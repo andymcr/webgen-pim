@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="generate" name="uk.ac.man.cs.mdsd.jsf.m2t.symfony">
+<project default="generate" name="uk.ac.man.cs.mdsd.web.m2t">
     <property name="ECLIPSE_HOME" value="../../../../../../Eclipse/eclipse-modeling-kepler-SR2-win32-x86_64"/>
     <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
-    <path id="uk.ac.man.cs.mdsd.jsf.m2t.symfony.libraryclasspath">
-        <pathelement location="${ECLIPSE_WORKSPACE}/uk.ac.man.cs.mdsd.jsf.m2t.symfony/bin"/>
+    <path id="uk.ac.man.cs.mdsd.web.m2t.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/uk.ac.man.cs.mdsd.web.m2t/bin"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.9.100.v20131218-1515.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.annotation_1.1.0.v201209060031.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.inject_1.0.0.v20091030.jar"/>
@@ -33,23 +33,23 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_11.0.2.v201303041551.jar"/>
     </path>
 
-    <path id="uk.ac.man.cs.mdsd.jsf.m2t.symfony.classpath">
-        <path refid="uk.ac.man.cs.mdsd.jsf.m2t.symfony.libraryclasspath"/>
+    <path id="uk.ac.man.cs.mdsd.web.m2t.classpath">
+        <path refid="uk.ac.man.cs.mdsd.web.m2t.libraryclasspath"/>
     </path>
 
     <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
-    <path id="uk.ac.man.cs.mdsd.jsf.m2t.symfony.libraryclasspath.alljars">
-        <pathelement location="../uk.ac.man.cs.mdsd.jsf.m2t.symfony/bin"/>
+    <path id="uk.ac.man.cs.mdsd.web.m2t.libraryclasspath.alljars">
+        <pathelement location="../uk.ac.man.cs.mdsd.web.m2t/bin"/>
         <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
     </path>
 
-    <path id="uk.ac.man.cs.mdsd.jsf.m2t.symfony.classpath.alljars">
-        <path refid="uk.ac.man.cs.mdsd.jsf.m2t.symfony.libraryclasspath.alljars"/>
+    <path id="uk.ac.man.cs.mdsd.web.m2t.classpath.alljars">
+        <path refid="uk.ac.man.cs.mdsd.web.m2t.libraryclasspath.alljars"/>
     </path>
 
     <!-- The default task with the jars used by this project -->
     <target name="generate">
-        <java classname="uk.ac.man.cs.mdsd.jsf.m2t.symfony.Generate" classpathref="uk.ac.man.cs.mdsd.jsf.m2t.symfony.classpath">
+        <java classname="uk.ac.man.cs.mdsd.web.m2t.Generate" classpathref="uk.ac.man.cs.mdsd.web.m2t.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -60,7 +60,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="generate.alljars">
-        <java classname="uk.ac.man.cs.mdsd.jsf.m2t.symfony.Generate" classpathref="uk.ac.man.cs.mdsd.jsf.m2t.symfony.classpath">
+        <java classname="uk.ac.man.cs.mdsd.web.m2t.Generate" classpathref="uk.ac.man.cs.mdsd.web.m2t.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
