@@ -12,8 +12,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,19 +20,18 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import uk.ac.man.cs.mdsd.webgen.website.QueryInstance;
-import uk.ac.man.cs.mdsd.webgen.website.WebsiteFactory;
+import uk.ac.man.cs.mdsd.webgen.website.ParameterReference;
+import uk.ac.man.cs.mdsd.webgen.website.Selection;
 import uk.ac.man.cs.mdsd.webgen.website.WebsitePackage;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.QueryInstance} object.
+ * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.ParameterReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class QueryInstanceItemProvider 
+public class ParameterReferenceItemProvider 
 	extends WebGenItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +45,7 @@ public class QueryInstanceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QueryInstanceItemProvider(AdapterFactory adapterFactory) {
+	public ParameterReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,76 +60,51 @@ public class QueryInstanceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addQueryPropertyDescriptor(object);
+			addParameterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Query feature.
+	 * This adds a property descriptor for the Parameter feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addQueryPropertyDescriptor(Object object) {
+	protected void addParameterPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_QueryInstance_query_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_QueryInstance_query_feature", "_UI_QueryInstance_type"),
-			WebsitePackage.Literals.QUERY_INSTANCE__QUERY,
+			getString("_UI_ParameterReference_parameter_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_ParameterReference_parameter_feature", "_UI_ParameterReference_type"),
+			WebsitePackage.Literals.PARAMETER_REFERENCE__PARAMETER,
 			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
+			getString("_UI_ModelPropertyCategory"),
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof QueryInstance) {
-						return getQueries((QueryInstance) object);
+					if (object instanceof ParameterReference) {
+						final Selection selection
+							= getCriteriaSelectionContext(object);
+						if (selection != null) {
+							return selection.getParameters();
+						}
 					}
+
 					return Collections.emptyList();
 				}
 		});
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebsitePackage.Literals.QUERY_INSTANCE__ACTUALS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns QueryInstance.gif.
+	 * This returns ParameterReference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/QueryInstance"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ParameterReference"));
 	}
 
 	/**
@@ -143,7 +115,7 @@ public class QueryInstanceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_QueryInstance_type");
+		return getString("_UI_ParameterReference_type");
 	}
 	
 
@@ -157,12 +129,6 @@ public class QueryInstanceItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(QueryInstance.class)) {
-			case WebsitePackage.QUERY_INSTANCE__ACTUALS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -176,11 +142,6 @@ public class QueryInstanceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebsitePackage.Literals.QUERY_INSTANCE__ACTUALS,
-				 WebsiteFactory.eINSTANCE.createQueryActual()));
 	}
 
 	/**

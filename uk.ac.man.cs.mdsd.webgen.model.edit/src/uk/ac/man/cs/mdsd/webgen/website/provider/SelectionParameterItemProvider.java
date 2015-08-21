@@ -1,15 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id: UpdateUnitItemProvider.java,v 1.7 2012/03/15 17:04:18 andy Exp $
  */
 package uk.ac.man.cs.mdsd.webgen.website.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -20,25 +14,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import uk.ac.man.cs.mdsd.webgen.website.Attribute;
-import uk.ac.man.cs.mdsd.webgen.website.UpdateUnit;
+import uk.ac.man.cs.mdsd.webgen.website.SelectionParameter;
 import uk.ac.man.cs.mdsd.webgen.website.WebsitePackage;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.UpdateUnit} object.
+ * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.SelectionParameter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UpdateUnitItemProvider
-	extends EditUnitItemProvider {
+public class SelectionParameterItemProvider extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UpdateUnitItemProvider(AdapterFactory adapterFactory) {
+	public SelectionParameterItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,72 +45,42 @@ public class UpdateUnitItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSelectionFeaturesPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
+			addDefaultValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Selection Feature feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSelectionFeaturesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_SelectTarget_selectionFeatures_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_SelectTarget_selectionFeatures_feature", "_UI_SelectTarget_type"),
-			 WebsitePackage.Literals.SELECT_TARGET__SELECTION_FEATURES,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof UpdateUnit) {
-						final UpdateUnit unit = (UpdateUnit) object;
-						final List<Attribute> features = new LinkedList<Attribute>();
-						features.addAll(getSourceElements(unit));
-						return features;
-					}
-					return Collections.emptyList();
-				}
-		});
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
+	 * This adds a property descriptor for the Default Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
+	protected void addDefaultValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UpdateUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UpdateUnit_styleClass_feature", "_UI_UpdateUnit_type"),
-				 WebsitePackage.Literals.UPDATE_UNIT__STYLE_CLASS,
+				 getString("_UI_SelectionParameter_defaultValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SelectionParameter_defaultValue_feature", "_UI_SelectionParameter_type"),
+				 WebsitePackage.Literals.SELECTION_PARAMETER__DEFAULT_VALUE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
 	/**
-	 * This returns UpdateUnit.gif.
+	 * This returns SelectionParameter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UpdateUnit.png"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SelectionParameter"));
 	}
 
 	/**
@@ -129,11 +91,12 @@ public class UpdateUnitItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UpdateUnit)object).getName();
+		String label = ((SelectionParameter)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_UpdateUnit_type") :
-			getString("_UI_UpdateUnit_type") + " " + label;
+			getString("_UI_SelectionParameter_type") :
+			getString("_UI_SelectionParameter_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -146,8 +109,8 @@ public class UpdateUnitItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(UpdateUnit.class)) {
-			case WebsitePackage.UPDATE_UNIT__STYLE_CLASS:
+		switch (notification.getFeatureID(SelectionParameter.class)) {
+			case WebsitePackage.SELECTION_PARAMETER__DEFAULT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
