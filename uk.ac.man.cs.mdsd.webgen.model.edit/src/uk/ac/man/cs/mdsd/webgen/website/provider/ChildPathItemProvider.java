@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.ChildFeature} object.
+ * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.ChildPath} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChildFeatureItemProvider 
+public class ChildPathItemProvider 
 	extends WebGenItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -38,7 +38,7 @@ public class ChildFeatureItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ChildFeatureItemProvider(AdapterFactory adapterFactory) {
+	public ChildPathItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -65,7 +65,7 @@ public class ChildFeatureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ChildFeature_type");
+		return getString("_UI_ChildPath_type");
 	}
 	
 

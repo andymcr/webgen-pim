@@ -15,23 +15,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import uk.ac.man.cs.mdsd.webgen.website.ChildAttribute;
+import uk.ac.man.cs.mdsd.webgen.website.ChildPathAttribute;
 import uk.ac.man.cs.mdsd.webgen.website.WebsitePackage;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.ChildAttribute} object.
+ * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.website.ChildPathAttribute} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChildAttributeItemProvider extends ChildFeatureItemProvider {
+public class ChildPathAttributeItemProvider extends ChildPathItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ChildAttributeItemProvider(AdapterFactory adapterFactory) {
+	public ChildPathAttributeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,16 +61,16 @@ public class ChildAttributeItemProvider extends ChildFeatureItemProvider {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_ChildAttribute_attribute_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_ChildAttribute_attribute_feature", "_UI_ChildAttribute_type"),
-			WebsitePackage.Literals.CHILD_ATTRIBUTE__ATTRIBUTE,
+			getString("_UI_ChildPathAttribute_attribute_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_ChildPathAttribute_attribute_feature", "_UI_ChildPathAttribute_type"),
+			WebsitePackage.Literals.CHILD_PATH_ATTRIBUTE__ATTRIBUTE,
 			true, false, true, null,
 			getString("_UI_ModelPropertyCategory"),
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof ChildAttribute) {
-						return getAttributes((ChildAttribute) object);
+					if (object instanceof ChildPathAttribute) {
+						return getAttributes((ChildPathAttribute) object);
 					}
 
 					return Collections.emptyList();
@@ -79,14 +79,14 @@ public class ChildAttributeItemProvider extends ChildFeatureItemProvider {
 	}
 
 	/**
-	 * This returns ChildAttribute.gif.
+	 * This returns ChildPathAttribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ChildAttribute"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ChildPathAttribute"));
 	}
 
 	/**
@@ -97,10 +97,10 @@ public class ChildAttributeItemProvider extends ChildFeatureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ChildAttribute)object).getName();
+		String label = ((ChildPathAttribute)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ChildAttribute_type") :
-			getString("_UI_ChildAttribute_type") + " " + label;
+			getString("_UI_ChildPathAttribute_type") :
+			getString("_UI_ChildPathAttribute_type") + " " + label;
 	}
 	
 
@@ -115,8 +115,8 @@ public class ChildAttributeItemProvider extends ChildFeatureItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ChildAttribute.class)) {
-			case WebsitePackage.CHILD_ATTRIBUTE__NAME:
+		switch (notification.getFeatureID(ChildPathAttribute.class)) {
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

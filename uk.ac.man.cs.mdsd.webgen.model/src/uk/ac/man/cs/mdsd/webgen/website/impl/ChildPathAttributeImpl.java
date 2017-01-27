@@ -11,24 +11,24 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import uk.ac.man.cs.mdsd.webgen.website.Attribute;
-import uk.ac.man.cs.mdsd.webgen.website.ChildAttribute;
+import uk.ac.man.cs.mdsd.webgen.website.ChildPathAttribute;
 import uk.ac.man.cs.mdsd.webgen.website.WebsitePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Child Attribute</b></em>'.
+ * An implementation of the model object '<em><b>Child Path Attribute</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.website.impl.ChildAttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.website.impl.ChildAttributeImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.website.impl.ChildPathAttributeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.website.impl.ChildPathAttributeImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribute {
+public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAttribute {
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebsitePackage.Literals.CHILD_ATTRIBUTE__NAME).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebsitePackage.Literals.CHILD_PATH_ATTRIBUTE__NAME).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
@@ -54,7 +54,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildAttributeImpl() {
+	protected ChildPathAttributeImpl() {
 		super();
 	}
 
@@ -65,7 +65,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WebsitePackage.Literals.CHILD_ATTRIBUTE;
+		return WebsitePackage.Literals.CHILD_PATH_ATTRIBUTE;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 			attribute = (Attribute)eResolveProxy(oldAttribute);
 			if (attribute != oldAttribute) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
 			}
 		}
 		return attribute;
@@ -112,7 +112,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 		Attribute oldAttribute = attribute;
 		attribute = newAttribute;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
 	}
 
 	/**
@@ -123,9 +123,9 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebsitePackage.CHILD_ATTRIBUTE__NAME:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__NAME:
 				return getName();
-			case WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				if (resolve) return getAttribute();
 				return basicGetAttribute();
 		}
@@ -140,7 +140,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				setAttribute((Attribute)newValue);
 				return;
 		}
@@ -155,7 +155,7 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				setAttribute((Attribute)null);
 				return;
 		}
@@ -170,12 +170,12 @@ public class ChildAttributeImpl extends ChildFeatureImpl implements ChildAttribu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebsitePackage.CHILD_ATTRIBUTE__NAME:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__NAME:
 				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebsitePackage.CHILD_ATTRIBUTE__ATTRIBUTE:
+			case WebsitePackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				return attribute != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ChildAttributeImpl
+} //ChildPathAttributeImpl
