@@ -2,15 +2,16 @@
  */
 package uk.ac.man.cs.mdsd.webgen.api.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import uk.ac.man.cs.mdsd.webgen.api.API;
 import uk.ac.man.cs.mdsd.webgen.api.ApiPackage;
 import uk.ac.man.cs.mdsd.webgen.api.Resource;
@@ -30,14 +31,14 @@ import uk.ac.man.cs.mdsd.webgen.api.Resource;
  */
 public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference.
+	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getResources()
 	 * @generated
 	 * @ordered
 	 */
-	protected Resource resources;
+	protected EList<Resource> resources;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,42 +64,11 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Resource getResources() {
+	public EList<Resource> getResources() {
+		if (resources == null) {
+			resources = new EObjectContainmentEList<Resource>(Resource.class, this, ApiPackage.API__RESOURCES);
+		}
 		return resources;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetResources(Resource newResources, NotificationChain msgs) {
-		Resource oldResources = resources;
-		resources = newResources;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApiPackage.API__RESOURCES, oldResources, newResources);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResources(Resource newResources) {
-		if (newResources != resources) {
-			NotificationChain msgs = null;
-			if (resources != null)
-				msgs = ((InternalEObject)resources).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApiPackage.API__RESOURCES, null, msgs);
-			if (newResources != null)
-				msgs = ((InternalEObject)newResources).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApiPackage.API__RESOURCES, null, msgs);
-			msgs = basicSetResources(newResources, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApiPackage.API__RESOURCES, newResources, newResources));
 	}
 
 	/**
@@ -110,7 +80,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApiPackage.API__RESOURCES:
-				return basicSetResources(null, msgs);
+				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -134,11 +104,13 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApiPackage.API__RESOURCES:
-				setResources((Resource)newValue);
+				getResources().clear();
+				getResources().addAll((Collection<? extends Resource>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -153,7 +125,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApiPackage.API__RESOURCES:
-				setResources((Resource)null);
+				getResources().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -168,7 +140,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApiPackage.API__RESOURCES:
-				return resources != null;
+				return resources != null && !resources.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -67,7 +67,7 @@ public interface ApiPackage extends EPackage {
 	int API = 0;
 
 	/**
-	 * The feature id for the '<em><b>Resources</b></em>' containment reference.
+	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,10 +178,10 @@ public interface ApiPackage extends EPackage {
 	EClass getAPI();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.man.cs.mdsd.webgen.api.API#getResources <em>Resources</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.man.cs.mdsd.webgen.api.API#getResources <em>Resources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Resources</em>'.
+	 * @return the meta object for the containment reference list '<em>Resources</em>'.
 	 * @see uk.ac.man.cs.mdsd.webgen.api.API#getResources()
 	 * @see #getAPI()
 	 * @generated
@@ -287,7 +287,7 @@ public interface ApiPackage extends EPackage {
 		EClass API = eINSTANCE.getAPI();
 
 		/**
-		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

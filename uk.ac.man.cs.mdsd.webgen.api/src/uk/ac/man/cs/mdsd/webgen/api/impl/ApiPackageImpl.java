@@ -245,7 +245,7 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apiEClass, uk.ac.man.cs.mdsd.webgen.api.API.class, "API", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAPI_Resources(), this.getResource(), null, "resources", null, 0, 1, uk.ac.man.cs.mdsd.webgen.api.API.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAPI_Resources(), this.getResource(), null, "resources", null, 0, -1, uk.ac.man.cs.mdsd.webgen.api.API.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResource_Service(), theServicePackage.getService(), null, "service", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
