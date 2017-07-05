@@ -16,22 +16,22 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import uk.ac.man.cs.mdsd.webgen.expression.ExpressionFactory;
 import uk.ac.man.cs.mdsd.webgen.expression.ExpressionPackage;
-import uk.ac.man.cs.mdsd.webgen.expression.PredicateIsOperator;
+import uk.ac.man.cs.mdsd.webgen.expression.PredicateInOperator;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.expression.PredicateIsOperator} object.
+ * This is the item provider adapter for a {@link uk.ac.man.cs.mdsd.webgen.expression.PredicateInOperator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
+public class PredicateInOperatorItemProvider extends PredicateItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredicateIsOperatorItemProvider(AdapterFactory adapterFactory) {
+	public PredicateInOperatorItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,8 +62,8 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT);
-			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT);
+			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT);
+			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT);
 		}
 		return childrenFeatures;
 	}
@@ -82,14 +82,14 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 	}
 
 	/**
-	 * This returns PredicateIsOperator.gif.
+	 * This returns PredicateInOperator.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PredicateIsOperator"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PredicateInOperator"));
 	}
 
 	/**
@@ -100,8 +100,8 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		PredicateIsOperator predicateIsOperator = (PredicateIsOperator)object;
-		return getString("_UI_PredicateIsOperator_type") + " " + predicateIsOperator.isNegated();
+		PredicateInOperator predicateInOperator = (PredicateInOperator)object;
+		return getString("_UI_PredicateInOperator_type") + " " + predicateInOperator.isNegated();
 	}
 	
 
@@ -116,9 +116,9 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(PredicateIsOperator.class)) {
-			case ExpressionPackage.PREDICATE_IS_OPERATOR__LEFT:
-			case ExpressionPackage.PREDICATE_IS_OPERATOR__RIGHT:
+		switch (notification.getFeatureID(PredicateInOperator.class)) {
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__LEFT:
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__RIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,132 +138,132 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createNullLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createStringLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createNullLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createStringLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+				(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
 	}
 
@@ -279,8 +279,8 @@ public class PredicateIsOperatorItemProvider extends PredicateItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT ||
-			childFeature == ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT;
+			childFeature == ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT ||
+			childFeature == ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT;
 
 		if (qualify) {
 			return getString
