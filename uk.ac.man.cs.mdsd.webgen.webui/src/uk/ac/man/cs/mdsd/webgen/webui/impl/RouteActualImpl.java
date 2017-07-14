@@ -12,39 +12,40 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import uk.ac.man.cs.mdsd.webgen.expression.Expression;
 
 import uk.ac.man.cs.mdsd.webgen.persistence.Attribute;
 
 import uk.ac.man.cs.mdsd.webgen.webui.ContentUnit;
-import uk.ac.man.cs.mdsd.webgen.webui.RoutingActual;
+import uk.ac.man.cs.mdsd.webgen.webui.RouteActual;
 import uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Routing Actual</b></em>'.
+ * An implementation of the model object '<em><b>Route Actual</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RoutingActualImpl#getActualFor <em>Actual For</em>}</li>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RoutingActualImpl#getRoutingParameter <em>Routing Parameter</em>}</li>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RoutingActualImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RouteActualImpl#getActualFor <em>Actual For</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RouteActualImpl#getRouteParameter <em>Route Parameter</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.impl.RouteActualImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoutingActualImpl extends MinimalEObjectImpl.Container implements RoutingActual {
+public class RouteActualImpl extends MinimalEObjectImpl.Container implements RouteActual {
 	/**
-	 * The cached value of the '{@link #getRoutingParameter() <em>Routing Parameter</em>}' reference.
+	 * The cached value of the '{@link #getRouteParameter() <em>Route Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoutingParameter()
+	 * @see #getRouteParameter()
 	 * @generated
 	 * @ordered
 	 */
-	protected Attribute routingParameter;
+	protected Attribute routeParameter;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -61,7 +62,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoutingActualImpl() {
+	protected RouteActualImpl() {
 		super();
 	}
 
@@ -72,7 +73,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WebuiPackage.Literals.ROUTING_ACTUAL;
+		return WebuiPackage.Literals.ROUTE_ACTUAL;
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	public ContentUnit getActualFor() {
-		if (eContainerFeatureID() != WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR) return null;
+		if (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR) return null;
 		return (ContentUnit)eInternalContainer();
 	}
 
@@ -91,7 +92,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	public NotificationChain basicSetActualFor(ContentUnit newActualFor, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newActualFor, WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newActualFor, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR, msgs);
 		return msgs;
 	}
 
@@ -101,19 +102,19 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	public void setActualFor(ContentUnit newActualFor) {
-		if (newActualFor != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR && newActualFor != null)) {
+		if (newActualFor != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR && newActualFor != null)) {
 			if (EcoreUtil.isAncestor(this, newActualFor))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newActualFor != null)
-				msgs = ((InternalEObject)newActualFor).eInverseAdd(this, WebuiPackage.CONTENT_UNIT__ROUTING_ACTUALS, ContentUnit.class, msgs);
+				msgs = ((InternalEObject)newActualFor).eInverseAdd(this, WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS, ContentUnit.class, msgs);
 			msgs = basicSetActualFor(newActualFor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR, newActualFor, newActualFor));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR, newActualFor, newActualFor));
 	}
 
 	/**
@@ -121,16 +122,16 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attribute getRoutingParameter() {
-		if (routingParameter != null && routingParameter.eIsProxy()) {
-			InternalEObject oldRoutingParameter = (InternalEObject)routingParameter;
-			routingParameter = (Attribute)eResolveProxy(oldRoutingParameter);
-			if (routingParameter != oldRoutingParameter) {
+	public Attribute getRouteParameter() {
+		if (routeParameter != null && routeParameter.eIsProxy()) {
+			InternalEObject oldRouteParameter = (InternalEObject)routeParameter;
+			routeParameter = (Attribute)eResolveProxy(oldRouteParameter);
+			if (routeParameter != oldRouteParameter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER, oldRoutingParameter, routingParameter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER, oldRouteParameter, routeParameter));
 			}
 		}
-		return routingParameter;
+		return routeParameter;
 	}
 
 	/**
@@ -138,8 +139,8 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attribute basicGetRoutingParameter() {
-		return routingParameter;
+	public Attribute basicGetRouteParameter() {
+		return routeParameter;
 	}
 
 	/**
@@ -147,11 +148,11 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoutingParameter(Attribute newRoutingParameter) {
-		Attribute oldRoutingParameter = routingParameter;
-		routingParameter = newRoutingParameter;
+	public void setRouteParameter(Attribute newRouteParameter) {
+		Attribute oldRouteParameter = routeParameter;
+		routeParameter = newRouteParameter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER, oldRoutingParameter, routingParameter));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER, oldRouteParameter, routeParameter));
 	}
 
 	/**
@@ -172,7 +173,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 		Expression oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTING_ACTUAL__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTE_ACTUAL__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -187,14 +188,14 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.ROUTING_ACTUAL__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.ROUTE_ACTUAL__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.ROUTING_ACTUAL__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.ROUTE_ACTUAL__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTING_ACTUAL__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ROUTE_ACTUAL__VALUE, newValue, newValue));
 	}
 
 	/**
@@ -205,7 +206,7 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetActualFor((ContentUnit)otherEnd, msgs);
@@ -221,9 +222,9 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				return basicSetActualFor(null, msgs);
-			case WebuiPackage.ROUTING_ACTUAL__VALUE:
+			case WebuiPackage.ROUTE_ACTUAL__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -237,8 +238,8 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
-				return eInternalContainer().eInverseRemove(this, WebuiPackage.CONTENT_UNIT__ROUTING_ACTUALS, ContentUnit.class, msgs);
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS, ContentUnit.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -251,12 +252,12 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				return getActualFor();
-			case WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER:
-				if (resolve) return getRoutingParameter();
-				return basicGetRoutingParameter();
-			case WebuiPackage.ROUTING_ACTUAL__VALUE:
+			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
+				if (resolve) return getRouteParameter();
+				return basicGetRouteParameter();
+			case WebuiPackage.ROUTE_ACTUAL__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -270,13 +271,13 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				setActualFor((ContentUnit)newValue);
 				return;
-			case WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER:
-				setRoutingParameter((Attribute)newValue);
+			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
+				setRouteParameter((Attribute)newValue);
 				return;
-			case WebuiPackage.ROUTING_ACTUAL__VALUE:
+			case WebuiPackage.ROUTE_ACTUAL__VALUE:
 				setValue((Expression)newValue);
 				return;
 		}
@@ -291,13 +292,13 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				setActualFor((ContentUnit)null);
 				return;
-			case WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER:
-				setRoutingParameter((Attribute)null);
+			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
+				setRouteParameter((Attribute)null);
 				return;
-			case WebuiPackage.ROUTING_ACTUAL__VALUE:
+			case WebuiPackage.ROUTE_ACTUAL__VALUE:
 				setValue((Expression)null);
 				return;
 		}
@@ -312,14 +313,14 @@ public class RoutingActualImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.ROUTING_ACTUAL__ACTUAL_FOR:
+			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				return getActualFor() != null;
-			case WebuiPackage.ROUTING_ACTUAL__ROUTING_PARAMETER:
-				return routingParameter != null;
-			case WebuiPackage.ROUTING_ACTUAL__VALUE:
+			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
+				return routeParameter != null;
+			case WebuiPackage.ROUTE_ACTUAL__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //RoutingActualImpl
+} //RouteActualImpl

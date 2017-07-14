@@ -10,26 +10,26 @@ import uk.ac.man.cs.mdsd.webgen.persistence.Attribute;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Routing Actual</b></em>'.
+ * A representation of the model object '<em><b>Route Actual</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getActualFor <em>Actual For</em>}</li>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getRoutingParameter <em>Routing Parameter</em>}</li>
- *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getActualFor <em>Actual For</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getRouteParameter <em>Route Parameter</em>}</li>
+ *   <li>{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRoutingActual()
+ * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRouteActual()
  * @model
  * @generated
  */
-public interface RoutingActual extends EObject {
+public interface RouteActual extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Actual For</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link uk.ac.man.cs.mdsd.webgen.webui.ContentUnit#getRoutingActuals <em>Routing Actuals</em>}'.
+	 * It is bidirectional and its opposite is '{@link uk.ac.man.cs.mdsd.webgen.webui.ContentUnit#getRouteActuals <em>Route Actuals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Actual For</em>' container reference isn't clear,
@@ -38,15 +38,15 @@ public interface RoutingActual extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual For</em>' container reference.
 	 * @see #setActualFor(ContentUnit)
-	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRoutingActual_ActualFor()
-	 * @see uk.ac.man.cs.mdsd.webgen.webui.ContentUnit#getRoutingActuals
-	 * @model opposite="routingActuals" required="true" transient="false"
+	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRouteActual_ActualFor()
+	 * @see uk.ac.man.cs.mdsd.webgen.webui.ContentUnit#getRouteActuals
+	 * @model opposite="routeActuals" required="true" transient="false"
 	 * @generated
 	 */
 	ContentUnit getActualFor();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getActualFor <em>Actual For</em>}' container reference.
+	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getActualFor <em>Actual For</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actual For</em>' container reference.
@@ -56,30 +56,30 @@ public interface RoutingActual extends EObject {
 	void setActualFor(ContentUnit value);
 
 	/**
-	 * Returns the value of the '<em><b>Routing Parameter</b></em>' reference.
+	 * Returns the value of the '<em><b>Route Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Routing Parameter</em>' reference isn't clear,
+	 * If the meaning of the '<em>Route Parameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Routing Parameter</em>' reference.
-	 * @see #setRoutingParameter(Attribute)
-	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRoutingActual_RoutingParameter()
+	 * @return the value of the '<em>Route Parameter</em>' reference.
+	 * @see #setRouteParameter(Attribute)
+	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRouteActual_RouteParameter()
 	 * @model required="true"
 	 * @generated
 	 */
-	Attribute getRoutingParameter();
+	Attribute getRouteParameter();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getRoutingParameter <em>Routing Parameter</em>}' reference.
+	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getRouteParameter <em>Route Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Routing Parameter</em>' reference.
-	 * @see #getRoutingParameter()
+	 * @param value the new value of the '<em>Route Parameter</em>' reference.
+	 * @see #getRouteParameter()
 	 * @generated
 	 */
-	void setRoutingParameter(Attribute value);
+	void setRouteParameter(Attribute value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
@@ -91,14 +91,14 @@ public interface RoutingActual extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(Expression)
-	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRoutingActual_Value()
+	 * @see uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage#getRouteActual_Value()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Expression getValue();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RoutingActual#getValue <em>Value</em>}' containment reference.
+	 * Sets the value of the '{@link uk.ac.man.cs.mdsd.webgen.webui.RouteActual#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' containment reference.
@@ -107,4 +107,4 @@ public interface RoutingActual extends EObject {
 	 */
 	void setValue(Expression value);
 
-} // RoutingActual
+} // RouteActual
