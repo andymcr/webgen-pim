@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.base;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.base;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -12,5 +12,5 @@ Export-Package: uk.ac.man.cs.mdsd.webgen.base,
  uk.ac.man.cs.mdsd.webgen.base.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.expression;visibility:=reexport
+ work.andycarpenter.webgen.pims.expression;visibility:=reexport
 Bundle-ActivationPolicy: lazy

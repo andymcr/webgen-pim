@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.model;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.model;singleton:=true
 Bundle-Version: 0.8.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -12,13 +12,13 @@ Export-Package: uk.ac.man.cs.mdsd.webgen.website,
  uk.ac.man.cs.mdsd.webgen.website.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.api;visibility:=reexport,
+ work.andycarpenter.webgen.pims.api;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.expression;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.base;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.presistence;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.security;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.service;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.webui;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.image;visibility:=reexport
+ work.andycarpenter.webgen.pims.expression;visibility:=reexport,
+ work.andycarpenter.webgen.pims.base;visibility:=reexport,
+ work.andycarpenter.webgen.pims.presistence;visibility:=reexport,
+ work.andycarpenter.webgen.pims.security;visibility:=reexport,
+ work.andycarpenter.webgen.pims.service;visibility:=reexport,
+ work.andycarpenter.webgen.pims.webui;visibility:=reexport,
+ work.andycarpenter.webgen.pims.image;visibility:=reexport
 Bundle-ActivationPolicy: lazy

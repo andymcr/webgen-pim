@@ -13,17 +13,17 @@
         lowerBound="1" eType="#//FrameworkTechnologies" defaultValueLiteral="Kohana"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyrightText" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//Persistence"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Persistence"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.service/model/service.ecore#//Services"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Services"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="images" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.image/model/image.ecore#//Image"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="images" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//Image"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="webUI" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.webui/model/webui.ecore#//WebUI"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webUI" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.webui/model/webui.ecore#//WebUI"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="api" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.api/model/api.ecore#//API"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="api" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.api/model/api.ecore#//API"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="security" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.security/model/security.ecore#//Security"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="security" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//Security"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FrameworkTechnologies">
@@ -44,7 +44,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metaDescription" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoImage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="logoFilters" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.image/model/image.ecore#//ImageManipulation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logoFilters" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameworkTechnology" ordered="false"
         lowerBound="1" eType="#//FrameworkTechnologies" defaultValueLiteral="Kohana"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useDbSessionStorage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

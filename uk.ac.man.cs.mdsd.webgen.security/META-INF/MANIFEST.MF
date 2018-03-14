@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.security;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.security;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -12,8 +12,8 @@ Export-Package: uk.ac.man.cs.mdsd.webgen.security,
  uk.ac.man.cs.mdsd.webgen.security.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.expression;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.base;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.presistence;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.service;visibility:=reexport
+ work.andycarpenter.webgen.pims.expression;visibility:=reexport,
+ work.andycarpenter.webgen.pims.base;visibility:=reexport,
+ work.andycarpenter.webgen.pims.presistence;visibility:=reexport,
+ work.andycarpenter.webgen.pims.service;visibility:=reexport
 Bundle-ActivationPolicy: lazy

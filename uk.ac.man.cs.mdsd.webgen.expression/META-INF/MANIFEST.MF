@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.expression;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.expression;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName

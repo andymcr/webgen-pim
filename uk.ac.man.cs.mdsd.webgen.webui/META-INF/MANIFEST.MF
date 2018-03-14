@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.webui;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.webui;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -14,9 +14,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ocl.pivot;visibility:=reexport,
  org.eclipse.ocl.examples.codegen;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.expression;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.base;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.presistence;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.service;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.image;visibility:=reexport
+ work.andycarpenter.webgen.pims.expression;visibility:=reexport,
+ work.andycarpenter.webgen.pims.base;visibility:=reexport,
+ work.andycarpenter.webgen.pims.presistence;visibility:=reexport,
+ work.andycarpenter.webgen.pims.service;visibility:=reexport,
+ work.andycarpenter.webgen.pims.image;visibility:=reexport
 Bundle-ActivationPolicy: lazy

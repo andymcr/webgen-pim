@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: uk.ac.man.cs.mdsd.webgen.model.editor;singleton:=true
+Bundle-SymbolicName: work.andycarpenter.webgen.pims.model.editor;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Bundle-Activator: uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteEditorPlugin$Implementation
@@ -14,14 +14,14 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.api.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.expression.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.base.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.presistence.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.service.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.image.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.webui.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.security.edit;visibility:=reexport,
- uk.ac.man.cs.mdsd.webgen.model.edit;visibility:=reexport
+ work.andycarpenter.webgen.pims.api.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.expression.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.base.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.presistence.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.service.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.image.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.webui.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.security.edit;visibility:=reexport,
+ work.andycarpenter.webgen.pims.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 
