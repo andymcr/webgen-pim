@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.api/src" modelPluginID="work.andycarpenter.webgen.pims.api"
+    modelName="Api" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression ../../work.andycarpenter.webgen.pims.presistence/model/persistence.genmodel#//persistence ../../work.andycarpenter.webgen.pims.service/model/service.genmodel#//service"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>api.ecore</foreignModel>
+  <genPackages prefix="Api" basePackage="work.andycarpenter.webgen.pims" disposableProviderFactory="true"
+      ecorePackage="api.ecore#/">
+    <genClasses ecoreClass="api.ecore#//API">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api.ecore#//API/resources"/>
+    </genClasses>
+    <genClasses ecoreClass="api.ecore#//Resource">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference api.ecore#//Resource/parentResource"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="Model"
+          ecoreFeature="ecore:EAttribute api.ecore#//Resource/name"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference api.ecore#//Resource/service"/>
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute api.ecore#//Resource/uriElement"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute api.ecore#//Resource/enableDefaultGetAll"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute api.ecore#//Resource/enableDefaultGetOne"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference api.ecore#//Resource/getAll"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference api.ecore#//Resource/getOne"/>
+      <genFeatures property="None" children="true" createChild="true" propertyDescription=""
+          ecoreFeature="ecore:EReference api.ecore#//Resource/selections"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Serialization"
+          propertySortChoices="true" ecoreFeature="ecore:EReference api.ecore#//Resource/defaultSerializationGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api.ecore#//Resource/childResources"/>
+    </genClasses>
+    <genClasses ecoreClass="api.ecore#//ResourceSelection">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference api.ecore#//ResourceSelection/parentResource"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="Model"
+          ecoreFeature="ecore:EAttribute api.ecore#//ResourceSelection/name"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference api.ecore#//ResourceSelection/selection"/>
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute api.ecore#//ResourceSelection/uriElement"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Serialization"
+          propertySortChoices="true" ecoreFeature="ecore:EReference api.ecore#//ResourceSelection/defaultSerializationGroups"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

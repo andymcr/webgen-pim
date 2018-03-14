@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.1 2010/03/23 10:53:26 andy Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.cs.man.ac.uk/mdsd/2010/Website"
+            class="uk.ac.man.cs.mdsd.webgen.website.WebsitePackage"
+            genModel="model/website.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated website -->
+      <package
+            uri="http://www.cs.man.ac.uk/mdsd/2010/Website"
+            class="work.andycarpenter.webgen.pims.website.WebsitePackage"
+            genModel="model/website.genmodel"/>
+   </extension>
+
+</plugin>

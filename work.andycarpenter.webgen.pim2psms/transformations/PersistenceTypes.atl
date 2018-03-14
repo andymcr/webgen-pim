@@ -1,0 +1,201 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
+-- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+
+module PersistenceTypes;
+create orm : ORM from website : Website;
+
+uses WebsiteHelpers;
+
+
+helper context Website!Attribute def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean
+	= noted->select(e | e.oclIsKindOf(Website!Attribute))
+		->exists(e | e.dataType = self.dataType 
+			and e."unique" = self."unique" 
+			and e.ordered = self.ordered);
+
+helper context Website!Association def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean
+	= noted->select(e | e.oclIsKindOf(Website!Association))
+		->exists(e | e.targetEntity = self.targetEntity 
+			and e."unique" = self."unique" 
+			and e.ordered = self.ordered);
+
+helper context Website!Association def: inverseFeatureTypeNoted(noted : Set(Website!Feature)) : Boolean
+	= noted->exists(e | e.partOf = self.partOf 
+			and e.targetUnique = self.targetUnique);
+
+
+rule Website {
+	from website : Website!Persistence
+	to orm : ORM!OrmModel (
+		serializationGroups <- website.serializationGroups,
+		dataTypes <- website.dataTypes,
+		entitiesAndViews <- website.entities,
+		collectionTypes <- website.entities
+			->select(c | c.oclIsTypeOf(Website!Entity))
+			->collect(e | e.features)->flatten()
+			->select(f | not f.oclIsKindOf(Website!DateAttribute))
+			->select(f | f.cardinality = #Many)
+			->iterate(f; result : Set(Website!Feature) = Set {} |
+				if f.featureTypeNoted(result) then
+					result
+				else
+					result->including(f)
+				endif)
+			->collect(f | thisModule.CollectionType(f))
+			->union(website.entities
+				->select(c | c.oclIsKindOf(Website!Entity))
+				->collect(e | e.features)->flatten()
+				->select(f | f.oclIsKindOf(Website!AssociationWithoutContainment))
+				->select(f | f.targetCardinality = #Many)
+				->iterate(f; result : Set(Website!Feature) = Set {} |
+					if f.inverseFeatureTypeNoted(result) then
+						result
+					else
+						result->including(f)
+					endif)
+				->collect(e | thisModule.InverseCollectionType(e))),
+		databaseTechnology <- website.databaseTechnology,
+		ormTechnology <- website.ormTechnology,
+		timestampCreation <- website.timestampCreation,
+		timestampUpdates <- website.timestampUpdates,
+		hasCustomOrmTypes <-
+			website.entities
+				->select(c | c.oclIsTypeOf(Website!Entity))
+				->collect(e | e.entityFeatures)->flatten()
+				->select(f | f.oclIsKindOf(Website!EntityAttribute))
+				->select(a | not a.ormType.oclIsUndefined())
+				->select(a | a.ormType.trim() <> '')
+				->notEmpty()
+	)
+}
+
+abstract rule NamedElement {
+	from website : Website!NamedElement
+	to orm : ORM!NamedElement (
+		name <- website.name
+	)
+}
+
+-- @extends NamedElement
+abstract rule NamedDisplayElement {
+	from website : Website!NamedDisplayElement
+	to orm : ORM!NamedDisplayElement (
+		displayLabel <-
+			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
+				website.displayLabel
+			else
+				website.name.createLabel()
+			endif
+	)
+}
+
+
+-- @extends NamedElement
+rule SerializationGroup {
+	from website : Website!SerializationGroup
+	to orm : ORM!SerializationGroup (
+	)
+}
+
+
+-- @extends NamedDisplayElement
+rule DataType {
+	from website : Website!DataType (website.oclIsTypeOf(Website!DataType))
+	to orm : ORM!DataType (
+	)
+}
+
+-- @extends NamedDisplayElement
+rule EnumerationType {
+	from website : Website!EnumerationType
+	to orm : ORM!EnumerationType (
+		enumerations <- website.enumerations
+	)
+}
+
+-- @extends NamedDisplayElement
+rule EnumerationLiteral {
+	from website : Website!EnumerationLiteral
+	to orm : ORM!EnumerationLiteral (
+	)
+}
+
+lazy rule CollectionType {
+	from website: Website!Feature
+	to orm : ORM!CollectionType (
+		name <- 'Collection'.concat(if website.oclIsKindOf(Website!Attribute) then
+				website.dataType.name
+			else
+				website.targetEntity.name
+			endif),
+		elementType <- if website.oclIsKindOf(Website!Attribute) then
+				website.dataType
+			else
+				website.targetEntity
+			endif,
+		collectionType <- website.collectionType()
+	)
+	do {
+		orm;
+	}
+}
+
+lazy rule InverseCollectionType {
+	from website: Website!Feature
+	to orm : ORM!CollectionType (
+		elementType <- website.partOf,
+		collectionType <- website.inverseCollectionType()
+	)
+	do {
+		orm;
+	}
+}
+
+
+-- @extends NamedDisplayElement
+abstract rule EntityOrView {
+	from website : Website!EntityOrView
+	to orm : ORM!EntityOrView (
+		singletonName <-
+			if website.singletonName.oclIsUndefined() or website.singletonName = '' then
+				website.name
+			else
+				website.singletonName
+			endif,
+		pluralisedName <-
+			if website.pluralisedName.oclIsUndefined() or website.pluralisedName = '' then
+				website.name
+			else
+				website.pluralisedName
+			endif,
+		tableName <- 
+			if not website.tableName.oclIsUndefined() and website.tableName <> '' then
+				website.tableName
+			else
+				website.name.createTableName()
+			endif,
+		autoKeyName <- website.autoKeyName.createAttributeColumnName(),
+		autoKeyPersistentType <- website.autoKeyPersistentType,
+		autoKeyGenerationStrategy <- website.autoKeyGenerationStrategy,
+		implementsUserInterface <- website.implementsUserInterface,
+		allowFormTypeCustomisation <- website.allowFormTypeCustomisation
+	)
+}
+
+-- @extends EntityOrView
+rule Entity {
+	from website : Website!Entity
+	to orm : ORM!Entity (
+	)
+}
+
+-- @extends EntityOrView
+rule View {
+	from website : Website!View
+	to orm : ORM!View (
+		encapsulates <- website.encapsulates
+	)
+}
+

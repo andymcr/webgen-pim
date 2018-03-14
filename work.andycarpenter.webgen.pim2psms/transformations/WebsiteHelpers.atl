@@ -1,0 +1,508 @@
+-- @atlcompiler emftvm
+
+library WebsiteHelpers;
+
+helper context String def: lowercaseFirst() : String
+	= self.substring(1, 1).toLower().concat(self.substring(2, self.size()));
+
+helper context String def: uppercaseFirst() : String
+	= self.substring(1, 1).toUpper().concat(self.substring(2, self.size()));
+
+helper context String def: createName() : String
+	= if self.trim().replaceAll('[A-Z]', '') = '' then
+			self.trim()
+		else
+			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
+		endif;
+
+helper context String def: createLabel() : String
+	= if self.trim().replaceAll('[A-Z]', '') = '' then
+			self
+		else
+			self.replaceAll('([A-Z])', ' $1').trim().uppercaseFirst()
+		endif;
+
+helper context String def: cleanString() : String
+	= if self.trim() = '' then
+			OclUndefined
+		else
+			self.trim()
+		endif;
+
+
+helper def: findWebGenModel() : Website!WebGenModel
+	= Website!WebGenModel.allInstancesFrom('website')->first();
+
+helper def: findOrmModel() : ORM!OrmModel
+	= ORM!OrmModel.allInstancesFrom('orm')->first();
+
+helper def: findOrmSerializationGroup(name : String) : ORM!SerializationGroup
+	= ORM!SerializationGroup.allInstancesFrom('orm')->any(g | g.name = name);
+
+helper def: findWebsiteProperties() : Website!WebsiteProperties
+	= thisModule.findWebGenModel().websiteProperties;
+
+helper def: findWebsitePersistence() : Website!Persistence
+	= thisModule.findWebGenModel().persistence;
+
+helper def: findWebsiteSecurity() : Website!Security
+	= thisModule.findWebGenModel().security;
+
+helper def: findWebsiteUI() : Website!Persistence
+	= thisModule.findWebGenModel().webUI;
+
+
+helper context String def: createTableName() : String
+	= let persistence : Website!Persistence = thisModule.findWebsitePersistence()
+		in if persistence.databaseTechnology = #Oracle then
+				self.toUpper()
+			else
+				self.toLower()
+			endif;
+
+helper context String def: createAttributeColumnName() : String
+	= let persistence : Website!Persistence = thisModule.findWebsitePersistence()
+		in if persistence.databaseTechnology = #Oracle then
+				self.createName().toUpper()
+			else
+				self.createName().toLower()
+			endif;
+
+helper context String def: createAssociationColumnName() : String
+	= let persistence : Website!Persistence = thisModule.findWebsitePersistence()
+		in let name : String
+				= if persistence.ormTechnology = #Kohana 
+							or persistence.ormTechnology = #DoctrineORM then
+						self.createName().concat('_id')
+					else
+						self.createName()
+					endif
+			in if persistence.databaseTechnology = #Oracle then
+					name.toUpper()
+				else
+					name.toLower()
+				endif;
+
+helper context Website!Entity def: createEntityColumnName() : String
+	= self.name.createName().concat('_id');
+
+helper context Website!DataType def: persistentType() : String
+	= if not self.persistentType.oclIsUndefined() and self.persistentType <> '' then
+			self.persistentType
+		else
+			if self.oclIsTypeOf(Website!EnumerationType) then
+				'Integer'
+			else
+				self.name
+			endif
+		endif;
+
+helper context Website!DataType def: ormType() : String
+	= if not self.ormType.oclIsUndefined() and self.ormType <> '' then
+			self.ormType
+		else
+			let typeName : String
+				= if self.oclIsTypeOf(Website!EnumerationType) then
+						'Integer'
+					else if self.name = 'TextBlock' then
+						'String'
+					else
+						self.name
+					endif endif
+			in let persistence : Website!Persistence = thisModule.findWebsitePersistence()
+				in if persistence.ormTechnology = #DoctrineORM then
+						typeName.toLowerCase()
+					else
+						typeName
+					endif
+		endif;
+
+helper context Website!Association def: targetEntityName() : String
+	= if self.oclIsTypeOf(Website!EncapsulatedAssociation) then
+			self.association.targetEntityName()
+		else
+			self.targetEntity.name
+		endif;
+
+	helper context Website!Association def: targetFeatureName() : String
+	= if self.oclIsTypeOf(Website!EncapsulatedAssociation) then
+			self.association.targetFeatureName()
+		else
+			if not self.targetFeatureName.oclIsUndefined() and self.targetFeatureName <> '' then
+				self.targetFeatureName
+			else
+				'inv'.concat(self.name.uppercaseFirst())
+			endif
+		endif;
+
+helper context Website!Association def: targetDisplayLabel() : String
+	= if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel <> '' then
+			self.targetDisplayLabel
+		else
+			self.targetFeatureName().createLabel()
+		endif;
+
+helper context Website!Association def: createPivotTableName() : String
+	= let name : String
+			= if not self.pivotTableName.oclIsUndefined() and self.pivotTableName <> '' then
+					self.pivotTableName
+				else
+					self.partOf.name.concat('_').concat(self.targetEntity.name)
+				endif
+		in let persistence : Website!Persistence = thisModule.findWebsitePersistence()
+			in if persistence.databaseTechnology = #Oracle then
+					name.toUpper()
+				else
+					name.toLower()
+				endif;
+
+	
+
+helper context Website!Feature def: collectionType() : ORM!CollectionType
+    = if self."unique" then
+		if self.ordered then
+			#"OrderedSet"
+		else
+			#"Set"
+		endif
+	else
+		if self.ordered then
+			#List
+		else
+			#"Bag"
+		endif
+	endif;
+
+helper context Website!Feature def: inverseCollectionType() : ORM!CollectionType
+    = if self.targetUnique then
+		#"Set"
+	else
+		#"Bag"
+	endif;
+
+
+helper context Website!Attribute def: validationPattern() : String
+	= if not self.validationPattern.oclIsUndefined() and self.validationPattern <> '' then
+			self.validationPattern
+		else
+			if self.oclIsTypeOf(Website!DataTypeAttribute) then
+				self.dataType.validationPattern
+			else
+				OclUndefined
+			endif
+		endif;
+
+
+helper def: findWebsiteEntityOrView(name : String) : Website!EntityOrView
+	= Website!EntityOrView.allInstancesFrom('website')->any(e | e.name = name);
+
+helper context Website!EntityOrView def: getWebsiteFeature(featureName : String) : Website!Feature
+	= self.features->any(f | f.name = featureName);
+
+helper def: findWebsiteDataType(name : String) : Website!EntityOrView
+	= Website!DataType.allInstancesFrom('website')->any(t | t.name = name);
+
+helper def: findOrmDataType(name : String) : ORM!DataType
+	= ORM!DataType.allInstancesFrom('orm')->any(d | d.name = name);
+
+helper def: findOrmCollectionType(name : String) : ORM!CollectionType
+	= ORM!CollectionType.allInstancesFrom('orm')->any(c | c.elementType.name = name);
+
+helper context Website!Feature def: findOrmTargetEntity() : ORM!Entity
+	= thisModule.findOrmEntityOrView(self.targetEntity.name);
+
+helper def: findOrmEntityOrView(name : String) : ORM!EntityOrView
+	= ORM!EntityOrView.allInstancesFrom('orm')->any(e | e.name = name);
+
+helper context Website!EntityOrView def: findOrmEntityOrView() : ORM!EntityOrView
+	= ORM!EntityOrView.allInstancesFrom('orm')->any(eov | eov.name = self.name);
+
+helper context Website!Feature def: findOrmEntityOrView() : ORM!EntityOrView
+	= thisModule.findOrmEntityOrView(self.partOf.name);
+
+helper context ORM!EntityOrView def: getOrmFeature(featureName : String) : ORM!Feature
+	= self.features->any(f | f.name = featureName);
+
+helper context Website!Feature def: findOrmFeature() : ORM!Feature
+	= if self.oclIsKindOf(Website!Attribute) then
+			self.findOrmAttribute()
+		else
+			self.findOrmSourceAssociation()
+		endif;
+
+helper context Website!Attribute def: findOrmAttribute() : ORM!Attribute
+	= self.findOrmEntityOrView().getOrmFeature(self.name);
+
+helper context Website!Association def: findOrmSourceAssociation() : ORM!Association
+	= thisModule.findOrmEntityOrView(self.partOf.name).getOrmFeature(self.name);
+
+helper context Website!Association def: findOrmTargetAssociation() : ORM!Association
+	= thisModule.findOrmEntityOrView(self.targetEntity.name).getOrmFeature(self.targetFeatureName());
+
+helper context Website!UnitAssociation def: findOrmAssociation() : ORM!Association
+	= if self.association.oclIsUndefined() then
+			OclUndefined
+		else 
+			if self.isSourceAssociation then
+				self.association.findOrmSourceAssociation()
+			else
+				self.association.findOrmTargetAssociation()
+			endif
+		endif;
+
+helper context Website!FeaturePathAssociation def: findOrmAssociation() : ORM!Association
+	= if self.association.oclIsUndefined() then
+			OclUndefined
+		else
+			if self.getSourceTypes()->includes(self.association.partOf) then
+				self.association.findOrmSourceAssociation()
+			else
+				self.association.findOrmTargetAssociation()
+			endif
+		endif;
+
+helper context Website!ChildPathAssociation def: findOrmAssociation() : ORM!Association
+	= if self.association.oclIsUndefined() then
+			OclUndefined
+		else
+			if self.getSourceTypes()->includes(self.association.partOf) then
+				self.association.findOrmSourceAssociation()
+			else
+				self.association.findOrmTargetAssociation()
+			endif
+		endif;
+
+helper context Website!UnitAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= Sequence{ self.association.sourceEntityX };
+
+helper context Website!FeaturePathAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
+			self.eContainer().contentType
+		else if self.eContainer().oclIsKindOf(Website!SingletonUnit) then
+			Sequence{ self.eContainer().contentType }
+		else if self.eContainer().oclIsKindOf(Website!InlineAction) then
+			self.eContainer().getSourceTypes()
+		else if self.eContainer().oclIsKindOf(Website!Expression) then
+			self.eContainer().getSourceTypes()
+		else
+			Sequence{}
+		endif endif endif endif;
+
+helper context Website!ChildPathAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= if self.eContainer().getSourceTypes()->includes(self.eContainer().association.partOf) then
+			Sequence{ self.eContainer().association.targetEntity }
+		else
+			Sequence{ self.eContainer().association.partOf }
+		endif;
+
+helper context Website!InlineAction def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
+			self.eContainer().contentType
+		else if self.eContainer().oclIsKindOf(Website!UnitElement) then
+			Sequence{ self.eContainer().partOf }
+		else if self.eContainer().oclIsKindOf(Website!UnitAssociation) then
+			self.eContainer().getSourceTypes()
+		else
+			Sequence{}
+		endif endif endif;
+
+helper context Website!Badge def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
+			self.eContainer().contentType
+		else if self.eContainer().oclIsKindOf(Website!UnitElement) then
+			Sequence{ self.eContainer().partOf }
+		else if self.eContainer().oclIsKindOf(Website!UnitAssociation) then
+			self.eContainer().getSourceTypes()
+		else
+			Sequence{}
+		endif endif endif;
+
+helper context Website!Expression def: getSourceTypes() : Sequence(Website!EntityOrView)
+	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
+			self.eContainer().contentType
+		else if self.eContainer().oclIsKindOf(Website!SingletonUnit) then
+			Sequence{ self.eContainer().contentType }
+		else if self.eContainer().oclIsKindOf(Website!InlineAction) then
+			self.eContainer().getSourceTypes()
+		else if self.eContainer().oclIsKindOf(Website!Badge) then
+			self.eContainer().getSourceTypes()
+		else
+			self.eContainer().getSourceTypes()
+		endif endif endif endif;
+
+
+helper def: findServiceFor(name : String) : Service!Service
+	= Service!Service.allInstancesFrom('service')
+		->select(s | not s.serves.oclIsUndefined())
+		->any(s | s.serves.name = name);
+
+helper def: findService(name : String) : Service!Service
+	= Service!Service.allInstancesFrom('service')->any(s | s.name = name);
+
+helper context Website!EntityOrView def: findService() : Service!Service
+	= thisModule.findServiceFor(self.name);
+
+helper context ORM!EntityOrView def: findService() : Service!Service
+	= thisModule.findServiceFor(self.name);
+
+helper context Website!Service def: findService() : Service!Service
+	= thisModule.findService(self.name);
+
+helper context Service!Service def: getServiceConstant(name : String) : Service!Selection
+	= self.constants->any(s | s.name = name);
+
+helper context Website!Constant def: findServiceConstant() : Service!Selection
+	= self.definedBy.findService().getServiceConstant(self.name);
+
+helper context Service!Service def: getServiceSelection(name : String) : Service!Selection
+	= self.selections->any(s | s.name = name);
+
+helper context Website!Selection def: findServiceSelection() : Service!Selection
+	= self.usedBy.findService().getServiceSelection(self.name);
+
+helper context Service!Selection def: getFilter(name : String) : Service!Filter
+	= self.filters->any(f | f.name = name);
+
+helper context Website!Filter def: findFilter() : Service!Filter
+	= self.selection.findServiceSelection().getFilter(self.name);
+
+helper context Service!Selection def: getServiceFormalParameter(name : String) : Service!FormalParameter
+	= self.parameters->any(p | p.name = name);
+
+helper context Website!FormalParameter def: findServiceFormalParameter() : Service!FormalParameter
+	= self.formalFor.findServiceSelection().getServiceFormalParameter(self.name);
+
+helper context Service!Service def: getBusinessOperation(name : String) : Service!Selection
+	= self.operations->any(s | s.name = name);
+
+helper context Website!BusinessOperation def: findBusinessOperation() : Service!Selection
+	= self.definedBy.findService().getBusinessOperation(self.name);
+
+
+helper context ORM!EntityOrView def: getOrmLabel(labelName : String) : ORM!ModelLabel
+	= self.labels->any(l | l.name = labelName);
+
+helper def: findOrmCollection(name : String) : ORM!DataType
+	= ORM!CollectionType.allInstancesFrom('orm')
+		->any(c | c.elementType.name = name );
+
+
+helper context Website!Attribute def: dateFormat() : String
+	= if self.oclIsTypeOf(Website!EncapsulatedAttribute) then
+			self.attribute.dateFormat()
+		else if not self.oclIsTypeOf(Website!DateAttribute) then
+			OclUndefined
+		else if not self.format.oclIsUndefined() and self.format <> '' then
+			self.format
+		else
+			if self.details = #DateOnly then
+				thisModule.findWebsiteUI().defaultDateFormat
+			else if self.details = #TimeOnly then
+				thisModule.findWebsiteUI().defaultTimeFormat
+			else
+				thisModule.findWebsiteUI().defaultDateTimeFormat
+			endif endif
+		endif endif endif;
+
+helper context Website!UnitField def: dateFormat() : String
+	= if not self.dateFormat.oclIsUndefined() and self.dateFormat <> '' then
+			self.dateFormat
+		else if self.oclIsTypeOf(Website!UnitElement) then
+			self.attribute.dateFormat()
+		else if self.oclIsTypeOf(Website!UnitAssociation) then
+			if not self.childFeature.oclIsUndefined() then
+				self.childFeature.dateFormat()
+			else
+				OclUndefined
+			endif
+		else if self.oclIsKindOf(Website!InterfaceField) then
+			if self.oclIsTypeOf(Website!DateField) then
+				self.format
+			else
+				OclUndefined
+			endif
+		else
+			OclUndefined
+		endif endif endif endif;
+
+helper context Website!ChildPath def: dateFormat() : String
+	= if self.oclIsTypeOf(Website!ChildPathAttribute) then
+			self.attribute.dateFormat()
+		else
+			if self.childFeature.oclIsUndefined() then
+				OclUndefined
+			else
+				self.childFeature.dateFormat()
+			endif
+		endif;
+
+
+helper def: findWafMenu(name : String) : WAF!Menu
+	= WAF!Menu.allInstancesFrom('waf')->select(m | m.name = name)->first();
+
+
+helper context Website!Entity def: getContainer() : ORM!Entity
+	= if self.associationEnds->isEmpty() then
+			OclUndefined
+		else if self.associationEnds->exists(a | a.oclIsKindOf(Website!AssociationWithContainment)) then
+			self.associationEnds->any(a | a.oclIsKindOf(Website!AssociationWithContainment)).partOf.findOrmEntityOrView()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CollectionUnit def: findContainerType() : ORM!Entity
+	= let directContainer : ORM!Entity
+			= if self.contentType->isEmpty() then
+					OclUndefined
+				else
+					self.contentType->first().getContainer()
+				endif
+		in if self.selection.oclIsUndefined() then
+			directContainer
+		else if self.selection.selectPath->notEmpty() then
+			self.selection.findServiceSelection().selectPath->last().opposite.partOf
+		else
+			directContainer
+		endif endif;
+
+helper context Website!CollectionUnit def: findContainerService() : Service!Service
+	= if self.contentType->isEmpty() then
+			OclUndefined
+		else
+			let container : Website!Entity = self.findContainerType()
+				in if container.oclIsUndefined() or self.omitContainerLoad then
+						OclUndefined
+					else
+						container.findService()
+					endif
+		endif;
+
+helper context Website!CollectionUnit def: findServicesUsed() : Sequence(Service!Service)
+	= self.servicesUsed->collect(s | s.findService())
+		->union(if self.contentType->isEmpty() then
+						Sequence{}
+					else
+						Sequence{ self.contentType->first().findService() }
+						->union(let containerService : Service!Service = self.findContainerService()
+									in if containerService.oclIsUndefined() then
+											Sequence{}
+										else
+											Sequence{ containerService }
+										endif)
+					endif);
+
+helper context Website!DetailsUnit def: findServicesUsed() : Sequence(Service!Service)
+	= self.servicesUsed->collect(s | s.findService())
+		->union(if self.contentType.oclIsUndefined() then
+				Sequence{}
+			else
+				Sequence{ self.contentType.findService() }
+			endif);
+
+helper context Website!EditUnit def: findServicesUsed() : Sequence(Service!Service)
+	= self.servicesUsed->collect(s | s.findService())
+		->union(if self.contentType.oclIsUndefined() then
+				Sequence{}
+			else
+				Sequence{ self.contentType.findService() }
+			endif);

@@ -1,0 +1,58 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
+-- @path Service=/uk.ac.man.cs.mdsd.service.model/model/Service.xecore
+-- @path API=/uk.ac.man.cs.mdsd.api.model/model/api.xecore
+
+module API;
+create api : API from website : Website, service : Service;
+
+uses WebsiteHelpers;
+
+
+rule API {
+	from website : Website!API
+	to api : API!API (
+		resources <- website.resources
+	)
+}
+
+
+rule Resource {
+	from website : Website!Resource
+	to api : API!Resource (
+		service <-
+			if website.service.oclIsUndefined() then
+				OclUndefined
+			else
+				thisModule.findService(website.service.name)
+			endif,
+		uriElement <-
+			if website.uriElement.trim() <> '' then
+				website.uriElement.trim()
+			else if not website.name.oclIsUndefined() then
+				website.name.createName()
+			else
+				''
+			endif endif,
+		enableDefaultGetOne <- website.enableDefaultGetOne,
+		enableDefaultGetAll <- website.enableDefaultGetAll,
+		getAll <-
+			if website.getAll.oclIsUndefined() then
+				OclUndefined
+			else
+				website.getAll.findServiceSelection()
+			endif,
+		getOne <-
+			if website.getOne.oclIsUndefined() then
+				OclUndefined
+			else
+				website.getOne.findServiceSelection()
+			endif,
+--		filters <- website.filters,
+		defaultSerializationGroups <-
+			website.defaultSerializationGroups
+				->collect(g | thisModule.findOrmSerializationGroup(g.name)),
+		childResources <- website.childResources
+	)
+} 

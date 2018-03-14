@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.service/src" modelPluginID="work.andycarpenter.webgen.pims.service"
+    modelName="Service" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression ../../work.andycarpenter.webgen.pims.presistence/model/persistence.genmodel#//persistence"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>service.ecore</foreignModel>
+  <genPackages prefix="Service" basePackage="work.andycarpenter.webgen.pims" childCreationExtenders="true"
+      ecorePackage="service.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="service.ecore#//OperationResultTypes">
+      <genEnumLiterals ecoreEnumLiteral="service.ecore#//OperationResultTypes/None"/>
+      <genEnumLiterals ecoreEnumLiteral="service.ecore#//OperationResultTypes/File"/>
+    </genEnums>
+    <genClasses ecoreClass="service.ecore#//Services">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory=""
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Services/services"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+          ecoreFeature="ecore:EReference service.ecore#//Service/constants"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference service.ecore#//Service/serves"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Service/selections"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference service.ecore#//Service/findAll"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference service.ecore#//Service/findOne"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Service/operations"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Service/uses"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//Constant">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference service.ecore#//Constant/definedBy"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Constant/value"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//Selection">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference service.ecore#//Selection/usedBy"/>
+      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//Selection/distinct"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Selection/fields"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Selection/joins"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
+          ecoreFeature="ecore:EReference service.ecore#//Selection/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Selection/filters"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
+          ecoreFeature="ecore:EReference service.ecore#//Selection/ordering"/>
+      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//Selection/limit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Selection/selectPath"/>
+      <genFeatures createChild="false" propertyCategory="Implementation" propertyDescription=""
+          ecoreFeature="ecore:EAttribute service.ecore#//Selection/methodName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="service.ecore#//Order">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory=""
+          ecoreFeature="ecore:EReference service.ecore#//Order/path"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//ConstantReference">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ConstantReference/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//ConstantReference/value"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//ServiceFeatureReference">
+      <genFeatures property="None" createChild="false" propertyCategory="Business"
+          ecoreFeature="ecore:EAttribute service.ecore#//ServiceFeatureReference/name"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//ServiceFeatureReference/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//Asc"/>
+    <genClasses ecoreClass="service.ecore#//Desc"/>
+    <genClasses ecoreClass="service.ecore#//BusinessOperation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference service.ecore#//BusinessOperation/definedBy"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Business"
+          propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//BusinessOperation/uses"/>
+      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//BusinessOperation/resultType"/>
+      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//BusinessOperation/resultMimeType"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//Filter">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference service.ecore#//Filter/selection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Filter/condition"/>
+      <genFeatures createChild="false" propertyCategory="Implementation" propertyDescription=""
+          ecoreFeature="ecore:EAttribute service.ecore#//Filter/methodName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,267 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
+-- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+-- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.ecore
+
+module PassImplicitUnitFields;
+create dummyWaf : WAF refining waf : WAF, orm : ORM;
+
+uses WebsiteHelpers;
+
+
+rule QueryParameterWithout {
+	from partialWaf : WAF!QueryParameter (partialWaf.parameter.oclIsUndefined())
+	to waf : WAF!QueryParameter (
+		parameter <-
+			if not partialWaf.refImmediateComposite().selection.oclIsUndefined() then
+				partialWaf.refImmediateComposite().selection.parameters->any(p | p.name = partialWaf.name)
+			else
+				OclUndefined
+			endif
+	)
+}
+
+rule QueryWithoutActuals {
+	from partialWaf : WAF!Query (partialWaf.parameters->isEmpty())
+	to waf : WAF!Query (
+		parameters <- Sequence{thisModule.implicitQueryParameter(partialWaf)}
+	)
+}
+
+lazy rule implicitQueryParameter {
+	from partialWaf : WAF!Query
+	to waf : WAF!QueryParameter (
+		formal <- partialWaf.filter.parameters->first(),
+		value <- partialWaf.filter.parameters->first().defaultValue
+	)
+}
+
+
+abstract rule DynamicUnit {
+	from partialWaf : WAF!DynamicUnit
+	to waf : WAF!DynamicUnit (
+	)
+}
+
+abstract rule SingletonUnit {
+	from partialWaf : WAF!SingletonUnit
+	to waf : WAF!SingletonUnit (
+		displayFields <-
+			if partialWaf.displayFields->notEmpty() or partialWaf.contentType.oclIsUndefined() then
+				partialWaf.displayFields
+			else
+				partialWaf.contentType.features
+					->select(f | if f.oclIsKindOf(Website!EntityFeature) then f.visible else true endif)
+					->select(f | f.oclIsKindOf(WAF!Attribute))
+					->collect(f | thisModule.implicitUnitAttribute(f))
+				->union(
+					if not waf.oclIsTypeOf(WAF!CreateUnit) then
+						Sequence{}
+					else
+						partialWaf.contentType.features
+							->select(f | if f.oclIsKindOf(ORM!EntityAssociation) then f.visible or f.container else true endif)
+							->select(f | f.oclIsKindOf(WAF!Association))
+							->collect(f | thisModule.implicitUnitAssociation(f))
+					endif)
+				endif
+	)
+}
+
+abstract rule CollectionUnit {
+	from partialWaf : WAF!CollectionUnit
+	to waf : WAF!CollectionUnit (
+		displayFields <-
+			if partialWaf.displayFields->notEmpty() or partialWaf.contentType->isEmpty() then
+				partialWaf.displayFields
+			else
+				partialWaf.contentType->first().features
+					->select(f | if f.oclIsKindOf(Website!EntityFeature) then f.visible else true endif)
+					->select(f | f.oclIsKindOf(WAF!Attribute))
+					->collect(f | thisModule.implicitUnitAttribute(f))
+				->union(
+					if not partialWaf.oclIsKindOf(WAF!IndexUnit) and not waf.oclIsTypeOf(WAF!CreateUnit) then
+						Sequence{}
+					else
+						partialWaf.contentType
+							->collect(e | e.features)->flatten()
+							->select(f | if f.oclIsKindOf(ORM!EntityAssociation) then f.visible or f.container else true endif)
+							->select(f | f.oclIsKindOf(WAF!Association))
+							->collect(f | thisModule.implicitUnitAssociation(f))
+					endif)
+				endif
+	)
+}
+
+lazy abstract rule implicitUnitFeature {
+	from partialWaf : WAF!EntityFeature
+	to waf : WAF!UnitFeature (
+		displayLabel <- partialWaf.displayLabel,
+		title <- partialWaf.name.createLabel(),
+		headerClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.headerClass
+					endif,
+		inputClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.inputClass
+					endif,
+		displayClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.displayClass
+					endif,
+		footerClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.footerClass
+					endif
+	)
+}
+
+--@extends implicitUnitFeature
+lazy rule implicitUnitAttribute {
+	from partialWaf : WAF!Attribute
+	to waf : WAF!UnitAttribute (
+		attribute <- partialWaf,
+		placeholder <- partialWaf.name.createLabel()
+	)
+	do {
+		waf;
+	}
+}
+
+--@extends implicitUnitFeature
+lazy rule implicitUnitAssociation {
+	from partialWaf : WAF!Association
+	to waf : WAF!UnitAssociation (
+		association <- partialWaf
+	)
+	do {
+		waf;
+	}
+}
+
+
+-- @extends DynamicUnit, SingletonUnit
+abstract rule EditUnit {
+	from partialWaf : WAF!EditUnit
+	to waf : WAF!EditUnit (
+	)
+}
+
+-- @extends EditUnit
+rule CreateUnit {
+	from partialWaf : WAF!CreateUnit
+	to waf : WAF!CreateUnit (
+	)
+}
+
+-- @extends EditUnit
+rule CreateUpdateUnit {
+	from partialWaf : WAF!CreateUpdateUnit
+	to waf : WAF!CreateUpdateUnit (
+	)
+}
+
+-- @extends EditUnit
+rule UpdateUnit {
+	from partialWaf : WAF!UpdateUnit
+	to waf : WAF!UpdateUnit (
+	)
+}
+
+-- @extends DynamicUnit
+abstract rule DataUnit {
+	from partialWaf : WAF!DataUnit
+	to waf : WAF!DataUnit (
+	)
+}
+
+-- @extends DataUnit, SingletonUnit
+rule DetailsUnit {
+	from partialWaf : WAF!DetailsUnit
+	to waf : WAF!DetailsUnit (
+	)
+}
+
+-- @extends DataUnit, CollectionUnit
+abstract rule IndexUnit {
+	from partialWaf : WAF!IndexUnit
+	to waf : WAF!IndexUnit (
+	)
+}
+
+-- @extends IndexUnit
+rule IndexGridUnit {
+	from partialWaf : WAF!IndexGridUnit
+	to waf : WAF!IndexGridUnit (
+	)
+}
+
+-- @extends IndexUnit
+rule IndexPageDirectionUnit {
+	from partialWaf : WAF!IndexPageDirectionUnit
+	to waf : WAF!IndexPageDirectionUnit (
+	)
+}
+
+-- @extends IndexUnit
+rule IndexLineDirectionUnit {
+	from partialWaf : WAF!IndexLineDirectionUnit
+	to waf : WAF!IndexLineDirectionUnit (
+	)
+}
+
+-- @extends DynamicUnit
+abstract rule ControlUnit {
+	from partialWaf : WAF!ControlUnit
+	to waf : WAF!ControlUnit (
+	)
+}
+
+-- @extends ControlUnit
+rule SearchUnit {
+	from partialWaf : WAF!SearchUnit
+	to waf : WAF!SearchUnit (
+	)
+}
+
+-- @extends EditUnit
+rule RegistrationUnit {
+	from partialWaf : WAF!RegistrationUnit
+	to waf : WAF!RegistrationUnit (
+	)
+}
+
+-- @extends ControlUnit
+rule LoginUnit {
+	from partialWaf : WAF!LoginUnit
+	to waf : WAF!LoginUnit (
+	)
+}
+
+-- @extends ControlUnit
+rule ForgottenPasswordUnit {
+	from partialWaf : WAF!ForgottenPasswordUnit
+	to waf : WAF!ForgottenPasswordUnit (
+	)
+}
