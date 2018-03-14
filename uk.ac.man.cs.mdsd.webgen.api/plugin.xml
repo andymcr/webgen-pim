@@ -10,7 +10,7 @@
       <!-- @generated api -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/api"
-            class="uk.ac.man.cs.mdsd.webgen.api.ApiPackage"
+            class="work.andycarpenter.webgen.pims.api.ApiPackage"
             genModel="model/api.genmodel"/>
    </extension>
 

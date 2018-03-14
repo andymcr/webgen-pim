@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: uk.ac.man.cs.mdsd.webgen.api,
- uk.ac.man.cs.mdsd.webgen.api.impl,
- uk.ac.man.cs.mdsd.webgen.api.util
+Export-Package: work.andycarpenter.webgen.pims.api,
+ work.andycarpenter.webgen.pims.api.impl,
+ work.andycarpenter.webgen.pims.api.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  work.andycarpenter.webgen.pims.base;visibility:=reexport,

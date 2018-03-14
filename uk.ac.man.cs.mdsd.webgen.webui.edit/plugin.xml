@@ -10,7 +10,7 @@
       <!-- @generated webui -->
       <factory
             uri="http://cs.man.ac.uk/mdsd/webgen/webui"
-            class="uk.ac.man.cs.mdsd.webgen.webui.provider.WebuiItemProviderAdapterFactory"
+            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,13 +23,12 @@
       <!-- @generated webui -->
       <extender
             uri="http://cs.man.ac.uk/mdsd/webgen/expression"
-            class="uk.ac.man.cs.mdsd.webgen.webui.provider.WebuiItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
+            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
       <extender
             uri="http://cs.man.ac.uk/mdsd/webgen/persistence"
-            class="uk.ac.man.cs.mdsd.webgen.webui.provider.WebuiItemProviderAdapterFactory$PersistenceChildCreationExtender"/>
+            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$PersistenceChildCreationExtender"/>
       <extender
             uri="http://cs.man.ac.uk/mdsd/webgen/service"
-            class="uk.ac.man.cs.mdsd.webgen.webui.provider.WebuiItemProviderAdapterFactory$ServiceChildCreationExtender"/>
+            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$ServiceChildCreationExtender"/>
    </extension>
-
 </plugin>

@@ -20,19 +20,19 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
-        eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.service/model/service.ecore#//Service"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Service"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enableDefaultGetAll" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enableDefaultGetOne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="getAll" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.service/model/service.ecore#//Selection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="getOne" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="getAll" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="getOne" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selections" upperBound="-1"
         eType="#//ResourceSelection" containment="true" eOpposite="#//ResourceSelection/parentResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultSerializationGroups"
-        upperBound="-1" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//SerializationGroup"/>
+        upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//SerializationGroup"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="childResources" upperBound="-1"
         eType="#//Resource" containment="true" eOpposite="#//Resource/parentResource"/>
   </eClassifiers>
@@ -46,10 +46,10 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" lowerBound="1"
-        eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.service/model/service.ecore#//Selection"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultSerializationGroups"
-        upperBound="-1" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//SerializationGroup"/>
+        upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//SerializationGroup"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -12,7 +12,7 @@
       <!-- @generated website -->
       <factory
             uri="http://www.cs.man.ac.uk/mdsd/2010/Website"
-            class="uk.ac.man.cs.mdsd.webgen.website.provider.WebsiteItemProviderAdapterFactory"
+            class="work.andycarpenter.webgen.pims.website.provider.WebsiteItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

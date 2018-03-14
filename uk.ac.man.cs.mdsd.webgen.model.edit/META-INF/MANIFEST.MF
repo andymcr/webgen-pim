@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: work.andycarpenter.webgen.pims.model.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: uk.ac.man.cs.mdsd.webgen.website.provider.WebsiteEditPlugin$Implementation
+Bundle-Activator: work.andycarpenter.webgen.pims.website.provider.WebsiteEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: uk.ac.man.cs.mdsd.webgen.website.provider
+Export-Package: work.andycarpenter.webgen.pims.website.provider
 Require-Bundle: org.eclipse.core.runtime,
  work.andycarpenter.webgen.pims.expression;visibility:=reexport,
  work.andycarpenter.webgen.pims.model;visibility:=reexport,

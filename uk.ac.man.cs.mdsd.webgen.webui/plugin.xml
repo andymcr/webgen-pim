@@ -10,7 +10,7 @@
       <!-- @generated webui -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/webui"
-            class="uk.ac.man.cs.mdsd.webgen.webui.WebuiPackage"
+            class="work.andycarpenter.webgen.pims.webui.WebuiPackage"
             genModel="model/webui.genmodel"/>
    </extension>
 
