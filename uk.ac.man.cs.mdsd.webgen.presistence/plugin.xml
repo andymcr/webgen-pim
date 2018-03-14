@@ -10,7 +10,7 @@
       <!-- @generated persistence -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/persistence"
-            class="uk.ac.man.cs.mdsd.webgen.persistence.PersistencePackage"
+            class="work.andycarpenter.webgen.pims.persistence.PersistencePackage"
             genModel="model/persistence.genmodel"/>
    </extension>
 

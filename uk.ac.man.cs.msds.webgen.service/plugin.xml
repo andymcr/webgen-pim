@@ -10,7 +10,7 @@
       <!-- @generated service -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/service"
-            class="uk.ac.man.cs.mdsd.webgen.service.ServicePackage"
+            class="work.andycarpenter.webgen.pims.service.ServicePackage"
             genModel="model/service.genmodel"/>
    </extension>
 

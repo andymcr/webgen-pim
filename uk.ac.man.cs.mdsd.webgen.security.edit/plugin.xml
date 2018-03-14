@@ -10,7 +10,7 @@
       <!-- @generated security -->
       <factory
             uri="http://cs.man.ac.uk/mdsd/webgen/security"
-            class="uk.ac.man.cs.mdsd.webgen.security.provider.SecurityItemProviderAdapterFactory"
+            class="work.andycarpenter.webgen.pims.security.provider.SecurityItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

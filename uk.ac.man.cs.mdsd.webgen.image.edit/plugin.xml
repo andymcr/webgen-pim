@@ -10,7 +10,7 @@
       <!-- @generated image -->
       <factory
             uri="http://cs.man.ac.uk/mdsd/webgen/image"
-            class="uk.ac.man.cs.mdsd.webgen.image.provider.ImageItemProviderAdapterFactory"
+            class="work.andycarpenter.webgen.pims.image.provider.ImageItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

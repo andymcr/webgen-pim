@@ -10,7 +10,7 @@
       <!-- @generated base -->
       <factory
             uri="http://cs.man.ac.uk/mdsd/webgen/base"
-            class="uk.ac.man.cs.mdsd.webgen.base.provider.BaseItemProviderAdapterFactory"
+            class="work.andycarpenter.webgen.pims.base.provider.BaseItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,7 +23,6 @@
       <!-- @generated base -->
       <extender
             uri="http://cs.man.ac.uk/mdsd/webgen/expression"
-            class="uk.ac.man.cs.mdsd.webgen.base.provider.BaseItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
+            class="work.andycarpenter.webgen.pims.base.provider.BaseItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
    </extension>
-
 </plugin>

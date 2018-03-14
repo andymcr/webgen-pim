@@ -10,7 +10,7 @@
       <!-- @generated base -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/base"
-            class="uk.ac.man.cs.mdsd.webgen.base.BasePackage"
+            class="work.andycarpenter.webgen.pims.base.BasePackage"
             genModel="model/base.genmodel"/>
    </extension>
 

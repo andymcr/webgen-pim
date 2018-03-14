@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: uk.ac.man.cs.mdsd.webgen.image,
- uk.ac.man.cs.mdsd.webgen.image.impl,
- uk.ac.man.cs.mdsd.webgen.image.util
+Export-Package: work.andycarpenter.webgen.pims.image,
+ work.andycarpenter.webgen.pims.image.impl,
+ work.andycarpenter.webgen.pims.image.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  work.andycarpenter.webgen.pims.base;visibility:=reexport,

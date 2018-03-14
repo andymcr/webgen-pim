@@ -25,9 +25,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="security" lowerBound="1"
         eType="#//Security" eOpposite="#//Security/authentication"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="user" ordered="false" lowerBound="1"
-        eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//EntityOrView"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userKey" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//Attribute"/>
+        lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loginLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Login"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoutLabel" ordered="false"
@@ -46,7 +46,7 @@
       <details key="captchaRequiresKeys" value="-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()&#xD;&#xA;true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" ordered="false"
-        eType="ecore:EClass ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.ecore#//EntityOrView"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationKey" lowerBound="1"
         eType="#//AuthenticationKeyTypes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" ordered="false"

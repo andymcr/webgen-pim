@@ -10,7 +10,7 @@
       <!-- @generated image -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/image"
-            class="uk.ac.man.cs.mdsd.webgen.image.ImagePackage"
+            class="work.andycarpenter.webgen.pims.image.ImagePackage"
             genModel="model/image.genmodel"/>
    </extension>
 

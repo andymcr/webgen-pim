@@ -10,7 +10,7 @@
       <!-- @generated expression -->
       <package
             uri="http://cs.man.ac.uk/mdsd/webgen/expression"
-            class="uk.ac.man.cs.mdsd.webgen.expression.ExpressionPackage"
+            class="work.andycarpenter.webgen.pims.expression.ExpressionPackage"
             genModel="model/expression.genmodel"/>
    </extension>
 

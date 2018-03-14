@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/uk.ac.man.cs.mdsd.webgen.security/src" modelPluginID="uk.ac.man.cs.mdsd.webgen.security"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.security/src" modelPluginID="work.andycarpenter.webgen.pims.security"
     modelName="Security" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    language="" usedGenPackages="../../uk.ac.man.cs.mdsd.webgen.base/model/base.genmodel#//base ../../uk.ac.man.cs.mdsd.webgen.expression/model/expression.genmodel#//expression ../../uk.ac.man.cs.mdsd.webgen.presistence/model/persistence.genmodel#//persistence"
+    language="" usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression ../../work.andycarpenter.webgen.pims.presistence/model/persistence.genmodel#//persistence"
     operationReflection="true" importOrganizing="true">
   <foreignModel>security.ecore</foreignModel>
-  <genPackages prefix="Security" basePackage="uk.ac.man.cs.mdsd.webgen" ecorePackage="security.ecore#/">
+  <genPackages prefix="Security" basePackage="work.andycarpenter.webgen.pims" ecorePackage="security.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="security.ecore#//AuthenticationKeyTypes">
       <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationKeyTypes/Email"/>
       <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationKeyTypes/ScreenName"/>
