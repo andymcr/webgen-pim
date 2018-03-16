@@ -76,7 +76,7 @@ public class NewWebgenProjectOperation extends WorkspaceModifyOperation {
 
 		createFolders(projectHandle, folders);
 
-		final Bundle bundle = Platform.getBundle("uk.ac.man.cs.mdsd.webgen.ui");
+		final Bundle bundle = Platform.getBundle("work.andycarpenter.webgen.ui");
 		switch (framework) {
 			case CODE_IGNITER :
 				resourcesCodeIgniter(bundle);

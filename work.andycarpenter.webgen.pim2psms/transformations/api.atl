@@ -1,8 +1,8 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path Service=/uk.ac.man.cs.mdsd.service.model/model/Service.xecore
--- @path API=/uk.ac.man.cs.mdsd.api.model/model/api.xecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path Service=/work.andycarpenter.psms.service/model/Service.xecore
+-- @path API=/work.andycarpenter.psms.rest/model/api.xecore
 
 module API;
 create api : API from website : Website, service : Service;

@@ -565,6 +565,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.UnitLabel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnitLabelItemProvider unitLabelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.UnitLabel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnitLabelAdapter() {
+		if (unitLabelItemProvider == null) {
+			unitLabelItemProvider = new UnitLabelItemProvider(this);
+		}
+
+		return unitLabelItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DataTypeField} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

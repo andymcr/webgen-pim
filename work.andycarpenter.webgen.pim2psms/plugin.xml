@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
-            id="uk.ac.man.cs.mdsd.webgen.pim2psms.websiteModel">
+            id="work.andycarpenter.webgen.pim2psms.websiteModel">
          <iterate
                ifEmpty="false"
                operator="and">
@@ -26,7 +26,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.ui.popup.any">
          <command
-               commandId="uk.ac.man.cs.mdsd.webgen.pim2psms.transformation"
+               commandId="work.andycarpenter.webgen.pim2psms.transformation"
                label="Generate WAF and ORM PSMs"
                style="push">
             <visibleWhen
@@ -34,7 +34,7 @@
                <with
                      variable="activeMenuSelection">
                   <reference
-                        definitionId="uk.ac.man.cs.mdsd.webgen.pim2psms.websiteModel">
+                        definitionId="work.andycarpenter.webgen.pim2psms.websiteModel">
                   </reference>
                </with>
             </visibleWhen>
@@ -45,15 +45,15 @@
          point="org.eclipse.ui.commands">
       <command
             description="Transform website model to JSF and ORM models"
-            id="uk.ac.man.cs.mdsd.webgen.pim2psms.transformation"
+            id="work.andycarpenter.webgen.pim2psms.transformation"
             name="transform">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="uk.ac.man.cs.mdsd.webgen.pim2psms.TransformationHandler"
-            commandId="uk.ac.man.cs.mdsd.webgen.pim2psms.transformation">
+            class="work.andycarpenter.webgen.pim2psms.TransformationHandler"
+            commandId="work.andycarpenter.webgen.pim2psms.transformation">
       </handler>
    </extension>
 

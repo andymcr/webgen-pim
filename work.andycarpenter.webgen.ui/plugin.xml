@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <wizard
-            class="uk.ac.man.cs.mdsd.webgen.ui.wizards.NewWebgenProjectWizard"
-            id="uk.ac.man.cs.mdsd.webgen.ui.create_project"
+            class="work.andycarpenter.webgen.ui.wizards.NewWebgenProjectWizard"
+            id="work.andycarpenter.webgen.ui.create_project"
             name="New Webgen Project"
             project="true">
       </wizard>

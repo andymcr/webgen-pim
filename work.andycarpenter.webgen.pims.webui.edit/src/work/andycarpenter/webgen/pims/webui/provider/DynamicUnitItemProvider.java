@@ -351,6 +351,11 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS,
+				 WebuiFactory.eINSTANCE.createUnitLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS,
 				 WebuiFactory.eINSTANCE.createDataTypeField()));
 
 		newChildDescriptors.add

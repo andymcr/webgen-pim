@@ -231,6 +231,12 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//FeaturePathLabel/label"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//UnitLabel">
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference webui.ecore#//UnitLabel/label"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="Model"
+          ecoreFeature="ecore:EAttribute webui.ecore#//UnitLabel/name"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InterfaceField">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//InterfaceField/required"/>
       <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute webui.ecore#//InterfaceField/defaultValue"/>

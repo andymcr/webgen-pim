@@ -94,7 +94,7 @@ public class TransformUsingEmftVm {
 	protected ModuleResolver getModuleResolver() {
 		if (moduleResolver == null) {
 			moduleResolver = new DefaultModuleResolver(
-				"platform:/plugin/uk.ac.man.cs.mdsd.webgen.pim2psms/transformations/",
+				"platform:/plugin/work.andycarpenter.webgen.pim2psms/transformations/",
 				resourceSet);
 		}
 

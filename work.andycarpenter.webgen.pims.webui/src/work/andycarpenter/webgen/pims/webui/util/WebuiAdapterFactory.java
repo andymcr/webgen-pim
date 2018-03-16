@@ -190,6 +190,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createFeaturePathLabelAdapter();
 			}
 			@Override
+			public Adapter caseUnitLabel(UnitLabel object) {
+				return createUnitLabelAdapter();
+			}
+			@Override
 			public Adapter caseInterfaceField(InterfaceField object) {
 				return createInterfaceFieldAdapter();
 			}
@@ -756,6 +760,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFeaturePathLabelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.UnitLabel <em>Unit Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitLabel
+	 * @generated
+	 */
+	public Adapter createUnitLabelAdapter() {
 		return null;
 	}
 

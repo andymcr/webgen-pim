@@ -77,6 +77,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: return createFeaturePathAttribute();
 			case WebuiPackage.FEATURE_PATH_ASSOCIATION: return createFeaturePathAssociation();
 			case WebuiPackage.FEATURE_PATH_LABEL: return createFeaturePathLabel();
+			case WebuiPackage.UNIT_LABEL: return createUnitLabel();
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
 			case WebuiPackage.DATE_FIELD: return createDateField();
 			case WebuiPackage.CAPTCHA_FIELD: return createCaptchaField();
@@ -347,6 +348,16 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public FeaturePathLabel createFeaturePathLabel() {
 		FeaturePathLabelImpl featurePathLabel = new FeaturePathLabelImpl();
 		return featurePathLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnitLabel createUnitLabel() {
+		UnitLabelImpl unitLabel = new UnitLabelImpl();
+		return unitLabel;
 	}
 
 	/**

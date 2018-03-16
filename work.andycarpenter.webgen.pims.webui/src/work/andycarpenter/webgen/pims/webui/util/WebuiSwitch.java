@@ -298,6 +298,13 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.UNIT_LABEL: {
+				UnitLabel unitLabel = (UnitLabel)theEObject;
+				T result = caseUnitLabel(unitLabel);
+				if (result == null) result = caseUnitField(unitLabel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.INTERFACE_FIELD: {
 				InterfaceField interfaceField = (InterfaceField)theEObject;
 				T result = caseInterfaceField(interfaceField);
@@ -1061,6 +1068,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFeaturePathLabel(FeaturePathLabel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit Label</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit Label</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnitLabel(UnitLabel object) {
 		return null;
 	}
 

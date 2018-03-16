@@ -11,13 +11,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://www.cs.man.ac.uk/mdsd/2010/Website"
-            class="uk.ac.man.cs.mdsd.webgen.website.WebsitePackage"
-            genModel="model/website.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated website -->
       <package
             uri="http://www.cs.man.ac.uk/mdsd/2010/Website"

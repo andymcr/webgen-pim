@@ -1,8 +1,8 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
--- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.ecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/orm.ecore
+-- @path WAF=/work.andycarpenter.psms.waf/model/Waf.ecore
 
 module PassAuthentication;
 create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM;

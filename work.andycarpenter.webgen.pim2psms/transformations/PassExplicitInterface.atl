@@ -1,8 +1,8 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.xecore
--- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.xecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/orm.xecore
+-- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xecore
 
 module PassExplicitInterface;
 create waf : WAF from website : Website, orm : ORM, service : Service, api : API;
@@ -679,6 +679,14 @@ rule FeaturePathAssociation {
 rule FeaturePathLabel {
 	from website : Website!FeaturePathLabel
 	to waf : WAF!FeaturePathLabel (
+		label <- website.label.findOrmLabel()
+	)
+}
+
+-- @extends UnitField
+rule UnitLabel {
+	from website : Website!UnitLabel
+	to waf : WAF!UnitLabel (
 		label <- website.label.findOrmLabel()
 	)
 }

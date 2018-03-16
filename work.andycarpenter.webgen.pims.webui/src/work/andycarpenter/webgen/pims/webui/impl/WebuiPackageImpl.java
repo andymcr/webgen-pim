@@ -84,6 +84,7 @@ import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.UnitField;
+import work.andycarpenter.webgen.pims.webui.UnitLabel;
 import work.andycarpenter.webgen.pims.webui.UnitSupportAction;
 import work.andycarpenter.webgen.pims.webui.UpdateUnit;
 import work.andycarpenter.webgen.pims.webui.WebUI;
@@ -301,6 +302,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass featurePathLabelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unitLabelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1869,6 +1877,33 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	public EReference getFeaturePathLabel_Label() {
 		return (EReference)featurePathLabelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnitLabel() {
+		return unitLabelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnitLabel_Label() {
+		return (EReference)unitLabelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnitLabel_Name() {
+		return (EAttribute)unitLabelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3577,6 +3612,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(featurePathLabelEClass, FEATURE_PATH_LABEL__NAME);
 		createEReference(featurePathLabelEClass, FEATURE_PATH_LABEL__LABEL);
 
+		unitLabelEClass = createEClass(UNIT_LABEL);
+		createEReference(unitLabelEClass, UNIT_LABEL__LABEL);
+		createEAttribute(unitLabelEClass, UNIT_LABEL__NAME);
+
 		interfaceFieldEClass = createEClass(INTERFACE_FIELD);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__REQUIRED);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__DEFAULT_VALUE);
@@ -3843,6 +3882,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		featurePathAssociationEClass.getESuperTypes().add(this.getFeaturePath());
 		featurePathAssociationEClass.getESuperTypes().add(this.getAssociationReference());
 		featurePathLabelEClass.getESuperTypes().add(this.getFeaturePath());
+		unitLabelEClass.getESuperTypes().add(this.getUnitField());
 		interfaceFieldEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		interfaceFieldEClass.getESuperTypes().add(this.getUnitField());
 		dataTypeFieldEClass.getESuperTypes().add(this.getInterfaceField());
@@ -4051,6 +4091,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(featurePathLabelEClass, FeaturePathLabel.class, "FeaturePathLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFeaturePathLabel_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeaturePathLabel.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 		initEReference(getFeaturePathLabel_Label(), thePersistencePackage.getModelLabel(), null, "label", null, 1, 1, FeaturePathLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unitLabelEClass, UnitLabel.class, "UnitLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitLabel_Label(), thePersistencePackage.getModelLabel(), null, "label", null, 1, 1, UnitLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitLabel_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnitLabel.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(interfaceFieldEClass, InterfaceField.class, "InterfaceField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterfaceField_Required(), ecorePackage.getEBoolean(), "required", null, 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4492,6 +4536,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   });	
 		addAnnotation
 		  (getFeaturePathLabel_Name(), 
+		   source, 
+		   new String[] {
+			 "derivation", "if label.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tlabel.name\r\nendif\r\n"
+		   });	
+		addAnnotation
+		  (getUnitLabel_Name(), 
 		   source, 
 		   new String[] {
 			 "derivation", "if label.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tlabel.name\r\nendif\r\n"

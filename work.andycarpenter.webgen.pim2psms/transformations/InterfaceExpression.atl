@@ -1,7 +1,7 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.xecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xecore
 
 module InterfaceExpression;
 create waf : WAF from website : Website;

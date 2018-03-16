@@ -15,9 +15,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteModelWizardID"
+            id="work.andycarpenter.webgen.pims.website.presentation.WebsiteModelWizardID"
             name="%_UI_WebsiteModelWizard_label"
-            class="uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteModelWizard"
+            class="work.andycarpenter.webgen.pims.website.presentation.WebsiteModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/WebsiteModelFile.gif">
          <description>%_UI_WebsiteModelWizard_description</description>
@@ -27,12 +27,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteEditorID"
+            id="work.andycarpenter.webgen.pims.website.presentation.WebsiteEditorID"
             name="%_UI_WebsiteEditor_label"
             icon="icons/full/obj16/WebsiteModelFile.gif"
             extensions="website"
-            class="uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteEditor"
-            contributorClass="uk.ac.man.cs.mdsd.webgen.website.presentation.WebsiteActionBarContributor">
+            class="work.andycarpenter.webgen.pims.website.presentation.WebsiteEditor"
+            contributorClass="work.andycarpenter.webgen.pims.website.presentation.WebsiteActionBarContributor">
       </editor>
    </extension>
 
