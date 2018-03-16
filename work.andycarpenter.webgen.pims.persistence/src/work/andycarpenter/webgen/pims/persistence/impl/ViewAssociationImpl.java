@@ -45,7 +45,8 @@ import work.andycarpenter.webgen.pims.persistence.ViewFeature;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getPlaceholder <em>Placeholder</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getNullDisplayValue <em>Null Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#isEncodeUriKey <em>Encode Uri Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl#getHeaderClass <em>Header Class</em>}</li>
@@ -146,24 +147,44 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 	protected String placeholder = PLACEHOLDER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The default value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NULL_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nullDisplayValue = NULL_DISPLAY_VALUE_EDEFAULT;
+	protected String defaultDisplayValue = DEFAULT_DISPLAY_VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emptyDisplayValue = EMPTY_DISPLAY_VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isEncodeUriKey() <em>Encode Uri Key</em>}' attribute.
@@ -483,8 +504,8 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNullDisplayValue() {
-		return nullDisplayValue;
+	public String getDefaultDisplayValue() {
+		return defaultDisplayValue;
 	}
 
 	/**
@@ -492,11 +513,32 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNullDisplayValue(String newNullDisplayValue) {
-		String oldNullDisplayValue = nullDisplayValue;
-		nullDisplayValue = newNullDisplayValue;
+	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
+		String oldDefaultDisplayValue = defaultDisplayValue;
+		defaultDisplayValue = newDefaultDisplayValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE, oldNullDisplayValue, nullDisplayValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE, oldDefaultDisplayValue, defaultDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmptyDisplayValue() {
+		return emptyDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
+		String oldEmptyDisplayValue = emptyDisplayValue;
+		emptyDisplayValue = newEmptyDisplayValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
 	}
 
 	/**
@@ -871,8 +913,10 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 				return isCollectionOrmAllowRemove();
 			case PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER:
 				return getPlaceholder();
-			case PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE:
-				return getNullDisplayValue();
+			case PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE:
+				return getDefaultDisplayValue();
+			case PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE:
+				return getEmptyDisplayValue();
 			case PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY:
 				return isEncodeUriKey();
 			case PersistencePackage.VIEW_ASSOCIATION__SERIALIZATION_GROUPS:
@@ -929,8 +973,11 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 			case PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER:
 				setPlaceholder((String)newValue);
 				return;
-			case PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE:
-				setNullDisplayValue((String)newValue);
+			case PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue((String)newValue);
+				return;
+			case PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue((String)newValue);
 				return;
 			case PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY:
 				setEncodeUriKey((Boolean)newValue);
@@ -994,8 +1041,11 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 			case PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER:
 				setPlaceholder(PLACEHOLDER_EDEFAULT);
 				return;
-			case PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE:
-				setNullDisplayValue(NULL_DISPLAY_VALUE_EDEFAULT);
+			case PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
+				return;
+			case PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
 				return;
 			case PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY:
 				setEncodeUriKey(ENCODE_URI_KEY_EDEFAULT);
@@ -1053,8 +1103,10 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 				return collectionOrmAllowRemove != COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
 			case PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER:
 				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
-			case PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE:
-				return NULL_DISPLAY_VALUE_EDEFAULT == null ? nullDisplayValue != null : !NULL_DISPLAY_VALUE_EDEFAULT.equals(nullDisplayValue);
+			case PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE:
+				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
+			case PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE:
+				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
 			case PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY:
 				return encodeUriKey != ENCODE_URI_KEY_EDEFAULT;
 			case PersistencePackage.VIEW_ASSOCIATION__SERIALIZATION_GROUPS:
@@ -1100,7 +1152,8 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 				case PersistencePackage.VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
 				case PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER: return PersistencePackage.FEATURE__PLACEHOLDER;
-				case PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE: return PersistencePackage.FEATURE__NULL_DISPLAY_VALUE;
+				case PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE: return PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE;
+				case PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE: return PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY: return PersistencePackage.FEATURE__ENCODE_URI_KEY;
 				case PersistencePackage.VIEW_ASSOCIATION__SERIALIZATION_GROUPS: return PersistencePackage.FEATURE__SERIALIZATION_GROUPS;
 				case PersistencePackage.VIEW_ASSOCIATION__HEADER_CLASS: return PersistencePackage.FEATURE__HEADER_CLASS;
@@ -1142,7 +1195,8 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE;
 				case PersistencePackage.FEATURE__PLACEHOLDER: return PersistencePackage.VIEW_ASSOCIATION__PLACEHOLDER;
-				case PersistencePackage.FEATURE__NULL_DISPLAY_VALUE: return PersistencePackage.VIEW_ASSOCIATION__NULL_DISPLAY_VALUE;
+				case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE: return PersistencePackage.VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE;
+				case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE: return PersistencePackage.VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.FEATURE__ENCODE_URI_KEY: return PersistencePackage.VIEW_ASSOCIATION__ENCODE_URI_KEY;
 				case PersistencePackage.FEATURE__SERIALIZATION_GROUPS: return PersistencePackage.VIEW_ASSOCIATION__SERIALIZATION_GROUPS;
 				case PersistencePackage.FEATURE__HEADER_CLASS: return PersistencePackage.VIEW_ASSOCIATION__HEADER_CLASS;
@@ -1189,8 +1243,10 @@ public class ViewAssociationImpl extends NamedDisplayElementImpl implements View
 		result.append(collectionOrmAllowRemove);
 		result.append(", placeholder: ");
 		result.append(placeholder);
-		result.append(", nullDisplayValue: ");
-		result.append(nullDisplayValue);
+		result.append(", defaultDisplayValue: ");
+		result.append(defaultDisplayValue);
+		result.append(", emptyDisplayValue: ");
+		result.append(emptyDisplayValue);
 		result.append(", encodeUriKey: ");
 		result.append(encodeUriKey);
 		result.append(", headerClass: ");

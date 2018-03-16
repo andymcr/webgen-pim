@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getPlaceholder <em>Placeholder</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getNullDisplayValue <em>Null Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isEncodeUriKey <em>Encode Uri Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getSerializationGroups <em>Serialization Groups</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getHeaderClass <em>Header Class</em>}</li>
@@ -139,30 +140,56 @@ public interface Feature extends EObject {
 	void setPlaceholder(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Null Display Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Null Display Value</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Default Display Value</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Null Display Value</em>' attribute.
-	 * @see #setNullDisplayValue(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_NullDisplayValue()
+	 * @return the value of the '<em>Default Display Value</em>' attribute.
+	 * @see #setDefaultDisplayValue(String)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_DefaultDisplayValue()
 	 * @model
 	 * @generated
 	 */
-	String getNullDisplayValue();
+	String getDefaultDisplayValue();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getNullDisplayValue <em>Null Display Value</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getDefaultDisplayValue <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Null Display Value</em>' attribute.
-	 * @see #getNullDisplayValue()
+	 * @param value the new value of the '<em>Default Display Value</em>' attribute.
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 */
-	void setNullDisplayValue(String value);
+	void setDefaultDisplayValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Empty Display Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Empty Display Value</em>' attribute.
+	 * @see #setEmptyDisplayValue(String)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_EmptyDisplayValue()
+	 * @model
+	 * @generated
+	 */
+	String getEmptyDisplayValue();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getEmptyDisplayValue <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Empty Display Value</em>' attribute.
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 */
+	void setEmptyDisplayValue(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Encode Uri Key</b></em>' attribute.

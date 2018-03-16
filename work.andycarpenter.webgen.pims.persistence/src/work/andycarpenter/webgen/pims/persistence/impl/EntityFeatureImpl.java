@@ -39,7 +39,8 @@ import work.andycarpenter.webgen.pims.persistence.isHasChoices;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getPlaceholder <em>Placeholder</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getNullDisplayValue <em>Null Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isEncodeUriKey <em>Encode Uri Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
@@ -141,24 +142,44 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	protected String placeholder = PLACEHOLDER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The default value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NULL_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nullDisplayValue = NULL_DISPLAY_VALUE_EDEFAULT;
+	protected String defaultDisplayValue = DEFAULT_DISPLAY_VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emptyDisplayValue = EMPTY_DISPLAY_VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isEncodeUriKey() <em>Encode Uri Key</em>}' attribute.
@@ -538,8 +559,8 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNullDisplayValue() {
-		return nullDisplayValue;
+	public String getDefaultDisplayValue() {
+		return defaultDisplayValue;
 	}
 
 	/**
@@ -547,11 +568,32 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNullDisplayValue(String newNullDisplayValue) {
-		String oldNullDisplayValue = nullDisplayValue;
-		nullDisplayValue = newNullDisplayValue;
+	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
+		String oldDefaultDisplayValue = defaultDisplayValue;
+		defaultDisplayValue = newDefaultDisplayValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE, oldNullDisplayValue, nullDisplayValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE, oldDefaultDisplayValue, defaultDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmptyDisplayValue() {
+		return emptyDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
+		String oldEmptyDisplayValue = emptyDisplayValue;
+		emptyDisplayValue = newEmptyDisplayValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
 	}
 
 	/**
@@ -940,8 +982,10 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return isCollectionOrmAllowRemove();
 			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
 				return getPlaceholder();
-			case PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE:
-				return getNullDisplayValue();
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return getDefaultDisplayValue();
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				return getEmptyDisplayValue();
 			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
 				return isEncodeUriKey();
 			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
@@ -997,8 +1041,11 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
 				setPlaceholder((String)newValue);
 				return;
-			case PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE:
-				setNullDisplayValue((String)newValue);
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue((String)newValue);
 				return;
 			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
 				setEncodeUriKey((Boolean)newValue);
@@ -1070,8 +1117,11 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
 				setPlaceholder(PLACEHOLDER_EDEFAULT);
 				return;
-			case PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE:
-				setNullDisplayValue(NULL_DISPLAY_VALUE_EDEFAULT);
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
 				return;
 			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
 				setEncodeUriKey(ENCODE_URI_KEY_EDEFAULT);
@@ -1138,8 +1188,10 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return collectionOrmAllowRemove != COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
 			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
 				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
-			case PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE:
-				return NULL_DISPLAY_VALUE_EDEFAULT == null ? nullDisplayValue != null : !NULL_DISPLAY_VALUE_EDEFAULT.equals(nullDisplayValue);
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
 			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
 				return encodeUriKey != ENCODE_URI_KEY_EDEFAULT;
 			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
@@ -1187,7 +1239,8 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
 				case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER: return PersistencePackage.FEATURE__PLACEHOLDER;
-				case PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE: return PersistencePackage.FEATURE__NULL_DISPLAY_VALUE;
+				case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE: return PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE;
+				case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE: return PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY: return PersistencePackage.FEATURE__ENCODE_URI_KEY;
 				case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS: return PersistencePackage.FEATURE__SERIALIZATION_GROUPS;
 				case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS: return PersistencePackage.FEATURE__HEADER_CLASS;
@@ -1212,7 +1265,8 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
 				case PersistencePackage.FEATURE__PLACEHOLDER: return PersistencePackage.ENTITY_FEATURE__PLACEHOLDER;
-				case PersistencePackage.FEATURE__NULL_DISPLAY_VALUE: return PersistencePackage.ENTITY_FEATURE__NULL_DISPLAY_VALUE;
+				case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE: return PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
+				case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE: return PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.FEATURE__ENCODE_URI_KEY: return PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY;
 				case PersistencePackage.FEATURE__SERIALIZATION_GROUPS: return PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS;
 				case PersistencePackage.FEATURE__HEADER_CLASS: return PersistencePackage.ENTITY_FEATURE__HEADER_CLASS;
@@ -1242,8 +1296,10 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 		result.append(collectionOrmAllowRemove);
 		result.append(", placeholder: ");
 		result.append(placeholder);
-		result.append(", nullDisplayValue: ");
-		result.append(nullDisplayValue);
+		result.append(", defaultDisplayValue: ");
+		result.append(defaultDisplayValue);
+		result.append(", emptyDisplayValue: ");
+		result.append(emptyDisplayValue);
 		result.append(", encodeUriKey: ");
 		result.append(encodeUriKey);
 		result.append(", headerClass: ");

@@ -372,6 +372,7 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		boolean qualify =
 			childFeature == WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN ||
 			childFeature == WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE ||
+			childFeature == WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN ||
 			childFeature == WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE;
 
 		if (qualify) {

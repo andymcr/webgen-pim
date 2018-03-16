@@ -157,21 +157,40 @@ helper context Website!InterfaceField def: validationPattern() : String
 			endif
 		endif;
 
-helper context Website!UnitFeature def: nullDisplayValue() : String
-	= if not self.nullDisplayValue.oclIsUndefined() and self.nullDisplayValue <> '' then
-			self.nullDisplayValue
+helper context Website!UnitFeature def: defaultDisplayValue() : String
+	= if not self.defaultDisplayValue.oclIsUndefined() and self.defaultDisplayValue <> '' then
+			self.defaultDisplayValue
 		else
 			if self.oclIsTypeOf(Website!UnitElement) then
-				if not self.attribute.nullDisplayValue.oclIsUndefined() and self.attribute.nullDisplayValue <> '' then
-					self.attribute.nullDisplayValue
+				if not self.attribute.defaultDisplayValue.oclIsUndefined() and self.attribute.defaultDisplayValue <> '' then
+					self.attribute.defaultDisplayValue
 				else
-					self.nullDisplayValue
+					self.defaultDisplayValue
 				endif
 			else
-				if not self.association.nullDisplayValue.oclIsUndefined() and self.association.nullDisplayValue <> '' then
-					self.association.nullDisplayValue
+				if not self.association.defaultDisplayValue.oclIsUndefined() and self.association.defaultDisplayValue <> '' then
+					self.association.defaultDisplayValue
 				else
-					self.nullDisplayValue
+					self.defaultDisplayValue
+				endif
+			endif
+		endif;
+
+helper context Website!UnitFeature def: emptyDisplayValue() : String
+	= if not self.emptyDisplayValue.oclIsUndefined() and self.emptyDisplayValue <> '' then
+			self.emptyDisplayValue
+		else
+			if self.oclIsTypeOf(Website!UnitElement) then
+				if not self.attribute.emptyDisplayValue.oclIsUndefined() and self.attribute.emptyDisplayValue <> '' then
+					self.attribute.emptyDisplayValue
+				else
+					self.emptyDisplayValue
+				endif
+			else
+				if not self.association.emptyDisplayValue.oclIsUndefined() and self.association.emptyDisplayValue <> '' then
+					self.association.emptyDisplayValue
+				else
+					self.emptyDisplayValue
 				endif
 			endif
 		endif;
@@ -495,7 +514,9 @@ abstract rule UnitFeature {
 		forcedValue <- website.forcedValue,
 		collectionUiAllowAdd <- website.collectionUiAllowAdd,
 		collectionUiAllowRemove <- website.collectionUiAllowRemove,
-		nullDisplayValue <- website.nullDisplayValue(),
+		defaultDisplayValue <- website.defaultDisplayValue(),
+		displayDefaultWhen <- website.displayDefaultWhen,
+		emptyDisplayValue <- website.emptyDisplayValue(),
 		autofocus <- website.autofocus,
 		footer <- website.footer
 	)

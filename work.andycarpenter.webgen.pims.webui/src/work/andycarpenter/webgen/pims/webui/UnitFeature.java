@@ -3,6 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Predicate;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +19,9 @@ import work.andycarpenter.webgen.pims.expression.Expression;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getForcedValue <em>Forced Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isCollectionUiAllowAdd <em>Collection Ui Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isCollectionUiAllowRemove <em>Collection Ui Allow Remove</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getNullDisplayValue <em>Null Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen <em>Display Default When</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getHeaderClass <em>Header Class</em>}</li>
@@ -167,30 +170,82 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	void setCollectionUiAllowRemove(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Null Display Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Null Display Value</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Default Display Value</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Null Display Value</em>' attribute.
-	 * @see #setNullDisplayValue(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_NullDisplayValue()
+	 * @return the value of the '<em>Default Display Value</em>' attribute.
+	 * @see #setDefaultDisplayValue(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DefaultDisplayValue()
 	 * @model
 	 * @generated
 	 */
-	String getNullDisplayValue();
+	String getDefaultDisplayValue();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getNullDisplayValue <em>Null Display Value</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Null Display Value</em>' attribute.
-	 * @see #getNullDisplayValue()
+	 * @param value the new value of the '<em>Default Display Value</em>' attribute.
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 */
-	void setNullDisplayValue(String value);
+	void setDefaultDisplayValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Display Default When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Display Default When</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Display Default When</em>' containment reference.
+	 * @see #setDisplayDefaultWhen(Predicate)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DisplayDefaultWhen()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Predicate getDisplayDefaultWhen();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen <em>Display Default When</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Display Default When</em>' containment reference.
+	 * @see #getDisplayDefaultWhen()
+	 * @generated
+	 */
+	void setDisplayDefaultWhen(Predicate value);
+
+	/**
+	 * Returns the value of the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Empty Display Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Empty Display Value</em>' attribute.
+	 * @see #setEmptyDisplayValue(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_EmptyDisplayValue()
+	 * @model
+	 * @generated
+	 */
+	String getEmptyDisplayValue();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Empty Display Value</em>' attribute.
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 */
+	void setEmptyDisplayValue(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Footer</b></em>' attribute.

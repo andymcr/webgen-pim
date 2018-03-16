@@ -434,13 +434,22 @@ public interface PersistencePackage extends EPackage {
 	int FEATURE__PLACEHOLDER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__NULL_DISPLAY_VALUE = 4;
+	int FEATURE__DEFAULT_DISPLAY_VALUE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__EMPTY_DISPLAY_VALUE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -449,7 +458,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__ENCODE_URI_KEY = 5;
+	int FEATURE__ENCODE_URI_KEY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -458,7 +467,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__SERIALIZATION_GROUPS = 6;
+	int FEATURE__SERIALIZATION_GROUPS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -467,7 +476,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__HEADER_CLASS = 7;
+	int FEATURE__HEADER_CLASS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -476,7 +485,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__DISPLAY_CLASS = 8;
+	int FEATURE__DISPLAY_CLASS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -485,7 +494,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__FOOTER_CLASS = 9;
+	int FEATURE__FOOTER_CLASS = 10;
 
 	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
@@ -494,7 +503,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = 10;
+	int FEATURE_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Feature</em>' class.
@@ -552,13 +561,22 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE__PLACEHOLDER = FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__NULL_DISPLAY_VALUE = FEATURE__NULL_DISPLAY_VALUE;
+	int ATTRIBUTE__DEFAULT_DISPLAY_VALUE = FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__EMPTY_DISPLAY_VALUE = FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -697,13 +715,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__PLACEHOLDER = FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__NULL_DISPLAY_VALUE = FEATURE__NULL_DISPLAY_VALUE;
+	int ASSOCIATION__DEFAULT_DISPLAY_VALUE = FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__EMPTY_DISPLAY_VALUE = FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -1370,13 +1397,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_FEATURE__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__NULL_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -1385,7 +1421,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int ENTITY_FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -1394,7 +1430,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int ENTITY_FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1403,7 +1439,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int ENTITY_FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -1412,7 +1448,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int ENTITY_FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1421,7 +1457,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int ENTITY_FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -1430,7 +1466,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int ENTITY_FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -1439,7 +1475,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ENTITY_FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -1448,7 +1484,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int ENTITY_FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -1457,7 +1493,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int ENTITY_FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -1466,7 +1502,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int ENTITY_FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -1475,7 +1511,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int ENTITY_FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -1484,7 +1520,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -1493,7 +1529,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+	int ENTITY_FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -1502,7 +1538,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+	int ENTITY_FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -1511,7 +1547,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+	int ENTITY_FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>Entity Feature</em>' class.
@@ -1520,7 +1556,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
+	int ENTITY_FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>Entity Feature</em>' class.
@@ -1596,13 +1632,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_ATTRIBUTE__PLACEHOLDER = ENTITY_FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_FEATURE__NULL_DISPLAY_VALUE;
+	int ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -1912,13 +1957,22 @@ public interface PersistencePackage extends EPackage {
 	int DATA_TYPE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int DATA_TYPE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -2264,13 +2318,22 @@ public interface PersistencePackage extends EPackage {
 	int DATE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int DATE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -2598,13 +2661,22 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int URL_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -2923,13 +2995,22 @@ public interface PersistencePackage extends EPackage {
 	int RESOURCE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -3386,13 +3467,22 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__NULL_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int FILE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -3747,13 +3837,22 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__NULL_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int IMAGE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -4108,13 +4207,22 @@ public interface PersistencePackage extends EPackage {
 	int LOCATION_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__NULL_DISPLAY_VALUE = ENTITY_ATTRIBUTE__NULL_DISPLAY_VALUE;
+	int LOCATION_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -4424,13 +4532,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_ASSOCIATION__PLACEHOLDER = ENTITY_FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__NULL_DISPLAY_VALUE = ENTITY_FEATURE__NULL_DISPLAY_VALUE;
+	int ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE = ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE = ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -4821,13 +4938,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT__PLACEHOLDER = ENTITY_ASSOCIATION__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__NULL_DISPLAY_VALUE = ENTITY_ASSOCIATION__NULL_DISPLAY_VALUE;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__EMPTY_DISPLAY_VALUE = ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -5236,13 +5362,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITH_CONTAINMENT__PLACEHOLDER = ENTITY_ASSOCIATION__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__NULL_DISPLAY_VALUE = ENTITY_ASSOCIATION__NULL_DISPLAY_VALUE;
+	int ASSOCIATION_WITH_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__EMPTY_DISPLAY_VALUE = ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -5896,13 +6031,22 @@ public interface PersistencePackage extends EPackage {
 	int VIEW_FEATURE__PLACEHOLDER = FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_FEATURE__NULL_DISPLAY_VALUE = FEATURE__NULL_DISPLAY_VALUE;
+	int VIEW_FEATURE__DEFAULT_DISPLAY_VALUE = FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_FEATURE__EMPTY_DISPLAY_VALUE = FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -6023,13 +6167,22 @@ public interface PersistencePackage extends EPackage {
 	int ENCAPSULATED_FEATURE__PLACEHOLDER = VIEW_FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENCAPSULATED_FEATURE__NULL_DISPLAY_VALUE = VIEW_FEATURE__NULL_DISPLAY_VALUE;
+	int ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE = VIEW_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE = VIEW_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -6177,13 +6330,22 @@ public interface PersistencePackage extends EPackage {
 	int ENCAPSULATED_ATTRIBUTE__PLACEHOLDER = ENCAPSULATED_FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENCAPSULATED_ATTRIBUTE__NULL_DISPLAY_VALUE = ENCAPSULATED_FEATURE__NULL_DISPLAY_VALUE;
+	int ENCAPSULATED_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENCAPSULATED_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -6385,13 +6547,22 @@ public interface PersistencePackage extends EPackage {
 	int ENCAPSULATED_ASSOCIATION__PLACEHOLDER = ENCAPSULATED_FEATURE__PLACEHOLDER;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENCAPSULATED_ASSOCIATION__NULL_DISPLAY_VALUE = ENCAPSULATED_FEATURE__NULL_DISPLAY_VALUE;
+	int ENCAPSULATED_ASSOCIATION__DEFAULT_DISPLAY_VALUE = ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENCAPSULATED_ASSOCIATION__EMPTY_DISPLAY_VALUE = ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -6674,13 +6845,22 @@ public interface PersistencePackage extends EPackage {
 	int VIEW_ASSOCIATION__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__NULL_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -6689,7 +6869,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int VIEW_ASSOCIATION__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -6698,7 +6878,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int VIEW_ASSOCIATION__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -6707,7 +6887,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int VIEW_ASSOCIATION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -6716,7 +6896,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int VIEW_ASSOCIATION__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -6725,7 +6905,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int VIEW_ASSOCIATION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -6734,7 +6914,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int VIEW_ASSOCIATION__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
@@ -6743,7 +6923,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__PSEUDO = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int VIEW_ASSOCIATION__PSEUDO = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
@@ -6752,7 +6932,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__ENCAPSULATED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int VIEW_ASSOCIATION__ENCAPSULATED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
@@ -6761,7 +6941,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__INPUT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int VIEW_ASSOCIATION__INPUT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
@@ -6770,7 +6950,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__SOURCE_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int VIEW_ASSOCIATION__SOURCE_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
@@ -6779,7 +6959,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__TARGET_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int VIEW_ASSOCIATION__TARGET_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -6788,7 +6968,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__SERIALIZATION_MAX_DEPTH = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int VIEW_ASSOCIATION__SERIALIZATION_MAX_DEPTH = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Opposite</b></em>' reference.
@@ -6797,7 +6977,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__OPPOSITE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+	int VIEW_ASSOCIATION__OPPOSITE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -6806,7 +6986,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+	int VIEW_ASSOCIATION__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>View Association</em>' class.
@@ -6815,7 +6995,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ASSOCIATION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+	int VIEW_ASSOCIATION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>View Association</em>' class.
@@ -7226,15 +7406,26 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getFeature_Placeholder();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getNullDisplayValue <em>Null Display Value</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getDefaultDisplayValue <em>Default Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Null Display Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getNullDisplayValue()
+	 * @return the meta object for the attribute '<em>Default Display Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getDefaultDisplayValue()
 	 * @see #getFeature()
 	 * @generated
 	 */
-	EAttribute getFeature_NullDisplayValue();
+	EAttribute getFeature_DefaultDisplayValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getEmptyDisplayValue <em>Empty Display Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Empty Display Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getEmptyDisplayValue()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_EmptyDisplayValue();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#isEncodeUriKey <em>Encode Uri Key</em>}'.
@@ -8919,12 +9110,20 @@ public interface PersistencePackage extends EPackage {
 		EAttribute FEATURE__PLACEHOLDER = eINSTANCE.getFeature_Placeholder();
 
 		/**
-		 * The meta object literal for the '<em><b>Null Display Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Display Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FEATURE__NULL_DISPLAY_VALUE = eINSTANCE.getFeature_NullDisplayValue();
+		EAttribute FEATURE__DEFAULT_DISPLAY_VALUE = eINSTANCE.getFeature_DefaultDisplayValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Empty Display Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__EMPTY_DISPLAY_VALUE = eINSTANCE.getFeature_EmptyDisplayValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Encode Uri Key</b></em>' attribute feature.

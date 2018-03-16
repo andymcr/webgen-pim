@@ -1846,13 +1846,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__NULL_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 6;
+	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -1861,7 +1879,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 7;
+	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Autofocus</b></em>' attribute.
@@ -1870,7 +1888,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 8;
+	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1879,7 +1897,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 9;
+	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
@@ -1888,7 +1906,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_CLASS = UNIT_FIELD_FEATURE_COUNT + 10;
+	int UNIT_FEATURE__INPUT_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -1897,7 +1915,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 11;
+	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1906,7 +1924,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -1915,7 +1933,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -2072,13 +2090,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__COLLECTION_UI_ALLOW_REMOVE = UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__NULL_DISPLAY_VALUE = UNIT_FEATURE__NULL_DISPLAY_VALUE;
+	int UNIT_ELEMENT__DEFAULT_DISPLAY_VALUE = UNIT_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__DISPLAY_DEFAULT_WHEN = UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__EMPTY_DISPLAY_VALUE = UNIT_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -2352,13 +2388,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__COLLECTION_UI_ALLOW_REMOVE = UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE;
 
 	/**
-	 * The feature id for the '<em><b>Null Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__NULL_DISPLAY_VALUE = UNIT_FEATURE__NULL_DISPLAY_VALUE;
+	int UNIT_ASSOCIATION__DEFAULT_DISPLAY_VALUE = UNIT_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__DISPLAY_DEFAULT_WHEN = UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__EMPTY_DISPLAY_VALUE = UNIT_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -12491,15 +12545,37 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_CollectionUiAllowRemove();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getNullDisplayValue <em>Null Display Value</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Null Display Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getNullDisplayValue()
+	 * @return the meta object for the attribute '<em>Default Display Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue()
 	 * @see #getUnitFeature()
 	 * @generated
 	 */
-	EAttribute getUnitFeature_NullDisplayValue();
+	EAttribute getUnitFeature_DefaultDisplayValue();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen <em>Display Default When</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Display Default When</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EReference getUnitFeature_DisplayDefaultWhen();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Empty Display Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_EmptyDisplayValue();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooter <em>Footer</em>}'.
@@ -15616,12 +15692,28 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = eINSTANCE.getUnitFeature_CollectionUiAllowRemove();
 
 		/**
-		 * The meta object literal for the '<em><b>Null Display Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Display Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_FEATURE__NULL_DISPLAY_VALUE = eINSTANCE.getUnitFeature_NullDisplayValue();
+		EAttribute UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = eINSTANCE.getUnitFeature_DefaultDisplayValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Default When</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = eINSTANCE.getUnitFeature_DisplayDefaultWhen();
+
+		/**
+		 * The meta object literal for the '<em><b>Empty Display Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__EMPTY_DISPLAY_VALUE = eINSTANCE.getUnitFeature_EmptyDisplayValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Footer</b></em>' attribute feature.

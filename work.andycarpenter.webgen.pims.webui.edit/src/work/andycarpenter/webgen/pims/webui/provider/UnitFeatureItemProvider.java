@@ -62,7 +62,8 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addRequiredPropertyDescriptor(object);
 			addCollectionUiAllowAddPropertyDescriptor(object);
 			addCollectionUiAllowRemovePropertyDescriptor(object);
-			addNullDisplayValuePropertyDescriptor(object);
+			addDefaultDisplayValuePropertyDescriptor(object);
+			addEmptyDisplayValuePropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
 			addAutofocusPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
@@ -162,19 +163,41 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Null Display Value feature.
+	 * This adds a property descriptor for the Default Display Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNullDisplayValuePropertyDescriptor(Object object) {
+	protected void addDefaultDisplayValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnitFeature_nullDisplayValue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_nullDisplayValue_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__NULL_DISPLAY_VALUE,
+				 getString("_UI_UnitFeature_defaultDisplayValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_defaultDisplayValue_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Empty Display Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmptyDisplayValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitFeature_emptyDisplayValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_emptyDisplayValue_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__EMPTY_DISPLAY_VALUE,
 				 true,
 				 false,
 				 false,
@@ -329,6 +352,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS);
 			childrenFeatures.add(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE);
+			childrenFeatures.add(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN);
 		}
 		return childrenFeatures;
 	}
@@ -377,7 +401,8 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
-			case WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE:
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
+			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
@@ -388,6 +413,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 			case WebuiPackage.UNIT_FEATURE__FORCED_VALUE:
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -524,6 +550,46 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
 				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
 	}
 
 	/**
@@ -539,7 +605,8 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 
 		boolean qualify =
 			childFeature == WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN ||
-			childFeature == WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE;
+			childFeature == WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE ||
+			childFeature == WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
 
 		if (qualify) {
 			return getString

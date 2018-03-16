@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
 
+import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
 import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
@@ -38,7 +39,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getForcedValue <em>Forced Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isCollectionUiAllowAdd <em>Collection Ui Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isCollectionUiAllowRemove <em>Collection Ui Allow Remove</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getNullDisplayValue <em>Null Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayDefaultWhen <em>Display Default When</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
@@ -151,24 +154,54 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	protected boolean collectionUiAllowRemove = COLLECTION_UI_ALLOW_REMOVE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The default value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NULL_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNullDisplayValue() <em>Null Display Value</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNullDisplayValue()
+	 * @see #getDefaultDisplayValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nullDisplayValue = NULL_DISPLAY_VALUE_EDEFAULT;
+	protected String defaultDisplayValue = DEFAULT_DISPLAY_VALUE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDisplayDefaultWhen() <em>Display Default When</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDisplayDefaultWhen()
+	 * @generated
+	 * @ordered
+	 */
+	protected Predicate displayDefaultWhen;
+
+	/**
+	 * The default value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmptyDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emptyDisplayValue = EMPTY_DISPLAY_VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFooter() <em>Footer</em>}' attribute.
@@ -453,8 +486,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNullDisplayValue() {
-		return nullDisplayValue;
+	public String getDefaultDisplayValue() {
+		return defaultDisplayValue;
 	}
 
 	/**
@@ -462,11 +495,75 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNullDisplayValue(String newNullDisplayValue) {
-		String oldNullDisplayValue = nullDisplayValue;
-		nullDisplayValue = newNullDisplayValue;
+	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
+		String oldDefaultDisplayValue = defaultDisplayValue;
+		defaultDisplayValue = newDefaultDisplayValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE, oldNullDisplayValue, nullDisplayValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE, oldDefaultDisplayValue, defaultDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Predicate getDisplayDefaultWhen() {
+		return displayDefaultWhen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDisplayDefaultWhen(Predicate newDisplayDefaultWhen, NotificationChain msgs) {
+		Predicate oldDisplayDefaultWhen = displayDefaultWhen;
+		displayDefaultWhen = newDisplayDefaultWhen;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN, oldDisplayDefaultWhen, newDisplayDefaultWhen);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDisplayDefaultWhen(Predicate newDisplayDefaultWhen) {
+		if (newDisplayDefaultWhen != displayDefaultWhen) {
+			NotificationChain msgs = null;
+			if (displayDefaultWhen != null)
+				msgs = ((InternalEObject)displayDefaultWhen).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN, null, msgs);
+			if (newDisplayDefaultWhen != null)
+				msgs = ((InternalEObject)newDisplayDefaultWhen).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN, null, msgs);
+			msgs = basicSetDisplayDefaultWhen(newDisplayDefaultWhen, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN, newDisplayDefaultWhen, newDisplayDefaultWhen));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmptyDisplayValue() {
+		return emptyDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
+		String oldEmptyDisplayValue = emptyDisplayValue;
+		emptyDisplayValue = newEmptyDisplayValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
 	}
 
 	/**
@@ -622,6 +719,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.UNIT_FEATURE__FORCED_VALUE:
 				return basicSetForcedValue(null, msgs);
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
+				return basicSetDisplayDefaultWhen(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -646,8 +745,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return isCollectionUiAllowAdd();
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				return isCollectionUiAllowRemove();
-			case WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE:
-				return getNullDisplayValue();
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return getDefaultDisplayValue();
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
+				return getDisplayDefaultWhen();
+			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
+				return getEmptyDisplayValue();
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				return getFooter();
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
@@ -692,8 +795,14 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				setCollectionUiAllowRemove((Boolean)newValue);
 				return;
-			case WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE:
-				setNullDisplayValue((String)newValue);
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
+				setDisplayDefaultWhen((Predicate)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				setFooter((String)newValue);
@@ -743,8 +852,14 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				setCollectionUiAllowRemove(COLLECTION_UI_ALLOW_REMOVE_EDEFAULT);
 				return;
-			case WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE:
-				setNullDisplayValue(NULL_DISPLAY_VALUE_EDEFAULT);
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
+				setDisplayDefaultWhen((Predicate)null);
+				return;
+			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
 				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				setFooter(FOOTER_EDEFAULT);
@@ -788,8 +903,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return collectionUiAllowAdd != COLLECTION_UI_ALLOW_ADD_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				return collectionUiAllowRemove != COLLECTION_UI_ALLOW_REMOVE_EDEFAULT;
-			case WebuiPackage.UNIT_FEATURE__NULL_DISPLAY_VALUE:
-				return NULL_DISPLAY_VALUE_EDEFAULT == null ? nullDisplayValue != null : !NULL_DISPLAY_VALUE_EDEFAULT.equals(nullDisplayValue);
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
+			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
+				return displayDefaultWhen != null;
+			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
+				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
@@ -856,8 +975,10 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(collectionUiAllowAdd);
 		result.append(", collectionUiAllowRemove: ");
 		result.append(collectionUiAllowRemove);
-		result.append(", nullDisplayValue: ");
-		result.append(nullDisplayValue);
+		result.append(", defaultDisplayValue: ");
+		result.append(defaultDisplayValue);
+		result.append(", emptyDisplayValue: ");
+		result.append(emptyDisplayValue);
 		result.append(", footer: ");
 		result.append(footer);
 		result.append(", autofocus: ");

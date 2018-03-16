@@ -64,7 +64,8 @@ public class ViewFeatureItemProvider
 			addCollectionOrmAllowAddPropertyDescriptor(object);
 			addCollectionOrmAllowRemovePropertyDescriptor(object);
 			addPlaceholderPropertyDescriptor(object);
-			addNullDisplayValuePropertyDescriptor(object);
+			addDefaultDisplayValuePropertyDescriptor(object);
+			addEmptyDisplayValuePropertyDescriptor(object);
 			addEncodeUriKeyPropertyDescriptor(object);
 			addSerializationGroupsPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
@@ -163,24 +164,46 @@ public class ViewFeatureItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Null Display Value feature.
+	 * This adds a property descriptor for the Default Display Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNullDisplayValuePropertyDescriptor(Object object) {
+	protected void addDefaultDisplayValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Feature_nullDisplayValue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_nullDisplayValue_feature", "_UI_Feature_type"),
-				 PersistencePackage.Literals.FEATURE__NULL_DISPLAY_VALUE,
+				 getString("_UI_Feature_defaultDisplayValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_defaultDisplayValue_feature", "_UI_Feature_type"),
+				 PersistencePackage.Literals.FEATURE__DEFAULT_DISPLAY_VALUE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_ModelPropertyCategory"),
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Empty Display Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmptyDisplayValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Feature_emptyDisplayValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_emptyDisplayValue_feature", "_UI_Feature_type"),
+				 PersistencePackage.Literals.FEATURE__EMPTY_DISPLAY_VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -325,7 +348,8 @@ public class ViewFeatureItemProvider
 			case PersistencePackage.VIEW_FEATURE__COLLECTION_ORM_ALLOW_ADD:
 			case PersistencePackage.VIEW_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
 			case PersistencePackage.VIEW_FEATURE__PLACEHOLDER:
-			case PersistencePackage.VIEW_FEATURE__NULL_DISPLAY_VALUE:
+			case PersistencePackage.VIEW_FEATURE__DEFAULT_DISPLAY_VALUE:
+			case PersistencePackage.VIEW_FEATURE__EMPTY_DISPLAY_VALUE:
 			case PersistencePackage.VIEW_FEATURE__ENCODE_URI_KEY:
 			case PersistencePackage.VIEW_FEATURE__SERIALIZATION_GROUPS:
 			case PersistencePackage.VIEW_FEATURE__HEADER_CLASS:
