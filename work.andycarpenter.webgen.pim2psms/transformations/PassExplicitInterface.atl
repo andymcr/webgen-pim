@@ -499,6 +499,7 @@ abstract rule UnitField {
 		requiresRole <- website.requiresRole.trim(),
 		hideWhen <- website.hideWhen,
 		title <- website.title(),
+		escapeHTML <- website.escapeHTML,
 		collectionDisplayOption <- website.collectionDisplayOption,
 		maximumDisplaySize <- website.maximumDisplaySize,
 		truncate <- website.truncate,

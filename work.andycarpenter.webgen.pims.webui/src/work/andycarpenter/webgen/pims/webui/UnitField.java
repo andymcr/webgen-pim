@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getMaximumDisplaySize <em>Maximum Display Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isTruncate <em>Truncate</em>}</li>
@@ -138,6 +139,33 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setTitle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Escape HTML</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Escape HTML</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Escape HTML</em>' attribute.
+	 * @see #setEscapeHTML(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_EscapeHTML()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isEscapeHTML();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#isEscapeHTML <em>Escape HTML</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Escape HTML</em>' attribute.
+	 * @see #isEscapeHTML()
+	 * @generated
+	 */
+	void setEscapeHTML(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Collection Display Option</b></em>' attribute.

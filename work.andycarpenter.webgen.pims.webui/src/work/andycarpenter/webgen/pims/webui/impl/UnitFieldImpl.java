@@ -32,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getMaximumDisplaySize <em>Maximum Display Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#isTruncate <em>Truncate</em>}</li>
@@ -91,6 +92,26 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isEscapeHTML() <em>Escape HTML</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEscapeHTML()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ESCAPE_HTML_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isEscapeHTML() <em>Escape HTML</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEscapeHTML()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean escapeHTML = ESCAPE_HTML_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCollectionDisplayOption() <em>Collection Display Option</em>}' attribute.
@@ -342,6 +363,27 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isEscapeHTML() {
+		return escapeHTML;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEscapeHTML(boolean newEscapeHTML) {
+		boolean oldEscapeHTML = escapeHTML;
+		escapeHTML = newEscapeHTML;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__ESCAPE_HTML, oldEscapeHTML, escapeHTML));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CollectionDisplayOptions getCollectionDisplayOption() {
 		return collectionDisplayOption;
 	}
@@ -504,6 +546,8 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return getHideWhen();
 			case WebuiPackage.UNIT_FIELD__TITLE:
 				return getTitle();
+			case WebuiPackage.UNIT_FIELD__ESCAPE_HTML:
+				return isEscapeHTML();
 			case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION:
 				return getCollectionDisplayOption();
 			case WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE:
@@ -537,6 +581,9 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case WebuiPackage.UNIT_FIELD__TITLE:
 				setTitle((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FIELD__ESCAPE_HTML:
+				setEscapeHTML((Boolean)newValue);
 				return;
 			case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption((CollectionDisplayOptions)newValue);
@@ -577,6 +624,9 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 			case WebuiPackage.UNIT_FIELD__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_FIELD__ESCAPE_HTML:
+				setEscapeHTML(ESCAPE_HTML_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption(COLLECTION_DISPLAY_OPTION_EDEFAULT);
 				return;
@@ -612,6 +662,8 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return hideWhen != null;
 			case WebuiPackage.UNIT_FIELD__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+			case WebuiPackage.UNIT_FIELD__ESCAPE_HTML:
+				return escapeHTML != ESCAPE_HTML_EDEFAULT;
 			case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION:
 				return collectionDisplayOption != COLLECTION_DISPLAY_OPTION_EDEFAULT;
 			case WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE:
@@ -640,6 +692,8 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		result.append(requiresRole);
 		result.append(", title: ");
 		result.append(title);
+		result.append(", escapeHTML: ");
+		result.append(escapeHTML);
 		result.append(", collectionDisplayOption: ");
 		result.append(collectionDisplayOption);
 		result.append(", maximumDisplaySize: ");

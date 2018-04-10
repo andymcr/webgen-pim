@@ -34,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getMaximumDisplaySize <em>Maximum Display Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isTruncate <em>Truncate</em>}</li>
@@ -99,6 +100,26 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isEscapeHTML() <em>Escape HTML</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEscapeHTML()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ESCAPE_HTML_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isEscapeHTML() <em>Escape HTML</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEscapeHTML()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean escapeHTML = ESCAPE_HTML_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCollectionDisplayOption() <em>Collection Display Option</em>}' attribute.
@@ -460,6 +481,27 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isEscapeHTML() {
+		return escapeHTML;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEscapeHTML(boolean newEscapeHTML) {
+		boolean oldEscapeHTML = escapeHTML;
+		escapeHTML = newEscapeHTML;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML, oldEscapeHTML, escapeHTML));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CollectionDisplayOptions getCollectionDisplayOption() {
 		return collectionDisplayOption;
 	}
@@ -765,6 +807,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return getHideWhen();
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				return getTitle();
+			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
+				return isEscapeHTML();
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				return getCollectionDisplayOption();
 			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
@@ -811,6 +855,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return;
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				setTitle((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
+				setEscapeHTML((Boolean)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption((CollectionDisplayOptions)newValue);
@@ -869,6 +916,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
+			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
+				setEscapeHTML(ESCAPE_HTML_EDEFAULT);
+				return;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption(COLLECTION_DISPLAY_OPTION_EDEFAULT);
 				return;
@@ -922,6 +972,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return hideWhen != null;
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
+				return escapeHTML != ESCAPE_HTML_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				return collectionDisplayOption != COLLECTION_DISPLAY_OPTION_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
@@ -961,6 +1013,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE: return WebuiPackage.UNIT_FIELD__REQUIRES_ROLE;
 				case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN: return WebuiPackage.UNIT_FIELD__HIDE_WHEN;
 				case WebuiPackage.INTERFACE_FIELD__TITLE: return WebuiPackage.UNIT_FIELD__TITLE;
+				case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML: return WebuiPackage.UNIT_FIELD__ESCAPE_HTML;
 				case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION;
 				case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE: return WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE;
 				case WebuiPackage.INTERFACE_FIELD__TRUNCATE: return WebuiPackage.UNIT_FIELD__TRUNCATE;
@@ -985,6 +1038,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE: return WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE;
 				case WebuiPackage.UNIT_FIELD__HIDE_WHEN: return WebuiPackage.INTERFACE_FIELD__HIDE_WHEN;
 				case WebuiPackage.UNIT_FIELD__TITLE: return WebuiPackage.INTERFACE_FIELD__TITLE;
+				case WebuiPackage.UNIT_FIELD__ESCAPE_HTML: return WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML;
 				case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION;
 				case WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE: return WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE;
 				case WebuiPackage.UNIT_FIELD__TRUNCATE: return WebuiPackage.INTERFACE_FIELD__TRUNCATE;
@@ -1010,6 +1064,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		result.append(requiresRole);
 		result.append(", title: ");
 		result.append(title);
+		result.append(", escapeHTML: ");
+		result.append(escapeHTML);
 		result.append(", collectionDisplayOption: ");
 		result.append(collectionDisplayOption);
 		result.append(", maximumDisplaySize: ");
