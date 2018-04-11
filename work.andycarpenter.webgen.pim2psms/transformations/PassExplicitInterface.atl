@@ -195,13 +195,13 @@ helper context Website!UnitFeature def: emptyDisplayValue() : String
 			endif
 		endif;
 
-helper context Website!Association def: findOrmEntityOrView(entityOrView : Website!EntityOrView) : ORM!EntityOrView
-	= if entityOrView.features->includes(self) then
-			thisModule.findOrmEntityOrView(entityOrView.name)
-		else if self.oclIsKindOf(Website!EntityAssociation) then
-			thisModule.findOrmEntityOrView(self.targetEntity.name)
+helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
+	= if entity.features->includes(self) then
+			thisModule.findOrmEntity(entity.name)
+		else if self.oclIsKindOf(Website!Association) then
+			thisModule.findOrmEntity(self.targetEntity.name)
 		else -- EncapsulatedAssociation
-			thisModule.findOrmEntityOrView(self.partOf.name) -- TODO fix
+			thisModule.findOrmEntity(self.partOf.name) -- TODO fix
 		endif endif;
 
 helper context Website!Expression def: findContainingSelection() : Website!Selection
@@ -217,14 +217,14 @@ helper context Website!Expression def: findContainingSelection() : Website!Selec
 
 helper context Website!Label def: findOrmLabel() : ORM!Label
 	= if self.oclIsKindOf(Website!Attribute) then
-		self.findOrmEntityOrView().getOrmFeature(self.name)
+		self.findOrmEntity().getOrmFeature(self.name)
 	else if self.oclIsTypeOf(Website!ModelLabel) then
-		thisModule.findOrmEntityOrView(self.labelFor.name).getOrmLabel(self.name)
+		thisModule.findOrmEntity(self.labelFor.name).getOrmLabel(self.name)
 	else
 		self.title
 	endif endif;
 
-helper context Website!EntityOrView def: container() : Website!EntityOrView
+helper context Website!Entity def: container() : Website!Entity
 	= let containingAssociation : Sequence(Website!AssociationWithContainment)
 		= self.allAssociations
 				->select(a | a.oclIsTypeOf(Website!AssociationWithContainment) and a.partOf <> self)
@@ -778,7 +778,7 @@ abstract rule SelectableUnit {
 abstract rule SingletonUnit {
 	from website : Website!SingletonUnit
 	to waf : WAF!SingletonUnit (
-		contentType <- thisModule.findOrmEntityOrView(website.contentType.name)
+		contentType <- thisModule.findOrmEntity(website.contentType.name)
 	)
 }
 
@@ -788,7 +788,7 @@ abstract rule CollectionUnit {
 	from website : Website!CollectionUnit
 	to waf : WAF!CollectionUnit (
 		contentType <- website.contentType
-			->collect(eov | thisModule.findOrmEntityOrView(eov.name)),
+			->collect(eov | thisModule.findOrmEntity(eov.name)),
 		selection <-
 			if website.selection.oclIsUndefined() then
 				website.selection

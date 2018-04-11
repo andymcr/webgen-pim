@@ -31,51 +31,20 @@ abstract rule NamedDisplayElement {
 }
 
 
-abstract rule Feature {
-	from website : Website!Feature
-	to orm : ORM!Feature (
-		collectionOrmAllowAdd <- website.collectionOrmAllowAdd,
-		collectionOrmAllowRemove <- website.collectionOrmAllowRemove,
-		encodeUriKey <- website.encodeUriKey,
-		serializationGroups <-
-			website.serializationGroups
-				->collect(g | thisModule.findOrmSerializationGroup(g.name))
-	)
-}
-
--- @extends Feature
-abstract rule Attribute {
-	from website : Website!Attribute
-	to orm : ORM!Attribute (
-		defaultValue <- website.defaultValue,
-		validationPattern <- website.validationPattern()
-	)
-}
-
--- @extends Feature
-abstract rule Association {
-	from website : Website!Association
-	to orm : ORM!Association (
-		pseudo <- website.pseudo,
-		placeholder <- website.placeholder,
-		serializationMaxDepth <- website.serializationMaxDepth
-	)
-}
-
-
 rule Entity {
 	from partialOrm : ORM!Entity
 	to orm : ORM!Entity (
-		"unique" <- thisModule.findWebsiteEntityOrView(partialOrm.name)."unique",
-		containerUnique <- thisModule.findWebsiteEntityOrView(partialOrm.name).containerUnique
+		"unique" <- thisModule.findWebsiteEntity(partialOrm.name)."unique",
+		containerUnique <- thisModule.findWebsiteEntity(partialOrm.name).containerUnique
 	)
 }
 
 -- @extends NamedDisplayElement
-abstract rule EntityFeature {
-	from website : Website!EntityFeature
-	to orm : ORM!EntityFeature (
-		partOf <- thisModule.findOrmEntityOrView(website.partOf.name),
+abstract rule Feature {
+	from website : Website!Feature
+	to orm : ORM!Feature (
+		partOf <- thisModule.findOrmEntity(website.partOf.name),
+		cardinality <- website.cardinality,
 		primaryKey <- website.primaryKey,
 		"derived" <- website."derived",
 		customiseSet <- website.customiseSet,
@@ -91,15 +60,22 @@ abstract rule EntityFeature {
 			else
 				website.pluralisedName
 			endif,
-		cardinality <- website.cardinality,
-		booleanIsHasChoice <- website.booleanIsHasChoice
+		booleanIsHasChoice <- website.booleanIsHasChoice,
+		encodeUriKey <- website.encodeUriKey,
+		collectionOrmAllowAdd <- website.collectionOrmAllowAdd,
+		collectionOrmAllowRemove <- website.collectionOrmAllowRemove,
+		serializationGroups <-
+			website.serializationGroups
+				->collect(g | thisModule.findOrmSerializationGroup(g.name))
 	)
 }
 
--- @extends EntityFeature, Attribute
-abstract rule EntityAttribute {
+-- @extends Feature
+abstract rule Attribute {
 	from website : Website!EntityAttribute
-	to orm : ORM!EntityAttribute (
+	to orm : ORM!Attribute (
+		defaultValue <- website.defaultValue,
+		slugFields <- website.slugFields,
 		hidden <- website.hidden,
 		columnName <-
 			if not website.columnName.oclIsUndefined() and website.columnName <> '' then
@@ -107,11 +83,11 @@ abstract rule EntityAttribute {
 			else
 				website.name.createAttributeColumnName()
 			endif,
-		slugFields <- website.slugFields
+		validationPattern <- website.validationPattern()
 	)
 }
 
--- @extends EntityAttribute
+-- @extends Attribute
 abstract rule SingletonAttribute {
 	from website : Website!Attribute (website.cardinality <> #Many)
 	to orm : ORM!SingletonAttribute (
@@ -121,7 +97,7 @@ abstract rule SingletonAttribute {
 	)
 }
 
--- @extends EntityAttribute
+-- @extends Attribute
 abstract rule CollectionAttribute {
 	from website : Website!Attribute (website.cardinality = #Many)
 	to orm : ORM!CollectionAttribute (
@@ -297,10 +273,12 @@ rule SingletonLocation {
 	)
 }
 
--- @extends EntityFeature, Association
-abstract rule EntityAssociation {
+-- @extends Feature
+abstract rule Association {
 	from website : Website!EntityAssociation
-	to orm : ORM!EntityAssociation (
+	to orm : ORM!Association (
+		pseudo <- website.pseudo,
+		keys <- website.keys,
 		columnName <-
 			if not website.columnName.oclIsUndefined() and website.columnName <> '' then
 				website.columnName
@@ -308,11 +286,12 @@ abstract rule EntityAssociation {
 				website.name.createAssociationColumnName()
 			endif,
 		pivotTableName <- website.createPivotTableName(),
-		keys <- website.keys
+		placeholder <- website.placeholder,
+		serializationMaxDepth <- website.serializationMaxDepth
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule OneToOneAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality <> #Many and website.targetCardinality <> #Many)
 	to orm : ORM!SingletonAssociation (
@@ -324,7 +303,7 @@ rule OneToOneAssociationWithoutContainment {
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #OneToOne,
 		opposite <- orm,
 		owningEnd <- website.cardinality <> #Required and website.targetCardinality = #Required,
@@ -343,7 +322,7 @@ rule OneToOneAssociationWithoutContainment {
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule ManyToOneAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality <> #Many and website.targetCardinality = #Many)
 	to orm : ORM!SingletonAssociation (
@@ -355,7 +334,7 @@ rule ManyToOneAssociationWithoutContainment {
 	associationEnd : ORM!CollectionAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #OneToMany,
 		opposite <- orm,
 		owningEnd <- false,
@@ -367,7 +346,7 @@ rule ManyToOneAssociationWithoutContainment {
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule OneToManyAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality = #Many and website.targetCardinality <> #Many)
 	to orm : ORM!CollectionAssociation (
@@ -379,7 +358,7 @@ rule OneToManyAssociationWithoutContainment {
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #ManyToOne,
 		opposite <- orm,
 		owningEnd <- true,
@@ -398,7 +377,7 @@ rule OneToManyAssociationWithoutContainment {
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule ManyToManyAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality = #Many and website.targetCardinality = #Many)
 	to orm : ORM!CollectionAssociation (
@@ -416,7 +395,7 @@ rule ManyToManyAssociationWithoutContainment {
 	associationEnd : ORM!CollectionAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #ManyToMany,
 		opposite <- orm,
 		owningEnd <- false,
@@ -434,7 +413,7 @@ rule ManyToManyAssociationWithoutContainment {
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule OneToOneAssociationWithContainment {
 	from website : Website!AssociationWithContainment (website.cardinality <> #Many)
 	to orm : ORM!SingletonAssociation (
@@ -447,7 +426,7 @@ rule OneToOneAssociationWithContainment {
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #OneToOne,
 		opposite <- orm,
 		owningEnd <- true,
@@ -467,7 +446,7 @@ rule OneToOneAssociationWithContainment {
 	)
 }
 
--- @extends EntityAssociation
+-- @extends Association
 rule OneToManyAssociationWithContainment {
 	from website : Website!AssociationWithContainment (website.cardinality = #Many)
 	to orm : ORM!CollectionAssociation (
@@ -479,7 +458,7 @@ rule OneToManyAssociationWithContainment {
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
-		partOf <- thisModule.findOrmEntityOrView(website.targetEntity.name),
+		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #ManyToOne,
 		opposite <- orm,
 		owningEnd <- true,
@@ -504,7 +483,7 @@ rule AssocationKey {
 	to orm : ORM!AssociationKey (
 		sourceFeature <- website.sourceFeature,
 		targetFeature <-
-			if website.targetFeature.oclIsKindOf(Website!EntityAttribute) then
+			if website.targetFeature.oclIsKindOf(Website!Attribute) then
 				website.targetFeature
 			else
 				if website.keyFor.targetEntityX = website.keyFor.targetEntity then
@@ -520,7 +499,7 @@ lazy rule OppositeAssociationKey {
 	from website : Website!AssociationKey
 	to orm : ORM!AssociationKey (
 		sourceFeature <-
-			if website.targetFeature.oclIsKindOf(Website!EntityAttribute) then
+			if website.targetFeature.oclIsKindOf(Website!Attribute) then
 				website.targetFeature
 			else
 				if website.keyFor.targetEntityX = website.keyFor.targetEntity then

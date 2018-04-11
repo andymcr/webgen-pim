@@ -66,7 +66,7 @@ abstract rule Authentication {
 			if website.user.oclIsUndefined() then
 				OclUndefined
 			else
-				thisModule.findOrmEntityOrView(website.user.name)
+				thisModule.findOrmEntity(website.user.name)
 			endif,
 		userKey <-
 			if website.user.oclIsUndefined() 
@@ -88,9 +88,9 @@ rule LocalAuthenticationSystem {
 			if thisModule.findWebsiteProperties().frameworkTechnology = #Symfony then
 				OclUndefined
 			else if website.authentication.oclIsUndefined() then
-				thisModule.findOrmEntityOrView('Authentication')
+				thisModule.findOrmEntity('Authentication')
 			else
-				thisModule.findOrmEntityOrView(website.authentication.name)
+				thisModule.findOrmEntity(website.authentication.name)
 			endif endif,
 		authenticationKey <- website.authenticationKey,
 		loginAttempt <-
@@ -98,7 +98,7 @@ rule LocalAuthenticationSystem {
 					or thisModule.findWebsiteProperties().frameworkTechnology = #Symfony then
 				OclUndefined
 			else
-				thisModule.findOrmEntityOrView('LoginAttempt')
+				thisModule.findOrmEntity('LoginAttempt')
 			endif,
 		useCaptcha <- website.useCaptcha,
 		allowRememberMe <- website.allowRememberMe,
@@ -108,7 +108,7 @@ rule LocalAuthenticationSystem {
 					or thisModule.findWebsiteProperties().frameworkTechnology = #Symfony then
 				OclUndefined
 			else
-				thisModule.findOrmEntityOrView('AutoLogin')
+				thisModule.findOrmEntity('AutoLogin')
 			endif,
 		useEmailActivation <- website.useEmailActivation,
 		sendWelcomeEmail <- website.sendWelcomeEmail,
@@ -164,10 +164,10 @@ unique lazy rule implicitRegistrationUnit {
 				thisModule.implicitLoginPage(website)
 			endif,
 		confirmLabel <- 'Register',
-		entities <- Sequence{thisModule.findOrmEntityOrView('Authentication')},
+		entities <- Sequence{thisModule.findOrmEntity('Authentication')},
 		displayFields <-
-			let features : Sequence(ORM!EntityFeature)
-				= thisModule.findOrmEntityOrView('Authentication').features
+			let features : Sequence(ORM!Feature)
+				= thisModule.findOrmEntity('Authentication').features
 					->select(f | f.name = 'username' or f.name = 'email' or f.name = 'password')
 				in features->select(f | f.name = 'username')
 					->collect(f | thisModule.implicitUnitAttribute(f))
@@ -222,10 +222,10 @@ unique lazy rule implicitLoginUnit {
 		displayLabel <- 'Login',
 		omitCaption <- false,
 		submitLabel <- 'Login',
-		entities <- Sequence{thisModule.findOrmEntityOrView('Authentication')},
+		entities <- Sequence{thisModule.findOrmEntity('Authentication')},
 		displayFields <-
-			let features : Sequence(ORM!EntityFeature)
-				= thisModule.findOrmEntityOrView('Authentication').features
+			let features : Sequence(ORM!Feature)
+				= thisModule.findOrmEntity('Authentication').features
 					->select(f | f.name = 'email' or f.name = 'password')
 				in features->select(f | f.name = 'email')
 					->collect(f | thisModule.implicitUnitAttribute(f))
@@ -262,10 +262,10 @@ unique lazy rule implicitForgottenPasswordUnit {
 		displayLabel <- 'Recover Forgotten Password',
 		omitCaption <- false,
 		submitLabel <- 'Recover Password',
-		entities <- Sequence{thisModule.findOrmEntityOrView('Authentication')},
+		entities <- Sequence{thisModule.findOrmEntity('Authentication')},
 		displayFields <-
-			let features : Sequence(ORM!EntityFeature)
-				= thisModule.findOrmEntityOrView('Authentication').features
+			let features : Sequence(ORM!Feature)
+				= thisModule.findOrmEntity('Authentication').features
 					->select(f | f.name = 'email')
 				in features
 					->collect(f | thisModule.implicitUnitAttribute(f)),
@@ -286,7 +286,7 @@ unique lazy rule implicitForgottenPasswordUnit {
 }
 
 
-helper context ORM!EntityFeature def: isBooleanDataType() : Boolean
+helper context ORM!Feature def: isBooleanDataType() : Boolean
 	= if not self.oclIsTypeOf(ORM!SingletonElement) then
 			false
 		else
@@ -294,7 +294,7 @@ helper context ORM!EntityFeature def: isBooleanDataType() : Boolean
 		endif;
 
 lazy abstract rule implicitUnitFeature {
-	from partialWaf : ORM!EntityFeature
+	from partialWaf : ORM!Feature
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
 		inputClass <-
@@ -434,10 +434,10 @@ unique lazy rule implicitManageAuthenticationsPage {
 		defaultPaginationSize <- 10,
 		nextPageLabel <- '>',
 		previousPageLabel <- '<',
-		entities <- Sequence{thisModule.findOrmEntityOrView('Authentication')},
+		entities <- Sequence{thisModule.findOrmEntity('Authentication')},
 		displayFields <-
-			let features : Sequence(ORM!EntityFeature)
-				= thisModule.findOrmEntityOrView('Authentication').features
+			let features : Sequence(ORM!Feature)
+				= thisModule.findOrmEntity('Authentication').features
 					->select(f | f.name = 'username' or f.name = 'email' or f.name = 'lastLogin')
 				in features
 					->collect(f | 
@@ -467,13 +467,13 @@ unique lazy rule implicitManageAuthenticationsPage {
 		displayLabel <- 'Edit User',
 		omitCaption <- false,
 		confirmLabel <- 'Save',
-		entities <- Sequence{thisModule.findOrmEntityOrView('Authentication')},
+		entities <- Sequence{thisModule.findOrmEntity('Authentication')},
 		displayFields <-
-			let features : Sequence(ORM!EntityFeature)
-				= thisModule.findOrmEntityOrView('Authentication').features
+			let features : Sequence(ORM!Feature)
+				= thisModule.findOrmEntity('Authentication').features
 					->select(f | f.name <> 'password')
 				in features
-					->select(f | f.oclIsKindOf(ORM!EntityAttribute))
+					->select(f | f.oclIsKindOf(ORM!Attribute))
 					->collect(f | 
 						if f.oclIsTypeOf(ORM!SingletonDate) then
 							thisModule.implicitUnitDateAttribute(f)

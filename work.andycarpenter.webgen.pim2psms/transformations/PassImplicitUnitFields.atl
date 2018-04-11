@@ -60,7 +60,7 @@ abstract rule SingletonUnit {
 						Sequence{}
 					else
 						partialWaf.contentType.features
-							->select(f | if f.oclIsKindOf(ORM!EntityAssociation) then f.visible or f.container else true endif)
+							->select(f | if f.oclIsKindOf(ORM!Association) then f.visible or f.container else true endif)
 							->select(f | f.oclIsKindOf(WAF!Association))
 							->collect(f | thisModule.implicitUnitAssociation(f))
 					endif)
@@ -85,7 +85,7 @@ abstract rule CollectionUnit {
 					else
 						partialWaf.contentType
 							->collect(e | e.features)->flatten()
-							->select(f | if f.oclIsKindOf(ORM!EntityAssociation) then f.visible or f.container else true endif)
+							->select(f | if f.oclIsKindOf(ORM!Association) then f.visible or f.container else true endif)
 							->select(f | f.oclIsKindOf(WAF!Association))
 							->collect(f | thisModule.implicitUnitAssociation(f))
 					endif)
@@ -94,13 +94,13 @@ abstract rule CollectionUnit {
 }
 
 lazy abstract rule implicitUnitFeature {
-	from partialWaf : WAF!EntityFeature
+	from partialWaf : WAF!Feature
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
 		title <- partialWaf.name.createLabel(),
 		headerClass <-
 			let feature : Website!Feature
-				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
 					.getWebsiteFeature(partialWaf.name)
 				in if feature.oclIsUndefined() then
 						'?? XXXX ??'
@@ -109,7 +109,7 @@ lazy abstract rule implicitUnitFeature {
 					endif,
 		inputClass <-
 			let feature : Website!Feature
-				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
 					.getWebsiteFeature(partialWaf.name)
 				in if feature.oclIsUndefined() then
 						'?? XXXX ??'
@@ -118,7 +118,7 @@ lazy abstract rule implicitUnitFeature {
 					endif,
 		displayClass <-
 			let feature : Website!Feature
-				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
 					.getWebsiteFeature(partialWaf.name)
 				in if feature.oclIsUndefined() then
 						'?? XXXX ??'
@@ -127,7 +127,7 @@ lazy abstract rule implicitUnitFeature {
 					endif,
 		footerClass <-
 			let feature : Website!Feature
-				= thisModule.findWebsiteEntityOrView(partialWaf.partOf.name)
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
 					.getWebsiteFeature(partialWaf.name)
 				in if feature.oclIsUndefined() then
 						'?? XXXX ??'

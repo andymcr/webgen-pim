@@ -42,7 +42,7 @@ helper context Website!Feature def: findOrmFeature(reference : Website!ServiceFe
 				endif
 		endif;
 
-helper context Website!Selection def: entities(xx : Sequence(Website!Association)) : Sequence(Website!EntityOrView)
+helper context Website!Selection def: entities(xx : Sequence(Website!Association)) : Sequence(Website!Entity)
 	= if xx->isEmpty() then
 			Sequence{self.usedBy.serves}
 		else if xx->size() = 1 then
@@ -52,7 +52,7 @@ helper context Website!Selection def: entities(xx : Sequence(Website!Association
 				Sequence{self.usedBy.serves, xx->last().partOf}
 			endif
 		else
-			let yy : Sequence(Website!EntityOrView)
+			let yy : Sequence(Website!Entity)
 				= self.entities(xx->subSequence(1, xx->size() -1))
 				in if yy->includes(xx->last().partOf) then
 						yy->union(Sequence{xx->last().targetEntity})
@@ -71,7 +71,7 @@ helper context Website!Selection def: findOrmJoins(xx : Sequence(Website!Associa
 				Sequence{xx->last().findOrmTargetAssociation()}
 			endif
 		else
-			let yy : Sequence(Website!EntityOrView)
+			let yy : Sequence(Website!Entity)
 				= self.entities(xx->subSequence(1, xx->size() -1))
 				in let zz : Sequence(ORM!Association)
 					= self.findOrmJoins(xx->subSequence(1, xx->size() -1))
@@ -92,7 +92,7 @@ helper context Website!Selection def: findOrmSelectPaths(xx : Sequence(Website!A
 				Sequence{xx->last().findOrmTargetAssociation()}
 			endif
 		else
-			let yy : Sequence(Website!EntityOrView)
+			let yy : Sequence(Website!Entity)
 				= self.entities(xx->subSequence(1, xx->size() -1))
 				in let zz : Sequence(ORM!Association)
 					= self.findOrmJoins(xx->subSequence(1, xx->size() -1))
@@ -164,7 +164,7 @@ rule Service {
 			if website.serves.oclIsUndefined() then
 				OclUndefined
 			else
-				thisModule.findOrmEntityOrView(website.serves.name)
+				thisModule.findOrmEntity(website.serves.name)
 			endif,
 		selections <- website.selections,
 		findAll <-

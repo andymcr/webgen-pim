@@ -17,12 +17,6 @@ abstract rule NamedElement {
 }
 
 
-abstract rule EntityOrView {
-	from partialOrm : ORM!EntityOrView
-	to orm : ORM!EntityOrView (
-	)
-}
-
 -- @extends NamedElement
 rule ModelLabel {
 	from website : Website!ModelLabel
@@ -44,7 +38,7 @@ rule ModelLabelAttribute {
 	from website : Website!ModelLabelAttribute
 	to orm : ORM!ModelLabelAttribute (
 		attribute <-
-			if website.attribute.oclIsKindOf(Website!EntityAttribute) then
+			if website.attribute.oclIsKindOf(Website!Attribute) then
 				website.attribute.findOrmAttribute()
 			else
 				website.attribute
@@ -67,7 +61,7 @@ rule ModelLabelAssociation {
 				website.association
 			else
 				if website.isSourceAssociation then
-					website.association.findOrmEntityOrView().getOrmFeature(website.association.name)
+					website.association.findOrmEntity().getOrmFeature(website.association.name)
 				else
 					website.association.findOrmTargetEntity().getOrmFeature(website.association.targetFeatureName)
 				endif
@@ -77,13 +71,12 @@ rule ModelLabelAssociation {
 }
 
 
--- @extends EntityOrView
 rule Entity {
 	from partialOrm : ORM!Entity
 	to orm : ORM!Entity (
 		labels <-
-			let website : Website!EntityOrView
-				= thisModule.findWebsiteEntityOrView(partialOrm.name)
+			let website : Website!Entity
+				= thisModule.findWebsiteEntity(partialOrm.name)
 				in if website.labels->exists(l | l.name = 'default') then
 						website.labels
 					else
@@ -104,7 +97,7 @@ rule Entity {
 }
 
 lazy rule implicitEntityLabel {
-	from website : ORM!EntityFeature
+	from website : ORM!Feature
 	to orm : ORM!ModelLabel (
 		name <- 'default',
 		format <- '%s',
@@ -117,129 +110,4 @@ lazy rule implicitEntityLabel {
 	}
 }
 
-
--- @extends EntityOrView
-rule View {
-	from partialOrm : ORM!View
-	to orm : ORM!View (
-		-- features via partOf in features
-		keys <- thisModule.findWebsiteEntityOrView(partialOrm.name).keys,
-		labels <-
-			let website : Website!EntityOrView
-				= thisModule.findWebsiteEntityOrView(partialOrm.name)
-				in if website.labels->exists(l | l.name = 'default') then
-						website.labels
-					else
-						website.labels-> union(
-							if website.features->exists(f | f.name = 'name') then
-								Sequence{thisModule.implicitViewLabel(
-									website.features->any(f | f.name = 'name'))
-								}
-							else if website.features->exists(f | f.name = 'title') then
-								Sequence{thisModule.implicitViewLabel(
-									website.features->any(f | f.name = 'title'))
-								}
-							else
-								Sequence{}
-							endif endif)
-					endif
-	)
-}
-
-lazy rule implicitViewLabel {
-	from website : Website!ViewFeature
-	to orm : ORM!ModelLabel (
-		name <- 'default',
-		format <- '%s',
-		features <- Sequence{feature}
-	), feature : ORM!ModelLabelAttribute (
-		attribute <- website
-	)
-	do {
-		orm;
-	}
-}
-
-
-abstract rule ViewFeature {
-	from website : Website!ViewFeature
-	to orm : ORM!ViewFeature (
-		partOf <- thisModule.findOrmEntityOrView(website.partOf.name)
-	)
-}
-
--- @extends ViewFeature
-abstract rule EncapsulatedFeature {
-	from website : Website!EncapsulatedFeature
-	to orm : ORM!ViewFeature (
-		name <- website.name,
-		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
-				website.displayLabel
-			else
-				website.name.createLabel()
-			endif
-	)
-}
-
--- @extends EncapsulatedFeature
-rule EncapsulatedAttribute {
-	from website : Website!EncapsulatedAttribute
-	to orm : ORM!EncapsulatedAttribute (
-		attribute <-
-			if website.attribute.oclIsKindOf(Website!EntityAttribute) then
-				website.attribute.findOrmEntityOrView().getOrmFeature(website.attribute.name)
-			else
-				website.attribute
-			endif,
-		columnName <-
-			if not website.columnName.oclIsUndefined() and website.columnName <> '' then
-				website.columnName
-			else
-				website.name.createAttributeColumnName()
-			endif,
-		validationPattern <- website.validationPattern(),
-		defaultValue <- website.defaultValue
-	)
-}
-
--- @extends EncapsulatedFeature
-rule EncapsulatedAssociation {
-	from website : Website!EncapsulatedAssociation
-	to orm : ORM!EncapsulatedAssociation (
-		association <-
-			if website.association.oclIsUndefined() then
-				website.association
-			else
-				if website.isSourceAssociation then
-					website.association.findOrmEntityOrView().getOrmFeature(website.association.name)
-				else
-					website.association.findOrmTargetEntity().getOrmFeature(website.association.targetFeatureName)
-				endif
-			endif,
-		encapsulatedTarget <- website.encapsulatedTarget,
-		columnName <-
-			if not website.columnName.oclIsUndefined() and website.columnName <> '' then
-				website.columnName
-			else
-				website.name.createAssociationColumnName()
-			endif
-	)
-}
-
--- @extends ViewFeature
-rule ViewAssociation {
-	from website : Website!ViewAssociation
-	to orm : ORM!ViewAssociation (
-		name <- website.name,
-		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
-				website.displayLabel
-			else
-				website.name.createLabel()
-			endif,
-		opposite <- website.opposite,
-		cardinality <- website.cardinality
-	)
-}
 

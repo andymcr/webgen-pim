@@ -14,9 +14,9 @@ rule ServiceModel {
 	from partialService : Service!ServiceModel
 	to service : Service!ServiceModel (
 		services <- partialService.services
-			->union(let servered : Sequence(ORM!EntityOrView)
+			->union(let servered : Sequence(ORM!Entity)
 				= partialService.services->collect(s | s.serves)
-				in thisModule.findOrmModel().entitiesAndViews
+				in thisModule.findOrmModel().entities
 					->select(e | servered->excludes(e))
 					->collect(e | thisModule.implicitService(e))
 			)

@@ -76,7 +76,7 @@ rule OrmModel {
 					else
 						Sequence{}
 					endif),
-		entitiesAndViews <-
+		entities <-
 			let website : Website!WebGenModel = thisModule.findWebGenModel()
 			in let authentication : Website!Authentication
 				= if website.security.oclIsUndefined() then
@@ -84,7 +84,7 @@ rule OrmModel {
 					else
 						website.security.authentication
 					endif
-			in partialOrm.entitiesAndViews
+			in partialOrm.entities
 				->union(if authentication.oclIsUndefined()
 							or website.websiteProperties.frameworkTechnology = #Symfony then
 							Sequence{}

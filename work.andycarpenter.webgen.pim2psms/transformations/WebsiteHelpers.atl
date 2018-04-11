@@ -193,13 +193,13 @@ helper context Website!Attribute def: validationPattern() : String
 		endif;
 
 
-helper def: findWebsiteEntityOrView(name : String) : Website!EntityOrView
-	= Website!EntityOrView.allInstancesFrom('website')->any(e | e.name = name);
+helper def: findWebsiteEntity(name : String) : Website!Entity
+	= Website!Entity.allInstancesFrom('website')->any(e | e.name = name);
 
-helper context Website!EntityOrView def: getWebsiteFeature(featureName : String) : Website!Feature
+helper context Website!Entity def: getWebsiteFeature(featureName : String) : Website!Feature
 	= self.features->any(f | f.name = featureName);
 
-helper def: findWebsiteDataType(name : String) : Website!EntityOrView
+helper def: findWebsiteDataType(name : String) : Website!Entity
 	= Website!DataType.allInstancesFrom('website')->any(t | t.name = name);
 
 helper def: findOrmDataType(name : String) : ORM!DataType
@@ -209,18 +209,18 @@ helper def: findOrmCollectionType(name : String) : ORM!CollectionType
 	= ORM!CollectionType.allInstancesFrom('orm')->any(c | c.elementType.name = name);
 
 helper context Website!Feature def: findOrmTargetEntity() : ORM!Entity
-	= thisModule.findOrmEntityOrView(self.targetEntity.name);
+	= thisModule.findOrmEntity(self.targetEntity.name);
 
-helper def: findOrmEntityOrView(name : String) : ORM!EntityOrView
-	= ORM!EntityOrView.allInstancesFrom('orm')->any(e | e.name = name);
+helper def: findOrmEntity(name : String) : ORM!Entity
+	= ORM!Entity.allInstancesFrom('orm')->any(e | e.name = name);
 
-helper context Website!EntityOrView def: findOrmEntityOrView() : ORM!EntityOrView
-	= ORM!EntityOrView.allInstancesFrom('orm')->any(eov | eov.name = self.name);
+helper context Website!Entity def: findOrmEntity() : ORM!Entity
+	= ORM!Entity.allInstancesFrom('orm')->any(eov | eov.name = self.name);
 
-helper context Website!Feature def: findOrmEntityOrView() : ORM!EntityOrView
-	= thisModule.findOrmEntityOrView(self.partOf.name);
+helper context Website!Feature def: findOrmEntity() : ORM!Entity
+	= thisModule.findOrmEntity(self.partOf.name);
 
-helper context ORM!EntityOrView def: getOrmFeature(featureName : String) : ORM!Feature
+helper context ORM!Entity def: getOrmFeature(featureName : String) : ORM!Feature
 	= self.features->any(f | f.name = featureName);
 
 helper context Website!Feature def: findOrmFeature() : ORM!Feature
@@ -231,13 +231,13 @@ helper context Website!Feature def: findOrmFeature() : ORM!Feature
 		endif;
 
 helper context Website!Attribute def: findOrmAttribute() : ORM!Attribute
-	= self.findOrmEntityOrView().getOrmFeature(self.name);
+	= self.findOrmEntity().getOrmFeature(self.name);
 
 helper context Website!Association def: findOrmSourceAssociation() : ORM!Association
-	= thisModule.findOrmEntityOrView(self.partOf.name).getOrmFeature(self.name);
+	= thisModule.findOrmEntity(self.partOf.name).getOrmFeature(self.name);
 
 helper context Website!Association def: findOrmTargetAssociation() : ORM!Association
-	= thisModule.findOrmEntityOrView(self.targetEntity.name).getOrmFeature(self.targetFeatureName());
+	= thisModule.findOrmEntity(self.targetEntity.name).getOrmFeature(self.targetFeatureName());
 
 helper context Website!UnitAssociation def: findOrmAssociation() : ORM!Association
 	= if self.association.oclIsUndefined() then
@@ -272,10 +272,10 @@ helper context Website!ChildPathAssociation def: findOrmAssociation() : ORM!Asso
 			endif
 		endif;
 
-helper context Website!UnitAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!UnitAssociation def: getSourceTypes() : Sequence(Website!Entity)
 	= Sequence{ self.association.sourceEntityX };
 
-helper context Website!FeaturePathAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!FeaturePathAssociation def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
 			self.eContainer().contentType
 		else if self.eContainer().oclIsKindOf(Website!SingletonUnit) then
@@ -288,14 +288,14 @@ helper context Website!FeaturePathAssociation def: getSourceTypes() : Sequence(W
 			Sequence{}
 		endif endif endif endif;
 
-helper context Website!ChildPathAssociation def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!ChildPathAssociation def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().getSourceTypes()->includes(self.eContainer().association.partOf) then
 			Sequence{ self.eContainer().association.targetEntity }
 		else
 			Sequence{ self.eContainer().association.partOf }
 		endif;
 
-helper context Website!InlineAction def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!InlineAction def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
 			self.eContainer().contentType
 		else if self.eContainer().oclIsKindOf(Website!UnitElement) then
@@ -306,7 +306,7 @@ helper context Website!InlineAction def: getSourceTypes() : Sequence(Website!Ent
 			Sequence{}
 		endif endif endif;
 
-helper context Website!Badge def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!Badge def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
 			self.eContainer().contentType
 		else if self.eContainer().oclIsKindOf(Website!UnitElement) then
@@ -317,7 +317,7 @@ helper context Website!Badge def: getSourceTypes() : Sequence(Website!EntityOrVi
 			Sequence{}
 		endif endif endif;
 
-helper context Website!Expression def: getSourceTypes() : Sequence(Website!EntityOrView)
+helper context Website!Expression def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
 			self.eContainer().contentType
 		else if self.eContainer().oclIsKindOf(Website!SingletonUnit) then
@@ -339,10 +339,10 @@ helper def: findServiceFor(name : String) : Service!Service
 helper def: findService(name : String) : Service!Service
 	= Service!Service.allInstancesFrom('service')->any(s | s.name = name);
 
-helper context Website!EntityOrView def: findService() : Service!Service
+helper context Website!Entity def: findService() : Service!Service
 	= thisModule.findServiceFor(self.name);
 
-helper context ORM!EntityOrView def: findService() : Service!Service
+helper context ORM!Entity def: findService() : Service!Service
 	= thisModule.findServiceFor(self.name);
 
 helper context Website!Service def: findService() : Service!Service
@@ -379,7 +379,7 @@ helper context Website!BusinessOperation def: findBusinessOperation() : Service!
 	= self.definedBy.findService().getBusinessOperation(self.name);
 
 
-helper context ORM!EntityOrView def: getOrmLabel(labelName : String) : ORM!ModelLabel
+helper context ORM!Entity def: getOrmLabel(labelName : String) : ORM!ModelLabel
 	= self.labels->any(l | l.name = labelName);
 
 helper def: findOrmCollection(name : String) : ORM!DataType
@@ -445,7 +445,7 @@ helper context Website!Entity def: getContainer() : ORM!Entity
 	= if self.associationEnds->isEmpty() then
 			OclUndefined
 		else if self.associationEnds->exists(a | a.oclIsKindOf(Website!AssociationWithContainment)) then
-			self.associationEnds->any(a | a.oclIsKindOf(Website!AssociationWithContainment)).partOf.findOrmEntityOrView()
+			self.associationEnds->any(a | a.oclIsKindOf(Website!AssociationWithContainment)).partOf.findOrmEntity()
 		else
 			OclUndefined
 		endif endif;

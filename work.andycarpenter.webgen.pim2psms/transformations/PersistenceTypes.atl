@@ -31,7 +31,7 @@ rule Website {
 	to orm : ORM!OrmModel (
 		serializationGroups <- website.serializationGroups,
 		dataTypes <- website.dataTypes,
-		entitiesAndViews <- website.entities,
+		entities <- website.entities,
 		collectionTypes <- website.entities
 			->select(c | c.oclIsTypeOf(Website!Entity))
 			->collect(e | e.features)->flatten()
@@ -64,7 +64,7 @@ rule Website {
 			website.entities
 				->select(c | c.oclIsTypeOf(Website!Entity))
 				->collect(e | e.entityFeatures)->flatten()
-				->select(f | f.oclIsKindOf(Website!EntityAttribute))
+				->select(f | f.oclIsKindOf(Website!Attribute))
 				->select(a | not a.ormType.oclIsUndefined())
 				->select(a | a.ormType.trim() <> '')
 				->notEmpty()
@@ -155,9 +155,9 @@ lazy rule InverseCollectionType {
 
 
 -- @extends NamedDisplayElement
-abstract rule EntityOrView {
-	from website : Website!EntityOrView
-	to orm : ORM!EntityOrView (
+rule Entity {
+	from website : Website!Entity
+	to orm : ORM!Entity (
 		singletonName <-
 			if website.singletonName.oclIsUndefined() or website.singletonName = '' then
 				website.name
@@ -180,22 +180,7 @@ abstract rule EntityOrView {
 		autoKeyPersistentType <- website.autoKeyPersistentType,
 		autoKeyGenerationStrategy <- website.autoKeyGenerationStrategy,
 		implementsUserInterface <- website.implementsUserInterface,
+		implementForumUser <- website.forumUser,
 		allowFormTypeCustomisation <- website.allowFormTypeCustomisation
 	)
 }
-
--- @extends EntityOrView
-rule Entity {
-	from website : Website!Entity
-	to orm : ORM!Entity (
-	)
-}
-
--- @extends EntityOrView
-rule View {
-	from website : Website!View
-	to orm : ORM!View (
-		encapsulates <- website.encapsulates
-	)
-}
-
