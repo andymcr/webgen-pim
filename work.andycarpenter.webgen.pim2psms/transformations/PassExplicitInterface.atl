@@ -820,6 +820,7 @@ abstract rule CollectionUnit {
 		badges <- website.badges,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
+		paginationControlPlacement <- website.paginationControlPlacement,
 		emptyMessage <- website.emptyMessage,
 		nextNpages <- website.nextNpages,
 		previousNpages <- website.previousNpages,

@@ -29,6 +29,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getEmptyMessage <em>Empty Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationControlPlacement <em>Pagination Control Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextNpages <em>Next Npages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousNpages <em>Previous Npages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextPageLabel <em>Next Page Label</em>}</li>
@@ -310,6 +311,36 @@ public interface CollectionUnit extends SelectableUnit {
 	 * @generated
 	 */
 	void setMaximumPaginationSize(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The default value is <code>"Below"</code>.
+	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pagination Control Placement</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pagination Control Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.PaginationControlPlacements
+	 * @see #setPaginationControlPlacement(PaginationControlPlacements)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_PaginationControlPlacement()
+	 * @model default="Below"
+	 * @generated
+	 */
+	PaginationControlPlacements getPaginationControlPlacement();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationControlPlacement <em>Pagination Control Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pagination Control Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.PaginationControlPlacements
+	 * @see #getPaginationControlPlacement()
+	 * @generated
+	 */
+	void setPaginationControlPlacement(PaginationControlPlacements value);
 
 	/**
 	 * Returns the value of the '<em><b>Next Npages</b></em>' attribute.

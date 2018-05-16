@@ -229,6 +229,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePageTopMenuOptions((PageTopMenuOptions)value, diagnostics, context);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return validateCollectionDisplayOptions((CollectionDisplayOptions)value, diagnostics, context);
+			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
+				return validatePaginationControlPlacements((PaginationControlPlacements)value, diagnostics, context);
 			case WebuiPackage.INDEX_DISPLAY_OPTION:
 				return validateIndexDisplayOption((IndexDisplayOption)value, diagnostics, context);
 			default:
@@ -1758,6 +1760,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCollectionDisplayOptions(CollectionDisplayOptions collectionDisplayOptions, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePaginationControlPlacements(PaginationControlPlacements paginationControlPlacements, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

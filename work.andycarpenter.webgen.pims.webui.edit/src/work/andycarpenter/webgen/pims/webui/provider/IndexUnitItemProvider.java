@@ -60,6 +60,7 @@ public class IndexUnitItemProvider extends DataUnitItemProvider {
 			addEmptyMessagePropertyDescriptor(object);
 			addDefaultPaginationSizePropertyDescriptor(object);
 			addMaximumPaginationSizePropertyDescriptor(object);
+			addPaginationControlPlacementPropertyDescriptor(object);
 			addNextNpagesPropertyDescriptor(object);
 			addPreviousNpagesPropertyDescriptor(object);
 			addNextPageLabelPropertyDescriptor(object);
@@ -325,6 +326,28 @@ public class IndexUnitItemProvider extends DataUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI_PaginationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Pagination Control Placement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPaginationControlPlacementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_paginationControlPlacement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationControlPlacement_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_PaginationPropertyCategory"),
 				 null));
 	}
@@ -829,6 +852,7 @@ public class IndexUnitItemProvider extends DataUnitItemProvider {
 			case WebuiPackage.INDEX_UNIT__EMPTY_MESSAGE:
 			case WebuiPackage.INDEX_UNIT__DEFAULT_PAGINATION_SIZE:
 			case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE:
+			case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT:
 			case WebuiPackage.INDEX_UNIT__NEXT_NPAGES:
 			case WebuiPackage.INDEX_UNIT__PREVIOUS_NPAGES:
 			case WebuiPackage.INDEX_UNIT__NEXT_PAGE_LABEL:

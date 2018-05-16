@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.webui.IndexDisplayOption;
 import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
 import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
+import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.SelectableUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -52,6 +53,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getEmptyMessage <em>Empty Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getPaginationControlPlacement <em>Pagination Control Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getNextNpages <em>Next Npages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getPreviousNpages <em>Previous Npages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getNextPageLabel <em>Next Page Label</em>}</li>
@@ -226,6 +228,26 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected int maximumPaginationSize = MAXIMUM_PAGINATION_SIZE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPaginationControlPlacement() <em>Pagination Control Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPaginationControlPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final PaginationControlPlacements PAGINATION_CONTROL_PLACEMENT_EDEFAULT = PaginationControlPlacements.BELOW;
+
+	/**
+	 * The cached value of the '{@link #getPaginationControlPlacement() <em>Pagination Control Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPaginationControlPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected PaginationControlPlacements paginationControlPlacement = PAGINATION_CONTROL_PLACEMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNextNpages() <em>Next Npages</em>}' attribute.
@@ -913,6 +935,27 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PaginationControlPlacements getPaginationControlPlacement() {
+		return paginationControlPlacement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPaginationControlPlacement(PaginationControlPlacements newPaginationControlPlacement) {
+		PaginationControlPlacements oldPaginationControlPlacement = paginationControlPlacement;
+		paginationControlPlacement = newPaginationControlPlacement == null ? PAGINATION_CONTROL_PLACEMENT_EDEFAULT : newPaginationControlPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT, oldPaginationControlPlacement, paginationControlPlacement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getNextNpages() {
 		return nextNpages;
 	}
@@ -1384,6 +1427,8 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 				return getDefaultPaginationSize();
 			case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE:
 				return getMaximumPaginationSize();
+			case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT:
+				return getPaginationControlPlacement();
 			case WebuiPackage.INDEX_UNIT__NEXT_NPAGES:
 				return getNextNpages();
 			case WebuiPackage.INDEX_UNIT__PREVIOUS_NPAGES:
@@ -1472,6 +1517,9 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 				return;
 			case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE:
 				setMaximumPaginationSize((Integer)newValue);
+				return;
+			case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT:
+				setPaginationControlPlacement((PaginationControlPlacements)newValue);
 				return;
 			case WebuiPackage.INDEX_UNIT__NEXT_NPAGES:
 				setNextNpages((Integer)newValue);
@@ -1579,6 +1627,9 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE:
 				setMaximumPaginationSize(MAXIMUM_PAGINATION_SIZE_EDEFAULT);
 				return;
+			case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT:
+				setPaginationControlPlacement(PAGINATION_CONTROL_PLACEMENT_EDEFAULT);
+				return;
 			case WebuiPackage.INDEX_UNIT__NEXT_NPAGES:
 				setNextNpages(NEXT_NPAGES_EDEFAULT);
 				return;
@@ -1673,6 +1724,8 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 				return defaultPaginationSize != DEFAULT_PAGINATION_SIZE_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE:
 				return maximumPaginationSize != MAXIMUM_PAGINATION_SIZE_EDEFAULT;
+			case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT:
+				return paginationControlPlacement != PAGINATION_CONTROL_PLACEMENT_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__NEXT_NPAGES:
 				return nextNpages != NEXT_NPAGES_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__PREVIOUS_NPAGES:
@@ -1742,6 +1795,7 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 				case WebuiPackage.INDEX_UNIT__EMPTY_MESSAGE: return WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE;
 				case WebuiPackage.INDEX_UNIT__DEFAULT_PAGINATION_SIZE: return WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
 				case WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE: return WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
+				case WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT: return WebuiPackage.COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
 				case WebuiPackage.INDEX_UNIT__NEXT_NPAGES: return WebuiPackage.COLLECTION_UNIT__NEXT_NPAGES;
 				case WebuiPackage.INDEX_UNIT__PREVIOUS_NPAGES: return WebuiPackage.COLLECTION_UNIT__PREVIOUS_NPAGES;
 				case WebuiPackage.INDEX_UNIT__NEXT_PAGE_LABEL: return WebuiPackage.COLLECTION_UNIT__NEXT_PAGE_LABEL;
@@ -1793,6 +1847,7 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 				case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE: return WebuiPackage.INDEX_UNIT__EMPTY_MESSAGE;
 				case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE: return WebuiPackage.INDEX_UNIT__DEFAULT_PAGINATION_SIZE;
 				case WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE: return WebuiPackage.INDEX_UNIT__MAXIMUM_PAGINATION_SIZE;
+				case WebuiPackage.COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT: return WebuiPackage.INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT;
 				case WebuiPackage.COLLECTION_UNIT__NEXT_NPAGES: return WebuiPackage.INDEX_UNIT__NEXT_NPAGES;
 				case WebuiPackage.COLLECTION_UNIT__PREVIOUS_NPAGES: return WebuiPackage.INDEX_UNIT__PREVIOUS_NPAGES;
 				case WebuiPackage.COLLECTION_UNIT__NEXT_PAGE_LABEL: return WebuiPackage.INDEX_UNIT__NEXT_PAGE_LABEL;
@@ -1837,6 +1892,8 @@ public class IndexUnitImpl extends DataUnitImpl implements IndexUnit {
 		result.append(defaultPaginationSize);
 		result.append(", maximumPaginationSize: ");
 		result.append(maximumPaginationSize);
+		result.append(", paginationControlPlacement: ");
+		result.append(paginationControlPlacement);
 		result.append(", nextNpages: ");
 		result.append(nextNpages);
 		result.append(", previousNpages: ");

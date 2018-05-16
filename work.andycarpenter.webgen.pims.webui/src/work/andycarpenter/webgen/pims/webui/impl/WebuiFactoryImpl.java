@@ -120,6 +120,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return createPageTopMenuOptionsFromString(eDataType, initialValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return createCollectionDisplayOptionsFromString(eDataType, initialValue);
+			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
+				return createPaginationControlPlacementsFromString(eDataType, initialValue);
 			case WebuiPackage.INDEX_DISPLAY_OPTION:
 				return createIndexDisplayOptionFromString(eDataType, initialValue);
 			default:
@@ -143,6 +145,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return convertPageTopMenuOptionsToString(eDataType, instanceValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return convertCollectionDisplayOptionsToString(eDataType, instanceValue);
+			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
+				return convertPaginationControlPlacementsToString(eDataType, instanceValue);
 			case WebuiPackage.INDEX_DISPLAY_OPTION:
 				return convertIndexDisplayOptionToString(eDataType, instanceValue);
 			default:
@@ -647,6 +651,26 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	public String convertCollectionDisplayOptionsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaginationControlPlacements createPaginationControlPlacementsFromString(EDataType eDataType, String initialValue) {
+		PaginationControlPlacements result = PaginationControlPlacements.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPaginationControlPlacementsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -68,6 +68,7 @@ import work.andycarpenter.webgen.pims.webui.MenuFeature;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.PageLink;
 import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
+import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.Query;
 import work.andycarpenter.webgen.pims.webui.QueryParameter;
 import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
@@ -561,6 +562,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EEnum collectionDisplayOptionsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum paginationControlPlacementsEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2244,7 +2252,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextNpages() {
+	public EAttribute getCollectionUnit_PaginationControlPlacement() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2253,7 +2261,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousNpages() {
+	public EAttribute getCollectionUnit_NextNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2262,7 +2270,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageLabel() {
+	public EAttribute getCollectionUnit_PreviousNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2271,7 +2279,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageIconName() {
+	public EAttribute getCollectionUnit_NextPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -2280,7 +2288,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageLabel() {
+	public EAttribute getCollectionUnit_NextPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -2289,7 +2297,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageIconName() {
+	public EAttribute getCollectionUnit_PreviousPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -2298,7 +2306,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
+	public EAttribute getCollectionUnit_PreviousPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -2307,7 +2315,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
+	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -2316,7 +2324,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageLabel() {
+	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -2325,7 +2333,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageIconName() {
+	public EAttribute getCollectionUnit_FirstPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -2334,7 +2342,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageLabel() {
+	public EAttribute getCollectionUnit_FirstPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -2343,7 +2351,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageIconName() {
+	public EAttribute getCollectionUnit_LastPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -2352,7 +2360,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationClass() {
+	public EAttribute getCollectionUnit_LastPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -2361,8 +2369,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationElementClass() {
+	public EAttribute getCollectionUnit_PaginationClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollectionUnit_PaginationElementClass() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
 	}
 
 	/**
@@ -3441,6 +3458,15 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getPaginationControlPlacements() {
+		return paginationControlPlacementsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getIndexDisplayOption() {
 		return indexDisplayOptionEEnum;
 	}
@@ -3687,6 +3713,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__EMPTY_MESSAGE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__NEXT_NPAGES);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PREVIOUS_NPAGES);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__NEXT_PAGE_LABEL);
@@ -3846,6 +3873,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		ajaxTechnologiesEEnum = createEEnum(AJAX_TECHNOLOGIES);
 		pageTopMenuOptionsEEnum = createEEnum(PAGE_TOP_MENU_OPTIONS);
 		collectionDisplayOptionsEEnum = createEEnum(COLLECTION_DISPLAY_OPTIONS);
+		paginationControlPlacementsEEnum = createEEnum(PAGINATION_CONTROL_PLACEMENTS);
 		indexDisplayOptionEEnum = createEEnum(INDEX_DISPLAY_OPTION);
 	}
 
@@ -4170,6 +4198,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCollectionUnit_EmptyMessage(), ecorePackage.getEString(), "emptyMessage", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_DefaultPaginationSize(), ecorePackage.getEInt(), "defaultPaginationSize", "10", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCollectionUnit_MaximumPaginationSize(), ecorePackage.getEInt(), "maximumPaginationSize", "0", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCollectionUnit_PaginationControlPlacement(), this.getPaginationControlPlacements(), "paginationControlPlacement", "Below", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_NextNpages(), ecorePackage.getEInt(), "nextNpages", "2", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_PreviousNpages(), ecorePackage.getEInt(), "previousNpages", "2", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_NextPageLabel(), ecorePackage.getEString(), "nextPageLabel", "&gt;", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4342,6 +4371,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEEnum(collectionDisplayOptionsEEnum, CollectionDisplayOptions.class, "CollectionDisplayOptions");
 		addEEnumLiteral(collectionDisplayOptionsEEnum, CollectionDisplayOptions.LINE_DIRECTION);
 		addEEnumLiteral(collectionDisplayOptionsEEnum, CollectionDisplayOptions.PAGE_DIRECTION);
+
+		initEEnum(paginationControlPlacementsEEnum, PaginationControlPlacements.class, "PaginationControlPlacements");
+		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.BELOW);
+		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE);
+		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE_AND_BELOW);
 
 		initEEnum(indexDisplayOptionEEnum, IndexDisplayOption.class, "IndexDisplayOption");
 		addEEnumLiteral(indexDisplayOptionEEnum, IndexDisplayOption.GRID);

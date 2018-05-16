@@ -26,6 +26,11 @@
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//CollectionDisplayOptions/LineDirection"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//CollectionDisplayOptions/PageDirection"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//PaginationControlPlacements">
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/Below"/>
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/Above"/>
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/AboveAndBelow"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//IndexDisplayOption">
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//IndexDisplayOption/Grid"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//IndexDisplayOption/PageDirection"/>
@@ -287,6 +292,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/emptyMessage"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/defaultPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/maximumPaginationSize"/>
+      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationControlPlacement"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/nextNpages"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/previousNpages"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/nextPageLabel"/>

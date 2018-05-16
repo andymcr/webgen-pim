@@ -439,6 +439,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contentType" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PaginationControlPlacements">
+    <eLiterals name="Below"/>
+    <eLiterals name="Above" value="1"/>
+    <eLiterals name="AboveAndBelow" value="2"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionUnit" abstract="true" interface="true"
       eSuperTypes="#//SelectableUnit">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -467,6 +472,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumPaginationSize"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationControlPlacement"
+        eType="#//PaginationControlPlacements" defaultValueLiteral="Below"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextNpages" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="2"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="previousNpages" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
