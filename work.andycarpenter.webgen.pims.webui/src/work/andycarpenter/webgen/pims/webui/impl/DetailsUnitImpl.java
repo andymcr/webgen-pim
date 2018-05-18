@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Selection;
 
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
@@ -22,7 +21,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getStyleClass <em>Style Class</em>}</li>
@@ -32,16 +30,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Label title;
-
 	/**
 	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -129,44 +117,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.DETAILS_UNIT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label getTitle() {
-		if (title != null && title.eIsProxy()) {
-			InternalEObject oldTitle = (InternalEObject)title;
-			title = (Label)eResolveProxy(oldTitle);
-			if (title != oldTitle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.DETAILS_UNIT__TITLE, oldTitle, title));
-			}
-		}
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label basicGetTitle() {
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle(Label newTitle) {
-		Label oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DETAILS_UNIT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -278,9 +228,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__TITLE:
-				if (resolve) return getTitle();
-				return basicGetTitle();
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				if (resolve) return getSelection();
 				return basicGetSelection();
@@ -302,9 +249,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__TITLE:
-				setTitle((Label)newValue);
-				return;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				setSelection((Selection)newValue);
 				return;
@@ -329,9 +273,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__TITLE:
-				setTitle((Label)null);
-				return;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				setSelection((Selection)null);
 				return;
@@ -356,8 +297,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__TITLE:
-				return title != null;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				return selection != null;
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:

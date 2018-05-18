@@ -270,10 +270,14 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//SelectableUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//SingletonUnit">
+      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//SingletonUnit/title"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//SingletonUnit/contentType"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionUnit">
+      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/unitTitle"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/contentType"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
@@ -311,8 +315,6 @@
     <genClasses image="false" ecoreClass="webui.ecore#//EditUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference webui.ecore#//EditUnit/disableWhen"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/title"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmDestination"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/confirmLabel"/>
@@ -345,8 +347,6 @@
           ecoreFeature="ecore:EReference webui.ecore#//MapUnit/placeName"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//DetailsUnit">
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//DetailsUnit/title"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//DetailsUnit/selection"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DetailsUnit/omitFieldLabels"/>
@@ -354,8 +354,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DetailsUnit/contentClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//IndexUnit">
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//IndexUnit/title"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//IndexUnit/displayOption"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//IndexUnit/omitColumnLabels"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//IndexUnit/styleClass"/>
@@ -363,7 +361,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//IndexUnit/rowClasses"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CardsUnit">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CardsUnit/unitTitle"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/omitFieldLabels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/contentClass"/>
@@ -392,16 +389,12 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ImageIndexUnit/styleClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SliderUnit">
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//SliderUnit/unitTitle"/>
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/showTime"/>
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/transitionTime"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/styleClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/contentClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//GalleryUnit">
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//GalleryUnit/unitTitle"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//GalleryUnit/fullSizeFilter"/>
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//GalleryUnit/showTime"/>

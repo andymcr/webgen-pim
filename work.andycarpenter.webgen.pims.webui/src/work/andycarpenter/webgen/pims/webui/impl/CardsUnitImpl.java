@@ -16,9 +16,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import work.andycarpenter.webgen.pims.persistence.Label;
-
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
 import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
@@ -33,7 +30,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getContentClass <em>Content Class</em>}</li>
@@ -53,16 +49,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
-
-	/**
-	 * The cached value of the '{@link #getUnitTitle() <em>Unit Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Label unitTitle;
 
 	/**
 	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
@@ -193,44 +179,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.CARDS_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
 		}
 		return actions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label getUnitTitle() {
-		if (unitTitle != null && unitTitle.eIsProxy()) {
-			InternalEObject oldUnitTitle = (InternalEObject)unitTitle;
-			unitTitle = (Label)eResolveProxy(oldUnitTitle);
-			if (unitTitle != oldUnitTitle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.CARDS_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
-			}
-		}
-		return unitTitle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label basicGetUnitTitle() {
-		return unitTitle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnitTitle(Label newUnitTitle) {
-		Label oldUnitTitle = unitTitle;
-		unitTitle = newUnitTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
 	}
 
 	/**
@@ -377,9 +325,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return getActions();
-			case WebuiPackage.CARDS_UNIT__UNIT_TITLE:
-				if (resolve) return getUnitTitle();
-				return basicGetUnitTitle();
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				return isOmitFieldLabels();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
@@ -406,9 +351,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__UNIT_TITLE:
-				setUnitTitle((Label)newValue);
 				return;
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels((Boolean)newValue);
@@ -440,9 +382,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				getActions().clear();
 				return;
-			case WebuiPackage.CARDS_UNIT__UNIT_TITLE:
-				setUnitTitle((Label)null);
-				return;
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
 				return;
@@ -472,8 +411,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
-			case WebuiPackage.CARDS_UNIT__UNIT_TITLE:
-				return unitTitle != null;
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:

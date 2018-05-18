@@ -247,14 +247,15 @@ abstract rule ImageUnit {
 	)
 }
 
--- @extends CardsUnit, ImageUnit
+-- no extends so that implicit fields never added
+-- extends CardsUnit, ImageUnit
 rule ImageIndexUnit {
 	from partialWaf : WAF!ImageIndexUnit
 	to waf : WAF!ImageIndexUnit (
 	)
 }
 
--- no extends so that implicate fields never added
+-- no extends so that implicit fields never added
 -- extends ImageUnit
 rule sliderUnit {
 	from partialWaf : WAF!SliderUnit
@@ -262,7 +263,7 @@ rule sliderUnit {
 	)
 }
 
--- no extends so that implicate fields never added
+-- no extends so that implicit fields never added
 -- extends ImageUnit
 rule galleryUnit {
 	from partialWaf : WAF!GalleryUnit

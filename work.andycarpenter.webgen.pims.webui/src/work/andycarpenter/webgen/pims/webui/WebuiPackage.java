@@ -4375,13 +4375,22 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__ERROR_CLASS = DYNAMIC_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__TITLE = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+	int SINGLETON_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Singleton Unit</em>' class.
@@ -4390,7 +4399,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 1;
+	int SINGLETON_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Singleton Unit</em>' class.
@@ -4619,13 +4628,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__ERROR_CLASS = DYNAMIC_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__UNIT_TITLE = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+	int COLLECTION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -4634,7 +4652,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 1;
+	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -4643,7 +4661,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 2;
+	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -4652,7 +4670,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 3;
+	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -4661,7 +4679,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 4;
+	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -4670,7 +4688,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 5;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -4679,7 +4697,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 6;
+	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -4688,7 +4706,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__BADGES = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+	int COLLECTION_UNIT__BADGES = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -4697,7 +4715,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -4706,7 +4724,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -4715,7 +4733,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -4724,7 +4742,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -4733,7 +4751,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -4742,7 +4760,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -4751,7 +4769,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -4760,7 +4778,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -4769,7 +4787,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -4778,7 +4796,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -4787,7 +4805,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -4796,7 +4814,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 19;
+	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -4805,7 +4823,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 20;
+	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -4814,7 +4832,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 21;
+	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -4823,7 +4841,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 22;
+	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -4832,7 +4850,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 23;
+	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -4841,7 +4859,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 24;
+	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -4850,7 +4868,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 25;
+	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 26;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -4859,7 +4877,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 26;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -5088,6 +5106,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__ERROR_CLASS = SINGLETON_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__TITLE = SINGLETON_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5106,22 +5133,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__DISABLE_WHEN = SINGLETON_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__TITLE = SINGLETON_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 2;
+	int EDIT_UNIT__CONFIRM_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
@@ -5130,7 +5148,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 3;
+	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
@@ -5139,7 +5157,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
@@ -5148,7 +5166,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 5;
+	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -5157,7 +5175,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
@@ -5166,7 +5184,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -5175,7 +5193,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 8;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -5404,6 +5422,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5420,15 +5447,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
@@ -5729,6 +5747,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5745,15 +5772,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
@@ -6081,6 +6099,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6097,15 +6124,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
@@ -6415,6 +6433,15 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6431,15 +6458,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
@@ -6776,6 +6794,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__ERROR_CLASS = SINGLETON_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__TITLE = SINGLETON_UNIT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6785,22 +6812,13 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__CONTENT_TYPE = SINGLETON_UNIT__CONTENT_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__TITLE = SINGLETON_UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__SELECTION = SINGLETON_UNIT_FEATURE_COUNT + 1;
+	int DETAILS_UNIT__SELECTION = SINGLETON_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6809,7 +6827,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__OMIT_FIELD_LABELS = SINGLETON_UNIT_FEATURE_COUNT + 2;
+	int DETAILS_UNIT__OMIT_FIELD_LABELS = SINGLETON_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -6818,7 +6836,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__STYLE_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 3;
+	int DETAILS_UNIT__STYLE_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -6827,7 +6845,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int DETAILS_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Details Unit</em>' class.
@@ -6836,7 +6854,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 5;
+	int DETAILS_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Details Unit</em>' class.
@@ -7063,6 +7081,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -7308,22 +7335,13 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__TITLE = COLLECTION_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Display Option</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Omit Column Labels</b></em>' attribute.
@@ -7332,7 +7350,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -7341,7 +7359,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__STYLE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int INDEX_UNIT__STYLE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -7350,7 +7368,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Row Classes</b></em>' attribute.
@@ -7359,7 +7377,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Index Unit</em>' class.
@@ -7368,7 +7386,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Index Unit</em>' class.
@@ -7595,6 +7613,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -7840,22 +7867,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__UNIT_TITLE = COLLECTION_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -7864,7 +7882,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -7873,7 +7891,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -7882,7 +7900,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -7891,7 +7909,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -7900,7 +7918,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8127,6 +8145,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_INDEX_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -8370,15 +8397,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_INDEX_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -8688,6 +8706,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -9213,6 +9240,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_INDEX_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9454,15 +9490,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_INDEX_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -9835,6 +9862,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__ERROR_CLASS = IMAGE_UNIT__ERROR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__UNIT_TITLE = IMAGE_UNIT__UNIT_TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10123,22 +10159,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__MISSING_IMAGE_PATH = IMAGE_UNIT__MISSING_IMAGE_PATH;
 
 	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__UNIT_TITLE = IMAGE_UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Show Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
+	int SLIDER_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Transition Time</b></em>' attribute.
@@ -10147,7 +10174,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 2;
+	int SLIDER_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -10156,7 +10183,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 3;
+	int SLIDER_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -10165,7 +10192,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 4;
+	int SLIDER_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Slider Unit</em>' class.
@@ -10174,7 +10201,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 5;
+	int SLIDER_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Slider Unit</em>' class.
@@ -10401,6 +10428,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__ERROR_CLASS = IMAGE_UNIT__ERROR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__UNIT_TITLE = IMAGE_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -10691,22 +10727,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__MISSING_IMAGE_PATH = IMAGE_UNIT__MISSING_IMAGE_PATH;
 
 	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__UNIT_TITLE = IMAGE_UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Full Size Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FULL_SIZE_FILTER = IMAGE_UNIT_FEATURE_COUNT + 1;
+	int GALLERY_UNIT__FULL_SIZE_FILTER = IMAGE_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Show Time</b></em>' attribute.
@@ -10715,7 +10742,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 2;
+	int GALLERY_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Transition Time</b></em>' attribute.
@@ -10724,7 +10751,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 3;
+	int GALLERY_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -10733,7 +10760,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 4;
+	int GALLERY_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -10742,7 +10769,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 5;
+	int GALLERY_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Gallery Unit</em>' class.
@@ -10751,7 +10778,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 6;
+	int GALLERY_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Gallery Unit</em>' class.
@@ -14698,6 +14725,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getSingletonUnit();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.SingletonUnit#getTitle()
+	 * @see #getSingletonUnit()
+	 * @generated
+	 */
+	EReference getSingletonUnit_Title();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType <em>Content Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14717,6 +14755,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCollectionUnit();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle <em>Unit Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Unit Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EReference getCollectionUnit_UnitTitle();
 
 	/**
 	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType <em>Content Type</em>}'.
@@ -15026,17 +15075,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getEditUnit_DisableWhen();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getTitle()
-	 * @see #getEditUnit()
-	 * @generated
-	 */
-	EReference getEditUnit_Title();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmDestination <em>Confirm Destination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15285,17 +15323,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getDetailsUnit();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DetailsUnit#getTitle()
-	 * @see #getDetailsUnit()
-	 * @generated
-	 */
-	EReference getDetailsUnit_Title();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getSelection <em>Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15348,17 +15375,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIndexUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#getTitle()
-	 * @see #getIndexUnit()
-	 * @generated
-	 */
-	EReference getIndexUnit_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getDisplayOption <em>Display Option</em>}'.
@@ -15424,17 +15440,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCardsUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitTitle <em>Unit Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Unit Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitTitle()
-	 * @see #getCardsUnit()
-	 * @generated
-	 */
-	EReference getCardsUnit_UnitTitle();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}'.
@@ -15739,17 +15744,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getSliderUnit();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getUnitTitle <em>Unit Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Unit Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SliderUnit#getUnitTitle()
-	 * @see #getSliderUnit()
-	 * @generated
-	 */
-	EReference getSliderUnit_UnitTitle();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getShowTime <em>Show Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15802,17 +15796,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGalleryUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.GalleryUnit#getUnitTitle <em>Unit Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Unit Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnit#getUnitTitle()
-	 * @see #getGalleryUnit()
-	 * @generated
-	 */
-	EReference getGalleryUnit_UnitTitle();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.GalleryUnit#getFullSizeFilter <em>Full Size Filter</em>}'.
@@ -17769,6 +17752,14 @@ public interface WebuiPackage extends EPackage {
 		EClass SINGLETON_UNIT = eINSTANCE.getSingletonUnit();
 
 		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SINGLETON_UNIT__TITLE = eINSTANCE.getSingletonUnit_Title();
+
+		/**
 		 * The meta object literal for the '<em><b>Content Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17785,6 +17776,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COLLECTION_UNIT = eINSTANCE.getCollectionUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit Title</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_UNIT__UNIT_TITLE = eINSTANCE.getCollectionUnit_UnitTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Content Type</b></em>' reference list feature.
@@ -18013,14 +18012,6 @@ public interface WebuiPackage extends EPackage {
 		EReference EDIT_UNIT__DISABLE_WHEN = eINSTANCE.getEditUnit_DisableWhen();
 
 		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EDIT_UNIT__TITLE = eINSTANCE.getEditUnit_Title();
-
-		/**
 		 * The meta object literal for the '<em><b>Confirm Destination</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18215,14 +18206,6 @@ public interface WebuiPackage extends EPackage {
 		EClass DETAILS_UNIT = eINSTANCE.getDetailsUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DETAILS_UNIT__TITLE = eINSTANCE.getDetailsUnit_Title();
-
-		/**
 		 * The meta object literal for the '<em><b>Selection</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18263,14 +18246,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INDEX_UNIT = eINSTANCE.getIndexUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INDEX_UNIT__TITLE = eINSTANCE.getIndexUnit_Title();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Option</b></em>' attribute feature.
@@ -18321,14 +18296,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CARDS_UNIT = eINSTANCE.getCardsUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CARDS_UNIT__UNIT_TITLE = eINSTANCE.getCardsUnit_UnitTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Omit Field Labels</b></em>' attribute feature.
@@ -18567,14 +18534,6 @@ public interface WebuiPackage extends EPackage {
 		EClass SLIDER_UNIT = eINSTANCE.getSliderUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>Unit Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SLIDER_UNIT__UNIT_TITLE = eINSTANCE.getSliderUnit_UnitTitle();
-
-		/**
 		 * The meta object literal for the '<em><b>Show Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18615,14 +18574,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GALLERY_UNIT = eINSTANCE.getGalleryUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit Title</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GALLERY_UNIT__UNIT_TITLE = eINSTANCE.getGalleryUnit_UnitTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Full Size Filter</b></em>' reference feature.

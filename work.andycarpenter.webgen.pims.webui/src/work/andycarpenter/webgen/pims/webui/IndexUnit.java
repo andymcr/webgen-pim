@@ -2,9 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Index Unit</b></em>'.
@@ -14,7 +11,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getDisplayOption <em>Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getStyleClass <em>Style Class</em>}</li>
@@ -23,37 +19,10 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getIndexUnit()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif'"
+ * @model
  * @generated
  */
 public interface IndexUnit extends CollectionUnit, InlineActionContainer {
-	/**
-	 * Returns the value of the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' reference.
-	 * @see #setTitle(Label)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getIndexUnit_Title()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Label getTitle();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getTitle <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' reference.
-	 * @see #getTitle()
-	 * @generated
-	 */
-	void setTitle(Label value);
-
 	/**
 	 * Returns the value of the '<em><b>Display Option</b></em>' attribute.
 	 * The default value is <code>"Grid"</code>.

@@ -5,11 +5,7 @@ package work.andycarpenter.webgen.pims.webui.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.SliderUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -21,7 +17,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getStyleClass <em>Style Class</em>}</li>
@@ -31,16 +26,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
-	/**
-	 * The cached value of the '{@link #getUnitTitle() <em>Unit Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Label unitTitle;
-
 	/**
 	 * The default value of the '{@link #getShowTime() <em>Show Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -145,44 +130,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label getUnitTitle() {
-		if (unitTitle != null && unitTitle.eIsProxy()) {
-			InternalEObject oldUnitTitle = (InternalEObject)unitTitle;
-			unitTitle = (Label)eResolveProxy(oldUnitTitle);
-			if (unitTitle != oldUnitTitle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SLIDER_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
-			}
-		}
-		return unitTitle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label basicGetUnitTitle() {
-		return unitTitle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnitTitle(Label newUnitTitle) {
-		Label oldUnitTitle = unitTitle;
-		unitTitle = newUnitTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SLIDER_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getShowTime() {
 		return showTime;
 	}
@@ -270,9 +217,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.SLIDER_UNIT__UNIT_TITLE:
-				if (resolve) return getUnitTitle();
-				return basicGetUnitTitle();
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				return getShowTime();
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
@@ -293,9 +237,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.SLIDER_UNIT__UNIT_TITLE:
-				setUnitTitle((Label)newValue);
-				return;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				setShowTime((Integer)newValue);
 				return;
@@ -320,9 +261,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.SLIDER_UNIT__UNIT_TITLE:
-				setUnitTitle((Label)null);
-				return;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				setShowTime(SHOW_TIME_EDEFAULT);
 				return;
@@ -347,8 +285,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.SLIDER_UNIT__UNIT_TITLE:
-				return unitTitle != null;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				return showTime != SHOW_TIME_EDEFAULT;
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:

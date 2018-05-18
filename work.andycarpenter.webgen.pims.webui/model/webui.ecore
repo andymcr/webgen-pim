@@ -436,6 +436,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectableUnit" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingletonUnit" abstract="true" eSuperTypes="#//DynamicUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="canOnlyTitleWithSingletons"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xD;&#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif endif"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" ordered="false"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contentType" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
   </eClassifiers>
@@ -446,11 +454,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionUnit" abstract="true" eSuperTypes="#//DynamicUnit #//SelectableUnit">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="selectionMustNotBeSingleton"/>
+      <details key="constraints" value="canOnlyTitleWithSingletons selectionMustNotBeSingleton"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="canOnlyTitleWithSingletons" value="not unitTitle.oclIsUndefined() implies &#xD;&#xA;&#x9;if unitTitle.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;unitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif"/>
       <details key="selectionMustNotBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit &lt;> 1"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" ordered="false"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contentType" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
@@ -504,16 +515,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="waves_effect"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditUnit" abstract="true" eSuperTypes="#//SingletonUnit">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="canOnlyTitleWithSingletons"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xD;&#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif endif"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="disableWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="title" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmDestination" ordered="false"
         eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmLabel" ordered="false"
@@ -562,15 +565,12 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="selectionValidChoice selectionMustBeSingleton"/>
       </eAnnotations>
-      <details key="constraints" value="canOnlyTitleWithSingletons selectionValidChoice selectionMustBeSingleton"/>
+      <details key="constraints" value="selectionValidChoice selectionMustBeSingleton"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xD;&#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif endif"/>
       <details key="selectionMustBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit = 1"/>
       <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;pageDisplayedOn.webUI.services.services&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | contentType = s.serves)&#xD;&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xD;&#xA;&#x9;&#x9;->includes(selection)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="title" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
@@ -585,14 +585,6 @@
     <eLiterals name="LineDirection" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IndexUnit" eSuperTypes="#//CollectionUnit #//InlineActionContainer">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="canOnlyTitleWithSingletons"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xD;&#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif endif"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="title" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayOption" ordered="false"
         eType="#//IndexDisplayOption" defaultValueLiteral="Grid"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitColumnLabels" ordered="false"
@@ -605,8 +597,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="odd_row,even_row"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CardsUnit" abstract="true" eSuperTypes="#//CollectionUnit #//InlineActionContainer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overlaySingleSelectAction"
@@ -644,8 +634,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="unit,image_index_unit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SliderUnit" eSuperTypes="#//ImageUnit">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="showTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transitionTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -656,8 +644,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="slider_content"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GalleryUnit" eSuperTypes="#//ImageUnit">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fullSizeFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="showTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>

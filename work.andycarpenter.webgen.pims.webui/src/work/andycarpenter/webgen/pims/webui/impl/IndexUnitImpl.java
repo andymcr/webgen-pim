@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.IndexDisplayOption;
 import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
@@ -31,7 +30,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDisplayOption <em>Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getStyleClass <em>Style Class</em>}</li>
@@ -51,16 +49,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
-
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Label title;
 
 	/**
 	 * The default value of the '{@link #getDisplayOption() <em>Display Option</em>}' attribute.
@@ -191,44 +179,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.INDEX_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
 		}
 		return actions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label getTitle() {
-		if (title != null && title.eIsProxy()) {
-			InternalEObject oldTitle = (InternalEObject)title;
-			title = (Label)eResolveProxy(oldTitle);
-			if (title != oldTitle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.INDEX_UNIT__TITLE, oldTitle, title));
-			}
-		}
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label basicGetTitle() {
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle(Label newTitle) {
-		Label oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -375,9 +325,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return getActions();
-			case WebuiPackage.INDEX_UNIT__TITLE:
-				if (resolve) return getTitle();
-				return basicGetTitle();
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return getDisplayOption();
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
@@ -404,9 +351,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
-				return;
-			case WebuiPackage.INDEX_UNIT__TITLE:
-				setTitle((Label)newValue);
 				return;
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption((IndexDisplayOption)newValue);
@@ -438,9 +382,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				return;
-			case WebuiPackage.INDEX_UNIT__TITLE:
-				setTitle((Label)null);
-				return;
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption(DISPLAY_OPTION_EDEFAULT);
 				return;
@@ -470,8 +411,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
-			case WebuiPackage.INDEX_UNIT__TITLE:
-				return title != null;
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return displayOption != DISPLAY_OPTION_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:

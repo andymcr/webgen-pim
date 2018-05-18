@@ -4,11 +4,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,7 +16,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.EditUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -52,7 +47,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTitlePropertyDescriptor(object);
 			addConfirmDestinationPropertyDescriptor(object);
 			addConfirmLabelPropertyDescriptor(object);
 			addCancelDestinationPropertyDescriptor(object);
@@ -61,36 +55,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			addCustomiseValuesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Title feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addTitlePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_EditUnit_title_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_title_feature", "_UI_EditUnit_title_feature"),
-			WebuiPackage.Literals.EDIT_UNIT__TITLE,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof EditUnit) {
-						final EditUnit unit = (EditUnit) object;
-						final Set<Label> labels = new HashSet<Label>();
-						labels.addAll(getLabels(unit.getContentType()));
-						return labels;
-					}
-
-					return Collections.emptySet();
-				}
-		});
 	}
 
 	/**

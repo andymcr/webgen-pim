@@ -4,11 +4,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,10 +14,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -54,7 +46,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUnitTitlePropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addOverlaySingleSelectActionPropertyDescriptor(object);
 			addContentClassPropertyDescriptor(object);
@@ -62,50 +53,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			addCardClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Unit Title feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addUnitTitlePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_CardsUnit_unitTitle_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_unitTitle_feature", "_UI_CardsUnit_type"),
-			WebuiPackage.Literals.CARDS_UNIT__UNIT_TITLE,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof CardsUnit) {
-						final CardsUnit unit = (CardsUnit) object;
-						if (unit.isOmitContainerLoad()) {
-							return Collections.emptySet();
-						}
-						final Set<Label> labels = new HashSet<Label>();
-						final EntityOrView selectType = getSelectType(unit);
-						if (selectType != null) {
-							labels.addAll(selectType.getAttributes());
-							labels.addAll(selectType.getLabels());
-						} else if (unit.getContentType().size() > 0){
-							final AssociationWithContainment containingAssociation
-								= getContainingAssociation(unit.getContentType().get(0));
-							if (containingAssociation != null) {
-								labels.addAll(containingAssociation.getPartOf().getAttributes());
-								labels.addAll(containingAssociation.getPartOf().getLabels());
-							}
-						}
-						return labels;
-					}
-
-					return Collections.emptySet();
-				}
-		});
 	}
 
 	/**

@@ -2143,8 +2143,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSingletonUnit_ContentType() {
+	public EReference getSingletonUnit_Title() {
 		return (EReference)singletonUnitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSingletonUnit_ContentType() {
+		return (EReference)singletonUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2161,7 +2170,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_ContentType() {
+	public EReference getCollectionUnit_UnitTitle() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2170,7 +2179,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_Selection() {
+	public EReference getCollectionUnit_ContentType() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2179,7 +2188,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_FindContainerSelection() {
+	public EReference getCollectionUnit_Selection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2188,8 +2197,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCollectionUnit_FindContainerSelection() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getCollectionUnit_OmitContainerLoad() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2198,15 +2216,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EReference getCollectionUnit_FindElementSelection() {
-		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2215,7 +2224,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_SupportedFilters() {
+	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2224,7 +2233,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_Badges() {
+	public EReference getCollectionUnit_SupportedFilters() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2233,8 +2242,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(8);
+	public EReference getCollectionUnit_Badges() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2242,7 +2251,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_DefaultPaginationSize() {
+	public EAttribute getCollectionUnit_EmptyMessage() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2251,7 +2260,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_MaximumPaginationSize() {
+	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -2260,7 +2269,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationControlPlacement() {
+	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2269,7 +2278,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextNpages() {
+	public EAttribute getCollectionUnit_PaginationControlPlacement() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2278,7 +2287,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousNpages() {
+	public EAttribute getCollectionUnit_NextNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2287,7 +2296,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageLabel() {
+	public EAttribute getCollectionUnit_PreviousNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -2296,7 +2305,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageIconName() {
+	public EAttribute getCollectionUnit_NextPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -2305,7 +2314,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageLabel() {
+	public EAttribute getCollectionUnit_NextPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -2314,7 +2323,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageIconName() {
+	public EAttribute getCollectionUnit_PreviousPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -2323,7 +2332,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
+	public EAttribute getCollectionUnit_PreviousPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -2332,7 +2341,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
+	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -2341,7 +2350,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageLabel() {
+	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -2350,7 +2359,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageIconName() {
+	public EAttribute getCollectionUnit_FirstPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -2359,7 +2368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageLabel() {
+	public EAttribute getCollectionUnit_FirstPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -2368,7 +2377,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageIconName() {
+	public EAttribute getCollectionUnit_LastPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -2377,7 +2386,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationClass() {
+	public EAttribute getCollectionUnit_LastPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -2386,8 +2395,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationElementClass() {
+	public EAttribute getCollectionUnit_PaginationClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollectionUnit_PaginationElementClass() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(26);
 	}
 
 	/**
@@ -2413,7 +2431,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEditUnit_Title() {
+	public EReference getEditUnit_ConfirmDestination() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2422,17 +2440,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEditUnit_ConfirmDestination() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getEditUnit_ConfirmLabel() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2441,7 +2450,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EReference getEditUnit_CancelDestination() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(4);
+		return (EReference)editUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2450,7 +2459,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getEditUnit_CancelLabel() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2459,7 +2468,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getEditUnit_ContentClass() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2468,7 +2477,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getEditUnit_CustomiseValues() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2629,7 +2638,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDetailsUnit_Title() {
+	public EReference getDetailsUnit_Selection() {
 		return (EReference)detailsUnitEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2638,17 +2647,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDetailsUnit_Selection() {
-		return (EReference)detailsUnitEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getDetailsUnit_OmitFieldLabels() {
-		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2657,7 +2657,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getDetailsUnit_StyleClass() {
-		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2666,7 +2666,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getDetailsUnit_ContentClass() {
-		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2683,17 +2683,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIndexUnit_Title() {
-		return (EReference)indexUnitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getIndexUnit_DisplayOption() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2702,7 +2693,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getIndexUnit_OmitColumnLabels() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2711,7 +2702,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getIndexUnit_StyleClass() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2720,7 +2711,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getIndexUnit_ContentClass() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2729,7 +2720,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getIndexUnit_RowClasses() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2746,17 +2737,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCardsUnit_UnitTitle() {
-		return (EReference)cardsUnitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getCardsUnit_OmitFieldLabels() {
-		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2765,7 +2747,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getCardsUnit_OverlaySingleSelectAction() {
-		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2774,7 +2756,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getCardsUnit_ContentClass() {
-		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2783,7 +2765,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getCardsUnit_ColumnClass() {
-		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2792,7 +2774,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getCardsUnit_CardClass() {
-		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3007,17 +2989,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSliderUnit_UnitTitle() {
-		return (EReference)sliderUnitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSliderUnit_ShowTime() {
-		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3026,7 +2999,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getSliderUnit_TransitionTime() {
-		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3035,7 +3008,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getSliderUnit_StyleClass() {
-		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3044,7 +3017,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getSliderUnit_ContentClass() {
-		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3061,7 +3034,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGalleryUnit_UnitTitle() {
+	public EReference getGalleryUnit_FullSizeFilter() {
 		return (EReference)galleryUnitEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3070,17 +3043,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGalleryUnit_FullSizeFilter() {
-		return (EReference)galleryUnitEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGalleryUnit_ShowTime() {
-		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3089,7 +3053,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getGalleryUnit_TransitionTime() {
-		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3098,7 +3062,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getGalleryUnit_StyleClass() {
-		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3107,7 +3071,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getGalleryUnit_ContentClass() {
-		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3752,9 +3716,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		selectableUnitEClass = createEClass(SELECTABLE_UNIT);
 
 		singletonUnitEClass = createEClass(SINGLETON_UNIT);
+		createEReference(singletonUnitEClass, SINGLETON_UNIT__TITLE);
 		createEReference(singletonUnitEClass, SINGLETON_UNIT__CONTENT_TYPE);
 
 		collectionUnitEClass = createEClass(COLLECTION_UNIT);
+		createEReference(collectionUnitEClass, COLLECTION_UNIT__UNIT_TITLE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__CONTENT_TYPE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_CONTAINER_SELECTION);
@@ -3784,7 +3750,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		editUnitEClass = createEClass(EDIT_UNIT);
 		createEReference(editUnitEClass, EDIT_UNIT__DISABLE_WHEN);
-		createEReference(editUnitEClass, EDIT_UNIT__TITLE);
 		createEReference(editUnitEClass, EDIT_UNIT__CONFIRM_DESTINATION);
 		createEAttribute(editUnitEClass, EDIT_UNIT__CONFIRM_LABEL);
 		createEReference(editUnitEClass, EDIT_UNIT__CANCEL_DESTINATION);
@@ -3813,14 +3778,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(mapUnitEClass, MAP_UNIT__PLACE_NAME);
 
 		detailsUnitEClass = createEClass(DETAILS_UNIT);
-		createEReference(detailsUnitEClass, DETAILS_UNIT__TITLE);
 		createEReference(detailsUnitEClass, DETAILS_UNIT__SELECTION);
 		createEAttribute(detailsUnitEClass, DETAILS_UNIT__OMIT_FIELD_LABELS);
 		createEAttribute(detailsUnitEClass, DETAILS_UNIT__STYLE_CLASS);
 		createEAttribute(detailsUnitEClass, DETAILS_UNIT__CONTENT_CLASS);
 
 		indexUnitEClass = createEClass(INDEX_UNIT);
-		createEReference(indexUnitEClass, INDEX_UNIT__TITLE);
 		createEAttribute(indexUnitEClass, INDEX_UNIT__DISPLAY_OPTION);
 		createEAttribute(indexUnitEClass, INDEX_UNIT__OMIT_COLUMN_LABELS);
 		createEAttribute(indexUnitEClass, INDEX_UNIT__STYLE_CLASS);
@@ -3828,7 +3791,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(indexUnitEClass, INDEX_UNIT__ROW_CLASSES);
 
 		cardsUnitEClass = createEClass(CARDS_UNIT);
-		createEReference(cardsUnitEClass, CARDS_UNIT__UNIT_TITLE);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__OMIT_FIELD_LABELS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CONTENT_CLASS);
@@ -3853,14 +3815,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(imageIndexUnitEClass, IMAGE_INDEX_UNIT__STYLE_CLASS);
 
 		sliderUnitEClass = createEClass(SLIDER_UNIT);
-		createEReference(sliderUnitEClass, SLIDER_UNIT__UNIT_TITLE);
 		createEAttribute(sliderUnitEClass, SLIDER_UNIT__SHOW_TIME);
 		createEAttribute(sliderUnitEClass, SLIDER_UNIT__TRANSITION_TIME);
 		createEAttribute(sliderUnitEClass, SLIDER_UNIT__STYLE_CLASS);
 		createEAttribute(sliderUnitEClass, SLIDER_UNIT__CONTENT_CLASS);
 
 		galleryUnitEClass = createEClass(GALLERY_UNIT);
-		createEReference(galleryUnitEClass, GALLERY_UNIT__UNIT_TITLE);
 		createEReference(galleryUnitEClass, GALLERY_UNIT__FULL_SIZE_FILTER);
 		createEAttribute(galleryUnitEClass, GALLERY_UNIT__SHOW_TIME);
 		createEAttribute(galleryUnitEClass, GALLERY_UNIT__TRANSITION_TIME);
@@ -4243,9 +4203,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(selectableUnitEClass, SelectableUnit.class, "SelectableUnit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(singletonUnitEClass, SingletonUnit.class, "SingletonUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSingletonUnit_Title(), thePersistencePackage.getLabel(), null, "title", null, 0, 1, SingletonUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSingletonUnit_ContentType(), thePersistencePackage.getEntityOrView(), null, "contentType", null, 1, 1, SingletonUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(collectionUnitEClass, CollectionUnit.class, "CollectionUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCollectionUnit_UnitTitle(), thePersistencePackage.getLabel(), null, "unitTitle", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCollectionUnit_ContentType(), thePersistencePackage.getEntityOrView(), null, "contentType", null, 1, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Selection(), theServicePackage.getSelection(), null, "selection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindContainerSelection(), theServicePackage.getSelection(), null, "findContainerSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4275,7 +4237,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(editUnitEClass, EditUnit.class, "EditUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEditUnit_DisableWhen(), theExpressionPackage.getPredicate(), null, "disableWhen", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEditUnit_Title(), thePersistencePackage.getLabel(), null, "title", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEditUnit_ConfirmDestination(), this.getPage(), null, "confirmDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEditUnit_ConfirmLabel(), ecorePackage.getEString(), "confirmLabel", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEditUnit_CancelDestination(), this.getPage(), null, "cancelDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4304,14 +4265,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getMapUnit_PlaceName(), thePersistencePackage.getAttribute(), null, "placeName", null, 0, 1, MapUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(detailsUnitEClass, DetailsUnit.class, "DetailsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDetailsUnit_Title(), thePersistencePackage.getLabel(), null, "title", null, 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDetailsUnit_Selection(), theServicePackage.getSelection(), null, "selection", null, 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDetailsUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDetailsUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,details_unit", 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDetailsUnit_ContentClass(), ecorePackage.getEString(), "contentClass", "details_content", 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(indexUnitEClass, IndexUnit.class, "IndexUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIndexUnit_Title(), thePersistencePackage.getLabel(), null, "title", null, 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getIndexUnit_DisplayOption(), this.getIndexDisplayOption(), "displayOption", "Grid", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getIndexUnit_OmitColumnLabels(), ecorePackage.getEBoolean(), "omitColumnLabels", "false", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getIndexUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,index_unit", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4319,7 +4278,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getIndexUnit_RowClasses(), ecorePackage.getEString(), "rowClasses", "odd_row,even_row", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cardsUnitEClass, CardsUnit.class, "CardsUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCardsUnit_UnitTitle(), thePersistencePackage.getLabel(), null, "unitTitle", null, 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_OverlaySingleSelectAction(), ecorePackage.getEBoolean(), "overlaySingleSelectAction", null, 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCardsUnit_ContentClass(), ecorePackage.getEString(), "contentClass", "row", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4344,14 +4302,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getImageIndexUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,image_index_unit", 0, 1, ImageIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(sliderUnitEClass, SliderUnit.class, "SliderUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSliderUnit_UnitTitle(), thePersistencePackage.getLabel(), null, "unitTitle", null, 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getSliderUnit_ShowTime(), ecorePackage.getEInt(), "showTime", "-1", 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSliderUnit_TransitionTime(), ecorePackage.getEInt(), "transitionTime", "-1", 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSliderUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,slider_unit", 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getSliderUnit_ContentClass(), ecorePackage.getEString(), "contentClass", "slider_content", 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(galleryUnitEClass, GalleryUnit.class, "GalleryUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGalleryUnit_UnitTitle(), thePersistencePackage.getLabel(), null, "unitTitle", null, 0, 1, GalleryUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getGalleryUnit_FullSizeFilter(), theImagePackage.getImageManipulation(), null, "fullSizeFilter", null, 0, 1, GalleryUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGalleryUnit_ShowTime(), ecorePackage.getEInt(), "showTime", "-1", 0, 1, GalleryUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGalleryUnit_TransitionTime(), ecorePackage.getEInt(), "transitionTime", "-1", 0, 1, GalleryUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4504,22 +4460,22 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			 "constraints", "selectionValidChoice"
 		   });	
 		addAnnotation
-		  (collectionUnitEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "selectionMustNotBeSingleton"
-		   });	
-		addAnnotation
-		  (editUnitEClass, 
+		  (singletonUnitEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "canOnlyTitleWithSingletons"
 		   });	
 		addAnnotation
+		  (collectionUnitEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "canOnlyTitleWithSingletons selectionMustNotBeSingleton"
+		   });	
+		addAnnotation
 		  (detailsUnitEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "canOnlyTitleWithSingletons selectionValidChoice selectionMustBeSingleton"
+			 "constraints", "selectionValidChoice selectionMustBeSingleton"
 		   });
 		addAnnotation
 		  (detailsUnitEClass, 
@@ -4527,12 +4483,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   "http://www.eclipse.org/emf/2002/Ecore",
 		   new String[] {
 			 "constraints", "selectionValidChoice selectionMustBeSingleton"
-		   });	
-		addAnnotation
-		  (indexUnitEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "canOnlyTitleWithSingletons"
 		   });	
 		addAnnotation
 		  (inlineActionContainerEClass, 
@@ -4685,30 +4635,24 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			 "derivation", "if label.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tlabel.name\r\nendif\r\n"
 		   });	
 		addAnnotation
-		  (collectionUnitEClass, 
-		   source, 
-		   new String[] {
-			 "selectionMustNotBeSingleton", "not selection.oclIsUndefined() implies\r\n\tselection.limit <> 1"
-		   });	
-		addAnnotation
-		  (editUnitEClass, 
+		  (singletonUnitEClass, 
 		   source, 
 		   new String[] {
 			 "canOnlyTitleWithSingletons", "not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif"
+		   });	
+		addAnnotation
+		  (collectionUnitEClass, 
+		   source, 
+		   new String[] {
+			 "canOnlyTitleWithSingletons", "not unitTitle.oclIsUndefined() implies \r\n\tif unitTitle.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\tunitTitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif",
+			 "selectionMustNotBeSingleton", "not selection.oclIsUndefined() implies\r\n\tselection.limit <> 1"
 		   });	
 		addAnnotation
 		  (detailsUnitEClass, 
 		   source, 
 		   new String[] {
-			 "canOnlyTitleWithSingletons", "not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif",
 			 "selectionMustBeSingleton", "not selection.oclIsUndefined() implies\r\n\tselection.limit = 1",
 			 "selectionValidChoice", "not selection.oclIsUndefined() implies\r\n\tpageDisplayedOn.webUI.services.services\r\n\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t->select(s : service::Service | contentType = s.serves)\r\n\t\t->collect(s : service::Service | s.selections)\r\n\t\t->includes(selection)"
-		   });	
-		addAnnotation
-		  (indexUnitEClass, 
-		   source, 
-		   new String[] {
-			 "canOnlyTitleWithSingletons", "not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif"
 		   });	
 		addAnnotation
 		  (inlineActionContainerEClass, 

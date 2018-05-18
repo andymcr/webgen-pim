@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 
@@ -36,6 +37,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContentType <em>Content Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
@@ -67,6 +69,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class CollectionUnitImpl extends DynamicUnitImpl implements CollectionUnit {
+	/**
+	 * The cached value of the '{@link #getUnitTitle() <em>Unit Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnitTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected Label unitTitle;
+
 	/**
 	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -534,6 +546,44 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.COLLECTION_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label getUnitTitle() {
+		if (unitTitle != null && unitTitle.eIsProxy()) {
+			InternalEObject oldUnitTitle = (InternalEObject)unitTitle;
+			unitTitle = (Label)eResolveProxy(oldUnitTitle);
+			if (unitTitle != oldUnitTitle) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.COLLECTION_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
+			}
+		}
+		return unitTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label basicGetUnitTitle() {
+		return unitTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnitTitle(Label newUnitTitle) {
+		Label oldUnitTitle = unitTitle;
+		unitTitle = newUnitTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
 	}
 
 	/**
@@ -1145,6 +1195,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
+				if (resolve) return getUnitTitle();
+				return basicGetUnitTitle();
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return getContentType();
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
@@ -1214,6 +1267,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
+				setUnitTitle((Label)newValue);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				getContentType().addAll((Collection<? extends EntityOrView>)newValue);
@@ -1307,6 +1363,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
+				setUnitTitle((Label)null);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				return;
@@ -1397,6 +1456,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
+				return unitTitle != null;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return contentType != null && !contentType.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:

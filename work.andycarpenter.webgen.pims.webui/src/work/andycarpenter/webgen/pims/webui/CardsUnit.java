@@ -2,8 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Cards Unit</b></em>'.
@@ -13,7 +11,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}</li>
@@ -26,32 +23,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * @generated
  */
 public interface CardsUnit extends CollectionUnit, InlineActionContainer {
-	/**
-	 * Returns the value of the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Unit Title</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit Title</em>' reference.
-	 * @see #setUnitTitle(Label)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_UnitTitle()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Label getUnitTitle();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitTitle <em>Unit Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit Title</em>' reference.
-	 * @see #getUnitTitle()
-	 * @generated
-	 */
-	void setUnitTitle(Label value);
-
 	/**
 	 * Returns the value of the '<em><b>Omit Field Labels</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -22,12 +23,22 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SingletonUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SingletonUnitImpl#getContentType <em>Content Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class SingletonUnitImpl extends DynamicUnitImpl implements SingletonUnit {
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected Label title;
 	/**
 	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -55,6 +66,44 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.SINGLETON_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label getTitle() {
+		if (title != null && title.eIsProxy()) {
+			InternalEObject oldTitle = (InternalEObject)title;
+			title = (Label)eResolveProxy(oldTitle);
+			if (title != oldTitle) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SINGLETON_UNIT__TITLE, oldTitle, title));
+			}
+		}
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label basicGetTitle() {
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTitle(Label newTitle) {
+		Label oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SINGLETON_UNIT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -103,6 +152,9 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.SINGLETON_UNIT__TITLE:
+				if (resolve) return getTitle();
+				return basicGetTitle();
 			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
 				if (resolve) return getContentType();
 				return basicGetContentType();
@@ -118,6 +170,9 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.SINGLETON_UNIT__TITLE:
+				setTitle((Label)newValue);
+				return;
 			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
 				setContentType((EntityOrView)newValue);
 				return;
@@ -133,6 +188,9 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.SINGLETON_UNIT__TITLE:
+				setTitle((Label)null);
+				return;
 			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
 				setContentType((EntityOrView)null);
 				return;
@@ -148,6 +206,8 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.SINGLETON_UNIT__TITLE:
+				return title != null;
 			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
 				return contentType != null;
 		}

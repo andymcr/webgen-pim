@@ -2,9 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Slider Unit</b></em>'.
@@ -14,7 +11,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getTransitionTime <em>Transition Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getStyleClass <em>Style Class</em>}</li>
@@ -26,32 +22,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * @generated
  */
 public interface SliderUnit extends ImageUnit {
-	/**
-	 * Returns the value of the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Unit Title</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit Title</em>' reference.
-	 * @see #setUnitTitle(Label)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSliderUnit_UnitTitle()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Label getUnitTitle();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getUnitTitle <em>Unit Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit Title</em>' reference.
-	 * @see #getUnitTitle()
-	 * @generated
-	 */
-	void setUnitTitle(Label value);
-
 	/**
 	 * Returns the value of the '<em><b>Show Time</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.

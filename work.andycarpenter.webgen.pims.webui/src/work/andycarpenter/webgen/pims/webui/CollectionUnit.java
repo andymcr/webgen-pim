@@ -6,6 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 
@@ -18,6 +19,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType <em>Content Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindContainerSelection <em>Find Container Selection</em>}</li>
@@ -48,11 +50,37 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit()
  * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionMustNotBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons selectionMustNotBeSingleton'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \r\n\tif unitTitle.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\tunitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
  * @generated
  */
 public interface CollectionUnit extends DynamicUnit, SelectableUnit {
+	/**
+	 * Returns the value of the '<em><b>Unit Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unit Title</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit Title</em>' reference.
+	 * @see #setUnitTitle(Label)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_UnitTitle()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	Label getUnitTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle <em>Unit Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit Title</em>' reference.
+	 * @see #getUnitTitle()
+	 * @generated
+	 */
+	void setUnitTitle(Label value);
+
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityOrView}.

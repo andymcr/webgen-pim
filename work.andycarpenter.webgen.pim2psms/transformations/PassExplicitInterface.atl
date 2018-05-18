@@ -779,6 +779,12 @@ abstract rule SelectableUnit {
 abstract rule SingletonUnit {
 	from website : Website!SingletonUnit
 	to waf : WAF!SingletonUnit (
+		title <-
+			if website.title.oclIsUndefined() then
+				website.title
+			else
+				website.title.findOrmLabel()
+			endif,
 		contentType <- thisModule.findOrmEntity(website.contentType.name)
 	)
 }
@@ -788,6 +794,12 @@ abstract rule SingletonUnit {
 abstract rule CollectionUnit {
 	from website : Website!CollectionUnit
 	to waf : WAF!CollectionUnit (
+		unitTitle <-
+			if website.unitTitle.oclIsUndefined() then
+				website.unitTitle
+			else
+				website.unitTitle.findOrmLabel()
+			endif,
 		contentType <- website.contentType
 			->collect(eov | thisModule.findOrmEntity(eov.name)),
 		selection <-
@@ -846,12 +858,6 @@ abstract rule EditUnit {
 	from website : Website!EditUnit
 	to waf : WAF!EditUnit (
 		disableWhen <- website.disableWhen,
-		title <-
-			if website.title.oclIsUndefined() then
-				website.title
-			else
-				website.title.findOrmLabel()
-			endif,
 		uriElement <-
 			if website.uriElement.trim() <> '' then
 				website.uriElement.trim()
@@ -946,12 +952,6 @@ rule UpdateUnit {
 rule DetailsUnit {
 	from website : Website!DetailsUnit
 	to waf : WAF!DetailsUnit (
-		title <-
-			if website.title.oclIsUndefined() then
-				website.title
-			else
-				website.title.findOrmLabel()
-			endif,
 		selection <-
 			if website.selection.oclIsUndefined() then
 				website.selection
@@ -966,12 +966,6 @@ rule DetailsUnit {
 abstract rule IndexUnit {
 	from website : Website!IndexUnit
 	to waf : WAF!IndexUnit (
-		title <-
-			if website.title.oclIsUndefined() then
-				website.title
-			else
-				website.title.findOrmLabel()
-			endif,
 		omitColumnLabels <- website.omitColumnLabels,
 		rowClasses <- website.rowClasses.replaceAll(',', ' ')
 	)
@@ -1002,12 +996,6 @@ rule IndexLineDirectionUnit {
 abstract rule CardsUnit {
 	from website : Website!CardsUnit
 	to waf : WAF!CardsUnit (
-		unitTitle <-
-			if website.unitTitle.oclIsUndefined() then
-				website.unitTitle
-			else
-				website.unitTitle.findOrmLabel()
-			endif,
 		omitFieldLabels <- website.omitFieldLabels,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
@@ -1049,12 +1037,6 @@ rule ImageIndexUnit {
 rule SliderUnit {
 	from website : Website!SliderUnit
 	to waf : WAF!SliderUnit (
-		unitTitle <-
-			if website.unitTitle.oclIsUndefined() then
-				website.unitTitle
-			else
-				website.unitTitle.findOrmLabel()
-			endif,
 		showTime <- website.showTime,
 		transitionTime <- website.transitionTime
 	)
@@ -1064,12 +1046,6 @@ rule SliderUnit {
 rule GalleryUnit {
 	from website : Website!GalleryUnit
 	to waf : WAF!GalleryUnit (
-		unitTitle <-
-			if website.unitTitle.oclIsUndefined() then
-				website.unitTitle
-			else
-				website.unitTitle.findOrmLabel()
-			endif,
 		fullSizeFilter <- website.fullSizeFilter,
 		showTime <- website.showTime,
 		transitionTime <- website.transitionTime

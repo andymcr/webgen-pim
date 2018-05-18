@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Selection;
 
 /**
@@ -14,7 +13,6 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getStyleClass <em>Style Class</em>}</li>
@@ -22,37 +20,11 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons selectionValidChoice selectionMustBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif' selectionMustBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\r\n\tpageDisplayedOn.webUI.services.services\r\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t-&gt;select(s : service::Service | contentType = s.serves)\r\n\t\t-&gt;collect(s : service::Service | s.selections)\r\n\t\t-&gt;includes(selection)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionValidChoice selectionMustBeSingleton'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\r\n\tpageDisplayedOn.webUI.services.services\r\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t-&gt;select(s : service::Service | contentType = s.serves)\r\n\t\t-&gt;collect(s : service::Service | s.selections)\r\n\t\t-&gt;includes(selection)'"
  * @generated
  */
 public interface DetailsUnit extends SingletonUnit, SelectableUnit {
-	/**
-	 * Returns the value of the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' reference.
-	 * @see #setTitle(Label)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit_Title()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Label getTitle();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getTitle <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' reference.
-	 * @see #getTitle()
-	 * @generated
-	 */
-	void setTitle(Label value);
-
 	/**
 	 * Returns the value of the '<em><b>Selection</b></em>' reference.
 	 * <!-- begin-user-doc -->

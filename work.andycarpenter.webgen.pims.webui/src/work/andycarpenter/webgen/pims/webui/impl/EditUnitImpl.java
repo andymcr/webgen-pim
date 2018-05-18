@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
-import work.andycarpenter.webgen.pims.persistence.Label;
-
 import work.andycarpenter.webgen.pims.webui.EditUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -26,7 +24,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getDisableWhen <em>Disable When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmDestination <em>Confirm Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmLabel <em>Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
@@ -47,16 +44,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @ordered
 	 */
 	protected Predicate disableWhen;
-
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Label title;
 
 	/**
 	 * The cached value of the '{@link #getConfirmDestination() <em>Confirm Destination</em>}' reference.
@@ -218,44 +205,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__DISABLE_WHEN, newDisableWhen, newDisableWhen));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label getTitle() {
-		if (title != null && title.eIsProxy()) {
-			InternalEObject oldTitle = (InternalEObject)title;
-			title = (Label)eResolveProxy(oldTitle);
-			if (title != oldTitle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.EDIT_UNIT__TITLE, oldTitle, title));
-			}
-		}
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label basicGetTitle() {
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle(Label newTitle) {
-		Label oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -442,9 +391,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		switch (featureID) {
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return getDisableWhen();
-			case WebuiPackage.EDIT_UNIT__TITLE:
-				if (resolve) return getTitle();
-				return basicGetTitle();
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				if (resolve) return getConfirmDestination();
 				return basicGetConfirmDestination();
@@ -473,9 +419,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		switch (featureID) {
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)newValue);
-				return;
-			case WebuiPackage.EDIT_UNIT__TITLE:
-				setTitle((Label)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				setConfirmDestination((Page)newValue);
@@ -510,9 +453,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)null);
 				return;
-			case WebuiPackage.EDIT_UNIT__TITLE:
-				setTitle((Label)null);
-				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				setConfirmDestination((Page)null);
 				return;
@@ -545,8 +485,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		switch (featureID) {
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return disableWhen != null;
-			case WebuiPackage.EDIT_UNIT__TITLE:
-				return title != null;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				return confirmDestination != null;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:

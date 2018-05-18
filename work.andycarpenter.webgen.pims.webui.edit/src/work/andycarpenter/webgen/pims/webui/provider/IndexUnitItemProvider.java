@@ -4,11 +4,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -19,10 +15,6 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -55,7 +47,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTitlePropertyDescriptor(object);
 			addDisplayOptionPropertyDescriptor(object);
 			addOmitColumnLabelsPropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
@@ -63,50 +54,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 			addRowClassesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Title feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addTitlePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_IndexUnit_title_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_IndexUnit_title_feature", "_UI_IndexUnit_type"),
-			WebuiPackage.Literals.INDEX_UNIT__TITLE,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof IndexUnit) {
-						final IndexUnit unit = (IndexUnit) object;
-						if (unit.isOmitContainerLoad()) {
-							return Collections.emptySet();
-						}
-						final Set<Label> labels = new HashSet<Label>();
-						final EntityOrView selectType = getSelectType(unit);
-						if (selectType != null) {
-							labels.addAll(selectType.getAttributes());
-							labels.addAll(selectType.getLabels());
-						} else if (unit.getContentType().size() > 0){
-							final AssociationWithContainment containingAssociation
-								= getContainingAssociation(unit.getContentType().get(0));
-							if (containingAssociation != null) {
-								labels.addAll(containingAssociation.getPartOf().getAttributes());
-								labels.addAll(containingAssociation.getPartOf().getLabels());
-							}
-						}
-						return labels;
-					}
-
-					return Collections.emptySet();
-				}
-		});
 	}
 
 	/**

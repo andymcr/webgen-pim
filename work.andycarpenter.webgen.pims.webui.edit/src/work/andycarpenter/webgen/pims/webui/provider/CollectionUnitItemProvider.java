@@ -19,8 +19,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -54,6 +57,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addUnitTitlePropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addFindContainerSelectionPropertyDescriptor(object);
@@ -81,6 +85,50 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addPaginationElementClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Unit Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addUnitTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_CollectionUnit_unitTitle_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_unitTitle_feature", "_UI_CollectionUnit_type"),
+			WebuiPackage.Literals.COLLECTION_UNIT__UNIT_TITLE,
+			true, false, true, null,
+			getString("_UI_InterfacePropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof CardsUnit) {
+						final CardsUnit unit = (CardsUnit) object;
+						if (unit.isOmitContainerLoad()) {
+							return Collections.emptySet();
+						}
+						final Set<Label> labels = new HashSet<Label>();
+						final EntityOrView selectType = getSelectType(unit);
+						if (selectType != null) {
+							labels.addAll(selectType.getAttributes());
+							labels.addAll(selectType.getLabels());
+						} else if (unit.getContentType().size() > 0){
+							final AssociationWithContainment containingAssociation
+								= getContainingAssociation(unit.getContentType().get(0));
+							if (containingAssociation != null) {
+								labels.addAll(containingAssociation.getPartOf().getAttributes());
+								labels.addAll(containingAssociation.getPartOf().getLabels());
+							}
+						}
+						return labels;
+					}
+
+					return Collections.emptySet();
+				}
+		});
 	}
 
 	/**
