@@ -44,6 +44,7 @@ abstract rule DynamicUnit {
 	)
 }
 
+--@extends DynamicUnit
 abstract rule SingletonUnit {
 	from partialWaf : WAF!SingletonUnit
 	to waf : WAF!SingletonUnit (
@@ -68,6 +69,7 @@ abstract rule SingletonUnit {
 	)
 }
 
+--@extends DynamicUnit
 abstract rule CollectionUnit {
 	from partialWaf : WAF!CollectionUnit
 	to waf : WAF!CollectionUnit (
@@ -161,7 +163,7 @@ lazy rule implicitUnitAssociation {
 }
 
 
--- @extends DynamicUnit, SingletonUnit
+-- @extends SingletonUnit
 abstract rule EditUnit {
 	from partialWaf : WAF!EditUnit
 	to waf : WAF!EditUnit (
@@ -189,21 +191,14 @@ rule UpdateUnit {
 	)
 }
 
--- @extends DynamicUnit
-abstract rule DataUnit {
-	from partialWaf : WAF!DataUnit
-	to waf : WAF!DataUnit (
-	)
-}
-
--- @extends DataUnit, SingletonUnit
+-- @extends SingletonUnit
 rule DetailsUnit {
 	from partialWaf : WAF!DetailsUnit
 	to waf : WAF!DetailsUnit (
 	)
 }
 
--- @extends DataUnit, CollectionUnit
+-- @extends CollectionUnit
 abstract rule IndexUnit {
 	from partialWaf : WAF!IndexUnit
 	to waf : WAF!IndexUnit (
@@ -228,6 +223,50 @@ rule IndexPageDirectionUnit {
 rule IndexLineDirectionUnit {
 	from partialWaf : WAF!IndexLineDirectionUnit
 	to waf : WAF!IndexLineDirectionUnit (
+	)
+}
+
+-- @extends CollectionUnit
+abstract rule CardsUnit {
+	from partialWaf : WAF!CardsUnit
+	to waf : WAF!CardsUnit (
+	)
+}
+
+-- @extends CardsUnit
+rule CardsIndexUnit {
+	from partialWaf : WAF!CardsIndexUnit
+	to waf : WAF!CardsIndexUnit (
+	)
+}
+
+-- @extends CollectionUnit
+abstract rule ImageUnit {
+	from partialWaf : WAF!ImageUnit
+	to waf : WAF!ImageUnit (
+	)
+}
+
+-- @extends CardsUnit, ImageUnit
+rule ImageIndexUnit {
+	from partialWaf : WAF!ImageIndexUnit
+	to waf : WAF!ImageIndexUnit (
+	)
+}
+
+-- no extends so that implicate fields never added
+-- extends ImageUnit
+rule sliderUnit {
+	from partialWaf : WAF!SliderUnit
+	to waf : WAF!SliderUnit (
+	)
+}
+
+-- no extends so that implicate fields never added
+-- extends ImageUnit
+rule galleryUnit {
+	from partialWaf : WAF!GalleryUnit
+	to waf : WAF!GalleryUnit (
 	)
 }
 

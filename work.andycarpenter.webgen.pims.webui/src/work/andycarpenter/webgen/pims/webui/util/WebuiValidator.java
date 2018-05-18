@@ -183,16 +183,14 @@ public class WebuiValidator extends EObjectValidator {
 				return validateUpdateUnit((UpdateUnit)value, diagnostics, context);
 			case WebuiPackage.MAP_UNIT:
 				return validateMapUnit((MapUnit)value, diagnostics, context);
-			case WebuiPackage.DATA_UNIT:
-				return validateDataUnit((DataUnit)value, diagnostics, context);
 			case WebuiPackage.DETAILS_UNIT:
 				return validateDetailsUnit((DetailsUnit)value, diagnostics, context);
 			case WebuiPackage.INDEX_UNIT:
 				return validateIndexUnit((IndexUnit)value, diagnostics, context);
-			case WebuiPackage.CONTROL_UNIT:
-				return validateControlUnit((ControlUnit)value, diagnostics, context);
-			case WebuiPackage.SEARCH_UNIT:
-				return validateSearchUnit((SearchUnit)value, diagnostics, context);
+			case WebuiPackage.CARDS_UNIT:
+				return validateCardsUnit((CardsUnit)value, diagnostics, context);
+			case WebuiPackage.CARDS_INDEX_UNIT:
+				return validateCardsIndexUnit((CardsIndexUnit)value, diagnostics, context);
 			case WebuiPackage.IMAGE_UNIT:
 				return validateImageUnit((ImageUnit)value, diagnostics, context);
 			case WebuiPackage.IMAGE_INDEX_UNIT:
@@ -201,6 +199,10 @@ public class WebuiValidator extends EObjectValidator {
 				return validateSliderUnit((SliderUnit)value, diagnostics, context);
 			case WebuiPackage.GALLERY_UNIT:
 				return validateGalleryUnit((GalleryUnit)value, diagnostics, context);
+			case WebuiPackage.CONTROL_UNIT:
+				return validateControlUnit((ControlUnit)value, diagnostics, context);
+			case WebuiPackage.SEARCH_UNIT:
+				return validateSearchUnit((SearchUnit)value, diagnostics, context);
 			case WebuiPackage.AUTHENTICATION_UNIT:
 				return validateAuthenticationUnit((AuthenticationUnit)value, diagnostics, context);
 			case WebuiPackage.REGISTRATION_UNIT:
@@ -989,7 +991,18 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateSingletonUnit(SingletonUnit singletonUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(singletonUnit, diagnostics, context);
+		if (!validate_NoCircularContainment(singletonUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(singletonUnit, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1007,6 +1020,8 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(collectionUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(collectionUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(collectionUnit, diagnostics, context);
 		return result;
 	}
@@ -1187,63 +1202,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataUnit(DataUnit dataUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(dataUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(dataUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDataUnit_canOnlyTitleWithSingletons(dataUnit, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the canOnlyTitleWithSingletons constraint of '<em>Data Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String DATA_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not title.oclIsUndefined() implies \r\n" +
-		"\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
-		"\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n" +
-		"\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\telse\r\n" +
-		"\t\ttrue\r\n" +
-		"\tendif endif";
-
-	/**
-	 * Validates the canOnlyTitleWithSingletons constraint of '<em>Data Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDataUnit_canOnlyTitleWithSingletons(DataUnit dataUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(WebuiPackage.Literals.DATA_UNIT,
-				 dataUnit,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "canOnlyTitleWithSingletons",
-				 DATA_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateDetailsUnit(DetailsUnit detailsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(detailsUnit, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(detailsUnit, diagnostics, context);
@@ -1256,10 +1214,46 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(detailsUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDataUnit_canOnlyTitleWithSingletons(detailsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDetailsUnit_canOnlyTitleWithSingletons(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDetailsUnit_selectionValidChoice(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDetailsUnit_selectionMustBeSingleton(detailsUnit, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the canOnlyTitleWithSingletons constraint of '<em>Details Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String DETAILS_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not title.oclIsUndefined() implies \r\n" +
+		"\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
+		"\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
+		"\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n" +
+		"\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
+		"\telse\r\n" +
+		"\t\ttrue\r\n" +
+		"\tendif endif";
+
+	/**
+	 * Validates the canOnlyTitleWithSingletons constraint of '<em>Details Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDetailsUnit_canOnlyTitleWithSingletons(DetailsUnit detailsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebuiPackage.Literals.DETAILS_UNIT,
+				 detailsUnit,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "canOnlyTitleWithSingletons",
+				 DETAILS_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -1343,9 +1337,89 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDataUnit_canOnlyTitleWithSingletons(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(indexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateIndexUnit_canOnlyTitleWithSingletons(indexUnit, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the canOnlyTitleWithSingletons constraint of '<em>Index Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String INDEX_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not title.oclIsUndefined() implies \r\n" +
+		"\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
+		"\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
+		"\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n" +
+		"\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
+		"\telse\r\n" +
+		"\t\ttrue\r\n" +
+		"\tendif endif";
+
+	/**
+	 * Validates the canOnlyTitleWithSingletons constraint of '<em>Index Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateIndexUnit_canOnlyTitleWithSingletons(IndexUnit indexUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebuiPackage.Literals.INDEX_UNIT,
+				 indexUnit,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "canOnlyTitleWithSingletons",
+				 INDEX_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCardsUnit(CardsUnit cardsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(cardsUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(cardsUnit, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCardsIndexUnit(CardsIndexUnit cardsIndexUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(cardsIndexUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(cardsIndexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(cardsIndexUnit, diagnostics, context);
 		return result;
 	}
 

@@ -4,8 +4,6 @@ package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Image Unit</b></em>'.
@@ -15,7 +13,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getImagePathFeature <em>Image Path Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getImageTitleFeature <em>Image Title Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#isTruncateImageTitle <em>Truncate Image Title</em>}</li>
@@ -28,33 +25,7 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * @model abstract="true"
  * @generated
  */
-public interface ImageUnit extends DynamicUnit, CollectionUnit {
-	/**
-	 * Returns the value of the '<em><b>Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' reference.
-	 * @see #setTitle(Label)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageUnit_Title()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Label getTitle();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getTitle <em>Title</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' reference.
-	 * @see #getTitle()
-	 * @generated
-	 */
-	void setTitle(Label value);
-
+public interface ImageUnit extends CollectionUnit {
 	/**
 	 * Returns the value of the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

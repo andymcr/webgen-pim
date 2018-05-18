@@ -381,7 +381,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
-				 WebuiFactory.eINSTANCE.createSearchUnit()));
+				 WebuiFactory.eINSTANCE.createCardsIndexUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -397,6 +397,11 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
 				 WebuiFactory.eINSTANCE.createGalleryUnit()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				 WebuiFactory.eINSTANCE.createSearchUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter

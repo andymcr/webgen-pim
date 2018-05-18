@@ -9,41 +9,41 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
-import work.andycarpenter.webgen.pims.webui.DataUnit;
+import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Data Unit</b></em>'.
+ * An implementation of the model object '<em><b>Singleton Unit</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DataUnitImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SingletonUnitImpl#getContentType <em>Content Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
+public abstract class SingletonUnitImpl extends DynamicUnitImpl implements SingletonUnit {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
+	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTitle()
+	 * @see #getContentType()
 	 * @generated
 	 * @ordered
 	 */
-	protected Label title;
+	protected EntityOrView contentType;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataUnitImpl() {
+	protected SingletonUnitImpl() {
 		super();
 	}
 
@@ -54,7 +54,7 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WebuiPackage.Literals.DATA_UNIT;
+		return WebuiPackage.Literals.SINGLETON_UNIT;
 	}
 
 	/**
@@ -62,16 +62,16 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label getTitle() {
-		if (title != null && title.eIsProxy()) {
-			InternalEObject oldTitle = (InternalEObject)title;
-			title = (Label)eResolveProxy(oldTitle);
-			if (title != oldTitle) {
+	public EntityOrView getContentType() {
+		if (contentType != null && contentType.eIsProxy()) {
+			InternalEObject oldContentType = (InternalEObject)contentType;
+			contentType = (EntityOrView)eResolveProxy(oldContentType);
+			if (contentType != oldContentType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.DATA_UNIT__TITLE, oldTitle, title));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE, oldContentType, contentType));
 			}
 		}
-		return title;
+		return contentType;
 	}
 
 	/**
@@ -79,8 +79,8 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label basicGetTitle() {
-		return title;
+	public EntityOrView basicGetContentType() {
+		return contentType;
 	}
 
 	/**
@@ -88,11 +88,11 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTitle(Label newTitle) {
-		Label oldTitle = title;
-		title = newTitle;
+	public void setContentType(EntityOrView newContentType) {
+		EntityOrView oldContentType = contentType;
+		contentType = newContentType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DATA_UNIT__TITLE, oldTitle, title));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE, oldContentType, contentType));
 	}
 
 	/**
@@ -103,9 +103,9 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.DATA_UNIT__TITLE:
-				if (resolve) return getTitle();
-				return basicGetTitle();
+			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
+				if (resolve) return getContentType();
+				return basicGetContentType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,8 +118,8 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.DATA_UNIT__TITLE:
-				setTitle((Label)newValue);
+			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
+				setContentType((EntityOrView)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,8 +133,8 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DATA_UNIT__TITLE:
-				setTitle((Label)null);
+			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
+				setContentType((EntityOrView)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,10 +148,10 @@ public abstract class DataUnitImpl extends DynamicUnitImpl implements DataUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DATA_UNIT__TITLE:
-				return title != null;
+			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
+				return contentType != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //DataUnitImpl
+} //SingletonUnitImpl

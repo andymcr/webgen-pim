@@ -88,10 +88,11 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.MAP_UNIT: return createMapUnit();
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
 			case WebuiPackage.INDEX_UNIT: return createIndexUnit();
-			case WebuiPackage.SEARCH_UNIT: return createSearchUnit();
+			case WebuiPackage.CARDS_INDEX_UNIT: return createCardsIndexUnit();
 			case WebuiPackage.IMAGE_INDEX_UNIT: return createImageIndexUnit();
 			case WebuiPackage.SLIDER_UNIT: return createSliderUnit();
 			case WebuiPackage.GALLERY_UNIT: return createGalleryUnit();
+			case WebuiPackage.SEARCH_UNIT: return createSearchUnit();
 			case WebuiPackage.REGISTRATION_UNIT: return createRegistrationUnit();
 			case WebuiPackage.LOGIN_UNIT: return createLoginUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
@@ -462,6 +463,16 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public IndexUnit createIndexUnit() {
 		IndexUnitImpl indexUnit = new IndexUnitImpl();
 		return indexUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CardsIndexUnit createCardsIndexUnit() {
+		CardsIndexUnitImpl cardsIndexUnit = new CardsIndexUnitImpl();
+		return cardsIndexUnit;
 	}
 
 	/**

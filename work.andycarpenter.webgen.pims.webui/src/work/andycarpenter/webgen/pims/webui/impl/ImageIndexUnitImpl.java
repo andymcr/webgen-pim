@@ -2,24 +2,16 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import work.andycarpenter.webgen.pims.image.ImageManipulation;
+import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.ImageIndexUnit;
-import work.andycarpenter.webgen.pims.webui.InlineAction;
-import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
+import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -30,30 +22,100 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getImagePathFeature <em>Image Path Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getImageTitleFeature <em>Image Title Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isTruncateImageTitle <em>Truncate Image Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getImageFilter <em>Image Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getMissingImageFilter <em>Missing Image Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getMissingImagePath <em>Missing Image Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isOverlayTitle <em>Overlay Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isEnableImageEnlargement <em>Enable Image Enlargement</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getContentClass <em>Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getColumnClass <em>Column Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl#getCardClass <em>Card Class</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit {
+public class ImageIndexUnitImpl extends CardsUnitImpl implements ImageIndexUnit {
 	/**
-	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+	 * The cached value of the '{@link #getImagePathFeature() <em>Image Path Feature</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActions()
+	 * @see #getImagePathFeature()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InlineAction> actions;
+	protected FeaturePath imagePathFeature;
+
+	/**
+	 * The cached value of the '{@link #getImageTitleFeature() <em>Image Title Feature</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImageTitleFeature()
+	 * @generated
+	 * @ordered
+	 */
+	protected FeaturePath imageTitleFeature;
+
+	/**
+	 * The default value of the '{@link #isTruncateImageTitle() <em>Truncate Image Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTruncateImageTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean TRUNCATE_IMAGE_TITLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isTruncateImageTitle() <em>Truncate Image Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTruncateImageTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean truncateImageTitle = TRUNCATE_IMAGE_TITLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getImageFilter() <em>Image Filter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImageFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected ImageManipulation imageFilter;
+
+	/**
+	 * The cached value of the '{@link #getMissingImageFilter() <em>Missing Image Filter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMissingImageFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected ImageManipulation missingImageFilter;
+
+	/**
+	 * The default value of the '{@link #getMissingImagePath() <em>Missing Image Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMissingImagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MISSING_IMAGE_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMissingImagePath() <em>Missing Image Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMissingImagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String missingImagePath = MISSING_IMAGE_PATH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isOverlayTitle() <em>Overlay Title</em>}' attribute.
@@ -96,46 +158,6 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	protected boolean enableImageEnlargement = ENABLE_IMAGE_ENLARGEMENT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitFieldLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OMIT_FIELD_LABELS_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitFieldLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean omitFieldLabels = OMIT_FIELD_LABELS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isOverlaySingleSelectAction() <em>Overlay Single Select Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOverlaySingleSelectAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOverlaySingleSelectAction() <em>Overlay Single Select Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOverlaySingleSelectAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean overlaySingleSelectAction = OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #isRevealUntruncatedContent() <em>Reveal Untruncated Content</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -176,66 +198,6 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "row";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "col s12 m6 l3";
-
-	/**
-	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String columnClass = COLUMN_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CARD_CLASS_EDEFAULT = "card hoverable";
-
-	/**
-	 * The cached value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cardClass = CARD_CLASS_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -259,11 +221,203 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InlineAction> getActions() {
-		if (actions == null) {
-			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
+	public FeaturePath getImagePathFeature() {
+		return imagePathFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetImagePathFeature(FeaturePath newImagePathFeature, NotificationChain msgs) {
+		FeaturePath oldImagePathFeature = imagePathFeature;
+		imagePathFeature = newImagePathFeature;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE, oldImagePathFeature, newImagePathFeature);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return actions;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImagePathFeature(FeaturePath newImagePathFeature) {
+		if (newImagePathFeature != imagePathFeature) {
+			NotificationChain msgs = null;
+			if (imagePathFeature != null)
+				msgs = ((InternalEObject)imagePathFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE, null, msgs);
+			if (newImagePathFeature != null)
+				msgs = ((InternalEObject)newImagePathFeature).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE, null, msgs);
+			msgs = basicSetImagePathFeature(newImagePathFeature, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE, newImagePathFeature, newImagePathFeature));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeaturePath getImageTitleFeature() {
+		return imageTitleFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetImageTitleFeature(FeaturePath newImageTitleFeature, NotificationChain msgs) {
+		FeaturePath oldImageTitleFeature = imageTitleFeature;
+		imageTitleFeature = newImageTitleFeature;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE, oldImageTitleFeature, newImageTitleFeature);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImageTitleFeature(FeaturePath newImageTitleFeature) {
+		if (newImageTitleFeature != imageTitleFeature) {
+			NotificationChain msgs = null;
+			if (imageTitleFeature != null)
+				msgs = ((InternalEObject)imageTitleFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE, null, msgs);
+			if (newImageTitleFeature != null)
+				msgs = ((InternalEObject)newImageTitleFeature).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE, null, msgs);
+			msgs = basicSetImageTitleFeature(newImageTitleFeature, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE, newImageTitleFeature, newImageTitleFeature));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isTruncateImageTitle() {
+		return truncateImageTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTruncateImageTitle(boolean newTruncateImageTitle) {
+		boolean oldTruncateImageTitle = truncateImageTitle;
+		truncateImageTitle = newTruncateImageTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE, oldTruncateImageTitle, truncateImageTitle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageManipulation getImageFilter() {
+		if (imageFilter != null && imageFilter.eIsProxy()) {
+			InternalEObject oldImageFilter = (InternalEObject)imageFilter;
+			imageFilter = (ImageManipulation)eResolveProxy(oldImageFilter);
+			if (imageFilter != oldImageFilter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER, oldImageFilter, imageFilter));
+			}
+		}
+		return imageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageManipulation basicGetImageFilter() {
+		return imageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImageFilter(ImageManipulation newImageFilter) {
+		ImageManipulation oldImageFilter = imageFilter;
+		imageFilter = newImageFilter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER, oldImageFilter, imageFilter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageManipulation getMissingImageFilter() {
+		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
+			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
+			missingImageFilter = (ImageManipulation)eResolveProxy(oldMissingImageFilter);
+			if (missingImageFilter != oldMissingImageFilter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
+			}
+		}
+		return missingImageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageManipulation basicGetMissingImageFilter() {
+		return missingImageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
+		ImageManipulation oldMissingImageFilter = missingImageFilter;
+		missingImageFilter = newMissingImageFilter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getMissingImagePath() {
+		return missingImagePath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMissingImagePath(String newMissingImagePath) {
+		String oldMissingImagePath = missingImagePath;
+		missingImagePath = newMissingImagePath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH, oldMissingImagePath, missingImagePath));
 	}
 
 	/**
@@ -313,48 +467,6 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isOmitFieldLabels() {
-		return omitFieldLabels;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOmitFieldLabels(boolean newOmitFieldLabels) {
-		boolean oldOmitFieldLabels = omitFieldLabels;
-		omitFieldLabels = newOmitFieldLabels;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS, oldOmitFieldLabels, omitFieldLabels));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isOverlaySingleSelectAction() {
-		return overlaySingleSelectAction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOverlaySingleSelectAction(boolean newOverlaySingleSelectAction) {
-		boolean oldOverlaySingleSelectAction = overlaySingleSelectAction;
-		overlaySingleSelectAction = newOverlaySingleSelectAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION, oldOverlaySingleSelectAction, overlaySingleSelectAction));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isRevealUntruncatedContent() {
 		return revealUntruncatedContent;
 	}
@@ -397,89 +509,13 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getColumnClass() {
-		return columnClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setColumnClass(String newColumnClass) {
-		String oldColumnClass = columnClass;
-		columnClass = newColumnClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS, oldColumnClass, columnClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCardClass() {
-		return cardClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCardClass(String newCardClass) {
-		String oldCardClass = cardClass;
-		cardClass = newCardClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS, oldCardClass, cardClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActions()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+				return basicSetImagePathFeature(null, msgs);
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
+				return basicSetImageTitleFeature(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -492,26 +528,28 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				return getActions();
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+				return getImagePathFeature();
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
+				return getImageTitleFeature();
+			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
+				return isTruncateImageTitle();
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER:
+				if (resolve) return getImageFilter();
+				return basicGetImageFilter();
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER:
+				if (resolve) return getMissingImageFilter();
+				return basicGetMissingImageFilter();
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
+				return getMissingImagePath();
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 				return isOverlayTitle();
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
 				return isEnableImageEnlargement();
-			case WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS:
-				return isOmitFieldLabels();
-			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-				return isOverlaySingleSelectAction();
 			case WebuiPackage.IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				return isRevealUntruncatedContent();
 			case WebuiPackage.IMAGE_INDEX_UNIT__STYLE_CLASS:
 				return getStyleClass();
-			case WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS:
-				return getContentClass();
-			case WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS:
-				return getColumnClass();
-			case WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS:
-				return getCardClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -521,13 +559,26 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				getActions().clear();
-				getActions().addAll((Collection<? extends InlineAction>)newValue);
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+				setImagePathFeature((FeaturePath)newValue);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
+				setImageTitleFeature((FeaturePath)newValue);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
+				setTruncateImageTitle((Boolean)newValue);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER:
+				setImageFilter((ImageManipulation)newValue);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER:
+				setMissingImageFilter((ImageManipulation)newValue);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
+				setMissingImagePath((String)newValue);
 				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 				setOverlayTitle((Boolean)newValue);
@@ -535,26 +586,11 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
 				setEnableImageEnlargement((Boolean)newValue);
 				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS:
-				setOmitFieldLabels((Boolean)newValue);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-				setOverlaySingleSelectAction((Boolean)newValue);
-				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				setRevealUntruncatedContent((Boolean)newValue);
 				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__STYLE_CLASS:
 				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS:
-				setColumnClass((String)newValue);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS:
-				setCardClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -568,8 +604,23 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				getActions().clear();
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+				setImagePathFeature((FeaturePath)null);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
+				setImageTitleFeature((FeaturePath)null);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
+				setTruncateImageTitle(TRUNCATE_IMAGE_TITLE_EDEFAULT);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER:
+				setImageFilter((ImageManipulation)null);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER:
+				setMissingImageFilter((ImageManipulation)null);
+				return;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
+				setMissingImagePath(MISSING_IMAGE_PATH_EDEFAULT);
 				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 				setOverlayTitle(OVERLAY_TITLE_EDEFAULT);
@@ -577,26 +628,11 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
 				setEnableImageEnlargement(ENABLE_IMAGE_ENLARGEMENT_EDEFAULT);
 				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS:
-				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-				setOverlaySingleSelectAction(OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT);
-				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				setRevealUntruncatedContent(REVEAL_UNTRUNCATED_CONTENT_EDEFAULT);
 				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__STYLE_CLASS:
 				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS:
-				setColumnClass(COLUMN_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS:
-				setCardClass(CARD_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -610,26 +646,26 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
-				return actions != null && !actions.isEmpty();
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+				return imagePathFeature != null;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
+				return imageTitleFeature != null;
+			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
+				return truncateImageTitle != TRUNCATE_IMAGE_TITLE_EDEFAULT;
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER:
+				return imageFilter != null;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER:
+				return missingImageFilter != null;
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
+				return MISSING_IMAGE_PATH_EDEFAULT == null ? missingImagePath != null : !MISSING_IMAGE_PATH_EDEFAULT.equals(missingImagePath);
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 				return overlayTitle != OVERLAY_TITLE_EDEFAULT;
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
 				return enableImageEnlargement != ENABLE_IMAGE_ENLARGEMENT_EDEFAULT;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS:
-				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
-			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-				return overlaySingleSelectAction != OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
 			case WebuiPackage.IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				return revealUntruncatedContent != REVEAL_UNTRUNCATED_CONTENT_EDEFAULT;
 			case WebuiPackage.IMAGE_INDEX_UNIT__STYLE_CLASS:
 				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
-			case WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS:
-				return COLUMN_CLASS_EDEFAULT == null ? columnClass != null : !COLUMN_CLASS_EDEFAULT.equals(columnClass);
-			case WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS:
-				return CARD_CLASS_EDEFAULT == null ? cardClass != null : !CARD_CLASS_EDEFAULT.equals(cardClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -641,9 +677,14 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
+		if (baseClass == ImageUnit.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE: return WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE;
+				case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE: return WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE;
+				case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE: return WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE;
+				case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__IMAGE_FILTER;
+				case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER;
+				case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH;
 				default: return -1;
 			}
 		}
@@ -657,9 +698,14 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
+		if (baseClass == ImageUnit.class) {
 			switch (baseFeatureID) {
-				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS;
+				case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE: return WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE;
+				case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE: return WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE;
+				case WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE: return WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE;
+				case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_FILTER;
+				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER;
+				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH;
 				default: return -1;
 			}
 		}
@@ -676,24 +722,18 @@ public class ImageIndexUnitImpl extends ImageUnitImpl implements ImageIndexUnit 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (overlayTitle: ");
+		result.append(" (truncateImageTitle: ");
+		result.append(truncateImageTitle);
+		result.append(", missingImagePath: ");
+		result.append(missingImagePath);
+		result.append(", overlayTitle: ");
 		result.append(overlayTitle);
 		result.append(", enableImageEnlargement: ");
 		result.append(enableImageEnlargement);
-		result.append(", omitFieldLabels: ");
-		result.append(omitFieldLabels);
-		result.append(", overlaySingleSelectAction: ");
-		result.append(overlaySingleSelectAction);
 		result.append(", revealUntruncatedContent: ");
 		result.append(revealUntruncatedContent);
 		result.append(", styleClass: ");
 		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
-		result.append(", columnClass: ");
-		result.append(columnClass);
-		result.append(", cardClass: ");
-		result.append(cardClass);
 		result.append(')');
 		return result.toString();
 	}

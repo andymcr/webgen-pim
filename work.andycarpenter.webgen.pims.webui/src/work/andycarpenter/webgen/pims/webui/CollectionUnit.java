@@ -47,12 +47,12 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionMustNotBeSingleton'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
  * @generated
  */
-public interface CollectionUnit extends SelectableUnit {
+public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityOrView}.

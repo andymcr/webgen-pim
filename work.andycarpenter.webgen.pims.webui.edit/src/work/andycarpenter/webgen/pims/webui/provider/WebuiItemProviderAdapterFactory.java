@@ -818,6 +818,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CardsIndexUnitItemProvider cardsIndexUnitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCardsIndexUnitAdapter() {
+		if (cardsIndexUnitItemProvider == null) {
+			cardsIndexUnitItemProvider = new CardsIndexUnitItemProvider(this);
+		}
+
+		return cardsIndexUnitItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SearchUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -22,6 +23,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getFullSizeFilter <em>Full Size Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
@@ -32,6 +34,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
+	/**
+	 * The cached value of the '{@link #getUnitTitle() <em>Unit Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnitTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected Label unitTitle;
+
 	/**
 	 * The cached value of the '{@link #getFullSizeFilter() <em>Full Size Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -139,6 +151,44 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.GALLERY_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label getUnitTitle() {
+		if (unitTitle != null && unitTitle.eIsProxy()) {
+			InternalEObject oldUnitTitle = (InternalEObject)unitTitle;
+			unitTitle = (Label)eResolveProxy(oldUnitTitle);
+			if (unitTitle != oldUnitTitle) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.GALLERY_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
+			}
+		}
+		return unitTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label basicGetUnitTitle() {
+		return unitTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnitTitle(Label newUnitTitle) {
+		Label oldUnitTitle = unitTitle;
+		unitTitle = newUnitTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.GALLERY_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
 	}
 
 	/**
@@ -271,6 +321,9 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.GALLERY_UNIT__UNIT_TITLE:
+				if (resolve) return getUnitTitle();
+				return basicGetUnitTitle();
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				if (resolve) return getFullSizeFilter();
 				return basicGetFullSizeFilter();
@@ -294,6 +347,9 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.GALLERY_UNIT__UNIT_TITLE:
+				setUnitTitle((Label)newValue);
+				return;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				setFullSizeFilter((ImageManipulation)newValue);
 				return;
@@ -321,6 +377,9 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.GALLERY_UNIT__UNIT_TITLE:
+				setUnitTitle((Label)null);
+				return;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				setFullSizeFilter((ImageManipulation)null);
 				return;
@@ -348,6 +407,8 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.GALLERY_UNIT__UNIT_TITLE:
+				return unitTitle != null;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				return fullSizeFilter != null;
 			case WebuiPackage.GALLERY_UNIT__SHOW_TIME:

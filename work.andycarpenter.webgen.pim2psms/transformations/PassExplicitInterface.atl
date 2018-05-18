@@ -775,6 +775,7 @@ abstract rule SelectableUnit {
 }
 
 
+-- @extends DynamicUnit
 abstract rule SingletonUnit {
 	from website : Website!SingletonUnit
 	to waf : WAF!SingletonUnit (
@@ -783,7 +784,7 @@ abstract rule SingletonUnit {
 }
 
 
--- @extends SelectableUnit
+-- @extends DynamicUnit, SelectableUnit
 abstract rule CollectionUnit {
 	from website : Website!CollectionUnit
 	to waf : WAF!CollectionUnit (
@@ -840,7 +841,7 @@ abstract rule CollectionUnit {
 }
 
 
--- @extends DynamicUnit, SingletonUnit
+-- @extends SingletonUnit
 abstract rule EditUnit {
 	from website : Website!EditUnit
 	to waf : WAF!EditUnit (
@@ -941,23 +942,16 @@ rule UpdateUnit {
 	)
 }
 
--- @extends DynamicUnit
-abstract rule DataUnit {
-	from website : Website!DataUnit
-	to waf : WAF!DataUnit (
+-- @extends SingletonUnit, SelectableUnit
+rule DetailsUnit {
+	from website : Website!DetailsUnit
+	to waf : WAF!DetailsUnit (
 		title <-
 			if website.title.oclIsUndefined() then
 				website.title
 			else
 				website.title.findOrmLabel()
-			endif
-	)
-}
-
--- @extends DataUnit, SingletonUnit, SelectableUnit
-rule DetailsUnit {
-	from website : Website!DetailsUnit
-	to waf : WAF!DetailsUnit (
+			endif,
 		selection <-
 			if website.selection.oclIsUndefined() then
 				website.selection
@@ -968,10 +962,16 @@ rule DetailsUnit {
 	)
 }
 
--- @extends DataUnit, CollectionUnit, InlineActionContainer
+-- @extends CollectionUnit, InlineActionContainer
 abstract rule IndexUnit {
 	from website : Website!IndexUnit
 	to waf : WAF!IndexUnit (
+		title <-
+			if website.title.oclIsUndefined() then
+				website.title
+			else
+				website.title.findOrmLabel()
+			endif,
 		omitColumnLabels <- website.omitColumnLabels,
 		rowClasses <- website.rowClasses.replaceAll(',', ' ')
 	)
@@ -998,10 +998,81 @@ rule IndexLineDirectionUnit {
 	)
 }
 
--- @extends IndexUnit
-rule IndexCardsUnit {
-	from website : Website!IndexUnit (website.displayOption = #Cards)
-	to waf : WAF!IndexCardsUnit (
+-- @extends CollectionUnit, InlineActionContainer
+abstract rule CardsUnit {
+	from website : Website!CardsUnit
+	to waf : WAF!CardsUnit (
+		unitTitle <-
+			if website.unitTitle.oclIsUndefined() then
+				website.unitTitle
+			else
+				website.unitTitle.findOrmLabel()
+			endif,
+		omitFieldLabels <- website.omitFieldLabels,
+		overlaySingleSelectAction <- website.overlaySingleSelectAction,
+		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
+		cardClass <- website.cardClass.replaceAll(',', ' ').trim()
+	)
+}
+
+-- @extends CardsUnit
+rule CardsIndexUnit {
+	from website : Website!CardsIndexUnit
+	to waf : WAF!CardsIndexUnit (
+	)
+}
+
+-- @extends CollectionUnit
+abstract rule ImageUnit {
+	from website : Website!ImageUnit
+	to waf : WAF!ImageUnit (
+		imagePathFeature <- website.imagePathFeature,
+		imageTitleFeature <- website.imageTitleFeature,
+		truncateImageTitle <- website.truncateImageTitle,
+		imageFilter <- website.imageFilter,
+		missingImageFilter <- website.missingImageFilter,
+		missingImagePath <- website.missingImagePath
+	)
+}
+
+-- @extends CardsUnit, ImageUnit
+rule ImageIndexUnit {
+	from website : Website!ImageIndexUnit
+	to waf : WAF!ImageIndexUnit (
+		enableImageEnlargement <- website.enableImageEnlargement,
+		overlayTitle <- website.overlayTitle,
+		revealUntruncatedContent <- website.revealUntruncatedContent
+	)
+}
+
+-- @extends ImageUnit
+rule SliderUnit {
+	from website : Website!SliderUnit
+	to waf : WAF!SliderUnit (
+		unitTitle <-
+			if website.unitTitle.oclIsUndefined() then
+				website.unitTitle
+			else
+				website.unitTitle.findOrmLabel()
+			endif,
+		showTime <- website.showTime,
+		transitionTime <- website.transitionTime
+	)
+}
+
+-- @extends ImageUnit
+rule GalleryUnit {
+	from website : Website!GalleryUnit
+	to waf : WAF!GalleryUnit (
+		unitTitle <-
+			if website.unitTitle.oclIsUndefined() then
+				website.unitTitle
+			else
+				website.unitTitle.findOrmLabel()
+			endif,
+		fullSizeFilter <- website.fullSizeFilter,
+		showTime <- website.showTime,
+		transitionTime <- website.transitionTime
 	)
 }
 
@@ -1035,58 +1106,6 @@ rule SearchUnit {
 	from website : Website!SearchUnit
 	to waf : WAF!SearchUnit (
 		resultsDestination <- website.resultsDestination
-	)
-}
-
--- @extends DynamicUnit, CollectionUnit
-abstract rule ImageUnit {
-	from website : Website!ImageUnit
-	to waf : WAF!ImageUnit (
-		title <-
-			if website.title.oclIsUndefined() then
-				website.title
-			else
-				website.title.findOrmLabel()
-			endif,
-		imagePathFeature <- website.imagePathFeature,
-		imageTitleFeature <- website.imageTitleFeature,
-		truncateImageTitle <- website.truncateImageTitle,
-		imageFilter <- website.imageFilter,
-		missingImageFilter <- website.missingImageFilter,
-		missingImagePath <- website.missingImagePath
-	)
-}
-
--- @extends ImageUnit, InlineActionContainer
-rule ImageIndexUnit {
-	from website : Website!ImageIndexUnit
-	to waf : WAF!ImageIndexUnit (
-		omitFieldLabels <- website.omitFieldLabels,
-		enableImageEnlargement <- website.enableImageEnlargement,
-		overlayTitle <- website.overlayTitle,
-		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		revealUntruncatedContent <- website.revealUntruncatedContent,
-		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
-		cardClass <- website.cardClass.replaceAll(',', ' ').trim()
-	)
-}
-
--- @extends ImageUnit
-rule SliderUnit {
-	from website : Website!SliderUnit
-	to waf : WAF!SliderUnit (
-		showTime <- website.showTime,
-		transitionTime <- website.transitionTime
-	)
-}
-
--- @extends ImageUnit
-rule GalleryUnit {
-	from website : Website!GalleryUnit
-	to waf : WAF!GalleryUnit (
-		fullSizeFilter <- website.fullSizeFilter,
-		showTime <- website.showTime,
-		transitionTime <- website.transitionTime
 	)
 }
 

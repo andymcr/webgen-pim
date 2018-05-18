@@ -5,7 +5,9 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -16,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.webui.DataUnit;
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -26,7 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DetailsUnitItemProvider extends DataUnitItemProvider {
+public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -48,7 +50,7 @@ public class DetailsUnitItemProvider extends DataUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addContentTypePropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
@@ -58,25 +60,36 @@ public class DetailsUnitItemProvider extends DataUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Type feature.
+	 * This adds a property descriptor for the Title feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected void addContentTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SingletonUnit_contentType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SingletonUnit_contentType_feature", "_UI_SingletonUnit_type"),
-				 WebuiPackage.Literals.SINGLETON_UNIT__CONTENT_TYPE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_DetailsUnit_title_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_DetailsUnit_title_feature", "_UI_DetailsUnit_type"),
+			WebuiPackage.Literals.DETAILS_UNIT__TITLE,
+			true, false, true, null,
+			getString("_UI_InterfacePropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof DetailsUnit) {
+						final DetailsUnit unit = (DetailsUnit) object;
+						final Set<Label> labels = new HashSet<Label>();
+						if (unit.getContentType() != null) {
+							labels.addAll(unit.getContentType().getAttributes());
+							labels.addAll(unit.getContentType().getLabels());
+						}
+						return labels;
+					}
+
+					return Collections.emptySet();
+				}
+		});
 	}
 
 	/**
@@ -97,8 +110,8 @@ public class DetailsUnitItemProvider extends DataUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof DataUnit) {
-						return getSelections((DataUnit) object);
+					if (object instanceof DetailsUnit) {
+						return getSelections((DetailsUnit) object);
 					}
 					return Collections.emptySet();
 				}

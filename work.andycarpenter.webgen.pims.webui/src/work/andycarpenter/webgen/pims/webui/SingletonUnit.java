@@ -2,8 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.ecore.EObject;
-
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
 /**
@@ -19,10 +17,10 @@ import work.andycarpenter.webgen.pims.persistence.EntityOrView;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  * @generated
  */
-public interface SingletonUnit extends EObject {
+public interface SingletonUnit extends DynamicUnit {
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

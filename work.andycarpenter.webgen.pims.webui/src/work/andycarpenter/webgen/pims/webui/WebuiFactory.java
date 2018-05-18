@@ -301,6 +301,15 @@ public interface WebuiFactory extends EFactory {
 	IndexUnit createIndexUnit();
 
 	/**
+	 * Returns a new object of class '<em>Cards Index Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cards Index Unit</em>'.
+	 * @generated
+	 */
+	CardsIndexUnit createCardsIndexUnit();
+
+	/**
 	 * Returns a new object of class '<em>Search Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

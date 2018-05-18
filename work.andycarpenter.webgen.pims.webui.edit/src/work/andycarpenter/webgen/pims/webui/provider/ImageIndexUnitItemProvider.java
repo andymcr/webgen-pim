@@ -27,7 +27,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
+public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -49,17 +49,104 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTruncateImageTitlePropertyDescriptor(object);
+			addImageFilterPropertyDescriptor(object);
+			addMissingImageFilterPropertyDescriptor(object);
+			addMissingImagePathPropertyDescriptor(object);
 			addOverlayTitlePropertyDescriptor(object);
 			addEnableImageEnlargementPropertyDescriptor(object);
-			addOmitFieldLabelsPropertyDescriptor(object);
-			addOverlaySingleSelectActionPropertyDescriptor(object);
 			addRevealUntruncatedContentPropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
-			addColumnClassPropertyDescriptor(object);
-			addCardClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Truncate Image Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTruncateImageTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImageUnit_truncateImageTitle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_truncateImageTitle_feature", "_UI_ImageUnit_type"),
+				 WebuiPackage.Literals.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ImagePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Image Filter feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImageFilterPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImageUnit_imageFilter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_imageFilter_feature", "_UI_ImageUnit_type"),
+				 WebuiPackage.Literals.IMAGE_UNIT__IMAGE_FILTER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ImagePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Missing Image Filter feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMissingImageFilterPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImageUnit_missingImageFilter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_missingImageFilter_feature", "_UI_ImageUnit_type"),
+				 WebuiPackage.Literals.IMAGE_UNIT__MISSING_IMAGE_FILTER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ImagePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Missing Image Path feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMissingImagePathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImageUnit_missingImagePath_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_missingImagePath_feature", "_UI_ImageUnit_type"),
+				 WebuiPackage.Literals.IMAGE_UNIT__MISSING_IMAGE_PATH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ImagePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -98,50 +185,6 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 				 getString("_UI_ImageIndexUnit_enableImageEnlargement_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_enableImageEnlargement_feature", "_UI_ImageIndexUnit_type"),
 				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_ImagePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Omit Field Labels feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOmitFieldLabelsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageIndexUnit_omitFieldLabels_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_omitFieldLabels_feature", "_UI_ImageIndexUnit_type"),
-				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Overlay Single Select Action feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOverlaySingleSelectActionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageIndexUnit_overlaySingleSelectAction_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_overlaySingleSelectAction_feature", "_UI_ImageIndexUnit_type"),
-				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION,
 				 true,
 				 false,
 				 false,
@@ -195,72 +238,6 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageIndexUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_contentClass_feature", "_UI_ImageIndexUnit_type"),
-				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Column Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addColumnClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageIndexUnit_columnClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_columnClass_feature", "_UI_ImageIndexUnit_type"),
-				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__COLUMN_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Card Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCardClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageIndexUnit_cardClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageIndexUnit_cardClass_feature", "_UI_ImageIndexUnit_type"),
-				 WebuiPackage.Literals.IMAGE_INDEX_UNIT__CARD_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -272,7 +249,8 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS);
+			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE);
+			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -337,18 +315,16 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageIndexUnit.class)) {
+			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
+			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
-			case WebuiPackage.IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS:
-			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 			case WebuiPackage.IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 			case WebuiPackage.IMAGE_INDEX_UNIT__STYLE_CLASS:
-			case WebuiPackage.IMAGE_INDEX_UNIT__CONTENT_CLASS:
-			case WebuiPackage.IMAGE_INDEX_UNIT__COLUMN_CLASS:
-			case WebuiPackage.IMAGE_INDEX_UNIT__CARD_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case WebuiPackage.IMAGE_INDEX_UNIT__ACTIONS:
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
+			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -368,18 +344,33 @@ public class ImageIndexUnitItemProvider extends ImageUnitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createSelectAction()));
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createDeleteAction()));
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createFeatureSupportAction()));
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 	}
 
 	/**

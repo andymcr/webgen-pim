@@ -237,7 +237,7 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
-				 WebuiFactory.eINSTANCE.createSearchUnit()));
+				 WebuiFactory.eINSTANCE.createCardsIndexUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -253,6 +253,11 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
 				 WebuiFactory.eINSTANCE.createGalleryUnit()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				 WebuiFactory.eINSTANCE.createSearchUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -246,10 +246,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createMapUnitAdapter();
 			}
 			@Override
-			public Adapter caseDataUnit(DataUnit object) {
-				return createDataUnitAdapter();
-			}
-			@Override
 			public Adapter caseDetailsUnit(DetailsUnit object) {
 				return createDetailsUnitAdapter();
 			}
@@ -258,12 +254,12 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createIndexUnitAdapter();
 			}
 			@Override
-			public Adapter caseControlUnit(ControlUnit object) {
-				return createControlUnitAdapter();
+			public Adapter caseCardsUnit(CardsUnit object) {
+				return createCardsUnitAdapter();
 			}
 			@Override
-			public Adapter caseSearchUnit(SearchUnit object) {
-				return createSearchUnitAdapter();
+			public Adapter caseCardsIndexUnit(CardsIndexUnit object) {
+				return createCardsIndexUnitAdapter();
 			}
 			@Override
 			public Adapter caseImageUnit(ImageUnit object) {
@@ -280,6 +276,14 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGalleryUnit(GalleryUnit object) {
 				return createGalleryUnitAdapter();
+			}
+			@Override
+			public Adapter caseControlUnit(ControlUnit object) {
+				return createControlUnitAdapter();
+			}
+			@Override
+			public Adapter caseSearchUnit(SearchUnit object) {
+				return createSearchUnitAdapter();
 			}
 			@Override
 			public Adapter caseAuthenticationUnit(AuthenticationUnit object) {
@@ -960,20 +964,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DataUnit <em>Data Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.DataUnit
-	 * @generated
-	 */
-	public Adapter createDataUnitAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit <em>Details Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -998,6 +988,34 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIndexUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CardsUnit <em>Cards Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit
+	 * @generated
+	 */
+	public Adapter createCardsUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit <em>Cards Index Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsIndexUnit
+	 * @generated
+	 */
+	public Adapter createCardsIndexUnitAdapter() {
 		return null;
 	}
 

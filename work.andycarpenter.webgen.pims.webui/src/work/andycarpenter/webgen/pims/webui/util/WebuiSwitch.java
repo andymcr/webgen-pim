@@ -361,21 +361,29 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.SINGLETON_UNIT: {
 				SingletonUnit singletonUnit = (SingletonUnit)theEObject;
 				T result = caseSingletonUnit(singletonUnit);
+				if (result == null) result = caseDynamicUnit(singletonUnit);
+				if (result == null) result = caseContentUnit(singletonUnit);
+				if (result == null) result = caseNamedDisplayElement(singletonUnit);
+				if (result == null) result = caseNamedElement(singletonUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case WebuiPackage.COLLECTION_UNIT: {
 				CollectionUnit collectionUnit = (CollectionUnit)theEObject;
 				T result = caseCollectionUnit(collectionUnit);
+				if (result == null) result = caseDynamicUnit(collectionUnit);
 				if (result == null) result = caseSelectableUnit(collectionUnit);
+				if (result == null) result = caseContentUnit(collectionUnit);
+				if (result == null) result = caseNamedDisplayElement(collectionUnit);
+				if (result == null) result = caseNamedElement(collectionUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case WebuiPackage.EDIT_UNIT: {
 				EditUnit editUnit = (EditUnit)theEObject;
 				T result = caseEditUnit(editUnit);
-				if (result == null) result = caseDynamicUnit(editUnit);
 				if (result == null) result = caseSingletonUnit(editUnit);
+				if (result == null) result = caseDynamicUnit(editUnit);
 				if (result == null) result = caseContentUnit(editUnit);
 				if (result == null) result = caseNamedDisplayElement(editUnit);
 				if (result == null) result = caseNamedElement(editUnit);
@@ -386,8 +394,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 				CreateUnit createUnit = (CreateUnit)theEObject;
 				T result = caseCreateUnit(createUnit);
 				if (result == null) result = caseEditUnit(createUnit);
-				if (result == null) result = caseDynamicUnit(createUnit);
 				if (result == null) result = caseSingletonUnit(createUnit);
+				if (result == null) result = caseDynamicUnit(createUnit);
 				if (result == null) result = caseContentUnit(createUnit);
 				if (result == null) result = caseNamedDisplayElement(createUnit);
 				if (result == null) result = caseNamedElement(createUnit);
@@ -399,8 +407,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseCreateUpdateUnit(createUpdateUnit);
 				if (result == null) result = caseEditUnit(createUpdateUnit);
 				if (result == null) result = caseSelectableUnit(createUpdateUnit);
-				if (result == null) result = caseDynamicUnit(createUpdateUnit);
 				if (result == null) result = caseSingletonUnit(createUpdateUnit);
+				if (result == null) result = caseDynamicUnit(createUpdateUnit);
 				if (result == null) result = caseContentUnit(createUpdateUnit);
 				if (result == null) result = caseNamedDisplayElement(createUpdateUnit);
 				if (result == null) result = caseNamedElement(createUpdateUnit);
@@ -412,8 +420,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseUpdateUnit(updateUnit);
 				if (result == null) result = caseEditUnit(updateUnit);
 				if (result == null) result = caseSelectableUnit(updateUnit);
-				if (result == null) result = caseDynamicUnit(updateUnit);
 				if (result == null) result = caseSingletonUnit(updateUnit);
+				if (result == null) result = caseDynamicUnit(updateUnit);
 				if (result == null) result = caseContentUnit(updateUnit);
 				if (result == null) result = caseNamedDisplayElement(updateUnit);
 				if (result == null) result = caseNamedElement(updateUnit);
@@ -425,28 +433,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseMapUnit(mapUnit);
 				if (result == null) result = caseEditUnit(mapUnit);
 				if (result == null) result = caseSelectableUnit(mapUnit);
-				if (result == null) result = caseDynamicUnit(mapUnit);
 				if (result == null) result = caseSingletonUnit(mapUnit);
+				if (result == null) result = caseDynamicUnit(mapUnit);
 				if (result == null) result = caseContentUnit(mapUnit);
 				if (result == null) result = caseNamedDisplayElement(mapUnit);
 				if (result == null) result = caseNamedElement(mapUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.DATA_UNIT: {
-				DataUnit dataUnit = (DataUnit)theEObject;
-				T result = caseDataUnit(dataUnit);
-				if (result == null) result = caseDynamicUnit(dataUnit);
-				if (result == null) result = caseContentUnit(dataUnit);
-				if (result == null) result = caseNamedDisplayElement(dataUnit);
-				if (result == null) result = caseNamedElement(dataUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.DETAILS_UNIT: {
 				DetailsUnit detailsUnit = (DetailsUnit)theEObject;
 				T result = caseDetailsUnit(detailsUnit);
-				if (result == null) result = caseDataUnit(detailsUnit);
 				if (result == null) result = caseSingletonUnit(detailsUnit);
 				if (result == null) result = caseSelectableUnit(detailsUnit);
 				if (result == null) result = caseDynamicUnit(detailsUnit);
@@ -459,7 +456,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.INDEX_UNIT: {
 				IndexUnit indexUnit = (IndexUnit)theEObject;
 				T result = caseIndexUnit(indexUnit);
-				if (result == null) result = caseDataUnit(indexUnit);
 				if (result == null) result = caseCollectionUnit(indexUnit);
 				if (result == null) result = caseInlineActionContainer(indexUnit);
 				if (result == null) result = caseDynamicUnit(indexUnit);
@@ -467,6 +463,86 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseContentUnit(indexUnit);
 				if (result == null) result = caseNamedDisplayElement(indexUnit);
 				if (result == null) result = caseNamedElement(indexUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CARDS_UNIT: {
+				CardsUnit cardsUnit = (CardsUnit)theEObject;
+				T result = caseCardsUnit(cardsUnit);
+				if (result == null) result = caseCollectionUnit(cardsUnit);
+				if (result == null) result = caseInlineActionContainer(cardsUnit);
+				if (result == null) result = caseDynamicUnit(cardsUnit);
+				if (result == null) result = caseSelectableUnit(cardsUnit);
+				if (result == null) result = caseContentUnit(cardsUnit);
+				if (result == null) result = caseNamedDisplayElement(cardsUnit);
+				if (result == null) result = caseNamedElement(cardsUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CARDS_INDEX_UNIT: {
+				CardsIndexUnit cardsIndexUnit = (CardsIndexUnit)theEObject;
+				T result = caseCardsIndexUnit(cardsIndexUnit);
+				if (result == null) result = caseCardsUnit(cardsIndexUnit);
+				if (result == null) result = caseCollectionUnit(cardsIndexUnit);
+				if (result == null) result = caseInlineActionContainer(cardsIndexUnit);
+				if (result == null) result = caseDynamicUnit(cardsIndexUnit);
+				if (result == null) result = caseSelectableUnit(cardsIndexUnit);
+				if (result == null) result = caseContentUnit(cardsIndexUnit);
+				if (result == null) result = caseNamedDisplayElement(cardsIndexUnit);
+				if (result == null) result = caseNamedElement(cardsIndexUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.IMAGE_UNIT: {
+				ImageUnit imageUnit = (ImageUnit)theEObject;
+				T result = caseImageUnit(imageUnit);
+				if (result == null) result = caseCollectionUnit(imageUnit);
+				if (result == null) result = caseDynamicUnit(imageUnit);
+				if (result == null) result = caseSelectableUnit(imageUnit);
+				if (result == null) result = caseContentUnit(imageUnit);
+				if (result == null) result = caseNamedDisplayElement(imageUnit);
+				if (result == null) result = caseNamedElement(imageUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.IMAGE_INDEX_UNIT: {
+				ImageIndexUnit imageIndexUnit = (ImageIndexUnit)theEObject;
+				T result = caseImageIndexUnit(imageIndexUnit);
+				if (result == null) result = caseCardsUnit(imageIndexUnit);
+				if (result == null) result = caseImageUnit(imageIndexUnit);
+				if (result == null) result = caseCollectionUnit(imageIndexUnit);
+				if (result == null) result = caseInlineActionContainer(imageIndexUnit);
+				if (result == null) result = caseDynamicUnit(imageIndexUnit);
+				if (result == null) result = caseSelectableUnit(imageIndexUnit);
+				if (result == null) result = caseContentUnit(imageIndexUnit);
+				if (result == null) result = caseNamedDisplayElement(imageIndexUnit);
+				if (result == null) result = caseNamedElement(imageIndexUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.SLIDER_UNIT: {
+				SliderUnit sliderUnit = (SliderUnit)theEObject;
+				T result = caseSliderUnit(sliderUnit);
+				if (result == null) result = caseImageUnit(sliderUnit);
+				if (result == null) result = caseCollectionUnit(sliderUnit);
+				if (result == null) result = caseDynamicUnit(sliderUnit);
+				if (result == null) result = caseSelectableUnit(sliderUnit);
+				if (result == null) result = caseContentUnit(sliderUnit);
+				if (result == null) result = caseNamedDisplayElement(sliderUnit);
+				if (result == null) result = caseNamedElement(sliderUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.GALLERY_UNIT: {
+				GalleryUnit galleryUnit = (GalleryUnit)theEObject;
+				T result = caseGalleryUnit(galleryUnit);
+				if (result == null) result = caseImageUnit(galleryUnit);
+				if (result == null) result = caseCollectionUnit(galleryUnit);
+				if (result == null) result = caseDynamicUnit(galleryUnit);
+				if (result == null) result = caseSelectableUnit(galleryUnit);
+				if (result == null) result = caseContentUnit(galleryUnit);
+				if (result == null) result = caseNamedDisplayElement(galleryUnit);
+				if (result == null) result = caseNamedElement(galleryUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -488,58 +564,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseContentUnit(searchUnit);
 				if (result == null) result = caseNamedDisplayElement(searchUnit);
 				if (result == null) result = caseNamedElement(searchUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.IMAGE_UNIT: {
-				ImageUnit imageUnit = (ImageUnit)theEObject;
-				T result = caseImageUnit(imageUnit);
-				if (result == null) result = caseDynamicUnit(imageUnit);
-				if (result == null) result = caseCollectionUnit(imageUnit);
-				if (result == null) result = caseContentUnit(imageUnit);
-				if (result == null) result = caseSelectableUnit(imageUnit);
-				if (result == null) result = caseNamedDisplayElement(imageUnit);
-				if (result == null) result = caseNamedElement(imageUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.IMAGE_INDEX_UNIT: {
-				ImageIndexUnit imageIndexUnit = (ImageIndexUnit)theEObject;
-				T result = caseImageIndexUnit(imageIndexUnit);
-				if (result == null) result = caseImageUnit(imageIndexUnit);
-				if (result == null) result = caseInlineActionContainer(imageIndexUnit);
-				if (result == null) result = caseDynamicUnit(imageIndexUnit);
-				if (result == null) result = caseCollectionUnit(imageIndexUnit);
-				if (result == null) result = caseContentUnit(imageIndexUnit);
-				if (result == null) result = caseSelectableUnit(imageIndexUnit);
-				if (result == null) result = caseNamedDisplayElement(imageIndexUnit);
-				if (result == null) result = caseNamedElement(imageIndexUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.SLIDER_UNIT: {
-				SliderUnit sliderUnit = (SliderUnit)theEObject;
-				T result = caseSliderUnit(sliderUnit);
-				if (result == null) result = caseImageUnit(sliderUnit);
-				if (result == null) result = caseDynamicUnit(sliderUnit);
-				if (result == null) result = caseCollectionUnit(sliderUnit);
-				if (result == null) result = caseContentUnit(sliderUnit);
-				if (result == null) result = caseSelectableUnit(sliderUnit);
-				if (result == null) result = caseNamedDisplayElement(sliderUnit);
-				if (result == null) result = caseNamedElement(sliderUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.GALLERY_UNIT: {
-				GalleryUnit galleryUnit = (GalleryUnit)theEObject;
-				T result = caseGalleryUnit(galleryUnit);
-				if (result == null) result = caseImageUnit(galleryUnit);
-				if (result == null) result = caseDynamicUnit(galleryUnit);
-				if (result == null) result = caseCollectionUnit(galleryUnit);
-				if (result == null) result = caseContentUnit(galleryUnit);
-				if (result == null) result = caseSelectableUnit(galleryUnit);
-				if (result == null) result = caseNamedDisplayElement(galleryUnit);
-				if (result == null) result = caseNamedElement(galleryUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1282,21 +1306,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDataUnit(DataUnit object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Details Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1323,6 +1332,36 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIndexUnit(IndexUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cards Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cards Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCardsUnit(CardsUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cards Index Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cards Index Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCardsIndexUnit(CardsIndexUnit object) {
 		return null;
 	}
 

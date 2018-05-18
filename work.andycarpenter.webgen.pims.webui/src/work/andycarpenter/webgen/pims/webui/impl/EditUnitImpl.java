@@ -11,13 +11,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
-
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
 import work.andycarpenter.webgen.pims.webui.EditUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -28,7 +25,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getContentType <em>Content Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmDestination <em>Confirm Destination</em>}</li>
@@ -41,17 +37,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
-	/**
-	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EntityOrView contentType;
-
+public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit {
 	/**
 	 * The cached value of the '{@link #getDisableWhen() <em>Disable When</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -189,44 +175,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.EDIT_UNIT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EntityOrView getContentType() {
-		if (contentType != null && contentType.eIsProxy()) {
-			InternalEObject oldContentType = (InternalEObject)contentType;
-			contentType = (EntityOrView)eResolveProxy(oldContentType);
-			if (contentType != oldContentType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.EDIT_UNIT__CONTENT_TYPE, oldContentType, contentType));
-			}
-		}
-		return contentType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EntityOrView basicGetContentType() {
-		return contentType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setContentType(EntityOrView newContentType) {
-		EntityOrView oldContentType = contentType;
-		contentType = newContentType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONTENT_TYPE, oldContentType, contentType));
 	}
 
 	/**
@@ -492,9 +440,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_UNIT__CONTENT_TYPE:
-				if (resolve) return getContentType();
-				return basicGetContentType();
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return getDisableWhen();
 			case WebuiPackage.EDIT_UNIT__TITLE:
@@ -526,9 +471,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_UNIT__CONTENT_TYPE:
-				setContentType((EntityOrView)newValue);
-				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)newValue);
 				return;
@@ -565,9 +507,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_UNIT__CONTENT_TYPE:
-				setContentType((EntityOrView)null);
-				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)null);
 				return;
@@ -604,8 +543,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_UNIT__CONTENT_TYPE:
-				return contentType != null;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return disableWhen != null;
 			case WebuiPackage.EDIT_UNIT__TITLE:
@@ -624,38 +561,6 @@ public abstract class EditUnitImpl extends DynamicUnitImpl implements EditUnit {
 				return customiseValues != CUSTOMISE_VALUES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SingletonUnit.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.EDIT_UNIT__CONTENT_TYPE: return WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SingletonUnit.class) {
-			switch (baseFeatureID) {
-				case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE: return WebuiPackage.EDIT_UNIT__CONTENT_TYPE;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

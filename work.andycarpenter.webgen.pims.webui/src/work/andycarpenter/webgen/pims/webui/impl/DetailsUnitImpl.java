@@ -8,14 +8,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Selection;
 
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
-import work.andycarpenter.webgen.pims.webui.SelectableUnit;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -26,7 +22,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getStyleClass <em>Style Class</em>}</li>
@@ -35,16 +31,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
+public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	/**
-	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContentType()
+	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityOrView contentType;
+	protected Label title;
 
 	/**
 	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' reference.
@@ -140,16 +136,16 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getContentType() {
-		if (contentType != null && contentType.eIsProxy()) {
-			InternalEObject oldContentType = (InternalEObject)contentType;
-			contentType = (EntityOrView)eResolveProxy(oldContentType);
-			if (contentType != oldContentType) {
+	public Label getTitle() {
+		if (title != null && title.eIsProxy()) {
+			InternalEObject oldTitle = (InternalEObject)title;
+			title = (Label)eResolveProxy(oldTitle);
+			if (title != oldTitle) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.DETAILS_UNIT__CONTENT_TYPE, oldContentType, contentType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.DETAILS_UNIT__TITLE, oldTitle, title));
 			}
 		}
-		return contentType;
+		return title;
 	}
 
 	/**
@@ -157,8 +153,8 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetContentType() {
-		return contentType;
+	public Label basicGetTitle() {
+		return title;
 	}
 
 	/**
@@ -166,11 +162,11 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContentType(EntityOrView newContentType) {
-		EntityOrView oldContentType = contentType;
-		contentType = newContentType;
+	public void setTitle(Label newTitle) {
+		Label oldTitle = title;
+		title = newTitle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DETAILS_UNIT__CONTENT_TYPE, oldContentType, contentType));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DETAILS_UNIT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -282,9 +278,9 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__CONTENT_TYPE:
-				if (resolve) return getContentType();
-				return basicGetContentType();
+			case WebuiPackage.DETAILS_UNIT__TITLE:
+				if (resolve) return getTitle();
+				return basicGetTitle();
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				if (resolve) return getSelection();
 				return basicGetSelection();
@@ -306,8 +302,8 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__CONTENT_TYPE:
-				setContentType((EntityOrView)newValue);
+			case WebuiPackage.DETAILS_UNIT__TITLE:
+				setTitle((Label)newValue);
 				return;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				setSelection((Selection)newValue);
@@ -333,8 +329,8 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__CONTENT_TYPE:
-				setContentType((EntityOrView)null);
+			case WebuiPackage.DETAILS_UNIT__TITLE:
+				setTitle((Label)null);
 				return;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				setSelection((Selection)null);
@@ -360,8 +356,8 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DETAILS_UNIT__CONTENT_TYPE:
-				return contentType != null;
+			case WebuiPackage.DETAILS_UNIT__TITLE:
+				return title != null;
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
 				return selection != null;
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
@@ -372,48 +368,6 @@ public class DetailsUnitImpl extends DataUnitImpl implements DetailsUnit {
 				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SingletonUnit.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.DETAILS_UNIT__CONTENT_TYPE: return WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE;
-				default: return -1;
-			}
-		}
-		if (baseClass == SelectableUnit.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SingletonUnit.class) {
-			switch (baseFeatureID) {
-				case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE: return WebuiPackage.DETAILS_UNIT__CONTENT_TYPE;
-				default: return -1;
-			}
-		}
-		if (baseClass == SelectableUnit.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
