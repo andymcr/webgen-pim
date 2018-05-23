@@ -58,6 +58,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addUnitTitlePropertyDescriptor(object);
+			addTruncateElementTitlePropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addFindContainerSelectionPropertyDescriptor(object);
@@ -129,6 +130,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 					return Collections.emptySet();
 				}
 		});
+	}
+
+	/**
+	 * This adds a property descriptor for the Truncate Element Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTruncateElementTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_truncateElementTitle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_truncateElementTitle_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -713,6 +736,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE);
 			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__BADGES);
 		}
 		return childrenFeatures;
@@ -758,6 +782,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CollectionUnit.class)) {
+			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
 			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
@@ -779,6 +804,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
 			case WebuiPackage.COLLECTION_UNIT__BADGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -796,6 +822,21 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
+				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 
 		newChildDescriptors.add
 			(createChildParameter

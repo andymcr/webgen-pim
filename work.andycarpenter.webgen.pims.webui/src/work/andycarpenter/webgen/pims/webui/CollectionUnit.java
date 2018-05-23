@@ -20,6 +20,8 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle <em>Unit Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getElementTitle <em>Element Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType <em>Content Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindContainerSelection <em>Find Container Selection</em>}</li>
@@ -80,6 +82,59 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setUnitTitle(Label value);
+
+	/**
+	 * Returns the value of the '<em><b>Element Title</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Element Title</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Element Title</em>' containment reference.
+	 * @see #setElementTitle(FeaturePath)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ElementTitle()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FeaturePath getElementTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getElementTitle <em>Element Title</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Element Title</em>' containment reference.
+	 * @see #getElementTitle()
+	 * @generated
+	 */
+	void setElementTitle(FeaturePath value);
+
+	/**
+	 * Returns the value of the '<em><b>Truncate Element Title</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Truncate Element Title</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Truncate Element Title</em>' attribute.
+	 * @see #setTruncateElementTitle(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_TruncateElementTitle()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isTruncateElementTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isTruncateElementTitle <em>Truncate Element Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Truncate Element Title</em>' attribute.
+	 * @see #isTruncateElementTitle()
+	 * @generated
+	 */
+	void setTruncateElementTitle(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference list.

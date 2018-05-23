@@ -22,8 +22,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#getImagePathFeature <em>Image Path Feature</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#getImageTitleFeature <em>Image Title Feature</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#isTruncateImageTitle <em>Truncate Image Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#getImageFilter <em>Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#getMissingImageFilter <em>Missing Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl#getMissingImagePath <em>Missing Image Path</em>}</li>
@@ -41,36 +39,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * @ordered
 	 */
 	protected FeaturePath imagePathFeature;
-
-	/**
-	 * The cached value of the '{@link #getImageTitleFeature() <em>Image Title Feature</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImageTitleFeature()
-	 * @generated
-	 * @ordered
-	 */
-	protected FeaturePath imageTitleFeature;
-
-	/**
-	 * The default value of the '{@link #isTruncateImageTitle() <em>Truncate Image Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isTruncateImageTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean TRUNCATE_IMAGE_TITLE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isTruncateImageTitle() <em>Truncate Image Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isTruncateImageTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean truncateImageTitle = TRUNCATE_IMAGE_TITLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getImageFilter() <em>Image Filter</em>}' reference.
@@ -172,70 +140,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE, newImagePathFeature, newImagePathFeature));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FeaturePath getImageTitleFeature() {
-		return imageTitleFeature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetImageTitleFeature(FeaturePath newImageTitleFeature, NotificationChain msgs) {
-		FeaturePath oldImageTitleFeature = imageTitleFeature;
-		imageTitleFeature = newImageTitleFeature;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE, oldImageTitleFeature, newImageTitleFeature);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImageTitleFeature(FeaturePath newImageTitleFeature) {
-		if (newImageTitleFeature != imageTitleFeature) {
-			NotificationChain msgs = null;
-			if (imageTitleFeature != null)
-				msgs = ((InternalEObject)imageTitleFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE, null, msgs);
-			if (newImageTitleFeature != null)
-				msgs = ((InternalEObject)newImageTitleFeature).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE, null, msgs);
-			msgs = basicSetImageTitleFeature(newImageTitleFeature, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE, newImageTitleFeature, newImageTitleFeature));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isTruncateImageTitle() {
-		return truncateImageTitle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTruncateImageTitle(boolean newTruncateImageTitle) {
-		boolean oldTruncateImageTitle = truncateImageTitle;
-		truncateImageTitle = newTruncateImageTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE, oldTruncateImageTitle, truncateImageTitle));
 	}
 
 	/**
@@ -345,8 +249,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
 				return basicSetImagePathFeature(null, msgs);
-			case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE:
-				return basicSetImageTitleFeature(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -361,10 +263,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
 				return getImagePathFeature();
-			case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE:
-				return getImageTitleFeature();
-			case WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE:
-				return isTruncateImageTitle();
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				if (resolve) return getImageFilter();
 				return basicGetImageFilter();
@@ -387,12 +285,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
 				setImagePathFeature((FeaturePath)newValue);
-				return;
-			case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE:
-				setImageTitleFeature((FeaturePath)newValue);
-				return;
-			case WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE:
-				setTruncateImageTitle((Boolean)newValue);
 				return;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
@@ -418,12 +310,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
 				setImagePathFeature((FeaturePath)null);
 				return;
-			case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE:
-				setImageTitleFeature((FeaturePath)null);
-				return;
-			case WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE:
-				setTruncateImageTitle(TRUNCATE_IMAGE_TITLE_EDEFAULT);
-				return;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);
 				return;
@@ -447,10 +333,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
 				return imagePathFeature != null;
-			case WebuiPackage.IMAGE_UNIT__IMAGE_TITLE_FEATURE:
-				return imageTitleFeature != null;
-			case WebuiPackage.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE:
-				return truncateImageTitle != TRUNCATE_IMAGE_TITLE_EDEFAULT;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				return imageFilter != null;
 			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER:
@@ -471,9 +353,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (truncateImageTitle: ");
-		result.append(truncateImageTitle);
-		result.append(", missingImagePath: ");
+		result.append(" (missingImagePath: ");
 		result.append(missingImagePath);
 		result.append(')');
 		return result.toString();

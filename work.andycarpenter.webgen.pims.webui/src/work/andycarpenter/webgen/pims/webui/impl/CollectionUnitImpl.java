@@ -26,6 +26,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
 
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
+import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -38,6 +39,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getElementTitle <em>Element Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContentType <em>Content Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
@@ -78,6 +81,36 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected Label unitTitle;
+
+	/**
+	 * The cached value of the '{@link #getElementTitle() <em>Element Title</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElementTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected FeaturePath elementTitle;
+
+	/**
+	 * The default value of the '{@link #isTruncateElementTitle() <em>Truncate Element Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTruncateElementTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean TRUNCATE_ELEMENT_TITLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isTruncateElementTitle() <em>Truncate Element Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTruncateElementTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean truncateElementTitle = TRUNCATE_ELEMENT_TITLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference list.
@@ -584,6 +617,70 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		unitTitle = newUnitTitle;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__UNIT_TITLE, oldUnitTitle, unitTitle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeaturePath getElementTitle() {
+		return elementTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetElementTitle(FeaturePath newElementTitle, NotificationChain msgs) {
+		FeaturePath oldElementTitle = elementTitle;
+		elementTitle = newElementTitle;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE, oldElementTitle, newElementTitle);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementTitle(FeaturePath newElementTitle) {
+		if (newElementTitle != elementTitle) {
+			NotificationChain msgs = null;
+			if (elementTitle != null)
+				msgs = ((InternalEObject)elementTitle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE, null, msgs);
+			if (newElementTitle != null)
+				msgs = ((InternalEObject)newElementTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE, null, msgs);
+			msgs = basicSetElementTitle(newElementTitle, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE, newElementTitle, newElementTitle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isTruncateElementTitle() {
+		return truncateElementTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTruncateElementTitle(boolean newTruncateElementTitle) {
+		boolean oldTruncateElementTitle = truncateElementTitle;
+		truncateElementTitle = newTruncateElementTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE, oldTruncateElementTitle, truncateElementTitle));
 	}
 
 	/**
@@ -1181,6 +1278,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+				return basicSetElementTitle(null, msgs);
 			case WebuiPackage.COLLECTION_UNIT__BADGES:
 				return ((InternalEList<?>)getBadges()).basicRemove(otherEnd, msgs);
 		}
@@ -1198,6 +1297,10 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				if (resolve) return getUnitTitle();
 				return basicGetUnitTitle();
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+				return getElementTitle();
+			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+				return isTruncateElementTitle();
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return getContentType();
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
@@ -1269,6 +1372,12 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				setUnitTitle((Label)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+				setElementTitle((FeaturePath)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+				setTruncateElementTitle((Boolean)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
@@ -1366,6 +1475,12 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				setUnitTitle((Label)null);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+				setElementTitle((FeaturePath)null);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+				setTruncateElementTitle(TRUNCATE_ELEMENT_TITLE_EDEFAULT);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				return;
@@ -1458,6 +1573,10 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				return unitTitle != null;
+			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+				return elementTitle != null;
+			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+				return truncateElementTitle != TRUNCATE_ELEMENT_TITLE_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return contentType != null && !contentType.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
@@ -1524,7 +1643,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (omitContainerLoad: ");
+		result.append(" (truncateElementTitle: ");
+		result.append(truncateElementTitle);
+		result.append(", omitContainerLoad: ");
 		result.append(omitContainerLoad);
 		result.append(", emptyMessage: ");
 		result.append(emptyMessage);

@@ -800,6 +800,8 @@ abstract rule CollectionUnit {
 			else
 				website.unitTitle.findOrmLabel()
 			endif,
+		elementTitle <- website.elementTitle,
+		truncateElementTitle <- website.truncateElementTitle,
 		contentType <- website.contentType
 			->collect(eov | thisModule.findOrmEntity(eov.name)),
 		selection <-
@@ -1015,8 +1017,6 @@ abstract rule ImageUnit {
 	from website : Website!ImageUnit
 	to waf : WAF!ImageUnit (
 		imagePathFeature <- website.imagePathFeature,
-		imageTitleFeature <- website.imageTitleFeature,
-		truncateImageTitle <- website.truncateImageTitle,
 		imageFilter <- website.imageFilter,
 		missingImageFilter <- website.missingImageFilter,
 		missingImagePath <- website.missingImagePath

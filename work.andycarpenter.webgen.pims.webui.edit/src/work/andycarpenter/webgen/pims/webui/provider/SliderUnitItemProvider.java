@@ -223,8 +223,8 @@ public class SliderUnitItemProvider extends ImageUnitItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE ||
-			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE;
+			childFeature == WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE ||
+			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE;
 
 		if (qualify) {
 			return getString

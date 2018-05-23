@@ -278,6 +278,9 @@
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionUnit">
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/unitTitle"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
+          ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/elementTitle"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/truncateElementTitle"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/contentType"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
@@ -373,9 +376,6 @@
     <genClasses image="false" ecoreClass="webui.ecore#//ImageUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imagePathFeature"/>
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
-          ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imageTitleFeature"/>
-      <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageUnit/truncateImageTitle"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imageFilter"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"

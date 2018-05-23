@@ -2179,7 +2179,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_ContentType() {
+	public EReference getCollectionUnit_ElementTitle() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2188,8 +2188,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_Selection() {
-		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(2);
+	public EAttribute getCollectionUnit_TruncateElementTitle() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2197,7 +2197,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_FindContainerSelection() {
+	public EReference getCollectionUnit_ContentType() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2206,8 +2206,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_OmitContainerLoad() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(4);
+	public EReference getCollectionUnit_Selection() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2215,7 +2215,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_FindElementSelection() {
+	public EReference getCollectionUnit_FindContainerSelection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2224,8 +2224,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_Filter() {
-		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCollectionUnit_OmitContainerLoad() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2233,7 +2233,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_SupportedFilters() {
+	public EReference getCollectionUnit_FindElementSelection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2242,7 +2242,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCollectionUnit_Badges() {
+	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2251,25 +2251,25 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCollectionUnit_SupportedFilters() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCollectionUnit_Badges() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCollectionUnit_DefaultPaginationSize() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2278,7 +2278,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationControlPlacement() {
+	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2287,7 +2287,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextNpages() {
+	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2296,7 +2296,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousNpages() {
+	public EAttribute getCollectionUnit_PaginationControlPlacement() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -2305,7 +2305,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageLabel() {
+	public EAttribute getCollectionUnit_NextNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -2314,7 +2314,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_NextPageIconName() {
+	public EAttribute getCollectionUnit_PreviousNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -2323,7 +2323,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageLabel() {
+	public EAttribute getCollectionUnit_NextPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -2332,7 +2332,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PreviousPageIconName() {
+	public EAttribute getCollectionUnit_NextPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -2341,7 +2341,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
+	public EAttribute getCollectionUnit_PreviousPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -2350,7 +2350,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
+	public EAttribute getCollectionUnit_PreviousPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -2359,7 +2359,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageLabel() {
+	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -2368,7 +2368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_FirstPageIconName() {
+	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -2377,7 +2377,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageLabel() {
+	public EAttribute getCollectionUnit_FirstPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -2386,7 +2386,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_LastPageIconName() {
+	public EAttribute getCollectionUnit_FirstPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -2395,7 +2395,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationClass() {
+	public EAttribute getCollectionUnit_LastPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -2404,8 +2404,26 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollectionUnit_PaginationElementClass() {
+	public EAttribute getCollectionUnit_LastPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollectionUnit_PaginationClass() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollectionUnit_PaginationElementClass() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(28);
 	}
 
 	/**
@@ -2890,7 +2908,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getImageUnit_ImageTitleFeature() {
+	public EReference getImageUnit_ImageFilter() {
 		return (EReference)imageUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2899,26 +2917,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageUnit_TruncateImageTitle() {
-		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getImageUnit_ImageFilter() {
-		return (EReference)imageUnitEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getImageUnit_MissingImageFilter() {
-		return (EReference)imageUnitEClass.getEStructuralFeatures().get(4);
+		return (EReference)imageUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2927,7 +2927,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	public EAttribute getImageUnit_MissingImagePath() {
-		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3721,6 +3721,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		collectionUnitEClass = createEClass(COLLECTION_UNIT);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__UNIT_TITLE);
+		createEReference(collectionUnitEClass, COLLECTION_UNIT__ELEMENT_TITLE);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__CONTENT_TYPE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_CONTAINER_SELECTION);
@@ -3802,8 +3804,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		imageUnitEClass = createEClass(IMAGE_UNIT);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_PATH_FEATURE);
-		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_TITLE_FEATURE);
-		createEAttribute(imageUnitEClass, IMAGE_UNIT__TRUNCATE_IMAGE_TITLE);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_FILTER);
 		createEReference(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_FILTER);
 		createEAttribute(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_PATH);
@@ -4208,6 +4208,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(collectionUnitEClass, CollectionUnit.class, "CollectionUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCollectionUnit_UnitTitle(), thePersistencePackage.getLabel(), null, "unitTitle", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCollectionUnit_ElementTitle(), this.getFeaturePath(), null, "elementTitle", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnit_TruncateElementTitle(), ecorePackage.getEBoolean(), "truncateElementTitle", "false", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_ContentType(), thePersistencePackage.getEntityOrView(), null, "contentType", null, 1, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Selection(), theServicePackage.getSelection(), null, "selection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindContainerSelection(), theServicePackage.getSelection(), null, "findContainerSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4289,8 +4291,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(imageUnitEClass, ImageUnit.class, "ImageUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageUnit_ImagePathFeature(), this.getFeaturePath(), null, "imagePathFeature", null, 1, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageUnit_ImageTitleFeature(), this.getFeaturePath(), null, "imageTitleFeature", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageUnit_TruncateImageTitle(), ecorePackage.getEBoolean(), "truncateImageTitle", "false", 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_ImageFilter(), theImagePackage.getImageManipulation(), null, "imageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_MissingImageFilter(), theImagePackage.getImageManipulation(), null, "missingImageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageUnit_MissingImagePath(), ecorePackage.getEString(), "missingImagePath", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

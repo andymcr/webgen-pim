@@ -49,7 +49,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTruncateImageTitlePropertyDescriptor(object);
 			addImageFilterPropertyDescriptor(object);
 			addMissingImageFilterPropertyDescriptor(object);
 			addMissingImagePathPropertyDescriptor(object);
@@ -59,28 +58,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Truncate Image Title feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTruncateImageTitlePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageUnit_truncateImageTitle_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_truncateImageTitle_feature", "_UI_ImageUnit_type"),
-				 WebuiPackage.Literals.IMAGE_UNIT__TRUNCATE_IMAGE_TITLE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_ImagePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -250,7 +227,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE);
-			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -315,7 +291,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageIndexUnit.class)) {
-			case WebuiPackage.IMAGE_INDEX_UNIT__TRUNCATE_IMAGE_TITLE:
 			case WebuiPackage.IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH:
 			case WebuiPackage.IMAGE_INDEX_UNIT__OVERLAY_TITLE:
 			case WebuiPackage.IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT:
@@ -324,7 +299,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE:
-			case WebuiPackage.IMAGE_INDEX_UNIT__IMAGE_TITLE_FEATURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -356,21 +330,6 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 	}
 
 	/**
@@ -385,8 +344,8 @@ public class ImageIndexUnitItemProvider extends CardsUnitItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE ||
-			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_TITLE_FEATURE;
+			childFeature == WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE ||
+			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE;
 
 		if (qualify) {
 			return getString
