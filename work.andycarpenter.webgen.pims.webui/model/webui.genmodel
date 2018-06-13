@@ -185,8 +185,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
+      <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/sourceEntity"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
