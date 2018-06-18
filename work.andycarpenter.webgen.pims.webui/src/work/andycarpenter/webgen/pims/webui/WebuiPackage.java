@@ -2577,22 +2577,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Selection</b></em>' reference.
+	 * The feature id for the '<em><b>Options</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__SELECTION = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Ajax Options List</b></em>' reference.
+	 * The feature id for the '<em><b>Filtered Options</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__AJAX_OPTIONS_LIST = UNIT_FEATURE_FEATURE_COUNT + 9;
+	int UNIT_ASSOCIATION__FILTERED_OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -14252,26 +14252,26 @@ public interface WebuiPackage extends EPackage {
 	EReference getUnitAssociation_TargetEntity();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getSelection <em>Selection</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Selection</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getSelection()
+	 * @return the meta object for the reference '<em>Options</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions()
 	 * @see #getUnitAssociation()
 	 * @generated
 	 */
-	EReference getUnitAssociation_Selection();
+	EReference getUnitAssociation_Options();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getAjaxOptionsList <em>Ajax Options List</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ajax Options List</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getAjaxOptionsList()
+	 * @return the meta object for the reference '<em>Filtered Options</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions()
 	 * @see #getUnitAssociation()
 	 * @generated
 	 */
-	EReference getUnitAssociation_AjaxOptionsList();
+	EReference getUnitAssociation_FilteredOptions();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}'.
@@ -17384,20 +17384,20 @@ public interface WebuiPackage extends EPackage {
 		EReference UNIT_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getUnitAssociation_TargetEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Selection</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Options</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNIT_ASSOCIATION__SELECTION = eINSTANCE.getUnitAssociation_Selection();
+		EReference UNIT_ASSOCIATION__OPTIONS = eINSTANCE.getUnitAssociation_Options();
 
 		/**
-		 * The meta object literal for the '<em><b>Ajax Options List</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Filtered Options</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNIT_ASSOCIATION__AJAX_OPTIONS_LIST = eINSTANCE.getUnitAssociation_AjaxOptionsList();
+		EReference UNIT_ASSOCIATION__FILTERED_OPTIONS = eINSTANCE.getUnitAssociation_FilteredOptions();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}' class.

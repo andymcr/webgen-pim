@@ -1684,7 +1684,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitAssociation_Selection() {
+	public EReference getUnitAssociation_Options() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1693,7 +1693,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitAssociation_AjaxOptionsList() {
+	public EReference getUnitAssociation_FilteredOptions() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3649,8 +3649,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__SOURCE_ENTITY);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__TARGET_ENTITY);
-		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__SELECTION);
-		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__AJAX_OPTIONS_LIST);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__FILTERED_OPTIONS);
 
 		associationReferenceEClass = createEClass(ASSOCIATION_REFERENCE);
 		createEAttribute(associationReferenceEClass, ASSOCIATION_REFERENCE__NAME);
@@ -4136,8 +4136,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getUnitAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_SourceEntity(), thePersistencePackage.getEntityOrView(), null, "sourceEntity", null, 0, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_TargetEntity(), thePersistencePackage.getEntityOrView(), null, "targetEntity", null, 0, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitAssociation_Selection(), theServicePackage.getSelection(), null, "selection", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitAssociation_AjaxOptionsList(), theServicePackage.getSelection(), null, "ajaxOptionsList", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_Options(), theServicePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_FilteredOptions(), theServicePackage.getFilter(), null, "filteredOptions", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationReferenceEClass, AssociationReference.class, "AssociationReference", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssociationReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -4457,7 +4457,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (unitAssociationEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "selectionValidChoice"
+			 "constraints", "optionsValidChoice"
 		   });	
 		addAnnotation
 		  (singletonUnitEClass, 
@@ -4548,7 +4548,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (unitAssociationEClass, 
 		   source, 
 		   new String[] {
-			 "selectionValidChoice", "not selection.oclIsUndefined() implies\r\n\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t->select(s : service::Service | s.serves = targetEntity)\r\n\t\t->collect(s : service::Service | s.selections)\r\n\t\t->includes(selection)"
+			 "optionsValidChoice", "not options.oclIsUndefined() implies\r\n\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t->select(s : service::Service | s.serves = targetEntity)\r\n\t\t->collect(s : service::Service | s.selections)\r\n\t\t->includes(options)"
 		   });	
 		addAnnotation
 		  (getUnitAssociation_IsSourceAssociation(), 

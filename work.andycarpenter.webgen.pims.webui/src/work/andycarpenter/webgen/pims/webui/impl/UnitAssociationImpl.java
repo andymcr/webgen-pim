@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
+import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 
 import work.andycarpenter.webgen.pims.webui.AssociationReference;
@@ -47,8 +48,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getSelection <em>Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAjaxOptionsList <em>Ajax Options List</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getFilteredOptions <em>Filtered Options</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,24 +136,24 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	protected EStructuralFeature.Internal.SettingDelegate TARGET_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__TARGET_ENTITY).getSettingDelegate();
 
 	/**
-	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' reference.
+	 * The cached value of the '{@link #getOptions() <em>Options</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSelection()
+	 * @see #getOptions()
 	 * @generated
 	 * @ordered
 	 */
-	protected Selection selection;
+	protected Selection options;
 
 	/**
-	 * The cached value of the '{@link #getAjaxOptionsList() <em>Ajax Options List</em>}' reference.
+	 * The cached value of the '{@link #getFilteredOptions() <em>Filtered Options</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAjaxOptionsList()
+	 * @see #getFilteredOptions()
 	 * @generated
 	 * @ordered
 	 */
-	protected Selection ajaxOptionsList;
+	protected Filter filteredOptions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -372,16 +373,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Selection getSelection() {
-		if (selection != null && selection.eIsProxy()) {
-			InternalEObject oldSelection = (InternalEObject)selection;
-			selection = (Selection)eResolveProxy(oldSelection);
-			if (selection != oldSelection) {
+	public Selection getOptions() {
+		if (options != null && options.eIsProxy()) {
+			InternalEObject oldOptions = (InternalEObject)options;
+			options = (Selection)eResolveProxy(oldOptions);
+			if (options != oldOptions) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__SELECTION, oldSelection, selection));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__OPTIONS, oldOptions, options));
 			}
 		}
-		return selection;
+		return options;
 	}
 
 	/**
@@ -389,8 +390,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Selection basicGetSelection() {
-		return selection;
+	public Selection basicGetOptions() {
+		return options;
 	}
 
 	/**
@@ -398,11 +399,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelection(Selection newSelection) {
-		Selection oldSelection = selection;
-		selection = newSelection;
+	public void setOptions(Selection newOptions) {
+		Selection oldOptions = options;
+		options = newOptions;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__SELECTION, oldSelection, selection));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__OPTIONS, oldOptions, options));
 	}
 
 	/**
@@ -410,16 +411,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Selection getAjaxOptionsList() {
-		if (ajaxOptionsList != null && ajaxOptionsList.eIsProxy()) {
-			InternalEObject oldAjaxOptionsList = (InternalEObject)ajaxOptionsList;
-			ajaxOptionsList = (Selection)eResolveProxy(oldAjaxOptionsList);
-			if (ajaxOptionsList != oldAjaxOptionsList) {
+	public Filter getFilteredOptions() {
+		if (filteredOptions != null && filteredOptions.eIsProxy()) {
+			InternalEObject oldFilteredOptions = (InternalEObject)filteredOptions;
+			filteredOptions = (Filter)eResolveProxy(oldFilteredOptions);
+			if (filteredOptions != oldFilteredOptions) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST, oldAjaxOptionsList, ajaxOptionsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS, oldFilteredOptions, filteredOptions));
 			}
 		}
-		return ajaxOptionsList;
+		return filteredOptions;
 	}
 
 	/**
@@ -427,8 +428,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Selection basicGetAjaxOptionsList() {
-		return ajaxOptionsList;
+	public Filter basicGetFilteredOptions() {
+		return filteredOptions;
 	}
 
 	/**
@@ -436,11 +437,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAjaxOptionsList(Selection newAjaxOptionsList) {
-		Selection oldAjaxOptionsList = ajaxOptionsList;
-		ajaxOptionsList = newAjaxOptionsList;
+	public void setFilteredOptions(Filter newFilteredOptions) {
+		Filter oldFilteredOptions = filteredOptions;
+		filteredOptions = newFilteredOptions;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST, oldAjaxOptionsList, ajaxOptionsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS, oldFilteredOptions, filteredOptions));
 	}
 
 	/**
@@ -506,12 +507,12 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
 				if (resolve) return getTargetEntity();
 				return basicGetTargetEntity();
-			case WebuiPackage.UNIT_ASSOCIATION__SELECTION:
-				if (resolve) return getSelection();
-				return basicGetSelection();
-			case WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST:
-				if (resolve) return getAjaxOptionsList();
-				return basicGetAjaxOptionsList();
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
+				if (resolve) return getOptions();
+				return basicGetOptions();
+			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
+				if (resolve) return getFilteredOptions();
+				return basicGetFilteredOptions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -538,11 +539,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)newValue);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__SELECTION:
-				setSelection((Selection)newValue);
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
+				setOptions((Selection)newValue);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST:
-				setAjaxOptionsList((Selection)newValue);
+			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
+				setFilteredOptions((Filter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -568,11 +569,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)null);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__SELECTION:
-				setSelection((Selection)null);
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
+				setOptions((Selection)null);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST:
-				setAjaxOptionsList((Selection)null);
+			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
+				setFilteredOptions((Filter)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -602,10 +603,10 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return SOURCE_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.UNIT_ASSOCIATION__SELECTION:
-				return selection != null;
-			case WebuiPackage.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST:
-				return ajaxOptionsList != null;
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
+				return options != null;
+			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
+				return filteredOptions != null;
 		}
 		return super.eIsSet(featureID);
 	}

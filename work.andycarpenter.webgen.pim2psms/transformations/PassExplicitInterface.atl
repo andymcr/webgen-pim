@@ -585,17 +585,17 @@ rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
 		displayLabel <- website.associationLabel(),
-		selection <-
-			if website.selection.oclIsUndefined() then
-				website.selection
+		options <-
+			if website.options.oclIsUndefined() then
+				website.options
 			else
-				website.selection.findServiceSelection()
+				website.options.findServiceSelection()
 			endif,
-		ajaxOptionsList <-
-			if website.ajaxOptionsList.oclIsUndefined() then
-				website.ajaxOptionsList
+		filteredOptions <-
+			if website.filteredOptions.oclIsUndefined() then
+				website.filteredOptions
 			else
-				website.ajaxOptionsList.findServiceSelection()
+				website.filteredOptions.findFilter()
 			endif,
 		headerClass <-
 			if not website.headerClass.oclIsUndefined() and website.headerClass <> '' then

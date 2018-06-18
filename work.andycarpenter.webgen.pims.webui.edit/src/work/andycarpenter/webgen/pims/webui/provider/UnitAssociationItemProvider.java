@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
@@ -61,8 +62,8 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addValueDisplayPropertyDescriptor(object);
 			addSourceEntityPropertyDescriptor(object);
 			addTargetEntityPropertyDescriptor(object);
-			addSelectionPropertyDescriptor(object);
-			addAjaxOptionsListPropertyDescriptor(object);
+			addOptionsPropertyDescriptor(object);
+			addFilteredOptionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -180,20 +181,20 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Selection feature.
+	 * This adds a property descriptor for the Options feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addSelectionPropertyDescriptor(Object object) {
+	protected void addOptionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_UnitAssociation_selection_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_selection_feature", "_UI_UnitAssociation_type"),
-			WebuiPackage.Literals.UNIT_ASSOCIATION__SELECTION,
+			getString("_UI_UnitAssociation_options_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_options_feature", "_UI_UnitAssociation_type"),
+			WebuiPackage.Literals.UNIT_ASSOCIATION__OPTIONS,
 			true, false, true, null,
-			getString("_UI_ModelPropertyCategory"),
+			getString("_UI_InterfacePropertyCategory"),
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
@@ -208,25 +209,39 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Ajax Options List feature.
+	 * This adds a property descriptor for the Filtered Options feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected void addAjaxOptionsListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_ajaxOptionsList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_ajaxOptionsList_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__AJAX_OPTIONS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	protected void addFilteredOptionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_UnitAssociation_filteredOptions_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_filteredOptions_feature", "_UI_UnitAssociation_type"),
+			WebuiPackage.Literals.UNIT_ASSOCIATION__FILTERED_OPTIONS,
+			true, false, true, null,
+			getString("_UI_InterfacePropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof UnitAssociation) {
+						final UnitAssociation association = (UnitAssociation) object;
+						if (association.getOptions() != null) {
+							return association.getOptions().getFilters();
+						} else {
+							final Set<Filter> filters = new HashSet<Filter>();
+							for (Selection selection : getSelections(getPageDisplayedOn(association).getWebUI(),
+										getTarget(association))) {
+								filters.addAll(selection.getFilters());
+							}
+							return filters;
+						}
+					}
+					return Collections.emptySet();
+				}
+		});
 	}
 
 	/**

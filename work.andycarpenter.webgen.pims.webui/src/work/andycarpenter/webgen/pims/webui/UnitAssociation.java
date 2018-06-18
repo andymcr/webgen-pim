@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 
+import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 
 /**
@@ -18,13 +19,13 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getSelection <em>Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getAjaxOptionsList <em>Ajax Options List</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionValidChoice'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionValidChoice='not selection.oclIsUndefined() implies\r\n\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t-&gt;select(s : service::Service | s.serves = targetEntity)\r\n\t\t-&gt;collect(s : service::Service | s.selections)\r\n\t\t-&gt;includes(selection)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='optionsValidChoice'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() implies\r\n\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t-&gt;select(s : service::Service | s.serves = targetEntity)\r\n\t\t-&gt;collect(s : service::Service | s.selections)\r\n\t\t-&gt;includes(options)'"
  * @generated
  */
 public interface UnitAssociation extends UnitFeature, UnitContainer, AssociationReference {
@@ -77,55 +78,55 @@ public interface UnitAssociation extends UnitFeature, UnitContainer, Association
 	EntityOrView getTargetEntity();
 
 	/**
-	 * Returns the value of the '<em><b>Selection</b></em>' reference.
+	 * Returns the value of the '<em><b>Options</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Selection</em>' reference isn't clear,
+	 * If the meaning of the '<em>Options</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selection</em>' reference.
-	 * @see #setSelection(Selection)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_Selection()
+	 * @return the value of the '<em>Options</em>' reference.
+	 * @see #setOptions(Selection)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_Options()
 	 * @model
 	 * @generated
 	 */
-	Selection getSelection();
+	Selection getOptions();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getSelection <em>Selection</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Selection</em>' reference.
-	 * @see #getSelection()
+	 * @param value the new value of the '<em>Options</em>' reference.
+	 * @see #getOptions()
 	 * @generated
 	 */
-	void setSelection(Selection value);
+	void setOptions(Selection value);
 
 	/**
-	 * Returns the value of the '<em><b>Ajax Options List</b></em>' reference.
+	 * Returns the value of the '<em><b>Filtered Options</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ajax Options List</em>' reference isn't clear,
+	 * If the meaning of the '<em>Filtered Options</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ajax Options List</em>' reference.
-	 * @see #setAjaxOptionsList(Selection)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_AjaxOptionsList()
+	 * @return the value of the '<em>Filtered Options</em>' reference.
+	 * @see #setFilteredOptions(Filter)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_FilteredOptions()
 	 * @model
 	 * @generated
 	 */
-	Selection getAjaxOptionsList();
+	Filter getFilteredOptions();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getAjaxOptionsList <em>Ajax Options List</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ajax Options List</em>' reference.
-	 * @see #getAjaxOptionsList()
+	 * @param value the new value of the '<em>Filtered Options</em>' reference.
+	 * @see #getFilteredOptions()
 	 * @generated
 	 */
-	void setAjaxOptionsList(Selection value);
+	void setFilteredOptions(Filter value);
 
 } // UnitAssociation

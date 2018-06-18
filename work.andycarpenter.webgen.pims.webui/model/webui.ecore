@@ -271,10 +271,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitAssociation" eSuperTypes="#//UnitFeature #//UnitContainer #//AssociationReference">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="selectionValidChoice"/>
+      <details key="constraints" value="optionsValidChoice"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.services.services&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | s.serves = targetEntity)&#xD;&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xD;&#xA;&#x9;&#x9;->includes(selection)"/>
+      <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xD;&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.services.services&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | s.serves = targetEntity)&#xD;&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xD;&#xA;&#x9;&#x9;->includes(options)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSourceAssociation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
@@ -295,8 +295,8 @@
         <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ajaxOptionsList" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filteredOptions" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssociationReference" abstract="true"
       interface="true">

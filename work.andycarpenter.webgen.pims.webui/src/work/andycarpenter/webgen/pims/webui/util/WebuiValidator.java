@@ -762,30 +762,30 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateUnitAssociation_selectionValidChoice(unitAssociation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUnitAssociation_optionsValidChoice(unitAssociation, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the selectionValidChoice constraint of '<em>Unit Association</em>'.
+	 * The cached validation expression for the optionsValidChoice constraint of '<em>Unit Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String UNIT_ASSOCIATION__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\r\n" +
+	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\r\n" +
 		"\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n" +
 		"\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n" +
 		"\t\t->select(s : service::Service | s.serves = targetEntity)\r\n" +
 		"\t\t->collect(s : service::Service | s.selections)\r\n" +
-		"\t\t->includes(selection)";
+		"\t\t->includes(options)";
 
 	/**
-	 * Validates the selectionValidChoice constraint of '<em>Unit Association</em>'.
+	 * Validates the optionsValidChoice constraint of '<em>Unit Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUnitAssociation_selectionValidChoice(UnitAssociation unitAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateUnitAssociation_optionsValidChoice(UnitAssociation unitAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(WebuiPackage.Literals.UNIT_ASSOCIATION,
@@ -793,8 +793,8 @@ public class WebuiValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "selectionValidChoice",
-				 UNIT_ASSOCIATION__SELECTION_VALID_CHOICE__EEXPRESSION,
+				 "optionsValidChoice",
+				 UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
