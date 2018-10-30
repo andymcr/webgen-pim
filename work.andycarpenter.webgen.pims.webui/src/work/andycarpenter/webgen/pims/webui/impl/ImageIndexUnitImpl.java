@@ -599,7 +599,7 @@ public class ImageIndexUnitImpl extends CardsUnitImpl implements ImageIndexUnit 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (missingImagePath: ");
 		result.append(missingImagePath);
 		result.append(", overlayTitle: ");

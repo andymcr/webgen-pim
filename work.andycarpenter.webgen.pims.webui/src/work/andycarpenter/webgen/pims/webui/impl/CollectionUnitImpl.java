@@ -1642,7 +1642,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (truncateElementTitle: ");
 		result.append(truncateElementTitle);
 		result.append(", omitContainerLoad: ");

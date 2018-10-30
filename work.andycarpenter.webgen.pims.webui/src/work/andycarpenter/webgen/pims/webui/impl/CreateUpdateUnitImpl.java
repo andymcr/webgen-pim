@@ -308,7 +308,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (onSaveContinueEditing: ");
 		result.append(onSaveContinueEditing);
 		result.append(", createUriElement: ");

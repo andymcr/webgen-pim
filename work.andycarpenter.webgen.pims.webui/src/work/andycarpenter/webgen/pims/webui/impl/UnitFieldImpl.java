@@ -687,7 +687,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (requiresRole: ");
 		result.append(requiresRole);
 		result.append(", title: ");

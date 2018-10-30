@@ -399,7 +399,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (confirmMessage: ");
 		result.append(confirmMessage);
 		result.append(", requiresRole: ");

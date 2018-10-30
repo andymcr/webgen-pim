@@ -434,7 +434,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (obfuscateFormFields: ");
 		result.append(obfuscateFormFields);
 		result.append(", placeholder: ");

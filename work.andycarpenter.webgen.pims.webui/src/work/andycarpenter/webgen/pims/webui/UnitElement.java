@@ -66,7 +66,7 @@ public interface UnitElement extends UnitFeature {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Name()
 	 * @model unsettable="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\r\n\t\'\'\r\nelse if attribute.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\tattribute.oclAsType(persistence::EncapsulatedAttribute).name\r\nelse\r\n\tattribute.oclAsType(persistence::EntityAttribute).name\r\nendif endif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.oclAsType(persistence::EntityAttribute).name\nendif'"
 	 * @generated
 	 */
 	String getName();

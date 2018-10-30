@@ -589,7 +589,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (defaultDateFormat: ");
 		result.append(defaultDateFormat);
 		result.append(", defaultTimeFormat: ");

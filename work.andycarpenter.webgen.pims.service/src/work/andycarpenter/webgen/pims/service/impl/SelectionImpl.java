@@ -693,7 +693,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (distinct: ");
 		result.append(distinct);
 		result.append(", limit: ");
