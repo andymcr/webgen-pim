@@ -737,7 +737,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (siteTitle: ");
 		result.append(siteTitle);
 		result.append(", webmasterEmail: ");

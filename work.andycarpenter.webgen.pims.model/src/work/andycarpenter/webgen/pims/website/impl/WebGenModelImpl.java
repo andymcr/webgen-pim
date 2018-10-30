@@ -695,7 +695,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (frameworkTechnology: ");
 		result.append(frameworkTechnology);
 		result.append(", copyrightText: ");

@@ -88,7 +88,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link WebsitePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -102,7 +102,8 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 		if (isInited) return (WebsitePackage)EPackage.Registry.INSTANCE.getEPackage(WebsitePackage.eNS_URI);
 
 		// Obtain or create and register package
-		WebsitePackageImpl theWebsitePackage = (WebsitePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof WebsitePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new WebsitePackageImpl());
+		Object registeredWebsitePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		WebsitePackageImpl theWebsitePackage = registeredWebsitePackage instanceof WebsitePackageImpl ? (WebsitePackageImpl)registeredWebsitePackage : new WebsitePackageImpl();
 
 		isInited = true;
 
@@ -125,7 +126,6 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 		// Mark meta-data to indicate it can't be changed
 		theWebsitePackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(WebsitePackage.eNS_URI, theWebsitePackage);
 		return theWebsitePackage;
@@ -491,14 +491,14 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 	}
 
