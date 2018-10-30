@@ -418,7 +418,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (defaultValue: ");
 		result.append(defaultValue);
 		result.append(", placeholder: ");

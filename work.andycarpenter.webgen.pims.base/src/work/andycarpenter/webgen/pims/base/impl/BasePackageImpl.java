@@ -140,7 +140,7 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link BasePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -154,7 +154,8 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		if (isInited) return (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 
 		// Obtain or create and register package
-		BasePackageImpl theBasePackage = (BasePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof BasePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new BasePackageImpl());
+		Object registeredBasePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		BasePackageImpl theBasePackage = registeredBasePackage instanceof BasePackageImpl ? (BasePackageImpl)registeredBasePackage : new BasePackageImpl();
 
 		isInited = true;
 
@@ -169,7 +170,7 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theBasePackage, 
+			(theBasePackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return BaseValidator.INSTANCE;
@@ -179,7 +180,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		// Mark meta-data to indicate it can't be changed
 		theBasePackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(BasePackage.eNS_URI, theBasePackage);
 		return theBasePackage;
@@ -603,20 +603,20 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });	
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
 		addAnnotation
-		  (namedElementEClass, 
-		   source, 
+		  (namedElementEClass,
+		   source,
 		   new String[] {
-			 "constraints", "nameNeedsAtLeastOneCharacter"
+			   "constraints", "nameNeedsAtLeastOneCharacter"
 		   });
 	}
 
@@ -627,18 +627,18 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (namedElementEClass, 
-		   source, 
+		  (namedElementEClass,
+		   source,
 		   new String[] {
-			 "nameNeedsAtLeastOneCharacter", "not name.oclIsUndefined() implies name.size() > 0"
-		   });	
+			   "nameNeedsAtLeastOneCharacter", "not name.oclIsUndefined() implies name.size() > 0"
+		   });
 		addAnnotation
-		  (getParameterReference_Name(), 
-		   source, 
+		  (getParameterReference_Name(),
+		   source,
 		   new String[] {
-			 "derivation", "if parameter.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tparameter.name\r\nendif"
+			   "derivation", "if parameter.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tparameter.name\r\nendif"
 		   });
 	}
 
