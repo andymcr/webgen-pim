@@ -302,7 +302,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (captchaSiteKey: ");
 		result.append(captchaSiteKey);
 		result.append(", captchaSecretKey: ");

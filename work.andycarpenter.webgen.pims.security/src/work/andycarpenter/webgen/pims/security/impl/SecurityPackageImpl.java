@@ -97,7 +97,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link SecurityPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -111,7 +111,8 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		if (isInited) return (SecurityPackage)EPackage.Registry.INSTANCE.getEPackage(SecurityPackage.eNS_URI);
 
 		// Obtain or create and register package
-		SecurityPackageImpl theSecurityPackage = (SecurityPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SecurityPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SecurityPackageImpl());
+		Object registeredSecurityPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SecurityPackageImpl theSecurityPackage = registeredSecurityPackage instanceof SecurityPackageImpl ? (SecurityPackageImpl)registeredSecurityPackage : new SecurityPackageImpl();
 
 		isInited = true;
 
@@ -128,7 +129,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theSecurityPackage, 
+			(theSecurityPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return SecurityValidator.INSTANCE;
@@ -138,7 +139,6 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		// Mark meta-data to indicate it can't be changed
 		theSecurityPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(SecurityPackage.eNS_URI, theSecurityPackage);
 		return theSecurityPackage;
@@ -471,26 +471,26 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });	
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
 		addAnnotation
-		  (authenticationEClass, 
-		   source, 
+		  (authenticationEClass,
+		   source,
 		   new String[] {
-			 "constraints", "userKeyFromUser userKeyRequiredAttribute"
-		   });	
+			   "constraints", "userKeyFromUser userKeyRequiredAttribute"
+		   });
 		addAnnotation
-		  (localAuthenticationSystemEClass, 
-		   source, 
+		  (localAuthenticationSystemEClass,
+		   source,
 		   new String[] {
-			 "constraints", "captchaRequiresKeys"
+			   "constraints", "captchaRequiresKeys"
 		   });
 	}
 
@@ -501,19 +501,19 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (authenticationEClass, 
-		   source, 
+		  (authenticationEClass,
+		   source,
 		   new String[] {
-			 "userKeyFromUser", "not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features->includes(userKey)",
-			 "userKeyRequiredAttribute", "not userKey.oclIsUndefined() implies\r\n\tif userKey.oclIsTypeOf(persistence::EncapsulatedAttribute) then\r\n\t\tuserKey.oclAsType(persistence::EncapsulatedAttribute).cardinality = persistence::Cardinality::Required\r\n\telse\r\n\t\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required\r\n\tendif"
-		   });	
+			   "userKeyFromUser", "not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features->includes(userKey)",
+			   "userKeyRequiredAttribute", "not userKey.oclIsUndefined() implies\r\n\tif userKey.oclIsTypeOf(persistence::EncapsulatedAttribute) then\r\n\t\tuserKey.oclAsType(persistence::EncapsulatedAttribute).cardinality = persistence::Cardinality::Required\r\n\telse\r\n\t\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required\r\n\tendif"
+		   });
 		addAnnotation
-		  (localAuthenticationSystemEClass, 
-		   source, 
+		  (localAuthenticationSystemEClass,
+		   source,
 		   new String[] {
-			 "captchaRequiresKeys", "-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()\r\ntrue"
+			   "captchaRequiresKeys", "-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()\r\ntrue"
 		   });
 	}
 

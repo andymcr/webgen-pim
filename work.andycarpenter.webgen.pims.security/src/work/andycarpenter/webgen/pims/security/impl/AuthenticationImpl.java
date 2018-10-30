@@ -429,7 +429,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (loginLabel: ");
 		result.append(loginLabel);
 		result.append(", logoutLabel: ");

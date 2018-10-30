@@ -528,7 +528,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (authenticationKey: ");
 		result.append(authenticationKey);
 		result.append(", useCaptcha: ");
