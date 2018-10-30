@@ -139,7 +139,7 @@ public class NullLiteralImpl extends MinimalEObjectImpl.Container implements Nul
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (suffixes: ");
 		result.append(suffixes);
 		result.append(')');
