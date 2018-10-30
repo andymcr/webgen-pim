@@ -367,7 +367,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link PersistencePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -381,7 +381,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		if (isInited) return (PersistencePackage)EPackage.Registry.INSTANCE.getEPackage(PersistencePackage.eNS_URI);
 
 		// Obtain or create and register package
-		PersistencePackageImpl thePersistencePackage = (PersistencePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof PersistencePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new PersistencePackageImpl());
+		Object registeredPersistencePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PersistencePackageImpl thePersistencePackage = registeredPersistencePackage instanceof PersistencePackageImpl ? (PersistencePackageImpl)registeredPersistencePackage : new PersistencePackageImpl();
 
 		isInited = true;
 
@@ -397,7 +398,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(thePersistencePackage, 
+			(thePersistencePackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return PersistenceValidator.INSTANCE;
@@ -407,7 +408,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		// Mark meta-data to indicate it can't be changed
 		thePersistencePackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(PersistencePackage.eNS_URI, thePersistencePackage);
 		return thePersistencePackage;
@@ -2426,44 +2426,44 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });	
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
 		addAnnotation
-		  (persistenceEClass, 
-		   source, 
+		  (persistenceEClass,
+		   source,
 		   new String[] {
-			 "constraints", "classifierNameUnique"
-		   });	
+			   "constraints", "classifierNameUnique"
+		   });
 		addAnnotation
-		  (entityOrViewEClass, 
-		   source, 
+		  (entityOrViewEClass,
+		   source,
 		   new String[] {
-			 "constraints", "keysFromLocalFeatures"
-		   });	
+			   "constraints", "keysFromLocalFeatures"
+		   });
 		addAnnotation
-		  (entityEClass, 
-		   source, 
+		  (entityEClass,
+		   source,
 		   new String[] {
-			 "constraints", "featureNameUniqueWithinEntity"
-		   });	
+			   "constraints", "featureNameUniqueWithinEntity"
+		   });
 		addAnnotation
-		  (entityFeatureEClass, 
-		   source, 
+		  (entityFeatureEClass,
+		   source,
 		   new String[] {
-			 "constraints", "primaryKeyRequired"
-		   });	
+			   "constraints", "primaryKeyRequired"
+		   });
 		addAnnotation
-		  (associationWithoutContainmentEClass, 
-		   source, 
+		  (associationWithoutContainmentEClass,
+		   source,
 		   new String[] {
-			 "constraints", "oneToManyAssociationsMustBeBidirectional"
+			   "constraints", "oneToManyAssociationsMustBeBidirectional"
 		   });
 	}
 
@@ -2474,126 +2474,126 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (persistenceEClass, 
-		   source, 
+		  (persistenceEClass,
+		   source,
 		   new String[] {
-			 "classifierNameUnique", "dataTypes->isUnique(name) and entities->isUnique(name)"
-		   });	
+			   "classifierNameUnique", "dataTypes->isUnique(name) and entities->isUnique(name)"
+		   });
 		addAnnotation
-		  (entityOrViewEClass, 
-		   source, 
+		  (entityOrViewEClass,
+		   source,
 		   new String[] {
-			 "keysFromLocalFeatures", "allFeatures->includesAll(keys)"
-		   });	
+			   "keysFromLocalFeatures", "allFeatures->includesAll(keys)"
+		   });
 		addAnnotation
-		  (getEntityOrView_Features(), 
-		   source, 
+		  (getEntityOrView_Features(),
+		   source,
 		   new String[] {
-			 "derivation", "if self.oclIsTypeOf(Entity) then\r\n\tself.oclAsType(Entity).entityFeatures\r\nelse\r\n\tself.oclAsType(View).viewFeatures\r\nendif"
-		   });	
+			   "derivation", "if self.oclIsTypeOf(Entity) then\r\n\tself.oclAsType(Entity).entityFeatures\r\nelse\r\n\tself.oclAsType(View).viewFeatures\r\nendif"
+		   });
 		addAnnotation
-		  (getEntityOrView_AllFeatures(), 
-		   source, 
+		  (getEntityOrView_AllFeatures(),
+		   source,
 		   new String[] {
-			 "derivation", "if self.oclIsTypeOf(Entity) then\r\n\tself.oclAsType(Entity).entityFeatures->union(self.oclAsType(Entity).associationEnds->select(e | e.bidirectional))->asOrderedSet()\r\nelse\r\n\tself.oclAsType(View).viewFeatures\r\nendif"
-		   });	
+			   "derivation", "if self.oclIsTypeOf(Entity) then\r\n\tself.oclAsType(Entity).entityFeatures->union(self.oclAsType(Entity).associationEnds->select(e | e.bidirectional))->asOrderedSet()\r\nelse\r\n\tself.oclAsType(View).viewFeatures\r\nendif"
+		   });
 		addAnnotation
-		  (getEntityOrView_Attributes(), 
-		   source, 
+		  (getEntityOrView_Attributes(),
+		   source,
 		   new String[] {
-			 "derivation", "features->select(f | f.oclIsKindOf(Attribute)).oclAsType(Attribute)->asOrderedSet()"
-		   });	
+			   "derivation", "features->select(f | f.oclIsKindOf(Attribute)).oclAsType(Attribute)->asOrderedSet()"
+		   });
 		addAnnotation
-		  (getEntityOrView_Associations(), 
-		   source, 
+		  (getEntityOrView_Associations(),
+		   source,
 		   new String[] {
-			 "derivation", "features->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"
-		   });	
+			   "derivation", "features->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"
+		   });
 		addAnnotation
-		  (getEntityOrView_AllAssociations(), 
-		   source, 
+		  (getEntityOrView_AllAssociations(),
+		   source,
 		   new String[] {
-			 "derivation", "allFeatures->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"
-		   });	
+			   "derivation", "allFeatures->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"
+		   });
 		addAnnotation
-		  (getAssociation_SourceEntityX(), 
-		   source, 
+		  (getAssociation_SourceEntityX(),
+		   source,
 		   new String[] {
-			 "derivation", "if self.oclIsKindOf(EntityAssociation) then\r\n\tself.oclAsType(EntityAssociation).partOf\r\nelse if self.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tself.oclAsType(EncapsulatedAssociation).sourceEntity\r\nelse\r\n\tself.oclAsType(ViewAssociation).partOf\r\nendif endif"
-		   });	
+			   "derivation", "if self.oclIsKindOf(EntityAssociation) then\r\n\tself.oclAsType(EntityAssociation).partOf\r\nelse if self.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tself.oclAsType(EncapsulatedAssociation).sourceEntity\r\nelse\r\n\tself.oclAsType(ViewAssociation).partOf\r\nendif endif"
+		   });
 		addAnnotation
-		  (getAssociation_TargetEntityX(), 
-		   source, 
+		  (getAssociation_TargetEntityX(),
+		   source,
 		   new String[] {
-			 "derivation", "if self.oclIsKindOf(EntityAssociation) then\r\n\tself.oclAsType(EntityAssociation).targetEntity\r\nelse if self.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tself.oclAsType(EncapsulatedAssociation).targetEntity\r\nelse\r\n\t-- TODO get other end\r\n\tself.oclAsType(ViewAssociation).partOf\r\nendif endif"
-		   });	
+			   "derivation", "if self.oclIsKindOf(EntityAssociation) then\r\n\tself.oclAsType(EntityAssociation).targetEntity\r\nelse if self.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tself.oclAsType(EncapsulatedAssociation).targetEntity\r\nelse\r\n\t-- TODO get other end\r\n\tself.oclAsType(ViewAssociation).partOf\r\nendif endif"
+		   });
 		addAnnotation
-		  (getModelLabelAssociation_IsSourceAssociation(), 
-		   source, 
+		  (getModelLabelAssociation_IsSourceAssociation(),
+		   source,
 		   new String[] {
-			 "derivation", "not association.oclIsUndefined() implies\r\n\tpartOf.labelFor.features->includes(association)"
-		   });	
+			   "derivation", "not association.oclIsUndefined() implies\r\n\tpartOf.labelFor.features->includes(association)"
+		   });
 		addAnnotation
-		  (entityEClass, 
-		   source, 
+		  (entityEClass,
+		   source,
 		   new String[] {
-			 "featureNameUniqueWithinEntity", "entityFeatures->isUnique(f | f.name)"
-		   });	
+			   "featureNameUniqueWithinEntity", "entityFeatures->isUnique(f | f.name)"
+		   });
 		addAnnotation
-		  (entityFeatureEClass, 
-		   source, 
+		  (entityFeatureEClass,
+		   source,
 		   new String[] {
-			 "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
-		   });	
+			   "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
+		   });
 		addAnnotation
-		  (associationWithoutContainmentEClass, 
-		   source, 
+		  (associationWithoutContainmentEClass,
+		   source,
 		   new String[] {
-			 "oneToManyAssociationsMustBeBidirectional", "cardinality = Cardinality::Optional and targetCardinality = Cardinality::Required implies bidirectional"
-		   });	
+			   "oneToManyAssociationsMustBeBidirectional", "cardinality = Cardinality::Optional and targetCardinality = Cardinality::Required implies bidirectional"
+		   });
 		addAnnotation
-		  (getEncapsulatedAttribute_Name(), 
-		   source, 
+		  (getEncapsulatedAttribute_Name(),
+		   source,
 		   new String[] {
-			 "derivation", "if not self.alias.oclIsUndefined() then\r\n\tif self.alias <> \'\' then\r\n\t\tself.alias\r\n\telse\r\n\t\t\'empty alias\'\r\n\tendif\r\nelse if attribute.oclIsUndefined() then\r\n\t\'\'\r\nelse \r\n\tif attribute.oclIsKindOf(EntityAttribute) then\r\n\t\tattribute.oclAsType(EntityAttribute).name\r\n\telse\r\n\t\tattribute.oclAsType(EncapsulatedAttribute).name\r\n\tendif\r\nendif endif"
-		   });	
+			   "derivation", "if not self.alias.oclIsUndefined() then\r\n\tif self.alias <> \'\' then\r\n\t\tself.alias\r\n\telse\r\n\t\t\'empty alias\'\r\n\tendif\r\nelse if attribute.oclIsUndefined() then\r\n\t\'\'\r\nelse \r\n\tif attribute.oclIsKindOf(EntityAttribute) then\r\n\t\tattribute.oclAsType(EntityAttribute).name\r\n\telse\r\n\t\tattribute.oclAsType(EncapsulatedAttribute).name\r\n\tendif\r\nendif endif"
+		   });
 		addAnnotation
-		  (getEncapsulatedAttribute_Cardinality(), 
-		   source, 
+		  (getEncapsulatedAttribute_Cardinality(),
+		   source,
 		   new String[] {
-			 "derivation", "if attribute.oclIsUndefined() then\r\n\tCardinality::Optional\r\nelse \r\n\tif attribute.oclIsKindOf(EntityAttribute) then\r\n\t\tattribute.oclAsType(EntityAttribute).cardinality\r\n\telse\r\n\t\tattribute.oclAsType(EncapsulatedAttribute).cardinality\r\n\tendif\r\nendif"
-		   });	
+			   "derivation", "if attribute.oclIsUndefined() then\r\n\tCardinality::Optional\r\nelse \r\n\tif attribute.oclIsKindOf(EntityAttribute) then\r\n\t\tattribute.oclAsType(EntityAttribute).cardinality\r\n\telse\r\n\t\tattribute.oclAsType(EncapsulatedAttribute).cardinality\r\n\tendif\r\nendif"
+		   });
 		addAnnotation
-		  (getEncapsulatedAssociation_Name(), 
-		   source, 
+		  (getEncapsulatedAssociation_Name(),
+		   source,
 		   new String[] {
-			 "derivation", "if not alias.oclIsUndefined() then\r\n\tif alias <> \'\' then\r\n\t\talias\r\n\telse\r\n\t\t\'empty alias\'\r\n\tendif\r\nelse if association.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).name\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tif self.association.oclIsKindOf(EntityAssociation) then\r\n\t\t\t\tself.association.oclAsType(EntityAssociation).name\r\n\t\t\telse\r\n\t\t\t\tassociation.oclAsType(ViewAssociation).name\r\n\t\t\tendif\r\n\t\telse\r\n\t\t\tif self.association.oclIsKindOf(EntityAssociation) then\r\n\t\t\t\tself.association.oclAsType(EntityAssociation).targetFeatureName\r\n\t\t\telse\r\n\t\t\t\tassociation.oclAsType(ViewAssociation).opposite.name\r\n\t\t\tendif\r\n\t\tendif\r\n\tendif\r\nendif endif"
-		   });	
+			   "derivation", "if not alias.oclIsUndefined() then\r\n\tif alias <> \'\' then\r\n\t\talias\r\n\telse\r\n\t\t\'empty alias\'\r\n\tendif\r\nelse if association.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).name\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tif self.association.oclIsKindOf(EntityAssociation) then\r\n\t\t\t\tself.association.oclAsType(EntityAssociation).name\r\n\t\t\telse\r\n\t\t\t\tassociation.oclAsType(ViewAssociation).name\r\n\t\t\tendif\r\n\t\telse\r\n\t\t\tif self.association.oclIsKindOf(EntityAssociation) then\r\n\t\t\t\tself.association.oclAsType(EntityAssociation).targetFeatureName\r\n\t\t\telse\r\n\t\t\t\tassociation.oclAsType(ViewAssociation).opposite.name\r\n\t\t\tendif\r\n\t\tendif\r\n\tendif\r\nendif endif"
+		   });
 		addAnnotation
-		  (getEncapsulatedAssociation_IsSourceAssociation(), 
-		   source, 
+		  (getEncapsulatedAssociation_IsSourceAssociation(),
+		   source,
 		   new String[] {
-			 "derivation", "not association.oclIsUndefined() implies\r\n\tpartOf.encapsulates->collect(eov | eov.features)->includes(association)"
-		   });	
+			   "derivation", "not association.oclIsUndefined() implies\r\n\tpartOf.encapsulates->collect(eov | eov.features)->includes(association)"
+		   });
 		addAnnotation
-		  (getEncapsulatedAssociation_Cardinality(), 
-		   source, 
+		  (getEncapsulatedAssociation_Cardinality(),
+		   source,
 		   new String[] {
-			 "derivation", "if association.oclIsUndefined() then\r\n\tCardinality::Optional\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).cardinality\r\n\telse if association.oclIsTypeOf(ViewAssociation) then\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(ViewAssociation).cardinality\r\n\t\telse\r\n\t\t\tassociation.oclAsType(ViewAssociation).opposite.cardinality\r\n\t\tendif\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).cardinality\r\n\t\telse if association.oclIsTypeOf(AssociationWithContainment) then\r\n\t\t\tCardinality::Required\r\n\t\telse\r\n\t\t\tassociation.oclAsType(AssociationWithoutContainment).targetCardinality \r\n\t\tendif endif\r\n\tendif endif\r\nendif"
-		   });	
+			   "derivation", "if association.oclIsUndefined() then\r\n\tCardinality::Optional\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).cardinality\r\n\telse if association.oclIsTypeOf(ViewAssociation) then\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(ViewAssociation).cardinality\r\n\t\telse\r\n\t\t\tassociation.oclAsType(ViewAssociation).opposite.cardinality\r\n\t\tendif\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).cardinality\r\n\t\telse if association.oclIsTypeOf(AssociationWithContainment) then\r\n\t\t\tCardinality::Required\r\n\t\telse\r\n\t\t\tassociation.oclAsType(AssociationWithoutContainment).targetCardinality \r\n\t\tendif endif\r\n\tendif endif\r\nendif"
+		   });
 		addAnnotation
-		  (getEncapsulatedAssociation_SourceEntity(), 
-		   source, 
+		  (getEncapsulatedAssociation_SourceEntity(),
+		   source,
 		   new String[] {
-			 "derivation", "if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).sourceEntity\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).partOf\r\n\t\telse\r\n\t\t\tassociation.oclAsType(EntityAssociation).targetEntity \r\n\t\tendif\r\n\tendif\r\nendif"
-		   });	
+			   "derivation", "if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).sourceEntity\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).partOf\r\n\t\telse\r\n\t\t\tassociation.oclAsType(EntityAssociation).targetEntity \r\n\t\tendif\r\n\tendif\r\nendif"
+		   });
 		addAnnotation
-		  (getEncapsulatedAssociation_TargetEntity(), 
-		   source, 
+		  (getEncapsulatedAssociation_TargetEntity(),
+		   source,
 		   new String[] {
-			 "derivation", "if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).targetEntity\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).targetEntity \r\n\t\telse\r\n\t\t\tassociation.oclAsType(EntityAssociation).partOf\r\n\t\tendif\r\n\tendif\r\nendif"
+			   "derivation", "if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif association.oclIsTypeOf(EncapsulatedAssociation) then\r\n\t\tassociation.oclAsType(EncapsulatedAssociation).targetEntity\r\n\telse\r\n\t\tif isSourceAssociation then\r\n\t\t\tassociation.oclAsType(EntityAssociation).targetEntity \r\n\t\telse\r\n\t\t\tassociation.oclAsType(EntityAssociation).partOf\r\n\t\tendif\r\n\tendif\r\nendif"
 		   });
 	}
 

@@ -205,7 +205,7 @@ public class DateAttributeImpl extends EntityAttributeImpl implements DateAttrib
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (details: ");
 		result.append(details);
 		result.append(", format: ");

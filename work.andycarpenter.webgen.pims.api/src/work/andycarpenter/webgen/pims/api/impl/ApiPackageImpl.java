@@ -78,7 +78,7 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ApiPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -92,7 +92,8 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 		if (isInited) return (ApiPackage)EPackage.Registry.INSTANCE.getEPackage(ApiPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ApiPackageImpl theApiPackage = (ApiPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApiPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApiPackageImpl());
+		Object registeredApiPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ApiPackageImpl theApiPackage = registeredApiPackage instanceof ApiPackageImpl ? (ApiPackageImpl)registeredApiPackage : new ApiPackageImpl();
 
 		isInited = true;
 
@@ -111,7 +112,6 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 		// Mark meta-data to indicate it can't be changed
 		theApiPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApiPackage.eNS_URI, theApiPackage);
 		return theApiPackage;
@@ -423,14 +423,14 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 	}
 
@@ -441,18 +441,18 @@ public class ApiPackageImpl extends EPackageImpl implements ApiPackage {
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (getResource_Name(), 
-		   source, 
+		  (getResource_Name(),
+		   source,
 		   new String[] {
-			 "derivation", "if service.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tservice.name\r\nendif"
-		   });	
+			   "derivation", "if service.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tservice.name\r\nendif"
+		   });
 		addAnnotation
-		  (getResourceSelection_Name(), 
-		   source, 
+		  (getResourceSelection_Name(),
+		   source,
 		   new String[] {
-			 "derivation", "if selection.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tselection.name\r\nendif"
+			   "derivation", "if selection.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tselection.name\r\nendif"
 		   });
 	}
 
