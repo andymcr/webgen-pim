@@ -108,7 +108,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ImagePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -122,7 +122,8 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 		if (isInited) return (ImagePackage)EPackage.Registry.INSTANCE.getEPackage(ImagePackage.eNS_URI);
 
 		// Obtain or create and register package
-		ImagePackageImpl theImagePackage = (ImagePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ImagePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ImagePackageImpl());
+		Object registeredImagePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ImagePackageImpl theImagePackage = registeredImagePackage instanceof ImagePackageImpl ? (ImagePackageImpl)registeredImagePackage : new ImagePackageImpl();
 
 		isInited = true;
 
@@ -139,7 +140,6 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 		// Mark meta-data to indicate it can't be changed
 		theImagePackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ImagePackage.eNS_URI, theImagePackage);
 		return theImagePackage;
