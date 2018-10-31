@@ -165,7 +165,7 @@
       <details key="constraints" value="featuresMustBeFromContentType"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="featuresMustBeFromContentType" value="let entities : OrderedSet(persistence::EntityOrView)&#xD;&#xA;&#x9;= if self.oclIsKindOf(SingletonUnit) then&#xD;&#xA;&#x9;&#x9;&#x9;OrderedSet{self.oclAsType(SingletonUnit).contentType}&#xD;&#xA;&#x9;&#x9;else if self.oclIsKindOf(CollectionUnit) then&#xD;&#xA;&#x9;&#x9;&#x9;self.oclAsType(CollectionUnit).contentType&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;OrderedSet{}&#xD;&#xA;&#x9;&#x9;endif endif&#xD;&#xA;&#x9;in let eovFeatures : Collection(persistence::Feature)&#xD;&#xA;&#x9;&#x9;= entities->collect(eov | eov.allFeatures)&#xD;&#xA;&#x9;&#x9;in displayFields&#xD;&#xA;&#x9;&#x9;&#x9;->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)&#xD;&#xA;&#x9;&#x9;&#x9;->select(f | &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if f.oclIsTypeOf(UnitElement) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;not f.oclAsType(UnitElement).attribute.oclIsUndefined()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;not f.oclAsType(UnitAssociation).association.oclIsUndefined()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;endif)&#xD;&#xA;&#x9;&#x9;&#x9;->forAll(f | &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if f.oclIsTypeOf(UnitElement) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;eovFeatures->includes(f.oclAsType(UnitElement).attribute)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;eovFeatures->includes(f.oclAsType(UnitAssociation).association)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;endif)"/>
+      <details key="featuresMustBeFromContentType" value="let entities : OrderedSet(persistence::EntityOrView)&#xA;&#x9;= if self.oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;&#x9;OrderedSet{self.oclAsType(SingletonUnit).contentType}&#xA;&#x9;&#x9;else if self.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;self.oclAsType(CollectionUnit).contentType&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;OrderedSet{}&#xA;&#x9;&#x9;endif endif&#xA;&#x9;in let eovFeatures : Collection(persistence::Feature)&#xA;&#x9;&#x9;= entities->collect(eov | eov.allFeatures)&#xA;&#x9;&#x9;in displayFields&#xA;&#x9;&#x9;&#x9;->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)&#xA;&#x9;&#x9;&#x9;->select(f | &#xA;&#x9;&#x9;&#x9;&#x9;if f.oclIsTypeOf(UnitElement) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;not f.oclAsType(UnitElement).attribute.oclIsUndefined()&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;not f.oclAsType(UnitAssociation).association.oclIsUndefined()&#xA;&#x9;&#x9;&#x9;&#x9;endif)&#xA;&#x9;&#x9;&#x9;->forAll(f | &#xA;&#x9;&#x9;&#x9;&#x9;if f.oclIsTypeOf(UnitElement) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;eovFeatures->includes(f.oclAsType(UnitElement).attribute)&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;eovFeatures->includes(f.oclAsType(UnitAssociation).association)&#xA;&#x9;&#x9;&#x9;&#x9;endif)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayFields" upperBound="-1"
         eType="#//UnitField" containment="true" eOpposite="#//UnitField/displayedOn"/>
@@ -256,7 +256,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xA;endif"/>
+        <details key="derivation" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;--else if attribute.oclIsKindOf(persistence::EntityAttribute) then&#xA;--&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xA;else&#xA;&#x9;'XXZZXX'&#xA;endif -- endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" ordered="false"
@@ -280,19 +280,19 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xD;&#xA;&#x9;let entities : OrderedSet(persistence::EntityOrView)&#xD;&#xA;&#x9;&#x9;= if displayedOn.oclIsKindOf(SingletonUnit) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;OrderedSet{displayedOn.oclAsType(SingletonUnit).contentType}&#xD;&#xA;&#x9;&#x9;&#x9;else if displayedOn.oclIsKindOf(CollectionUnit) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;displayedOn.oclAsType(CollectionUnit).contentType&#xD;&#xA;&#x9;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;OrderedSet{}&#xD;&#xA;&#x9;&#x9;&#x9;endif endif&#xD;&#xA;&#x9;&#x9;in entities->collect(e | e.associations)->includes(association)"/>
+        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;let entities : OrderedSet(persistence::EntityOrView)&#xA;&#x9;&#x9;= if displayedOn.oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;OrderedSet{displayedOn.oclAsType(SingletonUnit).contentType}&#xA;&#x9;&#x9;&#x9;else if displayedOn.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;displayedOn.oclAsType(CollectionUnit).contentType&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;OrderedSet{}&#xA;&#x9;&#x9;&#x9;endif endif&#xA;&#x9;&#x9;in entities->collect(e | e.associations)->includes(association)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
@@ -303,7 +303,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;''&#xD;&#xA;else if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;association.oclAsType(persistence::EntityAssociation).name&#xD;&#xA;else if association.oclIsTypeOf(persistence::EncapsulatedAssociation) then&#xD;&#xA;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).name&#xD;&#xA;else&#xD;&#xA;&#x9;association.oclAsType(persistence::ViewAssociation).name &#xD;&#xA;endif endif endif&#xD;&#xA;"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;''&#xA;else if association.oclIsKindOf(persistence::EntityAssociation) then&#xA; 'YYYYYY' --&#x9;association.oclAsType(persistence::EntityAssociation).name&#xA;else&#xA;&#x9;'XXZZXX'&#xA;endif endif&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="association" ordered="false"
@@ -321,7 +321,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if attribute.oclIsUndefined() then&#xD;&#xA;&#x9;''&#xD;&#xA;else if attribute.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xD;&#xA;else&#xD;&#xA;&#x9;attribute.oclAsType(persistence::EncapsulatedAttribute).name&#xD;&#xA;endif endif"/>
+        <details key="derivation" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" ordered="false"
@@ -338,13 +338,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -353,7 +353,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if attribute.oclIsUndefined() then&#xD;&#xA;&#x9;''&#xD;&#xA;else if attribute.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xD;&#xA;else&#xD;&#xA;&#x9;attribute.oclAsType(persistence::EncapsulatedAttribute).name&#xD;&#xA;endif endif&#xD;&#xA;"/>
+        <details key="derivation" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;attribute.oclAsType(persistence::EntityAttribute).name&#xA;endif&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
@@ -370,13 +370,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if association.oclIsUndefined() then&#xD;&#xA;&#x9;null&#xD;&#xA;else&#xD;&#xA;&#x9;if isSourceAssociation then&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).targetEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).sourceEntity&#xD;&#xA;&#x9;&#x9;endif&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).partOf&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -440,7 +440,7 @@
       <details key="constraints" value="canOnlyTitleWithSingletons"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xD;&#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif endif"/>
+      <details key="canOnlyTitleWithSingletons" value="not title.oclIsUndefined() implies &#xA;&#x9;if title.oclIsKindOf(persistence::EntityAttribute) then&#xA;&#x9;&#x9;title.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xA;&#x9;else if title.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xA;&#x9;&#x9;title.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xA;&#x9;else&#xA;&#x9;&#x9;true&#xA;&#x9;endif endif"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" ordered="false"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
@@ -457,7 +457,7 @@
       <details key="constraints" value="canOnlyTitleWithSingletons selectionMustNotBeSingleton"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyTitleWithSingletons" value="not unitTitle.oclIsUndefined() implies &#xD;&#xA;&#x9;if unitTitle.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;unitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif"/>
+      <details key="canOnlyTitleWithSingletons" value="not unitTitle.oclIsUndefined() implies &#xA;&#x9;if unitTitle.oclIsKindOf(persistence::EntityAttribute) then&#xA;&#x9;&#x9;unitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xA;&#x9;else&#xA;&#x9;&#x9;true&#xA;&#x9;endif"/>
       <details key="selectionMustNotBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit &lt;> 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" ordered="false"
@@ -570,7 +570,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="selectionMustBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit = 1"/>
-      <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;pageDisplayedOn.webUI.services.services&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | contentType = s.serves)&#xD;&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xD;&#xA;&#x9;&#x9;->includes(selection)"/>
+      <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xA;&#x9;pageDisplayedOn.webUI.services.services&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xA;&#x9;&#x9;->select(s : service::Service | contentType = s.serves)&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xA;&#x9;&#x9;->includes(selection)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
@@ -718,7 +718,7 @@
       <details key="constraints" value="canOnlyDeleteSingletons"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="canOnlyDeleteSingletons" value="if usedBy.oclIsKindOf(UnitElement) then&#xD;&#xA;&#x9;let attribute : persistence::Attribute&#xD;&#xA;&#x9;&#x9;= usedBy.oclAsType(UnitElement).attribute&#xD;&#xA;&#x9;&#x9;in if attribute.oclIsKindOf(persistence::EntityAttribute) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;attribute.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;attribute.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;&#x9;&#x9;endif&#xD;&#xA;else if usedBy.oclIsKindOf(UnitAssociation) then&#xD;&#xA;&#x9;let association : persistence::Association&#xD;&#xA;&#x9;&#x9;= usedBy.oclAsType(UnitAssociation).association&#xD;&#xA;&#x9;&#x9;in if association.oclIsKindOf(persistence::EntityAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;association.oclAsType(persistence::EntityAssociation).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;&#x9;&#x9;else if association.oclIsKindOf(persistence::EncapsulatedAssociation) then&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;association.oclAsType(persistence::EncapsulatedAssociation).cardinality &lt;> persistence::Cardinality::Many&#xD;&#xA;&#x9;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;false -- association.oclAsType(ViewAssociation)&#xD;&#xA;&#x9;&#x9;&#x9;endif endif&#xD;&#xA;else&#xD;&#xA;&#x9;usedBy.oclIsKindOf(CollectionUnit)&#xD;&#xA;endif endif&#xD;&#xA;"/>
+      <details key="canOnlyDeleteSingletons" value="if usedBy.oclIsKindOf(UnitElement) then&#xA;&#x9;usedBy.oclAsType(UnitElement).attribute.oclAsType(persistence::EntityAttribute).cardinality &lt;> persistence::Cardinality::Many&#xA;else if usedBy.oclIsKindOf(UnitAssociation) then&#xA;&#x9;usedBy.oclAsType(UnitAssociation).association.oclAsType(persistence::EntityAssociation).cardinality &lt;> persistence::Cardinality::Many&#xA;else&#xA;&#x9;usedBy.oclIsKindOf(CollectionUnit)&#xA;endif endif&#xA;"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
