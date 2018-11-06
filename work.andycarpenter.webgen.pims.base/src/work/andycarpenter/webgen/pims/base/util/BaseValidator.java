@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.base.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
