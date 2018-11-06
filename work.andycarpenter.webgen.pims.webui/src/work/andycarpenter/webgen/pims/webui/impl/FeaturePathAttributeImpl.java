@@ -9,9 +9,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -39,7 +37,6 @@ public class FeaturePathAttributeImpl extends FeaturePathImpl implements Feature
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH_ATTRIBUTE__NAME).getSettingDelegate();
-
 	/**
 	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
 	 * <!-- begin-user-doc -->

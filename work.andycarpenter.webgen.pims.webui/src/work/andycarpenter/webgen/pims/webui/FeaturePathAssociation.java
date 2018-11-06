@@ -2,7 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,10 +50,10 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @return the value of the '<em>Source Entity</em>' reference.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_SourceEntity()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif isSourceAssociation then\r\n\t\tif association.oclIsKindOf(persistence::EntityAssociation) then\r\n\t\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\r\n\t\telse\r\n\t\t\tassociation.oclAsType(persistence::EncapsulatedAssociation).sourceEntity\r\n\t\tendif\r\n\telse\r\n\t\tif association.oclIsKindOf(persistence::EntityAssociation) then\r\n\t\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\r\n\t\telse\r\n\t\t\tassociation.oclAsType(persistence::EncapsulatedAssociation).targetEntity\r\n\t\tendif\r\n\tendif\r\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\n\telse\n\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\n\tendif\nendif'"
 	 * @generated
 	 */
-	EntityOrView getSourceEntity();
+	Entity getSourceEntity();
 
 	/**
 	 * Returns the value of the '<em><b>Target Entity</b></em>' reference.
@@ -66,9 +66,9 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @return the value of the '<em>Target Entity</em>' reference.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_TargetEntity()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\r\n\tnull\r\nelse\r\n\tif isSourceAssociation then\r\n\t\tif association.oclIsKindOf(persistence::EntityAssociation) then\r\n\t\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\r\n\t\telse\r\n\t\t\tassociation.oclAsType(persistence::EncapsulatedAssociation).targetEntity\r\n\t\tendif\r\n\telse\r\n\t\tif association.oclIsKindOf(persistence::EntityAssociation) then\r\n\t\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\r\n\t\telse\r\n\t\t\tassociation.oclAsType(persistence::EncapsulatedAssociation).sourceEntity\r\n\t\tendif\r\n\tendif\r\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\n\telse\n\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\n\tendif\nendif'"
 	 * @generated
 	 */
-	EntityOrView getTargetEntity();
+	Entity getTargetEntity();
 
 } // FeaturePathAssociation

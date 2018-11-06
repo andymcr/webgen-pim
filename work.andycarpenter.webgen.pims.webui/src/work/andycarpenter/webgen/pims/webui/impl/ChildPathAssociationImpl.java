@@ -10,9 +10,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
 import work.andycarpenter.webgen.pims.webui.AssociationReference;
@@ -280,8 +279,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getSourceEntity() {
-		return (EntityOrView)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getSourceEntity() {
+		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -289,8 +288,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetSourceEntity() {
-		return (EntityOrView)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public Entity basicGetSourceEntity() {
+		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -298,8 +297,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getTargetEntity() {
-		return (EntityOrView)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getTargetEntity() {
+		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -307,8 +306,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetTargetEntity() {
-		return (EntityOrView)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public Entity basicGetTargetEntity() {
+		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
