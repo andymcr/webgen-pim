@@ -3,14 +3,11 @@
 package work.andycarpenter.webgen.pims.security.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes;
 import work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
@@ -44,7 +41,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityOrView authentication;
+	protected Entity authentication;
 
 	/**
 	 * The default value of the '{@link #getAuthenticationKey() <em>Authentication Key</em>}' attribute.
@@ -210,10 +207,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getAuthentication() {
+	public Entity getAuthentication() {
 		if (authentication != null && authentication.eIsProxy()) {
 			InternalEObject oldAuthentication = (InternalEObject)authentication;
-			authentication = (EntityOrView)eResolveProxy(oldAuthentication);
+			authentication = (Entity)eResolveProxy(oldAuthentication);
 			if (authentication != oldAuthentication) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION, oldAuthentication, authentication));
@@ -227,7 +224,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetAuthentication() {
+	public Entity basicGetAuthentication() {
 		return authentication;
 	}
 
@@ -236,8 +233,8 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAuthentication(EntityOrView newAuthentication) {
-		EntityOrView oldAuthentication = authentication;
+	public void setAuthentication(Entity newAuthentication) {
+		Entity oldAuthentication = authentication;
 		authentication = newAuthentication;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION, oldAuthentication, authentication));
@@ -428,7 +425,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				setAuthentication((EntityOrView)newValue);
+				setAuthentication((Entity)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey((AuthenticationKeyTypes)newValue);
@@ -464,7 +461,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				setAuthentication((EntityOrView)null);
+				setAuthentication((Entity)null);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey(AUTHENTICATION_KEY_EDEFAULT);

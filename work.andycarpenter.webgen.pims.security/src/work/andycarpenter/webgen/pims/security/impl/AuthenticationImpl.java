@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.security.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -12,10 +11,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.security.Authentication;
 import work.andycarpenter.webgen.pims.security.Security;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
@@ -46,7 +43,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityOrView user;
+	protected Entity user;
 
 	/**
 	 * The cached value of the '{@link #getUserKey() <em>User Key</em>}' reference.
@@ -163,10 +160,10 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getUser() {
+	public Entity getUser() {
 		if (user != null && user.eIsProxy()) {
 			InternalEObject oldUser = (InternalEObject)user;
-			user = (EntityOrView)eResolveProxy(oldUser);
+			user = (Entity)eResolveProxy(oldUser);
 			if (user != oldUser) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.AUTHENTICATION__USER, oldUser, user));
@@ -180,7 +177,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetUser() {
+	public Entity basicGetUser() {
 		return user;
 	}
 
@@ -189,8 +186,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUser(EntityOrView newUser) {
-		EntityOrView oldUser = user;
+	public void setUser(Entity newUser) {
+		Entity oldUser = user;
 		user = newUser;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__USER, oldUser, user));
@@ -356,7 +353,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				setSecurity((Security)newValue);
 				return;
 			case SecurityPackage.AUTHENTICATION__USER:
-				setUser((EntityOrView)newValue);
+				setUser((Entity)newValue);
 				return;
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)newValue);
@@ -383,7 +380,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				setSecurity((Security)null);
 				return;
 			case SecurityPackage.AUTHENTICATION__USER:
-				setUser((EntityOrView)null);
+				setUser((Entity)null);
 				return;
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)null);

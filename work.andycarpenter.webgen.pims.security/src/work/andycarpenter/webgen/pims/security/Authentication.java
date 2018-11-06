@@ -5,7 +5,7 @@ package work.andycarpenter.webgen.pims.security;
 import org.eclipse.emf.ecore.EObject;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import work.andycarpenter.webgen.pims.persistence.EntityOrView;
  * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='userKeyFromUser userKeyRequiredAttribute'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL userKeyFromUser='not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features-&gt;includes(userKey)' userKeyRequiredAttribute='not userKey.oclIsUndefined() implies\r\n\tif userKey.oclIsTypeOf(persistence::EncapsulatedAttribute) then\r\n\t\tuserKey.oclAsType(persistence::EncapsulatedAttribute).cardinality = persistence::Cardinality::Required\r\n\telse\r\n\t\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required\r\n\tendif'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL userKeyFromUser='not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features-&gt;includes(userKey)' userKeyRequiredAttribute='not userKey.oclIsUndefined() implies\n\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required'"
  * @generated
  */
 public interface Authentication extends EObject {
@@ -67,12 +67,12 @@ public interface Authentication extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User</em>' reference.
-	 * @see #setUser(EntityOrView)
+	 * @see #setUser(Entity)
 	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_User()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EntityOrView getUser();
+	Entity getUser();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}' reference.
@@ -82,7 +82,7 @@ public interface Authentication extends EObject {
 	 * @see #getUser()
 	 * @generated
 	 */
-	void setUser(EntityOrView value);
+	void setUser(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>User Key</b></em>' reference.

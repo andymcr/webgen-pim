@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.security.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -166,12 +165,8 @@ public class SecurityValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String AUTHENTICATION__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not userKey.oclIsUndefined() implies\r\n" +
-		"\tif userKey.oclIsTypeOf(persistence::EncapsulatedAttribute) then\r\n" +
-		"\t\tuserKey.oclAsType(persistence::EncapsulatedAttribute).cardinality = persistence::Cardinality::Required\r\n" +
-		"\telse\r\n" +
-		"\t\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required\r\n" +
-		"\tendif";
+	protected static final String AUTHENTICATION__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not userKey.oclIsUndefined() implies\n" +
+		"\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required";
 
 	/**
 	 * Validates the userKeyRequiredAttribute constraint of '<em>Authentication</em>'.

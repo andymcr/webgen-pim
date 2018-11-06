@@ -2,7 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.security;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,12 +38,12 @@ public interface LocalAuthenticationSystem extends Authentication {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Authentication</em>' reference.
-	 * @see #setAuthentication(EntityOrView)
+	 * @see #setAuthentication(Entity)
 	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_Authentication()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EntityOrView getAuthentication();
+	Entity getAuthentication();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthentication <em>Authentication</em>}' reference.
@@ -53,7 +53,7 @@ public interface LocalAuthenticationSystem extends Authentication {
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	void setAuthentication(EntityOrView value);
+	void setAuthentication(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Authentication Key</b></em>' attribute.
