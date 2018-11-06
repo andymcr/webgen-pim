@@ -2,7 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
 /**
@@ -21,7 +21,7 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not title.oclIsUndefined() implies \r\n\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif endif'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not title.oclIsUndefined() implies \n\tif title.oclIsKindOf(persistence::EntityAttribute) then\n\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif'"
  * @generated
  */
 public interface SingletonUnit extends DynamicUnit {
@@ -60,12 +60,12 @@ public interface SingletonUnit extends DynamicUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Content Type</em>' reference.
-	 * @see #setContentType(EntityOrView)
+	 * @see #setContentType(Entity)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit_ContentType()
 	 * @model required="true"
 	 * @generated
 	 */
-	EntityOrView getContentType();
+	Entity getContentType();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType <em>Content Type</em>}' reference.
@@ -75,6 +75,6 @@ public interface SingletonUnit extends DynamicUnit {
 	 * @see #getContentType()
 	 * @generated
 	 */
-	void setContentType(EntityOrView value);
+	void setContentType(Entity value);
 
 } // SingletonUnit

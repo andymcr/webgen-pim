@@ -3,9 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
-
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
@@ -53,7 +51,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons selectionMustNotBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \r\n\tif unitTitle.oclIsKindOf(persistence::EntityAttribute) then\r\n\t\tunitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\r\n\telse\r\n\t\ttrue\r\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::EntityAttribute) then\n\t\tunitTitle.oclAsType(persistence::EntityAttribute).cardinality &lt;&gt; persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
  * @generated
  */
 public interface CollectionUnit extends DynamicUnit, SelectableUnit {
@@ -138,7 +136,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityOrView}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Content Type</em>' reference list isn't clear,
@@ -150,7 +148,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<EntityOrView> getContentType();
+	EList<Entity> getContentType();
 
 	/**
 	 * Returns the value of the '<em><b>Selection</b></em>' reference.

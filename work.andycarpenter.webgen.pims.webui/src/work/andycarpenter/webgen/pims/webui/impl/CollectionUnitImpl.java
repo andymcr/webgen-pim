@@ -3,23 +3,18 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
-
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
@@ -120,7 +115,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityOrView> contentType;
+	protected EList<Entity> contentType;
 
 	/**
 	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' reference.
@@ -688,9 +683,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityOrView> getContentType() {
+	public EList<Entity> getContentType() {
 		if (contentType == null) {
-			contentType = new EObjectResolvingEList<EntityOrView>(EntityOrView.class, this, WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE);
+			contentType = new EObjectResolvingEList<Entity>(Entity.class, this, WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE);
 		}
 		return contentType;
 	}
@@ -1381,7 +1376,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
-				getContentType().addAll((Collection<? extends EntityOrView>)newValue);
+				getContentType().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
 				setSelection((Selection)newValue);
