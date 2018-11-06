@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelFeature;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -129,9 +129,9 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getLabelFor() {
+	public Entity getLabelFor() {
 		if (eContainerFeatureID() != PersistencePackage.MODEL_LABEL__LABEL_FOR) return null;
-		return (EntityOrView)eInternalContainer();
+		return (Entity)eInternalContainer();
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLabelFor(EntityOrView newLabelFor, NotificationChain msgs) {
+	public NotificationChain basicSetLabelFor(Entity newLabelFor, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newLabelFor, PersistencePackage.MODEL_LABEL__LABEL_FOR, msgs);
 		return msgs;
 	}
@@ -149,7 +149,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLabelFor(EntityOrView newLabelFor) {
+	public void setLabelFor(Entity newLabelFor) {
 		if (newLabelFor != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.MODEL_LABEL__LABEL_FOR && newLabelFor != null)) {
 			if (EcoreUtil.isAncestor(this, newLabelFor))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -157,7 +157,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newLabelFor != null)
-				msgs = ((InternalEObject)newLabelFor).eInverseAdd(this, PersistencePackage.ENTITY_OR_VIEW__LABELS, EntityOrView.class, msgs);
+				msgs = ((InternalEObject)newLabelFor).eInverseAdd(this, PersistencePackage.ENTITY__LABELS, Entity.class, msgs);
 			msgs = basicSetLabelFor(newLabelFor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -243,7 +243,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 			case PersistencePackage.MODEL_LABEL__LABEL_FOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetLabelFor((EntityOrView)otherEnd, msgs);
+				return basicSetLabelFor((Entity)otherEnd, msgs);
 			case PersistencePackage.MODEL_LABEL__FEATURES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFeatures()).basicAdd(otherEnd, msgs);
 		}
@@ -275,7 +275,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case PersistencePackage.MODEL_LABEL__LABEL_FOR:
-				return eInternalContainer().eInverseRemove(this, PersistencePackage.ENTITY_OR_VIEW__LABELS, EntityOrView.class, msgs);
+				return eInternalContainer().eInverseRemove(this, PersistencePackage.ENTITY__LABELS, Entity.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -312,7 +312,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PersistencePackage.MODEL_LABEL__LABEL_FOR:
-				setLabelFor((EntityOrView)newValue);
+				setLabelFor((Entity)newValue);
 				return;
 			case PersistencePackage.MODEL_LABEL__FORMAT:
 				setFormat((String)newValue);
@@ -341,7 +341,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PersistencePackage.MODEL_LABEL__LABEL_FOR:
-				setLabelFor((EntityOrView)null);
+				setLabelFor((Entity)null);
 				return;
 			case PersistencePackage.MODEL_LABEL__FORMAT:
 				setFormat(FORMAT_EDEFAULT);

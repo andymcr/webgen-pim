@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.presistence/src"
     modelPluginID="work.andycarpenter.webgen.pims.presistence" modelName="Persistence"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression"
     operationReflection="true" importOrganizing="true">
   <foreignModel>persistence.ecore</foreignModel>
   <genPackages prefix="Persistence" basePackage="work.andycarpenter.webgen.pims" ecorePackage="persistence.ecore#/">
@@ -45,34 +45,6 @@
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Persistence/timestampUpdates"/>
     </genClasses>
     <genClasses ecoreClass="persistence.ecore#//SerializationGroup"/>
-    <genClasses image="false" ecoreClass="persistence.ecore#//EntityOrView">
-      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/singletonName"/>
-      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/pluralisedName"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/keys"/>
-      <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/tableName"/>
-      <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/autoKeyName"/>
-      <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/autoKeyPersistentType"/>
-      <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/autoKeyGenerationStrategy"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/unique"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertyDescription=""
-          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/containerUnique"/>
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/labels"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/features"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/allFeatures"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/attributes"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/associations"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          propertyDescription="Serialization" ecoreFeature="ecore:EReference persistence.ecore#//EntityOrView/allAssociations"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/implementsUserInterface"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//EntityOrView/allowFormTypeCustomisation"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Feature">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/title"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/collectionOrmAllowAdd"/>
@@ -94,8 +66,6 @@
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Association">
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pseudo"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
-          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Association/encapsulatedBy"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputClass"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference persistence.ecore#//Association/sourceEntityX"/>
@@ -130,9 +100,25 @@
           ecoreFeature="ecore:EAttribute persistence.ecore#//ModelLabelAssociation/isSourceAssociation"/>
     </genClasses>
     <genClasses ecoreClass="persistence.ecore#//Entity">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/entityFeatures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/singletonName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/pluralisedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/features"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/attributes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/associations"/>
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference persistence.ecore#//Entity/associationEnds"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/allFeatures"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/allAssociations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/keys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/labels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/unique"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/containerUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/tableName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyPersistentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyGenerationStrategy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/implementsUserInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/allowFormTypeCustomisation"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//EntityFeature">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//EntityFeature/partOf"/>
@@ -217,46 +203,6 @@
           ecoreFeature="ecore:EReference persistence.ecore#//AssociationKey/sourceFeature"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertyDescription=""
           propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationKey/targetFeature"/>
-    </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//View">
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//View/encapsulates"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//View/viewFeatures"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//ViewFeature">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//ViewFeature/partOf"/>
-    </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//EncapsulatedFeature">
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedFeature/displayLabel"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedFeature/alias"/>
-      <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedFeature/columnName"/>
-    </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//EncapsulatedAttribute">
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedAttribute/name"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//EncapsulatedAttribute/attribute"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedAttribute/cardinality"/>
-    </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//EncapsulatedAssociation">
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedAssociation/name"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//EncapsulatedAssociation/association"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//EncapsulatedAssociation/encapsulatedTarget"/>
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedAssociation/isSourceAssociation"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//EncapsulatedAssociation/cardinality"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EReference persistence.ecore#//EncapsulatedAssociation/sourceEntity"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EReference persistence.ecore#//EncapsulatedAssociation/targetEntity"/>
-    </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//ViewAssociation">
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//ViewAssociation/opposite"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//ViewAssociation/cardinality"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

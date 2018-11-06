@@ -29,7 +29,7 @@ import work.andycarpenter.webgen.pims.base.NamedElement;
 public interface ModelLabel extends NamedElement, Label {
 	/**
 	 * Returns the value of the '<em><b>Label For</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getLabels <em>Labels</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Label For</em>' container reference isn't clear,
@@ -37,13 +37,13 @@ public interface ModelLabel extends NamedElement, Label {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label For</em>' container reference.
-	 * @see #setLabelFor(EntityOrView)
+	 * @see #setLabelFor(Entity)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getModelLabel_LabelFor()
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getLabels
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getLabels
 	 * @model opposite="labels" required="true" transient="false"
 	 * @generated
 	 */
-	EntityOrView getLabelFor();
+	Entity getLabelFor();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.ModelLabel#getLabelFor <em>Label For</em>}' container reference.
@@ -53,7 +53,7 @@ public interface ModelLabel extends NamedElement, Label {
 	 * @see #getLabelFor()
 	 * @generated
 	 */
-	void setLabelFor(EntityOrView value);
+	void setLabelFor(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Format</b></em>' attribute.

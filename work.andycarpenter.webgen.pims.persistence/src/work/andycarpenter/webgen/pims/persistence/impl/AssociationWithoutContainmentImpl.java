@@ -3,11 +3,9 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.persistence.AssociationWithoutContainment;
 import work.andycarpenter.webgen.pims.persistence.Cardinality;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;

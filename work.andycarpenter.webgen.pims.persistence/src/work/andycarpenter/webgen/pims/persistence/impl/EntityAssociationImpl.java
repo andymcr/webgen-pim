@@ -16,15 +16,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
-import work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -36,7 +32,6 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl#isPseudo <em>Pseudo</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl#getEncapsulatedBy <em>Encapsulated By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl#getInputClass <em>Input Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl#getSourceEntityX <em>Source Entity X</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl#getTargetEntityX <em>Target Entity X</em>}</li>
@@ -78,16 +73,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * @ordered
 	 */
 	protected boolean pseudo = PSEUDO_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getEncapsulatedBy() <em>Encapsulated By</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEncapsulatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EncapsulatedAssociation> encapsulatedBy;
 
 	/**
 	 * The default value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
@@ -434,18 +419,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EncapsulatedAssociation> getEncapsulatedBy() {
-		if (encapsulatedBy == null) {
-			encapsulatedBy = new EObjectWithInverseResolvingEList<EncapsulatedAssociation>(EncapsulatedAssociation.class, this, PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY, PersistencePackage.ENCAPSULATED_ASSOCIATION__ASSOCIATION);
-		}
-		return encapsulatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getInputClass() {
 		return inputClass;
 	}
@@ -467,8 +440,8 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getSourceEntityX() {
-		return (EntityOrView)SOURCE_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getSourceEntityX() {
+		return (Entity)SOURCE_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -476,8 +449,8 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetSourceEntityX() {
-		return (EntityOrView)SOURCE_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public Entity basicGetSourceEntityX() {
+		return (Entity)SOURCE_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -485,8 +458,8 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView getTargetEntityX() {
-		return (EntityOrView)TARGET_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getTargetEntityX() {
+		return (Entity)TARGET_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -494,8 +467,8 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityOrView basicGetTargetEntityX() {
-		return (EntityOrView)TARGET_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public Entity basicGetTargetEntityX() {
+		return (Entity)TARGET_ENTITY_X__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -831,8 +804,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEncapsulatedBy()).basicAdd(otherEnd, msgs);
 			case PersistencePackage.ENTITY_ASSOCIATION__KEYS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getKeys()).basicAdd(otherEnd, msgs);
 			case PersistencePackage.ENTITY_ASSOCIATION__TARGET_ENTITY:
@@ -851,8 +822,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				return ((InternalEList<?>)getEncapsulatedBy()).basicRemove(otherEnd, msgs);
 			case PersistencePackage.ENTITY_ASSOCIATION__KEYS:
 				return ((InternalEList<?>)getKeys()).basicRemove(otherEnd, msgs);
 			case PersistencePackage.ENTITY_ASSOCIATION__TARGET_ENTITY:
@@ -871,8 +840,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 		switch (featureID) {
 			case PersistencePackage.ENTITY_ASSOCIATION__PSEUDO:
 				return isPseudo();
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				return getEncapsulatedBy();
 			case PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS:
 				return getInputClass();
 			case PersistencePackage.ENTITY_ASSOCIATION__SOURCE_ENTITY_X:
@@ -925,10 +892,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 		switch (featureID) {
 			case PersistencePackage.ENTITY_ASSOCIATION__PSEUDO:
 				setPseudo((Boolean)newValue);
-				return;
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				getEncapsulatedBy().clear();
-				getEncapsulatedBy().addAll((Collection<? extends EncapsulatedAssociation>)newValue);
 				return;
 			case PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS:
 				setInputClass((String)newValue);
@@ -991,9 +954,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 			case PersistencePackage.ENTITY_ASSOCIATION__PSEUDO:
 				setPseudo(PSEUDO_EDEFAULT);
 				return;
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				getEncapsulatedBy().clear();
-				return;
 			case PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS:
 				setInputClass(INPUT_CLASS_EDEFAULT);
 				return;
@@ -1053,8 +1013,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 		switch (featureID) {
 			case PersistencePackage.ENTITY_ASSOCIATION__PSEUDO:
 				return pseudo != PSEUDO_EDEFAULT;
-			case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY:
-				return encapsulatedBy != null && !encapsulatedBy.isEmpty();
 			case PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS:
 				return INPUT_CLASS_EDEFAULT == null ? inputClass != null : !INPUT_CLASS_EDEFAULT.equals(inputClass);
 			case PersistencePackage.ENTITY_ASSOCIATION__SOURCE_ENTITY_X:
@@ -1103,7 +1061,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 		if (baseClass == Association.class) {
 			switch (derivedFeatureID) {
 				case PersistencePackage.ENTITY_ASSOCIATION__PSEUDO: return PersistencePackage.ASSOCIATION__PSEUDO;
-				case PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY: return PersistencePackage.ASSOCIATION__ENCAPSULATED_BY;
 				case PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS: return PersistencePackage.ASSOCIATION__INPUT_CLASS;
 				case PersistencePackage.ENTITY_ASSOCIATION__SOURCE_ENTITY_X: return PersistencePackage.ASSOCIATION__SOURCE_ENTITY_X;
 				case PersistencePackage.ENTITY_ASSOCIATION__TARGET_ENTITY_X: return PersistencePackage.ASSOCIATION__TARGET_ENTITY_X;
@@ -1124,7 +1081,6 @@ public abstract class EntityAssociationImpl extends EntityFeatureImpl implements
 		if (baseClass == Association.class) {
 			switch (baseFeatureID) {
 				case PersistencePackage.ASSOCIATION__PSEUDO: return PersistencePackage.ENTITY_ASSOCIATION__PSEUDO;
-				case PersistencePackage.ASSOCIATION__ENCAPSULATED_BY: return PersistencePackage.ENTITY_ASSOCIATION__ENCAPSULATED_BY;
 				case PersistencePackage.ASSOCIATION__INPUT_CLASS: return PersistencePackage.ENTITY_ASSOCIATION__INPUT_CLASS;
 				case PersistencePackage.ASSOCIATION__SOURCE_ENTITY_X: return PersistencePackage.ENTITY_ASSOCIATION__SOURCE_ENTITY_X;
 				case PersistencePackage.ASSOCIATION__TARGET_ENTITY_X: return PersistencePackage.ENTITY_ASSOCIATION__TARGET_ENTITY_X;

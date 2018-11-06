@@ -189,205 +189,6 @@ public interface PersistencePackage extends EPackage {
 	int SERIALIZATION_GROUP_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityOrViewImpl <em>Entity Or View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityOrViewImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityOrView()
-	 * @generated
-	 */
-	int ENTITY_OR_VIEW = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__NAME = BasePackage.CLASSIFIER__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__DISPLAY_LABEL = BasePackage.CLASSIFIER__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__SINGLETON_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__PLURALISED_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Keys</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__KEYS = BasePackage.CLASSIFIER_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__LABELS = BasePackage.CLASSIFIER_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__FEATURES = BasePackage.CLASSIFIER_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>All Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__ALL_FEATURES = BasePackage.CLASSIFIER_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__ATTRIBUTES = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Associations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__ASSOCIATIONS = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>All Associations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__ALL_ASSOCIATIONS = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
-
-	/**
-	 * The number of structural features of the '<em>Entity Or View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
-
-	/**
-	 * The number of operations of the '<em>Entity Or View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OR_VIEW_OPERATION_COUNT = BasePackage.CLASSIFIER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Feature <em>Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -395,7 +196,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeature()
 	 * @generated
 	 */
-	int FEATURE = 3;
+	int FEATURE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -522,7 +323,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ATTRIBUTE = 4;
+	int ATTRIBUTE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -676,7 +477,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociation()
 	 * @generated
 	 */
-	int ASSOCIATION = 5;
+	int ASSOCIATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -787,22 +588,13 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__PSEUDO = FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__ENCAPSULATED_BY = FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__INPUT_CLASS = FEATURE_FEATURE_COUNT + 2;
+	int ASSOCIATION__INPUT_CLASS = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
@@ -811,7 +603,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SOURCE_ENTITY_X = FEATURE_FEATURE_COUNT + 3;
+	int ASSOCIATION__SOURCE_ENTITY_X = FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
@@ -820,7 +612,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__TARGET_ENTITY_X = FEATURE_FEATURE_COUNT + 4;
+	int ASSOCIATION__TARGET_ENTITY_X = FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -829,7 +621,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 5;
+	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -838,7 +630,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 6;
+	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -857,7 +649,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 6;
+	int LABEL = 5;
 
 	/**
 	 * The number of structural features of the '<em>Label</em>' class.
@@ -885,7 +677,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabel()
 	 * @generated
 	 */
-	int MODEL_LABEL = 7;
+	int MODEL_LABEL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -967,7 +759,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelFeature()
 	 * @generated
 	 */
-	int MODEL_LABEL_FEATURE = 8;
+	int MODEL_LABEL_FEATURE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -1004,7 +796,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelAttribute()
 	 * @generated
 	 */
-	int MODEL_LABEL_ATTRIBUTE = 9;
+	int MODEL_LABEL_ATTRIBUTE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -1059,7 +851,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelAssociation()
 	 * @generated
 	 */
-	int MODEL_LABEL_ASSOCIATION = 10;
+	int MODEL_LABEL_ASSOCIATION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -1123,7 +915,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntity()
 	 * @generated
 	 */
-	int ENTITY = 11;
+	int ENTITY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1132,7 +924,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = ENTITY_OR_VIEW__NAME;
+	int ENTITY__NAME = BasePackage.CLASSIFIER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -1141,7 +933,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__DISPLAY_LABEL = ENTITY_OR_VIEW__DISPLAY_LABEL;
+	int ENTITY__DISPLAY_LABEL = BasePackage.CLASSIFIER__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -1150,7 +942,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__SINGLETON_NAME = ENTITY_OR_VIEW__SINGLETON_NAME;
+	int ENTITY__SINGLETON_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -1159,97 +951,16 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__PLURALISED_NAME = ENTITY_OR_VIEW__PLURALISED_NAME;
+	int ENTITY__PLURALISED_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Keys</b></em>' reference list.
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__KEYS = ENTITY_OR_VIEW__KEYS;
-
-	/**
-	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__TABLE_NAME = ENTITY_OR_VIEW__TABLE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__AUTO_KEY_NAME = ENTITY_OR_VIEW__AUTO_KEY_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = ENTITY_OR_VIEW__AUTO_KEY_PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = ENTITY_OR_VIEW__AUTO_KEY_GENERATION_STRATEGY;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__UNIQUE = ENTITY_OR_VIEW__UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__CONTAINER_UNIQUE = ENTITY_OR_VIEW__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__LABELS = ENTITY_OR_VIEW__LABELS;
-
-	/**
-	 * The feature id for the '<em><b>Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__FEATURES = ENTITY_OR_VIEW__FEATURES;
-
-	/**
-	 * The feature id for the '<em><b>All Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__ALL_FEATURES = ENTITY_OR_VIEW__ALL_FEATURES;
+	int ENTITY__FEATURES = BasePackage.CLASSIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -1258,7 +969,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ATTRIBUTES = ENTITY_OR_VIEW__ATTRIBUTES;
+	int ENTITY__ATTRIBUTES = BasePackage.CLASSIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Associations</b></em>' reference list.
@@ -1267,43 +978,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ASSOCIATIONS = ENTITY_OR_VIEW__ASSOCIATIONS;
-
-	/**
-	 * The feature id for the '<em><b>All Associations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__ALL_ASSOCIATIONS = ENTITY_OR_VIEW__ALL_ASSOCIATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__IMPLEMENTS_USER_INTERFACE = ENTITY_OR_VIEW__IMPLEMENTS_USER_INTERFACE;
-
-	/**
-	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = ENTITY_OR_VIEW__ALLOW_FORM_TYPE_CUSTOMISATION;
-
-	/**
-	 * The feature id for the '<em><b>Entity Features</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__ENTITY_FEATURES = ENTITY_OR_VIEW_FEATURE_COUNT + 0;
+	int ENTITY__ASSOCIATIONS = BasePackage.CLASSIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Association Ends</b></em>' reference list.
@@ -1312,7 +987,115 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ASSOCIATION_ENDS = ENTITY_OR_VIEW_FEATURE_COUNT + 1;
+	int ENTITY__ASSOCIATION_ENDS = BasePackage.CLASSIFIER_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>All Features</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ALL_FEATURES = BasePackage.CLASSIFIER_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>All Associations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ALL_ASSOCIATIONS = BasePackage.CLASSIFIER_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Keys</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__KEYS = BasePackage.CLASSIFIER_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__LABELS = BasePackage.CLASSIFIER_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Unique</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1321,7 +1104,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = ENTITY_OR_VIEW_FEATURE_COUNT + 2;
+	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -1330,7 +1113,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_OPERATION_COUNT = ENTITY_OR_VIEW_OPERATION_COUNT + 0;
+	int ENTITY_OPERATION_COUNT = BasePackage.CLASSIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl <em>Entity Feature</em>}' class.
@@ -1340,7 +1123,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityFeature()
 	 * @generated
 	 */
-	int ENTITY_FEATURE = 12;
+	int ENTITY_FEATURE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1575,7 +1358,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAttribute()
 	 * @generated
 	 */
-	int ENTITY_ATTRIBUTE = 13;
+	int ENTITY_ATTRIBUTE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1900,7 +1683,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDataTypeAttribute()
 	 * @generated
 	 */
-	int DATA_TYPE_ATTRIBUTE = 14;
+	int DATA_TYPE_ATTRIBUTE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2261,7 +2044,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateAttribute()
 	 * @generated
 	 */
-	int DATE_ATTRIBUTE = 15;
+	int DATE_ATTRIBUTE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2604,7 +2387,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUrlAttribute()
 	 * @generated
 	 */
-	int URL_ATTRIBUTE = 16;
+	int URL_ATTRIBUTE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2938,7 +2721,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceAttribute()
 	 * @generated
 	 */
-	int RESOURCE_ATTRIBUTE = 17;
+	int RESOURCE_ATTRIBUTE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3308,7 +3091,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPathElement()
 	 * @generated
 	 */
-	int PATH_ELEMENT = 18;
+	int PATH_ELEMENT = 17;
 
 	/**
 	 * The number of structural features of the '<em>Path Element</em>' class.
@@ -3336,7 +3119,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getStaticPathElement()
 	 * @generated
 	 */
-	int STATIC_PATH_ELEMENT = 19;
+	int STATIC_PATH_ELEMENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -3373,7 +3156,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatePathElement()
 	 * @generated
 	 */
-	int DATE_PATH_ELEMENT = 20;
+	int DATE_PATH_ELEMENT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -3410,7 +3193,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileAttribute()
 	 * @generated
 	 */
-	int FILE_ATTRIBUTE = 21;
+	int FILE_ATTRIBUTE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3780,7 +3563,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageAttribute()
 	 * @generated
 	 */
-	int IMAGE_ATTRIBUTE = 22;
+	int IMAGE_ATTRIBUTE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4150,7 +3933,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
 	 * @generated
 	 */
-	int LOCATION_ATTRIBUTE = 23;
+	int LOCATION_ATTRIBUTE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4475,7 +4258,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAssociation()
 	 * @generated
 	 */
-	int ENTITY_ASSOCIATION = 24;
+	int ENTITY_ASSOCIATION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4694,22 +4477,13 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_ASSOCIATION__PSEUDO = ENTITY_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__ENCAPSULATED_BY = ENTITY_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 2;
+	int ENTITY_ASSOCIATION__INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
@@ -4718,7 +4492,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__SOURCE_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 3;
+	int ENTITY_ASSOCIATION__SOURCE_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
@@ -4727,7 +4501,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 4;
+	int ENTITY_ASSOCIATION__TARGET_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -4736,7 +4510,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__SERIALIZATION_MAX_DEPTH = ENTITY_FEATURE_FEATURE_COUNT + 5;
+	int ENTITY_ASSOCIATION__SERIALIZATION_MAX_DEPTH = ENTITY_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
@@ -4745,7 +4519,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__KEYS = ENTITY_FEATURE_FEATURE_COUNT + 6;
+	int ENTITY_ASSOCIATION__KEYS = ENTITY_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
@@ -4754,7 +4528,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_ENTITY = ENTITY_FEATURE_FEATURE_COUNT + 7;
+	int ENTITY_ASSOCIATION__TARGET_ENTITY = ENTITY_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -4763,7 +4537,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__BIDIRECTIONAL = ENTITY_FEATURE_FEATURE_COUNT + 8;
+	int ENTITY_ASSOCIATION__BIDIRECTIONAL = ENTITY_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -4772,7 +4546,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__UNIQUE = ENTITY_FEATURE_FEATURE_COUNT + 9;
+	int ENTITY_ASSOCIATION__UNIQUE = ENTITY_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Pivot Table Name</b></em>' attribute.
@@ -4781,7 +4555,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__PIVOT_TABLE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 10;
+	int ENTITY_ASSOCIATION__PIVOT_TABLE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Target Feature Name</b></em>' attribute.
@@ -4790,7 +4564,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_FEATURE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 11;
+	int ENTITY_ASSOCIATION__TARGET_FEATURE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Target Primary Key</b></em>' attribute.
@@ -4799,7 +4573,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY = ENTITY_FEATURE_FEATURE_COUNT + 12;
+	int ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY = ENTITY_FEATURE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Target Column Name</b></em>' attribute.
@@ -4808,7 +4582,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_COLUMN_NAME = ENTITY_FEATURE_FEATURE_COUNT + 13;
+	int ENTITY_ASSOCIATION__TARGET_COLUMN_NAME = ENTITY_FEATURE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Label</b></em>' attribute.
@@ -4817,7 +4591,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL = ENTITY_FEATURE_FEATURE_COUNT + 14;
+	int ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL = ENTITY_FEATURE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
@@ -4826,7 +4600,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_HEADER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 15;
+	int ENTITY_ASSOCIATION__TARGET_HEADER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
@@ -4835,7 +4609,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 16;
+	int ENTITY_ASSOCIATION__TARGET_INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
@@ -4844,7 +4618,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 17;
+	int ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
@@ -4853,7 +4627,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 18;
+	int ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Entity Association</em>' class.
@@ -4862,7 +4636,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION_FEATURE_COUNT = ENTITY_FEATURE_FEATURE_COUNT + 19;
+	int ENTITY_ASSOCIATION_FEATURE_COUNT = ENTITY_FEATURE_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Entity Association</em>' class.
@@ -4881,7 +4655,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT = 25;
+	int ASSOCIATION_WITHOUT_CONTAINMENT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5100,15 +4874,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT__PSEUDO = ENTITY_ASSOCIATION__PSEUDO;
 
 	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__ENCAPSULATED_BY = ENTITY_ASSOCIATION__ENCAPSULATED_BY;
-
-	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5305,7 +5070,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT = 26;
+	int ASSOCIATION_WITH_CONTAINMENT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5524,15 +5289,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITH_CONTAINMENT__PSEUDO = ENTITY_ASSOCIATION__PSEUDO;
 
 	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__ENCAPSULATED_BY = ENTITY_ASSOCIATION__ENCAPSULATED_BY;
-
-	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5720,7 +5476,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
 	 * @generated
 	 */
-	int ASSOCIATION_KEY = 27;
+	int ASSOCIATION_KEY = 26;
 
 	/**
 	 * The feature id for the '<em><b>Key For</b></em>' container reference.
@@ -5768,1245 +5524,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_KEY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewImpl <em>View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getView()
-	 * @generated
-	 */
-	int VIEW = 28;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__NAME = ENTITY_OR_VIEW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__DISPLAY_LABEL = ENTITY_OR_VIEW__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__SINGLETON_NAME = ENTITY_OR_VIEW__SINGLETON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__PLURALISED_NAME = ENTITY_OR_VIEW__PLURALISED_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Keys</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__KEYS = ENTITY_OR_VIEW__KEYS;
-
-	/**
-	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__TABLE_NAME = ENTITY_OR_VIEW__TABLE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__AUTO_KEY_NAME = ENTITY_OR_VIEW__AUTO_KEY_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__AUTO_KEY_PERSISTENT_TYPE = ENTITY_OR_VIEW__AUTO_KEY_PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__AUTO_KEY_GENERATION_STRATEGY = ENTITY_OR_VIEW__AUTO_KEY_GENERATION_STRATEGY;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__UNIQUE = ENTITY_OR_VIEW__UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__CONTAINER_UNIQUE = ENTITY_OR_VIEW__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__LABELS = ENTITY_OR_VIEW__LABELS;
-
-	/**
-	 * The feature id for the '<em><b>Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__FEATURES = ENTITY_OR_VIEW__FEATURES;
-
-	/**
-	 * The feature id for the '<em><b>All Features</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ALL_FEATURES = ENTITY_OR_VIEW__ALL_FEATURES;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ATTRIBUTES = ENTITY_OR_VIEW__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Associations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ASSOCIATIONS = ENTITY_OR_VIEW__ASSOCIATIONS;
-
-	/**
-	 * The feature id for the '<em><b>All Associations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ALL_ASSOCIATIONS = ENTITY_OR_VIEW__ALL_ASSOCIATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__IMPLEMENTS_USER_INTERFACE = ENTITY_OR_VIEW__IMPLEMENTS_USER_INTERFACE;
-
-	/**
-	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ALLOW_FORM_TYPE_CUSTOMISATION = ENTITY_OR_VIEW__ALLOW_FORM_TYPE_CUSTOMISATION;
-
-	/**
-	 * The feature id for the '<em><b>Encapsulates</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__ENCAPSULATES = ENTITY_OR_VIEW_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>View Features</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW__VIEW_FEATURES = ENTITY_OR_VIEW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE_COUNT = ENTITY_OR_VIEW_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_OPERATION_COUNT = ENTITY_OR_VIEW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewFeatureImpl <em>View Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewFeatureImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getViewFeature()
-	 * @generated
-	 */
-	int VIEW_FEATURE = 29;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__TITLE = FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__COLLECTION_ORM_ALLOW_ADD = FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__PLACEHOLDER = FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__DEFAULT_DISPLAY_VALUE = FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__EMPTY_DISPLAY_VALUE = FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__ENCODE_URI_KEY = FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__SERIALIZATION_GROUPS = FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__HEADER_CLASS = FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__DISPLAY_CLASS = FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__FOOTER_CLASS = FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE__PART_OF = FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>View Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>View Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_FEATURE_OPERATION_COUNT = FEATURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedFeatureImpl <em>Encapsulated Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedFeatureImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedFeature()
-	 * @generated
-	 */
-	int ENCAPSULATED_FEATURE = 30;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__TITLE = VIEW_FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_ADD = VIEW_FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = VIEW_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__PLACEHOLDER = VIEW_FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE = VIEW_FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE = VIEW_FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__ENCODE_URI_KEY = VIEW_FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__SERIALIZATION_GROUPS = VIEW_FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__HEADER_CLASS = VIEW_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__DISPLAY_CLASS = VIEW_FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__FOOTER_CLASS = VIEW_FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__PART_OF = VIEW_FEATURE__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__DISPLAY_LABEL = VIEW_FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Alias</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__ALIAS = VIEW_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE__COLUMN_NAME = VIEW_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Encapsulated Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE_FEATURE_COUNT = VIEW_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Encapsulated Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_FEATURE_OPERATION_COUNT = VIEW_FEATURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAttributeImpl <em>Encapsulated Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedAttribute()
-	 * @generated
-	 */
-	int ENCAPSULATED_ATTRIBUTE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__TITLE = ENCAPSULATED_FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__PLACEHOLDER = ENCAPSULATED_FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__ENCODE_URI_KEY = ENCAPSULATED_FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__SERIALIZATION_GROUPS = ENCAPSULATED_FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__HEADER_CLASS = ENCAPSULATED_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__DISPLAY_CLASS = ENCAPSULATED_FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__FOOTER_CLASS = ENCAPSULATED_FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__PART_OF = ENCAPSULATED_FEATURE__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__DISPLAY_LABEL = ENCAPSULATED_FEATURE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Alias</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__ALIAS = ENCAPSULATED_FEATURE__ALIAS;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__COLUMN_NAME = ENCAPSULATED_FEATURE__COLUMN_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__DEFAULT_VALUE = ENCAPSULATED_FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__VALIDATION_PATTERN = ENCAPSULATED_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__INPUT_CLASS = ENCAPSULATED_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__NAME = ENCAPSULATED_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__ATTRIBUTE = ENCAPSULATED_FEATURE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE__CARDINALITY = ENCAPSULATED_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Encapsulated Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE_FEATURE_COUNT = ENCAPSULATED_FEATURE_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of operations of the '<em>Encapsulated Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ATTRIBUTE_OPERATION_COUNT = ENCAPSULATED_FEATURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAssociationImpl <em>Encapsulated Association</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAssociationImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedAssociation()
-	 * @generated
-	 */
-	int ENCAPSULATED_ASSOCIATION = 32;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__TITLE = ENCAPSULATED_FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD = ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE = ENCAPSULATED_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__PLACEHOLDER = ENCAPSULATED_FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__DEFAULT_DISPLAY_VALUE = ENCAPSULATED_FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__EMPTY_DISPLAY_VALUE = ENCAPSULATED_FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__ENCODE_URI_KEY = ENCAPSULATED_FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__SERIALIZATION_GROUPS = ENCAPSULATED_FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__HEADER_CLASS = ENCAPSULATED_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__DISPLAY_CLASS = ENCAPSULATED_FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__FOOTER_CLASS = ENCAPSULATED_FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__PART_OF = ENCAPSULATED_FEATURE__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__DISPLAY_LABEL = ENCAPSULATED_FEATURE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Alias</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__ALIAS = ENCAPSULATED_FEATURE__ALIAS;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__COLUMN_NAME = ENCAPSULATED_FEATURE__COLUMN_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__PSEUDO = ENCAPSULATED_FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__ENCAPSULATED_BY = ENCAPSULATED_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__INPUT_CLASS = ENCAPSULATED_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__SOURCE_ENTITY_X = ENCAPSULATED_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__TARGET_ENTITY_X = ENCAPSULATED_FEATURE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__SERIALIZATION_MAX_DEPTH = ENCAPSULATED_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__NAME = ENCAPSULATED_FEATURE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__ASSOCIATION = ENCAPSULATED_FEATURE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Encapsulated Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__ENCAPSULATED_TARGET = ENCAPSULATED_FEATURE_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__IS_SOURCE_ASSOCIATION = ENCAPSULATED_FEATURE_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__CARDINALITY = ENCAPSULATED_FEATURE_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__SOURCE_ENTITY = ENCAPSULATED_FEATURE_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION__TARGET_ENTITY = ENCAPSULATED_FEATURE_FEATURE_COUNT + 12;
-
-	/**
-	 * The number of structural features of the '<em>Encapsulated Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION_FEATURE_COUNT = ENCAPSULATED_FEATURE_FEATURE_COUNT + 13;
-
-	/**
-	 * The number of operations of the '<em>Encapsulated Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENCAPSULATED_ASSOCIATION_OPERATION_COUNT = ENCAPSULATED_FEATURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl <em>View Association</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getViewAssociation()
-	 * @generated
-	 */
-	int VIEW_ASSOCIATION = 33;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__PSEUDO = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Encapsulated By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__ENCAPSULATED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__INPUT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__SOURCE_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__TARGET_ENTITY_X = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__SERIALIZATION_MAX_DEPTH = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Opposite</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__OPPOSITE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
-
-	/**
-	 * The number of structural features of the '<em>View Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
-
-	/**
-	 * The number of operations of the '<em>View Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_ASSOCIATION_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7014,7 +5531,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 34;
+	int DATABASE_TECHNOLOGIES = 27;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -7024,7 +5541,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 35;
+	int ORM_TECHNOLOGIES = 28;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -7034,7 +5551,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 36;
+	int CARDINALITY = 29;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -7044,7 +5561,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 37;
+	int IS_HAS_CHOICES = 30;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -7054,7 +5571,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 38;
+	int DATE_DETAILS = 31;
 
 
 	/**
@@ -7153,203 +5670,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSerializationGroup();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView <em>Entity Or View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity Or View</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView
-	 * @generated
-	 */
-	EClass getEntityOrView();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getSingletonName <em>Singleton Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Singleton Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getSingletonName()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_SingletonName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getPluralisedName <em>Pluralised Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pluralised Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getPluralisedName()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_PluralisedName();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getKeys <em>Keys</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Keys</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getKeys()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Keys();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getTableName <em>Table Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Table Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getTableName()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_TableName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyName <em>Auto Key Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Auto Key Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyName()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_AutoKeyName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Auto Key Persistent Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyPersistentType()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_AutoKeyPersistentType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyGenerationStrategy <em>Auto Key Generation Strategy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Auto Key Generation Strategy</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAutoKeyGenerationStrategy()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_AutoKeyGenerationStrategy();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getUnique <em>Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getUnique()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Unique();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getContainerUnique <em>Container Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Container Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getContainerUnique()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_ContainerUnique();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getLabels <em>Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Labels</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getLabels()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Labels();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getFeatures <em>Features</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Features</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getFeatures()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Features();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAllFeatures <em>All Features</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>All Features</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAllFeatures()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_AllFeatures();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAttributes()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Attributes();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAssociations <em>Associations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Associations</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAssociations()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_Associations();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#getAllAssociations <em>All Associations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>All Associations</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#getAllAssociations()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EReference getEntityOrView_AllAssociations();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#isImplementsUserInterface <em>Implements User Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Implements User Interface</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#isImplementsUserInterface()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_ImplementsUserInterface();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView#isAllowFormTypeCustomisation <em>Allow Form Type Customisation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Allow Form Type Customisation</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView#isAllowFormTypeCustomisation()
-	 * @see #getEntityOrView()
-	 * @generated
-	 */
-	EAttribute getEntityOrView_AllowFormTypeCustomisation();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Feature <em>Feature</em>}'.
@@ -7545,17 +5865,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAssociation_Pseudo();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Association#getEncapsulatedBy <em>Encapsulated By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Encapsulated By</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getEncapsulatedBy()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EReference getAssociation_EncapsulatedBy();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getInputClass <em>Input Class</em>}'.
@@ -7783,15 +6092,70 @@ public interface PersistencePackage extends EPackage {
 	EClass getEntity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getEntityFeatures <em>Entity Features</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getSingletonName <em>Singleton Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entity Features</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getEntityFeatures()
+	 * @return the meta object for the attribute '<em>Singleton Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getSingletonName()
 	 * @see #getEntity()
 	 * @generated
 	 */
-	EReference getEntity_EntityFeatures();
+	EAttribute getEntity_SingletonName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getPluralisedName <em>Pluralised Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pluralised Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getPluralisedName()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_PluralisedName();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getFeatures <em>Features</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Features</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getFeatures()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Features();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getKeys <em>Keys</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Keys</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getKeys()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Keys();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAttributes()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Attributes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAssociations <em>Associations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Associations</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAssociations()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Associations();
 
 	/**
 	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAssociationEnds <em>Association Ends</em>}'.
@@ -7803,6 +6167,127 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEntity_AssociationEnds();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAllFeatures <em>All Features</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Features</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAllFeatures()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_AllFeatures();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAllAssociations <em>All Associations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Associations</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAllAssociations()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_AllAssociations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Labels</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getLabels()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Labels();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getUnique <em>Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Unique</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getUnique()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Unique();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique <em>Container Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Container Unique</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_ContainerUnique();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getTableName <em>Table Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Table Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getTableName()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_TableName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyName <em>Auto Key Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Key Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyName()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_AutoKeyName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Key Persistent Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyPersistentType()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_AutoKeyPersistentType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyGenerationStrategy <em>Auto Key Generation Strategy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Key Generation Strategy</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyGenerationStrategy()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_AutoKeyGenerationStrategy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsUserInterface <em>Implements User Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implements User Interface</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#isImplementsUserInterface()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_ImplementsUserInterface();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#isAllowFormTypeCustomisation <em>Allow Form Type Customisation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allow Form Type Customisation</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#isAllowFormTypeCustomisation()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_AllowFormTypeCustomisation();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature <em>Entity Feature</em>}'.
@@ -8515,264 +7000,6 @@ public interface PersistencePackage extends EPackage {
 	EReference getAssociationKey_TargetFeature();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.View <em>View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>View</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.View
-	 * @generated
-	 */
-	EClass getView();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.View#getEncapsulates <em>Encapsulates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Encapsulates</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.View#getEncapsulates()
-	 * @see #getView()
-	 * @generated
-	 */
-	EReference getView_Encapsulates();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.View#getViewFeatures <em>View Features</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>View Features</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.View#getViewFeatures()
-	 * @see #getView()
-	 * @generated
-	 */
-	EReference getView_ViewFeatures();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ViewFeature <em>View Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>View Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewFeature
-	 * @generated
-	 */
-	EClass getViewFeature();
-
-	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.ViewFeature#getPartOf <em>Part Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Part Of</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewFeature#getPartOf()
-	 * @see #getViewFeature()
-	 * @generated
-	 */
-	EReference getViewFeature_PartOf();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature <em>Encapsulated Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Encapsulated Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature
-	 * @generated
-	 */
-	EClass getEncapsulatedFeature();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getDisplayLabel <em>Display Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getDisplayLabel()
-	 * @see #getEncapsulatedFeature()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedFeature_DisplayLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getAlias <em>Alias</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alias</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getAlias()
-	 * @see #getEncapsulatedFeature()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedFeature_Alias();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getColumnName <em>Column Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature#getColumnName()
-	 * @see #getEncapsulatedFeature()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedFeature_ColumnName();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute <em>Encapsulated Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Encapsulated Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute
-	 * @generated
-	 */
-	EClass getEncapsulatedAttribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getName()
-	 * @see #getEncapsulatedAttribute()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedAttribute_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getAttribute()
-	 * @see #getEncapsulatedAttribute()
-	 * @generated
-	 */
-	EReference getEncapsulatedAttribute_Attribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getCardinality <em>Cardinality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cardinality</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute#getCardinality()
-	 * @see #getEncapsulatedAttribute()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedAttribute_Cardinality();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation <em>Encapsulated Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Encapsulated Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation
-	 * @generated
-	 */
-	EClass getEncapsulatedAssociation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getName()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedAssociation_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getAssociation <em>Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getAssociation()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EReference getEncapsulatedAssociation_Association();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getEncapsulatedTarget <em>Encapsulated Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Encapsulated Target</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getEncapsulatedTarget()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EReference getEncapsulatedAssociation_EncapsulatedTarget();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#isIsSourceAssociation()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedAssociation_IsSourceAssociation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getCardinality <em>Cardinality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cardinality</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getCardinality()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EAttribute getEncapsulatedAssociation_Cardinality();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getSourceEntity <em>Source Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getSourceEntity()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EReference getEncapsulatedAssociation_SourceEntity();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getTargetEntity <em>Target Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation#getTargetEntity()
-	 * @see #getEncapsulatedAssociation()
-	 * @generated
-	 */
-	EReference getEncapsulatedAssociation_TargetEntity();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ViewAssociation <em>View Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>View Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewAssociation
-	 * @generated
-	 */
-	EClass getViewAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ViewAssociation#getOpposite <em>Opposite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Opposite</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewAssociation#getOpposite()
-	 * @see #getViewAssociation()
-	 * @generated
-	 */
-	EReference getViewAssociation_Opposite();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ViewAssociation#getCardinality <em>Cardinality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cardinality</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewAssociation#getCardinality()
-	 * @see #getViewAssociation()
-	 * @generated
-	 */
-	EAttribute getViewAssociation_Cardinality();
-
-	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8920,152 +7147,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SERIALIZATION_GROUP = eINSTANCE.getSerializationGroup();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityOrViewImpl <em>Entity Or View</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityOrViewImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityOrView()
-		 * @generated
-		 */
-		EClass ENTITY_OR_VIEW = eINSTANCE.getEntityOrView();
-
-		/**
-		 * The meta object literal for the '<em><b>Singleton Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__SINGLETON_NAME = eINSTANCE.getEntityOrView_SingletonName();
-
-		/**
-		 * The meta object literal for the '<em><b>Pluralised Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__PLURALISED_NAME = eINSTANCE.getEntityOrView_PluralisedName();
-
-		/**
-		 * The meta object literal for the '<em><b>Keys</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__KEYS = eINSTANCE.getEntityOrView_Keys();
-
-		/**
-		 * The meta object literal for the '<em><b>Table Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__TABLE_NAME = eINSTANCE.getEntityOrView_TableName();
-
-		/**
-		 * The meta object literal for the '<em><b>Auto Key Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__AUTO_KEY_NAME = eINSTANCE.getEntityOrView_AutoKeyName();
-
-		/**
-		 * The meta object literal for the '<em><b>Auto Key Persistent Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__AUTO_KEY_PERSISTENT_TYPE = eINSTANCE.getEntityOrView_AutoKeyPersistentType();
-
-		/**
-		 * The meta object literal for the '<em><b>Auto Key Generation Strategy</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__AUTO_KEY_GENERATION_STRATEGY = eINSTANCE.getEntityOrView_AutoKeyGenerationStrategy();
-
-		/**
-		 * The meta object literal for the '<em><b>Unique</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__UNIQUE = eINSTANCE.getEntityOrView_Unique();
-
-		/**
-		 * The meta object literal for the '<em><b>Container Unique</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__CONTAINER_UNIQUE = eINSTANCE.getEntityOrView_ContainerUnique();
-
-		/**
-		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__LABELS = eINSTANCE.getEntityOrView_Labels();
-
-		/**
-		 * The meta object literal for the '<em><b>Features</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__FEATURES = eINSTANCE.getEntityOrView_Features();
-
-		/**
-		 * The meta object literal for the '<em><b>All Features</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__ALL_FEATURES = eINSTANCE.getEntityOrView_AllFeatures();
-
-		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__ATTRIBUTES = eINSTANCE.getEntityOrView_Attributes();
-
-		/**
-		 * The meta object literal for the '<em><b>Associations</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__ASSOCIATIONS = eINSTANCE.getEntityOrView_Associations();
-
-		/**
-		 * The meta object literal for the '<em><b>All Associations</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_OR_VIEW__ALL_ASSOCIATIONS = eINSTANCE.getEntityOrView_AllAssociations();
-
-		/**
-		 * The meta object literal for the '<em><b>Implements User Interface</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__IMPLEMENTS_USER_INTERFACE = eINSTANCE.getEntityOrView_ImplementsUserInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Allow Form Type Customisation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_OR_VIEW__ALLOW_FORM_TYPE_CUSTOMISATION = eINSTANCE.getEntityOrView_AllowFormTypeCustomisation();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.Feature <em>Feature</em>}' class.
@@ -9216,14 +7297,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSOCIATION__PSEUDO = eINSTANCE.getAssociation_Pseudo();
-
-		/**
-		 * The meta object literal for the '<em><b>Encapsulated By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION__ENCAPSULATED_BY = eINSTANCE.getAssociation_EncapsulatedBy();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Class</b></em>' attribute feature.
@@ -9406,12 +7479,52 @@ public interface PersistencePackage extends EPackage {
 		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Entity Features</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Singleton Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY__ENTITY_FEATURES = eINSTANCE.getEntity_EntityFeatures();
+		EAttribute ENTITY__SINGLETON_NAME = eINSTANCE.getEntity_SingletonName();
+
+		/**
+		 * The meta object literal for the '<em><b>Pluralised Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__PLURALISED_NAME = eINSTANCE.getEntity_PluralisedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__FEATURES = eINSTANCE.getEntity_Features();
+
+		/**
+		 * The meta object literal for the '<em><b>Keys</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__KEYS = eINSTANCE.getEntity_Keys();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ATTRIBUTES = eINSTANCE.getEntity_Attributes();
+
+		/**
+		 * The meta object literal for the '<em><b>Associations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ASSOCIATIONS = eINSTANCE.getEntity_Associations();
 
 		/**
 		 * The meta object literal for the '<em><b>Association Ends</b></em>' reference list feature.
@@ -9420,6 +7533,94 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENTITY__ASSOCIATION_ENDS = eINSTANCE.getEntity_AssociationEnds();
+
+		/**
+		 * The meta object literal for the '<em><b>All Features</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ALL_FEATURES = eINSTANCE.getEntity_AllFeatures();
+
+		/**
+		 * The meta object literal for the '<em><b>All Associations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ALL_ASSOCIATIONS = eINSTANCE.getEntity_AllAssociations();
+
+		/**
+		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__LABELS = eINSTANCE.getEntity_Labels();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__UNIQUE = eINSTANCE.getEntity_Unique();
+
+		/**
+		 * The meta object literal for the '<em><b>Container Unique</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__CONTAINER_UNIQUE = eINSTANCE.getEntity_ContainerUnique();
+
+		/**
+		 * The meta object literal for the '<em><b>Table Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__TABLE_NAME = eINSTANCE.getEntity_TableName();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Key Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__AUTO_KEY_NAME = eINSTANCE.getEntity_AutoKeyName();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Key Persistent Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__AUTO_KEY_PERSISTENT_TYPE = eINSTANCE.getEntity_AutoKeyPersistentType();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Key Generation Strategy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__AUTO_KEY_GENERATION_STRATEGY = eINSTANCE.getEntity_AutoKeyGenerationStrategy();
+
+		/**
+		 * The meta object literal for the '<em><b>Implements User Interface</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__IMPLEMENTS_USER_INTERFACE = eINSTANCE.getEntity_ImplementsUserInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Allow Form Type Customisation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = eINSTANCE.getEntity_AllowFormTypeCustomisation();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl <em>Entity Feature</em>}' class.
@@ -9980,210 +8181,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSOCIATION_KEY__TARGET_FEATURE = eINSTANCE.getAssociationKey_TargetFeature();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewImpl <em>View</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getView()
-		 * @generated
-		 */
-		EClass VIEW = eINSTANCE.getView();
-
-		/**
-		 * The meta object literal for the '<em><b>Encapsulates</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VIEW__ENCAPSULATES = eINSTANCE.getView_Encapsulates();
-
-		/**
-		 * The meta object literal for the '<em><b>View Features</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VIEW__VIEW_FEATURES = eINSTANCE.getView_ViewFeatures();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewFeatureImpl <em>View Feature</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewFeatureImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getViewFeature()
-		 * @generated
-		 */
-		EClass VIEW_FEATURE = eINSTANCE.getViewFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Part Of</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VIEW_FEATURE__PART_OF = eINSTANCE.getViewFeature_PartOf();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedFeatureImpl <em>Encapsulated Feature</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedFeatureImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedFeature()
-		 * @generated
-		 */
-		EClass ENCAPSULATED_FEATURE = eINSTANCE.getEncapsulatedFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_FEATURE__DISPLAY_LABEL = eINSTANCE.getEncapsulatedFeature_DisplayLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_FEATURE__ALIAS = eINSTANCE.getEncapsulatedFeature_Alias();
-
-		/**
-		 * The meta object literal for the '<em><b>Column Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_FEATURE__COLUMN_NAME = eINSTANCE.getEncapsulatedFeature_ColumnName();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAttributeImpl <em>Encapsulated Attribute</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAttributeImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedAttribute()
-		 * @generated
-		 */
-		EClass ENCAPSULATED_ATTRIBUTE = eINSTANCE.getEncapsulatedAttribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_ATTRIBUTE__NAME = eINSTANCE.getEncapsulatedAttribute_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENCAPSULATED_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getEncapsulatedAttribute_Attribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Cardinality</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_ATTRIBUTE__CARDINALITY = eINSTANCE.getEncapsulatedAttribute_Cardinality();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAssociationImpl <em>Encapsulated Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EncapsulatedAssociationImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEncapsulatedAssociation()
-		 * @generated
-		 */
-		EClass ENCAPSULATED_ASSOCIATION = eINSTANCE.getEncapsulatedAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_ASSOCIATION__NAME = eINSTANCE.getEncapsulatedAssociation_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Association</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENCAPSULATED_ASSOCIATION__ASSOCIATION = eINSTANCE.getEncapsulatedAssociation_Association();
-
-		/**
-		 * The meta object literal for the '<em><b>Encapsulated Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENCAPSULATED_ASSOCIATION__ENCAPSULATED_TARGET = eINSTANCE.getEncapsulatedAssociation_EncapsulatedTarget();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getEncapsulatedAssociation_IsSourceAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Cardinality</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENCAPSULATED_ASSOCIATION__CARDINALITY = eINSTANCE.getEncapsulatedAssociation_Cardinality();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENCAPSULATED_ASSOCIATION__SOURCE_ENTITY = eINSTANCE.getEncapsulatedAssociation_SourceEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENCAPSULATED_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getEncapsulatedAssociation_TargetEntity();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl <em>View Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ViewAssociationImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getViewAssociation()
-		 * @generated
-		 */
-		EClass VIEW_ASSOCIATION = eINSTANCE.getViewAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Opposite</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VIEW_ASSOCIATION__OPPOSITE = eINSTANCE.getViewAssociation_Opposite();
-
-		/**
-		 * The meta object literal for the '<em><b>Cardinality</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VIEW_ASSOCIATION__CARDINALITY = eINSTANCE.getViewAssociation_Cardinality();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.

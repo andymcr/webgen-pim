@@ -74,11 +74,6 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT: return createAssociationWithoutContainment();
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT: return createAssociationWithContainment();
 			case PersistencePackage.ASSOCIATION_KEY: return createAssociationKey();
-			case PersistencePackage.VIEW: return createView();
-			case PersistencePackage.ENCAPSULATED_FEATURE: return createEncapsulatedFeature();
-			case PersistencePackage.ENCAPSULATED_ATTRIBUTE: return createEncapsulatedAttribute();
-			case PersistencePackage.ENCAPSULATED_ASSOCIATION: return createEncapsulatedAssociation();
-			case PersistencePackage.VIEW_ASSOCIATION: return createViewAssociation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -298,56 +293,6 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public AssociationKey createAssociationKey() {
 		AssociationKeyImpl associationKey = new AssociationKeyImpl();
 		return associationKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public View createView() {
-		ViewImpl view = new ViewImpl();
-		return view;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EncapsulatedFeature createEncapsulatedFeature() {
-		EncapsulatedFeatureImpl encapsulatedFeature = new EncapsulatedFeatureImpl();
-		return encapsulatedFeature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EncapsulatedAttribute createEncapsulatedAttribute() {
-		EncapsulatedAttributeImpl encapsulatedAttribute = new EncapsulatedAttributeImpl();
-		return encapsulatedAttribute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EncapsulatedAssociation createEncapsulatedAssociation() {
-		EncapsulatedAssociationImpl encapsulatedAssociation = new EncapsulatedAssociationImpl();
-		return encapsulatedAssociation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ViewAssociation createViewAssociation() {
-		ViewAssociationImpl viewAssociation = new ViewAssociationImpl();
-		return viewAssociation;
 	}
 
 	/**

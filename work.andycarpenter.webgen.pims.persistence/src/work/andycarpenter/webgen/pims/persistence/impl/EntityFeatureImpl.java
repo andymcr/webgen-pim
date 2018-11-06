@@ -3,10 +3,8 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -16,7 +14,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 
 import work.andycarpenter.webgen.pims.persistence.Cardinality;
@@ -725,7 +722,7 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newPartOf != null)
-				msgs = ((InternalEObject)newPartOf).eInverseAdd(this, PersistencePackage.ENTITY__ENTITY_FEATURES, Entity.class, msgs);
+				msgs = ((InternalEObject)newPartOf).eInverseAdd(this, PersistencePackage.ENTITY__FEATURES, Entity.class, msgs);
 			msgs = basicSetPartOf(newPartOf, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -961,7 +958,7 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case PersistencePackage.ENTITY_FEATURE__PART_OF:
-				return eInternalContainer().eInverseRemove(this, PersistencePackage.ENTITY__ENTITY_FEATURES, Entity.class, msgs);
+				return eInternalContainer().eInverseRemove(this, PersistencePackage.ENTITY__FEATURES, Entity.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

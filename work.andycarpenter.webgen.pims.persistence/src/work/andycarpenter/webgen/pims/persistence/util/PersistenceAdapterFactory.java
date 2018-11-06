@@ -80,10 +80,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createSerializationGroupAdapter();
 			}
 			@Override
-			public Adapter caseEntityOrView(EntityOrView object) {
-				return createEntityOrViewAdapter();
-			}
-			@Override
 			public Adapter caseFeature(Feature object) {
 				return createFeatureAdapter();
 			}
@@ -184,30 +180,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createAssociationKeyAdapter();
 			}
 			@Override
-			public Adapter caseView(View object) {
-				return createViewAdapter();
-			}
-			@Override
-			public Adapter caseViewFeature(ViewFeature object) {
-				return createViewFeatureAdapter();
-			}
-			@Override
-			public Adapter caseEncapsulatedFeature(EncapsulatedFeature object) {
-				return createEncapsulatedFeatureAdapter();
-			}
-			@Override
-			public Adapter caseEncapsulatedAttribute(EncapsulatedAttribute object) {
-				return createEncapsulatedAttributeAdapter();
-			}
-			@Override
-			public Adapter caseEncapsulatedAssociation(EncapsulatedAssociation object) {
-				return createEncapsulatedAssociationAdapter();
-			}
-			@Override
-			public Adapter caseViewAssociation(ViewAssociation object) {
-				return createViewAssociationAdapter();
-			}
-			@Override
 			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
 			}
@@ -264,20 +236,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSerializationGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EntityOrView <em>Entity Or View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityOrView
-	 * @generated
-	 */
-	public Adapter createEntityOrViewAdapter() {
 		return null;
 	}
 
@@ -628,90 +586,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAssociationKeyAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.View <em>View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.View
-	 * @generated
-	 */
-	public Adapter createViewAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ViewFeature <em>View Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewFeature
-	 * @generated
-	 */
-	public Adapter createViewFeatureAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature <em>Encapsulated Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedFeature
-	 * @generated
-	 */
-	public Adapter createEncapsulatedFeatureAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute <em>Encapsulated Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute
-	 * @generated
-	 */
-	public Adapter createEncapsulatedAttributeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation <em>Encapsulated Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EncapsulatedAssociation
-	 * @generated
-	 */
-	public Adapter createEncapsulatedAssociationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ViewAssociation <em>View Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.ViewAssociation
-	 * @generated
-	 */
-	public Adapter createViewAssociationAdapter() {
 		return null;
 	}
 

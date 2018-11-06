@@ -278,11 +278,6 @@ public class PersistenceItemProvider
 			(createChildParameter
 				(PersistencePackage.Literals.PERSISTENCE__ENTITIES,
 				 PersistenceFactory.eINSTANCE.createEntity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.PERSISTENCE__ENTITIES,
-				 PersistenceFactory.eINSTANCE.createView()));
 	}
 
 	/**

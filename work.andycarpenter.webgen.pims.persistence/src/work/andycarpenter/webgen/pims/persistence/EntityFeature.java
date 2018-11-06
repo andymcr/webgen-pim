@@ -34,7 +34,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 public interface EntityFeature extends NamedDisplayElement, Feature {
 	/**
 	 * Returns the value of the '<em><b>Part Of</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Entity#getEntityFeatures <em>Entity Features</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Entity#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Part Of</em>' container reference isn't clear,
@@ -44,8 +44,8 @@ public interface EntityFeature extends NamedDisplayElement, Feature {
 	 * @return the value of the '<em>Part Of</em>' container reference.
 	 * @see #setPartOf(Entity)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntityFeature_PartOf()
-	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getEntityFeatures
-	 * @model opposite="entityFeatures" required="true" transient="false"
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getFeatures
+	 * @model opposite="features" required="true" transient="false"
 	 * @generated
 	 */
 	Entity getPartOf();

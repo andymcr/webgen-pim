@@ -66,7 +66,7 @@ public interface Persistence extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityOrView}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entities</em>' containment reference list isn't clear,
@@ -78,7 +78,7 @@ public interface Persistence extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EntityOrView> getEntities();
+	EList<Entity> getEntities();
 
 	/**
 	 * Returns the value of the '<em><b>Orm Technology</b></em>' attribute.

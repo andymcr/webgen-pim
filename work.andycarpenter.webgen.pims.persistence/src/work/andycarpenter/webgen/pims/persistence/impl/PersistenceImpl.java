@@ -3,10 +3,8 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -17,11 +15,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import work.andycarpenter.webgen.pims.base.DataType;
 
 import work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.OrmTechnologies;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -75,7 +72,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityOrView> entities;
+	protected EList<Entity> entities;
 
 	/**
 	 * The default value of the '{@link #getOrmTechnology() <em>Orm Technology</em>}' attribute.
@@ -205,9 +202,9 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityOrView> getEntities() {
+	public EList<Entity> getEntities() {
 		if (entities == null) {
-			entities = new EObjectContainmentEList<EntityOrView>(EntityOrView.class, this, PersistencePackage.PERSISTENCE__ENTITIES);
+			entities = new EObjectContainmentEList<Entity>(Entity.class, this, PersistencePackage.PERSISTENCE__ENTITIES);
 		}
 		return entities;
 	}
@@ -359,7 +356,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 				return;
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				getEntities().clear();
-				getEntities().addAll((Collection<? extends EntityOrView>)newValue);
+				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case PersistencePackage.PERSISTENCE__ORM_TECHNOLOGY:
 				setOrmTechnology((OrmTechnologies)newValue);

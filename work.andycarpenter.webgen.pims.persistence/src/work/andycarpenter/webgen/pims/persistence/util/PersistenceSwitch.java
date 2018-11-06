@@ -83,15 +83,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.ENTITY_OR_VIEW: {
-				EntityOrView entityOrView = (EntityOrView)theEObject;
-				T result = caseEntityOrView(entityOrView);
-				if (result == null) result = caseClassifier(entityOrView);
-				if (result == null) result = caseNamedDisplayElement(entityOrView);
-				if (result == null) result = caseNamedElement(entityOrView);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PersistencePackage.FEATURE: {
 				Feature feature = (Feature)theEObject;
 				T result = caseFeature(feature);
@@ -150,7 +141,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.ENTITY: {
 				Entity entity = (Entity)theEObject;
 				T result = caseEntity(entity);
-				if (result == null) result = caseEntityOrView(entity);
 				if (result == null) result = caseClassifier(entity);
 				if (result == null) result = caseNamedDisplayElement(entity);
 				if (result == null) result = caseNamedElement(entity);
@@ -332,63 +322,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.VIEW: {
-				View view = (View)theEObject;
-				T result = caseView(view);
-				if (result == null) result = caseEntityOrView(view);
-				if (result == null) result = caseClassifier(view);
-				if (result == null) result = caseNamedDisplayElement(view);
-				if (result == null) result = caseNamedElement(view);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.VIEW_FEATURE: {
-				ViewFeature viewFeature = (ViewFeature)theEObject;
-				T result = caseViewFeature(viewFeature);
-				if (result == null) result = caseFeature(viewFeature);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENCAPSULATED_FEATURE: {
-				EncapsulatedFeature encapsulatedFeature = (EncapsulatedFeature)theEObject;
-				T result = caseEncapsulatedFeature(encapsulatedFeature);
-				if (result == null) result = caseViewFeature(encapsulatedFeature);
-				if (result == null) result = caseFeature(encapsulatedFeature);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENCAPSULATED_ATTRIBUTE: {
-				EncapsulatedAttribute encapsulatedAttribute = (EncapsulatedAttribute)theEObject;
-				T result = caseEncapsulatedAttribute(encapsulatedAttribute);
-				if (result == null) result = caseEncapsulatedFeature(encapsulatedAttribute);
-				if (result == null) result = caseAttribute(encapsulatedAttribute);
-				if (result == null) result = caseViewFeature(encapsulatedAttribute);
-				if (result == null) result = caseLabel(encapsulatedAttribute);
-				if (result == null) result = caseFeature(encapsulatedAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENCAPSULATED_ASSOCIATION: {
-				EncapsulatedAssociation encapsulatedAssociation = (EncapsulatedAssociation)theEObject;
-				T result = caseEncapsulatedAssociation(encapsulatedAssociation);
-				if (result == null) result = caseEncapsulatedFeature(encapsulatedAssociation);
-				if (result == null) result = caseAssociation(encapsulatedAssociation);
-				if (result == null) result = caseViewFeature(encapsulatedAssociation);
-				if (result == null) result = caseFeature(encapsulatedAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.VIEW_ASSOCIATION: {
-				ViewAssociation viewAssociation = (ViewAssociation)theEObject;
-				T result = caseViewAssociation(viewAssociation);
-				if (result == null) result = caseNamedDisplayElement(viewAssociation);
-				if (result == null) result = caseViewFeature(viewAssociation);
-				if (result == null) result = caseAssociation(viewAssociation);
-				if (result == null) result = caseNamedElement(viewAssociation);
-				if (result == null) result = caseFeature(viewAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -420,21 +353,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSerializationGroup(SerializationGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity Or View</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity Or View</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntityOrView(EntityOrView object) {
 		return null;
 	}
 
@@ -810,96 +728,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAssociationKey(AssociationKey object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>View</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>View</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseView(View object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>View Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>View Feature</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseViewFeature(ViewFeature object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Encapsulated Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Encapsulated Feature</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEncapsulatedFeature(EncapsulatedFeature object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Encapsulated Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Encapsulated Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEncapsulatedAttribute(EncapsulatedAttribute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Encapsulated Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Encapsulated Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEncapsulatedAssociation(EncapsulatedAssociation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>View Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>View Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseViewAssociation(ViewAssociation object) {
 		return null;
 	}
 

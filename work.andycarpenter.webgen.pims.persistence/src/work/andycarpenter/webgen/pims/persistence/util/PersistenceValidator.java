@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.persistence.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -101,8 +100,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validatePersistence((Persistence)value, diagnostics, context);
 			case PersistencePackage.SERIALIZATION_GROUP:
 				return validateSerializationGroup((SerializationGroup)value, diagnostics, context);
-			case PersistencePackage.ENTITY_OR_VIEW:
-				return validateEntityOrView((EntityOrView)value, diagnostics, context);
 			case PersistencePackage.FEATURE:
 				return validateFeature((Feature)value, diagnostics, context);
 			case PersistencePackage.ATTRIBUTE:
@@ -153,18 +150,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAssociationWithContainment((AssociationWithContainment)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_KEY:
 				return validateAssociationKey((AssociationKey)value, diagnostics, context);
-			case PersistencePackage.VIEW:
-				return validateView((View)value, diagnostics, context);
-			case PersistencePackage.VIEW_FEATURE:
-				return validateViewFeature((ViewFeature)value, diagnostics, context);
-			case PersistencePackage.ENCAPSULATED_FEATURE:
-				return validateEncapsulatedFeature((EncapsulatedFeature)value, diagnostics, context);
-			case PersistencePackage.ENCAPSULATED_ATTRIBUTE:
-				return validateEncapsulatedAttribute((EncapsulatedAttribute)value, diagnostics, context);
-			case PersistencePackage.ENCAPSULATED_ASSOCIATION:
-				return validateEncapsulatedAssociation((EncapsulatedAssociation)value, diagnostics, context);
-			case PersistencePackage.VIEW_ASSOCIATION:
-				return validateViewAssociation((ViewAssociation)value, diagnostics, context);
 			case PersistencePackage.DATABASE_TECHNOLOGIES:
 				return validateDatabaseTechnologies((DatabaseTechnologies)value, diagnostics, context);
 			case PersistencePackage.ORM_TECHNOLOGIES:
@@ -245,55 +230,6 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(serializationGroup, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(serializationGroup, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityOrView(EntityOrView entityOrView, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(entityOrView, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityOrView, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityOrView_keysFromLocalFeatures(entityOrView, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the keysFromLocalFeatures constraint of '<em>Entity Or View</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String ENTITY_OR_VIEW__KEYS_FROM_LOCAL_FEATURES__EEXPRESSION = "allFeatures->includesAll(keys)";
-
-	/**
-	 * Validates the keysFromLocalFeatures constraint of '<em>Entity Or View</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityOrView_keysFromLocalFeatures(EntityOrView entityOrView, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(PersistencePackage.Literals.ENTITY_OR_VIEW,
-				 entityOrView,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "keysFromLocalFeatures",
-				 ENTITY_OR_VIEW__KEYS_FROM_LOCAL_FEATURES__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
 	}
 
 	/**
@@ -394,8 +330,8 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entity, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entity, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entity, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityOrView_keysFromLocalFeatures(entity, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEntity_featureNameUniqueWithinEntity(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEntity_keysFromLocalFeatures(entity, diagnostics, context);
 		return result;
 	}
 
@@ -405,7 +341,7 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String ENTITY__FEATURE_NAME_UNIQUE_WITHIN_ENTITY__EEXPRESSION = "entityFeatures->isUnique(f | f.name)";
+	protected static final String ENTITY__FEATURE_NAME_UNIQUE_WITHIN_ENTITY__EEXPRESSION = "features->isUnique(f | f.name)";
 
 	/**
 	 * Validates the featureNameUniqueWithinEntity constraint of '<em>Entity</em>'.
@@ -423,6 +359,35 @@ public class PersistenceValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "featureNameUniqueWithinEntity",
 				 ENTITY__FEATURE_NAME_UNIQUE_WITHIN_ENTITY__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the keysFromLocalFeatures constraint of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ENTITY__KEYS_FROM_LOCAL_FEATURES__EEXPRESSION = "allFeatures->includesAll(keys)";
+
+	/**
+	 * Validates the keysFromLocalFeatures constraint of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEntity_keysFromLocalFeatures(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(PersistencePackage.Literals.ENTITY,
+				 entity,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "keysFromLocalFeatures",
+				 ENTITY__KEYS_FROM_LOCAL_FEATURES__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -761,81 +726,6 @@ public class PersistenceValidator extends EObjectValidator {
 	 */
 	public boolean validateAssociationKey(AssociationKey associationKey, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(associationKey, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateView(View view, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(view, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(view, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(view, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityOrView_keysFromLocalFeatures(view, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateViewFeature(ViewFeature viewFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(viewFeature, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEncapsulatedFeature(EncapsulatedFeature encapsulatedFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(encapsulatedFeature, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEncapsulatedAttribute(EncapsulatedAttribute encapsulatedAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(encapsulatedAttribute, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEncapsulatedAssociation(EncapsulatedAssociation encapsulatedAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(encapsulatedAssociation, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateViewAssociation(ViewAssociation viewAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(viewAssociation, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(viewAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(viewAssociation, diagnostics, context);
-		return result;
 	}
 
 	/**

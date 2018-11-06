@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.persistence;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Association Without Containment</b></em>'.
