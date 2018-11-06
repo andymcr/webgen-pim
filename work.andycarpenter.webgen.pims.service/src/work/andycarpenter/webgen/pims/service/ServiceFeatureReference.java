@@ -37,7 +37,7 @@ public interface ServiceFeatureReference extends Variable {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getServiceFeatureReference_Name()
 	 * @model default="" unsettable="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if feature.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tif feature.oclIsKindOf(persistence::EntityFeature) then\r\n\t\tfeature.oclAsType(persistence::EntityFeature).name\r\n\telse if feature.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n\t\tfeature.oclAsType(persistence::EncapsulatedAttribute).name\r\n\telse if feature.oclIsKindOf(persistence::EncapsulatedAssociation) then\r\n\t\tfeature.oclAsType(persistence::EncapsulatedAssociation).name\r\n\telse\r\n\t\tfeature.oclAsType(persistence::ViewAssociation).name\r\n\tendif endif endif\r\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tif feature.oclIsKindOf(persistence::EntityFeature) then\n\t\tfeature.oclAsType(persistence::EntityFeature).name\n\telse\n\t\t\'\'\n\tendif\nendif'"
 	 * @generated
 	 */
 	String getName();

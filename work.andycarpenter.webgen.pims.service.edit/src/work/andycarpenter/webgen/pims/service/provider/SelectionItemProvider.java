@@ -28,8 +28,8 @@ import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
@@ -114,10 +114,9 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 			@Override
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
-					final Set<EntityOrView> entities
-						= getEntitiesAndViews((Selection) object);
+					final Set<Entity> entities = getEntities((Selection) object);
 					final Set<Feature> fields = new HashSet<Feature>();
-					for (EntityOrView entity : entities) {
+					for (Entity entity : entities) {
 						fields.addAll(entity.getFeatures());
 					}
 
@@ -148,10 +147,9 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 			@Override
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
-					final Set<EntityOrView> entities
-						= getEntitiesAndViews((Selection) object);
+					final Set<Entity> entities = getEntities((Selection) object);
 					final Set<Association> associations = new HashSet<Association>();
-					for (EntityOrView entity : entities) {
+					for (Entity entity : entities) {
 						associations.addAll(entity.getAllAssociations());
 					}
 
@@ -215,9 +213,8 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 							: selection.getSelectPath().get(selection.getSelectPath().size() - 2);
 					final Set<Association> fields = new HashSet<Association>();
 					if ((last == null) || (penultimate == null)) {
-						final Set<EntityOrView> entities
-							= getEntitiesAndViews((Selection) object);
-						for (EntityOrView entity : entities) {
+						final Set<Entity> entities = getEntities((Selection) object);
+						for (Entity entity : entities) {
 							fields.addAll(entity.getAllAssociations());
 						}
 					}
@@ -427,25 +424,25 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 		return ServiceEditPlugin.INSTANCE;
 	}
 
-	protected Set<EntityOrView> getEntitiesAndViews(final Selection selection) {
-		final Set<EntityOrView> entitiesAndViews = new HashSet<EntityOrView>();
-		entitiesAndViews.add(selection.getUsedBy().getServes());
+	protected Set<Entity> getEntities(final Selection selection) {
+		final Set<Entity> entities = new HashSet<Entity>();
+		entities.add(selection.getUsedBy().getServes());
 		final Set<Association> joins = new HashSet<Association>(selection.getJoins());
 		while (!joins.isEmpty()) {
 			final Set<Association> handled = new HashSet<Association>();
 			for (Association join : joins) {
-				if (entitiesAndViews.contains(join.getSourceEntityX())) {
-					entitiesAndViews.add(join.getTargetEntityX());
+				if (entities.contains(join.getSourceEntityX())) {
+					entities.add(join.getTargetEntityX());
 					handled.add(join);
-				} else if (entitiesAndViews.contains(join.getTargetEntityX())) {
-					entitiesAndViews.add(join.getSourceEntityX());
+				} else if (entities.contains(join.getTargetEntityX())) {
+					entities.add(join.getSourceEntityX());
 					handled.add(join);
 				}
 			}
 			joins.removeAll(handled);
 		}
 
-		return entitiesAndViews;
+		return entities;
 	}
 
 }

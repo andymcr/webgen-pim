@@ -13,7 +13,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="constants" upperBound="-1"
         eType="#//Constant" containment="true" eOpposite="#//Constant/definedBy"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serves" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//EntityOrView"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serves" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selections" upperBound="-1"
         eType="#//Selection" containment="true" eOpposite="#//Selection/usedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findAll" eType="#//Selection"/>
@@ -72,7 +72,7 @@
         changeable="false" volatile="true" defaultValueLiteral="" unsettable="true"
         derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if feature.oclIsUndefined() then&#xD;&#xA;&#x9;''&#xD;&#xA;else&#xD;&#xA;&#x9;if feature.oclIsKindOf(persistence::EntityFeature) then&#xD;&#xA;&#x9;&#x9;feature.oclAsType(persistence::EntityFeature).name&#xD;&#xA;&#x9;else if feature.oclIsKindOf(persistence::EncapsulatedAttribute) then&#xD;&#xA;&#x9;&#x9;feature.oclAsType(persistence::EncapsulatedAttribute).name&#xD;&#xA;&#x9;else if feature.oclIsKindOf(persistence::EncapsulatedAssociation) then&#xD;&#xA;&#x9;&#x9;feature.oclAsType(persistence::EncapsulatedAssociation).name&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;feature.oclAsType(persistence::ViewAssociation).name&#xD;&#xA;&#x9;endif endif endif&#xD;&#xA;endif"/>
+        <details key="derivation" value="if feature.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;if feature.oclIsKindOf(persistence::EntityFeature) then&#xA;&#x9;&#x9;feature.oclAsType(persistence::EntityFeature).name&#xA;&#x9;else&#xA;&#x9;&#x9;''&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"

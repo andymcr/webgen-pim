@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,12 +58,12 @@ public interface Service extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Serves</em>' reference.
-	 * @see #setServes(EntityOrView)
+	 * @see #setServes(Entity)
 	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getService_Serves()
 	 * @model
 	 * @generated
 	 */
-	EntityOrView getServes();
+	Entity getServes();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.service.Service#getServes <em>Serves</em>}' reference.
@@ -73,7 +73,7 @@ public interface Service extends NamedElement {
 	 * @see #getServes()
 	 * @generated
 	 */
-	void setServes(EntityOrView value);
+	void setServes(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Selections</b></em>' containment reference list.

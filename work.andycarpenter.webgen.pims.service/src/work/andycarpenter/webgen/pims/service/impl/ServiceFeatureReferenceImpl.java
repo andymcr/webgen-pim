@@ -16,9 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
 import work.andycarpenter.webgen.pims.persistence.Feature;
-
 import work.andycarpenter.webgen.pims.service.ServiceFeatureReference;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
 
