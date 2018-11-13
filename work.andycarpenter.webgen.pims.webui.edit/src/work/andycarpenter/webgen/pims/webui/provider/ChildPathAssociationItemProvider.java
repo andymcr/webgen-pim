@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -112,11 +112,11 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 						final ChildPathAssociation child = (ChildPathAssociation) object;
 						final Set<Label> labels = new HashSet<Label>();
 						if (child.getAssociation() != null) {
-							EntityOrView target;
-							if (getParentType(child).equals(child.getAssociation().getSourceEntityX())) {
-								target = child.getAssociation().getTargetEntityX();
+							Entity target;
+							if (getParentType(child).equals(child.getAssociation().getPartOf())) {
+								target = child.getAssociation().getTargetEntity();
 							} else {
-								target = child.getAssociation().getSourceEntityX();
+								target = child.getAssociation().getPartOf();
 							}
 							labels.addAll(target.getAttributes());
 							labels.addAll(target.getLabels());

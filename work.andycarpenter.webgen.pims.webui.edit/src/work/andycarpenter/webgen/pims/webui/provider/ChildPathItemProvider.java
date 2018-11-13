@@ -24,9 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute;
-import work.andycarpenter.webgen.pims.persistence.EntityAttribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
@@ -127,34 +125,34 @@ public class ChildPathItemProvider
 		return WebuiEditPlugin.INSTANCE;
 	}
 
-	protected EntityOrView getParentType(final ChildPath child) {
-		EntityOrView parentTarget;
+	protected Entity getParentType(final ChildPath child) {
+		Entity parentTarget;
 		if (child.getPartOf() instanceof UnitAssociation) {
 			parentTarget = getTarget((UnitAssociation) child.getPartOf());
 		} else if (child.getPartOf() instanceof FeaturePathAssociation) {
 			parentTarget = getTarget((FeaturePathAssociation) child.getPartOf());
 		} else {
 			final ChildPathAssociation parent = (ChildPathAssociation) child.getPartOf();
-			if (getParentType(parent).equals(parent.getAssociation().getSourceEntityX())) {
-				parentTarget = parent.getAssociation().getTargetEntityX();
+			if (getParentType(parent).equals(parent.getAssociation().getPartOf())) {
+				parentTarget = parent.getAssociation().getTargetEntity();
 			} else {
-				parentTarget = parent.getAssociation().getSourceEntityX();
+				parentTarget = parent.getAssociation().getPartOf();
 			}
 		}
 		return parentTarget;
 	}
 
-	protected EntityOrView getTarget(final UnitAssociation association) {
-		final Set<EntityOrView> entities = getContentTypes(association.getDisplayedOn());
-		if (entities.contains(association.getAssociation().getSourceEntityX())) {
-			return association.getAssociation().getTargetEntityX();
+	protected Entity getTarget(final UnitAssociation association) {
+		final Set<Entity> entities = getContentTypes(association.getDisplayedOn());
+		if (entities.contains(association.getAssociation().getPartOf())) {
+			return association.getAssociation().getTargetEntity();
 		} else{
-			return association.getAssociation().getSourceEntityX();
+			return association.getAssociation().getPartOf();
 		}
 	}
 
-	protected Set<EntityOrView> getContentTypes(final DynamicUnit unit) {
-		final Set<EntityOrView> contentType = new HashSet<EntityOrView>();
+	protected Set<Entity> getContentTypes(final DynamicUnit unit) {
+		final Set<Entity> contentType = new HashSet<Entity>();
 
 		if (unit instanceof SingletonUnit) {
 			final SingletonUnit singleton = (SingletonUnit) unit;
@@ -173,32 +171,32 @@ public class ChildPathItemProvider
 		return contentType;
 	}
 
-	protected EntityOrView getTarget(final FeaturePathAssociation path) {
+	protected Entity getTarget(final FeaturePathAssociation path) {
 		if (path.eContainer() instanceof DynamicUnit) {
-			final Set<EntityOrView> contentType
+			final Set<Entity> contentType
 				= getContentTypes((DynamicUnit) path.eContainer());
-			if (contentType.contains(path.getAssociation().getSourceEntityX())) {
-				return path.getAssociation().getTargetEntityX();
+			if (contentType.contains(path.getAssociation().getPartOf())) {
+				return path.getAssociation().getTargetEntity();
 			} else{
-				return path.getAssociation().getSourceEntityX();
+				return path.getAssociation().getPartOf();
 			}
 
 		} else if (path.eContainer() instanceof InlineAction) {
-			final Set<EntityOrView> entities
+			final Set<Entity> entities
 				= getEntities((InlineActionContainer) path.eContainer().eContainer());
-			if (entities.contains(path.getAssociation().getSourceEntityX())) {
-				return path.getAssociation().getTargetEntityX();
+			if (entities.contains(path.getAssociation().getPartOf())) {
+				return path.getAssociation().getTargetEntity();
 			} else{
-				return path.getAssociation().getSourceEntityX();
+				return path.getAssociation().getPartOf();
 			}
 
 		} else if (path.eContainer() instanceof Expression) {
-			final Set<EntityOrView> entities
+			final Set<Entity> entities
 				= getEntities((Expression) path.eContainer());
-			if (entities.contains(path.getAssociation().getSourceEntityX())) {
-				return path.getAssociation().getTargetEntityX();
+			if (entities.contains(path.getAssociation().getPartOf())) {
+				return path.getAssociation().getTargetEntity();
 			} else{
-				return path.getAssociation().getSourceEntityX();
+				return path.getAssociation().getPartOf();
 			}
 
 		} else {
@@ -206,35 +204,35 @@ public class ChildPathItemProvider
 		}
 	}
 
-	protected Set<EntityOrView> getEntities(final InlineActionContainer container) {
-		final Set<EntityOrView> entities = new HashSet<EntityOrView>();
+	protected Set<Entity> getEntities(final InlineActionContainer container) {
+		final Set<Entity> entities = new HashSet<Entity>();
 		if (container instanceof CollectionUnit) {
 			entities.addAll(((CollectionUnit) container).getContentType());
 		} else if (container instanceof UnitElement) {
 			entities.add(getParentType(
 				((UnitElement) container).getAttribute()));
 		} else if (container instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) container).getAssociation().getSourceEntityX());
+			entities.add(((UnitAssociation) container).getAssociation().getPartOf());
 		}
 
 		return entities;
 	}
 
-	protected Set<EntityOrView> getEntities(final Badge badge) {
-		final Set<EntityOrView> entities = new HashSet<EntityOrView>();
+	protected Set<Entity> getEntities(final Badge badge) {
+		final Set<Entity> entities = new HashSet<Entity>();
 		if (badge.eContainer() instanceof CollectionUnit) {
 			entities.addAll(((CollectionUnit) badge.eContainer()).getContentType());
 		} else if (badge.eContainer() instanceof UnitElement) {
 			entities.add(getParentType(
 				((UnitElement) badge.eContainer()).getAttribute()));
 		} else if (badge.eContainer() instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) badge.eContainer()).getAssociation().getSourceEntityX());
+			entities.add(((UnitAssociation) badge.eContainer()).getAssociation().getPartOf());
 		}
 
 		return entities;
 	}
 
-	protected Set<EntityOrView> getEntities(final Expression expression) {
+	protected Set<Entity> getEntities(final Expression expression) {
 		final DynamicUnit unit = getDynamicUnitContext(expression);
 		if (unit != null) {
 			return getContentTypes(unit);
@@ -253,13 +251,8 @@ public class ChildPathItemProvider
 		return Collections.emptySet();
 	}
 
-	protected EntityOrView getParentType(final Attribute attribute) {
-		if (attribute instanceof EntityAttribute) {
-			return ((EntityAttribute) attribute).getPartOf();
-		} else {
-			return getParentType(
-				((EncapsulatedAttribute) attribute).getAttribute());
-		}
+	protected Entity getParentType(final Attribute attribute) {
+		return attribute.getPartOf();
 	}
 
 	protected Object getContext(final Object object) {

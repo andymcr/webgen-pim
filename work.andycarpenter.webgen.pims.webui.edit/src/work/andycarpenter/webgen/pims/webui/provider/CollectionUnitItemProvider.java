@@ -19,9 +19,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
@@ -112,7 +112,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 							return Collections.emptySet();
 						}
 						final Set<Label> labels = new HashSet<Label>();
-						final EntityOrView selectType = getSelectType(unit);
+						final Entity selectType = getSelectType(unit);
 						if (selectType != null) {
 							labels.addAll(selectType.getAttributes());
 							labels.addAll(selectType.getLabels());
@@ -844,13 +844,13 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 WebuiFactory.eINSTANCE.createBadge()));
 	}
 
-	protected EntityOrView getSelectType(final CollectionUnit unit) {
+	protected Entity getSelectType(final CollectionUnit unit) {
 		if (unit.getSelection() == null) {
 			return null;
 		}
-		EntityOrView pathType = null;
-		Set<EntityOrView> entities = new HashSet<EntityOrView>(unit.getContentType());
-		for (EntityAssociation element : unit.getSelection().getSelectPath()) {
+		Entity pathType = null;
+		Set<Entity> entities = new HashSet<Entity>(unit.getContentType());
+		for (Association element : unit.getSelection().getSelectPath()) {
 			if (entities.contains(element.getPartOf())) {
 				pathType = element.getTargetEntity();
 			} else {
