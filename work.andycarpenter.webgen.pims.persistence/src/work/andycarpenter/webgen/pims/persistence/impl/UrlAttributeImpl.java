@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.UrlAttribute;
  *
  * @generated
  */
-public class UrlAttributeImpl extends EntityAttributeImpl implements UrlAttribute {
+public class UrlAttributeImpl extends AttributeImpl implements UrlAttribute {
 	/**
 	 * The default value of the '{@link #getDisplayValue() <em>Display Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
+import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -38,7 +38,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityAssociation association;
+	protected Association association;
 
 	/**
 	 * The cached value of the '{@link #getDynamicLabel() <em>Dynamic Label</em>}' reference.
@@ -84,10 +84,10 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityAssociation getAssociation() {
+	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject)association;
-			association = (EntityAssociation)eResolveProxy(oldAssociation);
+			association = (Association)eResolveProxy(oldAssociation);
 			if (association != oldAssociation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION, oldAssociation, association));
@@ -101,7 +101,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityAssociation basicGetAssociation() {
+	public Association basicGetAssociation() {
 		return association;
 	}
 
@@ -110,8 +110,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssociation(EntityAssociation newAssociation) {
-		EntityAssociation oldAssociation = association;
+	public void setAssociation(Association newAssociation) {
+		Association oldAssociation = association;
 		association = newAssociation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION, oldAssociation, association));
@@ -193,7 +193,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				setAssociation((EntityAssociation)newValue);
+				setAssociation((Association)newValue);
 				return;
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
 				setDynamicLabel((ModelLabel)newValue);
@@ -211,7 +211,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				setAssociation((EntityAssociation)null);
+				setAssociation((Association)null);
 				return;
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
 				setDynamicLabel((ModelLabel)null);

@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface ResourceAttribute extends EntityAttribute {
+public interface ResourceAttribute extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Maximum Upload Size</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.

@@ -19,7 +19,7 @@ package work.andycarpenter.webgen.pims.persistence;
  * @model
  * @generated
  */
-public interface AssociationWithContainment extends EntityAssociation {
+public interface AssociationWithContainment extends Association {
 	/**
 	 * Returns the value of the '<em><b>Source Visible</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

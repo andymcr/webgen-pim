@@ -30,7 +30,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class DataTypeAttributeImpl extends EntityAttributeImpl implements DataTypeAttribute {
+public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttribute {
 	/**
 	 * The cached value of the '{@link #getDataType() <em>Data Type</em>}' reference.
 	 * <!-- begin-user-doc -->

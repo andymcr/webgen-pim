@@ -26,7 +26,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class DateAttributeImpl extends EntityAttributeImpl implements DateAttribute {
+public class DateAttributeImpl extends AttributeImpl implements DateAttribute {
 	/**
 	 * The default value of the '{@link #getDetails() <em>Details</em>}' attribute.
 	 * <!-- begin-user-doc -->

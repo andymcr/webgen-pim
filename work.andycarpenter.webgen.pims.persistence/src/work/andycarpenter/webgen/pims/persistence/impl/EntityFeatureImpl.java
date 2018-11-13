@@ -3,8 +3,10 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -14,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 
 import work.andycarpenter.webgen.pims.persistence.Cardinality;
@@ -32,17 +35,6 @@ import work.andycarpenter.webgen.pims.persistence.isHasChoices;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getPlaceholder <em>Placeholder</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isEncodeUriKey <em>Encode Uri Key</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getDisplayClass <em>Display Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getPartOf <em>Part Of</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isOrdered <em>Ordered</em>}</li>
@@ -50,14 +42,145 @@ import work.andycarpenter.webgen.pims.persistence.isHasChoices;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isDerived <em>Derived</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCustomiseSet <em>Customise Set</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getBooleanIsHasChoice <em>Boolean Is Has Choice</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getPlaceholder <em>Placeholder</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#isEncodeUriKey <em>Encode Uri Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getSingletonName <em>Singleton Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getPluralisedName <em>Pluralised Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getColumnName <em>Column Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getDisplayClass <em>Display Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implements EntityFeature {
+	/**
+	 * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardinality()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Cardinality CARDINALITY_EDEFAULT = Cardinality.OPTIONAL;
+
+	/**
+	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardinality()
+	 * @generated
+	 * @ordered
+	 */
+	protected Cardinality cardinality = CARDINALITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isOrdered() <em>Ordered</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOrdered()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ORDERED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOrdered() <em>Ordered</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOrdered()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean ordered = ORDERED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPrimaryKey() <em>Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PRIMARY_KEY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPrimaryKey() <em>Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean primaryKey = PRIMARY_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isDerived() <em>Derived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDerived()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean DERIVED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isDerived() <em>Derived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDerived()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean derived = DERIVED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCustomiseSet() <em>Customise Set</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCustomiseSet()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CUSTOMISE_SET_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCustomiseSet() <em>Customise Set</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCustomiseSet()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean customiseSet = CUSTOMISE_SET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBooleanIsHasChoice() <em>Boolean Is Has Choice</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanIsHasChoice()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final isHasChoices BOOLEAN_IS_HAS_CHOICE_EDEFAULT = isHasChoices.IS_A;
+
+	/**
+	 * The cached value of the '{@link #getBooleanIsHasChoice() <em>Boolean Is Has Choice</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanIsHasChoice()
+	 * @generated
+	 * @ordered
+	 */
+	protected isHasChoices booleanIsHasChoice = BOOLEAN_IS_HAS_CHOICE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -199,6 +322,66 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	protected boolean encodeUriKey = ENCODE_URI_KEY_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getSingletonName() <em>Singleton Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSingletonName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SINGLETON_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSingletonName() <em>Singleton Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSingletonName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String singletonName = SINGLETON_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPluralisedName() <em>Pluralised Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPluralisedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PLURALISED_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPluralisedName() <em>Pluralised Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPluralisedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String pluralisedName = PLURALISED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColumnName() <em>Column Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColumnName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLUMN_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getColumnName() <em>Column Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColumnName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String columnName = COLUMN_NAME_EDEFAULT;
+
+	/**
 	 * The cached value of the '{@link #getSerializationGroups() <em>Serialization Groups</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -269,186 +452,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardinality()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Cardinality CARDINALITY_EDEFAULT = Cardinality.OPTIONAL;
-
-	/**
-	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardinality()
-	 * @generated
-	 * @ordered
-	 */
-	protected Cardinality cardinality = CARDINALITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isOrdered() <em>Ordered</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOrdered()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean ORDERED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOrdered() <em>Ordered</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOrdered()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean ordered = ORDERED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isPrimaryKey() <em>Primary Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPrimaryKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean PRIMARY_KEY_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isPrimaryKey() <em>Primary Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPrimaryKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean primaryKey = PRIMARY_KEY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isDerived() <em>Derived</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDerived()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean DERIVED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isDerived() <em>Derived</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDerived()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean derived = DERIVED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isCustomiseSet() <em>Customise Set</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCustomiseSet()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean CUSTOMISE_SET_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isCustomiseSet() <em>Customise Set</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCustomiseSet()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean customiseSet = CUSTOMISE_SET_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getBooleanIsHasChoice() <em>Boolean Is Has Choice</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBooleanIsHasChoice()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final isHasChoices BOOLEAN_IS_HAS_CHOICE_EDEFAULT = isHasChoices.IS_A;
-
-	/**
-	 * The cached value of the '{@link #getBooleanIsHasChoice() <em>Boolean Is Has Choice</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBooleanIsHasChoice()
-	 * @generated
-	 * @ordered
-	 */
-	protected isHasChoices booleanIsHasChoice = BOOLEAN_IS_HAS_CHOICE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSingletonName() <em>Singleton Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSingletonName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SINGLETON_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSingletonName() <em>Singleton Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSingletonName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String singletonName = SINGLETON_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPluralisedName() <em>Pluralised Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPluralisedName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PLURALISED_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPluralisedName() <em>Pluralised Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPluralisedName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String pluralisedName = PLURALISED_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getColumnName() <em>Column Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COLUMN_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getColumnName() <em>Column Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String columnName = COLUMN_NAME_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -465,228 +468,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	@Override
 	protected EClass eStaticClass() {
 		return PersistencePackage.Literals.ENTITY_FEATURE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTitle() {
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle(String newTitle) {
-		String oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__TITLE, oldTitle, title));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isCollectionOrmAllowAdd() {
-		return collectionOrmAllowAdd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCollectionOrmAllowAdd(boolean newCollectionOrmAllowAdd) {
-		boolean oldCollectionOrmAllowAdd = collectionOrmAllowAdd;
-		collectionOrmAllowAdd = newCollectionOrmAllowAdd;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD, oldCollectionOrmAllowAdd, collectionOrmAllowAdd));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isCollectionOrmAllowRemove() {
-		return collectionOrmAllowRemove;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCollectionOrmAllowRemove(boolean newCollectionOrmAllowRemove) {
-		boolean oldCollectionOrmAllowRemove = collectionOrmAllowRemove;
-		collectionOrmAllowRemove = newCollectionOrmAllowRemove;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE, oldCollectionOrmAllowRemove, collectionOrmAllowRemove));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPlaceholder() {
-		return placeholder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlaceholder(String newPlaceholder) {
-		String oldPlaceholder = placeholder;
-		placeholder = newPlaceholder;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__PLACEHOLDER, oldPlaceholder, placeholder));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDefaultDisplayValue() {
-		return defaultDisplayValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
-		String oldDefaultDisplayValue = defaultDisplayValue;
-		defaultDisplayValue = newDefaultDisplayValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE, oldDefaultDisplayValue, defaultDisplayValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getEmptyDisplayValue() {
-		return emptyDisplayValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
-		String oldEmptyDisplayValue = emptyDisplayValue;
-		emptyDisplayValue = newEmptyDisplayValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isEncodeUriKey() {
-		return encodeUriKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEncodeUriKey(boolean newEncodeUriKey) {
-		boolean oldEncodeUriKey = encodeUriKey;
-		encodeUriKey = newEncodeUriKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY, oldEncodeUriKey, encodeUriKey));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SerializationGroup> getSerializationGroups() {
-		if (serializationGroups == null) {
-			serializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS);
-		}
-		return serializationGroups;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getHeaderClass() {
-		return headerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeaderClass(String newHeaderClass) {
-		String oldHeaderClass = headerClass;
-		headerClass = newHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__HEADER_CLASS, oldHeaderClass, headerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDisplayClass() {
-		return displayClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDisplayClass(String newDisplayClass) {
-		String oldDisplayClass = displayClass;
-		displayClass = newDisplayClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS, oldDisplayClass, displayClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFooterClass() {
-		return footerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFooterClass(String newFooterClass) {
-		String oldFooterClass = footerClass;
-		footerClass = newFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS, oldFooterClass, footerClass));
 	}
 
 	/**
@@ -861,6 +642,153 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__TITLE, oldTitle, title));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCollectionOrmAllowAdd() {
+		return collectionOrmAllowAdd;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCollectionOrmAllowAdd(boolean newCollectionOrmAllowAdd) {
+		boolean oldCollectionOrmAllowAdd = collectionOrmAllowAdd;
+		collectionOrmAllowAdd = newCollectionOrmAllowAdd;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD, oldCollectionOrmAllowAdd, collectionOrmAllowAdd));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCollectionOrmAllowRemove() {
+		return collectionOrmAllowRemove;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCollectionOrmAllowRemove(boolean newCollectionOrmAllowRemove) {
+		boolean oldCollectionOrmAllowRemove = collectionOrmAllowRemove;
+		collectionOrmAllowRemove = newCollectionOrmAllowRemove;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE, oldCollectionOrmAllowRemove, collectionOrmAllowRemove));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPlaceholder() {
+		return placeholder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlaceholder(String newPlaceholder) {
+		String oldPlaceholder = placeholder;
+		placeholder = newPlaceholder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__PLACEHOLDER, oldPlaceholder, placeholder));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultDisplayValue() {
+		return defaultDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
+		String oldDefaultDisplayValue = defaultDisplayValue;
+		defaultDisplayValue = newDefaultDisplayValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE, oldDefaultDisplayValue, defaultDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmptyDisplayValue() {
+		return emptyDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
+		String oldEmptyDisplayValue = emptyDisplayValue;
+		emptyDisplayValue = newEmptyDisplayValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isEncodeUriKey() {
+		return encodeUriKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEncodeUriKey(boolean newEncodeUriKey) {
+		boolean oldEncodeUriKey = encodeUriKey;
+		encodeUriKey = newEncodeUriKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY, oldEncodeUriKey, encodeUriKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getSingletonName() {
 		return singletonName;
 	}
@@ -924,6 +852,81 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SerializationGroup> getSerializationGroups() {
+		if (serializationGroups == null) {
+			serializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS);
+		}
+		return serializationGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getHeaderClass() {
+		return headerClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHeaderClass(String newHeaderClass) {
+		String oldHeaderClass = headerClass;
+		headerClass = newHeaderClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__HEADER_CLASS, oldHeaderClass, headerClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDisplayClass() {
+		return displayClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDisplayClass(String newDisplayClass) {
+		String oldDisplayClass = displayClass;
+		displayClass = newDisplayClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS, oldDisplayClass, displayClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFooterClass() {
+		return footerClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFooterClass(String newFooterClass) {
+		String oldFooterClass = footerClass;
+		footerClass = newFooterClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS, oldFooterClass, footerClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -971,28 +974,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_FEATURE__TITLE:
-				return getTitle();
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
-				return isCollectionOrmAllowAdd();
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
-				return isCollectionOrmAllowRemove();
-			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
-				return getPlaceholder();
-			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
-				return getDefaultDisplayValue();
-			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
-				return getEmptyDisplayValue();
-			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
-				return isEncodeUriKey();
-			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
-				return getSerializationGroups();
-			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
-				return getHeaderClass();
-			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
-				return getDisplayClass();
-			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
-				return getFooterClass();
 			case PersistencePackage.ENTITY_FEATURE__PART_OF:
 				return getPartOf();
 			case PersistencePackage.ENTITY_FEATURE__CARDINALITY:
@@ -1007,12 +988,34 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return isCustomiseSet();
 			case PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE:
 				return getBooleanIsHasChoice();
+			case PersistencePackage.ENTITY_FEATURE__TITLE:
+				return getTitle();
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
+				return isCollectionOrmAllowAdd();
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
+				return isCollectionOrmAllowRemove();
+			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
+				return getPlaceholder();
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return getDefaultDisplayValue();
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				return getEmptyDisplayValue();
+			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
+				return isEncodeUriKey();
 			case PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME:
 				return getSingletonName();
 			case PersistencePackage.ENTITY_FEATURE__PLURALISED_NAME:
 				return getPluralisedName();
 			case PersistencePackage.ENTITY_FEATURE__COLUMN_NAME:
 				return getColumnName();
+			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
+				return getSerializationGroups();
+			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
+				return getHeaderClass();
+			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
+				return getDisplayClass();
+			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
+				return getFooterClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1026,40 +1029,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_FEATURE__TITLE:
-				setTitle((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
-				setCollectionOrmAllowAdd((Boolean)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
-				setCollectionOrmAllowRemove((Boolean)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
-				setPlaceholder((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
-				setDefaultDisplayValue((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
-				setEmptyDisplayValue((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
-				setEncodeUriKey((Boolean)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
-				getSerializationGroups().clear();
-				getSerializationGroups().addAll((Collection<? extends SerializationGroup>)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
-				setHeaderClass((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
-				setDisplayClass((String)newValue);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
-				setFooterClass((String)newValue);
-				return;
 			case PersistencePackage.ENTITY_FEATURE__PART_OF:
 				setPartOf((Entity)newValue);
 				return;
@@ -1081,6 +1050,27 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 			case PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE:
 				setBooleanIsHasChoice((isHasChoices)newValue);
 				return;
+			case PersistencePackage.ENTITY_FEATURE__TITLE:
+				setTitle((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
+				setCollectionOrmAllowAdd((Boolean)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
+				setCollectionOrmAllowRemove((Boolean)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
+				setPlaceholder((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
+				setEncodeUriKey((Boolean)newValue);
+				return;
 			case PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME:
 				setSingletonName((String)newValue);
 				return;
@@ -1089,6 +1079,19 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return;
 			case PersistencePackage.ENTITY_FEATURE__COLUMN_NAME:
 				setColumnName((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
+				getSerializationGroups().clear();
+				getSerializationGroups().addAll((Collection<? extends SerializationGroup>)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
+				setHeaderClass((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
+				setDisplayClass((String)newValue);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
+				setFooterClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1102,39 +1105,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_FEATURE__TITLE:
-				setTitle(TITLE_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
-				setCollectionOrmAllowAdd(COLLECTION_ORM_ALLOW_ADD_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
-				setCollectionOrmAllowRemove(COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
-				setPlaceholder(PLACEHOLDER_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
-				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
-				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
-				setEncodeUriKey(ENCODE_URI_KEY_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
-				getSerializationGroups().clear();
-				return;
-			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
-				setHeaderClass(HEADER_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
-				setDisplayClass(DISPLAY_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
-				setFooterClass(FOOTER_CLASS_EDEFAULT);
-				return;
 			case PersistencePackage.ENTITY_FEATURE__PART_OF:
 				setPartOf((Entity)null);
 				return;
@@ -1156,6 +1126,27 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 			case PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE:
 				setBooleanIsHasChoice(BOOLEAN_IS_HAS_CHOICE_EDEFAULT);
 				return;
+			case PersistencePackage.ENTITY_FEATURE__TITLE:
+				setTitle(TITLE_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
+				setCollectionOrmAllowAdd(COLLECTION_ORM_ALLOW_ADD_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
+				setCollectionOrmAllowRemove(COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
+				setPlaceholder(PLACEHOLDER_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
+				setEncodeUriKey(ENCODE_URI_KEY_EDEFAULT);
+				return;
 			case PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME:
 				setSingletonName(SINGLETON_NAME_EDEFAULT);
 				return;
@@ -1164,6 +1155,18 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return;
 			case PersistencePackage.ENTITY_FEATURE__COLUMN_NAME:
 				setColumnName(COLUMN_NAME_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
+				getSerializationGroups().clear();
+				return;
+			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
+				setHeaderClass(HEADER_CLASS_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
+				setDisplayClass(DISPLAY_CLASS_EDEFAULT);
+				return;
+			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
+				setFooterClass(FOOTER_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1177,28 +1180,6 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PersistencePackage.ENTITY_FEATURE__TITLE:
-				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
-				return collectionOrmAllowAdd != COLLECTION_ORM_ALLOW_ADD_EDEFAULT;
-			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
-				return collectionOrmAllowRemove != COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
-			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
-				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
-			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
-				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
-			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
-				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
-			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
-				return encodeUriKey != ENCODE_URI_KEY_EDEFAULT;
-			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
-				return serializationGroups != null && !serializationGroups.isEmpty();
-			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
-				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
-				return DISPLAY_CLASS_EDEFAULT == null ? displayClass != null : !DISPLAY_CLASS_EDEFAULT.equals(displayClass);
-			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
-				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 			case PersistencePackage.ENTITY_FEATURE__PART_OF:
 				return getPartOf() != null;
 			case PersistencePackage.ENTITY_FEATURE__CARDINALITY:
@@ -1213,12 +1194,34 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				return customiseSet != CUSTOMISE_SET_EDEFAULT;
 			case PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE:
 				return booleanIsHasChoice != BOOLEAN_IS_HAS_CHOICE_EDEFAULT;
+			case PersistencePackage.ENTITY_FEATURE__TITLE:
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD:
+				return collectionOrmAllowAdd != COLLECTION_ORM_ALLOW_ADD_EDEFAULT;
+			case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
+				return collectionOrmAllowRemove != COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
+			case PersistencePackage.ENTITY_FEATURE__PLACEHOLDER:
+				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
+			case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE:
+				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
+			case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE:
+				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
+			case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY:
+				return encodeUriKey != ENCODE_URI_KEY_EDEFAULT;
 			case PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME:
 				return SINGLETON_NAME_EDEFAULT == null ? singletonName != null : !SINGLETON_NAME_EDEFAULT.equals(singletonName);
 			case PersistencePackage.ENTITY_FEATURE__PLURALISED_NAME:
 				return PLURALISED_NAME_EDEFAULT == null ? pluralisedName != null : !PLURALISED_NAME_EDEFAULT.equals(pluralisedName);
 			case PersistencePackage.ENTITY_FEATURE__COLUMN_NAME:
 				return COLUMN_NAME_EDEFAULT == null ? columnName != null : !COLUMN_NAME_EDEFAULT.equals(columnName);
+			case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS:
+				return serializationGroups != null && !serializationGroups.isEmpty();
+			case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS:
+				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
+			case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS:
+				return DISPLAY_CLASS_EDEFAULT == null ? displayClass != null : !DISPLAY_CLASS_EDEFAULT.equals(displayClass);
+			case PersistencePackage.ENTITY_FEATURE__FOOTER_CLASS:
+				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1232,6 +1235,13 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Feature.class) {
 			switch (derivedFeatureID) {
+				case PersistencePackage.ENTITY_FEATURE__PART_OF: return PersistencePackage.FEATURE__PART_OF;
+				case PersistencePackage.ENTITY_FEATURE__CARDINALITY: return PersistencePackage.FEATURE__CARDINALITY;
+				case PersistencePackage.ENTITY_FEATURE__ORDERED: return PersistencePackage.FEATURE__ORDERED;
+				case PersistencePackage.ENTITY_FEATURE__PRIMARY_KEY: return PersistencePackage.FEATURE__PRIMARY_KEY;
+				case PersistencePackage.ENTITY_FEATURE__DERIVED: return PersistencePackage.FEATURE__DERIVED;
+				case PersistencePackage.ENTITY_FEATURE__CUSTOMISE_SET: return PersistencePackage.FEATURE__CUSTOMISE_SET;
+				case PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE: return PersistencePackage.FEATURE__BOOLEAN_IS_HAS_CHOICE;
 				case PersistencePackage.ENTITY_FEATURE__TITLE: return PersistencePackage.FEATURE__TITLE;
 				case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
@@ -1239,6 +1249,9 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				case PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE: return PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE;
 				case PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE: return PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY: return PersistencePackage.FEATURE__ENCODE_URI_KEY;
+				case PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME: return PersistencePackage.FEATURE__SINGLETON_NAME;
+				case PersistencePackage.ENTITY_FEATURE__PLURALISED_NAME: return PersistencePackage.FEATURE__PLURALISED_NAME;
+				case PersistencePackage.ENTITY_FEATURE__COLUMN_NAME: return PersistencePackage.FEATURE__COLUMN_NAME;
 				case PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS: return PersistencePackage.FEATURE__SERIALIZATION_GROUPS;
 				case PersistencePackage.ENTITY_FEATURE__HEADER_CLASS: return PersistencePackage.FEATURE__HEADER_CLASS;
 				case PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS: return PersistencePackage.FEATURE__DISPLAY_CLASS;
@@ -1258,6 +1271,13 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Feature.class) {
 			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE__PART_OF: return PersistencePackage.ENTITY_FEATURE__PART_OF;
+				case PersistencePackage.FEATURE__CARDINALITY: return PersistencePackage.ENTITY_FEATURE__CARDINALITY;
+				case PersistencePackage.FEATURE__ORDERED: return PersistencePackage.ENTITY_FEATURE__ORDERED;
+				case PersistencePackage.FEATURE__PRIMARY_KEY: return PersistencePackage.ENTITY_FEATURE__PRIMARY_KEY;
+				case PersistencePackage.FEATURE__DERIVED: return PersistencePackage.ENTITY_FEATURE__DERIVED;
+				case PersistencePackage.FEATURE__CUSTOMISE_SET: return PersistencePackage.ENTITY_FEATURE__CUSTOMISE_SET;
+				case PersistencePackage.FEATURE__BOOLEAN_IS_HAS_CHOICE: return PersistencePackage.ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE;
 				case PersistencePackage.FEATURE__TITLE: return PersistencePackage.ENTITY_FEATURE__TITLE;
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD: return PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD;
 				case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE: return PersistencePackage.ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
@@ -1265,6 +1285,9 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 				case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE: return PersistencePackage.ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
 				case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE: return PersistencePackage.ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
 				case PersistencePackage.FEATURE__ENCODE_URI_KEY: return PersistencePackage.ENTITY_FEATURE__ENCODE_URI_KEY;
+				case PersistencePackage.FEATURE__SINGLETON_NAME: return PersistencePackage.ENTITY_FEATURE__SINGLETON_NAME;
+				case PersistencePackage.FEATURE__PLURALISED_NAME: return PersistencePackage.ENTITY_FEATURE__PLURALISED_NAME;
+				case PersistencePackage.FEATURE__COLUMN_NAME: return PersistencePackage.ENTITY_FEATURE__COLUMN_NAME;
 				case PersistencePackage.FEATURE__SERIALIZATION_GROUPS: return PersistencePackage.ENTITY_FEATURE__SERIALIZATION_GROUPS;
 				case PersistencePackage.FEATURE__HEADER_CLASS: return PersistencePackage.ENTITY_FEATURE__HEADER_CLASS;
 				case PersistencePackage.FEATURE__DISPLAY_CLASS: return PersistencePackage.ENTITY_FEATURE__DISPLAY_CLASS;
@@ -1285,7 +1308,19 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (title: ");
+		result.append(" (cardinality: ");
+		result.append(cardinality);
+		result.append(", ordered: ");
+		result.append(ordered);
+		result.append(", primaryKey: ");
+		result.append(primaryKey);
+		result.append(", derived: ");
+		result.append(derived);
+		result.append(", customiseSet: ");
+		result.append(customiseSet);
+		result.append(", booleanIsHasChoice: ");
+		result.append(booleanIsHasChoice);
+		result.append(", title: ");
 		result.append(title);
 		result.append(", collectionOrmAllowAdd: ");
 		result.append(collectionOrmAllowAdd);
@@ -1299,30 +1334,18 @@ public abstract class EntityFeatureImpl extends NamedDisplayElementImpl implemen
 		result.append(emptyDisplayValue);
 		result.append(", encodeUriKey: ");
 		result.append(encodeUriKey);
-		result.append(", headerClass: ");
-		result.append(headerClass);
-		result.append(", displayClass: ");
-		result.append(displayClass);
-		result.append(", footerClass: ");
-		result.append(footerClass);
-		result.append(", cardinality: ");
-		result.append(cardinality);
-		result.append(", ordered: ");
-		result.append(ordered);
-		result.append(", primaryKey: ");
-		result.append(primaryKey);
-		result.append(", derived: ");
-		result.append(derived);
-		result.append(", customiseSet: ");
-		result.append(customiseSet);
-		result.append(", booleanIsHasChoice: ");
-		result.append(booleanIsHasChoice);
 		result.append(", singletonName: ");
 		result.append(singletonName);
 		result.append(", pluralisedName: ");
 		result.append(pluralisedName);
 		result.append(", columnName: ");
 		result.append(columnName);
+		result.append(", headerClass: ");
+		result.append(headerClass);
+		result.append(", displayClass: ");
+		result.append(displayClass);
+		result.append(", footerClass: ");
+		result.append(footerClass);
 		result.append(')');
 		return result.toString();
 	}

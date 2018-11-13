@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.LocationAttribute;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LocationAttributeItemProvider extends EntityAttributeItemProvider {
+public class LocationAttributeItemProvider extends AttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

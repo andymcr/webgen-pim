@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.base.impl.ClassifierImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.EntityFeature;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
@@ -105,7 +104,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityFeature> features;
+	protected EList<Feature> features;
 
 	/**
 	 * The cached setting delegate for the '{@link #getAttributes() <em>Attributes</em>}' reference list.
@@ -135,7 +134,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityAssociation> associationEnds;
+	protected EList<Association> associationEnds;
 
 	/**
 	 * The cached setting delegate for the '{@link #getAllFeatures() <em>All Features</em>}' reference list.
@@ -383,9 +382,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityFeature> getFeatures() {
+	public EList<Feature> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentWithInverseEList<EntityFeature>(EntityFeature.class, this, PersistencePackage.ENTITY__FEATURES, PersistencePackage.ENTITY_FEATURE__PART_OF);
+			features = new EObjectContainmentWithInverseEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__FEATURES, PersistencePackage.FEATURE__PART_OF);
 		}
 		return features;
 	}
@@ -427,9 +426,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityAssociation> getAssociationEnds() {
+	public EList<Association> getAssociationEnds() {
 		if (associationEnds == null) {
-			associationEnds = new EObjectWithInverseResolvingEList<EntityAssociation>(EntityAssociation.class, this, PersistencePackage.ENTITY__ASSOCIATION_ENDS, PersistencePackage.ENTITY_ASSOCIATION__TARGET_ENTITY);
+			associationEnds = new EObjectWithInverseResolvingEList<Association>(Association.class, this, PersistencePackage.ENTITY__ASSOCIATION_ENDS, PersistencePackage.ASSOCIATION__TARGET_ENTITY);
 		}
 		return associationEnds;
 	}
@@ -440,8 +439,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<EntityFeature> getAllFeatures() {
-		return (EList<EntityFeature>)ALL_FEATURES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public EList<Feature> getAllFeatures() {
+		return (EList<Feature>)ALL_FEATURES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -718,11 +717,11 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return;
 			case PersistencePackage.ENTITY__FEATURES:
 				getFeatures().clear();
-				getFeatures().addAll((Collection<? extends EntityFeature>)newValue);
+				getFeatures().addAll((Collection<? extends Feature>)newValue);
 				return;
 			case PersistencePackage.ENTITY__ASSOCIATION_ENDS:
 				getAssociationEnds().clear();
-				getAssociationEnds().addAll((Collection<? extends EntityAssociation>)newValue);
+				getAssociationEnds().addAll((Collection<? extends Association>)newValue);
 				return;
 			case PersistencePackage.ENTITY__KEYS:
 				getKeys().clear();

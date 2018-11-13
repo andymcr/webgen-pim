@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface AssociationKey extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Key For</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getKeys <em>Keys</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Association#getKeys <em>Keys</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Key For</em>' container reference isn't clear,
@@ -33,13 +33,13 @@ public interface AssociationKey extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Key For</em>' container reference.
-	 * @see #setKeyFor(EntityAssociation)
+	 * @see #setKeyFor(Association)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociationKey_KeyFor()
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getKeys
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getKeys
 	 * @model opposite="keys" required="true" transient="false"
 	 * @generated
 	 */
-	EntityAssociation getKeyFor();
+	Association getKeyFor();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.AssociationKey#getKeyFor <em>Key For</em>}' container reference.
@@ -49,7 +49,7 @@ public interface AssociationKey extends EObject {
 	 * @see #getKeyFor()
 	 * @generated
 	 */
-	void setKeyFor(EntityAssociation value);
+	void setKeyFor(Association value);
 
 	/**
 	 * Returns the value of the '<em><b>Source Feature</b></em>' reference.

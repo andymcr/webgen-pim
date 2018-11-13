@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssociationWithContainmentItemProvider extends EntityAssociationItemProvider {
+public class AssociationWithContainmentItemProvider extends AssociationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -93,7 +93,7 @@ public class AssociationWithContainmentItemProvider extends EntityAssociationIte
 	@Override
 	public String getText(Object object) {
 		String label = ((AssociationWithContainment)object).getName();
-		String targetLabel = ((EntityAssociation) object).getTargetFeatureName();
+		String targetLabel = ((Association) object).getTargetFeatureName();
 		if ((targetLabel != null) && (targetLabel.length() == 0)) {
 			targetLabel = null;
 		}

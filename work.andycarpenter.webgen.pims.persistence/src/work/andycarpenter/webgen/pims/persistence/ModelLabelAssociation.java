@@ -31,12 +31,12 @@ public interface ModelLabelAssociation extends ModelLabelFeature {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Association</em>' reference.
-	 * @see #setAssociation(EntityAssociation)
+	 * @see #setAssociation(Association)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getModelLabelAssociation_Association()
 	 * @model required="true"
 	 * @generated
 	 */
-	EntityAssociation getAssociation();
+	Association getAssociation();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#getAssociation <em>Association</em>}' reference.
@@ -46,7 +46,7 @@ public interface ModelLabelAssociation extends ModelLabelFeature {
 	 * @see #getAssociation()
 	 * @generated
 	 */
-	void setAssociation(EntityAssociation value);
+	void setAssociation(Association value);
 
 	/**
 	 * Returns the value of the '<em><b>Dynamic Label</b></em>' reference.

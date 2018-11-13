@@ -14,7 +14,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class LocationAttributeImpl extends EntityAttributeImpl implements LocationAttribute {
+public class LocationAttributeImpl extends AttributeImpl implements LocationAttribute {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

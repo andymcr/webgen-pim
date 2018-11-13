@@ -120,10 +120,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createEntityFeatureAdapter();
 			}
 			@Override
-			public Adapter caseEntityAttribute(EntityAttribute object) {
-				return createEntityAttributeAdapter();
-			}
-			@Override
 			public Adapter caseDataTypeAttribute(DataTypeAttribute object) {
 				return createDataTypeAttributeAdapter();
 			}
@@ -162,10 +158,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLocationAttribute(LocationAttribute object) {
 				return createLocationAttributeAdapter();
-			}
-			@Override
-			public Adapter caseEntityAssociation(EntityAssociation object) {
-				return createEntityAssociationAdapter();
 			}
 			@Override
 			public Adapter caseAssociationWithoutContainment(AssociationWithoutContainment object) {
@@ -380,20 +372,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute <em>Entity Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute
-	 * @generated
-	 */
-	public Adapter createEntityAttributeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.DataTypeAttribute <em>Data Type Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -530,20 +508,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationAttributeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation <em>Entity Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation
-	 * @generated
-	 */
-	public Adapter createEntityAssociationAdapter() {
 		return null;
 	}
 

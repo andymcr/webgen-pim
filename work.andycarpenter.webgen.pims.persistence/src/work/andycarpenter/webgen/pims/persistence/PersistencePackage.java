@@ -189,14 +189,95 @@ public interface PersistencePackage extends EPackage {
 	int SERIALIZATION_GROUP_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Feature <em>Feature</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl <em>Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.Feature
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeature()
 	 * @generated
 	 */
 	int FEATURE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Derived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -205,7 +286,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__TITLE = 0;
+	int FEATURE__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
@@ -214,7 +295,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__COLLECTION_ORM_ALLOW_ADD = 1;
+	int FEATURE__COLLECTION_ORM_ALLOW_ADD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
@@ -223,7 +304,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__COLLECTION_ORM_ALLOW_REMOVE = 2;
+	int FEATURE__COLLECTION_ORM_ALLOW_REMOVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -232,7 +313,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__PLACEHOLDER = 3;
+	int FEATURE__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -241,7 +322,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__DEFAULT_DISPLAY_VALUE = 4;
+	int FEATURE__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -250,7 +331,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__EMPTY_DISPLAY_VALUE = 5;
+	int FEATURE__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -259,7 +340,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__ENCODE_URI_KEY = 6;
+	int FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -268,7 +376,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__SERIALIZATION_GROUPS = 7;
+	int FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -277,7 +385,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__HEADER_CLASS = 8;
+	int FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -286,7 +394,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__DISPLAY_CLASS = 9;
+	int FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -295,7 +403,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__FOOTER_CLASS = 10;
+	int FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
@@ -304,7 +412,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = 11;
+	int FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>Feature</em>' class.
@@ -313,17 +421,98 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OPERATION_COUNT = 0;
+	int FEATURE_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Attribute <em>Attribute</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.Attribute
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttribute()
 	 * @generated
 	 */
 	int ATTRIBUTE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__NAME = FEATURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__DISPLAY_LABEL = FEATURE__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__PART_OF = FEATURE__PART_OF;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__CARDINALITY = FEATURE__CARDINALITY;
+
+	/**
+	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__ORDERED = FEATURE__ORDERED;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__PRIMARY_KEY = FEATURE__PRIMARY_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Derived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__DERIVED = FEATURE__DERIVED;
+
+	/**
+	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__CUSTOMISE_SET = FEATURE__CUSTOMISE_SET;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = FEATURE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -389,6 +578,33 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE__ENCODE_URI_KEY = FEATURE__ENCODE_URI_KEY;
 
 	/**
+	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__SINGLETON_NAME = FEATURE__SINGLETON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__PLURALISED_NAME = FEATURE__PLURALISED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__COLUMN_NAME = FEATURE__COLUMN_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -425,13 +641,76 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE__FOOTER_CLASS = FEATURE__FOOTER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__HIDDEN = FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__CONTAINER_UNIQUE = FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__PERSISTENT_TYPE = FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__ORM_TYPE = FEATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__INTERFACE_TYPE = FEATURE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__SLUG_FIELDS = FEATURE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__UNIQUE = FEATURE_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__DEFAULT_VALUE = FEATURE_FEATURE_COUNT + 0;
+	int ATTRIBUTE__DEFAULT_VALUE = FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -440,7 +719,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__VALIDATION_PATTERN = FEATURE_FEATURE_COUNT + 1;
+	int ATTRIBUTE__VALIDATION_PATTERN = FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
@@ -449,7 +728,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__INPUT_CLASS = FEATURE_FEATURE_COUNT + 2;
+	int ATTRIBUTE__INPUT_CLASS = FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -458,7 +737,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 3;
+	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -470,14 +749,95 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE_OPERATION_COUNT = FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Association <em>Association</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl <em>Association</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.Association
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociation()
 	 * @generated
 	 */
 	int ASSOCIATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__NAME = FEATURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__DISPLAY_LABEL = FEATURE__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__PART_OF = FEATURE__PART_OF;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__CARDINALITY = FEATURE__CARDINALITY;
+
+	/**
+	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__ORDERED = FEATURE__ORDERED;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__PRIMARY_KEY = FEATURE__PRIMARY_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Derived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__DERIVED = FEATURE__DERIVED;
+
+	/**
+	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__CUSTOMISE_SET = FEATURE__CUSTOMISE_SET;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__BOOLEAN_IS_HAS_CHOICE = FEATURE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -543,6 +903,33 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__ENCODE_URI_KEY = FEATURE__ENCODE_URI_KEY;
 
 	/**
+	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__SINGLETON_NAME = FEATURE__SINGLETON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__PLURALISED_NAME = FEATURE__PLURALISED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__COLUMN_NAME = FEATURE__COLUMN_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,13 +966,130 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__FOOTER_CLASS = FEATURE__FOOTER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__KEYS = FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_ENTITY = FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__BIDIRECTIONAL = FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__UNIQUE = FEATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Pivot Table Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__PIVOT_TABLE_NAME = FEATURE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Target Feature Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_FEATURE_NAME = FEATURE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Target Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_PRIMARY_KEY = FEATURE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Target Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_COLUMN_NAME = FEATURE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Target Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_DISPLAY_LABEL = FEATURE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_HEADER_CLASS = FEATURE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_INPUT_CLASS = FEATURE_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_DISPLAY_CLASS = FEATURE_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET_FOOTER_CLASS = FEATURE_FEATURE_COUNT + 12;
+
+	/**
 	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__PSEUDO = FEATURE_FEATURE_COUNT + 0;
+	int ASSOCIATION__PSEUDO = FEATURE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
@@ -594,25 +1098,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__INPUT_CLASS = FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__SOURCE_ENTITY_X = FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_ENTITY_X = FEATURE_FEATURE_COUNT + 3;
+	int ASSOCIATION__INPUT_CLASS = FEATURE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -621,7 +1107,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 4;
+	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -630,7 +1116,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 5;
+	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -1144,112 +1630,13 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_FEATURE__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ENTITY_FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -1258,7 +1645,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int ENTITY_FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -1267,7 +1654,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int ENTITY_FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -1276,7 +1663,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int ENTITY_FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -1285,7 +1672,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int ENTITY_FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -1294,7 +1681,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int ENTITY_FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -1303,7 +1690,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+	int ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -1312,7 +1762,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+	int ENTITY_FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -1321,7 +1771,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+	int ENTITY_FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -1330,7 +1780,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
+	int ENTITY_FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+
+	/**
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>Entity Feature</em>' class.
@@ -1351,331 +1837,6 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_FEATURE_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAttributeImpl <em>Entity Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAttribute()
-	 * @generated
-	 */
-	int ENTITY_ATTRIBUTE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__NAME = ENTITY_FEATURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__DISPLAY_LABEL = ENTITY_FEATURE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__TITLE = ENTITY_FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__PLACEHOLDER = ENTITY_FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__HEADER_CLASS = ENTITY_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__DISPLAY_CLASS = ENTITY_FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__FOOTER_CLASS = ENTITY_FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__PART_OF = ENTITY_FEATURE__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__CARDINALITY = ENTITY_FEATURE__CARDINALITY;
-
-	/**
-	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__ORDERED = ENTITY_FEATURE__ORDERED;
-
-	/**
-	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__PRIMARY_KEY = ENTITY_FEATURE__PRIMARY_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Derived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__DERIVED = ENTITY_FEATURE__DERIVED;
-
-	/**
-	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__CUSTOMISE_SET = ENTITY_FEATURE__CUSTOMISE_SET;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE;
-
-	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__SINGLETON_NAME = ENTITY_FEATURE__SINGLETON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__PLURALISED_NAME = ENTITY_FEATURE__PLURALISED_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__COLUMN_NAME = ENTITY_FEATURE__COLUMN_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__DEFAULT_VALUE = ENTITY_FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__HIDDEN = ENTITY_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_FEATURE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__ORM_TYPE = ENTITY_FEATURE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__INTERFACE_TYPE = ENTITY_FEATURE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__SLUG_FIELDS = ENTITY_FEATURE_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE__UNIQUE = ENTITY_FEATURE_FEATURE_COUNT + 9;
-
-	/**
-	 * The number of structural features of the '<em>Entity Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE_FEATURE_COUNT = ENTITY_FEATURE_FEATURE_COUNT + 10;
-
-	/**
-	 * The number of operations of the '<em>Entity Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ATTRIBUTE_OPERATION_COUNT = ENTITY_FEATURE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1683,7 +1844,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDataTypeAttribute()
 	 * @generated
 	 */
-	int DATA_TYPE_ATTRIBUTE = 13;
+	int DATA_TYPE_ATTRIBUTE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1692,7 +1853,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__NAME = ENTITY_ATTRIBUTE__NAME;
+	int DATA_TYPE_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -1701,106 +1862,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__DISPLAY_LABEL = ENTITY_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__TITLE = ENTITY_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__HEADER_CLASS = ENTITY_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__DISPLAY_CLASS = ENTITY_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__FOOTER_CLASS = ENTITY_ATTRIBUTE__FOOTER_CLASS;
+	int DATA_TYPE_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -1809,7 +1871,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__PART_OF = ENTITY_ATTRIBUTE__PART_OF;
+	int DATA_TYPE_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -1818,7 +1880,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__CARDINALITY = ENTITY_ATTRIBUTE__CARDINALITY;
+	int DATA_TYPE_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -1827,7 +1889,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__ORDERED = ENTITY_ATTRIBUTE__ORDERED;
+	int DATA_TYPE_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -1836,7 +1898,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__PRIMARY_KEY = ENTITY_ATTRIBUTE__PRIMARY_KEY;
+	int DATA_TYPE_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -1845,7 +1907,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__DERIVED = ENTITY_ATTRIBUTE__DERIVED;
+	int DATA_TYPE_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -1854,7 +1916,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__CUSTOMISE_SET = ENTITY_ATTRIBUTE__CUSTOMISE_SET;
+	int DATA_TYPE_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -1863,7 +1925,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int DATA_TYPE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -1872,7 +1997,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__SINGLETON_NAME = ENTITY_ATTRIBUTE__SINGLETON_NAME;
+	int DATA_TYPE_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -1881,7 +2006,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__PLURALISED_NAME = ENTITY_ATTRIBUTE__PLURALISED_NAME;
+	int DATA_TYPE_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -1890,34 +2015,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__COLUMN_NAME = ENTITY_ATTRIBUTE__COLUMN_NAME;
+	int DATA_TYPE_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__DEFAULT_VALUE = ENTITY_ATTRIBUTE__DEFAULT_VALUE;
+	int DATA_TYPE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_ATTRIBUTE__VALIDATION_PATTERN;
+	int DATA_TYPE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__INPUT_CLASS = ENTITY_ATTRIBUTE__INPUT_CLASS;
+	int DATA_TYPE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -1926,7 +2060,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__HIDDEN = ENTITY_ATTRIBUTE__HIDDEN;
+	int DATA_TYPE_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
@@ -1935,7 +2069,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_ATTRIBUTE__CONTAINER_UNIQUE;
+	int DATA_TYPE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
@@ -1944,7 +2078,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_ATTRIBUTE__PERSISTENT_TYPE;
+	int DATA_TYPE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
@@ -1953,7 +2087,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__ORM_TYPE = ENTITY_ATTRIBUTE__ORM_TYPE;
+	int DATA_TYPE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -1962,7 +2096,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__INTERFACE_TYPE = ENTITY_ATTRIBUTE__INTERFACE_TYPE;
+	int DATA_TYPE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -1971,7 +2105,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__SLUG_FIELDS = ENTITY_ATTRIBUTE__SLUG_FIELDS;
+	int DATA_TYPE_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -1980,7 +2114,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__UNIQUE = ENTITY_ATTRIBUTE__UNIQUE;
+	int DATA_TYPE_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Data Type</b></em>' reference.
@@ -1989,7 +2150,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__DATA_TYPE = ENTITY_ATTRIBUTE_FEATURE_COUNT + 0;
+	int DATA_TYPE_ATTRIBUTE__DATA_TYPE = ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Obfuscate Form Fields</b></em>' attribute.
@@ -1998,7 +2159,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__OBFUSCATE_FORM_FIELDS = ENTITY_ATTRIBUTE_FEATURE_COUNT + 1;
+	int DATA_TYPE_ATTRIBUTE__OBFUSCATE_FORM_FIELDS = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Case Insensitive</b></em>' attribute.
@@ -2007,7 +2168,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__CASE_INSENSITIVE = ENTITY_ATTRIBUTE_FEATURE_COUNT + 2;
+	int DATA_TYPE_ATTRIBUTE__CASE_INSENSITIVE = ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Encrypt</b></em>' attribute.
@@ -2016,7 +2177,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__ENCRYPT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 3;
+	int DATA_TYPE_ATTRIBUTE__ENCRYPT = ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Data Type Attribute</em>' class.
@@ -2025,7 +2186,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE_FEATURE_COUNT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 4;
+	int DATA_TYPE_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Data Type Attribute</em>' class.
@@ -2034,7 +2195,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE_OPERATION_COUNT = ENTITY_ATTRIBUTE_OPERATION_COUNT + 0;
+	int DATA_TYPE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateAttributeImpl <em>Date Attribute</em>}' class.
@@ -2044,7 +2205,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateAttribute()
 	 * @generated
 	 */
-	int DATE_ATTRIBUTE = 14;
+	int DATE_ATTRIBUTE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2053,7 +2214,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__NAME = ENTITY_ATTRIBUTE__NAME;
+	int DATE_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2062,106 +2223,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__DISPLAY_LABEL = ENTITY_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__TITLE = ENTITY_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__HEADER_CLASS = ENTITY_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__DISPLAY_CLASS = ENTITY_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__FOOTER_CLASS = ENTITY_ATTRIBUTE__FOOTER_CLASS;
+	int DATE_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2170,7 +2232,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__PART_OF = ENTITY_ATTRIBUTE__PART_OF;
+	int DATE_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2179,7 +2241,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__CARDINALITY = ENTITY_ATTRIBUTE__CARDINALITY;
+	int DATE_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -2188,7 +2250,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__ORDERED = ENTITY_ATTRIBUTE__ORDERED;
+	int DATE_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -2197,7 +2259,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__PRIMARY_KEY = ENTITY_ATTRIBUTE__PRIMARY_KEY;
+	int DATE_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -2206,7 +2268,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__DERIVED = ENTITY_ATTRIBUTE__DERIVED;
+	int DATE_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -2215,7 +2277,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__CUSTOMISE_SET = ENTITY_ATTRIBUTE__CUSTOMISE_SET;
+	int DATE_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -2224,7 +2286,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int DATE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -2233,7 +2358,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__SINGLETON_NAME = ENTITY_ATTRIBUTE__SINGLETON_NAME;
+	int DATE_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -2242,7 +2367,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__PLURALISED_NAME = ENTITY_ATTRIBUTE__PLURALISED_NAME;
+	int DATE_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -2251,34 +2376,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__COLUMN_NAME = ENTITY_ATTRIBUTE__COLUMN_NAME;
+	int DATE_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__DEFAULT_VALUE = ENTITY_ATTRIBUTE__DEFAULT_VALUE;
+	int DATE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_ATTRIBUTE__VALIDATION_PATTERN;
+	int DATE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__INPUT_CLASS = ENTITY_ATTRIBUTE__INPUT_CLASS;
+	int DATE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -2287,7 +2421,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__HIDDEN = ENTITY_ATTRIBUTE__HIDDEN;
+	int DATE_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
@@ -2296,7 +2430,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_ATTRIBUTE__CONTAINER_UNIQUE;
+	int DATE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
@@ -2305,7 +2439,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_ATTRIBUTE__PERSISTENT_TYPE;
+	int DATE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
@@ -2314,7 +2448,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__ORM_TYPE = ENTITY_ATTRIBUTE__ORM_TYPE;
+	int DATE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -2323,7 +2457,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__INTERFACE_TYPE = ENTITY_ATTRIBUTE__INTERFACE_TYPE;
+	int DATE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -2332,7 +2466,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__SLUG_FIELDS = ENTITY_ATTRIBUTE__SLUG_FIELDS;
+	int DATE_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -2341,7 +2475,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__UNIQUE = ENTITY_ATTRIBUTE__UNIQUE;
+	int DATE_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' attribute.
@@ -2350,7 +2511,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__DETAILS = ENTITY_ATTRIBUTE_FEATURE_COUNT + 0;
+	int DATE_ATTRIBUTE__DETAILS = ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -2359,7 +2520,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__FORMAT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 1;
+	int DATE_ATTRIBUTE__FORMAT = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Date Attribute</em>' class.
@@ -2368,7 +2529,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE_FEATURE_COUNT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 2;
+	int DATE_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Date Attribute</em>' class.
@@ -2377,7 +2538,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE_OPERATION_COUNT = ENTITY_ATTRIBUTE_OPERATION_COUNT + 0;
+	int DATE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UrlAttributeImpl <em>Url Attribute</em>}' class.
@@ -2387,7 +2548,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUrlAttribute()
 	 * @generated
 	 */
-	int URL_ATTRIBUTE = 15;
+	int URL_ATTRIBUTE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2396,7 +2557,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__NAME = ENTITY_ATTRIBUTE__NAME;
+	int URL_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2405,106 +2566,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__DISPLAY_LABEL = ENTITY_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__TITLE = ENTITY_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__HEADER_CLASS = ENTITY_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__DISPLAY_CLASS = ENTITY_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__FOOTER_CLASS = ENTITY_ATTRIBUTE__FOOTER_CLASS;
+	int URL_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2513,7 +2575,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__PART_OF = ENTITY_ATTRIBUTE__PART_OF;
+	int URL_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2522,7 +2584,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__CARDINALITY = ENTITY_ATTRIBUTE__CARDINALITY;
+	int URL_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -2531,7 +2593,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__ORDERED = ENTITY_ATTRIBUTE__ORDERED;
+	int URL_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -2540,7 +2602,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__PRIMARY_KEY = ENTITY_ATTRIBUTE__PRIMARY_KEY;
+	int URL_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -2549,7 +2611,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__DERIVED = ENTITY_ATTRIBUTE__DERIVED;
+	int URL_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -2558,7 +2620,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__CUSTOMISE_SET = ENTITY_ATTRIBUTE__CUSTOMISE_SET;
+	int URL_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -2567,7 +2629,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int URL_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -2576,7 +2701,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__SINGLETON_NAME = ENTITY_ATTRIBUTE__SINGLETON_NAME;
+	int URL_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -2585,7 +2710,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__PLURALISED_NAME = ENTITY_ATTRIBUTE__PLURALISED_NAME;
+	int URL_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -2594,34 +2719,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__COLUMN_NAME = ENTITY_ATTRIBUTE__COLUMN_NAME;
+	int URL_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__DEFAULT_VALUE = ENTITY_ATTRIBUTE__DEFAULT_VALUE;
+	int URL_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_ATTRIBUTE__VALIDATION_PATTERN;
+	int URL_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__INPUT_CLASS = ENTITY_ATTRIBUTE__INPUT_CLASS;
+	int URL_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -2630,7 +2764,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__HIDDEN = ENTITY_ATTRIBUTE__HIDDEN;
+	int URL_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
@@ -2639,7 +2773,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_ATTRIBUTE__CONTAINER_UNIQUE;
+	int URL_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
@@ -2648,7 +2782,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_ATTRIBUTE__PERSISTENT_TYPE;
+	int URL_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
@@ -2657,7 +2791,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__ORM_TYPE = ENTITY_ATTRIBUTE__ORM_TYPE;
+	int URL_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -2666,7 +2800,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__INTERFACE_TYPE = ENTITY_ATTRIBUTE__INTERFACE_TYPE;
+	int URL_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -2675,7 +2809,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__SLUG_FIELDS = ENTITY_ATTRIBUTE__SLUG_FIELDS;
+	int URL_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -2684,7 +2818,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__UNIQUE = ENTITY_ATTRIBUTE__UNIQUE;
+	int URL_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Value</b></em>' attribute.
@@ -2693,7 +2854,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__DISPLAY_VALUE = ENTITY_ATTRIBUTE_FEATURE_COUNT + 0;
+	int URL_ATTRIBUTE__DISPLAY_VALUE = ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Url Attribute</em>' class.
@@ -2702,7 +2863,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE_FEATURE_COUNT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 1;
+	int URL_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Url Attribute</em>' class.
@@ -2711,7 +2872,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE_OPERATION_COUNT = ENTITY_ATTRIBUTE_OPERATION_COUNT + 0;
+	int URL_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceAttributeImpl <em>Resource Attribute</em>}' class.
@@ -2721,7 +2882,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceAttribute()
 	 * @generated
 	 */
-	int RESOURCE_ATTRIBUTE = 16;
+	int RESOURCE_ATTRIBUTE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2730,7 +2891,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__NAME = ENTITY_ATTRIBUTE__NAME;
+	int RESOURCE_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2739,106 +2900,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DISPLAY_LABEL = ENTITY_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__TITLE = ENTITY_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__HEADER_CLASS = ENTITY_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__DISPLAY_CLASS = ENTITY_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__FOOTER_CLASS = ENTITY_ATTRIBUTE__FOOTER_CLASS;
+	int RESOURCE_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2847,7 +2909,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PART_OF = ENTITY_ATTRIBUTE__PART_OF;
+	int RESOURCE_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2856,7 +2918,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__CARDINALITY = ENTITY_ATTRIBUTE__CARDINALITY;
+	int RESOURCE_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -2865,7 +2927,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__ORDERED = ENTITY_ATTRIBUTE__ORDERED;
+	int RESOURCE_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -2874,7 +2936,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PRIMARY_KEY = ENTITY_ATTRIBUTE__PRIMARY_KEY;
+	int RESOURCE_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -2883,7 +2945,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DERIVED = ENTITY_ATTRIBUTE__DERIVED;
+	int RESOURCE_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -2892,7 +2954,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__CUSTOMISE_SET = ENTITY_ATTRIBUTE__CUSTOMISE_SET;
+	int RESOURCE_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -2901,7 +2963,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -2910,7 +3035,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__SINGLETON_NAME = ENTITY_ATTRIBUTE__SINGLETON_NAME;
+	int RESOURCE_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -2919,7 +3044,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PLURALISED_NAME = ENTITY_ATTRIBUTE__PLURALISED_NAME;
+	int RESOURCE_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -2928,34 +3053,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__COLUMN_NAME = ENTITY_ATTRIBUTE__COLUMN_NAME;
+	int RESOURCE_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DEFAULT_VALUE = ENTITY_ATTRIBUTE__DEFAULT_VALUE;
+	int RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_ATTRIBUTE__VALIDATION_PATTERN;
+	int RESOURCE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__INPUT_CLASS = ENTITY_ATTRIBUTE__INPUT_CLASS;
+	int RESOURCE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -2964,7 +3098,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__HIDDEN = ENTITY_ATTRIBUTE__HIDDEN;
+	int RESOURCE_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
@@ -2973,7 +3107,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_ATTRIBUTE__CONTAINER_UNIQUE;
+	int RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
@@ -2982,7 +3116,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_ATTRIBUTE__PERSISTENT_TYPE;
+	int RESOURCE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
@@ -2991,7 +3125,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__ORM_TYPE = ENTITY_ATTRIBUTE__ORM_TYPE;
+	int RESOURCE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -3000,7 +3134,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__INTERFACE_TYPE = ENTITY_ATTRIBUTE__INTERFACE_TYPE;
+	int RESOURCE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -3009,7 +3143,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__SLUG_FIELDS = ENTITY_ATTRIBUTE__SLUG_FIELDS;
+	int RESOURCE_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -3018,7 +3152,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__UNIQUE = ENTITY_ATTRIBUTE__UNIQUE;
+	int RESOURCE_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3027,7 +3188,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = ENTITY_ATTRIBUTE_FEATURE_COUNT + 0;
+	int RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Mime Types</b></em>' attribute list.
@@ -3036,7 +3197,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = ENTITY_ATTRIBUTE_FEATURE_COUNT + 1;
+	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Extensions</b></em>' attribute list.
@@ -3045,7 +3206,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = ENTITY_ATTRIBUTE_FEATURE_COUNT + 2;
+	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Uploads Within Website</b></em>' attribute.
@@ -3054,7 +3215,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = ENTITY_ATTRIBUTE_FEATURE_COUNT + 3;
+	int RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Upload Path</b></em>' containment reference list.
@@ -3063,7 +3224,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__UPLOAD_PATH = ENTITY_ATTRIBUTE_FEATURE_COUNT + 4;
+	int RESOURCE_ATTRIBUTE__UPLOAD_PATH = ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Resource Attribute</em>' class.
@@ -3072,7 +3233,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE_FEATURE_COUNT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 5;
+	int RESOURCE_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Resource Attribute</em>' class.
@@ -3081,7 +3242,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE_OPERATION_COUNT = ENTITY_ATTRIBUTE_OPERATION_COUNT + 0;
+	int RESOURCE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PathElementImpl <em>Path Element</em>}' class.
@@ -3091,7 +3252,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPathElement()
 	 * @generated
 	 */
-	int PATH_ELEMENT = 17;
+	int PATH_ELEMENT = 16;
 
 	/**
 	 * The number of structural features of the '<em>Path Element</em>' class.
@@ -3119,7 +3280,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getStaticPathElement()
 	 * @generated
 	 */
-	int STATIC_PATH_ELEMENT = 18;
+	int STATIC_PATH_ELEMENT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -3156,7 +3317,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatePathElement()
 	 * @generated
 	 */
-	int DATE_PATH_ELEMENT = 19;
+	int DATE_PATH_ELEMENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -3193,7 +3354,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileAttribute()
 	 * @generated
 	 */
-	int FILE_ATTRIBUTE = 20;
+	int FILE_ATTRIBUTE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3212,105 +3373,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE_ATTRIBUTE__DISPLAY_LABEL = RESOURCE_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -3376,6 +3438,69 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
+
+	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3403,31 +3528,40 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__COLUMN_NAME = RESOURCE_ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
+	int FILE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
+	int FILE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
+	int FILE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -3491,6 +3625,33 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE_ATTRIBUTE__UNIQUE = RESOURCE_ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3563,7 +3724,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageAttribute()
 	 * @generated
 	 */
-	int IMAGE_ATTRIBUTE = 21;
+	int IMAGE_ATTRIBUTE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3582,105 +3743,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_ATTRIBUTE__DISPLAY_LABEL = RESOURCE_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -3746,6 +3808,69 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
+
+	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3773,31 +3898,40 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_ATTRIBUTE__COLUMN_NAME = RESOURCE_ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
+	int IMAGE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
+	int IMAGE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
+	int IMAGE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -3861,6 +3995,33 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_ATTRIBUTE__UNIQUE = RESOURCE_ATTRIBUTE__UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3933,7 +4094,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
 	 * @generated
 	 */
-	int LOCATION_ATTRIBUTE = 22;
+	int LOCATION_ATTRIBUTE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3942,7 +4103,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__NAME = ENTITY_ATTRIBUTE__NAME;
+	int LOCATION_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -3951,106 +4112,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__DISPLAY_LABEL = ENTITY_ATTRIBUTE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__TITLE = ENTITY_ATTRIBUTE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__PLACEHOLDER = ENTITY_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ENTITY_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ENTITY_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__ENCODE_URI_KEY = ENTITY_ATTRIBUTE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__SERIALIZATION_GROUPS = ENTITY_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__HEADER_CLASS = ENTITY_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__DISPLAY_CLASS = ENTITY_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__FOOTER_CLASS = ENTITY_ATTRIBUTE__FOOTER_CLASS;
+	int LOCATION_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -4059,7 +4121,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__PART_OF = ENTITY_ATTRIBUTE__PART_OF;
+	int LOCATION_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -4068,7 +4130,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__CARDINALITY = ENTITY_ATTRIBUTE__CARDINALITY;
+	int LOCATION_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -4077,7 +4139,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__ORDERED = ENTITY_ATTRIBUTE__ORDERED;
+	int LOCATION_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -4086,7 +4148,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__PRIMARY_KEY = ENTITY_ATTRIBUTE__PRIMARY_KEY;
+	int LOCATION_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -4095,7 +4157,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__DERIVED = ENTITY_ATTRIBUTE__DERIVED;
+	int LOCATION_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -4104,7 +4166,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__CUSTOMISE_SET = ENTITY_ATTRIBUTE__CUSTOMISE_SET;
+	int LOCATION_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -4113,7 +4175,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ENTITY_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int LOCATION_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -4122,7 +4247,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__SINGLETON_NAME = ENTITY_ATTRIBUTE__SINGLETON_NAME;
+	int LOCATION_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -4131,7 +4256,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__PLURALISED_NAME = ENTITY_ATTRIBUTE__PLURALISED_NAME;
+	int LOCATION_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -4140,34 +4265,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__COLUMN_NAME = ENTITY_ATTRIBUTE__COLUMN_NAME;
+	int LOCATION_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__DEFAULT_VALUE = ENTITY_ATTRIBUTE__DEFAULT_VALUE;
+	int LOCATION_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__VALIDATION_PATTERN = ENTITY_ATTRIBUTE__VALIDATION_PATTERN;
+	int LOCATION_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__INPUT_CLASS = ENTITY_ATTRIBUTE__INPUT_CLASS;
+	int LOCATION_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -4176,7 +4310,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__HIDDEN = ENTITY_ATTRIBUTE__HIDDEN;
+	int LOCATION_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
@@ -4185,7 +4319,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__CONTAINER_UNIQUE = ENTITY_ATTRIBUTE__CONTAINER_UNIQUE;
+	int LOCATION_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
@@ -4194,7 +4328,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__PERSISTENT_TYPE = ENTITY_ATTRIBUTE__PERSISTENT_TYPE;
+	int LOCATION_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
@@ -4203,7 +4337,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__ORM_TYPE = ENTITY_ATTRIBUTE__ORM_TYPE;
+	int LOCATION_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -4212,7 +4346,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__INTERFACE_TYPE = ENTITY_ATTRIBUTE__INTERFACE_TYPE;
+	int LOCATION_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -4221,7 +4355,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__SLUG_FIELDS = ENTITY_ATTRIBUTE__SLUG_FIELDS;
+	int LOCATION_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -4230,251 +4364,25 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__UNIQUE = ENTITY_ATTRIBUTE__UNIQUE;
+	int LOCATION_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
 
 	/**
-	 * The number of structural features of the '<em>Location Attribute</em>' class.
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE_FEATURE_COUNT = ENTITY_ATTRIBUTE_FEATURE_COUNT + 0;
+	int LOCATION_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
 
 	/**
-	 * The number of operations of the '<em>Location Attribute</em>' class.
+	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE_OPERATION_COUNT = ENTITY_ATTRIBUTE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl <em>Entity Association</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAssociation()
-	 * @generated
-	 */
-	int ENTITY_ASSOCIATION = 23;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__NAME = ENTITY_FEATURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__DISPLAY_LABEL = ENTITY_FEATURE__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TITLE = ENTITY_FEATURE__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD = ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PLACEHOLDER = ENTITY_FEATURE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE = ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE = ENTITY_FEATURE__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__ENCODE_URI_KEY = ENTITY_FEATURE__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__SERIALIZATION_GROUPS = ENTITY_FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__HEADER_CLASS = ENTITY_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__DISPLAY_CLASS = ENTITY_FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__FOOTER_CLASS = ENTITY_FEATURE__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PART_OF = ENTITY_FEATURE__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__CARDINALITY = ENTITY_FEATURE__CARDINALITY;
-
-	/**
-	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__ORDERED = ENTITY_FEATURE__ORDERED;
-
-	/**
-	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PRIMARY_KEY = ENTITY_FEATURE__PRIMARY_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Derived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__DERIVED = ENTITY_FEATURE__DERIVED;
-
-	/**
-	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__CUSTOMISE_SET = ENTITY_FEATURE__CUSTOMISE_SET;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__BOOLEAN_IS_HAS_CHOICE = ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE;
-
-	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__SINGLETON_NAME = ENTITY_FEATURE__SINGLETON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PLURALISED_NAME = ENTITY_FEATURE__PLURALISED_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__COLUMN_NAME = ENTITY_FEATURE__COLUMN_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PSEUDO = ENTITY_FEATURE_FEATURE_COUNT + 0;
+	int LOCATION_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
 	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
@@ -4483,169 +4391,25 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 1;
+	int LOCATION_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
+	 * The number of structural features of the '<em>Location Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__SOURCE_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 2;
+	int LOCATION_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
+	 * The number of operations of the '<em>Location Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ASSOCIATION__TARGET_ENTITY_X = ENTITY_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__SERIALIZATION_MAX_DEPTH = ENTITY_FEATURE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__KEYS = ENTITY_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_ENTITY = ENTITY_FEATURE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__BIDIRECTIONAL = ENTITY_FEATURE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__UNIQUE = ENTITY_FEATURE_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Pivot Table Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__PIVOT_TABLE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Target Feature Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_FEATURE_NAME = ENTITY_FEATURE_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Target Primary Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY = ENTITY_FEATURE_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Target Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_COLUMN_NAME = ENTITY_FEATURE_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Target Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL = ENTITY_FEATURE_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_HEADER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_INPUT_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS = ENTITY_FEATURE_FEATURE_COUNT + 17;
-
-	/**
-	 * The number of structural features of the '<em>Entity Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION_FEATURE_COUNT = ENTITY_FEATURE_FEATURE_COUNT + 18;
-
-	/**
-	 * The number of operations of the '<em>Entity Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_ASSOCIATION_OPERATION_COUNT = ENTITY_FEATURE_OPERATION_COUNT + 0;
+	int LOCATION_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl <em>Association Without Containment</em>}' class.
@@ -4655,7 +4419,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT = 24;
+	int ASSOCIATION_WITHOUT_CONTAINMENT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4664,7 +4428,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__NAME = ENTITY_ASSOCIATION__NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__NAME = ASSOCIATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -4673,106 +4437,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__DISPLAY_LABEL = ENTITY_ASSOCIATION__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TITLE = ENTITY_ASSOCIATION__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__COLLECTION_ORM_ALLOW_ADD = ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PLACEHOLDER = ENTITY_ASSOCIATION__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__EMPTY_DISPLAY_VALUE = ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__ENCODE_URI_KEY = ENTITY_ASSOCIATION__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__SERIALIZATION_GROUPS = ENTITY_ASSOCIATION__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__HEADER_CLASS = ENTITY_ASSOCIATION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__DISPLAY_CLASS = ENTITY_ASSOCIATION__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__FOOTER_CLASS = ENTITY_ASSOCIATION__FOOTER_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__DISPLAY_LABEL = ASSOCIATION__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -4781,7 +4446,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PART_OF = ENTITY_ASSOCIATION__PART_OF;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PART_OF = ASSOCIATION__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -4790,7 +4455,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__CARDINALITY = ENTITY_ASSOCIATION__CARDINALITY;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__CARDINALITY = ASSOCIATION__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -4799,7 +4464,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__ORDERED = ENTITY_ASSOCIATION__ORDERED;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__ORDERED = ASSOCIATION__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -4808,7 +4473,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PRIMARY_KEY = ENTITY_ASSOCIATION__PRIMARY_KEY;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PRIMARY_KEY = ASSOCIATION__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -4817,7 +4482,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__DERIVED = ENTITY_ASSOCIATION__DERIVED;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__DERIVED = ASSOCIATION__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -4826,7 +4491,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__CUSTOMISE_SET = ENTITY_ASSOCIATION__CUSTOMISE_SET;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__CUSTOMISE_SET = ASSOCIATION__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -4835,7 +4500,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__BOOLEAN_IS_HAS_CHOICE = ENTITY_ASSOCIATION__BOOLEAN_IS_HAS_CHOICE;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__BOOLEAN_IS_HAS_CHOICE = ASSOCIATION__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TITLE = ASSOCIATION__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__COLLECTION_ORM_ALLOW_ADD = ASSOCIATION__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__COLLECTION_ORM_ALLOW_REMOVE = ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PLACEHOLDER = ASSOCIATION__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ASSOCIATION__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__EMPTY_DISPLAY_VALUE = ASSOCIATION__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__ENCODE_URI_KEY = ASSOCIATION__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -4844,7 +4572,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__SINGLETON_NAME = ENTITY_ASSOCIATION__SINGLETON_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__SINGLETON_NAME = ASSOCIATION__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -4853,7 +4581,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PLURALISED_NAME = ENTITY_ASSOCIATION__PLURALISED_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PLURALISED_NAME = ASSOCIATION__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -4862,52 +4590,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__COLUMN_NAME = ENTITY_ASSOCIATION__COLUMN_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__COLUMN_NAME = ASSOCIATION__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PSEUDO = ENTITY_ASSOCIATION__PSEUDO;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__SERIALIZATION_GROUPS = ASSOCIATION__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__INPUT_CLASS = ENTITY_ASSOCIATION__INPUT_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__HEADER_CLASS = ASSOCIATION__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__SOURCE_ENTITY_X = ENTITY_ASSOCIATION__SOURCE_ENTITY_X;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__DISPLAY_CLASS = ASSOCIATION__DISPLAY_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_ENTITY_X = ENTITY_ASSOCIATION__TARGET_ENTITY_X;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__SERIALIZATION_MAX_DEPTH = ENTITY_ASSOCIATION__SERIALIZATION_MAX_DEPTH;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__FOOTER_CLASS = ASSOCIATION__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
@@ -4916,7 +4635,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__KEYS = ENTITY_ASSOCIATION__KEYS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__KEYS = ASSOCIATION__KEYS;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
@@ -4925,7 +4644,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_ENTITY = ENTITY_ASSOCIATION__TARGET_ENTITY;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_ENTITY = ASSOCIATION__TARGET_ENTITY;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -4934,7 +4653,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__BIDIRECTIONAL = ENTITY_ASSOCIATION__BIDIRECTIONAL;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__BIDIRECTIONAL = ASSOCIATION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -4943,7 +4662,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__UNIQUE = ENTITY_ASSOCIATION__UNIQUE;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__UNIQUE = ASSOCIATION__UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Pivot Table Name</b></em>' attribute.
@@ -4952,7 +4671,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PIVOT_TABLE_NAME = ENTITY_ASSOCIATION__PIVOT_TABLE_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PIVOT_TABLE_NAME = ASSOCIATION__PIVOT_TABLE_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Feature Name</b></em>' attribute.
@@ -4961,7 +4680,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FEATURE_NAME = ENTITY_ASSOCIATION__TARGET_FEATURE_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FEATURE_NAME = ASSOCIATION__TARGET_FEATURE_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Primary Key</b></em>' attribute.
@@ -4970,7 +4689,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_PRIMARY_KEY = ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_PRIMARY_KEY = ASSOCIATION__TARGET_PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Target Column Name</b></em>' attribute.
@@ -4979,7 +4698,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_COLUMN_NAME = ENTITY_ASSOCIATION__TARGET_COLUMN_NAME;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_COLUMN_NAME = ASSOCIATION__TARGET_COLUMN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Label</b></em>' attribute.
@@ -4988,7 +4707,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_LABEL = ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_LABEL = ASSOCIATION__TARGET_DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
@@ -4997,7 +4716,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_HEADER_CLASS = ENTITY_ASSOCIATION__TARGET_HEADER_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_HEADER_CLASS = ASSOCIATION__TARGET_HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
@@ -5006,7 +4725,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_INPUT_CLASS = ENTITY_ASSOCIATION__TARGET_INPUT_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_INPUT_CLASS = ASSOCIATION__TARGET_INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
@@ -5015,7 +4734,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_CLASS = ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_CLASS = ASSOCIATION__TARGET_DISPLAY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
@@ -5024,7 +4743,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FOOTER_CLASS = ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__INPUT_CLASS = ASSOCIATION__INPUT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__SERIALIZATION_MAX_DEPTH = ASSOCIATION__SERIALIZATION_MAX_DEPTH;
 
 	/**
 	 * The feature id for the '<em><b>Target Cardinality</b></em>' attribute.
@@ -5033,7 +4779,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_CARDINALITY = ENTITY_ASSOCIATION_FEATURE_COUNT + 0;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_CARDINALITY = ASSOCIATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target Unique</b></em>' attribute.
@@ -5042,7 +4788,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_UNIQUE = ENTITY_ASSOCIATION_FEATURE_COUNT + 1;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_UNIQUE = ASSOCIATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Association Without Containment</em>' class.
@@ -5051,7 +4797,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT_FEATURE_COUNT = ENTITY_ASSOCIATION_FEATURE_COUNT + 2;
+	int ASSOCIATION_WITHOUT_CONTAINMENT_FEATURE_COUNT = ASSOCIATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Association Without Containment</em>' class.
@@ -5060,7 +4806,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT_OPERATION_COUNT = ENTITY_ASSOCIATION_OPERATION_COUNT + 0;
+	int ASSOCIATION_WITHOUT_CONTAINMENT_OPERATION_COUNT = ASSOCIATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithContainmentImpl <em>Association With Containment</em>}' class.
@@ -5070,7 +4816,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT = 25;
+	int ASSOCIATION_WITH_CONTAINMENT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5079,7 +4825,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__NAME = ENTITY_ASSOCIATION__NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__NAME = ASSOCIATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -5088,106 +4834,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__DISPLAY_LABEL = ENTITY_ASSOCIATION__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TITLE = ENTITY_ASSOCIATION__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__COLLECTION_ORM_ALLOW_ADD = ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_ADD;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__COLLECTION_ORM_ALLOW_REMOVE = ENTITY_ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PLACEHOLDER = ENTITY_ASSOCIATION__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ENTITY_ASSOCIATION__DEFAULT_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__EMPTY_DISPLAY_VALUE = ENTITY_ASSOCIATION__EMPTY_DISPLAY_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__ENCODE_URI_KEY = ENTITY_ASSOCIATION__ENCODE_URI_KEY;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__SERIALIZATION_GROUPS = ENTITY_ASSOCIATION__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__HEADER_CLASS = ENTITY_ASSOCIATION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__DISPLAY_CLASS = ENTITY_ASSOCIATION__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__FOOTER_CLASS = ENTITY_ASSOCIATION__FOOTER_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__DISPLAY_LABEL = ASSOCIATION__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -5196,7 +4843,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PART_OF = ENTITY_ASSOCIATION__PART_OF;
+	int ASSOCIATION_WITH_CONTAINMENT__PART_OF = ASSOCIATION__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -5205,7 +4852,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__CARDINALITY = ENTITY_ASSOCIATION__CARDINALITY;
+	int ASSOCIATION_WITH_CONTAINMENT__CARDINALITY = ASSOCIATION__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -5214,7 +4861,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__ORDERED = ENTITY_ASSOCIATION__ORDERED;
+	int ASSOCIATION_WITH_CONTAINMENT__ORDERED = ASSOCIATION__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -5223,7 +4870,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PRIMARY_KEY = ENTITY_ASSOCIATION__PRIMARY_KEY;
+	int ASSOCIATION_WITH_CONTAINMENT__PRIMARY_KEY = ASSOCIATION__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -5232,7 +4879,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__DERIVED = ENTITY_ASSOCIATION__DERIVED;
+	int ASSOCIATION_WITH_CONTAINMENT__DERIVED = ASSOCIATION__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -5241,7 +4888,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__CUSTOMISE_SET = ENTITY_ASSOCIATION__CUSTOMISE_SET;
+	int ASSOCIATION_WITH_CONTAINMENT__CUSTOMISE_SET = ASSOCIATION__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -5250,7 +4897,70 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__BOOLEAN_IS_HAS_CHOICE = ENTITY_ASSOCIATION__BOOLEAN_IS_HAS_CHOICE;
+	int ASSOCIATION_WITH_CONTAINMENT__BOOLEAN_IS_HAS_CHOICE = ASSOCIATION__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__TITLE = ASSOCIATION__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__COLLECTION_ORM_ALLOW_ADD = ASSOCIATION__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__COLLECTION_ORM_ALLOW_REMOVE = ASSOCIATION__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__PLACEHOLDER = ASSOCIATION__PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__DEFAULT_DISPLAY_VALUE = ASSOCIATION__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__EMPTY_DISPLAY_VALUE = ASSOCIATION__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__ENCODE_URI_KEY = ASSOCIATION__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -5259,7 +4969,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__SINGLETON_NAME = ENTITY_ASSOCIATION__SINGLETON_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__SINGLETON_NAME = ASSOCIATION__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -5268,7 +4978,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PLURALISED_NAME = ENTITY_ASSOCIATION__PLURALISED_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__PLURALISED_NAME = ASSOCIATION__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -5277,52 +4987,43 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__COLUMN_NAME = ENTITY_ASSOCIATION__COLUMN_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__COLUMN_NAME = ASSOCIATION__COLUMN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PSEUDO = ENTITY_ASSOCIATION__PSEUDO;
+	int ASSOCIATION_WITH_CONTAINMENT__SERIALIZATION_GROUPS = ASSOCIATION__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__INPUT_CLASS = ENTITY_ASSOCIATION__INPUT_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__HEADER_CLASS = ASSOCIATION__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Source Entity X</b></em>' reference.
+	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__SOURCE_ENTITY_X = ENTITY_ASSOCIATION__SOURCE_ENTITY_X;
+	int ASSOCIATION_WITH_CONTAINMENT__DISPLAY_CLASS = ASSOCIATION__DISPLAY_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Target Entity X</b></em>' reference.
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_ENTITY_X = ENTITY_ASSOCIATION__TARGET_ENTITY_X;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__SERIALIZATION_MAX_DEPTH = ENTITY_ASSOCIATION__SERIALIZATION_MAX_DEPTH;
+	int ASSOCIATION_WITH_CONTAINMENT__FOOTER_CLASS = ASSOCIATION__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
@@ -5331,7 +5032,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__KEYS = ENTITY_ASSOCIATION__KEYS;
+	int ASSOCIATION_WITH_CONTAINMENT__KEYS = ASSOCIATION__KEYS;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
@@ -5340,7 +5041,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_ENTITY = ENTITY_ASSOCIATION__TARGET_ENTITY;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_ENTITY = ASSOCIATION__TARGET_ENTITY;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -5349,7 +5050,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__BIDIRECTIONAL = ENTITY_ASSOCIATION__BIDIRECTIONAL;
+	int ASSOCIATION_WITH_CONTAINMENT__BIDIRECTIONAL = ASSOCIATION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -5358,7 +5059,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__UNIQUE = ENTITY_ASSOCIATION__UNIQUE;
+	int ASSOCIATION_WITH_CONTAINMENT__UNIQUE = ASSOCIATION__UNIQUE;
 
 	/**
 	 * The feature id for the '<em><b>Pivot Table Name</b></em>' attribute.
@@ -5367,7 +5068,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PIVOT_TABLE_NAME = ENTITY_ASSOCIATION__PIVOT_TABLE_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__PIVOT_TABLE_NAME = ASSOCIATION__PIVOT_TABLE_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Feature Name</b></em>' attribute.
@@ -5376,7 +5077,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FEATURE_NAME = ENTITY_ASSOCIATION__TARGET_FEATURE_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FEATURE_NAME = ASSOCIATION__TARGET_FEATURE_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Primary Key</b></em>' attribute.
@@ -5385,7 +5086,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_PRIMARY_KEY = ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_PRIMARY_KEY = ASSOCIATION__TARGET_PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Target Column Name</b></em>' attribute.
@@ -5394,7 +5095,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_COLUMN_NAME = ENTITY_ASSOCIATION__TARGET_COLUMN_NAME;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_COLUMN_NAME = ASSOCIATION__TARGET_COLUMN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Label</b></em>' attribute.
@@ -5403,7 +5104,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_LABEL = ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_LABEL = ASSOCIATION__TARGET_DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
@@ -5412,7 +5113,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_HEADER_CLASS = ENTITY_ASSOCIATION__TARGET_HEADER_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_HEADER_CLASS = ASSOCIATION__TARGET_HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
@@ -5421,7 +5122,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_INPUT_CLASS = ENTITY_ASSOCIATION__TARGET_INPUT_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_INPUT_CLASS = ASSOCIATION__TARGET_INPUT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
@@ -5430,7 +5131,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_CLASS = ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_CLASS = ASSOCIATION__TARGET_DISPLAY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
@@ -5439,7 +5140,34 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FOOTER_CLASS = ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
+
+	/**
+	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__INPUT_CLASS = ASSOCIATION__INPUT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__SERIALIZATION_MAX_DEPTH = ASSOCIATION__SERIALIZATION_MAX_DEPTH;
 
 	/**
 	 * The feature id for the '<em><b>Source Visible</b></em>' attribute.
@@ -5448,7 +5176,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__SOURCE_VISIBLE = ENTITY_ASSOCIATION_FEATURE_COUNT + 0;
+	int ASSOCIATION_WITH_CONTAINMENT__SOURCE_VISIBLE = ASSOCIATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Association With Containment</em>' class.
@@ -5457,7 +5185,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT_FEATURE_COUNT = ENTITY_ASSOCIATION_FEATURE_COUNT + 1;
+	int ASSOCIATION_WITH_CONTAINMENT_FEATURE_COUNT = ASSOCIATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Association With Containment</em>' class.
@@ -5466,7 +5194,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT_OPERATION_COUNT = ENTITY_ASSOCIATION_OPERATION_COUNT + 0;
+	int ASSOCIATION_WITH_CONTAINMENT_OPERATION_COUNT = ASSOCIATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationKeyImpl <em>Association Key</em>}' class.
@@ -5476,7 +5204,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
 	 * @generated
 	 */
-	int ASSOCIATION_KEY = 26;
+	int ASSOCIATION_KEY = 24;
 
 	/**
 	 * The feature id for the '<em><b>Key For</b></em>' container reference.
@@ -5531,7 +5259,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 27;
+	int DATABASE_TECHNOLOGIES = 25;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -5541,7 +5269,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 28;
+	int ORM_TECHNOLOGIES = 26;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -5551,7 +5279,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 29;
+	int CARDINALITY = 27;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -5561,7 +5289,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 30;
+	int IS_HAS_CHOICES = 28;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -5571,7 +5299,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 31;
+	int DATE_DETAILS = 29;
 
 
 	/**
@@ -5682,6 +5410,83 @@ public interface PersistencePackage extends EPackage {
 	EClass getFeature();
 
 	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.Feature#getPartOf <em>Part Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Part Of</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getPartOf()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EReference getFeature_PartOf();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getCardinality <em>Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cardinality</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getCardinality()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Cardinality();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#isOrdered <em>Ordered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ordered</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#isOrdered()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Ordered();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#isPrimaryKey <em>Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Primary Key</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#isPrimaryKey()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_PrimaryKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#isDerived <em>Derived</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Derived</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#isDerived()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Derived();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#isCustomiseSet <em>Customise Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Customise Set</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#isCustomiseSet()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_CustomiseSet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getBooleanIsHasChoice <em>Boolean Is Has Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Boolean Is Has Choice</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getBooleanIsHasChoice()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_BooleanIsHasChoice();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5759,6 +5564,39 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getFeature_EncodeUriKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getSingletonName <em>Singleton Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Singleton Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getSingletonName()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_SingletonName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getPluralisedName <em>Pluralised Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pluralised Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getPluralisedName()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_PluralisedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getColumnName <em>Column Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Column Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getColumnName()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_ColumnName();
+
+	/**
 	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Feature#getSerializationGroups <em>Serialization Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5813,6 +5651,83 @@ public interface PersistencePackage extends EPackage {
 	EClass getAttribute();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#isHidden <em>Hidden</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hidden</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#isHidden()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_Hidden();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#isContainerUnique <em>Container Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Container Unique</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#isContainerUnique()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_ContainerUnique();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType <em>Persistent Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Persistent Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_PersistentType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType <em>Orm Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Orm Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_OrmType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType <em>Interface Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interface Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_InterfaceType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getSlugFields <em>Slug Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Slug Fields</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getSlugFields()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_SlugFields();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#isUnique <em>Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#isUnique()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_Unique();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getDefaultValue <em>Default Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5856,6 +5771,149 @@ public interface PersistencePackage extends EPackage {
 	EClass getAssociation();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Association#getKeys <em>Keys</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Keys</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getKeys()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EReference getAssociation_Keys();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetEntity <em>Target Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Entity</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetEntity()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EReference getAssociation_TargetEntity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#isBidirectional <em>Bidirectional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bidirectional</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#isBidirectional()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_Bidirectional();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#isUnique <em>Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#isUnique()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_Unique();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getPivotTableName <em>Pivot Table Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pivot Table Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getPivotTableName()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_PivotTableName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFeatureName <em>Target Feature Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Feature Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetFeatureName()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetFeatureName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#isTargetPrimaryKey <em>Target Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Primary Key</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#isTargetPrimaryKey()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetPrimaryKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetColumnName <em>Target Column Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Column Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetColumnName()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetColumnName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayLabel <em>Target Display Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Display Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayLabel()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetDisplayLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass <em>Target Header Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Header Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetHeaderClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass <em>Target Input Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Input Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetInputClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass <em>Target Display Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Display Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetDisplayClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass <em>Target Footer Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Footer Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_TargetFooterClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#isPseudo <em>Pseudo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5876,28 +5934,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAssociation_InputClass();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Association#getSourceEntityX <em>Source Entity X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Entity X</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getSourceEntityX()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EReference getAssociation_SourceEntityX();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetEntityX <em>Target Entity X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity X</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetEntityX()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EReference getAssociation_TargetEntityX();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}'.
@@ -6300,203 +6336,6 @@ public interface PersistencePackage extends EPackage {
 	EClass getEntityFeature();
 
 	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getPartOf <em>Part Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Part Of</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getPartOf()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EReference getEntityFeature_PartOf();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getCardinality <em>Cardinality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cardinality</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getCardinality()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_Cardinality();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#isOrdered <em>Ordered</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ordered</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#isOrdered()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_Ordered();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#isPrimaryKey <em>Primary Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Primary Key</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#isPrimaryKey()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_PrimaryKey();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#isDerived <em>Derived</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Derived</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#isDerived()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_Derived();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#isCustomiseSet <em>Customise Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Customise Set</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#isCustomiseSet()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_CustomiseSet();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getBooleanIsHasChoice <em>Boolean Is Has Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Boolean Is Has Choice</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getBooleanIsHasChoice()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_BooleanIsHasChoice();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getSingletonName <em>Singleton Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Singleton Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getSingletonName()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_SingletonName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getPluralisedName <em>Pluralised Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pluralised Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getPluralisedName()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_PluralisedName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getColumnName <em>Column Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getColumnName()
-	 * @see #getEntityFeature()
-	 * @generated
-	 */
-	EAttribute getEntityFeature_ColumnName();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute <em>Entity Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute
-	 * @generated
-	 */
-	EClass getEntityAttribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#isHidden <em>Hidden</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Hidden</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#isHidden()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_Hidden();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#isContainerUnique <em>Container Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Container Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#isContainerUnique()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_ContainerUnique();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#getPersistentType <em>Persistent Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Persistent Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#getPersistentType()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_PersistentType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#getOrmType <em>Orm Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Orm Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#getOrmType()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_OrmType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#getInterfaceType <em>Interface Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Interface Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#getInterfaceType()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_InterfaceType();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#getSlugFields <em>Slug Fields</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Slug Fields</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#getSlugFields()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EReference getEntityAttribute_SlugFields();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAttribute#isUnique <em>Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAttribute#isUnique()
-	 * @see #getEntityAttribute()
-	 * @generated
-	 */
-	EAttribute getEntityAttribute_Unique();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DataTypeAttribute <em>Data Type Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6751,159 +6590,6 @@ public interface PersistencePackage extends EPackage {
 	EClass getLocationAttribute();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation <em>Entity Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation
-	 * @generated
-	 */
-	EClass getEntityAssociation();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getKeys <em>Keys</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Keys</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getKeys()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EReference getEntityAssociation_Keys();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetEntity <em>Target Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetEntity()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EReference getEntityAssociation_TargetEntity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#isBidirectional <em>Bidirectional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bidirectional</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#isBidirectional()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_Bidirectional();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#isUnique <em>Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#isUnique()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_Unique();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getPivotTableName <em>Pivot Table Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pivot Table Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getPivotTableName()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_PivotTableName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetFeatureName <em>Target Feature Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Feature Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetFeatureName()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetFeatureName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#isTargetPrimaryKey <em>Target Primary Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Primary Key</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#isTargetPrimaryKey()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetPrimaryKey();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetColumnName <em>Target Column Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Column Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetColumnName()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetColumnName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetDisplayLabel <em>Target Display Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Display Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetDisplayLabel()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetDisplayLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetHeaderClass <em>Target Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetHeaderClass()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetHeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetInputClass <em>Target Input Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetInputClass()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetInputClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetDisplayClass <em>Target Display Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Display Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetDisplayClass()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetDisplayClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetFooterClass <em>Target Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetFooterClass()
-	 * @see #getEntityAssociation()
-	 * @generated
-	 */
-	EAttribute getEntityAssociation_TargetFooterClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.AssociationWithoutContainment <em>Association Without Containment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7149,14 +6835,70 @@ public interface PersistencePackage extends EPackage {
 		EClass SERIALIZATION_GROUP = eINSTANCE.getSerializationGroup();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.Feature <em>Feature</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl <em>Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.Feature
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl
 		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeature()
 		 * @generated
 		 */
 		EClass FEATURE = eINSTANCE.getFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Part Of</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE__PART_OF = eINSTANCE.getFeature_PartOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Cardinality</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__CARDINALITY = eINSTANCE.getFeature_Cardinality();
+
+		/**
+		 * The meta object literal for the '<em><b>Ordered</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__ORDERED = eINSTANCE.getFeature_Ordered();
+
+		/**
+		 * The meta object literal for the '<em><b>Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__PRIMARY_KEY = eINSTANCE.getFeature_PrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Derived</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__DERIVED = eINSTANCE.getFeature_Derived();
+
+		/**
+		 * The meta object literal for the '<em><b>Customise Set</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__CUSTOMISE_SET = eINSTANCE.getFeature_CustomiseSet();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Is Has Choice</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__BOOLEAN_IS_HAS_CHOICE = eINSTANCE.getFeature_BooleanIsHasChoice();
 
 		/**
 		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
@@ -7215,6 +6957,30 @@ public interface PersistencePackage extends EPackage {
 		EAttribute FEATURE__ENCODE_URI_KEY = eINSTANCE.getFeature_EncodeUriKey();
 
 		/**
+		 * The meta object literal for the '<em><b>Singleton Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__SINGLETON_NAME = eINSTANCE.getFeature_SingletonName();
+
+		/**
+		 * The meta object literal for the '<em><b>Pluralised Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__PLURALISED_NAME = eINSTANCE.getFeature_PluralisedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Column Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__COLUMN_NAME = eINSTANCE.getFeature_ColumnName();
+
+		/**
 		 * The meta object literal for the '<em><b>Serialization Groups</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7247,14 +7013,70 @@ public interface PersistencePackage extends EPackage {
 		EAttribute FEATURE__FOOTER_CLASS = eINSTANCE.getFeature_FooterClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.Attribute <em>Attribute</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.Attribute
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl
 		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttribute()
 		 * @generated
 		 */
 		EClass ATTRIBUTE = eINSTANCE.getAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Hidden</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__HIDDEN = eINSTANCE.getAttribute_Hidden();
+
+		/**
+		 * The meta object literal for the '<em><b>Container Unique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__CONTAINER_UNIQUE = eINSTANCE.getAttribute_ContainerUnique();
+
+		/**
+		 * The meta object literal for the '<em><b>Persistent Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__PERSISTENT_TYPE = eINSTANCE.getAttribute_PersistentType();
+
+		/**
+		 * The meta object literal for the '<em><b>Orm Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__ORM_TYPE = eINSTANCE.getAttribute_OrmType();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__INTERFACE_TYPE = eINSTANCE.getAttribute_InterfaceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Slug Fields</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__SLUG_FIELDS = eINSTANCE.getAttribute_SlugFields();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__UNIQUE = eINSTANCE.getAttribute_Unique();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
@@ -7281,14 +7103,118 @@ public interface PersistencePackage extends EPackage {
 		EAttribute ATTRIBUTE__INPUT_CLASS = eINSTANCE.getAttribute_InputClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.Association <em>Association</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl <em>Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.Association
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl
 		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociation()
 		 * @generated
 		 */
 		EClass ASSOCIATION = eINSTANCE.getAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Keys</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION__KEYS = eINSTANCE.getAssociation_Keys();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION__TARGET_ENTITY = eINSTANCE.getAssociation_TargetEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Bidirectional</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__BIDIRECTIONAL = eINSTANCE.getAssociation_Bidirectional();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__UNIQUE = eINSTANCE.getAssociation_Unique();
+
+		/**
+		 * The meta object literal for the '<em><b>Pivot Table Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__PIVOT_TABLE_NAME = eINSTANCE.getAssociation_PivotTableName();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Feature Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_FEATURE_NAME = eINSTANCE.getAssociation_TargetFeatureName();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_PRIMARY_KEY = eINSTANCE.getAssociation_TargetPrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Column Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_COLUMN_NAME = eINSTANCE.getAssociation_TargetColumnName();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Display Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_DISPLAY_LABEL = eINSTANCE.getAssociation_TargetDisplayLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Header Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_HEADER_CLASS = eINSTANCE.getAssociation_TargetHeaderClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Input Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_INPUT_CLASS = eINSTANCE.getAssociation_TargetInputClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Display Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_DISPLAY_CLASS = eINSTANCE.getAssociation_TargetDisplayClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Footer Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__TARGET_FOOTER_CLASS = eINSTANCE.getAssociation_TargetFooterClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Pseudo</b></em>' attribute feature.
@@ -7305,22 +7231,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSOCIATION__INPUT_CLASS = eINSTANCE.getAssociation_InputClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Entity X</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION__SOURCE_ENTITY_X = eINSTANCE.getAssociation_SourceEntityX();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity X</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION__TARGET_ENTITY_X = eINSTANCE.getAssociation_TargetEntityX();
 
 		/**
 		 * The meta object literal for the '<em><b>Serialization Max Depth</b></em>' attribute feature.
@@ -7633,152 +7543,6 @@ public interface PersistencePackage extends EPackage {
 		EClass ENTITY_FEATURE = eINSTANCE.getEntityFeature();
 
 		/**
-		 * The meta object literal for the '<em><b>Part Of</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_FEATURE__PART_OF = eINSTANCE.getEntityFeature_PartOf();
-
-		/**
-		 * The meta object literal for the '<em><b>Cardinality</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__CARDINALITY = eINSTANCE.getEntityFeature_Cardinality();
-
-		/**
-		 * The meta object literal for the '<em><b>Ordered</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__ORDERED = eINSTANCE.getEntityFeature_Ordered();
-
-		/**
-		 * The meta object literal for the '<em><b>Primary Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__PRIMARY_KEY = eINSTANCE.getEntityFeature_PrimaryKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Derived</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__DERIVED = eINSTANCE.getEntityFeature_Derived();
-
-		/**
-		 * The meta object literal for the '<em><b>Customise Set</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__CUSTOMISE_SET = eINSTANCE.getEntityFeature_CustomiseSet();
-
-		/**
-		 * The meta object literal for the '<em><b>Boolean Is Has Choice</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = eINSTANCE.getEntityFeature_BooleanIsHasChoice();
-
-		/**
-		 * The meta object literal for the '<em><b>Singleton Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__SINGLETON_NAME = eINSTANCE.getEntityFeature_SingletonName();
-
-		/**
-		 * The meta object literal for the '<em><b>Pluralised Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__PLURALISED_NAME = eINSTANCE.getEntityFeature_PluralisedName();
-
-		/**
-		 * The meta object literal for the '<em><b>Column Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_FEATURE__COLUMN_NAME = eINSTANCE.getEntityFeature_ColumnName();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAttributeImpl <em>Entity Attribute</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityAttributeImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAttribute()
-		 * @generated
-		 */
-		EClass ENTITY_ATTRIBUTE = eINSTANCE.getEntityAttribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Hidden</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__HIDDEN = eINSTANCE.getEntityAttribute_Hidden();
-
-		/**
-		 * The meta object literal for the '<em><b>Container Unique</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__CONTAINER_UNIQUE = eINSTANCE.getEntityAttribute_ContainerUnique();
-
-		/**
-		 * The meta object literal for the '<em><b>Persistent Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__PERSISTENT_TYPE = eINSTANCE.getEntityAttribute_PersistentType();
-
-		/**
-		 * The meta object literal for the '<em><b>Orm Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__ORM_TYPE = eINSTANCE.getEntityAttribute_OrmType();
-
-		/**
-		 * The meta object literal for the '<em><b>Interface Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__INTERFACE_TYPE = eINSTANCE.getEntityAttribute_InterfaceType();
-
-		/**
-		 * The meta object literal for the '<em><b>Slug Fields</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_ATTRIBUTE__SLUG_FIELDS = eINSTANCE.getEntityAttribute_SlugFields();
-
-		/**
-		 * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ATTRIBUTE__UNIQUE = eINSTANCE.getEntityAttribute_Unique();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7989,120 +7753,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EClass LOCATION_ATTRIBUTE = eINSTANCE.getLocationAttribute();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl <em>Entity Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityAssociationImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityAssociation()
-		 * @generated
-		 */
-		EClass ENTITY_ASSOCIATION = eINSTANCE.getEntityAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Keys</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_ASSOCIATION__KEYS = eINSTANCE.getEntityAssociation_Keys();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getEntityAssociation_TargetEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Bidirectional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__BIDIRECTIONAL = eINSTANCE.getEntityAssociation_Bidirectional();
-
-		/**
-		 * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__UNIQUE = eINSTANCE.getEntityAssociation_Unique();
-
-		/**
-		 * The meta object literal for the '<em><b>Pivot Table Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__PIVOT_TABLE_NAME = eINSTANCE.getEntityAssociation_PivotTableName();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Feature Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_FEATURE_NAME = eINSTANCE.getEntityAssociation_TargetFeatureName();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Primary Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_PRIMARY_KEY = eINSTANCE.getEntityAssociation_TargetPrimaryKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Column Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_COLUMN_NAME = eINSTANCE.getEntityAssociation_TargetColumnName();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Display Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_DISPLAY_LABEL = eINSTANCE.getEntityAssociation_TargetDisplayLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_HEADER_CLASS = eINSTANCE.getEntityAssociation_TargetHeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Input Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_INPUT_CLASS = eINSTANCE.getEntityAssociation_TargetInputClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Display Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_DISPLAY_CLASS = eINSTANCE.getEntityAssociation_TargetDisplayClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY_ASSOCIATION__TARGET_FOOTER_CLASS = eINSTANCE.getEntityAssociation_TargetFooterClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl <em>Association Without Containment</em>}' class.

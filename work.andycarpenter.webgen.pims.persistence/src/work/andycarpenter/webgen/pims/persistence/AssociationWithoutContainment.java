@@ -20,7 +20,7 @@ package work.andycarpenter.webgen.pims.persistence;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL oneToManyAssociationsMustBeBidirectional='cardinality = Cardinality::Optional and targetCardinality = Cardinality::Required implies bidirectional'"
  * @generated
  */
-public interface AssociationWithoutContainment extends EntityAssociation {
+public interface AssociationWithoutContainment extends Association {
 	/**
 	 * Returns the value of the '<em><b>Target Cardinality</b></em>' attribute.
 	 * The default value is <code>"Required"</code>.

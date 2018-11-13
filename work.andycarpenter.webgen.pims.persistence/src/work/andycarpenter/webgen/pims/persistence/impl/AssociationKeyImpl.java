@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.EntityFeature;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
@@ -78,9 +78,9 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityAssociation getKeyFor() {
+	public Association getKeyFor() {
 		if (eContainerFeatureID() != PersistencePackage.ASSOCIATION_KEY__KEY_FOR) return null;
-		return (EntityAssociation)eInternalContainer();
+		return (Association)eInternalContainer();
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetKeyFor(EntityAssociation newKeyFor, NotificationChain msgs) {
+	public NotificationChain basicSetKeyFor(Association newKeyFor, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newKeyFor, PersistencePackage.ASSOCIATION_KEY__KEY_FOR, msgs);
 		return msgs;
 	}
@@ -98,7 +98,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKeyFor(EntityAssociation newKeyFor) {
+	public void setKeyFor(Association newKeyFor) {
 		if (newKeyFor != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.ASSOCIATION_KEY__KEY_FOR && newKeyFor != null)) {
 			if (EcoreUtil.isAncestor(this, newKeyFor))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -106,7 +106,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newKeyFor != null)
-				msgs = ((InternalEObject)newKeyFor).eInverseAdd(this, PersistencePackage.ENTITY_ASSOCIATION__KEYS, EntityAssociation.class, msgs);
+				msgs = ((InternalEObject)newKeyFor).eInverseAdd(this, PersistencePackage.ASSOCIATION__KEYS, Association.class, msgs);
 			msgs = basicSetKeyFor(newKeyFor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -201,7 +201,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 			case PersistencePackage.ASSOCIATION_KEY__KEY_FOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetKeyFor((EntityAssociation)otherEnd, msgs);
+				return basicSetKeyFor((Association)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -229,7 +229,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case PersistencePackage.ASSOCIATION_KEY__KEY_FOR:
-				return eInternalContainer().eInverseRemove(this, PersistencePackage.ENTITY_ASSOCIATION__KEYS, EntityAssociation.class, msgs);
+				return eInternalContainer().eInverseRemove(this, PersistencePackage.ASSOCIATION__KEYS, Association.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -263,7 +263,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PersistencePackage.ASSOCIATION_KEY__KEY_FOR:
-				setKeyFor((EntityAssociation)newValue);
+				setKeyFor((Association)newValue);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE:
 				setSourceFeature((EntityFeature)newValue);
@@ -284,7 +284,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PersistencePackage.ASSOCIATION_KEY__KEY_FOR:
-				setKeyFor((EntityAssociation)null);
+				setKeyFor((Association)null);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE:
 				setSourceFeature((EntityFeature)null);

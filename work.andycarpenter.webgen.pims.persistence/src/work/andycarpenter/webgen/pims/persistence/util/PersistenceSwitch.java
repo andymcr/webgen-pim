@@ -86,6 +86,8 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.FEATURE: {
 				Feature feature = (Feature)theEObject;
 				T result = caseFeature(feature);
+				if (result == null) result = caseNamedDisplayElement(feature);
+				if (result == null) result = caseNamedElement(feature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -94,6 +96,8 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseAttribute(attribute);
 				if (result == null) result = caseFeature(attribute);
 				if (result == null) result = caseLabel(attribute);
+				if (result == null) result = caseNamedDisplayElement(attribute);
+				if (result == null) result = caseNamedElement(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -101,6 +105,8 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				Association association = (Association)theEObject;
 				T result = caseAssociation(association);
 				if (result == null) result = caseFeature(association);
+				if (result == null) result = caseNamedDisplayElement(association);
+				if (result == null) result = caseNamedElement(association);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,33 +156,19 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.ENTITY_FEATURE: {
 				EntityFeature entityFeature = (EntityFeature)theEObject;
 				T result = caseEntityFeature(entityFeature);
-				if (result == null) result = caseNamedDisplayElement(entityFeature);
 				if (result == null) result = caseFeature(entityFeature);
+				if (result == null) result = caseNamedDisplayElement(entityFeature);
 				if (result == null) result = caseNamedElement(entityFeature);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENTITY_ATTRIBUTE: {
-				EntityAttribute entityAttribute = (EntityAttribute)theEObject;
-				T result = caseEntityAttribute(entityAttribute);
-				if (result == null) result = caseEntityFeature(entityAttribute);
-				if (result == null) result = caseAttribute(entityAttribute);
-				if (result == null) result = caseNamedDisplayElement(entityAttribute);
-				if (result == null) result = caseFeature(entityAttribute);
-				if (result == null) result = caseLabel(entityAttribute);
-				if (result == null) result = caseNamedElement(entityAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE: {
 				DataTypeAttribute dataTypeAttribute = (DataTypeAttribute)theEObject;
 				T result = caseDataTypeAttribute(dataTypeAttribute);
-				if (result == null) result = caseEntityAttribute(dataTypeAttribute);
-				if (result == null) result = caseEntityFeature(dataTypeAttribute);
 				if (result == null) result = caseAttribute(dataTypeAttribute);
-				if (result == null) result = caseNamedDisplayElement(dataTypeAttribute);
 				if (result == null) result = caseFeature(dataTypeAttribute);
 				if (result == null) result = caseLabel(dataTypeAttribute);
+				if (result == null) result = caseNamedDisplayElement(dataTypeAttribute);
 				if (result == null) result = caseNamedElement(dataTypeAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -184,12 +176,10 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.DATE_ATTRIBUTE: {
 				DateAttribute dateAttribute = (DateAttribute)theEObject;
 				T result = caseDateAttribute(dateAttribute);
-				if (result == null) result = caseEntityAttribute(dateAttribute);
-				if (result == null) result = caseEntityFeature(dateAttribute);
 				if (result == null) result = caseAttribute(dateAttribute);
-				if (result == null) result = caseNamedDisplayElement(dateAttribute);
 				if (result == null) result = caseFeature(dateAttribute);
 				if (result == null) result = caseLabel(dateAttribute);
+				if (result == null) result = caseNamedDisplayElement(dateAttribute);
 				if (result == null) result = caseNamedElement(dateAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -197,12 +187,10 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.URL_ATTRIBUTE: {
 				UrlAttribute urlAttribute = (UrlAttribute)theEObject;
 				T result = caseUrlAttribute(urlAttribute);
-				if (result == null) result = caseEntityAttribute(urlAttribute);
-				if (result == null) result = caseEntityFeature(urlAttribute);
 				if (result == null) result = caseAttribute(urlAttribute);
-				if (result == null) result = caseNamedDisplayElement(urlAttribute);
 				if (result == null) result = caseFeature(urlAttribute);
 				if (result == null) result = caseLabel(urlAttribute);
+				if (result == null) result = caseNamedDisplayElement(urlAttribute);
 				if (result == null) result = caseNamedElement(urlAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -210,12 +198,10 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.RESOURCE_ATTRIBUTE: {
 				ResourceAttribute resourceAttribute = (ResourceAttribute)theEObject;
 				T result = caseResourceAttribute(resourceAttribute);
-				if (result == null) result = caseEntityAttribute(resourceAttribute);
-				if (result == null) result = caseEntityFeature(resourceAttribute);
 				if (result == null) result = caseAttribute(resourceAttribute);
-				if (result == null) result = caseNamedDisplayElement(resourceAttribute);
 				if (result == null) result = caseFeature(resourceAttribute);
 				if (result == null) result = caseLabel(resourceAttribute);
+				if (result == null) result = caseNamedDisplayElement(resourceAttribute);
 				if (result == null) result = caseNamedElement(resourceAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -244,12 +230,10 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				FileAttribute fileAttribute = (FileAttribute)theEObject;
 				T result = caseFileAttribute(fileAttribute);
 				if (result == null) result = caseResourceAttribute(fileAttribute);
-				if (result == null) result = caseEntityAttribute(fileAttribute);
-				if (result == null) result = caseEntityFeature(fileAttribute);
 				if (result == null) result = caseAttribute(fileAttribute);
-				if (result == null) result = caseNamedDisplayElement(fileAttribute);
 				if (result == null) result = caseFeature(fileAttribute);
 				if (result == null) result = caseLabel(fileAttribute);
+				if (result == null) result = caseNamedDisplayElement(fileAttribute);
 				if (result == null) result = caseNamedElement(fileAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -258,12 +242,10 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				ImageAttribute imageAttribute = (ImageAttribute)theEObject;
 				T result = caseImageAttribute(imageAttribute);
 				if (result == null) result = caseResourceAttribute(imageAttribute);
-				if (result == null) result = caseEntityAttribute(imageAttribute);
-				if (result == null) result = caseEntityFeature(imageAttribute);
 				if (result == null) result = caseAttribute(imageAttribute);
-				if (result == null) result = caseNamedDisplayElement(imageAttribute);
 				if (result == null) result = caseFeature(imageAttribute);
 				if (result == null) result = caseLabel(imageAttribute);
+				if (result == null) result = caseNamedDisplayElement(imageAttribute);
 				if (result == null) result = caseNamedElement(imageAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -271,35 +253,20 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.LOCATION_ATTRIBUTE: {
 				LocationAttribute locationAttribute = (LocationAttribute)theEObject;
 				T result = caseLocationAttribute(locationAttribute);
-				if (result == null) result = caseEntityAttribute(locationAttribute);
-				if (result == null) result = caseEntityFeature(locationAttribute);
 				if (result == null) result = caseAttribute(locationAttribute);
-				if (result == null) result = caseNamedDisplayElement(locationAttribute);
 				if (result == null) result = caseFeature(locationAttribute);
 				if (result == null) result = caseLabel(locationAttribute);
+				if (result == null) result = caseNamedDisplayElement(locationAttribute);
 				if (result == null) result = caseNamedElement(locationAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENTITY_ASSOCIATION: {
-				EntityAssociation entityAssociation = (EntityAssociation)theEObject;
-				T result = caseEntityAssociation(entityAssociation);
-				if (result == null) result = caseEntityFeature(entityAssociation);
-				if (result == null) result = caseAssociation(entityAssociation);
-				if (result == null) result = caseNamedDisplayElement(entityAssociation);
-				if (result == null) result = caseFeature(entityAssociation);
-				if (result == null) result = caseNamedElement(entityAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT: {
 				AssociationWithoutContainment associationWithoutContainment = (AssociationWithoutContainment)theEObject;
 				T result = caseAssociationWithoutContainment(associationWithoutContainment);
-				if (result == null) result = caseEntityAssociation(associationWithoutContainment);
-				if (result == null) result = caseEntityFeature(associationWithoutContainment);
 				if (result == null) result = caseAssociation(associationWithoutContainment);
-				if (result == null) result = caseNamedDisplayElement(associationWithoutContainment);
 				if (result == null) result = caseFeature(associationWithoutContainment);
+				if (result == null) result = caseNamedDisplayElement(associationWithoutContainment);
 				if (result == null) result = caseNamedElement(associationWithoutContainment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -307,11 +274,9 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT: {
 				AssociationWithContainment associationWithContainment = (AssociationWithContainment)theEObject;
 				T result = caseAssociationWithContainment(associationWithContainment);
-				if (result == null) result = caseEntityAssociation(associationWithContainment);
-				if (result == null) result = caseEntityFeature(associationWithContainment);
 				if (result == null) result = caseAssociation(associationWithContainment);
-				if (result == null) result = caseNamedDisplayElement(associationWithContainment);
 				if (result == null) result = caseFeature(associationWithContainment);
+				if (result == null) result = caseNamedDisplayElement(associationWithContainment);
 				if (result == null) result = caseNamedElement(associationWithContainment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -507,21 +472,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntityAttribute(EntityAttribute object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Data Type Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -668,21 +618,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLocationAttribute(LocationAttribute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntityAssociation(EntityAssociation object) {
 		return null;
 	}
 

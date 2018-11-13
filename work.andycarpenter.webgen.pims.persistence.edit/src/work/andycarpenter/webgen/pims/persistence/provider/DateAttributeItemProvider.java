@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DateAttributeItemProvider extends EntityAttributeItemProvider {
+public class DateAttributeItemProvider extends AttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

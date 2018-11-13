@@ -120,8 +120,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateEntity((Entity)value, diagnostics, context);
 			case PersistencePackage.ENTITY_FEATURE:
 				return validateEntityFeature((EntityFeature)value, diagnostics, context);
-			case PersistencePackage.ENTITY_ATTRIBUTE:
-				return validateEntityAttribute((EntityAttribute)value, diagnostics, context);
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE:
 				return validateDataTypeAttribute((DataTypeAttribute)value, diagnostics, context);
 			case PersistencePackage.DATE_ATTRIBUTE:
@@ -142,8 +140,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateImageAttribute((ImageAttribute)value, diagnostics, context);
 			case PersistencePackage.LOCATION_ATTRIBUTE:
 				return validateLocationAttribute((LocationAttribute)value, diagnostics, context);
-			case PersistencePackage.ENTITY_ASSOCIATION:
-				return validateEntityAssociation((EntityAssociation)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT:
 				return validateAssociationWithoutContainment((AssociationWithoutContainment)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT:
@@ -238,7 +234,47 @@ public class PersistenceValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateFeature(Feature feature, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(feature, diagnostics, context);
+		if (!validate_NoCircularContainment(feature, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(feature, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the primaryKeyRequired constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FEATURE__PRIMARY_KEY_REQUIRED__EEXPRESSION = "primaryKey implies cardinality <> Cardinality::Optional";
+
+	/**
+	 * Validates the primaryKeyRequired constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFeature_primaryKeyRequired(Feature feature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(PersistencePackage.Literals.FEATURE,
+				 feature,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "primaryKeyRequired",
+				 FEATURE__PRIMARY_KEY_REQUIRED__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -247,7 +283,18 @@ public class PersistenceValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAttribute(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(attribute, diagnostics, context);
+		if (!validate_NoCircularContainment(attribute, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(attribute, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -256,7 +303,18 @@ public class PersistenceValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAssociation(Association association, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(association, diagnostics, context);
+		if (!validate_NoCircularContainment(association, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(association, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(association, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(association, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -409,56 +467,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(entityFeature, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the primaryKeyRequired constraint of '<em>Entity Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String ENTITY_FEATURE__PRIMARY_KEY_REQUIRED__EEXPRESSION = "primaryKey implies cardinality <> Cardinality::Optional";
-
-	/**
-	 * Validates the primaryKeyRequired constraint of '<em>Entity Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityFeature_primaryKeyRequired(EntityFeature entityFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(PersistencePackage.Literals.ENTITY_FEATURE,
-				 entityFeature,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "primaryKeyRequired",
-				 ENTITY_FEATURE__PRIMARY_KEY_REQUIRED__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityAttribute(EntityAttribute entityAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(entityAttribute, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(entityAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(entityFeature, diagnostics, context);
 		return result;
 	}
 
@@ -478,7 +487,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dataTypeAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dataTypeAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dataTypeAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(dataTypeAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(dataTypeAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -498,7 +507,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dateAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dateAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dateAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(dateAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(dateAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -518,7 +527,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(urlAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(urlAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(urlAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(urlAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(urlAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -538,7 +547,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(resourceAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(resourceAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(resourceAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(resourceAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -585,7 +594,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(fileAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(fileAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(fileAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(fileAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -605,7 +614,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(imageAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(imageAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -625,27 +634,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(locationAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(locationAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(locationAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(locationAttribute, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityAssociation(EntityAssociation entityAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(entityAssociation, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(entityAssociation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(locationAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -665,7 +654,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(associationWithoutContainment, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(associationWithoutContainment, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(associationWithoutContainment, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(associationWithoutContainment, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(associationWithoutContainment, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAssociationWithoutContainment_oneToManyAssociationsMustBeBidirectional(associationWithoutContainment, diagnostics, context);
 		return result;
 	}
@@ -715,7 +704,7 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(associationWithContainment, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(associationWithContainment, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(associationWithContainment, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEntityFeature_primaryKeyRequired(associationWithContainment, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(associationWithContainment, diagnostics, context);
 		return result;
 	}
 

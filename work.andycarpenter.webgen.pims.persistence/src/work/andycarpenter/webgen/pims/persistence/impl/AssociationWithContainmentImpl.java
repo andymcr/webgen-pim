@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class AssociationWithContainmentImpl extends EntityAssociationImpl implements AssociationWithContainment {
+public class AssociationWithContainmentImpl extends AssociationImpl implements AssociationWithContainment {
 	/**
 	 * The default value of the '{@link #isSourceVisible() <em>Source Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->

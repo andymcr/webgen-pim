@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.persistence.UrlAttribute;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UrlAttributeItemProvider extends EntityAttributeItemProvider {
+public class UrlAttributeItemProvider extends AttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

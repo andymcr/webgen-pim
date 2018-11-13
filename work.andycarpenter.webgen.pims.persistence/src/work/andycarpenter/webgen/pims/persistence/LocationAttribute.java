@@ -13,5 +13,5 @@ package work.andycarpenter.webgen.pims.persistence;
  * @model
  * @generated
  */
-public interface LocationAttribute extends EntityAttribute {
+public interface LocationAttribute extends Attribute {
 } // LocationAttribute

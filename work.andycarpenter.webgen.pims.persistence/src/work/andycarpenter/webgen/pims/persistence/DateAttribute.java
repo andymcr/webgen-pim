@@ -20,7 +20,7 @@ package work.andycarpenter.webgen.pims.persistence;
  * @model
  * @generated
  */
-public interface DateAttribute extends EntityAttribute {
+public interface DateAttribute extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Details</b></em>' attribute.
 	 * The default value is <code>"DateOnly"</code>.

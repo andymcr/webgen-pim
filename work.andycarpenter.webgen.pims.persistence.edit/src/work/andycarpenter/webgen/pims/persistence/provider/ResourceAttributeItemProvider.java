@@ -26,7 +26,7 @@ import work.andycarpenter.webgen.pims.persistence.ResourceAttribute;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceAttributeItemProvider extends EntityAttributeItemProvider {
+public class ResourceAttributeItemProvider extends AttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

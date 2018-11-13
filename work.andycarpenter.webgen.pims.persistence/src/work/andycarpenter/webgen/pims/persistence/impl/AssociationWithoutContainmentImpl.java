@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class AssociationWithoutContainmentImpl extends EntityAssociationImpl implements AssociationWithoutContainment {
+public class AssociationWithoutContainmentImpl extends AssociationImpl implements AssociationWithoutContainment {
 	/**
 	 * The default value of the '{@link #getTargetCardinality() <em>Target Cardinality</em>}' attribute.
 	 * <!-- begin-user-doc -->

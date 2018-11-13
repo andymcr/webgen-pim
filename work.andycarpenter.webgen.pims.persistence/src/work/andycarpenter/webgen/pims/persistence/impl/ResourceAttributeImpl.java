@@ -39,7 +39,7 @@ import work.andycarpenter.webgen.pims.persistence.ResourceAttribute;
  *
  * @generated
  */
-public abstract class ResourceAttributeImpl extends EntityAttributeImpl implements ResourceAttribute {
+public abstract class ResourceAttributeImpl extends AttributeImpl implements ResourceAttribute {
 	/**
 	 * The default value of the '{@link #getMaximumUploadSize() <em>Maximum Upload Size</em>}' attribute.
 	 * <!-- begin-user-doc -->

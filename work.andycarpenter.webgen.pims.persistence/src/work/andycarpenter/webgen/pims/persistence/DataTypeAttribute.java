@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.base.DataType;
  * @model
  * @generated
  */
-public interface DataTypeAttribute extends EntityAttribute {
+public interface DataTypeAttribute extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Data Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

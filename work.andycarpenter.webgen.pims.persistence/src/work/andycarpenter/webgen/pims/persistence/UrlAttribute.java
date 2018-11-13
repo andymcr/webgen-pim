@@ -19,7 +19,7 @@ package work.andycarpenter.webgen.pims.persistence;
  * @model
  * @generated
  */
-public interface UrlAttribute extends EntityAttribute {
+public interface UrlAttribute extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

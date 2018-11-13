@@ -94,8 +94,8 @@ public interface Entity extends Classifier {
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityFeature}.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature#getPartOf <em>Part Of</em>}'.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Feature#getPartOf <em>Part Of</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Features</em>' containment reference list isn't clear,
@@ -104,11 +104,11 @@ public interface Entity extends Classifier {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features</em>' containment reference list.
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_Features()
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature#getPartOf
+	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getPartOf
 	 * @model opposite="partOf" containment="true"
 	 * @generated
 	 */
-	EList<EntityFeature> getFeatures();
+	EList<Feature> getFeatures();
 
 	/**
 	 * Returns the value of the '<em><b>Keys</b></em>' reference list.
@@ -162,8 +162,8 @@ public interface Entity extends Classifier {
 
 	/**
 	 * Returns the value of the '<em><b>Association Ends</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityAssociation}.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetEntity <em>Target Entity</em>}'.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Association}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetEntity <em>Target Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Association Ends</em>' reference list isn't clear,
@@ -172,15 +172,15 @@ public interface Entity extends Classifier {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Association Ends</em>' reference list.
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_AssociationEnds()
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityAssociation#getTargetEntity
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetEntity
 	 * @model opposite="targetEntity"
 	 * @generated
 	 */
-	EList<EntityAssociation> getAssociationEnds();
+	EList<Association> getAssociationEnds();
 
 	/**
 	 * Returns the value of the '<em><b>All Features</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityFeature}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>All Features</em>' reference list isn't clear,
@@ -193,7 +193,7 @@ public interface Entity extends Classifier {
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='features-&gt;union(associationEnds-&gt;select(e | e.bidirectional))-&gt;asOrderedSet()'"
 	 * @generated
 	 */
-	EList<EntityFeature> getAllFeatures();
+	EList<Feature> getAllFeatures();
 
 	/**
 	 * Returns the value of the '<em><b>All Associations</b></em>' reference list.
