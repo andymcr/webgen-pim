@@ -457,10 +457,10 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			return entities;
 		} else {
 			final Set<Entity> target = new HashSet<Entity>();
-			if (entities.contains(association.getAssociation().getSourceEntityX())) {
-				target.add((Entity) association.getAssociation().getTargetEntityX());
+			if (entities.contains(association.getAssociation().getPartOf())) {
+				target.add((Entity) association.getAssociation().getTargetEntity());
 			} else{
-				target.add((Entity) association.getAssociation().getSourceEntityX());
+				target.add((Entity) association.getAssociation().getPartOf());
 			}
 			return target;
 		}

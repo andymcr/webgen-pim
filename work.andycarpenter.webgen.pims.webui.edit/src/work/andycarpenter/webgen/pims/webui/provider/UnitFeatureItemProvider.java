@@ -22,7 +22,6 @@ import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -624,16 +623,14 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		if (unit instanceof SingletonUnit) {
 			final SingletonUnit singleton = (SingletonUnit) unit;
 			if (singleton.getContentType() != null) {
-				contentType.add((Entity) singleton.getContentType());
+				contentType.add(singleton.getContentType());
 				return contentType;
 			}
 		}
 
 		if (unit instanceof CollectionUnit) {
 			final CollectionUnit collection = (CollectionUnit) unit;
-			for (EntityOrView xx : collection.getContentType()) {
-				contentType.add((Entity) xx);
-			}
+			contentType.addAll(collection.getContentType());
 			return contentType;
 		}
 

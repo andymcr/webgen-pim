@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
@@ -386,7 +386,7 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 	protected Set<Attribute> getAttributes(final DynamicUnit unit) {
 		final Set<Attribute> attributes = new HashSet<Attribute>();
 
-		for (EntityOrView entity : getContentType(unit)) {
+		for (Entity entity : getContentType(unit)) {
 			attributes.addAll(entity.getAttributes());
 		}
 

@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
@@ -414,8 +414,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 WebuiFactory.eINSTANCE.createUnitSupportAction()));
 	}
 
-	protected List<EntityOrView> getContentType(final DynamicUnit unit) {
-		final List<EntityOrView> contentType = new LinkedList<EntityOrView>();
+	protected List<Entity> getContentType(final DynamicUnit unit) {
+		final List<Entity> contentType = new LinkedList<Entity>();
 
 		if (unit instanceof SingletonUnit) {
 			final SingletonUnit singleton = (SingletonUnit) unit;
@@ -436,7 +436,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		return contentType;
 	}
 
-	protected EntityOrView getRoutingType(final DynamicUnit unit) {
+	protected Entity getRoutingType(final DynamicUnit unit) {
 		if (unit instanceof SingletonUnit) {
 			final SingletonUnit singleton = (SingletonUnit) unit;
 			return singleton.getContentType();
@@ -448,12 +448,12 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				if (!collection.getSelection().getSelectPath().isEmpty()) {
 					return collection.getSelection().getSelectPath().get(
 							collection.getSelection().getSelectPath().size() - 1)
-							.getTargetEntityX();
+							.getTargetEntity();
 				}
 			}
 			final Association association = getContainingAssociation(unit);
 			if (association != null) {
-				association.getSourceEntityX();
+				association.getPartOf();
 			}
 		}
 
@@ -463,7 +463,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	protected Set<Attribute> getAttributes(final DynamicUnit unit) {
 		final Set<Attribute> attributes = new HashSet<Attribute>();
 
-		for (EntityOrView entity : getContentType(unit)) {
+		for (Entity entity : getContentType(unit)) {
 			attributes.addAll(entity.getAttributes());
 		}
 
@@ -473,14 +473,14 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	protected Set<Association> getAssociations(final DynamicUnit unit) {
 		final Set<Association> associations = new HashSet<Association>();
 
-		for (EntityOrView entity : getContentType(unit)) {
+		for (Entity entity : getContentType(unit)) {
 			associations.addAll(entity.getAllAssociations());
 		}
 
 		return associations;
 	}
 
-	protected AssociationWithContainment getContainingAssociation(final EntityOrView type) {
+	protected AssociationWithContainment getContainingAssociation(final Entity type) {
 		for (Association association : type.getAllAssociations()) {
 			if (association instanceof AssociationWithContainment) {
 				if (!type.getAssociations().contains(association)) {
@@ -493,7 +493,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	protected AssociationWithContainment getContainingAssociation(final DynamicUnit unit) {
-		for (EntityOrView type : getContentType(unit)) {
+		for (Entity type : getContentType(unit)) {
 			final AssociationWithContainment association = getContainingAssociation(type);
 			if (association != null) {
 				return association;
@@ -503,7 +503,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		return null;
 	}
 
-	protected Set<Label> getLabels(final EntityOrView entityOrView) {
+	protected Set<Label> getLabels(final Entity entityOrView) {
 		final Set<Label> labels = new HashSet<Label>();
 		labels.addAll(entityOrView.getAttributes());
 		labels.addAll(entityOrView.getLabels());
@@ -511,7 +511,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		return labels;
 	}
 
-	protected Set<Selection> getSelections(final WebUI webUI, final EntityOrView entity) {
+	protected Set<Selection> getSelections(final WebUI webUI, final Entity entity) {
 		final Set<Selection> selections = new HashSet<Selection>();
 		for (Service service : webUI.getServices().getServices()) {
 			if (service.getServes() == entity) {
@@ -524,7 +524,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 	protected Set<Selection> getSelections(final DynamicUnit unit) {
 		final Set<Selection> selections = new HashSet<Selection>();
-		final List<EntityOrView> contentType = getContentType(unit);
+		final List<Entity> contentType = getContentType(unit);
 		if (!contentType.isEmpty()) {
 			final WebUI webUI = unit.getPageDisplayedOn().getWebUI();
 			selections.addAll(getSelections(webUI, contentType.get(0)));
@@ -536,7 +536,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	protected Set<Selection> getContainerSelections(final DynamicUnit unit) {
 		final Set<Selection> selections = new HashSet<Selection>();
 		final WebUI webUI = unit.getPageDisplayedOn().getWebUI();
-		for (EntityOrView type : getContentType(unit)) {
+		for (Entity type : getContentType(unit)) {
 			final AssociationWithContainment association = getContainingAssociation(type);
 			if (association != null) {
 				selections.addAll(getSelections(webUI, association.getPartOf()));
