@@ -166,7 +166,7 @@ public class SecurityValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String AUTHENTICATION__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not userKey.oclIsUndefined() implies\n" +
-		"\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required";
+		"\tuserKey.cardinality = persistence::Cardinality::Required";
 
 	/**
 	 * Validates the userKeyRequiredAttribute constraint of '<em>Authentication</em>'.

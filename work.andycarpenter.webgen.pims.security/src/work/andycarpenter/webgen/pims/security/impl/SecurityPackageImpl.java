@@ -507,7 +507,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		   source,
 		   new String[] {
 			   "userKeyFromUser", "not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features->includes(userKey)",
-			   "userKeyRequiredAttribute", "not userKey.oclIsUndefined() implies\n\tuserKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required"
+			   "userKeyRequiredAttribute", "not userKey.oclIsUndefined() implies\n\tuserKey.cardinality = persistence::Cardinality::Required"
 		   });
 		addAnnotation
 		  (localAuthenticationSystemEClass,

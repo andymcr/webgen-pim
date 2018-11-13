@@ -20,7 +20,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="userKeyFromUser" value="not user.oclIsUndefined() and not userKey.oclIsUndefined() implies&#xD;&#xA;&#x9;user.features->includes(userKey)"/>
-      <details key="userKeyRequiredAttribute" value="not userKey.oclIsUndefined() implies&#xA;&#x9;userKey.oclAsType(persistence::EntityAttribute).cardinality = persistence::Cardinality::Required"/>
+      <details key="userKeyRequiredAttribute" value="not userKey.oclIsUndefined() implies&#xA;&#x9;userKey.cardinality = persistence::Cardinality::Required"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="security" lowerBound="1"
         eType="#//Security" eOpposite="#//Security/authentication"/>
