@@ -17,8 +17,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -241,13 +241,13 @@ public class ImageUnitItemProvider extends CollectionUnitItemProvider {
 		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
-	protected EntityOrView getSelectType(final ImageUnit unit) {
+	protected Entity getSelectType(final ImageUnit unit) {
 		if (unit.getSelection() == null) {
 			return null;
 		}
-		EntityOrView pathType = null;
-		Set<EntityOrView> entities = new HashSet<EntityOrView>(unit.getContentType());
-		for (EntityAssociation element : unit.getSelection().getSelectPath()) {
+		Entity pathType = null;
+		Set<Entity> entities = new HashSet<Entity>(unit.getContentType());
+		for (Association element : unit.getSelection().getSelectPath()) {
 			if (entities.contains(element.getPartOf())) {
 				pathType = element.getTargetEntity();
 			} else {

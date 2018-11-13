@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -83,7 +83,7 @@ public class FeaturePathAssociationItemProvider extends FeaturePathItemProvider 
 					if (object instanceof FeaturePathAssociation) {
 						final Set<Association> associations = new HashSet<Association>();
 						final FeaturePathAssociation path = (FeaturePathAssociation) object;
-						for (EntityOrView entity :  getParentTypes(path)) {
+						for (Entity entity :  getParentTypes(path)) {
 							associations.addAll(entity.getAllAssociations());
 						}
 						return associations;

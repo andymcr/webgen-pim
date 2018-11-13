@@ -29,10 +29,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EncapsulatedAttribute;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
-import work.andycarpenter.webgen.pims.persistence.EntityAttribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
@@ -163,7 +160,7 @@ public class FeaturePathItemProvider
 		return WebuiEditPlugin.INSTANCE;
 	}
 
-	protected Set<EntityOrView> getParentTypes(final FeaturePath path) {
+	protected Set<Entity> getParentTypes(final FeaturePath path) {
 		if (path.eContainer() instanceof DynamicUnit) {
 			return getContentTypes((DynamicUnit) path.eContainer());
 
@@ -181,20 +178,20 @@ public class FeaturePathItemProvider
 		}
 	}
 
-	protected Set<EntityOrView> getTargets(final FeaturePathAssociation path) {
+	protected Set<Entity> getTargets(final FeaturePathAssociation path) {
 		if (path.eContainer() instanceof DynamicUnit) {
-			final Set<EntityOrView> targets = new HashSet<EntityOrView>();
+			final Set<Entity> targets = new HashSet<Entity>();
 			targets.add(getTarget(path.getAssociation(), (DynamicUnit) path.eContainer()));
 			return targets;
 
 		} else if (path.eContainer() instanceof InlineAction) {
-			final Set<EntityOrView> targets = new HashSet<EntityOrView>();
-			final Set<EntityOrView> entities
+			final Set<Entity> targets = new HashSet<Entity>();
+			final Set<Entity> entities
 				= getEntities((InlineActionContainer) path.eContainer().eContainer());
-			if (entities.contains(path.getAssociation().getSourceEntityX())) {
-				targets.add(path.getAssociation().getTargetEntityX());
+			if (entities.contains(path.getAssociation().getPartOf())) {
+				targets.add(path.getAssociation().getTargetEntity());
 			} else{
-				targets.add(path.getAssociation().getSourceEntityX());
+				targets.add(path.getAssociation().getPartOf());
 			}
 			return targets;
 
@@ -206,17 +203,17 @@ public class FeaturePathItemProvider
 		}
 	}
 
-	protected EntityOrView getTarget(final Association association, final DynamicUnit unit) {
-		final Set<EntityOrView> contentType = getContentTypes(unit);
-		if (contentType.contains(association.getSourceEntityX())) {
-			return association.getTargetEntityX();
+	protected Entity getTarget(final Association association, final DynamicUnit unit) {
+		final Set<Entity> contentType = getContentTypes(unit);
+		if (contentType.contains(association.getPartOf())) {
+			return association.getTargetEntity();
 		} else{
-			return association.getSourceEntityX();
+			return association.getPartOf();
 		}
 	}
 
-	protected Set<EntityOrView> getContentTypes(final DynamicUnit unit) {
-		final Set<EntityOrView> contentType = new HashSet<EntityOrView>();
+	protected Set<Entity> getContentTypes(final DynamicUnit unit) {
+		final Set<Entity> contentType = new HashSet<Entity>();
 
 		if (unit instanceof SingletonUnit) {
 			final SingletonUnit singleton = (SingletonUnit) unit;
@@ -239,21 +236,21 @@ public class FeaturePathItemProvider
 		return contentType;
 	}
 
-	protected EntityOrView getSelectType(final Selection selection, final List<EntityOrView> parentTypes) {
-		EntityOrView type = null;
+	protected Entity getSelectType(final Selection selection, final List<Entity> parentTypes) {
+		Entity type = null;
 		boolean first = true;
-		for (EntityAssociation association : selection.getSelectPath()) {
+		for (Association association : selection.getSelectPath()) {
 			if (first) {
-				if (parentTypes.contains(association.getSourceEntityX())) {
-					type = association.getTargetEntityX();
+				if (parentTypes.contains(association.getPartOf())) {
+					type = association.getTargetEntity();
 				} else {
-					type = association.getSourceEntityX();
+					type = association.getPartOf();
 				}
 			} else {
-				if (association.getSourceEntityX().equals(type)) {
-					type = association.getTargetEntityX();
+				if (association.getPartOf().equals(type)) {
+					type = association.getTargetEntity();
 				} else {
-					type = association.getSourceEntityX();
+					type = association.getPartOf();
 				}
 			}
 			first = false;
@@ -262,35 +259,35 @@ public class FeaturePathItemProvider
 		return type;
 	}
 
-	protected Set<EntityOrView> getEntities(final InlineActionContainer container) {
-		final Set<EntityOrView> entities = new HashSet<EntityOrView>();
+	protected Set<Entity> getEntities(final InlineActionContainer container) {
+		final Set<Entity> entities = new HashSet<Entity>();
 		if (container instanceof CollectionUnit) {
 			entities.addAll(((CollectionUnit) container).getContentType());
 		} else if (container instanceof UnitElement) {
 			entities.add(getParentType(
 				((UnitElement) container).getAttribute()));
 		} else if (container instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) container).getAssociation().getSourceEntityX());
+			entities.add(((UnitAssociation) container).getAssociation().getPartOf());
 		}
 
 		return entities;
 	}
 
-	protected Set<EntityOrView> getEntities(final Badge badge) {
-		final Set<EntityOrView> entities = new HashSet<EntityOrView>();
+	protected Set<Entity> getEntities(final Badge badge) {
+		final Set<Entity> entities = new HashSet<Entity>();
 		if (badge.eContainer() instanceof CollectionUnit) {
 			entities.addAll(((CollectionUnit) badge.eContainer()).getContentType());
 		} else if (badge.eContainer() instanceof UnitElement) {
 			entities.add(getParentType(
 				((UnitElement) badge.eContainer()).getAttribute()));
 		} else if (badge.eContainer() instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) badge.eContainer()).getAssociation().getSourceEntityX());
+			entities.add(((UnitAssociation) badge.eContainer()).getAssociation().getPartOf());
 		}
 
 		return entities;
 	}
 
-	protected Set<EntityOrView> getEntities(final Expression expression) {
+	protected Set<Entity> getEntities(final Expression expression) {
 		final DynamicUnit unit = getDynamicUnitContext(expression);
 		if (unit != null) {
 			return getContentTypes(unit);
@@ -309,13 +306,8 @@ public class FeaturePathItemProvider
 		return Collections.emptySet();
 	}
 
-	protected EntityOrView getParentType(final Attribute attribute) {
-		if (attribute instanceof EntityAttribute) {
-			return ((EntityAttribute) attribute).getPartOf();
-		} else {
-			return getParentType(
-				((EncapsulatedAttribute) attribute).getAttribute());
-		}
+	protected Entity getParentType(final Attribute attribute) {
+		return attribute.getPartOf();
 	}
 
 	protected Object getContext(final Object object) {

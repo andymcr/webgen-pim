@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.FeaturePathLabel;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -76,7 +76,7 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 					if (object instanceof FeaturePathLabel) {
 						final Set<Label> labels = new HashSet<Label>();
 						final FeaturePathLabel path = (FeaturePathLabel) object;
-						for (EntityOrView entity :  getParentTypes(path)) {
+						for (Entity entity :  getParentTypes(path)) {
 							labels.addAll(entity.getLabels());
 						}
 						return labels;

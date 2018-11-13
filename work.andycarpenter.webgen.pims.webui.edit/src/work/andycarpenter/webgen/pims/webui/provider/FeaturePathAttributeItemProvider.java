@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -76,7 +76,7 @@ public class FeaturePathAttributeItemProvider extends FeaturePathItemProvider {
 					if (object instanceof FeaturePathAttribute) {
 						final Set<Attribute> attributes = new HashSet<Attribute>();
 						final FeaturePathAttribute path = (FeaturePathAttribute) object;
-						for (EntityOrView entity :  getParentTypes(path)) {
+						for (Entity entity :  getParentTypes(path)) {
 							attributes.addAll(entity.getAttributes());
 						}
 						return attributes;
