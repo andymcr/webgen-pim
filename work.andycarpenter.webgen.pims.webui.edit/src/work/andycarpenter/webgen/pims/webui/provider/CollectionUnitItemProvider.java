@@ -25,7 +25,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -194,8 +193,8 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof ImageUnit) {
-						return getSelections((ImageUnit) object);
+					if (object instanceof CollectionUnit) {
+						return getSelections((CollectionUnit) object);
 					}
 					return Collections.emptySet();
 				}
@@ -220,8 +219,8 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof ImageUnit) {
-						return getContainerSelections((ImageUnit) object);
+					if (object instanceof CollectionUnit) {
+						return getContainerSelections((CollectionUnit) object);
 					}
 
 					return Collections.emptySet();
@@ -269,8 +268,8 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof ImageUnit) {
-						return getSelections((ImageUnit) object);
+					if (object instanceof CollectionUnit) {
+						return getSelections((CollectionUnit) object);
 					}
 					return Collections.emptySet();
 				}
@@ -317,8 +316,8 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof ImageUnit) {
-						final ImageUnit unit = (ImageUnit) object;
+					if (object instanceof CollectionUnit) {
+						final CollectionUnit unit = (CollectionUnit) object;
 						if (unit.getSelection() != null) {
 							return unit.getSelection().getFilters();
 						}
