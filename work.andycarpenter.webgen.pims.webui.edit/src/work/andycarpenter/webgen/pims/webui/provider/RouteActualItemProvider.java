@@ -34,7 +34,6 @@ import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityOrView;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
@@ -104,8 +103,7 @@ public class RouteActualItemProvider
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof RouteActual) {
 						final RouteActual actual = (RouteActual) object;
-						final EntityOrView type = getContentType(actual.getActualFor());
-						return getKeys(type);
+						return getKeys(getContentType(actual.getActualFor()));
 					}
 
 					return Collections.emptySet();
@@ -313,7 +311,7 @@ public class RouteActualItemProvider
 		return WebuiEditPlugin.INSTANCE;
 	}
 
-	private EntityOrView getContentType(final ContentUnit unit) {
+	private Entity getContentType(final ContentUnit unit) {
 		if (unit instanceof SingletonUnit)
 			return ((SingletonUnit) unit).getContentType();
 		else if (unit instanceof CollectionUnit) {
@@ -326,21 +324,21 @@ public class RouteActualItemProvider
 			return null;
 	}
 
-	private Set<Attribute> getKeys(final EntityOrView entity) {
+	private Set<Attribute> getKeys(final Entity entity) {
 		final Set<Attribute> keys = new HashSet<Attribute>();
 		for (Feature feature : entity.getKeys()) {
 			if (feature instanceof Attribute) {
 				keys.add((Attribute) feature);
 			}
 		}
-		final EntityOrView parent = getParent(entity);
+		final Entity parent = getParent(entity);
 		if (parent != null) {
 			keys.addAll(getKeys(parent));
 		}
 		return keys;
 	}
 
-	private EntityOrView getParent(final EntityOrView entity) {
+	private Entity getParent(final Entity entity) {
 		if (!(entity instanceof Entity)) {
 			return null;
 		}
