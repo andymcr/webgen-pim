@@ -1,7 +1,7 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/Orm.ecore
 
 module PersistenceTypes;
 create orm : ORM from website : Website;
@@ -63,7 +63,7 @@ rule Website {
 		hasCustomOrmTypes <-
 			website.entities
 				->select(c | c.oclIsTypeOf(Website!Entity))
-				->collect(e | e.entityFeatures)->flatten()
+				->collect(e | e.features)->flatten()
 				->select(f | f.oclIsKindOf(Website!Attribute))
 				->select(a | not a.ormType.oclIsUndefined())
 				->select(a | a.ormType.trim() <> '')
@@ -180,7 +180,7 @@ rule Entity {
 		autoKeyPersistentType <- website.autoKeyPersistentType,
 		autoKeyGenerationStrategy <- website.autoKeyGenerationStrategy,
 		implementsUserInterface <- website.implementsUserInterface,
-		implementForumUser <- website.forumUser,
+--		implementForumUser <- website.forumUser,
 		allowFormTypeCustomisation <- website.allowFormTypeCustomisation
 	)
 }

@@ -118,21 +118,13 @@ helper context Website!DataType def: ormType() : String
 		endif;
 
 helper context Website!Association def: targetEntityName() : String
-	= if self.oclIsTypeOf(Website!EncapsulatedAssociation) then
-			self.association.targetEntityName()
-		else
-			self.targetEntity.name
-		endif;
+	= self.targetEntity.name;
 
 	helper context Website!Association def: targetFeatureName() : String
-	= if self.oclIsTypeOf(Website!EncapsulatedAssociation) then
-			self.association.targetFeatureName()
+	= if not self.targetFeatureName.oclIsUndefined() and self.targetFeatureName <> '' then
+			self.targetFeatureName
 		else
-			if not self.targetFeatureName.oclIsUndefined() and self.targetFeatureName <> '' then
-				self.targetFeatureName
-			else
-				'inv'.concat(self.name.uppercaseFirst())
-			endif
+			'inv'.concat(self.name.uppercaseFirst())
 		endif;
 
 helper context Website!Association def: targetDisplayLabel() : String
@@ -273,7 +265,7 @@ helper context Website!ChildPathAssociation def: findOrmAssociation() : ORM!Asso
 		endif;
 
 helper context Website!UnitAssociation def: getSourceTypes() : Sequence(Website!Entity)
-	= Sequence{ self.association.sourceEntityX };
+	= Sequence{ self.association.partOf };
 
 helper context Website!FeaturePathAssociation def: getSourceTypes() : Sequence(Website!Entity)
 	= if self.eContainer().oclIsKindOf(Website!CollectionUnit) then
@@ -388,9 +380,7 @@ helper def: findOrmCollection(name : String) : ORM!DataType
 
 
 helper context Website!Attribute def: dateFormat() : String
-	= if self.oclIsTypeOf(Website!EncapsulatedAttribute) then
-			self.attribute.dateFormat()
-		else if not self.oclIsTypeOf(Website!DateAttribute) then
+	= if not self.oclIsTypeOf(Website!DateAttribute) then
 			OclUndefined
 		else if not self.format.oclIsUndefined() and self.format <> '' then
 			self.format
@@ -402,7 +392,7 @@ helper context Website!Attribute def: dateFormat() : String
 			else
 				thisModule.findWebsiteUI().defaultDateTimeFormat
 			endif endif
-		endif endif endif;
+		endif endif;
 
 helper context Website!UnitField def: dateFormat() : String
 	= if not self.dateFormat.oclIsUndefined() and self.dateFormat <> '' then

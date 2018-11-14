@@ -33,14 +33,10 @@ helper context Website!Association def: associationLabel() : String
 		endif;
 
 helper context Website!Association def: associationTargetLabel() : String
-	= if self.oclIsTypeOf(Website!EncapsulatedAssociation) then
-			self.association.associationTargetLabel()
+	= if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel <> '' then
+			self.targetDisplayLabel
 		else
-			if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel <> '' then
-				self.targetDisplayLabel
-			else
-				self.targetFeatureName().createLabel()
-			endif
+			self.targetFeatureName().createLabel()
 		endif;
 
 helper context Website!UnitElement def: attributeLabel() : String
@@ -101,11 +97,9 @@ helper context Website!Attribute def: interfaceType() : String
 			else
 				'time'
 			endif endif
-		else if self.oclIsTypeOf(Website!EncapsulatedAttribute) then
-		    self.attribute.interfaceType()
 		else
 			OclUndefined
-		endif endif endif;
+		endif endif;
 
 helper context Website!DataTypeField def: interfaceType() : String
 	= if not self.interfaceType.oclIsUndefined() and self.interfaceType <> '' then

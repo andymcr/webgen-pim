@@ -1,7 +1,7 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/Orm.ecore
 
 module PersistenceEntityFeatures;
 create dummyOrm : ORM refining orm : ORM, website : Website;
@@ -72,7 +72,7 @@ abstract rule Feature {
 
 -- @extends Feature
 abstract rule Attribute {
-	from website : Website!EntityAttribute
+	from website : Website!Attribute
 	to orm : ORM!Attribute (
 		defaultValue <- website.defaultValue,
 		slugFields <- website.slugFields,
@@ -275,7 +275,7 @@ rule SingletonLocation {
 
 -- @extends Feature
 abstract rule Association {
-	from website : Website!EntityAssociation
+	from website : Website!Association
 	to orm : ORM!Association (
 		pseudo <- website.pseudo,
 		keys <- website.keys,
