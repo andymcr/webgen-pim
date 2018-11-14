@@ -29,7 +29,6 @@ import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
@@ -203,11 +202,11 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
 					final Selection selection = (Selection) object;
-					final EntityAssociation last
+					final Association last
 						= selection.getSelectPath().isEmpty()
 							? null
 							: selection.getSelectPath().get(selection.getSelectPath().size() - 1);
-					final EntityAssociation penultimate
+					final Association penultimate
 						= selection.getSelectPath().size() < 2
 							? null
 							: selection.getSelectPath().get(selection.getSelectPath().size() - 2);
@@ -219,9 +218,9 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 						}
 					}
 					if (last != null) {
-						fields.addAll(last.getTargetEntityX().getAllAssociations());
+						fields.addAll(last.getTargetEntity().getAllAssociations());
 						if (penultimate != null) {
-							fields.addAll(penultimate.getTargetEntityX().getAllAssociations());
+							fields.addAll(penultimate.getTargetEntity().getAllAssociations());
 						}
 					}
 
@@ -431,11 +430,11 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 		while (!joins.isEmpty()) {
 			final Set<Association> handled = new HashSet<Association>();
 			for (Association join : joins) {
-				if (entities.contains(join.getSourceEntityX())) {
-					entities.add(join.getTargetEntityX());
+				if (entities.contains(join.getPartOf())) {
+					entities.add(join.getTargetEntity());
 					handled.add(join);
-				} else if (entities.contains(join.getTargetEntityX())) {
-					entities.add(join.getSourceEntityX());
+				} else if (entities.contains(join.getTargetEntity())) {
+					entities.add(join.getPartOf());
 					handled.add(join);
 				}
 			}

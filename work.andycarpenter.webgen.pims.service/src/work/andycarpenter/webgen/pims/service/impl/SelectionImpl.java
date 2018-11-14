@@ -29,7 +29,6 @@ import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 
 import work.andycarpenter.webgen.pims.service.Filter;
@@ -170,7 +169,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityAssociation> selectPath;
+	protected EList<Association> selectPath;
 
 	/**
 	 * The default value of the '{@link #getMethodName() <em>Method Name</em>}' attribute.
@@ -402,9 +401,9 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityAssociation> getSelectPath() {
+	public EList<Association> getSelectPath() {
 		if (selectPath == null) {
-			selectPath = new EObjectResolvingEList<EntityAssociation>(EntityAssociation.class, this, ServicePackage.SELECTION__SELECT_PATH);
+			selectPath = new EObjectResolvingEList<Association>(Association.class, this, ServicePackage.SELECTION__SELECT_PATH);
 		}
 		return selectPath;
 	}
@@ -564,7 +563,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return;
 			case ServicePackage.SELECTION__SELECT_PATH:
 				getSelectPath().clear();
-				getSelectPath().addAll((Collection<? extends EntityAssociation>)newValue);
+				getSelectPath().addAll((Collection<? extends Association>)newValue);
 				return;
 			case ServicePackage.SELECTION__METHOD_NAME:
 				setMethodName((String)newValue);

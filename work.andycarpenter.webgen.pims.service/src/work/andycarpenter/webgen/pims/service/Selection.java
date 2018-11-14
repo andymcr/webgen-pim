@@ -10,7 +10,6 @@ import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.EntityAssociation;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 
 /**
@@ -214,7 +213,7 @@ public interface Selection extends NamedElement, FormalParameterList {
 
 	/**
 	 * Returns the value of the '<em><b>Select Path</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityAssociation}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Association}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Select Path</em>' reference list isn't clear,
@@ -226,7 +225,7 @@ public interface Selection extends NamedElement, FormalParameterList {
 	 * @model
 	 * @generated
 	 */
-	EList<EntityAssociation> getSelectPath();
+	EList<Association> getSelectPath();
 
 	/**
 	 * Returns the value of the '<em><b>Method Name</b></em>' attribute.

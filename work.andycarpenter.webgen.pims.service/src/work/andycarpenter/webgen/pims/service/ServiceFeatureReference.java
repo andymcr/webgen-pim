@@ -37,7 +37,7 @@ public interface ServiceFeatureReference extends Variable {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getServiceFeatureReference_Name()
 	 * @model default="" unsettable="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tif feature.oclIsKindOf(persistence::EntityFeature) then\n\t\tfeature.oclAsType(persistence::EntityFeature).name\n\telse\n\t\t\'\'\n\tendif\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tfeature.name\nendif'"
 	 * @generated
 	 */
 	String getName();
