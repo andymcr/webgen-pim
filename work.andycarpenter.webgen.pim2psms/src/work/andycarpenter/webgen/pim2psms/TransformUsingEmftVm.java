@@ -167,71 +167,77 @@ public class TransformUsingEmftVm {
 	}
 
 	public void execute() throws IOException {
-		final Map<String, Model> ormInputModels = new HashMap<String, Model>();
-		ormInputModels.put("website", getWebsiteModel());
-		final String ormModelName = "orm";
-		final Model ormModel = executePassCreatingOutputModel("PersistenceTypes",
-			ormModelName, "orm", ormInputModels, null);
-		executeRefiningPass("PersistenceEntityFeatures", ormModelName, ormModel,
-			ormInputModels, null);
-		executeRefiningPass("PersistenceEntityLabels", ormModelName, ormModel,
-			ormInputModels, null);
-		executeRefiningPass("PersistenceKeys",
-			ormModelName, ormModel, ormInputModels, null);
-		executeRefiningPass("PersistenceImplicitStatic", ormModelName,
-			ormModel, ormInputModels, null);
-		executeRefiningPass("PersistenceImplicitAuthentication",
-			ormModelName, ormModel, ormInputModels, null);
-		executeRefiningPass("PersistenceImplicitAuthentication2",
-			ormModelName, ormModel, ormInputModels, null);
-		ormModel.getResource().save(Collections.emptyMap());
-
-		final Map<String, Model> serviceInputModels = new HashMap<String, Model>();
-		serviceInputModels.put("website", getWebsiteModel());
-		serviceInputModels.put("orm", ormModel);
-		final String serviceModelName = "service";
-		final Model serviceModel = executePassCreatingOutputModel("ServiceExplicit",
-			serviceModelName, "business", serviceInputModels, null);
-		executeRefiningPass("ServiceImplicit", serviceModelName, serviceModel,
-			serviceInputModels, null);
-		serviceModel.getResource().save(Collections.emptyMap());
-
-		final Map<String, Model> apiInputModels = new HashMap<String, Model>();
-		apiInputModels.put("website", getWebsiteModel());
-		apiInputModels.put("orm", ormModel);
-		apiInputModels.put("service", serviceModel);
-		final String apiModelName = "api";
-		final Model apiModel = executePassCreatingOutputModel("API",
-			apiModelName, "api", apiInputModels, null);
-		apiModel.getResource().save(Collections.emptyMap());
-
-		final Map<String, Model> wafInputModels = new HashMap<String, Model>();
-		wafInputModels.put("website", getWebsiteModel());
-		wafInputModels.put("orm", ormModel);
-		wafInputModels.put("service", serviceModel);
-		wafInputModels.put("api", apiModel);
-		final String wafModelName = "waf";
-
-		final Model wafTraceModelP1 = createModel("trace_waf_p1");
-		final Model wafModel = executePassCreatingOutputModel("PassExplicitInterface",
-			wafModelName, "waf", wafInputModels, wafTraceModelP1);
-
-		final Model wafTraceModelP5 = createModel("trace_waf_p5");
-		executeRefiningPass("PassImplicitStaticInterface", wafModelName,
-			wafModel, wafInputModels, wafTraceModelP5);
-
-		final Model wafTraceModelP6 = createModel("trace_waf_p6");
-		executeRefiningPass("PassImplicitUnitFields", wafModelName, wafModel,
-			wafInputModels, wafTraceModelP6);
-
-		final Model wafTraceModelP7 = createModel("trace_waf_p7");
-		executeRefiningPass("PassAuthentication", wafModelName, wafModel,
-			wafInputModels, wafTraceModelP7);
-
-		final Model wafTraceModelP8 = createModel("trace_waf_p8");
-		executeRefiningPass("PassAuthentication2", wafModelName, wafModel,
-			wafInputModels, wafTraceModelP8);
-		wafModel.getResource().save(Collections.emptyMap());
+		try {
+			final Map<String, Model> ormInputModels = new HashMap<String, Model>();
+			ormInputModels.put("website", getWebsiteModel());
+			final String ormModelName = "orm";
+			final Model ormModel = executePassCreatingOutputModel("PersistenceTypes",
+				ormModelName, "orm", ormInputModels, null);
+			executeRefiningPass("PersistenceEntityFeatures", ormModelName, ormModel,
+				ormInputModels, null);
+			executeRefiningPass("PersistenceEntityLabels", ormModelName, ormModel,
+				ormInputModels, null);
+			executeRefiningPass("PersistenceKeys",
+				ormModelName, ormModel, ormInputModels, null);
+			executeRefiningPass("PersistenceImplicitStatic", ormModelName,
+				ormModel, ormInputModels, null);
+			executeRefiningPass("PersistenceImplicitAuthentication",
+				ormModelName, ormModel, ormInputModels, null);
+			executeRefiningPass("PersistenceImplicitAuthentication2",
+				ormModelName, ormModel, ormInputModels, null);
+			ormModel.getResource().save(Collections.emptyMap());
+	
+			final Map<String, Model> serviceInputModels = new HashMap<String, Model>();
+			serviceInputModels.put("website", getWebsiteModel());
+			serviceInputModels.put("orm", ormModel);
+			final String serviceModelName = "service";
+			final Model serviceModel = executePassCreatingOutputModel("ServiceExplicit",
+				serviceModelName, "business", serviceInputModels, null);
+			executeRefiningPass("ServiceImplicit", serviceModelName, serviceModel,
+				serviceInputModels, null);
+			serviceModel.getResource().save(Collections.emptyMap());
+	
+			final Map<String, Model> apiInputModels = new HashMap<String, Model>();
+			apiInputModels.put("website", getWebsiteModel());
+			apiInputModels.put("orm", ormModel);
+			apiInputModels.put("service", serviceModel);
+			final String apiModelName = "api";
+			final Model apiModel = executePassCreatingOutputModel("API",
+				apiModelName, "api", apiInputModels, null);
+			apiModel.getResource().save(Collections.emptyMap());
+	
+			final Map<String, Model> wafInputModels = new HashMap<String, Model>();
+			wafInputModels.put("website", getWebsiteModel());
+			wafInputModels.put("orm", ormModel);
+			wafInputModels.put("service", serviceModel);
+			wafInputModels.put("api", apiModel);
+			final String wafModelName = "waf";
+	
+			final Model wafTraceModelP1 = createModel("trace_waf_p1");
+			final Model wafModel = executePassCreatingOutputModel("PassExplicitInterface",
+				wafModelName, "waf", wafInputModels, wafTraceModelP1);
+	
+			final Model wafTraceModelP5 = createModel("trace_waf_p5");
+			executeRefiningPass("PassImplicitStaticInterface", wafModelName,
+				wafModel, wafInputModels, wafTraceModelP5);
+	
+			final Model wafTraceModelP6 = createModel("trace_waf_p6");
+			executeRefiningPass("PassImplicitUnitFields", wafModelName, wafModel,
+				wafInputModels, wafTraceModelP6);
+	
+			final Model wafTraceModelP7 = createModel("trace_waf_p7");
+			executeRefiningPass("PassAuthentication", wafModelName, wafModel,
+				wafInputModels, wafTraceModelP7);
+	
+			final Model wafTraceModelP8 = createModel("trace_waf_p8");
+			executeRefiningPass("PassAuthentication2", wafModelName, wafModel,
+				wafInputModels, wafTraceModelP8);
+			wafModel.getResource().save(Collections.emptyMap());
+		} catch (Exception e) {
+			System.err.println(e);
+//			System.err.println(e.getCause());
+			throw new Error(e);
+		}
 	}
 
 }

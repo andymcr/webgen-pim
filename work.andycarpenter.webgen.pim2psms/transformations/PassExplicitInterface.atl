@@ -1000,9 +1000,9 @@ abstract rule CardsUnit {
 }
 
 -- @extends CardsUnit
-rule CardsIndexUnit {
-	from website : Website!CardsIndexUnit
-	to waf : WAF!CardsIndexUnit (
+rule TextCardsUnit {
+	from website : Website!TextCardsUnit
+	to waf : WAF!TextCardsUnit (
 	)
 }
 
@@ -1018,9 +1018,9 @@ abstract rule ImageUnit {
 }
 
 -- @extends CardsUnit, ImageUnit
-rule ImageIndexUnit {
-	from website : Website!ImageIndexUnit
-	to waf : WAF!ImageIndexUnit (
+rule ImageCardsUnit {
+	from website : Website!ImageCardsUnit
+	to waf : WAF!ImageCardsUnit (
 		enableImageEnlargement <- website.enableImageEnlargement,
 		overlayTitle <- website.overlayTitle,
 		revealUntruncatedContent <- website.revealUntruncatedContent

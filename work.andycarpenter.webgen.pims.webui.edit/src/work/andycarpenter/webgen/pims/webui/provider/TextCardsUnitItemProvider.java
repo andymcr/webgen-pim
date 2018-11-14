@@ -103,8 +103,8 @@ public class TextCardsUnitItemProvider extends CardsUnitItemProvider {
 		final String label = unit.getName();
 		return parentLabel + ": "
 			+ (label == null || label.length() == 0
-				? getString("_UI_ImageIndexUnit_type")
-				: getString("_UI_ImageIndexUnit_type") + " " + label);
+				? getString("_UI_TextCardsUnit_type")
+				: getString("_UI_TextCardsUnit_type") + " " + label);
 	}
 
 

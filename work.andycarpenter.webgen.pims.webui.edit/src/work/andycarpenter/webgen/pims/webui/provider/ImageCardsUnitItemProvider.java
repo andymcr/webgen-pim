@@ -274,8 +274,8 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 		final String label = unit.getName();
 		return parentLabel + ": "
 			+ (label == null || label.length() == 0
-				? getString("_UI_ImageIndexUnit_type")
-				: getString("_UI_ImageIndexUnit_type") + " " + label);
+				? getString("_UI_ImageCardsUnit_type")
+				: getString("_UI_ImageCardsUnit_type") + " " + label);
 	}
 
 

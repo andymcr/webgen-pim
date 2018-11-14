@@ -234,9 +234,9 @@ abstract rule CardsUnit {
 }
 
 -- @extends CardsUnit
-rule CardsIndexUnit {
-	from partialWaf : WAF!CardsIndexUnit
-	to waf : WAF!CardsIndexUnit (
+rule TextCardsUnit {
+	from partialWaf : WAF!TextCardsUnit
+	to waf : WAF!TextCardsUnit (
 	)
 }
 
@@ -249,9 +249,9 @@ abstract rule ImageUnit {
 
 -- no extends so that implicit fields never added
 -- extends CardsUnit, ImageUnit
-rule ImageIndexUnit {
-	from partialWaf : WAF!ImageIndexUnit
-	to waf : WAF!ImageIndexUnit (
+rule ImageCardsUnit {
+	from partialWaf : WAF!ImageCardsUnit
+	to waf : WAF!ImageCardsUnit (
 	)
 }
 
