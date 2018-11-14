@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.webui.AssociationReference;
 import work.andycarpenter.webgen.pims.webui.AuthenticationUnit;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CaptchaField;
-import work.andycarpenter.webgen.pims.webui.CardsIndexUnit;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
@@ -53,7 +52,7 @@ import work.andycarpenter.webgen.pims.webui.FeaturePathLabel;
 import work.andycarpenter.webgen.pims.webui.FeatureSupportAction;
 import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
-import work.andycarpenter.webgen.pims.webui.ImageIndexUnit;
+import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.IndexDisplayOption;
 import work.andycarpenter.webgen.pims.webui.IndexUnit;
@@ -81,6 +80,7 @@ import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.SliderUnit;
 import work.andycarpenter.webgen.pims.webui.StaticUnit;
 import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
+import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
@@ -429,7 +429,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass cardsIndexUnitEClass = null;
+	private EClass textCardsUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,7 +457,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageIndexUnitEClass = null;
+	private EClass imageCardsUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2800,8 +2800,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCardsIndexUnit() {
-		return cardsIndexUnitEClass;
+	public EClass getTextCardsUnit() {
+		return textCardsUnitEClass;
 	}
 
 	/**
@@ -2809,8 +2809,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCardsIndexUnit_StyleClass() {
-		return (EAttribute)cardsIndexUnitEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTextCardsUnit_StyleClass() {
+		return (EAttribute)textCardsUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2935,8 +2935,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getImageIndexUnit() {
-		return imageIndexUnitEClass;
+	public EClass getImageCardsUnit() {
+		return imageCardsUnitEClass;
 	}
 
 	/**
@@ -2944,8 +2944,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageIndexUnit_OverlayTitle() {
-		return (EAttribute)imageIndexUnitEClass.getEStructuralFeatures().get(0);
+	public EAttribute getImageCardsUnit_OverlayTitle() {
+		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2953,8 +2953,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageIndexUnit_EnableImageEnlargement() {
-		return (EAttribute)imageIndexUnitEClass.getEStructuralFeatures().get(1);
+	public EAttribute getImageCardsUnit_EnableImageEnlargement() {
+		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2962,8 +2962,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageIndexUnit_RevealUntruncatedContent() {
-		return (EAttribute)imageIndexUnitEClass.getEStructuralFeatures().get(2);
+	public EAttribute getImageCardsUnit_RevealUntruncatedContent() {
+		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2971,8 +2971,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageIndexUnit_StyleClass() {
-		return (EAttribute)imageIndexUnitEClass.getEStructuralFeatures().get(3);
+	public EAttribute getImageCardsUnit_StyleClass() {
+		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3799,8 +3799,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__COLUMN_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_CLASS);
 
-		cardsIndexUnitEClass = createEClass(CARDS_INDEX_UNIT);
-		createEAttribute(cardsIndexUnitEClass, CARDS_INDEX_UNIT__STYLE_CLASS);
+		textCardsUnitEClass = createEClass(TEXT_CARDS_UNIT);
+		createEAttribute(textCardsUnitEClass, TEXT_CARDS_UNIT__STYLE_CLASS);
 
 		imageUnitEClass = createEClass(IMAGE_UNIT);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_PATH_FEATURE);
@@ -3808,11 +3808,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_FILTER);
 		createEAttribute(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_PATH);
 
-		imageIndexUnitEClass = createEClass(IMAGE_INDEX_UNIT);
-		createEAttribute(imageIndexUnitEClass, IMAGE_INDEX_UNIT__OVERLAY_TITLE);
-		createEAttribute(imageIndexUnitEClass, IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT);
-		createEAttribute(imageIndexUnitEClass, IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT);
-		createEAttribute(imageIndexUnitEClass, IMAGE_INDEX_UNIT__STYLE_CLASS);
+		imageCardsUnitEClass = createEClass(IMAGE_CARDS_UNIT);
+		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__OVERLAY_TITLE);
+		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT);
+		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT);
+		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__STYLE_CLASS);
 
 		sliderUnitEClass = createEClass(SLIDER_UNIT);
 		createEAttribute(sliderUnitEClass, SLIDER_UNIT__SHOW_TIME);
@@ -3983,10 +3983,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		indexUnitEClass.getESuperTypes().add(this.getInlineActionContainer());
 		cardsUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		cardsUnitEClass.getESuperTypes().add(this.getInlineActionContainer());
-		cardsIndexUnitEClass.getESuperTypes().add(this.getCardsUnit());
+		textCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
 		imageUnitEClass.getESuperTypes().add(this.getCollectionUnit());
-		imageIndexUnitEClass.getESuperTypes().add(this.getCardsUnit());
-		imageIndexUnitEClass.getESuperTypes().add(this.getImageUnit());
+		imageCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
+		imageCardsUnitEClass.getESuperTypes().add(this.getImageUnit());
 		sliderUnitEClass.getESuperTypes().add(this.getImageUnit());
 		galleryUnitEClass.getESuperTypes().add(this.getImageUnit());
 		controlUnitEClass.getESuperTypes().add(this.getDynamicUnit());
@@ -4286,8 +4286,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCardsUnit_ColumnClass(), ecorePackage.getEString(), "columnClass", "col s12 m6 l3", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_CardClass(), ecorePackage.getEString(), "cardClass", "card hoverable", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(cardsIndexUnitEClass, CardsIndexUnit.class, "CardsIndexUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCardsIndexUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,card_index_unit", 0, 1, CardsIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(textCardsUnitEClass, TextCardsUnit.class, "TextCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextCardsUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,card_index_unit", 0, 1, TextCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(imageUnitEClass, ImageUnit.class, "ImageUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageUnit_ImagePathFeature(), this.getFeaturePath(), null, "imagePathFeature", null, 1, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4295,11 +4295,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getImageUnit_MissingImageFilter(), theImagePackage.getImageManipulation(), null, "missingImageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageUnit_MissingImagePath(), ecorePackage.getEString(), "missingImagePath", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imageIndexUnitEClass, ImageIndexUnit.class, "ImageIndexUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImageIndexUnit_OverlayTitle(), ecorePackage.getEBoolean(), "overlayTitle", "false", 0, 1, ImageIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageIndexUnit_EnableImageEnlargement(), ecorePackage.getEBoolean(), "enableImageEnlargement", null, 0, 1, ImageIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageIndexUnit_RevealUntruncatedContent(), ecorePackage.getEBoolean(), "revealUntruncatedContent", "false", 0, 1, ImageIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageIndexUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,image_index_unit", 0, 1, ImageIndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(imageCardsUnitEClass, ImageCardsUnit.class, "ImageCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImageCardsUnit_OverlayTitle(), ecorePackage.getEBoolean(), "overlayTitle", "false", 0, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageCardsUnit_EnableImageEnlargement(), ecorePackage.getEBoolean(), "enableImageEnlargement", null, 0, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageCardsUnit_RevealUntruncatedContent(), ecorePackage.getEBoolean(), "revealUntruncatedContent", "false", 0, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageCardsUnit_StyleClass(), ecorePackage.getEString(), "styleClass", "unit,image_index_unit", 0, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(sliderUnitEClass, SliderUnit.class, "SliderUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSliderUnit_ShowTime(), ecorePackage.getEInt(), "showTime", "-1", 0, 1, SliderUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

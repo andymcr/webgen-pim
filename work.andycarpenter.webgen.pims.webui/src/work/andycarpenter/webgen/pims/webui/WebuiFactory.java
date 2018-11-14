@@ -301,13 +301,22 @@ public interface WebuiFactory extends EFactory {
 	IndexUnit createIndexUnit();
 
 	/**
-	 * Returns a new object of class '<em>Cards Index Unit</em>'.
+	 * Returns a new object of class '<em>Text Cards Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cards Index Unit</em>'.
+	 * @return a new object of class '<em>Text Cards Unit</em>'.
 	 * @generated
 	 */
-	CardsIndexUnit createCardsIndexUnit();
+	TextCardsUnit createTextCardsUnit();
+
+	/**
+	 * Returns a new object of class '<em>Image Cards Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image Cards Unit</em>'.
+	 * @generated
+	 */
+	ImageCardsUnit createImageCardsUnit();
 
 	/**
 	 * Returns a new object of class '<em>Search Unit</em>'.
@@ -317,15 +326,6 @@ public interface WebuiFactory extends EFactory {
 	 * @generated
 	 */
 	SearchUnit createSearchUnit();
-
-	/**
-	 * Returns a new object of class '<em>Image Index Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image Index Unit</em>'.
-	 * @generated
-	 */
-	ImageIndexUnit createImageIndexUnit();
 
 	/**
 	 * Returns a new object of class '<em>Slider Unit</em>'.

@@ -609,7 +609,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card hoverable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CardsIndexUnit" eSuperTypes="#//CardsUnit">
+  <eClassifiers xsi:type="ecore:EClass" name="TextCardsUnit" eSuperTypes="#//CardsUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="unit,card_index_unit"/>
   </eClassifiers>
@@ -620,7 +620,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="missingImageFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingImagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageIndexUnit" eSuperTypes="#//CardsUnit #//ImageUnit">
+  <eClassifiers xsi:type="ecore:EClass" name="ImageCardsUnit" eSuperTypes="#//CardsUnit #//ImageUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overlayTitle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enableImageEnlargement"

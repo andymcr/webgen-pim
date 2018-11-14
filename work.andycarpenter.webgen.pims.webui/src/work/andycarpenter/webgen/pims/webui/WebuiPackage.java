@@ -7982,14 +7982,14 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsIndexUnitImpl <em>Cards Index Unit</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.CardsIndexUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int CARDS_INDEX_UNIT = 46;
+	int TEXT_CARDS_UNIT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7998,7 +7998,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__NAME = CARDS_UNIT__NAME;
+	int TEXT_CARDS_UNIT__NAME = CARDS_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -8007,7 +8007,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
+	int TEXT_CARDS_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -8016,7 +8016,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
+	int TEXT_CARDS_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -8025,7 +8025,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int TEXT_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -8034,7 +8034,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
+	int TEXT_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -8043,7 +8043,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
+	int TEXT_CARDS_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -8052,7 +8052,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PURPOSE_SUMMARY = CARDS_UNIT__PURPOSE_SUMMARY;
+	int TEXT_CARDS_UNIT__PURPOSE_SUMMARY = CARDS_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -8061,7 +8061,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
+	int TEXT_CARDS_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -8070,7 +8070,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
+	int TEXT_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -8079,7 +8079,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
+	int TEXT_CARDS_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -8088,7 +8088,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+	int TEXT_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -8097,7 +8097,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
+	int TEXT_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -8106,7 +8106,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
+	int TEXT_CARDS_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
@@ -8115,7 +8115,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__SERVICES_USED = CARDS_UNIT__SERVICES_USED;
+	int TEXT_CARDS_UNIT__SERVICES_USED = CARDS_UNIT__SERVICES_USED;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -8124,7 +8124,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__HIDE_WHEN = CARDS_UNIT__HIDE_WHEN;
+	int TEXT_CARDS_UNIT__HIDE_WHEN = CARDS_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -8133,7 +8133,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__MESSAGE_WHEN_HIDDEN = CARDS_UNIT__MESSAGE_WHEN_HIDDEN;
+	int TEXT_CARDS_UNIT__MESSAGE_WHEN_HIDDEN = CARDS_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
@@ -8142,7 +8142,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__SUPPORT_ACTIONS = CARDS_UNIT__SUPPORT_ACTIONS;
+	int TEXT_CARDS_UNIT__SUPPORT_ACTIONS = CARDS_UNIT__SUPPORT_ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -8151,7 +8151,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__HEADER = CARDS_UNIT__HEADER;
+	int TEXT_CARDS_UNIT__HEADER = CARDS_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -8160,7 +8160,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FOOTER = CARDS_UNIT__FOOTER;
+	int TEXT_CARDS_UNIT__FOOTER = CARDS_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -8169,7 +8169,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
+	int TEXT_CARDS_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -8178,7 +8178,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
+	int TEXT_CARDS_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -8187,7 +8187,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
+	int TEXT_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
@@ -8196,7 +8196,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+	int TEXT_CARDS_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -8205,7 +8205,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
+	int TEXT_CARDS_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
@@ -8214,7 +8214,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__ELEMENT_TITLE = CARDS_UNIT__ELEMENT_TITLE;
+	int TEXT_CARDS_UNIT__ELEMENT_TITLE = CARDS_UNIT__ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -8223,7 +8223,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
+	int TEXT_CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -8232,7 +8232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+	int TEXT_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -8241,7 +8241,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__SELECTION = CARDS_UNIT__SELECTION;
+	int TEXT_CARDS_UNIT__SELECTION = CARDS_UNIT__SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -8250,7 +8250,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
+	int TEXT_CARDS_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -8259,7 +8259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
+	int TEXT_CARDS_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -8268,7 +8268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
+	int TEXT_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -8277,7 +8277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FILTER = CARDS_UNIT__FILTER;
+	int TEXT_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -8286,7 +8286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
+	int TEXT_CARDS_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -8295,7 +8295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__BADGES = CARDS_UNIT__BADGES;
+	int TEXT_CARDS_UNIT__BADGES = CARDS_UNIT__BADGES;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -8304,7 +8304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
+	int TEXT_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -8313,7 +8313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__DEFAULT_PAGINATION_SIZE = CARDS_UNIT__DEFAULT_PAGINATION_SIZE;
+	int TEXT_CARDS_UNIT__DEFAULT_PAGINATION_SIZE = CARDS_UNIT__DEFAULT_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -8322,7 +8322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
+	int TEXT_CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -8331,7 +8331,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
+	int TEXT_CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -8340,7 +8340,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
+	int TEXT_CARDS_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -8349,7 +8349,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
+	int TEXT_CARDS_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -8358,7 +8358,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
+	int TEXT_CARDS_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -8367,7 +8367,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
+	int TEXT_CARDS_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -8376,7 +8376,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
+	int TEXT_CARDS_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -8385,7 +8385,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
+	int TEXT_CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -8394,7 +8394,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
+	int TEXT_CARDS_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -8403,7 +8403,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
+	int TEXT_CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -8412,7 +8412,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
+	int TEXT_CARDS_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -8421,7 +8421,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
+	int TEXT_CARDS_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -8430,7 +8430,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
+	int TEXT_CARDS_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -8439,7 +8439,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
+	int TEXT_CARDS_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -8448,7 +8448,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
+	int TEXT_CARDS_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -8457,7 +8457,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
+	int TEXT_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -8466,7 +8466,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
+	int TEXT_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -8475,7 +8475,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
+	int TEXT_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -8484,7 +8484,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
+	int TEXT_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -8493,7 +8493,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+	int TEXT_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -8502,7 +8502,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
+	int TEXT_CARDS_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -8511,7 +8511,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
+	int TEXT_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -8520,25 +8520,25 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 0;
+	int TEXT_CARDS_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Cards Index Unit</em>' class.
+	 * The number of structural features of the '<em>Text Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 1;
+	int TEXT_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Cards Index Unit</em>' class.
+	 * The number of operations of the '<em>Text Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_INDEX_UNIT_OPERATION_COUNT = CARDS_UNIT_OPERATION_COUNT + 0;
+	int TEXT_CARDS_UNIT_OPERATION_COUNT = CARDS_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -9093,14 +9093,14 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl <em>Image Index Unit</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_INDEX_UNIT = 48;
+	int IMAGE_CARDS_UNIT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9109,7 +9109,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__NAME = CARDS_UNIT__NAME;
+	int IMAGE_CARDS_UNIT__NAME = CARDS_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -9118,7 +9118,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
+	int IMAGE_CARDS_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -9127,7 +9127,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
+	int IMAGE_CARDS_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -9136,7 +9136,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int IMAGE_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -9145,7 +9145,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
+	int IMAGE_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -9154,7 +9154,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
+	int IMAGE_CARDS_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -9163,7 +9163,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PURPOSE_SUMMARY = CARDS_UNIT__PURPOSE_SUMMARY;
+	int IMAGE_CARDS_UNIT__PURPOSE_SUMMARY = CARDS_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -9172,7 +9172,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
+	int IMAGE_CARDS_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -9181,7 +9181,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
+	int IMAGE_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -9190,7 +9190,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
+	int IMAGE_CARDS_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -9199,7 +9199,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+	int IMAGE_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -9208,7 +9208,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
+	int IMAGE_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -9217,7 +9217,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
+	int IMAGE_CARDS_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
@@ -9226,7 +9226,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__SERVICES_USED = CARDS_UNIT__SERVICES_USED;
+	int IMAGE_CARDS_UNIT__SERVICES_USED = CARDS_UNIT__SERVICES_USED;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -9235,7 +9235,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__HIDE_WHEN = CARDS_UNIT__HIDE_WHEN;
+	int IMAGE_CARDS_UNIT__HIDE_WHEN = CARDS_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -9244,7 +9244,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__MESSAGE_WHEN_HIDDEN = CARDS_UNIT__MESSAGE_WHEN_HIDDEN;
+	int IMAGE_CARDS_UNIT__MESSAGE_WHEN_HIDDEN = CARDS_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
@@ -9253,7 +9253,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__SUPPORT_ACTIONS = CARDS_UNIT__SUPPORT_ACTIONS;
+	int IMAGE_CARDS_UNIT__SUPPORT_ACTIONS = CARDS_UNIT__SUPPORT_ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -9262,7 +9262,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__HEADER = CARDS_UNIT__HEADER;
+	int IMAGE_CARDS_UNIT__HEADER = CARDS_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -9271,7 +9271,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FOOTER = CARDS_UNIT__FOOTER;
+	int IMAGE_CARDS_UNIT__FOOTER = CARDS_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -9280,7 +9280,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
+	int IMAGE_CARDS_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -9289,7 +9289,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
+	int IMAGE_CARDS_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9298,7 +9298,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
+	int IMAGE_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
@@ -9307,7 +9307,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+	int IMAGE_CARDS_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9316,7 +9316,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
+	int IMAGE_CARDS_UNIT__UNIT_TITLE = CARDS_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
@@ -9325,7 +9325,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ELEMENT_TITLE = CARDS_UNIT__ELEMENT_TITLE;
+	int IMAGE_CARDS_UNIT__ELEMENT_TITLE = CARDS_UNIT__ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -9334,7 +9334,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
+	int IMAGE_CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
@@ -9343,7 +9343,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+	int IMAGE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -9352,7 +9352,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__SELECTION = CARDS_UNIT__SELECTION;
+	int IMAGE_CARDS_UNIT__SELECTION = CARDS_UNIT__SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -9361,7 +9361,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
+	int IMAGE_CARDS_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -9370,7 +9370,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
+	int IMAGE_CARDS_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -9379,7 +9379,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
+	int IMAGE_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -9388,7 +9388,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FILTER = CARDS_UNIT__FILTER;
+	int IMAGE_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -9397,7 +9397,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
+	int IMAGE_CARDS_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -9406,7 +9406,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__BADGES = CARDS_UNIT__BADGES;
+	int IMAGE_CARDS_UNIT__BADGES = CARDS_UNIT__BADGES;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -9415,7 +9415,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
+	int IMAGE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -9424,7 +9424,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__DEFAULT_PAGINATION_SIZE = CARDS_UNIT__DEFAULT_PAGINATION_SIZE;
+	int IMAGE_CARDS_UNIT__DEFAULT_PAGINATION_SIZE = CARDS_UNIT__DEFAULT_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -9433,7 +9433,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
+	int IMAGE_CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -9442,7 +9442,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
+	int IMAGE_CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -9451,7 +9451,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
+	int IMAGE_CARDS_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -9460,7 +9460,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
+	int IMAGE_CARDS_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -9469,7 +9469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
+	int IMAGE_CARDS_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -9478,7 +9478,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
+	int IMAGE_CARDS_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -9487,7 +9487,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
+	int IMAGE_CARDS_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -9496,7 +9496,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
+	int IMAGE_CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -9505,7 +9505,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
+	int IMAGE_CARDS_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -9514,7 +9514,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
+	int IMAGE_CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -9523,7 +9523,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
+	int IMAGE_CARDS_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -9532,7 +9532,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
+	int IMAGE_CARDS_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -9541,7 +9541,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
+	int IMAGE_CARDS_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -9550,7 +9550,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
+	int IMAGE_CARDS_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -9559,7 +9559,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
+	int IMAGE_CARDS_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -9568,7 +9568,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
+	int IMAGE_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -9577,7 +9577,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
+	int IMAGE_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -9586,7 +9586,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
+	int IMAGE_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -9595,7 +9595,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
+	int IMAGE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -9604,7 +9604,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+	int IMAGE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -9613,7 +9613,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
+	int IMAGE_CARDS_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -9622,7 +9622,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
+	int IMAGE_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -9631,7 +9631,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__IMAGE_PATH_FEATURE = CARDS_UNIT_FEATURE_COUNT + 0;
+	int IMAGE_CARDS_UNIT__IMAGE_PATH_FEATURE = CARDS_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
@@ -9640,7 +9640,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 1;
+	int IMAGE_CARDS_UNIT__IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
@@ -9649,7 +9649,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__MISSING_IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 2;
+	int IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
@@ -9658,7 +9658,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__MISSING_IMAGE_PATH = CARDS_UNIT_FEATURE_COUNT + 3;
+	int IMAGE_CARDS_UNIT__MISSING_IMAGE_PATH = CARDS_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Title</b></em>' attribute.
@@ -9667,7 +9667,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__OVERLAY_TITLE = CARDS_UNIT_FEATURE_COUNT + 4;
+	int IMAGE_CARDS_UNIT__OVERLAY_TITLE = CARDS_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Enable Image Enlargement</b></em>' attribute.
@@ -9676,7 +9676,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT = CARDS_UNIT_FEATURE_COUNT + 5;
+	int IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT = CARDS_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Reveal Untruncated Content</b></em>' attribute.
@@ -9685,7 +9685,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 6;
+	int IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -9694,25 +9694,25 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 7;
+	int IMAGE_CARDS_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 7;
 
 	/**
-	 * The number of structural features of the '<em>Image Index Unit</em>' class.
+	 * The number of structural features of the '<em>Image Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 8;
+	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 8;
 
 	/**
-	 * The number of operations of the '<em>Image Index Unit</em>' class.
+	 * The number of operations of the '<em>Image Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_INDEX_UNIT_OPERATION_COUNT = CARDS_UNIT_OPERATION_COUNT + 0;
+	int IMAGE_CARDS_UNIT_OPERATION_COUNT = CARDS_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -15589,25 +15589,25 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_CardClass();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit <em>Cards Index Unit</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit <em>Text Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cards Index Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsIndexUnit
+	 * @return the meta object for class '<em>Text Cards Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.TextCardsUnit
 	 * @generated
 	 */
-	EClass getCardsIndexUnit();
+	EClass getTextCardsUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit#getStyleClass <em>Style Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit#getStyleClass <em>Style Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsIndexUnit#getStyleClass()
-	 * @see #getCardsIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.TextCardsUnit#getStyleClass()
+	 * @see #getTextCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsIndexUnit_StyleClass();
+	EAttribute getTextCardsUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ControlUnit <em>Control Unit</em>}'.
@@ -15750,58 +15750,58 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getImageUnit_MissingImagePath();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit <em>Image Index Unit</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit <em>Image Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Image Index Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit
+	 * @return the meta object for class '<em>Image Cards Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit
 	 * @generated
 	 */
-	EClass getImageIndexUnit();
+	EClass getImageCardsUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isOverlayTitle <em>Overlay Title</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isOverlayTitle <em>Overlay Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Overlay Title</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isOverlayTitle()
-	 * @see #getImageIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isOverlayTitle()
+	 * @see #getImageCardsUnit()
 	 * @generated
 	 */
-	EAttribute getImageIndexUnit_OverlayTitle();
+	EAttribute getImageCardsUnit_OverlayTitle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isEnableImageEnlargement <em>Enable Image Enlargement</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isEnableImageEnlargement <em>Enable Image Enlargement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enable Image Enlargement</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isEnableImageEnlargement()
-	 * @see #getImageIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isEnableImageEnlargement()
+	 * @see #getImageCardsUnit()
 	 * @generated
 	 */
-	EAttribute getImageIndexUnit_EnableImageEnlargement();
+	EAttribute getImageCardsUnit_EnableImageEnlargement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reveal Untruncated Content</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit#isRevealUntruncatedContent()
-	 * @see #getImageIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isRevealUntruncatedContent()
+	 * @see #getImageCardsUnit()
 	 * @generated
 	 */
-	EAttribute getImageIndexUnit_RevealUntruncatedContent();
+	EAttribute getImageCardsUnit_RevealUntruncatedContent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit#getStyleClass <em>Style Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass <em>Style Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit#getStyleClass()
-	 * @see #getImageIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass()
+	 * @see #getImageCardsUnit()
 	 * @generated
 	 */
-	EAttribute getImageIndexUnit_StyleClass();
+	EAttribute getImageCardsUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SliderUnit <em>Slider Unit</em>}'.
@@ -18424,14 +18424,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CARDS_UNIT__CARD_CLASS = eINSTANCE.getCardsUnit_CardClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsIndexUnitImpl <em>Cards Index Unit</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.CardsIndexUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsIndexUnit()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 		 * @generated
 		 */
-		EClass CARDS_INDEX_UNIT = eINSTANCE.getCardsIndexUnit();
+		EClass TEXT_CARDS_UNIT = eINSTANCE.getTextCardsUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
@@ -18439,7 +18439,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_INDEX_UNIT__STYLE_CLASS = eINSTANCE.getCardsIndexUnit_StyleClass();
+		EAttribute TEXT_CARDS_UNIT__STYLE_CLASS = eINSTANCE.getTextCardsUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -18552,14 +18552,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute IMAGE_UNIT__MISSING_IMAGE_PATH = eINSTANCE.getImageUnit_MissingImagePath();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl <em>Image Index Unit</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.ImageIndexUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageIndexUnit()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 		 * @generated
 		 */
-		EClass IMAGE_INDEX_UNIT = eINSTANCE.getImageIndexUnit();
+		EClass IMAGE_CARDS_UNIT = eINSTANCE.getImageCardsUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Overlay Title</b></em>' attribute feature.
@@ -18567,7 +18567,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE_INDEX_UNIT__OVERLAY_TITLE = eINSTANCE.getImageIndexUnit_OverlayTitle();
+		EAttribute IMAGE_CARDS_UNIT__OVERLAY_TITLE = eINSTANCE.getImageCardsUnit_OverlayTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Enable Image Enlargement</b></em>' attribute feature.
@@ -18575,7 +18575,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE_INDEX_UNIT__ENABLE_IMAGE_ENLARGEMENT = eINSTANCE.getImageIndexUnit_EnableImageEnlargement();
+		EAttribute IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT = eINSTANCE.getImageCardsUnit_EnableImageEnlargement();
 
 		/**
 		 * The meta object literal for the '<em><b>Reveal Untruncated Content</b></em>' attribute feature.
@@ -18583,7 +18583,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE_INDEX_UNIT__REVEAL_UNTRUNCATED_CONTENT = eINSTANCE.getImageIndexUnit_RevealUntruncatedContent();
+		EAttribute IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = eINSTANCE.getImageCardsUnit_RevealUntruncatedContent();
 
 		/**
 		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
@@ -18591,7 +18591,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE_INDEX_UNIT__STYLE_CLASS = eINSTANCE.getImageIndexUnit_StyleClass();
+		EAttribute IMAGE_CARDS_UNIT__STYLE_CLASS = eINSTANCE.getImageCardsUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.

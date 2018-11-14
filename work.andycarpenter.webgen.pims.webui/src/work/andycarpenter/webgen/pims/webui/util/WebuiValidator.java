@@ -186,12 +186,12 @@ public class WebuiValidator extends EObjectValidator {
 				return validateIndexUnit((IndexUnit)value, diagnostics, context);
 			case WebuiPackage.CARDS_UNIT:
 				return validateCardsUnit((CardsUnit)value, diagnostics, context);
-			case WebuiPackage.CARDS_INDEX_UNIT:
-				return validateCardsIndexUnit((CardsIndexUnit)value, diagnostics, context);
+			case WebuiPackage.TEXT_CARDS_UNIT:
+				return validateTextCardsUnit((TextCardsUnit)value, diagnostics, context);
 			case WebuiPackage.IMAGE_UNIT:
 				return validateImageUnit((ImageUnit)value, diagnostics, context);
-			case WebuiPackage.IMAGE_INDEX_UNIT:
-				return validateImageIndexUnit((ImageIndexUnit)value, diagnostics, context);
+			case WebuiPackage.IMAGE_CARDS_UNIT:
+				return validateImageCardsUnit((ImageCardsUnit)value, diagnostics, context);
 			case WebuiPackage.SLIDER_UNIT:
 				return validateSliderUnit((SliderUnit)value, diagnostics, context);
 			case WebuiPackage.GALLERY_UNIT:
@@ -1360,21 +1360,21 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCardsIndexUnit(CardsIndexUnit cardsIndexUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(cardsIndexUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(cardsIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(cardsIndexUnit, diagnostics, context);
+	public boolean validateTextCardsUnit(TextCardsUnit textCardsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(textCardsUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(textCardsUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1445,21 +1445,21 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateImageIndexUnit(ImageIndexUnit imageIndexUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(imageIndexUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(imageIndexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(imageIndexUnit, diagnostics, context);
+	public boolean validateImageCardsUnit(ImageCardsUnit imageCardsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(imageCardsUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(imageCardsUnit, diagnostics, context);
 		return result;
 	}
 

@@ -379,12 +379,12 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
-				 WebuiFactory.eINSTANCE.createCardsIndexUnit()));
+				 WebuiFactory.eINSTANCE.createTextCardsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
-				 WebuiFactory.eINSTANCE.createImageIndexUnit()));
+				 WebuiFactory.eINSTANCE.createImageCardsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter

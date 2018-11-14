@@ -476,17 +476,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.CARDS_INDEX_UNIT: {
-				CardsIndexUnit cardsIndexUnit = (CardsIndexUnit)theEObject;
-				T result = caseCardsIndexUnit(cardsIndexUnit);
-				if (result == null) result = caseCardsUnit(cardsIndexUnit);
-				if (result == null) result = caseCollectionUnit(cardsIndexUnit);
-				if (result == null) result = caseInlineActionContainer(cardsIndexUnit);
-				if (result == null) result = caseDynamicUnit(cardsIndexUnit);
-				if (result == null) result = caseSelectableUnit(cardsIndexUnit);
-				if (result == null) result = caseContentUnit(cardsIndexUnit);
-				if (result == null) result = caseNamedDisplayElement(cardsIndexUnit);
-				if (result == null) result = caseNamedElement(cardsIndexUnit);
+			case WebuiPackage.TEXT_CARDS_UNIT: {
+				TextCardsUnit textCardsUnit = (TextCardsUnit)theEObject;
+				T result = caseTextCardsUnit(textCardsUnit);
+				if (result == null) result = caseCardsUnit(textCardsUnit);
+				if (result == null) result = caseCollectionUnit(textCardsUnit);
+				if (result == null) result = caseInlineActionContainer(textCardsUnit);
+				if (result == null) result = caseDynamicUnit(textCardsUnit);
+				if (result == null) result = caseSelectableUnit(textCardsUnit);
+				if (result == null) result = caseContentUnit(textCardsUnit);
+				if (result == null) result = caseNamedDisplayElement(textCardsUnit);
+				if (result == null) result = caseNamedElement(textCardsUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -502,18 +502,18 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.IMAGE_INDEX_UNIT: {
-				ImageIndexUnit imageIndexUnit = (ImageIndexUnit)theEObject;
-				T result = caseImageIndexUnit(imageIndexUnit);
-				if (result == null) result = caseCardsUnit(imageIndexUnit);
-				if (result == null) result = caseImageUnit(imageIndexUnit);
-				if (result == null) result = caseCollectionUnit(imageIndexUnit);
-				if (result == null) result = caseInlineActionContainer(imageIndexUnit);
-				if (result == null) result = caseDynamicUnit(imageIndexUnit);
-				if (result == null) result = caseSelectableUnit(imageIndexUnit);
-				if (result == null) result = caseContentUnit(imageIndexUnit);
-				if (result == null) result = caseNamedDisplayElement(imageIndexUnit);
-				if (result == null) result = caseNamedElement(imageIndexUnit);
+			case WebuiPackage.IMAGE_CARDS_UNIT: {
+				ImageCardsUnit imageCardsUnit = (ImageCardsUnit)theEObject;
+				T result = caseImageCardsUnit(imageCardsUnit);
+				if (result == null) result = caseCardsUnit(imageCardsUnit);
+				if (result == null) result = caseImageUnit(imageCardsUnit);
+				if (result == null) result = caseCollectionUnit(imageCardsUnit);
+				if (result == null) result = caseInlineActionContainer(imageCardsUnit);
+				if (result == null) result = caseDynamicUnit(imageCardsUnit);
+				if (result == null) result = caseSelectableUnit(imageCardsUnit);
+				if (result == null) result = caseContentUnit(imageCardsUnit);
+				if (result == null) result = caseNamedDisplayElement(imageCardsUnit);
+				if (result == null) result = caseNamedElement(imageCardsUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1348,17 +1348,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cards Index Unit</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Text Cards Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cards Index Unit</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Text Cards Unit</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCardsIndexUnit(CardsIndexUnit object) {
+	public T caseTextCardsUnit(TextCardsUnit object) {
 		return null;
 	}
 
@@ -1408,17 +1408,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Index Unit</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Image Cards Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Index Unit</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Image Cards Unit</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImageIndexUnit(ImageIndexUnit object) {
+	public T caseImageCardsUnit(ImageCardsUnit object) {
 		return null;
 	}
 

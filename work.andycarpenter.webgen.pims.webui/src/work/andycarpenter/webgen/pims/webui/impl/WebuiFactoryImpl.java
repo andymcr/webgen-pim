@@ -88,8 +88,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.MAP_UNIT: return createMapUnit();
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
 			case WebuiPackage.INDEX_UNIT: return createIndexUnit();
-			case WebuiPackage.CARDS_INDEX_UNIT: return createCardsIndexUnit();
-			case WebuiPackage.IMAGE_INDEX_UNIT: return createImageIndexUnit();
+			case WebuiPackage.TEXT_CARDS_UNIT: return createTextCardsUnit();
+			case WebuiPackage.IMAGE_CARDS_UNIT: return createImageCardsUnit();
 			case WebuiPackage.SLIDER_UNIT: return createSliderUnit();
 			case WebuiPackage.GALLERY_UNIT: return createGalleryUnit();
 			case WebuiPackage.SEARCH_UNIT: return createSearchUnit();
@@ -470,9 +470,19 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CardsIndexUnit createCardsIndexUnit() {
-		CardsIndexUnitImpl cardsIndexUnit = new CardsIndexUnitImpl();
-		return cardsIndexUnit;
+	public TextCardsUnit createTextCardsUnit() {
+		TextCardsUnitImpl textCardsUnit = new TextCardsUnitImpl();
+		return textCardsUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageCardsUnit createImageCardsUnit() {
+		ImageCardsUnitImpl imageCardsUnit = new ImageCardsUnitImpl();
+		return imageCardsUnit;
 	}
 
 	/**
@@ -483,16 +493,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public SearchUnit createSearchUnit() {
 		SearchUnitImpl searchUnit = new SearchUnitImpl();
 		return searchUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImageIndexUnit createImageIndexUnit() {
-		ImageIndexUnitImpl imageIndexUnit = new ImageIndexUnitImpl();
-		return imageIndexUnit;
 	}
 
 	/**

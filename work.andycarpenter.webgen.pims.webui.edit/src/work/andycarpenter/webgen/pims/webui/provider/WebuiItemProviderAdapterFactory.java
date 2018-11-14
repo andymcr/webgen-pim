@@ -818,26 +818,49 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.TextCardsUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CardsIndexUnitItemProvider cardsIndexUnitItemProvider;
+	protected TextCardsUnitItemProvider textCardsUnitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.TextCardsUnit}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCardsIndexUnitAdapter() {
-		if (cardsIndexUnitItemProvider == null) {
-			cardsIndexUnitItemProvider = new CardsIndexUnitItemProvider(this);
+	public Adapter createTextCardsUnitAdapter() {
+		if (textCardsUnitItemProvider == null) {
+			textCardsUnitItemProvider = new TextCardsUnitItemProvider(this);
 		}
 
-		return cardsIndexUnitItemProvider;
+		return textCardsUnitItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImageCardsUnitItemProvider imageCardsUnitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImageCardsUnitAdapter() {
+		if (imageCardsUnitItemProvider == null) {
+			imageCardsUnitItemProvider = new ImageCardsUnitItemProvider(this);
+		}
+
+		return imageCardsUnitItemProvider;
 	}
 
 	/**
@@ -861,29 +884,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 		}
 
 		return searchUnitItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ImageIndexUnitItemProvider imageIndexUnitItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createImageIndexUnitAdapter() {
-		if (imageIndexUnitItemProvider == null) {
-			imageIndexUnitItemProvider = new ImageIndexUnitItemProvider(this);
-		}
-
-		return imageIndexUnitItemProvider;
 	}
 
 	/**

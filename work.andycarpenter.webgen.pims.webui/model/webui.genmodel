@@ -370,8 +370,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//CardsIndexUnit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsIndexUnit/styleClass"/>
+    <genClasses ecoreClass="webui.ecore#//TextCardsUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//TextCardsUnit/styleClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//ImageUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
@@ -382,11 +382,11 @@
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/missingImageFilter"/>
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageUnit/missingImagePath"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//ImageIndexUnit">
-      <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageIndexUnit/overlayTitle"/>
-      <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageIndexUnit/enableImageEnlargement"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageIndexUnit/revealUntruncatedContent"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ImageIndexUnit/styleClass"/>
+    <genClasses ecoreClass="webui.ecore#//ImageCardsUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/enableImageEnlargement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/revealUntruncatedContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/styleClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SliderUnit">
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/showTime"/>

@@ -255,16 +255,16 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCardsUnitAdapter();
 			}
 			@Override
-			public Adapter caseCardsIndexUnit(CardsIndexUnit object) {
-				return createCardsIndexUnitAdapter();
+			public Adapter caseTextCardsUnit(TextCardsUnit object) {
+				return createTextCardsUnitAdapter();
 			}
 			@Override
 			public Adapter caseImageUnit(ImageUnit object) {
 				return createImageUnitAdapter();
 			}
 			@Override
-			public Adapter caseImageIndexUnit(ImageIndexUnit object) {
-				return createImageIndexUnitAdapter();
+			public Adapter caseImageCardsUnit(ImageCardsUnit object) {
+				return createImageCardsUnitAdapter();
 			}
 			@Override
 			public Adapter caseSliderUnit(SliderUnit object) {
@@ -1003,16 +1003,16 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CardsIndexUnit <em>Cards Index Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit <em>Text Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsIndexUnit
+	 * @see work.andycarpenter.webgen.pims.webui.TextCardsUnit
 	 * @generated
 	 */
-	public Adapter createCardsIndexUnitAdapter() {
+	public Adapter createTextCardsUnitAdapter() {
 		return null;
 	}
 
@@ -1059,16 +1059,16 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ImageIndexUnit <em>Image Index Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit <em>Image Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageIndexUnit
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit
 	 * @generated
 	 */
-	public Adapter createImageIndexUnitAdapter() {
+	public Adapter createImageCardsUnitAdapter() {
 		return null;
 	}
 
