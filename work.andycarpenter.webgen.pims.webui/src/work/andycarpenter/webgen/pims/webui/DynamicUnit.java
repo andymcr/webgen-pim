@@ -3,9 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
-
 import work.andycarpenter.webgen.pims.expression.Predicate;
-
 import work.andycarpenter.webgen.pims.service.Service;
 
 /**
@@ -33,7 +31,7 @@ import work.andycarpenter.webgen.pims.service.Service;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='featuresMustBeFromContentType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::EntityOrView)\r\n\t= if self.oclIsKindOf(SingletonUnit) then\r\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\r\n\t\telse if self.oclIsKindOf(CollectionUnit) then\r\n\t\t\tself.oclAsType(CollectionUnit).contentType\r\n\t\telse\r\n\t\t\tOrderedSet{}\r\n\t\tendif endif\r\n\tin let eovFeatures : Collection(persistence::Feature)\r\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\r\n\t\tin displayFields\r\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\r\n\t\t\t-&gt;select(f | \r\n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\r\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\r\n\t\t\t\telse\r\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\r\n\t\t\t\tendif)\r\n\t\t\t-&gt;forAll(f | \r\n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\r\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\r\n\t\t\t\telse\r\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\r\n\t\t\t\tendif)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::Entity)\n\t= OrderedSet{}\n\tin let eovFeatures : Collection(persistence::Feature)\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t-&gt;select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t-&gt;forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)'"
  * @generated
  */
 public interface DynamicUnit extends ContentUnit {

@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
-
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
 
 /**

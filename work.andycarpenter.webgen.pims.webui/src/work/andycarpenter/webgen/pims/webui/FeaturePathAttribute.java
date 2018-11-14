@@ -33,7 +33,7 @@ public interface FeaturePathAttribute extends FeaturePath {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAttribute_Name()
 	 * @model changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.oclAsType(persistence::EntityAttribute).name\nendif\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif\n'"
 	 * @generated
 	 */
 	String getName();

@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
-
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 /**

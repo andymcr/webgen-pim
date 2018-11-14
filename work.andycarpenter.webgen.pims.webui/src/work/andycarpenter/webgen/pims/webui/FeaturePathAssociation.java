@@ -50,7 +50,7 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @return the value of the '<em>Source Entity</em>' reference.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_SourceEntity()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\n\telse\n\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\n\tendif\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif'"
 	 * @generated
 	 */
 	Entity getSourceEntity();
@@ -66,7 +66,7 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @return the value of the '<em>Target Entity</em>' reference.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_TargetEntity()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.oclAsType(persistence::EntityAssociation).targetEntity\n\telse\n\t\tassociation.oclAsType(persistence::EntityAssociation).partOf\n\tendif\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.targetEntity\n\telse\n\t\tassociation.partOf\n\tendif\nendif'"
 	 * @generated
 	 */
 	Entity getTargetEntity();

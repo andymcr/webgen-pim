@@ -3,15 +3,11 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
-
 import work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -39,7 +35,6 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,7 +44,6 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,7 +53,6 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @ordered
 	 */
 	protected static final String DISPLAY_LABEL_EDEFAULT = null;
-
 	/**
 	 * The cached value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
 	 * <!-- begin-user-doc -->

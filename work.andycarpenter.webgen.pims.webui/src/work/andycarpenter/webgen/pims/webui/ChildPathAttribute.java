@@ -33,7 +33,7 @@ public interface ChildPathAttribute extends ChildPath {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAttribute_Name()
 	 * @model changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.oclAsType(persistence::EntityAttribute).name\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif'"
 	 * @generated
 	 */
 	String getName();

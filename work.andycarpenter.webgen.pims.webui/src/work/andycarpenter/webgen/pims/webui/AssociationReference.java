@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.ecore.EObject;
-
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
@@ -39,7 +38,7 @@ public interface AssociationReference extends EObject {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAssociationReference_Name()
 	 * @model unsettable="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\r\n\t\'\'\r\nelse if association.oclIsKindOf(persistence::EntityAssociation) then\r\n\tassociation.oclAsType(persistence::EntityAssociation).name\r\nelse if association.oclIsTypeOf(persistence::EncapsulatedAssociation) then\r\n\tassociation.oclAsType(persistence::EncapsulatedAssociation).name\r\nelse\r\n\tassociation.oclAsType(persistence::ViewAssociation).name \r\nendif endif endif\r\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\t\'\'\nelse\n\tassociation.name\nendif\n'"
 	 * @generated
 	 */
 	String getName();

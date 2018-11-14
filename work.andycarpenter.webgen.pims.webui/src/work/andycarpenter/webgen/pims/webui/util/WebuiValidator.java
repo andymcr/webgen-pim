@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -11,9 +10,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import work.andycarpenter.webgen.pims.base.util.BaseValidator;
-
 import work.andycarpenter.webgen.pims.webui.*;
 
 /**
@@ -269,6 +266,27 @@ public class WebuiValidator extends EObjectValidator {
 	protected static final String WEB_UI__PAGE_NAME_UNIQUE__EEXPRESSION = "pages->isUnique(name)";
 
 	/**
+	 * Validates the menuNameUnique constraint of '<em>Web UI</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateWebUI_menuNameUnique(WebUI webUI, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebuiPackage.Literals.WEB_UI,
+				 webUI,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "menuNameUnique",
+				 WEB_UI__MENU_NAME_UNIQUE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
 	 * Validates the pageNameUnique constraint of '<em>Web UI</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,27 +314,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String WEB_UI__MENU_NAME_UNIQUE__EEXPRESSION = "menus->isUnique(name)";
-
-	/**
-	 * Validates the menuNameUnique constraint of '<em>Web UI</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateWebUI_menuNameUnique(WebUI webUI, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(WebuiPackage.Literals.WEB_UI,
-				 webUI,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "menuNameUnique",
-				 WEB_UI__MENU_NAME_UNIQUE__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -589,29 +586,23 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "let entities : OrderedSet(persistence::EntityOrView)\r\n" +
-		"\t= if self.oclIsKindOf(SingletonUnit) then\r\n" +
-		"\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\r\n" +
-		"\t\telse if self.oclIsKindOf(CollectionUnit) then\r\n" +
-		"\t\t\tself.oclAsType(CollectionUnit).contentType\r\n" +
-		"\t\telse\r\n" +
-		"\t\t\tOrderedSet{}\r\n" +
-		"\t\tendif endif\r\n" +
-		"\tin let eovFeatures : Collection(persistence::Feature)\r\n" +
-		"\t\t= entities->collect(eov | eov.allFeatures)\r\n" +
-		"\t\tin displayFields\r\n" +
-		"\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\r\n" +
-		"\t\t\t->select(f | \r\n" +
-		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\r\n" +
-		"\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\r\n" +
-		"\t\t\t\telse\r\n" +
-		"\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\r\n" +
-		"\t\t\t\tendif)\r\n" +
-		"\t\t\t->forAll(f | \r\n" +
-		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\r\n" +
-		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitElement).attribute)\r\n" +
-		"\t\t\t\telse\r\n" +
-		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitAssociation).association)\r\n" +
+	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "let entities : OrderedSet(persistence::Entity)\n" +
+		"\t= OrderedSet{}\n" +
+		"\tin let eovFeatures : Collection(persistence::Feature)\n" +
+		"\t\t= entities->collect(eov | eov.allFeatures)\n" +
+		"\t\tin displayFields\n" +
+		"\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n" +
+		"\t\t\t->select(f | \n" +
+		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n" +
+		"\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n" +
+		"\t\t\t\telse\n" +
+		"\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n" +
+		"\t\t\t\tendif)\n" +
+		"\t\t\t->forAll(f | \n" +
+		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n" +
+		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitElement).attribute)\n" +
+		"\t\t\t\telse\n" +
+		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitAssociation).association)\n" +
 		"\t\t\t\tendif)";
 
 	/**
@@ -1012,14 +1003,12 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SINGLETON_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not title.oclIsUndefined() implies \r\n" +
-		"\tif title.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
-		"\t\ttitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\telse if title.oclIsKindOf(persistence::EncapsulatedAttribute) then\r\n" +
-		"\t\ttitle.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\telse\r\n" +
-		"\t\ttrue\r\n" +
-		"\tendif endif";
+	protected static final String SINGLETON_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not title.oclIsUndefined() implies \n" +
+		"\tif title.oclIsKindOf(persistence::Attribute) then\n" +
+		"\t\ttitle.oclAsType(persistence::Attribute).cardinality <> persistence::Cardinality::Many\n" +
+		"\telse\n" +
+		"\t\ttrue\n" +
+		"\tendif";
 
 	/**
 	 * Validates the canOnlyTitleWithSingletons constraint of '<em>Singleton Unit</em>'.
@@ -1070,11 +1059,11 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String COLLECTION_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not unitTitle.oclIsUndefined() implies \r\n" +
-		"\tif unitTitle.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
-		"\t\tunitTitle.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\telse\r\n" +
-		"\t\ttrue\r\n" +
+	protected static final String COLLECTION_UNIT__CAN_ONLY_TITLE_WITH_SINGLETONS__EEXPRESSION = "not unitTitle.oclIsUndefined() implies \n" +
+		"\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n" +
+		"\t\tunitTitle.oclAsType(persistence::Attribute).cardinality <> persistence::Cardinality::Many\n" +
+		"\telse\n" +
+		"\t\ttrue\n" +
 		"\tendif";
 
 	/**
@@ -1262,11 +1251,11 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\r\n" +
-		"\tpageDisplayedOn.webUI.services.services\r\n" +
-		"\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n" +
-		"\t\t->select(s : service::Service | contentType = s.serves)\r\n" +
-		"\t\t->collect(s : service::Service | s.selections)\r\n" +
+	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
+		"\tpageDisplayedOn.webUI.services.services\n" +
+		"\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\n" +
+		"\t\t->select(s : service::Service | contentType = s.serves)\n" +
+		"\t\t->collect(s : service::Service | s.selections)\n" +
 		"\t\t->includes(selection)";
 
 	/**
@@ -1699,27 +1688,13 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String DELETE_ACTION__CAN_ONLY_DELETE_SINGLETONS__EEXPRESSION = "if usedBy.oclIsKindOf(UnitElement) then\r\n" +
-		"\tlet attribute : persistence::Attribute\r\n" +
-		"\t\t= usedBy.oclAsType(UnitElement).attribute\r\n" +
-		"\t\tin if attribute.oclIsKindOf(persistence::EntityAttribute) then\r\n" +
-		"\t\t\t\tattribute.oclAsType(persistence::EntityAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\t\t\telse\r\n" +
-		"\t\t\t\tattribute.oclAsType(persistence::EncapsulatedAttribute).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\t\t\tendif\r\n" +
-		"else if usedBy.oclIsKindOf(UnitAssociation) then\r\n" +
-		"\tlet association : persistence::Association\r\n" +
-		"\t\t= usedBy.oclAsType(UnitAssociation).association\r\n" +
-		"\t\tin if association.oclIsKindOf(persistence::EntityAssociation) then\r\n" +
-		"\t\t\t\tassociation.oclAsType(persistence::EntityAssociation).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\t\t\telse if association.oclIsKindOf(persistence::EncapsulatedAssociation) then\r\n" +
-		"\t\t\t\tassociation.oclAsType(persistence::EncapsulatedAssociation).cardinality <> persistence::Cardinality::Many\r\n" +
-		"\t\t\telse\r\n" +
-		"\t\t\t\tfalse -- association.oclAsType(ViewAssociation)\r\n" +
-		"\t\t\tendif endif\r\n" +
-		"else\r\n" +
-		"\tusedBy.oclIsKindOf(CollectionUnit)\r\n" +
-		"endif endif\r\n" +
+	protected static final String DELETE_ACTION__CAN_ONLY_DELETE_SINGLETONS__EEXPRESSION = "if usedBy.oclIsKindOf(UnitElement) then\n" +
+		"\tusedBy.oclAsType(UnitElement).attribute.cardinality <> persistence::Cardinality::Many\n" +
+		"else if usedBy.oclIsKindOf(UnitAssociation) then\n" +
+		"\tusedBy.oclAsType(UnitAssociation).association.cardinality <> persistence::Cardinality::Many\n" +
+		"else\n" +
+		"\tusedBy.oclIsKindOf(CollectionUnit)\n" +
+		"endif endif\n" +
 		"";
 
 	/**
