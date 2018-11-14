@@ -163,6 +163,7 @@ public class WebsiteActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("website-settings"));
 		toolBarManager.add(new Separator("website-additions"));
 	}
