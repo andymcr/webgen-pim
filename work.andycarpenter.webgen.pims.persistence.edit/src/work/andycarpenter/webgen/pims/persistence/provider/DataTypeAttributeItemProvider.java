@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
@@ -156,14 +157,23 @@ public class DataTypeAttributeItemProvider extends AttributeItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DataTypeAttribute)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_DataTypeAttribute_type") :
-			getString("_UI_DataTypeAttribute_type") + " " + label;
+		final DataTypeAttribute attribute = (DataTypeAttribute) object;
+		final Object partOf = attribute.getPartOf();
+		String parentLabel = "";
+		final IItemLabelProvider provider
+			= (IItemLabelProvider) adapterFactory.adapt(partOf, IItemLabelProvider.class);
+		if (provider != null) {
+			parentLabel = provider.getText(partOf);
+		}
+		final String label = attribute.getName();
+		return parentLabel + ": "
+			+ (label == null || label.length() == 0
+				? getString("_UI_DataTypeAttribute_type")
+				: getString("_UI_DataTypeAttribute_type") + " " + label);
 	}
 	
 

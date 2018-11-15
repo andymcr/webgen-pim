@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import work.andycarpenter.webgen.pims.persistence.FileAttribute;
@@ -60,14 +60,23 @@ public class FileAttributeItemProvider extends ResourceAttributeItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FileAttribute)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_FileAttribute_type") :
-			getString("_UI_FileAttribute_type") + " " + label;
+		final FileAttribute attribute = (FileAttribute) object;
+		final Object partOf = attribute.getPartOf();
+		String parentLabel = "";
+		final IItemLabelProvider provider
+			= (IItemLabelProvider) adapterFactory.adapt(partOf, IItemLabelProvider.class);
+		if (provider != null) {
+			parentLabel = provider.getText(partOf);
+		}
+		final String label = attribute.getName();
+		return parentLabel + ": "
+			+ (label == null || label.length() == 0
+				? getString("_UI_FileAttribute_type")
+				: getString("_UI_FileAttribute_type") + " " + label);
 	}
 	
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import work.andycarpenter.webgen.pims.persistence.LocationAttribute;
@@ -64,10 +64,19 @@ public class LocationAttributeItemProvider extends AttributeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LocationAttribute)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_LocationAttribute_type") :
-			getString("_UI_LocationAttribute_type") + " " + label;
+		final LocationAttribute attribute = (LocationAttribute) object;
+		final Object partOf = attribute.getPartOf();
+		String parentLabel = "";
+		final IItemLabelProvider provider
+			= (IItemLabelProvider) adapterFactory.adapt(partOf, IItemLabelProvider.class);
+		if (provider != null) {
+			parentLabel = provider.getText(partOf);
+		}
+		final String label = attribute.getName();
+		return parentLabel + ": "
+			+ (label == null || label.length() == 0
+				? getString("_UI_LocationAttribute_type")
+				: getString("_UI_LocationAttribute_type") + " " + label);
 	}
 	
 
