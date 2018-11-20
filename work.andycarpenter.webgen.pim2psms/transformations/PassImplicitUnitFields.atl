@@ -53,16 +53,15 @@ abstract rule SingletonUnit {
 				partialWaf.displayFields
 			else
 				partialWaf.contentType.features
-					->select(f | if f.oclIsKindOf(Website!EntityFeature) then f.visible else true endif)
-					->select(f | f.oclIsKindOf(WAF!Attribute))
+					->select(f | f.oclIsKindOf(ORM!Attribute))
 					->collect(f | thisModule.implicitUnitAttribute(f))
 				->union(
 					if not waf.oclIsTypeOf(WAF!CreateUnit) then
 						Sequence{}
 					else
 						partialWaf.contentType.features
-							->select(f | if f.oclIsKindOf(ORM!Association) then f.visible or f.container else true endif)
 							->select(f | f.oclIsKindOf(WAF!Association))
+							->select(f | f.visible or f.container)
 							->collect(f | thisModule.implicitUnitAssociation(f))
 					endif)
 				endif
@@ -78,7 +77,6 @@ abstract rule CollectionUnit {
 				partialWaf.displayFields
 			else
 				partialWaf.contentType->first().features
-					->select(f | if f.oclIsKindOf(Website!EntityFeature) then f.visible else true endif)
 					->select(f | f.oclIsKindOf(WAF!Attribute))
 					->collect(f | thisModule.implicitUnitAttribute(f))
 				->union(
@@ -87,8 +85,8 @@ abstract rule CollectionUnit {
 					else
 						partialWaf.contentType
 							->collect(e | e.features)->flatten()
-							->select(f | if f.oclIsKindOf(ORM!Association) then f.visible or f.container else true endif)
 							->select(f | f.oclIsKindOf(WAF!Association))
+							->select(f | f.visible or f.container)
 							->collect(f | thisModule.implicitUnitAssociation(f))
 					endif)
 				endif

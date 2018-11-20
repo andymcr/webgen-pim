@@ -91,7 +91,6 @@ abstract rule Attribute {
 abstract rule SingletonAttribute {
 	from website : Website!Attribute (website.cardinality <> #Many)
 	to orm : ORM!SingletonAttribute (
-		required <- website.cardinality = #Required,
 		"unique" <- website."unique",
 		containerUnique <- website.containerUnique
 	)
@@ -297,8 +296,7 @@ rule OneToOneAssociationWithoutContainment {
 	to orm : ORM!SingletonAssociation (
 		associationRelationship <- #OneToOne,
 		opposite <- associationEnd,
-		owningEnd <- website.cardinality = #Required or website.targetCardinality <> #Required,
-		required <- website.cardinality = #Required
+		owningEnd <- website.cardinality = #Required or website.targetCardinality <> #Required
 	),
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
@@ -316,7 +314,6 @@ rule OneToOneAssociationWithoutContainment {
 			else
 				website.targetFeatureName().createAssociationColumnName()
 			endif,
-		required <- website.targetCardinality = #Required,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k))
 	)
@@ -328,8 +325,7 @@ rule ManyToOneAssociationWithoutContainment {
 	to orm : ORM!SingletonAssociation (
 		associationRelationship <- #ManyToOne,
 		opposite <- associationEnd,
-		owningEnd <- true,
-		required <- website.cardinality = #Required
+		owningEnd <- true
 	),
 	associationEnd : ORM!CollectionAssociation (
 		name <- website.targetFeatureName(),
@@ -371,7 +367,6 @@ rule OneToManyAssociationWithoutContainment {
 			else
 				website.targetFeatureName().createAssociationColumnName()
 			endif,
-		required <- website.targetCardinality = #Required,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k))
 	)
@@ -420,14 +415,14 @@ rule OneToOneAssociationWithContainment {
 		associationRelationship <- #OneToOne,
 		opposite <- associationEnd,
 		contains <- true,
-		visible <- website.sourceVisible,
-		required <- website.cardinality = #Required
+		visible <- website.sourceVisible
 	),
 	associationEnd : ORM!SingletonAssociation (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #OneToOne,
+		cardinality <- #Required,
 		opposite <- orm,
 		owningEnd <- true,
 		primaryKey <- website.targetPrimaryKey,
@@ -440,7 +435,6 @@ rule OneToOneAssociationWithContainment {
 			else
 				website.targetFeatureName().createAssociationColumnName()
 			endif,
-		required <- true,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k))
 	)
@@ -460,6 +454,7 @@ rule OneToManyAssociationWithContainment {
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
 		associationRelationship <- #ManyToOne,
+		cardinality <- #Required,
 		opposite <- orm,
 		owningEnd <- true,
 		primaryKey <- website.targetPrimaryKey,
@@ -472,7 +467,6 @@ rule OneToManyAssociationWithContainment {
 			else
 				website.targetFeatureName().createAssociationColumnName()
 			endif,
-		required <- true,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k))
 	)
