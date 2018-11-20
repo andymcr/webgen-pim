@@ -116,10 +116,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createEntityAdapter();
 			}
 			@Override
-			public Adapter caseEntityFeature(EntityFeature object) {
-				return createEntityFeatureAdapter();
-			}
-			@Override
 			public Adapter caseDataTypeAttribute(DataTypeAttribute object) {
 				return createDataTypeAttributeAdapter();
 			}
@@ -354,20 +350,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEntityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature <em>Entity Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature
-	 * @generated
-	 */
-	public Adapter createEntityFeatureAdapter() {
 		return null;
 	}
 

@@ -60,12 +60,12 @@ public interface AssociationKey extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Feature</em>' reference.
-	 * @see #setSourceFeature(EntityFeature)
+	 * @see #setSourceFeature(Feature)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociationKey_SourceFeature()
 	 * @model required="true"
 	 * @generated
 	 */
-	EntityFeature getSourceFeature();
+	Feature getSourceFeature();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.AssociationKey#getSourceFeature <em>Source Feature</em>}' reference.
@@ -75,7 +75,7 @@ public interface AssociationKey extends EObject {
 	 * @see #getSourceFeature()
 	 * @generated
 	 */
-	void setSourceFeature(EntityFeature value);
+	void setSourceFeature(Feature value);
 
 	/**
 	 * Returns the value of the '<em><b>Target Feature</b></em>' reference.
@@ -86,12 +86,12 @@ public interface AssociationKey extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Feature</em>' reference.
-	 * @see #setTargetFeature(EntityFeature)
+	 * @see #setTargetFeature(Feature)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociationKey_TargetFeature()
 	 * @model
 	 * @generated
 	 */
-	EntityFeature getTargetFeature();
+	Feature getTargetFeature();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.AssociationKey#getTargetFeature <em>Target Feature</em>}' reference.
@@ -101,6 +101,6 @@ public interface AssociationKey extends EObject {
 	 * @see #getTargetFeature()
 	 * @generated
 	 */
-	void setTargetFeature(EntityFeature value);
+	void setTargetFeature(Feature value);
 
 } // AssociationKey

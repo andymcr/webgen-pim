@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
-import work.andycarpenter.webgen.pims.persistence.EntityFeature;
+import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -42,7 +42,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityFeature sourceFeature;
+	protected Feature sourceFeature;
 
 	/**
 	 * The cached value of the '{@link #getTargetFeature() <em>Target Feature</em>}' reference.
@@ -52,7 +52,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EntityFeature targetFeature;
+	protected Feature targetFeature;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,10 +119,10 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityFeature getSourceFeature() {
+	public Feature getSourceFeature() {
 		if (sourceFeature != null && sourceFeature.eIsProxy()) {
 			InternalEObject oldSourceFeature = (InternalEObject)sourceFeature;
-			sourceFeature = (EntityFeature)eResolveProxy(oldSourceFeature);
+			sourceFeature = (Feature)eResolveProxy(oldSourceFeature);
 			if (sourceFeature != oldSourceFeature) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE, oldSourceFeature, sourceFeature));
@@ -136,7 +136,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityFeature basicGetSourceFeature() {
+	public Feature basicGetSourceFeature() {
 		return sourceFeature;
 	}
 
@@ -145,8 +145,8 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSourceFeature(EntityFeature newSourceFeature) {
-		EntityFeature oldSourceFeature = sourceFeature;
+	public void setSourceFeature(Feature newSourceFeature) {
+		Feature oldSourceFeature = sourceFeature;
 		sourceFeature = newSourceFeature;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE, oldSourceFeature, sourceFeature));
@@ -157,10 +157,10 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityFeature getTargetFeature() {
+	public Feature getTargetFeature() {
 		if (targetFeature != null && targetFeature.eIsProxy()) {
 			InternalEObject oldTargetFeature = (InternalEObject)targetFeature;
-			targetFeature = (EntityFeature)eResolveProxy(oldTargetFeature);
+			targetFeature = (Feature)eResolveProxy(oldTargetFeature);
 			if (targetFeature != oldTargetFeature) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.ASSOCIATION_KEY__TARGET_FEATURE, oldTargetFeature, targetFeature));
@@ -174,7 +174,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityFeature basicGetTargetFeature() {
+	public Feature basicGetTargetFeature() {
 		return targetFeature;
 	}
 
@@ -183,8 +183,8 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTargetFeature(EntityFeature newTargetFeature) {
-		EntityFeature oldTargetFeature = targetFeature;
+	public void setTargetFeature(Feature newTargetFeature) {
+		Feature oldTargetFeature = targetFeature;
 		targetFeature = newTargetFeature;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION_KEY__TARGET_FEATURE, oldTargetFeature, targetFeature));
@@ -266,10 +266,10 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 				setKeyFor((Association)newValue);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE:
-				setSourceFeature((EntityFeature)newValue);
+				setSourceFeature((Feature)newValue);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__TARGET_FEATURE:
-				setTargetFeature((EntityFeature)newValue);
+				setTargetFeature((Feature)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -287,10 +287,10 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 				setKeyFor((Association)null);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__SOURCE_FEATURE:
-				setSourceFeature((EntityFeature)null);
+				setSourceFeature((Feature)null);
 				return;
 			case PersistencePackage.ASSOCIATION_KEY__TARGET_FEATURE:
-				setTargetFeature((EntityFeature)null);
+				setTargetFeature((Feature)null);
 				return;
 		}
 		super.eUnset(featureID);

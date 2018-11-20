@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.base.impl.ClassifierImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityFeature;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -184,7 +183,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityFeature> unique;
+	protected EList<Feature> unique;
 
 	/**
 	 * The cached value of the '{@link #getContainerUnique() <em>Container Unique</em>}' reference list.
@@ -194,7 +193,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityFeature> containerUnique;
+	protected EList<Feature> containerUnique;
 
 	/**
 	 * The default value of the '{@link #getTableName() <em>Table Name</em>}' attribute.
@@ -470,9 +469,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityFeature> getUnique() {
+	public EList<Feature> getUnique() {
 		if (unique == null) {
-			unique = new EObjectResolvingEList<EntityFeature>(EntityFeature.class, this, PersistencePackage.ENTITY__UNIQUE);
+			unique = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__UNIQUE);
 		}
 		return unique;
 	}
@@ -482,9 +481,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityFeature> getContainerUnique() {
+	public EList<Feature> getContainerUnique() {
 		if (containerUnique == null) {
-			containerUnique = new EObjectResolvingEList<EntityFeature>(EntityFeature.class, this, PersistencePackage.ENTITY__CONTAINER_UNIQUE);
+			containerUnique = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__CONTAINER_UNIQUE);
 		}
 		return containerUnique;
 	}
@@ -733,11 +732,11 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return;
 			case PersistencePackage.ENTITY__UNIQUE:
 				getUnique().clear();
-				getUnique().addAll((Collection<? extends EntityFeature>)newValue);
+				getUnique().addAll((Collection<? extends Feature>)newValue);
 				return;
 			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
 				getContainerUnique().clear();
-				getContainerUnique().addAll((Collection<? extends EntityFeature>)newValue);
+				getContainerUnique().addAll((Collection<? extends Feature>)newValue);
 				return;
 			case PersistencePackage.ENTITY__TABLE_NAME:
 				setTableName((String)newValue);

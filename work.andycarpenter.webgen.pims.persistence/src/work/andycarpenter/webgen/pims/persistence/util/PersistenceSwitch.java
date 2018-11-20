@@ -153,15 +153,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.ENTITY_FEATURE: {
-				EntityFeature entityFeature = (EntityFeature)theEObject;
-				T result = caseEntityFeature(entityFeature);
-				if (result == null) result = caseFeature(entityFeature);
-				if (result == null) result = caseNamedDisplayElement(entityFeature);
-				if (result == null) result = caseNamedElement(entityFeature);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE: {
 				DataTypeAttribute dataTypeAttribute = (DataTypeAttribute)theEObject;
 				T result = caseDataTypeAttribute(dataTypeAttribute);
@@ -453,21 +444,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEntity(Entity object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity Feature</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntityFeature(EntityFeature object) {
 		return null;
 	}
 

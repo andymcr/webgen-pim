@@ -232,7 +232,7 @@ public interface Entity extends Classifier {
 
 	/**
 	 * Returns the value of the '<em><b>Unique</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityFeature}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Unique</em>' reference list isn't clear,
@@ -244,11 +244,11 @@ public interface Entity extends Classifier {
 	 * @model
 	 * @generated
 	 */
-	EList<EntityFeature> getUnique();
+	EList<Feature> getUnique();
 
 	/**
 	 * Returns the value of the '<em><b>Container Unique</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.EntityFeature}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Container Unique</em>' reference list isn't clear,
@@ -260,7 +260,7 @@ public interface Entity extends Classifier {
 	 * @model
 	 * @generated
 	 */
-	EList<EntityFeature> getContainerUnique();
+	EList<Feature> getContainerUnique();
 
 	/**
 	 * Returns the value of the '<em><b>Table Name</b></em>' attribute.

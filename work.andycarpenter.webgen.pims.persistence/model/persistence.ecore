@@ -43,6 +43,15 @@
     <eLiterals name="DoctrineODM" value="5" literal="DoctrineODM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SerializationGroup" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Cardinality">
+    <eLiterals name="Optional" literal="Optional"/>
+    <eLiterals name="Required" literal="Required"/>
+    <eLiterals name="Many" literal="Many"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="isHasChoices">
+    <eLiterals name="isA"/>
+    <eLiterals name="hasA"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Feature" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="primaryKeyRequired"/>
@@ -207,9 +216,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
         eType="#//ModelLabel" containment="true" eOpposite="#//ModelLabel/labelFor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unique" upperBound="-1"
-        eType="#//EntityFeature"/>
+        eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerUnique" upperBound="-1"
-        eType="#//EntityFeature"/>
+        eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoKeyName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="id"/>
@@ -222,16 +231,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowFormTypeCustomisation"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Cardinality">
-    <eLiterals name="Optional" literal="Optional"/>
-    <eLiterals name="Required" literal="Required"/>
-    <eLiterals name="Many" literal="Many"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="isHasChoices">
-    <eLiterals name="isA"/>
-    <eLiterals name="hasA"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EntityFeature" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement #//Feature"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataTypeAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//DataType"/>
@@ -300,7 +299,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="keyFor" lowerBound="1"
         eType="#//Association" eOpposite="#//Association/keys"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFeature" lowerBound="1"
-        eType="#//EntityFeature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetFeature" eType="#//EntityFeature"/>
+        eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetFeature" eType="#//Feature"/>
   </eClassifiers>
 </ecore:EPackage>

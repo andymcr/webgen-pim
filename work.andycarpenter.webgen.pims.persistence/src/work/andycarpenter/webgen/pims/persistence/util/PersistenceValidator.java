@@ -118,8 +118,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateModelLabelAssociation((ModelLabelAssociation)value, diagnostics, context);
 			case PersistencePackage.ENTITY:
 				return validateEntity((Entity)value, diagnostics, context);
-			case PersistencePackage.ENTITY_FEATURE:
-				return validateEntityFeature((EntityFeature)value, diagnostics, context);
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE:
 				return validateDataTypeAttribute((DataTypeAttribute)value, diagnostics, context);
 			case PersistencePackage.DATE_ATTRIBUTE:
@@ -449,26 +447,6 @@ public class PersistenceValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEntityFeature(EntityFeature entityFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(entityFeature, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(entityFeature, diagnostics, context);
-		return result;
 	}
 
 	/**

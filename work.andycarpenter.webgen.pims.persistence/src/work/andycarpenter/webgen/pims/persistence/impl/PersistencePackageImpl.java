@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.persistence.DateAttribute;
 import work.andycarpenter.webgen.pims.persistence.DateDetails;
 import work.andycarpenter.webgen.pims.persistence.DatePathElement;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.EntityFeature;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.FileAttribute;
 import work.andycarpenter.webgen.pims.persistence.ImageAttribute;
@@ -133,13 +132,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	private EClass entityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entityFeatureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1192,15 +1184,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntityFeature() {
-		return entityFeatureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDataTypeAttribute() {
 		return dataTypeAttributeEClass;
 	}
@@ -1671,8 +1654,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_USER_INTERFACE);
 		createEAttribute(entityEClass, ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION);
 
-		entityFeatureEClass = createEClass(ENTITY_FEATURE);
-
 		dataTypeAttributeEClass = createEClass(DATA_TYPE_ATTRIBUTE);
 		createEReference(dataTypeAttributeEClass, DATA_TYPE_ATTRIBUTE__DATA_TYPE);
 		createEAttribute(dataTypeAttributeEClass, DATA_TYPE_ATTRIBUTE__OBFUSCATE_FORM_FIELDS);
@@ -1769,8 +1750,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		modelLabelAttributeEClass.getESuperTypes().add(this.getModelLabelFeature());
 		modelLabelAssociationEClass.getESuperTypes().add(this.getModelLabelFeature());
 		entityEClass.getESuperTypes().add(theBasePackage.getClassifier());
-		entityFeatureEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
-		entityFeatureEClass.getESuperTypes().add(this.getFeature());
 		dataTypeAttributeEClass.getESuperTypes().add(this.getAttribute());
 		dateAttributeEClass.getESuperTypes().add(this.getAttribute());
 		urlAttributeEClass.getESuperTypes().add(this.getAttribute());
@@ -1880,16 +1859,14 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEReference(getEntity_AllAssociations(), this.getAssociation(), null, "allAssociations", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Keys(), this.getFeature(), null, "keys", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Labels(), this.getModelLabel(), this.getModelLabel_LabelFor(), "labels", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Unique(), this.getEntityFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_ContainerUnique(), this.getEntityFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Unique(), this.getFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_ContainerUnique(), this.getFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyName(), ecorePackage.getEString(), "autoKeyName", "id", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyPersistentType(), ecorePackage.getEString(), "autoKeyPersistentType", "integer", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyGenerationStrategy(), ecorePackage.getEString(), "autoKeyGenerationStrategy", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_ImplementsUserInterface(), ecorePackage.getEBoolean(), "implementsUserInterface", "false", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AllowFormTypeCustomisation(), ecorePackage.getEBoolean(), "allowFormTypeCustomisation", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(entityFeatureEClass, EntityFeature.class, "EntityFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dataTypeAttributeEClass, DataTypeAttribute.class, "DataTypeAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataTypeAttribute_DataType(), theBasePackage.getDataType(), null, "dataType", null, 1, 1, DataTypeAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1934,8 +1911,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		initEClass(associationKeyEClass, AssociationKey.class, "AssociationKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociationKey_KeyFor(), this.getAssociation(), this.getAssociation_Keys(), "keyFor", null, 1, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociationKey_SourceFeature(), this.getEntityFeature(), null, "sourceFeature", null, 1, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociationKey_TargetFeature(), this.getEntityFeature(), null, "targetFeature", null, 0, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationKey_SourceFeature(), this.getFeature(), null, "sourceFeature", null, 1, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationKey_TargetFeature(), this.getFeature(), null, "targetFeature", null, 0, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(databaseTechnologiesEEnum, DatabaseTechnologies.class, "DatabaseTechnologies");

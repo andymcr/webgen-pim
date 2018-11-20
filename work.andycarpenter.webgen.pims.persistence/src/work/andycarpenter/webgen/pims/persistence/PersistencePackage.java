@@ -1602,241 +1602,6 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY_OPERATION_COUNT = BasePackage.CLASSIFIER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl <em>Entity Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityFeature()
-	 * @generated
-	 */
-	int ENTITY_FEATURE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__PART_OF = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__CARDINALITY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__ORDERED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__PRIMARY_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Derived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DERIVED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__CUSTOMISE_SET = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__BOOLEAN_IS_HAS_CHOICE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_ADD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DEFAULT_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__EMPTY_DISPLAY_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__ENCODE_URI_KEY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__SINGLETON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__PLURALISED_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__COLUMN_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
-
-	/**
-	 * The number of structural features of the '<em>Entity Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 21;
-
-	/**
-	 * The number of operations of the '<em>Entity Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1844,7 +1609,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDataTypeAttribute()
 	 * @generated
 	 */
-	int DATA_TYPE_ATTRIBUTE = 12;
+	int DATA_TYPE_ATTRIBUTE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2205,7 +1970,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateAttribute()
 	 * @generated
 	 */
-	int DATE_ATTRIBUTE = 13;
+	int DATE_ATTRIBUTE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2548,7 +2313,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUrlAttribute()
 	 * @generated
 	 */
-	int URL_ATTRIBUTE = 14;
+	int URL_ATTRIBUTE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2882,7 +2647,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceAttribute()
 	 * @generated
 	 */
-	int RESOURCE_ATTRIBUTE = 15;
+	int RESOURCE_ATTRIBUTE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3252,7 +3017,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPathElement()
 	 * @generated
 	 */
-	int PATH_ELEMENT = 16;
+	int PATH_ELEMENT = 15;
 
 	/**
 	 * The number of structural features of the '<em>Path Element</em>' class.
@@ -3280,7 +3045,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getStaticPathElement()
 	 * @generated
 	 */
-	int STATIC_PATH_ELEMENT = 17;
+	int STATIC_PATH_ELEMENT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -3317,7 +3082,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatePathElement()
 	 * @generated
 	 */
-	int DATE_PATH_ELEMENT = 18;
+	int DATE_PATH_ELEMENT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -3354,7 +3119,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileAttribute()
 	 * @generated
 	 */
-	int FILE_ATTRIBUTE = 19;
+	int FILE_ATTRIBUTE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3724,7 +3489,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageAttribute()
 	 * @generated
 	 */
-	int IMAGE_ATTRIBUTE = 20;
+	int IMAGE_ATTRIBUTE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4094,7 +3859,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
 	 * @generated
 	 */
-	int LOCATION_ATTRIBUTE = 21;
+	int LOCATION_ATTRIBUTE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4419,7 +4184,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT = 22;
+	int ASSOCIATION_WITHOUT_CONTAINMENT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4816,7 +4581,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT = 23;
+	int ASSOCIATION_WITH_CONTAINMENT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5204,7 +4969,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
 	 * @generated
 	 */
-	int ASSOCIATION_KEY = 24;
+	int ASSOCIATION_KEY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Key For</b></em>' container reference.
@@ -5259,7 +5024,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 25;
+	int DATABASE_TECHNOLOGIES = 24;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -5269,7 +5034,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 26;
+	int ORM_TECHNOLOGIES = 25;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -5279,7 +5044,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 27;
+	int CARDINALITY = 26;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -5289,7 +5054,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 28;
+	int IS_HAS_CHOICES = 27;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -5299,7 +5064,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 29;
+	int DATE_DETAILS = 28;
 
 
 	/**
@@ -6324,16 +6089,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEntity_AllowFormTypeCustomisation();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.EntityFeature <em>Entity Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.EntityFeature
-	 * @generated
-	 */
-	EClass getEntityFeature();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DataTypeAttribute <em>Data Type Attribute</em>}'.
@@ -7531,16 +7286,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = eINSTANCE.getEntity_AllowFormTypeCustomisation();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl <em>Entity Feature</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.EntityFeatureImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getEntityFeature()
-		 * @generated
-		 */
-		EClass ENTITY_FEATURE = eINSTANCE.getEntityFeature();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.

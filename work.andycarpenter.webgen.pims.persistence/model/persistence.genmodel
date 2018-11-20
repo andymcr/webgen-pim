@@ -146,7 +146,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/implementsUserInterface"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/allowFormTypeCustomisation"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//EntityFeature"/>
     <genClasses ecoreClass="persistence.ecore#//DataTypeAttribute">
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference persistence.ecore#//DataTypeAttribute/dataType"/>
