@@ -29,6 +29,7 @@ import work.andycarpenter.webgen.pims.persistence.Feature;
  *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getOrdering <em>Ordering</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getLimit <em>Limit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getSelectPath <em>Select Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Selection#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -210,6 +211,22 @@ public interface Selection extends NamedElement, FormalParameterList {
 	 * @generated
 	 */
 	void setLimit(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Grouping</b></em>' reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Grouping</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Grouping</em>' reference list.
+	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getSelection_Grouping()
+	 * @model
+	 * @generated
+	 */
+	EList<Feature> getGrouping();
 
 	/**
 	 * Returns the value of the '<em><b>Select Path</b></em>' reference list.

@@ -54,6 +54,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getOrdering <em>Ordering</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getLimit <em>Limit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getSelectPath <em>Select Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -160,6 +161,16 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @ordered
 	 */
 	protected int limit = LIMIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getGrouping() <em>Grouping</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGrouping()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Feature> grouping;
 
 	/**
 	 * The cached value of the '{@link #getSelectPath() <em>Select Path</em>}' reference list.
@@ -401,6 +412,18 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Feature> getGrouping() {
+		if (grouping == null) {
+			grouping = new EObjectResolvingEList<Feature>(Feature.class, this, ServicePackage.SELECTION__GROUPING);
+		}
+		return grouping;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Association> getSelectPath() {
 		if (selectPath == null) {
 			selectPath = new EObjectResolvingEList<Association>(Association.class, this, ServicePackage.SELECTION__SELECT_PATH);
@@ -512,6 +535,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return getOrdering();
 			case ServicePackage.SELECTION__LIMIT:
 				return getLimit();
+			case ServicePackage.SELECTION__GROUPING:
+				return getGrouping();
 			case ServicePackage.SELECTION__SELECT_PATH:
 				return getSelectPath();
 			case ServicePackage.SELECTION__METHOD_NAME:
@@ -561,6 +586,10 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 			case ServicePackage.SELECTION__LIMIT:
 				setLimit((Integer)newValue);
 				return;
+			case ServicePackage.SELECTION__GROUPING:
+				getGrouping().clear();
+				getGrouping().addAll((Collection<? extends Feature>)newValue);
+				return;
 			case ServicePackage.SELECTION__SELECT_PATH:
 				getSelectPath().clear();
 				getSelectPath().addAll((Collection<? extends Association>)newValue);
@@ -607,6 +636,9 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 			case ServicePackage.SELECTION__LIMIT:
 				setLimit(LIMIT_EDEFAULT);
 				return;
+			case ServicePackage.SELECTION__GROUPING:
+				getGrouping().clear();
+				return;
 			case ServicePackage.SELECTION__SELECT_PATH:
 				getSelectPath().clear();
 				return;
@@ -643,6 +675,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return ordering != null && !ordering.isEmpty();
 			case ServicePackage.SELECTION__LIMIT:
 				return limit != LIMIT_EDEFAULT;
+			case ServicePackage.SELECTION__GROUPING:
+				return grouping != null && !grouping.isEmpty();
 			case ServicePackage.SELECTION__SELECT_PATH:
 				return selectPath != null && !selectPath.isEmpty();
 			case ServicePackage.SELECTION__METHOD_NAME:
