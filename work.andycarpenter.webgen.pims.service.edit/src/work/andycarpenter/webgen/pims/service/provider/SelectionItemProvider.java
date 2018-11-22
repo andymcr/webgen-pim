@@ -66,6 +66,7 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 			addFieldsPropertyDescriptor(object);
 			addJoinsPropertyDescriptor(object);
 			addLimitPropertyDescriptor(object);
+			addGroupingPropertyDescriptor(object);
 			addSelectPathPropertyDescriptor(object);
 			addMethodNamePropertyDescriptor(object);
 		}
@@ -180,6 +181,39 @@ public class SelectionItemProvider extends NamedElementItemProvider {
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 getString("_UI_BusinessPropertyCategory"),
 				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Grouping feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addGroupingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_Selection_grouping_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_Selection_grouping_feature", "_UI_Selection_type"),
+			ServicePackage.Literals.SELECTION__GROUPING,
+			true, false, true, null,
+			getString("_UI_BusinessPropertyCategory"),
+			null) {
+			@Override
+			public Collection<?> getChoiceOfValues(Object object) {
+				if (object instanceof Selection) {
+					final Set<Entity> entities = getEntities((Selection) object);
+					final Set<Feature> fields = new HashSet<Feature>();
+					for (Entity entity : entities) {
+						fields.addAll(entity.getFeatures());
+					}
+
+					return fields;
+				}
+
+				return Collections.emptySet();
+			}
+		});
 	}
 
 	/**
