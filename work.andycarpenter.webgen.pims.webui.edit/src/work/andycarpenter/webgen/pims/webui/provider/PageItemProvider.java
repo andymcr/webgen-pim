@@ -242,6 +242,11 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				 WebuiFactory.eINSTANCE.createDateCardsUnit()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
 				 WebuiFactory.eINSTANCE.createImageCardsUnit()));
 
 		newChildDescriptors.add

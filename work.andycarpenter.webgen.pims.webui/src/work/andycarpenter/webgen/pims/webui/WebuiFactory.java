@@ -310,6 +310,15 @@ public interface WebuiFactory extends EFactory {
 	TextCardsUnit createTextCardsUnit();
 
 	/**
+	 * Returns a new object of class '<em>Date Cards Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date Cards Unit</em>'.
+	 * @generated
+	 */
+	DateCardsUnit createDateCardsUnit();
+
+	/**
 	 * Returns a new object of class '<em>Image Cards Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

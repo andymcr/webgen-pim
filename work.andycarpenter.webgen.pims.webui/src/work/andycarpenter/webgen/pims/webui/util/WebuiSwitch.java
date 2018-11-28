@@ -490,6 +490,20 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.DATE_CARDS_UNIT: {
+				DateCardsUnit dateCardsUnit = (DateCardsUnit)theEObject;
+				T result = caseDateCardsUnit(dateCardsUnit);
+				if (result == null) result = caseCardsUnit(dateCardsUnit);
+				if (result == null) result = caseCollectionUnit(dateCardsUnit);
+				if (result == null) result = caseInlineActionContainer(dateCardsUnit);
+				if (result == null) result = caseDynamicUnit(dateCardsUnit);
+				if (result == null) result = caseSelectableUnit(dateCardsUnit);
+				if (result == null) result = caseContentUnit(dateCardsUnit);
+				if (result == null) result = caseNamedDisplayElement(dateCardsUnit);
+				if (result == null) result = caseNamedElement(dateCardsUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.IMAGE_UNIT: {
 				ImageUnit imageUnit = (ImageUnit)theEObject;
 				T result = caseImageUnit(imageUnit);
@@ -1359,6 +1373,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTextCardsUnit(TextCardsUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date Cards Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date Cards Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDateCardsUnit(DateCardsUnit object) {
 		return null;
 	}
 

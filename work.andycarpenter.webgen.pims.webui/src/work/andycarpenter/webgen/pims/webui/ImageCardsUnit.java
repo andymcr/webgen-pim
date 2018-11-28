@@ -105,7 +105,7 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 
 	/**
 	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,image_index_unit"</code>.
+	 * The default value is <code>"unit,cards_unit,image_cards_unit"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
@@ -115,7 +115,7 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @return the value of the '<em>Style Class</em>' attribute.
 	 * @see #setStyleClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_StyleClass()
-	 * @model default="unit,image_index_unit" ordered="false"
+	 * @model default="unit,cards_unit,image_cards_unit" ordered="false"
 	 * @generated
 	 */
 	String getStyleClass();

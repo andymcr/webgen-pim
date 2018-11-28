@@ -33,7 +33,7 @@ public class TextCardsUnitImpl extends CardsUnitImpl implements TextCardsUnit {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,card_index_unit";
+	protected static final String STYLE_CLASS_EDEFAULT = "unit,cards_unit,text_cards_unit";
 
 	/**
 	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.

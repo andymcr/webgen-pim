@@ -373,6 +373,10 @@
     <genClasses ecoreClass="webui.ecore#//TextCardsUnit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//TextCardsUnit/styleClass"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//DateCardsUnit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//DateCardsUnit/elementDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//DateCardsUnit/styleClass"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//ImageUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imagePathFeature"/>

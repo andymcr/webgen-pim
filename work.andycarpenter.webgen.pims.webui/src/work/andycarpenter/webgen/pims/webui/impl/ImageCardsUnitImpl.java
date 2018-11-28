@@ -156,7 +156,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,image_index_unit";
+	protected static final String STYLE_CLASS_EDEFAULT = "unit,cards_unit,image_cards_unit";
 
 	/**
 	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.

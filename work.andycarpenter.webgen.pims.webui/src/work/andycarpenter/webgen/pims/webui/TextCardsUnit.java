@@ -22,7 +22,7 @@ package work.andycarpenter.webgen.pims.webui;
 public interface TextCardsUnit extends CardsUnit {
 	/**
 	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,card_index_unit"</code>.
+	 * The default value is <code>"unit,cards_unit,text_cards_unit"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
@@ -32,7 +32,7 @@ public interface TextCardsUnit extends CardsUnit {
 	 * @return the value of the '<em>Style Class</em>' attribute.
 	 * @see #setStyleClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getTextCardsUnit_StyleClass()
-	 * @model default="unit,card_index_unit" ordered="false"
+	 * @model default="unit,cards_unit,text_cards_unit" ordered="false"
 	 * @generated
 	 */
 	String getStyleClass();

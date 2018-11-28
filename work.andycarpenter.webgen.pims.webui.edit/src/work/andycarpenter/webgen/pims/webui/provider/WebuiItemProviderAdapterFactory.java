@@ -841,6 +841,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DateCardsUnit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DateCardsUnitItemProvider dateCardsUnitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.DateCardsUnit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDateCardsUnitAdapter() {
+		if (dateCardsUnitItemProvider == null) {
+			dateCardsUnitItemProvider = new DateCardsUnitItemProvider(this);
+		}
+
+		return dateCardsUnitItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

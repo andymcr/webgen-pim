@@ -259,6 +259,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createTextCardsUnitAdapter();
 			}
 			@Override
+			public Adapter caseDateCardsUnit(DateCardsUnit object) {
+				return createDateCardsUnitAdapter();
+			}
+			@Override
 			public Adapter caseImageUnit(ImageUnit object) {
 				return createImageUnitAdapter();
 			}
@@ -1013,6 +1017,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextCardsUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DateCardsUnit <em>Date Cards Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.DateCardsUnit
+	 * @generated
+	 */
+	public Adapter createDateCardsUnitAdapter() {
 		return null;
 	}
 

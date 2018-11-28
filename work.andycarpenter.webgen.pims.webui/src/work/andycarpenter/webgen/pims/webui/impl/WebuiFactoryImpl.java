@@ -89,6 +89,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
 			case WebuiPackage.INDEX_UNIT: return createIndexUnit();
 			case WebuiPackage.TEXT_CARDS_UNIT: return createTextCardsUnit();
+			case WebuiPackage.DATE_CARDS_UNIT: return createDateCardsUnit();
 			case WebuiPackage.IMAGE_CARDS_UNIT: return createImageCardsUnit();
 			case WebuiPackage.SLIDER_UNIT: return createSliderUnit();
 			case WebuiPackage.GALLERY_UNIT: return createGalleryUnit();
@@ -473,6 +474,16 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public TextCardsUnit createTextCardsUnit() {
 		TextCardsUnitImpl textCardsUnit = new TextCardsUnitImpl();
 		return textCardsUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DateCardsUnit createDateCardsUnit() {
+		DateCardsUnitImpl dateCardsUnit = new DateCardsUnitImpl();
+		return dateCardsUnit;
 	}
 
 	/**

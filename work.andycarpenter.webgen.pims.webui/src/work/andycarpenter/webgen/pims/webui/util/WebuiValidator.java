@@ -188,6 +188,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateCardsUnit((CardsUnit)value, diagnostics, context);
 			case WebuiPackage.TEXT_CARDS_UNIT:
 				return validateTextCardsUnit((TextCardsUnit)value, diagnostics, context);
+			case WebuiPackage.DATE_CARDS_UNIT:
+				return validateDateCardsUnit((DateCardsUnit)value, diagnostics, context);
 			case WebuiPackage.IMAGE_UNIT:
 				return validateImageUnit((ImageUnit)value, diagnostics, context);
 			case WebuiPackage.IMAGE_CARDS_UNIT:
@@ -1375,6 +1377,29 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(textCardsUnit, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDateCardsUnit(DateCardsUnit dateCardsUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(dateCardsUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(dateCardsUnit, diagnostics, context);
 		return result;
 	}
 

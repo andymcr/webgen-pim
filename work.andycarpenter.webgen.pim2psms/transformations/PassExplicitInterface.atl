@@ -1006,6 +1006,14 @@ rule TextCardsUnit {
 	)
 }
 
+-- @extends CardsUnit
+rule DateCardsUnit {
+	from website : Website!DateCardsUnit
+	to waf : WAF!DateCardsUnit (
+		elementDate <- website.elementDate
+	)
+}
+
 -- @extends CollectionUnit
 abstract rule ImageUnit {
 	from website : Website!ImageUnit
