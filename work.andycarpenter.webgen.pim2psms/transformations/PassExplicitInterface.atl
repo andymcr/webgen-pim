@@ -537,13 +537,23 @@ rule UnitAttribute {
 					OclUndefined
 				endif
 			endif,
-		inputClass <-
-			if not website.inputClass.oclIsUndefined() and website.inputClass <> '' then
-				website.inputClass.replaceAll(',', ' ')
+		displayClass <-
+			if not website.displayClass.oclIsUndefined() and website.displayClass <> '' then
+				website.displayClass
 			else
 				if not website.attribute.oclIsUndefined() then
-					if not website.attribute.inputClass.oclIsUndefined() then
-						website.attribute.inputClass.replaceAll(',', ' ')
+					website.attribute.displayClass
+				else
+					OclUndefined
+				endif
+			endif,
+		inputColumnClass <-
+			if not website.inputColumnClass.oclIsUndefined() and website.inputColumnClass <> '' then
+				website.inputColumnClass.replaceAll(',', ' ')
+			else
+				if not website.attribute.oclIsUndefined() then
+					if not website.attribute.inputColumnClass.oclIsUndefined() then
+						website.attribute.inputColumnClass.replaceAll(',', ' ')
 					else
 						OclUndefined
 					endif
@@ -551,12 +561,16 @@ rule UnitAttribute {
 					OclUndefined
 				endif
 			endif,
-		displayClass <-
-			if not website.displayClass.oclIsUndefined() and website.displayClass <> '' then
-				website.displayClass
+		inputElementClass <-
+			if not website.inputElementClass.oclIsUndefined() and website.inputElementClass <> '' then
+				website.inputElementClass.replaceAll(',', ' ')
 			else
 				if not website.attribute.oclIsUndefined() then
-					website.attribute.displayClass
+					if not website.attribute.inputElementClass.oclIsUndefined() then
+						website.attribute.inputElementClass.replaceAll(',', ' ')
+					else
+						OclUndefined
+					endif
 				else
 					OclUndefined
 				endif
@@ -601,22 +615,40 @@ rule UnitAssociation {
 					OclUndefined
 				endif
 			endif,
-		inputClass <-
-			if not website.inputClass.oclIsUndefined() and website.inputClass <> '' then
-				website.inputClass.replaceAll(',', ' ')
-			else
-				if not website.association.oclIsUndefined() then
-					website.association.inputClass.replaceAll(',', ' ')
-				else
-					OclUndefined
-				endif
-			endif,
 		displayClass <-
 			if not website.displayClass.oclIsUndefined() and website.displayClass <> '' then
 				website.displayClass
 			else
 				if not website.association.oclIsUndefined() then
 					website.association.displayClass
+				else
+					OclUndefined
+				endif
+			endif,
+		inputColumnClass <-
+			if not website.inputColumnClass.oclIsUndefined() and website.inputColumnClass <> '' then
+				website.inputColumnClass.replaceAll(',', ' ')
+			else
+				if not website.association.oclIsUndefined() then
+					if not website.association.inputColumnClass.oclIsUndefined() then
+						website.association.inputColumnClass.replaceAll(',', ' ')
+					else
+						OclUndefined
+					endif
+				else
+					OclUndefined
+				endif
+			endif,
+		inputElementClass <-
+			if not website.inputElementClass.oclIsUndefined() and website.inputElementClass <> '' then
+				website.inputElementClass.replaceAll(',', ' ')
+			else
+				if not website.association.oclIsUndefined() then
+					if not website.association.inputElementClass.oclIsUndefined() then
+						website.association.inputElementClass.replaceAll(',', ' ')
+					else
+						OclUndefined
+					endif
 				else
 					OclUndefined
 				endif

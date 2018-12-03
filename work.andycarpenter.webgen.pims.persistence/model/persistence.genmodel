@@ -79,7 +79,8 @@
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
           ecoreFeature="ecore:EReference persistence.ecore#//Attribute/defaultValue"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/validationPattern"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/inputClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/inputColumnClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/inputElementClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Association">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Association/keys"/>
@@ -96,7 +97,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pseudo"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputColumnClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputElementClass"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/serializationMaxDepth"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Label"/>

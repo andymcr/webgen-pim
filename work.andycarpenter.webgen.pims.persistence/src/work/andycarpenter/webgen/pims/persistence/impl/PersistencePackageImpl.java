@@ -707,8 +707,17 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttribute_InputClass() {
+	public EAttribute getAttribute_InputColumnClass() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttribute_InputElementClass() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -851,7 +860,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssociation_InputClass() {
+	public EAttribute getAssociation_InputColumnClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -860,8 +869,17 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssociation_SerializationMaxDepth() {
+	public EAttribute getAssociation_InputElementClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAssociation_SerializationMaxDepth() {
+		return (EAttribute)associationEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -1593,7 +1611,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(attributeEClass, ATTRIBUTE__UNIQUE);
 		createEReference(attributeEClass, ATTRIBUTE__DEFAULT_VALUE);
 		createEAttribute(attributeEClass, ATTRIBUTE__VALIDATION_PATTERN);
-		createEAttribute(attributeEClass, ATTRIBUTE__INPUT_CLASS);
+		createEAttribute(attributeEClass, ATTRIBUTE__INPUT_COLUMN_CLASS);
+		createEAttribute(attributeEClass, ATTRIBUTE__INPUT_ELEMENT_CLASS);
 
 		associationEClass = createEClass(ASSOCIATION);
 		createEReference(associationEClass, ASSOCIATION__KEYS);
@@ -1610,7 +1629,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_DISPLAY_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_FOOTER_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__PSEUDO);
-		createEAttribute(associationEClass, ASSOCIATION__INPUT_CLASS);
+		createEAttribute(associationEClass, ASSOCIATION__INPUT_COLUMN_CLASS);
+		createEAttribute(associationEClass, ASSOCIATION__INPUT_ELEMENT_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__SERIALIZATION_MAX_DEPTH);
 
 		labelEClass = createEClass(LABEL);
@@ -1807,7 +1827,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAttribute_Unique(), ecorePackage.getEBoolean(), "unique", "false", 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttribute_DefaultValue(), theExpressionPackage.getExpression(), null, "defaultValue", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAttribute_ValidationPattern(), ecorePackage.getEString(), "validationPattern", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAttribute_InputClass(), ecorePackage.getEString(), "inputClass", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAttribute_InputColumnClass(), ecorePackage.getEString(), "inputColumnClass", "input-field,col,s12 m12 l12", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAttribute_InputElementClass(), ecorePackage.getEString(), "inputElementClass", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEClass, Association.class, "Association", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociation_Keys(), this.getAssociationKey(), this.getAssociationKey_KeyFor(), "keys", null, 0, -1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1824,7 +1845,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAssociation_TargetDisplayClass(), ecorePackage.getEString(), "targetDisplayClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_TargetFooterClass(), ecorePackage.getEString(), "targetFooterClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_Pseudo(), ecorePackage.getEBoolean(), "pseudo", "false", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_InputClass(), ecorePackage.getEString(), "inputClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociation_InputColumnClass(), ecorePackage.getEString(), "inputColumnClass", "input-field,col,s12 m12 l12", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociation_InputElementClass(), ecorePackage.getEString(), "inputElementClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_SerializationMaxDepth(), ecorePackage.getEInt(), "serializationMaxDepth", "1", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

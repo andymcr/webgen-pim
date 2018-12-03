@@ -1916,13 +1916,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__INPUT_COLUMN_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -1931,7 +1940,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1940,7 +1949,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -1949,7 +1958,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -2169,13 +2178,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__INPUT_CLASS = UNIT_FEATURE__INPUT_CLASS;
+	int UNIT_ELEMENT__INPUT_COLUMN_CLASS = UNIT_FEATURE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__INPUT_ELEMENT_CLASS = UNIT_FEATURE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -2476,13 +2494,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__INPUT_CLASS = UNIT_FEATURE__INPUT_CLASS;
+	int UNIT_ASSOCIATION__INPUT_COLUMN_CLASS = UNIT_FEATURE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__INPUT_ELEMENT_CLASS = UNIT_FEATURE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -14666,15 +14693,26 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_HeaderClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputClass <em>Input Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass <em>Input Column Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputClass()
+	 * @return the meta object for the attribute '<em>Input Column Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass()
 	 * @see #getUnitFeature()
 	 * @generated
 	 */
-	EAttribute getUnitFeature_InputClass();
+	EAttribute getUnitFeature_InputColumnClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass <em>Input Element Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Element Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_InputElementClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}'.
@@ -17866,12 +17904,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__HEADER_CLASS = eINSTANCE.getUnitFeature_HeaderClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Input Column Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_FEATURE__INPUT_CLASS = eINSTANCE.getUnitFeature_InputClass();
+		EAttribute UNIT_FEATURE__INPUT_COLUMN_CLASS = eINSTANCE.getUnitFeature_InputColumnClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Element Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__INPUT_ELEMENT_CLASS = eINSTANCE.getUnitFeature_InputElementClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Class</b></em>' attribute feature.

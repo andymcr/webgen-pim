@@ -107,15 +107,6 @@ lazy abstract rule implicitUnitFeature {
 					else
 						feature.headerClass
 					endif,
-		inputClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getWebsiteFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.inputClass
-					endif,
 		displayClass <-
 			let feature : Website!Feature
 				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
@@ -124,6 +115,24 @@ lazy abstract rule implicitUnitFeature {
 						'?? XXXX ??'
 					else
 						feature.displayClass
+					endif,
+		inputColumnClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.inputColumnClass
+					endif,
+		inputElementClass <-
+			let feature : Website!Feature
+				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
+					.getWebsiteFeature(partialWaf.name)
+				in if feature.oclIsUndefined() then
+						'?? XXXX ??'
+					else
+						feature.inputElementClass
 					endif,
 		footerClass <-
 			let feature : Website!Feature

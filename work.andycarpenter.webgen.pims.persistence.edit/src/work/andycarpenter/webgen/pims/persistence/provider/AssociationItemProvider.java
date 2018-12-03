@@ -61,7 +61,8 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			addTargetDisplayClassPropertyDescriptor(object);
 			addTargetFooterClassPropertyDescriptor(object);
 			addPseudoPropertyDescriptor(object);
-			addInputClassPropertyDescriptor(object);
+			addInputColumnClassPropertyDescriptor(object);
+			addInputElementClassPropertyDescriptor(object);
 			addSerializationMaxDepthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -354,19 +355,41 @@ public class AssociationItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Input Class feature.
+	 * This adds a property descriptor for the Input Column Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputClassPropertyDescriptor(Object object) {
+	protected void addInputColumnClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Association_inputClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_inputClass_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__INPUT_CLASS,
+				 getString("_UI_Association_inputColumnClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Association_inputColumnClass_feature", "_UI_Association_type"),
+				 PersistencePackage.Literals.ASSOCIATION__INPUT_COLUMN_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Element Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputElementClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Association_inputElementClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Association_inputElementClass_feature", "_UI_Association_type"),
+				 PersistencePackage.Literals.ASSOCIATION__INPUT_ELEMENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -468,7 +491,8 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
 			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
 			case PersistencePackage.ASSOCIATION__PSEUDO:
-			case PersistencePackage.ASSOCIATION__INPUT_CLASS:
+			case PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS:
+			case PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS:
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

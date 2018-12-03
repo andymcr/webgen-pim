@@ -59,7 +59,8 @@ public class AttributeItemProvider extends FeatureItemProvider {
 			addSlugFieldsPropertyDescriptor(object);
 			addUniquePropertyDescriptor(object);
 			addValidationPatternPropertyDescriptor(object);
-			addInputClassPropertyDescriptor(object);
+			addInputColumnClassPropertyDescriptor(object);
+			addInputElementClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -241,19 +242,41 @@ public class AttributeItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Input Class feature.
+	 * This adds a property descriptor for the Input Column Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputClassPropertyDescriptor(Object object) {
+	protected void addInputColumnClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Attribute_inputClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_inputClass_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__INPUT_CLASS,
+				 getString("_UI_Attribute_inputColumnClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_inputColumnClass_feature", "_UI_Attribute_type"),
+				 PersistencePackage.Literals.ATTRIBUTE__INPUT_COLUMN_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Element Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputElementClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attribute_inputElementClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_inputElementClass_feature", "_UI_Attribute_type"),
+				 PersistencePackage.Literals.ATTRIBUTE__INPUT_ELEMENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -326,7 +349,8 @@ public class AttributeItemProvider extends FeatureItemProvider {
 			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
 			case PersistencePackage.ATTRIBUTE__UNIQUE:
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
-			case PersistencePackage.ATTRIBUTE__INPUT_CLASS:
+			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
+			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:

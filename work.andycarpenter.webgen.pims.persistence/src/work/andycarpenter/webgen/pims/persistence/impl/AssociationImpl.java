@@ -44,7 +44,8 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetDisplayClass <em>Target Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetFooterClass <em>Target Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#isPseudo <em>Pseudo</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getInputClass <em>Input Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getInputColumnClass <em>Input Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getInputElementClass <em>Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getSerializationMaxDepth <em>Serialization Max Depth</em>}</li>
  * </ul>
  *
@@ -312,24 +313,44 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	protected boolean pseudo = PSEUDO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
+	 * The default value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
+	 * @see #getInputColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_CLASS_EDEFAULT = null;
+	protected static final String INPUT_COLUMN_CLASS_EDEFAULT = "input-field,col,s12 m12 l12";
 
 	/**
-	 * The cached value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
+	 * The cached value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
+	 * @see #getInputColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String inputClass = INPUT_CLASS_EDEFAULT;
+	protected String inputColumnClass = INPUT_COLUMN_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String inputElementClass = INPUT_ELEMENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSerializationMaxDepth() <em>Serialization Max Depth</em>}' attribute.
@@ -699,8 +720,8 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputClass() {
-		return inputClass;
+	public String getInputColumnClass() {
+		return inputColumnClass;
 	}
 
 	/**
@@ -708,11 +729,32 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputClass(String newInputClass) {
-		String oldInputClass = inputClass;
-		inputClass = newInputClass;
+	public void setInputColumnClass(String newInputColumnClass) {
+		String oldInputColumnClass = inputColumnClass;
+		inputColumnClass = newInputColumnClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__INPUT_CLASS, oldInputClass, inputClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS, oldInputColumnClass, inputColumnClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getInputElementClass() {
+		return inputElementClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputElementClass(String newInputElementClass) {
+		String oldInputElementClass = inputElementClass;
+		inputElementClass = newInputElementClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS, oldInputElementClass, inputElementClass));
 	}
 
 	/**
@@ -808,8 +850,10 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 				return getTargetFooterClass();
 			case PersistencePackage.ASSOCIATION__PSEUDO:
 				return isPseudo();
-			case PersistencePackage.ASSOCIATION__INPUT_CLASS:
-				return getInputClass();
+			case PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS:
+				return getInputColumnClass();
+			case PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS:
+				return getInputElementClass();
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				return getSerializationMaxDepth();
 		}
@@ -868,8 +912,11 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 			case PersistencePackage.ASSOCIATION__PSEUDO:
 				setPseudo((Boolean)newValue);
 				return;
-			case PersistencePackage.ASSOCIATION__INPUT_CLASS:
-				setInputClass((String)newValue);
+			case PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS:
+				setInputColumnClass((String)newValue);
+				return;
+			case PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS:
+				setInputElementClass((String)newValue);
 				return;
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				setSerializationMaxDepth((Integer)newValue);
@@ -928,8 +975,11 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 			case PersistencePackage.ASSOCIATION__PSEUDO:
 				setPseudo(PSEUDO_EDEFAULT);
 				return;
-			case PersistencePackage.ASSOCIATION__INPUT_CLASS:
-				setInputClass(INPUT_CLASS_EDEFAULT);
+			case PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS:
+				setInputColumnClass(INPUT_COLUMN_CLASS_EDEFAULT);
+				return;
+			case PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS:
+				setInputElementClass(INPUT_ELEMENT_CLASS_EDEFAULT);
 				return;
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				setSerializationMaxDepth(SERIALIZATION_MAX_DEPTH_EDEFAULT);
@@ -974,8 +1024,10 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 				return TARGET_FOOTER_CLASS_EDEFAULT == null ? targetFooterClass != null : !TARGET_FOOTER_CLASS_EDEFAULT.equals(targetFooterClass);
 			case PersistencePackage.ASSOCIATION__PSEUDO:
 				return pseudo != PSEUDO_EDEFAULT;
-			case PersistencePackage.ASSOCIATION__INPUT_CLASS:
-				return INPUT_CLASS_EDEFAULT == null ? inputClass != null : !INPUT_CLASS_EDEFAULT.equals(inputClass);
+			case PersistencePackage.ASSOCIATION__INPUT_COLUMN_CLASS:
+				return INPUT_COLUMN_CLASS_EDEFAULT == null ? inputColumnClass != null : !INPUT_COLUMN_CLASS_EDEFAULT.equals(inputColumnClass);
+			case PersistencePackage.ASSOCIATION__INPUT_ELEMENT_CLASS:
+				return INPUT_ELEMENT_CLASS_EDEFAULT == null ? inputElementClass != null : !INPUT_ELEMENT_CLASS_EDEFAULT.equals(inputElementClass);
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				return serializationMaxDepth != SERIALIZATION_MAX_DEPTH_EDEFAULT;
 		}
@@ -1016,8 +1068,10 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 		result.append(targetFooterClass);
 		result.append(", pseudo: ");
 		result.append(pseudo);
-		result.append(", inputClass: ");
-		result.append(inputClass);
+		result.append(", inputColumnClass: ");
+		result.append(inputColumnClass);
+		result.append(", inputElementClass: ");
+		result.append(inputElementClass);
 		result.append(", serializationMaxDepth: ");
 		result.append(serializationMaxDepth);
 		result.append(')');

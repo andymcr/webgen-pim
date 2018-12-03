@@ -722,13 +722,22 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE__VALIDATION_PATTERN = FEATURE_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__INPUT_CLASS = FEATURE_FEATURE_COUNT + 9;
+	int ATTRIBUTE__INPUT_COLUMN_CLASS = FEATURE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__INPUT_ELEMENT_CLASS = FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -737,7 +746,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 10;
+	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -1092,13 +1101,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__PSEUDO = FEATURE_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__INPUT_CLASS = FEATURE_FEATURE_COUNT + 14;
+	int ASSOCIATION__INPUT_COLUMN_CLASS = FEATURE_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__INPUT_ELEMENT_CLASS = FEATURE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -1107,7 +1125,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 15;
+	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -1116,7 +1134,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 16;
+	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -1900,13 +1918,22 @@ public interface PersistencePackage extends EPackage {
 	int DATA_TYPE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
+	int DATA_TYPE_ATTRIBUTE__INPUT_COLUMN_CLASS = ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_ATTRIBUTE__INPUT_ELEMENT_CLASS = ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Data Type</b></em>' reference.
@@ -2261,13 +2288,22 @@ public interface PersistencePackage extends EPackage {
 	int DATE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
+	int DATE_ATTRIBUTE__INPUT_COLUMN_CLASS = ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_ATTRIBUTE__INPUT_ELEMENT_CLASS = ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' attribute.
@@ -2604,13 +2640,22 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
+	int URL_ATTRIBUTE__INPUT_COLUMN_CLASS = ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_ATTRIBUTE__INPUT_ELEMENT_CLASS = ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Value</b></em>' attribute.
@@ -2938,13 +2983,22 @@ public interface PersistencePackage extends EPackage {
 	int RESOURCE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
+	int RESOURCE_ATTRIBUTE__INPUT_COLUMN_CLASS = ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ATTRIBUTE__INPUT_ELEMENT_CLASS = ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3410,13 +3464,22 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
+	int FILE_ATTRIBUTE__INPUT_COLUMN_CLASS = RESOURCE_ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_ATTRIBUTE__INPUT_ELEMENT_CLASS = RESOURCE_ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3780,13 +3843,22 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__INPUT_CLASS = RESOURCE_ATTRIBUTE__INPUT_CLASS;
+	int IMAGE_ATTRIBUTE__INPUT_COLUMN_CLASS = RESOURCE_ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_ATTRIBUTE__INPUT_ELEMENT_CLASS = RESOURCE_ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -4150,13 +4222,22 @@ public interface PersistencePackage extends EPackage {
 	int LOCATION_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_ATTRIBUTE__INPUT_CLASS = ATTRIBUTE__INPUT_CLASS;
+	int LOCATION_ATTRIBUTE__INPUT_COLUMN_CLASS = ATTRIBUTE__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_ATTRIBUTE__INPUT_ELEMENT_CLASS = ATTRIBUTE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Location Attribute</em>' class.
@@ -4520,13 +4601,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__INPUT_CLASS = ASSOCIATION__INPUT_CLASS;
+	int ASSOCIATION_WITHOUT_CONTAINMENT__INPUT_COLUMN_CLASS = ASSOCIATION__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT__INPUT_ELEMENT_CLASS = ASSOCIATION__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -4917,13 +5007,22 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITH_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
 
 	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT__INPUT_CLASS = ASSOCIATION__INPUT_CLASS;
+	int ASSOCIATION_WITH_CONTAINMENT__INPUT_COLUMN_CLASS = ASSOCIATION__INPUT_COLUMN_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT__INPUT_ELEMENT_CLASS = ASSOCIATION__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -5515,15 +5614,26 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getAttribute_ValidationPattern();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputClass <em>Input Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputColumnClass <em>Input Column Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getInputClass()
+	 * @return the meta object for the attribute '<em>Input Column Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getInputColumnClass()
 	 * @see #getAttribute()
 	 * @generated
 	 */
-	EAttribute getAttribute_InputClass();
+	EAttribute getAttribute_InputColumnClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputElementClass <em>Input Element Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Element Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getInputElementClass()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_InputElementClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Association <em>Association</em>}'.
@@ -5690,15 +5800,26 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getAssociation_Pseudo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getInputClass <em>Input Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getInputColumnClass <em>Input Column Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getInputClass()
+	 * @return the meta object for the attribute '<em>Input Column Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getInputColumnClass()
 	 * @see #getAssociation()
 	 * @generated
 	 */
-	EAttribute getAssociation_InputClass();
+	EAttribute getAssociation_InputColumnClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getInputElementClass <em>Input Element Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Element Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Association#getInputElementClass()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EAttribute getAssociation_InputElementClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}'.
@@ -6850,12 +6971,20 @@ public interface PersistencePackage extends EPackage {
 		EAttribute ATTRIBUTE__VALIDATION_PATTERN = eINSTANCE.getAttribute_ValidationPattern();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Input Column Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ATTRIBUTE__INPUT_CLASS = eINSTANCE.getAttribute_InputClass();
+		EAttribute ATTRIBUTE__INPUT_COLUMN_CLASS = eINSTANCE.getAttribute_InputColumnClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Element Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__INPUT_ELEMENT_CLASS = eINSTANCE.getAttribute_InputElementClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl <em>Association</em>}' class.
@@ -6980,12 +7109,20 @@ public interface PersistencePackage extends EPackage {
 		EAttribute ASSOCIATION__PSEUDO = eINSTANCE.getAssociation_Pseudo();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Input Column Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ASSOCIATION__INPUT_CLASS = eINSTANCE.getAssociation_InputClass();
+		EAttribute ASSOCIATION__INPUT_COLUMN_CLASS = eINSTANCE.getAssociation_InputColumnClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Element Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSOCIATION__INPUT_ELEMENT_CLASS = eINSTANCE.getAssociation_InputElementClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Serialization Max Depth</b></em>' attribute feature.

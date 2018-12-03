@@ -1566,7 +1566,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitFeature_InputClass() {
+	public EAttribute getUnitFeature_InputColumnClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1575,7 +1575,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitFeature_DisplayClass() {
+	public EAttribute getUnitFeature_InputElementClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -1584,8 +1584,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitFeature_FooterClass() {
+	public EAttribute getUnitFeature_DisplayClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnitFeature_FooterClass() {
+		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -3668,7 +3677,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__FOOTER);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__AUTOFOCUS);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__HEADER_CLASS);
-		createEAttribute(unitFeatureEClass, UNIT_FEATURE__INPUT_CLASS);
+		createEAttribute(unitFeatureEClass, UNIT_FEATURE__INPUT_COLUMN_CLASS);
+		createEAttribute(unitFeatureEClass, UNIT_FEATURE__INPUT_ELEMENT_CLASS);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__DISPLAY_CLASS);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__FOOTER_CLASS);
 
@@ -4160,7 +4170,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getUnitFeature_Footer(), ecorePackage.getEString(), "footer", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getUnitFeature_Autofocus(), ecorePackage.getEBoolean(), "autofocus", "false", 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getUnitFeature_HeaderClass(), ecorePackage.getEString(), "headerClass", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getUnitFeature_InputClass(), ecorePackage.getEString(), "inputClass", "input-field,col,s12", 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getUnitFeature_InputColumnClass(), ecorePackage.getEString(), "inputColumnClass", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getUnitFeature_InputElementClass(), ecorePackage.getEString(), "inputElementClass", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitFeature_DisplayClass(), ecorePackage.getEString(), "displayClass", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getUnitFeature_FooterClass(), ecorePackage.getEString(), "footerClass", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 

@@ -38,7 +38,8 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getDefaultValue <em>Default Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getValidationPattern <em>Validation Pattern</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInputClass <em>Input Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInputColumnClass <em>Input Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInputElementClass <em>Input Element Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -205,24 +206,44 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	protected String validationPattern = VALIDATION_PATTERN_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
+	 * The default value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
+	 * @see #getInputColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_CLASS_EDEFAULT = null;
+	protected static final String INPUT_COLUMN_CLASS_EDEFAULT = "input-field,col,s12 m12 l12";
 
 	/**
-	 * The cached value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
+	 * The cached value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
+	 * @see #getInputColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String inputClass = INPUT_CLASS_EDEFAULT;
+	protected String inputColumnClass = INPUT_COLUMN_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String inputElementClass = INPUT_ELEMENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -450,8 +471,8 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputClass() {
-		return inputClass;
+	public String getInputColumnClass() {
+		return inputColumnClass;
 	}
 
 	/**
@@ -459,11 +480,32 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputClass(String newInputClass) {
-		String oldInputClass = inputClass;
-		inputClass = newInputClass;
+	public void setInputColumnClass(String newInputColumnClass) {
+		String oldInputColumnClass = inputColumnClass;
+		inputColumnClass = newInputColumnClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__INPUT_CLASS, oldInputClass, inputClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS, oldInputColumnClass, inputColumnClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getInputElementClass() {
+		return inputElementClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputElementClass(String newInputElementClass) {
+		String oldInputElementClass = inputElementClass;
+		inputElementClass = newInputElementClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS, oldInputElementClass, inputElementClass));
 	}
 
 	/**
@@ -506,8 +548,10 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return getDefaultValue();
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				return getValidationPattern();
-			case PersistencePackage.ATTRIBUTE__INPUT_CLASS:
-				return getInputClass();
+			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
+				return getInputColumnClass();
+			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
+				return getInputElementClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -549,8 +593,11 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				setValidationPattern((String)newValue);
 				return;
-			case PersistencePackage.ATTRIBUTE__INPUT_CLASS:
-				setInputClass((String)newValue);
+			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
+				setInputColumnClass((String)newValue);
+				return;
+			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
+				setInputElementClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -591,8 +638,11 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				setValidationPattern(VALIDATION_PATTERN_EDEFAULT);
 				return;
-			case PersistencePackage.ATTRIBUTE__INPUT_CLASS:
-				setInputClass(INPUT_CLASS_EDEFAULT);
+			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
+				setInputColumnClass(INPUT_COLUMN_CLASS_EDEFAULT);
+				return;
+			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
+				setInputElementClass(INPUT_ELEMENT_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -624,8 +674,10 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return defaultValue != null;
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				return VALIDATION_PATTERN_EDEFAULT == null ? validationPattern != null : !VALIDATION_PATTERN_EDEFAULT.equals(validationPattern);
-			case PersistencePackage.ATTRIBUTE__INPUT_CLASS:
-				return INPUT_CLASS_EDEFAULT == null ? inputClass != null : !INPUT_CLASS_EDEFAULT.equals(inputClass);
+			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
+				return INPUT_COLUMN_CLASS_EDEFAULT == null ? inputColumnClass != null : !INPUT_COLUMN_CLASS_EDEFAULT.equals(inputColumnClass);
+			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
+				return INPUT_ELEMENT_CLASS_EDEFAULT == null ? inputElementClass != null : !INPUT_ELEMENT_CLASS_EDEFAULT.equals(inputElementClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -654,8 +706,10 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 		result.append(unique);
 		result.append(", validationPattern: ");
 		result.append(validationPattern);
-		result.append(", inputClass: ");
-		result.append(inputClass);
+		result.append(", inputColumnClass: ");
+		result.append(inputColumnClass);
+		result.append(", inputElementClass: ");
+		result.append(inputElementClass);
 		result.append(')');
 		return result.toString();
 	}

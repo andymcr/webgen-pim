@@ -170,7 +170,8 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footer"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/autofocus"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/headerClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/inputClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/inputColumnClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/inputElementClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/displayClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footerClass"/>
     </genClasses>

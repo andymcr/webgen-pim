@@ -23,7 +23,8 @@ import work.andycarpenter.webgen.pims.expression.Expression;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getDefaultValue <em>Default Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getValidationPattern <em>Validation Pattern</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputClass <em>Input Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputColumnClass <em>Input Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputElementClass <em>Input Element Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute()
@@ -258,29 +259,56 @@ public interface Attribute extends Feature, Label {
 	void setValidationPattern(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Column Class</b></em>' attribute.
+	 * The default value is <code>"input-field,col,s12 m12 l12"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Class</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Input Column Class</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Class</em>' attribute.
-	 * @see #setInputClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InputClass()
-	 * @model ordered="false"
+	 * @return the value of the '<em>Input Column Class</em>' attribute.
+	 * @see #setInputColumnClass(String)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InputColumnClass()
+	 * @model default="input-field,col,s12 m12 l12" ordered="false"
 	 * @generated
 	 */
-	String getInputClass();
+	String getInputColumnClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputClass <em>Input Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputColumnClass <em>Input Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Class</em>' attribute.
-	 * @see #getInputClass()
+	 * @param value the new value of the '<em>Input Column Class</em>' attribute.
+	 * @see #getInputColumnClass()
 	 * @generated
 	 */
-	void setInputClass(String value);
+	void setInputColumnClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input Element Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Element Class</em>' attribute.
+	 * @see #setInputElementClass(String)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InputElementClass()
+	 * @model
+	 * @generated
+	 */
+	String getInputElementClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputElementClass <em>Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input Element Class</em>' attribute.
+	 * @see #getInputElementClass()
+	 * @generated
+	 */
+	void setInputElementClass(String value);
 
 } // Attribute
