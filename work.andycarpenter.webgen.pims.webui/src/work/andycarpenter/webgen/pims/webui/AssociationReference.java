@@ -4,7 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.ecore.EObject;
 import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,12 +88,12 @@ public interface AssociationReference extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value Display</em>' reference.
-	 * @see #setValueDisplay(Label)
+	 * @see #setValueDisplay(ModelLabel)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAssociationReference_ValueDisplay()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Label getValueDisplay();
+	ModelLabel getValueDisplay();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.AssociationReference#getValueDisplay <em>Value Display</em>}' reference.
@@ -103,7 +103,7 @@ public interface AssociationReference extends EObject {
 	 * @see #getValueDisplay()
 	 * @generated
 	 */
-	void setValueDisplay(Label value);
+	void setValueDisplay(ModelLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Child Feature</b></em>' containment reference.

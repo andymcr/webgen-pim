@@ -310,7 +310,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="association" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Association"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueDisplay" ordered="false"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//ModelLabel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="childFeature" eType="#//ChildPath"
         containment="true" eOpposite="#//ChildPath/partOf"/>
   </eClassifiers>

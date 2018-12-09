@@ -16,8 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
-
+import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.webui.AssociationReference;
@@ -88,7 +87,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 * @ordered
 	 */
-	protected Label valueDisplay;
+	protected ModelLabel valueDisplay;
 
 	/**
 	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
@@ -242,10 +241,10 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label getValueDisplay() {
+	public ModelLabel getValueDisplay() {
 		if (valueDisplay != null && valueDisplay.eIsProxy()) {
 			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
-			valueDisplay = (Label)eResolveProxy(oldValueDisplay);
+			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
 			if (valueDisplay != oldValueDisplay) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
@@ -259,7 +258,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label basicGetValueDisplay() {
+	public ModelLabel basicGetValueDisplay() {
 		return valueDisplay;
 	}
 
@@ -268,8 +267,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValueDisplay(Label newValueDisplay) {
-		Label oldValueDisplay = valueDisplay;
+	public void setValueDisplay(ModelLabel newValueDisplay) {
+		ModelLabel oldValueDisplay = valueDisplay;
 		valueDisplay = newValueDisplay;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
@@ -529,7 +528,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				setAssociation((Association)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((Label)newValue);
+				setValueDisplay((ModelLabel)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)newValue);
@@ -559,7 +558,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				setAssociation((Association)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((Label)null);
+				setValueDisplay((ModelLabel)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)null);

@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
-
+import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.webui.AssociationReference;
 import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
@@ -67,7 +66,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 * @ordered
 	 */
-	protected Label valueDisplay;
+	protected ModelLabel valueDisplay;
 
 	/**
 	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
@@ -189,10 +188,10 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label getValueDisplay() {
+	public ModelLabel getValueDisplay() {
 		if (valueDisplay != null && valueDisplay.eIsProxy()) {
 			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
-			valueDisplay = (Label)eResolveProxy(oldValueDisplay);
+			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
 			if (valueDisplay != oldValueDisplay) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
@@ -206,7 +205,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Label basicGetValueDisplay() {
+	public ModelLabel basicGetValueDisplay() {
 		return valueDisplay;
 	}
 
@@ -215,8 +214,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValueDisplay(Label newValueDisplay) {
-		Label oldValueDisplay = valueDisplay;
+	public void setValueDisplay(ModelLabel newValueDisplay) {
+		ModelLabel oldValueDisplay = valueDisplay;
 		valueDisplay = newValueDisplay;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
@@ -382,7 +381,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				setAssociation((Association)newValue);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((Label)newValue);
+				setValueDisplay((ModelLabel)newValue);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)newValue);
@@ -403,7 +402,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				setAssociation((Association)null);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((Label)null);
+				setValueDisplay((ModelLabel)null);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE:
 				setChildFeature((ChildPath)null);

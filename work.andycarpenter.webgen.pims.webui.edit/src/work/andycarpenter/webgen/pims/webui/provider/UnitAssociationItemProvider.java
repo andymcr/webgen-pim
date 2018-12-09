@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
@@ -120,10 +120,9 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
-						final Set<Label> labels = new HashSet<Label>();
+						final Set<ModelLabel> labels = new HashSet<ModelLabel>();
 						if (association.getAssociation() != null) {
 							for (Entity target : getTarget(association)) {
-								labels.addAll(target.getAttributes());
 								labels.addAll(target.getLabels());
 							}
 						}
