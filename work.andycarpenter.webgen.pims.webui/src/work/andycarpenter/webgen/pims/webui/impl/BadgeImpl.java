@@ -10,11 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 import work.andycarpenter.webgen.pims.webui.Badge;
+import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -62,7 +61,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression value;
+	protected FeaturePath value;
 
 	/**
 	 * The cached value of the '{@link #getDisplayWhen() <em>Display When</em>}' containment reference.
@@ -129,7 +128,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression getValue() {
+	public FeaturePath getValue() {
 		return value;
 	}
 
@@ -138,8 +137,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(Expression newValue, NotificationChain msgs) {
-		Expression oldValue = value;
+	public NotificationChain basicSetValue(FeaturePath newValue, NotificationChain msgs) {
+		FeaturePath oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__VALUE, oldValue, newValue);
@@ -153,7 +152,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Expression newValue) {
+	public void setValue(FeaturePath newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -303,7 +302,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				setIconName((String)newValue);
 				return;
 			case WebuiPackage.BADGE__VALUE:
-				setValue((Expression)newValue);
+				setValue((FeaturePath)newValue);
 				return;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)newValue);
@@ -327,7 +326,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				setIconName(ICON_NAME_EDEFAULT);
 				return;
 			case WebuiPackage.BADGE__VALUE:
-				setValue((Expression)null);
+				setValue((FeaturePath)null);
 				return;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)null);

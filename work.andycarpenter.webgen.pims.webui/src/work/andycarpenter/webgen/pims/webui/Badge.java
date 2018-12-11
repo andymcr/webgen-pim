@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.ecore.EObject;
-import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 /**
@@ -62,12 +61,12 @@ public interface Badge extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(Expression)
+	 * @see #setValue(FeaturePath)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Expression getValue();
+	FeaturePath getValue();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}' containment reference.
@@ -77,7 +76,7 @@ public interface Badge extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Expression value);
+	void setValue(FeaturePath value);
 
 	/**
 	 * Returns the value of the '<em><b>Display When</b></em>' containment reference.
