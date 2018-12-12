@@ -858,7 +858,6 @@ abstract rule CollectionUnit {
 				website.filter.findFilter()
 			endif,
 		supportedFilters <-	website.supportedFilters->collect(f | f.findFilter()),
-		badges <- website.badges,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
 		paginationControlPlacement <- website.paginationControlPlacement,
@@ -1024,6 +1023,7 @@ rule IndexLineDirectionUnit {
 abstract rule CardsUnit {
 	from website : Website!CardsUnit
 	to waf : WAF!CardsUnit (
+		badges <- website.badges,
 		omitFieldLabels <- website.omitFieldLabels,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
