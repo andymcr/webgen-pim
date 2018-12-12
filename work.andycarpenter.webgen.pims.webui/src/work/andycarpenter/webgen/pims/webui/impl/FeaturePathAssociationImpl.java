@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.webui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -33,6 +34,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl#getPartOfx <em>Part Ofx</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl#getPaaaaaaa <em>Paaaaaaa</em>}</li>
  * </ul>
  *
  * @generated
@@ -107,6 +110,26 @@ public class FeaturePathAssociationImpl extends FeaturePathImpl implements Featu
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate TARGET_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH_ASSOCIATION__TARGET_ENTITY).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getPartOfx() <em>Part Ofx</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartOfx()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate PART_OFX__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH_ASSOCIATION__PART_OFX).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getPaaaaaaa() <em>Paaaaaaa</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPaaaaaaa()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate PAAAAAAA__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH_ASSOCIATION__PAAAAAAA).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -314,6 +337,34 @@ public class FeaturePathAssociationImpl extends FeaturePathImpl implements Featu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Entity getPartOfx() {
+		return (Entity)PART_OFX__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetPartOfx() {
+		return (Entity)PART_OFX__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Entity> getPaaaaaaa() {
+		return (EList<Entity>)PAAAAAAA__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -365,6 +416,11 @@ public class FeaturePathAssociationImpl extends FeaturePathImpl implements Featu
 			case WebuiPackage.FEATURE_PATH_ASSOCIATION__TARGET_ENTITY:
 				if (resolve) return getTargetEntity();
 				return basicGetTargetEntity();
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION__PART_OFX:
+				if (resolve) return getPartOfx();
+				return basicGetPartOfx();
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION__PAAAAAAA:
+				return getPaaaaaaa();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -433,6 +489,10 @@ public class FeaturePathAssociationImpl extends FeaturePathImpl implements Featu
 				return SOURCE_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.FEATURE_PATH_ASSOCIATION__TARGET_ENTITY:
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION__PART_OFX:
+				return PART_OFX__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION__PAAAAAAA:
+				return PAAAAAAA__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

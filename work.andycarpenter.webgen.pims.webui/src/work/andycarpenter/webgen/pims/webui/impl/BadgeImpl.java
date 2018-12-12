@@ -10,9 +10,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 import work.andycarpenter.webgen.pims.webui.Badge;
+import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -24,6 +26,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayWhen <em>Display When</em>}</li>
@@ -100,6 +103,47 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.BADGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CardsUnit getDisplayedOn() {
+		if (eContainerFeatureID() != WebuiPackage.BADGE__DISPLAYED_ON) return null;
+		return (CardsUnit)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDisplayedOn(CardsUnit newDisplayedOn, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newDisplayedOn, WebuiPackage.BADGE__DISPLAYED_ON, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDisplayedOn(CardsUnit newDisplayedOn) {
+		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.BADGE__DISPLAYED_ON && newDisplayedOn != null)) {
+			if (EcoreUtil.isAncestor(this, newDisplayedOn))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newDisplayedOn != null)
+				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.CARDS_UNIT__BADGES, CardsUnit.class, msgs);
+			msgs = basicSetDisplayedOn(newDisplayedOn, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__DISPLAYED_ON, newDisplayedOn, newDisplayedOn));
 	}
 
 	/**
@@ -258,8 +302,26 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetDisplayedOn((CardsUnit)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				return basicSetDisplayedOn(null, msgs);
 			case WebuiPackage.BADGE__VALUE:
 				return basicSetValue(null, msgs);
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
@@ -276,8 +338,24 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.CARDS_UNIT__BADGES, CardsUnit.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				return getDisplayedOn();
 			case WebuiPackage.BADGE__ICON_NAME:
 				return getIconName();
 			case WebuiPackage.BADGE__VALUE:
@@ -298,6 +376,9 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				setDisplayedOn((CardsUnit)newValue);
+				return;
 			case WebuiPackage.BADGE__ICON_NAME:
 				setIconName((String)newValue);
 				return;
@@ -322,6 +403,9 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				setDisplayedOn((CardsUnit)null);
+				return;
 			case WebuiPackage.BADGE__ICON_NAME:
 				setIconName(ICON_NAME_EDEFAULT);
 				return;
@@ -346,6 +430,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__DISPLAYED_ON:
+				return getDisplayedOn() != null;
 			case WebuiPackage.BADGE__ICON_NAME:
 				return ICON_NAME_EDEFAULT == null ? iconName != null : !ICON_NAME_EDEFAULT.equals(iconName);
 			case WebuiPackage.BADGE__VALUE:

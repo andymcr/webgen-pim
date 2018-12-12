@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
 import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
@@ -27,6 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getContentClass <em>Content Class</em>}</li>
@@ -46,6 +48,16 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
+
+	/**
+	 * The cached value of the '{@link #getBadges() <em>Badges</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBadges()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Badge> badges;
 
 	/**
 	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
@@ -183,6 +195,18 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Badge> getBadges() {
+		if (badges == null) {
+			badges = new EObjectContainmentWithInverseEList<Badge>(Badge.class, this, WebuiPackage.CARDS_UNIT__BADGES, WebuiPackage.BADGE__DISPLAYED_ON);
+		}
+		return badges;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isOmitFieldLabels() {
 		return omitFieldLabels;
 	}
@@ -294,6 +318,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActions()).basicAdd(otherEnd, msgs);
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBadges()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -308,6 +334,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				return ((InternalEList<?>)getBadges()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -322,6 +350,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return getActions();
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				return getBadges();
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				return isOmitFieldLabels();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
@@ -348,6 +378,10 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
+				return;
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				getBadges().clear();
+				getBadges().addAll((Collection<? extends Badge>)newValue);
 				return;
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels((Boolean)newValue);
@@ -379,6 +413,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				getActions().clear();
 				return;
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				getBadges().clear();
+				return;
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
 				return;
@@ -408,6 +445,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
+			case WebuiPackage.CARDS_UNIT__BADGES:
+				return badges != null && !badges.isEmpty();
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:

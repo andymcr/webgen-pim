@@ -186,6 +186,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateIndexUnit((IndexUnit)value, diagnostics, context);
 			case WebuiPackage.CARDS_UNIT:
 				return validateCardsUnit((CardsUnit)value, diagnostics, context);
+			case WebuiPackage.BADGE:
+				return validateBadge((Badge)value, diagnostics, context);
 			case WebuiPackage.TEXT_CARDS_UNIT:
 				return validateTextCardsUnit((TextCardsUnit)value, diagnostics, context);
 			case WebuiPackage.DATE_CARDS_UNIT:
@@ -220,8 +222,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateDeleteAction((DeleteAction)value, diagnostics, context);
 			case WebuiPackage.FEATURE_SUPPORT_ACTION:
 				return validateFeatureSupportAction((FeatureSupportAction)value, diagnostics, context);
-			case WebuiPackage.BADGE:
-				return validateBadge((Badge)value, diagnostics, context);
 			case WebuiPackage.INPUT_TECHNOLOGIES:
 				return validateInputTechnologies((InputTechnologies)value, diagnostics, context);
 			case WebuiPackage.AJAX_TECHNOLOGIES:

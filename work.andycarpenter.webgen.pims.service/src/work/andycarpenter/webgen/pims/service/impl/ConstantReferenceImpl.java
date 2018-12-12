@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
+import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.service.Constant;
 import work.andycarpenter.webgen.pims.service.ConstantReference;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
@@ -30,6 +32,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getSuffixes <em>Suffixes</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getValue <em>Value</em>}</li>
  * </ul>
@@ -46,6 +49,16 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<String> suffixes;
+
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
@@ -96,6 +109,33 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, ServicePackage.CONSTANT_REFERENCE__SUFFIXES);
 		}
 		return suffixes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject getRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetRootContainer() {
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -164,6 +204,9 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case ServicePackage.CONSTANT_REFERENCE__SUFFIXES:
 				return getSuffixes();
+			case ServicePackage.CONSTANT_REFERENCE__ROOT_CONTAINER:
+				if (resolve) return getRootContainer();
+				return basicGetRootContainer();
 			case ServicePackage.CONSTANT_REFERENCE__NAME:
 				return getName();
 			case ServicePackage.CONSTANT_REFERENCE__VALUE:
@@ -221,6 +264,8 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case ServicePackage.CONSTANT_REFERENCE__SUFFIXES:
 				return suffixes != null && !suffixes.isEmpty();
+			case ServicePackage.CONSTANT_REFERENCE__ROOT_CONTAINER:
+				return isSetRootContainer();
 			case ServicePackage.CONSTANT_REFERENCE__NAME:
 				return isSetName();
 			case ServicePackage.CONSTANT_REFERENCE__VALUE:

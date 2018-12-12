@@ -88,6 +88,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.MAP_UNIT: return createMapUnit();
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
 			case WebuiPackage.INDEX_UNIT: return createIndexUnit();
+			case WebuiPackage.BADGE: return createBadge();
 			case WebuiPackage.TEXT_CARDS_UNIT: return createTextCardsUnit();
 			case WebuiPackage.DATE_CARDS_UNIT: return createDateCardsUnit();
 			case WebuiPackage.IMAGE_CARDS_UNIT: return createImageCardsUnit();
@@ -100,7 +101,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.SELECT_ACTION: return createSelectAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.FEATURE_SUPPORT_ACTION: return createFeatureSupportAction();
-			case WebuiPackage.BADGE: return createBadge();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

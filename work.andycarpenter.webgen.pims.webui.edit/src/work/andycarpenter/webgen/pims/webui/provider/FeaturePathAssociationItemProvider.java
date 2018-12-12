@@ -58,6 +58,8 @@ public class FeaturePathAssociationItemProvider extends FeaturePathItemProvider 
 			addIsSourceAssociationPropertyDescriptor(object);
 			addSourceEntityPropertyDescriptor(object);
 			addTargetEntityPropertyDescriptor(object);
+			addPartOfxPropertyDescriptor(object);
+			addPaaaaaaaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -179,6 +181,50 @@ public class FeaturePathAssociationItemProvider extends FeaturePathItemProvider 
 				 false,
 				 null,
 				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Part Ofx feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartOfxPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePathAssociation_partOfx_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathAssociation_partOfx_feature", "_UI_FeaturePathAssociation_type"),
+				 WebuiPackage.Literals.FEATURE_PATH_ASSOCIATION__PART_OFX,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Paaaaaaa feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPaaaaaaaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePathAssociation_paaaaaaa_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathAssociation_paaaaaaa_feature", "_UI_FeaturePathAssociation_type"),
+				 WebuiPackage.Literals.FEATURE_PATH_ASSOCIATION__PAAAAAAA,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
 				 null));
 	}
 

@@ -476,6 +476,12 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.BADGE: {
+				Badge badge = (Badge)theEObject;
+				T result = caseBadge(badge);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.TEXT_CARDS_UNIT: {
 				TextCardsUnit textCardsUnit = (TextCardsUnit)theEObject;
 				T result = caseTextCardsUnit(textCardsUnit);
@@ -658,12 +664,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseInlineAction(featureSupportAction);
 				if (result == null) result = caseNamedDisplayElement(featureSupportAction);
 				if (result == null) result = caseNamedElement(featureSupportAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.BADGE: {
-				Badge badge = (Badge)theEObject;
-				T result = caseBadge(badge);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

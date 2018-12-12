@@ -256,6 +256,15 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getExpression_RootContainer() {
+		return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLiteral() {
 		return literalEClass;
 	}
@@ -623,6 +632,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Create classes and their features
 		expressionEClass = createEClass(EXPRESSION);
 		createEAttribute(expressionEClass, EXPRESSION__SUFFIXES);
+		createEReference(expressionEClass, EXPRESSION__ROOT_CONTAINER);
 
 		literalEClass = createEClass(LITERAL);
 
@@ -729,6 +739,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpression_Suffixes(), ecorePackage.getEString(), "suffixes", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpression_RootContainer(), ecorePackage.getEObject(), null, "rootContainer", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -797,6 +808,8 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -814,6 +827,22 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createOCLAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (getExpression_RootContainer(),
+		   source,
+		   new String[] {
+			   "derivation", "if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Expression) then\n\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Expression).rootContainer\nelse\n\tself.oclAsType(ecore::EObject).eContainer()\nendif"
 		   });
 	}
 

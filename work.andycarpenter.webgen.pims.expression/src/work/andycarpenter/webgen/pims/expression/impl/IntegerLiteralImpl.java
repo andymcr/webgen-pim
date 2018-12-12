@@ -10,6 +10,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -27,6 +29,7 @@ import work.andycarpenter.webgen.pims.expression.IntegerLiteral;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl#getSuffixes <em>Suffixes</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -42,6 +45,16 @@ public class IntegerLiteralImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<String> suffixes;
+
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -99,6 +112,33 @@ public class IntegerLiteralImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EObject getRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetRootContainer() {
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getValue() {
 		return value;
 	}
@@ -125,6 +165,9 @@ public class IntegerLiteralImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ExpressionPackage.INTEGER_LITERAL__SUFFIXES:
 				return getSuffixes();
+			case ExpressionPackage.INTEGER_LITERAL__ROOT_CONTAINER:
+				if (resolve) return getRootContainer();
+				return basicGetRootContainer();
 			case ExpressionPackage.INTEGER_LITERAL__VALUE:
 				return getValue();
 		}
@@ -179,6 +222,8 @@ public class IntegerLiteralImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ExpressionPackage.INTEGER_LITERAL__SUFFIXES:
 				return suffixes != null && !suffixes.isEmpty();
+			case ExpressionPackage.INTEGER_LITERAL__ROOT_CONTAINER:
+				return isSetRootContainer();
 			case ExpressionPackage.INTEGER_LITERAL__VALUE:
 				return value != VALUE_EDEFAULT;
 		}

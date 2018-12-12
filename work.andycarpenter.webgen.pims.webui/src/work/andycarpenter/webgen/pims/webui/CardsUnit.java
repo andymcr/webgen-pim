@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Cards Unit</b></em>'.
@@ -11,6 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}</li>
@@ -23,6 +26,24 @@ package work.andycarpenter.webgen.pims.webui;
  * @generated
  */
 public interface CardsUnit extends CollectionUnit, InlineActionContainer {
+	/**
+	 * Returns the value of the '<em><b>Badges</b></em>' containment reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Badge}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayedOn <em>Displayed On</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Badges</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Badges</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_Badges()
+	 * @see work.andycarpenter.webgen.pims.webui.Badge#getDisplayedOn
+	 * @model opposite="displayedOn" containment="true"
+	 * @generated
+	 */
+	EList<Badge> getBadges();
+
 	/**
 	 * Returns the value of the '<em><b>Omit Field Labels</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.service.ServiceFeatureReference;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
@@ -29,6 +31,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl#getSuffixes <em>Suffixes</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl#getFeature <em>Feature</em>}</li>
  * </ul>
@@ -45,6 +48,16 @@ public class ServiceFeatureReferenceImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected EList<String> suffixes;
+
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
@@ -95,6 +108,33 @@ public class ServiceFeatureReferenceImpl extends MinimalEObjectImpl.Container im
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, ServicePackage.SERVICE_FEATURE_REFERENCE__SUFFIXES);
 		}
 		return suffixes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject getRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetRootContainer() {
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -163,6 +203,9 @@ public class ServiceFeatureReferenceImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__SUFFIXES:
 				return getSuffixes();
+			case ServicePackage.SERVICE_FEATURE_REFERENCE__ROOT_CONTAINER:
+				if (resolve) return getRootContainer();
+				return basicGetRootContainer();
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__NAME:
 				return getName();
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__FEATURE:
@@ -220,6 +263,8 @@ public class ServiceFeatureReferenceImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__SUFFIXES:
 				return suffixes != null && !suffixes.isEmpty();
+			case ServicePackage.SERVICE_FEATURE_REFERENCE__ROOT_CONTAINER:
+				return isSetRootContainer();
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__NAME:
 				return isSetName();
 			case ServicePackage.SERVICE_FEATURE_REFERENCE__FEATURE:

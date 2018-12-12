@@ -178,6 +178,7 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS);
+			childrenFeatures.add(WebuiPackage.Literals.CARDS_UNIT__BADGES);
 		}
 		return childrenFeatures;
 	}
@@ -230,6 +231,7 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
+			case WebuiPackage.CARDS_UNIT__BADGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -261,6 +263,11 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createFeatureSupportAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.CARDS_UNIT__BADGES,
+				 WebuiFactory.eINSTANCE.createBadge()));
 	}
 
 }

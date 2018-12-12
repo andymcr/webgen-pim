@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.ParameterReference;
+import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +32,7 @@ import work.andycarpenter.webgen.pims.base.ParameterReference;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getSuffixes <em>Suffixes</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
@@ -46,6 +49,16 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<String> suffixes;
+
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
@@ -96,6 +109,33 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, BasePackage.PARAMETER_REFERENCE__SUFFIXES);
 		}
 		return suffixes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject getRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetRootContainer() {
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -155,6 +195,9 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
 				return getSuffixes();
+			case BasePackage.PARAMETER_REFERENCE__ROOT_CONTAINER:
+				if (resolve) return getRootContainer();
+				return basicGetRootContainer();
 			case BasePackage.PARAMETER_REFERENCE__NAME:
 				return getName();
 			case BasePackage.PARAMETER_REFERENCE__PARAMETER:
@@ -212,6 +255,8 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
 				return suffixes != null && !suffixes.isEmpty();
+			case BasePackage.PARAMETER_REFERENCE__ROOT_CONTAINER:
+				return isSetRootContainer();
 			case BasePackage.PARAMETER_REFERENCE__NAME:
 				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case BasePackage.PARAMETER_REFERENCE__PARAMETER:

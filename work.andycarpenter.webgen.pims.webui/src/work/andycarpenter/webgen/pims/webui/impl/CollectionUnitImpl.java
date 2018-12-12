@@ -11,15 +11,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
-
-import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
@@ -43,7 +39,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSupportedFilters <em>Supported Filters</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getEmptyMessage <em>Empty Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -186,16 +181,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected EList<Filter> supportedFilters;
-
-	/**
-	 * The cached value of the '{@link #getBadges() <em>Badges</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBadges()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Badge> badges;
 
 	/**
 	 * The default value of the '{@link #getEmptyMessage() <em>Empty Message</em>}' attribute.
@@ -880,18 +865,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Badge> getBadges() {
-		if (badges == null) {
-			badges = new EObjectContainmentEList<Badge>(Badge.class, this, WebuiPackage.COLLECTION_UNIT__BADGES);
-		}
-		return badges;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getEmptyMessage() {
 		return emptyMessage;
 	}
@@ -1275,8 +1248,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
 				return basicSetElementTitle(null, msgs);
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
-				return ((InternalEList<?>)getBadges()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1314,8 +1285,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return basicGetFilter();
 			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
 				return getSupportedFilters();
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
-				return getBadges();
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				return getEmptyMessage();
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
@@ -1396,10 +1365,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
 				getSupportedFilters().clear();
 				getSupportedFilters().addAll((Collection<? extends Filter>)newValue);
-				return;
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
-				getBadges().clear();
-				getBadges().addAll((Collection<? extends Badge>)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				setEmptyMessage((String)newValue);
@@ -1497,9 +1462,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
 				getSupportedFilters().clear();
 				return;
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
-				getBadges().clear();
-				return;
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				setEmptyMessage(EMPTY_MESSAGE_EDEFAULT);
 				return;
@@ -1586,8 +1548,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return filter != null;
 			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
 				return supportedFilters != null && !supportedFilters.isEmpty();
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
-				return badges != null && !badges.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				return EMPTY_MESSAGE_EDEFAULT == null ? emptyMessage != null : !EMPTY_MESSAGE_EDEFAULT.equals(emptyMessage);
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:

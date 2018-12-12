@@ -60,6 +60,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
+			addIsSourceAssociationPropertyDescriptor(object);
 			addSourceEntityPropertyDescriptor(object);
 			addTargetEntityPropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
@@ -133,6 +134,28 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					return Collections.emptySet();
 				}
 			});
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Source Association feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSourceAssociationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitAssociation_isSourceAssociation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_isSourceAssociation_feature", "_UI_UnitAssociation_type"),
+				 WebuiPackage.Literals.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
 	}
 
 	/**

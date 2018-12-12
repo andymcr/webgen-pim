@@ -10,6 +10,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -17,6 +19,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.base.CurrentTime;
+import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +30,7 @@ import work.andycarpenter.webgen.pims.base.CurrentTime;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl#getSuffixes <em>Suffixes</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl#getFormat <em>Format</em>}</li>
  * </ul>
  *
@@ -42,6 +46,16 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * @ordered
 	 */
 	protected EList<String> suffixes;
+
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
@@ -99,6 +113,33 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EObject getRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetRootContainer() {
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetRootContainer() {
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getFormat() {
 		return format;
 	}
@@ -125,6 +166,9 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 		switch (featureID) {
 			case BasePackage.CURRENT_TIME__SUFFIXES:
 				return getSuffixes();
+			case BasePackage.CURRENT_TIME__ROOT_CONTAINER:
+				if (resolve) return getRootContainer();
+				return basicGetRootContainer();
 			case BasePackage.CURRENT_TIME__FORMAT:
 				return getFormat();
 		}
@@ -179,6 +223,8 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 		switch (featureID) {
 			case BasePackage.CURRENT_TIME__SUFFIXES:
 				return suffixes != null && !suffixes.isEmpty();
+			case BasePackage.CURRENT_TIME__ROOT_CONTAINER:
+				return isSetRootContainer();
 			case BasePackage.CURRENT_TIME__FORMAT:
 				return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
 		}

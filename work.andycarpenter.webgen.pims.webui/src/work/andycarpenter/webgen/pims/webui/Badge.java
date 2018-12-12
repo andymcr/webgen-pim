@@ -14,6 +14,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}</li>
@@ -25,6 +26,34 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * @generated
  */
 public interface Badge extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Displayed On</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Displayed On</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Displayed On</em>' container reference.
+	 * @see #setDisplayedOn(CardsUnit)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_DisplayedOn()
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges
+	 * @model opposite="badges" required="true" transient="false"
+	 * @generated
+	 */
+	CardsUnit getDisplayedOn();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayedOn <em>Displayed On</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Displayed On</em>' container reference.
+	 * @see #getDisplayedOn()
+	 * @generated
+	 */
+	void setDisplayedOn(CardsUnit value);
+
 	/**
 	 * Returns the value of the '<em><b>Icon Name</b></em>' attribute.
 	 * The default value is <code>""</code>.

@@ -186,7 +186,8 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
-      <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/sourceEntity"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
@@ -233,6 +234,8 @@
           ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/sourceEntity"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/targetEntity"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/partOfx"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/paaaaaaa"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//FeaturePathLabel">
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathLabel/name"/>
@@ -295,7 +298,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filter"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/supportedFilters"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/badges"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/emptyMessage"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/defaultPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/maximumPaginationSize"/>
@@ -365,11 +367,19 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//IndexUnit/rowClasses"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CardsUnit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CardsUnit/badges"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/omitFieldLabels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/contentClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
+    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//Badge">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//Badge/displayedOn"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Badge/iconName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/displayWhen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/newWhen"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//TextCardsUnit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//TextCardsUnit/styleClass"/>
@@ -468,12 +478,6 @@
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Security"
           ecoreFeature="ecore:EReference webui.ecore#//FeatureSupportAction/enableWhen"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//FeatureSupportAction/uriElement"/>
-    </genClasses>
-    <genClasses ecoreClass="webui.ecore#//Badge">
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Badge/iconName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/displayWhen"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/newWhen"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

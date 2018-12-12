@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSupportedFilters <em>Supported Filters</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getEmptyMessage <em>Empty Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -296,22 +295,6 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	EList<Filter> getSupportedFilters();
-
-	/**
-	 * Returns the value of the '<em><b>Badges</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Badge}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Badges</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Badges</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_Badges()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Badge> getBadges();
 
 	/**
 	 * Returns the value of the '<em><b>Empty Message</b></em>' attribute.

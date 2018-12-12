@@ -255,6 +255,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCardsUnitAdapter();
 			}
 			@Override
+			public Adapter caseBadge(Badge object) {
+				return createBadgeAdapter();
+			}
+			@Override
 			public Adapter caseTextCardsUnit(TextCardsUnit object) {
 				return createTextCardsUnitAdapter();
 			}
@@ -321,10 +325,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseFeatureSupportAction(FeatureSupportAction object) {
 				return createFeatureSupportActionAdapter();
-			}
-			@Override
-			public Adapter caseBadge(Badge object) {
-				return createBadgeAdapter();
 			}
 			@Override
 			public Adapter caseNamedElement(NamedElement object) {

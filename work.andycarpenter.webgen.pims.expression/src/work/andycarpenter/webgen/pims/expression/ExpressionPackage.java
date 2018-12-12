@@ -78,13 +78,22 @@ public interface ExpressionPackage extends EPackage {
 	int EXPRESSION__SUFFIXES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__ROOT_CONTAINER = 1;
+
+	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_FEATURE_COUNT = 1;
+	int EXPRESSION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Expression</em>' class.
@@ -113,6 +122,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int LITERAL__SUFFIXES = EXPRESSION__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
 
 	/**
 	 * The number of structural features of the '<em>Literal</em>' class.
@@ -152,6 +170,15 @@ public interface ExpressionPackage extends EPackage {
 	int NULL_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
+
+	/**
 	 * The number of structural features of the '<em>Null Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +214,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -235,6 +271,15 @@ public interface ExpressionPackage extends EPackage {
 	int INTEGER_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,6 +324,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRING_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -327,6 +381,15 @@ public interface ExpressionPackage extends EPackage {
 	int TIME_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -373,6 +436,15 @@ public interface ExpressionPackage extends EPackage {
 	int VARIABLE__SUFFIXES = EXPRESSION__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -408,6 +480,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE__SUFFIXES = EXPRESSION__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -454,6 +535,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_BOOLEAN_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -520,6 +610,15 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_EQUALITY_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -582,6 +681,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_COMPARISON_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_COMPARISON_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -657,6 +765,15 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IN_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IN_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -719,6 +836,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_IS_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -785,6 +911,15 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_LIKE_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -849,6 +984,15 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_EMPTY__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_EMPTY__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -902,6 +1046,15 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_IS_NULL__SUFFIXES = PREDICATE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_NULL__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -980,6 +1133,17 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExpression_Suffixes();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.expression.Expression#getRootContainer <em>Root Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Root Container</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.Expression#getRootContainer()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_RootContainer();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}'.
@@ -1421,6 +1585,14 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXPRESSION__SUFFIXES = eINSTANCE.getExpression_Suffixes();
+
+		/**
+		 * The meta object literal for the '<em><b>Root Container</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__ROOT_CONTAINER = eINSTANCE.getExpression_RootContainer();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}' class.

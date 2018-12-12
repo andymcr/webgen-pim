@@ -365,7 +365,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="-- not association.oclIsUndefined() implies&#xD;&#xA;--&#x9;let unit : DynamicUnit&#xD;&#xA;--&#x9;&#x9;= self.eContainer().oclAsType(DynamicUnit)&#xD;&#xA;--&#x9;&#x9;in let entities : OrderedSet(persistence::EntityOrView)&#xD;&#xA;--&#x9;&#x9;&#x9;= if unit.oclIsKindOf(SingletonUnit) then&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;&#x9;OrderedSet{unit.oclAsType(SingletonUnit).contentType}&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;else if unit.oclIsKindOf(CollectionUnit) then&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(CollectionUnit).contentType&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;else&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;&#x9;unit.entities&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;endif endif&#xD;&#xA;--&#x9;&#x9;&#x9;in entities->collect(eov | eov.associations)->includes(association)&#xD;&#xA;true"/>
+        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;let unit : DynamicUnit = self.oclAsType(ecore::EObject).eContainer().oclAsType(UnitField).displayedOn&#xA;&#x9;&#x9;&#x9;in if unit.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;--&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SelectAction) then&#xA;--&#x9;&#x9;null&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsTypeOf(Badge) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType->includes(self.association.partOf)&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(expression::Expression) then&#xA;&#x9;&#x9;if rootContainer.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;let unit : DynamicUnit = rootContainer.oclAsType(UnitField).displayedOn&#xA;&#x9;&#x9;&#x9;&#x9;in if unit.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;endif endif endif&#xA;&#x9;else&#xA;&#x9;&#x9;true&#xA;&#x9;endif endif endif endif endif -- endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
@@ -478,8 +478,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedFilters" upperBound="-1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="badges" upperBound="-1"
-        eType="#//Badge" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPaginationSize"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -599,6 +597,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="odd_row,even_row"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CardsUnit" abstract="true" eSuperTypes="#//CollectionUnit #//InlineActionContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="badges" upperBound="-1"
+        eType="#//Badge" containment="true" eOpposite="#//Badge/displayedOn"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overlaySingleSelectAction"
@@ -609,6 +609,18 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="col s12 m6 l3"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card hoverable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Badge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"
+        eType="#//CardsUnit" eOpposite="#//CardsUnit/badges"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//FeaturePath"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displayWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextCardsUnit" eSuperTypes="#//CardsUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleClass" ordered="false"
@@ -747,15 +759,5 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Badge">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//FeaturePath"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="displayWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="newWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
-        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

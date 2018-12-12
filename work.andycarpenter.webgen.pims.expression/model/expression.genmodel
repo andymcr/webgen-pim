@@ -17,6 +17,7 @@
     </genEnums>
     <genClasses image="false" ecoreClass="expression.ecore#//Expression">
       <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//Expression/suffixes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference expression.ecore#//Expression/rootContainer"/>
     </genClasses>
     <genClasses image="false" ecoreClass="expression.ecore#//Literal"/>
     <genClasses ecoreClass="expression.ecore#//NullLiteral"/>

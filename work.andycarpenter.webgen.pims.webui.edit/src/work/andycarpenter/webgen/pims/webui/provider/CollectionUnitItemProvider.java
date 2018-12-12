@@ -736,7 +736,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE);
-			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__BADGES);
 		}
 		return childrenFeatures;
 	}
@@ -804,7 +803,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
-			case WebuiPackage.COLLECTION_UNIT__BADGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -836,11 +834,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.COLLECTION_UNIT__BADGES,
-				 WebuiFactory.eINSTANCE.createBadge()));
 	}
 
 	protected Entity getSelectType(final CollectionUnit unit) {
