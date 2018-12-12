@@ -23,13 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import work.andycarpenter.webgen.pims.base.BaseFactory;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-
-import work.andycarpenter.webgen.pims.service.ServiceFactory;
-
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -206,96 +200,6 @@ public class BadgeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 BaseFactory.eINSTANCE.createCurrentTime()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 BaseFactory.eINSTANCE.createCurrentUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createNullLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createStringLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ServiceFactory.eINSTANCE.createConstantReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.BADGE__VALUE,
-				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(WebuiPackage.Literals.BADGE__DISPLAY_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
@@ -387,7 +291,6 @@ public class BadgeItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == WebuiPackage.Literals.BADGE__VALUE ||
 			childFeature == WebuiPackage.Literals.BADGE__DISPLAY_WHEN ||
 			childFeature == WebuiPackage.Literals.BADGE__NEW_WHEN;
 

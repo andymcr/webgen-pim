@@ -190,6 +190,15 @@ public class ChildPathItemProvider
 				return path.getAssociation().getPartOf();
 			}
 
+		} else if (path.eContainer() instanceof Badge) {
+			final Set<Entity> entities
+				= getEntities((Badge) path.eContainer());
+			if (entities.contains(path.getAssociation().getPartOf())) {
+				return path.getAssociation().getTargetEntity();
+			} else{
+				return path.getAssociation().getPartOf();
+			}
+
 		} else if (path.eContainer() instanceof Expression) {
 			final Set<Entity> entities
 				= getEntities((Expression) path.eContainer());
