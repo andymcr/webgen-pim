@@ -47,12 +47,12 @@
     <genClasses ecoreClass="persistence.ecore#//SerializationGroup"/>
     <genClasses image="false" ecoreClass="persistence.ecore#//Feature">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Feature/partOf"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/cardinality"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/ordered"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/primaryKey"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/derived"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/cardinality"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/ordered"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/primaryKey"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/derived"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/customiseSet"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/booleanIsHasChoice"/>
+      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/booleanIsHasChoice"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/title"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/collectionOrmAllowAdd"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/collectionOrmAllowRemove"/>
@@ -62,40 +62,43 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/encodeUriKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/singletonName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/pluralisedName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/columnName"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/columnName"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EReference persistence.ecore#//Feature/serializationGroups"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/displayClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/footerClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Attribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/hidden"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/containerUnique"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/persistentType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/ormType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/interfaceType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Attribute/slugFields"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/unique"/>
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/hidden"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/containerUnique"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/persistentType"/>
+      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/ormType"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/interfaceType"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Attribute/slugFields"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/unique"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference persistence.ecore#//Attribute/defaultValue"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/validationPattern"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/inputColumnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/inputElementClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Association">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Association/keys"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Association/targetEntity"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/bidirectional"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/unique"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pivotTableName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFeatureName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetPrimaryKey"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetColumnName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayLabel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetHeaderClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetInputClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFooterClass"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Persistence"
+          ecoreFeature="ecore:EReference persistence.ecore#//Association/keys"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference persistence.ecore#//Association/targetEntity"/>
+      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/bidirectional"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/unique"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pivotTableName"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFeatureName"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetPrimaryKey"/>
+      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetColumnName"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayLabel"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetHeaderClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetInputClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pseudo"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputColumnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/inputElementClass"/>
