@@ -15,7 +15,6 @@ package work.andycarpenter.webgen.pims.base;
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getPersistentType <em>Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getOrmType <em>Orm Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getInterfaceType <em>Interface Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getValidationPattern <em>Validation Pattern</em>}</li>
  * </ul>
  *
@@ -101,32 +100,6 @@ public interface DataType extends Classifier {
 	 * @generated
 	 */
 	void setInterfaceType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Placeholder</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Placeholder</em>' attribute.
-	 * @see #setPlaceholder(String)
-	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getDataType_Placeholder()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	String getPlaceholder();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.base.DataType#getPlaceholder <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Placeholder</em>' attribute.
-	 * @see #getPlaceholder()
-	 * @generated
-	 */
-	void setPlaceholder(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.

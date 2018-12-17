@@ -244,22 +244,13 @@ public interface BasePackage extends EPackage {
 	int DATA_TYPE__INTERFACE_TYPE = CLASSIFIER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE__PLACEHOLDER = CLASSIFIER_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__VALIDATION_PATTERN = CLASSIFIER_FEATURE_COUNT + 4;
+	int DATA_TYPE__VALIDATION_PATTERN = CLASSIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
@@ -268,7 +259,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 5;
+	int DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Data Type</em>' class.
@@ -333,15 +324,6 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENUMERATION_TYPE__INTERFACE_TYPE = DATA_TYPE__INTERFACE_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION_TYPE__PLACEHOLDER = DATA_TYPE__PLACEHOLDER;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -806,17 +788,6 @@ public interface BasePackage extends EPackage {
 	EAttribute getDataType_InterfaceType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.DataType#getPlaceholder <em>Placeholder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Placeholder</em>'.
-	 * @see work.andycarpenter.webgen.pims.base.DataType#getPlaceholder()
-	 * @see #getDataType()
-	 * @generated
-	 */
-	EAttribute getDataType_Placeholder();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.DataType#getValidationPattern <em>Validation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1109,14 +1080,6 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATA_TYPE__INTERFACE_TYPE = eINSTANCE.getDataType_InterfaceType();
-
-		/**
-		 * The meta object literal for the '<em><b>Placeholder</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATA_TYPE__PLACEHOLDER = eINSTANCE.getDataType_Placeholder();
 
 		/**
 		 * The meta object literal for the '<em><b>Validation Pattern</b></em>' attribute feature.

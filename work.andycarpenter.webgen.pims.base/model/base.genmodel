@@ -20,7 +20,6 @@
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute base.ecore#//DataType/persistentType"/>
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute base.ecore#//DataType/ormType"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//DataType/interfaceType"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//DataType/placeholder"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//DataType/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="base.ecore#//EnumerationType">

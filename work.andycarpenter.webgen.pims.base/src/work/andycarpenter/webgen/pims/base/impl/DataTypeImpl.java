@@ -22,7 +22,6 @@ import work.andycarpenter.webgen.pims.base.DataType;
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl#getPersistentType <em>Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl#getOrmType <em>Orm Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl#getInterfaceType <em>Interface Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl#getValidationPattern <em>Validation Pattern</em>}</li>
  * </ul>
  *
@@ -88,26 +87,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * @ordered
 	 */
 	protected String interfaceType = INTERFACE_TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaceholder()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PLACEHOLDER_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaceholder()
-	 * @generated
-	 * @ordered
-	 */
-	protected String placeholder = PLACEHOLDER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.
@@ -216,27 +195,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPlaceholder() {
-		return placeholder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlaceholder(String newPlaceholder) {
-		String oldPlaceholder = placeholder;
-		placeholder = newPlaceholder;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BasePackage.DATA_TYPE__PLACEHOLDER, oldPlaceholder, placeholder));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -267,8 +225,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 				return getOrmType();
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
 				return getInterfaceType();
-			case BasePackage.DATA_TYPE__PLACEHOLDER:
-				return getPlaceholder();
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				return getValidationPattern();
 		}
@@ -291,9 +247,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 				return;
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
 				setInterfaceType((String)newValue);
-				return;
-			case BasePackage.DATA_TYPE__PLACEHOLDER:
-				setPlaceholder((String)newValue);
 				return;
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				setValidationPattern((String)newValue);
@@ -319,9 +272,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
 				setInterfaceType(INTERFACE_TYPE_EDEFAULT);
 				return;
-			case BasePackage.DATA_TYPE__PLACEHOLDER:
-				setPlaceholder(PLACEHOLDER_EDEFAULT);
-				return;
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				setValidationPattern(VALIDATION_PATTERN_EDEFAULT);
 				return;
@@ -343,8 +293,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 				return ORM_TYPE_EDEFAULT == null ? ormType != null : !ORM_TYPE_EDEFAULT.equals(ormType);
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
 				return INTERFACE_TYPE_EDEFAULT == null ? interfaceType != null : !INTERFACE_TYPE_EDEFAULT.equals(interfaceType);
-			case BasePackage.DATA_TYPE__PLACEHOLDER:
-				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				return VALIDATION_PATTERN_EDEFAULT == null ? validationPattern != null : !VALIDATION_PATTERN_EDEFAULT.equals(validationPattern);
 		}
@@ -367,8 +315,6 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 		result.append(ormType);
 		result.append(", interfaceType: ");
 		result.append(interfaceType);
-		result.append(", placeholder: ");
-		result.append(placeholder);
 		result.append(", validationPattern: ");
 		result.append(validationPattern);
 		result.append(')');

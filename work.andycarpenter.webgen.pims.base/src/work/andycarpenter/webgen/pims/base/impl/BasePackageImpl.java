@@ -271,17 +271,8 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDataType_Placeholder() {
-		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getDataType_ValidationPattern() {
-		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -477,7 +468,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		createEAttribute(dataTypeEClass, DATA_TYPE__PERSISTENT_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__ORM_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__INTERFACE_TYPE);
-		createEAttribute(dataTypeEClass, DATA_TYPE__PLACEHOLDER);
 		createEAttribute(dataTypeEClass, DATA_TYPE__VALIDATION_PATTERN);
 
 		enumerationTypeEClass = createEClass(ENUMERATION_TYPE);
@@ -559,7 +549,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		initEAttribute(getDataType_PersistentType(), ecorePackage.getEString(), "persistentType", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_OrmType(), ecorePackage.getEString(), "ormType", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_InterfaceType(), ecorePackage.getEString(), "interfaceType", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataType_Placeholder(), ecorePackage.getEString(), "placeholder", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDataType_ValidationPattern(), ecorePackage.getEString(), "validationPattern", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(enumerationTypeEClass, EnumerationType.class, "EnumerationType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

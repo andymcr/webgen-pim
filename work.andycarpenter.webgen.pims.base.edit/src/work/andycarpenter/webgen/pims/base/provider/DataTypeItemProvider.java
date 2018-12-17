@@ -48,7 +48,6 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 			addPersistentTypePropertyDescriptor(object);
 			addOrmTypePropertyDescriptor(object);
 			addInterfaceTypePropertyDescriptor(object);
-			addPlaceholderPropertyDescriptor(object);
 			addValidationPatternPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -121,28 +120,6 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Placeholder feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPlaceholderPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DataType_placeholder_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DataType_placeholder_feature", "_UI_DataType_type"),
-				 BasePackage.Literals.DATA_TYPE__PLACEHOLDER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Validation Pattern feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,7 +182,6 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 			case BasePackage.DATA_TYPE__PERSISTENT_TYPE:
 			case BasePackage.DATA_TYPE__ORM_TYPE:
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
-			case BasePackage.DATA_TYPE__PLACEHOLDER:
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
