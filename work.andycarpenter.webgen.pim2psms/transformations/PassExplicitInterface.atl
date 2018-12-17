@@ -9,6 +9,7 @@ create waf : WAF from website : Website, orm : ORM, service : Service, api : API
 
 uses WebsiteHelpers;
 uses InterfaceExpression;
+uses InterfaceHelpers;
 
 
 helper context String def: createName() : String
@@ -17,45 +18,6 @@ helper context String def: createName() : String
 		else
 			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
 		endif;
-
-helper context Website!Attribute def: attributeLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel <> '' then
-			self.displayLabel
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!Association def: associationLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel <> '' then
-			self.displayLabel
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!Association def: associationTargetLabel() : String
-	= if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel <> '' then
-			self.targetDisplayLabel
-		else
-			self.targetFeatureName().createLabel()
-		endif;
-
-helper context Website!UnitElement def: attributeLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and  self.displayLabel <> '' then
-			self.displayLabel
-		else
-			self.attribute.attributeLabel()
-		endif;
-
-helper context Website!UnitAssociation def: associationLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and  self.displayLabel <> ''
-				or self.association.oclIsUndefined() then
-			self.displayLabel
-		else if self.isSourceAssociation then
-			self.association.associationLabel()
-		else
-			self.association.associationTargetLabel()
-		endif endif;
-
 
 helper context Website!UnitField def: title() : String
 	= if self.title.trim() <> '' then
@@ -286,8 +248,8 @@ abstract rule NamedDisplayElement {
 	from website : Website!NamedDisplayElement
 	to waf : WAF!NamedDisplayElement (
 		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
-				website.displayLabel
+			if not website.displayLabel.oclIsUndefined() and website.displayLabel.trim() <> '' then
+				website.displayLabel.trim()
 			else
 				website.name.createLabel()
 			endif
@@ -495,7 +457,6 @@ abstract rule UnitField {
 		title <- website.title(),
 		escapeHTML <- website.escapeHTML,
 		collectionDisplayOption <- website.collectionDisplayOption,
-		maximumDisplaySize <- website.maximumDisplaySize,
 		truncate <- website.truncate,
 		dateFormat <- website.dateFormat(),
 		disableInput <- website.disableInput
@@ -522,7 +483,8 @@ rule UnitAttribute {
 	from website : Website!UnitElement
 	to waf : WAF!UnitAttribute (
 		attribute <- website.attribute.findOrmAttribute(),
-		displayLabel <- website.attributeLabel(),
+		displayLabel <- website.displayLabel(),
+		hasCustomisedDisplayLabel <- website.displayLabel() <> website.attribute.displayLabel(),
 		defaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholder <- website.placeholder(),
@@ -592,7 +554,17 @@ rule UnitAttribute {
 rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
-		displayLabel <- website.associationLabel(),
+		displayLabel <- website.displayLabel(),
+		hasCustomisedDisplayLabel <-
+			if website.childFeature.oclIsUndefined() then
+				if website.isSourceAssociation then
+					website.displayLabel() <> website.association.displayLabel()
+				else
+					website.displayLabel() <> website.association.targetDisplayLabel()
+				endif
+			else
+				true
+			endif,
 		options <-
 			if website.options.oclIsUndefined() then
 				website.options
@@ -743,12 +715,7 @@ rule UnitLabel {
 abstract rule InterfaceField {
 	from website : Website!InterfaceField
 	to waf : WAF!InterfaceField (
-		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
-				website.displayLabel
-			else
-				website.name.createLabel()
-			endif,
+		displayLabel <- website.displayLabel(),
 		required <- website.required,
 		defaultValue <- website.defaultValue,
 		mustMatch <- website.mustMatch,
@@ -1181,14 +1148,7 @@ rule DeleteAction {
 	from website : Website!DeleteAction 
 	to waf : WAF!DeleteAction (
 		destination <- website.destination,
-		confirmMessage <- 
-			if not website.confirmMessage.oclIsUndefined() then
-				website.confirmMessage
-			else if not website.displayLabel.oclIsUndefined() then
-				website.displayLabel.concat('?')
-			else
-				website.name.createLabel().concat('?')
-			endif endif,
+		confirmMessage <- website.confirmMessage(),
 		requiresRole <-
 			if website.requiresRole.trim() <> '' then
 				website.requiresRole.trim()

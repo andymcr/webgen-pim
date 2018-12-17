@@ -17,7 +17,7 @@ helper context String def: createName() : String
 
 helper context String def: createLabel() : String
 	= if self.trim().replaceAll('[A-Z]', '') = '' then
-			self
+			self.trim()
 		else
 			self.replaceAll('([A-Z])', ' $1').trim().uppercaseFirst()
 		endif;

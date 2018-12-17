@@ -1,0 +1,76 @@
+-- @atlcompiler emftvm
+
+library InterfaceHelpers;
+
+uses WebsiteHelpers;
+
+
+helper context Website!Attribute def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			self.name.createLabel()
+		endif;
+
+helper context Website!Association def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			self.name.createLabel()
+		endif;
+
+helper context Website!Association def: targetDisplayLabel() : String
+	= if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel.trim() <> '' then
+			self.targetDisplayLabel.trim()
+		else
+			self.targetFeatureName().createLabel()
+		endif;
+
+helper context Website!UnitElement def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			self.attribute.displayLabel()
+		endif;
+
+helper context Website!UnitAssociation def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			if self.childFeature.oclIsUndefined() then
+				if self.isSourceAssociation then
+					self.association.displayLabel()
+				else
+					self.association.targetDisplayLabel()
+				endif 
+			else
+				self.childFeature.displayLabel()
+			endif
+		endif;
+
+
+helper context Website!InterfaceField def: displayLabel() : String
+	= self.displayLabel.trim();
+
+helper context Website!ChildPathAttribute def: displayLabel() : String
+	= self.attribute.displayLabel();
+
+helper context Website!ChildPathAssociation def: displayLabel() : String
+	= if self.childFeature.oclIsUndefined() then
+				if self.isSourceAssociation then
+					self.association.displayLabel()
+				else
+					self.association.targetDisplayLabel()
+				endif 
+			else
+				self.childFeature.displayLabel()
+			endif;
+
+helper context Website!DeleteAction def: confirmMessage() : String
+	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
+				self.confirmMessage.trim()
+			else if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+				self.displayLabel.trim().concat('?')
+			else
+				self.name.createLabel().concat('?')
+			endif endif;
