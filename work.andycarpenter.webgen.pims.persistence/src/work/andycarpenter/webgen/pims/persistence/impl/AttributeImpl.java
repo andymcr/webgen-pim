@@ -37,6 +37,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getSlugFields <em>Slug Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getDefaultValue <em>Default Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getValidationPattern <em>Validation Pattern</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInputColumnClass <em>Input Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInputElementClass <em>Input Element Class</em>}</li>
@@ -184,6 +185,26 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @ordered
 	 */
 	protected Expression defaultValue;
+
+	/**
+	 * The default value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlaceholder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PLACEHOLDER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlaceholder()
+	 * @generated
+	 * @ordered
+	 */
+	protected String placeholder = PLACEHOLDER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.
@@ -450,6 +471,27 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPlaceholder() {
+		return placeholder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlaceholder(String newPlaceholder) {
+		String oldPlaceholder = placeholder;
+		placeholder = newPlaceholder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__PLACEHOLDER, oldPlaceholder, placeholder));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -546,6 +588,8 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return isUnique();
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:
 				return getDefaultValue();
+			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
+				return getPlaceholder();
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				return getValidationPattern();
 			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
@@ -589,6 +633,9 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return;
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:
 				setDefaultValue((Expression)newValue);
+				return;
+			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
+				setPlaceholder((String)newValue);
 				return;
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				setValidationPattern((String)newValue);
@@ -635,6 +682,9 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:
 				setDefaultValue((Expression)null);
 				return;
+			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
+				setPlaceholder(PLACEHOLDER_EDEFAULT);
+				return;
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				setValidationPattern(VALIDATION_PATTERN_EDEFAULT);
 				return;
@@ -672,6 +722,8 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return unique != UNIQUE_EDEFAULT;
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:
 				return defaultValue != null;
+			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
+				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
 				return VALIDATION_PATTERN_EDEFAULT == null ? validationPattern != null : !VALIDATION_PATTERN_EDEFAULT.equals(validationPattern);
 			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
@@ -704,6 +756,8 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 		result.append(interfaceType);
 		result.append(", unique: ");
 		result.append(unique);
+		result.append(", placeholder: ");
+		result.append(placeholder);
 		result.append(", validationPattern: ");
 		result.append(validationPattern);
 		result.append(", inputColumnClass: ");

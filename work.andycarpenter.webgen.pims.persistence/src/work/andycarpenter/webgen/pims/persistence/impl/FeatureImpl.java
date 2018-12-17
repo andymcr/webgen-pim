@@ -44,7 +44,6 @@ import work.andycarpenter.webgen.pims.persistence.isHasChoices;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#isEncodeUriKey <em>Encode Uri Key</em>}</li>
@@ -239,26 +238,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @ordered
 	 */
 	protected boolean collectionOrmAllowRemove = COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaceholder()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PLACEHOLDER_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaceholder()
-	 * @generated
-	 * @ordered
-	 */
-	protected String placeholder = PLACEHOLDER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
@@ -704,27 +683,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPlaceholder() {
-		return placeholder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlaceholder(String newPlaceholder) {
-		String oldPlaceholder = placeholder;
-		placeholder = newPlaceholder;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.FEATURE__PLACEHOLDER, oldPlaceholder, placeholder));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getDefaultDisplayValue() {
 		return defaultDisplayValue;
 	}
@@ -993,8 +951,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				return isCollectionOrmAllowAdd();
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
 				return isCollectionOrmAllowRemove();
-			case PersistencePackage.FEATURE__PLACEHOLDER:
-				return getPlaceholder();
 			case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE:
 				return getDefaultDisplayValue();
 			case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE:
@@ -1057,9 +1013,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				return;
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
 				setCollectionOrmAllowRemove((Boolean)newValue);
-				return;
-			case PersistencePackage.FEATURE__PLACEHOLDER:
-				setPlaceholder((String)newValue);
 				return;
 			case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE:
 				setDefaultDisplayValue((String)newValue);
@@ -1134,9 +1087,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
 				setCollectionOrmAllowRemove(COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT);
 				return;
-			case PersistencePackage.FEATURE__PLACEHOLDER:
-				setPlaceholder(PLACEHOLDER_EDEFAULT);
-				return;
 			case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE:
 				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
 				return;
@@ -1199,8 +1149,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				return collectionOrmAllowAdd != COLLECTION_ORM_ALLOW_ADD_EDEFAULT;
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
 				return collectionOrmAllowRemove != COLLECTION_ORM_ALLOW_REMOVE_EDEFAULT;
-			case PersistencePackage.FEATURE__PLACEHOLDER:
-				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
 			case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE:
 				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
 			case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE:
@@ -1253,8 +1201,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 		result.append(collectionOrmAllowAdd);
 		result.append(", collectionOrmAllowRemove: ");
 		result.append(collectionOrmAllowRemove);
-		result.append(", placeholder: ");
-		result.append(placeholder);
 		result.append(", defaultDisplayValue: ");
 		result.append(defaultDisplayValue);
 		result.append(", emptyDisplayValue: ");

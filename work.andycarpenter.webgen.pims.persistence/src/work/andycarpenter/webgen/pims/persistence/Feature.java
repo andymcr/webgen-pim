@@ -24,7 +24,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isCollectionOrmAllowAdd <em>Collection Orm Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isCollectionOrmAllowRemove <em>Collection Orm Allow Remove</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#isEncodeUriKey <em>Encode Uri Key</em>}</li>
@@ -317,32 +316,6 @@ public interface Feature extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setCollectionOrmAllowRemove(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Placeholder</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Placeholder</em>' attribute.
-	 * @see #setPlaceholder(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_Placeholder()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	String getPlaceholder();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getPlaceholder <em>Placeholder</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Placeholder</em>' attribute.
-	 * @see #getPlaceholder()
-	 * @generated
-	 */
-	void setPlaceholder(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.

@@ -58,7 +58,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 			addTitlePropertyDescriptor(object);
 			addCollectionOrmAllowAddPropertyDescriptor(object);
 			addCollectionOrmAllowRemovePropertyDescriptor(object);
-			addPlaceholderPropertyDescriptor(object);
 			addDefaultDisplayValuePropertyDescriptor(object);
 			addEmptyDisplayValuePropertyDescriptor(object);
 			addEncodeUriKeyPropertyDescriptor(object);
@@ -179,7 +178,7 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
+				 getString("_UI_OrmPropertyCategory"),
 				 null));
 	}
 
@@ -272,28 +271,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Placeholder feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPlaceholderPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feature_placeholder_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_placeholder_feature", "_UI_Feature_type"),
-				 PersistencePackage.Literals.FEATURE__PLACEHOLDER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Default Display Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -377,7 +354,7 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -399,7 +376,7 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -549,7 +526,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 			case PersistencePackage.FEATURE__TITLE:
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_ADD:
 			case PersistencePackage.FEATURE__COLLECTION_ORM_ALLOW_REMOVE:
-			case PersistencePackage.FEATURE__PLACEHOLDER:
 			case PersistencePackage.FEATURE__DEFAULT_DISPLAY_VALUE:
 			case PersistencePackage.FEATURE__EMPTY_DISPLAY_VALUE:
 			case PersistencePackage.FEATURE__ENCODE_URI_KEY:

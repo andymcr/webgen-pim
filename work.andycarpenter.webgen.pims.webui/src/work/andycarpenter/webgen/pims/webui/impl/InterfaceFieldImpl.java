@@ -36,7 +36,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getMaximumDisplaySize <em>Maximum Display Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isTruncate <em>Truncate</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDateFormat <em>Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isDisableInput <em>Disable Input</em>}</li>
@@ -140,26 +139,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected CollectionDisplayOptions collectionDisplayOption = COLLECTION_DISPLAY_OPTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMaximumDisplaySize() <em>Maximum Display Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaximumDisplaySize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int MAXIMUM_DISPLAY_SIZE_EDEFAULT = -1;
-
-	/**
-	 * The cached value of the '{@link #getMaximumDisplaySize() <em>Maximum Display Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaximumDisplaySize()
-	 * @generated
-	 * @ordered
-	 */
-	protected int maximumDisplaySize = MAXIMUM_DISPLAY_SIZE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isTruncate() <em>Truncate</em>}' attribute.
@@ -523,27 +502,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMaximumDisplaySize() {
-		return maximumDisplaySize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMaximumDisplaySize(int newMaximumDisplaySize) {
-		int oldMaximumDisplaySize = maximumDisplaySize;
-		maximumDisplaySize = newMaximumDisplaySize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE, oldMaximumDisplaySize, maximumDisplaySize));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isTruncate() {
 		return truncate;
 	}
@@ -811,8 +769,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return isEscapeHTML();
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				return getCollectionDisplayOption();
-			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
-				return getMaximumDisplaySize();
 			case WebuiPackage.INTERFACE_FIELD__TRUNCATE:
 				return isTruncate();
 			case WebuiPackage.INTERFACE_FIELD__DATE_FORMAT:
@@ -861,9 +817,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption((CollectionDisplayOptions)newValue);
-				return;
-			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
-				setMaximumDisplaySize((Integer)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__TRUNCATE:
 				setTruncate((Boolean)newValue);
@@ -922,9 +875,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				setCollectionDisplayOption(COLLECTION_DISPLAY_OPTION_EDEFAULT);
 				return;
-			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
-				setMaximumDisplaySize(MAXIMUM_DISPLAY_SIZE_EDEFAULT);
-				return;
 			case WebuiPackage.INTERFACE_FIELD__TRUNCATE:
 				setTruncate(TRUNCATE_EDEFAULT);
 				return;
@@ -976,8 +926,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return escapeHTML != ESCAPE_HTML_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 				return collectionDisplayOption != COLLECTION_DISPLAY_OPTION_EDEFAULT;
-			case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE:
-				return maximumDisplaySize != MAXIMUM_DISPLAY_SIZE_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__TRUNCATE:
 				return truncate != TRUNCATE_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__DATE_FORMAT:
@@ -1015,7 +963,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.INTERFACE_FIELD__TITLE: return WebuiPackage.UNIT_FIELD__TITLE;
 				case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML: return WebuiPackage.UNIT_FIELD__ESCAPE_HTML;
 				case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION;
-				case WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE: return WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE;
 				case WebuiPackage.INTERFACE_FIELD__TRUNCATE: return WebuiPackage.UNIT_FIELD__TRUNCATE;
 				case WebuiPackage.INTERFACE_FIELD__DATE_FORMAT: return WebuiPackage.UNIT_FIELD__DATE_FORMAT;
 				case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT: return WebuiPackage.UNIT_FIELD__DISABLE_INPUT;
@@ -1040,7 +987,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.UNIT_FIELD__TITLE: return WebuiPackage.INTERFACE_FIELD__TITLE;
 				case WebuiPackage.UNIT_FIELD__ESCAPE_HTML: return WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML;
 				case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION;
-				case WebuiPackage.UNIT_FIELD__MAXIMUM_DISPLAY_SIZE: return WebuiPackage.INTERFACE_FIELD__MAXIMUM_DISPLAY_SIZE;
 				case WebuiPackage.UNIT_FIELD__TRUNCATE: return WebuiPackage.INTERFACE_FIELD__TRUNCATE;
 				case WebuiPackage.UNIT_FIELD__DATE_FORMAT: return WebuiPackage.INTERFACE_FIELD__DATE_FORMAT;
 				case WebuiPackage.UNIT_FIELD__DISABLE_INPUT: return WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT;
@@ -1068,8 +1014,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		result.append(escapeHTML);
 		result.append(", collectionDisplayOption: ");
 		result.append(collectionDisplayOption);
-		result.append(", maximumDisplaySize: ");
-		result.append(maximumDisplaySize);
 		result.append(", truncate: ");
 		result.append(truncate);
 		result.append(", dateFormat: ");

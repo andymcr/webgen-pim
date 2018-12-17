@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getSlugFields <em>Slug Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getDefaultValue <em>Default Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getValidationPattern <em>Validation Pattern</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputColumnClass <em>Input Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInputElementClass <em>Input Element Class</em>}</li>
@@ -231,6 +232,32 @@ public interface Attribute extends Feature, Label {
 	 * @generated
 	 */
 	void setDefaultValue(Expression value);
+
+	/**
+	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Placeholder</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Placeholder</em>' attribute.
+	 * @see #setPlaceholder(String)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_Placeholder()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	String getPlaceholder();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPlaceholder <em>Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Placeholder</em>' attribute.
+	 * @see #getPlaceholder()
+	 * @generated
+	 */
+	void setPlaceholder(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.

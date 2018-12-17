@@ -70,38 +70,6 @@ helper context Website!DataTypeField def: interfaceType() : String
 			self.dataType.interfaceType
 		endif;
 
-helper context Website!UnitElement def: placeholder() : String
-	= if not self.placeholder.oclIsUndefined() and self.placeholder <> '' then
-			self.placeholder
-		else if not self.attribute.placeholder.oclIsUndefined() and self.attribute.placeholder <> '' then
-			self.attribute.placeholder
-		else
-			if self.attribute.oclIsTypeOf(Website!DataTypeAttribute) then
-				if not self.attribute.dataType.placeholder.oclIsUndefined() then
-					self.attribute.dataType.placeholder
-				else
-					self.name.createLabel()
-				endif
-			else
-				self.name.createLabel()
-			endif
-		endif endif;
-
-helper context Website!InterfaceField def: placeholder() : String
-	= if not self.placeholder.oclIsUndefined() and self.placeholder <> '' then
-			self.placeholder
-		else
-			if self.oclIsTypeOf(Website!DataTypeField) then
-				if not self.dataType.placeholder.oclIsUndefined() and self.dataType.placeholder <> '' then
-					self.dataType.placeholder
-				else
-					self.name.createLabel()
-				endif
-			else
-				self.name.createLabel()
-			endif
-		endif;
-
 helper context Website!InterfaceField def: validationPattern() : String
 	= if not self.validationPattern.oclIsUndefined() and self.validationPattern <> '' then
 			self.validationPattern
@@ -484,7 +452,7 @@ rule UnitAttribute {
 	to waf : WAF!UnitAttribute (
 		attribute <- website.attribute.findOrmAttribute(),
 		displayLabel <- website.displayLabel(),
-		hasCustomisedDisplayLabel <- website.displayLabel() <> website.attribute.displayLabel(),
+		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
 		defaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholder <- website.placeholder(),
@@ -555,16 +523,7 @@ rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
 		displayLabel <- website.displayLabel(),
-		hasCustomisedDisplayLabel <-
-			if website.childFeature.oclIsUndefined() then
-				if website.isSourceAssociation then
-					website.displayLabel() <> website.association.displayLabel()
-				else
-					website.displayLabel() <> website.association.targetDisplayLabel()
-				endif
-			else
-				true
-			endif,
+		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
 		options <-
 			if website.options.oclIsUndefined() then
 				website.options

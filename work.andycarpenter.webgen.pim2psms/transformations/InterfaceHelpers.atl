@@ -66,6 +66,52 @@ helper context Website!ChildPathAssociation def: displayLabel() : String
 				self.childFeature.displayLabel()
 			endif;
 
+helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
+	= self.displayLabel() <> self.attribute.displayLabel();
+
+helper context Website!UnitAssociation def: hasCustomisedDisplayLabel() : Boolean
+	= if self.childFeature.oclIsUndefined() then
+			if self.isSourceAssociation then
+				self.displayLabel() <> self.association.displayLabel()
+			else
+				self.displayLabel() <> self.association.targetDisplayLabel()
+			endif
+		else
+			true
+		endif;
+
+helper context Website!UnitElement def: placeholder() : String
+	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
+			self.placeholder.trim()
+		else if not self.attribute.placeholder.oclIsUndefined() and self.attribute.placeholder.trim() <> '' then
+			self.attribute.placeholder.trim()
+		else
+			if self.attribute.oclIsTypeOf(Website!DataTypeAttribute) then
+				if not self.attribute.dataType.placeholder.oclIsUndefined() and self.attribute.dataType.placeholder.trim() <> '' then
+					self.attribute.dataType.placeholder.trim()
+				else
+					self.name.createLabel()
+				endif
+			else
+				self.name.createLabel()
+			endif
+		endif endif;
+
+helper context Website!InterfaceField def: placeholder() : String
+	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
+			self.placeholder.trim()
+		else
+			if self.oclIsTypeOf(Website!DataTypeField) then
+				if not self.dataType.placeholder.oclIsUndefined() and self.dataType.placeholder.trim() <> '' then
+					self.dataType.placeholder.trim()
+				else
+					self.name.createLabel()
+				endif
+			else
+				self.name.createLabel()
+			endif
+		endif;
+
 helper context Website!DeleteAction def: confirmMessage() : String
 	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
 				self.confirmMessage.trim()

@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getMaximumDisplaySize <em>Maximum Display Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isTruncate <em>Truncate</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getDateFormat <em>Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isDisableInput <em>Disable Input</em>}</li>
@@ -195,33 +194,6 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setCollectionDisplayOption(CollectionDisplayOptions value);
-
-	/**
-	 * Returns the value of the '<em><b>Maximum Display Size</b></em>' attribute.
-	 * The default value is <code>"-1"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Maximum Display Size</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Display Size</em>' attribute.
-	 * @see #setMaximumDisplaySize(int)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_MaximumDisplaySize()
-	 * @model default="-1" ordered="false"
-	 * @generated
-	 */
-	int getMaximumDisplaySize();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getMaximumDisplaySize <em>Maximum Display Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Display Size</em>' attribute.
-	 * @see #getMaximumDisplaySize()
-	 * @generated
-	 */
-	void setMaximumDisplaySize(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Truncate</b></em>' attribute.

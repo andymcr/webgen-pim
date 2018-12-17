@@ -285,7 +285,6 @@ abstract rule Association {
 				website.name.createAssociationColumnName()
 			endif,
 		pivotTableName <- website.createPivotTableName(),
-		placeholder <- website.placeholder,
 		serializationMaxDepth <- website.serializationMaxDepth
 	)
 }
