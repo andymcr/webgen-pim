@@ -4,7 +4,7 @@
 -- @path ORM=/work.andycarpenter.psms.orm/model/orm.xecore
 -- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xecore
 
-module PassExplicitInterface;
+module InterfaceExplicit;
 create waf : WAF from website : Website, orm : ORM, service : Service, api : API;
 
 uses WebsiteHelpers;

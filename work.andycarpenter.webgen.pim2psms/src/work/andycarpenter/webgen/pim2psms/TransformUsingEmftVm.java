@@ -214,7 +214,7 @@ public class TransformUsingEmftVm {
 			final String wafModelName = "waf";
 	
 			final Model wafTraceModelP1 = createModel("trace_waf_p1");
-			final Model wafModel = executePassCreatingOutputModel("PassExplicitInterface",
+			final Model wafModel = executePassCreatingOutputModel("InterfaceExplicit",
 				wafModelName, "waf", wafInputModels, wafTraceModelP1);
 	
 			final Model wafTraceModelP5 = createModel("trace_waf_p5");
