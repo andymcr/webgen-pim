@@ -5,12 +5,14 @@ library InterfaceHelpers;
 uses WebsiteHelpers;
 
 
-helper context Website!Attribute def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
-			self.displayLabel.trim()
-		else
-			self.name.createLabel()
-		endif;
+helper context Website!DeleteAction def: confirmMessage() : String
+	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
+				self.confirmMessage.trim()
+			else if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+				self.displayLabel.trim().concat('?')
+			else
+				self.name.createLabel().concat('?')
+			endif endif;
 
 helper context Website!Association def: displayLabel() : String
 	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
@@ -26,11 +28,18 @@ helper context Website!Association def: targetDisplayLabel() : String
 			self.targetFeatureName().createLabel()
 		endif;
 
-helper context Website!UnitElement def: displayLabel() : String
+helper context Website!Attribute def: displayLabel() : String
 	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
 			self.displayLabel.trim()
 		else
-			self.attribute.displayLabel()
+			self.name.createLabel()
+		endif;
+
+helper context Website!InterfaceField def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			self.name.createLabel()
 		endif;
 
 helper context Website!UnitAssociation def: displayLabel() : String
@@ -48,12 +57,15 @@ helper context Website!UnitAssociation def: displayLabel() : String
 			endif
 		endif;
 
+helper context Website!UnitElement def: displayLabel() : String
+	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+			self.displayLabel.trim()
+		else
+			self.attribute.displayLabel()
+		endif;
 
-helper context Website!InterfaceField def: displayLabel() : String
-	= self.displayLabel.trim();
-
-helper context Website!ChildPathAttribute def: displayLabel() : String
-	= self.attribute.displayLabel();
+helper context Website!UnitLabel def: displayLabel() : String
+	= OclUndefined;
 
 helper context Website!ChildPathAssociation def: displayLabel() : String
 	= if self.childFeature.oclIsUndefined() then
@@ -66,8 +78,11 @@ helper context Website!ChildPathAssociation def: displayLabel() : String
 				self.childFeature.displayLabel()
 			endif;
 
-helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
-	= self.displayLabel() <> self.attribute.displayLabel();
+helper context Website!ChildPathAttribute def: displayLabel() : String
+	= self.attribute.displayLabel();
+
+helper context Website!InterfaceField def: hasCustomisedDisplayLabel() : Boolean
+	= true;
 
 helper context Website!UnitAssociation def: hasCustomisedDisplayLabel() : Boolean
 	= if self.childFeature.oclIsUndefined() then
@@ -80,43 +95,64 @@ helper context Website!UnitAssociation def: hasCustomisedDisplayLabel() : Boolea
 			true
 		endif;
 
-helper context Website!UnitElement def: placeholder() : String
+helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
+	= self.displayLabel() <> self.attribute.displayLabel();
+
+helper context Website!UnitLabel def: hasCustomisedDisplayLabel() : Boolean
+	= false;
+
+helper context Website!Attribute def: placeholder() : String
 	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
 			self.placeholder.trim()
-		else if not self.attribute.placeholder.oclIsUndefined() and self.attribute.placeholder.trim() <> '' then
-			self.attribute.placeholder.trim()
 		else
-			if self.attribute.oclIsTypeOf(Website!DataTypeAttribute) then
-				if not self.attribute.dataType.placeholder.oclIsUndefined() and self.attribute.dataType.placeholder.trim() <> '' then
-					self.attribute.dataType.placeholder.trim()
-				else
-					self.name.createLabel()
-				endif
-			else
-				self.name.createLabel()
-			endif
-		endif endif;
+			self.name.createLabel()
+		endif;
 
 helper context Website!InterfaceField def: placeholder() : String
 	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
 			self.placeholder.trim()
 		else
-			if self.oclIsTypeOf(Website!DataTypeField) then
-				if not self.dataType.placeholder.oclIsUndefined() and self.dataType.placeholder.trim() <> '' then
-					self.dataType.placeholder.trim()
-				else
-					self.name.createLabel()
-				endif
+			self.name.createLabel()
+		endif;
+
+helper context Website!UnitElement def: placeholder() : String
+	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
+			self.placeholder.trim()
+		else
+			self.attribute.placeholder()
+		endif;
+
+helper context Website!Association def: title() : String
+	= if not self.title.oclIsUndefined() and self.title <> '' then
+			self.title.trim()
+		else
+			self.name.createLabel()
+		endif;
+
+helper context Website!Attribute def: title() : String
+	= if not self.title.oclIsUndefined() and self.title <> '' then
+			self.title.trim()
+		else
+			self.name.createLabel()
+		endif;
+
+helper context Website!UnitAssociation def: title() : String
+	= if not self.title.oclIsUndefined() and self.title.trim() <> '' then
+			self.title.trim()
+		else
+			if self.isSourceAssociation then
+				self.association.title()
 			else
-				self.name.createLabel()
+				self.association.targetDisplayLabel()
 			endif
 		endif;
 
-helper context Website!DeleteAction def: confirmMessage() : String
-	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
-				self.confirmMessage.trim()
-			else if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
-				self.displayLabel.trim().concat('?')
-			else
-				self.name.createLabel().concat('?')
-			endif endif;
+helper context Website!UnitElement def: title() : String
+	= if not self.title.oclIsUndefined() and self.title.trim() <> '' then
+			self.title.trim()
+		else
+			self.attribute.title()
+		endif;
+
+helper context Website!UnitLabel def: title() : String
+	= OclUndefined;

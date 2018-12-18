@@ -19,27 +19,6 @@ helper context String def: createName() : String
 			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
 		endif;
 
-helper context Website!UnitField def: title() : String
-	= if self.title.trim() <> '' then
-			self.title.trim()
-		else
-			if self.oclIsTypeOf(Website!UnitElement) then
-				if not self.attribute.title.oclIsUndefined() and self.attribute.title <> '' then
-					self.attribute.title
-				else
-					self.name.createLabel()
-				endif
-			else if self.oclIsTypeOf(Website!UnitAssociation) then
-				if not self.association.title.oclIsUndefined() and self.association.title <> '' then
-					self.association.title
-				else
-					self.name.createLabel()
-				endif
-			else
-				self.name.createLabel()
-			endif endif
-		endif;
-
 helper context Website!Attribute def: interfaceType() : String
 	= if self.oclIsTypeOf(Website!DataTypeAttribute) then
 			if not self.interfaceType.oclIsUndefined() and self.interfaceType <> '' then
@@ -420,9 +399,12 @@ abstract rule DynamicUnit {
 abstract rule UnitField {
 	from website : Website!UnitField
 	to waf : WAF!UnitField (
+		displayLabel <- website.displayLabel(),
+		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
+		title <- website.title(),
+		hasCustomisedTitle <- website.title() <> website.displayLabel(),
 		requiresRole <- website.requiresRole.trim(),
 		hideWhen <- website.hideWhen,
-		title <- website.title(),
 		escapeHTML <- website.escapeHTML,
 		collectionDisplayOption <- website.collectionDisplayOption,
 		truncate <- website.truncate,
@@ -451,11 +433,10 @@ rule UnitAttribute {
 	from website : Website!UnitElement
 	to waf : WAF!UnitAttribute (
 		attribute <- website.attribute.findOrmAttribute(),
-		displayLabel <- website.displayLabel(),
-		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
 		defaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholder <- website.placeholder(),
+		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
 		validationPattern <- website.validationPattern,
 		headerClass <-
 			if not website.headerClass.oclIsUndefined() and website.headerClass <> '' then
@@ -522,8 +503,6 @@ rule UnitAttribute {
 rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
-		displayLabel <- website.displayLabel(),
-		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
 		options <-
 			if website.options.oclIsUndefined() then
 				website.options
@@ -674,11 +653,11 @@ rule UnitLabel {
 abstract rule InterfaceField {
 	from website : Website!InterfaceField
 	to waf : WAF!InterfaceField (
-		displayLabel <- website.displayLabel(),
 		required <- website.required,
 		defaultValue <- website.defaultValue,
 		mustMatch <- website.mustMatch,
 		placeholder <- website.placeholder(),
+		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
 		validationPattern <- website.validationPattern(),
 		inputClass <- website.inputClass
 	)
