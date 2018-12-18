@@ -160,7 +160,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DATE_FORMAT_EDEFAULT = null;
+	protected static final String DATE_FORMAT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDateFormat() <em>Date Format</em>}' attribute.

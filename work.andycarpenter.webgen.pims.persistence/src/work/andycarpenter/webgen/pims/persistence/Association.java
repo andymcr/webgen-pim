@@ -244,6 +244,7 @@ public interface Association extends Feature {
 
 	/**
 	 * Returns the value of the '<em><b>Target Display Label</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target Display Label</em>' attribute isn't clear,
@@ -253,7 +254,7 @@ public interface Association extends Feature {
 	 * @return the value of the '<em>Target Display Label</em>' attribute.
 	 * @see #setTargetDisplayLabel(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_TargetDisplayLabel()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getTargetDisplayLabel();
@@ -429,6 +430,7 @@ public interface Association extends Feature {
 
 	/**
 	 * Returns the value of the '<em><b>Input Element Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Element Class</em>' attribute isn't clear,
@@ -438,7 +440,7 @@ public interface Association extends Feature {
 	 * @return the value of the '<em>Input Element Class</em>' attribute.
 	 * @see #setInputElementClass(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_InputElementClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getInputElementClass();

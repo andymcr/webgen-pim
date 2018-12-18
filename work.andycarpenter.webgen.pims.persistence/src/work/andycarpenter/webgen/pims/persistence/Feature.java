@@ -239,6 +239,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
@@ -248,7 +249,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Title</em>' attribute.
 	 * @see #setTitle(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_Title()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getTitle();
@@ -319,6 +320,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Default Display Value</em>' attribute isn't clear,
@@ -328,7 +330,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Default Display Value</em>' attribute.
 	 * @see #setDefaultDisplayValue(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_DefaultDisplayValue()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultDisplayValue();
@@ -345,6 +347,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Empty Display Value</em>' attribute isn't clear,
@@ -354,7 +357,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Empty Display Value</em>' attribute.
 	 * @see #setEmptyDisplayValue(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_EmptyDisplayValue()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getEmptyDisplayValue();
@@ -492,6 +495,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Header Class</em>' attribute isn't clear,
@@ -501,7 +505,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Header Class</em>' attribute.
 	 * @see #setHeaderClass(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_HeaderClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getHeaderClass();
@@ -518,6 +522,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Display Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Display Class</em>' attribute isn't clear,
@@ -527,7 +532,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Display Class</em>' attribute.
 	 * @see #setDisplayClass(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_DisplayClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getDisplayClass();
@@ -544,6 +549,7 @@ public interface Feature extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Footer Class</em>' attribute isn't clear,
@@ -553,7 +559,7 @@ public interface Feature extends NamedDisplayElement {
 	 * @return the value of the '<em>Footer Class</em>' attribute.
 	 * @see #setFooterClass(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_FooterClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getFooterClass();

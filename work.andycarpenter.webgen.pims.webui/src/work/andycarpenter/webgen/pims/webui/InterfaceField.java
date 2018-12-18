@@ -133,6 +133,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 
 	/**
 	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placeholder</em>' attribute isn't clear,
@@ -142,7 +143,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Placeholder</em>' attribute.
 	 * @see #setPlaceholder(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_Placeholder()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getPlaceholder();
@@ -159,6 +160,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Validation Pattern</em>' attribute isn't clear,
@@ -168,7 +170,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Validation Pattern</em>' attribute.
 	 * @see #setValidationPattern(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_ValidationPattern()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getValidationPattern();

@@ -187,7 +187,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TITLE_EDEFAULT = null;
+	protected static final String TITLE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
@@ -247,7 +247,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
@@ -267,7 +267,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
@@ -377,7 +377,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HEADER_CLASS_EDEFAULT = null;
+	protected static final String HEADER_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
@@ -397,7 +397,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DISPLAY_CLASS_EDEFAULT = null;
+	protected static final String DISPLAY_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
@@ -417,7 +417,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = null;
+	protected static final String FOOTER_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.

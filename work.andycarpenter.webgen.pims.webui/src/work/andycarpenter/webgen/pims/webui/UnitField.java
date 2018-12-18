@@ -224,6 +224,7 @@ public interface UnitField extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Date Format</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Date Format</em>' attribute isn't clear,
@@ -233,7 +234,7 @@ public interface UnitField extends EObject {
 	 * @return the value of the '<em>Date Format</em>' attribute.
 	 * @see #setDateFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_DateFormat()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getDateFormat();

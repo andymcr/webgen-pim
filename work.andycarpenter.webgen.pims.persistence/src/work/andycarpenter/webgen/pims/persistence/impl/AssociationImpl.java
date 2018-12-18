@@ -200,7 +200,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TARGET_DISPLAY_LABEL_EDEFAULT = null;
+	protected static final String TARGET_DISPLAY_LABEL_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getTargetDisplayLabel() <em>Target Display Label</em>}' attribute.
@@ -340,7 +340,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = null;
+	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.

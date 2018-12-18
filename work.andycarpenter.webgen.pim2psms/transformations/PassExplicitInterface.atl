@@ -19,114 +19,6 @@ helper context String def: createName() : String
 			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
 		endif;
 
-helper context Website!Attribute def: interfaceType() : String
-	= if self.oclIsTypeOf(Website!DataTypeAttribute) then
-			if not self.interfaceType.oclIsUndefined() and self.interfaceType <> '' then
-				self.interfaceType
-			else
-				if self.oclIsTypeOf(Website!DataTypeAttribute) then
-					self.dataType.interfaceType
-				else
-					self.name.lowercaseFirst()
-				endif
-			endif
-		else if self.oclIsTypeOf(Website!DateAttribute) then
-			if self.details = #DateAndTime then
-				'datetime'
-			else if self.details = #DateOnly then
-				'date'
-			else
-				'time'
-			endif endif
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!DataTypeField def: interfaceType() : String
-	= if not self.interfaceType.oclIsUndefined() and self.interfaceType <> '' then
-			self.interfaceType
-		else
-			self.dataType.interfaceType
-		endif;
-
-helper context Website!InterfaceField def: validationPattern() : String
-	= if not self.validationPattern.oclIsUndefined() and self.validationPattern <> '' then
-			self.validationPattern
-		else
-			if self.oclIsTypeOf(Website!DataTypeField) then
-				self.dataType.validationPattern
-			else
-				OclUndefined
-			endif
-		endif;
-
-helper context Website!UnitFeature def: defaultDisplayValue() : String
-	= if not self.defaultDisplayValue.oclIsUndefined() and self.defaultDisplayValue <> '' then
-			self.defaultDisplayValue
-		else
-			if self.oclIsTypeOf(Website!UnitElement) then
-				if not self.attribute.defaultDisplayValue.oclIsUndefined() and self.attribute.defaultDisplayValue <> '' then
-					self.attribute.defaultDisplayValue
-				else
-					self.defaultDisplayValue
-				endif
-			else
-				if not self.association.defaultDisplayValue.oclIsUndefined() and self.association.defaultDisplayValue <> '' then
-					self.association.defaultDisplayValue
-				else
-					self.defaultDisplayValue
-				endif
-			endif
-		endif;
-
-helper context Website!UnitFeature def: emptyDisplayValue() : String
-	= if not self.emptyDisplayValue.oclIsUndefined() and self.emptyDisplayValue <> '' then
-			self.emptyDisplayValue
-		else
-			if self.oclIsTypeOf(Website!UnitElement) then
-				if not self.attribute.emptyDisplayValue.oclIsUndefined() and self.attribute.emptyDisplayValue <> '' then
-					self.attribute.emptyDisplayValue
-				else
-					self.emptyDisplayValue
-				endif
-			else
-				if not self.association.emptyDisplayValue.oclIsUndefined() and self.association.emptyDisplayValue <> '' then
-					self.association.emptyDisplayValue
-				else
-					self.emptyDisplayValue
-				endif
-			endif
-		endif;
-
-helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
-	= if entity.features->includes(self) then
-			thisModule.findOrmEntity(entity.name)
-		else if self.oclIsKindOf(Website!Association) then
-			thisModule.findOrmEntity(self.targetEntity.name)
-		else -- EncapsulatedAssociation
-			thisModule.findOrmEntity(self.partOf.name) -- TODO fix
-		endif endif;
-
-helper context Website!Expression def: findContainingSelection() : Website!Selection
-	= if self.refImmediateComposite().oclIsUndefined() then
-			OclUndefined
-		else if self.refImmediateComposite().oclIsTypeOf(Website!Selection) then
-			self.refImmediateComposite()
-		else if self.refImmediateComposite().oclIsKindOf(Website!Expression) then
-			self.refImmediateComposite().findContainingSelection()
-		else
-			OclUndefined
-		endif endif endif ;
-
-helper context Website!Label def: findOrmLabel() : ORM!Label
-	= if self.oclIsKindOf(Website!Attribute) then
-		self.findOrmEntity().getOrmFeature(self.name)
-	else if self.oclIsTypeOf(Website!ModelLabel) then
-		thisModule.findOrmEntity(self.labelFor.name).getOrmLabel(self.name)
-	else
-		self.title
-	endif endif;
-
 helper context Website!Entity def: container() : Website!Entity
 	= let containingAssociation : Sequence(Website!AssociationWithContainment)
 		= self.allAssociations
@@ -246,12 +138,7 @@ rule Menu {
 	from website : Website!Menu
 	to waf : WAF!Menu (
 		entries <- website.entries,
-		omitCaption <-
-			if not website.omitCaption.oclIsUndefined() then
-				website.omitCaption
-			else
-				false
-			endif,
+		omitCaption <- website.omitCaption,
 		captionClass <- website.captionClass.replaceAll(',', ' '),
 		styleClass <- website.styleClass.replaceAll(',', ' '),
 		layoutClass <- website.layoutClass.replaceAll(',', ' ')
@@ -299,12 +186,7 @@ rule Page {
 			else
 				website.parentPage.targetPage
 			endif,
-		styleClass <-
-			if website.styleClass.oclIsUndefined() then
-				OclUndefined
-			else
-				website.styleClass.replaceAll(',', ' ')
-			endif
+		styleClass <- website.styleClass.replaceAll(',', ' ')
 	)
 }
 
@@ -348,12 +230,7 @@ abstract rule ContentUnit {
 		routeActuals <- website.routeActuals,
 		requiresRole <- website.requiresRole.trim(),
 		purposeSummary <- website.purposeSummary,
-		omitCaption <-
-			if not website.omitCaption.oclIsUndefined() then
-				website.omitCaption
-			else
-				false
-			endif,
+		omitCaption <- website.omitCaption,
 		alternative <- website.alternative,
 		captionClass <- website.captionClass.replaceAll(',', ' '),
 		styleClass <- website.styleClass.replaceAll(',', ' '),
@@ -438,64 +315,11 @@ rule UnitAttribute {
 		placeholder <- website.placeholder(),
 		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
 		validationPattern <- website.validationPattern,
-		headerClass <-
-			if not website.headerClass.oclIsUndefined() and website.headerClass <> '' then
-				website.headerClass
-			else
-				if not website.attribute.oclIsUndefined() then
-					website.attribute.headerClass
-				else
-					OclUndefined
-				endif
-			endif,
-		displayClass <-
-			if not website.displayClass.oclIsUndefined() and website.displayClass <> '' then
-				website.displayClass
-			else
-				if not website.attribute.oclIsUndefined() then
-					website.attribute.displayClass
-				else
-					OclUndefined
-				endif
-			endif,
-		inputColumnClass <-
-			if not website.inputColumnClass.oclIsUndefined() and website.inputColumnClass <> '' then
-				website.inputColumnClass.replaceAll(',', ' ')
-			else
-				if not website.attribute.oclIsUndefined() then
-					if not website.attribute.inputColumnClass.oclIsUndefined() then
-						website.attribute.inputColumnClass.replaceAll(',', ' ')
-					else
-						OclUndefined
-					endif
-				else
-					OclUndefined
-				endif
-			endif,
-		inputElementClass <-
-			if not website.inputElementClass.oclIsUndefined() and website.inputElementClass <> '' then
-				website.inputElementClass.replaceAll(',', ' ')
-			else
-				if not website.attribute.oclIsUndefined() then
-					if not website.attribute.inputElementClass.oclIsUndefined() then
-						website.attribute.inputElementClass.replaceAll(',', ' ')
-					else
-						OclUndefined
-					endif
-				else
-					OclUndefined
-				endif
-			endif,
-		footerClass <-
-			if not website.footerClass.oclIsUndefined() and website.footerClass <> '' then
-				website.footerClass
-			else
-				if not website.attribute.oclIsUndefined() then
-					website.attribute.footerClass
-				else
-					OclUndefined
-				endif
-			endif
+		headerClass <- website.headerClass(),
+		displayClass <- website.displayClass(),
+		inputColumnClass <- website.inputColumnClass(),
+		inputElementClass <- website.inputElementClass(),
+		footerClass <- website.footerClass()
 	)
 }
 
@@ -515,64 +339,11 @@ rule UnitAssociation {
 			else
 				website.filteredOptions.findFilter()
 			endif,
-		headerClass <-
-			if not website.headerClass.oclIsUndefined() and website.headerClass <> '' then
-				website.headerClass
-			else
-				if not website.association.oclIsUndefined() then
-					website.association.headerClass
-				else
-					OclUndefined
-				endif
-			endif,
-		displayClass <-
-			if not website.displayClass.oclIsUndefined() and website.displayClass <> '' then
-				website.displayClass
-			else
-				if not website.association.oclIsUndefined() then
-					website.association.displayClass
-				else
-					OclUndefined
-				endif
-			endif,
-		inputColumnClass <-
-			if not website.inputColumnClass.oclIsUndefined() and website.inputColumnClass <> '' then
-				website.inputColumnClass.replaceAll(',', ' ')
-			else
-				if not website.association.oclIsUndefined() then
-					if not website.association.inputColumnClass.oclIsUndefined() then
-						website.association.inputColumnClass.replaceAll(',', ' ')
-					else
-						OclUndefined
-					endif
-				else
-					OclUndefined
-				endif
-			endif,
-		inputElementClass <-
-			if not website.inputElementClass.oclIsUndefined() and website.inputElementClass <> '' then
-				website.inputElementClass.replaceAll(',', ' ')
-			else
-				if not website.association.oclIsUndefined() then
-					if not website.association.inputElementClass.oclIsUndefined() then
-						website.association.inputElementClass.replaceAll(',', ' ')
-					else
-						OclUndefined
-					endif
-				else
-					OclUndefined
-				endif
-			endif,
-		footerClass <-
-			if not website.footerClass.oclIsUndefined() and website.footerClass <> '' then
-				website.footerClass
-			else
-				if not website.association.oclIsUndefined() then
-					website.association.footerClass
-				else
-					OclUndefined
-				endif
-			endif
+		headerClass <- website.headerClass(),
+		displayClass <- website.displayClass(),
+		inputColumnClass <- website.inputColumnClass(),
+		inputElementClass <- website.inputElementClass(),
+		footerClass <- website.footerClass()
 	)
 }
 

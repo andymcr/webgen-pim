@@ -168,7 +168,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DATE_FORMAT_EDEFAULT = null;
+	protected static final String DATE_FORMAT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDateFormat() <em>Date Format</em>}' attribute.
@@ -278,7 +278,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLACEHOLDER_EDEFAULT = null;
+	protected static final String PLACEHOLDER_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
@@ -298,7 +298,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALIDATION_PATTERN_EDEFAULT = null;
+	protected static final String VALIDATION_PATTERN_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.

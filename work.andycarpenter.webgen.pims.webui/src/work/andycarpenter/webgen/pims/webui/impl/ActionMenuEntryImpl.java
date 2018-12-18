@@ -62,7 +62,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DISPLAY_LABEL_EDEFAULT = null;
+	protected static final String DISPLAY_LABEL_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.

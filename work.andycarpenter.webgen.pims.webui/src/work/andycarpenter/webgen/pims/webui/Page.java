@@ -128,6 +128,7 @@ public interface Page extends NamedDisplayElement, UnitContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
@@ -137,7 +138,7 @@ public interface Page extends NamedDisplayElement, UnitContainer {
 	 * @return the value of the '<em>Style Class</em>' attribute.
 	 * @see #setStyleClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getPage_StyleClass()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getStyleClass();

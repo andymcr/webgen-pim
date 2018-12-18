@@ -14,36 +14,64 @@ helper context Website!DeleteAction def: confirmMessage() : String
 				self.name.createLabel().concat('?')
 			endif endif;
 
-helper context Website!Association def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+helper context Website!Feature def: defaultDisplayValue() : String
+	= if self.defaultDisplayValue.trim() <> '' then
+				self.defaultDisplayValue.trim()
+			else
+				OclUndefined
+			endif;
+
+helper context Website!UnitAssociation def: defaultDisplayValue() : String
+	= if self.defaultDisplayValue.trim() <> '' then
+			self.defaultDisplayValue.trim()
+		else
+			self.association.defaultDisplayValue()
+		endif;
+
+helper context Website!UnitElement def: defaultDisplayValue() : String
+	= if self.defaultDisplayValue.trim() <> '' then
+			self.defaultDisplayValue.trim()
+		else
+			self.attribute.defaultDisplayValue()
+		endif;
+
+helper context Website!Feature def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			self.association.displayClass()
+		endif;
+
+helper context Website!UnitElement def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.displayClass()
+		endif;
+
+helper context Website!Feature def: displayLabel() : String
+	= if self.displayLabel.trim() <> '' then
 			self.displayLabel.trim()
 		else
 			self.name.createLabel()
 		endif;
 
 helper context Website!Association def: targetDisplayLabel() : String
-	= if not self.targetDisplayLabel.oclIsUndefined() and self.targetDisplayLabel.trim() <> '' then
+	= if self.targetDisplayLabel.trim() <> '' then
 			self.targetDisplayLabel.trim()
 		else
 			self.targetFeatureName().createLabel()
 		endif;
 
-helper context Website!Attribute def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
-			self.displayLabel.trim()
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!InterfaceField def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
-			self.displayLabel.trim()
-		else
-			self.name.createLabel()
-		endif;
-
 helper context Website!UnitAssociation def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+	= if self.displayLabel.trim() <> '' then
 			self.displayLabel.trim()
 		else
 			if self.childFeature.oclIsUndefined() then
@@ -58,7 +86,7 @@ helper context Website!UnitAssociation def: displayLabel() : String
 		endif;
 
 helper context Website!UnitElement def: displayLabel() : String
-	= if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
+	= if self.displayLabel.trim() <> '' then
 			self.displayLabel.trim()
 		else
 			self.attribute.displayLabel()
@@ -81,6 +109,72 @@ helper context Website!ChildPathAssociation def: displayLabel() : String
 helper context Website!ChildPathAttribute def: displayLabel() : String
 	= self.attribute.displayLabel();
 
+helper context Website!Feature def: emptyDisplayValue() : String
+	= if self.emptyDisplayValue.trim() <> '' then
+			self.emptyDisplayValue.trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: emptyDisplayValue() : String
+	= if self.emptyDisplayValue.trim() <> '' then
+			self.emptyDisplayValue.trim()
+		else
+			self.association.emptyDisplayValue()
+		endif;
+
+helper context Website!UnitElement def: emptyDisplayValue() : String
+	= if self.emptyDisplayValue.trim() <> '' then
+			self.emptyDisplayValue.trim()
+		else
+			self.attribute.emptyDisplayValue()
+		endif;
+
+helper context Website!Expression def: findContainingSelection() : Website!Selection
+	= if self.refImmediateComposite().oclIsUndefined() then
+			OclUndefined
+		else if self.refImmediateComposite().oclIsTypeOf(Website!Selection) then
+			self.refImmediateComposite()
+		else if self.refImmediateComposite().oclIsKindOf(Website!Expression) then
+			self.refImmediateComposite().findContainingSelection()
+		else
+			OclUndefined
+		endif endif endif ;
+
+helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
+	= if entity.features->includes(self) then
+			thisModule.findOrmEntity(entity.name)
+		else
+			thisModule.findOrmEntity(self.targetEntity.name)
+		endif;
+
+helper context Website!Attribute def: findOrmLabel() : ORM!Label
+	= self.findOrmEntity().getOrmFeature(self.name);
+
+helper context Website!ModelLabel def: findOrmLabel() : ORM!Label
+	= thisModule.findOrmEntity(self.labelFor.name).getOrmLabel(self.name);
+
+helper context Website!Feature def: footerClass() : Boolean
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: footerClass() : Boolean
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			self.association.footerClass()
+		endif;
+
+helper context Website!UnitElement def: footerClass() : Boolean
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.footerClass()
+		endif;
+
 helper context Website!InterfaceField def: hasCustomisedDisplayLabel() : Boolean
 	= true;
 
@@ -101,43 +195,130 @@ helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
 helper context Website!UnitLabel def: hasCustomisedDisplayLabel() : Boolean
 	= false;
 
-helper context Website!Attribute def: placeholder() : String
-	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
-			self.placeholder.trim()
+helper context Website!Feature def: headerClass() : Boolean
+	= if self.headerClass.trim() <> '' then
+			self.headerClass.replaceAll(',', ' ').trim()
 		else
-			self.name.createLabel()
+			OclUndefined
 		endif;
 
-helper context Website!InterfaceField def: placeholder() : String
-	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
+helper context Website!UnitAssociation def: headerClass() : Boolean
+	= if self.headerClass.trim() <> '' then
+			self.headerClass.replaceAll(',', ' ').trim()
+		else
+			self.association.headerClass()
+		endif;
+
+helper context Website!UnitElement def: headerClass() : Boolean
+	= if self.headerClass.trim() <> '' then
+			self.headerClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.headerClass()
+		endif;
+
+helper context Website!Feature def: inputColumnClass() : Boolean
+	= if self.inputColumnClass.trim() <> '' then
+			self.inputColumnClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: inputColumnClass() : Boolean
+	= if self.inputColumnClass.trim() <> '' then
+			self.inputColumnClass.replaceAll(',', ' ').trim()
+		else
+			self.association.inputColumnClass()
+		endif;
+
+helper context Website!UnitElement def: inputColumnClass() : Boolean
+	= if self.inputColumnClass.trim() <> '' then
+			self.inputColumnClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.inputColumnClass()
+		endif;
+
+helper context Website!Feature def: inputElementClass() : Boolean
+	= if self.inputElementClass.trim() <> '' then
+			self.inputElementClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: inputElementClass() : Boolean
+	= if self.inputElementClass.trim() <> '' then
+			self.inputElementClass.replaceAll(',', ' ').trim()
+		else
+			self.association.inputElementClass()
+		endif;
+
+helper context Website!UnitElement def: inputElementClass() : Boolean
+	= if self.inputElementClass.trim() <> '' then
+			self.inputElementClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.inputElementClass()
+		endif;
+
+helper context Website!Attribute def: interfaceType() : String
+	= if self.oclIsTypeOf(Website!DataTypeAttribute) then
+			if self.interfaceType.trim() <> '' then
+				self.interfaceType.trim()
+			else
+				if self.oclIsTypeOf(Website!DataTypeAttribute) then
+					if self.dataType.interfaceType.trim() <> '' then
+						self.dataType.interfaceType.trim()
+					else
+						self.name.lowercaseFirst()
+					endif
+				else
+					self.name.lowercaseFirst()
+				endif
+			endif
+		else if self.oclIsTypeOf(Website!DateAttribute) then
+			if self.details = #DateAndTime then
+				'datetime'
+			else if self.details = #DateOnly then
+				'date'
+			else
+				'time'
+			endif endif
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!DataTypeField def: interfaceType() : String
+	= if self.interfaceType.trim() <> '' then
+			self.interfaceType.trim()
+		else
+			if self.dataType.interfaceType.trim() <> '' then
+				self.dataType.interfaceType.trim()
+			else
+				self.name.lowercaseFirst()
+			endif
+		endif;
+
+helper context Website!Feature def: placeholder() : String
+	= if self.placeholder.trim() <> '' then
 			self.placeholder.trim()
 		else
 			self.name.createLabel()
 		endif;
 
 helper context Website!UnitElement def: placeholder() : String
-	= if not self.placeholder.oclIsUndefined() and self.placeholder.trim() <> '' then
+	= if self.placeholder.trim() <> '' then
 			self.placeholder.trim()
 		else
 			self.attribute.placeholder()
 		endif;
 
-helper context Website!Association def: title() : String
-	= if not self.title.oclIsUndefined() and self.title <> '' then
-			self.title.trim()
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!Attribute def: title() : String
-	= if not self.title.oclIsUndefined() and self.title <> '' then
+helper context Website!Feature def: title() : String
+	= if self.title.trim() <> '' then
 			self.title.trim()
 		else
 			self.name.createLabel()
 		endif;
 
 helper context Website!UnitAssociation def: title() : String
-	= if not self.title.oclIsUndefined() and self.title.trim() <> '' then
+	= if self.title.trim() <> '' then
 			self.title.trim()
 		else
 			if self.isSourceAssociation then
@@ -148,7 +329,7 @@ helper context Website!UnitAssociation def: title() : String
 		endif;
 
 helper context Website!UnitElement def: title() : String
-	= if not self.title.oclIsUndefined() and self.title.trim() <> '' then
+	= if self.title.trim() <> '' then
 			self.title.trim()
 		else
 			self.attribute.title()
@@ -156,3 +337,14 @@ helper context Website!UnitElement def: title() : String
 
 helper context Website!UnitLabel def: title() : String
 	= OclUndefined;
+
+helper context Website!InterfaceField def: validationPattern() : String
+	= if self.validationPattern.trim() <> '' then
+			self.validationPattern.trim()
+		else
+			if self.oclIsTypeOf(Website!DataTypeField) then
+				self.dataType.validationPattern.trim()
+			else
+				OclUndefined
+			endif
+		endif;

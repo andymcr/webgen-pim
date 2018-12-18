@@ -88,6 +88,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Persistent Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Persistent Type</em>' attribute isn't clear,
@@ -97,7 +98,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Persistent Type</em>' attribute.
 	 * @see #setPersistentType(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_PersistentType()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getPersistentType();
@@ -114,6 +115,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Orm Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orm Type</em>' attribute isn't clear,
@@ -123,7 +125,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Orm Type</em>' attribute.
 	 * @see #setOrmType(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_OrmType()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getOrmType();
@@ -140,6 +142,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Interface Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Interface Type</em>' attribute isn't clear,
@@ -149,7 +152,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Interface Type</em>' attribute.
 	 * @see #setInterfaceType(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InterfaceType()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getInterfaceType();
@@ -235,6 +238,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placeholder</em>' attribute isn't clear,
@@ -244,7 +248,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Placeholder</em>' attribute.
 	 * @see #setPlaceholder(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_Placeholder()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getPlaceholder();
@@ -261,6 +265,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Validation Pattern</em>' attribute isn't clear,
@@ -270,7 +275,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Validation Pattern</em>' attribute.
 	 * @see #setValidationPattern(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_ValidationPattern()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getValidationPattern();
@@ -314,6 +319,7 @@ public interface Attribute extends Feature, Label {
 
 	/**
 	 * Returns the value of the '<em><b>Input Element Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Element Class</em>' attribute isn't clear,
@@ -323,7 +329,7 @@ public interface Attribute extends Feature, Label {
 	 * @return the value of the '<em>Input Element Class</em>' attribute.
 	 * @see #setInputElementClass(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InputElementClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getInputElementClass();

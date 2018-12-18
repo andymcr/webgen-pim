@@ -22,6 +22,7 @@ package work.andycarpenter.webgen.pims.base;
 public interface NamedDisplayElement extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Display Label</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Display Label</em>' attribute isn't clear,
@@ -31,7 +32,7 @@ public interface NamedDisplayElement extends NamedElement {
 	 * @return the value of the '<em>Display Label</em>' attribute.
 	 * @see #setDisplayLabel(String)
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getNamedDisplayElement_DisplayLabel()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getDisplayLabel();

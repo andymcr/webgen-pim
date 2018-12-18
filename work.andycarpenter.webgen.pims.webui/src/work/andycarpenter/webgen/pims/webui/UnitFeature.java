@@ -40,6 +40,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 public interface UnitFeature extends UnitField, InlineActionContainer {
 	/**
 	 * Returns the value of the '<em><b>Display Label</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Display Label</em>' attribute isn't clear,
@@ -49,7 +50,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Display Label</em>' attribute.
 	 * @see #setDisplayLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DisplayLabel()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getDisplayLabel();
@@ -172,6 +173,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Default Display Value</em>' attribute isn't clear,
@@ -181,7 +183,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Default Display Value</em>' attribute.
 	 * @see #setDefaultDisplayValue(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DefaultDisplayValue()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultDisplayValue();
@@ -224,6 +226,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Empty Display Value</em>' attribute isn't clear,
@@ -233,7 +236,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Empty Display Value</em>' attribute.
 	 * @see #setEmptyDisplayValue(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_EmptyDisplayValue()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getEmptyDisplayValue();
@@ -303,6 +306,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Header Class</em>' attribute isn't clear,
@@ -312,7 +316,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Header Class</em>' attribute.
 	 * @see #setHeaderClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_HeaderClass()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getHeaderClass();
@@ -329,6 +333,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Input Column Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Column Class</em>' attribute isn't clear,
@@ -338,7 +343,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Input Column Class</em>' attribute.
 	 * @see #setInputColumnClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputColumnClass()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getInputColumnClass();
@@ -355,6 +360,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Input Element Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Element Class</em>' attribute isn't clear,
@@ -364,7 +370,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Input Element Class</em>' attribute.
 	 * @see #setInputElementClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputElementClass()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getInputElementClass();
@@ -381,6 +387,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Display Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Display Class</em>' attribute isn't clear,
@@ -390,7 +397,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Display Class</em>' attribute.
 	 * @see #setDisplayClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DisplayClass()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getDisplayClass();
@@ -407,6 +414,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Footer Class</em>' attribute isn't clear,
@@ -416,7 +424,7 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	 * @return the value of the '<em>Footer Class</em>' attribute.
 	 * @see #setFooterClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_FooterClass()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getFooterClass();

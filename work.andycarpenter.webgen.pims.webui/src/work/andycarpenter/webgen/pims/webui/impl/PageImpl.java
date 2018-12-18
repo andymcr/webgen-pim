@@ -101,7 +101,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String STYLE_CLASS_EDEFAULT = null;
+	protected static final String STYLE_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.

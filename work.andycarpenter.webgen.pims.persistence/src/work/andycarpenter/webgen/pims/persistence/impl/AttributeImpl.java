@@ -94,7 +94,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PERSISTENT_TYPE_EDEFAULT = null;
+	protected static final String PERSISTENT_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getPersistentType() <em>Persistent Type</em>}' attribute.
@@ -114,7 +114,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ORM_TYPE_EDEFAULT = null;
+	protected static final String ORM_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getOrmType() <em>Orm Type</em>}' attribute.
@@ -134,7 +134,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERFACE_TYPE_EDEFAULT = null;
+	protected static final String INTERFACE_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInterfaceType() <em>Interface Type</em>}' attribute.
@@ -194,7 +194,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLACEHOLDER_EDEFAULT = null;
+	protected static final String PLACEHOLDER_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
@@ -214,7 +214,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALIDATION_PATTERN_EDEFAULT = null;
+	protected static final String VALIDATION_PATTERN_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.
@@ -254,7 +254,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = null;
+	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.

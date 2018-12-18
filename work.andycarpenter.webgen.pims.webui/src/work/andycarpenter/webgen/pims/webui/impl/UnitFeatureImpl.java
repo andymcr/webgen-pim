@@ -68,7 +68,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DISPLAY_LABEL_EDEFAULT = null;
+	protected static final String DISPLAY_LABEL_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
@@ -158,7 +158,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String DEFAULT_DISPLAY_VALUE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
@@ -188,7 +188,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = null;
+	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
@@ -248,7 +248,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HEADER_CLASS_EDEFAULT = null;
+	protected static final String HEADER_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
@@ -268,7 +268,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_COLUMN_CLASS_EDEFAULT = null;
+	protected static final String INPUT_COLUMN_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
@@ -288,7 +288,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = null;
+	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
@@ -308,7 +308,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DISPLAY_CLASS_EDEFAULT = null;
+	protected static final String DISPLAY_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
@@ -328,7 +328,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = null;
+	protected static final String FOOTER_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
