@@ -2,18 +2,13 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
@@ -21,9 +16,7 @@ import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.webui.AssociationReference;
 import work.andycarpenter.webgen.pims.webui.ChildPath;
-import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
-import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -34,7 +27,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getUnits <em>Units</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
@@ -49,16 +41,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociation {
-	/**
-	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnits()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ContentUnit> units;
-
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -166,18 +148,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.UNIT_ASSOCIATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ContentUnit> getUnits() {
-		if (units == null) {
-			units = new EObjectContainmentWithInverseEList<ContentUnit>(ContentUnit.class, this, WebuiPackage.UNIT_ASSOCIATION__UNITS, WebuiPackage.CONTENT_UNIT__DISPLAYED_ON);
-		}
-		return units;
 	}
 
 	/**
@@ -447,8 +417,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUnits()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				if (childFeature != null)
 					msgs = ((InternalEObject)childFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE, null, msgs);
@@ -465,8 +433,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return basicSetChildFeature(null, msgs);
 		}
@@ -481,8 +447,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				return getUnits();
 			case WebuiPackage.UNIT_ASSOCIATION__NAME:
 				return getName();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
@@ -520,10 +484,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				getUnits().clear();
-				getUnits().addAll((Collection<? extends ContentUnit>)newValue);
-				return;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)newValue);
 				return;
@@ -551,9 +511,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				getUnits().clear();
-				return;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)null);
 				return;
@@ -581,8 +538,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__UNITS:
-				return units != null && !units.isEmpty();
 			case WebuiPackage.UNIT_ASSOCIATION__NAME:
 				return isSetName();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
@@ -612,12 +567,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == UnitContainer.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.UNIT_ASSOCIATION__UNITS: return WebuiPackage.UNIT_CONTAINER__UNITS;
-				default: return -1;
-			}
-		}
 		if (baseClass == AssociationReference.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_ASSOCIATION__NAME: return WebuiPackage.ASSOCIATION_REFERENCE__NAME;
@@ -637,12 +586,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == UnitContainer.class) {
-			switch (baseFeatureID) {
-				case WebuiPackage.UNIT_CONTAINER__UNITS: return WebuiPackage.UNIT_ASSOCIATION__UNITS;
-				default: return -1;
-			}
-		}
 		if (baseClass == AssociationReference.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.ASSOCIATION_REFERENCE__NAME: return WebuiPackage.UNIT_ASSOCIATION__NAME;

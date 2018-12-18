@@ -17,6 +17,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getWebUI <em>Web UI</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getParentPage <em>Parent Page</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getChildPages <em>Child Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getUnits <em>Units</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Page#getStyleClass <em>Style Class</em>}</li>
  * </ul>
@@ -26,7 +27,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL contentUnitNameUniqueWithinPage='units-&gt;isUnique(name)'"
  * @generated
  */
-public interface Page extends NamedDisplayElement, UnitContainer {
+public interface Page extends NamedDisplayElement {
 	/**
 	 * Returns the value of the '<em><b>Web UI</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}'.
@@ -98,6 +99,24 @@ public interface Page extends NamedDisplayElement, UnitContainer {
 	 * @generated
 	 */
 	EList<PageLink> getChildPages();
+
+	/**
+	 * Returns the value of the '<em><b>Units</b></em>' containment reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.ContentUnit}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Units</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Units</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getPage_Units()
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn
+	 * @model opposite="displayedOn" containment="true"
+	 * @generated
+	 */
+	EList<ContentUnit> getUnits();
 
 	/**
 	 * Returns the value of the '<em><b>Uri Element</b></em>' attribute.

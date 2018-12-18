@@ -23,7 +23,6 @@ import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
-import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -233,9 +232,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnitContainer getDisplayedOn() {
+	public Page getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON) return null;
-		return (UnitContainer)eInternalContainer();
+		return (Page)eInternalContainer();
 	}
 
 	/**
@@ -243,7 +242,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDisplayedOn(UnitContainer newDisplayedOn, NotificationChain msgs) {
+	public NotificationChain basicSetDisplayedOn(Page newDisplayedOn, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newDisplayedOn, WebuiPackage.CONTENT_UNIT__DISPLAYED_ON, msgs);
 		return msgs;
 	}
@@ -253,7 +252,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplayedOn(UnitContainer newDisplayedOn) {
+	public void setDisplayedOn(Page newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -261,7 +260,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDisplayedOn != null)
-				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.UNIT_CONTAINER__UNITS, UnitContainer.class, msgs);
+				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
 			msgs = basicSetDisplayedOn(newDisplayedOn, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -467,7 +466,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDisplayedOn((UnitContainer)otherEnd, msgs);
+				return basicSetDisplayedOn((Page)otherEnd, msgs);
 			case WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRouteActuals()).basicAdd(otherEnd, msgs);
 		}
@@ -499,7 +498,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				return eInternalContainer().eInverseRemove(this, WebuiPackage.UNIT_CONTAINER__UNITS, UnitContainer.class, msgs);
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -547,7 +546,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				setDisplayedOn((UnitContainer)newValue);
+				setDisplayedOn((Page)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement((Boolean)newValue);
@@ -587,7 +586,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				setDisplayedOn((UnitContainer)null);
+				setDisplayedOn((Page)null);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement(CREATE_DEFAULT_URI_ELEMENT_EDEFAULT);

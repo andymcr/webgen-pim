@@ -175,7 +175,7 @@ rule EditStaticTextMenuEntry {
 	)
 }
 
--- @extends NamedDisplayElement, UnitContainer
+-- @extends NamedDisplayElement
 rule Page {
 	from website : Website!Page
 	to waf : WAF!Page (
@@ -186,6 +186,7 @@ rule Page {
 			else
 				website.parentPage.targetPage
 			endif,
+		units <- website.units,
 		styleClass <- website.styleClass.replaceAll(',', ' ')
 	)
 }
@@ -206,14 +207,6 @@ rule QueryParameter {
 		value <- website.value
 	)
 }
-
-abstract rule UnitContainer {
-	from website : Website!UnitContainer
-	to waf : WAF!UnitContainer (
-		units <- website.units
-	)
-}
-
 
 -- @extends NamedDisplayElement
 abstract rule ContentUnit {
@@ -323,7 +316,7 @@ rule UnitAttribute {
 	)
 }
 
--- @extends UnitFeature, UnitContainer, AssociationReference
+-- @extends UnitFeature, AssociationReference
 rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (

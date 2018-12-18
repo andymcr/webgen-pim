@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.PageLink;
-import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -32,10 +31,10 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getUnits <em>Units</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getWebUI <em>Web UI</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getParentPage <em>Parent Page</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getChildPages <em>Child Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getUnits <em>Units</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
@@ -43,16 +42,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class PageImpl extends NamedDisplayElementImpl implements Page {
-	/**
-	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnits()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ContentUnit> units;
-
 	/**
 	 * The cached value of the '{@link #getParentPage() <em>Parent Page</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -72,6 +61,16 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * @ordered
 	 */
 	protected EList<PageLink> childPages;
+
+	/**
+	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnits()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ContentUnit> units;
 
 	/**
 	 * The default value of the '{@link #getUriElement() <em>Uri Element</em>}' attribute.
@@ -291,14 +290,14 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUnits()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.PAGE__WEB_UI:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetWebUI((WebUI)otherEnd, msgs);
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChildPages()).basicAdd(otherEnd, msgs);
+			case WebuiPackage.PAGE__UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUnits()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -311,14 +310,14 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.PAGE__WEB_UI:
 				return basicSetWebUI(null, msgs);
 			case WebuiPackage.PAGE__PARENT_PAGE:
 				return basicSetParentPage(null, msgs);
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				return ((InternalEList<?>)getChildPages()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.PAGE__UNITS:
+				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -345,14 +344,14 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				return getUnits();
 			case WebuiPackage.PAGE__WEB_UI:
 				return getWebUI();
 			case WebuiPackage.PAGE__PARENT_PAGE:
 				return getParentPage();
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				return getChildPages();
+			case WebuiPackage.PAGE__UNITS:
+				return getUnits();
 			case WebuiPackage.PAGE__URI_ELEMENT:
 				return getUriElement();
 			case WebuiPackage.PAGE__STYLE_CLASS:
@@ -370,10 +369,6 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				getUnits().clear();
-				getUnits().addAll((Collection<? extends ContentUnit>)newValue);
-				return;
 			case WebuiPackage.PAGE__WEB_UI:
 				setWebUI((WebUI)newValue);
 				return;
@@ -383,6 +378,10 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				getChildPages().clear();
 				getChildPages().addAll((Collection<? extends PageLink>)newValue);
+				return;
+			case WebuiPackage.PAGE__UNITS:
+				getUnits().clear();
+				getUnits().addAll((Collection<? extends ContentUnit>)newValue);
 				return;
 			case WebuiPackage.PAGE__URI_ELEMENT:
 				setUriElement((String)newValue);
@@ -402,9 +401,6 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				getUnits().clear();
-				return;
 			case WebuiPackage.PAGE__WEB_UI:
 				setWebUI((WebUI)null);
 				return;
@@ -413,6 +409,9 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 				return;
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				getChildPages().clear();
+				return;
+			case WebuiPackage.PAGE__UNITS:
+				getUnits().clear();
 				return;
 			case WebuiPackage.PAGE__URI_ELEMENT:
 				setUriElement(URI_ELEMENT_EDEFAULT);
@@ -432,52 +431,20 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.PAGE__UNITS:
-				return units != null && !units.isEmpty();
 			case WebuiPackage.PAGE__WEB_UI:
 				return getWebUI() != null;
 			case WebuiPackage.PAGE__PARENT_PAGE:
 				return parentPage != null;
 			case WebuiPackage.PAGE__CHILD_PAGES:
 				return childPages != null && !childPages.isEmpty();
+			case WebuiPackage.PAGE__UNITS:
+				return units != null && !units.isEmpty();
 			case WebuiPackage.PAGE__URI_ELEMENT:
 				return URI_ELEMENT_EDEFAULT == null ? uriElement != null : !URI_ELEMENT_EDEFAULT.equals(uriElement);
 			case WebuiPackage.PAGE__STYLE_CLASS:
 				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == UnitContainer.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.PAGE__UNITS: return WebuiPackage.UNIT_CONTAINER__UNITS;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == UnitContainer.class) {
-			switch (baseFeatureID) {
-				case WebuiPackage.UNIT_CONTAINER__UNITS: return WebuiPackage.PAGE__UNITS;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

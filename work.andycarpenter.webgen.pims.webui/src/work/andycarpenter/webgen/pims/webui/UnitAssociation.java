@@ -27,7 +27,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() implies\r\n\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\r\n\t\t-&gt;select(s : service::Service | s.serves = targetEntity)\r\n\t\t-&gt;collect(s : service::Service | s.selections)\r\n\t\t-&gt;includes(options)'"
  * @generated
  */
-public interface UnitAssociation extends UnitFeature, UnitContainer, AssociationReference {
+public interface UnitAssociation extends UnitFeature, AssociationReference {
 	/**
 	 * Returns the value of the '<em><b>Is Source Association</b></em>' attribute.
 	 * <!-- begin-user-doc -->

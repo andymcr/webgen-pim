@@ -140,7 +140,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				Page page = (Page)theEObject;
 				T result = casePage(page);
 				if (result == null) result = caseNamedDisplayElement(page);
-				if (result == null) result = caseUnitContainer(page);
 				if (result == null) result = caseNamedElement(page);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -148,12 +147,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.PAGE_LINK: {
 				PageLink pageLink = (PageLink)theEObject;
 				T result = casePageLink(pageLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.UNIT_CONTAINER: {
-				UnitContainer unitContainer = (UnitContainer)theEObject;
-				T result = caseUnitContainer(unitContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -225,7 +218,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitAssociation unitAssociation = (UnitAssociation)theEObject;
 				T result = caseUnitAssociation(unitAssociation);
 				if (result == null) result = caseUnitFeature(unitAssociation);
-				if (result == null) result = caseUnitContainer(unitAssociation);
 				if (result == null) result = caseAssociationReference(unitAssociation);
 				if (result == null) result = caseUnitField(unitAssociation);
 				if (result == null) result = caseInlineActionContainer(unitAssociation);
@@ -833,21 +825,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePageLink(PageLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unit Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unit Container</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUnitContainer(UnitContainer object) {
 		return null;
 	}
 

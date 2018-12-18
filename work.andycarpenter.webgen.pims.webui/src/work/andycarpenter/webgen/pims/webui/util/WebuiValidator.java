@@ -116,8 +116,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePage((Page)value, diagnostics, context);
 			case WebuiPackage.PAGE_LINK:
 				return validatePageLink((PageLink)value, diagnostics, context);
-			case WebuiPackage.UNIT_CONTAINER:
-				return validateUnitContainer((UnitContainer)value, diagnostics, context);
 			case WebuiPackage.CONTENT_UNIT:
 				return validateContentUnit((ContentUnit)value, diagnostics, context);
 			case WebuiPackage.ROUTE_ACTUAL:
@@ -485,15 +483,6 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validatePageLink(PageLink pageLink, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pageLink, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateUnitContainer(UnitContainer unitContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(unitContainer, diagnostics, context);
 	}
 
 	/**

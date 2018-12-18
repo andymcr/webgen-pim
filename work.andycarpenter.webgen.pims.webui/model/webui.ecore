@@ -84,7 +84,7 @@
     <eLiterals name="AlwaysInclude"/>
     <eLiterals name="IncludeWhenAuthenticated"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement #//UnitContainer">
+  <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="contentUnitNameUniqueWithinPage"/>
     </eAnnotations>
@@ -97,6 +97,8 @@
         eType="#//PageLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="childPages" upperBound="-1"
         eType="#//PageLink" eOpposite="#//PageLink/targetPage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
+        eType="#//ContentUnit" containment="true" eOpposite="#//ContentUnit/displayedOn"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleClass" ordered="false"
@@ -106,13 +108,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetPage" lowerBound="1"
         eType="#//Page" eOpposite="#//Page/childPages"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnitContainer" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
-        eType="#//ContentUnit" containment="true" eOpposite="#//ContentUnit/displayedOn"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContentUnit" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" ordered="false"
-        lowerBound="1" eType="#//UnitContainer" eOpposite="#//UnitContainer/units"/>
+        lowerBound="1" eType="#//Page" eOpposite="#//Page/units"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createDefaultUriElement"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="routeActuals" upperBound="-1"
@@ -271,7 +269,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationPattern" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnitAssociation" eSuperTypes="#//UnitFeature #//UnitContainer #//AssociationReference">
+  <eClassifiers xsi:type="ecore:EClass" name="UnitAssociation" eSuperTypes="#//UnitFeature #//AssociationReference">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="optionsValidChoice"/>
     </eAnnotations>

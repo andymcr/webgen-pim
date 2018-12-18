@@ -33,7 +33,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 public interface ContentUnit extends NamedDisplayElement {
 	/**
 	 * Returns the value of the '<em><b>Displayed On</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.UnitContainer#getUnits <em>Units</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Page#getUnits <em>Units</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Displayed On</em>' container reference isn't clear,
@@ -41,13 +41,13 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displayed On</em>' container reference.
-	 * @see #setDisplayedOn(UnitContainer)
+	 * @see #setDisplayedOn(Page)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_DisplayedOn()
-	 * @see work.andycarpenter.webgen.pims.webui.UnitContainer#getUnits
+	 * @see work.andycarpenter.webgen.pims.webui.Page#getUnits
 	 * @model opposite="units" required="true" transient="false" ordered="false"
 	 * @generated
 	 */
-	UnitContainer getDisplayedOn();
+	Page getDisplayedOn();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}' container reference.
@@ -57,7 +57,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @see #getDisplayedOn()
 	 * @generated
 	 */
-	void setDisplayedOn(UnitContainer value);
+	void setDisplayedOn(Page value);
 
 	/**
 	 * Returns the value of the '<em><b>Create Default Uri Element</b></em>' attribute.

@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
-import work.andycarpenter.webgen.pims.webui.UnitContainer;
 import work.andycarpenter.webgen.pims.webui.UnitField;
 import work.andycarpenter.webgen.pims.webui.UnitSupportAction;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -609,9 +608,9 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnitContainer getDisplayedOn() {
+	public Page getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON) return null;
-		return (UnitContainer)eInternalContainer();
+		return (Page)eInternalContainer();
 	}
 
 	/**
@@ -619,7 +618,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDisplayedOn(UnitContainer newDisplayedOn, NotificationChain msgs) {
+	public NotificationChain basicSetDisplayedOn(Page newDisplayedOn, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newDisplayedOn, WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON, msgs);
 		return msgs;
 	}
@@ -629,7 +628,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisplayedOn(UnitContainer newDisplayedOn) {
+	public void setDisplayedOn(Page newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -637,7 +636,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDisplayedOn != null)
-				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.UNIT_CONTAINER__UNITS, UnitContainer.class, msgs);
+				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
 			msgs = basicSetDisplayedOn(newDisplayedOn, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -1191,7 +1190,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 			case WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDisplayedOn((UnitContainer)otherEnd, msgs);
+				return basicSetDisplayedOn((Page)otherEnd, msgs);
 			case WebuiPackage.REGISTRATION_UNIT__ROUTE_ACTUALS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRouteActuals()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.REGISTRATION_UNIT__DISPLAY_FIELDS:
@@ -1231,7 +1230,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON:
-				return eInternalContainer().eInverseRemove(this, WebuiPackage.UNIT_CONTAINER__UNITS, UnitContainer.class, msgs);
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -1322,7 +1321,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 				setDisplayLabel((String)newValue);
 				return;
 			case WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON:
-				setDisplayedOn((UnitContainer)newValue);
+				setDisplayedOn((Page)newValue);
 				return;
 			case WebuiPackage.REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement((Boolean)newValue);
@@ -1419,7 +1418,7 @@ public class RegistrationUnitImpl extends MinimalEObjectImpl.Container implement
 				setDisplayLabel(DISPLAY_LABEL_EDEFAULT);
 				return;
 			case WebuiPackage.REGISTRATION_UNIT__DISPLAYED_ON:
-				setDisplayedOn((UnitContainer)null);
+				setDisplayedOn((Page)null);
 				return;
 			case WebuiPackage.REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement(CREATE_DEFAULT_URI_ELEMENT_EDEFAULT);

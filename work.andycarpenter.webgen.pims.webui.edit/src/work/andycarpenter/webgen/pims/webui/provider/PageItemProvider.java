@@ -114,8 +114,8 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.UNIT_CONTAINER__UNITS);
 			childrenFeatures.add(WebuiPackage.Literals.PAGE__PARENT_PAGE);
+			childrenFeatures.add(WebuiPackage.Literals.PAGE__UNITS);
 		}
 		return childrenFeatures;
 	}
@@ -175,8 +175,8 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 			case WebuiPackage.PAGE__STYLE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case WebuiPackage.PAGE__UNITS:
 			case WebuiPackage.PAGE__PARENT_PAGE:
+			case WebuiPackage.PAGE__UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,93 +196,93 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__PARENT_PAGE,
+				 WebuiFactory.eINSTANCE.createPageLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createStaticUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createCreateSitemapUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createCreateUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createCreateUpdateUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createUpdateUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createMapUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createDetailsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createIndexUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createTextCardsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createDateCardsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createImageCardsUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createSliderUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createGalleryUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createSearchUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createRegistrationUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createLoginUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.UNIT_CONTAINER__UNITS,
+				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createForgottenPasswordUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.PAGE__PARENT_PAGE,
-				 WebuiFactory.eINSTANCE.createPageLink()));
 	}
 
 	/**

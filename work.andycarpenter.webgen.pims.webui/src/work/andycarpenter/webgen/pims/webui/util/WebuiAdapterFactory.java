@@ -115,10 +115,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createPageLinkAdapter();
 			}
 			@Override
-			public Adapter caseUnitContainer(UnitContainer object) {
-				return createUnitContainerAdapter();
-			}
-			@Override
 			public Adapter caseContentUnit(ContentUnit object) {
 				return createContentUnitAdapter();
 			}
@@ -513,20 +509,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPageLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.UnitContainer <em>Unit Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitContainer
-	 * @generated
-	 */
-	public Adapter createUnitContainerAdapter() {
 		return null;
 	}
 
