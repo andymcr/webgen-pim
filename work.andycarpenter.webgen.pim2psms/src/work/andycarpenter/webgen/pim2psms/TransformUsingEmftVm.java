@@ -217,25 +217,24 @@ public class TransformUsingEmftVm {
 			final Model wafModel = executePassCreatingOutputModel("InterfaceExplicit",
 				wafModelName, "waf", wafInputModels, wafTraceModelP1);
 	
-			final Model wafTraceModelP5 = createModel("trace_waf_p5");
-			executeRefiningPass("PassImplicitStaticInterface", wafModelName,
+			final Model wafTraceModelP5 = createModel("trace_waf_p2");
+			executeRefiningPass("InterfaceImplicitStatic", wafModelName,
 				wafModel, wafInputModels, wafTraceModelP5);
 	
-			final Model wafTraceModelP6 = createModel("trace_waf_p6");
-			executeRefiningPass("PassImplicitUnitFields", wafModelName, wafModel,
+			final Model wafTraceModelP6 = createModel("trace_waf_p3");
+			executeRefiningPass("InterfaceImplicitFields", wafModelName, wafModel,
 				wafInputModels, wafTraceModelP6);
 	
-			final Model wafTraceModelP7 = createModel("trace_waf_p7");
+			final Model wafTraceModelP7 = createModel("trace_waf_p4");
 			executeRefiningPass("PassAuthentication", wafModelName, wafModel,
 				wafInputModels, wafTraceModelP7);
 	
-			final Model wafTraceModelP8 = createModel("trace_waf_p8");
+			final Model wafTraceModelP8 = createModel("trace_waf_p5");
 			executeRefiningPass("PassAuthentication2", wafModelName, wafModel,
 				wafInputModels, wafTraceModelP8);
 			wafModel.getResource().save(Collections.emptyMap());
 		} catch (Exception e) {
 			System.err.println(e);
-//			System.err.println(e.getCause());
 			throw new Error(e);
 		}
 	}

@@ -4,7 +4,7 @@
 -- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
 -- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.ecore
 
-module PassImplicitUnitFields;
+module InterfaceImplicitFields;
 create dummyWaf : WAF refining waf : WAF, orm : ORM;
 
 uses WebsiteHelpers;
@@ -97,7 +97,7 @@ lazy abstract rule implicitUnitFeature {
 	from partialWaf : WAF!Feature
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
-		title <- partialWaf.name.createLabel(),
+		title <- partialWaf.displayLabel,
 		headerClass <-
 			let feature : Website!Feature
 				= thisModule.findWebsiteEntity(partialWaf.partOf.name)

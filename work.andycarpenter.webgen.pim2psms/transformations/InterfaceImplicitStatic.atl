@@ -4,7 +4,7 @@
 -- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.xcore
 -- @path WAF=/uk.ac.man.cs.mdsd.waf.model/model/Waf.xcore
 
-module PassImplicitStaticInterface;
+module InterfaceImplicitStatic;
 create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM;
 
 uses WebsiteHelpers;
