@@ -56,7 +56,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ORM_TYPE_EDEFAULT = null;
+	protected static final String ORM_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getOrmType() <em>Orm Type</em>}' attribute.
@@ -76,7 +76,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERFACE_TYPE_EDEFAULT = null;
+	protected static final String INTERFACE_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getInterfaceType() <em>Interface Type</em>}' attribute.
@@ -96,7 +96,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALIDATION_PATTERN_EDEFAULT = null;
+	protected static final String VALIDATION_PATTERN_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.
@@ -132,6 +132,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPersistentType() {
 		return persistentType;
 	}
@@ -141,6 +142,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPersistentType(String newPersistentType) {
 		String oldPersistentType = persistentType;
 		persistentType = newPersistentType;
@@ -153,6 +155,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOrmType() {
 		return ormType;
 	}
@@ -162,6 +165,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrmType(String newOrmType) {
 		String oldOrmType = ormType;
 		ormType = newOrmType;
@@ -174,6 +178,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInterfaceType() {
 		return interfaceType;
 	}
@@ -183,6 +188,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterfaceType(String newInterfaceType) {
 		String oldInterfaceType = interfaceType;
 		interfaceType = newInterfaceType;
@@ -195,6 +201,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -204,6 +211,7 @@ public class DataTypeImpl extends ClassifierImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidationPattern(String newValidationPattern) {
 		String oldValidationPattern = validationPattern;
 		validationPattern = newValidationPattern;

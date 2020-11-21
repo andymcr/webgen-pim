@@ -133,6 +133,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColor() {
 		return color;
 	}
@@ -142,6 +143,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColor(String newColor) {
 		String oldColor = color;
 		color = newColor;
@@ -154,6 +156,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -163,6 +166,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -175,6 +179,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -184,6 +189,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -196,6 +202,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BackgroundPositions getPosition() {
 		return position;
 	}
@@ -205,6 +212,7 @@ public class BackgroundFilterImpl extends ImageFilterImpl implements BackgroundF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosition(BackgroundPositions newPosition) {
 		BackgroundPositions oldPosition = position;
 		position = newPosition == null ? POSITION_EDEFAULT : newPosition;

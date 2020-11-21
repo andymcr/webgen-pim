@@ -566,6 +566,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Label getUnitTitle() {
 		if (unitTitle != null && unitTitle.eIsProxy()) {
 			InternalEObject oldUnitTitle = (InternalEObject)unitTitle;
@@ -592,6 +593,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnitTitle(Label newUnitTitle) {
 		Label oldUnitTitle = unitTitle;
 		unitTitle = newUnitTitle;
@@ -604,6 +606,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getElementTitle() {
 		return elementTitle;
 	}
@@ -628,6 +631,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElementTitle(FeaturePath newElementTitle) {
 		if (newElementTitle != elementTitle) {
 			NotificationChain msgs = null;
@@ -647,6 +651,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTruncateElementTitle() {
 		return truncateElementTitle;
 	}
@@ -656,6 +661,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTruncateElementTitle(boolean newTruncateElementTitle) {
 		boolean oldTruncateElementTitle = truncateElementTitle;
 		truncateElementTitle = newTruncateElementTitle;
@@ -668,6 +674,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Entity> getContentType() {
 		if (contentType == null) {
 			contentType = new EObjectResolvingEList<Entity>(Entity.class, this, WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE);
@@ -680,6 +687,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getSelection() {
 		if (selection != null && selection.eIsProxy()) {
 			InternalEObject oldSelection = (InternalEObject)selection;
@@ -706,6 +714,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Selection newSelection) {
 		Selection oldSelection = selection;
 		selection = newSelection;
@@ -718,6 +727,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getFindContainerSelection() {
 		if (findContainerSelection != null && findContainerSelection.eIsProxy()) {
 			InternalEObject oldFindContainerSelection = (InternalEObject)findContainerSelection;
@@ -744,6 +754,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFindContainerSelection(Selection newFindContainerSelection) {
 		Selection oldFindContainerSelection = findContainerSelection;
 		findContainerSelection = newFindContainerSelection;
@@ -756,6 +767,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitContainerLoad() {
 		return omitContainerLoad;
 	}
@@ -765,6 +777,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitContainerLoad(boolean newOmitContainerLoad) {
 		boolean oldOmitContainerLoad = omitContainerLoad;
 		omitContainerLoad = newOmitContainerLoad;
@@ -777,6 +790,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getFindElementSelection() {
 		if (findElementSelection != null && findElementSelection.eIsProxy()) {
 			InternalEObject oldFindElementSelection = (InternalEObject)findElementSelection;
@@ -803,6 +817,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFindElementSelection(Selection newFindElementSelection) {
 		Selection oldFindElementSelection = findElementSelection;
 		findElementSelection = newFindElementSelection;
@@ -815,6 +830,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Filter getFilter() {
 		if (filter != null && filter.eIsProxy()) {
 			InternalEObject oldFilter = (InternalEObject)filter;
@@ -841,6 +857,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFilter(Filter newFilter) {
 		Filter oldFilter = filter;
 		filter = newFilter;
@@ -853,6 +870,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Filter> getSupportedFilters() {
 		if (supportedFilters == null) {
 			supportedFilters = new EObjectResolvingEList<Filter>(Filter.class, this, WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS);
@@ -865,6 +883,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEmptyMessage() {
 		return emptyMessage;
 	}
@@ -874,6 +893,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEmptyMessage(String newEmptyMessage) {
 		String oldEmptyMessage = emptyMessage;
 		emptyMessage = newEmptyMessage;
@@ -886,6 +906,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getDefaultPaginationSize() {
 		return defaultPaginationSize;
 	}
@@ -895,6 +916,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultPaginationSize(int newDefaultPaginationSize) {
 		int oldDefaultPaginationSize = defaultPaginationSize;
 		defaultPaginationSize = newDefaultPaginationSize;
@@ -907,6 +929,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMaximumPaginationSize() {
 		return maximumPaginationSize;
 	}
@@ -916,6 +939,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaximumPaginationSize(int newMaximumPaginationSize) {
 		int oldMaximumPaginationSize = maximumPaginationSize;
 		maximumPaginationSize = newMaximumPaginationSize;
@@ -928,6 +952,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaginationControlPlacements getPaginationControlPlacement() {
 		return paginationControlPlacement;
 	}
@@ -937,6 +962,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaginationControlPlacement(PaginationControlPlacements newPaginationControlPlacement) {
 		PaginationControlPlacements oldPaginationControlPlacement = paginationControlPlacement;
 		paginationControlPlacement = newPaginationControlPlacement == null ? PAGINATION_CONTROL_PLACEMENT_EDEFAULT : newPaginationControlPlacement;
@@ -949,6 +975,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNextNpages() {
 		return nextNpages;
 	}
@@ -958,6 +985,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNextNpages(int newNextNpages) {
 		int oldNextNpages = nextNpages;
 		nextNpages = newNextNpages;
@@ -970,6 +998,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPreviousNpages() {
 		return previousNpages;
 	}
@@ -979,6 +1008,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreviousNpages(int newPreviousNpages) {
 		int oldPreviousNpages = previousNpages;
 		previousNpages = newPreviousNpages;
@@ -991,6 +1021,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNextPageLabel() {
 		return nextPageLabel;
 	}
@@ -1000,6 +1031,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNextPageLabel(String newNextPageLabel) {
 		String oldNextPageLabel = nextPageLabel;
 		nextPageLabel = newNextPageLabel;
@@ -1012,6 +1044,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNextPageIconName() {
 		return nextPageIconName;
 	}
@@ -1021,6 +1054,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNextPageIconName(String newNextPageIconName) {
 		String oldNextPageIconName = nextPageIconName;
 		nextPageIconName = newNextPageIconName;
@@ -1033,6 +1067,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPreviousPageLabel() {
 		return previousPageLabel;
 	}
@@ -1042,6 +1077,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreviousPageLabel(String newPreviousPageLabel) {
 		String oldPreviousPageLabel = previousPageLabel;
 		previousPageLabel = newPreviousPageLabel;
@@ -1054,6 +1090,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPreviousPageIconName() {
 		return previousPageIconName;
 	}
@@ -1063,6 +1100,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreviousPageIconName(String newPreviousPageIconName) {
 		String oldPreviousPageIconName = previousPageIconName;
 		previousPageIconName = newPreviousPageIconName;
@@ -1075,6 +1113,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUseDisabledPageLinks() {
 		return useDisabledPageLinks;
 	}
@@ -1084,6 +1123,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseDisabledPageLinks(boolean newUseDisabledPageLinks) {
 		boolean oldUseDisabledPageLinks = useDisabledPageLinks;
 		useDisabledPageLinks = newUseDisabledPageLinks;
@@ -1096,6 +1136,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUseFirstLastPageLinks() {
 		return useFirstLastPageLinks;
 	}
@@ -1105,6 +1146,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseFirstLastPageLinks(boolean newUseFirstLastPageLinks) {
 		boolean oldUseFirstLastPageLinks = useFirstLastPageLinks;
 		useFirstLastPageLinks = newUseFirstLastPageLinks;
@@ -1117,6 +1159,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFirstPageLabel() {
 		return firstPageLabel;
 	}
@@ -1126,6 +1169,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstPageLabel(String newFirstPageLabel) {
 		String oldFirstPageLabel = firstPageLabel;
 		firstPageLabel = newFirstPageLabel;
@@ -1138,6 +1182,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFirstPageIconName() {
 		return firstPageIconName;
 	}
@@ -1147,6 +1192,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstPageIconName(String newFirstPageIconName) {
 		String oldFirstPageIconName = firstPageIconName;
 		firstPageIconName = newFirstPageIconName;
@@ -1159,6 +1205,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLastPageLabel() {
 		return lastPageLabel;
 	}
@@ -1168,6 +1215,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastPageLabel(String newLastPageLabel) {
 		String oldLastPageLabel = lastPageLabel;
 		lastPageLabel = newLastPageLabel;
@@ -1180,6 +1228,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLastPageIconName() {
 		return lastPageIconName;
 	}
@@ -1189,6 +1238,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastPageIconName(String newLastPageIconName) {
 		String oldLastPageIconName = lastPageIconName;
 		lastPageIconName = newLastPageIconName;
@@ -1201,6 +1251,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPaginationClass() {
 		return paginationClass;
 	}
@@ -1210,6 +1261,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaginationClass(String newPaginationClass) {
 		String oldPaginationClass = paginationClass;
 		paginationClass = newPaginationClass;
@@ -1222,6 +1274,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPaginationElementClass() {
 		return paginationElementClass;
 	}
@@ -1231,6 +1284,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaginationElementClass(String newPaginationElementClass) {
 		String oldPaginationElementClass = paginationElementClass;
 		paginationElementClass = newPaginationElementClass;

@@ -87,6 +87,7 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -96,6 +97,7 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -108,6 +110,7 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayLabel() {
 		return displayLabel;
 	}
@@ -117,6 +120,7 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayLabel(String newDisplayLabel) {
 		String oldDisplayLabel = displayLabel;
 		displayLabel = newDisplayLabel;

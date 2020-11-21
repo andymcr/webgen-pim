@@ -72,6 +72,7 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -81,6 +82,7 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getAttribute() {
 		if (attribute != null && attribute.eIsProxy()) {
 			InternalEObject oldAttribute = (InternalEObject)attribute;
@@ -107,6 +109,7 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttribute(Attribute newAttribute) {
 		Attribute oldAttribute = attribute;
 		attribute = newAttribute;

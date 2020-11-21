@@ -603,11 +603,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overlaySingleSelectAction"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="row"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="container"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="row row-cols-1 row-cols-md-3 row-cols-lg-4"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="col s12 m6 l3"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="col-sm-12 col-md-6 col-lg-3"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card hoverable"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card h-100"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Badge">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"

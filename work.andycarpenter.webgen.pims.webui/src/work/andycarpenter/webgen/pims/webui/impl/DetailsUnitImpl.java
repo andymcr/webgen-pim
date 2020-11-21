@@ -122,6 +122,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getSelection() {
 		if (selection != null && selection.eIsProxy()) {
 			InternalEObject oldSelection = (InternalEObject)selection;
@@ -148,6 +149,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Selection newSelection) {
 		Selection oldSelection = selection;
 		selection = newSelection;
@@ -160,6 +162,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitFieldLabels() {
 		return omitFieldLabels;
 	}
@@ -169,6 +172,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitFieldLabels(boolean newOmitFieldLabels) {
 		boolean oldOmitFieldLabels = omitFieldLabels;
 		omitFieldLabels = newOmitFieldLabels;
@@ -181,6 +185,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -190,6 +195,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -202,6 +208,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -211,6 +218,7 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

@@ -69,6 +69,7 @@ public class ConstantImpl extends NamedElementImpl implements Constant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Service getDefinedBy() {
 		if (eContainerFeatureID() != ServicePackage.CONSTANT__DEFINED_BY) return null;
 		return (Service)eInternalContainer();
@@ -89,6 +90,7 @@ public class ConstantImpl extends NamedElementImpl implements Constant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinedBy(Service newDefinedBy) {
 		if (newDefinedBy != eInternalContainer() || (eContainerFeatureID() != ServicePackage.CONSTANT__DEFINED_BY && newDefinedBy != null)) {
 			if (EcoreUtil.isAncestor(this, newDefinedBy))
@@ -110,6 +112,7 @@ public class ConstantImpl extends NamedElementImpl implements Constant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getValue() {
 		return value;
 	}
@@ -134,6 +137,7 @@ public class ConstantImpl extends NamedElementImpl implements Constant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Expression newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

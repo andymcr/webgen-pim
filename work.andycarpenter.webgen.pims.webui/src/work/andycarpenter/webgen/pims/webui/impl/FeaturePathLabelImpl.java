@@ -74,6 +74,7 @@ public class FeaturePathLabelImpl extends FeaturePathImpl implements FeaturePath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -83,6 +84,7 @@ public class FeaturePathLabelImpl extends FeaturePathImpl implements FeaturePath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel getLabel() {
 		if (label != null && label.eIsProxy()) {
 			InternalEObject oldLabel = (InternalEObject)label;
@@ -109,6 +111,7 @@ public class FeaturePathLabelImpl extends FeaturePathImpl implements FeaturePath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(ModelLabel newLabel) {
 		ModelLabel oldLabel = label;
 		label = newLabel;

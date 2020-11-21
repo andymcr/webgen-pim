@@ -129,6 +129,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FormalParameterList getFormalFor() {
 		if (eContainerFeatureID() != BasePackage.FORMAL_PARAMETER__FORMAL_FOR) return null;
 		return (FormalParameterList)eInternalContainer();
@@ -149,6 +150,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormalFor(FormalParameterList newFormalFor) {
 		if (newFormalFor != eInternalContainer() || (eContainerFeatureID() != BasePackage.FORMAL_PARAMETER__FORMAL_FOR && newFormalFor != null)) {
 			if (EcoreUtil.isAncestor(this, newFormalFor))
@@ -170,6 +172,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultValue() {
 		return defaultValue;
 	}
@@ -179,6 +182,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(String newDefaultValue) {
 		String oldDefaultValue = defaultValue;
 		defaultValue = newDefaultValue;
@@ -191,6 +195,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType getDataType() {
 		if (dataType != null && dataType.eIsProxy()) {
 			InternalEObject oldDataType = (InternalEObject)dataType;
@@ -217,6 +222,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataType(DataType newDataType) {
 		DataType oldDataType = dataType;
 		dataType = newDataType;
@@ -229,6 +235,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPlaceholder() {
 		return placeholder;
 	}
@@ -238,6 +245,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlaceholder(String newPlaceholder) {
 		String oldPlaceholder = placeholder;
 		placeholder = newPlaceholder;
@@ -250,6 +258,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -259,6 +268,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;

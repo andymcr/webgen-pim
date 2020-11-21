@@ -118,6 +118,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -127,6 +128,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -139,6 +141,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayLabel() {
 		return displayLabel;
 	}
@@ -148,6 +151,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayLabel(String newDisplayLabel) {
 		String oldDisplayLabel = displayLabel;
 		displayLabel = newDisplayLabel;
@@ -160,6 +164,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContentUnit getDestination() {
 		if (destination != null && destination.eIsProxy()) {
 			InternalEObject oldDestination = (InternalEObject)destination;
@@ -186,6 +191,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestination(ContentUnit newDestination) {
 		ContentUnit oldDestination = destination;
 		destination = newDestination;
@@ -198,6 +204,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Query getQuery() {
 		return query;
 	}
@@ -222,6 +229,7 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuery(Query newQuery) {
 		if (newQuery != query) {
 			NotificationChain msgs = null;

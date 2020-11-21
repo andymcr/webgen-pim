@@ -69,6 +69,7 @@ public abstract class NamedDisplayElementImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayLabel() {
 		return displayLabel;
 	}
@@ -78,6 +79,7 @@ public abstract class NamedDisplayElementImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayLabel(String newDisplayLabel) {
 		String oldDisplayLabel = displayLabel;
 		displayLabel = newDisplayLabel;

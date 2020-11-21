@@ -111,6 +111,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContent() {
 		return content;
 	}
@@ -120,6 +121,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContent(String newContent) {
 		String oldContent = content;
 		content = newContent;
@@ -132,6 +134,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -141,6 +144,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -153,6 +157,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -162,6 +167,7 @@ public class StaticUnitImpl extends ContentUnitImpl implements StaticUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

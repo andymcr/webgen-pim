@@ -150,6 +150,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImage() {
 		return imageEClass;
 	}
@@ -159,6 +160,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImage_Manipulations() {
 		return (EReference)imageEClass.getEStructuralFeatures().get(0);
 	}
@@ -168,6 +170,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImageManipulation() {
 		return imageManipulationEClass;
 	}
@@ -177,6 +180,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageManipulation_JpegQuality() {
 		return (EAttribute)imageManipulationEClass.getEStructuralFeatures().get(0);
 	}
@@ -186,6 +190,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImageManipulation_Filters() {
 		return (EReference)imageManipulationEClass.getEStructuralFeatures().get(1);
 	}
@@ -195,6 +200,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBackgroundFilter() {
 		return backgroundFilterEClass;
 	}
@@ -204,6 +210,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBackgroundFilter_Color() {
 		return (EAttribute)backgroundFilterEClass.getEStructuralFeatures().get(0);
 	}
@@ -213,6 +220,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBackgroundFilter_Width() {
 		return (EAttribute)backgroundFilterEClass.getEStructuralFeatures().get(1);
 	}
@@ -222,6 +230,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBackgroundFilter_Height() {
 		return (EAttribute)backgroundFilterEClass.getEStructuralFeatures().get(2);
 	}
@@ -231,6 +240,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBackgroundFilter_Position() {
 		return (EAttribute)backgroundFilterEClass.getEStructuralFeatures().get(3);
 	}
@@ -240,6 +250,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImageFilter() {
 		return imageFilterEClass;
 	}
@@ -249,6 +260,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThumbnailFilter() {
 		return thumbnailFilterEClass;
 	}
@@ -258,6 +270,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThumbnailFilter_Width() {
 		return (EAttribute)thumbnailFilterEClass.getEStructuralFeatures().get(0);
 	}
@@ -267,6 +280,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThumbnailFilter_Height() {
 		return (EAttribute)thumbnailFilterEClass.getEStructuralFeatures().get(1);
 	}
@@ -276,6 +290,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThumbnailFilter_Mode() {
 		return (EAttribute)thumbnailFilterEClass.getEStructuralFeatures().get(2);
 	}
@@ -285,6 +300,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getBackgroundPositions() {
 		return backgroundPositionsEEnum;
 	}
@@ -294,6 +310,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getThumbnailModes() {
 		return thumbnailModesEEnum;
 	}
@@ -303,6 +320,7 @@ public class ImagePackageImpl extends EPackageImpl implements ImagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageFactory getImageFactory() {
 		return (ImageFactory)getEFactoryInstance();
 	}

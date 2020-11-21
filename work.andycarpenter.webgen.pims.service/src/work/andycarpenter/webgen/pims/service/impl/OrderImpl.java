@@ -64,6 +64,7 @@ public abstract class OrderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getPath() {
 		return path;
 	}
@@ -88,6 +89,7 @@ public abstract class OrderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(Variable newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;

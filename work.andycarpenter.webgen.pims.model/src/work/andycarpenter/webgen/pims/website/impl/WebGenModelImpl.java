@@ -184,6 +184,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebsiteProperties getWebsiteProperties() {
 		return websiteProperties;
 	}
@@ -208,6 +209,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWebsiteProperties(WebsiteProperties newWebsiteProperties) {
 		if (newWebsiteProperties != websiteProperties) {
 			NotificationChain msgs = null;
@@ -227,6 +229,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrameworkTechnologies getFrameworkTechnology() {
 		return frameworkTechnology;
 	}
@@ -236,6 +239,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrameworkTechnology(FrameworkTechnologies newFrameworkTechnology) {
 		FrameworkTechnologies oldFrameworkTechnology = frameworkTechnology;
 		frameworkTechnology = newFrameworkTechnology == null ? FRAMEWORK_TECHNOLOGY_EDEFAULT : newFrameworkTechnology;
@@ -248,6 +252,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCopyrightText() {
 		return copyrightText;
 	}
@@ -257,6 +262,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyrightText(String newCopyrightText) {
 		String oldCopyrightText = copyrightText;
 		copyrightText = newCopyrightText;
@@ -269,6 +275,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Persistence getPersistence() {
 		return persistence;
 	}
@@ -293,6 +300,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPersistence(Persistence newPersistence) {
 		if (newPersistence != persistence) {
 			NotificationChain msgs = null;
@@ -312,6 +320,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Services getServices() {
 		return services;
 	}
@@ -336,6 +345,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServices(Services newServices) {
 		if (newServices != services) {
 			NotificationChain msgs = null;
@@ -355,6 +365,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image getImages() {
 		return images;
 	}
@@ -379,6 +390,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImages(Image newImages) {
 		if (newImages != images) {
 			NotificationChain msgs = null;
@@ -398,6 +410,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebUI getWebUI() {
 		return webUI;
 	}
@@ -422,6 +435,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWebUI(WebUI newWebUI) {
 		if (newWebUI != webUI) {
 			NotificationChain msgs = null;
@@ -441,6 +455,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public API getApi() {
 		return api;
 	}
@@ -465,6 +480,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApi(API newApi) {
 		if (newApi != api) {
 			NotificationChain msgs = null;
@@ -484,6 +500,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Security getSecurity() {
 		return security;
 	}
@@ -508,6 +525,7 @@ public class WebGenModelImpl extends EObjectImpl implements WebGenModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecurity(Security newSecurity) {
 		if (newSecurity != security) {
 			NotificationChain msgs = null;

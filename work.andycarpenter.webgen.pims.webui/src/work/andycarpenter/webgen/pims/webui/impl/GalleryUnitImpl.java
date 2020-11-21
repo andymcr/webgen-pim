@@ -145,6 +145,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getFullSizeFilter() {
 		if (fullSizeFilter != null && fullSizeFilter.eIsProxy()) {
 			InternalEObject oldFullSizeFilter = (InternalEObject)fullSizeFilter;
@@ -171,6 +172,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFullSizeFilter(ImageManipulation newFullSizeFilter) {
 		ImageManipulation oldFullSizeFilter = fullSizeFilter;
 		fullSizeFilter = newFullSizeFilter;
@@ -183,6 +185,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getShowTime() {
 		return showTime;
 	}
@@ -192,6 +195,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShowTime(int newShowTime) {
 		int oldShowTime = showTime;
 		showTime = newShowTime;
@@ -204,6 +208,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTransitionTime() {
 		return transitionTime;
 	}
@@ -213,6 +218,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransitionTime(int newTransitionTime) {
 		int oldTransitionTime = transitionTime;
 		transitionTime = newTransitionTime;
@@ -225,6 +231,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -234,6 +241,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -246,6 +254,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -255,6 +264,7 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

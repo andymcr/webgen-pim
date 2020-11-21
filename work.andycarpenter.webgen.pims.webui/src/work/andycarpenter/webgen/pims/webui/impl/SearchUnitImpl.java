@@ -82,6 +82,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IndexUnit getResultsDestination() {
 		if (resultsDestination != null && resultsDestination.eIsProxy()) {
 			InternalEObject oldResultsDestination = (InternalEObject)resultsDestination;
@@ -108,6 +109,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResultsDestination(IndexUnit newResultsDestination) {
 		IndexUnit oldResultsDestination = resultsDestination;
 		resultsDestination = newResultsDestination;
@@ -120,6 +122,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -129,6 +132,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

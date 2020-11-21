@@ -136,6 +136,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWebGenModel() {
 		return webGenModelEClass;
 	}
@@ -145,6 +146,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_WebsiteProperties() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -154,6 +156,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebGenModel_FrameworkTechnology() {
 		return (EAttribute)webGenModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -163,6 +166,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebGenModel_CopyrightText() {
 		return (EAttribute)webGenModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -172,6 +176,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_Persistence() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(3);
 	}
@@ -181,6 +186,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_Services() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(4);
 	}
@@ -190,6 +196,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_Images() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(5);
 	}
@@ -199,6 +206,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_WebUI() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(6);
 	}
@@ -208,6 +216,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_Api() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(7);
 	}
@@ -217,6 +226,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebGenModel_Security() {
 		return (EReference)webGenModelEClass.getEStructuralFeatures().get(8);
 	}
@@ -226,6 +236,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWebsiteProperties() {
 		return websitePropertiesEClass;
 	}
@@ -235,6 +246,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_SiteTitle() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(0);
 	}
@@ -244,6 +256,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_WebmasterEmail() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(1);
 	}
@@ -253,6 +266,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_CopyrightText() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(2);
 	}
@@ -262,6 +276,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_MetaDescription() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(3);
 	}
@@ -271,6 +286,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_LogoImage() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(4);
 	}
@@ -280,6 +296,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebsiteProperties_LogoFilters() {
 		return (EReference)websitePropertiesEClass.getEStructuralFeatures().get(5);
 	}
@@ -289,6 +306,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_FrameworkTechnology() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(6);
 	}
@@ -298,6 +316,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_UseDbSessionStorage() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(7);
 	}
@@ -307,6 +326,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_TextEditorURL() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(8);
 	}
@@ -316,6 +336,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_TopNavigationId() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(9);
 	}
@@ -325,6 +346,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_SiteTemplate() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(10);
 	}
@@ -334,6 +356,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebsiteProperties_StaticUnitsEditable() {
 		return (EAttribute)websitePropertiesEClass.getEStructuralFeatures().get(11);
 	}
@@ -343,6 +366,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getFrameworkTechnologies() {
 		return frameworkTechnologiesEEnum;
 	}
@@ -352,6 +376,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebsiteFactory getWebsiteFactory() {
 		return (WebsiteFactory)getEFactoryInstance();
 	}

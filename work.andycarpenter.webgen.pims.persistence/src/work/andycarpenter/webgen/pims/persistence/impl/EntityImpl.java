@@ -339,6 +339,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSingletonName() {
 		return singletonName;
 	}
@@ -348,6 +349,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSingletonName(String newSingletonName) {
 		String oldSingletonName = singletonName;
 		singletonName = newSingletonName;
@@ -360,6 +362,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPluralisedName() {
 		return pluralisedName;
 	}
@@ -369,6 +372,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPluralisedName(String newPluralisedName) {
 		String oldPluralisedName = pluralisedName;
 		pluralisedName = newPluralisedName;
@@ -381,6 +385,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getFeatures() {
 		if (features == null) {
 			features = new EObjectContainmentWithInverseEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__FEATURES, PersistencePackage.FEATURE__PART_OF);
@@ -393,6 +398,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getKeys() {
 		if (keys == null) {
 			keys = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__KEYS);
@@ -406,6 +412,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Attribute> getAttributes() {
 		return (EList<Attribute>)ATTRIBUTES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -416,6 +423,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Association> getAssociations() {
 		return (EList<Association>)ASSOCIATIONS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -425,6 +433,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Association> getAssociationEnds() {
 		if (associationEnds == null) {
 			associationEnds = new EObjectWithInverseResolvingEList<Association>(Association.class, this, PersistencePackage.ENTITY__ASSOCIATION_ENDS, PersistencePackage.ASSOCIATION__TARGET_ENTITY);
@@ -438,6 +447,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Feature> getAllFeatures() {
 		return (EList<Feature>)ALL_FEATURES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -448,6 +458,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Association> getAllAssociations() {
 		return (EList<Association>)ALL_ASSOCIATIONS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -457,6 +468,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ModelLabel> getLabels() {
 		if (labels == null) {
 			labels = new EObjectContainmentWithInverseEList<ModelLabel>(ModelLabel.class, this, PersistencePackage.ENTITY__LABELS, PersistencePackage.MODEL_LABEL__LABEL_FOR);
@@ -469,6 +481,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getUnique() {
 		if (unique == null) {
 			unique = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__UNIQUE);
@@ -481,6 +494,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getContainerUnique() {
 		if (containerUnique == null) {
 			containerUnique = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__CONTAINER_UNIQUE);
@@ -493,6 +507,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTableName() {
 		return tableName;
 	}
@@ -502,6 +517,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTableName(String newTableName) {
 		String oldTableName = tableName;
 		tableName = newTableName;
@@ -514,6 +530,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAutoKeyName() {
 		return autoKeyName;
 	}
@@ -523,6 +540,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAutoKeyName(String newAutoKeyName) {
 		String oldAutoKeyName = autoKeyName;
 		autoKeyName = newAutoKeyName;
@@ -535,6 +553,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAutoKeyPersistentType() {
 		return autoKeyPersistentType;
 	}
@@ -544,6 +563,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAutoKeyPersistentType(String newAutoKeyPersistentType) {
 		String oldAutoKeyPersistentType = autoKeyPersistentType;
 		autoKeyPersistentType = newAutoKeyPersistentType;
@@ -556,6 +576,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAutoKeyGenerationStrategy() {
 		return autoKeyGenerationStrategy;
 	}
@@ -565,6 +586,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAutoKeyGenerationStrategy(String newAutoKeyGenerationStrategy) {
 		String oldAutoKeyGenerationStrategy = autoKeyGenerationStrategy;
 		autoKeyGenerationStrategy = newAutoKeyGenerationStrategy;
@@ -577,6 +599,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isImplementsUserInterface() {
 		return implementsUserInterface;
 	}
@@ -586,6 +609,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImplementsUserInterface(boolean newImplementsUserInterface) {
 		boolean oldImplementsUserInterface = implementsUserInterface;
 		implementsUserInterface = newImplementsUserInterface;
@@ -598,6 +622,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAllowFormTypeCustomisation() {
 		return allowFormTypeCustomisation;
 	}
@@ -607,6 +632,7 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowFormTypeCustomisation(boolean newAllowFormTypeCustomisation) {
 		boolean oldAllowFormTypeCustomisation = allowFormTypeCustomisation;
 		allowFormTypeCustomisation = newAllowFormTypeCustomisation;

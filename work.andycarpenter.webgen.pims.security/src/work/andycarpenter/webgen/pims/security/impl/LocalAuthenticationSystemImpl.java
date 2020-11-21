@@ -207,6 +207,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getAuthentication() {
 		if (authentication != null && authentication.eIsProxy()) {
 			InternalEObject oldAuthentication = (InternalEObject)authentication;
@@ -233,6 +234,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthentication(Entity newAuthentication) {
 		Entity oldAuthentication = authentication;
 		authentication = newAuthentication;
@@ -245,6 +247,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuthenticationKeyTypes getAuthenticationKey() {
 		return authenticationKey;
 	}
@@ -254,6 +257,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthenticationKey(AuthenticationKeyTypes newAuthenticationKey) {
 		AuthenticationKeyTypes oldAuthenticationKey = authenticationKey;
 		authenticationKey = newAuthenticationKey == null ? AUTHENTICATION_KEY_EDEFAULT : newAuthenticationKey;
@@ -266,6 +270,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUseCaptcha() {
 		return useCaptcha;
 	}
@@ -275,6 +280,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseCaptcha(boolean newUseCaptcha) {
 		boolean oldUseCaptcha = useCaptcha;
 		useCaptcha = newUseCaptcha;
@@ -287,6 +293,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAllowRememberMe() {
 		return allowRememberMe;
 	}
@@ -296,6 +303,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowRememberMe(boolean newAllowRememberMe) {
 		boolean oldAllowRememberMe = allowRememberMe;
 		allowRememberMe = newAllowRememberMe;
@@ -308,6 +316,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAllowSelfRegistration() {
 		return allowSelfRegistration;
 	}
@@ -317,6 +326,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowSelfRegistration(boolean newAllowSelfRegistration) {
 		boolean oldAllowSelfRegistration = allowSelfRegistration;
 		allowSelfRegistration = newAllowSelfRegistration;
@@ -329,6 +339,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTrackLoginAttempts() {
 		return trackLoginAttempts;
 	}
@@ -338,6 +349,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTrackLoginAttempts(boolean newTrackLoginAttempts) {
 		boolean oldTrackLoginAttempts = trackLoginAttempts;
 		trackLoginAttempts = newTrackLoginAttempts;
@@ -350,6 +362,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUseEmailActivation() {
 		return useEmailActivation;
 	}
@@ -359,6 +372,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseEmailActivation(boolean newUseEmailActivation) {
 		boolean oldUseEmailActivation = useEmailActivation;
 		useEmailActivation = newUseEmailActivation;
@@ -371,6 +385,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSendWelcomeEmail() {
 		return sendWelcomeEmail;
 	}
@@ -380,6 +395,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSendWelcomeEmail(boolean newSendWelcomeEmail) {
 		boolean oldSendWelcomeEmail = sendWelcomeEmail;
 		sendWelcomeEmail = newSendWelcomeEmail;

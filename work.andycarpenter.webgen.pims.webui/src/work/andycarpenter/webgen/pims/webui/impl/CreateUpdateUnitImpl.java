@@ -132,6 +132,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOnSaveContinueEditing() {
 		return onSaveContinueEditing;
 	}
@@ -141,6 +142,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnSaveContinueEditing(boolean newOnSaveContinueEditing) {
 		boolean oldOnSaveContinueEditing = onSaveContinueEditing;
 		onSaveContinueEditing = newOnSaveContinueEditing;
@@ -153,6 +155,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCreateUriElement() {
 		return createUriElement;
 	}
@@ -162,6 +165,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreateUriElement(String newCreateUriElement) {
 		String oldCreateUriElement = createUriElement;
 		createUriElement = newCreateUriElement;
@@ -174,6 +178,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClearLabel() {
 		return clearLabel;
 	}
@@ -183,6 +188,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClearLabel(String newClearLabel) {
 		String oldClearLabel = clearLabel;
 		clearLabel = newClearLabel;
@@ -195,6 +201,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -204,6 +211,7 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

@@ -216,6 +216,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DynamicUnit getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.UNIT_FIELD__DISPLAYED_ON) return null;
 		return (DynamicUnit)eInternalContainer();
@@ -236,6 +237,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayedOn(DynamicUnit newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.UNIT_FIELD__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
@@ -257,6 +259,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -266,6 +269,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -278,6 +282,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getHideWhen() {
 		return hideWhen;
 	}
@@ -302,6 +307,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHideWhen(Predicate newHideWhen) {
 		if (newHideWhen != hideWhen) {
 			NotificationChain msgs = null;
@@ -321,6 +327,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -330,6 +337,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -342,6 +350,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEscapeHTML() {
 		return escapeHTML;
 	}
@@ -351,6 +360,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEscapeHTML(boolean newEscapeHTML) {
 		boolean oldEscapeHTML = escapeHTML;
 		escapeHTML = newEscapeHTML;
@@ -363,6 +373,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollectionDisplayOptions getCollectionDisplayOption() {
 		return collectionDisplayOption;
 	}
@@ -372,6 +383,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionDisplayOption(CollectionDisplayOptions newCollectionDisplayOption) {
 		CollectionDisplayOptions oldCollectionDisplayOption = collectionDisplayOption;
 		collectionDisplayOption = newCollectionDisplayOption == null ? COLLECTION_DISPLAY_OPTION_EDEFAULT : newCollectionDisplayOption;
@@ -384,6 +396,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTruncate() {
 		return truncate;
 	}
@@ -393,6 +406,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTruncate(boolean newTruncate) {
 		boolean oldTruncate = truncate;
 		truncate = newTruncate;
@@ -405,6 +419,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDateFormat() {
 		return dateFormat;
 	}
@@ -414,6 +429,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateFormat(String newDateFormat) {
 		String oldDateFormat = dateFormat;
 		dateFormat = newDateFormat;
@@ -426,6 +442,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDisableInput() {
 		return disableInput;
 	}
@@ -435,6 +452,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisableInput(boolean newDisableInput) {
 		boolean oldDisableInput = disableInput;
 		disableInput = newDisableInput;

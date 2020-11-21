@@ -74,6 +74,7 @@ public class UnitLabelImpl extends UnitFieldImpl implements UnitLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel getLabel() {
 		if (label != null && label.eIsProxy()) {
 			InternalEObject oldLabel = (InternalEObject)label;
@@ -100,6 +101,7 @@ public class UnitLabelImpl extends UnitFieldImpl implements UnitLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(ModelLabel newLabel) {
 		ModelLabel oldLabel = label;
 		label = newLabel;
@@ -112,6 +114,7 @@ public class UnitLabelImpl extends UnitFieldImpl implements UnitLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}

@@ -151,6 +151,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getAttribute() {
 		if (attribute != null && attribute.eIsProxy()) {
 			InternalEObject oldAttribute = (InternalEObject)attribute;
@@ -177,6 +178,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttribute(Attribute newAttribute) {
 		Attribute oldAttribute = attribute;
 		attribute = newAttribute;
@@ -189,6 +191,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -198,6 +201,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -207,6 +211,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefaultValue() {
 		return defaultValue;
 	}
@@ -231,6 +236,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(Expression newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -250,6 +256,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isObfuscateFormFields() {
 		return obfuscateFormFields;
 	}
@@ -259,6 +266,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObfuscateFormFields(boolean newObfuscateFormFields) {
 		boolean oldObfuscateFormFields = obfuscateFormFields;
 		obfuscateFormFields = newObfuscateFormFields;
@@ -271,6 +279,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPlaceholder() {
 		return placeholder;
 	}
@@ -280,6 +289,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlaceholder(String newPlaceholder) {
 		String oldPlaceholder = placeholder;
 		placeholder = newPlaceholder;
@@ -292,6 +302,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -301,6 +312,7 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidationPattern(String newValidationPattern) {
 		String oldValidationPattern = validationPattern;
 		validationPattern = newValidationPattern;

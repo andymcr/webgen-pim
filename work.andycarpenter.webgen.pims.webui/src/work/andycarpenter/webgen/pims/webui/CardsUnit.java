@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}</li>
  * </ul>
@@ -99,7 +100,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"row"</code>.
+	 * The default value is <code>"container"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
@@ -109,7 +110,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Content Class</em>' attribute.
 	 * @see #setContentClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ContentClass()
-	 * @model default="row" ordered="false"
+	 * @model default="container" ordered="false"
 	 * @generated
 	 */
 	String getContentClass();
@@ -125,8 +126,31 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	void setContentClass(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.
+	 * The default value is <code>"row row-cols-1 row-cols-md-3 row-cols-lg-4"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Row Class</em>' attribute.
+	 * @see #setRowClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_RowClass()
+	 * @model default="row row-cols-1 row-cols-md-3 row-cols-lg-4" ordered="false"
+	 * @generated
+	 */
+	String getRowClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Row Class</em>' attribute.
+	 * @see #getRowClass()
+	 * @generated
+	 */
+	void setRowClass(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Column Class</b></em>' attribute.
-	 * The default value is <code>"col s12 m6 l3"</code>.
+	 * The default value is <code>"col-sm-12 col-md-6 col-lg-3"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Column Class</em>' attribute isn't clear,
@@ -136,7 +160,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Column Class</em>' attribute.
 	 * @see #setColumnClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ColumnClass()
-	 * @model default="col s12 m6 l3" ordered="false"
+	 * @model default="col-sm-12 col-md-6 col-lg-3" ordered="false"
 	 * @generated
 	 */
 	String getColumnClass();
@@ -153,7 +177,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Card Class</b></em>' attribute.
-	 * The default value is <code>"card hoverable"</code>.
+	 * The default value is <code>"card h-100"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Card Class</em>' attribute isn't clear,
@@ -163,7 +187,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Card Class</em>' attribute.
 	 * @see #setCardClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardClass()
-	 * @model default="card hoverable" ordered="false"
+	 * @model default="card h-100" ordered="false"
 	 * @generated
 	 */
 	String getCardClass();

@@ -69,6 +69,7 @@ public class UrlAttributeImpl extends AttributeImpl implements UrlAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayValue() {
 		return displayValue;
 	}
@@ -78,6 +79,7 @@ public class UrlAttributeImpl extends AttributeImpl implements UrlAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayValue(String newDisplayValue) {
 		String oldDisplayValue = displayValue;
 		displayValue = newDisplayValue;

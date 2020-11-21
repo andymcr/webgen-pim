@@ -92,6 +92,7 @@ public class UnitSupportActionImpl extends NamedDisplayElementImpl implements Un
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDisable() {
 		return disable;
 	}
@@ -101,6 +102,7 @@ public class UnitSupportActionImpl extends NamedDisplayElementImpl implements Un
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisable(boolean newDisable) {
 		boolean oldDisable = disable;
 		disable = newDisable;
@@ -113,6 +115,7 @@ public class UnitSupportActionImpl extends NamedDisplayElementImpl implements Un
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getConfirmMessage() {
 		return confirmMessage;
 	}
@@ -122,6 +125,7 @@ public class UnitSupportActionImpl extends NamedDisplayElementImpl implements Un
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmMessage(String newConfirmMessage) {
 		String oldConfirmMessage = confirmMessage;
 		confirmMessage = newConfirmMessage;

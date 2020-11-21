@@ -66,6 +66,7 @@ public class EnumerationTypeImpl extends DataTypeImpl implements EnumerationType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EnumerationLiteral> getEnumerations() {
 		if (enumerations == null) {
 			enumerations = new EObjectContainmentEList<EnumerationLiteral>(EnumerationLiteral.class, this, BasePackage.ENUMERATION_TYPE__ENUMERATIONS);

@@ -105,6 +105,7 @@ public class ImageFactoryImpl extends EFactoryImpl implements ImageFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
@@ -115,6 +116,7 @@ public class ImageFactoryImpl extends EFactoryImpl implements ImageFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation createImageManipulation() {
 		ImageManipulationImpl imageManipulation = new ImageManipulationImpl();
 		return imageManipulation;
@@ -125,6 +127,7 @@ public class ImageFactoryImpl extends EFactoryImpl implements ImageFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BackgroundFilter createBackgroundFilter() {
 		BackgroundFilterImpl backgroundFilter = new BackgroundFilterImpl();
 		return backgroundFilter;
@@ -135,6 +138,7 @@ public class ImageFactoryImpl extends EFactoryImpl implements ImageFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThumbnailFilter createThumbnailFilter() {
 		ThumbnailFilterImpl thumbnailFilter = new ThumbnailFilterImpl();
 		return thumbnailFilter;
@@ -185,6 +189,7 @@ public class ImageFactoryImpl extends EFactoryImpl implements ImageFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagePackage getImagePackage() {
 		return (ImagePackage)getEPackage();
 	}

@@ -135,6 +135,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getDestination() {
 		if (destination != null && destination.eIsProxy()) {
 			InternalEObject oldDestination = (InternalEObject)destination;
@@ -161,6 +162,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestination(Page newDestination) {
 		Page oldDestination = destination;
 		destination = newDestination;
@@ -173,6 +175,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getConfirmMessage() {
 		return confirmMessage;
 	}
@@ -182,6 +185,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmMessage(String newConfirmMessage) {
 		String oldConfirmMessage = confirmMessage;
 		confirmMessage = newConfirmMessage;
@@ -194,6 +198,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -203,6 +208,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -215,6 +221,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getEnableWhen() {
 		return enableWhen;
 	}
@@ -239,6 +246,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnableWhen(Predicate newEnableWhen) {
 		if (newEnableWhen != enableWhen) {
 			NotificationChain msgs = null;
@@ -258,6 +266,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -267,6 +276,7 @@ public class DeleteActionImpl extends InlineActionImpl implements DeleteAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;

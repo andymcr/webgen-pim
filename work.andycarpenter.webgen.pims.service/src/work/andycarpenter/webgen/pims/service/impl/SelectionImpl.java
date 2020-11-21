@@ -226,6 +226,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FormalParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentWithInverseEList<FormalParameter>(FormalParameter.class, this, ServicePackage.SELECTION__PARAMETERS, BasePackage.FORMAL_PARAMETER__FORMAL_FOR);
@@ -238,6 +239,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Service getUsedBy() {
 		if (eContainerFeatureID() != ServicePackage.SELECTION__USED_BY) return null;
 		return (Service)eInternalContainer();
@@ -258,6 +260,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsedBy(Service newUsedBy) {
 		if (newUsedBy != eInternalContainer() || (eContainerFeatureID() != ServicePackage.SELECTION__USED_BY && newUsedBy != null)) {
 			if (EcoreUtil.isAncestor(this, newUsedBy))
@@ -279,6 +282,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDistinct() {
 		return distinct;
 	}
@@ -288,6 +292,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDistinct(boolean newDistinct) {
 		boolean oldDistinct = distinct;
 		distinct = newDistinct;
@@ -300,6 +305,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getFields() {
 		if (fields == null) {
 			fields = new EObjectResolvingEList<Feature>(Feature.class, this, ServicePackage.SELECTION__FIELDS);
@@ -312,6 +318,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Association> getJoins() {
 		if (joins == null) {
 			joins = new EObjectResolvingEList<Association>(Association.class, this, ServicePackage.SELECTION__JOINS);
@@ -324,6 +331,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getCondition() {
 		return condition;
 	}
@@ -348,6 +356,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Predicate newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -367,6 +376,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Filter> getFilters() {
 		if (filters == null) {
 			filters = new EObjectContainmentWithInverseEList<Filter>(Filter.class, this, ServicePackage.SELECTION__FILTERS, ServicePackage.FILTER__SELECTION);
@@ -379,6 +389,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Order> getOrdering() {
 		if (ordering == null) {
 			ordering = new EObjectContainmentEList<Order>(Order.class, this, ServicePackage.SELECTION__ORDERING);
@@ -391,6 +402,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLimit() {
 		return limit;
 	}
@@ -400,6 +412,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLimit(int newLimit) {
 		int oldLimit = limit;
 		limit = newLimit;
@@ -412,6 +425,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getGrouping() {
 		if (grouping == null) {
 			grouping = new EObjectResolvingEList<Feature>(Feature.class, this, ServicePackage.SELECTION__GROUPING);
@@ -424,6 +438,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Association> getSelectPath() {
 		if (selectPath == null) {
 			selectPath = new EObjectResolvingEList<Association>(Association.class, this, ServicePackage.SELECTION__SELECT_PATH);
@@ -436,6 +451,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMethodName() {
 		return methodName;
 	}
@@ -445,6 +461,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodName(String newMethodName) {
 		String oldMethodName = methodName;
 		methodName = newMethodName;

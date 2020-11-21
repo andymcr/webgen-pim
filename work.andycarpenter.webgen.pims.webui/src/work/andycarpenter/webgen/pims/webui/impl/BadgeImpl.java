@@ -110,6 +110,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CardsUnit getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.BADGE__DISPLAYED_ON) return null;
 		return (CardsUnit)eInternalContainer();
@@ -130,6 +131,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayedOn(CardsUnit newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.BADGE__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
@@ -151,6 +153,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIconName() {
 		return iconName;
 	}
@@ -160,6 +163,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIconName(String newIconName) {
 		String oldIconName = iconName;
 		iconName = newIconName;
@@ -172,6 +176,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getValue() {
 		return value;
 	}
@@ -196,6 +201,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(FeaturePath newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -215,6 +221,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getDisplayWhen() {
 		return displayWhen;
 	}
@@ -239,6 +246,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayWhen(Predicate newDisplayWhen) {
 		if (newDisplayWhen != displayWhen) {
 			NotificationChain msgs = null;
@@ -258,6 +266,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getNewWhen() {
 		return newWhen;
 	}
@@ -282,6 +291,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNewWhen(Predicate newNewWhen) {
 		if (newNewWhen != newWhen) {
 			NotificationChain msgs = null;

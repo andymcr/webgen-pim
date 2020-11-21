@@ -100,6 +100,7 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Security createSecurity() {
 		SecurityImpl security = new SecurityImpl();
 		return security;
@@ -110,6 +111,7 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocalAuthenticationSystem createLocalAuthenticationSystem() {
 		LocalAuthenticationSystemImpl localAuthenticationSystem = new LocalAuthenticationSystemImpl();
 		return localAuthenticationSystem;
@@ -120,6 +122,7 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasAuthentication createCasAuthentication() {
 		CasAuthenticationImpl casAuthentication = new CasAuthenticationImpl();
 		return casAuthentication;
@@ -150,6 +153,7 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SecurityPackage getSecurityPackage() {
 		return (SecurityPackage)getEPackage();
 	}

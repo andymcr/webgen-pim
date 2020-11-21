@@ -83,6 +83,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getElementDate() {
 		return elementDate;
 	}
@@ -107,6 +108,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElementDate(FeaturePath newElementDate) {
 		if (newElementDate != elementDate) {
 			NotificationChain msgs = null;
@@ -126,6 +128,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -135,6 +138,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

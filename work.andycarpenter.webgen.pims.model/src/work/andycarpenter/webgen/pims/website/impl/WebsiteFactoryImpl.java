@@ -99,6 +99,7 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebGenModel createWebGenModel() {
 		WebGenModelImpl webGenModel = new WebGenModelImpl();
 		return webGenModel;
@@ -109,6 +110,7 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebsiteProperties createWebsiteProperties() {
 		WebsitePropertiesImpl websiteProperties = new WebsitePropertiesImpl();
 		return websiteProperties;
@@ -139,6 +141,7 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebsitePackage getWebsitePackage() {
 		return (WebsitePackage)getEPackage();
 	}

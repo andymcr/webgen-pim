@@ -238,6 +238,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -247,6 +248,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExpression_Suffixes() {
 		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -256,6 +258,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpression_RootContainer() {
 		return (EReference)expressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -265,6 +268,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLiteral() {
 		return literalEClass;
 	}
@@ -274,6 +278,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNullLiteral() {
 		return nullLiteralEClass;
 	}
@@ -283,6 +288,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanLiteral() {
 		return booleanLiteralEClass;
 	}
@@ -292,6 +298,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBooleanLiteral_Value() {
 		return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -301,6 +308,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerLiteral() {
 		return integerLiteralEClass;
 	}
@@ -310,6 +318,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIntegerLiteral_Value() {
 		return (EAttribute)integerLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -319,6 +328,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringLiteral() {
 		return stringLiteralEClass;
 	}
@@ -328,6 +338,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringLiteral_Value() {
 		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -337,6 +348,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimeLiteral() {
 		return timeLiteralEClass;
 	}
@@ -346,6 +358,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTimeLiteral_Value() {
 		return (EAttribute)timeLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -355,6 +368,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -364,6 +378,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicate() {
 		return predicateEClass;
 	}
@@ -373,6 +388,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPredicate_Negated() {
 		return (EAttribute)predicateEClass.getEStructuralFeatures().get(0);
 	}
@@ -382,6 +398,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateBooleanOperator() {
 		return predicateBooleanOperatorEClass;
 	}
@@ -391,6 +408,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateBooleanOperator_Expressions() {
 		return (EReference)predicateBooleanOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -400,6 +418,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPredicateBooleanOperator_Operator() {
 		return (EAttribute)predicateBooleanOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -409,6 +428,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateEqualityOperator() {
 		return predicateEqualityOperatorEClass;
 	}
@@ -418,6 +438,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateEqualityOperator_Left() {
 		return (EReference)predicateEqualityOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -427,6 +448,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateEqualityOperator_Right() {
 		return (EReference)predicateEqualityOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -436,6 +458,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateComparisonOperator() {
 		return predicateComparisonOperatorEClass;
 	}
@@ -445,6 +468,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateComparisonOperator_Left() {
 		return (EReference)predicateComparisonOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -454,6 +478,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPredicateComparisonOperator_Operator() {
 		return (EAttribute)predicateComparisonOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -463,6 +488,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateComparisonOperator_Right() {
 		return (EReference)predicateComparisonOperatorEClass.getEStructuralFeatures().get(2);
 	}
@@ -472,6 +498,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateInOperator() {
 		return predicateInOperatorEClass;
 	}
@@ -481,6 +508,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateInOperator_Left() {
 		return (EReference)predicateInOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -490,6 +518,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateInOperator_Right() {
 		return (EReference)predicateInOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -499,6 +528,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateIsOperator() {
 		return predicateIsOperatorEClass;
 	}
@@ -508,6 +538,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateIsOperator_Left() {
 		return (EReference)predicateIsOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -517,6 +548,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateIsOperator_Right() {
 		return (EReference)predicateIsOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -526,6 +558,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateLikeOperator() {
 		return predicateLikeOperatorEClass;
 	}
@@ -535,6 +568,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateLikeOperator_Left() {
 		return (EReference)predicateLikeOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -544,6 +578,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateLikeOperator_Right() {
 		return (EReference)predicateLikeOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -553,6 +588,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateIsEmpty() {
 		return predicateIsEmptyEClass;
 	}
@@ -562,6 +598,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateIsEmpty_Feature() {
 		return (EReference)predicateIsEmptyEClass.getEStructuralFeatures().get(0);
 	}
@@ -571,6 +608,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredicateIsNull() {
 		return predicateIsNullEClass;
 	}
@@ -580,6 +618,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPredicateIsNull_Feature() {
 		return (EReference)predicateIsNullEClass.getEStructuralFeatures().get(0);
 	}
@@ -589,6 +628,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getBooleanOperator() {
 		return booleanOperatorEEnum;
 	}
@@ -598,6 +638,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getComparisionOperator() {
 		return comparisionOperatorEEnum;
 	}
@@ -607,6 +648,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionFactory getExpressionFactory() {
 		return (ExpressionFactory)getEFactoryInstance();
 	}

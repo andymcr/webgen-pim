@@ -91,6 +91,7 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Predicate> getExpressions() {
 		if (expressions == null) {
 			expressions = new EObjectContainmentEList<Predicate>(Predicate.class, this, ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS);
@@ -103,6 +104,7 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanOperator getOperator() {
 		return operator;
 	}
@@ -112,6 +114,7 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(BooleanOperator newOperator) {
 		BooleanOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

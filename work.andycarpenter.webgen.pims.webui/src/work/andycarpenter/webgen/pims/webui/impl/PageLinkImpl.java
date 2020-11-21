@@ -63,6 +63,7 @@ public class PageLinkImpl extends MinimalEObjectImpl.Container implements PageLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getTargetPage() {
 		if (targetPage != null && targetPage.eIsProxy()) {
 			InternalEObject oldTargetPage = (InternalEObject)targetPage;
@@ -104,6 +105,7 @@ public class PageLinkImpl extends MinimalEObjectImpl.Container implements PageLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetPage(Page newTargetPage) {
 		if (newTargetPage != targetPage) {
 			NotificationChain msgs = null;

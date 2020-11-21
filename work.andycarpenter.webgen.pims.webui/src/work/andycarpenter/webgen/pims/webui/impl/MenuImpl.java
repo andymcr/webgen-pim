@@ -155,6 +155,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MenuEntry> getEntries() {
 		if (entries == null) {
 			entries = new EObjectContainmentWithInverseEList<MenuEntry>(MenuEntry.class, this, WebuiPackage.MENU__ENTRIES, WebuiPackage.MENU_ENTRY__PART_OF);
@@ -167,6 +168,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitCaption() {
 		return omitCaption;
 	}
@@ -176,6 +178,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitCaption(boolean newOmitCaption) {
 		boolean oldOmitCaption = omitCaption;
 		omitCaption = newOmitCaption;
@@ -188,6 +191,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCaptionClass() {
 		return captionClass;
 	}
@@ -197,6 +201,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaptionClass(String newCaptionClass) {
 		String oldCaptionClass = captionClass;
 		captionClass = newCaptionClass;
@@ -209,6 +214,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -218,6 +224,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -230,6 +237,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLayoutClass() {
 		return layoutClass;
 	}
@@ -239,6 +247,7 @@ public class MenuImpl extends NamedDisplayElementImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLayoutClass(String newLayoutClass) {
 		String oldLayoutClass = layoutClass;
 		layoutClass = newLayoutClass;

@@ -136,6 +136,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContentUnit> getUnits() {
 		if (units == null) {
 			units = new EObjectContainmentWithInverseEList<ContentUnit>(ContentUnit.class, this, WebuiPackage.PAGE__UNITS, WebuiPackage.CONTENT_UNIT__DISPLAYED_ON);
@@ -148,6 +149,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebUI getWebUI() {
 		if (eContainerFeatureID() != WebuiPackage.PAGE__WEB_UI) return null;
 		return (WebUI)eInternalContainer();
@@ -168,6 +170,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWebUI(WebUI newWebUI) {
 		if (newWebUI != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.PAGE__WEB_UI && newWebUI != null)) {
 			if (EcoreUtil.isAncestor(this, newWebUI))
@@ -189,6 +192,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PageLink getParentPage() {
 		return parentPage;
 	}
@@ -213,6 +217,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentPage(PageLink newParentPage) {
 		if (newParentPage != parentPage) {
 			NotificationChain msgs = null;
@@ -232,6 +237,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PageLink> getChildPages() {
 		if (childPages == null) {
 			childPages = new EObjectWithInverseResolvingEList<PageLink>(PageLink.class, this, WebuiPackage.PAGE__CHILD_PAGES, WebuiPackage.PAGE_LINK__TARGET_PAGE);
@@ -244,6 +250,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -253,6 +260,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;
@@ -265,6 +273,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -274,6 +283,7 @@ public class PageImpl extends NamedDisplayElementImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

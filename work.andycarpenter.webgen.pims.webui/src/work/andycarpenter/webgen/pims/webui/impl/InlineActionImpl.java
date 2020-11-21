@@ -195,6 +195,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InlineActionContainer getUsedBy() {
 		if (eContainerFeatureID() != WebuiPackage.INLINE_ACTION__USED_BY) return null;
 		return (InlineActionContainer)eInternalContainer();
@@ -215,6 +216,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsedBy(InlineActionContainer newUsedBy) {
 		if (newUsedBy != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.INLINE_ACTION__USED_BY && newUsedBy != null)) {
 			if (EcoreUtil.isAncestor(this, newUsedBy))
@@ -236,6 +238,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIconName() {
 		return iconName;
 	}
@@ -245,6 +248,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIconName(String newIconName) {
 		String oldIconName = iconName;
 		iconName = newIconName;
@@ -257,6 +261,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDisable() {
 		return disable;
 	}
@@ -266,6 +271,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisable(boolean newDisable) {
 		boolean oldDisable = disable;
 		disable = newDisable;
@@ -278,6 +284,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getDisplayWhen() {
 		return displayWhen;
 	}
@@ -302,6 +309,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayWhen(Predicate newDisplayWhen) {
 		if (newDisplayWhen != displayWhen) {
 			NotificationChain msgs = null;
@@ -321,6 +329,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeader() {
 		return header;
 	}
@@ -330,6 +339,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeader(String newHeader) {
 		String oldHeader = header;
 		header = newHeader;
@@ -342,6 +352,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooter() {
 		return footer;
 	}
@@ -351,6 +362,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooter(String newFooter) {
 		String oldFooter = footer;
 		footer = newFooter;
@@ -363,6 +375,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -372,6 +385,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaderClass(String newHeaderClass) {
 		String oldHeaderClass = headerClass;
 		headerClass = newHeaderClass;
@@ -384,6 +398,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -393,6 +408,7 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooterClass(String newFooterClass) {
 		String oldFooterClass = footerClass;
 		footerClass = newFooterClass;

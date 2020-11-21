@@ -130,6 +130,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getShowTime() {
 		return showTime;
 	}
@@ -139,6 +140,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShowTime(int newShowTime) {
 		int oldShowTime = showTime;
 		showTime = newShowTime;
@@ -151,6 +153,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTransitionTime() {
 		return transitionTime;
 	}
@@ -160,6 +163,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransitionTime(int newTransitionTime) {
 		int oldTransitionTime = transitionTime;
 		transitionTime = newTransitionTime;
@@ -172,6 +176,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -181,6 +186,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -193,6 +199,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -202,6 +209,7 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

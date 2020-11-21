@@ -55,6 +55,7 @@ public abstract class ChildPathImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationReference getPartOf() {
 		if (eContainerFeatureID() != WebuiPackage.CHILD_PATH__PART_OF) return null;
 		return (AssociationReference)eInternalContainer();
@@ -75,6 +76,7 @@ public abstract class ChildPathImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartOf(AssociationReference newPartOf) {
 		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CHILD_PATH__PART_OF && newPartOf != null)) {
 			if (EcoreUtil.isAncestor(this, newPartOf))

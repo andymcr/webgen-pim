@@ -82,6 +82,7 @@ public class ModelLabelAttributeImpl extends ModelLabelFeatureImpl implements Mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getAttribute() {
 		if (attribute != null && attribute.eIsProxy()) {
 			InternalEObject oldAttribute = (InternalEObject)attribute;
@@ -108,6 +109,7 @@ public class ModelLabelAttributeImpl extends ModelLabelFeatureImpl implements Mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttribute(Attribute newAttribute) {
 		Attribute oldAttribute = attribute;
 		attribute = newAttribute;
@@ -120,6 +122,7 @@ public class ModelLabelAttributeImpl extends ModelLabelFeatureImpl implements Mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDateFormat() {
 		return dateFormat;
 	}
@@ -129,6 +132,7 @@ public class ModelLabelAttributeImpl extends ModelLabelFeatureImpl implements Mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateFormat(String newDateFormat) {
 		String oldDateFormat = dateFormat;
 		dateFormat = newDateFormat;

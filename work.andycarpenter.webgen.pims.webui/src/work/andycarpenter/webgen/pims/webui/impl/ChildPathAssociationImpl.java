@@ -132,6 +132,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -141,6 +142,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -150,6 +152,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject)association;
@@ -176,6 +179,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociation(Association newAssociation) {
 		Association oldAssociation = association;
 		association = newAssociation;
@@ -188,6 +192,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel getValueDisplay() {
 		if (valueDisplay != null && valueDisplay.eIsProxy()) {
 			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
@@ -214,6 +219,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDisplay(ModelLabel newValueDisplay) {
 		ModelLabel oldValueDisplay = valueDisplay;
 		valueDisplay = newValueDisplay;
@@ -226,6 +232,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChildPath getChildFeature() {
 		return childFeature;
 	}
@@ -250,6 +257,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChildFeature(ChildPath newChildFeature) {
 		if (newChildFeature != childFeature) {
 			NotificationChain msgs = null;
@@ -269,6 +277,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsSourceAssociation() {
 		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -278,6 +287,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getSourceEntity() {
 		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -296,6 +306,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getTargetEntity() {
 		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}

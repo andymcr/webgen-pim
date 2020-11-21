@@ -69,6 +69,7 @@ public class StaticPathElementImpl extends PathElementImpl implements StaticPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getElement() {
 		return element;
 	}
@@ -78,6 +79,7 @@ public class StaticPathElementImpl extends PathElementImpl implements StaticPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElement(String newElement) {
 		String oldElement = element;
 		element = newElement;

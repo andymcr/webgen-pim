@@ -141,6 +141,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constant> getConstants() {
 		if (constants == null) {
 			constants = new EObjectContainmentWithInverseEList<Constant>(Constant.class, this, ServicePackage.SERVICE__CONSTANTS, ServicePackage.CONSTANT__DEFINED_BY);
@@ -153,6 +154,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getServes() {
 		if (serves != null && serves.eIsProxy()) {
 			InternalEObject oldServes = (InternalEObject)serves;
@@ -179,6 +181,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServes(Entity newServes) {
 		Entity oldServes = serves;
 		serves = newServes;
@@ -191,6 +194,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Selection> getSelections() {
 		if (selections == null) {
 			selections = new EObjectContainmentWithInverseEList<Selection>(Selection.class, this, ServicePackage.SERVICE__SELECTIONS, ServicePackage.SELECTION__USED_BY);
@@ -203,6 +207,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getFindAll() {
 		if (findAll != null && findAll.eIsProxy()) {
 			InternalEObject oldFindAll = (InternalEObject)findAll;
@@ -229,6 +234,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFindAll(Selection newFindAll) {
 		Selection oldFindAll = findAll;
 		findAll = newFindAll;
@@ -241,6 +247,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getFindOne() {
 		if (findOne != null && findOne.eIsProxy()) {
 			InternalEObject oldFindOne = (InternalEObject)findOne;
@@ -267,6 +274,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFindOne(Selection newFindOne) {
 		Selection oldFindOne = findOne;
 		findOne = newFindOne;
@@ -279,6 +287,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BusinessOperation> getOperations() {
 		if (operations == null) {
 			operations = new EObjectContainmentWithInverseEList<BusinessOperation>(BusinessOperation.class, this, ServicePackage.SERVICE__OPERATIONS, ServicePackage.BUSINESS_OPERATION__DEFINED_BY);
@@ -291,6 +300,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Service> getUses() {
 		if (uses == null) {
 			uses = new EObjectResolvingEList<Service>(Service.class, this, ServicePackage.SERVICE__USES);

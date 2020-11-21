@@ -132,6 +132,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FormalParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentWithInverseEList<FormalParameter>(FormalParameter.class, this, ServicePackage.BUSINESS_OPERATION__PARAMETERS, BasePackage.FORMAL_PARAMETER__FORMAL_FOR);
@@ -144,6 +145,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Service getDefinedBy() {
 		if (eContainerFeatureID() != ServicePackage.BUSINESS_OPERATION__DEFINED_BY) return null;
 		return (Service)eInternalContainer();
@@ -164,6 +166,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinedBy(Service newDefinedBy) {
 		if (newDefinedBy != eInternalContainer() || (eContainerFeatureID() != ServicePackage.BUSINESS_OPERATION__DEFINED_BY && newDefinedBy != null)) {
 			if (EcoreUtil.isAncestor(this, newDefinedBy))
@@ -185,6 +188,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Service> getUses() {
 		if (uses == null) {
 			uses = new EObjectResolvingEList<Service>(Service.class, this, ServicePackage.BUSINESS_OPERATION__USES);
@@ -197,6 +201,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationResultTypes getResultType() {
 		return resultType;
 	}
@@ -206,6 +211,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResultType(OperationResultTypes newResultType) {
 		OperationResultTypes oldResultType = resultType;
 		resultType = newResultType == null ? RESULT_TYPE_EDEFAULT : newResultType;
@@ -218,6 +224,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getResultMimeType() {
 		return resultMimeType;
 	}
@@ -227,6 +234,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResultMimeType(String newResultMimeType) {
 		String oldResultMimeType = resultMimeType;
 		resultMimeType = newResultMimeType;

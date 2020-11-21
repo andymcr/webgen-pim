@@ -35,7 +35,6 @@ public interface Order extends EObject {
 	 * @see #setPath(Variable)
 	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getOrder_Path()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory=''"
 	 * @generated
 	 */
 	Variable getPath();

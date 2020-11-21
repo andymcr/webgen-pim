@@ -131,6 +131,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		EValidator.Registry.INSTANCE.put
 			(theSecurityPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return SecurityValidator.INSTANCE;
 				 }
@@ -149,6 +150,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSecurity() {
 		return securityEClass;
 	}
@@ -158,6 +160,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurity_CaptchaSiteKey() {
 		return (EAttribute)securityEClass.getEStructuralFeatures().get(0);
 	}
@@ -167,6 +170,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurity_CaptchaSecretKey() {
 		return (EAttribute)securityEClass.getEStructuralFeatures().get(1);
 	}
@@ -176,6 +180,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSecurity_Authentication() {
 		return (EReference)securityEClass.getEStructuralFeatures().get(2);
 	}
@@ -185,6 +190,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuthentication() {
 		return authenticationEClass;
 	}
@@ -194,6 +200,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAuthentication_Security() {
 		return (EReference)authenticationEClass.getEStructuralFeatures().get(0);
 	}
@@ -203,6 +210,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAuthentication_User() {
 		return (EReference)authenticationEClass.getEStructuralFeatures().get(1);
 	}
@@ -212,6 +220,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAuthentication_UserKey() {
 		return (EReference)authenticationEClass.getEStructuralFeatures().get(2);
 	}
@@ -221,6 +230,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_LoginLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(3);
 	}
@@ -230,6 +240,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_LogoutLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(4);
 	}
@@ -239,6 +250,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLocalAuthenticationSystem() {
 		return localAuthenticationSystemEClass;
 	}
@@ -248,6 +260,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLocalAuthenticationSystem_Authentication() {
 		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(0);
 	}
@@ -257,6 +270,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_AuthenticationKey() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(1);
 	}
@@ -266,6 +280,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_UseCaptcha() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(2);
 	}
@@ -275,6 +290,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_AllowRememberMe() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(3);
 	}
@@ -284,6 +300,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_AllowSelfRegistration() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(4);
 	}
@@ -293,6 +310,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_TrackLoginAttempts() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(5);
 	}
@@ -302,6 +320,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_UseEmailActivation() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(6);
 	}
@@ -311,6 +330,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_SendWelcomeEmail() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(7);
 	}
@@ -320,6 +340,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasAuthentication() {
 		return casAuthenticationEClass;
 	}
@@ -329,6 +350,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAuthenticationKeyTypes() {
 		return authenticationKeyTypesEEnum;
 	}
@@ -338,6 +360,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SecurityFactory getSecurityFactory() {
 		return (SecurityFactory)getEFactoryInstance();
 	}

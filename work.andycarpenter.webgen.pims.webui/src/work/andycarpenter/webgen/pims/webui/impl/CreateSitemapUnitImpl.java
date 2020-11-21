@@ -132,6 +132,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDeployedURL() {
 		return deployedURL;
 	}
@@ -141,6 +142,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeployedURL(String newDeployedURL) {
 		String oldDeployedURL = deployedURL;
 		deployedURL = newDeployedURL;
@@ -153,6 +155,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFilename() {
 		return filename;
 	}
@@ -162,6 +165,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFilename(String newFilename) {
 		String oldFilename = filename;
 		filename = newFilename;
@@ -174,6 +178,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -183,6 +188,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -195,6 +201,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -204,6 +211,7 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

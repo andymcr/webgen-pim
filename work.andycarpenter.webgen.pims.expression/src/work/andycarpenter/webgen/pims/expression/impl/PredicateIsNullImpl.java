@@ -62,6 +62,7 @@ public class PredicateIsNullImpl extends PredicateImpl implements PredicateIsNul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getFeature() {
 		return feature;
 	}
@@ -86,6 +87,7 @@ public class PredicateIsNullImpl extends PredicateImpl implements PredicateIsNul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFeature(Variable newFeature) {
 		if (newFeature != feature) {
 			NotificationChain msgs = null;

@@ -367,6 +367,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/omitFieldLabels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/contentClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/rowClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
     </genClasses>

@@ -95,6 +95,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeft() {
 		return left;
 	}
@@ -119,6 +120,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeft(Expression newLeft) {
 		if (newLeft != left) {
 			NotificationChain msgs = null;
@@ -138,6 +140,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComparisionOperator getOperator() {
 		return operator;
 	}
@@ -147,6 +150,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(ComparisionOperator newOperator) {
 		ComparisionOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -159,6 +163,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRight() {
 		return right;
 	}
@@ -183,6 +188,7 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRight(Expression newRight) {
 		if (newRight != right) {
 			NotificationChain msgs = null;

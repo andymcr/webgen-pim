@@ -114,6 +114,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NullLiteral createNullLiteral() {
 		NullLiteralImpl nullLiteral = new NullLiteralImpl();
 		return nullLiteral;
@@ -124,6 +125,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanLiteral createBooleanLiteral() {
 		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
 		return booleanLiteral;
@@ -134,6 +136,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerLiteral createIntegerLiteral() {
 		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
 		return integerLiteral;
@@ -144,6 +147,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringLiteral createStringLiteral() {
 		StringLiteralImpl stringLiteral = new StringLiteralImpl();
 		return stringLiteral;
@@ -154,6 +158,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeLiteral createTimeLiteral() {
 		TimeLiteralImpl timeLiteral = new TimeLiteralImpl();
 		return timeLiteral;
@@ -164,6 +169,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateBooleanOperator createPredicateBooleanOperator() {
 		PredicateBooleanOperatorImpl predicateBooleanOperator = new PredicateBooleanOperatorImpl();
 		return predicateBooleanOperator;
@@ -174,6 +180,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateEqualityOperator createPredicateEqualityOperator() {
 		PredicateEqualityOperatorImpl predicateEqualityOperator = new PredicateEqualityOperatorImpl();
 		return predicateEqualityOperator;
@@ -184,6 +191,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateComparisonOperator createPredicateComparisonOperator() {
 		PredicateComparisonOperatorImpl predicateComparisonOperator = new PredicateComparisonOperatorImpl();
 		return predicateComparisonOperator;
@@ -194,6 +202,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateInOperator createPredicateInOperator() {
 		PredicateInOperatorImpl predicateInOperator = new PredicateInOperatorImpl();
 		return predicateInOperator;
@@ -204,6 +213,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateIsOperator createPredicateIsOperator() {
 		PredicateIsOperatorImpl predicateIsOperator = new PredicateIsOperatorImpl();
 		return predicateIsOperator;
@@ -214,6 +224,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateLikeOperator createPredicateLikeOperator() {
 		PredicateLikeOperatorImpl predicateLikeOperator = new PredicateLikeOperatorImpl();
 		return predicateLikeOperator;
@@ -224,6 +235,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateIsEmpty createPredicateIsEmpty() {
 		PredicateIsEmptyImpl predicateIsEmpty = new PredicateIsEmptyImpl();
 		return predicateIsEmpty;
@@ -234,6 +246,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredicateIsNull createPredicateIsNull() {
 		PredicateIsNullImpl predicateIsNull = new PredicateIsNullImpl();
 		return predicateIsNull;
@@ -284,6 +297,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionPackage getExpressionPackage() {
 		return (ExpressionPackage)getEPackage();
 	}

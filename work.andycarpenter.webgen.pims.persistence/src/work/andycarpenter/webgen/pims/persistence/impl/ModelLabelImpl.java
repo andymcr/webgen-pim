@@ -129,6 +129,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getLabelFor() {
 		if (eContainerFeatureID() != PersistencePackage.MODEL_LABEL__LABEL_FOR) return null;
 		return (Entity)eInternalContainer();
@@ -149,6 +150,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabelFor(Entity newLabelFor) {
 		if (newLabelFor != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.MODEL_LABEL__LABEL_FOR && newLabelFor != null)) {
 			if (EcoreUtil.isAncestor(this, newLabelFor))
@@ -170,6 +172,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormat() {
 		return format;
 	}
@@ -179,6 +182,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormat(String newFormat) {
 		String oldFormat = format;
 		format = newFormat;
@@ -191,6 +195,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCustomise() {
 		return customise;
 	}
@@ -200,6 +205,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCustomise(boolean newCustomise) {
 		boolean oldCustomise = customise;
 		customise = newCustomise;
@@ -212,6 +218,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ModelLabelFeature> getFeatures() {
 		if (features == null) {
 			features = new EObjectContainmentWithInverseEList<ModelLabelFeature>(ModelLabelFeature.class, this, PersistencePackage.MODEL_LABEL__FEATURES, PersistencePackage.MODEL_LABEL_FEATURE__PART_OF);
@@ -224,6 +231,7 @@ public class ModelLabelImpl extends NamedElementImpl implements ModelLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SerializationGroup> getSerializationGroups() {
 		if (serializationGroups == null) {
 			serializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, PersistencePackage.MODEL_LABEL__SERIALIZATION_GROUPS);

@@ -101,6 +101,7 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getSuffixes() {
 		if (suffixes == null) {
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, BasePackage.CURRENT_TIME__SUFFIXES);
@@ -113,6 +114,7 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject getRootContainer() {
 		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -131,6 +133,7 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRootContainer() {
 		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -140,6 +143,7 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormat() {
 		return format;
 	}
@@ -149,6 +153,7 @@ public class CurrentTimeImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormat(String newFormat) {
 		String oldFormat = format;
 		format = newFormat;

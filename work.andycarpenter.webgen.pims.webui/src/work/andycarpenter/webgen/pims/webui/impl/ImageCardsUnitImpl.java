@@ -192,6 +192,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getImagePathFeature() {
 		return imagePathFeature;
 	}
@@ -216,6 +217,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImagePathFeature(FeaturePath newImagePathFeature) {
 		if (newImagePathFeature != imagePathFeature) {
 			NotificationChain msgs = null;
@@ -235,6 +237,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getImageFilter() {
 		if (imageFilter != null && imageFilter.eIsProxy()) {
 			InternalEObject oldImageFilter = (InternalEObject)imageFilter;
@@ -261,6 +264,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImageFilter(ImageManipulation newImageFilter) {
 		ImageManipulation oldImageFilter = imageFilter;
 		imageFilter = newImageFilter;
@@ -273,6 +277,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getMissingImageFilter() {
 		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
 			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
@@ -299,6 +304,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
 		ImageManipulation oldMissingImageFilter = missingImageFilter;
 		missingImageFilter = newMissingImageFilter;
@@ -311,6 +317,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMissingImagePath() {
 		return missingImagePath;
 	}
@@ -320,6 +327,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMissingImagePath(String newMissingImagePath) {
 		String oldMissingImagePath = missingImagePath;
 		missingImagePath = newMissingImagePath;
@@ -332,6 +340,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOverlayTitle() {
 		return overlayTitle;
 	}
@@ -341,6 +350,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOverlayTitle(boolean newOverlayTitle) {
 		boolean oldOverlayTitle = overlayTitle;
 		overlayTitle = newOverlayTitle;
@@ -353,6 +363,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEnableImageEnlargement() {
 		return enableImageEnlargement;
 	}
@@ -362,6 +373,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnableImageEnlargement(boolean newEnableImageEnlargement) {
 		boolean oldEnableImageEnlargement = enableImageEnlargement;
 		enableImageEnlargement = newEnableImageEnlargement;
@@ -374,6 +386,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRevealUntruncatedContent() {
 		return revealUntruncatedContent;
 	}
@@ -383,6 +396,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRevealUntruncatedContent(boolean newRevealUntruncatedContent) {
 		boolean oldRevealUntruncatedContent = revealUntruncatedContent;
 		revealUntruncatedContent = newRevealUntruncatedContent;
@@ -395,6 +409,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -404,6 +419,7 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

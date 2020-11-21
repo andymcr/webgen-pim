@@ -92,6 +92,7 @@ public class ImageManipulationImpl extends NamedElementImpl implements ImageMani
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getJpegQuality() {
 		return jpegQuality;
 	}
@@ -101,6 +102,7 @@ public class ImageManipulationImpl extends NamedElementImpl implements ImageMani
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setJpegQuality(int newJpegQuality) {
 		int oldJpegQuality = jpegQuality;
 		jpegQuality = newJpegQuality;
@@ -113,6 +115,7 @@ public class ImageManipulationImpl extends NamedElementImpl implements ImageMani
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImageFilter> getFilters() {
 		if (filters == null) {
 			filters = new EObjectContainmentEList<ImageFilter>(ImageFilter.class, this, ImagePackage.IMAGE_MANIPULATION__FILTERS);

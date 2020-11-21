@@ -251,6 +251,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnitField> getDisplayFields() {
 		if (displayFields == null) {
 			displayFields = new EObjectContainmentWithInverseEList<UnitField>(UnitField.class, this, WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS, WebuiPackage.UNIT_FIELD__DISPLAYED_ON);
@@ -263,6 +264,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Service> getServicesUsed() {
 		if (servicesUsed == null) {
 			servicesUsed = new EObjectResolvingEList<Service>(Service.class, this, WebuiPackage.DYNAMIC_UNIT__SERVICES_USED);
@@ -275,6 +277,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getHideWhen() {
 		return hideWhen;
 	}
@@ -299,6 +302,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHideWhen(Predicate newHideWhen) {
 		if (newHideWhen != hideWhen) {
 			NotificationChain msgs = null;
@@ -318,6 +322,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMessageWhenHidden() {
 		return messageWhenHidden;
 	}
@@ -327,6 +332,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessageWhenHidden(String newMessageWhenHidden) {
 		String oldMessageWhenHidden = messageWhenHidden;
 		messageWhenHidden = newMessageWhenHidden;
@@ -339,6 +345,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnitSupportAction> getSupportActions() {
 		if (supportActions == null) {
 			supportActions = new EObjectContainmentEList<UnitSupportAction>(UnitSupportAction.class, this, WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS);
@@ -351,6 +358,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeader() {
 		return header;
 	}
@@ -360,6 +368,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeader(String newHeader) {
 		String oldHeader = header;
 		header = newHeader;
@@ -372,6 +381,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooter() {
 		return footer;
 	}
@@ -381,6 +391,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooter(String newFooter) {
 		String oldFooter = footer;
 		footer = newFooter;
@@ -393,6 +404,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -402,6 +414,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaderClass(String newHeaderClass) {
 		String oldHeaderClass = headerClass;
 		headerClass = newHeaderClass;
@@ -414,6 +427,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getControlClass() {
 		return controlClass;
 	}
@@ -423,6 +437,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setControlClass(String newControlClass) {
 		String oldControlClass = controlClass;
 		controlClass = newControlClass;
@@ -435,6 +450,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -444,6 +460,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooterClass(String newFooterClass) {
 		String oldFooterClass = footerClass;
 		footerClass = newFooterClass;
@@ -456,6 +473,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getErrorClass() {
 		return errorClass;
 	}
@@ -465,6 +483,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setErrorClass(String newErrorClass) {
 		String oldErrorClass = errorClass;
 		errorClass = newErrorClass;

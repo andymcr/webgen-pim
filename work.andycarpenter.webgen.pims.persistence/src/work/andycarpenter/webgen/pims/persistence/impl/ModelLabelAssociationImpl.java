@@ -84,6 +84,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject)association;
@@ -110,6 +111,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociation(Association newAssociation) {
 		Association oldAssociation = association;
 		association = newAssociation;
@@ -122,6 +124,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel getDynamicLabel() {
 		if (dynamicLabel != null && dynamicLabel.eIsProxy()) {
 			InternalEObject oldDynamicLabel = (InternalEObject)dynamicLabel;
@@ -148,6 +151,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDynamicLabel(ModelLabel newDynamicLabel) {
 		ModelLabel oldDynamicLabel = dynamicLabel;
 		dynamicLabel = newDynamicLabel;
@@ -160,6 +164,7 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsSourceAssociation() {
 		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}

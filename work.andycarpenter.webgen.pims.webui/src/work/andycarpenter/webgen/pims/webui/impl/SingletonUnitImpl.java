@@ -70,6 +70,7 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Label getTitle() {
 		if (title != null && title.eIsProxy()) {
 			InternalEObject oldTitle = (InternalEObject)title;
@@ -96,6 +97,7 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(Label newTitle) {
 		Label oldTitle = title;
 		title = newTitle;
@@ -108,6 +110,7 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getContentType() {
 		if (contentType != null && contentType.eIsProxy()) {
 			InternalEObject oldContentType = (InternalEObject)contentType;
@@ -134,6 +137,7 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentType(Entity newContentType) {
 		Entity oldContentType = contentType;
 		contentType = newContentType;

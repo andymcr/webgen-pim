@@ -364,6 +364,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InlineAction> getActions() {
 		if (actions == null) {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.UNIT_FEATURE__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
@@ -376,6 +377,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayLabel() {
 		return displayLabel;
 	}
@@ -385,6 +387,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayLabel(String newDisplayLabel) {
 		String oldDisplayLabel = displayLabel;
 		displayLabel = newDisplayLabel;
@@ -397,6 +400,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRequired() {
 		return required;
 	}
@@ -406,6 +410,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequired(boolean newRequired) {
 		boolean oldRequired = required;
 		required = newRequired;
@@ -418,6 +423,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getForcedValue() {
 		return forcedValue;
 	}
@@ -442,6 +448,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setForcedValue(Expression newForcedValue) {
 		if (newForcedValue != forcedValue) {
 			NotificationChain msgs = null;
@@ -461,6 +468,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCollectionUiAllowAdd() {
 		return collectionUiAllowAdd;
 	}
@@ -470,6 +478,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionUiAllowAdd(boolean newCollectionUiAllowAdd) {
 		boolean oldCollectionUiAllowAdd = collectionUiAllowAdd;
 		collectionUiAllowAdd = newCollectionUiAllowAdd;
@@ -482,6 +491,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCollectionUiAllowRemove() {
 		return collectionUiAllowRemove;
 	}
@@ -491,6 +501,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionUiAllowRemove(boolean newCollectionUiAllowRemove) {
 		boolean oldCollectionUiAllowRemove = collectionUiAllowRemove;
 		collectionUiAllowRemove = newCollectionUiAllowRemove;
@@ -503,6 +514,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultDisplayValue() {
 		return defaultDisplayValue;
 	}
@@ -512,6 +524,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
 		String oldDefaultDisplayValue = defaultDisplayValue;
 		defaultDisplayValue = newDefaultDisplayValue;
@@ -524,6 +537,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getDisplayDefaultWhen() {
 		return displayDefaultWhen;
 	}
@@ -548,6 +562,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayDefaultWhen(Predicate newDisplayDefaultWhen) {
 		if (newDisplayDefaultWhen != displayDefaultWhen) {
 			NotificationChain msgs = null;
@@ -567,6 +582,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEmptyDisplayValue() {
 		return emptyDisplayValue;
 	}
@@ -576,6 +592,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
 		String oldEmptyDisplayValue = emptyDisplayValue;
 		emptyDisplayValue = newEmptyDisplayValue;
@@ -588,6 +605,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooter() {
 		return footer;
 	}
@@ -597,6 +615,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooter(String newFooter) {
 		String oldFooter = footer;
 		footer = newFooter;
@@ -609,6 +628,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAutofocus() {
 		return autofocus;
 	}
@@ -618,6 +638,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAutofocus(boolean newAutofocus) {
 		boolean oldAutofocus = autofocus;
 		autofocus = newAutofocus;
@@ -630,6 +651,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -639,6 +661,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaderClass(String newHeaderClass) {
 		String oldHeaderClass = headerClass;
 		headerClass = newHeaderClass;
@@ -651,6 +674,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputColumnClass() {
 		return inputColumnClass;
 	}
@@ -660,6 +684,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputColumnClass(String newInputColumnClass) {
 		String oldInputColumnClass = inputColumnClass;
 		inputColumnClass = newInputColumnClass;
@@ -672,6 +697,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputElementClass() {
 		return inputElementClass;
 	}
@@ -681,6 +707,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputElementClass(String newInputElementClass) {
 		String oldInputElementClass = inputElementClass;
 		inputElementClass = newInputElementClass;
@@ -693,6 +720,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayClass() {
 		return displayClass;
 	}
@@ -702,6 +730,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayClass(String newDisplayClass) {
 		String oldDisplayClass = displayClass;
 		displayClass = newDisplayClass;
@@ -714,6 +743,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -723,6 +753,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooterClass(String newFooterClass) {
 		String oldFooterClass = footerClass;
 		footerClass = newFooterClass;

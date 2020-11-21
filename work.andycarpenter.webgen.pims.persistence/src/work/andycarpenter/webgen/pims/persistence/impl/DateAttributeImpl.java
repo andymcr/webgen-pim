@@ -91,6 +91,7 @@ public class DateAttributeImpl extends AttributeImpl implements DateAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateDetails getDetails() {
 		return details;
 	}
@@ -100,6 +101,7 @@ public class DateAttributeImpl extends AttributeImpl implements DateAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetails(DateDetails newDetails) {
 		DateDetails oldDetails = details;
 		details = newDetails == null ? DETAILS_EDEFAULT : newDetails;
@@ -112,6 +114,7 @@ public class DateAttributeImpl extends AttributeImpl implements DateAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormat() {
 		return format;
 	}
@@ -121,6 +124,7 @@ public class DateAttributeImpl extends AttributeImpl implements DateAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormat(String newFormat) {
 		String oldFormat = format;
 		format = newFormat;

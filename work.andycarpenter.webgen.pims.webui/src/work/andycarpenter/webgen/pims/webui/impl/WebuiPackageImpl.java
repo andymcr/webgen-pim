@@ -649,6 +649,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		EValidator.Registry.INSTANCE.put
 			(theWebuiPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return WebuiValidator.INSTANCE;
 				 }
@@ -667,6 +668,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWebUI() {
 		return webUIEClass;
 	}
@@ -676,6 +678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebUI_Services() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(0);
 	}
@@ -685,6 +688,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebUI_Menus() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(1);
 	}
@@ -694,6 +698,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWebUI_Pages() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(2);
 	}
@@ -703,6 +708,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_DefaultDateFormat() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(3);
 	}
@@ -712,6 +718,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_DefaultTimeFormat() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(4);
 	}
@@ -721,6 +728,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_DefaultDateTimeFormat() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(5);
 	}
@@ -730,6 +738,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_DefaultMaximumUploadSize() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(6);
 	}
@@ -739,6 +748,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_InputTechnology() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(7);
 	}
@@ -748,6 +758,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebUI_AjaxTechnology() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(8);
 	}
@@ -757,6 +768,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMenu() {
 		return menuEClass;
 	}
@@ -766,6 +778,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMenu_Entries() {
 		return (EReference)menuEClass.getEStructuralFeatures().get(0);
 	}
@@ -775,6 +788,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMenu_OmitCaption() {
 		return (EAttribute)menuEClass.getEStructuralFeatures().get(1);
 	}
@@ -784,6 +798,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMenu_CaptionClass() {
 		return (EAttribute)menuEClass.getEStructuralFeatures().get(2);
 	}
@@ -793,6 +808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMenu_StyleClass() {
 		return (EAttribute)menuEClass.getEStructuralFeatures().get(3);
 	}
@@ -802,6 +818,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMenu_LayoutClass() {
 		return (EAttribute)menuEClass.getEStructuralFeatures().get(4);
 	}
@@ -811,6 +828,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMenuEntry() {
 		return menuEntryEClass;
 	}
@@ -820,6 +838,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMenuEntry_PartOf() {
 		return (EReference)menuEntryEClass.getEStructuralFeatures().get(0);
 	}
@@ -829,6 +848,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSubmenuEntry() {
 		return submenuEntryEClass;
 	}
@@ -838,6 +858,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSubmenuEntry_RequiresRole() {
 		return (EAttribute)submenuEntryEClass.getEStructuralFeatures().get(0);
 	}
@@ -847,6 +868,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActionMenuEntry() {
 		return actionMenuEntryEClass;
 	}
@@ -856,6 +878,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActionMenuEntry_Destination() {
 		return (EReference)actionMenuEntryEClass.getEStructuralFeatures().get(0);
 	}
@@ -865,6 +888,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActionMenuEntry_Query() {
 		return (EReference)actionMenuEntryEClass.getEStructuralFeatures().get(1);
 	}
@@ -874,6 +898,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEditStaticTextMenuEntry() {
 		return editStaticTextMenuEntryEClass;
 	}
@@ -883,6 +908,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMenuFeature() {
 		return menuFeatureEClass;
 	}
@@ -892,6 +918,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getQuery() {
 		return queryEClass;
 	}
@@ -901,6 +928,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getQuery_Filter() {
 		return (EReference)queryEClass.getEStructuralFeatures().get(0);
 	}
@@ -910,6 +938,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getQuery_Parameters() {
 		return (EReference)queryEClass.getEStructuralFeatures().get(1);
 	}
@@ -919,6 +948,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getQueryParameter() {
 		return queryParameterEClass;
 	}
@@ -928,6 +958,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getQueryParameter_Value() {
 		return (EAttribute)queryParameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -937,6 +968,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPage() {
 		return pageEClass;
 	}
@@ -946,6 +978,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_WebUI() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(0);
 	}
@@ -955,6 +988,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_ParentPage() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(1);
 	}
@@ -964,6 +998,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_ChildPages() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(2);
 	}
@@ -973,6 +1008,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Units() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(3);
 	}
@@ -982,6 +1018,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPage_UriElement() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(4);
 	}
@@ -991,6 +1028,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPage_StyleClass() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(5);
 	}
@@ -1000,6 +1038,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPageLink() {
 		return pageLinkEClass;
 	}
@@ -1009,6 +1048,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPageLink_TargetPage() {
 		return (EReference)pageLinkEClass.getEStructuralFeatures().get(0);
 	}
@@ -1018,6 +1058,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getContentUnit() {
 		return contentUnitEClass;
 	}
@@ -1027,6 +1068,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContentUnit_DisplayedOn() {
 		return (EReference)contentUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -1036,6 +1078,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_CreateDefaultUriElement() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -1045,6 +1088,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContentUnit_RouteActuals() {
 		return (EReference)contentUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -1054,6 +1098,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_RequiresRole() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -1063,6 +1108,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_PurposeSummary() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -1072,6 +1118,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_UriElement() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(5);
 	}
@@ -1081,6 +1128,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_Alternative() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(6);
 	}
@@ -1090,6 +1138,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_OmitCaption() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(7);
 	}
@@ -1099,6 +1148,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContentUnit_CaptionClass() {
 		return (EAttribute)contentUnitEClass.getEStructuralFeatures().get(8);
 	}
@@ -1108,6 +1158,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContentUnit_PageDisplayedOn() {
 		return (EReference)contentUnitEClass.getEStructuralFeatures().get(9);
 	}
@@ -1117,6 +1168,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRouteActual() {
 		return routeActualEClass;
 	}
@@ -1126,6 +1178,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRouteActual_ActualFor() {
 		return (EReference)routeActualEClass.getEStructuralFeatures().get(0);
 	}
@@ -1135,6 +1188,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRouteActual_RouteParameter() {
 		return (EReference)routeActualEClass.getEStructuralFeatures().get(1);
 	}
@@ -1144,6 +1198,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRouteActual_Value() {
 		return (EReference)routeActualEClass.getEStructuralFeatures().get(2);
 	}
@@ -1153,6 +1208,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStaticUnit() {
 		return staticUnitEClass;
 	}
@@ -1162,6 +1218,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStaticUnit_Content() {
 		return (EAttribute)staticUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -1171,6 +1228,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStaticUnit_StyleClass() {
 		return (EAttribute)staticUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -1180,6 +1238,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStaticUnit_ContentClass() {
 		return (EAttribute)staticUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -1189,6 +1248,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCreateSitemapUnit() {
 		return createSitemapUnitEClass;
 	}
@@ -1198,6 +1258,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateSitemapUnit_DeployedURL() {
 		return (EAttribute)createSitemapUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -1207,6 +1268,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateSitemapUnit_Filename() {
 		return (EAttribute)createSitemapUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -1216,6 +1278,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateSitemapUnit_StyleClass() {
 		return (EAttribute)createSitemapUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -1225,6 +1288,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateSitemapUnit_ContentClass() {
 		return (EAttribute)createSitemapUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -1234,6 +1298,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDynamicUnit() {
 		return dynamicUnitEClass;
 	}
@@ -1243,6 +1308,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDynamicUnit_DisplayFields() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -1252,6 +1318,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDynamicUnit_ServicesUsed() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -1261,6 +1328,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDynamicUnit_HideWhen() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -1270,6 +1338,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_MessageWhenHidden() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -1279,6 +1348,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDynamicUnit_SupportActions() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -1288,6 +1358,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_Header() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(5);
 	}
@@ -1297,6 +1368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_Footer() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(6);
 	}
@@ -1306,6 +1378,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_HeaderClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(7);
 	}
@@ -1315,6 +1388,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_ControlClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(8);
 	}
@@ -1324,6 +1398,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_FooterClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(9);
 	}
@@ -1333,6 +1408,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDynamicUnit_ErrorClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(10);
 	}
@@ -1342,6 +1418,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitField() {
 		return unitFieldEClass;
 	}
@@ -1351,6 +1428,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitField_DisplayedOn() {
 		return (EReference)unitFieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -1360,6 +1438,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_RequiresRole() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -1369,6 +1448,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitField_HideWhen() {
 		return (EReference)unitFieldEClass.getEStructuralFeatures().get(2);
 	}
@@ -1378,6 +1458,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_Title() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(3);
 	}
@@ -1387,6 +1468,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_EscapeHTML() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(4);
 	}
@@ -1396,6 +1478,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_CollectionDisplayOption() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(5);
 	}
@@ -1405,6 +1488,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_Truncate() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(6);
 	}
@@ -1414,6 +1498,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_DateFormat() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(7);
 	}
@@ -1423,6 +1508,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitField_DisableInput() {
 		return (EAttribute)unitFieldEClass.getEStructuralFeatures().get(8);
 	}
@@ -1432,6 +1518,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitFeature() {
 		return unitFeatureEClass;
 	}
@@ -1441,6 +1528,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_DisplayLabel() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(0);
 	}
@@ -1450,6 +1538,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_Required() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(1);
 	}
@@ -1459,6 +1548,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitFeature_ForcedValue() {
 		return (EReference)unitFeatureEClass.getEStructuralFeatures().get(2);
 	}
@@ -1468,6 +1558,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_CollectionUiAllowAdd() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(3);
 	}
@@ -1477,6 +1568,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_CollectionUiAllowRemove() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(4);
 	}
@@ -1486,6 +1578,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_DefaultDisplayValue() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(5);
 	}
@@ -1495,6 +1588,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitFeature_DisplayDefaultWhen() {
 		return (EReference)unitFeatureEClass.getEStructuralFeatures().get(6);
 	}
@@ -1504,6 +1598,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_EmptyDisplayValue() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(7);
 	}
@@ -1513,6 +1608,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_Footer() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(8);
 	}
@@ -1522,6 +1618,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_Autofocus() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(9);
 	}
@@ -1531,6 +1628,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_HeaderClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(10);
 	}
@@ -1540,6 +1638,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_InputColumnClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(11);
 	}
@@ -1549,6 +1648,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_InputElementClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(12);
 	}
@@ -1558,6 +1658,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_DisplayClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(13);
 	}
@@ -1567,6 +1668,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitFeature_FooterClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(14);
 	}
@@ -1576,6 +1678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitElement() {
 		return unitElementEClass;
 	}
@@ -1585,6 +1688,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitElement_Attribute() {
 		return (EReference)unitElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1594,6 +1698,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitElement_Name() {
 		return (EAttribute)unitElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1603,6 +1708,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitElement_DefaultValue() {
 		return (EReference)unitElementEClass.getEStructuralFeatures().get(2);
 	}
@@ -1612,6 +1718,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitElement_ObfuscateFormFields() {
 		return (EAttribute)unitElementEClass.getEStructuralFeatures().get(3);
 	}
@@ -1621,6 +1728,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitElement_Placeholder() {
 		return (EAttribute)unitElementEClass.getEStructuralFeatures().get(4);
 	}
@@ -1630,6 +1738,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitElement_ValidationPattern() {
 		return (EAttribute)unitElementEClass.getEStructuralFeatures().get(5);
 	}
@@ -1639,6 +1748,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitAssociation() {
 		return unitAssociationEClass;
 	}
@@ -1648,6 +1758,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitAssociation_IsSourceAssociation() {
 		return (EAttribute)unitAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1657,6 +1768,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitAssociation_SourceEntity() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1666,6 +1778,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitAssociation_TargetEntity() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1675,6 +1788,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitAssociation_Options() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(3);
 	}
@@ -1684,6 +1798,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitAssociation_FilteredOptions() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(4);
 	}
@@ -1693,6 +1808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociationReference() {
 		return associationReferenceEClass;
 	}
@@ -1702,6 +1818,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociationReference_Name() {
 		return (EAttribute)associationReferenceEClass.getEStructuralFeatures().get(0);
 	}
@@ -1711,6 +1828,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationReference_Association() {
 		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(1);
 	}
@@ -1720,6 +1838,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationReference_ValueDisplay() {
 		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(2);
 	}
@@ -1729,6 +1848,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationReference_ChildFeature() {
 		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(3);
 	}
@@ -1738,6 +1858,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChildPath() {
 		return childPathEClass;
 	}
@@ -1747,6 +1868,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChildPath_PartOf() {
 		return (EReference)childPathEClass.getEStructuralFeatures().get(0);
 	}
@@ -1756,6 +1878,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChildPathAttribute() {
 		return childPathAttributeEClass;
 	}
@@ -1765,6 +1888,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChildPathAttribute_Name() {
 		return (EAttribute)childPathAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1774,6 +1898,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChildPathAttribute_Attribute() {
 		return (EReference)childPathAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1783,6 +1908,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChildPathAssociation() {
 		return childPathAssociationEClass;
 	}
@@ -1792,6 +1918,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChildPathAssociation_IsSourceAssociation() {
 		return (EAttribute)childPathAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1801,6 +1928,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChildPathAssociation_SourceEntity() {
 		return (EReference)childPathAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1810,6 +1938,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChildPathAssociation_TargetEntity() {
 		return (EReference)childPathAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1819,6 +1948,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeaturePath() {
 		return featurePathEClass;
 	}
@@ -1828,6 +1958,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeaturePathAttribute() {
 		return featurePathAttributeEClass;
 	}
@@ -1837,6 +1968,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeaturePathAttribute_Name() {
 		return (EAttribute)featurePathAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1846,6 +1978,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeaturePathAttribute_Attribute() {
 		return (EReference)featurePathAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1855,6 +1988,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeaturePathAssociation() {
 		return featurePathAssociationEClass;
 	}
@@ -1864,6 +1998,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeaturePathAssociation_IsSourceAssociation() {
 		return (EAttribute)featurePathAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1873,6 +2008,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeaturePathAssociation_SourceEntity() {
 		return (EReference)featurePathAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1882,6 +2018,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeaturePathAssociation_TargetEntity() {
 		return (EReference)featurePathAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1891,6 +2028,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeaturePathLabel() {
 		return featurePathLabelEClass;
 	}
@@ -1900,6 +2038,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeaturePathLabel_Name() {
 		return (EAttribute)featurePathLabelEClass.getEStructuralFeatures().get(0);
 	}
@@ -1909,6 +2048,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeaturePathLabel_Label() {
 		return (EReference)featurePathLabelEClass.getEStructuralFeatures().get(1);
 	}
@@ -1918,6 +2058,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitLabel() {
 		return unitLabelEClass;
 	}
@@ -1927,6 +2068,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnitLabel_Label() {
 		return (EReference)unitLabelEClass.getEStructuralFeatures().get(0);
 	}
@@ -1936,6 +2078,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitLabel_Name() {
 		return (EAttribute)unitLabelEClass.getEStructuralFeatures().get(1);
 	}
@@ -1945,6 +2088,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceField() {
 		return interfaceFieldEClass;
 	}
@@ -1954,6 +2098,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceField_Required() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -1963,6 +2108,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceField_DefaultValue() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -1972,6 +2118,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceField_MustMatch() {
 		return (EReference)interfaceFieldEClass.getEStructuralFeatures().get(2);
 	}
@@ -1981,6 +2128,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceField_InputClass() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(3);
 	}
@@ -1990,6 +2138,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceField_Placeholder() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(4);
 	}
@@ -1999,6 +2148,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceField_ValidationPattern() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(5);
 	}
@@ -2008,6 +2158,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataTypeField() {
 		return dataTypeFieldEClass;
 	}
@@ -2017,6 +2168,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataTypeField_DataType() {
 		return (EReference)dataTypeFieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -2026,6 +2178,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeField_ObfuscateFormFields() {
 		return (EAttribute)dataTypeFieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -2035,6 +2188,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeField_Encrypt() {
 		return (EAttribute)dataTypeFieldEClass.getEStructuralFeatures().get(2);
 	}
@@ -2044,6 +2198,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeField_InterfaceType() {
 		return (EAttribute)dataTypeFieldEClass.getEStructuralFeatures().get(3);
 	}
@@ -2053,6 +2208,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDateField() {
 		return dateFieldEClass;
 	}
@@ -2062,6 +2218,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateField_Details() {
 		return (EAttribute)dateFieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -2071,6 +2228,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateField_Format() {
 		return (EAttribute)dateFieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -2080,6 +2238,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCaptchaField() {
 		return captchaFieldEClass;
 	}
@@ -2089,6 +2248,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnitSupportAction() {
 		return unitSupportActionEClass;
 	}
@@ -2098,6 +2258,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitSupportAction_Disable() {
 		return (EAttribute)unitSupportActionEClass.getEStructuralFeatures().get(0);
 	}
@@ -2107,6 +2268,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnitSupportAction_ConfirmMessage() {
 		return (EAttribute)unitSupportActionEClass.getEStructuralFeatures().get(1);
 	}
@@ -2116,6 +2278,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSelectableUnit() {
 		return selectableUnitEClass;
 	}
@@ -2125,6 +2288,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSingletonUnit() {
 		return singletonUnitEClass;
 	}
@@ -2134,6 +2298,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingletonUnit_Title() {
 		return (EReference)singletonUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2143,6 +2308,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingletonUnit_ContentType() {
 		return (EReference)singletonUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2152,6 +2318,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCollectionUnit() {
 		return collectionUnitEClass;
 	}
@@ -2161,6 +2328,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_UnitTitle() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2170,6 +2338,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_ElementTitle() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2179,6 +2348,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_TruncateElementTitle() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2188,6 +2358,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_ContentType() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2197,6 +2368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_Selection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -2206,6 +2378,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_FindContainerSelection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(5);
 	}
@@ -2215,6 +2388,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_OmitContainerLoad() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(6);
 	}
@@ -2224,6 +2398,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_FindElementSelection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(7);
 	}
@@ -2233,6 +2408,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(8);
 	}
@@ -2242,6 +2418,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCollectionUnit_SupportedFilters() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(9);
 	}
@@ -2251,6 +2428,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_EmptyMessage() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(10);
 	}
@@ -2260,6 +2438,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
@@ -2269,6 +2448,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
@@ -2278,6 +2458,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PaginationControlPlacement() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
@@ -2287,6 +2468,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_NextNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
@@ -2296,6 +2478,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PreviousNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
@@ -2305,6 +2488,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_NextPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
@@ -2314,6 +2498,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_NextPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
@@ -2323,6 +2508,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PreviousPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
@@ -2332,6 +2518,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PreviousPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
 	}
@@ -2341,6 +2528,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
 	}
@@ -2350,6 +2538,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
 	}
@@ -2359,6 +2548,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_FirstPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
 	}
@@ -2368,6 +2558,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_FirstPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
 	}
@@ -2377,6 +2568,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_LastPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
 	}
@@ -2386,6 +2578,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_LastPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
 	}
@@ -2395,6 +2588,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PaginationClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(26);
 	}
@@ -2404,6 +2598,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCollectionUnit_PaginationElementClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(27);
 	}
@@ -2413,6 +2608,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEditUnit() {
 		return editUnitEClass;
 	}
@@ -2422,6 +2618,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEditUnit_DisableWhen() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2431,6 +2628,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEditUnit_ConfirmDestination() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2440,6 +2638,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEditUnit_ConfirmLabel() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2449,6 +2648,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEditUnit_CancelDestination() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2458,6 +2658,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEditUnit_CancelLabel() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -2467,6 +2668,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEditUnit_ContentClass() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(5);
 	}
@@ -2476,6 +2678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEditUnit_CustomiseValues() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(6);
 	}
@@ -2485,6 +2688,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCreateUnit() {
 		return createUnitEClass;
 	}
@@ -2494,6 +2698,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateUnit_StyleClass() {
 		return (EAttribute)createUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2503,6 +2708,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCreateUpdateUnit() {
 		return createUpdateUnitEClass;
 	}
@@ -2512,6 +2718,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateUpdateUnit_OnSaveContinueEditing() {
 		return (EAttribute)createUpdateUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2521,6 +2728,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateUpdateUnit_CreateUriElement() {
 		return (EAttribute)createUpdateUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2530,6 +2738,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateUpdateUnit_ClearLabel() {
 		return (EAttribute)createUpdateUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2539,6 +2748,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCreateUpdateUnit_StyleClass() {
 		return (EAttribute)createUpdateUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2548,6 +2758,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUpdateUnit() {
 		return updateUnitEClass;
 	}
@@ -2557,6 +2768,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUpdateUnit_OnSaveContinueEditing() {
 		return (EAttribute)updateUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2566,6 +2778,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUpdateUnit_StyleClass() {
 		return (EAttribute)updateUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2575,6 +2788,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMapUnit() {
 		return mapUnitEClass;
 	}
@@ -2584,6 +2798,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMapUnit_ReadOnly() {
 		return (EAttribute)mapUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2593,6 +2808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMapUnit_DefaultZoomLevel() {
 		return (EAttribute)mapUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2602,6 +2818,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMapUnit_StyleClass() {
 		return (EAttribute)mapUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2611,6 +2828,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMapUnit_Location() {
 		return (EReference)mapUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2620,6 +2838,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMapUnit_PlaceName() {
 		return (EReference)mapUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -2629,6 +2848,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDetailsUnit() {
 		return detailsUnitEClass;
 	}
@@ -2638,6 +2858,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDetailsUnit_Selection() {
 		return (EReference)detailsUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2647,6 +2868,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDetailsUnit_OmitFieldLabels() {
 		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2656,6 +2878,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDetailsUnit_StyleClass() {
 		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2665,6 +2888,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDetailsUnit_ContentClass() {
 		return (EAttribute)detailsUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2674,6 +2898,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIndexUnit() {
 		return indexUnitEClass;
 	}
@@ -2683,6 +2908,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndexUnit_DisplayOption() {
 		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2692,6 +2918,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndexUnit_OmitColumnLabels() {
 		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2701,6 +2928,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndexUnit_StyleClass() {
 		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2710,6 +2938,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndexUnit_ContentClass() {
 		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2719,6 +2948,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndexUnit_RowClasses() {
 		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -2728,6 +2958,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCardsUnit() {
 		return cardsUnitEClass;
 	}
@@ -2737,6 +2968,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCardsUnit_Badges() {
 		return (EReference)cardsUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2746,6 +2978,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCardsUnit_OmitFieldLabels() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2755,6 +2988,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCardsUnit_OverlaySingleSelectAction() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2764,6 +2998,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCardsUnit_ContentClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2773,7 +3008,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCardsUnit_ColumnClass() {
+	@Override
+	public EAttribute getCardsUnit_RowClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2782,7 +3018,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCardsUnit_CardClass() {
+	@Override
+	public EAttribute getCardsUnit_ColumnClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2791,6 +3028,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EAttribute getCardsUnit_CardClass() {
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTextCardsUnit() {
 		return textCardsUnitEClass;
 	}
@@ -2800,6 +3048,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTextCardsUnit_StyleClass() {
 		return (EAttribute)textCardsUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2809,6 +3058,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDateCardsUnit() {
 		return dateCardsUnitEClass;
 	}
@@ -2818,6 +3068,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDateCardsUnit_ElementDate() {
 		return (EReference)dateCardsUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2827,6 +3078,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateCardsUnit_StyleClass() {
 		return (EAttribute)dateCardsUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2836,6 +3088,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getControlUnit() {
 		return controlUnitEClass;
 	}
@@ -2845,6 +3098,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getControlUnit_SubmitLabel() {
 		return (EAttribute)controlUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2854,6 +3108,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getControlUnit_CancelDestination() {
 		return (EReference)controlUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2863,6 +3118,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getControlUnit_CancelLabel() {
 		return (EAttribute)controlUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2872,6 +3128,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getControlUnit_ContentClass() {
 		return (EAttribute)controlUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2881,6 +3138,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSearchUnit() {
 		return searchUnitEClass;
 	}
@@ -2890,6 +3148,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSearchUnit_ResultsDestination() {
 		return (EReference)searchUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2899,6 +3158,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSearchUnit_StyleClass() {
 		return (EAttribute)searchUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2908,6 +3168,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImageUnit() {
 		return imageUnitEClass;
 	}
@@ -2917,6 +3178,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImageUnit_ImagePathFeature() {
 		return (EReference)imageUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2926,6 +3188,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImageUnit_ImageFilter() {
 		return (EReference)imageUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2935,6 +3198,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImageUnit_MissingImageFilter() {
 		return (EReference)imageUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2944,6 +3208,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageUnit_MissingImagePath() {
 		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2953,6 +3218,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImageCardsUnit() {
 		return imageCardsUnitEClass;
 	}
@@ -2962,6 +3228,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageCardsUnit_OverlayTitle() {
 		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -2971,6 +3238,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageCardsUnit_EnableImageEnlargement() {
 		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -2980,6 +3248,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageCardsUnit_RevealUntruncatedContent() {
 		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -2989,6 +3258,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImageCardsUnit_StyleClass() {
 		return (EAttribute)imageCardsUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -2998,6 +3268,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSliderUnit() {
 		return sliderUnitEClass;
 	}
@@ -3007,6 +3278,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSliderUnit_ShowTime() {
 		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -3016,6 +3288,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSliderUnit_TransitionTime() {
 		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -3025,6 +3298,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSliderUnit_StyleClass() {
 		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -3034,6 +3308,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSliderUnit_ContentClass() {
 		return (EAttribute)sliderUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -3043,6 +3318,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGalleryUnit() {
 		return galleryUnitEClass;
 	}
@@ -3052,6 +3328,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGalleryUnit_FullSizeFilter() {
 		return (EReference)galleryUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -3061,6 +3338,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGalleryUnit_ShowTime() {
 		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -3070,6 +3348,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGalleryUnit_TransitionTime() {
 		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(2);
 	}
@@ -3079,6 +3358,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGalleryUnit_StyleClass() {
 		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(3);
 	}
@@ -3088,6 +3368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGalleryUnit_ContentClass() {
 		return (EAttribute)galleryUnitEClass.getEStructuralFeatures().get(4);
 	}
@@ -3097,6 +3378,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuthenticationUnit() {
 		return authenticationUnitEClass;
 	}
@@ -3106,6 +3388,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRegistrationUnit() {
 		return registrationUnitEClass;
 	}
@@ -3115,6 +3398,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegistrationUnit_StyleClass() {
 		return (EAttribute)registrationUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -3124,6 +3408,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLoginUnit() {
 		return loginUnitEClass;
 	}
@@ -3133,6 +3418,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoginUnit_LogoutUriElement() {
 		return (EAttribute)loginUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -3142,6 +3428,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoginUnit_StyleClass() {
 		return (EAttribute)loginUnitEClass.getEStructuralFeatures().get(1);
 	}
@@ -3151,6 +3438,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getForgottenPasswordUnit() {
 		return forgottenPasswordUnitEClass;
 	}
@@ -3160,6 +3448,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getForgottenPasswordUnit_StyleClass() {
 		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(0);
 	}
@@ -3169,6 +3458,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInlineActionContainer() {
 		return inlineActionContainerEClass;
 	}
@@ -3178,6 +3468,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInlineActionContainer_Actions() {
 		return (EReference)inlineActionContainerEClass.getEStructuralFeatures().get(0);
 	}
@@ -3187,6 +3478,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInlineAction() {
 		return inlineActionEClass;
 	}
@@ -3196,6 +3488,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInlineAction_UsedBy() {
 		return (EReference)inlineActionEClass.getEStructuralFeatures().get(0);
 	}
@@ -3205,6 +3498,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_IconName() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(1);
 	}
@@ -3214,6 +3508,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_Disable() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(2);
 	}
@@ -3223,6 +3518,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInlineAction_DisplayWhen() {
 		return (EReference)inlineActionEClass.getEStructuralFeatures().get(3);
 	}
@@ -3232,6 +3528,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_Header() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(4);
 	}
@@ -3241,6 +3538,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_Footer() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(5);
 	}
@@ -3250,6 +3548,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_HeaderClass() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(6);
 	}
@@ -3259,6 +3558,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInlineAction_FooterClass() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(7);
 	}
@@ -3268,6 +3568,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSelectAction() {
 		return selectActionEClass;
 	}
@@ -3277,6 +3578,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSelectAction_Target() {
 		return (EReference)selectActionEClass.getEStructuralFeatures().get(0);
 	}
@@ -3286,6 +3588,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSelectAction_ValuePath() {
 		return (EReference)selectActionEClass.getEStructuralFeatures().get(1);
 	}
@@ -3295,6 +3598,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeleteAction() {
 		return deleteActionEClass;
 	}
@@ -3304,6 +3608,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeleteAction_Destination() {
 		return (EReference)deleteActionEClass.getEStructuralFeatures().get(0);
 	}
@@ -3313,6 +3618,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDeleteAction_ConfirmMessage() {
 		return (EAttribute)deleteActionEClass.getEStructuralFeatures().get(1);
 	}
@@ -3322,6 +3628,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDeleteAction_RequiresRole() {
 		return (EAttribute)deleteActionEClass.getEStructuralFeatures().get(2);
 	}
@@ -3331,6 +3638,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeleteAction_EnableWhen() {
 		return (EReference)deleteActionEClass.getEStructuralFeatures().get(3);
 	}
@@ -3340,6 +3648,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDeleteAction_UriElement() {
 		return (EAttribute)deleteActionEClass.getEStructuralFeatures().get(4);
 	}
@@ -3349,6 +3658,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeatureSupportAction() {
 		return featureSupportActionEClass;
 	}
@@ -3358,6 +3668,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeatureSupportAction_Operation() {
 		return (EReference)featureSupportActionEClass.getEStructuralFeatures().get(0);
 	}
@@ -3367,6 +3678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeatureSupportAction_ConfirmMessage() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(1);
 	}
@@ -3376,6 +3688,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeatureSupportAction_FileExtension() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(2);
 	}
@@ -3385,6 +3698,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeatureSupportAction_RequiresRole() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(3);
 	}
@@ -3394,6 +3708,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeatureSupportAction_EnableWhen() {
 		return (EReference)featureSupportActionEClass.getEStructuralFeatures().get(4);
 	}
@@ -3403,6 +3718,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeatureSupportAction_UriElement() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(5);
 	}
@@ -3412,6 +3728,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBadge() {
 		return badgeEClass;
 	}
@@ -3421,6 +3738,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBadge_DisplayedOn() {
 		return (EReference)badgeEClass.getEStructuralFeatures().get(0);
 	}
@@ -3430,6 +3748,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBadge_IconName() {
 		return (EAttribute)badgeEClass.getEStructuralFeatures().get(1);
 	}
@@ -3439,6 +3758,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBadge_Value() {
 		return (EReference)badgeEClass.getEStructuralFeatures().get(2);
 	}
@@ -3448,6 +3768,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBadge_DisplayWhen() {
 		return (EReference)badgeEClass.getEStructuralFeatures().get(3);
 	}
@@ -3457,6 +3778,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBadge_NewWhen() {
 		return (EReference)badgeEClass.getEStructuralFeatures().get(4);
 	}
@@ -3466,6 +3788,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getInputTechnologies() {
 		return inputTechnologiesEEnum;
 	}
@@ -3475,6 +3798,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAjaxTechnologies() {
 		return ajaxTechnologiesEEnum;
 	}
@@ -3484,6 +3808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getPageTopMenuOptions() {
 		return pageTopMenuOptionsEEnum;
 	}
@@ -3493,6 +3818,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCollectionDisplayOptions() {
 		return collectionDisplayOptionsEEnum;
 	}
@@ -3502,6 +3828,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getPaginationControlPlacements() {
 		return paginationControlPlacementsEEnum;
 	}
@@ -3511,6 +3838,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getIndexDisplayOption() {
 		return indexDisplayOptionEEnum;
 	}
@@ -3520,6 +3848,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebuiFactory getWebuiFactory() {
 		return (WebuiFactory)getEFactoryInstance();
 	}
@@ -3821,6 +4150,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__OMIT_FIELD_LABELS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CONTENT_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__ROW_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__COLUMN_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_CLASS);
 
@@ -4309,9 +4639,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getCardsUnit_Badges(), this.getBadge(), this.getBadge_DisplayedOn(), "badges", null, 0, -1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCardsUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_OverlaySingleSelectAction(), ecorePackage.getEBoolean(), "overlaySingleSelectAction", null, 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCardsUnit_ContentClass(), ecorePackage.getEString(), "contentClass", "row", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCardsUnit_ColumnClass(), ecorePackage.getEString(), "columnClass", "col s12 m6 l3", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCardsUnit_CardClass(), ecorePackage.getEString(), "cardClass", "card hoverable", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_ContentClass(), ecorePackage.getEString(), "contentClass", "container", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_RowClass(), ecorePackage.getEString(), "rowClass", "row row-cols-1 row-cols-md-3 row-cols-lg-4", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_ColumnClass(), ecorePackage.getEString(), "columnClass", "col-sm-12 col-md-6 col-lg-3", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_CardClass(), ecorePackage.getEString(), "cardClass", "card h-100", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(badgeEClass, Badge.class, "Badge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBadge_DisplayedOn(), this.getCardsUnit(), this.getCardsUnit_Badges(), "displayedOn", null, 1, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

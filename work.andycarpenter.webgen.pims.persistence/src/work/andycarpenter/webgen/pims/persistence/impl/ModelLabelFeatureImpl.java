@@ -55,6 +55,7 @@ public abstract class ModelLabelFeatureImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel getPartOf() {
 		if (eContainerFeatureID() != PersistencePackage.MODEL_LABEL_FEATURE__PART_OF) return null;
 		return (ModelLabel)eInternalContainer();
@@ -75,6 +76,7 @@ public abstract class ModelLabelFeatureImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartOf(ModelLabel newPartOf) {
 		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.MODEL_LABEL_FEATURE__PART_OF && newPartOf != null)) {
 			if (EcoreUtil.isAncestor(this, newPartOf))

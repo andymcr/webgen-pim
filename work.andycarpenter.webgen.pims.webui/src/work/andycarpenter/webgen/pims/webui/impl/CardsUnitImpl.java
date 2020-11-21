@@ -32,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getContentClass <em>Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardClass <em>Card Class</em>}</li>
  * </ul>
@@ -107,7 +108,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "row";
+	protected static final String CONTENT_CLASS_EDEFAULT = "container";
 
 	/**
 	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
@@ -120,6 +121,26 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRowClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ROW_CLASS_EDEFAULT = "row row-cols-1 row-cols-md-3 row-cols-lg-4";
+
+	/**
+	 * The cached value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRowClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String rowClass = ROW_CLASS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,7 +148,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "col s12 m6 l3";
+	protected static final String COLUMN_CLASS_EDEFAULT = "col-sm-12 col-md-6 col-lg-3";
 
 	/**
 	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
@@ -147,7 +168,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_CLASS_EDEFAULT = "card hoverable";
+	protected static final String CARD_CLASS_EDEFAULT = "card h-100";
 
 	/**
 	 * The cached value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
@@ -183,6 +204,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InlineAction> getActions() {
 		if (actions == null) {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.CARDS_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
@@ -195,6 +217,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Badge> getBadges() {
 		if (badges == null) {
 			badges = new EObjectContainmentWithInverseEList<Badge>(Badge.class, this, WebuiPackage.CARDS_UNIT__BADGES, WebuiPackage.BADGE__DISPLAYED_ON);
@@ -207,6 +230,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitFieldLabels() {
 		return omitFieldLabels;
 	}
@@ -216,6 +240,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitFieldLabels(boolean newOmitFieldLabels) {
 		boolean oldOmitFieldLabels = omitFieldLabels;
 		omitFieldLabels = newOmitFieldLabels;
@@ -228,6 +253,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOverlaySingleSelectAction() {
 		return overlaySingleSelectAction;
 	}
@@ -237,6 +263,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOverlaySingleSelectAction(boolean newOverlaySingleSelectAction) {
 		boolean oldOverlaySingleSelectAction = overlaySingleSelectAction;
 		overlaySingleSelectAction = newOverlaySingleSelectAction;
@@ -249,6 +276,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -258,6 +286,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;
@@ -270,6 +299,30 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getRowClass() {
+		return rowClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRowClass(String newRowClass) {
+		String oldRowClass = rowClass;
+		rowClass = newRowClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__ROW_CLASS, oldRowClass, rowClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getColumnClass() {
 		return columnClass;
 	}
@@ -279,6 +332,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColumnClass(String newColumnClass) {
 		String oldColumnClass = columnClass;
 		columnClass = newColumnClass;
@@ -291,6 +345,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCardClass() {
 		return cardClass;
 	}
@@ -300,6 +355,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCardClass(String newCardClass) {
 		String oldCardClass = cardClass;
 		cardClass = newCardClass;
@@ -358,6 +414,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return isOverlaySingleSelectAction();
 			case WebuiPackage.CARDS_UNIT__CONTENT_CLASS:
 				return getContentClass();
+			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
+				return getRowClass();
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
 				return getColumnClass();
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
@@ -392,6 +450,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CONTENT_CLASS:
 				setContentClass((String)newValue);
 				return;
+			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
+				setRowClass((String)newValue);
+				return;
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
 				setColumnClass((String)newValue);
 				return;
@@ -425,6 +486,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CONTENT_CLASS:
 				setContentClass(CONTENT_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
+				setRowClass(ROW_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
 				setColumnClass(COLUMN_CLASS_EDEFAULT);
 				return;
@@ -453,6 +517,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return overlaySingleSelectAction != OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
 			case WebuiPackage.CARDS_UNIT__CONTENT_CLASS:
 				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
+			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
+				return ROW_CLASS_EDEFAULT == null ? rowClass != null : !ROW_CLASS_EDEFAULT.equals(rowClass);
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
 				return COLUMN_CLASS_EDEFAULT == null ? columnClass != null : !COLUMN_CLASS_EDEFAULT.equals(columnClass);
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
@@ -509,6 +575,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		result.append(overlaySingleSelectAction);
 		result.append(", contentClass: ");
 		result.append(contentClass);
+		result.append(", rowClass: ");
+		result.append(rowClass);
 		result.append(", columnClass: ");
 		result.append(columnClass);
 		result.append(", cardClass: ");

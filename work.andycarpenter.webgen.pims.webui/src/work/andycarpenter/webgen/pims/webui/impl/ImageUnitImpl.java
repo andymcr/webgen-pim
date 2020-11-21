@@ -104,6 +104,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getImagePathFeature() {
 		return imagePathFeature;
 	}
@@ -128,6 +129,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImagePathFeature(FeaturePath newImagePathFeature) {
 		if (newImagePathFeature != imagePathFeature) {
 			NotificationChain msgs = null;
@@ -147,6 +149,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getImageFilter() {
 		if (imageFilter != null && imageFilter.eIsProxy()) {
 			InternalEObject oldImageFilter = (InternalEObject)imageFilter;
@@ -173,6 +176,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImageFilter(ImageManipulation newImageFilter) {
 		ImageManipulation oldImageFilter = imageFilter;
 		imageFilter = newImageFilter;
@@ -185,6 +189,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getMissingImageFilter() {
 		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
 			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
@@ -211,6 +216,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
 		ImageManipulation oldMissingImageFilter = missingImageFilter;
 		missingImageFilter = newMissingImageFilter;
@@ -223,6 +229,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMissingImagePath() {
 		return missingImagePath;
 	}
@@ -232,6 +239,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMissingImagePath(String newMissingImagePath) {
 		String oldMissingImagePath = missingImagePath;
 		missingImagePath = newMissingImagePath;

@@ -105,6 +105,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCaptchaSiteKey() {
 		return captchaSiteKey;
 	}
@@ -114,6 +115,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaptchaSiteKey(String newCaptchaSiteKey) {
 		String oldCaptchaSiteKey = captchaSiteKey;
 		captchaSiteKey = newCaptchaSiteKey;
@@ -126,6 +128,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCaptchaSecretKey() {
 		return captchaSecretKey;
 	}
@@ -135,6 +138,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaptchaSecretKey(String newCaptchaSecretKey) {
 		String oldCaptchaSecretKey = captchaSecretKey;
 		captchaSecretKey = newCaptchaSecretKey;
@@ -147,6 +151,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Authentication getAuthentication() {
 		return authentication;
 	}
@@ -171,6 +176,7 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthentication(Authentication newAuthentication) {
 		if (newAuthentication != authentication) {
 			NotificationChain msgs = null;

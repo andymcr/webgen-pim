@@ -74,6 +74,7 @@ public class SelectActionImpl extends InlineActionImpl implements SelectAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SelectableUnit getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -100,6 +101,7 @@ public class SelectActionImpl extends InlineActionImpl implements SelectAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(SelectableUnit newTarget) {
 		SelectableUnit oldTarget = target;
 		target = newTarget;
@@ -112,6 +114,7 @@ public class SelectActionImpl extends InlineActionImpl implements SelectAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePath getValuePath() {
 		return valuePath;
 	}
@@ -136,6 +139,7 @@ public class SelectActionImpl extends InlineActionImpl implements SelectAction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValuePath(FeaturePath newValuePath) {
 		if (newValuePath != valuePath) {
 			NotificationChain msgs = null;

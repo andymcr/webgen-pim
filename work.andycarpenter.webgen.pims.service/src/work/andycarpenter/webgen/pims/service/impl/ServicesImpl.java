@@ -68,6 +68,7 @@ public class ServicesImpl extends MinimalEObjectImpl.Container implements Servic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Service> getServices() {
 		if (services == null) {
 			services = new EObjectContainmentEList<Service>(Service.class, this, ServicePackage.SERVICES__SERVICES);

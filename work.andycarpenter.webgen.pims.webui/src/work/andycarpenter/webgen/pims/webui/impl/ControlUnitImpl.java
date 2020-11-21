@@ -124,6 +124,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSubmitLabel() {
 		return submitLabel;
 	}
@@ -133,6 +134,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubmitLabel(String newSubmitLabel) {
 		String oldSubmitLabel = submitLabel;
 		submitLabel = newSubmitLabel;
@@ -145,6 +147,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getCancelDestination() {
 		if (cancelDestination != null && cancelDestination.eIsProxy()) {
 			InternalEObject oldCancelDestination = (InternalEObject)cancelDestination;
@@ -171,6 +174,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelDestination(Page newCancelDestination) {
 		Page oldCancelDestination = cancelDestination;
 		cancelDestination = newCancelDestination;
@@ -183,6 +187,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCancelLabel() {
 		return cancelLabel;
 	}
@@ -192,6 +197,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelLabel(String newCancelLabel) {
 		String oldCancelLabel = cancelLabel;
 		cancelLabel = newCancelLabel;
@@ -204,6 +210,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -213,6 +220,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;

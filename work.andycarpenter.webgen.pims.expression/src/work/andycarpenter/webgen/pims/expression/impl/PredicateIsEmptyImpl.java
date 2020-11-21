@@ -62,6 +62,7 @@ public class PredicateIsEmptyImpl extends PredicateImpl implements PredicateIsEm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getFeature() {
 		return feature;
 	}
@@ -86,6 +87,7 @@ public class PredicateIsEmptyImpl extends PredicateImpl implements PredicateIsEm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFeature(Variable newFeature) {
 		if (newFeature != feature) {
 			NotificationChain msgs = null;

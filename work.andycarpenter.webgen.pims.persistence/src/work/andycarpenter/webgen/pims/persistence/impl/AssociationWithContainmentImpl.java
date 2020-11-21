@@ -69,6 +69,7 @@ public class AssociationWithContainmentImpl extends AssociationImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSourceVisible() {
 		return sourceVisible;
 	}
@@ -78,6 +79,7 @@ public class AssociationWithContainmentImpl extends AssociationImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceVisible(boolean newSourceVisible) {
 		boolean oldSourceVisible = sourceVisible;
 		sourceVisible = newSourceVisible;

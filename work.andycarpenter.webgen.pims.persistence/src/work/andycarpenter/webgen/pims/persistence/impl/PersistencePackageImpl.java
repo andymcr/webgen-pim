@@ -320,6 +320,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		EValidator.Registry.INSTANCE.put
 			(thePersistencePackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return PersistenceValidator.INSTANCE;
 				 }
@@ -338,6 +339,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPersistence() {
 		return persistenceEClass;
 	}
@@ -347,6 +349,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPersistence_SerializationGroups() {
 		return (EReference)persistenceEClass.getEStructuralFeatures().get(0);
 	}
@@ -356,6 +359,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPersistence_DataTypes() {
 		return (EReference)persistenceEClass.getEStructuralFeatures().get(1);
 	}
@@ -365,6 +369,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPersistence_Entities() {
 		return (EReference)persistenceEClass.getEStructuralFeatures().get(2);
 	}
@@ -374,6 +379,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPersistence_OrmTechnology() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(3);
 	}
@@ -383,6 +389,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPersistence_DatabaseTechnology() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(4);
 	}
@@ -392,6 +399,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPersistence_TimestampCreation() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(5);
 	}
@@ -401,6 +409,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPersistence_TimestampUpdates() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(6);
 	}
@@ -410,6 +419,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSerializationGroup() {
 		return serializationGroupEClass;
 	}
@@ -419,6 +429,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFeature() {
 		return featureEClass;
 	}
@@ -428,6 +439,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeature_PartOf() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(0);
 	}
@@ -437,6 +449,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_Cardinality() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(1);
 	}
@@ -446,6 +459,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_Ordered() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(2);
 	}
@@ -455,6 +469,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_PrimaryKey() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(3);
 	}
@@ -464,6 +479,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_Derived() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(4);
 	}
@@ -473,6 +489,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_CustomiseSet() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(5);
 	}
@@ -482,6 +499,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_BooleanIsHasChoice() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(6);
 	}
@@ -491,6 +509,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_Title() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(7);
 	}
@@ -500,6 +519,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_CollectionOrmAllowAdd() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(8);
 	}
@@ -509,6 +529,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_CollectionOrmAllowRemove() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(9);
 	}
@@ -518,6 +539,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_DefaultDisplayValue() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(10);
 	}
@@ -527,6 +549,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_EmptyDisplayValue() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(11);
 	}
@@ -536,6 +559,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_EncodeUriKey() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(12);
 	}
@@ -545,6 +569,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_SingletonName() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(13);
 	}
@@ -554,6 +579,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_PluralisedName() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(14);
 	}
@@ -563,6 +589,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_ColumnName() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(15);
 	}
@@ -572,6 +599,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFeature_SerializationGroups() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(16);
 	}
@@ -581,6 +609,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_HeaderClass() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(17);
 	}
@@ -590,6 +619,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_DisplayClass() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(18);
 	}
@@ -599,6 +629,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFeature_FooterClass() {
 		return (EAttribute)featureEClass.getEStructuralFeatures().get(19);
 	}
@@ -608,6 +639,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -617,6 +649,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Hidden() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -626,6 +659,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_ContainerUnique() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -635,6 +669,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_PersistentType() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -644,6 +679,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_OrmType() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
@@ -653,6 +689,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_InterfaceType() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(4);
 	}
@@ -662,6 +699,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_SlugFields() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(5);
 	}
@@ -671,6 +709,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Unique() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(6);
 	}
@@ -680,6 +719,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_DefaultValue() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(7);
 	}
@@ -689,6 +729,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Placeholder() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(8);
 	}
@@ -698,6 +739,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_ValidationPattern() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(9);
 	}
@@ -707,6 +749,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_InputColumnClass() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(10);
 	}
@@ -716,6 +759,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_InputElementClass() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(11);
 	}
@@ -725,6 +769,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociation() {
 		return associationEClass;
 	}
@@ -734,6 +779,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociation_Keys() {
 		return (EReference)associationEClass.getEStructuralFeatures().get(0);
 	}
@@ -743,6 +789,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociation_TargetEntity() {
 		return (EReference)associationEClass.getEStructuralFeatures().get(1);
 	}
@@ -752,6 +799,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_Bidirectional() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(2);
 	}
@@ -761,6 +809,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_Unique() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(3);
 	}
@@ -770,6 +819,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_PivotTableName() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(4);
 	}
@@ -779,6 +829,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetFeatureName() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(5);
 	}
@@ -788,6 +839,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetPrimaryKey() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(6);
 	}
@@ -797,6 +849,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetColumnName() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(7);
 	}
@@ -806,6 +859,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetDisplayLabel() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(8);
 	}
@@ -815,6 +869,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetHeaderClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(9);
 	}
@@ -824,6 +879,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetInputClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(10);
 	}
@@ -833,6 +889,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetDisplayClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(11);
 	}
@@ -842,6 +899,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_TargetFooterClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(12);
 	}
@@ -851,6 +909,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_Pseudo() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(13);
 	}
@@ -860,6 +919,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_InputColumnClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(14);
 	}
@@ -869,6 +929,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_InputElementClass() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(15);
 	}
@@ -878,6 +939,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociation_SerializationMaxDepth() {
 		return (EAttribute)associationEClass.getEStructuralFeatures().get(16);
 	}
@@ -887,6 +949,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLabel() {
 		return labelEClass;
 	}
@@ -896,6 +959,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModelLabel() {
 		return modelLabelEClass;
 	}
@@ -905,6 +969,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabel_LabelFor() {
 		return (EReference)modelLabelEClass.getEStructuralFeatures().get(0);
 	}
@@ -914,6 +979,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModelLabel_Format() {
 		return (EAttribute)modelLabelEClass.getEStructuralFeatures().get(1);
 	}
@@ -923,6 +989,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModelLabel_Customise() {
 		return (EAttribute)modelLabelEClass.getEStructuralFeatures().get(2);
 	}
@@ -932,6 +999,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabel_Features() {
 		return (EReference)modelLabelEClass.getEStructuralFeatures().get(3);
 	}
@@ -941,6 +1009,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabel_SerializationGroups() {
 		return (EReference)modelLabelEClass.getEStructuralFeatures().get(4);
 	}
@@ -950,6 +1019,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModelLabelFeature() {
 		return modelLabelFeatureEClass;
 	}
@@ -959,6 +1029,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabelFeature_PartOf() {
 		return (EReference)modelLabelFeatureEClass.getEStructuralFeatures().get(0);
 	}
@@ -968,6 +1039,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModelLabelAttribute() {
 		return modelLabelAttributeEClass;
 	}
@@ -977,6 +1049,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabelAttribute_Attribute() {
 		return (EReference)modelLabelAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -986,6 +1059,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModelLabelAttribute_DateFormat() {
 		return (EAttribute)modelLabelAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -995,6 +1069,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModelLabelAssociation() {
 		return modelLabelAssociationEClass;
 	}
@@ -1004,6 +1079,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabelAssociation_Association() {
 		return (EReference)modelLabelAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1013,6 +1089,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelLabelAssociation_DynamicLabel() {
 		return (EReference)modelLabelAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1022,6 +1099,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModelLabelAssociation_IsSourceAssociation() {
 		return (EAttribute)modelLabelAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1031,6 +1109,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -1040,6 +1119,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_SingletonName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1049,6 +1129,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_PluralisedName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
 	}
@@ -1058,6 +1139,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Features() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(2);
 	}
@@ -1067,6 +1149,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Keys() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(8);
 	}
@@ -1076,6 +1159,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Attributes() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(3);
 	}
@@ -1085,6 +1169,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Associations() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(4);
 	}
@@ -1094,6 +1179,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_AssociationEnds() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(5);
 	}
@@ -1103,6 +1189,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_AllFeatures() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(6);
 	}
@@ -1112,6 +1199,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_AllAssociations() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(7);
 	}
@@ -1121,6 +1209,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Labels() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(9);
 	}
@@ -1130,6 +1219,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Unique() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(10);
 	}
@@ -1139,6 +1229,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_ContainerUnique() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(11);
 	}
@@ -1148,6 +1239,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_TableName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(12);
 	}
@@ -1157,6 +1249,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_AutoKeyName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(13);
 	}
@@ -1166,6 +1259,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_AutoKeyPersistentType() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(14);
 	}
@@ -1175,6 +1269,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_AutoKeyGenerationStrategy() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(15);
 	}
@@ -1184,6 +1279,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_ImplementsUserInterface() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(16);
 	}
@@ -1193,6 +1289,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_AllowFormTypeCustomisation() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(17);
 	}
@@ -1202,6 +1299,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataTypeAttribute() {
 		return dataTypeAttributeEClass;
 	}
@@ -1211,6 +1309,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataTypeAttribute_DataType() {
 		return (EReference)dataTypeAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1220,6 +1319,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeAttribute_ObfuscateFormFields() {
 		return (EAttribute)dataTypeAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1229,6 +1329,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeAttribute_CaseInsensitive() {
 		return (EAttribute)dataTypeAttributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -1238,6 +1339,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTypeAttribute_Encrypt() {
 		return (EAttribute)dataTypeAttributeEClass.getEStructuralFeatures().get(3);
 	}
@@ -1247,6 +1349,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDateAttribute() {
 		return dateAttributeEClass;
 	}
@@ -1256,6 +1359,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateAttribute_Details() {
 		return (EAttribute)dateAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1265,6 +1369,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateAttribute_Format() {
 		return (EAttribute)dateAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1274,6 +1379,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUrlAttribute() {
 		return urlAttributeEClass;
 	}
@@ -1283,6 +1389,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUrlAttribute_DisplayValue() {
 		return (EAttribute)urlAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1292,6 +1399,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getResourceAttribute() {
 		return resourceAttributeEClass;
 	}
@@ -1301,6 +1409,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getResourceAttribute_MaximumUploadSize() {
 		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1310,6 +1419,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getResourceAttribute_ValidUploadMimeTypes() {
 		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1319,6 +1429,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getResourceAttribute_ValidUploadExtensions() {
 		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -1328,6 +1439,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getResourceAttribute_UploadsWithinWebsite() {
 		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(3);
 	}
@@ -1337,6 +1449,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getResourceAttribute_UploadPath() {
 		return (EReference)resourceAttributeEClass.getEStructuralFeatures().get(4);
 	}
@@ -1346,6 +1459,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPathElement() {
 		return pathElementEClass;
 	}
@@ -1355,6 +1469,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStaticPathElement() {
 		return staticPathElementEClass;
 	}
@@ -1364,6 +1479,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStaticPathElement_Element() {
 		return (EAttribute)staticPathElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1373,6 +1489,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDatePathElement() {
 		return datePathElementEClass;
 	}
@@ -1382,6 +1499,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDatePathElement_Format() {
 		return (EAttribute)datePathElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1391,6 +1509,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFileAttribute() {
 		return fileAttributeEClass;
 	}
@@ -1400,6 +1519,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImageAttribute() {
 		return imageAttributeEClass;
 	}
@@ -1409,6 +1529,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLocationAttribute() {
 		return locationAttributeEClass;
 	}
@@ -1418,6 +1539,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociationWithoutContainment() {
 		return associationWithoutContainmentEClass;
 	}
@@ -1427,6 +1549,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociationWithoutContainment_TargetCardinality() {
 		return (EAttribute)associationWithoutContainmentEClass.getEStructuralFeatures().get(0);
 	}
@@ -1436,6 +1559,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociationWithoutContainment_TargetUnique() {
 		return (EAttribute)associationWithoutContainmentEClass.getEStructuralFeatures().get(1);
 	}
@@ -1445,6 +1569,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociationWithContainment() {
 		return associationWithContainmentEClass;
 	}
@@ -1454,6 +1579,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociationWithContainment_SourceVisible() {
 		return (EAttribute)associationWithContainmentEClass.getEStructuralFeatures().get(0);
 	}
@@ -1463,6 +1589,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociationKey() {
 		return associationKeyEClass;
 	}
@@ -1472,6 +1599,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationKey_KeyFor() {
 		return (EReference)associationKeyEClass.getEStructuralFeatures().get(0);
 	}
@@ -1481,6 +1609,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationKey_SourceFeature() {
 		return (EReference)associationKeyEClass.getEStructuralFeatures().get(1);
 	}
@@ -1490,6 +1619,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationKey_TargetFeature() {
 		return (EReference)associationKeyEClass.getEStructuralFeatures().get(2);
 	}
@@ -1499,6 +1629,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDatabaseTechnologies() {
 		return databaseTechnologiesEEnum;
 	}
@@ -1508,6 +1639,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOrmTechnologies() {
 		return ormTechnologiesEEnum;
 	}
@@ -1517,6 +1649,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCardinality() {
 		return cardinalityEEnum;
 	}
@@ -1526,6 +1659,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getisHasChoices() {
 		return isHasChoicesEEnum;
 	}
@@ -1535,6 +1669,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDateDetails() {
 		return dateDetailsEEnum;
 	}
@@ -1544,6 +1679,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PersistenceFactory getPersistenceFactory() {
 		return (PersistenceFactory)getEFactoryInstance();
 	}

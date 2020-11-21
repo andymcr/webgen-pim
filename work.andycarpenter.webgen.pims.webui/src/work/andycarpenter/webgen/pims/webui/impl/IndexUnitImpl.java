@@ -172,6 +172,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InlineAction> getActions() {
 		if (actions == null) {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.INDEX_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
@@ -184,6 +185,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IndexDisplayOption getDisplayOption() {
 		return displayOption;
 	}
@@ -193,6 +195,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayOption(IndexDisplayOption newDisplayOption) {
 		IndexDisplayOption oldDisplayOption = displayOption;
 		displayOption = newDisplayOption == null ? DISPLAY_OPTION_EDEFAULT : newDisplayOption;
@@ -205,6 +208,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitColumnLabels() {
 		return omitColumnLabels;
 	}
@@ -214,6 +218,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitColumnLabels(boolean newOmitColumnLabels) {
 		boolean oldOmitColumnLabels = omitColumnLabels;
 		omitColumnLabels = newOmitColumnLabels;
@@ -226,6 +231,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -235,6 +241,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;
@@ -247,6 +254,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -256,6 +264,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;
@@ -268,6 +277,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRowClasses() {
 		return rowClasses;
 	}
@@ -277,6 +287,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRowClasses(String newRowClasses) {
 		String oldRowClasses = rowClasses;
 		rowClasses = newRowClasses;

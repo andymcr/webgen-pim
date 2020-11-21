@@ -76,6 +76,7 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Menu getPartOf() {
 		if (eContainerFeatureID() != WebuiPackage.SUBMENU_ENTRY__PART_OF) return null;
 		return (Menu)eInternalContainer();
@@ -96,6 +97,7 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartOf(Menu newPartOf) {
 		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.SUBMENU_ENTRY__PART_OF && newPartOf != null)) {
 			if (EcoreUtil.isAncestor(this, newPartOf))
@@ -117,6 +119,7 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -126,6 +129,7 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;

@@ -161,6 +161,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebUI createWebUI() {
 		WebUIImpl webUI = new WebUIImpl();
 		return webUI;
@@ -171,6 +172,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Menu createMenu() {
 		MenuImpl menu = new MenuImpl();
 		return menu;
@@ -181,6 +183,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubmenuEntry createSubmenuEntry() {
 		SubmenuEntryImpl submenuEntry = new SubmenuEntryImpl();
 		return submenuEntry;
@@ -191,6 +194,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionMenuEntry createActionMenuEntry() {
 		ActionMenuEntryImpl actionMenuEntry = new ActionMenuEntryImpl();
 		return actionMenuEntry;
@@ -201,6 +205,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EditStaticTextMenuEntry createEditStaticTextMenuEntry() {
 		EditStaticTextMenuEntryImpl editStaticTextMenuEntry = new EditStaticTextMenuEntryImpl();
 		return editStaticTextMenuEntry;
@@ -211,6 +216,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MenuFeature createMenuFeature() {
 		MenuFeatureImpl menuFeature = new MenuFeatureImpl();
 		return menuFeature;
@@ -221,6 +227,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Query createQuery() {
 		QueryImpl query = new QueryImpl();
 		return query;
@@ -231,6 +238,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QueryParameter createQueryParameter() {
 		QueryParameterImpl queryParameter = new QueryParameterImpl();
 		return queryParameter;
@@ -241,6 +249,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page createPage() {
 		PageImpl page = new PageImpl();
 		return page;
@@ -251,6 +260,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PageLink createPageLink() {
 		PageLinkImpl pageLink = new PageLinkImpl();
 		return pageLink;
@@ -261,6 +271,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RouteActual createRouteActual() {
 		RouteActualImpl routeActual = new RouteActualImpl();
 		return routeActual;
@@ -271,6 +282,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StaticUnit createStaticUnit() {
 		StaticUnitImpl staticUnit = new StaticUnitImpl();
 		return staticUnit;
@@ -281,6 +293,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateSitemapUnit createCreateSitemapUnit() {
 		CreateSitemapUnitImpl createSitemapUnit = new CreateSitemapUnitImpl();
 		return createSitemapUnit;
@@ -291,6 +304,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitElement createUnitElement() {
 		UnitElementImpl unitElement = new UnitElementImpl();
 		return unitElement;
@@ -301,6 +315,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitAssociation createUnitAssociation() {
 		UnitAssociationImpl unitAssociation = new UnitAssociationImpl();
 		return unitAssociation;
@@ -311,6 +326,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChildPathAttribute createChildPathAttribute() {
 		ChildPathAttributeImpl childPathAttribute = new ChildPathAttributeImpl();
 		return childPathAttribute;
@@ -321,6 +337,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChildPathAssociation createChildPathAssociation() {
 		ChildPathAssociationImpl childPathAssociation = new ChildPathAssociationImpl();
 		return childPathAssociation;
@@ -331,6 +348,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePathAttribute createFeaturePathAttribute() {
 		FeaturePathAttributeImpl featurePathAttribute = new FeaturePathAttributeImpl();
 		return featurePathAttribute;
@@ -341,6 +359,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePathAssociation createFeaturePathAssociation() {
 		FeaturePathAssociationImpl featurePathAssociation = new FeaturePathAssociationImpl();
 		return featurePathAssociation;
@@ -351,6 +370,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeaturePathLabel createFeaturePathLabel() {
 		FeaturePathLabelImpl featurePathLabel = new FeaturePathLabelImpl();
 		return featurePathLabel;
@@ -361,6 +381,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitLabel createUnitLabel() {
 		UnitLabelImpl unitLabel = new UnitLabelImpl();
 		return unitLabel;
@@ -371,6 +392,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataTypeField createDataTypeField() {
 		DataTypeFieldImpl dataTypeField = new DataTypeFieldImpl();
 		return dataTypeField;
@@ -381,6 +403,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateField createDateField() {
 		DateFieldImpl dateField = new DateFieldImpl();
 		return dateField;
@@ -391,6 +414,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CaptchaField createCaptchaField() {
 		CaptchaFieldImpl captchaField = new CaptchaFieldImpl();
 		return captchaField;
@@ -401,6 +425,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitSupportAction createUnitSupportAction() {
 		UnitSupportActionImpl unitSupportAction = new UnitSupportActionImpl();
 		return unitSupportAction;
@@ -411,6 +436,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateUnit createCreateUnit() {
 		CreateUnitImpl createUnit = new CreateUnitImpl();
 		return createUnit;
@@ -421,6 +447,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateUpdateUnit createCreateUpdateUnit() {
 		CreateUpdateUnitImpl createUpdateUnit = new CreateUpdateUnitImpl();
 		return createUpdateUnit;
@@ -431,6 +458,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UpdateUnit createUpdateUnit() {
 		UpdateUnitImpl updateUnit = new UpdateUnitImpl();
 		return updateUnit;
@@ -441,6 +469,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MapUnit createMapUnit() {
 		MapUnitImpl mapUnit = new MapUnitImpl();
 		return mapUnit;
@@ -451,6 +480,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetailsUnit createDetailsUnit() {
 		DetailsUnitImpl detailsUnit = new DetailsUnitImpl();
 		return detailsUnit;
@@ -461,6 +491,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IndexUnit createIndexUnit() {
 		IndexUnitImpl indexUnit = new IndexUnitImpl();
 		return indexUnit;
@@ -471,6 +502,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TextCardsUnit createTextCardsUnit() {
 		TextCardsUnitImpl textCardsUnit = new TextCardsUnitImpl();
 		return textCardsUnit;
@@ -481,6 +513,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateCardsUnit createDateCardsUnit() {
 		DateCardsUnitImpl dateCardsUnit = new DateCardsUnitImpl();
 		return dateCardsUnit;
@@ -491,6 +524,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageCardsUnit createImageCardsUnit() {
 		ImageCardsUnitImpl imageCardsUnit = new ImageCardsUnitImpl();
 		return imageCardsUnit;
@@ -501,6 +535,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchUnit createSearchUnit() {
 		SearchUnitImpl searchUnit = new SearchUnitImpl();
 		return searchUnit;
@@ -511,6 +546,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SliderUnit createSliderUnit() {
 		SliderUnitImpl sliderUnit = new SliderUnitImpl();
 		return sliderUnit;
@@ -521,6 +557,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GalleryUnit createGalleryUnit() {
 		GalleryUnitImpl galleryUnit = new GalleryUnitImpl();
 		return galleryUnit;
@@ -531,6 +568,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegistrationUnit createRegistrationUnit() {
 		RegistrationUnitImpl registrationUnit = new RegistrationUnitImpl();
 		return registrationUnit;
@@ -541,6 +579,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LoginUnit createLoginUnit() {
 		LoginUnitImpl loginUnit = new LoginUnitImpl();
 		return loginUnit;
@@ -551,6 +590,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ForgottenPasswordUnit createForgottenPasswordUnit() {
 		ForgottenPasswordUnitImpl forgottenPasswordUnit = new ForgottenPasswordUnitImpl();
 		return forgottenPasswordUnit;
@@ -561,6 +601,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SelectAction createSelectAction() {
 		SelectActionImpl selectAction = new SelectActionImpl();
 		return selectAction;
@@ -571,6 +612,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeleteAction createDeleteAction() {
 		DeleteActionImpl deleteAction = new DeleteActionImpl();
 		return deleteAction;
@@ -581,6 +623,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeatureSupportAction createFeatureSupportAction() {
 		FeatureSupportActionImpl featureSupportAction = new FeatureSupportActionImpl();
 		return featureSupportAction;
@@ -591,6 +634,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Badge createBadge() {
 		BadgeImpl badge = new BadgeImpl();
 		return badge;
@@ -721,6 +765,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebuiPackage getWebuiPackage() {
 		return (WebuiPackage)getEPackage();
 	}

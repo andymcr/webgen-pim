@@ -55,6 +55,7 @@ public abstract class MenuEntryImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Menu getPartOf() {
 		if (eContainerFeatureID() != WebuiPackage.MENU_ENTRY__PART_OF) return null;
 		return (Menu)eInternalContainer();
@@ -75,6 +76,7 @@ public abstract class MenuEntryImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartOf(Menu newPartOf) {
 		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.MENU_ENTRY__PART_OF && newPartOf != null)) {
 			if (EcoreUtil.isAncestor(this, newPartOf))

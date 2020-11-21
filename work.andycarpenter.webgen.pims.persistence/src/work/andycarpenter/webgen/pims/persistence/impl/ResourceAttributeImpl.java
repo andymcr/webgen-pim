@@ -134,6 +134,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMaximumUploadSize() {
 		return maximumUploadSize;
 	}
@@ -143,6 +144,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaximumUploadSize(int newMaximumUploadSize) {
 		int oldMaximumUploadSize = maximumUploadSize;
 		maximumUploadSize = newMaximumUploadSize;
@@ -155,6 +157,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getValidUploadMimeTypes() {
 		if (validUploadMimeTypes == null) {
 			validUploadMimeTypes = new EDataTypeUniqueEList<String>(String.class, this, PersistencePackage.RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES);
@@ -167,6 +170,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getValidUploadExtensions() {
 		if (validUploadExtensions == null) {
 			validUploadExtensions = new EDataTypeUniqueEList<String>(String.class, this, PersistencePackage.RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS);
@@ -179,6 +183,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUploadsWithinWebsite() {
 		return uploadsWithinWebsite;
 	}
@@ -188,6 +193,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUploadsWithinWebsite(boolean newUploadsWithinWebsite) {
 		boolean oldUploadsWithinWebsite = uploadsWithinWebsite;
 		uploadsWithinWebsite = newUploadsWithinWebsite;
@@ -200,6 +206,7 @@ public abstract class ResourceAttributeImpl extends AttributeImpl implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PathElement> getUploadPath() {
 		if (uploadPath == null) {
 			uploadPath = new EObjectContainmentEList<PathElement>(PathElement.class, this, PersistencePackage.RESOURCE_ATTRIBUTE__UPLOAD_PATH);

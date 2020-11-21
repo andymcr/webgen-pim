@@ -232,6 +232,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON) return null;
 		return (Page)eInternalContainer();
@@ -252,6 +253,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayedOn(Page newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
@@ -273,6 +275,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCreateDefaultUriElement() {
 		return createDefaultUriElement;
 	}
@@ -282,6 +285,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreateDefaultUriElement(boolean newCreateDefaultUriElement) {
 		boolean oldCreateDefaultUriElement = createDefaultUriElement;
 		createDefaultUriElement = newCreateDefaultUriElement;
@@ -294,6 +298,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RouteActual> getRouteActuals() {
 		if (routeActuals == null) {
 			routeActuals = new EObjectContainmentWithInverseEList<RouteActual>(RouteActual.class, this, WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR);
@@ -306,6 +311,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -315,6 +321,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -327,6 +334,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPurposeSummary() {
 		return purposeSummary;
 	}
@@ -336,6 +344,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurposeSummary(String newPurposeSummary) {
 		String oldPurposeSummary = purposeSummary;
 		purposeSummary = newPurposeSummary;
@@ -348,6 +357,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -357,6 +367,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;
@@ -369,6 +380,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAlternative() {
 		return alternative;
 	}
@@ -378,6 +390,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlternative(String newAlternative) {
 		String oldAlternative = alternative;
 		alternative = newAlternative;
@@ -390,6 +403,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitCaption() {
 		return omitCaption;
 	}
@@ -399,6 +413,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitCaption(boolean newOmitCaption) {
 		boolean oldOmitCaption = omitCaption;
 		omitCaption = newOmitCaption;
@@ -411,6 +426,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCaptionClass() {
 		return captionClass;
 	}
@@ -420,6 +436,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaptionClass(String newCaptionClass) {
 		String oldCaptionClass = captionClass;
 		captionClass = newCaptionClass;
@@ -432,6 +449,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPageDisplayedOn() {
 		return (Page)PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -450,6 +468,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetPageDisplayedOn() {
 		return PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}

@@ -69,6 +69,7 @@ public class TextCardsUnitImpl extends CardsUnitImpl implements TextCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -78,6 +79,7 @@ public class TextCardsUnitImpl extends CardsUnitImpl implements TextCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

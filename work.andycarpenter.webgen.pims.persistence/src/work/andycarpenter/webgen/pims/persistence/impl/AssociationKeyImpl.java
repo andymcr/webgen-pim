@@ -78,6 +78,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getKeyFor() {
 		if (eContainerFeatureID() != PersistencePackage.ASSOCIATION_KEY__KEY_FOR) return null;
 		return (Association)eInternalContainer();
@@ -98,6 +99,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKeyFor(Association newKeyFor) {
 		if (newKeyFor != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.ASSOCIATION_KEY__KEY_FOR && newKeyFor != null)) {
 			if (EcoreUtil.isAncestor(this, newKeyFor))
@@ -119,6 +121,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Feature getSourceFeature() {
 		if (sourceFeature != null && sourceFeature.eIsProxy()) {
 			InternalEObject oldSourceFeature = (InternalEObject)sourceFeature;
@@ -145,6 +148,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceFeature(Feature newSourceFeature) {
 		Feature oldSourceFeature = sourceFeature;
 		sourceFeature = newSourceFeature;
@@ -157,6 +161,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Feature getTargetFeature() {
 		if (targetFeature != null && targetFeature.eIsProxy()) {
 			InternalEObject oldTargetFeature = (InternalEObject)targetFeature;
@@ -183,6 +188,7 @@ public class AssociationKeyImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetFeature(Feature newTargetFeature) {
 		Feature oldTargetFeature = targetFeature;
 		targetFeature = newTargetFeature;

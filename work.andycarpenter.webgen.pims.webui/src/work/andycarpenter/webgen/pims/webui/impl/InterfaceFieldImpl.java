@@ -334,6 +334,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DynamicUnit getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON) return null;
 		return (DynamicUnit)eInternalContainer();
@@ -354,6 +355,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayedOn(DynamicUnit newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
@@ -375,6 +377,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -384,6 +387,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -396,6 +400,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getHideWhen() {
 		return hideWhen;
 	}
@@ -420,6 +425,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHideWhen(Predicate newHideWhen) {
 		if (newHideWhen != hideWhen) {
 			NotificationChain msgs = null;
@@ -439,6 +445,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -448,6 +455,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -460,6 +468,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEscapeHTML() {
 		return escapeHTML;
 	}
@@ -469,6 +478,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEscapeHTML(boolean newEscapeHTML) {
 		boolean oldEscapeHTML = escapeHTML;
 		escapeHTML = newEscapeHTML;
@@ -481,6 +491,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollectionDisplayOptions getCollectionDisplayOption() {
 		return collectionDisplayOption;
 	}
@@ -490,6 +501,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionDisplayOption(CollectionDisplayOptions newCollectionDisplayOption) {
 		CollectionDisplayOptions oldCollectionDisplayOption = collectionDisplayOption;
 		collectionDisplayOption = newCollectionDisplayOption == null ? COLLECTION_DISPLAY_OPTION_EDEFAULT : newCollectionDisplayOption;
@@ -502,6 +514,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTruncate() {
 		return truncate;
 	}
@@ -511,6 +524,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTruncate(boolean newTruncate) {
 		boolean oldTruncate = truncate;
 		truncate = newTruncate;
@@ -523,6 +537,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDateFormat() {
 		return dateFormat;
 	}
@@ -532,6 +547,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateFormat(String newDateFormat) {
 		String oldDateFormat = dateFormat;
 		dateFormat = newDateFormat;
@@ -544,6 +560,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDisableInput() {
 		return disableInput;
 	}
@@ -553,6 +570,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisableInput(boolean newDisableInput) {
 		boolean oldDisableInput = disableInput;
 		disableInput = newDisableInput;
@@ -565,6 +583,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRequired() {
 		return required;
 	}
@@ -574,6 +593,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequired(boolean newRequired) {
 		boolean oldRequired = required;
 		required = newRequired;
@@ -586,6 +606,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultValue() {
 		return defaultValue;
 	}
@@ -595,6 +616,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(String newDefaultValue) {
 		String oldDefaultValue = defaultValue;
 		defaultValue = newDefaultValue;
@@ -607,6 +629,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitField getMustMatch() {
 		if (mustMatch != null && mustMatch.eIsProxy()) {
 			InternalEObject oldMustMatch = (InternalEObject)mustMatch;
@@ -633,6 +656,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMustMatch(UnitField newMustMatch) {
 		UnitField oldMustMatch = mustMatch;
 		mustMatch = newMustMatch;
@@ -645,6 +669,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputClass() {
 		return inputClass;
 	}
@@ -654,6 +679,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputClass(String newInputClass) {
 		String oldInputClass = inputClass;
 		inputClass = newInputClass;
@@ -666,6 +692,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPlaceholder() {
 		return placeholder;
 	}
@@ -675,6 +702,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlaceholder(String newPlaceholder) {
 		String oldPlaceholder = placeholder;
 		placeholder = newPlaceholder;
@@ -687,6 +715,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -696,6 +725,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidationPattern(String newValidationPattern) {
 		String oldValidationPattern = validationPattern;
 		validationPattern = newValidationPattern;

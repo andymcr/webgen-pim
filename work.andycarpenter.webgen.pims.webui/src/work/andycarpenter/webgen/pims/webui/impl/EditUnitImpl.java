@@ -169,6 +169,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getDisableWhen() {
 		return disableWhen;
 	}
@@ -193,6 +194,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisableWhen(Predicate newDisableWhen) {
 		if (newDisableWhen != disableWhen) {
 			NotificationChain msgs = null;
@@ -212,6 +214,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getConfirmDestination() {
 		if (confirmDestination != null && confirmDestination.eIsProxy()) {
 			InternalEObject oldConfirmDestination = (InternalEObject)confirmDestination;
@@ -238,6 +241,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmDestination(Page newConfirmDestination) {
 		Page oldConfirmDestination = confirmDestination;
 		confirmDestination = newConfirmDestination;
@@ -250,6 +254,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getConfirmLabel() {
 		return confirmLabel;
 	}
@@ -259,6 +264,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmLabel(String newConfirmLabel) {
 		String oldConfirmLabel = confirmLabel;
 		confirmLabel = newConfirmLabel;
@@ -271,6 +277,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getCancelDestination() {
 		if (cancelDestination != null && cancelDestination.eIsProxy()) {
 			InternalEObject oldCancelDestination = (InternalEObject)cancelDestination;
@@ -297,6 +304,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelDestination(Page newCancelDestination) {
 		Page oldCancelDestination = cancelDestination;
 		cancelDestination = newCancelDestination;
@@ -309,6 +317,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCancelLabel() {
 		return cancelLabel;
 	}
@@ -318,6 +327,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelLabel(String newCancelLabel) {
 		String oldCancelLabel = cancelLabel;
 		cancelLabel = newCancelLabel;
@@ -330,6 +340,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -339,6 +350,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;
@@ -351,6 +363,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCustomiseValues() {
 		return customiseValues;
 	}
@@ -360,6 +373,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCustomiseValues(boolean newCustomiseValues) {
 		boolean oldCustomiseValues = customiseValues;
 		customiseValues = newCustomiseValues;

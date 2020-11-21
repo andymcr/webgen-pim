@@ -130,6 +130,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Persistence createPersistence() {
 		PersistenceImpl persistence = new PersistenceImpl();
 		return persistence;
@@ -140,6 +141,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SerializationGroup createSerializationGroup() {
 		SerializationGroupImpl serializationGroup = new SerializationGroupImpl();
 		return serializationGroup;
@@ -150,6 +152,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabel createModelLabel() {
 		ModelLabelImpl modelLabel = new ModelLabelImpl();
 		return modelLabel;
@@ -160,6 +163,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabelAttribute createModelLabelAttribute() {
 		ModelLabelAttributeImpl modelLabelAttribute = new ModelLabelAttributeImpl();
 		return modelLabelAttribute;
@@ -170,6 +174,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelLabelAssociation createModelLabelAssociation() {
 		ModelLabelAssociationImpl modelLabelAssociation = new ModelLabelAssociationImpl();
 		return modelLabelAssociation;
@@ -180,6 +185,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity createEntity() {
 		EntityImpl entity = new EntityImpl();
 		return entity;
@@ -190,6 +196,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataTypeAttribute createDataTypeAttribute() {
 		DataTypeAttributeImpl dataTypeAttribute = new DataTypeAttributeImpl();
 		return dataTypeAttribute;
@@ -200,6 +207,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateAttribute createDateAttribute() {
 		DateAttributeImpl dateAttribute = new DateAttributeImpl();
 		return dateAttribute;
@@ -210,6 +218,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UrlAttribute createUrlAttribute() {
 		UrlAttributeImpl urlAttribute = new UrlAttributeImpl();
 		return urlAttribute;
@@ -220,6 +229,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StaticPathElement createStaticPathElement() {
 		StaticPathElementImpl staticPathElement = new StaticPathElementImpl();
 		return staticPathElement;
@@ -230,6 +240,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DatePathElement createDatePathElement() {
 		DatePathElementImpl datePathElement = new DatePathElementImpl();
 		return datePathElement;
@@ -240,6 +251,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FileAttribute createFileAttribute() {
 		FileAttributeImpl fileAttribute = new FileAttributeImpl();
 		return fileAttribute;
@@ -250,6 +262,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageAttribute createImageAttribute() {
 		ImageAttributeImpl imageAttribute = new ImageAttributeImpl();
 		return imageAttribute;
@@ -260,6 +273,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationAttribute createLocationAttribute() {
 		LocationAttributeImpl locationAttribute = new LocationAttributeImpl();
 		return locationAttribute;
@@ -270,6 +284,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationWithoutContainment createAssociationWithoutContainment() {
 		AssociationWithoutContainmentImpl associationWithoutContainment = new AssociationWithoutContainmentImpl();
 		return associationWithoutContainment;
@@ -280,6 +295,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationWithContainment createAssociationWithContainment() {
 		AssociationWithContainmentImpl associationWithContainment = new AssociationWithContainmentImpl();
 		return associationWithContainment;
@@ -290,6 +306,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationKey createAssociationKey() {
 		AssociationKeyImpl associationKey = new AssociationKeyImpl();
 		return associationKey;
@@ -400,6 +417,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PersistencePackage getPersistencePackage() {
 		return (PersistencePackage)getEPackage();
 	}

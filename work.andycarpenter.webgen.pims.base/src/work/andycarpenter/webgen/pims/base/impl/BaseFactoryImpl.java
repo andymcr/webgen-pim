@@ -73,6 +73,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType createDataType() {
 		DataTypeImpl dataType = new DataTypeImpl();
 		return dataType;
@@ -83,6 +84,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationType createEnumerationType() {
 		EnumerationTypeImpl enumerationType = new EnumerationTypeImpl();
 		return enumerationType;
@@ -93,6 +95,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral createEnumerationLiteral() {
 		EnumerationLiteralImpl enumerationLiteral = new EnumerationLiteralImpl();
 		return enumerationLiteral;
@@ -103,6 +106,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CurrentTime createCurrentTime() {
 		CurrentTimeImpl currentTime = new CurrentTimeImpl();
 		return currentTime;
@@ -113,6 +117,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CurrentUser createCurrentUser() {
 		CurrentUserImpl currentUser = new CurrentUserImpl();
 		return currentUser;
@@ -123,6 +128,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FormalParameter createFormalParameter() {
 		FormalParameterImpl formalParameter = new FormalParameterImpl();
 		return formalParameter;
@@ -133,6 +139,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterReference createParameterReference() {
 		ParameterReferenceImpl parameterReference = new ParameterReferenceImpl();
 		return parameterReference;
@@ -143,6 +150,7 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BasePackage getBasePackage() {
 		return (BasePackage)getEPackage();
 	}

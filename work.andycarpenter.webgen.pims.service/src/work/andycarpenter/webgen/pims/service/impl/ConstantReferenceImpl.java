@@ -104,6 +104,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getSuffixes() {
 		if (suffixes == null) {
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, ServicePackage.CONSTANT_REFERENCE__SUFFIXES);
@@ -116,6 +117,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject getRootContainer() {
 		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -134,6 +136,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRootContainer() {
 		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -143,6 +146,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -152,6 +156,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -161,6 +166,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constant getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject)value;
@@ -187,6 +193,7 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Constant newValue) {
 		Constant oldValue = value;
 		value = newValue;

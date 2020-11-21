@@ -295,6 +295,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSiteTitle() {
 		return siteTitle;
 	}
@@ -304,6 +305,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSiteTitle(String newSiteTitle) {
 		String oldSiteTitle = siteTitle;
 		siteTitle = newSiteTitle;
@@ -316,6 +318,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getWebmasterEmail() {
 		return webmasterEmail;
 	}
@@ -325,6 +328,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWebmasterEmail(String newWebmasterEmail) {
 		String oldWebmasterEmail = webmasterEmail;
 		webmasterEmail = newWebmasterEmail;
@@ -337,6 +341,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCopyrightText() {
 		return copyrightText;
 	}
@@ -346,6 +351,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyrightText(String newCopyrightText) {
 		String oldCopyrightText = copyrightText;
 		copyrightText = newCopyrightText;
@@ -358,6 +364,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMetaDescription() {
 		return metaDescription;
 	}
@@ -367,6 +374,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMetaDescription(String newMetaDescription) {
 		String oldMetaDescription = metaDescription;
 		metaDescription = newMetaDescription;
@@ -379,6 +387,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLogoImage() {
 		return logoImage;
 	}
@@ -388,6 +397,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogoImage(String newLogoImage) {
 		String oldLogoImage = logoImage;
 		logoImage = newLogoImage;
@@ -400,6 +410,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImageManipulation getLogoFilters() {
 		if (logoFilters != null && logoFilters.eIsProxy()) {
 			InternalEObject oldLogoFilters = (InternalEObject)logoFilters;
@@ -426,6 +437,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogoFilters(ImageManipulation newLogoFilters) {
 		ImageManipulation oldLogoFilters = logoFilters;
 		logoFilters = newLogoFilters;
@@ -438,6 +450,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrameworkTechnologies getFrameworkTechnology() {
 		return frameworkTechnology;
 	}
@@ -447,6 +460,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrameworkTechnology(FrameworkTechnologies newFrameworkTechnology) {
 		FrameworkTechnologies oldFrameworkTechnology = frameworkTechnology;
 		frameworkTechnology = newFrameworkTechnology == null ? FRAMEWORK_TECHNOLOGY_EDEFAULT : newFrameworkTechnology;
@@ -459,6 +473,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUseDbSessionStorage() {
 		return useDbSessionStorage;
 	}
@@ -468,6 +483,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseDbSessionStorage(boolean newUseDbSessionStorage) {
 		boolean oldUseDbSessionStorage = useDbSessionStorage;
 		useDbSessionStorage = newUseDbSessionStorage;
@@ -480,6 +496,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTextEditorURL() {
 		return textEditorURL;
 	}
@@ -489,6 +506,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTextEditorURL(String newTextEditorURL) {
 		String oldTextEditorURL = textEditorURL;
 		textEditorURL = newTextEditorURL;
@@ -501,6 +519,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTopNavigationId() {
 		return topNavigationId;
 	}
@@ -510,6 +529,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTopNavigationId(String newTopNavigationId) {
 		String oldTopNavigationId = topNavigationId;
 		topNavigationId = newTopNavigationId;
@@ -522,6 +542,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSiteTemplate() {
 		return siteTemplate;
 	}
@@ -531,6 +552,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSiteTemplate(String newSiteTemplate) {
 		String oldSiteTemplate = siteTemplate;
 		siteTemplate = newSiteTemplate;
@@ -543,6 +565,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStaticUnitsEditable() {
 		return staticUnitsEditable;
 	}
@@ -552,6 +575,7 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStaticUnitsEditable(boolean newStaticUnitsEditable) {
 		boolean oldStaticUnitsEditable = staticUnitsEditable;
 		staticUnitsEditable = newStaticUnitsEditable;

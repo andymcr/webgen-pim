@@ -107,6 +107,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Services createServices() {
 		ServicesImpl services = new ServicesImpl();
 		return services;
@@ -117,6 +118,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Service createService() {
 		ServiceImpl service = new ServiceImpl();
 		return service;
@@ -127,6 +129,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constant createConstant() {
 		ConstantImpl constant = new ConstantImpl();
 		return constant;
@@ -137,6 +140,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection createSelection() {
 		SelectionImpl selection = new SelectionImpl();
 		return selection;
@@ -147,6 +151,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConstantReference createConstantReference() {
 		ConstantReferenceImpl constantReference = new ConstantReferenceImpl();
 		return constantReference;
@@ -157,6 +162,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServiceFeatureReference createServiceFeatureReference() {
 		ServiceFeatureReferenceImpl serviceFeatureReference = new ServiceFeatureReferenceImpl();
 		return serviceFeatureReference;
@@ -167,6 +173,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asc createAsc() {
 		AscImpl asc = new AscImpl();
 		return asc;
@@ -177,6 +184,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Desc createDesc() {
 		DescImpl desc = new DescImpl();
 		return desc;
@@ -187,6 +195,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BusinessOperation createBusinessOperation() {
 		BusinessOperationImpl businessOperation = new BusinessOperationImpl();
 		return businessOperation;
@@ -197,6 +206,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Filter createFilter() {
 		FilterImpl filter = new FilterImpl();
 		return filter;
@@ -227,6 +237,7 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServicePackage getServicePackage() {
 		return (ServicePackage)getEPackage();
 	}

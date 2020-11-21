@@ -178,6 +178,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SerializationGroup> getSerializationGroups() {
 		if (serializationGroups == null) {
 			serializationGroups = new EObjectContainmentEList<SerializationGroup>(SerializationGroup.class, this, PersistencePackage.PERSISTENCE__SERIALIZATION_GROUPS);
@@ -190,6 +191,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataType> getDataTypes() {
 		if (dataTypes == null) {
 			dataTypes = new EObjectContainmentEList<DataType>(DataType.class, this, PersistencePackage.PERSISTENCE__DATA_TYPES);
@@ -202,6 +204,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Entity> getEntities() {
 		if (entities == null) {
 			entities = new EObjectContainmentEList<Entity>(Entity.class, this, PersistencePackage.PERSISTENCE__ENTITIES);
@@ -214,6 +217,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrmTechnologies getOrmTechnology() {
 		return ormTechnology;
 	}
@@ -223,6 +227,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrmTechnology(OrmTechnologies newOrmTechnology) {
 		OrmTechnologies oldOrmTechnology = ormTechnology;
 		ormTechnology = newOrmTechnology == null ? ORM_TECHNOLOGY_EDEFAULT : newOrmTechnology;
@@ -235,6 +240,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DatabaseTechnologies getDatabaseTechnology() {
 		return databaseTechnology;
 	}
@@ -244,6 +250,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatabaseTechnology(DatabaseTechnologies newDatabaseTechnology) {
 		DatabaseTechnologies oldDatabaseTechnology = databaseTechnology;
 		databaseTechnology = newDatabaseTechnology == null ? DATABASE_TECHNOLOGY_EDEFAULT : newDatabaseTechnology;
@@ -256,6 +263,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTimestampCreation() {
 		return timestampCreation;
 	}
@@ -265,6 +273,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimestampCreation(boolean newTimestampCreation) {
 		boolean oldTimestampCreation = timestampCreation;
 		timestampCreation = newTimestampCreation;
@@ -277,6 +286,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTimestampUpdates() {
 		return timestampUpdates;
 	}
@@ -286,6 +296,7 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimestampUpdates(boolean newTimestampUpdates) {
 		boolean oldTimestampUpdates = timestampUpdates;
 		timestampUpdates = newTimestampUpdates;

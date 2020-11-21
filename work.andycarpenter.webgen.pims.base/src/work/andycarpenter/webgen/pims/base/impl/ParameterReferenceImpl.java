@@ -104,6 +104,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getSuffixes() {
 		if (suffixes == null) {
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, BasePackage.PARAMETER_REFERENCE__SUFFIXES);
@@ -116,6 +117,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject getRootContainer() {
 		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -134,6 +136,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRootContainer() {
 		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -143,6 +146,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -152,6 +156,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FormalParameter getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -178,6 +183,7 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(FormalParameter newParameter) {
 		FormalParameter oldParameter = parameter;
 		parameter = newParameter;

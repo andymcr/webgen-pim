@@ -125,6 +125,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType getDataType() {
 		if (dataType != null && dataType.eIsProxy()) {
 			InternalEObject oldDataType = (InternalEObject)dataType;
@@ -151,6 +152,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataType(DataType newDataType) {
 		DataType oldDataType = dataType;
 		dataType = newDataType;
@@ -163,6 +165,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isObfuscateFormFields() {
 		return obfuscateFormFields;
 	}
@@ -172,6 +175,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObfuscateFormFields(boolean newObfuscateFormFields) {
 		boolean oldObfuscateFormFields = obfuscateFormFields;
 		obfuscateFormFields = newObfuscateFormFields;
@@ -184,6 +188,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCaseInsensitive() {
 		return caseInsensitive;
 	}
@@ -193,6 +198,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaseInsensitive(boolean newCaseInsensitive) {
 		boolean oldCaseInsensitive = caseInsensitive;
 		caseInsensitive = newCaseInsensitive;
@@ -205,6 +211,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEncrypt() {
 		return encrypt;
 	}
@@ -214,6 +221,7 @@ public class DataTypeAttributeImpl extends AttributeImpl implements DataTypeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncrypt(boolean newEncrypt) {
 		boolean oldEncrypt = encrypt;
 		encrypt = newEncrypt;

@@ -160,6 +160,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BusinessOperation getOperation() {
 		if (operation != null && operation.eIsProxy()) {
 			InternalEObject oldOperation = (InternalEObject)operation;
@@ -186,6 +187,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(BusinessOperation newOperation) {
 		BusinessOperation oldOperation = operation;
 		operation = newOperation;
@@ -198,6 +200,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getConfirmMessage() {
 		return confirmMessage;
 	}
@@ -207,6 +210,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmMessage(String newConfirmMessage) {
 		String oldConfirmMessage = confirmMessage;
 		confirmMessage = newConfirmMessage;
@@ -219,6 +223,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFileExtension() {
 		return fileExtension;
 	}
@@ -228,6 +233,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFileExtension(String newFileExtension) {
 		String oldFileExtension = fileExtension;
 		fileExtension = newFileExtension;
@@ -240,6 +246,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -249,6 +256,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -261,6 +269,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getEnableWhen() {
 		return enableWhen;
 	}
@@ -285,6 +294,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnableWhen(Predicate newEnableWhen) {
 		if (newEnableWhen != enableWhen) {
 			NotificationChain msgs = null;
@@ -304,6 +314,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -313,6 +324,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;

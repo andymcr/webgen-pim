@@ -81,6 +81,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContentUnit getActualFor() {
 		if (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR) return null;
 		return (ContentUnit)eInternalContainer();
@@ -101,6 +102,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActualFor(ContentUnit newActualFor) {
 		if (newActualFor != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR && newActualFor != null)) {
 			if (EcoreUtil.isAncestor(this, newActualFor))
@@ -122,6 +124,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getRouteParameter() {
 		if (routeParameter != null && routeParameter.eIsProxy()) {
 			InternalEObject oldRouteParameter = (InternalEObject)routeParameter;
@@ -148,6 +151,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRouteParameter(Attribute newRouteParameter) {
 		Attribute oldRouteParameter = routeParameter;
 		routeParameter = newRouteParameter;
@@ -160,6 +164,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getValue() {
 		return value;
 	}
@@ -184,6 +189,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Expression newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

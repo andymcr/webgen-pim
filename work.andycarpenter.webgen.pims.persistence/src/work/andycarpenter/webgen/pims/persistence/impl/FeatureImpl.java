@@ -453,6 +453,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getPartOf() {
 		if (eContainerFeatureID() != PersistencePackage.FEATURE__PART_OF) return null;
 		return (Entity)eInternalContainer();
@@ -473,6 +474,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartOf(Entity newPartOf) {
 		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.FEATURE__PART_OF && newPartOf != null)) {
 			if (EcoreUtil.isAncestor(this, newPartOf))
@@ -494,6 +496,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cardinality getCardinality() {
 		return cardinality;
 	}
@@ -503,6 +506,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCardinality(Cardinality newCardinality) {
 		Cardinality oldCardinality = cardinality;
 		cardinality = newCardinality == null ? CARDINALITY_EDEFAULT : newCardinality;
@@ -515,6 +519,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return ordered;
 	}
@@ -524,6 +529,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrdered(boolean newOrdered) {
 		boolean oldOrdered = ordered;
 		ordered = newOrdered;
@@ -536,6 +542,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPrimaryKey() {
 		return primaryKey;
 	}
@@ -545,6 +552,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrimaryKey(boolean newPrimaryKey) {
 		boolean oldPrimaryKey = primaryKey;
 		primaryKey = newPrimaryKey;
@@ -557,6 +565,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerived() {
 		return derived;
 	}
@@ -566,6 +575,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDerived(boolean newDerived) {
 		boolean oldDerived = derived;
 		derived = newDerived;
@@ -578,6 +588,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCustomiseSet() {
 		return customiseSet;
 	}
@@ -587,6 +598,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCustomiseSet(boolean newCustomiseSet) {
 		boolean oldCustomiseSet = customiseSet;
 		customiseSet = newCustomiseSet;
@@ -599,6 +611,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public isHasChoices getBooleanIsHasChoice() {
 		return booleanIsHasChoice;
 	}
@@ -608,6 +621,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBooleanIsHasChoice(isHasChoices newBooleanIsHasChoice) {
 		isHasChoices oldBooleanIsHasChoice = booleanIsHasChoice;
 		booleanIsHasChoice = newBooleanIsHasChoice == null ? BOOLEAN_IS_HAS_CHOICE_EDEFAULT : newBooleanIsHasChoice;
@@ -620,6 +634,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -629,6 +644,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -641,6 +657,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCollectionOrmAllowAdd() {
 		return collectionOrmAllowAdd;
 	}
@@ -650,6 +667,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionOrmAllowAdd(boolean newCollectionOrmAllowAdd) {
 		boolean oldCollectionOrmAllowAdd = collectionOrmAllowAdd;
 		collectionOrmAllowAdd = newCollectionOrmAllowAdd;
@@ -662,6 +680,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCollectionOrmAllowRemove() {
 		return collectionOrmAllowRemove;
 	}
@@ -671,6 +690,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectionOrmAllowRemove(boolean newCollectionOrmAllowRemove) {
 		boolean oldCollectionOrmAllowRemove = collectionOrmAllowRemove;
 		collectionOrmAllowRemove = newCollectionOrmAllowRemove;
@@ -683,6 +703,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultDisplayValue() {
 		return defaultDisplayValue;
 	}
@@ -692,6 +713,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultDisplayValue(String newDefaultDisplayValue) {
 		String oldDefaultDisplayValue = defaultDisplayValue;
 		defaultDisplayValue = newDefaultDisplayValue;
@@ -704,6 +726,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEmptyDisplayValue() {
 		return emptyDisplayValue;
 	}
@@ -713,6 +736,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
 		String oldEmptyDisplayValue = emptyDisplayValue;
 		emptyDisplayValue = newEmptyDisplayValue;
@@ -725,6 +749,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEncodeUriKey() {
 		return encodeUriKey;
 	}
@@ -734,6 +759,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncodeUriKey(boolean newEncodeUriKey) {
 		boolean oldEncodeUriKey = encodeUriKey;
 		encodeUriKey = newEncodeUriKey;
@@ -746,6 +772,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSingletonName() {
 		return singletonName;
 	}
@@ -755,6 +782,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSingletonName(String newSingletonName) {
 		String oldSingletonName = singletonName;
 		singletonName = newSingletonName;
@@ -767,6 +795,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPluralisedName() {
 		return pluralisedName;
 	}
@@ -776,6 +805,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPluralisedName(String newPluralisedName) {
 		String oldPluralisedName = pluralisedName;
 		pluralisedName = newPluralisedName;
@@ -788,6 +818,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColumnName() {
 		return columnName;
 	}
@@ -797,6 +828,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColumnName(String newColumnName) {
 		String oldColumnName = columnName;
 		columnName = newColumnName;
@@ -809,6 +841,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SerializationGroup> getSerializationGroups() {
 		if (serializationGroups == null) {
 			serializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, PersistencePackage.FEATURE__SERIALIZATION_GROUPS);
@@ -821,6 +854,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -830,6 +864,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaderClass(String newHeaderClass) {
 		String oldHeaderClass = headerClass;
 		headerClass = newHeaderClass;
@@ -842,6 +877,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayClass() {
 		return displayClass;
 	}
@@ -851,6 +887,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayClass(String newDisplayClass) {
 		String oldDisplayClass = displayClass;
 		displayClass = newDisplayClass;
@@ -863,6 +900,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -872,6 +910,7 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooterClass(String newFooterClass) {
 		String oldFooterClass = footerClass;
 		footerClass = newFooterClass;

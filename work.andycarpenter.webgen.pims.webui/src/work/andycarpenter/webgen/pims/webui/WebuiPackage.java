@@ -7864,13 +7864,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -7879,7 +7888,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -7888,7 +7897,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8647,6 +8656,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9194,6 +9212,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -10265,6 +10292,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -16025,6 +16061,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_ContentClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Row Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass()
+	 * @see #getCardsUnit()
+	 * @generated
+	 */
+	EAttribute getCardsUnit_RowClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18897,6 +18944,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CARDS_UNIT__CONTENT_CLASS = eINSTANCE.getCardsUnit_ContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Row Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT__ROW_CLASS = eINSTANCE.getCardsUnit_RowClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Column Class</b></em>' attribute feature.

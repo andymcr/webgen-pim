@@ -68,6 +68,7 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImageManipulation> getManipulations() {
 		if (manipulations == null) {
 			manipulations = new EObjectContainmentEList<ImageManipulation>(ImageManipulation.class, this, ImagePackage.IMAGE__MANIPULATIONS);

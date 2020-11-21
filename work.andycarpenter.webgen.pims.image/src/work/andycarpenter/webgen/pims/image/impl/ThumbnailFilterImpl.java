@@ -112,6 +112,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -121,6 +122,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -133,6 +135,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -142,6 +145,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -154,6 +158,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThumbnailModes getMode() {
 		return mode;
 	}
@@ -163,6 +168,7 @@ public class ThumbnailFilterImpl extends ImageFilterImpl implements ThumbnailFil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(ThumbnailModes newMode) {
 		ThumbnailModes oldMode = mode;
 		mode = newMode == null ? MODE_EDEFAULT : newMode;

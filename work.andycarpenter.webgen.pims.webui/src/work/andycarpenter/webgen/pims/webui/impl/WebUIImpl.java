@@ -220,6 +220,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Services getServices() {
 		if (services != null && services.eIsProxy()) {
 			InternalEObject oldServices = (InternalEObject)services;
@@ -246,6 +247,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServices(Services newServices) {
 		Services oldServices = services;
 		services = newServices;
@@ -258,6 +260,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Menu> getMenus() {
 		if (menus == null) {
 			menus = new EObjectContainmentEList<Menu>(Menu.class, this, WebuiPackage.WEB_UI__MENUS);
@@ -270,6 +273,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Page> getPages() {
 		if (pages == null) {
 			pages = new EObjectContainmentWithInverseEList<Page>(Page.class, this, WebuiPackage.WEB_UI__PAGES, WebuiPackage.PAGE__WEB_UI);
@@ -282,6 +286,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultDateFormat() {
 		return defaultDateFormat;
 	}
@@ -291,6 +296,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultDateFormat(String newDefaultDateFormat) {
 		String oldDefaultDateFormat = defaultDateFormat;
 		defaultDateFormat = newDefaultDateFormat;
@@ -303,6 +309,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultTimeFormat() {
 		return defaultTimeFormat;
 	}
@@ -312,6 +319,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultTimeFormat(String newDefaultTimeFormat) {
 		String oldDefaultTimeFormat = defaultTimeFormat;
 		defaultTimeFormat = newDefaultTimeFormat;
@@ -324,6 +332,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultDateTimeFormat() {
 		return defaultDateTimeFormat;
 	}
@@ -333,6 +342,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultDateTimeFormat(String newDefaultDateTimeFormat) {
 		String oldDefaultDateTimeFormat = defaultDateTimeFormat;
 		defaultDateTimeFormat = newDefaultDateTimeFormat;
@@ -345,6 +355,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getDefaultMaximumUploadSize() {
 		return defaultMaximumUploadSize;
 	}
@@ -354,6 +365,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultMaximumUploadSize(int newDefaultMaximumUploadSize) {
 		int oldDefaultMaximumUploadSize = defaultMaximumUploadSize;
 		defaultMaximumUploadSize = newDefaultMaximumUploadSize;
@@ -366,6 +378,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputTechnologies getInputTechnology() {
 		return inputTechnology;
 	}
@@ -375,6 +388,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputTechnology(InputTechnologies newInputTechnology) {
 		InputTechnologies oldInputTechnology = inputTechnology;
 		inputTechnology = newInputTechnology == null ? INPUT_TECHNOLOGY_EDEFAULT : newInputTechnology;
@@ -387,6 +401,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AjaxTechnologies getAjaxTechnology() {
 		return ajaxTechnology;
 	}
@@ -396,6 +411,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAjaxTechnology(AjaxTechnologies newAjaxTechnology) {
 		AjaxTechnologies oldAjaxTechnology = ajaxTechnology;
 		ajaxTechnology = newAjaxTechnology == null ? AJAX_TECHNOLOGY_EDEFAULT : newAjaxTechnology;

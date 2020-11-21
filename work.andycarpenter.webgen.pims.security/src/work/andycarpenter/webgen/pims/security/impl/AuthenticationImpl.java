@@ -119,6 +119,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Security getSecurity() {
 		if (eContainerFeatureID() != SecurityPackage.AUTHENTICATION__SECURITY) return null;
 		return (Security)eInternalContainer();
@@ -139,6 +140,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecurity(Security newSecurity) {
 		if (newSecurity != eInternalContainer() || (eContainerFeatureID() != SecurityPackage.AUTHENTICATION__SECURITY && newSecurity != null)) {
 			if (EcoreUtil.isAncestor(this, newSecurity))
@@ -160,6 +162,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getUser() {
 		if (user != null && user.eIsProxy()) {
 			InternalEObject oldUser = (InternalEObject)user;
@@ -186,6 +189,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUser(Entity newUser) {
 		Entity oldUser = user;
 		user = newUser;
@@ -198,6 +202,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getUserKey() {
 		if (userKey != null && userKey.eIsProxy()) {
 			InternalEObject oldUserKey = (InternalEObject)userKey;
@@ -224,6 +229,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUserKey(Attribute newUserKey) {
 		Attribute oldUserKey = userKey;
 		userKey = newUserKey;
@@ -236,6 +242,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLoginLabel() {
 		return loginLabel;
 	}
@@ -245,6 +252,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLoginLabel(String newLoginLabel) {
 		String oldLoginLabel = loginLabel;
 		loginLabel = newLoginLabel;
@@ -257,6 +265,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLogoutLabel() {
 		return logoutLabel;
 	}
@@ -266,6 +275,7 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogoutLabel(String newLogoutLabel) {
 		String oldLogoutLabel = logoutLabel;
 		logoutLabel = newLogoutLabel;

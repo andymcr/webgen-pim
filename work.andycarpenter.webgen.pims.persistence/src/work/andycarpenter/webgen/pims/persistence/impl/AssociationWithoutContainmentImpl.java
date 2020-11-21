@@ -89,6 +89,7 @@ public class AssociationWithoutContainmentImpl extends AssociationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cardinality getTargetCardinality() {
 		return targetCardinality;
 	}
@@ -98,6 +99,7 @@ public class AssociationWithoutContainmentImpl extends AssociationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetCardinality(Cardinality newTargetCardinality) {
 		Cardinality oldTargetCardinality = targetCardinality;
 		targetCardinality = newTargetCardinality == null ? TARGET_CARDINALITY_EDEFAULT : newTargetCardinality;
@@ -110,6 +112,7 @@ public class AssociationWithoutContainmentImpl extends AssociationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTargetUnique() {
 		return targetUnique;
 	}
@@ -119,6 +122,7 @@ public class AssociationWithoutContainmentImpl extends AssociationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetUnique(boolean newTargetUnique) {
 		boolean oldTargetUnique = targetUnique;
 		targetUnique = newTargetUnique;

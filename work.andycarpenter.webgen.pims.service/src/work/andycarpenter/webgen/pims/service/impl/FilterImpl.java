@@ -111,6 +111,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FormalParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentWithInverseEList<FormalParameter>(FormalParameter.class, this, ServicePackage.FILTER__PARAMETERS, BasePackage.FORMAL_PARAMETER__FORMAL_FOR);
@@ -123,6 +124,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getSelection() {
 		if (eContainerFeatureID() != ServicePackage.FILTER__SELECTION) return null;
 		return (Selection)eInternalContainer();
@@ -143,6 +145,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Selection newSelection) {
 		if (newSelection != eInternalContainer() || (eContainerFeatureID() != ServicePackage.FILTER__SELECTION && newSelection != null)) {
 			if (EcoreUtil.isAncestor(this, newSelection))
@@ -164,6 +167,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getCondition() {
 		return condition;
 	}
@@ -188,6 +192,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Predicate newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -207,6 +212,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMethodName() {
 		return methodName;
 	}
@@ -216,6 +222,7 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodName(String newMethodName) {
 		String oldMethodName = methodName;
 		methodName = newMethodName;

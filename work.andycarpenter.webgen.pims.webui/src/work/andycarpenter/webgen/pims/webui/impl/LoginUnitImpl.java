@@ -587,6 +587,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -596,6 +597,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -608,6 +610,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDisplayLabel() {
 		return displayLabel;
 	}
@@ -617,6 +620,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayLabel(String newDisplayLabel) {
 		String oldDisplayLabel = displayLabel;
 		displayLabel = newDisplayLabel;
@@ -629,6 +633,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getDisplayedOn() {
 		if (eContainerFeatureID() != WebuiPackage.LOGIN_UNIT__DISPLAYED_ON) return null;
 		return (Page)eInternalContainer();
@@ -649,6 +654,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplayedOn(Page newDisplayedOn) {
 		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.LOGIN_UNIT__DISPLAYED_ON && newDisplayedOn != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplayedOn))
@@ -670,6 +676,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCreateDefaultUriElement() {
 		return createDefaultUriElement;
 	}
@@ -679,6 +686,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreateDefaultUriElement(boolean newCreateDefaultUriElement) {
 		boolean oldCreateDefaultUriElement = createDefaultUriElement;
 		createDefaultUriElement = newCreateDefaultUriElement;
@@ -691,6 +699,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RouteActual> getRouteActuals() {
 		if (routeActuals == null) {
 			routeActuals = new EObjectContainmentWithInverseEList<RouteActual>(RouteActual.class, this, WebuiPackage.LOGIN_UNIT__ROUTE_ACTUALS, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR);
@@ -703,6 +712,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -712,6 +722,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiresRole(String newRequiresRole) {
 		String oldRequiresRole = requiresRole;
 		requiresRole = newRequiresRole;
@@ -724,6 +735,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPurposeSummary() {
 		return purposeSummary;
 	}
@@ -733,6 +745,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurposeSummary(String newPurposeSummary) {
 		String oldPurposeSummary = purposeSummary;
 		purposeSummary = newPurposeSummary;
@@ -745,6 +758,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -754,6 +768,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;
@@ -766,6 +781,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAlternative() {
 		return alternative;
 	}
@@ -775,6 +791,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlternative(String newAlternative) {
 		String oldAlternative = alternative;
 		alternative = newAlternative;
@@ -787,6 +804,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOmitCaption() {
 		return omitCaption;
 	}
@@ -796,6 +814,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOmitCaption(boolean newOmitCaption) {
 		boolean oldOmitCaption = omitCaption;
 		omitCaption = newOmitCaption;
@@ -808,6 +827,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCaptionClass() {
 		return captionClass;
 	}
@@ -817,6 +837,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaptionClass(String newCaptionClass) {
 		String oldCaptionClass = captionClass;
 		captionClass = newCaptionClass;
@@ -829,6 +850,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPageDisplayedOn() {
 		return (Page)PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -847,6 +869,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetPageDisplayedOn() {
 		return PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -856,6 +879,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnitField> getDisplayFields() {
 		if (displayFields == null) {
 			displayFields = new EObjectContainmentWithInverseEList<UnitField>(UnitField.class, this, WebuiPackage.LOGIN_UNIT__DISPLAY_FIELDS, WebuiPackage.UNIT_FIELD__DISPLAYED_ON);
@@ -868,6 +892,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Service> getServicesUsed() {
 		if (servicesUsed == null) {
 			servicesUsed = new EObjectResolvingEList<Service>(Service.class, this, WebuiPackage.LOGIN_UNIT__SERVICES_USED);
@@ -880,6 +905,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Predicate getHideWhen() {
 		return hideWhen;
 	}
@@ -904,6 +930,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHideWhen(Predicate newHideWhen) {
 		if (newHideWhen != hideWhen) {
 			NotificationChain msgs = null;
@@ -923,6 +950,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMessageWhenHidden() {
 		return messageWhenHidden;
 	}
@@ -932,6 +960,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessageWhenHidden(String newMessageWhenHidden) {
 		String oldMessageWhenHidden = messageWhenHidden;
 		messageWhenHidden = newMessageWhenHidden;
@@ -944,6 +973,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnitSupportAction> getSupportActions() {
 		if (supportActions == null) {
 			supportActions = new EObjectContainmentEList<UnitSupportAction>(UnitSupportAction.class, this, WebuiPackage.LOGIN_UNIT__SUPPORT_ACTIONS);
@@ -956,6 +986,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeader() {
 		return header;
 	}
@@ -965,6 +996,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeader(String newHeader) {
 		String oldHeader = header;
 		header = newHeader;
@@ -977,6 +1009,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooter() {
 		return footer;
 	}
@@ -986,6 +1019,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooter(String newFooter) {
 		String oldFooter = footer;
 		footer = newFooter;
@@ -998,6 +1032,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -1007,6 +1042,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaderClass(String newHeaderClass) {
 		String oldHeaderClass = headerClass;
 		headerClass = newHeaderClass;
@@ -1019,6 +1055,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getControlClass() {
 		return controlClass;
 	}
@@ -1028,6 +1065,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setControlClass(String newControlClass) {
 		String oldControlClass = controlClass;
 		controlClass = newControlClass;
@@ -1040,6 +1078,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -1049,6 +1088,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFooterClass(String newFooterClass) {
 		String oldFooterClass = footerClass;
 		footerClass = newFooterClass;
@@ -1061,6 +1101,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getErrorClass() {
 		return errorClass;
 	}
@@ -1070,6 +1111,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setErrorClass(String newErrorClass) {
 		String oldErrorClass = errorClass;
 		errorClass = newErrorClass;
@@ -1082,6 +1124,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSubmitLabel() {
 		return submitLabel;
 	}
@@ -1091,6 +1134,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubmitLabel(String newSubmitLabel) {
 		String oldSubmitLabel = submitLabel;
 		submitLabel = newSubmitLabel;
@@ -1103,6 +1147,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getCancelDestination() {
 		if (cancelDestination != null && cancelDestination.eIsProxy()) {
 			InternalEObject oldCancelDestination = (InternalEObject)cancelDestination;
@@ -1129,6 +1174,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelDestination(Page newCancelDestination) {
 		Page oldCancelDestination = cancelDestination;
 		cancelDestination = newCancelDestination;
@@ -1141,6 +1187,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCancelLabel() {
 		return cancelLabel;
 	}
@@ -1150,6 +1197,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCancelLabel(String newCancelLabel) {
 		String oldCancelLabel = cancelLabel;
 		cancelLabel = newCancelLabel;
@@ -1162,6 +1210,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContentClass() {
 		return contentClass;
 	}
@@ -1171,6 +1220,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentClass(String newContentClass) {
 		String oldContentClass = contentClass;
 		contentClass = newContentClass;
@@ -1183,6 +1233,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLogoutUriElement() {
 		return logoutUriElement;
 	}
@@ -1192,6 +1243,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogoutUriElement(String newLogoutUriElement) {
 		String oldLogoutUriElement = logoutUriElement;
 		logoutUriElement = newLogoutUriElement;
@@ -1204,6 +1256,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyleClass() {
 		return styleClass;
 	}
@@ -1213,6 +1266,7 @@ public class LoginUnitImpl extends MinimalEObjectImpl.Container implements Login
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyleClass(String newStyleClass) {
 		String oldStyleClass = styleClass;
 		styleClass = newStyleClass;

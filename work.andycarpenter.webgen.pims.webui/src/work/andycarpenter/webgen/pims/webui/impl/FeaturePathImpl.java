@@ -77,6 +77,7 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getSuffixes() {
 		if (suffixes == null) {
 			suffixes = new EDataTypeUniqueEList<String>(String.class, this, WebuiPackage.FEATURE_PATH__SUFFIXES);
@@ -89,6 +90,7 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject getRootContainer() {
 		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -107,6 +109,7 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRootContainer() {
 		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}

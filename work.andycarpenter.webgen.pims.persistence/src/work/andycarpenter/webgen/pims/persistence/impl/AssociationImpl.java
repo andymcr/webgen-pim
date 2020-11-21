@@ -396,6 +396,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AssociationKey> getKeys() {
 		if (keys == null) {
 			keys = new EObjectContainmentWithInverseEList<AssociationKey>(AssociationKey.class, this, PersistencePackage.ASSOCIATION__KEYS, PersistencePackage.ASSOCIATION_KEY__KEY_FOR);
@@ -408,6 +409,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getTargetEntity() {
 		if (targetEntity != null && targetEntity.eIsProxy()) {
 			InternalEObject oldTargetEntity = (InternalEObject)targetEntity;
@@ -449,6 +451,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetEntity(Entity newTargetEntity) {
 		if (newTargetEntity != targetEntity) {
 			NotificationChain msgs = null;
@@ -468,6 +471,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBidirectional() {
 		return bidirectional;
 	}
@@ -477,6 +481,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBidirectional(boolean newBidirectional) {
 		boolean oldBidirectional = bidirectional;
 		bidirectional = newBidirectional;
@@ -489,6 +494,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return unique;
 	}
@@ -498,6 +504,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnique(boolean newUnique) {
 		boolean oldUnique = unique;
 		unique = newUnique;
@@ -510,6 +517,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPivotTableName() {
 		return pivotTableName;
 	}
@@ -519,6 +527,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPivotTableName(String newPivotTableName) {
 		String oldPivotTableName = pivotTableName;
 		pivotTableName = newPivotTableName;
@@ -531,6 +540,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetFeatureName() {
 		return targetFeatureName;
 	}
@@ -540,6 +550,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetFeatureName(String newTargetFeatureName) {
 		String oldTargetFeatureName = targetFeatureName;
 		targetFeatureName = newTargetFeatureName;
@@ -552,6 +563,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTargetPrimaryKey() {
 		return targetPrimaryKey;
 	}
@@ -561,6 +573,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetPrimaryKey(boolean newTargetPrimaryKey) {
 		boolean oldTargetPrimaryKey = targetPrimaryKey;
 		targetPrimaryKey = newTargetPrimaryKey;
@@ -573,6 +586,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetColumnName() {
 		return targetColumnName;
 	}
@@ -582,6 +596,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetColumnName(String newTargetColumnName) {
 		String oldTargetColumnName = targetColumnName;
 		targetColumnName = newTargetColumnName;
@@ -594,6 +609,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetDisplayLabel() {
 		return targetDisplayLabel;
 	}
@@ -603,6 +619,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetDisplayLabel(String newTargetDisplayLabel) {
 		String oldTargetDisplayLabel = targetDisplayLabel;
 		targetDisplayLabel = newTargetDisplayLabel;
@@ -615,6 +632,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetHeaderClass() {
 		return targetHeaderClass;
 	}
@@ -624,6 +642,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetHeaderClass(String newTargetHeaderClass) {
 		String oldTargetHeaderClass = targetHeaderClass;
 		targetHeaderClass = newTargetHeaderClass;
@@ -636,6 +655,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetInputClass() {
 		return targetInputClass;
 	}
@@ -645,6 +665,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetInputClass(String newTargetInputClass) {
 		String oldTargetInputClass = targetInputClass;
 		targetInputClass = newTargetInputClass;
@@ -657,6 +678,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetDisplayClass() {
 		return targetDisplayClass;
 	}
@@ -666,6 +688,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetDisplayClass(String newTargetDisplayClass) {
 		String oldTargetDisplayClass = targetDisplayClass;
 		targetDisplayClass = newTargetDisplayClass;
@@ -678,6 +701,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTargetFooterClass() {
 		return targetFooterClass;
 	}
@@ -687,6 +711,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetFooterClass(String newTargetFooterClass) {
 		String oldTargetFooterClass = targetFooterClass;
 		targetFooterClass = newTargetFooterClass;
@@ -699,6 +724,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPseudo() {
 		return pseudo;
 	}
@@ -708,6 +734,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPseudo(boolean newPseudo) {
 		boolean oldPseudo = pseudo;
 		pseudo = newPseudo;
@@ -720,6 +747,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputColumnClass() {
 		return inputColumnClass;
 	}
@@ -729,6 +757,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputColumnClass(String newInputColumnClass) {
 		String oldInputColumnClass = inputColumnClass;
 		inputColumnClass = newInputColumnClass;
@@ -741,6 +770,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputElementClass() {
 		return inputElementClass;
 	}
@@ -750,6 +780,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputElementClass(String newInputElementClass) {
 		String oldInputElementClass = inputElementClass;
 		inputElementClass = newInputElementClass;
@@ -762,6 +793,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getSerializationMaxDepth() {
 		return serializationMaxDepth;
 	}
@@ -771,6 +803,7 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSerializationMaxDepth(int newSerializationMaxDepth) {
 		int oldSerializationMaxDepth = serializationMaxDepth;
 		serializationMaxDepth = newSerializationMaxDepth;

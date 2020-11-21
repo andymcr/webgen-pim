@@ -290,6 +290,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isHidden() {
 		return hidden;
 	}
@@ -299,6 +300,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHidden(boolean newHidden) {
 		boolean oldHidden = hidden;
 		hidden = newHidden;
@@ -311,6 +313,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isContainerUnique() {
 		return containerUnique;
 	}
@@ -320,6 +323,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContainerUnique(boolean newContainerUnique) {
 		boolean oldContainerUnique = containerUnique;
 		containerUnique = newContainerUnique;
@@ -332,6 +336,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPersistentType() {
 		return persistentType;
 	}
@@ -341,6 +346,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPersistentType(String newPersistentType) {
 		String oldPersistentType = persistentType;
 		persistentType = newPersistentType;
@@ -353,6 +359,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOrmType() {
 		return ormType;
 	}
@@ -362,6 +369,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrmType(String newOrmType) {
 		String oldOrmType = ormType;
 		ormType = newOrmType;
@@ -374,6 +382,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInterfaceType() {
 		return interfaceType;
 	}
@@ -383,6 +392,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterfaceType(String newInterfaceType) {
 		String oldInterfaceType = interfaceType;
 		interfaceType = newInterfaceType;
@@ -395,6 +405,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getSlugFields() {
 		if (slugFields == null) {
 			slugFields = new EObjectResolvingEList<Attribute>(Attribute.class, this, PersistencePackage.ATTRIBUTE__SLUG_FIELDS);
@@ -407,6 +418,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return unique;
 	}
@@ -416,6 +428,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnique(boolean newUnique) {
 		boolean oldUnique = unique;
 		unique = newUnique;
@@ -428,6 +441,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefaultValue() {
 		return defaultValue;
 	}
@@ -452,6 +466,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(Expression newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -471,6 +486,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPlaceholder() {
 		return placeholder;
 	}
@@ -480,6 +496,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlaceholder(String newPlaceholder) {
 		String oldPlaceholder = placeholder;
 		placeholder = newPlaceholder;
@@ -492,6 +509,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -501,6 +519,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidationPattern(String newValidationPattern) {
 		String oldValidationPattern = validationPattern;
 		validationPattern = newValidationPattern;
@@ -513,6 +532,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputColumnClass() {
 		return inputColumnClass;
 	}
@@ -522,6 +542,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputColumnClass(String newInputColumnClass) {
 		String oldInputColumnClass = inputColumnClass;
 		inputColumnClass = newInputColumnClass;
@@ -534,6 +555,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInputElementClass() {
 		return inputElementClass;
 	}
@@ -543,6 +565,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputElementClass(String newInputElementClass) {
 		String oldInputElementClass = inputElementClass;
 		inputElementClass = newInputElementClass;
