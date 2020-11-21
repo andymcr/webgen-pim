@@ -695,6 +695,7 @@ abstract rule CardsUnit {
 		badges <- website.badges,
 		omitFieldLabels <- website.omitFieldLabels,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
+		rowClass <- website.rowClass.replaceAll(',', ' ').trim(),
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
 		cardClass <- website.cardClass.replaceAll(',', ' ').trim()
 	)
