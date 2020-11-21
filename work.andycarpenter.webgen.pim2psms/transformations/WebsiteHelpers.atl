@@ -178,7 +178,11 @@ helper context Website!Attribute def: validationPattern() : String
 			self.validationPattern
 		else
 			if self.oclIsTypeOf(Website!DataTypeAttribute) then
-				self.dataType.validationPattern
+				if not self.dataType.validationPattern.oclIsUndefined() and self.dataType.validationPattern <> '' then
+					self.dataType.validationPattern
+				else
+					OclUndefined
+				endif
 			else
 				OclUndefined
 			endif

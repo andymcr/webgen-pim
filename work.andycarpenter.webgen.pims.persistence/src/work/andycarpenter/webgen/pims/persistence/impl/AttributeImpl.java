@@ -214,7 +214,7 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALIDATION_PATTERN_EDEFAULT = "";
+	protected static final String VALIDATION_PATTERN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValidationPattern() <em>Validation Pattern</em>}' attribute.

@@ -105,7 +105,6 @@ public interface DataType extends Classifier {
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.
-	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Validation Pattern</em>' attribute isn't clear,
@@ -115,7 +114,7 @@ public interface DataType extends Classifier {
 	 * @return the value of the '<em>Validation Pattern</em>' attribute.
 	 * @see #setValidationPattern(String)
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getDataType_ValidationPattern()
-	 * @model default="" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getValidationPattern();
