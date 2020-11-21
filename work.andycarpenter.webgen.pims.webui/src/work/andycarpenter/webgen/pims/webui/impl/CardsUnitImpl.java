@@ -148,7 +148,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "col-sm-12 col-md-6 col-lg-3";
+	protected static final String COLUMN_CLASS_EDEFAULT = "col";
 
 	/**
 	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.

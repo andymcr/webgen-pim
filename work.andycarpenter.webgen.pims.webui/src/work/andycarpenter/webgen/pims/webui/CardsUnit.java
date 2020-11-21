@@ -150,7 +150,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Column Class</b></em>' attribute.
-	 * The default value is <code>"col-sm-12 col-md-6 col-lg-3"</code>.
+	 * The default value is <code>"col"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Column Class</em>' attribute isn't clear,
@@ -160,7 +160,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Column Class</em>' attribute.
 	 * @see #setColumnClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ColumnClass()
-	 * @model default="col-sm-12 col-md-6 col-lg-3" ordered="false"
+	 * @model default="col" ordered="false"
 	 * @generated
 	 */
 	String getColumnClass();
