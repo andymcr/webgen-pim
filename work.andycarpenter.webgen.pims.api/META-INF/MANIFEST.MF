@@ -7,7 +7,7 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: work.andycarpenter.webgen.pims.api,
  work.andycarpenter.webgen.pims.api.impl,
  work.andycarpenter.webgen.pims.api.util
