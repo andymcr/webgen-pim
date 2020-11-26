@@ -4,7 +4,10 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -24,6 +27,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -64,6 +69,7 @@ public class BadgeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIconNamePropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +95,37 @@ public class BadgeItemProvider
 				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
+
+	/**
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Badge_title_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Badge_title_feature", "_UI_Badge_type"),
+				WebuiPackage.Literals.BADGE__TITLE,
+				true, false, true, null,
+				getString("_UI_BusinessPropertyCategory"),
+				null) {
+					@Override
+					public Collection<?> getChoiceOfValues(Object object) {
+						if (object instanceof Badge) {
+							final Badge badge = (Badge) object;
+							final Set<Label> attributes = new HashSet<Label>();
+							for (Entity entity : badge.getDisplayedOn().getContentType()) {
+								attributes.addAll(entity.getAttributes());
+							}
+							return attributes;
+						}
+						return Collections.emptySet();
+					}
+			});
+		}
 
 	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an

@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.ecore.EObject;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +18,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}</li>
  * </ul>
  *
@@ -105,6 +107,28 @@ public interface Badge extends EObject {
 	 * @generated
 	 */
 	void setValue(FeaturePath value);
+
+	/**
+	 * Returns the value of the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Title</em>' reference.
+	 * @see #setTitle(Attribute)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_Title()
+	 * @model
+	 * @generated
+	 */
+	Attribute getTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getTitle <em>Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Title</em>' reference.
+	 * @see #getTitle()
+	 * @generated
+	 */
+	void setTitle(Attribute value);
 
 	/**
 	 * Returns the value of the '<em><b>Display When</b></em>' containment reference.

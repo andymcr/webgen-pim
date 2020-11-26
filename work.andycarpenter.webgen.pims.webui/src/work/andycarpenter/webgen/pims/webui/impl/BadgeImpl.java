@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePath;
@@ -29,6 +30,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayWhen <em>Display When</em>}</li>
  * </ul>
  *
@@ -64,6 +66,16 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @ordered
 	 */
 	protected FeaturePath value;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected Attribute title;
 
 	/**
 	 * The cached value of the '{@link #getDisplayWhen() <em>Display When</em>}' containment reference.
@@ -211,6 +223,46 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
+	public Attribute getTitle() {
+		if (title != null && title.eIsProxy()) {
+			InternalEObject oldTitle = (InternalEObject)title;
+			title = (Attribute)eResolveProxy(oldTitle);
+			if (title != oldTitle) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.BADGE__TITLE, oldTitle, title));
+			}
+		}
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute basicGetTitle() {
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTitle(Attribute newTitle) {
+		Attribute oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__TITLE, oldTitle, title));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Predicate getDisplayWhen() {
 		return displayWhen;
 	}
@@ -312,6 +364,9 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return getIconName();
 			case WebuiPackage.BADGE__VALUE:
 				return getValue();
+			case WebuiPackage.BADGE__TITLE:
+				if (resolve) return getTitle();
+				return basicGetTitle();
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return getDisplayWhen();
 		}
@@ -334,6 +389,9 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return;
 			case WebuiPackage.BADGE__VALUE:
 				setValue((FeaturePath)newValue);
+				return;
+			case WebuiPackage.BADGE__TITLE:
+				setTitle((Attribute)newValue);
 				return;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)newValue);
@@ -359,6 +417,9 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 			case WebuiPackage.BADGE__VALUE:
 				setValue((FeaturePath)null);
 				return;
+			case WebuiPackage.BADGE__TITLE:
+				setTitle((Attribute)null);
+				return;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)null);
 				return;
@@ -380,6 +441,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return ICON_NAME_EDEFAULT == null ? iconName != null : !ICON_NAME_EDEFAULT.equals(iconName);
 			case WebuiPackage.BADGE__VALUE:
 				return value != null;
+			case WebuiPackage.BADGE__TITLE:
+				return title != null;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return displayWhen != null;
 		}

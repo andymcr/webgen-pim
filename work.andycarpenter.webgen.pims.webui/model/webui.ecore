@@ -618,6 +618,7 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//FeaturePath"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
   </eClassifiers>
