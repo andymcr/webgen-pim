@@ -28,6 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDisplayOption <em>Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getStyleClass <em>Style Class</em>}</li>
@@ -47,6 +48,26 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
+
+	/**
+	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ANCHOR_CLASS_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDisplayOption() <em>Display Option</em>}' attribute.
@@ -178,6 +199,29 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.INDEX_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
 		}
 		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultAnchorClass() {
+		return defaultAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultAnchorClass(String newDefaultAnchorClass) {
+		String oldDefaultAnchorClass = defaultAnchorClass;
+		defaultAnchorClass = newDefaultAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS, oldDefaultAnchorClass, defaultAnchorClass));
 	}
 
 	/**
@@ -334,6 +378,8 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return getActions();
+			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
+				return getDefaultAnchorClass();
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return getDisplayOption();
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
@@ -360,6 +406,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
+				return;
+			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption((IndexDisplayOption)newValue);
@@ -391,6 +440,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				return;
+			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption(DISPLAY_OPTION_EDEFAULT);
 				return;
@@ -420,6 +472,8 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
+			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
+				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return displayOption != DISPLAY_OPTION_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
@@ -444,6 +498,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (baseClass == InlineActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.INDEX_UNIT__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -460,6 +515,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (baseClass == InlineActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.INDEX_UNIT__ACTIONS;
+				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS: return WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -476,7 +532,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (displayOption: ");
+		result.append(" (defaultAnchorClass: ");
+		result.append(defaultAnchorClass);
+		result.append(", displayOption: ");
 		result.append(displayOption);
 		result.append(", omitColumnLabels: ");
 		result.append(omitColumnLabels);

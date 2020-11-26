@@ -364,26 +364,25 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CardsUnit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CardsUnit/badges"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/omitFieldLabels"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/contentClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/rowClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/omitFieldLabels"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/contentClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/rowClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//Badge">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//Badge/displayedOn"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Badge/iconName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/displayWhen"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Badge/newWhen"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//TextCardsUnit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//TextCardsUnit/styleClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TextCardsUnit/styleClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//DateCardsUnit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//DateCardsUnit/elementDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//DateCardsUnit/styleClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DateCardsUnit/styleClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//ImageUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
@@ -395,10 +394,10 @@
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageUnit/missingImagePath"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ImageCardsUnit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/enableImageEnlargement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/revealUntruncatedContent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/styleClass"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/enableImageEnlargement"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/revealUntruncatedContent"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/styleClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SliderUnit">
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/showTime"/>
@@ -439,6 +438,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InlineActionContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//InlineActionContainer/actions"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineActionContainer/defaultAnchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InlineAction">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//InlineAction/usedBy"/>
@@ -448,6 +448,7 @@
           ecoreFeature="ecore:EReference webui.ecore#//InlineAction/displayWhen"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/header"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/footer"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/anchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/footerClass"/>
     </genClasses>

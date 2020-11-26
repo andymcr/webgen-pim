@@ -831,6 +831,7 @@ abstract rule InlineAction {
 		displayWhen <- website.displayWhen,
 		header <- website.header,
 		footer <- website.footer,
+		anchorClass <- website.anchorClass(),
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass
 	)
@@ -896,16 +897,6 @@ rule FeatureSupportAction {
 	)
 }
 
-
-rule Badge {
-	from website : Website!Badge
-	to waf : WAF!Badge (
-		iconName <- website.iconName,
-		value <- website.value,
-		displayWhen <- website.displayWhen,
-		newWhen <- website.newWhen
-	)
-}
 
 rule ConstantReference {
 	from website : Website!ConstantReference (website.isInterfaceExpression())

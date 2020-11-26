@@ -34,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getDisplayWhen <em>Display When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getFooter <em>Footer</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
@@ -130,6 +131,26 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * @ordered
 	 */
 	protected String footer = FOOTER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAnchorClass() <em>Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getAnchorClass() <em>Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String anchorClass = ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
@@ -376,6 +397,29 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 	 * @generated
 	 */
 	@Override
+	public String getAnchorClass() {
+		return anchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAnchorClass(String newAnchorClass) {
+		String oldAnchorClass = anchorClass;
+		anchorClass = newAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INLINE_ACTION__ANCHOR_CLASS, oldAnchorClass, anchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getHeaderClass() {
 		return headerClass;
 	}
@@ -482,6 +526,8 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 				return getHeader();
 			case WebuiPackage.INLINE_ACTION__FOOTER:
 				return getFooter();
+			case WebuiPackage.INLINE_ACTION__ANCHOR_CLASS:
+				return getAnchorClass();
 			case WebuiPackage.INLINE_ACTION__HEADER_CLASS:
 				return getHeaderClass();
 			case WebuiPackage.INLINE_ACTION__FOOTER_CLASS:
@@ -515,6 +561,9 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 				return;
 			case WebuiPackage.INLINE_ACTION__FOOTER:
 				setFooter((String)newValue);
+				return;
+			case WebuiPackage.INLINE_ACTION__ANCHOR_CLASS:
+				setAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.INLINE_ACTION__HEADER_CLASS:
 				setHeaderClass((String)newValue);
@@ -552,6 +601,9 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 			case WebuiPackage.INLINE_ACTION__FOOTER:
 				setFooter(FOOTER_EDEFAULT);
 				return;
+			case WebuiPackage.INLINE_ACTION__ANCHOR_CLASS:
+				setAnchorClass(ANCHOR_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.INLINE_ACTION__HEADER_CLASS:
 				setHeaderClass(HEADER_CLASS_EDEFAULT);
 				return;
@@ -582,6 +634,8 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 				return HEADER_EDEFAULT == null ? header != null : !HEADER_EDEFAULT.equals(header);
 			case WebuiPackage.INLINE_ACTION__FOOTER:
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
+			case WebuiPackage.INLINE_ACTION__ANCHOR_CLASS:
+				return ANCHOR_CLASS_EDEFAULT == null ? anchorClass != null : !ANCHOR_CLASS_EDEFAULT.equals(anchorClass);
 			case WebuiPackage.INLINE_ACTION__HEADER_CLASS:
 				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
 			case WebuiPackage.INLINE_ACTION__FOOTER_CLASS:
@@ -608,6 +662,8 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 		result.append(header);
 		result.append(", footer: ");
 		result.append(footer);
+		result.append(", anchorClass: ");
+		result.append(anchorClass);
 		result.append(", headerClass: ");
 		result.append(headerClass);
 		result.append(", footerClass: ");

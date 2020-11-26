@@ -1762,13 +1762,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__DEFAULT_ANCHOR_CLASS = UNIT_FIELD_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 1;
+	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -1777,7 +1786,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 2;
+	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Forced Value</b></em>' containment reference.
@@ -1786,7 +1795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 3;
+	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Add</b></em>' attribute.
@@ -1795,7 +1804,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 4;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Remove</b></em>' attribute.
@@ -1804,7 +1813,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 5;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -1813,7 +1822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 6;
+	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
@@ -1822,7 +1831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 7;
+	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -1831,7 +1840,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 8;
+	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -1840,7 +1849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 9;
+	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Autofocus</b></em>' attribute.
@@ -1849,7 +1858,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 10;
+	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1858,7 +1867,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 11;
+	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
@@ -1867,7 +1876,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_COLUMN_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__INPUT_COLUMN_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
@@ -1876,7 +1885,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -1885,7 +1894,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1894,7 +1903,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -1903,7 +1912,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -2013,6 +2022,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__ACTIONS = UNIT_FEATURE__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__DEFAULT_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2320,6 +2338,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__ACTIONS = UNIT_FEATURE__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__DEFAULT_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -7287,13 +7314,22 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__DEFAULT_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Display Option</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 1;
+	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Omit Column Labels</b></em>' attribute.
@@ -7302,7 +7338,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -7311,7 +7347,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__STYLE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int INDEX_UNIT__STYLE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -7320,7 +7356,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Row Classes</b></em>' attribute.
@@ -7329,7 +7365,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Index Unit</em>' class.
@@ -7338,7 +7374,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Index Unit</em>' class.
@@ -7828,13 +7864,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__DEFAULT_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__BADGES = COLLECTION_UNIT_FEATURE_COUNT + 1;
+	int CARDS_UNIT__BADGES = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -7843,7 +7888,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -7852,7 +7897,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -7861,7 +7906,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
@@ -7870,7 +7915,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -7879,7 +7924,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -7888,7 +7933,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -7897,7 +7942,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 8;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8125,22 +8170,13 @@ public interface WebuiPackage extends EPackage {
 	int BADGE__DISPLAY_WHEN = 3;
 
 	/**
-	 * The feature id for the '<em><b>New When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BADGE__NEW_WHEN = 4;
-
-	/**
 	 * The number of structural features of the '<em>Badge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BADGE_FEATURE_COUNT = 5;
+	int BADGE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Badge</em>' class.
@@ -8618,6 +8654,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -9176,6 +9221,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -10256,6 +10310,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -12904,13 +12967,22 @@ public interface WebuiPackage extends EPackage {
 	int INLINE_ACTION_CONTAINER__ACTIONS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Inline Action Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION_CONTAINER_FEATURE_COUNT = 1;
+	int INLINE_ACTION_CONTAINER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Inline Action Container</em>' class.
@@ -12994,13 +13066,22 @@ public interface WebuiPackage extends EPackage {
 	int INLINE_ACTION__FOOTER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INLINE_ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int INLINE_ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13009,7 +13090,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int INLINE_ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Inline Action</em>' class.
@@ -13018,7 +13099,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int INLINE_ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Inline Action</em>' class.
@@ -13100,6 +13181,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECT_ACTION__FOOTER = INLINE_ACTION__FOOTER;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__ANCHOR_CLASS = INLINE_ACTION__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -13226,6 +13316,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_ACTION__FOOTER = INLINE_ACTION__FOOTER;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__ANCHOR_CLASS = INLINE_ACTION__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -13379,6 +13478,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_SUPPORT_ACTION__FOOTER = INLINE_ACTION__FOOTER;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SUPPORT_ACTION__ANCHOR_CLASS = INLINE_ACTION__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -16565,6 +16673,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getInlineActionContainer_Actions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass()
+	 * @see #getInlineActionContainer()
+	 * @generated
+	 */
+	EAttribute getInlineActionContainer_DefaultAnchorClass();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.InlineAction <em>Inline Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16639,6 +16758,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInlineAction_Footer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineAction#getAnchorClass <em>Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InlineAction#getAnchorClass()
+	 * @see #getInlineAction()
+	 * @generated
+	 */
+	EAttribute getInlineAction_AnchorClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineAction#getHeaderClass <em>Header Class</em>}'.
@@ -16888,17 +17018,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBadge_DisplayWhen();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.Badge#getNewWhen <em>New When</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>New When</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Badge#getNewWhen()
-	 * @see #getBadge()
-	 * @generated
-	 */
-	EReference getBadge_NewWhen();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}'.
@@ -19348,6 +19467,14 @@ public interface WebuiPackage extends EPackage {
 		EReference INLINE_ACTION_CONTAINER__ACTIONS = eINSTANCE.getInlineActionContainer_Actions();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS = eINSTANCE.getInlineActionContainer_DefaultAnchorClass();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl <em>Inline Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19404,6 +19531,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INLINE_ACTION__FOOTER = eINSTANCE.getInlineAction_Footer();
+
+		/**
+		 * The meta object literal for the '<em><b>Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INLINE_ACTION__ANCHOR_CLASS = eINSTANCE.getInlineAction_AnchorClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Header Class</b></em>' attribute feature.
@@ -19596,14 +19731,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BADGE__DISPLAY_WHEN = eINSTANCE.getBadge_DisplayWhen();
-
-		/**
-		 * The meta object literal for the '<em><b>New When</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BADGE__NEW_WHEN = eINSTANCE.getBadge_NewWhen();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}' enum.

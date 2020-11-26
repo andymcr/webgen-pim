@@ -18,7 +18,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getNewWhen <em>New When</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge()
@@ -132,31 +131,5 @@ public interface Badge extends EObject {
 	 * @generated
 	 */
 	void setDisplayWhen(Predicate value);
-
-	/**
-	 * Returns the value of the '<em><b>New When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>New When</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>New When</em>' containment reference.
-	 * @see #setNewWhen(Predicate)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_NewWhen()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Predicate getNewWhen();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getNewWhen <em>New When</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>New When</em>' containment reference.
-	 * @see #getNewWhen()
-	 * @generated
-	 */
-	void setNewWhen(Predicate value);
 
 } // Badge

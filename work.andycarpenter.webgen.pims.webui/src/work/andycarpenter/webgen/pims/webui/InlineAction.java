@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getDisplayWhen <em>Display When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getFooter <em>Footer</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
@@ -187,6 +188,29 @@ public interface InlineAction extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setFooter(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Anchor Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Anchor Class</em>' attribute.
+	 * @see #setAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineAction_AnchorClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getAnchorClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InlineAction#getAnchorClass <em>Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Anchor Class</em>' attribute.
+	 * @see #getAnchorClass()
+	 * @generated
+	 */
+	void setAnchorClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.

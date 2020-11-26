@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer()
@@ -42,5 +43,28 @@ public interface InlineActionContainer extends EObject {
 	 * @generated
 	 */
 	EList<InlineAction> getActions();
+
+	/**
+	 * Returns the value of the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Anchor Class</em>' attribute.
+	 * @see #setDefaultAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer_DefaultAnchorClass()
+	 * @model default=" "
+	 * @generated
+	 */
+	String getDefaultAnchorClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Anchor Class</em>' attribute.
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 */
+	void setDefaultAnchorClass(String value);
 
 } // InlineActionContainer

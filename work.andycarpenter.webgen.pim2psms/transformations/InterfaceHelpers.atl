@@ -348,3 +348,13 @@ helper context Website!InterfaceField def: validationPattern() : String
 				OclUndefined
 			endif
 		endif;
+
+helper context Website!InlineAction def: anchorClass() : String
+	= if self.anchorClass.trim() <> '' then
+			self.anchorClass.trim()
+		else if self.refImmediateComposite().defaultAnchorClass.trim() <> '' then
+			self.refImmediateComposite().defaultAnchorClass.trim()
+		else
+			self.refImmediateComposite().name
+		endif endif;
+

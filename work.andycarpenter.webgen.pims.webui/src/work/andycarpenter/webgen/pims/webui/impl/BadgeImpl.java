@@ -30,7 +30,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayWhen <em>Display When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getNewWhen <em>New When</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,16 +74,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @ordered
 	 */
 	protected Predicate displayWhen;
-
-	/**
-	 * The cached value of the '{@link #getNewWhen() <em>New When</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNewWhen()
-	 * @generated
-	 * @ordered
-	 */
-	protected Predicate newWhen;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -267,51 +256,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
-	public Predicate getNewWhen() {
-		return newWhen;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetNewWhen(Predicate newNewWhen, NotificationChain msgs) {
-		Predicate oldNewWhen = newWhen;
-		newWhen = newNewWhen;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__NEW_WHEN, oldNewWhen, newNewWhen);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNewWhen(Predicate newNewWhen) {
-		if (newNewWhen != newWhen) {
-			NotificationChain msgs = null;
-			if (newWhen != null)
-				msgs = ((InternalEObject)newWhen).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.BADGE__NEW_WHEN, null, msgs);
-			if (newNewWhen != null)
-				msgs = ((InternalEObject)newNewWhen).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.BADGE__NEW_WHEN, null, msgs);
-			msgs = basicSetNewWhen(newNewWhen, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__NEW_WHEN, newNewWhen, newNewWhen));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.BADGE__DISPLAYED_ON:
@@ -336,8 +280,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return basicSetValue(null, msgs);
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return basicSetDisplayWhen(null, msgs);
-			case WebuiPackage.BADGE__NEW_WHEN:
-				return basicSetNewWhen(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -372,8 +314,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return getValue();
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return getDisplayWhen();
-			case WebuiPackage.BADGE__NEW_WHEN:
-				return getNewWhen();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -397,9 +337,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)newValue);
-				return;
-			case WebuiPackage.BADGE__NEW_WHEN:
-				setNewWhen((Predicate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -425,9 +362,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)null);
 				return;
-			case WebuiPackage.BADGE__NEW_WHEN:
-				setNewWhen((Predicate)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -448,8 +382,6 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return value != null;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return displayWhen != null;
-			case WebuiPackage.BADGE__NEW_WHEN:
-				return newWhen != null;
 		}
 		return super.eIsSet(featureID);
 	}
