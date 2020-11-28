@@ -138,9 +138,9 @@ rule Menu {
 	from website : Website!Menu
 	to waf : WAF!Menu (
 		entries <- website.entries,
+		styleClass <- website.styleClass.replaceAll(',', ' '),
 		omitCaption <- website.omitCaption,
 		captionClass <- website.captionClass.replaceAll(',', ' '),
-		styleClass <- website.styleClass.replaceAll(',', ' '),
 		layoutClass <- website.layoutClass.replaceAll(',', ' ')
 	)
 }
@@ -223,11 +223,26 @@ abstract rule ContentUnit {
 		routeActuals <- website.routeActuals,
 		requiresRole <- website.requiresRole.trim(),
 		purposeSummary <- website.purposeSummary,
-		omitCaption <- website.omitCaption,
 		alternative <- website.alternative,
-		captionClass <- website.captionClass.replaceAll(',', ' '),
-		styleClass <- website.styleClass.replaceAll(',', ' '),
-		contentClass <- website.contentClass.replaceAll(',', ' ')
+		sectionClass <-
+			if website.sectionClass.trim() <> '' then
+				website.sectiontClass.trim()
+			else
+				OclUndefined
+			endif,
+		omitCaption <- website.omitCaption,
+		captionClass <-
+			if website.captionClass.trim() <> '' then
+				website.captionClass.trim()
+			else
+				OclUndefined
+			endif,
+		contentClass <-
+			if website.contentClass.trim() <> '' then
+				website.contentClass.trim()
+			else
+				OclUndefined
+			endif
 	)
 }
 
@@ -310,7 +325,8 @@ rule UnitAttribute {
 		validationPattern <- website.validationPattern,
 		headerClass <- website.headerClass(),
 		displayClass <- website.displayClass(),
-		inputColumnClass <- website.inputColumnClass(),
+		inputGroupClass <- website.inputGroupClass(),
+		inputLabelClass <- website.inputLabelClass(),
 		inputElementClass <- website.inputElementClass(),
 		footerClass <- website.footerClass()
 	)
@@ -334,7 +350,8 @@ rule UnitAssociation {
 			endif,
 		headerClass <- website.headerClass(),
 		displayClass <- website.displayClass(),
-		inputColumnClass <- website.inputColumnClass(),
+		inputGroupClass <- website.inputGroupClass(),
+		inputLabelClass <- website.inputLabelClass(),
 		inputElementClass <- website.inputElementClass(),
 		footerClass <- website.footerClass()
 	)
@@ -767,15 +784,9 @@ abstract rule ControlUnit {
 			else
 				if  website.oclIsKindOf(Website!SearchUnit) then
 					'Search'
-				else if  website.oclIsKindOf(Website!RegistrationUnit) then
-					'Register'
-				else if  website.oclIsKindOf(Website!LoginUnit) then
-					'Login'
-				else if  website.oclIsKindOf(Website!ForgottenPasswordUnit) then
-					'Forgotton Password'
 				else
 					'Control'
-				endif endif endif endif
+				endif
 			endif,
 		cancelDestination <- website.cancelDestination,
 		cancelLabel <- website.cancelLabel
@@ -787,32 +798,6 @@ rule SearchUnit {
 	from website : Website!SearchUnit
 	to waf : WAF!SearchUnit (
 		resultsDestination <- website.resultsDestination
-	)
-}
-
--- @extends EditUnit
-rule RegistrationUnit {
-	from website : Website!RegistrationUnit
-	to waf : WAF!RegistrationUnit (
-	)
-}
-
--- @extends ControlUnit
-rule LoginUnit {
-	from website : Website!LoginUnit
-	to waf : WAF!LoginUnit (
-		loginIdField <- website.loginIdField,
-		passwordField <- website.passwordField,
-		rememberMeField <- website.rememberMeField,
-		logoutUriElement <- website.logoutUriElement
-	)
-}
-
--- @extends ControlUnit
-rule ForgottenPasswordUnit {
-	from website : Website!ForgottenPasswordUnit
-	to waf : WAF!ForgottenPasswordUnit (
-		loginIdField <- website.loginIdField
 	)
 }
 
