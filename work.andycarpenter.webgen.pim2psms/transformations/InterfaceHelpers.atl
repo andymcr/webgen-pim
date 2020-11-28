@@ -355,6 +355,6 @@ helper context Website!InlineAction def: anchorClass() : String
 		else if self.refImmediateComposite().defaultAnchorClass.trim() <> '' then
 			self.refImmediateComposite().defaultAnchorClass.trim()
 		else
-			self.refImmediateComposite().name
+			OclUndefined
 		endif endif;
 
