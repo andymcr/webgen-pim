@@ -189,7 +189,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_CLASS_EDEFAULT = "card rounded shadow h-100";
+	protected static final String CARD_CLASS_EDEFAULT = "card rounded shadow-sm h-100";
 
 	/**
 	 * The cached value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.

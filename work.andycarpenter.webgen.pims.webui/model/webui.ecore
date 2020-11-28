@@ -514,7 +514,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="pagination"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationElementClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="waves_effect"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="page-item"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationAnchorClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="page-link"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditUnit" abstract="true" eSuperTypes="#//SingletonUnit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="disableWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
@@ -609,7 +611,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="col"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card rounded shadow h-100"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card rounded shadow-sm h-100"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Badge">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"

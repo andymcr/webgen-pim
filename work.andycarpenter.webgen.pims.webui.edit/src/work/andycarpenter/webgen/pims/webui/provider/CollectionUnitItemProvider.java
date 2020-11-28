@@ -83,6 +83,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addLastPageIconNamePropertyDescriptor(object);
 			addPaginationClassPropertyDescriptor(object);
 			addPaginationElementClassPropertyDescriptor(object);
+			addPaginationAnchorClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -724,6 +725,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Pagination Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPaginationAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_paginationAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationAnchorClass_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -800,6 +823,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			case WebuiPackage.COLLECTION_UNIT__LAST_PAGE_ICON_NAME:
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_CLASS:
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
+			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:

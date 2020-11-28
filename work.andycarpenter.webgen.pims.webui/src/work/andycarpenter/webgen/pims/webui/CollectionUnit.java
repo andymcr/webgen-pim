@@ -45,6 +45,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getLastPageIconName <em>Last Page Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationClass <em>Pagination Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationElementClass <em>Pagination Element Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass <em>Pagination Anchor Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit()
@@ -759,7 +760,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 
 	/**
 	 * Returns the value of the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * The default value is <code>"waves_effect"</code>.
+	 * The default value is <code>"page-item"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pagination Element Class</em>' attribute isn't clear,
@@ -769,7 +770,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Pagination Element Class</em>' attribute.
 	 * @see #setPaginationElementClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_PaginationElementClass()
-	 * @model default="waves_effect"
+	 * @model default="page-item"
 	 * @generated
 	 */
 	String getPaginationElementClass();
@@ -783,5 +784,28 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setPaginationElementClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * The default value is <code>"page-link"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pagination Anchor Class</em>' attribute.
+	 * @see #setPaginationAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_PaginationAnchorClass()
+	 * @model default="page-link"
+	 * @generated
+	 */
+	String getPaginationAnchorClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass <em>Pagination Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pagination Anchor Class</em>' attribute.
+	 * @see #getPaginationAnchorClass()
+	 * @generated
+	 */
+	void setPaginationAnchorClass(String value);
 
 } // CollectionUnit

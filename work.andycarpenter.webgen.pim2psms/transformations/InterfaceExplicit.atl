@@ -544,7 +544,8 @@ abstract rule CollectionUnit {
 		lastPageLabel <- website.lastPageLabel,
 		lastPageIconName <- website.lastPageIconName,
 		paginationClass <- website.paginationClass,
-		paginationElementClass <- website.paginationElementClass
+		paginationElementClass <- website.paginationElementClass,
+		paginationAnchorClass <- website.paginationAnchorClass
 	)
 }
 
@@ -903,7 +904,12 @@ rule Badge {
 	to waf : WAF!Badge (
 		iconName <- website.iconName,
 		value <- website.value,
-		title <- website.title,
+		title <-
+			if website.title.oclIsUndefined() then
+				OclUndefined
+			else
+				website.title.findOrmLabel()
+			endif,
 		displayWhen <- website.displayWhen
 	)
 }

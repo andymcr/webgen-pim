@@ -4841,13 +4841,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+
+	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 29;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -7305,6 +7314,15 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7855,6 +7873,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8161,13 +8188,22 @@ public interface WebuiPackage extends EPackage {
 	int BADGE__VALUE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE__TITLE = 3;
+
+	/**
 	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BADGE__DISPLAY_WHEN = 3;
+	int BADGE__DISPLAY_WHEN = 4;
 
 	/**
 	 * The number of structural features of the '<em>Badge</em>' class.
@@ -8176,7 +8212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BADGE_FEATURE_COUNT = 4;
+	int BADGE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Badge</em>' class.
@@ -8645,6 +8681,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -9212,6 +9257,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -9790,6 +9844,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10301,6 +10364,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -10933,6 +11005,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__PAGINATION_ELEMENT_CLASS = IMAGE_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__PAGINATION_ANCHOR_CLASS = IMAGE_UNIT__PAGINATION_ANCHOR_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11480,6 +11561,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__PAGINATION_ELEMENT_CLASS = IMAGE_UNIT__PAGINATION_ELEMENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__PAGINATION_ANCHOR_CLASS = IMAGE_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -15737,6 +15827,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionUnit_PaginationElementClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass <em>Pagination Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pagination Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_PaginationAnchorClass();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EditUnit <em>Edit Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17007,6 +17108,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBadge_Value();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Badge#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Badge#getTitle()
+	 * @see #getBadge()
+	 * @generated
+	 */
+	EReference getBadge_Title();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}'.
@@ -18729,6 +18841,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = eINSTANCE.getCollectionUnit_PaginationElementClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Pagination Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = eINSTANCE.getCollectionUnit_PaginationAnchorClass();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19723,6 +19843,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BADGE__VALUE = eINSTANCE.getBadge_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BADGE__TITLE = eINSTANCE.getBadge_Title();
 
 		/**
 		 * The meta object literal for the '<em><b>Display When</b></em>' containment reference feature.

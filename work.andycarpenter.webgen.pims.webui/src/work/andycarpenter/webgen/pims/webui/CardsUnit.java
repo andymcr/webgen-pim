@@ -177,7 +177,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Card Class</b></em>' attribute.
-	 * The default value is <code>"card rounded shadow h-100"</code>.
+	 * The default value is <code>"card rounded shadow-sm h-100"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Card Class</em>' attribute isn't clear,
@@ -187,7 +187,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Card Class</em>' attribute.
 	 * @see #setCardClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardClass()
-	 * @model default="card rounded shadow h-100" ordered="false"
+	 * @model default="card rounded shadow-sm h-100" ordered="false"
 	 * @generated
 	 */
 	String getCardClass();

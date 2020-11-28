@@ -57,6 +57,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getLastPageIconName <em>Last Page Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getPaginationClass <em>Pagination Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getPaginationElementClass <em>Pagination Element Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getPaginationAnchorClass <em>Pagination Anchor Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -530,7 +531,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PAGINATION_ELEMENT_CLASS_EDEFAULT = "waves_effect";
+	protected static final String PAGINATION_ELEMENT_CLASS_EDEFAULT = "page-item";
 
 	/**
 	 * The cached value of the '{@link #getPaginationElementClass() <em>Pagination Element Class</em>}' attribute.
@@ -541,6 +542,26 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected String paginationElementClass = PAGINATION_ELEMENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPaginationAnchorClass() <em>Pagination Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPaginationAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PAGINATION_ANCHOR_CLASS_EDEFAULT = "page-link";
+
+	/**
+	 * The cached value of the '{@link #getPaginationAnchorClass() <em>Pagination Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPaginationAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String paginationAnchorClass = PAGINATION_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1298,6 +1319,29 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
+	public String getPaginationAnchorClass() {
+		return paginationAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPaginationAnchorClass(String newPaginationAnchorClass) {
+		String oldPaginationAnchorClass = paginationAnchorClass;
+		paginationAnchorClass = newPaginationAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS, oldPaginationAnchorClass, paginationAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
@@ -1375,6 +1419,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return getPaginationClass();
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
 				return getPaginationElementClass();
+			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
+				return getPaginationAnchorClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1474,6 +1520,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
 				setPaginationElementClass((String)newValue);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
+				setPaginationAnchorClass((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1570,6 +1619,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
 				setPaginationElementClass(PAGINATION_ELEMENT_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
+				setPaginationAnchorClass(PAGINATION_ANCHOR_CLASS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1638,6 +1690,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return PAGINATION_CLASS_EDEFAULT == null ? paginationClass != null : !PAGINATION_CLASS_EDEFAULT.equals(paginationClass);
 			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
 				return PAGINATION_ELEMENT_CLASS_EDEFAULT == null ? paginationElementClass != null : !PAGINATION_ELEMENT_CLASS_EDEFAULT.equals(paginationElementClass);
+			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
+				return PAGINATION_ANCHOR_CLASS_EDEFAULT == null ? paginationAnchorClass != null : !PAGINATION_ANCHOR_CLASS_EDEFAULT.equals(paginationAnchorClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1692,6 +1746,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		result.append(paginationClass);
 		result.append(", paginationElementClass: ");
 		result.append(paginationElementClass);
+		result.append(", paginationAnchorClass: ");
+		result.append(paginationAnchorClass);
 		result.append(')');
 		return result.toString();
 	}

@@ -313,6 +313,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/lastPageIconName"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationElementClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//EditUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
