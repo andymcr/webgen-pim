@@ -21,8 +21,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitImpl#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,46 +55,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * @ordered
 	 */
 	protected boolean omitFieldLabels = OMIT_FIELD_LABELS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,details_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "details_content";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,52 +144,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DETAILS_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DETAILS_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.DETAILS_UNIT__SELECTION:
@@ -239,10 +151,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 				return basicGetSelection();
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
 				return isOmitFieldLabels();
-			case WebuiPackage.DETAILS_UNIT__STYLE_CLASS:
-				return getStyleClass();
-			case WebuiPackage.DETAILS_UNIT__CONTENT_CLASS:
-				return getContentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,12 +168,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 				return;
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels((Boolean)newValue);
-				return;
-			case WebuiPackage.DETAILS_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.DETAILS_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -285,12 +187,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
 				return;
-			case WebuiPackage.DETAILS_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.DETAILS_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -307,10 +203,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 				return selection != null;
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
 				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
-			case WebuiPackage.DETAILS_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.DETAILS_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -327,10 +219,6 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (omitFieldLabels: ");
 		result.append(omitFieldLabels);
-		result.append(", styleClass: ");
-		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

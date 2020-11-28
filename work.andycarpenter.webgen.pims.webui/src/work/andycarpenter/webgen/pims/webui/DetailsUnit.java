@@ -15,8 +15,6 @@ import work.andycarpenter.webgen.pims.service.Selection;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit()
@@ -77,59 +75,5 @@ public interface DetailsUnit extends SingletonUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setOmitFieldLabels(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,details_unit"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit_StyleClass()
-	 * @model default="unit,details_unit" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"details_content"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit_ContentClass()
-	 * @model default="details_content" ordered="false"
-	 * @generated
-	 */
-	String getContentClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getContentClass <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
-	 * @generated
-	 */
-	void setContentClass(String value);
 
 } // DetailsUnit

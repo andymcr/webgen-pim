@@ -52,7 +52,6 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 
 			addReadOnlyPropertyDescriptor(object);
 			addDefaultZoomLevelPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
 			addPlaceNamePropertyDescriptor(object);
 		}
@@ -100,28 +99,6 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MapUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MapUnit_styleClass_feature", "_UI_MapUnit_type"),
-				 WebuiPackage.Literals.MAP_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -226,7 +203,6 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 		switch (notification.getFeatureID(MapUnit.class)) {
 			case WebuiPackage.MAP_UNIT__READ_ONLY:
 			case WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL:
-			case WebuiPackage.MAP_UNIT__STYLE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

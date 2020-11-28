@@ -216,47 +216,32 @@ helper context Website!UnitElement def: headerClass() : Boolean
 			self.attribute.headerClass()
 		endif;
 
-helper context Website!Feature def: inputColumnClass() : Boolean
-	= if self.inputColumnClass.trim() <> '' then
-			self.inputColumnClass.replaceAll(',', ' ').trim()
+helper context Website!UnitField def: inputGroupClass() : Boolean
+	= if self.inputGroupClass.trim() <> '' then
+			self.inputLabelClass.trim()
+		else if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultInputGroupClass
 		else
 			OclUndefined
-		endif;
+		endif endif;
 
-helper context Website!UnitAssociation def: inputColumnClass() : Boolean
-	= if self.inputColumnClass.trim() <> '' then
-			self.inputColumnClass.replaceAll(',', ' ').trim()
-		else
-			self.association.inputColumnClass()
-		endif;
-
-helper context Website!UnitElement def: inputColumnClass() : Boolean
-	= if self.inputColumnClass.trim() <> '' then
-			self.inputColumnClass.replaceAll(',', ' ').trim()
-		else
-			self.attribute.inputColumnClass()
-		endif;
-
-helper context Website!Feature def: inputElementClass() : Boolean
-	= if self.inputElementClass.trim() <> '' then
-			self.inputElementClass.replaceAll(',', ' ').trim()
+helper context Website!UnitField def: inputLabelClass() : Boolean
+	= if self.inputLabelClass.trim() <> '' then
+			self.inputLabelClass.trim()
+		else if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultInputLabelClass
 		else
 			OclUndefined
-		endif;
+		endif endif;
 
-helper context Website!UnitAssociation def: inputElementClass() : Boolean
+helper context Website!UnitField def: inputElementClass() : Boolean
 	= if self.inputElementClass.trim() <> '' then
-			self.inputElementClass.replaceAll(',', ' ').trim()
+			self.inputElementClass.trim()
+		else if thisModule.findWebsiteUI().defaultInputElementClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultInputElementClass
 		else
-			self.association.inputElementClass()
-		endif;
-
-helper context Website!UnitElement def: inputElementClass() : Boolean
-	= if self.inputElementClass.trim() <> '' then
-			self.inputElementClass.replaceAll(',', ' ').trim()
-		else
-			self.attribute.inputElementClass()
-		endif;
+			OclUndefined
+		endif endif;
 
 helper context Website!Attribute def: interfaceType() : String
 	= if self.oclIsTypeOf(Website!DataTypeAttribute) then

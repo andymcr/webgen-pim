@@ -10,11 +10,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.webui.DateCardsUnit;
@@ -49,31 +46,8 @@ public class DateCardsUnitItemProvider extends CardsUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DateCardsUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DateCardsUnit_styleClass_feature", "_UI_DateCardsUnit_type"),
-				 WebuiPackage.Literals.DATE_CARDS_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -153,9 +127,6 @@ public class DateCardsUnitItemProvider extends CardsUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DateCardsUnit.class)) {
-			case WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

@@ -47,7 +47,6 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOnSaveContinueEditingPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,28 +70,6 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UpdateUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UpdateUnit_styleClass_feature", "_UI_UpdateUnit_type"),
-				 WebuiPackage.Literals.UPDATE_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -144,7 +121,6 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 
 		switch (notification.getFeatureID(UpdateUnit.class)) {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
-			case WebuiPackage.UPDATE_UNIT__STYLE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

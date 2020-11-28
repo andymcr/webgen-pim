@@ -48,7 +48,6 @@ public class ControlUnitItemProvider extends DynamicUnitItemProvider {
 			addSubmitLabelPropertyDescriptor(object);
 			addCancelDestinationPropertyDescriptor(object);
 			addCancelLabelPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -120,28 +119,6 @@ public class ControlUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ControlUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ControlUnit_contentClass_feature", "_UI_ControlUnit_type"),
-				 WebuiPackage.Literals.CONTROL_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -170,7 +147,6 @@ public class ControlUnitItemProvider extends DynamicUnitItemProvider {
 		switch (notification.getFeatureID(ControlUnit.class)) {
 			case WebuiPackage.CONTROL_UNIT__SUBMIT_LABEL:
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
-			case WebuiPackage.CONTROL_UNIT__CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

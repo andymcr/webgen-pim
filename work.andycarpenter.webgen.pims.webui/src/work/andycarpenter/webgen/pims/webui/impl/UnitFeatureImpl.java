@@ -42,7 +42,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputColumnClass <em>Input Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputGroupClass <em>Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputLabelClass <em>Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputElementClass <em>Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayClass <em>Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
@@ -282,24 +283,44 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	protected String headerClass = HEADER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
+	 * The default value of the '{@link #getInputGroupClass() <em>Input Group Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputColumnClass()
+	 * @see #getInputGroupClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_COLUMN_CLASS_EDEFAULT = "";
+	protected static final String INPUT_GROUP_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getInputColumnClass() <em>Input Column Class</em>}' attribute.
+	 * The cached value of the '{@link #getInputGroupClass() <em>Input Group Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputColumnClass()
+	 * @see #getInputGroupClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String inputColumnClass = INPUT_COLUMN_CLASS_EDEFAULT;
+	protected String inputGroupClass = INPUT_GROUP_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInputLabelClass() <em>Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getInputLabelClass() <em>Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String inputLabelClass = INPUT_LABEL_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
@@ -719,8 +740,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public String getInputColumnClass() {
-		return inputColumnClass;
+	public String getInputGroupClass() {
+		return inputGroupClass;
 	}
 
 	/**
@@ -729,11 +750,34 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public void setInputColumnClass(String newInputColumnClass) {
-		String oldInputColumnClass = inputColumnClass;
-		inputColumnClass = newInputColumnClass;
+	public void setInputGroupClass(String newInputGroupClass) {
+		String oldInputGroupClass = inputGroupClass;
+		inputGroupClass = newInputGroupClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_COLUMN_CLASS, oldInputColumnClass, inputColumnClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS, oldInputGroupClass, inputGroupClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getInputLabelClass() {
+		return inputLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInputLabelClass(String newInputLabelClass) {
+		String oldInputLabelClass = inputLabelClass;
+		inputLabelClass = newInputLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS, oldInputLabelClass, inputLabelClass));
 	}
 
 	/**
@@ -872,8 +916,10 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return isAutofocus();
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				return getHeaderClass();
-			case WebuiPackage.UNIT_FEATURE__INPUT_COLUMN_CLASS:
-				return getInputColumnClass();
+			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
+				return getInputGroupClass();
+			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
+				return getInputLabelClass();
 			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
 				return getInputElementClass();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
@@ -933,8 +979,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				setHeaderClass((String)newValue);
 				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_COLUMN_CLASS:
-				setInputColumnClass((String)newValue);
+			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
+				setInputGroupClass((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
+				setInputLabelClass((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
 				setInputElementClass((String)newValue);
@@ -996,8 +1045,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				setHeaderClass(HEADER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_COLUMN_CLASS:
-				setInputColumnClass(INPUT_COLUMN_CLASS_EDEFAULT);
+			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
+				setInputGroupClass(INPUT_GROUP_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
+				setInputLabelClass(INPUT_LABEL_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
 				setInputElementClass(INPUT_ELEMENT_CLASS_EDEFAULT);
@@ -1046,8 +1098,10 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return autofocus != AUTOFOCUS_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case WebuiPackage.UNIT_FEATURE__INPUT_COLUMN_CLASS:
-				return INPUT_COLUMN_CLASS_EDEFAULT == null ? inputColumnClass != null : !INPUT_COLUMN_CLASS_EDEFAULT.equals(inputColumnClass);
+			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
+				return INPUT_GROUP_CLASS_EDEFAULT == null ? inputGroupClass != null : !INPUT_GROUP_CLASS_EDEFAULT.equals(inputGroupClass);
+			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
+				return INPUT_LABEL_CLASS_EDEFAULT == null ? inputLabelClass != null : !INPUT_LABEL_CLASS_EDEFAULT.equals(inputLabelClass);
 			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
 				return INPUT_ELEMENT_CLASS_EDEFAULT == null ? inputElementClass != null : !INPUT_ELEMENT_CLASS_EDEFAULT.equals(inputElementClass);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
@@ -1122,8 +1176,10 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(autofocus);
 		result.append(", headerClass: ");
 		result.append(headerClass);
-		result.append(", inputColumnClass: ");
-		result.append(inputColumnClass);
+		result.append(", inputGroupClass: ");
+		result.append(inputGroupClass);
+		result.append(", inputLabelClass: ");
+		result.append(inputLabelClass);
 		result.append(", inputElementClass: ");
 		result.append(inputElementClass);
 		result.append(", displayClass: ");

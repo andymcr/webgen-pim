@@ -11,9 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.webui.SearchUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -46,7 +43,6 @@ public class SearchUnitItemProvider extends ControlUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addResultsDestinationPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,28 +66,6 @@ public class SearchUnitItemProvider extends ControlUnitItemProvider {
 				 true,
 				 null,
 				 getString("_UI_NavigationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SearchUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SearchUnit_styleClass_feature", "_UI_SearchUnit_type"),
-				 WebuiPackage.Literals.SEARCH_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -131,12 +105,6 @@ public class SearchUnitItemProvider extends ControlUnitItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(SearchUnit.class)) {
-			case WebuiPackage.SEARCH_UNIT__STYLE_CLASS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

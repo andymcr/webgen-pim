@@ -49,8 +49,6 @@ public class GalleryUnitItemProvider extends ImageUnitItemProvider {
 			addFullSizeFilterPropertyDescriptor(object);
 			addShowTimePropertyDescriptor(object);
 			addTransitionTimePropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -122,50 +120,6 @@ public class GalleryUnitItemProvider extends ImageUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GalleryUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GalleryUnit_styleClass_feature", "_UI_GalleryUnit_type"),
-				 WebuiPackage.Literals.GALLERY_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GalleryUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GalleryUnit_contentClass_feature", "_UI_GalleryUnit_type"),
-				 WebuiPackage.Literals.GALLERY_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This returns GalleryUnit.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,8 +168,6 @@ public class GalleryUnitItemProvider extends ImageUnitItemProvider {
 		switch (notification.getFeatureID(GalleryUnit.class)) {
 			case WebuiPackage.GALLERY_UNIT__SHOW_TIME:
 			case WebuiPackage.GALLERY_UNIT__TRANSITION_TIME:
-			case WebuiPackage.GALLERY_UNIT__STYLE_CLASS:
-			case WebuiPackage.GALLERY_UNIT__CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

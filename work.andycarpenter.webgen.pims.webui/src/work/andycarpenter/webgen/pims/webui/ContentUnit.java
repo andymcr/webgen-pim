@@ -21,8 +21,10 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAlternative <em>Alternative</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getCaptionClass <em>Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
@@ -211,6 +213,29 @@ public interface ContentUnit extends NamedDisplayElement {
 	void setAlternative(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Section Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Section Class</em>' attribute.
+	 * @see #setSectionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_SectionClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getSectionClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Section Class</em>' attribute.
+	 * @see #getSectionClass()
+	 * @generated
+	 */
+	void setSectionClass(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -238,7 +263,7 @@ public interface ContentUnit extends NamedDisplayElement {
 
 	/**
 	 * Returns the value of the '<em><b>Caption Class</b></em>' attribute.
-	 * The default value is <code>"unit_caption"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Caption Class</em>' attribute isn't clear,
@@ -248,7 +273,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @return the value of the '<em>Caption Class</em>' attribute.
 	 * @see #setCaptionClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_CaptionClass()
-	 * @model default="unit_caption"
+	 * @model default=""
 	 * @generated
 	 */
 	String getCaptionClass();
@@ -262,6 +287,29 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setCaptionClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Content Class</em>' attribute.
+	 * @see #setContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_ContentClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Content Class</em>' attribute.
+	 * @see #getContentClass()
+	 * @generated
+	 */
+	void setContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Page Displayed On</b></em>' reference.

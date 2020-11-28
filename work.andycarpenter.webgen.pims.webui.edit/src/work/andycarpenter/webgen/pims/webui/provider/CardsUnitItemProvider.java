@@ -49,7 +49,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addOverlaySingleSelectActionPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 			addRowClassPropertyDescriptor(object);
 			addColumnClassPropertyDescriptor(object);
 			addCardClassPropertyDescriptor(object);
@@ -120,28 +119,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_contentClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -272,7 +249,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-			case WebuiPackage.CARDS_UNIT__CONTENT_CLASS:
 			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:

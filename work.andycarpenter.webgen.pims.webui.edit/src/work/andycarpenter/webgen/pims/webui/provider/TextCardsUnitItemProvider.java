@@ -8,15 +8,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
-import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.TextCardsUnit} object.
@@ -46,31 +40,8 @@ public class TextCardsUnitItemProvider extends CardsUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TextCardsUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TextCardsUnit_styleClass_feature", "_UI_TextCardsUnit_type"),
-				 WebuiPackage.Literals.TEXT_CARDS_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -118,12 +89,6 @@ public class TextCardsUnitItemProvider extends CardsUnitItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(TextCardsUnit.class)) {
-			case WebuiPackage.TEXT_CARDS_UNIT__STYLE_CLASS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

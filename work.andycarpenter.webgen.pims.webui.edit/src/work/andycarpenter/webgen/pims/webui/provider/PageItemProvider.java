@@ -268,21 +268,6 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createSearchUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.PAGE__UNITS,
-				 WebuiFactory.eINSTANCE.createRegistrationUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.PAGE__UNITS,
-				 WebuiFactory.eINSTANCE.createLoginUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.PAGE__UNITS,
-				 WebuiFactory.eINSTANCE.createForgottenPasswordUnit()));
 	}
 
 	/**

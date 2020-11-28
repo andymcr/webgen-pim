@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,26 +44,6 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 	 * @ordered
 	 */
 	protected boolean onSaveContinueEditing = ON_SAVE_CONTINUE_EDITING_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,update_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,35 +93,10 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UPDATE_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				return isOnSaveContinueEditing();
-			case WebuiPackage.UPDATE_UNIT__STYLE_CLASS:
-				return getStyleClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,9 +111,6 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 		switch (featureID) {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				setOnSaveContinueEditing((Boolean)newValue);
-				return;
-			case WebuiPackage.UPDATE_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,9 +127,6 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				setOnSaveContinueEditing(ON_SAVE_CONTINUE_EDITING_EDEFAULT);
 				return;
-			case WebuiPackage.UPDATE_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,8 +141,6 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 		switch (featureID) {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				return onSaveContinueEditing != ON_SAVE_CONTINUE_EDITING_EDEFAULT;
-			case WebuiPackage.UPDATE_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -211,8 +157,6 @@ public class UpdateUnitImpl extends EditUnitImpl implements UpdateUnit {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (onSaveContinueEditing: ");
 		result.append(onSaveContinueEditing);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(')');
 		return result.toString();
 	}

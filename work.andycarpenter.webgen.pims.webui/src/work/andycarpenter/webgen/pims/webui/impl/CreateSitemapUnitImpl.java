@@ -21,8 +21,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateSitemapUnitImpl#getDeployedURL <em>Deployed URL</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateSitemapUnitImpl#getFilename <em>Filename</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateSitemapUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateSitemapUnitImpl#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,46 +65,6 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * @ordered
 	 */
 	protected String filename = FILENAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,create_sitemap_unit,framed";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "create_sitemap_content";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,62 +137,12 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CREATE_SITEMAP_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CREATE_SITEMAP_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.CREATE_SITEMAP_UNIT__DEPLOYED_URL:
 				return getDeployedURL();
 			case WebuiPackage.CREATE_SITEMAP_UNIT__FILENAME:
 				return getFilename();
-			case WebuiPackage.CREATE_SITEMAP_UNIT__STYLE_CLASS:
-				return getStyleClass();
-			case WebuiPackage.CREATE_SITEMAP_UNIT__CONTENT_CLASS:
-				return getContentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,12 +160,6 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 				return;
 			case WebuiPackage.CREATE_SITEMAP_UNIT__FILENAME:
 				setFilename((String)newValue);
-				return;
-			case WebuiPackage.CREATE_SITEMAP_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.CREATE_SITEMAP_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -277,12 +179,6 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 			case WebuiPackage.CREATE_SITEMAP_UNIT__FILENAME:
 				setFilename(FILENAME_EDEFAULT);
 				return;
-			case WebuiPackage.CREATE_SITEMAP_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.CREATE_SITEMAP_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -299,10 +195,6 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 				return DEPLOYED_URL_EDEFAULT == null ? deployedURL != null : !DEPLOYED_URL_EDEFAULT.equals(deployedURL);
 			case WebuiPackage.CREATE_SITEMAP_UNIT__FILENAME:
 				return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
-			case WebuiPackage.CREATE_SITEMAP_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.CREATE_SITEMAP_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -321,10 +213,6 @@ public class CreateSitemapUnitImpl extends ContentUnitImpl implements CreateSite
 		result.append(deployedURL);
 		result.append(", filename: ");
 		result.append(filename);
-		result.append(", styleClass: ");
-		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

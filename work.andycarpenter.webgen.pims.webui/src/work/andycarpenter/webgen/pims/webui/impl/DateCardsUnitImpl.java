@@ -23,7 +23,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl#getElementDate <em>Element Date</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,26 +37,6 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * @ordered
 	 */
 	protected FeaturePath elementDate;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,cards_unit,date_cards_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,29 +108,6 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
@@ -170,8 +126,6 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
 				return getElementDate();
-			case WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS:
-				return getStyleClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,9 +140,6 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
 				setElementDate((FeaturePath)newValue);
-				return;
-			case WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -205,9 +156,6 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
 				setElementDate((FeaturePath)null);
 				return;
-			case WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -222,26 +170,8 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
 				return elementDate != null;
-			case WebuiPackage.DATE_CARDS_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (styleClass: ");
-		result.append(styleClass);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DateCardsUnitImpl

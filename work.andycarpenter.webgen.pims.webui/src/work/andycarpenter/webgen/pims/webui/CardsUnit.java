@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}</li>
@@ -97,33 +96,6 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @generated
 	 */
 	void setOverlaySingleSelectAction(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"container"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ContentClass()
-	 * @model default="container" ordered="false"
-	 * @generated
-	 */
-	String getContentClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
-	 * @generated
-	 */
-	void setContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.

@@ -116,24 +116,8 @@ lazy abstract rule implicitUnitFeature {
 					else
 						feature.displayClass
 					endif,
-		inputColumnClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getWebsiteFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.inputColumnClass
-					endif,
-		inputElementClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getWebsiteFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.inputElementClass
-					endif,
+		inputLabelClass <- OclUndefined,
+		inputElementClass <- OclUndefined,
 		footerClass <-
 			let feature : Website!Feature
 				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
@@ -289,26 +273,5 @@ abstract rule ControlUnit {
 rule SearchUnit {
 	from partialWaf : WAF!SearchUnit
 	to waf : WAF!SearchUnit (
-	)
-}
-
--- @extends EditUnit
-rule RegistrationUnit {
-	from partialWaf : WAF!RegistrationUnit
-	to waf : WAF!RegistrationUnit (
-	)
-}
-
--- @extends ControlUnit
-rule LoginUnit {
-	from partialWaf : WAF!LoginUnit
-	to waf : WAF!LoginUnit (
-	)
-}
-
--- @extends ControlUnit
-rule ForgottenPasswordUnit {
-	from partialWaf : WAF!ForgottenPasswordUnit
-	to waf : WAF!ForgottenPasswordUnit (
 	)
 }

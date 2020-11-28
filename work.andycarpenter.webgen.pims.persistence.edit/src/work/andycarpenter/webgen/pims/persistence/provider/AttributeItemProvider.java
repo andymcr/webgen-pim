@@ -60,8 +60,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 			addUniquePropertyDescriptor(object);
 			addPlaceholderPropertyDescriptor(object);
 			addValidationPatternPropertyDescriptor(object);
-			addInputColumnClassPropertyDescriptor(object);
-			addInputElementClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -265,50 +263,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Input Column Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputColumnClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attribute_inputColumnClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_inputColumnClass_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__INPUT_COLUMN_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Element Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputElementClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attribute_inputElementClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_inputElementClass_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__INPUT_ELEMENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -373,8 +327,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 			case PersistencePackage.ATTRIBUTE__UNIQUE:
 			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:
-			case PersistencePackage.ATTRIBUTE__INPUT_COLUMN_CLASS:
-			case PersistencePackage.ATTRIBUTE__INPUT_ELEMENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PersistencePackage.ATTRIBUTE__DEFAULT_VALUE:

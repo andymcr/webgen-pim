@@ -32,7 +32,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isOverlayTitle <em>Overlay Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isEnableImageEnlargement <em>Enable Image Enlargement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -147,26 +146,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * @ordered
 	 */
 	protected boolean revealUntruncatedContent = REVEAL_UNTRUNCATED_CONTENT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,cards_unit,image_cards_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -410,29 +389,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_CARDS_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_PATH_FEATURE:
@@ -465,8 +421,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				return isEnableImageEnlargement();
 			case WebuiPackage.IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				return isRevealUntruncatedContent();
-			case WebuiPackage.IMAGE_CARDS_UNIT__STYLE_CLASS:
-				return getStyleClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -499,9 +453,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				setRevealUntruncatedContent((Boolean)newValue);
-				return;
-			case WebuiPackage.IMAGE_CARDS_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -536,9 +487,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 			case WebuiPackage.IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				setRevealUntruncatedContent(REVEAL_UNTRUNCATED_CONTENT_EDEFAULT);
 				return;
-			case WebuiPackage.IMAGE_CARDS_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -565,8 +513,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				return enableImageEnlargement != ENABLE_IMAGE_ENLARGEMENT_EDEFAULT;
 			case WebuiPackage.IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT:
 				return revealUntruncatedContent != REVEAL_UNTRUNCATED_CONTENT_EDEFAULT;
-			case WebuiPackage.IMAGE_CARDS_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -627,8 +573,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 		result.append(enableImageEnlargement);
 		result.append(", revealUntruncatedContent: ");
 		result.append(revealUntruncatedContent);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(')');
 		return result.toString();
 	}

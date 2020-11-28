@@ -95,9 +95,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.SLIDER_UNIT: return createSliderUnit();
 			case WebuiPackage.GALLERY_UNIT: return createGalleryUnit();
 			case WebuiPackage.SEARCH_UNIT: return createSearchUnit();
-			case WebuiPackage.REGISTRATION_UNIT: return createRegistrationUnit();
-			case WebuiPackage.LOGIN_UNIT: return createLoginUnit();
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
 			case WebuiPackage.SELECT_ACTION: return createSelectAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.FEATURE_SUPPORT_ACTION: return createFeatureSupportAction();
@@ -561,39 +558,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public GalleryUnit createGalleryUnit() {
 		GalleryUnitImpl galleryUnit = new GalleryUnitImpl();
 		return galleryUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public RegistrationUnit createRegistrationUnit() {
-		RegistrationUnitImpl registrationUnit = new RegistrationUnitImpl();
-		return registrationUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LoginUnit createLoginUnit() {
-		LoginUnitImpl loginUnit = new LoginUnitImpl();
-		return loginUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ForgottenPasswordUnit createForgottenPasswordUnit() {
-		ForgottenPasswordUnitImpl forgottenPasswordUnit = new ForgottenPasswordUnitImpl();
-		return forgottenPasswordUnit;
 	}
 
 	/**

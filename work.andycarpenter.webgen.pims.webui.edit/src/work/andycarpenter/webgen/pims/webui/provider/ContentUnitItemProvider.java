@@ -57,8 +57,10 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			addPurposeSummaryPropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
 			addAlternativePropertyDescriptor(object);
+			addSectionClassPropertyDescriptor(object);
 			addOmitCaptionPropertyDescriptor(object);
 			addCaptionClassPropertyDescriptor(object);
+			addContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -174,6 +176,28 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Section Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSectionClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContentUnit_sectionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_sectionClass_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__SECTION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Omit Caption feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +233,28 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 				 getString("_UI_ContentUnit_captionClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_captionClass_feature", "_UI_ContentUnit_type"),
 				 WebuiPackage.Literals.CONTENT_UNIT__CAPTION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContentUnit_contentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_contentClass_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__CONTENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -279,8 +325,10 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
+			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
+			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS:

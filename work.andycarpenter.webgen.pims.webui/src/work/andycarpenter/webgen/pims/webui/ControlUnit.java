@@ -15,7 +15,6 @@ package work.andycarpenter.webgen.pims.webui;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getSubmitLabel <em>Submit Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit()
@@ -100,32 +99,5 @@ public interface ControlUnit extends DynamicUnit {
 	 * @generated
 	 */
 	void setCancelLabel(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"control_form"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit_ContentClass()
-	 * @model default="control_form" ordered="false"
-	 * @generated
-	 */
-	String getContentClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getContentClass <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
-	 * @generated
-	 */
-	void setContentClass(String value);
 
 } // ControlUnit

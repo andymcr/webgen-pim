@@ -13,7 +13,6 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SearchUnit#getResultsDestination <em>Results Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.SearchUnit#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSearchUnit()
@@ -46,32 +45,5 @@ public interface SearchUnit extends ControlUnit {
 	 * @generated
 	 */
 	void setResultsDestination(IndexUnit value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,search_unit"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSearchUnit_StyleClass()
-	 * @model default="unit,search_unit" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SearchUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
 
 } // SearchUnit

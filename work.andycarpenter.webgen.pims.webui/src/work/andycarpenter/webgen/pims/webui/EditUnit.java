@@ -18,7 +18,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}</li>
  * </ul>
  *
@@ -156,33 +155,6 @@ public interface EditUnit extends SingletonUnit {
 	 * @generated
 	 */
 	void setCancelLabel(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"edit_content,framed"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ContentClass()
-	 * @model default="edit_content,framed" ordered="false"
-	 * @generated
-	 */
-	String getContentClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getContentClass <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
-	 * @generated
-	 */
-	void setContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Customise Values</b></em>' attribute.

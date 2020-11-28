@@ -25,7 +25,8 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass <em>Input Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass <em>Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass <em>Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooterClass <em>Footer Class</em>}</li>
@@ -332,31 +333,50 @@ public interface UnitFeature extends UnitField, InlineActionContainer {
 	void setHeaderClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Column Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Group Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Column Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Column Class</em>' attribute.
-	 * @see #setInputColumnClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputColumnClass()
+	 * @return the value of the '<em>Input Group Class</em>' attribute.
+	 * @see #setInputGroupClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputGroupClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getInputColumnClass();
+	String getInputGroupClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass <em>Input Column Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Column Class</em>' attribute.
-	 * @see #getInputColumnClass()
+	 * @param value the new value of the '<em>Input Group Class</em>' attribute.
+	 * @see #getInputGroupClass()
 	 * @generated
 	 */
-	void setInputColumnClass(String value);
+	void setInputGroupClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Label Class</em>' attribute.
+	 * @see #setInputLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputLabelClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getInputLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass <em>Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input Label Class</em>' attribute.
+	 * @see #getInputLabelClass()
+	 * @generated
+	 */
+	void setInputLabelClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Element Class</b></em>' attribute.

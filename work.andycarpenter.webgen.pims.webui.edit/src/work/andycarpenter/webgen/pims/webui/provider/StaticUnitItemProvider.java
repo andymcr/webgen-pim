@@ -46,8 +46,6 @@ public class StaticUnitItemProvider extends ContentUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addContentPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,50 +69,6 @@ public class StaticUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_StaticUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_StaticUnit_styleClass_feature", "_UI_StaticUnit_type"),
-				 WebuiPackage.Literals.STATIC_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_StaticUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_StaticUnit_contentClass_feature", "_UI_StaticUnit_type"),
-				 WebuiPackage.Literals.STATIC_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -157,8 +111,6 @@ public class StaticUnitItemProvider extends ContentUnitItemProvider {
 
 		switch (notification.getFeatureID(StaticUnit.class)) {
 			case WebuiPackage.STATIC_UNIT__CONTENT:
-			case WebuiPackage.STATIC_UNIT__STYLE_CLASS:
-			case WebuiPackage.STATIC_UNIT__CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

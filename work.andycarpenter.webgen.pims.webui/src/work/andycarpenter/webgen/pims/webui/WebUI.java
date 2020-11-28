@@ -22,6 +22,9 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getInputTechnology <em>Input Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getAjaxTechnology <em>Ajax Technology</em>}</li>
@@ -173,6 +176,75 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultDateTimeFormat(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Input Group Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Input Group Class</em>' attribute.
+	 * @see #setDefaultInputGroupClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultInputGroupClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getDefaultInputGroupClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Input Group Class</em>' attribute.
+	 * @see #getDefaultInputGroupClass()
+	 * @generated
+	 */
+	void setDefaultInputGroupClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Input Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Input Label Class</em>' attribute.
+	 * @see #setDefaultInputLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultInputLabelClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getDefaultInputLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Input Label Class</em>' attribute.
+	 * @see #getDefaultInputLabelClass()
+	 * @generated
+	 */
+	void setDefaultInputLabelClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Input Element Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Input Element Class</em>' attribute.
+	 * @see #setDefaultInputElementClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultInputElementClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getDefaultInputElementClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Input Element Class</em>' attribute.
+	 * @see #getDefaultInputElementClass()
+	 * @generated
+	 */
+	void setDefaultInputElementClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Maximum Upload Size</b></em>' attribute.

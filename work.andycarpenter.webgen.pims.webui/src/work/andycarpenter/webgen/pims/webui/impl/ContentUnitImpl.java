@@ -40,8 +40,10 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getAlternative <em>Alternative</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getCaptionClass <em>Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
@@ -159,6 +161,26 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	protected String alternative = ALTERNATIVE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getSectionClass() <em>Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSectionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECTION_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSectionClass() <em>Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSectionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String sectionClass = SECTION_CLASS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #isOmitCaption() <em>Omit Caption</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,7 +208,7 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CAPTION_CLASS_EDEFAULT = "unit_caption";
+	protected static final String CAPTION_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getCaptionClass() <em>Caption Class</em>}' attribute.
@@ -197,6 +219,26 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @ordered
 	 */
 	protected String captionClass = CAPTION_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The cached setting delegate for the '{@link #getPageDisplayedOn() <em>Page Displayed On</em>}' reference.
@@ -404,6 +446,29 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getSectionClass() {
+		return sectionClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSectionClass(String newSectionClass) {
+		String oldSectionClass = sectionClass;
+		sectionClass = newSectionClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__SECTION_CLASS, oldSectionClass, sectionClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isOmitCaption() {
 		return omitCaption;
 	}
@@ -442,6 +507,29 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		captionClass = newCaptionClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__CAPTION_CLASS, oldCaptionClass, captionClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getContentClass() {
+		return contentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContentClass(String newContentClass) {
+		String oldContentClass = contentClass;
+		contentClass = newContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
 	}
 
 	/**
@@ -544,10 +632,14 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return getUriElement();
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return getAlternative();
+			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
+				return getSectionClass();
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return isOmitCaption();
 			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
 				return getCaptionClass();
+			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
+				return getContentClass();
 			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
 				if (resolve) return getPageDisplayedOn();
 				return basicGetPageDisplayedOn();
@@ -586,11 +678,17 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative((String)newValue);
 				return;
+			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
+				setSectionClass((String)newValue);
+				return;
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption((Boolean)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
 				setCaptionClass((String)newValue);
+				return;
+			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
+				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -625,11 +723,17 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative(ALTERNATIVE_EDEFAULT);
 				return;
+			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
+				setSectionClass(SECTION_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption(OMIT_CAPTION_EDEFAULT);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
 				setCaptionClass(CAPTION_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
+				setContentClass(CONTENT_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -657,10 +761,14 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return URI_ELEMENT_EDEFAULT == null ? uriElement != null : !URI_ELEMENT_EDEFAULT.equals(uriElement);
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return ALTERNATIVE_EDEFAULT == null ? alternative != null : !ALTERNATIVE_EDEFAULT.equals(alternative);
+			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
+				return SECTION_CLASS_EDEFAULT == null ? sectionClass != null : !SECTION_CLASS_EDEFAULT.equals(sectionClass);
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return omitCaption != OMIT_CAPTION_EDEFAULT;
 			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
 				return CAPTION_CLASS_EDEFAULT == null ? captionClass != null : !CAPTION_CLASS_EDEFAULT.equals(captionClass);
+			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
+				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
 				return isSetPageDisplayedOn();
 		}
@@ -687,10 +795,14 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		result.append(uriElement);
 		result.append(", alternative: ");
 		result.append(alternative);
+		result.append(", sectionClass: ");
+		result.append(sectionClass);
 		result.append(", omitCaption: ");
 		result.append(omitCaption);
 		result.append(", captionClass: ");
 		result.append(captionClass);
+		result.append(", contentClass: ");
+		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

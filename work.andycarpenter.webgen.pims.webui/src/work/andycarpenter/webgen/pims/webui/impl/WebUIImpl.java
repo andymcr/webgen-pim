@@ -38,6 +38,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getInputTechnology <em>Input Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getAjaxTechnology <em>Ajax Technology</em>}</li>
@@ -135,6 +138,66 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultInputGroupClass() <em>Default Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INPUT_GROUP_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultInputGroupClass() <em>Default Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultInputGroupClass = DEFAULT_INPUT_GROUP_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultInputLabelClass() <em>Default Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INPUT_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultInputLabelClass() <em>Default Input Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultInputLabelClass = DEFAULT_INPUT_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultInputElementClass() <em>Default Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultInputElementClass() <em>Default Input Element Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultInputElementClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultInputElementClass = DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultMaximumUploadSize() <em>Default Maximum Upload Size</em>}' attribute.
@@ -356,6 +419,75 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultInputGroupClass() {
+		return defaultInputGroupClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultInputGroupClass(String newDefaultInputGroupClass) {
+		String oldDefaultInputGroupClass = defaultInputGroupClass;
+		defaultInputGroupClass = newDefaultInputGroupClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS, oldDefaultInputGroupClass, defaultInputGroupClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultInputLabelClass() {
+		return defaultInputLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultInputLabelClass(String newDefaultInputLabelClass) {
+		String oldDefaultInputLabelClass = defaultInputLabelClass;
+		defaultInputLabelClass = newDefaultInputLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS, oldDefaultInputLabelClass, defaultInputLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultInputElementClass() {
+		return defaultInputElementClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultInputElementClass(String newDefaultInputElementClass) {
+		String oldDefaultInputElementClass = defaultInputElementClass;
+		defaultInputElementClass = newDefaultInputElementClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS, oldDefaultInputElementClass, defaultInputElementClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getDefaultMaximumUploadSize() {
 		return defaultMaximumUploadSize;
 	}
@@ -471,6 +603,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+				return getDefaultInputGroupClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+				return getDefaultInputLabelClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
+				return getDefaultInputElementClass();
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return getDefaultMaximumUploadSize();
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -509,6 +647,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+				setDefaultInputGroupClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+				setDefaultInputLabelClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
+				setDefaultInputElementClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize((Integer)newValue);
@@ -549,6 +696,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+				setDefaultInputGroupClass(DEFAULT_INPUT_GROUP_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+				setDefaultInputLabelClass(DEFAULT_INPUT_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
+				setDefaultInputElementClass(DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize(DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT);
 				return;
@@ -582,6 +738,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+				return DEFAULT_INPUT_GROUP_CLASS_EDEFAULT == null ? defaultInputGroupClass != null : !DEFAULT_INPUT_GROUP_CLASS_EDEFAULT.equals(defaultInputGroupClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+				return DEFAULT_INPUT_LABEL_CLASS_EDEFAULT == null ? defaultInputLabelClass != null : !DEFAULT_INPUT_LABEL_CLASS_EDEFAULT.equals(defaultInputLabelClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
+				return DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT == null ? defaultInputElementClass != null : !DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT.equals(defaultInputElementClass);
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return defaultMaximumUploadSize != DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -608,6 +770,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultInputGroupClass: ");
+		result.append(defaultInputGroupClass);
+		result.append(", defaultInputLabelClass: ");
+		result.append(defaultInputLabelClass);
+		result.append(", defaultInputElementClass: ");
+		result.append(defaultInputElementClass);
 		result.append(", defaultMaximumUploadSize: ");
 		result.append(defaultMaximumUploadSize);
 		result.append(", inputTechnology: ");

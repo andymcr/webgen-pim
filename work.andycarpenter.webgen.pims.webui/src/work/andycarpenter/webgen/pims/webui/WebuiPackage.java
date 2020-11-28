@@ -125,13 +125,40 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DATE_TIME_FORMAT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Default Input Element Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 8;
+
+	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 6;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -140,7 +167,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 7;
+	int WEB_UI__INPUT_TECHNOLOGY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -149,7 +176,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 8;
+	int WEB_UI__AJAX_TECHNOLOGY = 11;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -158,7 +185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 9;
+	int WEB_UI_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -883,13 +910,22 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -898,7 +934,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int CONTENT_UNIT__CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_UNIT__CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -907,7 +952,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__PAGE_DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int CONTENT_UNIT__PAGE_DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Content Unit</em>' class.
@@ -916,7 +961,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Content Unit</em>' class.
@@ -1074,6 +1119,15 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1090,6 +1144,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIC_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1110,31 +1173,13 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__CONTENT = CONTENT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_UNIT__STYLE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_UNIT__CONTENT_CLASS = CONTENT_UNIT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Static Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 3;
+	int STATIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Static Unit</em>' class.
@@ -1237,6 +1282,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_SITEMAP_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1253,6 +1307,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_SITEMAP_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_SITEMAP_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1282,31 +1345,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__FILENAME = CONTENT_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_SITEMAP_UNIT__STYLE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_SITEMAP_UNIT__CONTENT_CLASS = CONTENT_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Create Sitemap Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_SITEMAP_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 4;
+	int CREATE_SITEMAP_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Create Sitemap Unit</em>' class.
@@ -1409,6 +1454,15 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1425,6 +1479,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1870,13 +1933,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_COLUMN_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__INPUT_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
@@ -1885,7 +1957,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -1894,7 +1966,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1903,7 +1975,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -1912,7 +1984,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 17;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -2132,13 +2204,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__INPUT_COLUMN_CLASS = UNIT_FEATURE__INPUT_COLUMN_CLASS;
+	int UNIT_ELEMENT__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__INPUT_LABEL_CLASS = UNIT_FEATURE__INPUT_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
@@ -2448,13 +2529,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Input Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__INPUT_COLUMN_CLASS = UNIT_FEATURE__INPUT_COLUMN_CLASS;
+	int UNIT_ASSOCIATION__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__INPUT_LABEL_CLASS = UNIT_FEATURE__INPUT_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
@@ -4210,6 +4300,15 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4226,6 +4325,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -4463,6 +4571,15 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4479,6 +4596,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -4959,6 +5085,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__ALTERNATIVE = SINGLETON_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__SECTION_CLASS = SINGLETON_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4975,6 +5110,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__CAPTION_CLASS = SINGLETON_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CONTENT_CLASS = SINGLETON_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -5148,22 +5292,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -5172,7 +5307,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -5275,6 +5410,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5291,6 +5435,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -5464,15 +5617,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5482,22 +5626,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__STYLE_CLASS = EDIT_UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Create Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 1;
+	int CREATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Create Unit</em>' class.
@@ -5600,6 +5735,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5616,6 +5760,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -5789,15 +5942,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5834,22 +5978,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CLEAR_LABEL = EDIT_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__STYLE_CLASS = EDIT_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Create Update Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 4;
+	int CREATE_UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Create Update Unit</em>' class.
@@ -5952,6 +6087,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5968,6 +6112,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -6141,15 +6294,6 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6168,22 +6312,13 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__STYLE_CLASS = EDIT_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Update Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 2;
+	int UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Update Unit</em>' class.
@@ -6286,6 +6421,15 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6302,6 +6446,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -6475,15 +6628,6 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6511,22 +6655,13 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__DEFAULT_ZOOM_LEVEL = EDIT_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__STYLE_CLASS = EDIT_UNIT_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__LOCATION = EDIT_UNIT_FEATURE_COUNT + 3;
+	int MAP_UNIT__LOCATION = EDIT_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Place Name</b></em>' reference.
@@ -6535,7 +6670,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__PLACE_NAME = EDIT_UNIT_FEATURE_COUNT + 4;
+	int MAP_UNIT__PLACE_NAME = EDIT_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Map Unit</em>' class.
@@ -6544,7 +6679,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 5;
+	int MAP_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Map Unit</em>' class.
@@ -6647,6 +6782,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__ALTERNATIVE = SINGLETON_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__SECTION_CLASS = SINGLETON_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6663,6 +6807,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_UNIT__CAPTION_CLASS = SINGLETON_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__CONTENT_CLASS = SINGLETON_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -6809,31 +6962,13 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__OMIT_FIELD_LABELS = SINGLETON_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__STYLE_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__CONTENT_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Details Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int DETAILS_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Details Unit</em>' class.
@@ -6936,6 +7071,15 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6952,6 +7096,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7359,31 +7512,13 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__STYLE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Row Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Index Unit</em>' class.
@@ -7392,7 +7527,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Index Unit</em>' class.
@@ -7495,6 +7630,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7511,6 +7655,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7927,22 +8080,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -7951,7 +8095,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -7960,7 +8104,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
+	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -7969,7 +8113,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 9;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8061,46 +8205,6 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT = 51;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AuthenticationUnit <em>Authentication Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.AuthenticationUnit
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationUnit()
-	 * @generated
-	 */
-	int AUTHENTICATION_UNIT = 54;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.RegistrationUnitImpl <em>Registration Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.RegistrationUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
-	 * @generated
-	 */
-	int REGISTRATION_UNIT = 55;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.LoginUnitImpl <em>Login Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.LoginUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
-	 * @generated
-	 */
-	int LOGIN_UNIT = 56;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl <em>Forgotten Password Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
-	 * @generated
-	 */
-	int FORGOTTEN_PASSWORD_UNIT = 57;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer <em>Inline Action Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8108,7 +8212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInlineActionContainer()
 	 * @generated
 	 */
-	int INLINE_ACTION_CONTAINER = 58;
+	int INLINE_ACTION_CONTAINER = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl <em>Inline Action</em>}' class.
@@ -8118,7 +8222,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInlineAction()
 	 * @generated
 	 */
-	int INLINE_ACTION = 59;
+	int INLINE_ACTION = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -8128,7 +8232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 60;
+	int SELECT_ACTION = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -8138,7 +8242,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 61;
+	int DELETE_ACTION = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl <em>Feature Support Action</em>}' class.
@@ -8148,7 +8252,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeatureSupportAction()
 	 * @generated
 	 */
-	int FEATURE_SUPPORT_ACTION = 62;
+	int FEATURE_SUPPORT_ACTION = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -8305,6 +8409,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8321,6 +8434,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -8737,15 +8859,6 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8773,22 +8886,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Text Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 1;
+	int TEXT_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Text Cards Unit</em>' class.
@@ -8881,6 +8985,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8897,6 +9010,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -9313,15 +9435,6 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9358,22 +9471,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__ELEMENT_DATE = CARDS_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Date Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 2;
+	int DATE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Date Cards Unit</em>' class.
@@ -9466,6 +9570,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9482,6 +9595,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -9988,6 +10110,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10004,6 +10135,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -10420,15 +10560,6 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10519,22 +10650,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__STYLE_CLASS = CARDS_UNIT_FEATURE_COUNT + 7;
-
-	/**
 	 * The number of structural features of the '<em>Image Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 8;
+	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Image Cards Unit</em>' class.
@@ -10627,6 +10749,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__ALTERNATIVE = IMAGE_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SECTION_CLASS = IMAGE_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10643,6 +10774,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__CAPTION_CLASS = IMAGE_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__CONTENT_CLASS = IMAGE_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -11068,31 +11208,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Slider Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 4;
+	int SLIDER_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Slider Unit</em>' class.
@@ -11185,6 +11307,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__ALTERNATIVE = IMAGE_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SECTION_CLASS = IMAGE_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11201,6 +11332,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__CAPTION_CLASS = IMAGE_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__CONTENT_CLASS = IMAGE_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -11635,31 +11775,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__STYLE_CLASS = IMAGE_UNIT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__CONTENT_CLASS = IMAGE_UNIT_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Gallery Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 5;
+	int GALLERY_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Gallery Unit</em>' class.
@@ -11752,6 +11874,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11768,6 +11899,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -11905,22 +12045,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__CANCEL_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__CONTENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Control Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 4;
+	int CONTROL_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Control Unit</em>' class.
@@ -12013,6 +12144,15 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__ALTERNATIVE = CONTROL_UNIT__ALTERNATIVE;
 
 	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__SECTION_CLASS = CONTROL_UNIT__SECTION_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12029,6 +12169,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__CAPTION_CLASS = CONTROL_UNIT__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__CONTENT_CLASS = CONTROL_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -12166,15 +12315,6 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__CANCEL_LABEL = CONTROL_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__CONTENT_CLASS = CONTROL_UNIT__CONTENT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Results Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12184,22 +12324,13 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__RESULTS_DESTINATION = CONTROL_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__STYLE_CLASS = CONTROL_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Search Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT_FEATURE_COUNT = CONTROL_UNIT_FEATURE_COUNT + 2;
+	int SEARCH_UNIT_FEATURE_COUNT = CONTROL_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Search Unit</em>' class.
@@ -12209,843 +12340,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT_OPERATION_COUNT = CONTROL_UNIT_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Authentication Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTHENTICATION_UNIT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Authentication Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTHENTICATION_UNIT_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__NAME = AUTHENTICATION_UNIT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__DISPLAY_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__ROUTE_ACTUALS = AUTHENTICATION_UNIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__REQUIRES_ROLE = AUTHENTICATION_UNIT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__PURPOSE_SUMMARY = AUTHENTICATION_UNIT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__ALTERNATIVE = AUTHENTICATION_UNIT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__OMIT_CAPTION = AUTHENTICATION_UNIT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CAPTION_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__PAGE_DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__DISPLAY_FIELDS = AUTHENTICATION_UNIT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__SERVICES_USED = AUTHENTICATION_UNIT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__HIDE_WHEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__MESSAGE_WHEN_HIDDEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__SUPPORT_ACTIONS = AUTHENTICATION_UNIT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Header</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__HEADER = AUTHENTICATION_UNIT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Footer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__FOOTER = AUTHENTICATION_UNIT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__HEADER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CONTROL_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 20;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__FOOTER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 21;
-
-	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__ERROR_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 22;
-
-	/**
-	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__SUBMIT_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 23;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CANCEL_DESTINATION = AUTHENTICATION_UNIT_FEATURE_COUNT + 24;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CANCEL_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 25;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CONTENT_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 26;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__STYLE_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 27;
-
-	/**
-	 * The number of structural features of the '<em>Registration Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT_FEATURE_COUNT = AUTHENTICATION_UNIT_FEATURE_COUNT + 28;
-
-	/**
-	 * The number of operations of the '<em>Registration Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT_OPERATION_COUNT = AUTHENTICATION_UNIT_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__NAME = AUTHENTICATION_UNIT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__DISPLAY_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CREATE_DEFAULT_URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__ROUTE_ACTUALS = AUTHENTICATION_UNIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__REQUIRES_ROLE = AUTHENTICATION_UNIT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__PURPOSE_SUMMARY = AUTHENTICATION_UNIT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__ALTERNATIVE = AUTHENTICATION_UNIT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__OMIT_CAPTION = AUTHENTICATION_UNIT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CAPTION_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__PAGE_DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__DISPLAY_FIELDS = AUTHENTICATION_UNIT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__SERVICES_USED = AUTHENTICATION_UNIT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__HIDE_WHEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__MESSAGE_WHEN_HIDDEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__SUPPORT_ACTIONS = AUTHENTICATION_UNIT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Header</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__HEADER = AUTHENTICATION_UNIT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Footer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__FOOTER = AUTHENTICATION_UNIT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__HEADER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CONTROL_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 20;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__FOOTER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 21;
-
-	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__ERROR_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 22;
-
-	/**
-	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__SUBMIT_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 23;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CANCEL_DESTINATION = AUTHENTICATION_UNIT_FEATURE_COUNT + 24;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CANCEL_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 25;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CONTENT_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 26;
-
-	/**
-	 * The feature id for the '<em><b>Logout Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__LOGOUT_URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 27;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__STYLE_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 28;
-
-	/**
-	 * The number of structural features of the '<em>Login Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT_FEATURE_COUNT = AUTHENTICATION_UNIT_FEATURE_COUNT + 29;
-
-	/**
-	 * The number of operations of the '<em>Login Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT_OPERATION_COUNT = AUTHENTICATION_UNIT_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__NAME = AUTHENTICATION_UNIT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__DISPLAY_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CREATE_DEFAULT_URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__ROUTE_ACTUALS = AUTHENTICATION_UNIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__REQUIRES_ROLE = AUTHENTICATION_UNIT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__PURPOSE_SUMMARY = AUTHENTICATION_UNIT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__URI_ELEMENT = AUTHENTICATION_UNIT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__ALTERNATIVE = AUTHENTICATION_UNIT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__OMIT_CAPTION = AUTHENTICATION_UNIT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CAPTION_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__PAGE_DISPLAYED_ON = AUTHENTICATION_UNIT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__DISPLAY_FIELDS = AUTHENTICATION_UNIT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__SERVICES_USED = AUTHENTICATION_UNIT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__HIDE_WHEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__MESSAGE_WHEN_HIDDEN = AUTHENTICATION_UNIT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__SUPPORT_ACTIONS = AUTHENTICATION_UNIT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Header</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__HEADER = AUTHENTICATION_UNIT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Footer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__FOOTER = AUTHENTICATION_UNIT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__HEADER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONTROL_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 20;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__FOOTER_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 21;
-
-	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__ERROR_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 22;
-
-	/**
-	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__SUBMIT_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 23;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CANCEL_DESTINATION = AUTHENTICATION_UNIT_FEATURE_COUNT + 24;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CANCEL_LABEL = AUTHENTICATION_UNIT_FEATURE_COUNT + 25;
-
-	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONTENT_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 26;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__STYLE_CLASS = AUTHENTICATION_UNIT_FEATURE_COUNT + 27;
-
-	/**
-	 * The number of structural features of the '<em>Forgotten Password Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = AUTHENTICATION_UNIT_FEATURE_COUNT + 28;
-
-	/**
-	 * The number of operations of the '<em>Forgotten Password Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT_OPERATION_COUNT = AUTHENTICATION_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -13676,7 +12970,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInputTechnologies()
 	 * @generated
 	 */
-	int INPUT_TECHNOLOGIES = 63;
+	int INPUT_TECHNOLOGIES = 59;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AjaxTechnologies <em>Ajax Technologies</em>}' enum.
@@ -13686,7 +12980,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAjaxTechnologies()
 	 * @generated
 	 */
-	int AJAX_TECHNOLOGIES = 64;
+	int AJAX_TECHNOLOGIES = 60;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -13696,7 +12990,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 65;
+	int PAGE_TOP_MENU_OPTIONS = 61;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -13706,7 +13000,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 66;
+	int COLLECTION_DISPLAY_OPTIONS = 62;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -13716,7 +13010,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 67;
+	int PAGINATION_CONTROL_PLACEMENTS = 63;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.IndexDisplayOption <em>Index Display Option</em>}' enum.
@@ -13726,7 +13020,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexDisplayOption()
 	 * @generated
 	 */
-	int INDEX_DISPLAY_OPTION = 68;
+	int INDEX_DISPLAY_OPTION = 64;
 
 
 	/**
@@ -13804,6 +13098,39 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultDateTimeFormat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Input Group Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultInputGroupClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Input Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultInputLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Input Element Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultInputElementClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}'.
@@ -14235,6 +13562,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_Alternative();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Section Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass()
+	 * @see #getContentUnit()
+	 * @generated
+	 */
+	EAttribute getContentUnit_SectionClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14255,6 +13593,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContentUnit_CaptionClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass()
+	 * @see #getContentUnit()
+	 * @generated
+	 */
+	EAttribute getContentUnit_ContentClass();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}'.
@@ -14332,28 +13681,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getStaticUnit_Content();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.StaticUnit#getStyleClass()
-	 * @see #getStaticUnit()
-	 * @generated
-	 */
-	EAttribute getStaticUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.StaticUnit#getContentClass()
-	 * @see #getStaticUnit()
-	 * @generated
-	 */
-	EAttribute getStaticUnit_ContentClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CreateSitemapUnit <em>Create Sitemap Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14384,28 +13711,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCreateSitemapUnit_Filename();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CreateSitemapUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CreateSitemapUnit#getStyleClass()
-	 * @see #getCreateSitemapUnit()
-	 * @generated
-	 */
-	EAttribute getCreateSitemapUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CreateSitemapUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CreateSitemapUnit#getContentClass()
-	 * @see #getCreateSitemapUnit()
-	 * @generated
-	 */
-	EAttribute getCreateSitemapUnit_ContentClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit <em>Dynamic Unit</em>}'.
@@ -14779,15 +14084,26 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_HeaderClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass <em>Input Column Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Column Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputColumnClass()
+	 * @return the meta object for the attribute '<em>Input Group Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass()
 	 * @see #getUnitFeature()
 	 * @generated
 	 */
-	EAttribute getUnitFeature_InputColumnClass();
+	EAttribute getUnitFeature_InputGroupClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass <em>Input Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_InputLabelClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass <em>Input Element Class</em>}'.
@@ -15903,17 +15219,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getEditUnit_CancelLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getContentClass()
-	 * @see #getEditUnit()
-	 * @generated
-	 */
-	EAttribute getEditUnit_ContentClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15933,17 +15238,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCreateUnit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CreateUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CreateUnit#getStyleClass()
-	 * @see #getCreateUnit()
-	 * @generated
-	 */
-	EAttribute getCreateUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit <em>Create Update Unit</em>}'.
@@ -15989,17 +15283,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCreateUpdateUnit_ClearLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getStyleClass()
-	 * @see #getCreateUpdateUnit()
-	 * @generated
-	 */
-	EAttribute getCreateUpdateUnit_StyleClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UpdateUnit <em>Update Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16019,17 +15302,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdateUnit_OnSaveContinueEditing();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UpdateUnit#getStyleClass()
-	 * @see #getUpdateUnit()
-	 * @generated
-	 */
-	EAttribute getUpdateUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.MapUnit <em>Map Unit</em>}'.
@@ -16062,17 +15334,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMapUnit_DefaultZoomLevel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.MapUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.MapUnit#getStyleClass()
-	 * @see #getMapUnit()
-	 * @generated
-	 */
-	EAttribute getMapUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.MapUnit#getLocation <em>Location</em>}'.
@@ -16129,28 +15390,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDetailsUnit_OmitFieldLabels();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DetailsUnit#getStyleClass()
-	 * @see #getDetailsUnit()
-	 * @generated
-	 */
-	EAttribute getDetailsUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DetailsUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DetailsUnit#getContentClass()
-	 * @see #getDetailsUnit()
-	 * @generated
-	 */
-	EAttribute getDetailsUnit_ContentClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.IndexUnit <em>Index Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16181,28 +15420,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIndexUnit_OmitColumnLabels();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#getStyleClass()
-	 * @see #getIndexUnit()
-	 * @generated
-	 */
-	EAttribute getIndexUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#getContentClass()
-	 * @see #getIndexUnit()
-	 * @generated
-	 */
-	EAttribute getIndexUnit_ContentClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getRowClasses <em>Row Classes</em>}'.
@@ -16259,17 +15476,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_OverlaySingleSelectAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getContentClass()
-	 * @see #getCardsUnit()
-	 * @generated
-	 */
-	EAttribute getCardsUnit_ContentClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16313,17 +15519,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getTextCardsUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.TextCardsUnit#getStyleClass()
-	 * @see #getTextCardsUnit()
-	 * @generated
-	 */
-	EAttribute getTextCardsUnit_StyleClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DateCardsUnit <em>Date Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16343,17 +15538,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDateCardsUnit_ElementDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DateCardsUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DateCardsUnit#getStyleClass()
-	 * @see #getDateCardsUnit()
-	 * @generated
-	 */
-	EAttribute getDateCardsUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ControlUnit <em>Control Unit</em>}'.
@@ -16399,17 +15583,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getControlUnit_CancelLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ControlUnit#getContentClass()
-	 * @see #getControlUnit()
-	 * @generated
-	 */
-	EAttribute getControlUnit_ContentClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SearchUnit <em>Search Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16429,17 +15602,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSearchUnit_ResultsDestination();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SearchUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SearchUnit#getStyleClass()
-	 * @see #getSearchUnit()
-	 * @generated
-	 */
-	EAttribute getSearchUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}'.
@@ -16539,17 +15701,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getImageCardsUnit_RevealUntruncatedContent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass()
-	 * @see #getImageCardsUnit()
-	 * @generated
-	 */
-	EAttribute getImageCardsUnit_StyleClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SliderUnit <em>Slider Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16580,28 +15731,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSliderUnit_TransitionTime();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SliderUnit#getStyleClass()
-	 * @see #getSliderUnit()
-	 * @generated
-	 */
-	EAttribute getSliderUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SliderUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SliderUnit#getContentClass()
-	 * @see #getSliderUnit()
-	 * @generated
-	 */
-	EAttribute getSliderUnit_ContentClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.GalleryUnit <em>Gallery Unit</em>}'.
@@ -16645,112 +15774,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGalleryUnit_TransitionTime();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.GalleryUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnit#getStyleClass()
-	 * @see #getGalleryUnit()
-	 * @generated
-	 */
-	EAttribute getGalleryUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.GalleryUnit#getContentClass <em>Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnit#getContentClass()
-	 * @see #getGalleryUnit()
-	 * @generated
-	 */
-	EAttribute getGalleryUnit_ContentClass();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.AuthenticationUnit <em>Authentication Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Authentication Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AuthenticationUnit
-	 * @generated
-	 */
-	EClass getAuthenticationUnit();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.RegistrationUnit <em>Registration Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Registration Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.RegistrationUnit
-	 * @generated
-	 */
-	EClass getRegistrationUnit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.RegistrationUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.RegistrationUnit#getStyleClass()
-	 * @see #getRegistrationUnit()
-	 * @generated
-	 */
-	EAttribute getRegistrationUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.LoginUnit <em>Login Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Login Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.LoginUnit
-	 * @generated
-	 */
-	EClass getLoginUnit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.LoginUnit#getLogoutUriElement <em>Logout Uri Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Logout Uri Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.LoginUnit#getLogoutUriElement()
-	 * @see #getLoginUnit()
-	 * @generated
-	 */
-	EAttribute getLoginUnit_LogoutUriElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.LoginUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.LoginUnit#getStyleClass()
-	 * @see #getLoginUnit()
-	 * @generated
-	 */
-	EAttribute getLoginUnit_StyleClass();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit <em>Forgotten Password Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Forgotten Password Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit
-	 * @generated
-	 */
-	EClass getForgottenPasswordUnit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getStyleClass()
-	 * @see #getForgottenPasswordUnit()
-	 * @generated
-	 */
-	EAttribute getForgottenPasswordUnit_StyleClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer <em>Inline Action Container</em>}'.
@@ -17273,6 +16296,30 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_DATE_TIME_FORMAT = eINSTANCE.getWebUI_DefaultDateTimeFormat();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Input Group Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_INPUT_GROUP_CLASS = eINSTANCE.getWebUI_DefaultInputGroupClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Input Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_INPUT_LABEL_CLASS = eINSTANCE.getWebUI_DefaultInputLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Input Element Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = eINSTANCE.getWebUI_DefaultInputElementClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Maximum Upload Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17615,6 +16662,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__ALTERNATIVE = eINSTANCE.getContentUnit_Alternative();
 
 		/**
+		 * The meta object literal for the '<em><b>Section Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTENT_UNIT__SECTION_CLASS = eINSTANCE.getContentUnit_SectionClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Omit Caption</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17629,6 +16684,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTENT_UNIT__CAPTION_CLASS = eINSTANCE.getContentUnit_CaptionClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTENT_UNIT__CONTENT_CLASS = eINSTANCE.getContentUnit_ContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Page Displayed On</b></em>' reference feature.
@@ -17691,22 +16754,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute STATIC_UNIT__CONTENT = eINSTANCE.getStaticUnit_Content();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATIC_UNIT__STYLE_CLASS = eINSTANCE.getStaticUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATIC_UNIT__CONTENT_CLASS = eINSTANCE.getStaticUnit_ContentClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CreateSitemapUnitImpl <em>Create Sitemap Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17731,22 +16778,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CREATE_SITEMAP_UNIT__FILENAME = eINSTANCE.getCreateSitemapUnit_Filename();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CREATE_SITEMAP_UNIT__STYLE_CLASS = eINSTANCE.getCreateSitemapUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CREATE_SITEMAP_UNIT__CONTENT_CLASS = eINSTANCE.getCreateSitemapUnit_ContentClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl <em>Dynamic Unit</em>}' class.
@@ -18027,12 +17058,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__HEADER_CLASS = eINSTANCE.getUnitFeature_HeaderClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Column Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Input Group Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_FEATURE__INPUT_COLUMN_CLASS = eINSTANCE.getUnitFeature_InputColumnClass();
+		EAttribute UNIT_FEATURE__INPUT_GROUP_CLASS = eINSTANCE.getUnitFeature_InputGroupClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__INPUT_LABEL_CLASS = eINSTANCE.getUnitFeature_InputLabelClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Element Class</b></em>' attribute feature.
@@ -18899,14 +17938,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute EDIT_UNIT__CANCEL_LABEL = eINSTANCE.getEditUnit_CancelLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDIT_UNIT__CONTENT_CLASS = eINSTANCE.getEditUnit_ContentClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Customise Values</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18923,14 +17954,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CREATE_UNIT = eINSTANCE.getCreateUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CREATE_UNIT__STYLE_CLASS = eINSTANCE.getCreateUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl <em>Create Update Unit</em>}' class.
@@ -18967,14 +17990,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CREATE_UPDATE_UNIT__CLEAR_LABEL = eINSTANCE.getCreateUpdateUnit_ClearLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CREATE_UPDATE_UNIT__STYLE_CLASS = eINSTANCE.getCreateUpdateUnit_StyleClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18991,14 +18006,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING = eINSTANCE.getUpdateUnit_OnSaveContinueEditing();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UPDATE_UNIT__STYLE_CLASS = eINSTANCE.getUpdateUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl <em>Map Unit</em>}' class.
@@ -19025,14 +18032,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MAP_UNIT__DEFAULT_ZOOM_LEVEL = eINSTANCE.getMapUnit_DefaultZoomLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MAP_UNIT__STYLE_CLASS = eINSTANCE.getMapUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
@@ -19077,22 +18076,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DETAILS_UNIT__OMIT_FIELD_LABELS = eINSTANCE.getDetailsUnit_OmitFieldLabels();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DETAILS_UNIT__STYLE_CLASS = eINSTANCE.getDetailsUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DETAILS_UNIT__CONTENT_CLASS = eINSTANCE.getDetailsUnit_ContentClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl <em>Index Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19117,22 +18100,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INDEX_UNIT__OMIT_COLUMN_LABELS = eINSTANCE.getIndexUnit_OmitColumnLabels();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INDEX_UNIT__STYLE_CLASS = eINSTANCE.getIndexUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INDEX_UNIT__CONTENT_CLASS = eINSTANCE.getIndexUnit_ContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Row Classes</b></em>' attribute feature.
@@ -19177,14 +18144,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = eINSTANCE.getCardsUnit_OverlaySingleSelectAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT__CONTENT_CLASS = eINSTANCE.getCardsUnit_ContentClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Row Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19219,14 +18178,6 @@ public interface WebuiPackage extends EPackage {
 		EClass TEXT_CARDS_UNIT = eINSTANCE.getTextCardsUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEXT_CARDS_UNIT__STYLE_CLASS = eINSTANCE.getTextCardsUnit_StyleClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19243,14 +18194,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATE_CARDS_UNIT__ELEMENT_DATE = eINSTANCE.getDateCardsUnit_ElementDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATE_CARDS_UNIT__STYLE_CLASS = eINSTANCE.getDateCardsUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -19287,14 +18230,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTROL_UNIT__CANCEL_LABEL = eINSTANCE.getControlUnit_CancelLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTROL_UNIT__CONTENT_CLASS = eINSTANCE.getControlUnit_ContentClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19311,14 +18246,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SEARCH_UNIT__RESULTS_DESTINATION = eINSTANCE.getSearchUnit_ResultsDestination();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEARCH_UNIT__STYLE_CLASS = eINSTANCE.getSearchUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
@@ -19397,14 +18324,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = eINSTANCE.getImageCardsUnit_RevealUntruncatedContent();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE_CARDS_UNIT__STYLE_CLASS = eINSTANCE.getImageCardsUnit_StyleClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19429,22 +18348,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SLIDER_UNIT__TRANSITION_TIME = eINSTANCE.getSliderUnit_TransitionTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SLIDER_UNIT__STYLE_CLASS = eINSTANCE.getSliderUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SLIDER_UNIT__CONTENT_CLASS = eINSTANCE.getSliderUnit_ContentClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -19479,94 +18382,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GALLERY_UNIT__TRANSITION_TIME = eINSTANCE.getGalleryUnit_TransitionTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GALLERY_UNIT__STYLE_CLASS = eINSTANCE.getGalleryUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GALLERY_UNIT__CONTENT_CLASS = eINSTANCE.getGalleryUnit_ContentClass();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.AuthenticationUnit <em>Authentication Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.AuthenticationUnit
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationUnit()
-		 * @generated
-		 */
-		EClass AUTHENTICATION_UNIT = eINSTANCE.getAuthenticationUnit();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.RegistrationUnitImpl <em>Registration Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.RegistrationUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
-		 * @generated
-		 */
-		EClass REGISTRATION_UNIT = eINSTANCE.getRegistrationUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REGISTRATION_UNIT__STYLE_CLASS = eINSTANCE.getRegistrationUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.LoginUnitImpl <em>Login Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.LoginUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
-		 * @generated
-		 */
-		EClass LOGIN_UNIT = eINSTANCE.getLoginUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Logout Uri Element</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOGIN_UNIT__LOGOUT_URI_ELEMENT = eINSTANCE.getLoginUnit_LogoutUriElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOGIN_UNIT__STYLE_CLASS = eINSTANCE.getLoginUnit_StyleClass();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl <em>Forgotten Password Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
-		 * @generated
-		 */
-		EClass FORGOTTEN_PASSWORD_UNIT = eINSTANCE.getForgottenPasswordUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORGOTTEN_PASSWORD_UNIT__STYLE_CLASS = eINSTANCE.getForgottenPasswordUnit_StyleClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer <em>Inline Action Container</em>}' class.

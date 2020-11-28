@@ -13,8 +13,6 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getContent <em>Content</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getStaticUnit()
@@ -47,59 +45,5 @@ public interface StaticUnit extends ContentUnit {
 	 * @generated
 	 */
 	void setContent(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,static_unit,framed"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getStaticUnit_StyleClass()
-	 * @model default="unit,static_unit,framed" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
-	 * The default value is <code>"static_content"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getStaticUnit_ContentClass()
-	 * @model default="static_content" ordered="false"
-	 * @generated
-	 */
-	String getContentClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.StaticUnit#getContentClass <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
-	 * @generated
-	 */
-	void setContentClass(String value);
 
 } // StaticUnit

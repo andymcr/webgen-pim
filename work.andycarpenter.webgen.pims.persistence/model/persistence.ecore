@@ -117,10 +117,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationPattern" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputColumnClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="input-field,col,s12 m12 l12"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputElementClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Association" abstract="true" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="keys" upperBound="-1" eType="#//AssociationKey"
@@ -145,10 +141,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetFooterClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputColumnClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="input-field,col,s12 m12 l12"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputElementClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializationMaxDepth"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
   </eClassifiers>

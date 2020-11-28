@@ -13,7 +13,6 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit()
@@ -47,32 +46,5 @@ public interface UpdateUnit extends EditUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setOnSaveContinueEditing(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,update_unit"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit_StyleClass()
-	 * @model default="unit,update_unit" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
 
 } // UpdateUnit

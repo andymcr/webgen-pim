@@ -19,8 +19,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,46 +63,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * @ordered
 	 */
 	protected int transitionTime = TRANSITION_TIME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,slider_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "slider_content";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,62 +135,12 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SLIDER_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SLIDER_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				return getShowTime();
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
 				return getTransitionTime();
-			case WebuiPackage.SLIDER_UNIT__STYLE_CLASS:
-				return getStyleClass();
-			case WebuiPackage.SLIDER_UNIT__CONTENT_CLASS:
-				return getContentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,12 +158,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 				return;
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
 				setTransitionTime((Integer)newValue);
-				return;
-			case WebuiPackage.SLIDER_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.SLIDER_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,12 +177,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
 				setTransitionTime(TRANSITION_TIME_EDEFAULT);
 				return;
-			case WebuiPackage.SLIDER_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.SLIDER_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,10 +193,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 				return showTime != SHOW_TIME_EDEFAULT;
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
 				return transitionTime != TRANSITION_TIME_EDEFAULT;
-			case WebuiPackage.SLIDER_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.SLIDER_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,10 +211,6 @@ public class SliderUnitImpl extends ImageUnitImpl implements SliderUnit {
 		result.append(showTime);
 		result.append(", transitionTime: ");
 		result.append(transitionTime);
-		result.append(", styleClass: ");
-		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

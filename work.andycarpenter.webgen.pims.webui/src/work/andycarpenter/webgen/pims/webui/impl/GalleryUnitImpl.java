@@ -24,8 +24,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getFullSizeFilter <em>Full Size Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,46 +78,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * @ordered
 	 */
 	protected int transitionTime = TRANSITION_TIME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,gallery_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "gallery_content";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -232,52 +190,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.GALLERY_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.GALLERY_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
@@ -287,10 +199,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 				return getShowTime();
 			case WebuiPackage.GALLERY_UNIT__TRANSITION_TIME:
 				return getTransitionTime();
-			case WebuiPackage.GALLERY_UNIT__STYLE_CLASS:
-				return getStyleClass();
-			case WebuiPackage.GALLERY_UNIT__CONTENT_CLASS:
-				return getContentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -311,12 +219,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 				return;
 			case WebuiPackage.GALLERY_UNIT__TRANSITION_TIME:
 				setTransitionTime((Integer)newValue);
-				return;
-			case WebuiPackage.GALLERY_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.GALLERY_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -339,12 +241,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 			case WebuiPackage.GALLERY_UNIT__TRANSITION_TIME:
 				setTransitionTime(TRANSITION_TIME_EDEFAULT);
 				return;
-			case WebuiPackage.GALLERY_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.GALLERY_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -363,10 +259,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 				return showTime != SHOW_TIME_EDEFAULT;
 			case WebuiPackage.GALLERY_UNIT__TRANSITION_TIME:
 				return transitionTime != TRANSITION_TIME_EDEFAULT;
-			case WebuiPackage.GALLERY_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.GALLERY_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -385,10 +277,6 @@ public class GalleryUnitImpl extends ImageUnitImpl implements GalleryUnit {
 		result.append(showTime);
 		result.append(", transitionTime: ");
 		result.append(transitionTime);
-		result.append(", styleClass: ");
-		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

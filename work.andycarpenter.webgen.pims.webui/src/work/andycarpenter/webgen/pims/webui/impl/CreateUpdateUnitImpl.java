@@ -22,7 +22,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getCreateUriElement <em>Create Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getClearLabel <em>Clear Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,26 +86,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * @ordered
 	 */
 	protected String clearLabel = CLEAR_LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,create_unit,update_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,29 +181,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CREATE_UPDATE_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
@@ -233,8 +189,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 				return getCreateUriElement();
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				return getClearLabel();
-			case WebuiPackage.CREATE_UPDATE_UNIT__STYLE_CLASS:
-				return getStyleClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,9 +209,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 				return;
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				setClearLabel((String)newValue);
-				return;
-			case WebuiPackage.CREATE_UPDATE_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,9 +231,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				setClearLabel(CLEAR_LABEL_EDEFAULT);
 				return;
-			case WebuiPackage.CREATE_UPDATE_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -301,8 +249,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 				return CREATE_URI_ELEMENT_EDEFAULT == null ? createUriElement != null : !CREATE_URI_ELEMENT_EDEFAULT.equals(createUriElement);
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				return CLEAR_LABEL_EDEFAULT == null ? clearLabel != null : !CLEAR_LABEL_EDEFAULT.equals(clearLabel);
-			case WebuiPackage.CREATE_UPDATE_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -323,8 +269,6 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 		result.append(createUriElement);
 		result.append(", clearLabel: ");
 		result.append(clearLabel);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(')');
 		return result.toString();
 	}

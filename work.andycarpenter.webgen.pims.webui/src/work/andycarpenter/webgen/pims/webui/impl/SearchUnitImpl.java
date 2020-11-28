@@ -22,7 +22,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl#getResultsDestination <em>Results Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,26 +36,6 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * @ordered
 	 */
 	protected IndexUnit resultsDestination;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,search_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,36 +102,11 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SEARCH_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
 				if (resolve) return getResultsDestination();
 				return basicGetResultsDestination();
-			case WebuiPackage.SEARCH_UNIT__STYLE_CLASS:
-				return getStyleClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,9 +121,6 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 		switch (featureID) {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
 				setResultsDestination((IndexUnit)newValue);
-				return;
-			case WebuiPackage.SEARCH_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,9 +137,6 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
 				setResultsDestination((IndexUnit)null);
 				return;
-			case WebuiPackage.SEARCH_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,26 +151,8 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 		switch (featureID) {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
 				return resultsDestination != null;
-			case WebuiPackage.SEARCH_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (styleClass: ");
-		result.append(styleClass);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SearchUnitImpl

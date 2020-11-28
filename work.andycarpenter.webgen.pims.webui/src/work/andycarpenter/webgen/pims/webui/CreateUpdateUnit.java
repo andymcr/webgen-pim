@@ -15,7 +15,6 @@ package work.andycarpenter.webgen.pims.webui;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getCreateUriElement <em>Create Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getClearLabel <em>Clear Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit()
@@ -102,32 +101,5 @@ public interface CreateUpdateUnit extends EditUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setClearLabel(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,create_unit,update_unit"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit_StyleClass()
-	 * @model default="unit,create_unit,update_unit" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
 
 } // CreateUpdateUnit

@@ -47,8 +47,6 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 
 			addSelectionPropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,50 +100,6 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DetailsUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DetailsUnit_styleClass_feature", "_UI_DetailsUnit_type"),
-				 WebuiPackage.Literals.DETAILS_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DetailsUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DetailsUnit_contentClass_feature", "_UI_DetailsUnit_type"),
-				 WebuiPackage.Literals.DETAILS_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This returns DetailsUnit.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,8 +147,6 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 
 		switch (notification.getFeatureID(DetailsUnit.class)) {
 			case WebuiPackage.DETAILS_UNIT__OMIT_FIELD_LABELS:
-			case WebuiPackage.DETAILS_UNIT__STYLE_CLASS:
-			case WebuiPackage.DETAILS_UNIT__CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

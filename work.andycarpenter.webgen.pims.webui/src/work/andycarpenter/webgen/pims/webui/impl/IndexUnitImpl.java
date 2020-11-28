@@ -31,8 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDisplayOption <em>Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getRowClasses <em>Row Classes</em>}</li>
  * </ul>
  *
@@ -108,46 +106,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected boolean omitColumnLabels = OMIT_COLUMN_LABELS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,index_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "striped,responsive-table";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRowClasses() <em>Row Classes</em>}' attribute.
@@ -276,52 +234,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRowClasses() {
 		return rowClasses;
 	}
@@ -384,10 +296,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 				return getDisplayOption();
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 				return isOmitColumnLabels();
-			case WebuiPackage.INDEX_UNIT__STYLE_CLASS:
-				return getStyleClass();
-			case WebuiPackage.INDEX_UNIT__CONTENT_CLASS:
-				return getContentClass();
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				return getRowClasses();
 		}
@@ -416,12 +324,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 				setOmitColumnLabels((Boolean)newValue);
 				return;
-			case WebuiPackage.INDEX_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
-				return;
-			case WebuiPackage.INDEX_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
-				return;
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				setRowClasses((String)newValue);
 				return;
@@ -449,12 +351,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 				setOmitColumnLabels(OMIT_COLUMN_LABELS_EDEFAULT);
 				return;
-			case WebuiPackage.INDEX_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.INDEX_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				setRowClasses(ROW_CLASSES_EDEFAULT);
 				return;
@@ -478,10 +374,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 				return displayOption != DISPLAY_OPTION_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 				return omitColumnLabels != OMIT_COLUMN_LABELS_EDEFAULT;
-			case WebuiPackage.INDEX_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
-			case WebuiPackage.INDEX_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				return ROW_CLASSES_EDEFAULT == null ? rowClasses != null : !ROW_CLASSES_EDEFAULT.equals(rowClasses);
 		}
@@ -538,10 +430,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		result.append(displayOption);
 		result.append(", omitColumnLabels: ");
 		result.append(omitColumnLabels);
-		result.append(", styleClass: ");
-		result.append(styleClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(", rowClasses: ");
 		result.append(rowClasses);
 		result.append(')');

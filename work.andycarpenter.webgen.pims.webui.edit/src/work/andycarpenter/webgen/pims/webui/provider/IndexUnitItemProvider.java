@@ -50,8 +50,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDisplayOptionPropertyDescriptor(object);
 			addOmitColumnLabelsPropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
 			addRowClassesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -120,50 +118,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IndexUnit_styleClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IndexUnit_styleClass_feature", "_UI_IndexUnit_type"),
-				 WebuiPackage.Literals.INDEX_UNIT__STYLE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Content Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IndexUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IndexUnit_contentClass_feature", "_UI_IndexUnit_type"),
-				 WebuiPackage.Literals.INDEX_UNIT__CONTENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -269,8 +223,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
-			case WebuiPackage.INDEX_UNIT__STYLE_CLASS:
-			case WebuiPackage.INDEX_UNIT__CONTENT_CLASS:
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -67,6 +67,9 @@ public class WebUIItemProvider
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
+			addDefaultInputGroupClassPropertyDescriptor(object);
+			addDefaultInputLabelClassPropertyDescriptor(object);
+			addDefaultInputElementClassPropertyDescriptor(object);
 			addDefaultMaximumUploadSizePropertyDescriptor(object);
 			addInputTechnologyPropertyDescriptor(object);
 			addAjaxTechnologyPropertyDescriptor(object);
@@ -159,6 +162,72 @@ public class WebUIItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Input Group Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultInputGroupClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultInputGroupClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultInputGroupClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INPUT_GROUP_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Input Label Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultInputLabelClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultInputLabelClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultInputLabelClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INPUT_LABEL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Input Element Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultInputElementClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultInputElementClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultInputElementClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -300,6 +369,9 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
 			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:

@@ -25,7 +25,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl#isReadOnly <em>Read Only</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl#getDefaultZoomLevel <em>Default Zoom Level</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl#getPlaceName <em>Place Name</em>}</li>
  * </ul>
@@ -72,26 +71,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 	 * @ordered
 	 */
 	protected int defaultZoomLevel = DEFAULT_ZOOM_LEVEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = "unit,map_unit";
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
@@ -176,29 +155,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 		defaultZoomLevel = newDefaultZoomLevel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL, oldDefaultZoomLevel, defaultZoomLevel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.MAP_UNIT__STYLE_CLASS, oldStyleClass, styleClass));
 	}
 
 	/**
@@ -293,8 +249,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 				return isReadOnly();
 			case WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL:
 				return getDefaultZoomLevel();
-			case WebuiPackage.MAP_UNIT__STYLE_CLASS:
-				return getStyleClass();
 			case WebuiPackage.MAP_UNIT__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
@@ -318,9 +272,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 				return;
 			case WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL:
 				setDefaultZoomLevel((Integer)newValue);
-				return;
-			case WebuiPackage.MAP_UNIT__STYLE_CLASS:
-				setStyleClass((String)newValue);
 				return;
 			case WebuiPackage.MAP_UNIT__LOCATION:
 				setLocation((LocationAttribute)newValue);
@@ -346,9 +297,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 			case WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL:
 				setDefaultZoomLevel(DEFAULT_ZOOM_LEVEL_EDEFAULT);
 				return;
-			case WebuiPackage.MAP_UNIT__STYLE_CLASS:
-				setStyleClass(STYLE_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.MAP_UNIT__LOCATION:
 				setLocation((LocationAttribute)null);
 				return;
@@ -371,8 +319,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 				return readOnly != READ_ONLY_EDEFAULT;
 			case WebuiPackage.MAP_UNIT__DEFAULT_ZOOM_LEVEL:
 				return defaultZoomLevel != DEFAULT_ZOOM_LEVEL_EDEFAULT;
-			case WebuiPackage.MAP_UNIT__STYLE_CLASS:
-				return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 			case WebuiPackage.MAP_UNIT__LOCATION:
 				return location != null;
 			case WebuiPackage.MAP_UNIT__PLACE_NAME:
@@ -395,8 +341,6 @@ public class MapUnitImpl extends EditUnitImpl implements MapUnit {
 		result.append(readOnly);
 		result.append(", defaultZoomLevel: ");
 		result.append(defaultZoomLevel);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(')');
 		return result.toString();
 	}

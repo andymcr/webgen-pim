@@ -24,7 +24,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl#getSubmitLabel <em>Submit Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl#getContentClass <em>Content Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,26 +78,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * @ordered
 	 */
 	protected String cancelLabel = CANCEL_LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "control_form";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -211,29 +190,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * @generated
 	 */
 	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTROL_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.CONTROL_UNIT__SUBMIT_LABEL:
@@ -243,8 +199,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 				return basicGetCancelDestination();
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				return getCancelLabel();
-			case WebuiPackage.CONTROL_UNIT__CONTENT_CLASS:
-				return getContentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,9 +219,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 				return;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				setCancelLabel((String)newValue);
-				return;
-			case WebuiPackage.CONTROL_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -290,9 +241,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				setCancelLabel(CANCEL_LABEL_EDEFAULT);
 				return;
-			case WebuiPackage.CONTROL_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,8 +259,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 				return cancelDestination != null;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				return CANCEL_LABEL_EDEFAULT == null ? cancelLabel != null : !CANCEL_LABEL_EDEFAULT.equals(cancelLabel);
-			case WebuiPackage.CONTROL_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -331,8 +277,6 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 		result.append(submitLabel);
 		result.append(", cancelLabel: ");
 		result.append(cancelLabel);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(')');
 		return result.toString();
 	}

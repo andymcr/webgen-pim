@@ -15,7 +15,6 @@ package work.andycarpenter.webgen.pims.webui;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isOverlayTitle <em>Overlay Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isEnableImageEnlargement <em>Enable Image Enlargement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit()
@@ -102,32 +101,5 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @generated
 	 */
 	void setRevealUntruncatedContent(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * The default value is <code>"unit,cards_unit,image_cards_unit"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_StyleClass()
-	 * @model default="unit,cards_unit,image_cards_unit" ordered="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
 
 } // ImageCardsUnit

@@ -28,7 +28,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmLabel <em>Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getContentClass <em>Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#isCustomiseValues <em>Customise Values</em>}</li>
  * </ul>
  *
@@ -104,26 +103,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @ordered
 	 */
 	protected String cancelLabel = CANCEL_LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "edit_content,framed";
-
-	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isCustomiseValues() <em>Customise Values</em>}' attribute.
@@ -341,29 +320,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public String getContentClass() {
-		return contentClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean isCustomiseValues() {
 		return customiseValues;
 	}
@@ -415,8 +371,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return basicGetCancelDestination();
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				return getCancelLabel();
-			case WebuiPackage.EDIT_UNIT__CONTENT_CLASS:
-				return getContentClass();
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 				return isCustomiseValues();
 		}
@@ -445,9 +399,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel((String)newValue);
-				return;
-			case WebuiPackage.EDIT_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 				setCustomiseValues((Boolean)newValue);
@@ -479,9 +430,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel(CANCEL_LABEL_EDEFAULT);
 				return;
-			case WebuiPackage.EDIT_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 				setCustomiseValues(CUSTOMISE_VALUES_EDEFAULT);
 				return;
@@ -507,8 +455,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return cancelDestination != null;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				return CANCEL_LABEL_EDEFAULT == null ? cancelLabel != null : !CANCEL_LABEL_EDEFAULT.equals(cancelLabel);
-			case WebuiPackage.EDIT_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 				return customiseValues != CUSTOMISE_VALUES_EDEFAULT;
 		}
@@ -529,8 +475,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		result.append(confirmLabel);
 		result.append(", cancelLabel: ");
 		result.append(cancelLabel);
-		result.append(", contentClass: ");
-		result.append(contentClass);
 		result.append(", customiseValues: ");
 		result.append(customiseValues);
 		result.append(')');
