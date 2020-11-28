@@ -202,14 +202,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateControlUnit((ControlUnit)value, diagnostics, context);
 			case WebuiPackage.SEARCH_UNIT:
 				return validateSearchUnit((SearchUnit)value, diagnostics, context);
-			case WebuiPackage.AUTHENTICATION_UNIT:
-				return validateAuthenticationUnit((AuthenticationUnit)value, diagnostics, context);
-			case WebuiPackage.REGISTRATION_UNIT:
-				return validateRegistrationUnit((RegistrationUnit)value, diagnostics, context);
-			case WebuiPackage.LOGIN_UNIT:
-				return validateLoginUnit((LoginUnit)value, diagnostics, context);
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT:
-				return validateForgottenPasswordUnit((ForgottenPasswordUnit)value, diagnostics, context);
 			case WebuiPackage.INLINE_ACTION_CONTAINER:
 				return validateInlineActionContainer((InlineActionContainer)value, diagnostics, context);
 			case WebuiPackage.INLINE_ACTION:
@@ -1518,75 +1510,6 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(galleryUnit, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAuthenticationUnit(AuthenticationUnit authenticationUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(authenticationUnit, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateRegistrationUnit(RegistrationUnit registrationUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(registrationUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(registrationUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(registrationUnit, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLoginUnit(LoginUnit loginUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(loginUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(loginUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(loginUnit, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateForgottenPasswordUnit(ForgottenPasswordUnit forgottenPasswordUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(forgottenPasswordUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(forgottenPasswordUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(forgottenPasswordUnit, diagnostics, context);
 		return result;
 	}
 

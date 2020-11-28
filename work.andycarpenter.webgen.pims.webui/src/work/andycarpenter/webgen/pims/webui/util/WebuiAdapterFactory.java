@@ -287,22 +287,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createSearchUnitAdapter();
 			}
 			@Override
-			public Adapter caseAuthenticationUnit(AuthenticationUnit object) {
-				return createAuthenticationUnitAdapter();
-			}
-			@Override
-			public Adapter caseRegistrationUnit(RegistrationUnit object) {
-				return createRegistrationUnitAdapter();
-			}
-			@Override
-			public Adapter caseLoginUnit(LoginUnit object) {
-				return createLoginUnitAdapter();
-			}
-			@Override
-			public Adapter caseForgottenPasswordUnit(ForgottenPasswordUnit object) {
-				return createForgottenPasswordUnitAdapter();
-			}
-			@Override
 			public Adapter caseInlineActionContainer(InlineActionContainer object) {
 				return createInlineActionContainerAdapter();
 			}
@@ -1097,62 +1081,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGalleryUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.AuthenticationUnit <em>Authentication Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.AuthenticationUnit
-	 * @generated
-	 */
-	public Adapter createAuthenticationUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.RegistrationUnit <em>Registration Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.RegistrationUnit
-	 * @generated
-	 */
-	public Adapter createRegistrationUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.LoginUnit <em>Login Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.LoginUnit
-	 * @generated
-	 */
-	public Adapter createLoginUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit <em>Forgotten Password Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit
-	 * @generated
-	 */
-	public Adapter createForgottenPasswordUnitAdapter() {
 		return null;
 	}
 

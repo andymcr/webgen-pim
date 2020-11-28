@@ -576,48 +576,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.AUTHENTICATION_UNIT: {
-				AuthenticationUnit authenticationUnit = (AuthenticationUnit)theEObject;
-				T result = caseAuthenticationUnit(authenticationUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.REGISTRATION_UNIT: {
-				RegistrationUnit registrationUnit = (RegistrationUnit)theEObject;
-				T result = caseRegistrationUnit(registrationUnit);
-				if (result == null) result = caseAuthenticationUnit(registrationUnit);
-				if (result == null) result = caseControlUnit(registrationUnit);
-				if (result == null) result = caseDynamicUnit(registrationUnit);
-				if (result == null) result = caseContentUnit(registrationUnit);
-				if (result == null) result = caseNamedDisplayElement(registrationUnit);
-				if (result == null) result = caseNamedElement(registrationUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.LOGIN_UNIT: {
-				LoginUnit loginUnit = (LoginUnit)theEObject;
-				T result = caseLoginUnit(loginUnit);
-				if (result == null) result = caseAuthenticationUnit(loginUnit);
-				if (result == null) result = caseControlUnit(loginUnit);
-				if (result == null) result = caseDynamicUnit(loginUnit);
-				if (result == null) result = caseContentUnit(loginUnit);
-				if (result == null) result = caseNamedDisplayElement(loginUnit);
-				if (result == null) result = caseNamedElement(loginUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: {
-				ForgottenPasswordUnit forgottenPasswordUnit = (ForgottenPasswordUnit)theEObject;
-				T result = caseForgottenPasswordUnit(forgottenPasswordUnit);
-				if (result == null) result = caseAuthenticationUnit(forgottenPasswordUnit);
-				if (result == null) result = caseControlUnit(forgottenPasswordUnit);
-				if (result == null) result = caseDynamicUnit(forgottenPasswordUnit);
-				if (result == null) result = caseContentUnit(forgottenPasswordUnit);
-				if (result == null) result = caseNamedDisplayElement(forgottenPasswordUnit);
-				if (result == null) result = caseNamedElement(forgottenPasswordUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.INLINE_ACTION_CONTAINER: {
 				InlineActionContainer inlineActionContainer = (InlineActionContainer)theEObject;
 				T result = caseInlineActionContainer(inlineActionContainer);
@@ -1455,66 +1413,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGalleryUnit(GalleryUnit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Authentication Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Authentication Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAuthenticationUnit(AuthenticationUnit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Registration Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Registration Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRegistrationUnit(RegistrationUnit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Login Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Login Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLoginUnit(LoginUnit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Forgotten Password Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Forgotten Password Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseForgottenPasswordUnit(ForgottenPasswordUnit object) {
 		return null;
 	}
 
