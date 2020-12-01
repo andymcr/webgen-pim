@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  * </ul>
  *
@@ -43,6 +44,29 @@ public interface InlineActionContainer extends EObject {
 	 * @generated
 	 */
 	EList<InlineAction> getActions();
+
+	/**
+	 * Returns the value of the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Action Navigation Class</em>' attribute.
+	 * @see #setActionNavigationClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer_ActionNavigationClass()
+	 * @model default=" "
+	 * @generated
+	 */
+	String getActionNavigationClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getActionNavigationClass <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Action Navigation Class</em>' attribute.
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 */
+	void setActionNavigationClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Local Anchor Class</b></em>' attribute.

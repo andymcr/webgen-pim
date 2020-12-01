@@ -26,6 +26,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDateTimeFormat"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="jS F Y G.i"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultActionNavigationClass"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="nav"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultAnchorClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInputGroupClass"
@@ -667,6 +670,8 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//InlineAction" containment="true" eOpposite="#//InlineAction/usedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionNavigationClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=" "/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultLocalAnchorClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=" "/>
   </eClassifiers>

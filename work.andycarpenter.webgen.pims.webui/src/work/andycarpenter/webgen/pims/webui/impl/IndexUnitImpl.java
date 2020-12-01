@@ -28,6 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDisplayOption <em>Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
@@ -46,6 +47,26 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
+
+	/**
+	 * The default value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_NAVIGATION_CLASS_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
@@ -157,6 +178,29 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.INDEX_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
 		}
 		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getActionNavigationClass() {
+		return actionNavigationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setActionNavigationClass(String newActionNavigationClass) {
+		String oldActionNavigationClass = actionNavigationClass;
+		actionNavigationClass = newActionNavigationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
 	}
 
 	/**
@@ -290,6 +334,8 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return getActions();
+			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
+				return getActionNavigationClass();
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 				return getDefaultLocalAnchorClass();
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
@@ -314,6 +360,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
+				return;
+			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass((String)newValue);
 				return;
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 				setDefaultLocalAnchorClass((String)newValue);
@@ -342,6 +391,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				getActions().clear();
 				return;
+			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
 				return;
@@ -368,6 +420,8 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		switch (featureID) {
 			case WebuiPackage.INDEX_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
+			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
+				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
@@ -390,6 +444,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (baseClass == InlineActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.INDEX_UNIT__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
@@ -407,6 +462,7 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (baseClass == InlineActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.INDEX_UNIT__ACTIONS;
+				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS;
 				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
@@ -424,7 +480,9 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (defaultLocalAnchorClass: ");
+		result.append(" (actionNavigationClass: ");
+		result.append(actionNavigationClass);
+		result.append(", defaultLocalAnchorClass: ");
 		result.append(defaultLocalAnchorClass);
 		result.append(", displayOption: ");
 		result.append(displayOption);

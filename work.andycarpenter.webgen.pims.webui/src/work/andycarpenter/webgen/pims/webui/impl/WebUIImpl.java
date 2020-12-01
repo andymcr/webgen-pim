@@ -38,6 +38,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
@@ -139,6 +140,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT = "nav";
+
+	/**
+	 * The cached value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultActionNavigationClass = DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
@@ -440,6 +461,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultActionNavigationClass() {
+		return defaultActionNavigationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultActionNavigationClass(String newDefaultActionNavigationClass) {
+		String oldDefaultActionNavigationClass = defaultActionNavigationClass;
+		defaultActionNavigationClass = newDefaultActionNavigationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS, oldDefaultActionNavigationClass, defaultActionNavigationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultAnchorClass() {
 		return defaultAnchorClass;
 	}
@@ -647,6 +691,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				return getDefaultActionNavigationClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return getDefaultAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
@@ -693,6 +739,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				setDefaultActionNavigationClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass((String)newValue);
@@ -745,6 +794,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				setDefaultActionNavigationClass(DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
 				return;
@@ -790,6 +842,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
@@ -824,6 +878,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultActionNavigationClass: ");
+		result.append(defaultActionNavigationClass);
 		result.append(", defaultAnchorClass: ");
 		result.append(defaultAnchorClass);
 		result.append(", defaultInputGroupClass: ");

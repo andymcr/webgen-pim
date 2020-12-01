@@ -47,12 +47,35 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActionNavigationClassPropertyDescriptor(object);
 			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addDisplayOptionPropertyDescriptor(object);
 			addOmitColumnLabelsPropertyDescriptor(object);
 			addRowClassesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Action Navigation Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActionNavigationClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InlineActionContainer_actionNavigationClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_actionNavigationClass_feature", "_UI_InlineActionContainer_type"),
+				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -220,6 +243,7 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IndexUnit.class)) {
+			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:

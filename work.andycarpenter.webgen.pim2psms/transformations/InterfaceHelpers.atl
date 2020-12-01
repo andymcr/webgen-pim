@@ -334,6 +334,15 @@ helper context Website!InterfaceField def: validationPattern() : String
 			endif
 		endif;
 
+helper context Website!InlineActionContainer def: actionNavigationClass() : String
+	= if self.actionNavigationClass.trim() <> '' then
+			self.actionNavigationClass.trim()
+		else if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultActionNavigationClass
+		else
+			OclUndefined
+		endif endif;
+
 helper context Website!InlineAction def: anchorClass() : String
 	= if self.anchorClass.trim() <> '' then
 			self.anchorClass.trim()

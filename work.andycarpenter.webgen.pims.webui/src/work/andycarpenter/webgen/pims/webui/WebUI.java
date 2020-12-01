@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
@@ -177,6 +178,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultDateTimeFormat(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Action Navigation Class</b></em>' attribute.
+	 * The default value is <code>"nav"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Action Navigation Class</em>' attribute.
+	 * @see #setDefaultActionNavigationClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultActionNavigationClass()
+	 * @model default="nav" ordered="false"
+	 * @generated
+	 */
+	String getDefaultActionNavigationClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Action Navigation Class</em>' attribute.
+	 * @see #getDefaultActionNavigationClass()
+	 * @generated
+	 */
+	void setDefaultActionNavigationClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Anchor Class</b></em>' attribute.

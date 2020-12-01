@@ -46,6 +46,7 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActionNavigationClassPropertyDescriptor(object);
 			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addOverlaySingleSelectActionPropertyDescriptor(object);
@@ -54,6 +55,28 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			addCardClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Action Navigation Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActionNavigationClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InlineActionContainer_actionNavigationClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_actionNavigationClass_feature", "_UI_InlineActionContainer_type"),
+				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -246,6 +269,7 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CardsUnit.class)) {
+			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:

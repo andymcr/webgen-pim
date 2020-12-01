@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayLabel <em>Display Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isRequired <em>Required</em>}</li>
@@ -61,6 +62,26 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected EList<InlineAction> actions;
+
+	/**
+	 * The default value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_NAVIGATION_CLASS_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
@@ -412,6 +433,29 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.UNIT_FEATURE__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
 		}
 		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getActionNavigationClass() {
+		return actionNavigationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setActionNavigationClass(String newActionNavigationClass) {
+		String oldActionNavigationClass = actionNavigationClass;
+		actionNavigationClass = newActionNavigationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
 	}
 
 	/**
@@ -892,6 +936,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return getActions();
+			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
+				return getActionNavigationClass();
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 				return getDefaultLocalAnchorClass();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
@@ -942,6 +988,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 				setDefaultLocalAnchorClass((String)newValue);
@@ -1009,6 +1058,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
 				return;
+			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
 				return;
@@ -1074,6 +1126,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return actions != null && !actions.isEmpty();
+			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
+				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
@@ -1122,6 +1176,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (baseClass == InlineActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
@@ -1139,6 +1194,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (baseClass == InlineActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
+				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
 				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
@@ -1156,7 +1212,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (defaultLocalAnchorClass: ");
+		result.append(" (actionNavigationClass: ");
+		result.append(actionNavigationClass);
+		result.append(", defaultLocalAnchorClass: ");
 		result.append(defaultLocalAnchorClass);
 		result.append(", displayLabel: ");
 		result.append(displayLabel);

@@ -805,7 +805,8 @@ rule SearchUnit {
 abstract rule InlineActionContainer {
 	from website : Website!InlineActionContainer
 	to waf : WAF!InlineActionContainer (
-		actions <- website.actions
+		actions <- website.actions,
+		actionNavigationClass <- website.actionNavigationClass()
 	)
 }
 
