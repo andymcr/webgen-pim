@@ -11,7 +11,7 @@ import java.util.Set;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -533,14 +533,20 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		return selections;
 	}
 
-	protected Set<Selection> getContainerSelections(final DynamicUnit unit) {
-		final Set<Selection> selections = new HashSet<Selection>();
+	protected Set<Selection> getContainerSelections(final CollectionUnit unit) {
 		final WebUI webUI = unit.getPageDisplayedOn().getWebUI();
-		for (Entity type : getContentType(unit)) {
-			final AssociationWithContainment association = getContainingAssociation(type);
-			if (association != null) {
-				selections.addAll(getSelections(webUI, association.getPartOf()));
+		final Set<Selection> selections = new HashSet<Selection>();
+		if (unit.getSelection().getSelectPath().isEmpty()) {
+			for (Entity type : getContentType(unit)) {
+				final AssociationWithContainment association = getContainingAssociation(type);
+				if (association != null) {
+					selections.addAll(getSelections(webUI, association.getPartOf()));
+				}
 			}
+		} else {
+			final EList<Association> path = unit.getSelection().getSelectPath();
+			final List<Association> last = path.subList(path.size() -1, path.size()); 
+			selections.addAll(getSelections(webUI, last.get(0).getPartOf()));
 		}
 
 		return selections;

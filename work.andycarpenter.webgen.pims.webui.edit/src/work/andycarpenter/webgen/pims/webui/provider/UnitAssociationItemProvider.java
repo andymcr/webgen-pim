@@ -60,9 +60,6 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
-			addIsSourceAssociationPropertyDescriptor(object);
-			addSourceEntityPropertyDescriptor(object);
-			addTargetEntityPropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
 			addFilteredOptionsPropertyDescriptor(object);
 		}
@@ -134,72 +131,6 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					return Collections.emptySet();
 				}
 			});
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Source Association feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsSourceAssociationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_isSourceAssociation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_isSourceAssociation_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_DebugPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Source Entity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSourceEntityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_sourceEntity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_sourceEntity_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__SOURCE_ENTITY,
-				 false,
-				 false,
-				 false,
-				 null,
-				 getString("_UI_DebugPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target Entity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetEntityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_targetEntity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_targetEntity_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__TARGET_ENTITY,
-				 false,
-				 false,
-				 false,
-				 null,
-				 getString("_UI_DebugPropertyCategory"),
-				 null));
 	}
 
 	/**

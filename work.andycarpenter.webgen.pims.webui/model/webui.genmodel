@@ -46,6 +46,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultTimeFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateTimeFormat"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultAnchorClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputGroupClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputLabelClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputElementClass"/>
@@ -186,11 +187,10 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+      <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
+      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/sourceEntity"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/targetEntity"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
@@ -315,7 +315,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/lastPageIconName"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationElementClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//EditUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
@@ -410,7 +410,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InlineActionContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//InlineActionContainer/actions"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineActionContainer/defaultAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//InlineActionContainer/defaultLocalAnchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InlineAction">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//InlineAction/usedBy"/>

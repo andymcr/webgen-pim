@@ -28,7 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
@@ -51,24 +51,24 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	protected EList<InlineAction> actions;
 
 	/**
-	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultAnchorClass()
+	 * @see #getDefaultLocalAnchorClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_ANCHOR_CLASS_EDEFAULT = " ";
+	protected static final String DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT = " ";
 
 	/**
-	 * The cached value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultAnchorClass()
+	 * @see #getDefaultLocalAnchorClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
+	protected String defaultLocalAnchorClass = DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBadges() <em>Badges</em>}' containment reference list.
@@ -218,8 +218,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getDefaultAnchorClass() {
-		return defaultAnchorClass;
+	public String getDefaultLocalAnchorClass() {
+		return defaultLocalAnchorClass;
 	}
 
 	/**
@@ -228,11 +228,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setDefaultAnchorClass(String newDefaultAnchorClass) {
-		String oldDefaultAnchorClass = defaultAnchorClass;
-		defaultAnchorClass = newDefaultAnchorClass;
+	public void setDefaultLocalAnchorClass(String newDefaultLocalAnchorClass) {
+		String oldDefaultLocalAnchorClass = defaultLocalAnchorClass;
+		defaultLocalAnchorClass = newDefaultLocalAnchorClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS, oldDefaultAnchorClass, defaultAnchorClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS, oldDefaultLocalAnchorClass, defaultLocalAnchorClass));
 	}
 
 	/**
@@ -406,8 +406,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return getActions();
-			case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS:
-				return getDefaultAnchorClass();
+			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				return getDefaultLocalAnchorClass();
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return getBadges();
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
@@ -437,8 +437,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				getActions().clear();
 				getActions().addAll((Collection<? extends InlineAction>)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS:
-				setDefaultAnchorClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				setDefaultLocalAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
@@ -474,8 +474,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				getActions().clear();
 				return;
-			case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS:
-				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
@@ -509,8 +509,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		switch (featureID) {
 			case WebuiPackage.CARDS_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
-			case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS:
-				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
+			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return badges != null && !badges.isEmpty();
 			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
@@ -537,7 +537,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		if (baseClass == InlineActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.CARDS_UNIT__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
-				case WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS;
+				case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -554,7 +554,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		if (baseClass == InlineActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.CARDS_UNIT__ACTIONS;
-				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS: return WebuiPackage.CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
+				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -571,8 +571,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (defaultAnchorClass: ");
-		result.append(defaultAnchorClass);
+		result.append(" (defaultLocalAnchorClass: ");
+		result.append(defaultLocalAnchorClass);
 		result.append(", omitFieldLabels: ");
 		result.append(omitFieldLabels);
 		result.append(", overlaySingleSelectAction: ");

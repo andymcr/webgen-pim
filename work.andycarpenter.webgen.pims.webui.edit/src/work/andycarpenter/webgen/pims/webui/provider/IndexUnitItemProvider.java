@@ -47,7 +47,7 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDefaultAnchorClassPropertyDescriptor(object);
+			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addDisplayOptionPropertyDescriptor(object);
 			addOmitColumnLabelsPropertyDescriptor(object);
 			addRowClassesPropertyDescriptor(object);
@@ -56,19 +56,19 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Anchor Class feature.
+	 * This adds a property descriptor for the Default Local Anchor Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultAnchorClassPropertyDescriptor(Object object) {
+	protected void addDefaultLocalAnchorClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InlineActionContainer_defaultAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_defaultAnchorClass_feature", "_UI_InlineActionContainer_type"),
-				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS,
+				 getString("_UI_InlineActionContainer_defaultLocalAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_defaultLocalAnchorClass_feature", "_UI_InlineActionContainer_type"),
+				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -220,7 +220,7 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IndexUnit.class)) {
-			case WebuiPackage.INDEX_UNIT__DEFAULT_ANCHOR_CLASS:
+			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:

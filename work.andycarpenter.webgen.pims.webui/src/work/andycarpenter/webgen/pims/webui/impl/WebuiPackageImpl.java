@@ -707,7 +707,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputGroupClass() {
+	public EAttribute getWebUI_DefaultAnchorClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -717,7 +717,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputLabelClass() {
+	public EAttribute getWebUI_DefaultInputGroupClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -727,7 +727,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputElementClass() {
+	public EAttribute getWebUI_DefaultInputLabelClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -737,7 +737,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultMaximumUploadSize() {
+	public EAttribute getWebUI_DefaultInputElementClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -747,7 +747,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_InputTechnology() {
+	public EAttribute getWebUI_DefaultMaximumUploadSize() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -757,8 +757,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_AjaxTechnology() {
+	public EAttribute getWebUI_InputTechnology() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_AjaxTechnology() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -3207,7 +3217,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineActionContainer_DefaultAnchorClass() {
+	public EAttribute getInlineActionContainer_DefaultLocalAnchorClass() {
 		return (EAttribute)inlineActionContainerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3627,6 +3637,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TIME_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_TIME_FORMAT);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INPUT_GROUP_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INPUT_LABEL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS);
@@ -3937,7 +3948,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		inlineActionContainerEClass = createEClass(INLINE_ACTION_CONTAINER);
 		createEReference(inlineActionContainerEClass, INLINE_ACTION_CONTAINER__ACTIONS);
-		createEAttribute(inlineActionContainerEClass, INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS);
+		createEAttribute(inlineActionContainerEClass, INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS);
 
 		inlineActionEClass = createEClass(INLINE_ACTION);
 		createEReference(inlineActionEClass, INLINE_ACTION__USED_BY);
@@ -4085,6 +4096,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultDateFormat(), ecorePackage.getEString(), "defaultDateFormat", "jS F Y", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultTimeFormat(), ecorePackage.getEString(), "defaultTimeFormat", "G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDateTimeFormat(), ecorePackage.getEString(), "defaultDateTimeFormat", "jS F Y G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getWebUI_DefaultAnchorClass(), ecorePackage.getEString(), "defaultAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultInputGroupClass(), ecorePackage.getEString(), "defaultInputGroupClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultInputLabelClass(), ecorePackage.getEString(), "defaultInputLabelClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultInputElementClass(), ecorePackage.getEString(), "defaultInputElementClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4395,7 +4407,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(inlineActionContainerEClass, InlineActionContainer.class, "InlineActionContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInlineActionContainer_Actions(), this.getInlineAction(), this.getInlineAction_UsedBy(), "actions", null, 0, -1, InlineActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInlineActionContainer_DefaultAnchorClass(), ecorePackage.getEString(), "defaultAnchorClass", " ", 0, 1, InlineActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInlineActionContainer_DefaultLocalAnchorClass(), ecorePackage.getEString(), "defaultLocalAnchorClass", " ", 0, 1, InlineActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inlineActionEClass, InlineAction.class, "InlineAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInlineAction_UsedBy(), this.getInlineActionContainer(), this.getInlineActionContainer_Actions(), "usedBy", null, 1, 1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -38,6 +38,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
@@ -138,6 +139,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultInputGroupClass() <em>Default Input Group Class</em>}' attribute.
@@ -419,6 +440,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultAnchorClass() {
+		return defaultAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultAnchorClass(String newDefaultAnchorClass) {
+		String oldDefaultAnchorClass = defaultAnchorClass;
+		defaultAnchorClass = newDefaultAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS, oldDefaultAnchorClass, defaultAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultInputGroupClass() {
 		return defaultInputGroupClass;
 	}
@@ -603,6 +647,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				return getDefaultAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				return getDefaultInputGroupClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
@@ -647,6 +693,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				setDefaultInputGroupClass((String)newValue);
@@ -696,6 +745,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				setDefaultInputGroupClass(DEFAULT_INPUT_GROUP_CLASS_EDEFAULT);
 				return;
@@ -738,6 +790,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				return DEFAULT_INPUT_GROUP_CLASS_EDEFAULT == null ? defaultInputGroupClass != null : !DEFAULT_INPUT_GROUP_CLASS_EDEFAULT.equals(defaultInputGroupClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
@@ -770,6 +824,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultAnchorClass: ");
+		result.append(defaultAnchorClass);
 		result.append(", defaultInputGroupClass: ");
 		result.append(defaultInputGroupClass);
 		result.append(", defaultInputLabelClass: ");

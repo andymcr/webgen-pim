@@ -125,13 +125,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DATE_TIME_FORMAT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 6;
+
+	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 6;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -140,7 +149,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 7;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Element Class</b></em>' attribute.
@@ -149,7 +158,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 8;
+	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -158,7 +167,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 9;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -167,7 +176,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 10;
+	int WEB_UI__INPUT_TECHNOLOGY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -176,7 +185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 11;
+	int WEB_UI__AJAX_TECHNOLOGY = 12;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -185,7 +194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 12;
+	int WEB_UI_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -1825,13 +1834,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DEFAULT_ANCHOR_CLASS = UNIT_FIELD_FEATURE_COUNT + 1;
+	int UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS = UNIT_FIELD_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2096,13 +2105,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__ACTIONS = UNIT_FEATURE__ACTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__DEFAULT_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_ANCHOR_CLASS;
+	int UNIT_ELEMENT__DEFAULT_LOCAL_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2421,13 +2430,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__ACTIONS = UNIT_FEATURE__ACTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__DEFAULT_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_ANCHOR_CLASS;
+	int UNIT_ASSOCIATION__DEFAULT_LOCAL_ANCHOR_CLASS = UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -7485,13 +7494,13 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DEFAULT_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
+	int INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Display Option</b></em>' attribute.
@@ -8044,13 +8053,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ACTIONS = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__DEFAULT_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
+	int CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -8823,13 +8832,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
+	int TEXT_CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -9399,13 +9408,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
+	int DATE_CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -10524,13 +10533,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__ACTIONS = CARDS_UNIT__ACTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__DEFAULT_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_ANCHOR_CLASS;
+	int IMAGE_CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -12351,13 +12360,13 @@ public interface WebuiPackage extends EPackage {
 	int INLINE_ACTION_CONTAINER__ACTIONS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS = 1;
+	int INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Inline Action Container</em>' class.
@@ -13098,6 +13107,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultDateTimeFormat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultAnchorClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}'.
@@ -15797,15 +15817,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getInlineActionContainer_Actions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass()
+	 * @return the meta object for the attribute '<em>Default Local Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultLocalAnchorClass()
 	 * @see #getInlineActionContainer()
 	 * @generated
 	 */
-	EAttribute getInlineActionContainer_DefaultAnchorClass();
+	EAttribute getInlineActionContainer_DefaultLocalAnchorClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.InlineAction <em>Inline Action</em>}'.
@@ -16294,6 +16314,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_DATE_TIME_FORMAT = eINSTANCE.getWebUI_DefaultDateTimeFormat();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultAnchorClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Input Group Class</b></em>' attribute feature.
@@ -18402,12 +18430,12 @@ public interface WebuiPackage extends EPackage {
 		EReference INLINE_ACTION_CONTAINER__ACTIONS = eINSTANCE.getInlineActionContainer_Actions();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Anchor Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Local Anchor Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS = eINSTANCE.getInlineActionContainer_DefaultAnchorClass();
+		EAttribute INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS = eINSTANCE.getInlineActionContainer_DefaultLocalAnchorClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl <em>Inline Action</em>}' class.

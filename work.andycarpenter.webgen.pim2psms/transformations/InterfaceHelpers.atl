@@ -337,9 +337,11 @@ helper context Website!InterfaceField def: validationPattern() : String
 helper context Website!InlineAction def: anchorClass() : String
 	= if self.anchorClass.trim() <> '' then
 			self.anchorClass.trim()
-		else if self.refImmediateComposite().defaultAnchorClass.trim() <> '' then
-			self.refImmediateComposite().defaultAnchorClass.trim()
+		else if self.refImmediateComposite().defaultLocalAnchorClass.trim() <> '' then
+			self.refImmediateComposite().defaultLocalAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass
 		else
 			OclUndefined
-		endif endif;
+		endif endif endif;
 

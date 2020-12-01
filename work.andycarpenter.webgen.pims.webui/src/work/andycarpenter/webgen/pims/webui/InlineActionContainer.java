@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getActions <em>Actions</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer()
@@ -45,26 +45,26 @@ public interface InlineActionContainer extends EObject {
 	EList<InlineAction> getActions();
 
 	/**
-	 * Returns the value of the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Local Anchor Class</b></em>' attribute.
 	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Anchor Class</em>' attribute.
-	 * @see #setDefaultAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer_DefaultAnchorClass()
+	 * @return the value of the '<em>Default Local Anchor Class</em>' attribute.
+	 * @see #setDefaultLocalAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineActionContainer_DefaultLocalAnchorClass()
 	 * @model default=" "
 	 * @generated
 	 */
-	String getDefaultAnchorClass();
+	String getDefaultLocalAnchorClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultAnchorClass <em>Default Anchor Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Anchor Class</em>' attribute.
-	 * @see #getDefaultAnchorClass()
+	 * @param value the new value of the '<em>Default Local Anchor Class</em>' attribute.
+	 * @see #getDefaultLocalAnchorClass()
 	 * @generated
 	 */
-	void setDefaultAnchorClass(String value);
+	void setDefaultLocalAnchorClass(String value);
 
 } // InlineActionContainer

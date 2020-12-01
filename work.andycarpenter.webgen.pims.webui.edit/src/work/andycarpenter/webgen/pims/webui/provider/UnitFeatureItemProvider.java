@@ -59,7 +59,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDefaultAnchorClassPropertyDescriptor(object);
+			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addDisplayLabelPropertyDescriptor(object);
 			addRequiredPropertyDescriptor(object);
 			addCollectionUiAllowAddPropertyDescriptor(object);
@@ -79,19 +79,19 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Anchor Class feature.
+	 * This adds a property descriptor for the Default Local Anchor Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultAnchorClassPropertyDescriptor(Object object) {
+	protected void addDefaultLocalAnchorClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InlineActionContainer_defaultAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_defaultAnchorClass_feature", "_UI_InlineActionContainer_type"),
-				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__DEFAULT_ANCHOR_CLASS,
+				 getString("_UI_InlineActionContainer_defaultLocalAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_defaultLocalAnchorClass_feature", "_UI_InlineActionContainer_type"),
+				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -467,7 +467,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UnitFeature.class)) {
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_ANCHOR_CLASS:
+			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD:
