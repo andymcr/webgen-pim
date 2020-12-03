@@ -8,6 +8,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -33,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getElementTitle <em>Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isOmitContainerLoad <em>Omit Container Load</em>}</li>
@@ -112,6 +114,16 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected EList<Entity> contentType;
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.COLLECTION_UNIT__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' reference.
@@ -701,6 +713,35 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			contentType = new EObjectResolvingEList<Entity>(Entity.class, this, WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE);
 		}
 		return contentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContainingType(Entity newContainingType) {
+		CONTAINING_TYPE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newContainingType);
 	}
 
 	/**
@@ -1367,6 +1408,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return isTruncateElementTitle();
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return getContentType();
+			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
 				if (resolve) return getSelection();
 				return basicGetSelection();
@@ -1446,6 +1490,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				getContentType().addAll((Collection<? extends Entity>)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
+				setContainingType((Entity)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
 				setSelection((Selection)newValue);
@@ -1547,6 +1594,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				return;
+			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
+				setContainingType((Entity)null);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
 				setSelection((Selection)null);
 				return;
@@ -1642,6 +1692,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return truncateElementTitle != TRUNCATE_ELEMENT_TITLE_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return contentType != null && !contentType.isEmpty();
+			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:
 				return selection != null;
 			case WebuiPackage.COLLECTION_UNIT__FIND_CONTAINER_SELECTION:

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.base.impl.ClassifierImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
@@ -40,6 +41,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAssociationEnds <em>Association Ends</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAllFeatures <em>All Features</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAllAssociations <em>All Associations</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getContainingAssociation <em>Containing Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getKeys <em>Keys</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getUnique <em>Unique</em>}</li>
@@ -154,6 +156,16 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate ALL_ASSOCIATIONS__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ENTITY__ALL_ASSOCIATIONS).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingAssociation() <em>Containing Association</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingAssociation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_ASSOCIATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ENTITY__CONTAINING_ASSOCIATION).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getKeys() <em>Keys</em>}' reference list.
@@ -469,6 +481,25 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@Override
+	public AssociationWithContainment getContainingAssociation() {
+		return (AssociationWithContainment)CONTAINING_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AssociationWithContainment basicGetContainingAssociation() {
+		return (AssociationWithContainment)CONTAINING_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<ModelLabel> getLabels() {
 		if (labels == null) {
 			labels = new EObjectContainmentWithInverseEList<ModelLabel>(ModelLabel.class, this, PersistencePackage.ENTITY__LABELS, PersistencePackage.MODEL_LABEL__LABEL_FOR);
@@ -701,6 +732,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return getAllFeatures();
 			case PersistencePackage.ENTITY__ALL_ASSOCIATIONS:
 				return getAllAssociations();
+			case PersistencePackage.ENTITY__CONTAINING_ASSOCIATION:
+				if (resolve) return getContainingAssociation();
+				return basicGetContainingAssociation();
 			case PersistencePackage.ENTITY__KEYS:
 				return getKeys();
 			case PersistencePackage.ENTITY__LABELS:
@@ -864,6 +898,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return ALL_FEATURES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case PersistencePackage.ENTITY__ALL_ASSOCIATIONS:
 				return ALL_ASSOCIATIONS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case PersistencePackage.ENTITY__CONTAINING_ASSOCIATION:
+				return CONTAINING_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case PersistencePackage.ENTITY__KEYS:
 				return keys != null && !keys.isEmpty();
 			case PersistencePackage.ENTITY__LABELS:

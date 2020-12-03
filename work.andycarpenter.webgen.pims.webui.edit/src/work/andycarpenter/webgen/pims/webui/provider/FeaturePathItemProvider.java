@@ -11,7 +11,7 @@ import java.util.Set;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -28,6 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.service.Selection;
@@ -185,19 +186,29 @@ public class FeaturePathItemProvider
 
 	protected Set<Entity> getParentTypes(final FeaturePath path) {
 		if (path.eContainer() instanceof DynamicUnit) {
-			return getContentTypes((DynamicUnit) path.eContainer());
+			return getContentTypes((DynamicUnit) path.eContainer(), isOnCollectionUnit(path));
 
 		} else if (path.eContainer() instanceof InlineAction) {
 			return getEntities((InlineActionContainer) path.eContainer().eContainer());
 
 		} else if (path.eContainer() instanceof Expression) {
-			return getEntities((Expression) path.eContainer());
+			return getEntities((Expression) path.eContainer(), isOnCollectionUnit(path));
 
 		} else if (path.eContainer() instanceof Badge) {
 			return getEntities((Badge) path.eContainer());
 
 		} else {
 			return Collections.emptySet();
+		}
+	}
+
+	protected Boolean isOnCollectionUnit(EObject eObject) {
+		if (eObject.eContainer() == null) {
+			return false;
+		} else if (eObject.eContainer() instanceof CollectionUnit) {
+			return true;
+		} else {
+			return isOnCollectionUnit(eObject.eContainer());
 		}
 	}
 
@@ -236,6 +247,10 @@ public class FeaturePathItemProvider
 	}
 
 	protected Set<Entity> getContentTypes(final DynamicUnit unit) {
+		return getContentTypes(unit, false);
+	}
+
+	protected Set<Entity> getContentTypes(final DynamicUnit unit, final Boolean useContainer) {
 		final Set<Entity> contentType = new HashSet<Entity>();
 
 		if (unit instanceof SingletonUnit) {
@@ -248,15 +263,38 @@ public class FeaturePathItemProvider
 
 		if (unit instanceof CollectionUnit) {
 			final CollectionUnit collection = (CollectionUnit) unit;
-			contentType.addAll(collection.getContentType());
-			if ((collection.getSelection() != null)
-					&& (collection.getSelection().getSelectPath().size() > 0)) {
-				contentType.add(getSelectType(collection.getSelection(), collection.getContentType()));
+			if (useContainer) {
+				final EList<Entity> contentType2 = ((CollectionUnit) unit).getContentType();
+				if (contentType2.size() > 0) {
+					final Association association
+						= getContainingAssociation(contentType2.get(0));
+					if (association != null) {
+						contentType.add(association.getPartOf());
+					}
+				}
+			} else {
+				contentType.addAll(collection.getContentType());
+				if ((collection.getSelection() != null)
+						&& (collection.getSelection().getSelectPath().size() > 0)) {
+					contentType.add(getSelectType(collection.getSelection(), collection.getContentType()));
+				}
 			}
 			return contentType;
 		}
 
 		return contentType;
+	}
+
+	protected AssociationWithContainment getContainingAssociation(final Entity type) {
+		for (Association association : type.getAllAssociations()) {
+			if (association instanceof AssociationWithContainment) {
+				if (!type.getAssociations().contains(association)) {
+					return (AssociationWithContainment) association;
+				}
+			}
+		}
+
+		return null;
 	}
 
 	protected Entity getSelectType(final Selection selection, final List<Entity> parentTypes) {
@@ -311,9 +349,13 @@ public class FeaturePathItemProvider
 	}
 
 	protected Set<Entity> getEntities(final Expression expression) {
+		return getEntities(expression, false);
+	}
+
+	protected Set<Entity> getEntities(final Expression expression, final Boolean useContainer) {
 		final DynamicUnit unit = getDynamicUnitContext(expression);
 		if (unit != null) {
-			return getContentTypes(unit);
+			return getContentTypes(unit, useContainer);
 		}
 
 		final InlineActionContainer action = getActionContext(expression);

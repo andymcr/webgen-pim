@@ -136,6 +136,8 @@
           ecoreFeature="ecore:EReference persistence.ecore#//Entity/associationEnds"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/allFeatures"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Entity/allAssociations"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Model"
+          ecoreFeature="ecore:EReference persistence.ecore#//Entity/containingAssociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/keys"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/labels"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/unique"/>

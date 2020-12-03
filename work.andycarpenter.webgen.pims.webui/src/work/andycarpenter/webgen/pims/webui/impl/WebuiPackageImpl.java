@@ -2377,7 +2377,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionUnit_Selection() {
+	public EReference getCollectionUnit_ContainingType() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2387,7 +2387,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionUnit_FindContainerSelection() {
+	public EReference getCollectionUnit_Selection() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2397,8 +2397,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getCollectionUnit_FindContainerSelection() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getCollectionUnit_OmitContainerLoad() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2408,16 +2418,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getCollectionUnit_FindElementSelection() {
-		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2427,7 +2427,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionUnit_SupportedFilters() {
+	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2437,8 +2437,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(10);
+	public EReference getCollectionUnit_SupportedFilters() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -2447,7 +2447,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_DefaultPaginationSize() {
+	public EAttribute getCollectionUnit_EmptyMessage() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2457,7 +2457,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_MaximumPaginationSize() {
+	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2467,7 +2467,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PaginationControlPlacement() {
+	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2477,7 +2477,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_NextNpages() {
+	public EAttribute getCollectionUnit_PaginationControlPlacement() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -2487,7 +2487,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PreviousNpages() {
+	public EAttribute getCollectionUnit_NextNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -2497,7 +2497,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_NextPageLabel() {
+	public EAttribute getCollectionUnit_PreviousNpages() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -2507,7 +2507,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_NextPageIconName() {
+	public EAttribute getCollectionUnit_NextPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -2517,7 +2517,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PreviousPageLabel() {
+	public EAttribute getCollectionUnit_NextPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -2527,7 +2527,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PreviousPageIconName() {
+	public EAttribute getCollectionUnit_PreviousPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -2537,7 +2537,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
+	public EAttribute getCollectionUnit_PreviousPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -2547,7 +2547,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
+	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -2557,7 +2557,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_FirstPageLabel() {
+	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -2567,7 +2567,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_FirstPageIconName() {
+	public EAttribute getCollectionUnit_FirstPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -2577,7 +2577,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_LastPageLabel() {
+	public EAttribute getCollectionUnit_FirstPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -2587,7 +2587,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_LastPageIconName() {
+	public EAttribute getCollectionUnit_LastPageLabel() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -2597,7 +2597,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PaginationClass() {
+	public EAttribute getCollectionUnit_LastPageIconName() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -2607,7 +2607,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PaginationElementClass() {
+	public EAttribute getCollectionUnit_PaginationClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -2617,8 +2617,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_PaginationAnchorClass() {
+	public EAttribute getCollectionUnit_PaginationElementClass() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionUnit_PaginationAnchorClass() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(29);
 	}
 
 	/**
@@ -3860,6 +3870,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__ELEMENT_TITLE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__CONTENT_TYPE);
+		createEReference(collectionUnitEClass, COLLECTION_UNIT__CONTAINING_TYPE);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_CONTAINER_SELECTION);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__OMIT_CONTAINER_LOAD);
@@ -4321,6 +4332,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getCollectionUnit_ElementTitle(), this.getFeaturePath(), null, "elementTitle", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_TruncateElementTitle(), ecorePackage.getEBoolean(), "truncateElementTitle", "false", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_ContentType(), thePersistencePackage.getEntity(), null, "contentType", null, 1, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionUnit_ContainingType(), thePersistencePackage.getEntity(), null, "containingType", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Selection(), theServicePackage.getSelection(), null, "selection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindContainerSelection(), theServicePackage.getSelection(), null, "findContainerSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_OmitContainerLoad(), ecorePackage.getEBoolean(), "omitContainerLoad", "false", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4690,7 +4702,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (getFeaturePathAssociation_IsSourceAssociation(),
 		   source,
 		   new String[] {
-			   "derivation", "not association.oclIsUndefined() implies\n\tif self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(CollectionUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SingletonUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(SingletonUnit).contentType = association.partOf\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(UnitField) then\n\t\tlet unit : DynamicUnit = self.oclAsType(ecore::EObject).eContainer().oclAsType(UnitField).displayedOn\n\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\telse\n\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\tendif\n--\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SelectAction) then\n--\t\tnull\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsTypeOf(Badge) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType->includes(self.association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(expression::Expression) then\n\t\tif rootContainer.oclIsKindOf(CollectionUnit) then\n\t\t\trootContainer.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\telse if rootContainer.oclIsKindOf(SingletonUnit) then\n\t\t\trootContainer.oclAsType(SingletonUnit).contentType = association.partOf\n\t\telse if rootContainer.oclIsKindOf(UnitField) then\n\t\t\tlet unit : DynamicUnit = rootContainer.oclAsType(UnitField).displayedOn\n\t\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\t\telse\n\t\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\t\tendif\n\t\telse\n\t\t\ttrue\n\t\tendif endif endif\n\telse\n\t\ttrue\n\tendif endif endif endif endif -- endif"
+			   "derivation", "not association.oclIsUndefined() implies\n\tif self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(CollectionUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SingletonUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(SingletonUnit).contentType = association.partOf\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(UnitField) then\n\t\tlet unit : DynamicUnit = self.oclAsType(ecore::EObject).eContainer().oclAsType(UnitField).displayedOn\n\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\telse\n\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\tendif\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsTypeOf(Badge) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType->includes(self.association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(expression::Expression) then\n\t\tif rootContainer.oclIsKindOf(CollectionUnit) then\n\t\t\tlet collectionUnit : CollectionUnit = rootContainer.oclAsType(CollectionUnit)\n\t\t\tin if collectionUnit.containingType.oclIsUndefined() then\n\t\t\t\t\tcollectionUnit.containingType.associations->includes(association.partOf)\n\t\t\t\telse\n\t\t\t\t\ttrue\n\t\t\t\tendif\n\t\telse if rootContainer.oclIsKindOf(SingletonUnit) then\n\t\t\trootContainer.oclAsType(SingletonUnit).contentType = association.partOf\n\t\telse if rootContainer.oclIsKindOf(UnitField) then\n\t\t\tlet unit : DynamicUnit = rootContainer.oclAsType(UnitField).displayedOn\n\t\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\t\telse\n\t\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\t\tendif\n\t\telse\n\t\t\ttrue\n\t\tendif endif endif\n\telse\n\t\ttrue\n\tendif endif endif endif endif"
 		   });
 		addAnnotation
 		  (getFeaturePathAssociation_SourceEntity(),
@@ -4728,6 +4740,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   new String[] {
 			   "canOnlyTitleWithSingletons", "not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n\t\tunitTitle.oclAsType(persistence::Attribute).cardinality <> persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif",
 			   "selectionMustNotBeSingleton", "not selection.oclIsUndefined() implies\r\n\tselection.limit <> 1"
+		   });
+		addAnnotation
+		  (getCollectionUnit_ContainingType(),
+		   source,
+		   new String[] {
+			   "derivation", "contentType->any(e | not e.containingAssociation.oclIsUndefined())"
 		   });
 		addAnnotation
 		  (detailsUnitEClass,

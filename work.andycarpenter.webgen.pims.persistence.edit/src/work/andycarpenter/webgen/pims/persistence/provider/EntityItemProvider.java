@@ -56,6 +56,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			addAssociationsPropertyDescriptor(object);
 			addAllFeaturesPropertyDescriptor(object);
 			addAllAssociationsPropertyDescriptor(object);
+			addContainingAssociationPropertyDescriptor(object);
 			addKeysPropertyDescriptor(object);
 			addUniquePropertyDescriptor(object);
 			addContainerUniquePropertyDescriptor(object);
@@ -215,6 +216,28 @@ public class EntityItemProvider extends ClassifierItemProvider {
 				 getString("_UI_Entity_allAssociations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_allAssociations_feature", "_UI_Entity_type"),
 				 PersistencePackage.Literals.ENTITY__ALL_ASSOCIATIONS,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Containing Association feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingAssociationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entity_containingAssociation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_containingAssociation_feature", "_UI_Entity_type"),
+				 PersistencePackage.Literals.ENTITY__CONTAINING_ASSOCIATION,
 				 false,
 				 false,
 				 false,

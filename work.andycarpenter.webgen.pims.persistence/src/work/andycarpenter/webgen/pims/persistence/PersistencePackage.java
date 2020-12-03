@@ -1458,13 +1458,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY__ALL_ASSOCIATIONS = BasePackage.CLASSIFIER_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Containing Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__CONTAINING_ASSOCIATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 8;
+
+	/**
 	 * The feature id for the '<em><b>Keys</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__KEYS = BasePackage.CLASSIFIER_FEATURE_COUNT + 8;
+	int ENTITY__KEYS = BasePackage.CLASSIFIER_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -1473,7 +1482,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__LABELS = BasePackage.CLASSIFIER_FEATURE_COUNT + 9;
+	int ENTITY__LABELS = BasePackage.CLASSIFIER_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' reference list.
@@ -1482,7 +1491,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 10;
+	int ENTITY__UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
@@ -1491,7 +1500,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 11;
+	int ENTITY__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
@@ -1500,7 +1509,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
+	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
@@ -1509,7 +1518,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
+	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
@@ -1518,7 +1527,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
+	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
@@ -1527,7 +1536,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
+	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
@@ -1536,7 +1545,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
+	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
@@ -1545,7 +1554,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
+	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1554,7 +1563,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
+	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -5835,6 +5844,17 @@ public interface PersistencePackage extends EPackage {
 	EReference getEntity_AllAssociations();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainingAssociation <em>Containing Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getContainingAssociation()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_ContainingAssociation();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7041,6 +7061,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENTITY__ALL_ASSOCIATIONS = eINSTANCE.getEntity_AllAssociations();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Association</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__CONTAINING_ASSOCIATION = eINSTANCE.getEntity_ContainingAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.

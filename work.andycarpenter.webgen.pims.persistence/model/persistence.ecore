@@ -219,6 +219,13 @@
         <details key="derivation" value="allFeatures->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingAssociation"
+        eType="#//AssociationWithContainment" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="associationEnds->any(e | e.oclIsTypeOf(AssociationWithContainment)).oclAsType(AssociationWithContainment)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="keys" upperBound="-1" eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
         eType="#//ModelLabel" containment="true" eOpposite="#//ModelLabel/labelFor"/>
