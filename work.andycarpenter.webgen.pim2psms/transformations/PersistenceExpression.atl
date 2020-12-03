@@ -66,6 +66,15 @@ rule CurrentUser {
 }
 
 
+rule FunctionCall {
+	from website : Website!FunctionCall (website.isPresistenceExpression())
+	to orm : ORM!FunctionCall (
+		name <- website.name,
+		actuals <- website.actuals
+	)
+}
+
+
 abstract rule Predicate {
 	from website : Website!Predicate
 	to orm : ORM!Predicate (

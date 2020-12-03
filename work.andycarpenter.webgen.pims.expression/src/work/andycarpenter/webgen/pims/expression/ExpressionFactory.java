@@ -67,6 +67,15 @@ public interface ExpressionFactory extends EFactory {
 	TimeLiteral createTimeLiteral();
 
 	/**
+	 * Returns a new object of class '<em>Function Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Call</em>'.
+	 * @generated
+	 */
+	FunctionCall createFunctionCall();
+
+	/**
 	 * Returns a new object of class '<em>Predicate Boolean Operator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -89,6 +89,16 @@ rule CurrentUser {
 
 
 -- @extends Expression
+rule functionCall {
+	from website : Website!FunctionCall (website.isInterfaceExpression())
+	to waf : WAF!FunctionCall (
+		name <- website.name,
+		actuals <- website.actuals
+	)
+}
+
+
+-- @extends Expression
 abstract rule Predicate {
 	from website : Website!Predicate
 	to waf : WAF!Predicate (
