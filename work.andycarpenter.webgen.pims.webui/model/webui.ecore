@@ -480,9 +480,14 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contentType" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="if selection.oclIsUndefined() then&#xA;&#x9;null&#xA;else if selection.selectPath->isEmpty() then&#xA;&#x9;null&#xA;else&#xA;&#x9;selection.selectPath->last().partOf&#xA;endif endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="contentType->any(e | not e.containingAssociation.oclIsUndefined())"/>
+        <details key="derivation" value="if not selectType.oclIsUndefined() then&#xA;&#x9;selectType&#xA;else let contained : persistence::Entity &#xA;&#x9;= contentType->any(e | not e.containingAssociation.oclIsUndefined())&#xA;&#x9;in if contained.oclIsUndefined() then&#xA;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;contained.containingAssociation.partOf&#xA;&#x9;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>

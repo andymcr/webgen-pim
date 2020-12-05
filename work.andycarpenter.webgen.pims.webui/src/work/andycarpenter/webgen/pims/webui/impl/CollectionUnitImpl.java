@@ -34,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getElementTitle <em>Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelectType <em>Select Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
@@ -114,6 +115,16 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected EList<Entity> contentType;
+
+	/**
+	 * The cached setting delegate for the '{@link #getSelectType() <em>Select Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelectType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate SELECT_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.COLLECTION_UNIT__SELECT_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
@@ -713,6 +724,35 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			contentType = new EObjectResolvingEList<Entity>(Entity.class, this, WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE);
 		}
 		return contentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity getSelectType() {
+		return (Entity)SELECT_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetSelectType() {
+		return (Entity)SELECT_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSelectType(Entity newSelectType) {
+		SELECT_TYPE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newSelectType);
 	}
 
 	/**
@@ -1408,6 +1448,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return isTruncateElementTitle();
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return getContentType();
+			case WebuiPackage.COLLECTION_UNIT__SELECT_TYPE:
+				if (resolve) return getSelectType();
+				return basicGetSelectType();
 			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
 				if (resolve) return getContainingType();
 				return basicGetContainingType();
@@ -1490,6 +1533,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				getContentType().addAll((Collection<? extends Entity>)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__SELECT_TYPE:
+				setSelectType((Entity)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
 				setContainingType((Entity)newValue);
@@ -1594,6 +1640,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				getContentType().clear();
 				return;
+			case WebuiPackage.COLLECTION_UNIT__SELECT_TYPE:
+				setSelectType((Entity)null);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
 				setContainingType((Entity)null);
 				return;
@@ -1692,6 +1741,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return truncateElementTitle != TRUNCATE_ELEMENT_TITLE_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__CONTENT_TYPE:
 				return contentType != null && !contentType.isEmpty();
+			case WebuiPackage.COLLECTION_UNIT__SELECT_TYPE:
+				return SELECT_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.COLLECTION_UNIT__CONTAINING_TYPE:
 				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.COLLECTION_UNIT__SELECTION:

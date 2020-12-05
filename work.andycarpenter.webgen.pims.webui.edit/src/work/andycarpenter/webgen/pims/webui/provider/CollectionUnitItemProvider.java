@@ -58,6 +58,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addUnitTitlePropertyDescriptor(object);
 			addTruncateElementTitlePropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
+			addSelectTypePropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addFindContainerSelectionPropertyDescriptor(object);
@@ -169,6 +170,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_contentType_feature", "_UI_CollectionUnit_type"),
 				 WebuiPackage.Literals.COLLECTION_UNIT__CONTENT_TYPE,
 				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Select Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSelectTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_selectType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_selectType_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__SELECT_TYPE,
+				 false,
 				 false,
 				 true,
 				 null,

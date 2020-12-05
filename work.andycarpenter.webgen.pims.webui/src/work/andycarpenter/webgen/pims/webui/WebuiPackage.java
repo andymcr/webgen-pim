@@ -4796,13 +4796,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__SELECT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 4;
+	int COLLECTION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -4811,7 +4820,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 5;
+	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -4820,7 +4829,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
+	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -4829,7 +4838,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -4838,7 +4847,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -4847,7 +4856,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -4856,7 +4865,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -4865,7 +4874,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -4874,7 +4883,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -4883,7 +4892,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -4892,7 +4901,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -4901,7 +4910,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -4910,7 +4919,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -4919,7 +4928,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -4928,7 +4937,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -4937,7 +4946,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 19;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -4946,7 +4955,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 20;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -4955,7 +4964,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 21;
+	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -4964,7 +4973,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 22;
+	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -4973,7 +4982,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 23;
+	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -4982,7 +4991,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 24;
+	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -4991,7 +5000,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 25;
+	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -5000,7 +5009,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 26;
+	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -5009,7 +5018,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
+	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -5018,7 +5027,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 29;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -5027,7 +5036,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 29;
+	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 30;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -5036,7 +5045,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 30;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 31;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -7305,6 +7314,15 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7880,6 +7898,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -8679,6 +8706,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9271,6 +9307,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -9876,6 +9921,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10423,6 +10477,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -11082,6 +11145,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SELECT_TYPE = IMAGE_UNIT__SELECT_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11647,6 +11719,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Select Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SELECT_TYPE = IMAGE_UNIT__SELECT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -15081,6 +15162,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getCollectionUnit_ContentType();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType <em>Select Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Select Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EReference getCollectionUnit_SelectType();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContainingType <em>Containing Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17926,6 +18018,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COLLECTION_UNIT__CONTENT_TYPE = eINSTANCE.getCollectionUnit_ContentType();
+
+		/**
+		 * The meta object literal for the '<em><b>Select Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_UNIT__SELECT_TYPE = eINSTANCE.getCollectionUnit_SelectType();
 
 		/**
 		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.

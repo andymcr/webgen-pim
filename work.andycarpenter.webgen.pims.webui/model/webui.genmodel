@@ -287,6 +287,8 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/contentType"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Model"
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/selectType"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Model"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/containingType"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/selection"/>
