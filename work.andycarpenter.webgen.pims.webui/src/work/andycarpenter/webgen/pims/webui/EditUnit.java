@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit()
@@ -181,5 +182,28 @@ public interface EditUnit extends SingletonUnit {
 	 * @generated
 	 */
 	void setCustomiseValues(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit Input Group Class</em>' attribute.
+	 * @see #setUnitInputGroupClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_UnitInputGroupClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getUnitInputGroupClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit Input Group Class</em>' attribute.
+	 * @see #getUnitInputGroupClass()
+	 * @generated
+	 */
+	void setUnitInputGroupClass(String value);
 
 } // EditUnit

@@ -31,7 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getColumnClass <em>Column Class</em>}</li>
@@ -100,26 +99,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected EList<Badge> badges;
-
-	/**
-	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitFieldLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OMIT_FIELD_LABELS_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitFieldLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean omitFieldLabels = OMIT_FIELD_LABELS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isOverlaySingleSelectAction() <em>Overlay Single Select Action</em>}' attribute.
@@ -298,29 +277,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public boolean isOmitFieldLabels() {
-		return omitFieldLabels;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOmitFieldLabels(boolean newOmitFieldLabels) {
-		boolean oldOmitFieldLabels = omitFieldLabels;
-		omitFieldLabels = newOmitFieldLabels;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS, oldOmitFieldLabels, omitFieldLabels));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean isOverlaySingleSelectAction() {
 		return overlaySingleSelectAction;
 	}
@@ -456,8 +412,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getDefaultLocalAnchorClass();
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return getBadges();
-			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
-				return isOmitFieldLabels();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return isOverlaySingleSelectAction();
 			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
@@ -492,9 +446,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
 				getBadges().addAll((Collection<? extends Badge>)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
-				setOmitFieldLabels((Boolean)newValue);
 				return;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction((Boolean)newValue);
@@ -532,9 +483,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
 				return;
-			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
-				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
-				return;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction(OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT);
 				return;
@@ -567,8 +515,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return badges != null && !badges.isEmpty();
-			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
-				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return overlaySingleSelectAction != OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
 			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
@@ -631,8 +577,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		result.append(actionNavigationClass);
 		result.append(", defaultLocalAnchorClass: ");
 		result.append(defaultLocalAnchorClass);
-		result.append(", omitFieldLabels: ");
-		result.append(omitFieldLabels);
 		result.append(", overlaySingleSelectAction: ");
 		result.append(overlaySingleSelectAction);
 		result.append(", rowClass: ");

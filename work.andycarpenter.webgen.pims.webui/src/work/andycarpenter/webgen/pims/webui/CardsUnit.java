@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}</li>
@@ -43,33 +42,6 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @generated
 	 */
 	EList<Badge> getBadges();
-
-	/**
-	 * Returns the value of the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Omit Field Labels</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Omit Field Labels</em>' attribute.
-	 * @see #setOmitFieldLabels(boolean)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_OmitFieldLabels()
-	 * @model default="false" ordered="false"
-	 * @generated
-	 */
-	boolean isOmitFieldLabels();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Omit Field Labels</em>' attribute.
-	 * @see #isOmitFieldLabels()
-	 * @generated
-	 */
-	void setOmitFieldLabels(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Overlay Single Select Action</b></em>' attribute.

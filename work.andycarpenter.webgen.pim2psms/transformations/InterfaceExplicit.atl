@@ -277,9 +277,7 @@ abstract rule DynamicUnit {
 		headerClass <- website.headerClass,
 		controlClass <- website.controlClass,
 		footerClass <- website.footerClass,
-		fieldListClass <- website.fieldListClass(),
-		fieldLabelClass <- website.fieldLabelClass(),
-		fieldValueClass <- website.fieldValueClass()
+		fieldListClass <- website.fieldListClass()
 	)
 }
 
@@ -311,7 +309,10 @@ abstract rule UnitFeature {
 		displayDefaultWhen <- website.displayDefaultWhen,
 		emptyDisplayValue <- website.emptyDisplayValue(),
 		autofocus <- website.autofocus,
-		footer <- website.footer
+		footer <- website.footer,
+		fieldLabelClass <- website.fieldLabelClass(),
+		fieldValueClass <- website.fieldValueClass(),
+		inputGroupClass <- website.inputGroupClass()
 	)
 }
 
@@ -327,9 +328,6 @@ rule UnitAttribute {
 		validationPattern <- website.validationPattern,
 		headerClass <- website.headerClass(),
 		displayClass <- website.displayClass(),
-		inputGroupClass <- website.inputGroupClass(),
-		inputLabelClass <- website.inputLabelClass(),
-		inputElementClass <- website.inputElementClass(),
 		footerClass <- website.footerClass()
 	)
 }
@@ -352,9 +350,6 @@ rule UnitAssociation {
 			endif,
 		headerClass <- website.headerClass(),
 		displayClass <- website.displayClass(),
-		inputGroupClass <- website.inputGroupClass(),
-		inputLabelClass <- website.inputLabelClass(),
-		inputElementClass <- website.inputElementClass(),
 		footerClass <- website.footerClass()
 	)
 }
@@ -546,6 +541,7 @@ abstract rule CollectionUnit {
 				website.filter.findFilter()
 			endif,
 		supportedFilters <-	website.supportedFilters->collect(f | f.findFilter()),
+		omitFieldLabels <- website.omitFieldLabels,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
 		paginationControlPlacement <- website.paginationControlPlacement,
@@ -682,7 +678,6 @@ rule DetailsUnit {
 abstract rule IndexUnit {
 	from website : Website!IndexUnit
 	to waf : WAF!IndexUnit (
-		omitColumnLabels <- website.omitColumnLabels,
 		rowClasses <- website.rowClasses.replaceAll(',', ' ')
 	)
 }
@@ -713,7 +708,6 @@ abstract rule CardsUnit {
 	from website : Website!CardsUnit
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
-		omitFieldLabels <- website.omitFieldLabels,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
 		rowClass <- website.rowClass.replaceAll(',', ' ').trim(),
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),

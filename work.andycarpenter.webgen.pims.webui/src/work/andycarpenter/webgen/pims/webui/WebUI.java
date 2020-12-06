@@ -29,7 +29,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getInputTechnology <em>Input Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getAjaxTechnology <em>Ajax Technology</em>}</li>
@@ -344,27 +344,27 @@ public interface WebUI extends EObject {
 	void setDefaultInputLabelClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Input Element Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Input Value Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Input Element Class</em>' attribute.
-	 * @see #setDefaultInputElementClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultInputElementClass()
+	 * @return the value of the '<em>Default Input Value Class</em>' attribute.
+	 * @see #setDefaultInputValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultInputValueClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getDefaultInputElementClass();
+	String getDefaultInputValueClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Input Element Class</em>' attribute.
-	 * @see #getDefaultInputElementClass()
+	 * @param value the new value of the '<em>Default Input Value Class</em>' attribute.
+	 * @see #getDefaultInputValueClass()
 	 * @generated
 	 */
-	void setDefaultInputElementClass(String value);
+	void setDefaultInputValueClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Maximum Upload Size</b></em>' attribute.

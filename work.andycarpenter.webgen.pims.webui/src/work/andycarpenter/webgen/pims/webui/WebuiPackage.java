@@ -188,13 +188,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>Default Input Element Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 13;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -1643,22 +1643,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+	int DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -2005,31 +2005,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+
+	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__INPUT_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__INPUT_ELEMENT_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -2285,6 +2285,24 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__FIELD_LABEL_CLASS = UNIT_FEATURE__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__FIELD_VALUE_CLASS = UNIT_FEATURE__FIELD_VALUE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2292,24 +2310,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__INPUT_LABEL_CLASS = UNIT_FEATURE__INPUT_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__INPUT_ELEMENT_CLASS = UNIT_FEATURE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -2619,6 +2619,24 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__FIELD_LABEL_CLASS = UNIT_FEATURE__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__FIELD_VALUE_CLASS = UNIT_FEATURE__FIELD_VALUE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2626,24 +2644,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__INPUT_LABEL_CLASS = UNIT_FEATURE__INPUT_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__INPUT_ELEMENT_CLASS = UNIT_FEATURE__INPUT_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
@@ -4534,22 +4534,22 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+	int SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
+	int SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -4823,22 +4823,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+	int COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
+	int COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -4958,13 +4958,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+
+	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -4973,7 +4982,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -4982,7 +4991,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -4991,7 +5000,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -5000,7 +5009,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -5009,7 +5018,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -5018,7 +5027,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 19;
+	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -5027,7 +5036,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 20;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -5036,7 +5045,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 21;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -5045,7 +5054,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 22;
+	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -5054,7 +5063,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 23;
+	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -5063,7 +5072,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 24;
+	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -5072,7 +5081,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 25;
+	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -5081,7 +5090,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 26;
+	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -5090,7 +5099,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 27;
+	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -5099,7 +5108,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 29;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -5108,7 +5117,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 29;
+	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 30;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -5117,7 +5126,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 30;
+	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 31;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -5126,7 +5135,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 31;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 32;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -5373,22 +5382,22 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__FIELD_LABEL_CLASS = SINGLETON_UNIT__FIELD_LABEL_CLASS;
+	int EDIT_UNIT__UNIT_FIELD_LABEL_CLASS = SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__FIELD_VALUE_CLASS = SINGLETON_UNIT__FIELD_VALUE_CLASS;
+	int EDIT_UNIT__UNIT_FIELD_VALUE_CLASS = SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -5463,13 +5472,22 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -5716,22 +5734,22 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+	int CREATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
+	int CREATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -5804,6 +5822,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Create Unit</em>' class.
@@ -6059,22 +6086,22 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+	int CREATE_UPDATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
+	int CREATE_UPDATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6147,6 +6174,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>On Save Continue Editing</b></em>' attribute.
@@ -6429,22 +6465,22 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+	int UPDATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
+	int UPDATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6517,6 +6553,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>On Save Continue Editing</b></em>' attribute.
@@ -6781,22 +6826,22 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+	int MAP_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
+	int MAP_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6869,6 +6914,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Read Only</b></em>' attribute.
@@ -7160,22 +7214,22 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__FIELD_LABEL_CLASS = SINGLETON_UNIT__FIELD_LABEL_CLASS;
+	int DETAILS_UNIT__UNIT_FIELD_LABEL_CLASS = SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__FIELD_VALUE_CLASS = SINGLETON_UNIT__FIELD_VALUE_CLASS;
+	int DETAILS_UNIT__UNIT_FIELD_VALUE_CLASS = SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7467,22 +7521,22 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+	int INDEX_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
+	int INDEX_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -7600,6 +7654,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -7800,22 +7863,13 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Omit Column Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__OMIT_COLUMN_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Row Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Index Unit</em>' class.
@@ -7824,7 +7878,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Index Unit</em>' class.
@@ -8071,22 +8125,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+	int CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
+	int CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -8204,6 +8258,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -8404,22 +8467,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__BADGES = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
@@ -8428,7 +8482,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
@@ -8437,7 +8491,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -8446,7 +8500,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
+	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -8455,7 +8509,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 9;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8895,22 +8949,22 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+	int TEXT_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
+	int TEXT_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9028,6 +9082,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -9226,15 +9289,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__BADGES = CARDS_UNIT__BADGES;
-
-	/**
-	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -9516,22 +9570,22 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+	int DATE_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
+	int DATE_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9649,6 +9703,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -9847,15 +9910,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__BADGES = CARDS_UNIT__BADGES;
-
-	/**
-	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -10146,22 +10200,22 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+	int IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
+	int IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10279,6 +10333,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -10722,22 +10785,22 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+	int IMAGE_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
+	int IMAGE_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10855,6 +10918,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -11053,15 +11125,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__BADGES = CARDS_UNIT__BADGES;
-
-	/**
-	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__OMIT_FIELD_LABELS = CARDS_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Single Select Action</b></em>' attribute.
@@ -11406,22 +11469,22 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIELD_LABEL_CLASS = IMAGE_UNIT__FIELD_LABEL_CLASS;
+	int SLIDER_UNIT__UNIT_FIELD_LABEL_CLASS = IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIELD_VALUE_CLASS = IMAGE_UNIT__FIELD_VALUE_CLASS;
+	int SLIDER_UNIT__UNIT_FIELD_VALUE_CLASS = IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -11539,6 +11602,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__EMPTY_MESSAGE = IMAGE_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__OMIT_FIELD_LABELS = IMAGE_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -12000,22 +12072,22 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIELD_LABEL_CLASS = IMAGE_UNIT__FIELD_LABEL_CLASS;
+	int GALLERY_UNIT__UNIT_FIELD_LABEL_CLASS = IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIELD_VALUE_CLASS = IMAGE_UNIT__FIELD_VALUE_CLASS;
+	int GALLERY_UNIT__UNIT_FIELD_VALUE_CLASS = IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12133,6 +12205,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__EMPTY_MESSAGE = IMAGE_UNIT__EMPTY_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__OMIT_FIELD_LABELS = IMAGE_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -12603,22 +12684,22 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+	int CONTROL_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
+	int CONTROL_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -12891,22 +12972,22 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__FIELD_LIST_CLASS = CONTROL_UNIT__FIELD_LIST_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__FIELD_LABEL_CLASS = CONTROL_UNIT__FIELD_LABEL_CLASS;
+	int SEARCH_UNIT__UNIT_FIELD_LABEL_CLASS = CONTROL_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__FIELD_VALUE_CLASS = CONTROL_UNIT__FIELD_VALUE_CLASS;
+	int SEARCH_UNIT__UNIT_FIELD_VALUE_CLASS = CONTROL_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -13807,15 +13888,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultInputLabelClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Input Element Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass()
+	 * @return the meta object for the attribute '<em>Default Input Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultInputElementClass();
+	EAttribute getWebUI_DefaultInputValueClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}'.
@@ -14529,26 +14610,26 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnit_FieldListClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass()
+	 * @return the meta object for the attribute '<em>Unit Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EAttribute getDynamicUnit_FieldLabelClass();
+	EAttribute getDynamicUnit_UnitFieldLabelClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Value Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass()
+	 * @return the meta object for the attribute '<em>Unit Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EAttribute getDynamicUnit_FieldValueClass();
+	EAttribute getDynamicUnit_UnitFieldValueClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitField <em>Unit Field</em>}'.
@@ -14791,6 +14872,28 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_HeaderClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldLabelClass <em>Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldLabelClass()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_FieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldValueClass <em>Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldValueClass()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_FieldValueClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14800,28 +14903,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUnitFeature_InputGroupClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass <em>Input Label Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputLabelClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_InputLabelClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass <em>Input Element Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Element Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputElementClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_InputElementClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}'.
@@ -15685,6 +15766,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionUnit_EmptyMessage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Omit Field Labels</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_OmitFieldLabels();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15959,6 +16051,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getEditUnit_CustomiseValues();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit Input Group Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_UnitInputGroupClass();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CreateUnit <em>Create Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16140,17 +16243,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getIndexUnit_DisplayOption();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#isOmitColumnLabels <em>Omit Column Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Omit Column Labels</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#isOmitColumnLabels()
-	 * @see #getIndexUnit()
-	 * @generated
-	 */
-	EAttribute getIndexUnit_OmitColumnLabels();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getRowClasses <em>Row Classes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16181,17 +16273,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCardsUnit_Badges();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels <em>Omit Field Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Omit Field Labels</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#isOmitFieldLabels()
-	 * @see #getCardsUnit()
-	 * @generated
-	 */
-	EAttribute getCardsUnit_OmitFieldLabels();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}'.
@@ -17092,12 +17173,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_INPUT_LABEL_CLASS = eINSTANCE.getWebUI_DefaultInputLabelClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Input Element Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Input Value Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = eINSTANCE.getWebUI_DefaultInputElementClass();
+		EAttribute WEB_UI__DEFAULT_INPUT_VALUE_CLASS = eINSTANCE.getWebUI_DefaultInputValueClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Maximum Upload Size</b></em>' attribute feature.
@@ -17658,20 +17739,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT__FIELD_LIST_CLASS = eINSTANCE.getDynamicUnit_FieldListClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Field Label Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Unit Field Label Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DYNAMIC_UNIT__FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnit_FieldLabelClass();
+		EAttribute DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnit_UnitFieldLabelClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Field Value Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Unit Field Value Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DYNAMIC_UNIT__FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnit_FieldValueClass();
+		EAttribute DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnit_UnitFieldValueClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl <em>Unit Field</em>}' class.
@@ -17854,28 +17935,28 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__HEADER_CLASS = eINSTANCE.getUnitFeature_HeaderClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__FIELD_LABEL_CLASS = eINSTANCE.getUnitFeature_FieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__FIELD_VALUE_CLASS = eINSTANCE.getUnitFeature_FieldValueClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Input Group Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute UNIT_FEATURE__INPUT_GROUP_CLASS = eINSTANCE.getUnitFeature_InputGroupClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Label Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__INPUT_LABEL_CLASS = eINSTANCE.getUnitFeature_InputLabelClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Element Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__INPUT_ELEMENT_CLASS = eINSTANCE.getUnitFeature_InputElementClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Class</b></em>' attribute feature.
@@ -18556,6 +18637,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_UNIT__EMPTY_MESSAGE = eINSTANCE.getCollectionUnit_EmptyMessage();
 
 		/**
+		 * The meta object literal for the '<em><b>Omit Field Labels</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__OMIT_FIELD_LABELS = eINSTANCE.getCollectionUnit_OmitFieldLabels();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Pagination Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18758,6 +18847,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute EDIT_UNIT__CUSTOMISE_VALUES = eINSTANCE.getEditUnit_CustomiseValues();
 
 		/**
+		 * The meta object literal for the '<em><b>Unit Input Group Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = eINSTANCE.getEditUnit_UnitInputGroupClass();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CreateUnitImpl <em>Create Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18906,14 +19003,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute INDEX_UNIT__DISPLAY_OPTION = eINSTANCE.getIndexUnit_DisplayOption();
 
 		/**
-		 * The meta object literal for the '<em><b>Omit Column Labels</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INDEX_UNIT__OMIT_COLUMN_LABELS = eINSTANCE.getIndexUnit_OmitColumnLabels();
-
-		/**
 		 * The meta object literal for the '<em><b>Row Classes</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18938,14 +19027,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CARDS_UNIT__BADGES = eINSTANCE.getCardsUnit_Badges();
-
-		/**
-		 * The meta object literal for the '<em><b>Omit Field Labels</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT__OMIT_FIELD_LABELS = eINSTANCE.getCardsUnit_OmitFieldLabels();
 
 		/**
 		 * The meta object literal for the '<em><b>Overlay Single Select Action</b></em>' attribute feature.

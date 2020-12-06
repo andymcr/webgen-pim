@@ -48,7 +48,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 
 			addActionNavigationClassPropertyDescriptor(object);
 			addDefaultLocalAnchorClassPropertyDescriptor(object);
-			addOmitFieldLabelsPropertyDescriptor(object);
 			addOverlaySingleSelectActionPropertyDescriptor(object);
 			addRowClassPropertyDescriptor(object);
 			addColumnClassPropertyDescriptor(object);
@@ -98,28 +97,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Omit Field Labels feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOmitFieldLabelsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnit_omitFieldLabels_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_omitFieldLabels_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__OMIT_FIELD_LABELS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -271,7 +248,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 		switch (notification.getFeatureID(CardsUnit.class)) {
 			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-			case WebuiPackage.CARDS_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
 			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:

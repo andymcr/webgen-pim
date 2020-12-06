@@ -52,6 +52,7 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			addCancelDestinationPropertyDescriptor(object);
 			addCancelLabelPropertyDescriptor(object);
 			addCustomiseValuesPropertyDescriptor(object);
+			addUnitInputGroupClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -167,6 +168,28 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Unit Input Group Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnitInputGroupClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_unitInputGroupClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_unitInputGroupClass_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -226,6 +249,7 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
+			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:

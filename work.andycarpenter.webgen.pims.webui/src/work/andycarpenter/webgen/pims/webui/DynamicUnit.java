@@ -26,8 +26,8 @@ import work.andycarpenter.webgen.pims.service.Service;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass <em>Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
@@ -297,49 +297,49 @@ public interface DynamicUnit extends ContentUnit {
 	void setFieldListClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Field Label Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Unit Field Label Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field Label Class</em>' attribute.
-	 * @see #setFieldLabelClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldLabelClass()
+	 * @return the value of the '<em>Unit Field Label Class</em>' attribute.
+	 * @see #setUnitFieldLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_UnitFieldLabelClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getFieldLabelClass();
+	String getUnitFieldLabelClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field Label Class</em>' attribute.
-	 * @see #getFieldLabelClass()
+	 * @param value the new value of the '<em>Unit Field Label Class</em>' attribute.
+	 * @see #getUnitFieldLabelClass()
 	 * @generated
 	 */
-	void setFieldLabelClass(String value);
+	void setUnitFieldLabelClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Field Value Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Unit Field Value Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field Value Class</em>' attribute.
-	 * @see #setFieldValueClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldValueClass()
+	 * @return the value of the '<em>Unit Field Value Class</em>' attribute.
+	 * @see #setUnitFieldValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_UnitFieldValueClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getFieldValueClass();
+	String getUnitFieldValueClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field Value Class</em>' attribute.
-	 * @see #getFieldValueClass()
+	 * @param value the new value of the '<em>Unit Field Value Class</em>' attribute.
+	 * @see #getUnitFieldValueClass()
 	 * @generated
 	 */
-	void setFieldValueClass(String value);
+	void setUnitFieldValueClass(String value);
 
 } // DynamicUnit

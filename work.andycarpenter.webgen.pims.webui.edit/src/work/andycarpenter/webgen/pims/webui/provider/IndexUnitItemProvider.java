@@ -50,7 +50,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 			addActionNavigationClassPropertyDescriptor(object);
 			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addDisplayOptionPropertyDescriptor(object);
-			addOmitColumnLabelsPropertyDescriptor(object);
 			addRowClassesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -118,28 +117,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Omit Column Labels feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOmitColumnLabelsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IndexUnit_omitColumnLabels_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IndexUnit_omitColumnLabels_feature", "_UI_IndexUnit_type"),
-				 WebuiPackage.Literals.INDEX_UNIT__OMIT_COLUMN_LABELS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
@@ -246,7 +223,6 @@ public class IndexUnitItemProvider extends CollectionUnitItemProvider {
 			case WebuiPackage.INDEX_UNIT__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.INDEX_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
-			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

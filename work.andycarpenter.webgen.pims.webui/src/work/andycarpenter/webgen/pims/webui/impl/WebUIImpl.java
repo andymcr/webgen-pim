@@ -45,7 +45,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputValueClass <em>Default Input Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getInputTechnology <em>Input Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getAjaxTechnology <em>Ajax Technology</em>}</li>
@@ -285,24 +285,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultInputLabelClass = DEFAULT_INPUT_LABEL_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultInputElementClass() <em>Default Input Element Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultInputValueClass() <em>Default Input Value Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultInputElementClass()
+	 * @see #getDefaultInputValueClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT = "";
+	protected static final String DEFAULT_INPUT_VALUE_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultInputElementClass() <em>Default Input Element Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultInputValueClass() <em>Default Input Value Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultInputElementClass()
+	 * @see #getDefaultInputValueClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultInputElementClass = DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT;
+	protected String defaultInputValueClass = DEFAULT_INPUT_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultMaximumUploadSize() <em>Default Maximum Upload Size</em>}' attribute.
@@ -685,8 +685,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultInputElementClass() {
-		return defaultInputElementClass;
+	public String getDefaultInputValueClass() {
+		return defaultInputValueClass;
 	}
 
 	/**
@@ -695,11 +695,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultInputElementClass(String newDefaultInputElementClass) {
-		String oldDefaultInputElementClass = defaultInputElementClass;
-		defaultInputElementClass = newDefaultInputElementClass;
+	public void setDefaultInputValueClass(String newDefaultInputValueClass) {
+		String oldDefaultInputValueClass = defaultInputValueClass;
+		defaultInputValueClass = newDefaultInputValueClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS, oldDefaultInputElementClass, defaultInputElementClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS, oldDefaultInputValueClass, defaultInputValueClass));
 	}
 
 	/**
@@ -837,8 +837,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultInputGroupClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 				return getDefaultInputLabelClass();
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
-				return getDefaultInputElementClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
+				return getDefaultInputValueClass();
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return getDefaultMaximumUploadSize();
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -899,8 +899,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 				setDefaultInputLabelClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
-				setDefaultInputElementClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
+				setDefaultInputValueClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize((Integer)newValue);
@@ -962,8 +962,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 				setDefaultInputLabelClass(DEFAULT_INPUT_LABEL_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
-				setDefaultInputElementClass(DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
+				setDefaultInputValueClass(DEFAULT_INPUT_VALUE_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize(DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT);
@@ -1012,8 +1012,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_INPUT_GROUP_CLASS_EDEFAULT == null ? defaultInputGroupClass != null : !DEFAULT_INPUT_GROUP_CLASS_EDEFAULT.equals(defaultInputGroupClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 				return DEFAULT_INPUT_LABEL_CLASS_EDEFAULT == null ? defaultInputLabelClass != null : !DEFAULT_INPUT_LABEL_CLASS_EDEFAULT.equals(defaultInputLabelClass);
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:
-				return DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT == null ? defaultInputElementClass != null : !DEFAULT_INPUT_ELEMENT_CLASS_EDEFAULT.equals(defaultInputElementClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
+				return DEFAULT_INPUT_VALUE_CLASS_EDEFAULT == null ? defaultInputValueClass != null : !DEFAULT_INPUT_VALUE_CLASS_EDEFAULT.equals(defaultInputValueClass);
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return defaultMaximumUploadSize != DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -1054,8 +1054,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultInputGroupClass);
 		result.append(", defaultInputLabelClass: ");
 		result.append(defaultInputLabelClass);
-		result.append(", defaultInputElementClass: ");
-		result.append(defaultInputElementClass);
+		result.append(", defaultInputValueClass: ");
+		result.append(defaultInputValueClass);
 		result.append(", defaultMaximumUploadSize: ");
 		result.append(defaultMaximumUploadSize);
 		result.append(", inputTechnology: ");

@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.service.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSupportedFilters <em>Supported Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getEmptyMessage <em>Empty Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationControlPlacement <em>Pagination Control Placement</em>}</li>
@@ -368,6 +369,29 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setEmptyMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Omit Field Labels</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Omit Field Labels</em>' attribute.
+	 * @see #setOmitFieldLabels(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_OmitFieldLabels()
+	 * @model default="false" ordered="false"
+	 * @generated
+	 */
+	boolean isOmitFieldLabels();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Omit Field Labels</em>' attribute.
+	 * @see #isOmitFieldLabels()
+	 * @generated
+	 */
+	void setOmitFieldLabels(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Pagination Size</b></em>' attribute.

@@ -43,9 +43,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldLabelClass <em>Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldValueClass <em>Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputGroupClass <em>Input Group Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputLabelClass <em>Input Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputElementClass <em>Input Element Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayClass <em>Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
@@ -304,6 +304,46 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	protected String headerClass = HEADER_CLASS_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fieldLabelClass = FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fieldValueClass = FIELD_VALUE_CLASS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getInputGroupClass() <em>Input Group Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,46 +362,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected String inputGroupClass = INPUT_GROUP_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getInputLabelClass() <em>Input Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INPUT_LABEL_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getInputLabelClass() <em>Input Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String inputLabelClass = INPUT_LABEL_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputElementClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INPUT_ELEMENT_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getInputElementClass() <em>Input Element Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputElementClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String inputElementClass = INPUT_ELEMENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
@@ -784,6 +784,52 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
+	public String getFieldLabelClass() {
+		return fieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFieldLabelClass(String newFieldLabelClass) {
+		String oldFieldLabelClass = fieldLabelClass;
+		fieldLabelClass = newFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS, oldFieldLabelClass, fieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFieldValueClass() {
+		return fieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFieldValueClass(String newFieldValueClass) {
+		String oldFieldValueClass = fieldValueClass;
+		fieldValueClass = newFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS, oldFieldValueClass, fieldValueClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getInputGroupClass() {
 		return inputGroupClass;
 	}
@@ -799,52 +845,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		inputGroupClass = newInputGroupClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS, oldInputGroupClass, inputGroupClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getInputLabelClass() {
-		return inputLabelClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInputLabelClass(String newInputLabelClass) {
-		String oldInputLabelClass = inputLabelClass;
-		inputLabelClass = newInputLabelClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS, oldInputLabelClass, inputLabelClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getInputElementClass() {
-		return inputElementClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInputElementClass(String newInputElementClass) {
-		String oldInputElementClass = inputElementClass;
-		inputElementClass = newInputElementClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS, oldInputElementClass, inputElementClass));
 	}
 
 	/**
@@ -962,12 +962,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return isAutofocus();
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				return getHeaderClass();
+			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
+				return getFieldLabelClass();
+			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
+				return getFieldValueClass();
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				return getInputGroupClass();
-			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
-				return getInputLabelClass();
-			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
-				return getInputElementClass();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 				return getDisplayClass();
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
@@ -1028,14 +1028,14 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				setHeaderClass((String)newValue);
 				return;
+			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
+				setFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
+				setFieldValueClass((String)newValue);
+				return;
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				setInputGroupClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
-				setInputLabelClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
-				setInputElementClass((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 				setDisplayClass((String)newValue);
@@ -1097,14 +1097,14 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				setHeaderClass(HEADER_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
+				setFieldLabelClass(FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
+				setFieldValueClass(FIELD_VALUE_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				setInputGroupClass(INPUT_GROUP_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
-				setInputLabelClass(INPUT_LABEL_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
-				setInputElementClass(INPUT_ELEMENT_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 				setDisplayClass(DISPLAY_CLASS_EDEFAULT);
@@ -1152,12 +1152,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return autofocus != AUTOFOCUS_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
 				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
+			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
+				return FIELD_LABEL_CLASS_EDEFAULT == null ? fieldLabelClass != null : !FIELD_LABEL_CLASS_EDEFAULT.equals(fieldLabelClass);
+			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
+				return FIELD_VALUE_CLASS_EDEFAULT == null ? fieldValueClass != null : !FIELD_VALUE_CLASS_EDEFAULT.equals(fieldValueClass);
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				return INPUT_GROUP_CLASS_EDEFAULT == null ? inputGroupClass != null : !INPUT_GROUP_CLASS_EDEFAULT.equals(inputGroupClass);
-			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
-				return INPUT_LABEL_CLASS_EDEFAULT == null ? inputLabelClass != null : !INPUT_LABEL_CLASS_EDEFAULT.equals(inputLabelClass);
-			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
-				return INPUT_ELEMENT_CLASS_EDEFAULT == null ? inputElementClass != null : !INPUT_ELEMENT_CLASS_EDEFAULT.equals(inputElementClass);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 				return DISPLAY_CLASS_EDEFAULT == null ? displayClass != null : !DISPLAY_CLASS_EDEFAULT.equals(displayClass);
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
@@ -1234,12 +1234,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(autofocus);
 		result.append(", headerClass: ");
 		result.append(headerClass);
+		result.append(", fieldLabelClass: ");
+		result.append(fieldLabelClass);
+		result.append(", fieldValueClass: ");
+		result.append(fieldValueClass);
 		result.append(", inputGroupClass: ");
 		result.append(inputGroupClass);
-		result.append(", inputLabelClass: ");
-		result.append(inputLabelClass);
-		result.append(", inputElementClass: ");
-		result.append(inputElementClass);
 		result.append(", displayClass: ");
 		result.append(displayClass);
 		result.append(", footerClass: ");

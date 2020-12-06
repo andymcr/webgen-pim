@@ -116,8 +116,6 @@ lazy abstract rule implicitUnitFeature {
 					else
 						feature.displayClass
 					endif,
-		inputLabelClass <- OclUndefined,
-		inputElementClass <- OclUndefined,
 		footerClass <-
 			let feature : Website!Feature
 				= thisModule.findWebsiteEntity(partialWaf.partOf.name)

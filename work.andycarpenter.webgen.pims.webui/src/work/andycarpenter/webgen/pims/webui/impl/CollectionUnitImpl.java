@@ -43,6 +43,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSupportedFilters <em>Supported Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getEmptyMessage <em>Empty Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getPaginationControlPlacement <em>Pagination Control Placement</em>}</li>
@@ -225,6 +226,26 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected String emptyMessage = EMPTY_MESSAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOmitFieldLabels()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean OMIT_FIELD_LABELS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOmitFieldLabels()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean omitFieldLabels = OMIT_FIELD_LABELS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultPaginationSize() <em>Default Pagination Size</em>}' attribute.
@@ -1009,6 +1030,29 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
+	public boolean isOmitFieldLabels() {
+		return omitFieldLabels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOmitFieldLabels(boolean newOmitFieldLabels) {
+		boolean oldOmitFieldLabels = omitFieldLabels;
+		omitFieldLabels = newOmitFieldLabels;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS, oldOmitFieldLabels, omitFieldLabels));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getDefaultPaginationSize() {
 		return defaultPaginationSize;
 	}
@@ -1472,6 +1516,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return getSupportedFilters();
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				return getEmptyMessage();
+			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
+				return isOmitFieldLabels();
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 				return getDefaultPaginationSize();
 			case WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE:
@@ -1561,6 +1607,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return;
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				setEmptyMessage((String)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
+				setOmitFieldLabels((Boolean)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 				setDefaultPaginationSize((Integer)newValue);
@@ -1667,6 +1716,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				setEmptyMessage(EMPTY_MESSAGE_EDEFAULT);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
+				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 				setDefaultPaginationSize(DEFAULT_PAGINATION_SIZE_EDEFAULT);
 				return;
@@ -1759,6 +1811,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return supportedFilters != null && !supportedFilters.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				return EMPTY_MESSAGE_EDEFAULT == null ? emptyMessage != null : !EMPTY_MESSAGE_EDEFAULT.equals(emptyMessage);
+			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
+				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 				return defaultPaginationSize != DEFAULT_PAGINATION_SIZE_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE:
@@ -1815,6 +1869,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		result.append(omitContainerLoad);
 		result.append(", emptyMessage: ");
 		result.append(emptyMessage);
+		result.append(", omitFieldLabels: ");
+		result.append(omitFieldLabels);
 		result.append(", defaultPaginationSize: ");
 		result.append(defaultPaginationSize);
 		result.append(", maximumPaginationSize: ");

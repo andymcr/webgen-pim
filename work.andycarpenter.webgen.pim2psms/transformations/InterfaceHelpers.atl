@@ -225,50 +225,66 @@ helper context Website!DynamicUnit def: fieldListClass() : String
 			OclUndefined
 		endif endif;
 
-helper context Website!DynamicUnit def: fieldLabelClass() : String
+helper context Website!UnitFeature def: fieldLabelClass() : String
 	= if self.fieldLabelClass.trim() <> '' then
 			self.fieldLabelClass.trim()
-		else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultFieldLabelClass
+		else if self.displayedOn.unitFieldLabelClass.trim() <> '' then
+			self.displayedOn.unitFieldLabelClass.trim()
 		else
-			OclUndefined
+			if self.displayedOn.oclIsKindOf(Website!EditUnit) then
+				if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultInputLabelClass.trim()
+				else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldLabelClass.trim() 
+				else
+					OclUndefined
+				endif endif
+			else
+				 if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldLabelClass.trim() 
+				else
+					OclUndefined
+				endif
+			endif
 		endif endif;
 
-helper context Website!DynamicUnit def: fieldValueClass() : String
+helper context Website!UnitFeature def: fieldValueClass() : String
 	= if self.fieldValueClass.trim() <> '' then
 			self.fieldValueClass.trim()
-		else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultFieldValueClass
+		else if self.displayedOn.unitFieldValueClass.trim() <> '' then
+			self.displayedOn.unitFieldValueClass.trim()
 		else
-			OclUndefined
+			if self.displayedOn.oclIsKindOf(Website!EditUnit) then
+				if thisModule.findWebsiteUI().defaultInputValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultInputValueClass.trim()
+				else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldValueClass.trim() 
+				else
+					OclUndefined
+				endif endif
+			else
+				 if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldValueClass.trim() 
+				else
+					OclUndefined
+				endif
+			endif
 		endif endif;
 
-helper context Website!UnitField def: inputGroupClass() : String
-	= if self.inputGroupClass.trim() <> '' then
-			self.inputLabelClass.trim()
-		else if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultInputGroupClass
-		else
+helper context Website!UnitFeature def: inputGroupClass() : String
+	= if not self.displayedOn.oclIsKindOf(Website!EditUnit) then
 			OclUndefined
-		endif endif;
-
-helper context Website!UnitField def: inputLabelClass() : String
-	= if self.inputLabelClass.trim() <> '' then
-			self.inputLabelClass.trim()
-		else if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultInputLabelClass
 		else
-			OclUndefined
-		endif endif;
-
-helper context Website!UnitField def: inputElementClass() : String
-	= if self.inputElementClass.trim() <> '' then
-			self.inputElementClass.trim()
-		else if thisModule.findWebsiteUI().defaultInputElementClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultInputElementClass
-		else
-			OclUndefined
-		endif endif;
+			if self.inputGroupClass.trim() <> '' then
+				self.inputGroupClass.trim()
+			else if self.displayedOn.unitInputGroupClass.trim() <> '' then
+				self.displayedOn.unitInputGroupClass.trim()
+			else if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultInputGroupClass.trim()
+			else
+				OclUndefined
+			endif endif endif
+		endif;
 
 helper context Website!Attribute def: interfaceType() : String
 	= if self.oclIsTypeOf(Website!DataTypeAttribute) then

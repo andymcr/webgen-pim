@@ -31,7 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getDisplayOption <em>Display Option</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl#getRowClasses <em>Row Classes</em>}</li>
  * </ul>
  *
@@ -107,26 +106,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @ordered
 	 */
 	protected IndexDisplayOption displayOption = DISPLAY_OPTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isOmitColumnLabels() <em>Omit Column Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitColumnLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OMIT_COLUMN_LABELS_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOmitColumnLabels() <em>Omit Column Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitColumnLabels()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean omitColumnLabels = OMIT_COLUMN_LABELS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRowClasses() <em>Row Classes</em>}' attribute.
@@ -255,29 +234,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 	 * @generated
 	 */
 	@Override
-	public boolean isOmitColumnLabels() {
-		return omitColumnLabels;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOmitColumnLabels(boolean newOmitColumnLabels) {
-		boolean oldOmitColumnLabels = omitColumnLabels;
-		omitColumnLabels = newOmitColumnLabels;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS, oldOmitColumnLabels, omitColumnLabels));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRowClasses() {
 		return rowClasses;
 	}
@@ -340,8 +296,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 				return getDefaultLocalAnchorClass();
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return getDisplayOption();
-			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
-				return isOmitColumnLabels();
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				return getRowClasses();
 		}
@@ -370,9 +324,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption((IndexDisplayOption)newValue);
 				return;
-			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
-				setOmitColumnLabels((Boolean)newValue);
-				return;
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				setRowClasses((String)newValue);
 				return;
@@ -400,9 +351,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				setDisplayOption(DISPLAY_OPTION_EDEFAULT);
 				return;
-			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
-				setOmitColumnLabels(OMIT_COLUMN_LABELS_EDEFAULT);
-				return;
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				setRowClasses(ROW_CLASSES_EDEFAULT);
 				return;
@@ -426,8 +374,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.INDEX_UNIT__DISPLAY_OPTION:
 				return displayOption != DISPLAY_OPTION_EDEFAULT;
-			case WebuiPackage.INDEX_UNIT__OMIT_COLUMN_LABELS:
-				return omitColumnLabels != OMIT_COLUMN_LABELS_EDEFAULT;
 			case WebuiPackage.INDEX_UNIT__ROW_CLASSES:
 				return ROW_CLASSES_EDEFAULT == null ? rowClasses != null : !ROW_CLASSES_EDEFAULT.equals(rowClasses);
 		}
@@ -486,8 +432,6 @@ public class IndexUnitImpl extends CollectionUnitImpl implements IndexUnit {
 		result.append(defaultLocalAnchorClass);
 		result.append(", displayOption: ");
 		result.append(displayOption);
-		result.append(", omitColumnLabels: ");
-		result.append(omitColumnLabels);
 		result.append(", rowClasses: ");
 		result.append(rowClasses);
 		result.append(')');

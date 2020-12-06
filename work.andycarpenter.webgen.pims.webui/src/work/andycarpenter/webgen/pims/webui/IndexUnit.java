@@ -12,7 +12,6 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getDisplayOption <em>Display Option</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#isOmitColumnLabels <em>Omit Column Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getRowClasses <em>Row Classes</em>}</li>
  * </ul>
  *
@@ -50,33 +49,6 @@ public interface IndexUnit extends CollectionUnit, InlineActionContainer {
 	 * @generated
 	 */
 	void setDisplayOption(IndexDisplayOption value);
-
-	/**
-	 * Returns the value of the '<em><b>Omit Column Labels</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Omit Column Labels</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Omit Column Labels</em>' attribute.
-	 * @see #setOmitColumnLabels(boolean)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getIndexUnit_OmitColumnLabels()
-	 * @model default="false" ordered="false"
-	 * @generated
-	 */
-	boolean isOmitColumnLabels();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#isOmitColumnLabels <em>Omit Column Labels</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Omit Column Labels</em>' attribute.
-	 * @see #isOmitColumnLabels()
-	 * @generated
-	 */
-	void setOmitColumnLabels(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Row Classes</b></em>' attribute.

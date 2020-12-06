@@ -70,9 +70,9 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addFooterPropertyDescriptor(object);
 			addAutofocusPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
+			addFieldLabelClassPropertyDescriptor(object);
+			addFieldValueClassPropertyDescriptor(object);
 			addInputGroupClassPropertyDescriptor(object);
-			addInputLabelClassPropertyDescriptor(object);
-			addInputElementClassPropertyDescriptor(object);
 			addDisplayClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
 		}
@@ -322,6 +322,50 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Field Label Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFieldLabelClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitFeature_fieldLabelClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_fieldLabelClass_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__FIELD_LABEL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Field Value Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFieldValueClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitFeature_fieldValueClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_fieldValueClass_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__FIELD_VALUE_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Input Group Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,50 +379,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 				 getString("_UI_UnitFeature_inputGroupClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_inputGroupClass_feature", "_UI_UnitFeature_type"),
 				 WebuiPackage.Literals.UNIT_FEATURE__INPUT_GROUP_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Label Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputLabelClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_inputLabelClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_inputLabelClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__INPUT_LABEL_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Element Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputElementClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_inputElementClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_inputElementClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__INPUT_ELEMENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -501,9 +501,9 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
+			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
+			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-			case WebuiPackage.UNIT_FEATURE__INPUT_LABEL_CLASS:
-			case WebuiPackage.UNIT_FEATURE__INPUT_ELEMENT_CLASS:
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
