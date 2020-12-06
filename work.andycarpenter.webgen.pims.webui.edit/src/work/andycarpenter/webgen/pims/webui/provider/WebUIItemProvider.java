@@ -69,6 +69,9 @@ public class WebUIItemProvider
 			addDefaultDateTimeFormatPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
+			addDefaultFieldListClassPropertyDescriptor(object);
+			addDefaultFieldLabelClassPropertyDescriptor(object);
+			addDefaultFieldValueClassPropertyDescriptor(object);
 			addDefaultInputGroupClassPropertyDescriptor(object);
 			addDefaultInputLabelClassPropertyDescriptor(object);
 			addDefaultInputElementClassPropertyDescriptor(object);
@@ -203,6 +206,72 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultAnchorClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultAnchorClass_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Field List Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultFieldListClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultFieldListClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFieldListClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FIELD_LIST_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Field Label Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultFieldLabelClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultFieldLabelClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFieldLabelClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FIELD_LABEL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Field Value Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultFieldValueClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultFieldValueClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFieldValueClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FIELD_VALUE_CLASS,
 				 true,
 				 false,
 				 false,
@@ -417,6 +486,9 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS:

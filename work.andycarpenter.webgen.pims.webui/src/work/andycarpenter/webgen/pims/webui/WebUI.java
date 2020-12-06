@@ -24,6 +24,9 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
@@ -224,6 +227,75 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultAnchorClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Field List Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Field List Class</em>' attribute.
+	 * @see #setDefaultFieldListClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultFieldListClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultFieldListClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Field List Class</em>' attribute.
+	 * @see #getDefaultFieldListClass()
+	 * @generated
+	 */
+	void setDefaultFieldListClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Field Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Field Label Class</em>' attribute.
+	 * @see #setDefaultFieldLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultFieldLabelClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultFieldLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Field Label Class</em>' attribute.
+	 * @see #getDefaultFieldLabelClass()
+	 * @generated
+	 */
+	void setDefaultFieldLabelClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Field Value Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Field Value Class</em>' attribute.
+	 * @see #setDefaultFieldValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultFieldValueClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultFieldValueClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Field Value Class</em>' attribute.
+	 * @see #getDefaultFieldValueClass()
+	 * @generated
+	 */
+	void setDefaultFieldValueClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Input Group Class</b></em>' attribute.

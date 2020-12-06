@@ -143,13 +143,40 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_ANCHOR_CLASS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 10;
+
+	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 8;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -158,7 +185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 9;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Element Class</b></em>' attribute.
@@ -167,7 +194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 10;
+	int WEB_UI__DEFAULT_INPUT_ELEMENT_CLASS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -176,7 +203,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 11;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -185,7 +212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 12;
+	int WEB_UI__INPUT_TECHNOLOGY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -194,7 +221,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 13;
+	int WEB_UI__AJAX_TECHNOLOGY = 16;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -203,7 +230,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 14;
+	int WEB_UI_FEATURE_COUNT = 17;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -1607,13 +1634,31 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__ERROR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+	int DYNAMIC_UNIT__FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -1622,7 +1667,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -4480,13 +4525,31 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__ERROR_CLASS = DYNAMIC_UNIT__ERROR_CLASS;
+	int SINGLETON_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -4751,13 +4814,31 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__ERROR_CLASS = DYNAMIC_UNIT__ERROR_CLASS;
+	int COLLECTION_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -5283,13 +5364,31 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__FOOTER_CLASS = SINGLETON_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__ERROR_CLASS = SINGLETON_UNIT__ERROR_CLASS;
+	int EDIT_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__FIELD_LABEL_CLASS = SINGLETON_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__FIELD_VALUE_CLASS = SINGLETON_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -5608,13 +5707,31 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
+	int CREATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -5933,13 +6050,31 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
+	int CREATE_UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6285,13 +6420,31 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
+	int UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6619,13 +6772,31 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__ERROR_CLASS = EDIT_UNIT__ERROR_CLASS;
+	int MAP_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__FIELD_LABEL_CLASS = EDIT_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__FIELD_VALUE_CLASS = EDIT_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6980,13 +7151,31 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__FOOTER_CLASS = SINGLETON_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__ERROR_CLASS = SINGLETON_UNIT__ERROR_CLASS;
+	int DETAILS_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__FIELD_LABEL_CLASS = SINGLETON_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__FIELD_VALUE_CLASS = SINGLETON_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7269,13 +7458,31 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+	int INDEX_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -7855,13 +8062,31 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+	int CARDS_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -8661,13 +8886,31 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+	int TEXT_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9264,13 +9507,31 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+	int DATE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9876,13 +10137,31 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__ERROR_CLASS = COLLECTION_UNIT__ERROR_CLASS;
+	int IMAGE_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__FIELD_LABEL_CLASS = COLLECTION_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__FIELD_VALUE_CLASS = COLLECTION_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10434,13 +10713,31 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__ERROR_CLASS = CARDS_UNIT__ERROR_CLASS;
+	int IMAGE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__FIELD_LABEL_CLASS = CARDS_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__FIELD_VALUE_CLASS = CARDS_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -11100,13 +11397,31 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FOOTER_CLASS = IMAGE_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ERROR_CLASS = IMAGE_UNIT__ERROR_CLASS;
+	int SLIDER_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__FIELD_LABEL_CLASS = IMAGE_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__FIELD_VALUE_CLASS = IMAGE_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -11676,13 +11991,31 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__FOOTER_CLASS = IMAGE_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ERROR_CLASS = IMAGE_UNIT__ERROR_CLASS;
+	int GALLERY_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__FIELD_LABEL_CLASS = IMAGE_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__FIELD_VALUE_CLASS = IMAGE_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12261,13 +12594,31 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__ERROR_CLASS = DYNAMIC_UNIT__ERROR_CLASS;
+	int CONTROL_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__FIELD_LABEL_CLASS = DYNAMIC_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__FIELD_VALUE_CLASS = DYNAMIC_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -12531,13 +12882,31 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__FOOTER_CLASS = CONTROL_UNIT__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Error Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__ERROR_CLASS = CONTROL_UNIT__ERROR_CLASS;
+	int SEARCH_UNIT__FIELD_LIST_CLASS = CONTROL_UNIT__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__FIELD_LABEL_CLASS = CONTROL_UNIT__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__FIELD_VALUE_CLASS = CONTROL_UNIT__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -13383,6 +13752,39 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultAnchorClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultFieldListClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultFieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultFieldValueClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14116,15 +14518,37 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnit_FooterClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getErrorClass <em>Error Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Error Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getErrorClass()
+	 * @return the meta object for the attribute '<em>Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EAttribute getDynamicUnit_ErrorClass();
+	EAttribute getDynamicUnit_FieldListClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_FieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_FieldValueClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitField <em>Unit Field</em>}'.
@@ -16628,6 +17052,30 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultAnchorClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Field List Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_FIELD_LIST_CLASS = eINSTANCE.getWebUI_DefaultFieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_FIELD_LABEL_CLASS = eINSTANCE.getWebUI_DefaultFieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_FIELD_VALUE_CLASS = eINSTANCE.getWebUI_DefaultFieldValueClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Input Group Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17202,12 +17650,28 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT__FOOTER_CLASS = eINSTANCE.getDynamicUnit_FooterClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Error Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Field List Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DYNAMIC_UNIT__ERROR_CLASS = eINSTANCE.getDynamicUnit_ErrorClass();
+		EAttribute DYNAMIC_UNIT__FIELD_LIST_CLASS = eINSTANCE.getDynamicUnit_FieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnit_FieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnit_FieldValueClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl <em>Unit Field</em>}' class.

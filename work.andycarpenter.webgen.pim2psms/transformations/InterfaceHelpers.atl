@@ -154,27 +154,6 @@ helper context Website!Attribute def: findOrmLabel() : ORM!Label
 helper context Website!ModelLabel def: findOrmLabel() : ORM!Label
 	= thisModule.findOrmEntity(self.labelFor.name).getOrmLabel(self.name);
 
-helper context Website!Feature def: footerClass() : Boolean
-	= if self.footerClass.trim() <> '' then
-			self.footerClass.replaceAll(',', ' ').trim()
-		else
-			OclUndefined
-		endif;
-
-helper context Website!UnitAssociation def: footerClass() : Boolean
-	= if self.footerClass.trim() <> '' then
-			self.footerClass.replaceAll(',', ' ').trim()
-		else
-			self.association.footerClass()
-		endif;
-
-helper context Website!UnitElement def: footerClass() : Boolean
-	= if self.footerClass.trim() <> '' then
-			self.footerClass.replaceAll(',', ' ').trim()
-		else
-			self.attribute.footerClass()
-		endif;
-
 helper context Website!InterfaceField def: hasCustomisedDisplayLabel() : Boolean
 	= true;
 
@@ -195,28 +174,76 @@ helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
 helper context Website!UnitLabel def: hasCustomisedDisplayLabel() : Boolean
 	= false;
 
-helper context Website!Feature def: headerClass() : Boolean
+helper context Website!Feature def: headerClass() : String
 	= if self.headerClass.trim() <> '' then
 			self.headerClass.replaceAll(',', ' ').trim()
 		else
 			OclUndefined
 		endif;
 
-helper context Website!UnitAssociation def: headerClass() : Boolean
+helper context Website!UnitAssociation def: headerClass() : String
 	= if self.headerClass.trim() <> '' then
 			self.headerClass.replaceAll(',', ' ').trim()
 		else
 			self.association.headerClass()
 		endif;
 
-helper context Website!UnitElement def: headerClass() : Boolean
+helper context Website!UnitElement def: headerClass() : String
 	= if self.headerClass.trim() <> '' then
 			self.headerClass.replaceAll(',', ' ').trim()
 		else
 			self.attribute.headerClass()
 		endif;
 
-helper context Website!UnitField def: inputGroupClass() : Boolean
+helper context Website!Feature def: footerClass() : String
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: footerClass() : String
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			self.association.footerClass()
+		endif;
+
+helper context Website!UnitElement def: footerClass() : String
+	= if self.footerClass.trim() <> '' then
+			self.footerClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.footerClass()
+		endif;
+
+helper context Website!DynamicUnit def: fieldListClass() : String
+	= if self.fieldListClass.trim() <> '' then
+			self.fieldListClass.trim()
+		else if thisModule.findWebsiteUI().defaultFieldListClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultFieldListClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!DynamicUnit def: fieldLabelClass() : String
+	= if self.fieldLabelClass.trim() <> '' then
+			self.fieldLabelClass.trim()
+		else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultFieldLabelClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!DynamicUnit def: fieldValueClass() : String
+	= if self.fieldValueClass.trim() <> '' then
+			self.fieldValueClass.trim()
+		else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultFieldValueClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!UnitField def: inputGroupClass() : String
 	= if self.inputGroupClass.trim() <> '' then
 			self.inputLabelClass.trim()
 		else if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
@@ -225,7 +252,7 @@ helper context Website!UnitField def: inputGroupClass() : Boolean
 			OclUndefined
 		endif endif;
 
-helper context Website!UnitField def: inputLabelClass() : Boolean
+helper context Website!UnitField def: inputLabelClass() : String
 	= if self.inputLabelClass.trim() <> '' then
 			self.inputLabelClass.trim()
 		else if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
@@ -234,7 +261,7 @@ helper context Website!UnitField def: inputLabelClass() : Boolean
 			OclUndefined
 		endif endif;
 
-helper context Website!UnitField def: inputElementClass() : Boolean
+helper context Website!UnitField def: inputElementClass() : String
 	= if self.inputElementClass.trim() <> '' then
 			self.inputElementClass.trim()
 		else if thisModule.findWebsiteUI().defaultInputElementClass.trim() <> '' then

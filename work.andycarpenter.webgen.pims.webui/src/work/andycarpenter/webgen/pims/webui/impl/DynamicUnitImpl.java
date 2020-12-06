@@ -41,7 +41,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getControlClass <em>Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getErrorClass <em>Error Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFieldListClass <em>Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFieldLabelClass <em>Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFieldValueClass <em>Field Value Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -208,24 +210,64 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getErrorClass() <em>Error Class</em>}' attribute.
+	 * The default value of the '{@link #getFieldListClass() <em>Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getErrorClass()
+	 * @see #getFieldListClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ERROR_CLASS_EDEFAULT = "error";
+	protected static final String FIELD_LIST_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getErrorClass() <em>Error Class</em>}' attribute.
+	 * The cached value of the '{@link #getFieldListClass() <em>Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getErrorClass()
+	 * @see #getFieldListClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String errorClass = ERROR_CLASS_EDEFAULT;
+	protected String fieldListClass = FIELD_LIST_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fieldLabelClass = FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fieldValueClass = FIELD_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -474,8 +516,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public String getErrorClass() {
-		return errorClass;
+	public String getFieldListClass() {
+		return fieldListClass;
 	}
 
 	/**
@@ -484,11 +526,57 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public void setErrorClass(String newErrorClass) {
-		String oldErrorClass = errorClass;
-		errorClass = newErrorClass;
+	public void setFieldListClass(String newFieldListClass) {
+		String oldFieldListClass = fieldListClass;
+		fieldListClass = newFieldListClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS, oldErrorClass, errorClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS, oldFieldListClass, fieldListClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFieldLabelClass() {
+		return fieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFieldLabelClass(String newFieldLabelClass) {
+		String oldFieldLabelClass = fieldLabelClass;
+		fieldLabelClass = newFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS, oldFieldLabelClass, fieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFieldValueClass() {
+		return fieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFieldValueClass(String newFieldValueClass) {
+		String oldFieldValueClass = fieldValueClass;
+		fieldValueClass = newFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS, oldFieldValueClass, fieldValueClass));
 	}
 
 	/**
@@ -552,8 +640,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getControlClass();
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return getFooterClass();
-			case WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS:
-				return getErrorClass();
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
+				return getFieldListClass();
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS:
+				return getFieldLabelClass();
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS:
+				return getFieldValueClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -600,8 +692,14 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass((String)newValue);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS:
-				setErrorClass((String)newValue);
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
+				setFieldListClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS:
+				setFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS:
+				setFieldValueClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -645,8 +743,14 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass(FOOTER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS:
-				setErrorClass(ERROR_CLASS_EDEFAULT);
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
+				setFieldListClass(FIELD_LIST_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS:
+				setFieldLabelClass(FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS:
+				setFieldValueClass(FIELD_VALUE_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -680,8 +784,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return CONTROL_CLASS_EDEFAULT == null ? controlClass != null : !CONTROL_CLASS_EDEFAULT.equals(controlClass);
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
-			case WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS:
-				return ERROR_CLASS_EDEFAULT == null ? errorClass != null : !ERROR_CLASS_EDEFAULT.equals(errorClass);
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
+				return FIELD_LIST_CLASS_EDEFAULT == null ? fieldListClass != null : !FIELD_LIST_CLASS_EDEFAULT.equals(fieldListClass);
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS:
+				return FIELD_LABEL_CLASS_EDEFAULT == null ? fieldLabelClass != null : !FIELD_LABEL_CLASS_EDEFAULT.equals(fieldLabelClass);
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS:
+				return FIELD_VALUE_CLASS_EDEFAULT == null ? fieldValueClass != null : !FIELD_VALUE_CLASS_EDEFAULT.equals(fieldValueClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -708,8 +816,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(controlClass);
 		result.append(", footerClass: ");
 		result.append(footerClass);
-		result.append(", errorClass: ");
-		result.append(errorClass);
+		result.append(", fieldListClass: ");
+		result.append(fieldListClass);
+		result.append(", fieldLabelClass: ");
+		result.append(fieldLabelClass);
+		result.append(", fieldValueClass: ");
+		result.append(fieldValueClass);
 		result.append(')');
 		return result.toString();
 	}

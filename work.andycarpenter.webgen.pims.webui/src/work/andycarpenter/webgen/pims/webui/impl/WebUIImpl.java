@@ -40,6 +40,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputElementClass <em>Default Input Element Class</em>}</li>
@@ -180,6 +183,66 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldListClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FIELD_LIST_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldListClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFieldListClass = DEFAULT_FIELD_LIST_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFieldLabelClass() <em>Default Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFieldLabelClass() <em>Default Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFieldLabelClass = DEFAULT_FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFieldValueClass() <em>Default Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFieldValueClass() <em>Default Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFieldValueClass = DEFAULT_FIELD_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultInputGroupClass() <em>Default Input Group Class</em>}' attribute.
@@ -507,6 +570,75 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultFieldListClass() {
+		return defaultFieldListClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultFieldListClass(String newDefaultFieldListClass) {
+		String oldDefaultFieldListClass = defaultFieldListClass;
+		defaultFieldListClass = newDefaultFieldListClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS, oldDefaultFieldListClass, defaultFieldListClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultFieldLabelClass() {
+		return defaultFieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultFieldLabelClass(String newDefaultFieldLabelClass) {
+		String oldDefaultFieldLabelClass = defaultFieldLabelClass;
+		defaultFieldLabelClass = newDefaultFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS, oldDefaultFieldLabelClass, defaultFieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultFieldValueClass() {
+		return defaultFieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultFieldValueClass(String newDefaultFieldValueClass) {
+		String oldDefaultFieldValueClass = defaultFieldValueClass;
+		defaultFieldValueClass = newDefaultFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS, oldDefaultFieldValueClass, defaultFieldValueClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultInputGroupClass() {
 		return defaultInputGroupClass;
 	}
@@ -695,6 +827,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultActionNavigationClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return getDefaultAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				return getDefaultFieldListClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+				return getDefaultFieldLabelClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
+				return getDefaultFieldValueClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				return getDefaultInputGroupClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
@@ -745,6 +883,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				setDefaultFieldListClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+				setDefaultFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
+				setDefaultFieldValueClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				setDefaultInputGroupClass((String)newValue);
@@ -800,6 +947,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				setDefaultFieldListClass(DEFAULT_FIELD_LIST_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+				setDefaultFieldLabelClass(DEFAULT_FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
+				setDefaultFieldValueClass(DEFAULT_FIELD_VALUE_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				setDefaultInputGroupClass(DEFAULT_INPUT_GROUP_CLASS_EDEFAULT);
 				return;
@@ -846,6 +1002,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				return DEFAULT_FIELD_LIST_CLASS_EDEFAULT == null ? defaultFieldListClass != null : !DEFAULT_FIELD_LIST_CLASS_EDEFAULT.equals(defaultFieldListClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+				return DEFAULT_FIELD_LABEL_CLASS_EDEFAULT == null ? defaultFieldLabelClass != null : !DEFAULT_FIELD_LABEL_CLASS_EDEFAULT.equals(defaultFieldLabelClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
+				return DEFAULT_FIELD_VALUE_CLASS_EDEFAULT == null ? defaultFieldValueClass != null : !DEFAULT_FIELD_VALUE_CLASS_EDEFAULT.equals(defaultFieldValueClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 				return DEFAULT_INPUT_GROUP_CLASS_EDEFAULT == null ? defaultInputGroupClass != null : !DEFAULT_INPUT_GROUP_CLASS_EDEFAULT.equals(defaultInputGroupClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
@@ -882,6 +1044,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultActionNavigationClass);
 		result.append(", defaultAnchorClass: ");
 		result.append(defaultAnchorClass);
+		result.append(", defaultFieldListClass: ");
+		result.append(defaultFieldListClass);
+		result.append(", defaultFieldLabelClass: ");
+		result.append(defaultFieldLabelClass);
+		result.append(", defaultFieldValueClass: ");
+		result.append(defaultFieldValueClass);
 		result.append(", defaultInputGroupClass: ");
 		result.append(defaultInputGroupClass);
 		result.append(", defaultInputLabelClass: ");

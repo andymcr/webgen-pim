@@ -25,7 +25,9 @@ import work.andycarpenter.webgen.pims.service.Service;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass <em>Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getErrorClass <em>Error Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
@@ -272,30 +274,72 @@ public interface DynamicUnit extends ContentUnit {
 	void setFooterClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Error Class</b></em>' attribute.
-	 * The default value is <code>"error"</code>.
+	 * Returns the value of the '<em><b>Field List Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Error Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Error Class</em>' attribute.
-	 * @see #setErrorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ErrorClass()
-	 * @model default="error"
+	 * @return the value of the '<em>Field List Class</em>' attribute.
+	 * @see #setFieldListClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldListClass()
+	 * @model default=""
 	 * @generated
 	 */
-	String getErrorClass();
+	String getFieldListClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getErrorClass <em>Error Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Error Class</em>' attribute.
-	 * @see #getErrorClass()
+	 * @param value the new value of the '<em>Field List Class</em>' attribute.
+	 * @see #getFieldListClass()
 	 * @generated
 	 */
-	void setErrorClass(String value);
+	void setFieldListClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Field Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Field Label Class</em>' attribute.
+	 * @see #setFieldLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldLabelClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getFieldLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldLabelClass <em>Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Field Label Class</em>' attribute.
+	 * @see #getFieldLabelClass()
+	 * @generated
+	 */
+	void setFieldLabelClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Field Value Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Field Value Class</em>' attribute.
+	 * @see #setFieldValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldValueClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getFieldValueClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldValueClass <em>Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Field Value Class</em>' attribute.
+	 * @see #getFieldValueClass()
+	 * @generated
+	 */
+	void setFieldValueClass(String value);
 
 } // DynamicUnit

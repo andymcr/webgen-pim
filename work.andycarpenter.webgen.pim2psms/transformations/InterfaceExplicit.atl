@@ -277,7 +277,9 @@ abstract rule DynamicUnit {
 		headerClass <- website.headerClass,
 		controlClass <- website.controlClass,
 		footerClass <- website.footerClass,
-		errorClass <- website.errorClass
+		fieldListClass <- website.fieldListClass(),
+		fieldLabelClass <- website.fieldLabelClass(),
+		fieldValueClass <- website.fieldValueClass()
 	)
 }
 

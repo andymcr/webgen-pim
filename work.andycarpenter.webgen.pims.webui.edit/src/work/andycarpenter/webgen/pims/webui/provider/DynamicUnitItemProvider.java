@@ -69,7 +69,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addHeaderClassPropertyDescriptor(object);
 			addControlClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
-			addErrorClassPropertyDescriptor(object);
+			addFieldListClassPropertyDescriptor(object);
+			addFieldLabelClassPropertyDescriptor(object);
+			addFieldValueClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -229,19 +231,63 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Error Class feature.
+	 * This adds a property descriptor for the Field List Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addErrorClassPropertyDescriptor(Object object) {
+	protected void addFieldListClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_errorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_errorClass_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__ERROR_CLASS,
+				 getString("_UI_DynamicUnit_fieldListClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_fieldListClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__FIELD_LIST_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Field Label Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFieldLabelClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_fieldLabelClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_fieldLabelClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__FIELD_LABEL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Field Value Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFieldValueClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_fieldValueClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_fieldValueClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__FIELD_VALUE_CLASS,
 				 true,
 				 false,
 				 false,
@@ -315,7 +361,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
-			case WebuiPackage.DYNAMIC_UNIT__ERROR_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_LABEL_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__FIELD_VALUE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
