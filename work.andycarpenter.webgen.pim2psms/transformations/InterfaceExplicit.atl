@@ -711,7 +711,9 @@ abstract rule CardsUnit {
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
 		rowClass <- website.rowClass.replaceAll(',', ' ').trim(),
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
-		cardClass <- website.cardClass.replaceAll(',', ' ').trim()
+		cardClass <- website.cardClass(),
+		cardHeaderClass <- website.cardHeaderClass(),
+		cardFooterClass <- website.cardFooterClass()
 	)
 }
 

@@ -38,6 +38,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardClass <em>Default Card Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
@@ -143,6 +146,66 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardClass() <em>Default Card Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARD_CLASS_EDEFAULT = "card rounded shadow-sm h-100";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardClass() <em>Default Card Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardClass = DEFAULT_CARD_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardHeaderClass() <em>Default Card Header Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardHeaderClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARD_HEADER_CLASS_EDEFAULT = "card-header";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardHeaderClass() <em>Default Card Header Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardHeaderClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardHeaderClass = DEFAULT_CARD_HEADER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardFooterClass() <em>Default Card Footer Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardFooterClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARD_FOOTER_CLASS_EDEFAULT = "card-footer";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardFooterClass() <em>Default Card Footer Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardFooterClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardFooterClass = DEFAULT_CARD_FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
@@ -524,6 +587,75 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultCardClass() {
+		return defaultCardClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardClass(String newDefaultCardClass) {
+		String oldDefaultCardClass = defaultCardClass;
+		defaultCardClass = newDefaultCardClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS, oldDefaultCardClass, defaultCardClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCardHeaderClass() {
+		return defaultCardHeaderClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardHeaderClass(String newDefaultCardHeaderClass) {
+		String oldDefaultCardHeaderClass = defaultCardHeaderClass;
+		defaultCardHeaderClass = newDefaultCardHeaderClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS, oldDefaultCardHeaderClass, defaultCardHeaderClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCardFooterClass() {
+		return defaultCardFooterClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardFooterClass(String newDefaultCardFooterClass) {
+		String oldDefaultCardFooterClass = defaultCardFooterClass;
+		defaultCardFooterClass = newDefaultCardFooterClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS, oldDefaultCardFooterClass, defaultCardFooterClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultActionNavigationClass() {
 		return defaultActionNavigationClass;
 	}
@@ -823,6 +955,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
+				return getDefaultCardClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+				return getDefaultCardHeaderClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
+				return getDefaultCardFooterClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				return getDefaultActionNavigationClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
@@ -877,6 +1015,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
+				setDefaultCardClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+				setDefaultCardHeaderClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
+				setDefaultCardFooterClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				setDefaultActionNavigationClass((String)newValue);
@@ -941,6 +1088,15 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
+				setDefaultCardClass(DEFAULT_CARD_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+				setDefaultCardHeaderClass(DEFAULT_CARD_HEADER_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
+				setDefaultCardFooterClass(DEFAULT_CARD_FOOTER_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				setDefaultActionNavigationClass(DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT);
 				return;
@@ -998,6 +1154,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
+				return DEFAULT_CARD_CLASS_EDEFAULT == null ? defaultCardClass != null : !DEFAULT_CARD_CLASS_EDEFAULT.equals(defaultCardClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+				return DEFAULT_CARD_HEADER_CLASS_EDEFAULT == null ? defaultCardHeaderClass != null : !DEFAULT_CARD_HEADER_CLASS_EDEFAULT.equals(defaultCardHeaderClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
+				return DEFAULT_CARD_FOOTER_CLASS_EDEFAULT == null ? defaultCardFooterClass != null : !DEFAULT_CARD_FOOTER_CLASS_EDEFAULT.equals(defaultCardFooterClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
@@ -1040,6 +1202,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultCardClass: ");
+		result.append(defaultCardClass);
+		result.append(", defaultCardHeaderClass: ");
+		result.append(defaultCardHeaderClass);
+		result.append(", defaultCardFooterClass: ");
+		result.append(defaultCardFooterClass);
 		result.append(", defaultActionNavigationClass: ");
 		result.append(defaultActionNavigationClass);
 		result.append(", defaultAnchorClass: ");

@@ -67,6 +67,9 @@ public class WebUIItemProvider
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
+			addDefaultCardClassPropertyDescriptor(object);
+			addDefaultCardHeaderClassPropertyDescriptor(object);
+			addDefaultCardFooterClassPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultFieldListClassPropertyDescriptor(object);
@@ -167,6 +170,72 @@ public class WebUIItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Card Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Card Header Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardHeaderClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardHeaderClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardHeaderClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_HEADER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Card Footer Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardFooterClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardFooterClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardFooterClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_FOOTER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -484,6 +553,9 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:

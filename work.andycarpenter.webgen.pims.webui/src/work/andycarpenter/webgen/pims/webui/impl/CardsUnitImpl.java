@@ -35,6 +35,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getRowClass <em>Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardClass <em>Card Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardHeaderClass <em>Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardFooterClass <em>Card Footer Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -168,7 +170,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_CLASS_EDEFAULT = "card rounded shadow-sm h-100";
+	protected static final String CARD_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
@@ -179,6 +181,46 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected String cardClass = CARD_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCardHeaderClass() <em>Card Header Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardHeaderClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CARD_HEADER_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getCardHeaderClass() <em>Card Header Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardHeaderClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cardHeaderClass = CARD_HEADER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCardFooterClass() <em>Card Footer Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardFooterClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CARD_FOOTER_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getCardFooterClass() <em>Card Footer Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardFooterClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cardFooterClass = CARD_FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -368,6 +410,52 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getCardHeaderClass() {
+		return cardHeaderClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCardHeaderClass(String newCardHeaderClass) {
+		String oldCardHeaderClass = cardHeaderClass;
+		cardHeaderClass = newCardHeaderClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS, oldCardHeaderClass, cardHeaderClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCardFooterClass() {
+		return cardFooterClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCardFooterClass(String newCardFooterClass) {
+		String oldCardFooterClass = cardFooterClass;
+		cardFooterClass = newCardFooterClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS, oldCardFooterClass, cardFooterClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -420,6 +508,10 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getColumnClass();
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
 				return getCardClass();
+			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
+				return getCardHeaderClass();
+			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
+				return getCardFooterClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -459,6 +551,12 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
 				setCardClass((String)newValue);
 				return;
+			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
+				setCardHeaderClass((String)newValue);
+				return;
+			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
+				setCardFooterClass((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -495,6 +593,12 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
 				setCardClass(CARD_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
+				setCardHeaderClass(CARD_HEADER_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
+				setCardFooterClass(CARD_FOOTER_CLASS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -523,6 +627,10 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return COLUMN_CLASS_EDEFAULT == null ? columnClass != null : !COLUMN_CLASS_EDEFAULT.equals(columnClass);
 			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
 				return CARD_CLASS_EDEFAULT == null ? cardClass != null : !CARD_CLASS_EDEFAULT.equals(cardClass);
+			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
+				return CARD_HEADER_CLASS_EDEFAULT == null ? cardHeaderClass != null : !CARD_HEADER_CLASS_EDEFAULT.equals(cardHeaderClass);
+			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
+				return CARD_FOOTER_CLASS_EDEFAULT == null ? cardFooterClass != null : !CARD_FOOTER_CLASS_EDEFAULT.equals(cardFooterClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -585,6 +693,10 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		result.append(columnClass);
 		result.append(", cardClass: ");
 		result.append(cardClass);
+		result.append(", cardHeaderClass: ");
+		result.append(cardHeaderClass);
+		result.append(", cardFooterClass: ");
+		result.append(cardFooterClass);
 		result.append(')');
 		return result.toString();
 	}

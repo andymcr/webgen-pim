@@ -26,6 +26,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDateTimeFormat"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="jS F Y G.i"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card rounded shadow-sm h-100"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardHeaderClass"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card-header"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardFooterClass"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card-footer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultActionNavigationClass"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="nav"/>
@@ -622,7 +630,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="col"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card rounded shadow-sm h-100"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardHeaderClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardFooterClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Badge">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"

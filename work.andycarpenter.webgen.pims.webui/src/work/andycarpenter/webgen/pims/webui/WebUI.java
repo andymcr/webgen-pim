@@ -22,6 +22,9 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
@@ -181,6 +184,75 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultDateTimeFormat(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Card Class</b></em>' attribute.
+	 * The default value is <code>"card rounded shadow-sm h-100"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Card Class</em>' attribute.
+	 * @see #setDefaultCardClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardClass()
+	 * @model default="card rounded shadow-sm h-100" ordered="false"
+	 * @generated
+	 */
+	String getDefaultCardClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Card Class</em>' attribute.
+	 * @see #getDefaultCardClass()
+	 * @generated
+	 */
+	void setDefaultCardClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Card Header Class</b></em>' attribute.
+	 * The default value is <code>"card-header"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Card Header Class</em>' attribute.
+	 * @see #setDefaultCardHeaderClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardHeaderClass()
+	 * @model default="card-header" ordered="false"
+	 * @generated
+	 */
+	String getDefaultCardHeaderClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass <em>Default Card Header Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Card Header Class</em>' attribute.
+	 * @see #getDefaultCardHeaderClass()
+	 * @generated
+	 */
+	void setDefaultCardHeaderClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Card Footer Class</b></em>' attribute.
+	 * The default value is <code>"card-footer"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Card Footer Class</em>' attribute.
+	 * @see #setDefaultCardFooterClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardFooterClass()
+	 * @model default="card-footer" ordered="false"
+	 * @generated
+	 */
+	String getDefaultCardFooterClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Card Footer Class</em>' attribute.
+	 * @see #getDefaultCardFooterClass()
+	 * @generated
+	 */
+	void setDefaultCardFooterClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Action Navigation Class</b></em>' attribute.
