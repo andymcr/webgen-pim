@@ -377,6 +377,13 @@ helper context Website!InterfaceField def: validationPattern() : String
 			endif
 		endif;
 
+helper context Website!DynamicUnit def: messageWhenHidden() : String
+	= if self.messageWhenHidden.trim() <> '' then
+			self.messageWhenHidden.trim()
+		else
+			OclUndefined
+		endif;
+
 helper context Website!InlineActionContainer def: actionNavigationClass() : String
 	= if self.actionNavigationClass.trim() <> '' then
 			self.actionNavigationClass.trim()

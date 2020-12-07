@@ -270,7 +270,7 @@ abstract rule DynamicUnit {
 		displayFields <- website.displayFields,
 		servicesUsed <- website.findServicesUsed(),
 		hideWhen <- website.hideWhen,
-		messageWhenHidden <- website.messageWhenHidden.trim(),
+		messageWhenHidden <- website.messageWhenHidden(),
 		supportActions <- website.supportActions,
 		header <- website.header,
 		footer <- website.footer,
