@@ -570,7 +570,13 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "let entities : OrderedSet(persistence::Entity)\n" +
-		"\t= OrderedSet{}\n" +
+		"\t= if self.oclIsKindOf(SingletonUnit) then\n" +
+		"\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n" +
+		"\t\telse if self.oclIsKindOf(CollectionUnit) then\n" +
+		"\t\t\tself.oclAsType(CollectionUnit).contentType\n" +
+		"\t\telse\n" +
+		"\t\t\tOrderedSet{}\n" +
+		"\t\tendif endif\n" +
 		"\tin let eovFeatures : Collection(persistence::Feature)\n" +
 		"\t\t= entities->collect(eov | eov.allFeatures)\n" +
 		"\t\tin displayFields\n" +

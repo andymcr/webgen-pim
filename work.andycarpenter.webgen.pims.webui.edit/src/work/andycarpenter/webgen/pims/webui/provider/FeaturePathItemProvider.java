@@ -215,7 +215,7 @@ public class FeaturePathItemProvider
 	}
 
 	protected Set<Entity> getParentTypes(final UnitField field) {
-		return getParentTypes(field.getDisplayedOn());
+		return getContentTypes(field.getDisplayedOn());
 	}
 
 	protected Set<Entity> getParentTypes(final InlineAction action) {
@@ -239,7 +239,7 @@ public class FeaturePathItemProvider
 			return getParentTypes((DynamicUnit) expression.eContainer());
 
 		} else if (expression.eContainer() instanceof UnitField) {
-			return getParentTypes((UnitField) expression.eContainer());
+			return getContentTypes(((UnitField) expression.eContainer()).getDisplayedOn());
 
 		} else if (expression.eContainer() instanceof InlineAction) {
 			return getParentTypes((InlineAction) expression.eContainer());
@@ -253,6 +253,25 @@ public class FeaturePathItemProvider
 		} else {
 			return Collections.emptySet();
 		}
+	}
+
+	protected Set<Entity> getContentTypes(final DynamicUnit unit) {
+		final Set<Entity> contentTypes = new HashSet<Entity>();
+		if (unit instanceof SingletonUnit) {
+			final SingletonUnit singleton = (SingletonUnit) unit;
+			if (singleton.getContentType() != null) {
+				contentTypes.add(singleton.getContentType());
+			}
+		}
+
+		if (unit instanceof CollectionUnit) {
+			final CollectionUnit collection = (CollectionUnit) unit;
+			if (!collection.getContentType().isEmpty()) {
+				contentTypes.addAll(collection.getContentType());
+			}
+		}
+
+		return contentTypes;
 	}
 
 }
