@@ -727,7 +727,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultCardFooterClass() {
+	public EAttribute getWebUI_DefaultCardBodyClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -737,7 +737,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultActionNavigationClass() {
+	public EAttribute getWebUI_DefaultCardFooterClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -747,7 +747,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultAnchorClass() {
+	public EAttribute getWebUI_DefaultActionNavigationClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -757,7 +757,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultFieldListClass() {
+	public EAttribute getWebUI_DefaultAnchorClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -767,7 +767,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultFieldLabelClass() {
+	public EAttribute getWebUI_DefaultFieldListClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -777,7 +777,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultFieldValueClass() {
+	public EAttribute getWebUI_DefaultFieldLabelClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -787,7 +787,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputGroupClass() {
+	public EAttribute getWebUI_DefaultFieldValueClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -797,7 +797,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputLabelClass() {
+	public EAttribute getWebUI_DefaultInputGroupClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -807,7 +807,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultInputValueClass() {
+	public EAttribute getWebUI_DefaultInputLabelClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -817,7 +817,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultMaximumUploadSize() {
+	public EAttribute getWebUI_DefaultInputValueClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -827,7 +827,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_InputTechnology() {
+	public EAttribute getWebUI_DefaultMaximumUploadSize() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -837,8 +837,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_AjaxTechnology() {
+	public EAttribute getWebUI_InputTechnology() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_AjaxTechnology() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(20);
 	}
 
 	/**
@@ -3067,8 +3077,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_CardFooterClass() {
+	public EAttribute getCardsUnit_CardBodyClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCardsUnit_CardFooterClass() {
+		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -3779,6 +3799,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_TIME_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARD_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARD_HEADER_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARD_BODY_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARD_FOOTER_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ANCHOR_CLASS);
@@ -4057,6 +4078,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__COLUMN_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_HEADER_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_BODY_CLASS);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_FOOTER_CLASS);
 
 		badgeEClass = createEClass(BADGE);
@@ -4252,6 +4274,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultDateTimeFormat(), ecorePackage.getEString(), "defaultDateTimeFormat", "jS F Y G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardClass(), ecorePackage.getEString(), "defaultCardClass", "card rounded shadow-sm h-100", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardHeaderClass(), ecorePackage.getEString(), "defaultCardHeaderClass", "card-header", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getWebUI_DefaultCardBodyClass(), ecorePackage.getEString(), "defaultCardBodyClass", "card-body", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardFooterClass(), ecorePackage.getEString(), "defaultCardFooterClass", "card-footer", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultActionNavigationClass(), ecorePackage.getEString(), "defaultActionNavigationClass", "nav", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultAnchorClass(), ecorePackage.getEString(), "defaultAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4530,6 +4553,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCardsUnit_ColumnClass(), ecorePackage.getEString(), "columnClass", "col", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_CardClass(), ecorePackage.getEString(), "cardClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCardsUnit_CardHeaderClass(), ecorePackage.getEString(), "cardHeaderClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardsUnit_CardBodyClass(), ecorePackage.getEString(), "cardBodyClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCardsUnit_CardFooterClass(), ecorePackage.getEString(), "cardFooterClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(badgeEClass, Badge.class, "Badge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

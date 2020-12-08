@@ -36,6 +36,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardClass <em>Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardHeaderClass <em>Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardBodyClass <em>Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardFooterClass <em>Card Footer Class</em>}</li>
  * </ul>
  *
@@ -201,6 +202,26 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected String cardHeaderClass = CARD_HEADER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCardBodyClass() <em>Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardBodyClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CARD_BODY_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getCardBodyClass() <em>Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardBodyClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cardBodyClass = CARD_BODY_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCardFooterClass() <em>Card Footer Class</em>}' attribute.
@@ -434,6 +455,29 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
+	public String getCardBodyClass() {
+		return cardBodyClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCardBodyClass(String newCardBodyClass) {
+		String oldCardBodyClass = cardBodyClass;
+		cardBodyClass = newCardBodyClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS, oldCardBodyClass, cardBodyClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getCardFooterClass() {
 		return cardFooterClass;
 	}
@@ -510,6 +554,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getCardClass();
 			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
 				return getCardHeaderClass();
+			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
+				return getCardBodyClass();
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				return getCardFooterClass();
 		}
@@ -554,6 +600,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
 				setCardHeaderClass((String)newValue);
 				return;
+			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
+				setCardBodyClass((String)newValue);
+				return;
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				setCardFooterClass((String)newValue);
 				return;
@@ -596,6 +645,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
 				setCardHeaderClass(CARD_HEADER_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
+				setCardBodyClass(CARD_BODY_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				setCardFooterClass(CARD_FOOTER_CLASS_EDEFAULT);
 				return;
@@ -629,6 +681,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return CARD_CLASS_EDEFAULT == null ? cardClass != null : !CARD_CLASS_EDEFAULT.equals(cardClass);
 			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
 				return CARD_HEADER_CLASS_EDEFAULT == null ? cardHeaderClass != null : !CARD_HEADER_CLASS_EDEFAULT.equals(cardHeaderClass);
+			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
+				return CARD_BODY_CLASS_EDEFAULT == null ? cardBodyClass != null : !CARD_BODY_CLASS_EDEFAULT.equals(cardBodyClass);
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				return CARD_FOOTER_CLASS_EDEFAULT == null ? cardFooterClass != null : !CARD_FOOTER_CLASS_EDEFAULT.equals(cardFooterClass);
 		}
@@ -695,6 +749,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		result.append(cardClass);
 		result.append(", cardHeaderClass: ");
 		result.append(cardHeaderClass);
+		result.append(", cardBodyClass: ");
+		result.append(cardBodyClass);
 		result.append(", cardFooterClass: ");
 		result.append(cardFooterClass);
 		result.append(')');

@@ -24,6 +24,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
@@ -230,6 +231,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultCardHeaderClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Card Body Class</b></em>' attribute.
+	 * The default value is <code>"card-body"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Card Body Class</em>' attribute.
+	 * @see #setDefaultCardBodyClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardBodyClass()
+	 * @model default="card-body" ordered="false"
+	 * @generated
+	 */
+	String getDefaultCardBodyClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Card Body Class</em>' attribute.
+	 * @see #getDefaultCardBodyClass()
+	 * @generated
+	 */
+	void setDefaultCardBodyClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Card Footer Class</b></em>' attribute.

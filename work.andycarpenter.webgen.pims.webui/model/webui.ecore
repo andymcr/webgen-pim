@@ -31,6 +31,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardHeaderClass"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="card-header"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardBodyClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card-body"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardFooterClass"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="card-footer"/>
@@ -632,6 +634,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardHeaderClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardBodyClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardFooterClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>

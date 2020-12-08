@@ -69,6 +69,7 @@ public class WebUIItemProvider
 			addDefaultDateTimeFormatPropertyDescriptor(object);
 			addDefaultCardClassPropertyDescriptor(object);
 			addDefaultCardHeaderClassPropertyDescriptor(object);
+			addDefaultCardBodyClassPropertyDescriptor(object);
 			addDefaultCardFooterClassPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
@@ -209,6 +210,28 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultCardHeaderClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardHeaderClass_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_HEADER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Card Body Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardBodyClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardBodyClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardBodyClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_BODY_CLASS,
 				 true,
 				 false,
 				 false,
@@ -411,7 +434,7 @@ public class WebUIItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -555,6 +578,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:

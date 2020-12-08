@@ -48,6 +48,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateTimeFormat"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCardClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCardHeaderClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCardBodyClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCardFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultActionNavigationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultAnchorClass"/>
@@ -56,7 +57,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldValueClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputGroupClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputLabelClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputValueClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputValueClass"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultMaximumUploadSize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/inputTechnology"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/ajaxTechnology"/>
@@ -376,6 +377,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/columnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardHeaderClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardBodyClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/cardFooterClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//Badge">

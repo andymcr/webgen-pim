@@ -713,6 +713,7 @@ abstract rule CardsUnit {
 		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
 		cardClass <- website.cardClass(),
 		cardHeaderClass <- website.cardHeaderClass(),
+		cardBodyClass <- website.cardBodyClass(),
 		cardFooterClass <- website.cardFooterClass()
 	)
 }

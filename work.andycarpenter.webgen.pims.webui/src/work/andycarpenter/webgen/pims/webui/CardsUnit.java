@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass <em>Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}</li>
  * </ul>
  *
@@ -170,6 +171,29 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @generated
 	 */
 	void setCardHeaderClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Card Body Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Card Body Class</em>' attribute.
+	 * @see #setCardBodyClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardBodyClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getCardBodyClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Card Body Class</em>' attribute.
+	 * @see #getCardBodyClass()
+	 * @generated
+	 */
+	void setCardBodyClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Card Footer Class</b></em>' attribute.

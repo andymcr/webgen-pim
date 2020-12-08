@@ -40,6 +40,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardClass <em>Default Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
@@ -186,6 +187,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultCardHeaderClass = DEFAULT_CARD_HEADER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardBodyClass() <em>Default Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardBodyClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARD_BODY_CLASS_EDEFAULT = "card-body";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardBodyClass() <em>Default Card Body Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardBodyClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardBodyClass = DEFAULT_CARD_BODY_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultCardFooterClass() <em>Default Card Footer Class</em>}' attribute.
@@ -633,6 +654,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultCardBodyClass() {
+		return defaultCardBodyClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardBodyClass(String newDefaultCardBodyClass) {
+		String oldDefaultCardBodyClass = defaultCardBodyClass;
+		defaultCardBodyClass = newDefaultCardBodyClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS, oldDefaultCardBodyClass, defaultCardBodyClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultCardFooterClass() {
 		return defaultCardFooterClass;
 	}
@@ -959,6 +1003,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultCardClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 				return getDefaultCardHeaderClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
+				return getDefaultCardBodyClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				return getDefaultCardFooterClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
@@ -1021,6 +1067,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 				setDefaultCardHeaderClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
+				setDefaultCardBodyClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				setDefaultCardFooterClass((String)newValue);
@@ -1094,6 +1143,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 				setDefaultCardHeaderClass(DEFAULT_CARD_HEADER_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
+				setDefaultCardBodyClass(DEFAULT_CARD_BODY_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				setDefaultCardFooterClass(DEFAULT_CARD_FOOTER_CLASS_EDEFAULT);
 				return;
@@ -1158,6 +1210,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_CARD_CLASS_EDEFAULT == null ? defaultCardClass != null : !DEFAULT_CARD_CLASS_EDEFAULT.equals(defaultCardClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 				return DEFAULT_CARD_HEADER_CLASS_EDEFAULT == null ? defaultCardHeaderClass != null : !DEFAULT_CARD_HEADER_CLASS_EDEFAULT.equals(defaultCardHeaderClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
+				return DEFAULT_CARD_BODY_CLASS_EDEFAULT == null ? defaultCardBodyClass != null : !DEFAULT_CARD_BODY_CLASS_EDEFAULT.equals(defaultCardBodyClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				return DEFAULT_CARD_FOOTER_CLASS_EDEFAULT == null ? defaultCardFooterClass != null : !DEFAULT_CARD_FOOTER_CLASS_EDEFAULT.equals(defaultCardFooterClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
@@ -1206,6 +1260,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultCardClass);
 		result.append(", defaultCardHeaderClass: ");
 		result.append(defaultCardHeaderClass);
+		result.append(", defaultCardBodyClass: ");
+		result.append(defaultCardBodyClass);
 		result.append(", defaultCardFooterClass: ");
 		result.append(defaultCardFooterClass);
 		result.append(", defaultActionNavigationClass: ");

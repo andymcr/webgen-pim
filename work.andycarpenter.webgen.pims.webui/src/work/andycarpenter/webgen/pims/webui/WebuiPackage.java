@@ -143,13 +143,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 8;
+
+	/**
 	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 8;
+	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
@@ -158,7 +167,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 9;
+	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
@@ -167,7 +176,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 10;
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
@@ -176,7 +185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 11;
+	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
@@ -185,7 +194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 12;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -194,7 +203,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 13;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -203,7 +212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 14;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -212,7 +221,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 15;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -221,7 +230,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 16;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -230,7 +239,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 17;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -239,7 +248,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 18;
+	int WEB_UI__INPUT_TECHNOLOGY = 19;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -248,7 +257,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 19;
+	int WEB_UI__AJAX_TECHNOLOGY = 20;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -257,7 +266,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 20;
+	int WEB_UI_FEATURE_COUNT = 21;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -8539,13 +8548,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CARD_HEADER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CARD_BODY_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 9;
+	int CARDS_UNIT__CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -8554,7 +8572,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 10;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -9381,6 +9399,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10018,6 +10045,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
@@ -11251,6 +11287,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
@@ -13932,6 +13977,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultCardHeaderClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Card Body Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCardBodyClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16462,6 +16518,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_CardHeaderClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Card Body Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass()
+	 * @see #getCardsUnit()
+	 * @generated
+	 */
+	EAttribute getCardsUnit_CardBodyClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17285,6 +17352,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_CARD_HEADER_CLASS = eINSTANCE.getWebUI_DefaultCardHeaderClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Card Body Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CARD_BODY_CLASS = eINSTANCE.getWebUI_DefaultCardBodyClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Card Footer Class</b></em>' attribute feature.
@@ -19245,6 +19320,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CARDS_UNIT__CARD_HEADER_CLASS = eINSTANCE.getCardsUnit_CardHeaderClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Card Body Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT__CARD_BODY_CLASS = eINSTANCE.getCardsUnit_CardBodyClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Card Footer Class</b></em>' attribute feature.

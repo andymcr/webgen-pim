@@ -402,6 +402,15 @@ helper context Website!CardsUnit def: cardHeaderClass() : String
 			OclUndefined
 		endif endif;
 
+helper context Website!CardsUnit def: cardBodyClass() : String
+	= if self.cardBodyClass.trim() <> '' then
+			self.cardBodyClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardBodyClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardBodyClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
 helper context Website!CardsUnit def: cardFooterClass() : String
 	= if self.cardFooterClass.trim() <> '' then
 			self.cardFooterClass.trim()
