@@ -36,6 +36,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardFooterClass"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="card-footer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultBadgeClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="badge"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultActionNavigationClass"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="nav"/>
@@ -639,6 +641,8 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardFooterClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitBadgeClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Badge">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"
@@ -650,6 +654,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="badgeClass" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextCardsUnit" eSuperTypes="#//CardsUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="DateCardsUnit" eSuperTypes="#//CardsUnit">

@@ -26,6 +26,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
@@ -277,6 +278,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultCardFooterClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Badge Class</b></em>' attribute.
+	 * The default value is <code>"badge"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Badge Class</em>' attribute.
+	 * @see #setDefaultBadgeClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultBadgeClass()
+	 * @model default="badge" ordered="false"
+	 * @generated
+	 */
+	String getDefaultBadgeClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Badge Class</em>' attribute.
+	 * @see #getDefaultBadgeClass()
+	 * @generated
+	 */
+	void setDefaultBadgeClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Action Navigation Class</b></em>' attribute.

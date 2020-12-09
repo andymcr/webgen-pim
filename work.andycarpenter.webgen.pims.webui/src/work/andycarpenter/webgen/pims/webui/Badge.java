@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge()
@@ -155,5 +156,28 @@ public interface Badge extends EObject {
 	 * @generated
 	 */
 	void setDisplayWhen(Predicate value);
+
+	/**
+	 * Returns the value of the '<em><b>Badge Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Badge Class</em>' attribute.
+	 * @see #setBadgeClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_BadgeClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getBadgeClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Badge Class</em>' attribute.
+	 * @see #getBadgeClass()
+	 * @generated
+	 */
+	void setBadgeClass(String value);
 
 } // Badge

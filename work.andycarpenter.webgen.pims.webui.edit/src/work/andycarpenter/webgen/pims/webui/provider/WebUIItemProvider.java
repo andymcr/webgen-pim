@@ -71,6 +71,7 @@ public class WebUIItemProvider
 			addDefaultCardHeaderClassPropertyDescriptor(object);
 			addDefaultCardBodyClassPropertyDescriptor(object);
 			addDefaultCardFooterClassPropertyDescriptor(object);
+			addDefaultBadgeClassPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultFieldListClassPropertyDescriptor(object);
@@ -254,6 +255,28 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultCardFooterClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardFooterClass_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARD_FOOTER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Badge Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultBadgeClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultBadgeClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultBadgeClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_BADGE_CLASS,
 				 true,
 				 false,
 				 false,
@@ -580,6 +603,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:

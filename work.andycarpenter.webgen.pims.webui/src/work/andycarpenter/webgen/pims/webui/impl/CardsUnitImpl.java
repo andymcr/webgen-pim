@@ -38,6 +38,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardHeaderClass <em>Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardBodyClass <em>Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardFooterClass <em>Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getUnitBadgeClass <em>Unit Badge Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -242,6 +243,26 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected String cardFooterClass = CARD_FOOTER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUnitBadgeClass() <em>Unit Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnitBadgeClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UNIT_BADGE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getUnitBadgeClass() <em>Unit Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnitBadgeClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String unitBadgeClass = UNIT_BADGE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -500,6 +521,29 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getUnitBadgeClass() {
+		return unitBadgeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUnitBadgeClass(String newUnitBadgeClass) {
+		String oldUnitBadgeClass = unitBadgeClass;
+		unitBadgeClass = newUnitBadgeClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS, oldUnitBadgeClass, unitBadgeClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -558,6 +602,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getCardBodyClass();
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				return getCardFooterClass();
+			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
+				return getUnitBadgeClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -606,6 +652,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				setCardFooterClass((String)newValue);
 				return;
+			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
+				setUnitBadgeClass((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -651,6 +700,9 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				setCardFooterClass(CARD_FOOTER_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
+				setUnitBadgeClass(UNIT_BADGE_CLASS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -685,6 +737,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return CARD_BODY_CLASS_EDEFAULT == null ? cardBodyClass != null : !CARD_BODY_CLASS_EDEFAULT.equals(cardBodyClass);
 			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
 				return CARD_FOOTER_CLASS_EDEFAULT == null ? cardFooterClass != null : !CARD_FOOTER_CLASS_EDEFAULT.equals(cardFooterClass);
+			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
+				return UNIT_BADGE_CLASS_EDEFAULT == null ? unitBadgeClass != null : !UNIT_BADGE_CLASS_EDEFAULT.equals(unitBadgeClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -753,6 +807,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		result.append(cardBodyClass);
 		result.append(", cardFooterClass: ");
 		result.append(cardFooterClass);
+		result.append(", unitBadgeClass: ");
+		result.append(unitBadgeClass);
 		result.append(')');
 		return result.toString();
 	}

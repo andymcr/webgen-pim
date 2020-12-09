@@ -5,6 +5,17 @@ library InterfaceHelpers;
 uses WebsiteHelpers;
 
 
+helper context Website!Badge def: badgeClass() : String
+	= if self.badgeClass.trim() <> '' then
+			self.badgeClass.trim()
+		else if self.displayedOn.unitBadgeClass.trim() <> '' then
+			self.displayedOn.unitBadgeClass.trim()
+		else if thisModule.findWebsiteUI().defaultBadgeClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultBadgeClass.trim() 
+		else
+			OclUndefined
+		endif endif endif;
+
 helper context Website!DeleteAction def: confirmMessage() : String
 	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
 				self.confirmMessage.trim()

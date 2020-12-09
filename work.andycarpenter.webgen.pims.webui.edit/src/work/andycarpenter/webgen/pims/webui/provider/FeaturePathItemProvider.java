@@ -231,7 +231,7 @@ public class FeaturePathItemProvider
 	}
 
 	protected Set<Entity> getParentTypes(final Badge badge) {
-		return getParentTypes(badge.getDisplayedOn());
+		return getContentTypes(badge.getDisplayedOn());
 	}
 
 	protected Set<Entity> getParentTypes(final Expression expression) {

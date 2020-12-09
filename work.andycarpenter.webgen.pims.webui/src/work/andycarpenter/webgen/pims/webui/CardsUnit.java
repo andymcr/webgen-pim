@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass <em>Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit()
@@ -217,5 +218,28 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @generated
 	 */
 	void setCardFooterClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit Badge Class</em>' attribute.
+	 * @see #setUnitBadgeClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_UnitBadgeClass()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getUnitBadgeClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit Badge Class</em>' attribute.
+	 * @see #getUnitBadgeClass()
+	 * @generated
+	 */
+	void setUnitBadgeClass(String value);
 
 } // CardsUnit

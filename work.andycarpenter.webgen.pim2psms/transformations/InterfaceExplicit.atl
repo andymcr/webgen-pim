@@ -895,7 +895,8 @@ rule Badge {
 			else
 				website.title.findOrmLabel()
 			endif,
-		displayWhen <- website.displayWhen
+		displayWhen <- website.displayWhen,
+		badgeClass <- website.badgeClass()
 	)
 }
 

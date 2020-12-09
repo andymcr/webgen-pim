@@ -161,13 +161,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 9;
 
 	/**
+	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_BADGE_CLASS = 10;
+
+	/**
 	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 10;
+	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
@@ -176,7 +185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 11;
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
@@ -185,7 +194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 12;
+	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
@@ -194,7 +203,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 13;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -203,7 +212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 14;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -212,7 +221,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 15;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -221,7 +230,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 16;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -230,7 +239,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 17;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -239,7 +248,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 18;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -248,7 +257,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 19;
+	int WEB_UI__INPUT_TECHNOLOGY = 20;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -257,7 +266,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 20;
+	int WEB_UI__AJAX_TECHNOLOGY = 21;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -266,7 +275,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 21;
+	int WEB_UI_FEATURE_COUNT = 22;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -8566,13 +8575,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__UNIT_BADGE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 11;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit</em>' class.
@@ -8769,13 +8787,22 @@ public interface WebuiPackage extends EPackage {
 	int BADGE__DISPLAY_WHEN = 4;
 
 	/**
+	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE__BADGE_CLASS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Badge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BADGE_FEATURE_COUNT = 5;
+	int BADGE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Badge</em>' class.
@@ -9415,6 +9442,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Text Cards Unit</em>' class.
@@ -10063,6 +10099,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Element Date</b></em>' containment reference.
@@ -11305,6 +11350,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -13999,6 +14053,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultCardFooterClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultBadgeClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16540,6 +16605,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_CardFooterClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass()
+	 * @see #getCardsUnit()
+	 * @generated
+	 */
+	EAttribute getCardsUnit_UnitBadgeClass();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit <em>Text Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17197,6 +17273,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getBadge_DisplayWhen();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass()
+	 * @see #getBadge()
+	 * @generated
+	 */
+	EAttribute getBadge_BadgeClass();
+
+	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17368,6 +17455,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_CARD_FOOTER_CLASS = eINSTANCE.getWebUI_DefaultCardFooterClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Badge Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_BADGE_CLASS = eINSTANCE.getWebUI_DefaultBadgeClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Action Navigation Class</b></em>' attribute feature.
@@ -19338,6 +19433,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CARDS_UNIT__CARD_FOOTER_CLASS = eINSTANCE.getCardsUnit_CardFooterClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Unit Badge Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT__UNIT_BADGE_CLASS = eINSTANCE.getCardsUnit_UnitBadgeClass();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19852,6 +19955,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BADGE__DISPLAY_WHEN = eINSTANCE.getBadge_DisplayWhen();
+
+		/**
+		 * The meta object literal for the '<em><b>Badge Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BADGE__BADGE_CLASS = eINSTANCE.getBadge_BadgeClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}' enum.

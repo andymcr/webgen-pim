@@ -42,6 +42,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
@@ -227,6 +228,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultCardFooterClass = DEFAULT_CARD_FOOTER_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultBadgeClass() <em>Default Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultBadgeClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_BADGE_CLASS_EDEFAULT = "badge";
+
+	/**
+	 * The cached value of the '{@link #getDefaultBadgeClass() <em>Default Badge Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultBadgeClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultBadgeClass = DEFAULT_BADGE_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
@@ -700,6 +721,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultBadgeClass() {
+		return defaultBadgeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultBadgeClass(String newDefaultBadgeClass) {
+		String oldDefaultBadgeClass = defaultBadgeClass;
+		defaultBadgeClass = newDefaultBadgeClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS, oldDefaultBadgeClass, defaultBadgeClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultActionNavigationClass() {
 		return defaultActionNavigationClass;
 	}
@@ -1007,6 +1051,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultCardBodyClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				return getDefaultCardFooterClass();
+			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
+				return getDefaultBadgeClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				return getDefaultActionNavigationClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
@@ -1073,6 +1119,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				setDefaultCardFooterClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
+				setDefaultBadgeClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				setDefaultActionNavigationClass((String)newValue);
@@ -1149,6 +1198,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				setDefaultCardFooterClass(DEFAULT_CARD_FOOTER_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
+				setDefaultBadgeClass(DEFAULT_BADGE_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				setDefaultActionNavigationClass(DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT);
 				return;
@@ -1214,6 +1266,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_CARD_BODY_CLASS_EDEFAULT == null ? defaultCardBodyClass != null : !DEFAULT_CARD_BODY_CLASS_EDEFAULT.equals(defaultCardBodyClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 				return DEFAULT_CARD_FOOTER_CLASS_EDEFAULT == null ? defaultCardFooterClass != null : !DEFAULT_CARD_FOOTER_CLASS_EDEFAULT.equals(defaultCardFooterClass);
+			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
+				return DEFAULT_BADGE_CLASS_EDEFAULT == null ? defaultBadgeClass != null : !DEFAULT_BADGE_CLASS_EDEFAULT.equals(defaultBadgeClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
@@ -1264,6 +1318,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultCardBodyClass);
 		result.append(", defaultCardFooterClass: ");
 		result.append(defaultCardFooterClass);
+		result.append(", defaultBadgeClass: ");
+		result.append(defaultBadgeClass);
 		result.append(", defaultActionNavigationClass: ");
 		result.append(defaultActionNavigationClass);
 		result.append(", defaultAnchorClass: ");
