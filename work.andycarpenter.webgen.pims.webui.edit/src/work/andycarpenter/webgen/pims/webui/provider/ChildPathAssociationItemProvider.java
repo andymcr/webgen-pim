@@ -12,6 +12,7 @@ import java.util.Set;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -19,8 +20,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.provider.FeatureChildPathItemProvider;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -31,7 +33,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
+public class ChildPathAssociationItemProvider extends FeatureChildPathItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -53,13 +55,36 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
 			addIsSourceAssociationPropertyDescriptor(object);
-			addSourceEntityPropertyDescriptor(object);
 			addTargetEntityPropertyDescriptor(object);
+			addContainingTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssociationReference_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_name_feature", "_UI_AssociationReference_type"),
+				 PersistencePackage.Literals.ASSOCIATION_REFERENCE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -74,7 +99,7 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 			getResourceLocator(),
 			getString("_UI_AssociationReference_association_feature"),
 			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_association_feature", "_UI_AssociationReference_type"),
-			WebuiPackage.Literals.ASSOCIATION_REFERENCE__ASSOCIATION,
+			PersistencePackage.Literals.ASSOCIATION_REFERENCE__ASSOCIATION,
 			true, false, true, null,
 			getString("_UI_ModelPropertyCategory"),
 			null) {
@@ -82,7 +107,9 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof ChildPathAssociation) {
 						final ChildPathAssociation child = (ChildPathAssociation) object;
-						return getParentType(child).getAllAssociations();
+						if (child.getContainingType() != null) {
+							return child.getContainingType().getAllAssociations();
+						}
 					}
 
 					return Collections.emptyList();
@@ -102,7 +129,7 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 			getResourceLocator(),
 			getString("_UI_AssociationReference_valueDisplay_feature"),
 			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_valueDisplay_feature", "_UI_AssociationReference_type"),
-			WebuiPackage.Literals.ASSOCIATION_REFERENCE__VALUE_DISPLAY,
+			PersistencePackage.Literals.ASSOCIATION_REFERENCE__VALUE_DISPLAY,
 			true, false, true, null,
 			getString("_UI_InterfacePropertyCategory"),
 			null) {
@@ -111,17 +138,10 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 					if (object instanceof ChildPathAssociation) {
 						final ChildPathAssociation child = (ChildPathAssociation) object;
 						final Set<Label> labels = new HashSet<Label>();
-						if (child.getAssociation() != null) {
-							Entity target;
-							if (getParentType(child).equals(child.getAssociation().getPartOf())) {
-								target = child.getAssociation().getTargetEntity();
-							} else {
-								target = child.getAssociation().getPartOf();
-							}
-							labels.addAll(target.getAttributes());
-							labels.addAll(target.getLabels());
+						if (child.getTargetEntity() != null) {
+							labels.addAll(child.getTargetEntity().getAttributes());
+							labels.addAll(child.getTargetEntity().getLabels());
 						}
-
 						return labels;
 					}
 
@@ -153,28 +173,6 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Source Entity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSourceEntityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ChildPathAssociation_sourceEntity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ChildPathAssociation_sourceEntity_feature", "_UI_ChildPathAssociation_type"),
-				 WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__SOURCE_ENTITY,
-				 false,
-				 false,
-				 false,
-				 null,
-				 getString("_UI_DebugPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Target Entity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,6 +195,28 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Containing Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ChildPathAssociation_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ChildPathAssociation_containingType_feature", "_UI_ChildPathAssociation_type"),
+				 WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__CONTAINING_TYPE,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -208,7 +228,7 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE);
+			childrenFeatures.add(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -288,13 +308,24 @@ public class ChildPathAssociationItemProvider extends ChildPathItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
 				 WebuiFactory.eINSTANCE.createChildPathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
 				 WebuiFactory.eINSTANCE.createChildPathAssociation()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return WebuiEditPlugin.INSTANCE;
 	}
 
 }

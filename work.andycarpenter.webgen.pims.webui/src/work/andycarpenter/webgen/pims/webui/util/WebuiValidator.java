@@ -134,10 +134,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateUnitElement((UnitElement)value, diagnostics, context);
 			case WebuiPackage.UNIT_ASSOCIATION:
 				return validateUnitAssociation((UnitAssociation)value, diagnostics, context);
-			case WebuiPackage.ASSOCIATION_REFERENCE:
-				return validateAssociationReference((AssociationReference)value, diagnostics, context);
-			case WebuiPackage.CHILD_PATH:
-				return validateChildPath((ChildPath)value, diagnostics, context);
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE:
 				return validateChildPathAttribute((ChildPathAttribute)value, diagnostics, context);
 			case WebuiPackage.CHILD_PATH_ASSOCIATION:
@@ -577,7 +573,7 @@ public class WebuiValidator extends EObjectValidator {
 		"\t\telse\n" +
 		"\t\t\tOrderedSet{}\n" +
 		"\t\tendif endif\n" +
-		"\tin let eovFeatures : Collection(persistence::Feature)\n" +
+		"\tin let features : Collection(persistence::Feature)\n" +
 		"\t\t= entities->collect(eov | eov.allFeatures)\n" +
 		"\t\tin displayFields\n" +
 		"\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n" +
@@ -589,9 +585,9 @@ public class WebuiValidator extends EObjectValidator {
 		"\t\t\t\tendif)\n" +
 		"\t\t\t->forAll(f | \n" +
 		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n" +
-		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitElement).attribute)\n" +
+		"\t\t\t\t\tfeatures->includes(f.oclAsType(UnitElement).attribute)\n" +
 		"\t\t\t\telse\n" +
-		"\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitAssociation).association)\n" +
+		"\t\t\t\t\tfeatures->includes(f.oclAsType(UnitAssociation).association)\n" +
 		"\t\t\t\tendif)";
 
 	/**
@@ -778,24 +774,6 @@ public class WebuiValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAssociationReference(AssociationReference associationReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(associationReference, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateChildPath(ChildPath childPath, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(childPath, diagnostics, context);
 	}
 
 	/**

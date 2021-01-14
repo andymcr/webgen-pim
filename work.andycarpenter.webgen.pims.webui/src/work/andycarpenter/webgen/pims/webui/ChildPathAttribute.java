@@ -3,6 +3,8 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,13 +17,14 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAttribute()
  * @model
  * @generated
  */
-public interface ChildPathAttribute extends ChildPath {
+public interface ChildPathAttribute extends FeatureChildPath {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,5 +66,17 @@ public interface ChildPathAttribute extends ChildPath {
 	 * @generated
 	 */
 	void setAttribute(Attribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAttribute_ContainingType()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if partOf.oclIsTypeOf(UnitAssociation) then\n\tpartOf.oclAsType(UnitAssociation).targetEntity\nelse if partOf.oclIsTypeOf(FeaturePathAssociation) then\n\tpartOf.oclAsType(FeaturePathAssociation).targetEntity\nelse\n\tpartOf.oclAsType(ChildPathAssociation).targetEntity\nendif endif'"
+	 * @generated
+	 */
+	Entity getContainingType();
 
 } // ChildPathAttribute

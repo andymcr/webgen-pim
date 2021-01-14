@@ -360,7 +360,7 @@ helper context Website!UnitField def: dateFormat() : String
 			OclUndefined
 		endif endif endif endif;
 
-helper context Website!ChildPath def: dateFormat() : String
+helper context Website!FeatureChildPath def: dateFormat() : String
 	= if self.oclIsTypeOf(Website!ChildPathAttribute) then
 			self.attribute.dateFormat()
 		else

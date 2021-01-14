@@ -21,7 +21,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.ModelLabel;
+import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
@@ -58,12 +59,36 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
+			addContainingTypesPropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
 			addFilteredOptionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssociationReference_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_name_feature", "_UI_AssociationReference_type"),
+				 PersistencePackage.Literals.ASSOCIATION_REFERENCE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -78,7 +103,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			getResourceLocator(),
 			getString("_UI_AssociationReference_association_feature"),
 			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_association_feature", "_UI_AssociationReference_type"),
-			WebuiPackage.Literals.ASSOCIATION_REFERENCE__ASSOCIATION,
+			PersistencePackage.Literals.ASSOCIATION_REFERENCE__ASSOCIATION,
 			true, false, true, null,
 			getString("_UI_ModelPropertyCategory"),
 			null) {
@@ -87,7 +112,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
 						final Set<Association> associations = new HashSet<Association>();
-						for (Entity entity : getTarget(association)) {
+						for (Entity entity : association.getContainingTypes()) {
 							associations.addAll(entity.getAllAssociations());
 						}
 						return associations;
@@ -110,7 +135,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			getResourceLocator(),
 			getString("_UI_AssociationReference_valueDisplay_feature"),
 			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_valueDisplay_feature", "_UI_AssociationReference_type"),
-			WebuiPackage.Literals.ASSOCIATION_REFERENCE__VALUE_DISPLAY,
+			PersistencePackage.Literals.ASSOCIATION_REFERENCE__VALUE_DISPLAY,
 			true, false, true, null,
 			getString("_UI_InterfacePropertyCategory"),
 			null) {
@@ -118,19 +143,39 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
-						final Set<ModelLabel> labels = new HashSet<ModelLabel>();
-						if (association.getAssociation() != null) {
-							for (Entity target : getTarget(association)) {
-								labels.addAll(target.getLabels());
-							}
+						final Set<Label> labels = new HashSet<Label>();
+						if (association.getTargetEntity() != null) {
+							labels.addAll(association.getTargetEntity().getAttributes());
+							labels.addAll(association.getTargetEntity().getLabels());
 						}
-
 						return labels;
 					}
 
 					return Collections.emptySet();
 				}
 			});
+	}
+
+	/**
+	 * This adds a property descriptor for the Containing Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitAssociation_containingTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_containingTypes_feature", "_UI_UnitAssociation_type"),
+				 WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -153,8 +198,10 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
-						return getSelections(getPageDisplayedOn(association).getWebUI(),
-							getTarget(association));
+						if (association.getTargetEntity() != null) {
+							return getSelections(getPageDisplayedOn(association).getWebUI(),
+								association.getTargetEntity());
+						}
 					}
 					return Collections.emptySet();
 				}
@@ -186,7 +233,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 						} else {
 							final Set<Filter> filters = new HashSet<Filter>();
 							for (Selection selection : getSelections(getPageDisplayedOn(association).getWebUI(),
-										getTarget(association))) {
+									association.getTargetEntity())) {
 								filters.addAll(selection.getFilters());
 							}
 							return filters;
@@ -209,7 +256,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE);
+			childrenFeatures.add(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -289,12 +336,12 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
 				 WebuiFactory.eINSTANCE.createChildPathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
 				 WebuiFactory.eINSTANCE.createChildPathAssociation()));
 	}
 
@@ -322,25 +369,10 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
-	protected Set<Entity> getTarget(final UnitAssociation association) {
-		final Set<Entity> entities = getContentType(association.getDisplayedOn());
-		if (association.getAssociation() == null) {
-			return entities;
-		} else {
-			final Set<Entity> target = new HashSet<Entity>();
-			if (entities.contains(association.getAssociation().getPartOf())) {
-				target.add((Entity) association.getAssociation().getTargetEntity());
-			} else{
-				target.add((Entity) association.getAssociation().getPartOf());
-			}
-			return target;
-		}
-	}
-
-	protected Set<Selection> getSelections(final WebUI webUI, final Set<Entity> contentType) {
+	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
 		final Set<Selection> selections = new HashSet<Selection>();
 		for (Service service : webUI.getServices().getServices()) {
-			if (contentType.contains(service.getServes())) {
+			if (contentType.equals(service.getServes())) {
 				selections.addAll(service.getSelections());
 			}
 		}

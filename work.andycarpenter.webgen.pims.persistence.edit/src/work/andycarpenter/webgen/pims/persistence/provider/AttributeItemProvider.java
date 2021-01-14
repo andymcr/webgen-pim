@@ -390,6 +390,11 @@ public class AttributeItemProvider extends FeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

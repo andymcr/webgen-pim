@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getAssociation <em>Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getDynamicLabel <em>Dynamic Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  * </ul>
  *
@@ -41,14 +41,14 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	protected Association association;
 
 	/**
-	 * The cached value of the '{@link #getDynamicLabel() <em>Dynamic Label</em>}' reference.
+	 * The cached value of the '{@link #getValueDisplay() <em>Value Display</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDynamicLabel()
+	 * @see #getValueDisplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected ModelLabel dynamicLabel;
+	protected ModelLabel valueDisplay;
 
 	/**
 	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
@@ -125,16 +125,16 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public ModelLabel getDynamicLabel() {
-		if (dynamicLabel != null && dynamicLabel.eIsProxy()) {
-			InternalEObject oldDynamicLabel = (InternalEObject)dynamicLabel;
-			dynamicLabel = (ModelLabel)eResolveProxy(oldDynamicLabel);
-			if (dynamicLabel != oldDynamicLabel) {
+	public ModelLabel getValueDisplay() {
+		if (valueDisplay != null && valueDisplay.eIsProxy()) {
+			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
+			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
+			if (valueDisplay != oldValueDisplay) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL, oldDynamicLabel, dynamicLabel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
 			}
 		}
-		return dynamicLabel;
+		return valueDisplay;
 	}
 
 	/**
@@ -142,8 +142,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelLabel basicGetDynamicLabel() {
-		return dynamicLabel;
+	public ModelLabel basicGetValueDisplay() {
+		return valueDisplay;
 	}
 
 	/**
@@ -152,11 +152,11 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void setDynamicLabel(ModelLabel newDynamicLabel) {
-		ModelLabel oldDynamicLabel = dynamicLabel;
-		dynamicLabel = newDynamicLabel;
+	public void setValueDisplay(ModelLabel newValueDisplay) {
+		ModelLabel oldValueDisplay = valueDisplay;
+		valueDisplay = newValueDisplay;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL, oldDynamicLabel, dynamicLabel));
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
 	}
 
 	/**
@@ -180,9 +180,9 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
 				if (resolve) return getAssociation();
 				return basicGetAssociation();
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
-				if (resolve) return getDynamicLabel();
-				return basicGetDynamicLabel();
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
+				if (resolve) return getValueDisplay();
+				return basicGetValueDisplay();
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return isIsSourceAssociation();
 		}
@@ -200,8 +200,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)newValue);
 				return;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
-				setDynamicLabel((ModelLabel)newValue);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
+				setValueDisplay((ModelLabel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,8 +218,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)null);
 				return;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
-				setDynamicLabel((ModelLabel)null);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
+				setValueDisplay((ModelLabel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -235,8 +235,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 		switch (featureID) {
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
 				return association != null;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL:
-				return dynamicLabel != null;
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
+				return valueDisplay != null;
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}

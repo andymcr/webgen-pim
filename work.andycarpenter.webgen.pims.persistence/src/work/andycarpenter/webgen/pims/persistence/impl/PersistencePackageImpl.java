@@ -17,6 +17,7 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithoutContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
@@ -28,6 +29,7 @@ import work.andycarpenter.webgen.pims.persistence.DateDetails;
 import work.andycarpenter.webgen.pims.persistence.DatePathElement;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.persistence.FileAttribute;
 import work.andycarpenter.webgen.pims.persistence.ImageAttribute;
 import work.andycarpenter.webgen.pims.persistence.Label;
@@ -90,6 +92,20 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	private EClass associationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass associationReferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureChildPathEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -910,6 +926,76 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EClass getAssociationReference() {
+		return associationReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAssociationReference_Name() {
+		return (EAttribute)associationReferenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAssociationReference_Association() {
+		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAssociationReference_ValueDisplay() {
+		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAssociationReference_ChildFeature() {
+		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFeatureChildPath() {
+		return featureChildPathEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFeatureChildPath_PartOf() {
+		return (EReference)featureChildPathEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLabel() {
 		return labelEClass;
 	}
@@ -1050,7 +1136,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getModelLabelAssociation_DynamicLabel() {
+	public EReference getModelLabelAssociation_ValueDisplay() {
 		return (EReference)modelLabelAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1735,6 +1821,15 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(associationEClass, ASSOCIATION__PSEUDO);
 		createEAttribute(associationEClass, ASSOCIATION__SERIALIZATION_MAX_DEPTH);
 
+		associationReferenceEClass = createEClass(ASSOCIATION_REFERENCE);
+		createEAttribute(associationReferenceEClass, ASSOCIATION_REFERENCE__NAME);
+		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__ASSOCIATION);
+		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__VALUE_DISPLAY);
+		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__CHILD_FEATURE);
+
+		featureChildPathEClass = createEClass(FEATURE_CHILD_PATH);
+		createEReference(featureChildPathEClass, FEATURE_CHILD_PATH__PART_OF);
+
 		labelEClass = createEClass(LABEL);
 
 		modelLabelEClass = createEClass(MODEL_LABEL);
@@ -1753,7 +1848,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		modelLabelAssociationEClass = createEClass(MODEL_LABEL_ASSOCIATION);
 		createEReference(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__ASSOCIATION);
-		createEReference(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL);
+		createEReference(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY);
 		createEAttribute(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION);
 
 		entityEClass = createEClass(ENTITY);
@@ -1948,6 +2043,15 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAssociation_Pseudo(), ecorePackage.getEBoolean(), "pseudo", "false", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_SerializationMaxDepth(), ecorePackage.getEInt(), "serializationMaxDepth", "1", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(associationReferenceEClass, AssociationReference.class, "AssociationReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAssociationReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationReference_Association(), this.getAssociation(), null, "association", null, 1, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationReference_ValueDisplay(), this.getModelLabel(), null, "valueDisplay", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationReference_ChildFeature(), this.getFeatureChildPath(), this.getFeatureChildPath_PartOf(), "childFeature", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(featureChildPathEClass, FeatureChildPath.class, "FeatureChildPath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFeatureChildPath_PartOf(), this.getAssociationReference(), this.getAssociationReference_ChildFeature(), "partOf", null, 0, 1, FeatureChildPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modelLabelEClass, ModelLabel.class, "ModelLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1966,7 +2070,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		initEClass(modelLabelAssociationEClass, ModelLabelAssociation.class, "ModelLabelAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModelLabelAssociation_Association(), this.getAssociation(), null, "association", null, 1, 1, ModelLabelAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModelLabelAssociation_DynamicLabel(), this.getModelLabel(), null, "dynamicLabel", null, 0, 1, ModelLabelAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelLabelAssociation_ValueDisplay(), this.getModelLabel(), null, "valueDisplay", null, 0, 1, ModelLabelAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelLabelAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, ModelLabelAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2136,10 +2240,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 			   "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
 		   });
 		addAnnotation
+		  (getAssociationReference_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if association.oclIsUndefined() then\n\t\'\'\nelse\n\tassociation.name\nendif"
+		   });
+		addAnnotation
 		  (getModelLabelAssociation_IsSourceAssociation(),
 		   source,
 		   new String[] {
-			   "derivation", "not association.oclIsUndefined() implies\r\n\tpartOf.labelFor.features->includes(association)"
+			   "derivation", "not association.oclIsUndefined() implies\n\tpartOf.labelFor.features->includes(association)"
 		   });
 		addAnnotation
 		  (entityEClass,

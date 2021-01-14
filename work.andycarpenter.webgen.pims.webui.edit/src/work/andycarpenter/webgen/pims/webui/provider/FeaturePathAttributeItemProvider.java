@@ -76,7 +76,7 @@ public class FeaturePathAttributeItemProvider extends FeaturePathItemProvider {
 					if (object instanceof FeaturePathAttribute) {
 						final Set<Attribute> attributes = new HashSet<Attribute>();
 						final FeaturePathAttribute path = (FeaturePathAttribute) object;
-						for (Entity entity :  getParentTypes(path)) {
+						for (Entity entity :  path.getContainingTypes()) {
 							attributes.addAll(entity.getAttributes());
 						}
 						return attributes;

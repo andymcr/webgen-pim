@@ -2,8 +2,10 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +17,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getUsedBy <em>Used By</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#isDisable <em>Disable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InlineAction#getDisplayWhen <em>Display When</em>}</li>
@@ -57,6 +60,19 @@ public interface InlineAction extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setUsedBy(InlineActionContainer value);
+
+	/**
+	 * Returns the value of the '<em><b>Containing Types</b></em>' reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Types</em>' reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInlineAction_ContainingTypes()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsTypeOf(CollectionUnit) then\n\tusedBy.oclAsType(CollectionUnit).contentTypes\nelse if usedBy.oclIsTypeOf(UnitAssociation) then\n\tOrderedSet{usedBy.oclAsType(UnitAssociation).targetEntity}\nelse\n\tOrderedSet{}\nendif endif'"
+	 * @generated
+	 */
+	EList<Entity> getContainingTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Icon Name</b></em>' attribute.

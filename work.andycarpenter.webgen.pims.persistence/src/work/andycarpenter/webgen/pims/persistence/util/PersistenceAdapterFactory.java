@@ -92,6 +92,14 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createAssociationAdapter();
 			}
 			@Override
+			public Adapter caseAssociationReference(AssociationReference object) {
+				return createAssociationReferenceAdapter();
+			}
+			@Override
+			public Adapter caseFeatureChildPath(FeatureChildPath object) {
+				return createFeatureChildPathAdapter();
+			}
+			@Override
 			public Adapter caseLabel(Label object) {
 				return createLabelAdapter();
 			}
@@ -266,6 +274,34 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AssociationReference <em>Association Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationReference
+	 * @generated
+	 */
+	public Adapter createAssociationReferenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FeatureChildPath <em>Feature Child Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureChildPath
+	 * @generated
+	 */
+	public Adapter createFeatureChildPathAdapter() {
 		return null;
 	}
 

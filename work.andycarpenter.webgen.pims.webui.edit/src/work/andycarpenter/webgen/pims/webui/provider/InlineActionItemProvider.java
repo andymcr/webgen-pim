@@ -53,6 +53,7 @@ public class InlineActionItemProvider extends NamedDisplayElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addContainingTypesPropertyDescriptor(object);
 			addIconNamePropertyDescriptor(object);
 			addDisablePropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
@@ -62,6 +63,28 @@ public class InlineActionItemProvider extends NamedDisplayElementItemProvider {
 			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Containing Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InlineAction_containingTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InlineAction_containingTypes_feature", "_UI_InlineAction_type"),
+				 WebuiPackage.Literals.INLINE_ACTION__CONTAINING_TYPES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

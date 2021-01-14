@@ -8,6 +8,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.service.Service;
 
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -31,6 +33,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
@@ -49,6 +52,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class DynamicUnitImpl extends ContentUnitImpl implements DynamicUnit {
+	/**
+	 * The cached setting delegate for the '{@link #getContentTypes() <em>Content Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTENT_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.DYNAMIC_UNIT__CONTENT_TYPES).getSettingDelegate();
+
 	/**
 	 * The cached value of the '{@link #getDisplayFields() <em>Display Fields</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -286,6 +299,17 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.DYNAMIC_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getContentTypes() {
+		return (EList<Entity>)CONTENT_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -620,6 +644,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
+				return getContentTypes();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return getDisplayFields();
 			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:
@@ -764,6 +790,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
+				return CONTENT_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return displayFields != null && !displayFields.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:

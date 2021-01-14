@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
@@ -14,7 +15,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getTargetEntity <em>Target Entity</em>}</li>
  * </ul>
  *
@@ -38,22 +38,6 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @generated
 	 */
 	boolean isIsSourceAssociation();
-
-	/**
-	 * Returns the value of the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Entity</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Entity</em>' reference.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_SourceEntity()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif'"
-	 * @generated
-	 */
-	Entity getSourceEntity();
 
 	/**
 	 * Returns the value of the '<em><b>Target Entity</b></em>' reference.

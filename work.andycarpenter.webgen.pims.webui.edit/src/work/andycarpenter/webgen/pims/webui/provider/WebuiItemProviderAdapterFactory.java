@@ -42,6 +42,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
 
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
@@ -1556,6 +1557,25 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAssociationReference(AssociationReference object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+						 WebuiFactory.eINSTANCE.createChildPathAttribute()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
+						 WebuiFactory.eINSTANCE.createChildPathAssociation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

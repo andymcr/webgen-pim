@@ -48,7 +48,7 @@ public class ModelLabelAssociationItemProvider extends ModelLabelFeatureItemProv
 			super.getPropertyDescriptors(object);
 
 			addAssociationPropertyDescriptor(object);
-			addDynamicLabelPropertyDescriptor(object);
+			addValueDisplayPropertyDescriptor(object);
 			addIsSourceAssociationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -83,18 +83,18 @@ public class ModelLabelAssociationItemProvider extends ModelLabelFeatureItemProv
 	}
 
 	/**
-	 * This adds a property descriptor for the Dynamic Label feature.
+	 * This adds a property descriptor for the Value Display feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addDynamicLabelPropertyDescriptor(Object object) {
+	protected void addValueDisplayPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_ModelLabelAssociation_dynamicLabel_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_ModelLabelAssociation_dynamicLabel_feature", "_UI_ModelLabelAssociation_type"),
-			PersistencePackage.Literals.MODEL_LABEL_ASSOCIATION__DYNAMIC_LABEL,
+			getString("_UI_ModelLabelAssociation_valueDisplay_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_ModelLabelAssociation_valueDisplay_feature", "_UI_ModelLabelAssociation_type"),
+			PersistencePackage.Literals.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY,
 			true, false, true, null,
 			getString("_UI_InterfacePropertyCategory"),
 			null) {

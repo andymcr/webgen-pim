@@ -11,10 +11,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
-import work.andycarpenter.webgen.pims.webui.AssociationReference;
-import work.andycarpenter.webgen.pims.webui.ChildPath;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.impl.FeatureChildPathImpl;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -31,13 +33,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPathAssociation {
+public class ChildPathAssociationImpl extends FeatureChildPathImpl implements ChildPathAssociation {
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,7 +48,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.ASSOCIATION_REFERENCE__NAME).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ASSOCIATION_REFERENCE__NAME).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference.
@@ -76,7 +78,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 * @ordered
 	 */
-	protected ChildPath childFeature;
+	protected FeatureChildPath childFeature;
 
 	/**
 	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
@@ -89,16 +91,6 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	protected EStructuralFeature.Internal.SettingDelegate IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION).getSettingDelegate();
 
 	/**
-	 * The cached setting delegate for the '{@link #getSourceEntity() <em>Source Entity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceEntity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate SOURCE_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__SOURCE_ENTITY).getSettingDelegate();
-
-	/**
 	 * The cached setting delegate for the '{@link #getTargetEntity() <em>Target Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,6 +99,16 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate TARGET_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__TARGET_ENTITY).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ASSOCIATION__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,8 +145,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 */
 	@Override
-	public boolean isSetName() {
-		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	public void setName(String newName) {
+		NAME__ESETTING_DELEGATE.dynamicSet(this, null, 0, newName);
 	}
 
 	/**
@@ -233,7 +235,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 */
 	@Override
-	public ChildPath getChildFeature() {
+	public FeatureChildPath getChildFeature() {
 		return childFeature;
 	}
 
@@ -242,8 +244,8 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetChildFeature(ChildPath newChildFeature, NotificationChain msgs) {
-		ChildPath oldChildFeature = childFeature;
+	public NotificationChain basicSetChildFeature(FeatureChildPath newChildFeature, NotificationChain msgs) {
+		FeatureChildPath oldChildFeature = childFeature;
 		childFeature = newChildFeature;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE, oldChildFeature, newChildFeature);
@@ -258,13 +260,13 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 */
 	@Override
-	public void setChildFeature(ChildPath newChildFeature) {
+	public void setChildFeature(FeatureChildPath newChildFeature) {
 		if (newChildFeature != childFeature) {
 			NotificationChain msgs = null;
 			if (childFeature != null)
-				msgs = ((InternalEObject)childFeature).eInverseRemove(this, WebuiPackage.CHILD_PATH__PART_OF, ChildPath.class, msgs);
+				msgs = ((InternalEObject)childFeature).eInverseRemove(this, PersistencePackage.FEATURE_CHILD_PATH__PART_OF, FeatureChildPath.class, msgs);
 			if (newChildFeature != null)
-				msgs = ((InternalEObject)newChildFeature).eInverseAdd(this, WebuiPackage.CHILD_PATH__PART_OF, ChildPath.class, msgs);
+				msgs = ((InternalEObject)newChildFeature).eInverseAdd(this, PersistencePackage.FEATURE_CHILD_PATH__PART_OF, FeatureChildPath.class, msgs);
 			msgs = basicSetChildFeature(newChildFeature, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -280,25 +282,6 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	@Override
 	public boolean isIsSourceAssociation() {
 		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Entity getSourceEntity() {
-		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetSourceEntity() {
-		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -326,12 +309,31 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	 * @generated
 	 */
 	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE:
 				if (childFeature != null)
 					msgs = ((InternalEObject)childFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE, null, msgs);
-				return basicSetChildFeature((ChildPath)otherEnd, msgs);
+				return basicSetChildFeature((FeatureChildPath)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -370,12 +372,12 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				return getChildFeature();
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return isIsSourceAssociation();
-			case WebuiPackage.CHILD_PATH_ASSOCIATION__SOURCE_ENTITY:
-				if (resolve) return getSourceEntity();
-				return basicGetSourceEntity();
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__TARGET_ENTITY:
 				if (resolve) return getTargetEntity();
 				return basicGetTargetEntity();
+			case WebuiPackage.CHILD_PATH_ASSOCIATION__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -388,6 +390,9 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.CHILD_PATH_ASSOCIATION__NAME:
+				setName((String)newValue);
+				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)newValue);
 				return;
@@ -395,7 +400,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				setValueDisplay((ModelLabel)newValue);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildPath)newValue);
+				setChildFeature((FeatureChildPath)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -409,6 +414,9 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.CHILD_PATH_ASSOCIATION__NAME:
+				NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
+				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)null);
 				return;
@@ -416,7 +424,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				setValueDisplay((ModelLabel)null);
 				return;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildPath)null);
+				setChildFeature((FeatureChildPath)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -431,7 +439,7 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__NAME:
-				return isSetName();
+				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION:
 				return association != null;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY:
@@ -440,10 +448,10 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 				return childFeature != null;
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.CHILD_PATH_ASSOCIATION__SOURCE_ENTITY:
-				return SOURCE_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.CHILD_PATH_ASSOCIATION__TARGET_ENTITY:
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.CHILD_PATH_ASSOCIATION__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -457,10 +465,10 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == AssociationReference.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.CHILD_PATH_ASSOCIATION__NAME: return WebuiPackage.ASSOCIATION_REFERENCE__NAME;
-				case WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION: return WebuiPackage.ASSOCIATION_REFERENCE__ASSOCIATION;
-				case WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY: return WebuiPackage.ASSOCIATION_REFERENCE__VALUE_DISPLAY;
-				case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE: return WebuiPackage.ASSOCIATION_REFERENCE__CHILD_FEATURE;
+				case WebuiPackage.CHILD_PATH_ASSOCIATION__NAME: return PersistencePackage.ASSOCIATION_REFERENCE__NAME;
+				case WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION: return PersistencePackage.ASSOCIATION_REFERENCE__ASSOCIATION;
+				case WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY: return PersistencePackage.ASSOCIATION_REFERENCE__VALUE_DISPLAY;
+				case WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE: return PersistencePackage.ASSOCIATION_REFERENCE__CHILD_FEATURE;
 				default: return -1;
 			}
 		}
@@ -476,10 +484,10 @@ public class ChildPathAssociationImpl extends ChildPathImpl implements ChildPath
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == AssociationReference.class) {
 			switch (baseFeatureID) {
-				case WebuiPackage.ASSOCIATION_REFERENCE__NAME: return WebuiPackage.CHILD_PATH_ASSOCIATION__NAME;
-				case WebuiPackage.ASSOCIATION_REFERENCE__ASSOCIATION: return WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION;
-				case WebuiPackage.ASSOCIATION_REFERENCE__VALUE_DISPLAY: return WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY;
-				case WebuiPackage.ASSOCIATION_REFERENCE__CHILD_FEATURE: return WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE;
+				case PersistencePackage.ASSOCIATION_REFERENCE__NAME: return WebuiPackage.CHILD_PATH_ASSOCIATION__NAME;
+				case PersistencePackage.ASSOCIATION_REFERENCE__ASSOCIATION: return WebuiPackage.CHILD_PATH_ASSOCIATION__ASSOCIATION;
+				case PersistencePackage.ASSOCIATION_REFERENCE__VALUE_DISPLAY: return WebuiPackage.CHILD_PATH_ASSOCIATION__VALUE_DISPLAY;
+				case PersistencePackage.ASSOCIATION_REFERENCE__CHILD_FEATURE: return WebuiPackage.CHILD_PATH_ASSOCIATION__CHILD_FEATURE;
 				default: return -1;
 			}
 		}

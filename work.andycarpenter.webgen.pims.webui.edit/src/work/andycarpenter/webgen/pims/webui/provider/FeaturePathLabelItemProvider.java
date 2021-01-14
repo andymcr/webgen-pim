@@ -76,7 +76,7 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 					if (object instanceof FeaturePathLabel) {
 						final Set<Label> labels = new HashSet<Label>();
 						final FeaturePathLabel path = (FeaturePathLabel) object;
-						for (Entity entity :  getParentTypes(path)) {
+						for (Entity entity : path.getContainingTypes()) {
 							labels.addAll(entity.getLabels());
 						}
 						return labels;

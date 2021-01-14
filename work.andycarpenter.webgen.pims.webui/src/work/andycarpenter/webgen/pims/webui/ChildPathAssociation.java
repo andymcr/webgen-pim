@@ -2,7 +2,9 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,15 +16,15 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getTargetEntity <em>Target Entity</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAssociation()
  * @model
  * @generated
  */
-public interface ChildPathAssociation extends ChildPath, AssociationReference {
+public interface ChildPathAssociation extends FeatureChildPath, AssociationReference {
 	/**
 	 * Returns the value of the '<em><b>Is Source Association</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,22 +42,6 @@ public interface ChildPathAssociation extends ChildPath, AssociationReference {
 	boolean isIsSourceAssociation();
 
 	/**
-	 * Returns the value of the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Entity</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Entity</em>' reference.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAssociation_SourceEntity()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif'"
-	 * @generated
-	 */
-	Entity getSourceEntity();
-
-	/**
 	 * Returns the value of the '<em><b>Target Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -70,5 +56,17 @@ public interface ChildPathAssociation extends ChildPath, AssociationReference {
 	 * @generated
 	 */
 	Entity getTargetEntity();
+
+	/**
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getChildPathAssociation_ContainingType()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if partOf.oclIsTypeOf(UnitAssociation) then\n\tpartOf.oclAsType(UnitAssociation).targetEntity\nelse if partOf.oclIsTypeOf(FeaturePathAssociation) then\n\tpartOf.oclAsType(FeaturePathAssociation).targetEntity\nelse\n\tpartOf.oclAsType(ChildPathAssociation).targetEntity\nendif endif'"
+	 * @generated
+	 */
+	Entity getContainingType();
 
 } // ChildPathAssociation

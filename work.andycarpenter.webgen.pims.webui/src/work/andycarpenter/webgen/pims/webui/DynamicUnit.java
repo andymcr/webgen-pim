@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.service.Service;
 
 /**
@@ -15,6 +16,7 @@ import work.andycarpenter.webgen.pims.service.Service;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}</li>
@@ -33,10 +35,23 @@ import work.andycarpenter.webgen.pims.service.Service;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='featuresMustBeFromContentType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let eovFeatures : Collection(persistence::Feature)\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t-&gt;select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t-&gt;forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\teovFeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let features : Collection(persistence::Feature)\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t-&gt;select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t-&gt;forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)'"
  * @generated
  */
 public interface DynamicUnit extends ContentUnit {
+	/**
+	 * Returns the value of the '<em><b>Content Types</b></em>' reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Content Types</em>' reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ContentTypes()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.oclIsKindOf(SingletonUnit) then\n\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\nelse if self.oclIsKindOf(CollectionUnit) then\n\tself.oclAsType(CollectionUnit).contentType\nelse\n\tOrderedSet{}\nendif endif'"
+	 * @generated
+	 */
+	EList<Entity> getContentTypes();
+
 	/**
 	 * Returns the value of the '<em><b>Display Fields</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.UnitField}.

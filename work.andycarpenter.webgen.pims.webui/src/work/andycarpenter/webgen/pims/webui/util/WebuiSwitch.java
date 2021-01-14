@@ -10,6 +10,8 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Variable;
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.webui.*;
 
 /**
@@ -224,29 +226,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.ASSOCIATION_REFERENCE: {
-				AssociationReference associationReference = (AssociationReference)theEObject;
-				T result = caseAssociationReference(associationReference);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.CHILD_PATH: {
-				ChildPath childPath = (ChildPath)theEObject;
-				T result = caseChildPath(childPath);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE: {
 				ChildPathAttribute childPathAttribute = (ChildPathAttribute)theEObject;
 				T result = caseChildPathAttribute(childPathAttribute);
-				if (result == null) result = caseChildPath(childPathAttribute);
+				if (result == null) result = caseFeatureChildPath(childPathAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case WebuiPackage.CHILD_PATH_ASSOCIATION: {
 				ChildPathAssociation childPathAssociation = (ChildPathAssociation)theEObject;
 				T result = caseChildPathAssociation(childPathAssociation);
-				if (result == null) result = caseChildPath(childPathAssociation);
+				if (result == null) result = caseFeatureChildPath(childPathAssociation);
 				if (result == null) result = caseAssociationReference(childPathAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -937,17 +927,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseChildPath(ChildPath object) {
+	public T caseFeatureChildPath(FeatureChildPath object) {
 		return null;
 	}
 

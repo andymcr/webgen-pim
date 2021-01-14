@@ -12,6 +12,8 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Variable;
+import work.andycarpenter.webgen.pims.persistence.AssociationReference;
+import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.webui.*;
 
 /**
@@ -149,14 +151,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUnitAssociation(UnitAssociation object) {
 				return createUnitAssociationAdapter();
-			}
-			@Override
-			public Adapter caseAssociationReference(AssociationReference object) {
-				return createAssociationReferenceAdapter();
-			}
-			@Override
-			public Adapter caseChildPath(ChildPath object) {
-				return createChildPathAdapter();
 			}
 			@Override
 			public Adapter caseChildPathAttribute(ChildPathAttribute object) {
@@ -313,6 +307,14 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNamedDisplayElement(NamedDisplayElement object) {
 				return createNamedDisplayElementAdapter();
+			}
+			@Override
+			public Adapter caseAssociationReference(AssociationReference object) {
+				return createAssociationReferenceAdapter();
+			}
+			@Override
+			public Adapter caseFeatureChildPath(FeatureChildPath object) {
+				return createFeatureChildPathAdapter();
 			}
 			@Override
 			public Adapter caseExpression(Expression object) {
@@ -623,13 +625,13 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AssociationReference <em>Association Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationReference
 	 * @generated
 	 */
 	public Adapter createAssociationReferenceAdapter() {
@@ -637,16 +639,16 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPath <em>Child Path</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FeatureChildPath <em>Feature Child Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPath
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureChildPath
 	 * @generated
 	 */
-	public Adapter createChildPathAdapter() {
+	public Adapter createFeatureChildPathAdapter() {
 		return null;
 	}
 

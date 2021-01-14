@@ -139,6 +139,7 @@
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//CreateSitemapUnit/filename"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//DynamicUnit">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/contentTypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/displayFields"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/servicesUsed"/>
@@ -200,39 +201,29 @@
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
       <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/isSourceAssociation"/>
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/sourceEntity"/>
-      <genFeatures property="None" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/targetEntity"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/containingTypes"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/filteredOptions"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="webui.ecore#//AssociationReference">
-      <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//AssociationReference/name"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//AssociationReference/association"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//AssociationReference/valueDisplay"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//AssociationReference/childFeature"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="webui.ecore#//ChildPath">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ChildPath/partOf"/>
-    </genClasses>
     <genClasses ecoreClass="webui.ecore#//ChildPathAttribute">
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//ChildPathAttribute/name"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//ChildPathAttribute/attribute"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ChildPathAttribute/containingType"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ChildPathAssociation">
       <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EAttribute webui.ecore#//ChildPathAssociation/isSourceAssociation"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EReference webui.ecore#//ChildPathAssociation/sourceEntity"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//ChildPathAssociation/targetEntity"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ChildPathAssociation/containingType"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="webui.ecore#//FeaturePath"/>
+    <genClasses image="false" ecoreClass="webui.ecore#//FeaturePath">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//FeaturePath/containingTypes"/>
+    </genClasses>
     <genClasses ecoreClass="webui.ecore#//FeaturePathAttribute">
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathAttribute/name"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
@@ -241,8 +232,6 @@
     <genClasses ecoreClass="webui.ecore#//FeaturePathAssociation">
       <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathAssociation/isSourceAssociation"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/sourceEntity"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//FeaturePathAssociation/targetEntity"/>
     </genClasses>
@@ -435,6 +424,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//InlineAction">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//InlineAction/usedBy"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//InlineAction/containingTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/iconName"/>
       <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute webui.ecore#//InlineAction/disable"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"

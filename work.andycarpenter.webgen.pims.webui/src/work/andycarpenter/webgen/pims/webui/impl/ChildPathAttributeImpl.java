@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.impl.FeatureChildPathImpl;
 import work.andycarpenter.webgen.pims.webui.ChildPathAttribute;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -23,11 +25,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAttribute {
+public class ChildPathAttributeImpl extends FeatureChildPathImpl implements ChildPathAttribute {
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,6 +50,16 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 	 * @ordered
 	 */
 	protected Attribute attribute;
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,6 +136,25 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 	 * @generated
 	 */
 	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE__NAME:
@@ -130,6 +162,9 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				if (resolve) return getAttribute();
 				return basicGetAttribute();
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,6 +211,8 @@ public class ChildPathAttributeImpl extends ChildPathImpl implements ChildPathAt
 				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
 				return attribute != null;
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

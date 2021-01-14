@@ -368,13 +368,13 @@ abstract rule AssociationReference {
 	)
 }
 
-abstract rule ChildPath {
-	from website : Website!ChildPath
-	to waf : WAF!ChildPath (
+abstract rule FeatureChildPath {
+	from website : Website!FeatureChildPath
+	to waf : WAF!FeatureChildPath (
 	)
 }
 
--- @extends ChildPath
+-- @extends FeatureChildPath
 rule ChildPathAttribute {
 	from website : Website!ChildPathAttribute
 	to waf : WAF!ChildPathAttribute (
@@ -382,7 +382,7 @@ rule ChildPathAttribute {
 	)
 }
 
--- @extends ChildPath, AssociationReference
+-- @extends FeatureChildPath, AssociationReference
 rule ChildPathAssociation {
 	from website : Website!ChildPathAssociation
 	to waf : WAF!ChildPathAssociation (

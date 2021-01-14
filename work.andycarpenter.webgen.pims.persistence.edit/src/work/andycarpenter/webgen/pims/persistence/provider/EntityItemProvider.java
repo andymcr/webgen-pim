@@ -242,7 +242,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 

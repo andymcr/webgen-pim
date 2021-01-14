@@ -5,7 +5,9 @@ package work.andycarpenter.webgen.pims.webui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -16,6 +18,7 @@ import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.InlineAction;
 import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -29,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getUsedBy <em>Used By</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#isDisable <em>Disable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl#getDisplayWhen <em>Display When</em>}</li>
@@ -42,6 +46,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class InlineActionImpl extends NamedDisplayElementImpl implements InlineAction {
+	/**
+	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.INLINE_ACTION__CONTAINING_TYPES).getSettingDelegate();
+
 	/**
 	 * The default value of the '{@link #getIconName() <em>Icon Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -252,6 +266,17 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INLINE_ACTION__USED_BY, newUsedBy, newUsedBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getContainingTypes() {
+		return (EList<Entity>)CONTAINING_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -516,6 +541,8 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 		switch (featureID) {
 			case WebuiPackage.INLINE_ACTION__USED_BY:
 				return getUsedBy();
+			case WebuiPackage.INLINE_ACTION__CONTAINING_TYPES:
+				return getContainingTypes();
 			case WebuiPackage.INLINE_ACTION__ICON_NAME:
 				return getIconName();
 			case WebuiPackage.INLINE_ACTION__DISABLE:
@@ -624,6 +651,8 @@ public abstract class InlineActionImpl extends NamedDisplayElementImpl implement
 		switch (featureID) {
 			case WebuiPackage.INLINE_ACTION__USED_BY:
 				return getUsedBy() != null;
+			case WebuiPackage.INLINE_ACTION__CONTAINING_TYPES:
+				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.INLINE_ACTION__ICON_NAME:
 				return ICON_NAME_EDEFAULT == null ? iconName != null : !ICON_NAME_EDEFAULT.equals(iconName);
 			case WebuiPackage.INLINE_ACTION__DISABLE:

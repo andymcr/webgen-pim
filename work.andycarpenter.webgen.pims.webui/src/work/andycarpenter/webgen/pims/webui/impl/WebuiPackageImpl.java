@@ -23,11 +23,9 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
 
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
 import work.andycarpenter.webgen.pims.webui.AjaxTechnologies;
-import work.andycarpenter.webgen.pims.webui.AssociationReference;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CaptchaField;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
-import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.ChildPathAttribute;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
@@ -237,20 +235,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass unitAssociationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass associationReferenceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass childPathEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1387,7 +1371,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDynamicUnit_DisplayFields() {
+	public EReference getDynamicUnit_ContentTypes() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1397,7 +1381,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDynamicUnit_ServicesUsed() {
+	public EReference getDynamicUnit_DisplayFields() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1407,7 +1391,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDynamicUnit_HideWhen() {
+	public EReference getDynamicUnit_ServicesUsed() {
 		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1417,8 +1401,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getDynamicUnit_HideWhen() {
+		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getDynamicUnit_MessageWhenHidden() {
-		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1428,7 +1422,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getDynamicUnit_SupportActions() {
-		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(4);
+		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1438,16 +1432,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getDynamicUnit_Header() {
-		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDynamicUnit_Footer() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1457,7 +1441,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_HeaderClass() {
+	public EAttribute getDynamicUnit_Footer() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1467,7 +1451,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_ControlClass() {
+	public EAttribute getDynamicUnit_HeaderClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1477,7 +1461,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_FooterClass() {
+	public EAttribute getDynamicUnit_ControlClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1487,7 +1471,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_FieldListClass() {
+	public EAttribute getDynamicUnit_FooterClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1497,7 +1481,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_UnitFieldLabelClass() {
+	public EAttribute getDynamicUnit_FieldListClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1507,8 +1491,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_UnitFieldValueClass() {
+	public EAttribute getDynamicUnit_UnitFieldLabelClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDynamicUnit_UnitFieldValueClass() {
+		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1877,7 +1871,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUnitAssociation_SourceEntity() {
+	public EReference getUnitAssociation_TargetEntity() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1887,7 +1881,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUnitAssociation_TargetEntity() {
+	public EReference getUnitAssociation_ContainingTypes() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1909,76 +1903,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EReference getUnitAssociation_FilteredOptions() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAssociationReference() {
-		return associationReferenceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociationReference_Name() {
-		return (EAttribute)associationReferenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssociationReference_Association() {
-		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssociationReference_ValueDisplay() {
-		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssociationReference_ChildFeature() {
-		return (EReference)associationReferenceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getChildPath() {
-		return childPathEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getChildPath_PartOf() {
-		return (EReference)childPathEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2017,6 +1941,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getChildPathAttribute_ContainingType() {
+		return (EReference)childPathAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildPathAssociation() {
 		return childPathAssociationEClass;
 	}
@@ -2037,7 +1971,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getChildPathAssociation_SourceEntity() {
+	public EReference getChildPathAssociation_TargetEntity() {
 		return (EReference)childPathAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2047,7 +1981,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getChildPathAssociation_TargetEntity() {
+	public EReference getChildPathAssociation_ContainingType() {
 		return (EReference)childPathAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2059,6 +1993,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EClass getFeaturePath() {
 		return featurePathEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFeaturePath_ContainingTypes() {
+		return (EReference)featurePathEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2117,18 +2061,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFeaturePathAssociation_SourceEntity() {
-		return (EReference)featurePathAssociationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFeaturePathAssociation_TargetEntity() {
-		return (EReference)featurePathAssociationEClass.getEStructuralFeatures().get(2);
+		return (EReference)featurePathAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3427,8 +3361,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineAction_IconName() {
-		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(1);
+	public EReference getInlineAction_ContainingTypes() {
+		return (EReference)inlineActionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3437,7 +3371,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineAction_Disable() {
+	public EAttribute getInlineAction_IconName() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3447,8 +3381,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getInlineAction_Disable() {
+		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getInlineAction_DisplayWhen() {
-		return (EReference)inlineActionEClass.getEStructuralFeatures().get(3);
+		return (EReference)inlineActionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3458,16 +3402,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getInlineAction_Header() {
-		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInlineAction_Footer() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3477,7 +3411,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineAction_AnchorClass() {
+	public EAttribute getInlineAction_Footer() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -3487,7 +3421,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineAction_HeaderClass() {
+	public EAttribute getInlineAction_AnchorClass() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3497,8 +3431,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInlineAction_FooterClass() {
+	public EAttribute getInlineAction_HeaderClass() {
 		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInlineAction_FooterClass() {
+		return (EAttribute)inlineActionEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -3910,6 +3854,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(createSitemapUnitEClass, CREATE_SITEMAP_UNIT__FILENAME);
 
 		dynamicUnitEClass = createEClass(DYNAMIC_UNIT);
+		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__CONTENT_TYPES);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__DISPLAY_FIELDS);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__SERVICES_USED);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__HIDE_WHEN);
@@ -3963,30 +3908,23 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		unitAssociationEClass = createEClass(UNIT_ASSOCIATION);
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION);
-		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__SOURCE_ENTITY);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__TARGET_ENTITY);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__CONTAINING_TYPES);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__FILTERED_OPTIONS);
-
-		associationReferenceEClass = createEClass(ASSOCIATION_REFERENCE);
-		createEAttribute(associationReferenceEClass, ASSOCIATION_REFERENCE__NAME);
-		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__ASSOCIATION);
-		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__VALUE_DISPLAY);
-		createEReference(associationReferenceEClass, ASSOCIATION_REFERENCE__CHILD_FEATURE);
-
-		childPathEClass = createEClass(CHILD_PATH);
-		createEReference(childPathEClass, CHILD_PATH__PART_OF);
 
 		childPathAttributeEClass = createEClass(CHILD_PATH_ATTRIBUTE);
 		createEAttribute(childPathAttributeEClass, CHILD_PATH_ATTRIBUTE__NAME);
 		createEReference(childPathAttributeEClass, CHILD_PATH_ATTRIBUTE__ATTRIBUTE);
+		createEReference(childPathAttributeEClass, CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE);
 
 		childPathAssociationEClass = createEClass(CHILD_PATH_ASSOCIATION);
 		createEAttribute(childPathAssociationEClass, CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION);
-		createEReference(childPathAssociationEClass, CHILD_PATH_ASSOCIATION__SOURCE_ENTITY);
 		createEReference(childPathAssociationEClass, CHILD_PATH_ASSOCIATION__TARGET_ENTITY);
+		createEReference(childPathAssociationEClass, CHILD_PATH_ASSOCIATION__CONTAINING_TYPE);
 
 		featurePathEClass = createEClass(FEATURE_PATH);
+		createEReference(featurePathEClass, FEATURE_PATH__CONTAINING_TYPES);
 
 		featurePathAttributeEClass = createEClass(FEATURE_PATH_ATTRIBUTE);
 		createEAttribute(featurePathAttributeEClass, FEATURE_PATH_ATTRIBUTE__NAME);
@@ -3994,7 +3932,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		featurePathAssociationEClass = createEClass(FEATURE_PATH_ASSOCIATION);
 		createEAttribute(featurePathAssociationEClass, FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION);
-		createEReference(featurePathAssociationEClass, FEATURE_PATH_ASSOCIATION__SOURCE_ENTITY);
 		createEReference(featurePathAssociationEClass, FEATURE_PATH_ASSOCIATION__TARGET_ENTITY);
 
 		featurePathLabelEClass = createEClass(FEATURE_PATH_LABEL);
@@ -4161,6 +4098,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		inlineActionEClass = createEClass(INLINE_ACTION);
 		createEReference(inlineActionEClass, INLINE_ACTION__USED_BY);
+		createEReference(inlineActionEClass, INLINE_ACTION__CONTAINING_TYPES);
 		createEAttribute(inlineActionEClass, INLINE_ACTION__ICON_NAME);
 		createEAttribute(inlineActionEClass, INLINE_ACTION__DISABLE);
 		createEReference(inlineActionEClass, INLINE_ACTION__DISPLAY_WHEN);
@@ -4250,14 +4188,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		unitFeatureEClass.getESuperTypes().add(this.getInlineActionContainer());
 		unitElementEClass.getESuperTypes().add(this.getUnitFeature());
 		unitAssociationEClass.getESuperTypes().add(this.getUnitFeature());
-		unitAssociationEClass.getESuperTypes().add(this.getAssociationReference());
-		childPathAttributeEClass.getESuperTypes().add(this.getChildPath());
-		childPathAssociationEClass.getESuperTypes().add(this.getChildPath());
-		childPathAssociationEClass.getESuperTypes().add(this.getAssociationReference());
+		unitAssociationEClass.getESuperTypes().add(thePersistencePackage.getAssociationReference());
+		childPathAttributeEClass.getESuperTypes().add(thePersistencePackage.getFeatureChildPath());
+		childPathAssociationEClass.getESuperTypes().add(thePersistencePackage.getFeatureChildPath());
+		childPathAssociationEClass.getESuperTypes().add(thePersistencePackage.getAssociationReference());
 		featurePathEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 		featurePathAttributeEClass.getESuperTypes().add(this.getFeaturePath());
 		featurePathAssociationEClass.getESuperTypes().add(this.getFeaturePath());
-		featurePathAssociationEClass.getESuperTypes().add(this.getAssociationReference());
+		featurePathAssociationEClass.getESuperTypes().add(thePersistencePackage.getAssociationReference());
 		featurePathLabelEClass.getESuperTypes().add(this.getFeaturePath());
 		unitLabelEClass.getESuperTypes().add(this.getUnitField());
 		interfaceFieldEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
@@ -4388,6 +4326,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCreateSitemapUnit_Filename(), ecorePackage.getEString(), "filename", "sitemap.xml", 1, 1, CreateSitemapUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dynamicUnitEClass, DynamicUnit.class, "DynamicUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDynamicUnit_ContentTypes(), thePersistencePackage.getEntity(), null, "contentTypes", null, 0, -1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_DisplayFields(), this.getUnitField(), this.getUnitField_DisplayedOn(), "displayFields", null, 0, -1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_ServicesUsed(), theServicePackage.getService(), null, "servicesUsed", null, 0, -1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_HideWhen(), theExpressionPackage.getPredicate(), null, "hideWhen", null, 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4441,30 +4380,23 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(unitAssociationEClass, UnitAssociation.class, "UnitAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnitAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitAssociation_SourceEntity(), thePersistencePackage.getEntity(), null, "sourceEntity", null, 0, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_TargetEntity(), thePersistencePackage.getEntity(), null, "targetEntity", null, 0, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_ContainingTypes(), thePersistencePackage.getEntity(), null, "containingTypes", null, 0, -1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_Options(), theServicePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_FilteredOptions(), theServicePackage.getFilter(), null, "filteredOptions", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(associationReferenceEClass, AssociationReference.class, "AssociationReference", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAssociationReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getAssociationReference_Association(), thePersistencePackage.getAssociation(), null, "association", null, 1, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAssociationReference_ValueDisplay(), thePersistencePackage.getModelLabel(), null, "valueDisplay", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAssociationReference_ChildFeature(), this.getChildPath(), this.getChildPath_PartOf(), "childFeature", null, 0, 1, AssociationReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(childPathEClass, ChildPath.class, "ChildPath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getChildPath_PartOf(), this.getAssociationReference(), this.getAssociationReference_ChildFeature(), "partOf", null, 0, 1, ChildPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(childPathAttributeEClass, ChildPathAttribute.class, "ChildPathAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChildPathAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChildPathAttribute.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 		initEReference(getChildPathAttribute_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, ChildPathAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getChildPathAttribute_ContainingType(), thePersistencePackage.getEntity(), null, "containingType", null, 0, 1, ChildPathAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(childPathAssociationEClass, ChildPathAssociation.class, "ChildPathAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChildPathAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, ChildPathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getChildPathAssociation_SourceEntity(), thePersistencePackage.getEntity(), null, "sourceEntity", null, 0, 1, ChildPathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getChildPathAssociation_TargetEntity(), thePersistencePackage.getEntity(), null, "targetEntity", null, 0, 1, ChildPathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getChildPathAssociation_ContainingType(), thePersistencePackage.getEntity(), null, "containingType", null, 0, 1, ChildPathAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(featurePathEClass, FeaturePath.class, "FeaturePath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFeaturePath_ContainingTypes(), thePersistencePackage.getEntity(), null, "containingTypes", null, 0, -1, FeaturePath.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(featurePathAttributeEClass, FeaturePathAttribute.class, "FeaturePathAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFeaturePathAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeaturePathAttribute.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -4472,7 +4404,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(featurePathAssociationEClass, FeaturePathAssociation.class, "FeaturePathAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFeaturePathAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, FeaturePathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getFeaturePathAssociation_SourceEntity(), thePersistencePackage.getEntity(), null, "sourceEntity", null, 0, 1, FeaturePathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getFeaturePathAssociation_TargetEntity(), thePersistencePackage.getEntity(), null, "targetEntity", null, 0, 1, FeaturePathAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(featurePathLabelEClass, FeaturePathLabel.class, "FeaturePathLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4639,6 +4570,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(inlineActionEClass, InlineAction.class, "InlineAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInlineAction_UsedBy(), this.getInlineActionContainer(), this.getInlineActionContainer_Actions(), "usedBy", null, 1, 1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getInlineAction_ContainingTypes(), thePersistencePackage.getEntity(), null, "containingTypes", null, 0, -1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInlineAction_IconName(), ecorePackage.getEString(), "iconName", "", 0, 1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInlineAction_Disable(), ecorePackage.getEBoolean(), "disable", null, 0, 1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInlineAction_DisplayWhen(), theExpressionPackage.getPredicate(), null, "displayWhen", null, 0, 1, InlineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4815,7 +4747,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (dynamicUnitEClass,
 		   source,
 		   new String[] {
-			   "featuresMustBeFromContentType", "let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let eovFeatures : Collection(persistence::Feature)\n\t\t= entities->collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t->select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t->forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\teovFeatures->includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)"
+			   "featuresMustBeFromContentType", "let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let features : Collection(persistence::Feature)\n\t\t= entities->collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t->select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t->forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tfeatures->includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\tfeatures->includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)"
+		   });
+		addAnnotation
+		  (getDynamicUnit_ContentTypes(),
+		   source,
+		   new String[] {
+			   "derivation", "if self.oclIsKindOf(SingletonUnit) then\n\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\nelse if self.oclIsKindOf(CollectionUnit) then\n\tself.oclAsType(CollectionUnit).contentType\nelse\n\tOrderedSet{}\nendif endif"
 		   });
 		addAnnotation
 		  (unitFeatureEClass,
@@ -4840,13 +4778,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (getUnitAssociation_IsSourceAssociation(),
 		   source,
 		   new String[] {
-			   "derivation", "not association.oclIsUndefined() implies\n\tif displayedOn.oclIsKindOf(SingletonUnit) then\n\t\tdisplayedOn.oclAsType(SingletonUnit).contentType.associations->includes(association)\n\telse if displayedOn.oclIsKindOf(CollectionUnit) then\n\t\tdisplayedOn.oclAsType(CollectionUnit).contentType->collect(e | e.associations)->includes(association)\n\telse\n\t\tfalse\n\tendif endif"
-		   });
-		addAnnotation
-		  (getUnitAssociation_SourceEntity(),
-		   source,
-		   new String[] {
-			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif"
+			   "derivation", "not association.oclIsUndefined() implies\n\tdisplayedOn.contentTypes->collect(e | e.associations)->includes(association)"
 		   });
 		addAnnotation
 		  (getUnitAssociation_TargetEntity(),
@@ -4855,10 +4787,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.targetEntity\n\telse\n\t\tassociation.partOf\n\tendif\nendif"
 		   });
 		addAnnotation
-		  (getAssociationReference_Name(),
+		  (getUnitAssociation_ContainingTypes(),
 		   source,
 		   new String[] {
-			   "derivation", "if association.oclIsUndefined() then\n\t\'\'\nelse\n\tassociation.name\nendif\n"
+			   "derivation", "displayedOn.contentTypes"
 		   });
 		addAnnotation
 		  (getChildPathAttribute_Name(),
@@ -4867,22 +4799,34 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			   "derivation", "if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif"
 		   });
 		addAnnotation
+		  (getChildPathAttribute_ContainingType(),
+		   source,
+		   new String[] {
+			   "derivation", "if partOf.oclIsTypeOf(UnitAssociation) then\n\tpartOf.oclAsType(UnitAssociation).targetEntity\nelse if partOf.oclIsTypeOf(FeaturePathAssociation) then\n\tpartOf.oclAsType(FeaturePathAssociation).targetEntity\nelse\n\tpartOf.oclAsType(ChildPathAssociation).targetEntity\nendif endif"
+		   });
+		addAnnotation
 		  (getChildPathAssociation_IsSourceAssociation(),
 		   source,
 		   new String[] {
 			   "derivation", "not association.oclIsUndefined() implies\r\n\tif partOf.oclIsTypeOf(UnitAssociation) then\r\n\t\tpartOf.oclAsType(UnitAssociation).targetEntity.associations->includes(association)\r\n\telse if partOf.oclIsTypeOf(FeaturePathAssociation) then\r\n\t\tpartOf.oclAsType(FeaturePathAssociation).targetEntity.associations->includes(association)\r\n\telse\r\n\t\tpartOf.oclAsType(ChildPathAssociation).targetEntity.associations->includes(association)\r\n\tendif endif"
 		   });
 		addAnnotation
-		  (getChildPathAssociation_SourceEntity(),
-		   source,
-		   new String[] {
-			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif"
-		   });
-		addAnnotation
 		  (getChildPathAssociation_TargetEntity(),
 		   source,
 		   new String[] {
 			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.targetEntity\n\telse\n\t\tassociation.partOf\n\tendif\nendif"
+		   });
+		addAnnotation
+		  (getChildPathAssociation_ContainingType(),
+		   source,
+		   new String[] {
+			   "derivation", "if partOf.oclIsTypeOf(UnitAssociation) then\n\tpartOf.oclAsType(UnitAssociation).targetEntity\nelse if partOf.oclIsTypeOf(FeaturePathAssociation) then\n\tpartOf.oclAsType(FeaturePathAssociation).targetEntity\nelse\n\tpartOf.oclAsType(ChildPathAssociation).targetEntity\nendif endif"
+		   });
+		addAnnotation
+		  (getFeaturePath_ContainingTypes(),
+		   source,
+		   new String[] {
+			   "derivation", "if rootContainer.oclIsTypeOf(SingletonUnit) then\n\tOrderedSet{rootContainer.oclAsType(SingletonUnit).contentType}\nelse if rootContainer.oclIsTypeOf(CollectionUnit) then\n\tOrderedSet{rootContainer.oclAsType(CollectionUnit).containingType}\nelse if rootContainer.oclIsTypeOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsTypeOf(InlineAction) then\n\trootContainer.oclAsType(InlineAction).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif endif"
 		   });
 		addAnnotation
 		  (getFeaturePathAttribute_Name(),
@@ -4895,12 +4839,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   source,
 		   new String[] {
 			   "derivation", "not association.oclIsUndefined() implies\n\tif self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(CollectionUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SingletonUnit) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(SingletonUnit).contentType = association.partOf\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(UnitField) then\n\t\tlet unit : DynamicUnit = self.oclAsType(ecore::EObject).eContainer().oclAsType(UnitField).displayedOn\n\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\telse\n\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\tendif\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsTypeOf(Badge) then\n\t\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType->includes(self.association.partOf)\n\telse if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(expression::Expression) then\n\t\tif rootContainer.oclIsKindOf(CollectionUnit) then\n\t\t\tlet collectionUnit : CollectionUnit = rootContainer.oclAsType(CollectionUnit)\n\t\t\tin if collectionUnit.containingType.oclIsUndefined() then\n\t\t\t\t\tcollectionUnit.containingType.associations->includes(association.partOf)\n\t\t\t\telse\n\t\t\t\t\ttrue\n\t\t\t\tendif\n\t\telse if rootContainer.oclIsKindOf(SingletonUnit) then\n\t\t\trootContainer.oclAsType(SingletonUnit).contentType = association.partOf\n\t\telse if rootContainer.oclIsKindOf(UnitField) then\n\t\t\tlet unit : DynamicUnit = rootContainer.oclAsType(UnitField).displayedOn\n\t\t\t\tin if unit.oclIsKindOf(CollectionUnit) then\n\t\t\t\t\t\tunit.oclAsType(CollectionUnit).contentType->includes(association.partOf)\n\t\t\t\t\telse\n\t\t\t\t\t\tunit.oclAsType(SingletonUnit).contentType = association.partOf\n\t\t\t\t\tendif\n\t\telse\n\t\t\ttrue\n\t\tendif endif endif\n\telse\n\t\ttrue\n\tendif endif endif endif endif"
-		   });
-		addAnnotation
-		  (getFeaturePathAssociation_SourceEntity(),
-		   source,
-		   new String[] {
-			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation then\n\t\tassociation.partOf\n\telse\n\t\tassociation.targetEntity\n\tendif\nendif"
 		   });
 		addAnnotation
 		  (getFeaturePathAssociation_TargetEntity(),
@@ -4957,6 +4895,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   source,
 		   new String[] {
 			   "atMostOneDeleteAction", "actions->select(a | a.oclIsKindOf(DeleteAction))->size() < 2"
+		   });
+		addAnnotation
+		  (getInlineAction_ContainingTypes(),
+		   source,
+		   new String[] {
+			   "derivation", "if usedBy.oclIsTypeOf(CollectionUnit) then\n\tusedBy.oclAsType(CollectionUnit).contentTypes\nelse if usedBy.oclIsTypeOf(UnitAssociation) then\n\tOrderedSet{usedBy.oclAsType(UnitAssociation).targetEntity}\nelse\n\tOrderedSet{}\nendif endif"
 		   });
 		addAnnotation
 		  (deleteActionEClass,

@@ -66,7 +66,7 @@ rule ModelLabelAssociation {
 					website.association.findOrmTargetEntity().getOrmFeature(website.association.targetFeatureName)
 				endif
 			endif,
-		dynamicLabel <- website.dynamicLabel
+		valueDisplay <- website.valueDisplay
 	)
 }
 

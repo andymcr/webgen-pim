@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1589,13 +1590,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__PAGE_DISPLAYED_ON = CONTENT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__CONTENT_TYPES = CONTENT_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 0;
+	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Services Used</b></em>' reference list.
@@ -1604,7 +1614,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__SERVICES_USED = CONTENT_UNIT_FEATURE_COUNT + 1;
+	int DYNAMIC_UNIT__SERVICES_USED = CONTENT_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -1613,7 +1623,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 2;
+	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -1622,7 +1632,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 3;
+	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Support Actions</b></em>' containment reference list.
@@ -1631,7 +1641,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__SUPPORT_ACTIONS = CONTENT_UNIT_FEATURE_COUNT + 4;
+	int DYNAMIC_UNIT__SUPPORT_ACTIONS = CONTENT_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -1640,7 +1650,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 5;
+	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -1649,7 +1659,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 6;
+	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1658,7 +1668,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 7;
+	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -1667,7 +1677,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 8;
+	int DYNAMIC_UNIT__CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1676,7 +1686,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
+	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -1685,7 +1695,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+	int DYNAMIC_UNIT__FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
@@ -1694,7 +1704,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
@@ -1703,7 +1713,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+	int DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -1712,7 +1722,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 13;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -2754,22 +2764,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__SOURCE_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__CONTAINING_TYPES = UNIT_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference.
@@ -2808,107 +2818,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAssociationReference()
-	 * @generated
-	 */
-	int ASSOCIATION_REFERENCE = 20;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE__ASSOCIATION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Value Display</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE__VALUE_DISPLAY = 2;
-
-	/**
-	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE__CHILD_FEATURE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Association Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Association Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_REFERENCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl <em>Child Path</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPath()
-	 * @generated
-	 */
-	int CHILD_PATH = 21;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH__PART_OF = 0;
-
-	/**
-	 * The number of structural features of the '<em>Child Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Child Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl <em>Child Path Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2916,7 +2825,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAttribute()
 	 * @generated
 	 */
-	int CHILD_PATH_ATTRIBUTE = 22;
+	int CHILD_PATH_ATTRIBUTE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2925,7 +2834,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ATTRIBUTE__PART_OF = CHILD_PATH__PART_OF;
+	int CHILD_PATH_ATTRIBUTE__PART_OF = PersistencePackage.FEATURE_CHILD_PATH__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2934,7 +2843,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ATTRIBUTE__NAME = CHILD_PATH_FEATURE_COUNT + 0;
+	int CHILD_PATH_ATTRIBUTE__NAME = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -2943,7 +2852,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ATTRIBUTE__ATTRIBUTE = CHILD_PATH_FEATURE_COUNT + 1;
+	int CHILD_PATH_ATTRIBUTE__ATTRIBUTE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Child Path Attribute</em>' class.
@@ -2952,7 +2870,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ATTRIBUTE_FEATURE_COUNT = CHILD_PATH_FEATURE_COUNT + 2;
+	int CHILD_PATH_ATTRIBUTE_FEATURE_COUNT = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Child Path Attribute</em>' class.
@@ -2961,7 +2879,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ATTRIBUTE_OPERATION_COUNT = CHILD_PATH_OPERATION_COUNT + 0;
+	int CHILD_PATH_ATTRIBUTE_OPERATION_COUNT = PersistencePackage.FEATURE_CHILD_PATH_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl <em>Child Path Association</em>}' class.
@@ -2971,7 +2889,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAssociation()
 	 * @generated
 	 */
-	int CHILD_PATH_ASSOCIATION = 23;
+	int CHILD_PATH_ASSOCIATION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2980,7 +2898,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__PART_OF = CHILD_PATH__PART_OF;
+	int CHILD_PATH_ASSOCIATION__PART_OF = PersistencePackage.FEATURE_CHILD_PATH__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2989,7 +2907,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__NAME = CHILD_PATH_FEATURE_COUNT + 0;
+	int CHILD_PATH_ASSOCIATION__NAME = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Association</b></em>' reference.
@@ -2998,7 +2916,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__ASSOCIATION = CHILD_PATH_FEATURE_COUNT + 1;
+	int CHILD_PATH_ASSOCIATION__ASSOCIATION = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Value Display</b></em>' reference.
@@ -3007,7 +2925,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__VALUE_DISPLAY = CHILD_PATH_FEATURE_COUNT + 2;
+	int CHILD_PATH_ASSOCIATION__VALUE_DISPLAY = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -3016,7 +2934,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__CHILD_FEATURE = CHILD_PATH_FEATURE_COUNT + 3;
+	int CHILD_PATH_ASSOCIATION__CHILD_FEATURE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
@@ -3025,16 +2943,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = CHILD_PATH_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__SOURCE_ENTITY = CHILD_PATH_FEATURE_COUNT + 5;
+	int CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
@@ -3043,7 +2952,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION__TARGET_ENTITY = CHILD_PATH_FEATURE_COUNT + 6;
+	int CHILD_PATH_ASSOCIATION__TARGET_ENTITY = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__CONTAINING_TYPE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Child Path Association</em>' class.
@@ -3052,7 +2970,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION_FEATURE_COUNT = CHILD_PATH_FEATURE_COUNT + 7;
+	int CHILD_PATH_ASSOCIATION_FEATURE_COUNT = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Child Path Association</em>' class.
@@ -3061,7 +2979,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHILD_PATH_ASSOCIATION_OPERATION_COUNT = CHILD_PATH_OPERATION_COUNT + 0;
+	int CHILD_PATH_ASSOCIATION_OPERATION_COUNT = PersistencePackage.FEATURE_CHILD_PATH_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl <em>Feature Path</em>}' class.
@@ -3071,7 +2989,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePath()
 	 * @generated
 	 */
-	int FEATURE_PATH = 24;
+	int FEATURE_PATH = 22;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3092,13 +3010,22 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
 
 	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH__CONTAINING_TYPES = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Feature Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+	int FEATURE_PATH_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Feature Path</em>' class.
@@ -3117,7 +3044,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAttribute()
 	 * @generated
 	 */
-	int FEATURE_PATH_ATTRIBUTE = 25;
+	int FEATURE_PATH_ATTRIBUTE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3136,6 +3063,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_ATTRIBUTE__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3181,7 +3117,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
 	 * @generated
 	 */
-	int FEATURE_PATH_ASSOCIATION = 26;
+	int FEATURE_PATH_ASSOCIATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3200,6 +3136,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_ASSOCIATION__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3247,22 +3192,13 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = FEATURE_PATH_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__SOURCE_ENTITY = FEATURE_PATH_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ASSOCIATION__TARGET_ENTITY = FEATURE_PATH_FEATURE_COUNT + 6;
+	int FEATURE_PATH_ASSOCIATION__TARGET_ENTITY = FEATURE_PATH_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Feature Path Association</em>' class.
@@ -3271,7 +3207,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ASSOCIATION_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 7;
+	int FEATURE_PATH_ASSOCIATION_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Feature Path Association</em>' class.
@@ -3290,7 +3226,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathLabel()
 	 * @generated
 	 */
-	int FEATURE_PATH_LABEL = 27;
+	int FEATURE_PATH_LABEL = 25;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3309,6 +3245,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_LABEL__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3354,7 +3299,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 28;
+	int UNIT_LABEL = 26;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3481,7 +3426,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 29;
+	int INTERFACE_FIELD = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3662,7 +3607,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 30;
+	int DATA_TYPE_FIELD = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3879,7 +3824,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 31;
+	int DATE_FIELD = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4078,7 +4023,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCaptchaField()
 	 * @generated
 	 */
-	int CAPTCHA_FIELD = 32;
+	int CAPTCHA_FIELD = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4259,7 +4204,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitSupportAction()
 	 * @generated
 	 */
-	int UNIT_SUPPORT_ACTION = 33;
+	int UNIT_SUPPORT_ACTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4323,7 +4268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 34;
+	int SELECTABLE_UNIT = 32;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -4351,7 +4296,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 35;
+	int SINGLETON_UNIT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4478,6 +4423,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -4640,7 +4594,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 36;
+	int COLLECTION_UNIT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4767,6 +4721,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -5199,7 +5162,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 37;
+	int EDIT_UNIT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5326,6 +5289,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__PAGE_DISPLAYED_ON = SINGLETON_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CONTENT_TYPES = SINGLETON_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -5551,7 +5523,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 38;
+	int CREATE_UNIT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5678,6 +5650,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -5903,7 +5884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 39;
+	int CREATE_UPDATE_UNIT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6030,6 +6011,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -6282,7 +6272,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 40;
+	int UPDATE_UNIT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6409,6 +6399,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -6643,7 +6642,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 41;
+	int MAP_UNIT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6770,6 +6769,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7031,7 +7039,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 42;
+	int DETAILS_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7158,6 +7166,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_UNIT__PAGE_DISPLAYED_ON = SINGLETON_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__CONTENT_TYPES = SINGLETON_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7338,7 +7355,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexUnit()
 	 * @generated
 	 */
-	int INDEX_UNIT = 43;
+	int INDEX_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7465,6 +7482,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7942,7 +7968,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 44;
+	int CARDS_UNIT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8069,6 +8095,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -8609,7 +8644,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 46;
+	int TEXT_CARDS_UNIT = 44;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -8619,7 +8654,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 47;
+	int DATE_CARDS_UNIT = 45;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -8629,7 +8664,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 52;
+	int CONTROL_UNIT = 50;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -8639,7 +8674,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 53;
+	int SEARCH_UNIT = 51;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
@@ -8649,7 +8684,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 48;
+	int IMAGE_UNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -8659,7 +8694,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 49;
+	int IMAGE_CARDS_UNIT = 47;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -8669,7 +8704,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 50;
+	int SLIDER_UNIT = 48;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -8679,7 +8714,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 51;
+	int GALLERY_UNIT = 49;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer <em>Inline Action Container</em>}' class.
@@ -8689,7 +8724,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInlineActionContainer()
 	 * @generated
 	 */
-	int INLINE_ACTION_CONTAINER = 54;
+	int INLINE_ACTION_CONTAINER = 52;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InlineActionImpl <em>Inline Action</em>}' class.
@@ -8699,7 +8734,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInlineAction()
 	 * @generated
 	 */
-	int INLINE_ACTION = 55;
+	int INLINE_ACTION = 53;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -8709,7 +8744,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 56;
+	int SELECT_ACTION = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -8719,7 +8754,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 57;
+	int DELETE_ACTION = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl <em>Feature Support Action</em>}' class.
@@ -8729,7 +8764,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeatureSupportAction()
 	 * @generated
 	 */
-	int FEATURE_SUPPORT_ACTION = 58;
+	int FEATURE_SUPPORT_ACTION = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -8739,7 +8774,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 45;
+	int BADGE = 43;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -8938,6 +8973,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -9595,6 +9639,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -10263,6 +10316,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
+
+	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10846,6 +10908,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -11568,6 +11639,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__PAGE_DISPLAYED_ON = IMAGE_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__CONTENT_TYPES = IMAGE_UNIT__CONTENT_TYPES;
+
+	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12169,6 +12249,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__PAGE_DISPLAYED_ON = IMAGE_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__CONTENT_TYPES = IMAGE_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -12783,6 +12872,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+
+	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13071,6 +13169,15 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__PAGE_DISPLAYED_ON = CONTROL_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
+	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__CONTENT_TYPES = CONTROL_UNIT__CONTENT_TYPES;
+
+	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13314,13 +13421,22 @@ public interface WebuiPackage extends EPackage {
 	int INLINE_ACTION__USED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INLINE_ACTION__CONTAINING_TYPES = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+	int INLINE_ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -13329,7 +13445,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int INLINE_ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
@@ -13338,7 +13454,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int INLINE_ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -13347,7 +13463,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__HEADER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int INLINE_ACTION__HEADER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -13356,7 +13472,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__FOOTER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int INLINE_ACTION__FOOTER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -13365,7 +13481,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int INLINE_ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -13374,7 +13490,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int INLINE_ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13383,7 +13499,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int INLINE_ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Inline Action</em>' class.
@@ -13392,7 +13508,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INLINE_ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int INLINE_ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Inline Action</em>' class.
@@ -13429,6 +13545,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECT_ACTION__USED_BY = INLINE_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__CONTAINING_TYPES = INLINE_ACTION__CONTAINING_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -13564,6 +13689,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_ACTION__USED_BY = INLINE_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__CONTAINING_TYPES = INLINE_ACTION__CONTAINING_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -13728,6 +13862,15 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_SUPPORT_ACTION__USED_BY = INLINE_ACTION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SUPPORT_ACTION__CONTAINING_TYPES = INLINE_ACTION__CONTAINING_TYPES;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13879,7 +14022,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInputTechnologies()
 	 * @generated
 	 */
-	int INPUT_TECHNOLOGIES = 59;
+	int INPUT_TECHNOLOGIES = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AjaxTechnologies <em>Ajax Technologies</em>}' enum.
@@ -13889,7 +14032,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAjaxTechnologies()
 	 * @generated
 	 */
-	int AJAX_TECHNOLOGIES = 60;
+	int AJAX_TECHNOLOGIES = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -13899,7 +14042,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 61;
+	int PAGE_TOP_MENU_OPTIONS = 59;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -13909,7 +14052,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 62;
+	int COLLECTION_DISPLAY_OPTIONS = 60;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -13919,7 +14062,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 63;
+	int PAGINATION_CONTROL_PLACEMENTS = 61;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.IndexDisplayOption <em>Index Display Option</em>}' enum.
@@ -13929,7 +14072,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexDisplayOption()
 	 * @generated
 	 */
-	int INDEX_DISPLAY_OPTION = 64;
+	int INDEX_DISPLAY_OPTION = 62;
 
 
 	/**
@@ -14742,6 +14885,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getDynamicUnit();
 
 	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes <em>Content Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Content Types</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EReference getDynamicUnit_ContentTypes();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15277,17 +15431,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitAssociation_IsSourceAssociation();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getSourceEntity <em>Source Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getSourceEntity()
-	 * @see #getUnitAssociation()
-	 * @generated
-	 */
-	EReference getUnitAssociation_SourceEntity();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15297,6 +15440,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnitAssociation_TargetEntity();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes <em>Containing Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Containing Types</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes()
+	 * @see #getUnitAssociation()
+	 * @generated
+	 */
+	EReference getUnitAssociation_ContainingTypes();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}'.
@@ -15319,81 +15473,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnitAssociation_FilteredOptions();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Association Reference</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference
-	 * @generated
-	 */
-	EClass getAssociationReference();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.AssociationReference#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference#getName()
-	 * @see #getAssociationReference()
-	 * @generated
-	 */
-	EAttribute getAssociationReference_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.AssociationReference#getAssociation <em>Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference#getAssociation()
-	 * @see #getAssociationReference()
-	 * @generated
-	 */
-	EReference getAssociationReference_Association();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.AssociationReference#getValueDisplay <em>Value Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value Display</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference#getValueDisplay()
-	 * @see #getAssociationReference()
-	 * @generated
-	 */
-	EReference getAssociationReference_ValueDisplay();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.AssociationReference#getChildFeature <em>Child Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Child Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.AssociationReference#getChildFeature()
-	 * @see #getAssociationReference()
-	 * @generated
-	 */
-	EReference getAssociationReference_ChildFeature();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPath <em>Child Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Child Path</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPath
-	 * @generated
-	 */
-	EClass getChildPath();
-
-	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.ChildPath#getPartOf <em>Part Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Part Of</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPath#getPartOf()
-	 * @see #getChildPath()
-	 * @generated
-	 */
-	EReference getChildPath_PartOf();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute <em>Child Path Attribute</em>}'.
@@ -15428,6 +15507,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getChildPathAttribute_Attribute();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getContainingType <em>Containing Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getContainingType()
+	 * @see #getChildPathAttribute()
+	 * @generated
+	 */
+	EReference getChildPathAttribute_ContainingType();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation <em>Child Path Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15449,17 +15539,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getChildPathAssociation_IsSourceAssociation();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getSourceEntity <em>Source Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getSourceEntity()
-	 * @see #getChildPathAssociation()
-	 * @generated
-	 */
-	EReference getChildPathAssociation_SourceEntity();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getTargetEntity <em>Target Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15471,6 +15550,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getChildPathAssociation_TargetEntity();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getContainingType <em>Containing Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getContainingType()
+	 * @see #getChildPathAssociation()
+	 * @generated
+	 */
+	EReference getChildPathAssociation_ContainingType();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePath <em>Feature Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15479,6 +15569,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFeaturePath();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingTypes <em>Containing Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Containing Types</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingTypes()
+	 * @see #getFeaturePath()
+	 * @generated
+	 */
+	EReference getFeaturePath_ContainingTypes();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute <em>Feature Path Attribute</em>}'.
@@ -15532,17 +15633,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFeaturePathAssociation_IsSourceAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getSourceEntity <em>Source Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getSourceEntity()
-	 * @see #getFeaturePathAssociation()
-	 * @generated
-	 */
-	EReference getFeaturePathAssociation_SourceEntity();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getTargetEntity <em>Target Entity</em>}'.
@@ -16947,6 +17037,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getInlineAction_UsedBy();
 
 	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.InlineAction#getContainingTypes <em>Containing Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Containing Types</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InlineAction#getContainingTypes()
+	 * @see #getInlineAction()
+	 * @generated
+	 */
+	EReference getInlineAction_ContainingTypes();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InlineAction#getIconName <em>Icon Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17999,6 +18100,14 @@ public interface WebuiPackage extends EPackage {
 		EClass DYNAMIC_UNIT = eINSTANCE.getDynamicUnit();
 
 		/**
+		 * The meta object literal for the '<em><b>Content Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DYNAMIC_UNIT__CONTENT_TYPES = eINSTANCE.getDynamicUnit_ContentTypes();
+
+		/**
 		 * The meta object literal for the '<em><b>Display Fields</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18399,20 +18508,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getUnitAssociation_IsSourceAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_ASSOCIATION__SOURCE_ENTITY = eINSTANCE.getUnitAssociation_SourceEntity();
-
-		/**
 		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference UNIT_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getUnitAssociation_TargetEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_ASSOCIATION__CONTAINING_TYPES = eINSTANCE.getUnitAssociation_ContainingTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Options</b></em>' reference feature.
@@ -18429,66 +18538,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNIT_ASSOCIATION__FILTERED_OPTIONS = eINSTANCE.getUnitAssociation_FilteredOptions();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.AssociationReference <em>Association Reference</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.AssociationReference
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAssociationReference()
-		 * @generated
-		 */
-		EClass ASSOCIATION_REFERENCE = eINSTANCE.getAssociationReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION_REFERENCE__NAME = eINSTANCE.getAssociationReference_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Association</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION_REFERENCE__ASSOCIATION = eINSTANCE.getAssociationReference_Association();
-
-		/**
-		 * The meta object literal for the '<em><b>Value Display</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION_REFERENCE__VALUE_DISPLAY = eINSTANCE.getAssociationReference_ValueDisplay();
-
-		/**
-		 * The meta object literal for the '<em><b>Child Feature</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION_REFERENCE__CHILD_FEATURE = eINSTANCE.getAssociationReference_ChildFeature();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl <em>Child Path</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPath()
-		 * @generated
-		 */
-		EClass CHILD_PATH = eINSTANCE.getChildPath();
-
-		/**
-		 * The meta object literal for the '<em><b>Part Of</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH__PART_OF = eINSTANCE.getChildPath_PartOf();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl <em>Child Path Attribute</em>}' class.
@@ -18517,6 +18566,14 @@ public interface WebuiPackage extends EPackage {
 		EReference CHILD_PATH_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getChildPathAttribute_Attribute();
 
 		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE = eINSTANCE.getChildPathAttribute_ContainingType();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl <em>Child Path Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18535,20 +18592,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getChildPathAssociation_IsSourceAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH_ASSOCIATION__SOURCE_ENTITY = eINSTANCE.getChildPathAssociation_SourceEntity();
-
-		/**
 		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CHILD_PATH_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getChildPathAssociation_TargetEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHILD_PATH_ASSOCIATION__CONTAINING_TYPE = eINSTANCE.getChildPathAssociation_ContainingType();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl <em>Feature Path</em>}' class.
@@ -18559,6 +18616,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FEATURE_PATH = eINSTANCE.getFeaturePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE_PATH__CONTAINING_TYPES = eINSTANCE.getFeaturePath_ContainingTypes();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAttributeImpl <em>Feature Path Attribute</em>}' class.
@@ -18603,14 +18668,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getFeaturePathAssociation_IsSourceAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_PATH_ASSOCIATION__SOURCE_ENTITY = eINSTANCE.getFeaturePathAssociation_SourceEntity();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
@@ -19707,6 +19764,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INLINE_ACTION__USED_BY = eINSTANCE.getInlineAction_UsedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INLINE_ACTION__CONTAINING_TYPES = eINSTANCE.getInlineAction_ContainingTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Icon Name</b></em>' attribute feature.
