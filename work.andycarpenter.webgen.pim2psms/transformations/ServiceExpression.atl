@@ -79,6 +79,14 @@ abstract rule Predicate {
 }
 
 -- @extends Predicate
+rule PredicateBooleanVariable {
+	from website : Website!PredicateBooleanVariable (website.isServiceExpression())
+	to service : Service!PredicateBooleanVariable (
+		feature <- website.feature
+	)
+}
+
+-- @extends Predicate
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isServiceExpression())
 	to service : Service!PredicateBooleanOperator (

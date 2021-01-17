@@ -315,6 +315,11 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

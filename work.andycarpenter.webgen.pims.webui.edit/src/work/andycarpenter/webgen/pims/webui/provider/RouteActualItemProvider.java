@@ -257,6 +257,11 @@ public class RouteActualItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

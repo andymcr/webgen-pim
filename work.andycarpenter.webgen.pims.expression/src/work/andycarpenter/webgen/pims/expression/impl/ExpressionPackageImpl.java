@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.expression.Literal;
 import work.andycarpenter.webgen.pims.expression.NullLiteral;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator;
+import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
 import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
@@ -109,6 +110,13 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	private EClass predicateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass predicateBooleanVariableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -437,6 +445,26 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
+	public EClass getPredicateBooleanVariable() {
+		return predicateBooleanVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPredicateBooleanVariable_Feature() {
+		return (EReference)predicateBooleanVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPredicateBooleanOperator() {
 		return predicateBooleanOperatorEClass;
 	}
@@ -739,6 +767,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		predicateEClass = createEClass(PREDICATE);
 		createEAttribute(predicateEClass, PREDICATE__NEGATED);
 
+		predicateBooleanVariableEClass = createEClass(PREDICATE_BOOLEAN_VARIABLE);
+		createEReference(predicateBooleanVariableEClass, PREDICATE_BOOLEAN_VARIABLE__FEATURE);
+
 		predicateBooleanOperatorEClass = createEClass(PREDICATE_BOOLEAN_OPERATOR);
 		createEReference(predicateBooleanOperatorEClass, PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS);
 		createEAttribute(predicateBooleanOperatorEClass, PREDICATE_BOOLEAN_OPERATOR__OPERATOR);
@@ -812,6 +843,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		functionCallEClass.getESuperTypes().add(this.getExpression());
 		variableEClass.getESuperTypes().add(this.getExpression());
 		predicateEClass.getESuperTypes().add(this.getExpression());
+		predicateBooleanVariableEClass.getESuperTypes().add(this.getPredicate());
 		predicateBooleanOperatorEClass.getESuperTypes().add(this.getPredicate());
 		predicateEqualityOperatorEClass.getESuperTypes().add(this.getPredicate());
 		predicateComparisonOperatorEClass.getESuperTypes().add(this.getPredicate());
@@ -824,7 +856,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpression_Suffixes(), ecorePackage.getEString(), "suffixes", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpression_RootContainer(), ecorePackage.getEObject(), null, "rootContainer", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getExpression_RootContainer(), ecorePackage.getEObject(), null, "rootContainer", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -850,6 +882,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 
 		initEClass(predicateEClass, Predicate.class, "Predicate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPredicate_Negated(), ecorePackage.getEBoolean(), "negated", "false", 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(predicateBooleanVariableEClass, PredicateBooleanVariable.class, "PredicateBooleanVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPredicateBooleanVariable_Feature(), this.getVariable(), null, "feature", null, 0, 1, PredicateBooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateBooleanOperatorEClass, PredicateBooleanOperator.class, "PredicateBooleanOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPredicateBooleanOperator_Expressions(), this.getPredicate(), null, "expressions", null, 1, -1, PredicateBooleanOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -239,6 +239,11 @@ public class DeleteActionItemProvider extends InlineActionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.DELETE_ACTION__ENABLE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.DELETE_ACTION__ENABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

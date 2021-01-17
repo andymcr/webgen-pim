@@ -107,7 +107,7 @@ public class NullLiteralItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DEbugPropertyCategory"),
 				 null));
 	}
 

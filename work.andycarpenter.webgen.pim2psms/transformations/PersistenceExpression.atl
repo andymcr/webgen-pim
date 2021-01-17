@@ -83,6 +83,14 @@ abstract rule Predicate {
 }
 
 -- @extends Predicate
+rule PredicateBooleanVariable {
+	from website : Website!PredicateBooleanVariable (website.isPresistenceExpression())
+	to orm : ORM!PredicateBooleanVariable (
+		feature <- website.feature
+	)
+}
+
+-- @extends Predicate
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isPresistenceExpression())
 	to orm : ORM!PredicateBooleanOperator (

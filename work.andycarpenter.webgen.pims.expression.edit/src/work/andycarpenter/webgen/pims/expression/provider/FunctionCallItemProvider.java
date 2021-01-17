@@ -111,7 +111,7 @@ public class FunctionCallItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DEbugPropertyCategory"),
 				 null));
 	}
 
@@ -256,6 +256,11 @@ public class FunctionCallItemProvider
 			(createChildParameter
 				(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
 				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

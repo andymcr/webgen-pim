@@ -139,7 +139,8 @@
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//CreateSitemapUnit/filename"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//DynamicUnit">
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/contentTypes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/contentTypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/displayFields"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/servicesUsed"/>
@@ -153,8 +154,8 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/controlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/footerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/fieldListClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/unitFieldLabelClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/unitFieldValueClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/unitFieldLabelClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/unitFieldValueClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//UnitField">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//UnitField/displayedOn"/>
@@ -222,7 +223,8 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ChildPathAssociation/containingType"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//FeaturePath">
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//FeaturePath/containingTypes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EReference webui.ecore#//FeaturePath/containingTypes"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//FeaturePathAttribute">
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathAttribute/name"/>
@@ -301,7 +303,7 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/supportedFilters"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/emptyMessage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/omitFieldLabels"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/omitFieldLabels"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/defaultPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/maximumPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationControlPlacement"/>

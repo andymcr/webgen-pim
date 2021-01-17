@@ -107,6 +107,14 @@ abstract rule Predicate {
 }
 
 -- @extends Predicate
+rule PredicateBooleanVariable {
+	from website : Website!PredicateBooleanVariable (website.isInterfaceExpression())
+	to waf : WAF!PredicateBooleanVariable (
+		feature <- website.feature
+	)
+}
+
+-- @extends Predicate
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isInterfaceExpression())
 	to waf : WAF!PredicateBooleanOperator (

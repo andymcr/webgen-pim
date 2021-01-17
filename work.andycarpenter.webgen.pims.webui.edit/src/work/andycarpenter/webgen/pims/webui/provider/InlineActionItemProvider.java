@@ -328,6 +328,11 @@ public class InlineActionItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.INLINE_ACTION__DISPLAY_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.INLINE_ACTION__DISPLAY_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

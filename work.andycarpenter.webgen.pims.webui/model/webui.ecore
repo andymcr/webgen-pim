@@ -382,7 +382,7 @@
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
         changeable="false" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if rootContainer.oclIsTypeOf(SingletonUnit) then&#xA;&#x9;OrderedSet{rootContainer.oclAsType(SingletonUnit).contentType}&#xA;else if rootContainer.oclIsTypeOf(CollectionUnit) then&#xA;&#x9;OrderedSet{rootContainer.oclAsType(CollectionUnit).containingType}&#xA;else if rootContainer.oclIsTypeOf(UnitField) then&#xA;&#x9;rootContainer.oclAsType(UnitField).displayedOn.contentTypes&#xA;else if rootContainer.oclIsTypeOf(InlineAction) then&#xA;&#x9;rootContainer.oclAsType(InlineAction).containingTypes&#xA;else if rootContainer.oclIsTypeOf(Badge) then&#xA;&#x9;rootContainer.oclAsType(Badge).displayedOn.contentTypes&#xA;else&#xA;&#x9;OrderedSet{}&#xA;endif endif endif endif endif"/>
+        <details key="derivation" value="if rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;rootContainer.oclAsType(DynamicUnit).contentTypes&#xA;else if rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;rootContainer.oclAsType(UnitField).displayedOn.contentTypes&#xA;else if rootContainer.oclIsKindOf(InlineAction) then&#xA;&#x9;rootContainer.oclAsType(InlineAction).containingTypes&#xA;else if rootContainer.oclIsTypeOf(Badge) then&#xA;&#x9;rootContainer.oclAsType(Badge).displayedOn.contentTypes&#xA;else&#xA;&#x9;OrderedSet{}&#xA;endif endif endif endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

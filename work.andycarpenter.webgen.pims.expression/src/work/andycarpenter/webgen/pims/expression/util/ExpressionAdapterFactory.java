@@ -108,6 +108,10 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 				return createPredicateAdapter();
 			}
 			@Override
+			public Adapter casePredicateBooleanVariable(PredicateBooleanVariable object) {
+				return createPredicateBooleanVariableAdapter();
+			}
+			@Override
 			public Adapter casePredicateBooleanOperator(PredicateBooleanOperator object) {
 				return createPredicateBooleanOperatorAdapter();
 			}
@@ -296,6 +300,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPredicateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable <em>Predicate Boolean Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable
+	 * @generated
+	 */
+	public Adapter createPredicateBooleanVariableAdapter() {
 		return null;
 	}
 

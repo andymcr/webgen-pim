@@ -263,6 +263,11 @@ public class FeatureSupportActionItemProvider extends InlineActionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.FEATURE_SUPPORT_ACTION__ENABLE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.FEATURE_SUPPORT_ACTION__ENABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

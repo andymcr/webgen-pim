@@ -32,7 +32,7 @@ public interface FeaturePath extends Variable {
 	 * @return the value of the '<em>Containing Types</em>' reference list.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePath_ContainingTypes()
 	 * @model changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if rootContainer.oclIsTypeOf(SingletonUnit) then\n\tOrderedSet{rootContainer.oclAsType(SingletonUnit).contentType}\nelse if rootContainer.oclIsTypeOf(CollectionUnit) then\n\tOrderedSet{rootContainer.oclAsType(CollectionUnit).containingType}\nelse if rootContainer.oclIsTypeOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsTypeOf(InlineAction) then\n\trootContainer.oclAsType(InlineAction).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif endif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if rootContainer.oclIsKindOf(DynamicUnit) then\n\trootContainer.oclAsType(DynamicUnit).contentTypes\nelse if rootContainer.oclIsKindOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsKindOf(InlineAction) then\n\trootContainer.oclAsType(InlineAction).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif'"
 	 * @generated
 	 */
 	EList<Entity> getContainingTypes();

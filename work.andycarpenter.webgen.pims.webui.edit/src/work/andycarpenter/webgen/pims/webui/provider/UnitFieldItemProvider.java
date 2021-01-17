@@ -316,6 +316,11 @@ public class UnitFieldItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add

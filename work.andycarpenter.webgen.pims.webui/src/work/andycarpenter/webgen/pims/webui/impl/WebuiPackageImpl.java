@@ -4826,7 +4826,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (getFeaturePath_ContainingTypes(),
 		   source,
 		   new String[] {
-			   "derivation", "if rootContainer.oclIsTypeOf(SingletonUnit) then\n\tOrderedSet{rootContainer.oclAsType(SingletonUnit).contentType}\nelse if rootContainer.oclIsTypeOf(CollectionUnit) then\n\tOrderedSet{rootContainer.oclAsType(CollectionUnit).containingType}\nelse if rootContainer.oclIsTypeOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsTypeOf(InlineAction) then\n\trootContainer.oclAsType(InlineAction).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif endif"
+			   "derivation", "if rootContainer.oclIsKindOf(DynamicUnit) then\n\trootContainer.oclAsType(DynamicUnit).contentTypes\nelse if rootContainer.oclIsKindOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsKindOf(InlineAction) then\n\trootContainer.oclAsType(InlineAction).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif"
 		   });
 		addAnnotation
 		  (getFeaturePathAttribute_Name(),

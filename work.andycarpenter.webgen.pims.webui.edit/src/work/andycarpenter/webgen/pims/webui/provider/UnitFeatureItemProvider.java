@@ -606,6 +606,11 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
@@ -652,6 +657,11 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
 				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

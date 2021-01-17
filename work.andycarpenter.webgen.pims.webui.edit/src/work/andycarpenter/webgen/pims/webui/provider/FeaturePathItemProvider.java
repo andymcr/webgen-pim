@@ -105,7 +105,7 @@ public class FeaturePathItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DEbugPropertyCategory"),
 				 null));
 	}
 
@@ -127,7 +127,7 @@ public class FeaturePathItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

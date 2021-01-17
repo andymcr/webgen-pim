@@ -582,6 +582,70 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanVariableImpl <em>Predicate Boolean Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanVariableImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanVariable()
+	 * @generated
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE__SUFFIXES = PREDICATE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Negated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE__NEGATED = PREDICATE__NEGATED;
+
+	/**
+	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE__FEATURE = PREDICATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Predicate Boolean Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Predicate Boolean Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_BOOLEAN_VARIABLE_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl <em>Predicate Boolean Operator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -589,7 +653,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanOperator()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_OPERATOR = 10;
+	int PREDICATE_BOOLEAN_OPERATOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -662,7 +726,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateEqualityOperator()
 	 * @generated
 	 */
-	int PREDICATE_EQUALITY_OPERATOR = 11;
+	int PREDICATE_EQUALITY_OPERATOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -735,7 +799,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateComparisonOperator()
 	 * @generated
 	 */
-	int PREDICATE_COMPARISON_OPERATOR = 12;
+	int PREDICATE_COMPARISON_OPERATOR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -817,7 +881,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateInOperator()
 	 * @generated
 	 */
-	int PREDICATE_IN_OPERATOR = 13;
+	int PREDICATE_IN_OPERATOR = 14;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -890,7 +954,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsOperator()
 	 * @generated
 	 */
-	int PREDICATE_IS_OPERATOR = 14;
+	int PREDICATE_IS_OPERATOR = 15;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -963,7 +1027,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateLikeOperator()
 	 * @generated
 	 */
-	int PREDICATE_LIKE_OPERATOR = 15;
+	int PREDICATE_LIKE_OPERATOR = 16;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1036,7 +1100,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsEmpty()
 	 * @generated
 	 */
-	int PREDICATE_IS_EMPTY = 16;
+	int PREDICATE_IS_EMPTY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1100,7 +1164,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsNull()
 	 * @generated
 	 */
-	int PREDICATE_IS_NULL = 17;
+	int PREDICATE_IS_NULL = 18;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1164,7 +1228,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanOperator()
 	 * @generated
 	 */
-	int BOOLEAN_OPERATOR = 18;
+	int BOOLEAN_OPERATOR = 19;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.ComparisionOperator <em>Comparision Operator</em>}' enum.
@@ -1174,7 +1238,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getComparisionOperator()
 	 * @generated
 	 */
-	int COMPARISION_OPERATOR = 19;
+	int COMPARISION_OPERATOR = 20;
 
 
 	/**
@@ -1375,6 +1439,27 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPredicate_Negated();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable <em>Predicate Boolean Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Predicate Boolean Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable
+	 * @generated
+	 */
+	EClass getPredicateBooleanVariable();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature()
+	 * @see #getPredicateBooleanVariable()
+	 * @generated
+	 */
+	EReference getPredicateBooleanVariable_Feature();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator <em>Predicate Boolean Operator</em>}'.
@@ -1835,6 +1920,24 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PREDICATE__NEGATED = eINSTANCE.getPredicate_Negated();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanVariableImpl <em>Predicate Boolean Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanVariableImpl
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanVariable()
+		 * @generated
+		 */
+		EClass PREDICATE_BOOLEAN_VARIABLE = eINSTANCE.getPredicateBooleanVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREDICATE_BOOLEAN_VARIABLE__FEATURE = eINSTANCE.getPredicateBooleanVariable_Feature();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl <em>Predicate Boolean Operator</em>}' class.

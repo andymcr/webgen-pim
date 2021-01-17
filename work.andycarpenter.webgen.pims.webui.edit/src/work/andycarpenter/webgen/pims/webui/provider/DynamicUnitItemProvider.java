@@ -95,7 +95,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 
@@ -293,7 +293,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -315,7 +315,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -438,6 +438,11 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS,
 				 WebuiFactory.eINSTANCE.createCaptchaField()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

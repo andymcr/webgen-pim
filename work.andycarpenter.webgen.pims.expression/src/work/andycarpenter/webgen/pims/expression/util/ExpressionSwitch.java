@@ -140,6 +140,14 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: {
+				PredicateBooleanVariable predicateBooleanVariable = (PredicateBooleanVariable)theEObject;
+				T result = casePredicateBooleanVariable(predicateBooleanVariable);
+				if (result == null) result = casePredicate(predicateBooleanVariable);
+				if (result == null) result = caseExpression(predicateBooleanVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR: {
 				PredicateBooleanOperator predicateBooleanOperator = (PredicateBooleanOperator)theEObject;
 				T result = casePredicateBooleanOperator(predicateBooleanOperator);
@@ -355,6 +363,21 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePredicate(Predicate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Predicate Boolean Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Predicate Boolean Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePredicateBooleanVariable(PredicateBooleanVariable object) {
 		return null;
 	}
 

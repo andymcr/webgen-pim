@@ -63,6 +63,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 			case ExpressionPackage.STRING_LITERAL: return createStringLiteral();
 			case ExpressionPackage.TIME_LITERAL: return createTimeLiteral();
 			case ExpressionPackage.FUNCTION_CALL: return createFunctionCall();
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: return createPredicateBooleanVariable();
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR: return createPredicateBooleanOperator();
 			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: return createPredicateEqualityOperator();
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR: return createPredicateComparisonOperator();
@@ -174,6 +175,17 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	public FunctionCall createFunctionCall() {
 		FunctionCallImpl functionCall = new FunctionCallImpl();
 		return functionCall;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PredicateBooleanVariable createPredicateBooleanVariable() {
+		PredicateBooleanVariableImpl predicateBooleanVariable = new PredicateBooleanVariableImpl();
+		return predicateBooleanVariable;
 	}
 
 	/**
