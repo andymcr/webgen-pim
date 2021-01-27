@@ -177,6 +177,7 @@ public class PersistenceItemProvider
 			childrenFeatures.add(PersistencePackage.Literals.PERSISTENCE__SERIALIZATION_GROUPS);
 			childrenFeatures.add(PersistencePackage.Literals.PERSISTENCE__DATA_TYPES);
 			childrenFeatures.add(PersistencePackage.Literals.PERSISTENCE__ENTITIES);
+			childrenFeatures.add(PersistencePackage.Literals.PERSISTENCE__REPOSITORIES);
 		}
 		return childrenFeatures;
 	}
@@ -242,6 +243,7 @@ public class PersistenceItemProvider
 			case PersistencePackage.PERSISTENCE__SERIALIZATION_GROUPS:
 			case PersistencePackage.PERSISTENCE__DATA_TYPES:
 			case PersistencePackage.PERSISTENCE__ENTITIES:
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -278,6 +280,11 @@ public class PersistenceItemProvider
 			(createChildParameter
 				(PersistencePackage.Literals.PERSISTENCE__ENTITIES,
 				 PersistenceFactory.eINSTANCE.createEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.PERSISTENCE__REPOSITORIES,
+				 PersistenceFactory.eINSTANCE.createRepository()));
 	}
 
 	/**

@@ -7,109 +7,12 @@
 module ServiceExplicit;
 create service : Service from website : Website, orm : ORM;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 uses ServiceExpression;
 
 
-helper context Website!Expression def: findContainingSelection() : Website!Selection
-	= if self.refImmediateComposite().oclIsUndefined() then
-			OclUndefined
-		else if self.refImmediateComposite().oclIsTypeOf(Website!Selection) then
-			self.refImmediateComposite()
-		else if self.refImmediateComposite().oclIsKindOf(Website!Expression) then
-			self.refImmediateComposite().findContainingSelection()
-		else
-			OclUndefined
-		endif endif endif ;
-
-helper context Website!Feature def: findOrmFeature(reference : Website!ServiceFeatureReference) : ORM!Feature
-	= if self.oclIsKindOf(Website!Attribute) then
-			self.findOrmAttribute()
-		else 
-			let selection : Website!Selection = reference.findContainingSelection()
-			in if selection.oclIsUndefined() then
-					OclUndefined
-				else
-					if reference.findContainingSelection().usedBy.serves = self.partOf then
-						self.findOrmSourceAssociation()
-					else if reference.findContainingSelection().usedBy.serves = self.targetEntity then
-						self.findOrmTargetAssociation()
-					else if selection.joins->includes(self.partOf) then
-						self.findOrmSourceAssociation()
-					else
-						self.findOrmTargetAssociation()
-					endif endif endif
-				endif
-		endif;
-
-helper context Website!Selection def: entities(xx : Sequence(Website!Association)) : Sequence(Website!Entity)
-	= if xx->isEmpty() then
-			Sequence{self.usedBy.serves}
-		else if xx->size() = 1 then
-			if xx->last().partOf = self.usedBy.serves then
-				Sequence{self.usedBy.serves, xx->last().targetEntity}
-			else
-				Sequence{self.usedBy.serves, xx->last().partOf}
-			endif
-		else
-			let yy : Sequence(Website!Entity)
-				= self.entities(xx->subSequence(1, xx->size() -1))
-				in if yy->includes(xx->last().partOf) then
-						yy->union(Sequence{xx->last().targetEntity})
-					else
-						yy->union(Sequence{xx->last().partOf})
-					endif
-		endif endif;
-
-helper context Website!Selection def: findOrmJoins(xx : Sequence(Website!Association)) : Sequence(ORM!Association)
-	= if xx->isEmpty() then
-			Sequence{}
-		else if xx->size() = 1 then
-			if xx->last().partOf = self.usedBy.serves then
-				Sequence{xx->last().findOrmSourceAssociation()}
-			else
-				Sequence{xx->last().findOrmTargetAssociation()}
-			endif
-		else
-			let yy : Sequence(Website!Entity)
-				= self.entities(xx->subSequence(1, xx->size() -1))
-				in let zz : Sequence(ORM!Association)
-					= self.findOrmJoins(xx->subSequence(1, xx->size() -1))
-					in if yy->includes(xx->last().partOf) then
-							zz->union(Sequence{xx->last().findOrmSourceAssociation()})
-						else
-							zz->union(Sequence{xx->last().findOrmTargetAssociation()})
-						endif
-			endif endif;
-
-helper context Website!Selection def: findOrmSelectPaths(xx : Sequence(Website!Association)) : Sequence(ORM!Association)
-	= if xx->isEmpty() then
-			Sequence{}
-		else if xx->size() = 1 then
-			if xx->last().partOf = self.usedBy.serves then
-				Sequence{xx->last().findOrmSourceAssociation()}
-			else
-				Sequence{xx->last().findOrmTargetAssociation()}
-			endif
-		else
-			let yy : Sequence(Website!Entity)
-				= self.entities(xx->subSequence(1, xx->size() -1))
-				in let zz : Sequence(ORM!Association)
-					= self.findOrmJoins(xx->subSequence(1, xx->size() -1))
-					in if yy->includes(xx->last().partOf) then
-							zz->union(Sequence{xx->last().findOrmSourceAssociation()})
-						else
-							zz->union(Sequence{xx->last().findOrmTargetAssociation()})
-						endif
-			endif endif;
-
-				
-rule ServiceModel {
-	from website : Website!Services
-	to service : Service!ServiceModel (
-		services <- website.services
-	)
-}
+helper context Website!FormalParameter def: isServiceFormal() : Boolean
+	= self.formalFor.oclIsTypeOf(Website!BusinessOperation);
 
 
 abstract rule NamedElement {
@@ -128,7 +31,7 @@ abstract rule FormalParameterList {
 
 -- @extends NamedElement
 rule FormalParameter {
-	from website : Website!FormalParameter
+	from website : Website!FormalParameter (website.isServiceFormal())
 	to service : Service!FormalParameter (
 		dataType <-
 			if website.dataType.oclIsUndefined() then
@@ -155,6 +58,14 @@ rule FormalParameter {
 }
 
 
+rule ServiceModel {
+	from website : Website!Services
+	to service : Service!ServiceModel (
+		services <- website.services
+	)
+}
+
+
 -- @extends NamedElement
 rule Service {
 	from website : Website!Service
@@ -166,23 +77,6 @@ rule Service {
 			else
 				thisModule.findOrmEntity(website.serves.name)
 			endif,
-		selections <- website.selections,
-		findAll <-
-			if not website.findAll.oclIsUndefined() then
-				website.findAll
-			else if website.selections->select(s | s.name.toLower() = 'all')->notEmpty() then
-				website.selections->any(s | s.name.toLower() = 'all')
-			else
-				OclUndefined
-			endif endif,
-		findOne <-
-			if not website.findOne.oclIsUndefined() then
-				website.findAll
-			else if website.selections->select(s | s.name.toLower() = 'one')->notEmpty() then
-				website.selections->any(s | s.name.toLower() = 'one')
-			else
-				OclUndefined
-			endif endif,
 		"uses" <- website."uses",
 		operations <- website.operations
 	)
@@ -197,30 +91,6 @@ rule Constant {
 }
 
 -- @extends NamedElement, FormalParameterList
-rule Selection {
-	from website : Website!Selection
-	to service : Service!Selection (
-		"distinct" <- website."distinct",
-		fields <- website.fields
-			->collect(f | f.findOrmFeature()),
-		joins <- website.findOrmJoins(website.joins),
-		condition <- website.condition,
-		filters <- website.filters,
-		ordering <- website.ordering,
-		limit <- website.limit,
-		grouping <- website.grouping
-			->collect(f | f.findOrmFeature()),
-		selectPath <- website.findOrmSelectPaths(website.selectPath),
-		methodName <-
-			if not website.methodName.oclIsUndefined() and website.methodName.trim() <> '' then
-			    website.methodName
-			else
-				'find'.concat(website.name.uppercaseFirst())
-			endif
-	)
-}
-
--- @extends NamedElement, FormalParameterList
 rule BusinessOperation {
 	from website : Website!BusinessOperation
 	to service : Service!BusinessOperation (
@@ -231,65 +101,11 @@ rule BusinessOperation {
 }
 
 
--- @extends NamedElement, FormalParameterList
-rule Filter {
-	from website : Website!Filter
-	to service : Service!Filter (
-		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
-				website.displayLabel
-			else
-				'Filter'
-			endif,
-		condition <- website.condition,
-		methodName <-
-			if not website.methodName.oclIsUndefined() and website.methodName.trim() <> '' then
-			    website.methodName
-			else
-				'find'.concat(website.name.uppercaseFirst())
-			endif
-	)
-}
-
-
-abstract rule Order {
-	from website : Website!Order
-	to service : Service!Order (
-		path <- website.path
-	)
-}
-
--- @extends Order
-rule Asc {
-	from website : Website!Asc
-	to service : Service!Asc (
-	)
-}
-
--- @extends Order
-rule Desc {
-	from website : Website!Desc
-	to service : Service!Desc (
-	)
-}
-
 
 rule ConstantReference {
 	from website : Website!ConstantReference
 	to service : Service!ConstantReference (
 		value <- website.value
-	)
-}
-
-rule ServiceFeatureReference {
-	from website : Website!ServiceFeatureReference
-	to service : Service!FeatureReference (
-		feature <-
-			if website.feature.oclIsUndefined() then
-				OclUndefined
-			else
-				website.feature.findOrmFeature(website)
-			endif
 	)
 }
 

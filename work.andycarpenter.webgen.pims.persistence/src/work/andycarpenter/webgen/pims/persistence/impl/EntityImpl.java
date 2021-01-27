@@ -24,6 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.Repository;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,6 +47,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getContainerUnique <em>Container Unique</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getTableName <em>Table Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyName <em>Auto Key Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}</li>
@@ -206,6 +208,16 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected EList<Feature> containerUnique;
+
+	/**
+	 * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepository()
+	 * @generated
+	 * @ordered
+	 */
+	protected Repository repository;
 
 	/**
 	 * The default value of the '{@link #getTableName() <em>Table Name</em>}' attribute.
@@ -539,6 +551,68 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@Override
+	public Repository getRepository() {
+		if (repository != null && repository.eIsProxy()) {
+			InternalEObject oldRepository = (InternalEObject)repository;
+			repository = (Repository)eResolveProxy(oldRepository);
+			if (repository != oldRepository) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.ENTITY__REPOSITORY, oldRepository, repository));
+			}
+		}
+		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Repository basicGetRepository() {
+		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRepository(Repository newRepository, NotificationChain msgs) {
+		Repository oldRepository = repository;
+		repository = newRepository;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY__REPOSITORY, oldRepository, newRepository);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRepository(Repository newRepository) {
+		if (newRepository != repository) {
+			NotificationChain msgs = null;
+			if (repository != null)
+				msgs = ((InternalEObject)repository).eInverseRemove(this, PersistencePackage.REPOSITORY__SERVES, Repository.class, msgs);
+			if (newRepository != null)
+				msgs = ((InternalEObject)newRepository).eInverseAdd(this, PersistencePackage.REPOSITORY__SERVES, Repository.class, msgs);
+			msgs = basicSetRepository(newRepository, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY__REPOSITORY, newRepository, newRepository));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getTableName() {
 		return tableName;
 	}
@@ -686,6 +760,10 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAssociationEnds()).basicAdd(otherEnd, msgs);
 			case PersistencePackage.ENTITY__LABELS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLabels()).basicAdd(otherEnd, msgs);
+			case PersistencePackage.ENTITY__REPOSITORY:
+				if (repository != null)
+					msgs = ((InternalEObject)repository).eInverseRemove(this, PersistencePackage.REPOSITORY__SERVES, Repository.class, msgs);
+				return basicSetRepository((Repository)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -704,6 +782,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return ((InternalEList<?>)getAssociationEnds()).basicRemove(otherEnd, msgs);
 			case PersistencePackage.ENTITY__LABELS:
 				return ((InternalEList<?>)getLabels()).basicRemove(otherEnd, msgs);
+			case PersistencePackage.ENTITY__REPOSITORY:
+				return basicSetRepository(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -743,6 +823,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return getUnique();
 			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
 				return getContainerUnique();
+			case PersistencePackage.ENTITY__REPOSITORY:
+				if (resolve) return getRepository();
+				return basicGetRepository();
 			case PersistencePackage.ENTITY__TABLE_NAME:
 				return getTableName();
 			case PersistencePackage.ENTITY__AUTO_KEY_NAME:
@@ -798,6 +881,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				getContainerUnique().clear();
 				getContainerUnique().addAll((Collection<? extends Feature>)newValue);
 				return;
+			case PersistencePackage.ENTITY__REPOSITORY:
+				setRepository((Repository)newValue);
+				return;
 			case PersistencePackage.ENTITY__TABLE_NAME:
 				setTableName((String)newValue);
 				return;
@@ -851,6 +937,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return;
 			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
 				getContainerUnique().clear();
+				return;
+			case PersistencePackage.ENTITY__REPOSITORY:
+				setRepository((Repository)null);
 				return;
 			case PersistencePackage.ENTITY__TABLE_NAME:
 				setTableName(TABLE_NAME_EDEFAULT);
@@ -908,6 +997,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return unique != null && !unique.isEmpty();
 			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
 				return containerUnique != null && !containerUnique.isEmpty();
+			case PersistencePackage.ENTITY__REPOSITORY:
+				return repository != null;
 			case PersistencePackage.ENTITY__TABLE_NAME:
 				return TABLE_NAME_EDEFAULT == null ? tableName != null : !TABLE_NAME_EDEFAULT.equals(tableName);
 			case PersistencePackage.ENTITY__AUTO_KEY_NAME:

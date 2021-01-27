@@ -148,6 +148,20 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAssociationWithContainment((AssociationWithContainment)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_KEY:
 				return validateAssociationKey((AssociationKey)value, diagnostics, context);
+			case PersistencePackage.REPOSITORY:
+				return validateRepository((Repository)value, diagnostics, context);
+			case PersistencePackage.SELECTION:
+				return validateSelection((Selection)value, diagnostics, context);
+			case PersistencePackage.ORDER:
+				return validateOrder((Order)value, diagnostics, context);
+			case PersistencePackage.ASC:
+				return validateAsc((Asc)value, diagnostics, context);
+			case PersistencePackage.DESC:
+				return validateDesc((Desc)value, diagnostics, context);
+			case PersistencePackage.FILTER:
+				return validateFilter((Filter)value, diagnostics, context);
+			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE:
+				return validateRepositoryFeatureReference((RepositoryFeatureReference)value, diagnostics, context);
 			case PersistencePackage.DATABASE_TECHNOLOGIES:
 				return validateDatabaseTechnologies((DatabaseTechnologies)value, diagnostics, context);
 			case PersistencePackage.ORM_TECHNOLOGIES:
@@ -715,6 +729,99 @@ public class PersistenceValidator extends EObjectValidator {
 	 */
 	public boolean validateAssociationKey(AssociationKey associationKey, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(associationKey, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRepository(Repository repository, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(repository, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(repository, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(repository, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSelection(Selection selection, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(selection, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(selection, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(selection, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateOrder(Order order, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(order, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAsc(Asc asc, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(asc, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDesc(Desc desc, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(desc, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFilter(Filter filter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(filter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(filter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(filter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRepositoryFeatureReference(RepositoryFeatureReference repositoryFeatureReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(repositoryFeatureReference, diagnostics, context);
 	}
 
 	/**

@@ -6,9 +6,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
-
-import work.andycarpenter.webgen.pims.service.Selection;
 
 /**
  * <!-- begin-user-doc -->

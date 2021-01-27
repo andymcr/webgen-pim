@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-import work.andycarpenter.webgen.pims.service.Filter;
-import work.andycarpenter.webgen.pims.service.Selection;
-import work.andycarpenter.webgen.pims.service.Service;
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -371,9 +371,9 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
 		final Set<Selection> selections = new HashSet<Selection>();
-		for (Service service : webUI.getServices().getServices()) {
-			if (contentType.equals(service.getServes())) {
-				selections.addAll(service.getSelections());
+		for (Repository repository : webUI.getPersistence().getRepositories()) {
+			if (contentType.equals(repository.getServes())) {
+				selections.addAll(repository.getSelections());
 			}
 		}
 

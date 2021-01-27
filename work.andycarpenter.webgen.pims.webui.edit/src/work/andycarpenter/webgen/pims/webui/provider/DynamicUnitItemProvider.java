@@ -25,8 +25,8 @@ import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
-import work.andycarpenter.webgen.pims.service.Selection;
-import work.andycarpenter.webgen.pims.service.Service;
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.SingletonUnit;
@@ -589,9 +589,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 	protected Set<Selection> getSelections(final WebUI webUI, final Entity entity) {
 		final Set<Selection> selections = new HashSet<Selection>();
-		for (Service service : webUI.getServices().getServices()) {
-			if (service.getServes() == entity) {
-				selections.addAll(service.getSelections());
+		for (Repository repository : webUI.getPersistence().getRepositories()) {
+			if (repository.getServes() == entity) {
+				selections.addAll(repository.getSelections());
 			}
 		}
 

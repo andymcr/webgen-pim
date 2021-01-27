@@ -6,7 +6,7 @@
 module PersistenceKeys;
 create dummyOrm : ORM refining orm : ORM, website : Website;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 
 
 rule Entity {

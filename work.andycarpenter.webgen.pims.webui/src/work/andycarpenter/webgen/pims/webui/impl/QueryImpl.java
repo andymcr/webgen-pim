@@ -17,9 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import work.andycarpenter.webgen.pims.service.Filter;
-
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.webui.Query;
 import work.andycarpenter.webgen.pims.webui.QueryParameter;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;

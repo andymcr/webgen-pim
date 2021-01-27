@@ -23,9 +23,8 @@ import work.andycarpenter.webgen.pims.api.ApiPackage;
 import work.andycarpenter.webgen.pims.api.Resource;
 import work.andycarpenter.webgen.pims.api.ResourceSelection;
 
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
-
-import work.andycarpenter.webgen.pims.service.Selection;
 
 /**
  * <!-- begin-user-doc -->
@@ -119,6 +118,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Resource getParentResource() {
 		if (eContainerFeatureID() != ApiPackage.RESOURCE_SELECTION__PARENT_RESOURCE) return null;
 		return (Resource)eInternalContainer();
@@ -139,6 +139,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentResource(Resource newParentResource) {
 		if (newParentResource != eInternalContainer() || (eContainerFeatureID() != ApiPackage.RESOURCE_SELECTION__PARENT_RESOURCE && newParentResource != null)) {
 			if (EcoreUtil.isAncestor(this, newParentResource))
@@ -160,6 +161,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -169,6 +171,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -178,6 +181,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getSelection() {
 		if (selection != null && selection.eIsProxy()) {
 			InternalEObject oldSelection = (InternalEObject)selection;
@@ -204,6 +208,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Selection newSelection) {
 		Selection oldSelection = selection;
 		selection = newSelection;
@@ -216,6 +221,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -225,6 +231,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;
@@ -237,6 +244,7 @@ public class ResourceSelectionImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SerializationGroup> getDefaultSerializationGroups() {
 		if (defaultSerializationGroups == null) {
 			defaultSerializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, ApiPackage.RESOURCE_SELECTION__DEFAULT_SERIALIZATION_GROUPS);

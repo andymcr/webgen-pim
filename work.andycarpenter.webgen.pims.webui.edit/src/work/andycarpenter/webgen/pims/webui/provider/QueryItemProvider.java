@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.service.Filter;
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
 import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.Query;

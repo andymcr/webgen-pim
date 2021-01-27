@@ -39,6 +39,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Persistence/dataTypes"/>
       <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
           ecoreFeature="ecore:EReference persistence.ecore#//Persistence/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Persistence/repositories"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Persistence/ormTechnology"/>
       <genFeatures createChild="false" propertyCategory="Database" ecoreFeature="ecore:EAttribute persistence.ecore#//Persistence/databaseTechnology"/>
       <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Persistence/timestampCreation"/>
@@ -153,6 +154,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/labels"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/unique"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/containerUnique"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Entity/repository"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/tableName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyPersistentType"/>
@@ -205,6 +207,51 @@
           ecoreFeature="ecore:EReference persistence.ecore#//AssociationKey/sourceFeature"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertyDescription=""
           propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationKey/targetFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//Repository">
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Repository/serves"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//Repository/selections"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Repository/findAll"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Repository/findOne"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//Selection">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Selection/definedBy"/>
+      <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Selection/distinct"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/fields"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/joins"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
+          ecoreFeature="ecore:EReference persistence.ecore#//Selection/condition"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
+          ecoreFeature="ecore:EReference persistence.ecore#//Selection/ordering"/>
+      <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Selection/limit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/grouping"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/selectPath"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
+          ecoreFeature="ecore:EReference persistence.ecore#//Selection/filters"/>
+      <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Selection/methodName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence.ecore#//Order">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
+          ecoreFeature="ecore:EReference persistence.ecore#//Order/path"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//Asc"/>
+    <genClasses ecoreClass="persistence.ecore#//Desc"/>
+    <genClasses ecoreClass="persistence.ecore#//Filter">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Filter/selection"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
+          ecoreFeature="ecore:EReference persistence.ecore#//Filter/condition"/>
+      <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Filter/methodName"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//RepositoryFeatureReference">
+      <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//RepositoryFeatureReference/name"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//RepositoryFeatureReference/feature"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

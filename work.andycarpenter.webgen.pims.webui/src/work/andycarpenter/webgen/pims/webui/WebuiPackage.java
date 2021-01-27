@@ -72,13 +72,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI = 0;
 
 	/**
+	 * The feature id for the '<em><b>Persistence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__PERSISTENCE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__SERVICES = 0;
+	int WEB_UI__SERVICES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Menus</b></em>' containment reference list.
@@ -87,7 +96,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__MENUS = 1;
+	int WEB_UI__MENUS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Pages</b></em>' containment reference list.
@@ -96,7 +105,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__PAGES = 2;
+	int WEB_UI__PAGES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Default Date Format</b></em>' attribute.
@@ -105,7 +114,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DATE_FORMAT = 3;
+	int WEB_UI__DEFAULT_DATE_FORMAT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Default Time Format</b></em>' attribute.
@@ -114,7 +123,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TIME_FORMAT = 4;
+	int WEB_UI__DEFAULT_TIME_FORMAT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Default Date Time Format</b></em>' attribute.
@@ -123,7 +132,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DATE_TIME_FORMAT = 5;
+	int WEB_UI__DEFAULT_DATE_TIME_FORMAT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
@@ -132,7 +141,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_CLASS = 6;
+	int WEB_UI__DEFAULT_CARD_CLASS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
@@ -141,7 +150,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 7;
+	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
@@ -150,7 +159,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 8;
+	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
@@ -159,7 +168,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 9;
+	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
@@ -168,7 +177,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_BADGE_CLASS = 10;
+	int WEB_UI__DEFAULT_BADGE_CLASS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
@@ -177,7 +186,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 11;
+	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
@@ -186,7 +195,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 12;
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
@@ -195,7 +204,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 13;
+	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
@@ -204,7 +213,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 14;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -213,7 +222,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 15;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -222,7 +231,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 16;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -231,7 +240,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 17;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -240,7 +249,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 18;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -249,7 +258,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 19;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -258,7 +267,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 20;
+	int WEB_UI__INPUT_TECHNOLOGY = 21;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -267,7 +276,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 21;
+	int WEB_UI__AJAX_TECHNOLOGY = 22;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -276,7 +285,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 22;
+	int WEB_UI_FEATURE_COUNT = 23;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -14086,6 +14095,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getWebUI();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getPersistence <em>Persistence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Persistence</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getPersistence()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_Persistence();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getServices <em>Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17476,6 +17496,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass WEB_UI = eINSTANCE.getWebUI();
+
+		/**
+		 * The meta object literal for the '<em><b>Persistence</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__PERSISTENCE = eINSTANCE.getWebUI_Persistence();
 
 		/**
 		 * The meta object literal for the '<em><b>Services</b></em>' reference feature.

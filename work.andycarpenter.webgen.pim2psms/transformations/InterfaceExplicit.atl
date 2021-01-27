@@ -8,6 +8,7 @@ module InterfaceExplicit;
 create waf : WAF from website : Website, orm : ORM, service : Service, api : API;
 
 uses WebsiteHelpers;
+uses PersistenceHelpers;
 uses InterfaceExpression;
 uses InterfaceHelpers;
 
@@ -19,15 +20,26 @@ helper context String def: createName() : String
 			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
 		endif;
 
-helper context Website!Entity def: container() : Website!Entity
-	= let containingAssociation : Sequence(Website!AssociationWithContainment)
-		= self.allAssociations
-				->select(a | a.oclIsTypeOf(Website!AssociationWithContainment) and a.partOf <> self)
-			in if containingAssociation->isEmpty() then
-					OclUndefined
-				else
-					containingAssociation->first().partOf
-				endif;
+
+abstract rule NamedElement {
+	from website : Website!NamedElement
+	to waf : WAF!NamedElement (
+		name <- website.name
+	)
+}
+
+-- @extends NamedElement
+abstract rule NamedDisplayElement {
+	from website : Website!NamedDisplayElement
+	to waf : WAF!NamedDisplayElement (
+		displayLabel <-
+			if not website.displayLabel.oclIsUndefined() and website.displayLabel.trim() <> '' then
+				website.displayLabel.trim()
+			else
+				website.name.createLabel()
+			endif
+	)
+}
 
 
 rule WafModel {
@@ -71,27 +83,6 @@ rule WafModel {
 		topNavigationId <- website.websiteProperties.topNavigationId,
 		siteTemplate <- website.websiteProperties.siteTemplate,
 		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable
-	)
-}
-
-
-abstract rule NamedElement {
-	from website : Website!NamedElement
-	to waf : WAF!NamedElement (
-		name <- website.name
-	)
-}
-
--- @extends NamedElement
-abstract rule NamedDisplayElement {
-	from website : Website!NamedDisplayElement
-	to waf : WAF!NamedDisplayElement (
-		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel.trim() <> '' then
-				website.displayLabel.trim()
-			else
-				website.name.createLabel()
-			endif
 	)
 }
 
@@ -268,6 +259,7 @@ abstract rule DynamicUnit {
 	from website : Website!DynamicUnit
 	to waf : WAF!DynamicUnit (
 		displayFields <- website.displayFields,
+		repositoriesUsed <- website.findRepositoriesUsed(),
 		servicesUsed <- website.findServicesUsed(),
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden(),
@@ -340,7 +332,7 @@ rule UnitAssociation {
 			if website.options.oclIsUndefined() then
 				website.options
 			else
-				website.options.findServiceSelection()
+				website.options.findSelection()
 			endif,
 		filteredOptions <-
 			if website.filteredOptions.oclIsUndefined() then
@@ -494,7 +486,7 @@ abstract rule SingletonUnit {
 			else
 				website.title.findOrmLabel()
 			endif,
-		contentType <- thisModule.findOrmEntity(website.contentType.name)
+		contentType <- website.contentType.findOrmEntity()
 	)
 }
 
@@ -511,28 +503,27 @@ abstract rule CollectionUnit {
 			endif,
 		elementTitle <- website.elementTitle,
 		truncateElementTitle <- website.truncateElementTitle,
-		contentType <- website.contentType
-			->collect(eov | thisModule.findOrmEntity(eov.name)),
+		contentType <- website.contentType->collect(e | e.findOrmEntity()),
 		selection <-
 			if website.selection.oclIsUndefined() then
 				website.selection
 			else
-				website.selection.findServiceSelection()
+				website.selection.findSelection()
 			endif,
 		omitContainerLoad <- website.omitContainerLoad,
-		containerType <- website.findContainerType(),
-		containerService <- website.findContainerService(),
+--		containerType <- website.findContainerType(),
+		containerRepository <- website.findContainerRepository(),
 		findContainerSelection <-
 			if website.findContainerSelection.oclIsUndefined() then
 				website.findContainerSelection
 			else
-				website.findContainerSelection.findServiceSelection()
+				website.findContainerSelection.findSelection()
 			endif,
 		findElementSelection <-
 			if website.findElementSelection.oclIsUndefined() then
 				website.findElementSelection
 			else
-				website.findElementSelection.findServiceSelection()
+				website.findElementSelection.findSelection()
 			endif,
 		filter <-
 			if website.filter.oclIsUndefined() then
@@ -668,7 +659,7 @@ rule DetailsUnit {
 			if website.selection.oclIsUndefined() then
 				website.selection
 			else
-				website.selection.findServiceSelection()
+				website.selection.findSelection()
 			endif,
 		omitFieldLabels <- website.omitFieldLabels
 	)

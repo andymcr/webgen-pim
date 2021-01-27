@@ -8,9 +8,12 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import work.andycarpenter.webgen.pims.base.Classifier;
+import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
+import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.persistence.*;
 
 /**
@@ -287,6 +290,58 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.ASSOCIATION_KEY: {
 				AssociationKey associationKey = (AssociationKey)theEObject;
 				T result = caseAssociationKey(associationKey);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.REPOSITORY: {
+				Repository repository = (Repository)theEObject;
+				T result = caseRepository(repository);
+				if (result == null) result = caseNamedElement(repository);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.SELECTION: {
+				Selection selection = (Selection)theEObject;
+				T result = caseSelection(selection);
+				if (result == null) result = caseNamedElement(selection);
+				if (result == null) result = caseFormalParameterList(selection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.ORDER: {
+				Order order = (Order)theEObject;
+				T result = caseOrder(order);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.ASC: {
+				Asc asc = (Asc)theEObject;
+				T result = caseAsc(asc);
+				if (result == null) result = caseOrder(asc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.DESC: {
+				Desc desc = (Desc)theEObject;
+				T result = caseDesc(desc);
+				if (result == null) result = caseOrder(desc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.FILTER: {
+				Filter filter = (Filter)theEObject;
+				T result = caseFilter(filter);
+				if (result == null) result = caseNamedDisplayElement(filter);
+				if (result == null) result = caseFormalParameterList(filter);
+				if (result == null) result = caseNamedElement(filter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE: {
+				RepositoryFeatureReference repositoryFeatureReference = (RepositoryFeatureReference)theEObject;
+				T result = caseRepositoryFeatureReference(repositoryFeatureReference);
+				if (result == null) result = caseVariable(repositoryFeatureReference);
+				if (result == null) result = caseExpression(repositoryFeatureReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -685,6 +740,111 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRepository(Repository object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelection(Selection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrder(Order object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asc</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asc</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsc(Asc object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Desc</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Desc</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDesc(Desc object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFilter(Filter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Repository Feature Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Repository Feature Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRepositoryFeatureReference(RepositoryFeatureReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -726,6 +886,51 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClassifier(Classifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Formal Parameter List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Formal Parameter List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFormalParameterList(FormalParameterList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpression(Expression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
 		return null;
 	}
 

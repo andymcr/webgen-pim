@@ -21,6 +21,7 @@ import work.andycarpenter.webgen.pims.base.BaseFactory;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -350,6 +351,11 @@ public class AttributeItemProvider extends FeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
 				 BaseFactory.eINSTANCE.createCurrentTime()));
 
 		newChildDescriptors.add
@@ -391,6 +397,11 @@ public class AttributeItemProvider extends FeatureItemProvider {
 			(createChildParameter
 				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
 				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

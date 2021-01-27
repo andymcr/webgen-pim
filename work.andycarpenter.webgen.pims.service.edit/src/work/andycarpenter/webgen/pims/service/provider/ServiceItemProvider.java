@@ -52,8 +52,6 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addServesPropertyDescriptor(object);
-			addFindAllPropertyDescriptor(object);
-			addFindOnePropertyDescriptor(object);
 			addUsesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -73,50 +71,6 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 				 getString("_UI_Service_serves_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Service_serves_feature", "_UI_Service_type"),
 				 ServicePackage.Literals.SERVICE__SERVES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Find All feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFindAllPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Service_findAll_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_findAll_feature", "_UI_Service_type"),
-				 ServicePackage.Literals.SERVICE__FIND_ALL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Find One feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFindOnePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Service_findOne_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_findOne_feature", "_UI_Service_type"),
-				 ServicePackage.Literals.SERVICE__FIND_ONE,
 				 true,
 				 false,
 				 true,
@@ -160,7 +114,6 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ServicePackage.Literals.SERVICE__CONSTANTS);
-			childrenFeatures.add(ServicePackage.Literals.SERVICE__SELECTIONS);
 			childrenFeatures.add(ServicePackage.Literals.SERVICE__OPERATIONS);
 		}
 		return childrenFeatures;
@@ -218,7 +171,6 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 
 		switch (notification.getFeatureID(Service.class)) {
 			case ServicePackage.SERVICE__CONSTANTS:
-			case ServicePackage.SERVICE__SELECTIONS:
 			case ServicePackage.SERVICE__OPERATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -241,11 +193,6 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(ServicePackage.Literals.SERVICE__CONSTANTS,
 				 ServiceFactory.eINSTANCE.createConstant()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ServicePackage.Literals.SERVICE__SELECTIONS,
-				 ServiceFactory.eINSTANCE.createSelection()));
 
 		newChildDescriptors.add
 			(createChildParameter

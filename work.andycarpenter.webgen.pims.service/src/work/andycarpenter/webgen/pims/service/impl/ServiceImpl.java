@@ -21,9 +21,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
 import work.andycarpenter.webgen.pims.service.Constant;
-import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
 
@@ -37,9 +37,6 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getConstants <em>Constants</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getServes <em>Serves</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getSelections <em>Selections</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getFindAll <em>Find All</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getFindOne <em>Find One</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getOperations <em>Operations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getUses <em>Uses</em>}</li>
  * </ul>
@@ -68,36 +65,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	protected Entity serves;
 
 	/**
-	 * The cached value of the '{@link #getSelections() <em>Selections</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSelections()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Selection> selections;
-
-	/**
-	 * The cached value of the '{@link #getFindAll() <em>Find All</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFindAll()
-	 * @generated
-	 * @ordered
-	 */
-	protected Selection findAll;
-
-	/**
-	 * The cached value of the '{@link #getFindOne() <em>Find One</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFindOne()
-	 * @generated
-	 * @ordered
-	 */
-	protected Selection findOne;
-
-	/**
 	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,7 +82,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Service> uses;
+	protected EList<Repository> uses;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,99 +162,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @generated
 	 */
 	@Override
-	public EList<Selection> getSelections() {
-		if (selections == null) {
-			selections = new EObjectContainmentWithInverseEList<Selection>(Selection.class, this, ServicePackage.SERVICE__SELECTIONS, ServicePackage.SELECTION__USED_BY);
-		}
-		return selections;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Selection getFindAll() {
-		if (findAll != null && findAll.eIsProxy()) {
-			InternalEObject oldFindAll = (InternalEObject)findAll;
-			findAll = (Selection)eResolveProxy(oldFindAll);
-			if (findAll != oldFindAll) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ServicePackage.SERVICE__FIND_ALL, oldFindAll, findAll));
-			}
-		}
-		return findAll;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Selection basicGetFindAll() {
-		return findAll;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFindAll(Selection newFindAll) {
-		Selection oldFindAll = findAll;
-		findAll = newFindAll;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.SERVICE__FIND_ALL, oldFindAll, findAll));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Selection getFindOne() {
-		if (findOne != null && findOne.eIsProxy()) {
-			InternalEObject oldFindOne = (InternalEObject)findOne;
-			findOne = (Selection)eResolveProxy(oldFindOne);
-			if (findOne != oldFindOne) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ServicePackage.SERVICE__FIND_ONE, oldFindOne, findOne));
-			}
-		}
-		return findOne;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Selection basicGetFindOne() {
-		return findOne;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFindOne(Selection newFindOne) {
-		Selection oldFindOne = findOne;
-		findOne = newFindOne;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.SERVICE__FIND_ONE, oldFindOne, findOne));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<BusinessOperation> getOperations() {
 		if (operations == null) {
 			operations = new EObjectContainmentWithInverseEList<BusinessOperation>(BusinessOperation.class, this, ServicePackage.SERVICE__OPERATIONS, ServicePackage.BUSINESS_OPERATION__DEFINED_BY);
@@ -301,9 +175,9 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @generated
 	 */
 	@Override
-	public EList<Service> getUses() {
+	public EList<Repository> getUses() {
 		if (uses == null) {
-			uses = new EObjectResolvingEList<Service>(Service.class, this, ServicePackage.SERVICE__USES);
+			uses = new EObjectResolvingEList<Repository>(Repository.class, this, ServicePackage.SERVICE__USES);
 		}
 		return uses;
 	}
@@ -319,8 +193,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 		switch (featureID) {
 			case ServicePackage.SERVICE__CONSTANTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConstants()).basicAdd(otherEnd, msgs);
-			case ServicePackage.SERVICE__SELECTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSelections()).basicAdd(otherEnd, msgs);
 			case ServicePackage.SERVICE__OPERATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperations()).basicAdd(otherEnd, msgs);
 		}
@@ -337,8 +209,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 		switch (featureID) {
 			case ServicePackage.SERVICE__CONSTANTS:
 				return ((InternalEList<?>)getConstants()).basicRemove(otherEnd, msgs);
-			case ServicePackage.SERVICE__SELECTIONS:
-				return ((InternalEList<?>)getSelections()).basicRemove(otherEnd, msgs);
 			case ServicePackage.SERVICE__OPERATIONS:
 				return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
 		}
@@ -358,14 +228,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			case ServicePackage.SERVICE__SERVES:
 				if (resolve) return getServes();
 				return basicGetServes();
-			case ServicePackage.SERVICE__SELECTIONS:
-				return getSelections();
-			case ServicePackage.SERVICE__FIND_ALL:
-				if (resolve) return getFindAll();
-				return basicGetFindAll();
-			case ServicePackage.SERVICE__FIND_ONE:
-				if (resolve) return getFindOne();
-				return basicGetFindOne();
 			case ServicePackage.SERVICE__OPERATIONS:
 				return getOperations();
 			case ServicePackage.SERVICE__USES:
@@ -390,23 +252,13 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			case ServicePackage.SERVICE__SERVES:
 				setServes((Entity)newValue);
 				return;
-			case ServicePackage.SERVICE__SELECTIONS:
-				getSelections().clear();
-				getSelections().addAll((Collection<? extends Selection>)newValue);
-				return;
-			case ServicePackage.SERVICE__FIND_ALL:
-				setFindAll((Selection)newValue);
-				return;
-			case ServicePackage.SERVICE__FIND_ONE:
-				setFindOne((Selection)newValue);
-				return;
 			case ServicePackage.SERVICE__OPERATIONS:
 				getOperations().clear();
 				getOperations().addAll((Collection<? extends BusinessOperation>)newValue);
 				return;
 			case ServicePackage.SERVICE__USES:
 				getUses().clear();
-				getUses().addAll((Collection<? extends Service>)newValue);
+				getUses().addAll((Collection<? extends Repository>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -425,15 +277,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return;
 			case ServicePackage.SERVICE__SERVES:
 				setServes((Entity)null);
-				return;
-			case ServicePackage.SERVICE__SELECTIONS:
-				getSelections().clear();
-				return;
-			case ServicePackage.SERVICE__FIND_ALL:
-				setFindAll((Selection)null);
-				return;
-			case ServicePackage.SERVICE__FIND_ONE:
-				setFindOne((Selection)null);
 				return;
 			case ServicePackage.SERVICE__OPERATIONS:
 				getOperations().clear();
@@ -457,12 +300,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return constants != null && !constants.isEmpty();
 			case ServicePackage.SERVICE__SERVES:
 				return serves != null;
-			case ServicePackage.SERVICE__SELECTIONS:
-				return selections != null && !selections.isEmpty();
-			case ServicePackage.SERVICE__FIND_ALL:
-				return findAll != null;
-			case ServicePackage.SERVICE__FIND_ONE:
-				return findOne != null;
 			case ServicePackage.SERVICE__OPERATIONS:
 				return operations != null && !operations.isEmpty();
 			case ServicePackage.SERVICE__USES:

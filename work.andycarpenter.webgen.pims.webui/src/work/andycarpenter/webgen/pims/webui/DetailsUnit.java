@@ -2,7 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.service.Selection;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
  * <!-- begin-user-doc -->

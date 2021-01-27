@@ -40,17 +40,15 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
-
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-
 import work.andycarpenter.webgen.pims.persistence.util.PersistenceSwitch;
 
 import work.andycarpenter.webgen.pims.service.Constant;
-import work.andycarpenter.webgen.pims.service.Order;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
 
 import work.andycarpenter.webgen.pims.service.util.ServiceSwitch;
@@ -1606,6 +1604,30 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 			 * <!-- end-user-doc -->
 			 * @generated
 			 */
+			@Override
+			public Object caseOrder(Order object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ORDER__PATH,
+						 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ORDER__PATH,
+						 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ORDER__PATH,
+						 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
 			protected CommandParameter createChildParameter(Object feature, Object child) {
 				return new CommandParameter(null, feature, child);
 			}
@@ -1693,31 +1715,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 				newChildDescriptors.add
 					(createChildParameter
 						(ServicePackage.Literals.CONSTANT__VALUE,
-						 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrder(Order object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.ORDER__PATH,
-						 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.ORDER__PATH,
-						 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.ORDER__PATH,
 						 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 
 				return null;

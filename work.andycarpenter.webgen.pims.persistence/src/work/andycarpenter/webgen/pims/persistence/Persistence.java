@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.base.DataType;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getSerializationGroups <em>Serialization Groups</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getEntities <em>Entities</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getOrmTechnology <em>Orm Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#getDatabaseTechnology <em>Database Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Persistence#isTimestampCreation <em>Timestamp Creation</em>}</li>
@@ -79,6 +80,18 @@ public interface Persistence extends EObject {
 	 * @generated
 	 */
 	EList<Entity> getEntities();
+
+	/**
+	 * Returns the value of the '<em><b>Repositories</b></em>' containment reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Repository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Repositories</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getPersistence_Repositories()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Repository> getRepositories();
 
 	/**
 	 * Returns the value of the '<em><b>Orm Technology</b></em>' attribute.

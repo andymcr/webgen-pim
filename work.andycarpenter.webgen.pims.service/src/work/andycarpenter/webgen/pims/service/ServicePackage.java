@@ -137,40 +137,13 @@ public interface ServicePackage extends EPackage {
 	int SERVICE__SERVES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Selections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__SELECTIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Find All</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__FIND_ALL = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Find One</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__FIND_ONE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__OPERATIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int SERVICE__OPERATIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Uses</b></em>' reference list.
@@ -179,7 +152,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int SERVICE__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Service</em>' class.
@@ -188,7 +161,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
+	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Service</em>' class.
@@ -255,188 +228,6 @@ public interface ServicePackage extends EPackage {
 	int CONSTANT_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl <em>Selection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.SelectionImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getSelection()
-	 * @generated
-	 */
-	int SELECTION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__NAME = BasePackage.NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__PARAMETERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Used By</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__USED_BY = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Distinct</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__DISTINCT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__FIELDS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Joins</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__JOINS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__CONDITION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__FILTERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Ordering</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__ORDERING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Limit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__LIMIT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Grouping</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__GROUPING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Select Path</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__SELECT_PATH = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__METHOD_NAME = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 11;
-
-	/**
-	 * The number of structural features of the '<em>Selection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The number of operations of the '<em>Selection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.OrderImpl <em>Order</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.OrderImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOrder()
-	 * @generated
-	 */
-	int ORDER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORDER__PATH = 0;
-
-	/**
-	 * The number of structural features of the '<em>Order</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORDER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Order</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORDER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl <em>Constant Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -444,7 +235,7 @@ public interface ServicePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getConstantReference()
 	 * @generated
 	 */
-	int CONSTANT_REFERENCE = 5;
+	int CONSTANT_REFERENCE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -501,144 +292,6 @@ public interface ServicePackage extends EPackage {
 	int CONSTANT_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl <em>Feature Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getServiceFeatureReference()
-	 * @generated
-	 */
-	int SERVICE_FEATURE_REFERENCE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE__NAME = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE__FEATURE = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Feature Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Feature Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.AscImpl <em>Asc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.AscImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getAsc()
-	 * @generated
-	 */
-	int ASC = 7;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASC__PATH = ORDER__PATH;
-
-	/**
-	 * The number of structural features of the '<em>Asc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASC_OPERATION_COUNT = ORDER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.DescImpl <em>Desc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.DescImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getDesc()
-	 * @generated
-	 */
-	int DESC = 8;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESC__PATH = ORDER__PATH;
-
-	/**
-	 * The number of structural features of the '<em>Desc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Desc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESC_OPERATION_COUNT = ORDER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl <em>Business Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,7 +299,7 @@ public interface ServicePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getBusinessOperation()
 	 * @generated
 	 */
-	int BUSINESS_OPERATION = 9;
+	int BUSINESS_OPERATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -721,88 +374,6 @@ public interface ServicePackage extends EPackage {
 	int BUSINESS_OPERATION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.impl.FilterImpl <em>Filter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.service.impl.FilterImpl
-	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getFilter()
-	 * @generated
-	 */
-	int FILTER = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__PARAMETERS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Selection</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__SELECTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__CONDITION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER__METHOD_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILTER_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,7 +381,7 @@ public interface ServicePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOperationResultTypes()
 	 * @generated
 	 */
-	int OPERATION_RESULT_TYPES = 11;
+	int OPERATION_RESULT_TYPES = 5;
 
 
 	/**
@@ -867,39 +438,6 @@ public interface ServicePackage extends EPackage {
 	EReference getService_Serves();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.service.Service#getSelections <em>Selections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Selections</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Service#getSelections()
-	 * @see #getService()
-	 * @generated
-	 */
-	EReference getService_Selections();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.service.Service#getFindAll <em>Find All</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Find All</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Service#getFindAll()
-	 * @see #getService()
-	 * @generated
-	 */
-	EReference getService_FindAll();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.service.Service#getFindOne <em>Find One</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Find One</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Service#getFindOne()
-	 * @see #getService()
-	 * @generated
-	 */
-	EReference getService_FindOne();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.service.Service#getOperations <em>Operations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -954,158 +492,6 @@ public interface ServicePackage extends EPackage {
 	EReference getConstant_Value();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Selection <em>Selection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Selection</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection
-	 * @generated
-	 */
-	EClass getSelection();
-
-	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.service.Selection#getUsedBy <em>Used By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Used By</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getUsedBy()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_UsedBy();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.Selection#isDistinct <em>Distinct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Distinct</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#isDistinct()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EAttribute getSelection_Distinct();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getFields <em>Fields</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Fields</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getFields()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Fields();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getJoins <em>Joins</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Joins</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getJoins()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Joins();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.service.Selection#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Condition</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getCondition()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Condition();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getFilters <em>Filters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Filters</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getFilters()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Filters();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getOrdering <em>Ordering</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ordering</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getOrdering()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Ordering();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.Selection#getLimit <em>Limit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Limit</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getLimit()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EAttribute getSelection_Limit();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getGrouping <em>Grouping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Grouping</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getGrouping()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_Grouping();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.service.Selection#getSelectPath <em>Select Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Select Path</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getSelectPath()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_SelectPath();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.Selection#getMethodName <em>Method Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Selection#getMethodName()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EAttribute getSelection_MethodName();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Order <em>Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Order</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Order
-	 * @generated
-	 */
-	EClass getOrder();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.service.Order#getPath <em>Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Path</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Order#getPath()
-	 * @see #getOrder()
-	 * @generated
-	 */
-	EReference getOrder_Path();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.ConstantReference <em>Constant Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1136,58 +522,6 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConstantReference_Value();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference <em>Feature Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Feature Reference</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.ServiceFeatureReference
-	 * @generated
-	 */
-	EClass getServiceFeatureReference();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.ServiceFeatureReference#getName()
-	 * @see #getServiceFeatureReference()
-	 * @generated
-	 */
-	EAttribute getServiceFeatureReference_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference#getFeature <em>Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.ServiceFeatureReference#getFeature()
-	 * @see #getServiceFeatureReference()
-	 * @generated
-	 */
-	EReference getServiceFeatureReference_Feature();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Asc <em>Asc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Asc</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Asc
-	 * @generated
-	 */
-	EClass getAsc();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Desc <em>Desc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Desc</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Desc
-	 * @generated
-	 */
-	EClass getDesc();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.BusinessOperation <em>Business Operation</em>}'.
@@ -1242,49 +576,6 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBusinessOperation_ResultMimeType();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Filter <em>Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Filter</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Filter
-	 * @generated
-	 */
-	EClass getFilter();
-
-	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.service.Filter#getSelection <em>Selection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Selection</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Filter#getSelection()
-	 * @see #getFilter()
-	 * @generated
-	 */
-	EReference getFilter_Selection();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.service.Filter#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Condition</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Filter#getCondition()
-	 * @see #getFilter()
-	 * @generated
-	 */
-	EReference getFilter_Condition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.Filter#getMethodName <em>Method Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Filter#getMethodName()
-	 * @see #getFilter()
-	 * @generated
-	 */
-	EAttribute getFilter_MethodName();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}'.
@@ -1364,30 +655,6 @@ public interface ServicePackage extends EPackage {
 		EReference SERVICE__SERVES = eINSTANCE.getService_Serves();
 
 		/**
-		 * The meta object literal for the '<em><b>Selections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE__SELECTIONS = eINSTANCE.getService_Selections();
-
-		/**
-		 * The meta object literal for the '<em><b>Find All</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE__FIND_ALL = eINSTANCE.getService_FindAll();
-
-		/**
-		 * The meta object literal for the '<em><b>Find One</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE__FIND_ONE = eINSTANCE.getService_FindOne();
-
-		/**
 		 * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1430,122 +697,6 @@ public interface ServicePackage extends EPackage {
 		EReference CONSTANT__VALUE = eINSTANCE.getConstant_Value();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.SelectionImpl <em>Selection</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.SelectionImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getSelection()
-		 * @generated
-		 */
-		EClass SELECTION = eINSTANCE.getSelection();
-
-		/**
-		 * The meta object literal for the '<em><b>Used By</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__USED_BY = eINSTANCE.getSelection_UsedBy();
-
-		/**
-		 * The meta object literal for the '<em><b>Distinct</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SELECTION__DISTINCT = eINSTANCE.getSelection_Distinct();
-
-		/**
-		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__FIELDS = eINSTANCE.getSelection_Fields();
-
-		/**
-		 * The meta object literal for the '<em><b>Joins</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__JOINS = eINSTANCE.getSelection_Joins();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__CONDITION = eINSTANCE.getSelection_Condition();
-
-		/**
-		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__FILTERS = eINSTANCE.getSelection_Filters();
-
-		/**
-		 * The meta object literal for the '<em><b>Ordering</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__ORDERING = eINSTANCE.getSelection_Ordering();
-
-		/**
-		 * The meta object literal for the '<em><b>Limit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SELECTION__LIMIT = eINSTANCE.getSelection_Limit();
-
-		/**
-		 * The meta object literal for the '<em><b>Grouping</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__GROUPING = eINSTANCE.getSelection_Grouping();
-
-		/**
-		 * The meta object literal for the '<em><b>Select Path</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__SELECT_PATH = eINSTANCE.getSelection_SelectPath();
-
-		/**
-		 * The meta object literal for the '<em><b>Method Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SELECTION__METHOD_NAME = eINSTANCE.getSelection_MethodName();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.OrderImpl <em>Order</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.OrderImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOrder()
-		 * @generated
-		 */
-		EClass ORDER = eINSTANCE.getOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORDER__PATH = eINSTANCE.getOrder_Path();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl <em>Constant Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1570,52 +721,6 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTANT_REFERENCE__VALUE = eINSTANCE.getConstantReference_Value();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl <em>Feature Reference</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServiceFeatureReferenceImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getServiceFeatureReference()
-		 * @generated
-		 */
-		EClass SERVICE_FEATURE_REFERENCE = eINSTANCE.getServiceFeatureReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICE_FEATURE_REFERENCE__NAME = eINSTANCE.getServiceFeatureReference_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE_FEATURE_REFERENCE__FEATURE = eINSTANCE.getServiceFeatureReference_Feature();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.AscImpl <em>Asc</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.AscImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getAsc()
-		 * @generated
-		 */
-		EClass ASC = eINSTANCE.getAsc();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.DescImpl <em>Desc</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.DescImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getDesc()
-		 * @generated
-		 */
-		EClass DESC = eINSTANCE.getDesc();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl <em>Business Operation</em>}' class.
@@ -1658,40 +763,6 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BUSINESS_OPERATION__RESULT_MIME_TYPE = eINSTANCE.getBusinessOperation_ResultMimeType();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.FilterImpl <em>Filter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.service.impl.FilterImpl
-		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getFilter()
-		 * @generated
-		 */
-		EClass FILTER = eINSTANCE.getFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Selection</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FILTER__SELECTION = eINSTANCE.getFilter_Selection();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FILTER__CONDITION = eINSTANCE.getFilter_Condition();
-
-		/**
-		 * The meta object literal for the '<em><b>Method Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILTER__METHOD_NAME = eINSTANCE.getFilter_MethodName();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}' enum.

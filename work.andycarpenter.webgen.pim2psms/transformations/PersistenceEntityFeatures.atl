@@ -7,7 +7,8 @@ module PersistenceEntityFeatures;
 create dummyOrm : ORM refining orm : ORM, website : Website;
 
 uses WebsiteHelpers;
-uses PersistenceExpression;
+uses PersistenceHelpers;
+uses PersistenceFeatureExpression;
 
 
 abstract rule NamedElement {
@@ -30,14 +31,6 @@ abstract rule NamedDisplayElement {
 	)
 }
 
-
-rule Entity {
-	from partialOrm : ORM!Entity
-	to orm : ORM!Entity (
-		"unique" <- thisModule.findWebsiteEntity(partialOrm.name)."unique",
-		containerUnique <- thisModule.findWebsiteEntity(partialOrm.name).containerUnique
-	)
-}
 
 -- @extends NamedDisplayElement
 abstract rule Feature {

@@ -6,7 +6,7 @@
 module PersistenceImplicitAuthentication;
 create dummyOrm : ORM refining orm : ORM, website : Website;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 
 
 helper context Website!Authentication def: getDataType(name : String) : ORM!DataType

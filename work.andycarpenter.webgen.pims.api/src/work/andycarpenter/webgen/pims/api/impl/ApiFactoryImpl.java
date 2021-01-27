@@ -69,6 +69,7 @@ public class ApiFactoryImpl extends EFactoryImpl implements ApiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public API createAPI() {
 		APIImpl api = new APIImpl();
 		return api;
@@ -79,6 +80,7 @@ public class ApiFactoryImpl extends EFactoryImpl implements ApiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Resource createResource() {
 		ResourceImpl resource = new ResourceImpl();
 		return resource;
@@ -89,6 +91,7 @@ public class ApiFactoryImpl extends EFactoryImpl implements ApiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceSelection createResourceSelection() {
 		ResourceSelectionImpl resourceSelection = new ResourceSelectionImpl();
 		return resourceSelection;
@@ -99,6 +102,7 @@ public class ApiFactoryImpl extends EFactoryImpl implements ApiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ApiPackage getApiPackage() {
 		return (ApiPackage)getEPackage();
 	}

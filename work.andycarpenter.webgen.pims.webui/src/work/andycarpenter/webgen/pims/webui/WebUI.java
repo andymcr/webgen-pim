@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.webui;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.service.Services;
 
 /**
@@ -16,6 +17,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPersistence <em>Persistence</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getServices <em>Services</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getMenus <em>Menus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}</li>
@@ -46,6 +48,28 @@ import work.andycarpenter.webgen.pims.service.Services;
  * @generated
  */
 public interface WebUI extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Persistence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Persistence</em>' reference.
+	 * @see #setPersistence(Persistence)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_Persistence()
+	 * @model
+	 * @generated
+	 */
+	Persistence getPersistence();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getPersistence <em>Persistence</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Persistence</em>' reference.
+	 * @see #getPersistence()
+	 * @generated
+	 */
+	void setPersistence(Persistence value);
+
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' reference.
 	 * <!-- begin-user-doc -->

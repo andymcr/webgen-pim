@@ -68,6 +68,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Resource> getResources() {
 		if (resources == null) {
 			resources = new EObjectContainmentEList<Resource>(Resource.class, this, ApiPackage.API__RESOURCES);

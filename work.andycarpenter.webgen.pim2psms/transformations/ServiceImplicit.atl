@@ -7,7 +7,7 @@
 module ServiceImplicit;
 create dummyService : Service refining service : Service, orm : ORM;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 
 
 rule ServiceModel {

@@ -60,13 +60,8 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 			case ServicePackage.SERVICES: return createServices();
 			case ServicePackage.SERVICE: return createService();
 			case ServicePackage.CONSTANT: return createConstant();
-			case ServicePackage.SELECTION: return createSelection();
 			case ServicePackage.CONSTANT_REFERENCE: return createConstantReference();
-			case ServicePackage.SERVICE_FEATURE_REFERENCE: return createServiceFeatureReference();
-			case ServicePackage.ASC: return createAsc();
-			case ServicePackage.DESC: return createDesc();
 			case ServicePackage.BUSINESS_OPERATION: return createBusinessOperation();
-			case ServicePackage.FILTER: return createFilter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -141,17 +136,6 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * @generated
 	 */
 	@Override
-	public Selection createSelection() {
-		SelectionImpl selection = new SelectionImpl();
-		return selection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ConstantReference createConstantReference() {
 		ConstantReferenceImpl constantReference = new ConstantReferenceImpl();
 		return constantReference;
@@ -163,53 +147,9 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	 * @generated
 	 */
 	@Override
-	public ServiceFeatureReference createServiceFeatureReference() {
-		ServiceFeatureReferenceImpl serviceFeatureReference = new ServiceFeatureReferenceImpl();
-		return serviceFeatureReference;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Asc createAsc() {
-		AscImpl asc = new AscImpl();
-		return asc;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Desc createDesc() {
-		DescImpl desc = new DescImpl();
-		return desc;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public BusinessOperation createBusinessOperation() {
 		BusinessOperationImpl businessOperation = new BusinessOperationImpl();
 		return businessOperation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Filter createFilter() {
-		FilterImpl filter = new FilterImpl();
-		return filter;
 	}
 
 	/**

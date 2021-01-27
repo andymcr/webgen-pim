@@ -21,6 +21,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" upperBound="-1"
+        eType="#//Repository" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ormTechnology" eType="#//OrmTechnologies"
         defaultValueLiteral="Kohana"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="databaseTechnology" ordered="false"
@@ -249,6 +251,8 @@
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerUnique" upperBound="-1"
         eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="#//Repository"
+        eOpposite="#//Repository/serves"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoKeyName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="id"/>
@@ -331,5 +335,54 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFeature" lowerBound="1"
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetFeature" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serves" lowerBound="1"
+        eType="#//Entity" eOpposite="#//Entity/repository"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selections" upperBound="-1"
+        eType="#//Selection" containment="true" eOpposite="#//Selection/definedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="findAll" eType="#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="findOne" eType="#//Selection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Selection" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" lowerBound="1"
+        eType="#//Repository" eOpposite="#//Repository/selections"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distinct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="joins" upperBound="-1"
+        eType="#//Association"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ordering" upperBound="-1"
+        eType="#//Order" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grouping" upperBound="-1"
+        eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectPath" upperBound="-1"
+        eType="#//Association"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filters" upperBound="-1"
+        eType="#//Filter" containment="true" eOpposite="#//Filter/selection"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="path" lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Asc" eSuperTypes="#//Order"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Desc" eSuperTypes="#//Order"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Filter" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" lowerBound="1"
+        eType="#//Selection" eOpposite="#//Selection/filters"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryFeatureReference" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
+        eType="#//Feature"/>
   </eClassifiers>
 </ecore:EPackage>

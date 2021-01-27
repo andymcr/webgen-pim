@@ -1,0 +1,178 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/Orm.ecore
+
+module PersistenceRepositories;
+create dummyOrm : ORM refining orm : ORM, website : Website;
+
+uses WebsiteHelpers;
+uses PersistenceHelpers;
+uses PersistenceRepositoryExpression;
+
+
+abstract rule NamedElement {
+	from website : Website!NamedElement
+	to orm : ORM!NamedElement (
+		name <- website.name
+	)
+}
+
+-- @extends NamedElement
+abstract rule NamedDisplayElement {
+	from website : Website!NamedDisplayElement
+	to orm : ORM!NamedDisplayElement (
+		displayLabel <-
+			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
+				website.displayLabel
+			else
+				website.name.createLabel()
+			endif
+	)
+}
+
+abstract rule FormalParameterList {
+	from website : Website!FormalParameterList
+	to orm : ORM!FormalParameterList (
+		parameters <- website.parameters
+	)
+}
+
+-- @extends NamedElement
+rule FormalParameter {
+	from website : Website!FormalParameter (website.isPersistenceFormal())
+	to orm : ORM!FormalParameter (
+		dataType <-
+			if website.dataType.oclIsUndefined() then
+				website.dataType
+			else
+				thisModule.findOrmDataType(website.dataType.name)
+			endif,
+		defaultValue <-
+			if website.defaultValue.oclIsUndefined() then
+				website.defaultValue
+			else if website.defaultValue.trim() <> '' then
+				website.defaultValue.trim()
+			else
+				OclUndefined
+			endif endif,
+		placeholder <-
+			if not website.placeholder.oclIsUndefined() then
+				website.placeholder.trim()
+			else
+				website.name.createLabel()
+			endif,
+		description <- website.description
+	)
+}
+
+
+-- @extends NamedElement
+rule Repository {
+	from website : Website!Repository
+	to orm : ORM!Repository (
+		partOf <- thisModule.findOrmModel(),
+		serves <- website.serves.findOrmEntity(),
+		selections <- website.selections,
+		findAll <-
+			if not website.findAll.oclIsUndefined() then
+				website.findAll
+			else if website.selections->select(s | s.name.toLower() = 'all')->notEmpty() then
+				website.selections->any(s | s.name.toLower() = 'all')
+			else
+				OclUndefined
+			endif endif,
+		findOne <-
+			if not website.findOne.oclIsUndefined() then
+				website.findAll
+			else if website.selections->select(s | s.name.toLower() = 'one')->notEmpty() then
+				website.selections->any(s | s.name.toLower() = 'one')
+			else
+				OclUndefined
+			endif endif
+	)
+}
+
+-- @extends NamedElement, FormalParameterList
+rule Selection {
+	from website : Website!Selection
+	to orm : ORM!Selection (
+		"distinct" <- website."distinct",
+		fields <- website.fields->collect(f | f.findOrmFeature()),
+		joins <- website.findOrmJoins(website.joins),
+		condition <- website.condition,
+		ordering <- website.ordering,
+		limit <- website.limit,
+		grouping <- website.grouping->collect(f | f.findOrmFeature()),
+		selectPath <- website.findOrmSelectPath(website.selectPath),
+		filters <- website.filters,
+		methodName <-
+			if not website.methodName.oclIsUndefined() and website.methodName.trim() <> '' then
+			    website.methodName
+			else
+				'find'.concat(website.name.uppercaseFirst())
+			endif
+	)
+}
+
+rule ConstantReference {
+	from website : Website!ConstantReference (website.isPresistenceRepositoryExpression())
+	to orm : ORM!ConstantReference (
+		value <- website.value
+	)
+}
+
+rule ParameterReference {
+	from website : Website!ParameterReference (website.isPresistenceRepositoryExpression())
+	to orm : ORM!ParameterReference (
+		parameter <- website.parameter
+	)
+}
+
+rule RepositoryFeatureReference {
+	from website : Website!RepositoryFeatureReference (website.isPresistenceRepositoryExpression())
+	to orm : ORM!FeatureReference (
+		feature <- website.feature.findOrmFeature()
+	)
+}
+
+abstract rule Order {
+	from website : Website!Order
+	to orm : ORM!Order (
+		path <- website.path
+	)
+}
+
+-- @extends Order
+rule Asc {
+	from website : Website!Asc
+	to orm : ORM!Asc (
+	)
+}
+
+-- @extends Order
+rule Desc {
+	from website : Website!Desc
+	to orm : ORM!Desc (
+	)
+}
+
+-- @extends NamedDisplayElement, FormalParameterList
+rule Filter {
+	from website : Website!Filter
+	to orm : ORM!Filter (
+		displayLabel <-
+			if not website.displayLabel.oclIsUndefined() and website.displayLabel <> '' then
+				website.displayLabel
+			else
+				'Filter'
+			endif,
+		condition <- website.condition,
+		methodName <-
+			if not website.methodName.oclIsUndefined() and website.methodName.trim() <> '' then
+			    website.methodName
+			else
+				'find'.concat(website.name.uppercaseFirst())
+			endif
+	)
+}

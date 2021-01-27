@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
-import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
@@ -93,20 +92,6 @@ public class ServiceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ServicePackage.SELECTION: {
-				Selection selection = (Selection)theEObject;
-				T result = caseSelection(selection);
-				if (result == null) result = caseNamedElement(selection);
-				if (result == null) result = caseFormalParameterList(selection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ServicePackage.ORDER: {
-				Order order = (Order)theEObject;
-				T result = caseOrder(order);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ServicePackage.CONSTANT_REFERENCE: {
 				ConstantReference constantReference = (ConstantReference)theEObject;
 				T result = caseConstantReference(constantReference);
@@ -115,42 +100,11 @@ public class ServiceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ServicePackage.SERVICE_FEATURE_REFERENCE: {
-				ServiceFeatureReference serviceFeatureReference = (ServiceFeatureReference)theEObject;
-				T result = caseServiceFeatureReference(serviceFeatureReference);
-				if (result == null) result = caseVariable(serviceFeatureReference);
-				if (result == null) result = caseExpression(serviceFeatureReference);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ServicePackage.ASC: {
-				Asc asc = (Asc)theEObject;
-				T result = caseAsc(asc);
-				if (result == null) result = caseOrder(asc);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ServicePackage.DESC: {
-				Desc desc = (Desc)theEObject;
-				T result = caseDesc(desc);
-				if (result == null) result = caseOrder(desc);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ServicePackage.BUSINESS_OPERATION: {
 				BusinessOperation businessOperation = (BusinessOperation)theEObject;
 				T result = caseBusinessOperation(businessOperation);
 				if (result == null) result = caseNamedElement(businessOperation);
 				if (result == null) result = caseFormalParameterList(businessOperation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ServicePackage.FILTER: {
-				Filter filter = (Filter)theEObject;
-				T result = caseFilter(filter);
-				if (result == null) result = caseNamedDisplayElement(filter);
-				if (result == null) result = caseFormalParameterList(filter);
-				if (result == null) result = caseNamedElement(filter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -204,36 +158,6 @@ public class ServiceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Selection</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Selection</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSelection(Selection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Order</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Order</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOrder(Order object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Constant Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -249,51 +173,6 @@ public class ServiceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Reference</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseServiceFeatureReference(ServiceFeatureReference object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Asc</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Asc</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAsc(Asc object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Desc</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Desc</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDesc(Desc object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Business Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -305,21 +184,6 @@ public class ServiceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBusinessOperation(BusinessOperation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Filter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFilter(Filter object) {
 		return null;
 	}
 
@@ -380,21 +244,6 @@ public class ServiceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVariable(Variable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Named Display Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Named Display Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNamedDisplayElement(NamedDisplayElement object) {
 		return null;
 	}
 

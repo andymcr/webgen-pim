@@ -748,11 +748,10 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\r\n" +
-		"\tdisplayedOn.pageDisplayedOn.webUI.services.services\r\n" +
-		"\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\r\n" +
-		"\t\t->select(s : service::Service | s.serves = targetEntity)\r\n" +
-		"\t\t->collect(s : service::Service | s.selections)\r\n" +
+	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\n" +
+		"\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n" +
+		"\t\t->select(r : repository::Repository | r.serves = targetEntity)\n" +
+		"\t\t->collect(r : repository::Repository | r.selections)\n" +
 		"\t\t->includes(options)";
 
 	/**

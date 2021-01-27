@@ -15,19 +15,12 @@ import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-
-import work.andycarpenter.webgen.pims.service.Asc;
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
 import work.andycarpenter.webgen.pims.service.Constant;
 import work.andycarpenter.webgen.pims.service.ConstantReference;
-import work.andycarpenter.webgen.pims.service.Desc;
-import work.andycarpenter.webgen.pims.service.Filter;
 import work.andycarpenter.webgen.pims.service.OperationResultTypes;
-import work.andycarpenter.webgen.pims.service.Order;
-import work.andycarpenter.webgen.pims.service.Selection;
 import work.andycarpenter.webgen.pims.service.Service;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
-import work.andycarpenter.webgen.pims.service.ServiceFeatureReference;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
 import work.andycarpenter.webgen.pims.service.Services;
 
@@ -64,20 +57,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass selectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass orderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass constantReferenceEClass = null;
 
 	/**
@@ -85,35 +64,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass serviceFeatureReferenceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ascEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass descEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass businessOperationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass filterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,7 +195,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getService_Selections() {
+	public EReference getService_Operations() {
 		return (EReference)serviceEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -254,38 +205,8 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getService_FindAll() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getService_FindOne() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getService_Operations() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getService_Uses() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(6);
+		return (EReference)serviceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -324,146 +245,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getSelection() {
-		return selectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_UsedBy() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSelection_Distinct() {
-		return (EAttribute)selectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Fields() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Joins() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Condition() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Filters() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Ordering() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSelection_Limit() {
-		return (EAttribute)selectionEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_Grouping() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSelection_SelectPath() {
-		return (EReference)selectionEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSelection_MethodName() {
-		return (EAttribute)selectionEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getOrder() {
-		return orderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getOrder_Path() {
-		return (EReference)orderEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getConstantReference() {
 		return constantReferenceEClass;
 	}
@@ -486,56 +267,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	@Override
 	public EReference getConstantReference_Value() {
 		return (EReference)constantReferenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getServiceFeatureReference() {
-		return serviceFeatureReferenceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getServiceFeatureReference_Name() {
-		return (EAttribute)serviceFeatureReferenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getServiceFeatureReference_Feature() {
-		return (EReference)serviceFeatureReferenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAsc() {
-		return ascEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDesc() {
-		return descEClass;
 	}
 
 	/**
@@ -594,46 +325,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getFilter() {
-		return filterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFilter_Selection() {
-		return (EReference)filterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFilter_Condition() {
-		return (EReference)filterEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFilter_MethodName() {
-		return (EAttribute)filterEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getOperationResultTypes() {
 		return operationResultTypesEEnum;
 	}
@@ -673,9 +364,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		serviceEClass = createEClass(SERVICE);
 		createEReference(serviceEClass, SERVICE__CONSTANTS);
 		createEReference(serviceEClass, SERVICE__SERVES);
-		createEReference(serviceEClass, SERVICE__SELECTIONS);
-		createEReference(serviceEClass, SERVICE__FIND_ALL);
-		createEReference(serviceEClass, SERVICE__FIND_ONE);
 		createEReference(serviceEClass, SERVICE__OPERATIONS);
 		createEReference(serviceEClass, SERVICE__USES);
 
@@ -683,44 +371,15 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEReference(constantEClass, CONSTANT__DEFINED_BY);
 		createEReference(constantEClass, CONSTANT__VALUE);
 
-		selectionEClass = createEClass(SELECTION);
-		createEReference(selectionEClass, SELECTION__USED_BY);
-		createEAttribute(selectionEClass, SELECTION__DISTINCT);
-		createEReference(selectionEClass, SELECTION__FIELDS);
-		createEReference(selectionEClass, SELECTION__JOINS);
-		createEReference(selectionEClass, SELECTION__CONDITION);
-		createEReference(selectionEClass, SELECTION__FILTERS);
-		createEReference(selectionEClass, SELECTION__ORDERING);
-		createEAttribute(selectionEClass, SELECTION__LIMIT);
-		createEReference(selectionEClass, SELECTION__GROUPING);
-		createEReference(selectionEClass, SELECTION__SELECT_PATH);
-		createEAttribute(selectionEClass, SELECTION__METHOD_NAME);
-
-		orderEClass = createEClass(ORDER);
-		createEReference(orderEClass, ORDER__PATH);
-
 		constantReferenceEClass = createEClass(CONSTANT_REFERENCE);
 		createEAttribute(constantReferenceEClass, CONSTANT_REFERENCE__NAME);
 		createEReference(constantReferenceEClass, CONSTANT_REFERENCE__VALUE);
-
-		serviceFeatureReferenceEClass = createEClass(SERVICE_FEATURE_REFERENCE);
-		createEAttribute(serviceFeatureReferenceEClass, SERVICE_FEATURE_REFERENCE__NAME);
-		createEReference(serviceFeatureReferenceEClass, SERVICE_FEATURE_REFERENCE__FEATURE);
-
-		ascEClass = createEClass(ASC);
-
-		descEClass = createEClass(DESC);
 
 		businessOperationEClass = createEClass(BUSINESS_OPERATION);
 		createEReference(businessOperationEClass, BUSINESS_OPERATION__DEFINED_BY);
 		createEReference(businessOperationEClass, BUSINESS_OPERATION__USES);
 		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__RESULT_TYPE);
 		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__RESULT_MIME_TYPE);
-
-		filterEClass = createEClass(FILTER);
-		createEReference(filterEClass, FILTER__SELECTION);
-		createEReference(filterEClass, FILTER__CONDITION);
-		createEAttribute(filterEClass, FILTER__METHOD_NAME);
 
 		// Create enums
 		operationResultTypesEEnum = createEEnum(OPERATION_RESULT_TYPES);
@@ -761,16 +420,9 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		// Add supertypes to classes
 		serviceEClass.getESuperTypes().add(theBasePackage.getNamedElement());
 		constantEClass.getESuperTypes().add(theBasePackage.getNamedElement());
-		selectionEClass.getESuperTypes().add(theBasePackage.getNamedElement());
-		selectionEClass.getESuperTypes().add(theBasePackage.getFormalParameterList());
 		constantReferenceEClass.getESuperTypes().add(theExpressionPackage.getVariable());
-		serviceFeatureReferenceEClass.getESuperTypes().add(theExpressionPackage.getVariable());
-		ascEClass.getESuperTypes().add(this.getOrder());
-		descEClass.getESuperTypes().add(this.getOrder());
 		businessOperationEClass.getESuperTypes().add(theBasePackage.getNamedElement());
 		businessOperationEClass.getESuperTypes().add(theBasePackage.getFormalParameterList());
-		filterEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
-		filterEClass.getESuperTypes().add(theBasePackage.getFormalParameterList());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(servicesEClass, Services.class, "Services", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -779,54 +431,22 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getService_Constants(), this.getConstant(), this.getConstant_DefinedBy(), "constants", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Serves(), thePersistencePackage.getEntity(), null, "serves", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Selections(), this.getSelection(), this.getSelection_UsedBy(), "selections", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_FindAll(), this.getSelection(), null, "findAll", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_FindOne(), this.getSelection(), null, "findOne", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Operations(), this.getBusinessOperation(), this.getBusinessOperation_DefinedBy(), "operations", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Uses(), this.getService(), null, "uses", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_Uses(), thePersistencePackage.getRepository(), null, "uses", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstant_DefinedBy(), this.getService(), this.getService_Constants(), "definedBy", null, 1, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstant_Value(), theExpressionPackage.getExpression(), null, "value", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(selectionEClass, Selection.class, "Selection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSelection_UsedBy(), this.getService(), this.getService_Selections(), "usedBy", null, 1, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelection_Distinct(), ecorePackage.getEBoolean(), "distinct", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelection_Fields(), thePersistencePackage.getFeature(), null, "fields", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelection_Joins(), thePersistencePackage.getAssociation(), null, "joins", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelection_Condition(), theExpressionPackage.getPredicate(), null, "condition", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSelection_Filters(), this.getFilter(), this.getFilter_Selection(), "filters", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelection_Ordering(), this.getOrder(), null, "ordering", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelection_Limit(), ecorePackage.getEInt(), "limit", "0", 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSelection_Grouping(), thePersistencePackage.getFeature(), null, "grouping", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelection_SelectPath(), thePersistencePackage.getAssociation(), null, "selectPath", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelection_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(orderEClass, Order.class, "Order", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrder_Path(), theExpressionPackage.getVariable(), null, "path", null, 1, 1, Order.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(constantReferenceEClass, ConstantReference.class, "ConstantReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstantReference_Name(), ecorePackage.getEString(), "name", "", 0, 1, ConstantReference.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getConstantReference_Value(), this.getConstant(), null, "value", null, 1, 1, ConstantReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(serviceFeatureReferenceEClass, ServiceFeatureReference.class, "ServiceFeatureReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getServiceFeatureReference_Name(), ecorePackage.getEString(), "name", "", 0, 1, ServiceFeatureReference.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceFeatureReference_Feature(), thePersistencePackage.getFeature(), null, "feature", null, 1, 1, ServiceFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(ascEClass, Asc.class, "Asc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(descEClass, Desc.class, "Desc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(businessOperationEClass, BusinessOperation.class, "BusinessOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusinessOperation_DefinedBy(), this.getService(), this.getService_Operations(), "definedBy", null, 0, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusinessOperation_Uses(), this.getService(), null, "uses", null, 0, -1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessOperation_ResultType(), this.getOperationResultTypes(), "resultType", null, 1, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessOperation_ResultMimeType(), ecorePackage.getEString(), "resultMimeType", null, 0, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(filterEClass, Filter.class, "Filter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFilter_Selection(), this.getSelection(), this.getSelection_Filters(), "selection", null, 0, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFilter_Condition(), theExpressionPackage.getPredicate(), null, "condition", null, 1, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFilter_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(operationResultTypesEEnum, OperationResultTypes.class, "OperationResultTypes");
@@ -874,12 +494,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		   source,
 		   new String[] {
 			   "derivation", "if value.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tvalue.name\r\nendif"
-		   });
-		addAnnotation
-		  (getServiceFeatureReference_Name(),
-		   source,
-		   new String[] {
-			   "derivation", "if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tfeature.name\nendif"
 		   });
 	}
 

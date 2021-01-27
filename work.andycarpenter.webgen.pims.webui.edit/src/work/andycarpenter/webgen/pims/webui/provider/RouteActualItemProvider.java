@@ -35,6 +35,7 @@ import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
+import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
@@ -302,12 +303,12 @@ public class RouteActualItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 ServiceFactory.eINSTANCE.createConstantReference()));
+				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
+				 ServiceFactory.eINSTANCE.createConstantReference()));
 	}
 
 	/**

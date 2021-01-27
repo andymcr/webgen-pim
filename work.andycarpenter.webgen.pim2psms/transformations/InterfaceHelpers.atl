@@ -3,6 +3,51 @@
 library InterfaceHelpers;
 
 uses WebsiteHelpers;
+uses PersistenceHelpers;
+
+
+--helper context Website!CollectionUnit def: findContainerType() : Website!Entity
+--	= let directContainer : Website!Entity
+--			= if self.contentType->isEmpty() then
+--					OclUndefined
+--				else
+--					self.contentType->first().getContainer()
+--				endif
+--		in if self.selectType.oclIsUndefined() then
+--			directContainer
+--		else
+--			self.selectType
+--		endif;
+
+helper context Website!CollectionUnit def: findContainerRepository() : ORM!Repository
+	= if self.containingType.oclIsUndefined() then
+			OclUndefined
+		else
+			self.containingType.repository.findRepository()
+		endif;
+
+helper context Website!CollectionUnit def: findRepositoriesUsed() : Sequence(ORM!Repository)
+	= if self.contentType->isEmpty() then
+			Sequence{}
+		else
+			Sequence{ self.contentType->first().repository.findRepository() }
+				->union(let containerRepository : ODM!Repository = self.findContainerRepository()
+							in if containerRepository.oclIsUndefined() then
+									Sequence{}
+								else
+									Sequence{ containerRepository }
+								endif)
+		endif;
+
+helper context Website!SingletonUnit def: findRepositoriesUsed() : Sequence(ORM!Repository)
+	= if self.contentType.oclIsUndefined() then
+			Sequence{}
+		else
+			Sequence{ self.contentType.repository.findRepository() }
+		endif;
+
+helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
+	= self.servicesUsed->collect(s | s.findService());
 
 
 helper context Website!Badge def: badgeClass() : String

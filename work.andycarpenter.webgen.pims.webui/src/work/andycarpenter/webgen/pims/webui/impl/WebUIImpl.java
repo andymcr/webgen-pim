@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.service.Services;
 
 import work.andycarpenter.webgen.pims.webui.AjaxTechnologies;
@@ -32,6 +33,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPersistence <em>Persistence</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getServices <em>Services</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getMenus <em>Menus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPages <em>Pages</em>}</li>
@@ -59,6 +61,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
+	/**
+	 * The cached value of the '{@link #getPersistence() <em>Persistence</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPersistence()
+	 * @generated
+	 * @ordered
+	 */
+	protected Persistence persistence;
+
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -486,6 +498,46 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.WEB_UI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Persistence getPersistence() {
+		if (persistence != null && persistence.eIsProxy()) {
+			InternalEObject oldPersistence = (InternalEObject)persistence;
+			persistence = (Persistence)eResolveProxy(oldPersistence);
+			if (persistence != oldPersistence) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.WEB_UI__PERSISTENCE, oldPersistence, persistence));
+			}
+		}
+		return persistence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Persistence basicGetPersistence() {
+		return persistence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPersistence(Persistence newPersistence) {
+		Persistence oldPersistence = persistence;
+		persistence = newPersistence;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__PERSISTENCE, oldPersistence, persistence));
 	}
 
 	/**
@@ -1030,6 +1082,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.WEB_UI__PERSISTENCE:
+				if (resolve) return getPersistence();
+				return basicGetPersistence();
 			case WebuiPackage.WEB_UI__SERVICES:
 				if (resolve) return getServices();
 				return basicGetServices();
@@ -1088,6 +1143,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.WEB_UI__PERSISTENCE:
+				setPersistence((Persistence)newValue);
+				return;
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)newValue);
 				return;
@@ -1168,6 +1226,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.WEB_UI__PERSISTENCE:
+				setPersistence((Persistence)null);
+				return;
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)null);
 				return;
@@ -1246,6 +1307,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.WEB_UI__PERSISTENCE:
+				return persistence != null;
 			case WebuiPackage.WEB_UI__SERVICES:
 				return services != null;
 			case WebuiPackage.WEB_UI__MENUS:

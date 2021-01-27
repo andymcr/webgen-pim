@@ -14,10 +14,10 @@ import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-import work.andycarpenter.webgen.pims.service.Filter;
-import work.andycarpenter.webgen.pims.service.Selection;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 

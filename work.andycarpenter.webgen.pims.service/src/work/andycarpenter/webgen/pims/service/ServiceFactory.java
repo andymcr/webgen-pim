@@ -49,15 +49,6 @@ public interface ServiceFactory extends EFactory {
 	Constant createConstant();
 
 	/**
-	 * Returns a new object of class '<em>Selection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Selection</em>'.
-	 * @generated
-	 */
-	Selection createSelection();
-
-	/**
 	 * Returns a new object of class '<em>Constant Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,33 +58,6 @@ public interface ServiceFactory extends EFactory {
 	ConstantReference createConstantReference();
 
 	/**
-	 * Returns a new object of class '<em>Feature Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Reference</em>'.
-	 * @generated
-	 */
-	ServiceFeatureReference createServiceFeatureReference();
-
-	/**
-	 * Returns a new object of class '<em>Asc</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Asc</em>'.
-	 * @generated
-	 */
-	Asc createAsc();
-
-	/**
-	 * Returns a new object of class '<em>Desc</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Desc</em>'.
-	 * @generated
-	 */
-	Desc createDesc();
-
-	/**
 	 * Returns a new object of class '<em>Business Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,15 +65,6 @@ public interface ServiceFactory extends EFactory {
 	 * @generated
 	 */
 	BusinessOperation createBusinessOperation();
-
-	/**
-	 * Returns a new object of class '<em>Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Filter</em>'.
-	 * @generated
-	 */
-	Filter createFilter();
 
 	/**
 	 * Returns the package supported by this factory.

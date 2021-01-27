@@ -23,6 +23,7 @@ import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -360,12 +361,12 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 ServiceFactory.eINSTANCE.createConstantReference()));
+				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
+				 ServiceFactory.eINSTANCE.createConstantReference()));
 	}
 
 	/**

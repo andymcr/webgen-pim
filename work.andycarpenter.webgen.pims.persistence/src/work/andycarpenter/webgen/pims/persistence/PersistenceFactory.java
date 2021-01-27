@@ -175,6 +175,60 @@ public interface PersistenceFactory extends EFactory {
 	AssociationKey createAssociationKey();
 
 	/**
+	 * Returns a new object of class '<em>Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Repository</em>'.
+	 * @generated
+	 */
+	Repository createRepository();
+
+	/**
+	 * Returns a new object of class '<em>Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Selection</em>'.
+	 * @generated
+	 */
+	Selection createSelection();
+
+	/**
+	 * Returns a new object of class '<em>Asc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Asc</em>'.
+	 * @generated
+	 */
+	Asc createAsc();
+
+	/**
+	 * Returns a new object of class '<em>Desc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Desc</em>'.
+	 * @generated
+	 */
+	Desc createDesc();
+
+	/**
+	 * Returns a new object of class '<em>Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Filter</em>'.
+	 * @generated
+	 */
+	Filter createFilter();
+
+	/**
+	 * Returns a new object of class '<em>Repository Feature Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Repository Feature Reference</em>'.
+	 * @generated
+	 */
+	RepositoryFeatureReference createRepositoryFeatureReference();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

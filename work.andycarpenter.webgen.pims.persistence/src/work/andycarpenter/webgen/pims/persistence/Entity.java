@@ -27,6 +27,7 @@ import work.andycarpenter.webgen.pims.base.Classifier;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique <em>Container Unique</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getTableName <em>Table Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyName <em>Auto Key Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}</li>
@@ -274,6 +275,30 @@ public interface Entity extends Classifier {
 	 * @generated
 	 */
 	EList<Feature> getContainerUnique();
+
+	/**
+	 * Returns the value of the '<em><b>Repository</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Repository#getServes <em>Serves</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Repository</em>' reference.
+	 * @see #setRepository(Repository)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_Repository()
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository#getServes
+	 * @model opposite="serves"
+	 * @generated
+	 */
+	Repository getRepository();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Entity#getRepository <em>Repository</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Repository</em>' reference.
+	 * @see #getRepository()
+	 * @generated
+	 */
+	void setRepository(Repository value);
 
 	/**
 	 * Returns the value of the '<em><b>Table Name</b></em>' attribute.

@@ -15,6 +15,7 @@ import work.andycarpenter.webgen.pims.base.BasePackage;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
+import work.andycarpenter.webgen.pims.persistence.Asc;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
@@ -27,10 +28,12 @@ import work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies;
 import work.andycarpenter.webgen.pims.persistence.DateAttribute;
 import work.andycarpenter.webgen.pims.persistence.DateDetails;
 import work.andycarpenter.webgen.pims.persistence.DatePathElement;
+import work.andycarpenter.webgen.pims.persistence.Desc;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.persistence.FileAttribute;
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.ImageAttribute;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.LocationAttribute;
@@ -38,12 +41,16 @@ import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelFeature;
+import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.OrmTechnologies;
 import work.andycarpenter.webgen.pims.persistence.PathElement;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference;
 import work.andycarpenter.webgen.pims.persistence.ResourceAttribute;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
 import work.andycarpenter.webgen.pims.persistence.StaticPathElement;
 import work.andycarpenter.webgen.pims.persistence.UrlAttribute;
@@ -245,6 +252,55 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass repositoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass selectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ascEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass descEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass filterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass repositoryFeatureReferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum databaseTechnologiesEEnum = null;
 
 	/**
@@ -396,8 +452,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPersistence_OrmTechnology() {
-		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(3);
+	public EReference getPersistence_Repositories() {
+		return (EReference)persistenceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -406,7 +462,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPersistence_DatabaseTechnology() {
+	public EAttribute getPersistence_OrmTechnology() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -416,7 +472,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPersistence_TimestampCreation() {
+	public EAttribute getPersistence_DatabaseTechnology() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -426,8 +482,18 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPersistence_TimestampUpdates() {
+	public EAttribute getPersistence_TimestampCreation() {
 		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPersistence_TimestampUpdates() {
+		return (EAttribute)persistenceEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1296,8 +1362,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_TableName() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(13);
+	public EReference getEntity_Repository() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1306,7 +1372,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyName() {
+	public EAttribute getEntity_TableName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -1316,7 +1382,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyPersistentType() {
+	public EAttribute getEntity_AutoKeyName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -1326,7 +1392,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyGenerationStrategy() {
+	public EAttribute getEntity_AutoKeyPersistentType() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -1336,7 +1402,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_ImplementsUserInterface() {
+	public EAttribute getEntity_AutoKeyGenerationStrategy() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -1346,8 +1412,18 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AllowFormTypeCustomisation() {
+	public EAttribute getEntity_ImplementsUserInterface() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntity_AllowFormTypeCustomisation() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(19);
 	}
 
 	/**
@@ -1686,6 +1762,286 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EClass getRepository() {
+		return repositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRepository_Serves() {
+		return (EReference)repositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRepository_Selections() {
+		return (EReference)repositoryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRepository_FindAll() {
+		return (EReference)repositoryEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRepository_FindOne() {
+		return (EReference)repositoryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSelection() {
+		return selectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_DefinedBy() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSelection_Distinct() {
+		return (EAttribute)selectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Fields() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Joins() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Condition() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Ordering() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSelection_Limit() {
+		return (EAttribute)selectionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Grouping() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_SelectPath() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSelection_Filters() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSelection_MethodName() {
+		return (EAttribute)selectionEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOrder() {
+		return orderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getOrder_Path() {
+		return (EReference)orderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAsc() {
+		return ascEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDesc() {
+		return descEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFilter() {
+		return filterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFilter_Selection() {
+		return (EReference)filterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFilter_Condition() {
+		return (EReference)filterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFilter_MethodName() {
+		return (EAttribute)filterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRepositoryFeatureReference() {
+		return repositoryFeatureReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRepositoryFeatureReference_Name() {
+		return (EAttribute)repositoryFeatureReferenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRepositoryFeatureReference_Feature() {
+		return (EReference)repositoryFeatureReferenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getDatabaseTechnologies() {
 		return databaseTechnologiesEEnum;
 	}
@@ -1763,6 +2119,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(persistenceEClass, PERSISTENCE__SERIALIZATION_GROUPS);
 		createEReference(persistenceEClass, PERSISTENCE__DATA_TYPES);
 		createEReference(persistenceEClass, PERSISTENCE__ENTITIES);
+		createEReference(persistenceEClass, PERSISTENCE__REPOSITORIES);
 		createEAttribute(persistenceEClass, PERSISTENCE__ORM_TECHNOLOGY);
 		createEAttribute(persistenceEClass, PERSISTENCE__DATABASE_TECHNOLOGY);
 		createEAttribute(persistenceEClass, PERSISTENCE__TIMESTAMP_CREATION);
@@ -1865,6 +2222,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(entityEClass, ENTITY__LABELS);
 		createEReference(entityEClass, ENTITY__UNIQUE);
 		createEReference(entityEClass, ENTITY__CONTAINER_UNIQUE);
+		createEReference(entityEClass, ENTITY__REPOSITORY);
 		createEAttribute(entityEClass, ENTITY__TABLE_NAME);
 		createEAttribute(entityEClass, ENTITY__AUTO_KEY_NAME);
 		createEAttribute(entityEClass, ENTITY__AUTO_KEY_PERSISTENT_TYPE);
@@ -1917,6 +2275,41 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(associationKeyEClass, ASSOCIATION_KEY__KEY_FOR);
 		createEReference(associationKeyEClass, ASSOCIATION_KEY__SOURCE_FEATURE);
 		createEReference(associationKeyEClass, ASSOCIATION_KEY__TARGET_FEATURE);
+
+		repositoryEClass = createEClass(REPOSITORY);
+		createEReference(repositoryEClass, REPOSITORY__SERVES);
+		createEReference(repositoryEClass, REPOSITORY__SELECTIONS);
+		createEReference(repositoryEClass, REPOSITORY__FIND_ALL);
+		createEReference(repositoryEClass, REPOSITORY__FIND_ONE);
+
+		selectionEClass = createEClass(SELECTION);
+		createEReference(selectionEClass, SELECTION__DEFINED_BY);
+		createEAttribute(selectionEClass, SELECTION__DISTINCT);
+		createEReference(selectionEClass, SELECTION__FIELDS);
+		createEReference(selectionEClass, SELECTION__JOINS);
+		createEReference(selectionEClass, SELECTION__CONDITION);
+		createEReference(selectionEClass, SELECTION__ORDERING);
+		createEAttribute(selectionEClass, SELECTION__LIMIT);
+		createEReference(selectionEClass, SELECTION__GROUPING);
+		createEReference(selectionEClass, SELECTION__SELECT_PATH);
+		createEReference(selectionEClass, SELECTION__FILTERS);
+		createEAttribute(selectionEClass, SELECTION__METHOD_NAME);
+
+		orderEClass = createEClass(ORDER);
+		createEReference(orderEClass, ORDER__PATH);
+
+		ascEClass = createEClass(ASC);
+
+		descEClass = createEClass(DESC);
+
+		filterEClass = createEClass(FILTER);
+		createEReference(filterEClass, FILTER__SELECTION);
+		createEReference(filterEClass, FILTER__CONDITION);
+		createEAttribute(filterEClass, FILTER__METHOD_NAME);
+
+		repositoryFeatureReferenceEClass = createEClass(REPOSITORY_FEATURE_REFERENCE);
+		createEAttribute(repositoryFeatureReferenceEClass, REPOSITORY_FEATURE_REFERENCE__NAME);
+		createEReference(repositoryFeatureReferenceEClass, REPOSITORY_FEATURE_REFERENCE__FEATURE);
 
 		// Create enums
 		databaseTechnologiesEEnum = createEEnum(DATABASE_TECHNOLOGIES);
@@ -1979,12 +2372,21 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		locationAttributeEClass.getESuperTypes().add(this.getAttribute());
 		associationWithoutContainmentEClass.getESuperTypes().add(this.getAssociation());
 		associationWithContainmentEClass.getESuperTypes().add(this.getAssociation());
+		repositoryEClass.getESuperTypes().add(theBasePackage.getNamedElement());
+		selectionEClass.getESuperTypes().add(theBasePackage.getNamedElement());
+		selectionEClass.getESuperTypes().add(theBasePackage.getFormalParameterList());
+		ascEClass.getESuperTypes().add(this.getOrder());
+		descEClass.getESuperTypes().add(this.getOrder());
+		filterEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
+		filterEClass.getESuperTypes().add(theBasePackage.getFormalParameterList());
+		repositoryFeatureReferenceEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(persistenceEClass, Persistence.class, "Persistence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPersistence_SerializationGroups(), this.getSerializationGroup(), null, "serializationGroups", null, 0, -1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPersistence_DataTypes(), theBasePackage.getDataType(), null, "dataTypes", null, 0, -1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPersistence_Entities(), this.getEntity(), null, "entities", null, 0, -1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersistence_Repositories(), this.getRepository(), null, "repositories", null, 0, -1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPersistence_OrmTechnology(), this.getOrmTechnologies(), "ormTechnology", "Kohana", 0, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPersistence_DatabaseTechnology(), this.getDatabaseTechnologies(), "databaseTechnology", "MySql", 1, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPersistence_TimestampCreation(), ecorePackage.getEBoolean(), "timestampCreation", "true", 0, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2087,6 +2489,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEReference(getEntity_Labels(), this.getModelLabel(), this.getModelLabel_LabelFor(), "labels", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Unique(), this.getFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_ContainerUnique(), this.getFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Repository(), this.getRepository(), this.getRepository_Serves(), "repository", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyName(), ecorePackage.getEString(), "autoKeyName", "id", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyPersistentType(), ecorePackage.getEString(), "autoKeyPersistentType", "integer", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2139,6 +2542,41 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEReference(getAssociationKey_KeyFor(), this.getAssociation(), this.getAssociation_Keys(), "keyFor", null, 1, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationKey_SourceFeature(), this.getFeature(), null, "sourceFeature", null, 1, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationKey_TargetFeature(), this.getFeature(), null, "targetFeature", null, 0, 1, AssociationKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRepository_Serves(), this.getEntity(), this.getEntity_Repository(), "serves", null, 1, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepository_Selections(), this.getSelection(), this.getSelection_DefinedBy(), "selections", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepository_FindAll(), this.getSelection(), null, "findAll", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepository_FindOne(), this.getSelection(), null, "findOne", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(selectionEClass, Selection.class, "Selection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSelection_DefinedBy(), this.getRepository(), this.getRepository_Selections(), "definedBy", null, 1, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelection_Distinct(), ecorePackage.getEBoolean(), "distinct", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Fields(), this.getFeature(), null, "fields", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Joins(), this.getAssociation(), null, "joins", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Condition(), theExpressionPackage.getPredicate(), null, "condition", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Ordering(), this.getOrder(), null, "ordering", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelection_Limit(), ecorePackage.getEInt(), "limit", "0", 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Grouping(), this.getFeature(), null, "grouping", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_SelectPath(), this.getAssociation(), null, "selectPath", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_Filters(), this.getFilter(), this.getFilter_Selection(), "filters", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelection_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(orderEClass, Order.class, "Order", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOrder_Path(), theExpressionPackage.getVariable(), null, "path", null, 1, 1, Order.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ascEClass, Asc.class, "Asc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(descEClass, Desc.class, "Desc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(filterEClass, Filter.class, "Filter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFilter_Selection(), this.getSelection(), this.getSelection_Filters(), "selection", null, 1, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFilter_Condition(), theExpressionPackage.getPredicate(), null, "condition", null, 1, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFilter_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Filter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(repositoryFeatureReferenceEClass, RepositoryFeatureReference.class, "RepositoryFeatureReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRepositoryFeatureReference_Name(), ecorePackage.getEString(), "name", null, 1, 1, RepositoryFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepositoryFeatureReference_Feature(), this.getFeature(), null, "feature", null, 1, 1, RepositoryFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(databaseTechnologiesEEnum, DatabaseTechnologies.class, "DatabaseTechnologies");

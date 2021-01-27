@@ -123,13 +123,13 @@ public interface ApiPackage extends EPackage {
 	int RESOURCE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Service</b></em>' reference.
+	 * The feature id for the '<em><b>Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__SERVICE = 2;
+	int RESOURCE__REPOSITORY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -349,15 +349,15 @@ public interface ApiPackage extends EPackage {
 	EAttribute getResource_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.api.Resource#getService <em>Service</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.api.Resource#getRepository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Service</em>'.
-	 * @see work.andycarpenter.webgen.pims.api.Resource#getService()
+	 * @return the meta object for the reference '<em>Repository</em>'.
+	 * @see work.andycarpenter.webgen.pims.api.Resource#getRepository()
 	 * @see #getResource()
 	 * @generated
 	 */
-	EReference getResource_Service();
+	EReference getResource_Repository();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.api.Resource#getUriElement <em>Uri Element</em>}'.
@@ -580,12 +580,12 @@ public interface ApiPackage extends EPackage {
 		EAttribute RESOURCE__NAME = eINSTANCE.getResource_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Repository</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE__SERVICE = eINSTANCE.getResource_Service();
+		EReference RESOURCE__REPOSITORY = eINSTANCE.getResource_Repository();
 
 		/**
 		 * The meta object literal for the '<em><b>Uri Element</b></em>' attribute feature.

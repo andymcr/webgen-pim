@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.service.Selection;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 

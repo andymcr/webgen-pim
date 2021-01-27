@@ -14,6 +14,7 @@
       <details key="pageNameUnique" value="pages->isUnique(name)"/>
       <details key="menuNameUnique" value="menus->isUnique(name)"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Persistence"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Services"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="menus" upperBound="-1"
         eType="#//Menu" containment="true"/>
@@ -104,7 +105,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="MenuFeature" eSuperTypes="#//MenuEntry"/>
   <eClassifiers xsi:type="ecore:EClass" name="Query">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" lowerBound="1"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//QueryParameter" containment="true"/>
   </eClassifiers>
@@ -315,7 +316,7 @@
       <details key="constraints" value="optionsValidChoice"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xD;&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.services.services&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xD;&#xA;&#x9;&#x9;->select(s : service::Service | s.serves = targetEntity)&#xD;&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xD;&#xA;&#x9;&#x9;->includes(options)"/>
+      <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(r : Persistence::Repository | r.serves = targetEntity)&#xA;&#x9;&#x9;->collect(r : Persistence::Repository | r.selections)&#xA;&#x9;&#x9;->includes(options)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSourceAssociation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
@@ -337,8 +338,8 @@
         <details key="derivation" value="displayedOn.contentTypes"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="filteredOptions" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filteredOptions" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChildPathAttribute" eSuperTypes="../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//FeatureChildPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -509,15 +510,15 @@
         <details key="derivation" value="if not selectType.oclIsUndefined() then&#xA;&#x9;selectType&#xA;else let contained : persistence::Entity &#xA;&#x9;= contentType->any(e | not e.containingAssociation.oclIsUndefined())&#xA;&#x9;in if contained.oclIsUndefined() then&#xA;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;contained.containingAssociation.partOf&#xA;&#x9;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findContainerSelection"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitContainerLoad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="findElementSelection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="findElementSelection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedFilters" upperBound="-1"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Filter"/>
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
@@ -606,7 +607,7 @@
       <details key="selectionMustBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit = 1"/>
       <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xA;&#x9;pageDisplayedOn.webUI.services.services&#xA;&#x9;&#x9;->select(s : service::Service | not s.serves.oclIsUndefined())&#xA;&#x9;&#x9;->select(s : service::Service | contentType = s.serves)&#xA;&#x9;&#x9;->collect(s : service::Service | s.selections)&#xA;&#x9;&#x9;->includes(selection)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>

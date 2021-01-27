@@ -31,6 +31,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
+import work.andycarpenter.webgen.pims.expression.FunctionCall;
+import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
 import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
@@ -42,6 +44,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 import work.andycarpenter.webgen.pims.persistence.util.PersistenceSwitch;
@@ -168,29 +171,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.Selection} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectionItemProvider selectionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.service.Selection}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectionAdapter() {
-		if (selectionItemProvider == null) {
-			selectionItemProvider = new SelectionItemProvider(this);
-		}
-
-		return selectionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.ConstantReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,75 +194,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ServiceFeatureReferenceItemProvider serviceFeatureReferenceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createServiceFeatureReferenceAdapter() {
-		if (serviceFeatureReferenceItemProvider == null) {
-			serviceFeatureReferenceItemProvider = new ServiceFeatureReferenceItemProvider(this);
-		}
-
-		return serviceFeatureReferenceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.Asc} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AscItemProvider ascItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.service.Asc}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAscAdapter() {
-		if (ascItemProvider == null) {
-			ascItemProvider = new AscItemProvider(this);
-		}
-
-		return ascItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.Desc} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DescItemProvider descItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.service.Desc}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescAdapter() {
-		if (descItemProvider == null) {
-			descItemProvider = new DescItemProvider(this);
-		}
-
-		return descItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.BusinessOperation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -303,29 +214,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 		}
 
 		return businessOperationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.service.Filter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FilterItemProvider filterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.service.Filter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFilterAdapter() {
-		if (filterItemProvider == null) {
-			filterItemProvider = new FilterItemProvider(this);
-		}
-
-		return filterItemProvider;
 	}
 
 	/**
@@ -471,6 +359,34 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 			 * @generated
 			 */
 			@Override
+			public Object caseFunctionCall(FunctionCall object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__FEATURE,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
 			public Object casePredicateEqualityOperator(PredicateEqualityOperator object) {
 				newChildDescriptors.add
 					(createChildParameter
@@ -479,18 +395,8 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -509,18 +415,8 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -539,18 +435,8 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -569,18 +455,8 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -599,18 +475,8 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -627,11 +493,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__FEATURE,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
 
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__FEATURE,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
 				return null;
 			}
  
@@ -646,11 +507,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_NULL__FEATURE,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__FEATURE,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
 
 				return null;
 			}
@@ -739,14 +595,23 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 						(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
 						 ServiceFactory.eINSTANCE.createConstantReference()));
 
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-						 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseOrder(Order object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(PersistencePackage.Literals.ORDER__PATH,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

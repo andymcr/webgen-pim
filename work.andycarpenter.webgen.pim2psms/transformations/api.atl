@@ -7,7 +7,7 @@
 module API;
 create api : API from website : Website, service : Service;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 
 
 rule API {
@@ -21,11 +21,11 @@ rule API {
 rule Resource {
 	from website : Website!Resource
 	to api : API!Resource (
-		service <-
-			if website.service.oclIsUndefined() then
+		repository <-
+			if website.repository.oclIsUndefined() then
 				OclUndefined
 			else
-				thisModule.findService(website.service.name)
+				website.repository.findRepository()
 			endif,
 		uriElement <-
 			if website.uriElement.trim() <> '' then
@@ -41,13 +41,13 @@ rule Resource {
 			if website.getAll.oclIsUndefined() then
 				OclUndefined
 			else
-				website.getAll.findServiceSelection()
+				website.getAll.findSelection()
 			endif,
 		getOne <-
 			if website.getOne.oclIsUndefined() then
 				OclUndefined
 			else
-				website.getOne.findServiceSelection()
+				website.getOne.findSelection()
 			endif,
 --		filters <- website.filters,
 		defaultSerializationGroups <-

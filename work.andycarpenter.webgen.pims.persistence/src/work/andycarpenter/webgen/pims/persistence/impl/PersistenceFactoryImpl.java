@@ -74,6 +74,12 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT: return createAssociationWithoutContainment();
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT: return createAssociationWithContainment();
 			case PersistencePackage.ASSOCIATION_KEY: return createAssociationKey();
+			case PersistencePackage.REPOSITORY: return createRepository();
+			case PersistencePackage.SELECTION: return createSelection();
+			case PersistencePackage.ASC: return createAsc();
+			case PersistencePackage.DESC: return createDesc();
+			case PersistencePackage.FILTER: return createFilter();
+			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE: return createRepositoryFeatureReference();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -310,6 +316,72 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public AssociationKey createAssociationKey() {
 		AssociationKeyImpl associationKey = new AssociationKeyImpl();
 		return associationKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Repository createRepository() {
+		RepositoryImpl repository = new RepositoryImpl();
+		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Selection createSelection() {
+		SelectionImpl selection = new SelectionImpl();
+		return selection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Asc createAsc() {
+		AscImpl asc = new AscImpl();
+		return asc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Desc createDesc() {
+		DescImpl desc = new DescImpl();
+		return desc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Filter createFilter() {
+		FilterImpl filter = new FilterImpl();
+		return filter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RepositoryFeatureReference createRepositoryFeatureReference() {
+		RepositoryFeatureReferenceImpl repositoryFeatureReference = new RepositoryFeatureReferenceImpl();
+		return repositoryFeatureReference;
 	}
 
 	/**

@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
-import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
@@ -87,44 +86,16 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 				return createConstantAdapter();
 			}
 			@Override
-			public Adapter caseSelection(Selection object) {
-				return createSelectionAdapter();
-			}
-			@Override
-			public Adapter caseOrder(Order object) {
-				return createOrderAdapter();
-			}
-			@Override
 			public Adapter caseConstantReference(ConstantReference object) {
 				return createConstantReferenceAdapter();
-			}
-			@Override
-			public Adapter caseServiceFeatureReference(ServiceFeatureReference object) {
-				return createServiceFeatureReferenceAdapter();
-			}
-			@Override
-			public Adapter caseAsc(Asc object) {
-				return createAscAdapter();
-			}
-			@Override
-			public Adapter caseDesc(Desc object) {
-				return createDescAdapter();
 			}
 			@Override
 			public Adapter caseBusinessOperation(BusinessOperation object) {
 				return createBusinessOperationAdapter();
 			}
 			@Override
-			public Adapter caseFilter(Filter object) {
-				return createFilterAdapter();
-			}
-			@Override
 			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
-			}
-			@Override
-			public Adapter caseFormalParameterList(FormalParameterList object) {
-				return createFormalParameterListAdapter();
 			}
 			@Override
 			public Adapter caseExpression(Expression object) {
@@ -135,8 +106,8 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseNamedDisplayElement(NamedDisplayElement object) {
-				return createNamedDisplayElementAdapter();
+			public Adapter caseFormalParameterList(FormalParameterList object) {
+				return createFormalParameterListAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -201,34 +172,6 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.Selection <em>Selection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.Selection
-	 * @generated
-	 */
-	public Adapter createSelectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.Order <em>Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.Order
-	 * @generated
-	 */
-	public Adapter createOrderAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.ConstantReference <em>Constant Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -243,48 +186,6 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.ServiceFeatureReference <em>Feature Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.ServiceFeatureReference
-	 * @generated
-	 */
-	public Adapter createServiceFeatureReferenceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.Asc <em>Asc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.Asc
-	 * @generated
-	 */
-	public Adapter createAscAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.Desc <em>Desc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.Desc
-	 * @generated
-	 */
-	public Adapter createDescAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.BusinessOperation <em>Business Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -295,20 +196,6 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBusinessOperationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.service.Filter <em>Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.service.Filter
-	 * @generated
-	 */
-	public Adapter createFilterAdapter() {
 		return null;
 	}
 
@@ -365,20 +252,6 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVariableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.base.NamedDisplayElement <em>Named Display Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.base.NamedDisplayElement
-	 * @generated
-	 */
-	public Adapter createNamedDisplayElementAdapter() {
 		return null;
 	}
 

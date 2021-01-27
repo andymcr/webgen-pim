@@ -63,6 +63,7 @@ public class WebUIItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPersistencePropertyDescriptor(object);
 			addServicesPropertyDescriptor(object);
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
@@ -85,6 +86,28 @@ public class WebUIItemProvider
 			addAjaxTechnologyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Persistence feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPersistencePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_persistence_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_persistence_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__PERSISTENCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

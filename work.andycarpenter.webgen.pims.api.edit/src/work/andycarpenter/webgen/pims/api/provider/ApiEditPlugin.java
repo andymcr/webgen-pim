@@ -12,8 +12,6 @@ import work.andycarpenter.webgen.pims.expression.provider.ExpressionEditPlugin;
 
 import work.andycarpenter.webgen.pims.persistence.provider.PersistenceEditPlugin;
 
-import work.andycarpenter.webgen.pims.service.provider.ServiceEditPlugin;
-
 /**
  * This is the central singleton for the Api edit plugin.
  * <!-- begin-user-doc -->
@@ -49,7 +47,6 @@ public final class ApiEditPlugin extends EMFPlugin {
 		     BaseEditPlugin.INSTANCE,
 		     ExpressionEditPlugin.INSTANCE,
 		     PersistenceEditPlugin.INSTANCE,
-		     ServiceEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -25,10 +25,9 @@ import work.andycarpenter.webgen.pims.api.ApiPackage;
 import work.andycarpenter.webgen.pims.api.Resource;
 import work.andycarpenter.webgen.pims.api.ResourceSelection;
 
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
-
-import work.andycarpenter.webgen.pims.service.Selection;
-import work.andycarpenter.webgen.pims.service.Service;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +39,7 @@ import work.andycarpenter.webgen.pims.service.Service;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#getParentResource <em>Parent Resource</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#getName <em>Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#getService <em>Service</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#isEnableDefaultGetAll <em>Enable Default Get All</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.impl.ResourceImpl#isEnableDefaultGetOne <em>Enable Default Get One</em>}</li>
@@ -65,14 +64,14 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ApiPackage.Literals.RESOURCE__NAME).getSettingDelegate();
 
 	/**
-	 * The cached value of the '{@link #getService() <em>Service</em>}' reference.
+	 * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getService()
+	 * @see #getRepository()
 	 * @generated
 	 * @ordered
 	 */
-	protected Service service;
+	protected Repository repository;
 
 	/**
 	 * The default value of the '{@link #getUriElement() <em>Uri Element</em>}' attribute.
@@ -208,6 +207,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Resource getParentResource() {
 		if (eContainerFeatureID() != ApiPackage.RESOURCE__PARENT_RESOURCE) return null;
 		return (Resource)eInternalContainer();
@@ -228,6 +228,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentResource(Resource newParentResource) {
 		if (newParentResource != eInternalContainer() || (eContainerFeatureID() != ApiPackage.RESOURCE__PARENT_RESOURCE && newParentResource != null)) {
 			if (EcoreUtil.isAncestor(this, newParentResource))
@@ -249,6 +250,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -258,6 +260,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
@@ -267,16 +270,17 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service getService() {
-		if (service != null && service.eIsProxy()) {
-			InternalEObject oldService = (InternalEObject)service;
-			service = (Service)eResolveProxy(oldService);
-			if (service != oldService) {
+	@Override
+	public Repository getRepository() {
+		if (repository != null && repository.eIsProxy()) {
+			InternalEObject oldRepository = (InternalEObject)repository;
+			repository = (Repository)eResolveProxy(oldRepository);
+			if (repository != oldRepository) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApiPackage.RESOURCE__SERVICE, oldService, service));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApiPackage.RESOURCE__REPOSITORY, oldRepository, repository));
 			}
 		}
-		return service;
+		return repository;
 	}
 
 	/**
@@ -284,8 +288,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service basicGetService() {
-		return service;
+	public Repository basicGetRepository() {
+		return repository;
 	}
 
 	/**
@@ -293,11 +297,12 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setService(Service newService) {
-		Service oldService = service;
-		service = newService;
+	@Override
+	public void setRepository(Repository newRepository) {
+		Repository oldRepository = repository;
+		repository = newRepository;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApiPackage.RESOURCE__SERVICE, oldService, service));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApiPackage.RESOURCE__REPOSITORY, oldRepository, repository));
 	}
 
 	/**
@@ -305,6 +310,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -314,6 +320,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUriElement(String newUriElement) {
 		String oldUriElement = uriElement;
 		uriElement = newUriElement;
@@ -326,6 +333,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEnableDefaultGetAll() {
 		return enableDefaultGetAll;
 	}
@@ -335,6 +343,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnableDefaultGetAll(boolean newEnableDefaultGetAll) {
 		boolean oldEnableDefaultGetAll = enableDefaultGetAll;
 		enableDefaultGetAll = newEnableDefaultGetAll;
@@ -347,6 +356,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEnableDefaultGetOne() {
 		return enableDefaultGetOne;
 	}
@@ -356,6 +366,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnableDefaultGetOne(boolean newEnableDefaultGetOne) {
 		boolean oldEnableDefaultGetOne = enableDefaultGetOne;
 		enableDefaultGetOne = newEnableDefaultGetOne;
@@ -368,6 +379,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getGetAll() {
 		if (getAll != null && getAll.eIsProxy()) {
 			InternalEObject oldGetAll = (InternalEObject)getAll;
@@ -394,6 +406,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGetAll(Selection newGetAll) {
 		Selection oldGetAll = getAll;
 		getAll = newGetAll;
@@ -406,6 +419,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection getGetOne() {
 		if (getOne != null && getOne.eIsProxy()) {
 			InternalEObject oldGetOne = (InternalEObject)getOne;
@@ -432,6 +446,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGetOne(Selection newGetOne) {
 		Selection oldGetOne = getOne;
 		getOne = newGetOne;
@@ -444,6 +459,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ResourceSelection> getSelections() {
 		if (selections == null) {
 			selections = new EObjectContainmentWithInverseEList<ResourceSelection>(ResourceSelection.class, this, ApiPackage.RESOURCE__SELECTIONS, ApiPackage.RESOURCE_SELECTION__PARENT_RESOURCE);
@@ -456,6 +472,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SerializationGroup> getDefaultSerializationGroups() {
 		if (defaultSerializationGroups == null) {
 			defaultSerializationGroups = new EObjectResolvingEList<SerializationGroup>(SerializationGroup.class, this, ApiPackage.RESOURCE__DEFAULT_SERIALIZATION_GROUPS);
@@ -468,6 +485,7 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Resource> getChildResources() {
 		if (childResources == null) {
 			childResources = new EObjectContainmentWithInverseEList<Resource>(Resource.class, this, ApiPackage.RESOURCE__CHILD_RESOURCES, ApiPackage.RESOURCE__PARENT_RESOURCE);
@@ -540,9 +558,9 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 				return getParentResource();
 			case ApiPackage.RESOURCE__NAME:
 				return getName();
-			case ApiPackage.RESOURCE__SERVICE:
-				if (resolve) return getService();
-				return basicGetService();
+			case ApiPackage.RESOURCE__REPOSITORY:
+				if (resolve) return getRepository();
+				return basicGetRepository();
 			case ApiPackage.RESOURCE__URI_ELEMENT:
 				return getUriElement();
 			case ApiPackage.RESOURCE__ENABLE_DEFAULT_GET_ALL:
@@ -577,8 +595,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 			case ApiPackage.RESOURCE__PARENT_RESOURCE:
 				setParentResource((Resource)newValue);
 				return;
-			case ApiPackage.RESOURCE__SERVICE:
-				setService((Service)newValue);
+			case ApiPackage.RESOURCE__REPOSITORY:
+				setRepository((Repository)newValue);
 				return;
 			case ApiPackage.RESOURCE__URI_ELEMENT:
 				setUriElement((String)newValue);
@@ -622,8 +640,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 			case ApiPackage.RESOURCE__PARENT_RESOURCE:
 				setParentResource((Resource)null);
 				return;
-			case ApiPackage.RESOURCE__SERVICE:
-				setService((Service)null);
+			case ApiPackage.RESOURCE__REPOSITORY:
+				setRepository((Repository)null);
 				return;
 			case ApiPackage.RESOURCE__URI_ELEMENT:
 				setUriElement(URI_ELEMENT_EDEFAULT);
@@ -665,8 +683,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 				return getParentResource() != null;
 			case ApiPackage.RESOURCE__NAME:
 				return isSetName();
-			case ApiPackage.RESOURCE__SERVICE:
-				return service != null;
+			case ApiPackage.RESOURCE__REPOSITORY:
+				return repository != null;
 			case ApiPackage.RESOURCE__URI_ELEMENT:
 				return URI_ELEMENT_EDEFAULT == null ? uriElement != null : !URI_ELEMENT_EDEFAULT.equals(uriElement);
 			case ApiPackage.RESOURCE__ENABLE_DEFAULT_GET_ALL:

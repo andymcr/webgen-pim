@@ -6,10 +6,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
-
-import work.andycarpenter.webgen.pims.service.Selection;
-import work.andycarpenter.webgen.pims.service.Service;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import work.andycarpenter.webgen.pims.service.Service;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#getParentResource <em>Parent Resource</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#getName <em>Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#getService <em>Service</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#isEnableDefaultGetAll <em>Enable Default Get All</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.api.Resource#isEnableDefaultGetOne <em>Enable Default Get One</em>}</li>
@@ -78,7 +77,7 @@ public interface Resource extends EObject {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.api.ApiPackage#getResource_Name()
 	 * @model unsettable="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if service.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tservice.name\r\nendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if repository.oclIsUndefined() then\n\t\'\'\nelse\n\trepository.name\nendif'"
 	 * @generated
 	 */
 	String getName();
@@ -94,30 +93,26 @@ public interface Resource extends EObject {
 	boolean isSetName();
 
 	/**
-	 * Returns the value of the '<em><b>Service</b></em>' reference.
+	 * Returns the value of the '<em><b>Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service</em>' reference.
-	 * @see #setService(Service)
-	 * @see work.andycarpenter.webgen.pims.api.ApiPackage#getResource_Service()
+	 * @return the value of the '<em>Repository</em>' reference.
+	 * @see #setRepository(Repository)
+	 * @see work.andycarpenter.webgen.pims.api.ApiPackage#getResource_Repository()
 	 * @model required="true"
 	 * @generated
 	 */
-	Service getService();
+	Repository getRepository();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.api.Resource#getService <em>Service</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.api.Resource#getRepository <em>Repository</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service</em>' reference.
-	 * @see #getService()
+	 * @param value the new value of the '<em>Repository</em>' reference.
+	 * @see #getRepository()
 	 * @generated
 	 */
-	void setService(Service value);
+	void setRepository(Repository value);
 
 	/**
 	 * Returns the value of the '<em><b>Uri Element</b></em>' attribute.

@@ -4,9 +4,9 @@ package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
-import work.andycarpenter.webgen.pims.service.Filter;
-import work.andycarpenter.webgen.pims.service.Selection;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
  * <!-- begin-user-doc -->
@@ -330,7 +330,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 
 	/**
 	 * Returns the value of the '<em><b>Supported Filters</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.service.Filter}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Filter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Supported Filters</em>' reference list isn't clear,

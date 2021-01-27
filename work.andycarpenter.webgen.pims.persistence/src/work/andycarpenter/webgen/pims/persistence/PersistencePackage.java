@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,13 +99,22 @@ public interface PersistencePackage extends EPackage {
 	int PERSISTENCE__ENTITIES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Repositories</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSISTENCE__REPOSITORIES = 3;
+
+	/**
 	 * The feature id for the '<em><b>Orm Technology</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSISTENCE__ORM_TECHNOLOGY = 3;
+	int PERSISTENCE__ORM_TECHNOLOGY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Database Technology</b></em>' attribute.
@@ -113,7 +123,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSISTENCE__DATABASE_TECHNOLOGY = 4;
+	int PERSISTENCE__DATABASE_TECHNOLOGY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp Creation</b></em>' attribute.
@@ -122,7 +132,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSISTENCE__TIMESTAMP_CREATION = 5;
+	int PERSISTENCE__TIMESTAMP_CREATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp Updates</b></em>' attribute.
@@ -131,7 +141,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSISTENCE__TIMESTAMP_UPDATES = 6;
+	int PERSISTENCE__TIMESTAMP_UPDATES = 7;
 
 	/**
 	 * The number of structural features of the '<em>Persistence</em>' class.
@@ -140,7 +150,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSISTENCE_FEATURE_COUNT = 7;
+	int PERSISTENCE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Persistence</em>' class.
@@ -1604,13 +1614,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Repository</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__REPOSITORY = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
+
+	/**
 	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
+	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
@@ -1619,7 +1638,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
+	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
@@ -1628,7 +1647,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
+	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
@@ -1637,7 +1656,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
+	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
@@ -1646,7 +1665,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
+	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Allow Form Type Customisation</b></em>' attribute.
@@ -1655,7 +1674,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
+	int ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1664,7 +1683,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
+	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -4992,6 +5011,481 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_KEY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl <em>Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepository()
+	 * @generated
+	 */
+	int REPOSITORY = 26;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__NAME = BasePackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Serves</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__SERVES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__SELECTIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Find All</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__FIND_ALL = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Find One</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__FIND_ONE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl <em>Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelection()
+	 * @generated
+	 */
+	int SELECTION = 27;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__NAME = BasePackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__PARAMETERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Defined By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__DEFINED_BY = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Distinct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__DISTINCT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__FIELDS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Joins</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__JOINS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__CONDITION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ordering</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__ORDERING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Limit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__LIMIT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Grouping</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__GROUPING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Select Path</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__SELECT_PATH = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__FILTERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__METHOD_NAME = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OrderImpl <em>Order</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.OrderImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrder()
+	 * @generated
+	 */
+	int ORDER = 28;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER__PATH = 0;
+
+	/**
+	 * The number of structural features of the '<em>Order</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Order</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AscImpl <em>Asc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AscImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAsc()
+	 * @generated
+	 */
+	int ASC = 29;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC__PATH = ORDER__PATH;
+
+	/**
+	 * The number of structural features of the '<em>Asc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Asc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC_OPERATION_COUNT = ORDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DescImpl <em>Desc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DescImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDesc()
+	 * @generated
+	 */
+	int DESC = 30;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC__PATH = ORDER__PATH;
+
+	/**
+	 * The number of structural features of the '<em>Desc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Desc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC_OPERATION_COUNT = ORDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl <em>Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FilterImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFilter()
+	 * @generated
+	 */
+	int FILTER = 31;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__PARAMETERS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__SELECTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__CONDITION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__METHOD_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl <em>Repository Feature Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepositoryFeatureReference()
+	 * @generated
+	 */
+	int REPOSITORY_FEATURE_REFERENCE = 32;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE__NAME = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE__FEATURE = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Repository Feature Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Repository Feature Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY_FEATURE_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4999,7 +5493,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 26;
+	int DATABASE_TECHNOLOGIES = 33;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -5009,7 +5503,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 27;
+	int ORM_TECHNOLOGIES = 34;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -5019,7 +5513,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 28;
+	int CARDINALITY = 35;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -5029,7 +5523,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 29;
+	int IS_HAS_CHOICES = 36;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -5039,7 +5533,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 30;
+	int DATE_DETAILS = 37;
 
 
 	/**
@@ -5084,6 +5578,17 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPersistence_Entities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Persistence#getRepositories <em>Repositories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Repositories</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Persistence#getRepositories()
+	 * @see #getPersistence()
+	 * @generated
+	 */
+	EReference getPersistence_Repositories();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Persistence#getOrmTechnology <em>Orm Technology</em>}'.
@@ -6064,6 +6569,17 @@ public interface PersistencePackage extends EPackage {
 	EReference getEntity_ContainerUnique();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Entity#getRepository <em>Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Repository</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getRepository()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Repository();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#getTableName <em>Table Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6480,6 +6996,307 @@ public interface PersistencePackage extends EPackage {
 	EReference getAssociationKey_TargetFeature();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Repository <em>Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Repository</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository
+	 * @generated
+	 */
+	EClass getRepository();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Repository#getServes <em>Serves</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Serves</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository#getServes()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EReference getRepository_Serves();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Repository#getSelections <em>Selections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Selections</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository#getSelections()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EReference getRepository_Selections();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Repository#getFindAll <em>Find All</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Find All</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository#getFindAll()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EReference getRepository_FindAll();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Repository#getFindOne <em>Find One</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Find One</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Repository#getFindOne()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EReference getRepository_FindOne();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Selection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Selection</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection
+	 * @generated
+	 */
+	EClass getSelection();
+
+	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.Selection#getDefinedBy <em>Defined By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Defined By</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getDefinedBy()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_DefinedBy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Selection#isDistinct <em>Distinct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Distinct</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#isDistinct()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EAttribute getSelection_Distinct();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getFields <em>Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Fields</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getFields()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Fields();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getJoins <em>Joins</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Joins</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getJoins()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Joins();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Selection#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getCondition()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getOrdering <em>Ordering</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ordering</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getOrdering()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Ordering();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Selection#getLimit <em>Limit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Limit</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getLimit()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EAttribute getSelection_Limit();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getGrouping <em>Grouping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Grouping</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getGrouping()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Grouping();
+
+	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Select Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_SelectPath();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Filters</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getFilters()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_Filters();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Selection#getMethodName <em>Method Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getMethodName()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EAttribute getSelection_MethodName();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Order <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Order
+	 * @generated
+	 */
+	EClass getOrder();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Order#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Order#getPath()
+	 * @see #getOrder()
+	 * @generated
+	 */
+	EReference getOrder_Path();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Asc <em>Asc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Asc</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Asc
+	 * @generated
+	 */
+	EClass getAsc();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Desc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Desc</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Desc
+	 * @generated
+	 */
+	EClass getDesc();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Filter <em>Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Filter
+	 * @generated
+	 */
+	EClass getFilter();
+
+	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.Filter#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Selection</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Filter#getSelection()
+	 * @see #getFilter()
+	 * @generated
+	 */
+	EReference getFilter_Selection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Filter#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Filter#getCondition()
+	 * @see #getFilter()
+	 * @generated
+	 */
+	EReference getFilter_Condition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Filter#getMethodName <em>Method Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Filter#getMethodName()
+	 * @see #getFilter()
+	 * @generated
+	 */
+	EAttribute getFilter_MethodName();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference <em>Repository Feature Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Repository Feature Reference</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference
+	 * @generated
+	 */
+	EClass getRepositoryFeatureReference();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getName()
+	 * @see #getRepositoryFeatureReference()
+	 * @generated
+	 */
+	EAttribute getRepositoryFeatureReference_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getFeature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getFeature()
+	 * @see #getRepositoryFeatureReference()
+	 * @generated
+	 */
+	EReference getRepositoryFeatureReference_Feature();
+
+	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6585,6 +7402,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PERSISTENCE__ENTITIES = eINSTANCE.getPersistence_Entities();
+
+		/**
+		 * The meta object literal for the '<em><b>Repositories</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSISTENCE__REPOSITORIES = eINSTANCE.getPersistence_Repositories();
 
 		/**
 		 * The meta object literal for the '<em><b>Orm Technology</b></em>' attribute feature.
@@ -7331,6 +8156,14 @@ public interface PersistencePackage extends EPackage {
 		EReference ENTITY__CONTAINER_UNIQUE = eINSTANCE.getEntity_ContainerUnique();
 
 		/**
+		 * The meta object literal for the '<em><b>Repository</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__REPOSITORY = eINSTANCE.getEntity_Repository();
+
+		/**
 		 * The meta object literal for the '<em><b>Table Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7667,6 +8500,244 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSOCIATION_KEY__TARGET_FEATURE = eINSTANCE.getAssociationKey_TargetFeature();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl <em>Repository</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepository()
+		 * @generated
+		 */
+		EClass REPOSITORY = eINSTANCE.getRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>Serves</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY__SERVES = eINSTANCE.getRepository_Serves();
+
+		/**
+		 * The meta object literal for the '<em><b>Selections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY__SELECTIONS = eINSTANCE.getRepository_Selections();
+
+		/**
+		 * The meta object literal for the '<em><b>Find All</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY__FIND_ALL = eINSTANCE.getRepository_FindAll();
+
+		/**
+		 * The meta object literal for the '<em><b>Find One</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY__FIND_ONE = eINSTANCE.getRepository_FindOne();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl <em>Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelection()
+		 * @generated
+		 */
+		EClass SELECTION = eINSTANCE.getSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Defined By</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__DEFINED_BY = eINSTANCE.getSelection_DefinedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Distinct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTION__DISTINCT = eINSTANCE.getSelection_Distinct();
+
+		/**
+		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__FIELDS = eINSTANCE.getSelection_Fields();
+
+		/**
+		 * The meta object literal for the '<em><b>Joins</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__JOINS = eINSTANCE.getSelection_Joins();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__CONDITION = eINSTANCE.getSelection_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Ordering</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__ORDERING = eINSTANCE.getSelection_Ordering();
+
+		/**
+		 * The meta object literal for the '<em><b>Limit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTION__LIMIT = eINSTANCE.getSelection_Limit();
+
+		/**
+		 * The meta object literal for the '<em><b>Grouping</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__GROUPING = eINSTANCE.getSelection_Grouping();
+
+		/**
+		 * The meta object literal for the '<em><b>Select Path</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__SELECT_PATH = eINSTANCE.getSelection_SelectPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__FILTERS = eINSTANCE.getSelection_Filters();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTION__METHOD_NAME = eINSTANCE.getSelection_MethodName();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OrderImpl <em>Order</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.OrderImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrder()
+		 * @generated
+		 */
+		EClass ORDER = eINSTANCE.getOrder();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORDER__PATH = eINSTANCE.getOrder_Path();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AscImpl <em>Asc</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AscImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAsc()
+		 * @generated
+		 */
+		EClass ASC = eINSTANCE.getAsc();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DescImpl <em>Desc</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.DescImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDesc()
+		 * @generated
+		 */
+		EClass DESC = eINSTANCE.getDesc();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl <em>Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.FilterImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFilter()
+		 * @generated
+		 */
+		EClass FILTER = eINSTANCE.getFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILTER__SELECTION = eINSTANCE.getFilter_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILTER__CONDITION = eINSTANCE.getFilter_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILTER__METHOD_NAME = eINSTANCE.getFilter_MethodName();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl <em>Repository Feature Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepositoryFeatureReference()
+		 * @generated
+		 */
+		EClass REPOSITORY_FEATURE_REFERENCE = eINSTANCE.getRepositoryFeatureReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPOSITORY_FEATURE_REFERENCE__NAME = eINSTANCE.getRepositoryFeatureReference_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY_FEATURE_REFERENCE__FEATURE = eINSTANCE.getRepositoryFeatureReference_Feature();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.

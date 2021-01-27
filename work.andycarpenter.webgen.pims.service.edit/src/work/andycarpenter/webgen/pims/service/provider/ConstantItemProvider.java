@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 
+import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.Constant;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
@@ -152,11 +153,6 @@ public class ConstantItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ServicePackage.Literals.CONSTANT__VALUE,
-				 ServiceFactory.eINSTANCE.createServiceFeatureReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ServicePackage.Literals.CONSTANT__VALUE,
 				 BaseFactory.eINSTANCE.createCurrentTime()));
 
 		newChildDescriptors.add
@@ -197,6 +193,16 @@ public class ConstantItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ServicePackage.Literals.CONSTANT__VALUE,
+				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
@@ -233,6 +239,11 @@ public class ConstantItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(ServicePackage.Literals.CONSTANT__VALUE,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
+				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 	}
 
 	/**

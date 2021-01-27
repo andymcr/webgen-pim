@@ -7,7 +7,7 @@
 module PassAuthentication;
 create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM;
 
-uses WebsiteHelpers;
+uses PersistenceHelpers;
 
 
 rule WafModel {

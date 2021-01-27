@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.OrmTechnologies;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
 
 /**
@@ -35,6 +36,7 @@ import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getOrmTechnology <em>Orm Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#getDatabaseTechnology <em>Database Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.PersistenceImpl#isTimestampCreation <em>Timestamp Creation</em>}</li>
@@ -73,6 +75,16 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * @ordered
 	 */
 	protected EList<Entity> entities;
+
+	/**
+	 * The cached value of the '{@link #getRepositories() <em>Repositories</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepositories()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Repository> repositories;
 
 	/**
 	 * The default value of the '{@link #getOrmTechnology() <em>Orm Technology</em>}' attribute.
@@ -218,6 +230,19 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 	 * @generated
 	 */
 	@Override
+	public EList<Repository> getRepositories() {
+		if (repositories == null) {
+			repositories = new EObjectContainmentEList<Repository>(Repository.class, this, PersistencePackage.PERSISTENCE__REPOSITORIES);
+		}
+		return repositories;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public OrmTechnologies getOrmTechnology() {
 		return ormTechnology;
 	}
@@ -318,6 +343,8 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 				return ((InternalEList<?>)getDataTypes()).basicRemove(otherEnd, msgs);
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
+				return ((InternalEList<?>)getRepositories()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -336,6 +363,8 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 				return getDataTypes();
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				return getEntities();
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
+				return getRepositories();
 			case PersistencePackage.PERSISTENCE__ORM_TECHNOLOGY:
 				return getOrmTechnology();
 			case PersistencePackage.PERSISTENCE__DATABASE_TECHNOLOGY:
@@ -368,6 +397,10 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
+				return;
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
+				getRepositories().clear();
+				getRepositories().addAll((Collection<? extends Repository>)newValue);
 				return;
 			case PersistencePackage.PERSISTENCE__ORM_TECHNOLOGY:
 				setOrmTechnology((OrmTechnologies)newValue);
@@ -402,6 +435,9 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				getEntities().clear();
 				return;
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
+				getRepositories().clear();
+				return;
 			case PersistencePackage.PERSISTENCE__ORM_TECHNOLOGY:
 				setOrmTechnology(ORM_TECHNOLOGY_EDEFAULT);
 				return;
@@ -432,6 +468,8 @@ public class PersistenceImpl extends MinimalEObjectImpl.Container implements Per
 				return dataTypes != null && !dataTypes.isEmpty();
 			case PersistencePackage.PERSISTENCE__ENTITIES:
 				return entities != null && !entities.isEmpty();
+			case PersistencePackage.PERSISTENCE__REPOSITORIES:
+				return repositories != null && !repositories.isEmpty();
 			case PersistencePackage.PERSISTENCE__ORM_TECHNOLOGY:
 				return ormTechnology != ORM_TECHNOLOGY_EDEFAULT;
 			case PersistencePackage.PERSISTENCE__DATABASE_TECHNOLOGY:

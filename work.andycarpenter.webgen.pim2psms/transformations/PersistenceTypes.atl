@@ -7,23 +7,7 @@ module PersistenceTypes;
 create orm : ORM from website : Website;
 
 uses WebsiteHelpers;
-
-
-helper context Website!Attribute def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean
-	= noted->select(e | e.oclIsKindOf(Website!Attribute))
-		->exists(e | e.dataType = self.dataType 
-			and e."unique" = self."unique" 
-			and e.ordered = self.ordered);
-
-helper context Website!Association def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean
-	= noted->select(e | e.oclIsKindOf(Website!Association))
-		->exists(e | e.targetEntity = self.targetEntity 
-			and e."unique" = self."unique" 
-			and e.ordered = self.ordered);
-
-helper context Website!Association def: inverseFeatureTypeNoted(noted : Set(Website!Feature)) : Boolean
-	= noted->exists(e | e.partOf = self.partOf 
-			and e.targetUnique = self.targetUnique);
+uses PersistenceHelpers;
 
 
 rule Website {
@@ -170,6 +154,8 @@ rule Entity {
 			else
 				website.pluralisedName
 			endif,
+		"unique" <- website."unique",
+		containerUnique <- website.containerUnique,
 		tableName <- 
 			if not website.tableName.oclIsUndefined() and website.tableName <> '' then
 				website.tableName
