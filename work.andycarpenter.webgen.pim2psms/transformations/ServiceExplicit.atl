@@ -71,13 +71,7 @@ rule Service {
 	from website : Website!Service
 	to service : Service!Service (
 		constants <- website.constants,
-		serves <-
-			if website.serves.oclIsUndefined() then
-				OclUndefined
-			else
-				thisModule.findOrmEntity(website.serves.name)
-			endif,
-		"uses" <- website."uses",
+		"uses" <- website."uses"->collect(r | r.findRepository()),
 		operations <- website.operations
 	)
 } 

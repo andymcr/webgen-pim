@@ -511,7 +511,12 @@ abstract rule CollectionUnit {
 				website.selection.findSelection()
 			endif,
 		omitContainerLoad <- website.omitContainerLoad,
---		containerType <- website.findContainerType(),
+		containerType <-
+			if website.containingType.oclIsUndefined() then
+				website.containingType
+			else
+				website.containingType.findOrmEntity()
+			endif,
 		containerRepository <- website.findContainerRepository(),
 		findContainerSelection <-
 			if website.findContainerSelection.oclIsUndefined() then

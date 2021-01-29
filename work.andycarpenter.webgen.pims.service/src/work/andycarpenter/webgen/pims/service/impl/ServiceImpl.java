@@ -3,24 +3,17 @@
 package work.andycarpenter.webgen.pims.service.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
-
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
 import work.andycarpenter.webgen.pims.service.Constant;
@@ -36,7 +29,6 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getConstants <em>Constants</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getServes <em>Serves</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getOperations <em>Operations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getUses <em>Uses</em>}</li>
  * </ul>
@@ -53,16 +45,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @ordered
 	 */
 	protected EList<Constant> constants;
-
-	/**
-	 * The cached value of the '{@link #getServes() <em>Serves</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServes()
-	 * @generated
-	 * @ordered
-	 */
-	protected Entity serves;
 
 	/**
 	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
@@ -114,46 +96,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			constants = new EObjectContainmentWithInverseEList<Constant>(Constant.class, this, ServicePackage.SERVICE__CONSTANTS, ServicePackage.CONSTANT__DEFINED_BY);
 		}
 		return constants;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Entity getServes() {
-		if (serves != null && serves.eIsProxy()) {
-			InternalEObject oldServes = (InternalEObject)serves;
-			serves = (Entity)eResolveProxy(oldServes);
-			if (serves != oldServes) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ServicePackage.SERVICE__SERVES, oldServes, serves));
-			}
-		}
-		return serves;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetServes() {
-		return serves;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setServes(Entity newServes) {
-		Entity oldServes = serves;
-		serves = newServes;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.SERVICE__SERVES, oldServes, serves));
 	}
 
 	/**
@@ -225,9 +167,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 		switch (featureID) {
 			case ServicePackage.SERVICE__CONSTANTS:
 				return getConstants();
-			case ServicePackage.SERVICE__SERVES:
-				if (resolve) return getServes();
-				return basicGetServes();
 			case ServicePackage.SERVICE__OPERATIONS:
 				return getOperations();
 			case ServicePackage.SERVICE__USES:
@@ -248,9 +187,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			case ServicePackage.SERVICE__CONSTANTS:
 				getConstants().clear();
 				getConstants().addAll((Collection<? extends Constant>)newValue);
-				return;
-			case ServicePackage.SERVICE__SERVES:
-				setServes((Entity)newValue);
 				return;
 			case ServicePackage.SERVICE__OPERATIONS:
 				getOperations().clear();
@@ -275,9 +211,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			case ServicePackage.SERVICE__CONSTANTS:
 				getConstants().clear();
 				return;
-			case ServicePackage.SERVICE__SERVES:
-				setServes((Entity)null);
-				return;
 			case ServicePackage.SERVICE__OPERATIONS:
 				getOperations().clear();
 				return;
@@ -298,8 +231,6 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 		switch (featureID) {
 			case ServicePackage.SERVICE__CONSTANTS:
 				return constants != null && !constants.isEmpty();
-			case ServicePackage.SERVICE__SERVES:
-				return serves != null;
 			case ServicePackage.SERVICE__OPERATIONS:
 				return operations != null && !operations.isEmpty();
 			case ServicePackage.SERVICE__USES:

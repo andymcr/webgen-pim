@@ -5,8 +5,6 @@ package work.andycarpenter.webgen.pims.service;
 import org.eclipse.emf.common.util.EList;
 
 import work.andycarpenter.webgen.pims.base.NamedElement;
-
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Repository;
 
 /**
@@ -19,7 +17,6 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getConstants <em>Constants</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getServes <em>Serves</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getOperations <em>Operations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getUses <em>Uses</em>}</li>
  * </ul>
@@ -46,32 +43,6 @@ public interface Service extends NamedElement {
 	 * @generated
 	 */
 	EList<Constant> getConstants();
-
-	/**
-	 * Returns the value of the '<em><b>Serves</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Serves</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Serves</em>' reference.
-	 * @see #setServes(Entity)
-	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getService_Serves()
-	 * @model
-	 * @generated
-	 */
-	Entity getServes();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.service.Service#getServes <em>Serves</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Serves</em>' reference.
-	 * @see #getServes()
-	 * @generated
-	 */
-	void setServes(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Operations</b></em>' containment reference list.

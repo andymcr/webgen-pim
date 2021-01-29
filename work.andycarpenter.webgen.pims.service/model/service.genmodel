@@ -19,8 +19,6 @@
     <genClasses ecoreClass="service.ecore#//Service">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
           ecoreFeature="ecore:EReference service.ecore#//Service/constants"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference service.ecore#//Service/serves"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Service/operations"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Service/uses"/>

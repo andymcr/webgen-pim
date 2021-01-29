@@ -51,32 +51,9 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addServesPropertyDescriptor(object);
 			addUsesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Serves feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addServesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Service_serves_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_serves_feature", "_UI_Service_type"),
-				 ServicePackage.Literals.SERVICE__SERVES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
 	}
 
 	/**

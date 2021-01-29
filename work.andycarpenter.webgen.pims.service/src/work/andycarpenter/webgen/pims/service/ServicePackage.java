@@ -128,22 +128,13 @@ public interface ServicePackage extends EPackage {
 	int SERVICE__CONSTANTS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Serves</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__SERVES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__OPERATIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SERVICE__OPERATIONS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Uses</b></em>' reference list.
@@ -152,7 +143,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int SERVICE__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Service</em>' class.
@@ -161,7 +152,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Service</em>' class.
@@ -427,17 +418,6 @@ public interface ServicePackage extends EPackage {
 	EReference getService_Constants();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.service.Service#getServes <em>Serves</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Serves</em>'.
-	 * @see work.andycarpenter.webgen.pims.service.Service#getServes()
-	 * @see #getService()
-	 * @generated
-	 */
-	EReference getService_Serves();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.service.Service#getOperations <em>Operations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -645,14 +625,6 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SERVICE__CONSTANTS = eINSTANCE.getService_Constants();
-
-		/**
-		 * The meta object literal for the '<em><b>Serves</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE__SERVES = eINSTANCE.getService_Serves();
 
 		/**
 		 * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
