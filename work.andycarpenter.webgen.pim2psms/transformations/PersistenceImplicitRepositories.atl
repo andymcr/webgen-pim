@@ -1,0 +1,36 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
+-- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.xecore
+
+module PersistenceImplicitRepositories;
+create dummyOrm : ORM refining orm : ORM;
+
+uses PersistenceHelpers;
+
+
+rule OrmModel {
+	from partialOrm : ORM!OrmModel
+	to orm : ORM!OrmModel (
+		repositories <- partialOrm.repositories
+			->union(let servered : Sequence(ORM!Entity)
+				= partialOrm.repositories->collect(r | r.serves)
+				in thisModule.findOrmModel().entities
+					->select(e | servered->excludes(e))
+					->collect(e | thisModule.implicitRepository(e))
+			)
+	)
+}
+
+
+lazy rule implicitRepository {
+	from orm : ORM!Entity
+	to repository : ORM!Repository (
+-- TODO pularise
+		name <- orm.name, 
+		serves <- orm
+	)
+	do {
+		repository;
+	}
+}
