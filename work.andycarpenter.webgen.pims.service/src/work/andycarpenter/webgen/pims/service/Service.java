@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getConstants <em>Constants</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getOperations <em>Operations</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getRequires <em>Requires</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getUses <em>Uses</em>}</li>
  * </ul>
  *
@@ -63,8 +64,20 @@ public interface Service extends NamedElement {
 	EList<BusinessOperation> getOperations();
 
 	/**
-	 * Returns the value of the '<em><b>Uses</b></em>' reference list.
+	 * Returns the value of the '<em><b>Requires</b></em>' reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Repository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requires</em>' reference list.
+	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getService_Requires()
+	 * @model
+	 * @generated
+	 */
+	EList<Repository> getRequires();
+
+	/**
+	 * Returns the value of the '<em><b>Uses</b></em>' reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.service.Service}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses</em>' reference list isn't clear,
@@ -76,6 +89,6 @@ public interface Service extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Repository> getUses();
+	EList<Service> getUses();
 
 } // Service

@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getConstants <em>Constants</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getOperations <em>Operations</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getRequires <em>Requires</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getUses <em>Uses</em>}</li>
  * </ul>
  *
@@ -57,6 +58,16 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	protected EList<BusinessOperation> operations;
 
 	/**
+	 * The cached value of the '{@link #getRequires() <em>Requires</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequires()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Repository> requires;
+
+	/**
 	 * The cached value of the '{@link #getUses() <em>Uses</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,7 +75,7 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Repository> uses;
+	protected EList<Service> uses;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,9 +128,22 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @generated
 	 */
 	@Override
-	public EList<Repository> getUses() {
+	public EList<Repository> getRequires() {
+		if (requires == null) {
+			requires = new EObjectResolvingEList<Repository>(Repository.class, this, ServicePackage.SERVICE__REQUIRES);
+		}
+		return requires;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Service> getUses() {
 		if (uses == null) {
-			uses = new EObjectResolvingEList<Repository>(Repository.class, this, ServicePackage.SERVICE__USES);
+			uses = new EObjectResolvingEList<Service>(Service.class, this, ServicePackage.SERVICE__USES);
 		}
 		return uses;
 	}
@@ -169,6 +193,8 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return getConstants();
 			case ServicePackage.SERVICE__OPERATIONS:
 				return getOperations();
+			case ServicePackage.SERVICE__REQUIRES:
+				return getRequires();
 			case ServicePackage.SERVICE__USES:
 				return getUses();
 		}
@@ -192,9 +218,13 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				getOperations().clear();
 				getOperations().addAll((Collection<? extends BusinessOperation>)newValue);
 				return;
+			case ServicePackage.SERVICE__REQUIRES:
+				getRequires().clear();
+				getRequires().addAll((Collection<? extends Repository>)newValue);
+				return;
 			case ServicePackage.SERVICE__USES:
 				getUses().clear();
-				getUses().addAll((Collection<? extends Repository>)newValue);
+				getUses().addAll((Collection<? extends Service>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -213,6 +243,9 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return;
 			case ServicePackage.SERVICE__OPERATIONS:
 				getOperations().clear();
+				return;
+			case ServicePackage.SERVICE__REQUIRES:
+				getRequires().clear();
 				return;
 			case ServicePackage.SERVICE__USES:
 				getUses().clear();
@@ -233,6 +266,8 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return constants != null && !constants.isEmpty();
 			case ServicePackage.SERVICE__OPERATIONS:
 				return operations != null && !operations.isEmpty();
+			case ServicePackage.SERVICE__REQUIRES:
+				return requires != null && !requires.isEmpty();
 			case ServicePackage.SERVICE__USES:
 				return uses != null && !uses.isEmpty();
 		}

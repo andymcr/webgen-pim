@@ -71,7 +71,8 @@ rule Service {
 	from website : Website!Service
 	to service : Service!Service (
 		constants <- website.constants,
-		"uses" <- website."uses"->collect(r | r.findRepository()),
+		requires <- website.requires->collect(r | r.findRepository()),
+		"uses" <- website."uses",
 		operations <- website.operations
 	)
 } 

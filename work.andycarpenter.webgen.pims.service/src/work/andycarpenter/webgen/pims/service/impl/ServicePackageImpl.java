@@ -195,8 +195,18 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getService_Uses() {
+	public EReference getService_Requires() {
 		return (EReference)serviceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getService_Uses() {
+		return (EReference)serviceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -354,6 +364,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		serviceEClass = createEClass(SERVICE);
 		createEReference(serviceEClass, SERVICE__CONSTANTS);
 		createEReference(serviceEClass, SERVICE__OPERATIONS);
+		createEReference(serviceEClass, SERVICE__REQUIRES);
 		createEReference(serviceEClass, SERVICE__USES);
 
 		constantEClass = createEClass(CONSTANT);
@@ -420,7 +431,8 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getService_Constants(), this.getConstant(), this.getConstant_DefinedBy(), "constants", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Operations(), this.getBusinessOperation(), this.getBusinessOperation_DefinedBy(), "operations", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Uses(), thePersistencePackage.getRepository(), null, "uses", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_Requires(), thePersistencePackage.getRepository(), null, "requires", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_Uses(), this.getService(), null, "uses", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstant_DefinedBy(), this.getService(), this.getService_Constants(), "definedBy", null, 1, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
