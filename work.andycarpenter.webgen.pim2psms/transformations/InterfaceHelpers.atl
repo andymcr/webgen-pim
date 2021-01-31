@@ -34,8 +34,20 @@ helper context Website!SingletonUnit def: findRepositoriesUsed() : Sequence(ORM!
 		endif;
 
 helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
-	= self.servicesUsed->collect(s | s.findService());
+	= self.servicesUsed->collect(s | s.findService())
+		->union(self.actionServices()->collect(s | s.findService()))
+		->asSet()
+		->asSequence()->sortedBy(s | s.name);
 
+helper context Website!DynamicUnit def: actionServices() : Sequence(Website!Service)
+	= if self.oclIsKindOf(Website!InlineActionContainer) then
+			self.actions
+				->select(a | a.oclIsTypeOf(Website!FeatureSupportAction))
+				->collect(a | a.operation.definedBy)
+		else
+			Sequence{}
+		endif;
+	
 
 helper context Website!Badge def: badgeClass() : String
 	= if self.badgeClass.trim() <> '' then
