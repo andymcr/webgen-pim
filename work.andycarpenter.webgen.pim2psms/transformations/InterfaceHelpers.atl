@@ -6,19 +6,6 @@ uses WebsiteHelpers;
 uses PersistenceHelpers;
 
 
---helper context Website!CollectionUnit def: findContainerType() : Website!Entity
---	= let directContainer : Website!Entity
---			= if self.contentType->isEmpty() then
---					OclUndefined
---				else
---					self.contentType->first().getContainer()
---				endif
---		in if self.selectType.oclIsUndefined() then
---			directContainer
---		else
---			self.selectType
---		endif;
-
 helper context Website!CollectionUnit def: findContainerRepository() : ORM!Repository
 	= if self.containingType.oclIsUndefined() then
 			OclUndefined
@@ -32,7 +19,7 @@ helper context Website!CollectionUnit def: findRepositoriesUsed() : Sequence(ORM
 		else
 			Sequence{ self.contentType->first().repository.findRepository() }
 				->union(let containerRepository : ODM!Repository = self.findContainerRepository()
-							in if containerRepository.oclIsUndefined() then
+							in if self.omitContainerLoad or containerRepository.oclIsUndefined() then
 									Sequence{}
 								else
 									Sequence{ containerRepository }

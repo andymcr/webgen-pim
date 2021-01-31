@@ -132,7 +132,26 @@ rule ParameterReference {
 rule RepositoryFeatureReference {
 	from website : Website!RepositoryFeatureReference (website.isPresistenceRepositoryExpression())
 	to orm : ORM!FeatureReference (
-		feature <- website.feature.findOrmFeature()
+		feature <-
+			if website.feature.oclIsKindOf(Website!Attribute) then
+				website.feature.findOrmAttribute()
+			else 
+				if website.rootContainer.oclIsUndefined() then
+						OclUndefined
+					else
+						let x : Website!Entity
+							= website.rootContainer.definedBy.serves
+							in if website.feature.partOf = x then
+									website.feature.findOrmSourceAssociation()
+								else if website.feature.targetEntity = x then
+									website.feature.findOrmTargetAssociation()
+								else if website.rootContainer.joins->includes(website.feature.partOf) then
+									website.feature.findOrmSourceAssociation()
+								else
+									website.feature.findOrmTargetAssociation()
+								endif endif endif
+					endif
+			endif
 	)
 }
 
