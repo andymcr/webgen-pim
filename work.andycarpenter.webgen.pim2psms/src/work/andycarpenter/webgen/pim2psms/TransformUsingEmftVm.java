@@ -218,7 +218,7 @@ public class TransformUsingEmftVm {
 			final Model wafTraceModelP1 = createModel("trace_waf_p1");
 			final Model wafModel = executePassCreatingOutputModel("InterfaceExplicit",
 				wafModelName, "waf", wafInputModels, wafTraceModelP1);
-/*
+
 			final Model wafTraceModelP5 = createModel("trace_waf_p2");
 			executeRefiningPass("InterfaceImplicitStatic", wafModelName,
 				wafModel, wafInputModels, wafTraceModelP5);
@@ -234,7 +234,7 @@ public class TransformUsingEmftVm {
 			final Model wafTraceModelP8 = createModel("trace_waf_p5");
 			executeRefiningPass("PassAuthentication2", wafModelName, wafModel,
 				wafInputModels, wafTraceModelP8);
-*/			wafModel.getResource().save(Collections.emptyMap());
+			wafModel.getResource().save(Collections.emptyMap());
 		} catch (Exception e) {
 			System.err.println(e);
 			throw new Error(e);
