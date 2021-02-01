@@ -3581,7 +3581,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFeatureSupportAction_FileExtension() {
+	public EAttribute getFeatureSupportAction_SuccessMessage() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3591,7 +3591,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFeatureSupportAction_RequiresRole() {
+	public EAttribute getFeatureSupportAction_FailureMessage() {
 		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3601,8 +3601,28 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFeatureSupportAction_FileExtension() {
+		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFeatureSupportAction_RequiresRole() {
+		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getFeatureSupportAction_EnableWhen() {
-		return (EReference)featureSupportActionEClass.getEStructuralFeatures().get(4);
+		return (EReference)featureSupportActionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3612,7 +3632,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getFeatureSupportAction_UriElement() {
-		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)featureSupportActionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -4133,6 +4153,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		featureSupportActionEClass = createEClass(FEATURE_SUPPORT_ACTION);
 		createEReference(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__OPERATION);
 		createEAttribute(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE);
+		createEAttribute(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE);
+		createEAttribute(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE);
 		createEAttribute(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__FILE_EXTENSION);
 		createEAttribute(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__REQUIRES_ROLE);
 		createEReference(featureSupportActionEClass, FEATURE_SUPPORT_ACTION__ENABLE_WHEN);
@@ -4605,7 +4627,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(featureSupportActionEClass, FeatureSupportAction.class, "FeatureSupportAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeatureSupportAction_Operation(), theServicePackage.getBusinessOperation(), null, "operation", null, 1, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFeatureSupportAction_ConfirmMessage(), ecorePackage.getEString(), "confirmMessage", null, 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeatureSupportAction_ConfirmMessage(), ecorePackage.getEString(), "confirmMessage", " ", 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeatureSupportAction_SuccessMessage(), ecorePackage.getEString(), "successMessage", " ", 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeatureSupportAction_FailureMessage(), ecorePackage.getEString(), "failureMessage", " ", 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeatureSupportAction_FileExtension(), ecorePackage.getEString(), "fileExtension", null, 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeatureSupportAction_RequiresRole(), ecorePackage.getEString(), "requiresRole", "", 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureSupportAction_EnableWhen(), theExpressionPackage.getPredicate(), null, "enableWhen", null, 0, 1, FeatureSupportAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4784,7 +4808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (unitAssociationEClass,
 		   source,
 		   new String[] {
-			   "optionsValidChoice", "not options.oclIsUndefined() implies\n\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n\t\t->select(r : repository::Repository | r.serves = targetEntity)\n\t\t->collect(r : repository::Repository | r.selections)\n\t\t->includes(options)"
+			   "optionsValidChoice", "not options.oclIsUndefined() implies\n\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n\t\t->select(r : Persistence::Repository | r.serves = targetEntity)\n\t\t->collect(r : Persistence::Repository | r.selections)\n\t\t->includes(options)"
 		   });
 		addAnnotation
 		  (getUnitAssociation_IsSourceAssociation(),

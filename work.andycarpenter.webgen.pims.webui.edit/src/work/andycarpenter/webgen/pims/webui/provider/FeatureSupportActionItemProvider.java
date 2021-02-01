@@ -51,6 +51,8 @@ public class FeatureSupportActionItemProvider extends InlineActionItemProvider {
 
 			addOperationPropertyDescriptor(object);
 			addConfirmMessagePropertyDescriptor(object);
+			addSuccessMessagePropertyDescriptor(object);
+			addFailureMessagePropertyDescriptor(object);
 			addFileExtensionPropertyDescriptor(object);
 			addRequiresRolePropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
@@ -94,6 +96,50 @@ public class FeatureSupportActionItemProvider extends InlineActionItemProvider {
 				 getString("_UI_FeatureSupportAction_confirmMessage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureSupportAction_confirmMessage_feature", "_UI_FeatureSupportAction_type"),
 				 WebuiPackage.Literals.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Success Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSuccessMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureSupportAction_successMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureSupportAction_successMessage_feature", "_UI_FeatureSupportAction_type"),
+				 WebuiPackage.Literals.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Failure Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFailureMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureSupportAction_failureMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureSupportAction_failureMessage_feature", "_UI_FeatureSupportAction_type"),
+				 WebuiPackage.Literals.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE,
 				 true,
 				 false,
 				 false,
@@ -237,6 +283,8 @@ public class FeatureSupportActionItemProvider extends InlineActionItemProvider {
 
 		switch (notification.getFeatureID(FeatureSupportAction.class)) {
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE:
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE:
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE:
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__FILE_EXTENSION:
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__REQUIRES_ROLE:
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__URI_ELEMENT:

@@ -13970,13 +13970,31 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE = INLINE_ACTION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE = INLINE_ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE = INLINE_ACTION_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SUPPORT_ACTION__FILE_EXTENSION = INLINE_ACTION_FEATURE_COUNT + 2;
+	int FEATURE_SUPPORT_ACTION__FILE_EXTENSION = INLINE_ACTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -13985,7 +14003,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SUPPORT_ACTION__REQUIRES_ROLE = INLINE_ACTION_FEATURE_COUNT + 3;
+	int FEATURE_SUPPORT_ACTION__REQUIRES_ROLE = INLINE_ACTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
@@ -13994,7 +14012,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SUPPORT_ACTION__ENABLE_WHEN = INLINE_ACTION_FEATURE_COUNT + 4;
+	int FEATURE_SUPPORT_ACTION__ENABLE_WHEN = INLINE_ACTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -14003,7 +14021,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SUPPORT_ACTION__URI_ELEMENT = INLINE_ACTION_FEATURE_COUNT + 5;
+	int FEATURE_SUPPORT_ACTION__URI_ELEMENT = INLINE_ACTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Feature Support Action</em>' class.
@@ -14012,7 +14030,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SUPPORT_ACTION_FEATURE_COUNT = INLINE_ACTION_FEATURE_COUNT + 6;
+	int FEATURE_SUPPORT_ACTION_FEATURE_COUNT = INLINE_ACTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Feature Support Action</em>' class.
@@ -17285,6 +17303,28 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getFeatureSupportAction_ConfirmMessage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getSuccessMessage <em>Success Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Success Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getSuccessMessage()
+	 * @see #getFeatureSupportAction()
+	 * @generated
+	 */
+	EAttribute getFeatureSupportAction_SuccessMessage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFailureMessage <em>Failure Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Failure Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFailureMessage()
+	 * @see #getFeatureSupportAction()
+	 * @generated
+	 */
+	EAttribute getFeatureSupportAction_FailureMessage();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFileExtension <em>File Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19966,6 +20006,22 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE = eINSTANCE.getFeatureSupportAction_ConfirmMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Success Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE = eINSTANCE.getFeatureSupportAction_SuccessMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Failure Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE = eINSTANCE.getFeatureSupportAction_FailureMessage();
 
 		/**
 		 * The meta object literal for the '<em><b>File Extension</b></em>' attribute feature.

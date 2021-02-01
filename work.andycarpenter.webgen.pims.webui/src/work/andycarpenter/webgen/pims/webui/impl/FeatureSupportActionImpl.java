@@ -27,6 +27,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getOperation <em>Operation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getConfirmMessage <em>Confirm Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getSuccessMessage <em>Success Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getFailureMessage <em>Failure Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getFileExtension <em>File Extension</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeatureSupportActionImpl#getEnableWhen <em>Enable When</em>}</li>
@@ -54,7 +56,7 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONFIRM_MESSAGE_EDEFAULT = null;
+	protected static final String CONFIRM_MESSAGE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' attribute.
@@ -65,6 +67,46 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * @ordered
 	 */
 	protected String confirmMessage = CONFIRM_MESSAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSuccessMessage() <em>Success Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUCCESS_MESSAGE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getSuccessMessage() <em>Success Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String successMessage = SUCCESS_MESSAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFailureMessage() <em>Failure Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FAILURE_MESSAGE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getFailureMessage() <em>Failure Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String failureMessage = FAILURE_MESSAGE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFileExtension() <em>File Extension</em>}' attribute.
@@ -224,6 +266,52 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 	 * @generated
 	 */
 	@Override
+	public String getSuccessMessage() {
+		return successMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSuccessMessage(String newSuccessMessage) {
+		String oldSuccessMessage = successMessage;
+		successMessage = newSuccessMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE, oldSuccessMessage, successMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFailureMessage() {
+		return failureMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFailureMessage(String newFailureMessage) {
+		String oldFailureMessage = failureMessage;
+		failureMessage = newFailureMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE, oldFailureMessage, failureMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getFileExtension() {
 		return fileExtension;
 	}
@@ -359,6 +447,10 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 				return basicGetOperation();
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE:
 				return getConfirmMessage();
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE:
+				return getSuccessMessage();
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE:
+				return getFailureMessage();
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__FILE_EXTENSION:
 				return getFileExtension();
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__REQUIRES_ROLE:
@@ -384,6 +476,12 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 				return;
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE:
 				setConfirmMessage((String)newValue);
+				return;
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE:
+				setSuccessMessage((String)newValue);
+				return;
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE:
+				setFailureMessage((String)newValue);
 				return;
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__FILE_EXTENSION:
 				setFileExtension((String)newValue);
@@ -415,6 +513,12 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE:
 				setConfirmMessage(CONFIRM_MESSAGE_EDEFAULT);
 				return;
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE:
+				setSuccessMessage(SUCCESS_MESSAGE_EDEFAULT);
+				return;
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE:
+				setFailureMessage(FAILURE_MESSAGE_EDEFAULT);
+				return;
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__FILE_EXTENSION:
 				setFileExtension(FILE_EXTENSION_EDEFAULT);
 				return;
@@ -443,6 +547,10 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 				return operation != null;
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__CONFIRM_MESSAGE:
 				return CONFIRM_MESSAGE_EDEFAULT == null ? confirmMessage != null : !CONFIRM_MESSAGE_EDEFAULT.equals(confirmMessage);
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__SUCCESS_MESSAGE:
+				return SUCCESS_MESSAGE_EDEFAULT == null ? successMessage != null : !SUCCESS_MESSAGE_EDEFAULT.equals(successMessage);
+			case WebuiPackage.FEATURE_SUPPORT_ACTION__FAILURE_MESSAGE:
+				return FAILURE_MESSAGE_EDEFAULT == null ? failureMessage != null : !FAILURE_MESSAGE_EDEFAULT.equals(failureMessage);
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__FILE_EXTENSION:
 				return FILE_EXTENSION_EDEFAULT == null ? fileExtension != null : !FILE_EXTENSION_EDEFAULT.equals(fileExtension);
 			case WebuiPackage.FEATURE_SUPPORT_ACTION__REQUIRES_ROLE:
@@ -467,6 +575,10 @@ public class FeatureSupportActionImpl extends InlineActionImpl implements Featur
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (confirmMessage: ");
 		result.append(confirmMessage);
+		result.append(", successMessage: ");
+		result.append(successMessage);
+		result.append(", failureMessage: ");
+		result.append(failureMessage);
 		result.append(", fileExtension: ");
 		result.append(fileExtension);
 		result.append(", requiresRole: ");

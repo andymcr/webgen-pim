@@ -16,6 +16,8 @@ import work.andycarpenter.webgen.pims.service.BusinessOperation;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getOperation <em>Operation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getConfirmMessage <em>Confirm Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getSuccessMessage <em>Success Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFailureMessage <em>Failure Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFileExtension <em>File Extension</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getEnableWhen <em>Enable When</em>}</li>
@@ -55,6 +57,7 @@ public interface FeatureSupportAction extends InlineAction {
 
 	/**
 	 * Returns the value of the '<em><b>Confirm Message</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Confirm Message</em>' attribute isn't clear,
@@ -64,7 +67,7 @@ public interface FeatureSupportAction extends InlineAction {
 	 * @return the value of the '<em>Confirm Message</em>' attribute.
 	 * @see #setConfirmMessage(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeatureSupportAction_ConfirmMessage()
-	 * @model
+	 * @model default=" "
 	 * @generated
 	 */
 	String getConfirmMessage();
@@ -78,6 +81,52 @@ public interface FeatureSupportAction extends InlineAction {
 	 * @generated
 	 */
 	void setConfirmMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Success Message</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Success Message</em>' attribute.
+	 * @see #setSuccessMessage(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeatureSupportAction_SuccessMessage()
+	 * @model default=" "
+	 * @generated
+	 */
+	String getSuccessMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getSuccessMessage <em>Success Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Success Message</em>' attribute.
+	 * @see #getSuccessMessage()
+	 * @generated
+	 */
+	void setSuccessMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Failure Message</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Failure Message</em>' attribute.
+	 * @see #setFailureMessage(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeatureSupportAction_FailureMessage()
+	 * @model default=" "
+	 * @generated
+	 */
+	String getFailureMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction#getFailureMessage <em>Failure Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Failure Message</em>' attribute.
+	 * @see #getFailureMessage()
+	 * @generated
+	 */
+	void setFailureMessage(String value);
 
 	/**
 	 * Returns the value of the '<em><b>File Extension</b></em>' attribute.

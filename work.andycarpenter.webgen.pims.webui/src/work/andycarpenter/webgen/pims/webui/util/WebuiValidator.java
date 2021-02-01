@@ -750,8 +750,8 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\n" +
 		"\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n" +
-		"\t\t->select(r : repository::Repository | r.serves = targetEntity)\n" +
-		"\t\t->collect(r : repository::Repository | r.selections)\n" +
+		"\t\t->select(r : Persistence::Repository | r.serves = targetEntity)\n" +
+		"\t\t->collect(r : Persistence::Repository | r.selections)\n" +
 		"\t\t->includes(options)";
 
 	/**
