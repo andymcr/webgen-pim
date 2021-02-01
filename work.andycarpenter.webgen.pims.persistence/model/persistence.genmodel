@@ -98,7 +98,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetInputClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFooterClass"/>
-      <genFeatures createChild="false" propertyCategory="Orm" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/pseudo"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/serializationMaxDepth"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//AssociationReference">

@@ -972,18 +972,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAssociation_Pseudo() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getAssociation_SerializationMaxDepth() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(14);
+		return (EAttribute)associationEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -2175,7 +2165,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_INPUT_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_DISPLAY_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_FOOTER_CLASS);
-		createEAttribute(associationEClass, ASSOCIATION__PSEUDO);
 		createEAttribute(associationEClass, ASSOCIATION__SERIALIZATION_MAX_DEPTH);
 
 		associationReferenceEClass = createEClass(ASSOCIATION_REFERENCE);
@@ -2442,7 +2431,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAssociation_TargetInputClass(), ecorePackage.getEString(), "targetInputClass", "input_association", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_TargetDisplayClass(), ecorePackage.getEString(), "targetDisplayClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_TargetFooterClass(), ecorePackage.getEString(), "targetFooterClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_Pseudo(), ecorePackage.getEBoolean(), "pseudo", "false", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_SerializationMaxDepth(), ecorePackage.getEInt(), "serializationMaxDepth", "1", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationReferenceEClass, AssociationReference.class, "AssociationReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

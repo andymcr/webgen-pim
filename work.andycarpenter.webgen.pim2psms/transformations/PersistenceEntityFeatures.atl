@@ -269,7 +269,6 @@ rule SingletonLocation {
 abstract rule Association {
 	from website : Website!Association
 	to orm : ORM!Association (
-		pseudo <- website.pseudo,
 		keys <- website.keys,
 		columnName <-
 			if not website.columnName.oclIsUndefined() and website.columnName <> '' then
@@ -298,7 +297,6 @@ rule OneToOneAssociationWithoutContainment {
 		opposite <- orm,
 		owningEnd <- website.cardinality <> #Required and website.targetCardinality = #Required,
 		primaryKey <- website.targetPrimaryKey,
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		columnName <-
 			if not website.targetColumnName.oclIsUndefined() and website.targetColumnName <> '' then
@@ -327,7 +325,6 @@ rule ManyToOneAssociationWithoutContainment {
 		opposite <- orm,
 		owningEnd <- false,
 		primaryKey <- website.targetPrimaryKey,
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k))
@@ -351,7 +348,6 @@ rule OneToManyAssociationWithoutContainment {
 		opposite <- orm,
 		owningEnd <- true,
 		primaryKey <- website.targetPrimaryKey,
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		columnName <-
 			if not website.targetColumnName.oclIsUndefined() and website.targetColumnName <> '' then
@@ -389,7 +385,6 @@ rule ManyToManyAssociationWithoutContainment {
 		primaryKey <- website.targetPrimaryKey,
 		pivotTableName <- website.createPivotTableName(),
 		keys <- website.keys->collect(k | thisModule.OppositeAssociationKey(k)),
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		columnName <-
 			if not website.targetColumnName.oclIsUndefined() and website.targetColumnName <> '' then
@@ -419,7 +414,6 @@ rule OneToOneAssociationWithContainment {
 		owningEnd <- true,
 		primaryKey <- website.targetPrimaryKey,
 		container <- true,
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		columnName <-
 			if not website.targetColumnName.oclIsUndefined() and website.targetColumnName <> '' then
@@ -451,7 +445,6 @@ rule OneToManyAssociationWithContainment {
 		owningEnd <- true,
 		primaryKey <- website.targetPrimaryKey,
 		container <- true,
-		pseudo <- website.pseudo,
 		visible <- website.bidirectional,
 		columnName <-
 			if not website.targetColumnName.oclIsUndefined() and website.targetColumnName <> '' then

@@ -60,7 +60,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			addTargetInputClassPropertyDescriptor(object);
 			addTargetDisplayClassPropertyDescriptor(object);
 			addTargetFooterClassPropertyDescriptor(object);
-			addPseudoPropertyDescriptor(object);
 			addSerializationMaxDepthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -331,28 +330,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Pseudo feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPseudoPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Association_pseudo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_pseudo_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__PSEUDO,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_OrmPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Serialization Max Depth feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -444,7 +421,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
 			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
-			case PersistencePackage.ASSOCIATION__PSEUDO:
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

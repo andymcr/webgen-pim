@@ -1066,22 +1066,13 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__TARGET_FOOTER_CLASS = FEATURE_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__PSEUDO = FEATURE_FEATURE_COUNT + 13;
-
-	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 14;
+	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -1090,7 +1081,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 15;
+	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -4532,15 +4523,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
-
-	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4909,15 +4891,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pseudo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__PSEUDO = ASSOCIATION__PSEUDO;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -6146,17 +6119,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAssociation_TargetFooterClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#isPseudo <em>Pseudo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pseudo</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#isPseudo()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_Pseudo();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}'.
@@ -7826,14 +7788,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSOCIATION__TARGET_FOOTER_CLASS = eINSTANCE.getAssociation_TargetFooterClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Pseudo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__PSEUDO = eINSTANCE.getAssociation_Pseudo();
 
 		/**
 		 * The meta object literal for the '<em><b>Serialization Max Depth</b></em>' attribute feature.

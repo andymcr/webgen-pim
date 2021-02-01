@@ -26,7 +26,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass <em>Target Input Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass <em>Target Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass <em>Target Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#isPseudo <em>Pseudo</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}</li>
  * </ul>
  *
@@ -371,33 +370,6 @@ public interface Association extends Feature {
 	 * @generated
 	 */
 	void setTargetFooterClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Pseudo</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pseudo</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pseudo</em>' attribute.
-	 * @see #setPseudo(boolean)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_Pseudo()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isPseudo();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Association#isPseudo <em>Pseudo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pseudo</em>' attribute.
-	 * @see #isPseudo()
-	 * @generated
-	 */
-	void setPseudo(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Serialization Max Depth</b></em>' attribute.
