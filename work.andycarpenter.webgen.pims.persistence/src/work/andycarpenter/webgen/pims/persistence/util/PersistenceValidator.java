@@ -10,9 +10,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import work.andycarpenter.webgen.pims.base.util.BaseValidator;
-
 import work.andycarpenter.webgen.pims.persistence.*;
 
 /**

@@ -3,9 +3,7 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
-
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
 

@@ -35,6 +35,8 @@ import work.andycarpenter.webgen.pims.base.BaseFactory;
 import work.andycarpenter.webgen.pims.base.util.BaseAdapterFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
+import work.andycarpenter.webgen.pims.expression.FunctionCall;
+import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
 import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
@@ -390,6 +392,44 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseFunctionCall(FunctionCall object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						 BaseFactory.eINSTANCE.createCurrentTime()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						 BaseFactory.eINSTANCE.createCurrentUser()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__FEATURE,
+						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

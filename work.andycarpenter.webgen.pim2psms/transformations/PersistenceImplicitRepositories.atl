@@ -13,10 +13,8 @@ rule OrmModel {
 	from partialOrm : ORM!OrmModel
 	to orm : ORM!OrmModel (
 		repositories <- partialOrm.repositories
-			->union(let servered : Sequence(ORM!Entity)
-				= partialOrm.repositories->collect(r | r.serves)
-				in thisModule.findOrmModel().entities
-					->select(e | servered->excludes(e))
+			->union(partialOrm.entities
+					->select(e | e.repository.oclIsUndefined())
 					->collect(e | thisModule.implicitRepository(e))
 			)
 	)

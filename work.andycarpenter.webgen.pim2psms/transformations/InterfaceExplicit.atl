@@ -254,7 +254,7 @@ rule StaticUnit {
 }
 
 
--- @extends ContentUnit
+-- @extends ContentUnit, ActionContainer
 abstract rule DynamicUnit {
 	from website : Website!DynamicUnit
 	to waf : WAF!DynamicUnit (
@@ -263,7 +263,7 @@ abstract rule DynamicUnit {
 		servicesUsed <- website.findServicesUsed(),
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden(),
-		supportActions <- website.supportActions,
+		actions <- website.actions,
 		header <- website.header,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
@@ -290,7 +290,7 @@ abstract rule UnitField {
 	)
 }
 
--- @extends UnitField, InlineActionContainer
+-- @extends UnitField, ActionContainer
 abstract rule UnitFeature {
 	from website : Website!UnitFeature
 	to waf : WAF!UnitFeature (
@@ -457,15 +457,6 @@ rule DateField {
 rule CaptchaField {
 	from website : Website!CaptchaField
 	to waf : WAF!CaptchaField (
-	)
-}
-
--- @extends NamedDisplayElement
-rule UnitSupportAction {
-	from website : Website!UnitSupportAction
-	to waf : WAF!UnitSupportAction (
-		disable <- website.disable,
-		confirmMessage <- website.confirmMessage
 	)
 }
 
@@ -670,7 +661,7 @@ rule DetailsUnit {
 	)
 }
 
--- @extends CollectionUnit, InlineActionContainer
+-- @extends CollectionUnit
 abstract rule IndexUnit {
 	from website : Website!IndexUnit
 	to waf : WAF!IndexUnit (
@@ -699,14 +690,14 @@ rule IndexLineDirectionUnit {
 	)
 }
 
--- @extends CollectionUnit, InlineActionContainer
+-- @extends CollectionUnit
 abstract rule CardsUnit {
 	from website : Website!CardsUnit
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		rowClass <- website.rowClass.replaceAll(',', ' ').trim(),
-		columnClass <- website.columnClass.replaceAll(',', ' ').trim(),
+		rowClass <- website.rowClass(),
+		columnClass <- website.columnClass(),
 		cardClass <- website.cardClass(),
 		cardHeaderClass <- website.cardHeaderClass(),
 		cardBodyClass <- website.cardBodyClass(),
@@ -797,65 +788,21 @@ rule SearchUnit {
 }
 
 
-abstract rule InlineActionContainer {
-	from website : Website!InlineActionContainer
-	to waf : WAF!InlineActionContainer (
+abstract rule ActionContainer {
+	from website : Website!ActionContainer
+	to waf : WAF!ActionContainer (
 		actions <- website.actions,
 		actionNavigationClass <- website.actionNavigationClass()
 	)
 }
 
 -- @extends NamedDisplayElement
-abstract rule InlineAction {
-	from website : Website!InlineAction
-	to waf : WAF!InlineAction (
+abstract rule Action {
+	from website : Website!Action
+	to waf : WAF!Action (
 		disable <- website.disable,
 		displayWhen <- website.displayWhen,
-		header <- website.header,
-		footer <- website.footer,
-		anchorClass <- website.anchorClass(),
-		headerClass <- website.headerClass,
-		footerClass <- website.footerClass
-	)
-}
-
-
--- @extends InlineAction
-rule SelectAction {
-	from website : Website!SelectAction
-	to waf : WAF!SelectAction (
-		target <- website.target,
-		valuePath <- website.valuePath
-	)
-}
-
--- @extends InlineAction
-rule DeleteAction {
-	from website : Website!DeleteAction 
-	to waf : WAF!DeleteAction (
-		destination <- website.destination,
-		confirmMessage <- website.confirmMessage(),
-		requiresRole <-
-			if website.requiresRole.trim() <> '' then
-				website.requiresRole.trim()
-			else
-				website.usedBy.requiresRole.trim()
-			endif,
 		enableWhen <- website.enableWhen,
-		uriElement <-
-			if website.uriElement <> '' then
-				website.uriElement
-			else
-				website.name.createName()
-			endif
-	)
-}
-
--- @extends InlineAction
-rule FeatureSupportAction {
-	from website : Website!FeatureSupportAction 
-	to waf : WAF!FeatureSupportAction (
-		operation <- website.operation.findBusinessOperation(),
 		confirmMessage <-
 			if website.confirmMessage.trim() <> '' then
 				website.confirmMessage.trim()
@@ -874,20 +821,93 @@ rule FeatureSupportAction {
 			else
 				OclUndefined
 			endif,
+		anchorClass <- website.anchorClass(),
+		headerClass <- website.headerClass,
+		footerClass <- website.footerClass
+	)
+}
+
+
+-- @extends Action
+rule SelectAction {
+	from website : Website!SelectAction
+	to waf : WAF!SelectAction (
+		target <- website.target,
+		valuePath <- website.valuePath
+	)
+}
+
+-- @extends Action
+rule DeleteAction {
+	from website : Website!DeleteAction 
+	to waf : WAF!DeleteAction (
+		confirmMessage <-
+			if website.confirmMessage.trim() <> '' then
+				website.confirmMessage.trim()
+			else if website.displayLabel.trim() <> '' then
+				website.displayLabel.trim().concat('?')
+			else
+				website.name.createLabel().concat('?')
+			endif endif,
 		requiresRole <-
 			if website.requiresRole.trim() <> '' then
 				website.requiresRole.trim()
 			else
 				website.usedBy.requiresRole.trim()
 			endif,
-		enableWhen <- website.enableWhen,
 		uriElement <-
 			if website.uriElement <> '' then
 				website.uriElement
 			else
 				website.name.createName()
+			endif
+	)
+}
+
+-- @extends Action
+abstract rule OperationAction {
+	from website : Website!OperationAction 
+	to waf : WAF!OperationAction (
+		operation <-
+			if website.operation.oclIsUndefined() then
+				website.operation
+			else
+				website.operation.findBusinessOperation()
 			endif,
-		fileExtension <- website.fileExtension
+		fileExtension <- website.fileExtension,
+		requiresRole <-
+			if website.requiresRole.trim() <> '' then
+				website.requiresRole.trim()
+			else
+				website.usedBy.requiresRole.trim()
+			endif,
+		uriElement <-
+			if website.uriElement <> '' then
+				website.uriElement
+			else
+				website.name.createName()
+			endif
+	)
+}
+
+-- @extends OperationAction
+rule InstanceOperationAction {
+	from website : Website!InstanceOperationAction 
+	to waf : WAF!InstanceOperationAction (
+	)
+}
+
+-- @extends OperationAction
+rule ContainerOperationAction {
+	from website : Website!ContainerOperationAction 
+	to waf : WAF!ContainerOperationAction (
+	)
+}
+
+-- @extends OperationAction
+rule GeneralOperationAction {
+	from website : Website!GeneralOperationAction 
+	to waf : WAF!GeneralOperationAction (
 	)
 }
 

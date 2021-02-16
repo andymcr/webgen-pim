@@ -7,23 +7,21 @@ module InterfaceExpression;
 create waf : WAF from website : Website;
 
 helper context Website!Expression def: isInterfaceExpression() : Boolean
-	= if self.refImmediateComposite().oclIsUndefined() then
+	= if self.rootContainer.oclIsUndefined() then
 			false
-		else if self.refImmediateComposite().oclIsKindOf(Website!DynamicUnit) then
+		else if self.rootContainer.oclIsKindOf(Website!DynamicUnit) then
 			true
-		else if self.refImmediateComposite().oclIsKindOf(Website!RouteActual) then
+		else if self.rootContainer.oclIsKindOf(Website!RouteActual) then
 			true
-		else if self.refImmediateComposite().oclIsKindOf(Website!UnitField) then
+		else if self.rootContainer.oclIsKindOf(Website!UnitField) then
 			true
-		else if self.refImmediateComposite().oclIsKindOf(Website!InlineAction) then
+		else if self.rootContainer.oclIsKindOf(Website!Action) then
 			true
-		else if self.refImmediateComposite().oclIsKindOf(Website!Badge) then
+		else if self.rootContainer.oclIsKindOf(Website!Badge) then
 			true
-		else if self.refImmediateComposite().oclIsKindOf(Website!Expression) then
-			self.refImmediateComposite().isInterfaceExpression()
 		else
 			false
-		endif endif endif endif endif endif endif;
+		endif endif endif endif endif endif;
 
 
 abstract rule Expression {

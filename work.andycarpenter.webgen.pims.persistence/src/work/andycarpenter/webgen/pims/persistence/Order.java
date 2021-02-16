@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.persistence;
 
 import org.eclipse.emf.ecore.EObject;
-
 import work.andycarpenter.webgen.pims.expression.Variable;
 
 /**

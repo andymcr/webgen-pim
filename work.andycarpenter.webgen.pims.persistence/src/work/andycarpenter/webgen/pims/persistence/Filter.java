@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.persistence;
 
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
-
 import work.andycarpenter.webgen.pims.expression.Predicate;
 
 /**

@@ -8,13 +8,9 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import work.andycarpenter.webgen.pims.base.BasePackage;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-
 import work.andycarpenter.webgen.pims.persistence.Asc;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationKey;
