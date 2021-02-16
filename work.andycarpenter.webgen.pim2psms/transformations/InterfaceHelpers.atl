@@ -34,15 +34,15 @@ helper context Website!SingletonUnit def: findRepositoriesUsed() : Sequence(ORM!
 		endif;
 
 helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
-	= self.servicesUsed->collect(s | s.findService())
-		->union(self.actionServices()->collect(s | s.findService()))
+	= self.actionServices()->collect(s | s.findService())
 		->asSet()
 		->asSequence()->sortedBy(s | s.name);
 
 helper context Website!DynamicUnit def: actionServices() : Sequence(Website!Service)
-	= if self.oclIsKindOf(Website!InlineActionContainer) then
+	= if self.oclIsKindOf(Website!ActionContainer) then
 			self.actions
-				->select(a | a.oclIsTypeOf(Website!FeatureSupportAction))
+				->select(a | a.oclIsKindOf(Website!OperationAction))
+				->select(a | not a.operation.oclIsUndefined())
 				->collect(a | a.operation.definedBy)
 		else
 			Sequence{}
@@ -59,15 +59,6 @@ helper context Website!Badge def: badgeClass() : String
 		else
 			OclUndefined
 		endif endif endif;
-
-helper context Website!DeleteAction def: confirmMessage() : String
-	= if not self.confirmMessage.oclIsUndefined() and self.confirmMessage.trim() <> '' then
-				self.confirmMessage.trim()
-			else if not self.displayLabel.oclIsUndefined() and self.displayLabel.trim() <> '' then
-				self.displayLabel.trim().concat('?')
-			else
-				self.name.createLabel().concat('?')
-			endif endif;
 
 helper context Website!Feature def: defaultDisplayValue() : String
 	= if self.defaultDisplayValue.trim() <> '' then
@@ -448,6 +439,24 @@ helper context Website!CardsUnit def: cardClass() : String
 			OclUndefined
 		endif endif;
 
+helper context Website!CardsUnit def: rowClass() : String
+	= if self.rowClass.trim() <> '' then
+			self.rowClass.trim()
+		else if thisModule.findWebsiteUI().defaultRowClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultRowClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: columnClass() : String
+	= if self.columnClass.trim() <> '' then
+			self.columnClass.trim()
+		else if thisModule.findWebsiteUI().defaultColumnClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultColumnClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
 helper context Website!CardsUnit def: cardHeaderClass() : String
 	= if self.cardHeaderClass.trim() <> '' then
 			self.cardHeaderClass.trim()
@@ -475,7 +484,7 @@ helper context Website!CardsUnit def: cardFooterClass() : String
 			OclUndefined
 		endif endif;
 
-helper context Website!InlineActionContainer def: actionNavigationClass() : String
+helper context Website!ActionContainer def: actionNavigationClass() : String
 	= if self.actionNavigationClass.trim() <> '' then
 			self.actionNavigationClass.trim()
 		else if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
@@ -484,7 +493,7 @@ helper context Website!InlineActionContainer def: actionNavigationClass() : Stri
 			OclUndefined
 		endif endif;
 
-helper context Website!InlineAction def: anchorClass() : String
+helper context Website!Action def: anchorClass() : String
 	= if self.anchorClass.trim() <> '' then
 			self.anchorClass.trim()
 		else if self.refImmediateComposite().defaultLocalAnchorClass.trim() <> '' then
