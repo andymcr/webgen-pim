@@ -658,29 +658,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.UnitSupportAction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnitSupportActionItemProvider unitSupportActionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.UnitSupportAction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnitSupportActionAdapter() {
-		if (unitSupportActionItemProvider == null) {
-			unitSupportActionItemProvider = new UnitSupportActionItemProvider(this);
-		}
-
-		return unitSupportActionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CreateUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1003,26 +980,72 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.InstanceOperationAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FeatureSupportActionItemProvider featureSupportActionItemProvider;
+	protected InstanceOperationActionItemProvider instanceOperationActionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.InstanceOperationAction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFeatureSupportActionAdapter() {
-		if (featureSupportActionItemProvider == null) {
-			featureSupportActionItemProvider = new FeatureSupportActionItemProvider(this);
+	public Adapter createInstanceOperationActionAdapter() {
+		if (instanceOperationActionItemProvider == null) {
+			instanceOperationActionItemProvider = new InstanceOperationActionItemProvider(this);
 		}
 
-		return featureSupportActionItemProvider;
+		return instanceOperationActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ContainerOperationAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContainerOperationActionItemProvider containerOperationActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ContainerOperationAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createContainerOperationActionAdapter() {
+		if (containerOperationActionItemProvider == null) {
+			containerOperationActionItemProvider = new ContainerOperationActionItemProvider(this);
+		}
+
+		return containerOperationActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.GeneralOperationAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GeneralOperationActionItemProvider generalOperationActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.GeneralOperationAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGeneralOperationActionAdapter() {
+		if (generalOperationActionItemProvider == null) {
+			generalOperationActionItemProvider = new GeneralOperationActionItemProvider(this);
+		}
+
+		return generalOperationActionItemProvider;
 	}
 
 	/**

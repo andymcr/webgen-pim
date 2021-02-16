@@ -8,9 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.base.DataType;
-
 import work.andycarpenter.webgen.pims.persistence.DataTypeAttribute;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 

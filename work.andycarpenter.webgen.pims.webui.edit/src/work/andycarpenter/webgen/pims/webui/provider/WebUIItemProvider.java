@@ -68,6 +68,8 @@ public class WebUIItemProvider
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
+			addDefaultRowClassPropertyDescriptor(object);
+			addDefaultColumnClassPropertyDescriptor(object);
 			addDefaultCardClassPropertyDescriptor(object);
 			addDefaultCardHeaderClassPropertyDescriptor(object);
 			addDefaultCardBodyClassPropertyDescriptor(object);
@@ -195,6 +197,50 @@ public class WebUIItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Row Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultRowClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultRowClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultRowClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_ROW_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Column Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultColumnClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultColumnClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultColumnClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_COLUMN_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -622,6 +668,8 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
+			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:

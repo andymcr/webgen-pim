@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface CardsUnit extends CollectionUnit, InlineActionContainer {
+public interface CardsUnit extends CollectionUnit {
 	/**
 	 * Returns the value of the '<em><b>Badges</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Badge}.
@@ -75,13 +75,13 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.
-	 * The default value is <code>"row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Row Class</em>' attribute.
 	 * @see #setRowClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_RowClass()
-	 * @model default="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3" ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getRowClass();
@@ -98,7 +98,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 
 	/**
 	 * Returns the value of the '<em><b>Column Class</b></em>' attribute.
-	 * The default value is <code>"col"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Column Class</em>' attribute isn't clear,
@@ -108,7 +108,7 @@ public interface CardsUnit extends CollectionUnit, InlineActionContainer {
 	 * @return the value of the '<em>Column Class</em>' attribute.
 	 * @see #setColumnClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ColumnClass()
-	 * @model default="col" ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getColumnClass();

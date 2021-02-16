@@ -26,13 +26,13 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
+import work.andycarpenter.webgen.pims.webui.Action;
+import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
-import work.andycarpenter.webgen.pims.webui.InlineAction;
-import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
 import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
@@ -181,9 +181,9 @@ public class ChildPathItemProvider
 				return path.getAssociation().getPartOf();
 			}
 
-		} else if (path.eContainer() instanceof InlineAction) {
+		} else if (path.eContainer() instanceof Action) {
 			final Set<Entity> entities
-				= getEntitiesX((InlineActionContainer) path.eContainer().eContainer());
+				= getEntitiesX((ActionContainer) path.eContainer().eContainer());
 			if (entities.contains(path.getAssociation().getPartOf())) {
 				return path.getAssociation().getTargetEntity();
 			} else{
@@ -213,7 +213,7 @@ public class ChildPathItemProvider
 		}
 	}
 
-	protected Set<Entity> getEntitiesX(final InlineActionContainer container) {
+	protected Set<Entity> getEntitiesX(final ActionContainer container) {
 		final Set<Entity> entities = new HashSet<Entity>();
 		if (container instanceof CollectionUnit) {
 			entities.addAll(((CollectionUnit) container).getContentType());
@@ -247,7 +247,7 @@ public class ChildPathItemProvider
 			return getContentTypesX(unit);
 		}
 
-		final InlineActionContainer action = getActionContextX(expression);
+		final ActionContainer action = getActionContextX(expression);
 		if (action != null) {
 			return getEntitiesX(action);
 		}
@@ -296,11 +296,11 @@ public class ChildPathItemProvider
 		return null;
 	}
 
-	protected InlineActionContainer getActionContextX(final Object object) { 
+	protected ActionContainer getActionContextX(final Object object) { 
 	Object container = getContextX(object); 
  		while (container != null) { 
- 			if (container instanceof InlineActionContainer) { 
- 				return (InlineActionContainer) container; 
+ 			if (container instanceof ActionContainer) { 
+ 				return (ActionContainer) container; 
  			} 
  			container = getContextX(container); 
  		} 

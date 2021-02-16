@@ -13,7 +13,23 @@ uses PersistenceHelpers;
 rule WafModel {
 	from partialWaf : WAF!WafModel
 	to waf : WAF!WafModel (
-		pages <- partialWaf.pages,
+		pages <-
+			let security : Website!Security = thisModule.findWebsiteSecurity()
+			in partialWaf.pages
+				->union(
+					if security.authentication.oclIsUndefined() then
+						Sequence{}
+					else if security.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem) then
+						let authentication : Website!LocalAuthenticationSystem
+							= security.authentication.oclAsType(Website!LocalAuthenticationSystem)
+						in if authentication.authentication.oclIsUndefined() then
+								Sequence{thisModule.implicitManageAuthenticationsPage(authentication)}
+							else
+								Sequence{}
+							endif
+					else
+						Sequence{}
+					endif endif),
 		authentication <- thisModule.findWebsiteSecurity().authentication
 	)
 }
@@ -83,32 +99,99 @@ rule CasAuthentication {
 }
 
 
-helper context ORM!Feature def: isBooleanDataType() : Boolean
-	= if not self.oclIsTypeOf(ORM!SingletonElement) then
-			false
-		else
-			self.dataType.name = 'Boolean'
-		endif;
+unique lazy rule implicitManageAuthenticationsPage {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!Page (
+		name <- 'ManageAuthentications',
+		displayLabel <- 'Manage Authentications',
+		units <- Sequence{authentications, edit},
+		uriElement <- 'authentications'
+	),
+	authentications : WAF!TextCardsUnit (
+		name <- 'authentications',
+		displayLabel <- 'Authentications',
+		requiresRole <- website.viewRole,
+		omitCaption <- false,
+		defaultPaginationSize <- 12,
+		nextPageLabel <- '>',
+		previousPageLabel <- '<',
+		contentType <- Sequence{thisModule.findOrmEntity('Authentication')},
+		elementTitle <- elementTitle,
+		displayFields <-
+			thisModule.findOrmEntity('Authentication').features
+				->select(f | f.name = 'email' or f.name = 'roles')
+				->collect(f | thisModule.implicitUnitAttribute(f)),
+		repositoriesUsed <- Sequence { thisModule.findRepository('Authentication') },
+		actions <- Sequence{editAction, deleteAction},
+		rowClass <- thisModule.findWebsiteUI().defaultRowClass,
+		columnClass <- thisModule.findWebsiteUI().defaultColumnClass,
+		cardClass <- thisModule.findWebsiteUI().defaultCardClass,
+		cardHeaderClass <- thisModule.findWebsiteUI().defaultCardHeaderClass,
+		cardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
+		cardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
+		fieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
+		actionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass
+	),
+	elementTitle : WAF!FeaturePathAttribute (
+		attribute <- 
+			thisModule.findOrmEntity('Authentication').features
+				->any(f | f.name = 'username')
+	),
+	editAction : WAF!SelectAction (
+		name <- 'edit',
+		displayLabel <- 'Edit',
+		target <- edit,
+		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
+	),
+	deleteAction : WAF!DeleteAction (
+		name <- 'delete',
+		displayLabel <- 'Delete',
+		requiresRole <- website.editRole,
+		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
+	),
+	edit : WAF!UpdateUnit (
+		name <- 'edit',
+		displayLabel <- 'Edit Authentication',
+		requiresRole <- website.editRole,
+		omitCaption <- false,
+		confirmLabel <- 'Save',
+		contentType <- thisModule.findOrmEntity('Authentication'),
+		displayFields <-
+			thisModule.findOrmEntity('Authentication').features
+				->select(f | f.name <> 'password')
+				->select(f | f.oclIsKindOf(ORM!Attribute))
+				->collect(f | 
+					if f.oclIsTypeOf(ORM!SingletonDate) then
+						thisModule.implicitUnitDateAttribute(f)
+					else
+						thisModule.implicitUnitAttribute(f)
+					endif),
+		repositoriesUsed <- Sequence { thisModule.findRepository('Authentication') },
+		captionClass <- 'unit_caption',
+		controlClass <- 'unit_control',
+		contentClass <- 'input_form'
+	)
+	do {
+		waf;
+	}
+}
 
 lazy abstract rule implicitUnitFeature {
 	from partialWaf : ORM!Feature
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
-		inputClass <-
-			if partialWaf.isBooleanDataType() then
-				'input_checkbox'
-			else
-				'input_attribute'
-			endif
+		title <- partialWaf.displayLabel,
+		truncate <- true,
+		collectionDisplayOption <- #PageDirection
 	)
 }
 
 -- @extends implicitUnitFeature
 lazy rule implicitUnitAttribute {
-	from partialWaf : ORM!SingletonElement
+	from partialWaf : ORM!Attribute
 	to waf : WAF!UnitAttribute (
 		attribute <- partialWaf,
-		obfuscateFormFields <- partialWaf.obfuscateFormFields
+		placeholder <- partialWaf.name.createLabel()
 	)
 	do {
 		waf;
@@ -117,7 +200,7 @@ lazy rule implicitUnitAttribute {
 
 -- @extends implicitUnitFeature
 lazy rule implicitUnitDateAttribute {
-	from partialWaf : ORM!SingletonDate
+	from partialWaf : ORM!Attribute
 	to waf : WAF!UnitAttribute (
 		attribute <- partialWaf,
 		dateFormat <- 'jS F Y G.i'

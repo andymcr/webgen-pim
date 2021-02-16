@@ -22,6 +22,8 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthenticationKey <em>Authentication Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getViewRole <em>View Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#isAllowRememberMe <em>Allow Remember Me</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#isAllowSelfRegistration <em>Allow Self Registration</em>}</li>
@@ -62,6 +64,46 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @ordered
 	 */
 	protected AuthenticationKeyTypes authenticationKey = AUTHENTICATION_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getViewRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VIEW_ROLE_EDEFAULT = "ROLE_SECURITY";
+
+	/**
+	 * The cached value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getViewRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected String viewRole = VIEW_ROLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEditRole() <em>Edit Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEditRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EDIT_ROLE_EDEFAULT = "ROLE_SECURITY";
+
+	/**
+	 * The cached value of the '{@link #getEditRole() <em>Edit Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEditRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected String editRole = EDIT_ROLE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isUseCaptcha() <em>Use Captcha</em>}' attribute.
@@ -271,6 +313,52 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getViewRole() {
+		return viewRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setViewRole(String newViewRole) {
+		String oldViewRole = viewRole;
+		viewRole = newViewRole;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE, oldViewRole, viewRole));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getEditRole() {
+		return editRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEditRole(String newEditRole) {
+		String oldEditRole = editRole;
+		editRole = newEditRole;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE, oldEditRole, editRole));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isUseCaptcha() {
 		return useCaptcha;
 	}
@@ -416,6 +504,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				return basicGetAuthentication();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				return getAuthenticationKey();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
+				return getViewRole();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
+				return getEditRole();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				return isUseCaptcha();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME:
@@ -445,6 +537,12 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey((AuthenticationKeyTypes)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
+				setViewRole((String)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
+				setEditRole((String)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				setUseCaptcha((Boolean)newValue);
@@ -482,6 +580,12 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey(AUTHENTICATION_KEY_EDEFAULT);
 				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
+				setViewRole(VIEW_ROLE_EDEFAULT);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
+				setEditRole(EDIT_ROLE_EDEFAULT);
+				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				setUseCaptcha(USE_CAPTCHA_EDEFAULT);
 				return;
@@ -516,6 +620,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				return authentication != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				return authenticationKey != AUTHENTICATION_KEY_EDEFAULT;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
+				return VIEW_ROLE_EDEFAULT == null ? viewRole != null : !VIEW_ROLE_EDEFAULT.equals(viewRole);
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
+				return EDIT_ROLE_EDEFAULT == null ? editRole != null : !EDIT_ROLE_EDEFAULT.equals(editRole);
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				return useCaptcha != USE_CAPTCHA_EDEFAULT;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME:
@@ -544,6 +652,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (authenticationKey: ");
 		result.append(authenticationKey);
+		result.append(", viewRole: ");
+		result.append(viewRole);
+		result.append(", editRole: ");
+		result.append(editRole);
 		result.append(", useCaptcha: ");
 		result.append(useCaptcha);
 		result.append(", allowRememberMe: ");

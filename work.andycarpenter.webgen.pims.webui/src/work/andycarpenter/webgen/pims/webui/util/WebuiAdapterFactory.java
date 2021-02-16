@@ -197,10 +197,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCaptchaFieldAdapter();
 			}
 			@Override
-			public Adapter caseUnitSupportAction(UnitSupportAction object) {
-				return createUnitSupportActionAdapter();
-			}
-			@Override
 			public Adapter caseSelectableUnit(SelectableUnit object) {
 				return createSelectableUnitAdapter();
 			}
@@ -281,12 +277,12 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createSearchUnitAdapter();
 			}
 			@Override
-			public Adapter caseInlineActionContainer(InlineActionContainer object) {
-				return createInlineActionContainerAdapter();
+			public Adapter caseActionContainer(ActionContainer object) {
+				return createActionContainerAdapter();
 			}
 			@Override
-			public Adapter caseInlineAction(InlineAction object) {
-				return createInlineActionAdapter();
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
 			}
 			@Override
 			public Adapter caseSelectAction(SelectAction object) {
@@ -297,8 +293,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createDeleteActionAdapter();
 			}
 			@Override
-			public Adapter caseFeatureSupportAction(FeatureSupportAction object) {
-				return createFeatureSupportActionAdapter();
+			public Adapter caseOperationAction(OperationAction object) {
+				return createOperationActionAdapter();
+			}
+			@Override
+			public Adapter caseInstanceOperationAction(InstanceOperationAction object) {
+				return createInstanceOperationActionAdapter();
+			}
+			@Override
+			public Adapter caseContainerOperationAction(ContainerOperationAction object) {
+				return createContainerOperationActionAdapter();
+			}
+			@Override
+			public Adapter caseGeneralOperationAction(GeneralOperationAction object) {
+				return createGeneralOperationActionAdapter();
 			}
 			@Override
 			public Adapter caseNamedElement(NamedElement object) {
@@ -807,20 +815,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.UnitSupportAction <em>Unit Support Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitSupportAction
-	 * @generated
-	 */
-	public Adapter createUnitSupportActionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.SelectableUnit <em>Selectable Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1031,6 +1025,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ActionContainer
+	 * @generated
+	 */
+	public Adapter createActionContainerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1087,30 +1095,72 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.InlineActionContainer <em>Inline Action Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.InlineActionContainer
+	 * @see work.andycarpenter.webgen.pims.webui.Action
 	 * @generated
 	 */
-	public Adapter createInlineActionContainerAdapter() {
+	public Adapter createActionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.InlineAction <em>Inline Action</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.OperationAction <em>Operation Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.InlineAction
+	 * @see work.andycarpenter.webgen.pims.webui.OperationAction
 	 * @generated
 	 */
-	public Adapter createInlineActionAdapter() {
+	public Adapter createOperationActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.InstanceOperationAction <em>Instance Operation Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceOperationAction
+	 * @generated
+	 */
+	public Adapter createInstanceOperationActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ContainerOperationAction <em>Container Operation Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ContainerOperationAction
+	 * @generated
+	 */
+	public Adapter createContainerOperationActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.GeneralOperationAction <em>General Operation Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.GeneralOperationAction
+	 * @generated
+	 */
+	public Adapter createGeneralOperationActionAdapter() {
 		return null;
 	}
 
@@ -1139,20 +1189,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDeleteActionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeatureSupportAction <em>Feature Support Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeatureSupportAction
-	 * @generated
-	 */
-	public Adapter createFeatureSupportActionAdapter() {
 		return null;
 	}
 

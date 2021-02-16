@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionValidChoice selectionMustBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\n\tpageDisplayedOn.webUI.services.services\n\t\t-&gt;select(s : service::Service | not s.serves.oclIsUndefined())\n\t\t-&gt;select(s : service::Service | contentType = s.serves)\n\t\t-&gt;collect(s : service::Service | s.selections)\n\t\t-&gt;includes(selection)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\n\tpageDisplayedOn.webUI.persistence.repositories\n\t\t-&gt;select(s : persistence::Repository | not s.serves.oclIsUndefined())\n\t\t-&gt;select(s : persistence::Repository | contentType = s.serves)\n\t\t-&gt;collect(s : persistence::Repository | s.selections)\n\t\t-&gt;includes(selection)'"
  * @generated
  */
 public interface DetailsUnit extends SingletonUnit, SelectableUnit {

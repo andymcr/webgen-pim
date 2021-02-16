@@ -26,22 +26,20 @@ helper context Website!Authentication def: getDataType(name : String) : ORM!Data
 				endif endif endif
 		endif;
 
-helper context Website!Authentication def: getPersistentType(name : String) : String
-	= let dataType : Website!DataType
-			= Website!DataType.allInstancesFrom('website')->any(d | d.name = name)
-		in if dataType.oclIsUndefined() then
-			if name = 'Email' then
-				'String'
-			else
-				name
-			endif
+helper context Website!Authentication def: getCollectionType(name : String) : ORM!DataType
+	= let collectionType : ORM!CollectionType = thisModule.findOrmCollectionType(name)
+		in if not collectionType.oclIsUndefined() then
+			collectionType
 		else
-			dataType.persistentType()
+			if name = 'String' then
+				thisModule.implicitStringCollectionType(self)
+			else
+				OclUndefined
+			endif
 		endif;
 
 helper context Website!Authentication def: getOrmType(name : String) : String
-	= let dataType : Website!DataType
-			= Website!DataType.allInstancesFrom('website')->any(d | d.name = name)
+	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
 		in if dataType.oclIsUndefined() then
 			if name = 'Email' then
 				'String'
@@ -52,30 +50,100 @@ helper context Website!Authentication def: getOrmType(name : String) : String
 			dataType.ormType()
 		endif;
 
+helper context Website!Authentication def: getPersistentType(name : String) : String
+	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
+		in if dataType.oclIsUndefined() then
+			if name = 'Email' then
+				'String'
+			else
+				name
+			endif
+		else
+			dataType.persistentType()
+		endif;
+
+
 rule OrmModel {
 	from partialOrm : ORM!OrmModel
 	to orm : ORM!OrmModel (
 		dataTypes <-
-			let website : Website!WebGenModel = thisModule.findWebGenModel()
+			let security : Website!Security = thisModule.findWebsiteSecurity()
 			in partialOrm.dataTypes
 				->union(
-					if thisModule.findOrmDataType('Boolean').oclIsUndefined() then
-						Sequence{thisModule.implicitBooleanDataType(website)}
+					if security.authentication.oclIsUndefined() then
+						Sequence{}
+					else if security.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem) then
+						let authentication : Website!LocalAuthenticationSystem
+							= security.authentication.oclAsType(Website!LocalAuthenticationSystem)
+						in if authentication.authentication.oclIsUndefined() then
+								if thisModule.findOrmDataType('Boolean').oclIsUndefined() then
+									Sequence{thisModule.implicitBooleanDataType(authentication)}
+								else
+									Sequence{}
+								endif
+							else
+								Sequence{}
+							endif
 					else
 						Sequence{}
-					endif)
+					endif endif)
 				->union(
-					if thisModule.findOrmDataType('String').oclIsUndefined() then
-						Sequence{thisModule.implicitStringDataType(website)}
+					if security.authentication.oclIsUndefined() then
+						Sequence{}
+					else if security.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem) then
+						let authentication : Website!LocalAuthenticationSystem
+							= security.authentication.oclAsType(Website!LocalAuthenticationSystem)
+						in if authentication.authentication.oclIsUndefined() then
+								if thisModule.findOrmDataType('Email').oclIsUndefined() then
+									Sequence{thisModule.implicitEmailDataType(authentication)}
+								else
+									Sequence{}
+								endif
+							else
+								Sequence{}
+							endif
 					else
 						Sequence{}
-					endif)
+					endif endif)
 				->union(
-					if thisModule.findOrmDataType('Email').oclIsUndefined() then
-						Sequence{thisModule.implicitEmailDataType(website)}
+					if security.authentication.oclIsUndefined() then
+						Sequence{}
+					else if security.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem) then
+						let authentication : Website!LocalAuthenticationSystem
+							= security.authentication.oclAsType(Website!LocalAuthenticationSystem)
+						in if authentication.authentication.oclIsUndefined() then
+								if thisModule.findOrmDataType('String').oclIsUndefined() then
+									Sequence{thisModule.implicitStringDataType(authentication)}
+								else
+									Sequence{}
+								endif
+							else
+								Sequence{}
+							endif
 					else
 						Sequence{}
-					endif),
+					endif endif),
+		collectionTypes <-
+			let security : Website!Security = thisModule.findWebsiteSecurity()
+			in partialOrm.collectionTypes
+				->union(
+					if security.authentication.oclIsUndefined() then
+						Sequence{}
+					else if security.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem) then
+						let authentication : Website!LocalAuthenticationSystem
+							= security.authentication.oclAsType(Website!LocalAuthenticationSystem)
+						in if authentication.authentication.oclIsUndefined() then
+								if thisModule.findOrmCollectionType('String').oclIsUndefined() then
+									Sequence{thisModule.implicitStringCollectionType(authentication)}
+								else
+									Sequence{}
+								endif
+							else
+								Sequence{}
+							endif
+					else
+						Sequence{}
+					endif endif),
 		entities <-
 			let website : Website!WebGenModel = thisModule.findWebGenModel()
 			in let authentication : Website!Authentication
@@ -85,12 +153,11 @@ rule OrmModel {
 						website.security.authentication
 					endif
 			in partialOrm.entities
-				->union(if authentication.oclIsUndefined()
-							or website.websiteProperties.frameworkTechnology = #Symfony then
+				->union(if authentication.oclIsUndefined() then
 							Sequence{}
 						else if authentication.oclIsTypeOf(Website!LocalAuthenticationSystem)
 								and authentication.authentication.oclIsUndefined() then
-							Sequence{thisModule.implicitAuthenticationSystemEntity(authentication)}
+							Sequence{thisModule.implicitAuthenticationEntity(authentication)}
 						else
 							Sequence{}
 						endif endif)
@@ -116,7 +183,7 @@ rule OrmModel {
 }
 
 unique lazy rule implicitBooleanDataType {
-	from website: Website!WebGenModel
+	from website: Website!Authentication
 	to orm : ORM!DataType (
 		name <- 'Boolean',
 		displayLabel <- 'Boolean'
@@ -127,7 +194,7 @@ unique lazy rule implicitBooleanDataType {
 }
 
 unique lazy rule implicitEmailDataType {
-	from website: Website!WebGenModel
+	from website: Website!Authentication
 	to orm : ORM!DataType (
 		name <- 'Email',
 		displayLabel <- 'Email'
@@ -138,7 +205,7 @@ unique lazy rule implicitEmailDataType {
 }
 
 unique lazy rule implicitStringDataType {
-	from website: Website!WebGenModel
+	from website: Website!Authentication
 	to orm : ORM!DataType (
 		name <- 'String',
 		displayLabel <- 'String'
@@ -148,31 +215,54 @@ unique lazy rule implicitStringDataType {
 	}
 }
 
+unique lazy rule implicitStringCollectionType {
+	from website: Website!Authentication
+	to orm : ORM!CollectionType (
+		name <- 'String',
+		elementType <- website.getDataType('String'),
+		persistenceType <- 'String',
+		ormType <- website.getPersistentType('array')
+	)
+	do {
+		orm;
+	}
+}
 
-unique lazy rule implicitAuthenticationSystemEntity {
+
+unique lazy rule implicitAuthenticationEntity {
 	from website: Website!Authentication
 	to orm : ORM!Entity (
 		name <- 'Authentication',
 		tableName <- 'authentications',
 		autoKeyName <- 'id',
+		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
 		displayLabel <- 'Authentication',
 		features <- Sequence{username, usernameCanonical, email, emailCanonical,
-				password, salt, enabled, locked, expired, expiresAt, confirmationToken,
+				password, enabled, locked, expired, expiresAt, confirmationToken,
 				passwordRequestedAt, passwordChangedAt, credentialsExpired,
 				credentialsExpireAt, roles, lastLogin, lastIp}
 			->union(
-				if website.allowRememberMe then
+				if website.allowRememberMe and false then
 					Sequence{thisModule.implicitAutoLoginOpposite(website)}
 				else
 					Sequence{}
-				endif)
+				endif),
+		labels <- Sequence{label}
+	),
+	label : ORM!ModelLabel (
+		name <- 'default',
+		format <- '%s',
+		features <- Sequence{labelFeature}
+	),
+	labelFeature : ORM!ModelLabelAttribute (
+		attribute <- email
 	),
 	username : ORM!SingletonElement (
 		name <- 'username',
 		displayLabel <- 'Username',
 		dataType <- website.getDataType('String'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- true,
 		columnName <- 'username',
 		persistentType <- website.getPersistentType('String'),
@@ -182,7 +272,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'usernameCanonical',
 		displayLabel <- 'Username (Canonical)',
 		dataType <- website.getDataType('String'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- true,
 		columnName <- 'username_canonical',
 		persistentType <- website.getPersistentType('String'),
@@ -192,7 +282,8 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'email',
 		displayLabel <- 'Email',
 		dataType <- website.getDataType('Email'),
-		required <- true,
+		cardinality <- #Required,
+		primaryKey <- true,
 		"unique" <- true,
 		caseInsensitive <- true,
 		columnName <- 'email',
@@ -203,7 +294,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'emailCanonical',
 		displayLabel <- 'Email (Canonical)',
 		dataType <- website.getDataType('Email'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- true,
 		caseInsensitive <- true,
 		columnName <- 'email_canonical',
@@ -214,22 +305,11 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'password',
 		displayLabel <- 'Password',
 		dataType <- website.getDataType('String'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- false,
 		obfuscateFormFields <- true,
 		encrypt <- true,
 		columnName <- 'password',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
-	),
-	salt : ORM!SingletonElement (
-		name <- 'salt',
-		displayLabel <- 'SALT',
-		dataType <- website.getDataType('String'),
-		required <- true,
-		"unique" <- false,
-		obfuscateFormFields <- true,
-		columnName <- 'salt',
 		persistentType <- website.getPersistentType('String'),
 		ormType <- website.getOrmType('String')
 	),
@@ -238,50 +318,50 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		displayLabel <- 'Enabled',
 		dataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'enabled',
 		defaultValue <- enabledDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
-	enabledDefault : ORM!IntegerLiteral (
-		value <- 1
+	enabledDefault : ORM!BooleanLiteral (
+		value <- true
 	),
 	locked : ORM!SingletonElement (
 		name <- 'localed',
 		displayLabel <- 'Locked',
 		dataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'locked',
 		defaultValue <- lockedDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
-	lockedDefault : ORM!IntegerLiteral (
-		value <- 0
+	lockedDefault : ORM!BooleanLiteral (
+		value <- false
 	),
 	expired : ORM!SingletonElement (
 		name <- 'expired',
 		displayLabel <- 'Expired',
 		dataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'expired',
 		defaultValue <- expiredDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
-	expiredDefault : ORM!IntegerLiteral (
-		value <- 0
+	expiredDefault : ORM!BooleanLiteral (
+		value <- false
 	),
 	expiresAt : ORM!SingletonDate (
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
-		required <- false,
+		cardinality <- #Optional,
 		defaultValue <- lastLoginDefault,
 		"unique" <- false,
 		columnName <- 'expires_at',
@@ -292,7 +372,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'confirmationToken',
 		displayLabel <- 'Confirmation Token',
 		dataType <- website.getDataType('String'),
-		required <- false,
+		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'confirmation_token',
 		persistentType <- website.getPersistentType('String'),
@@ -301,7 +381,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 	passwordRequestedAt : ORM!SingletonDate (
 		name <- 'passwordRequestedAt',
 		displayLabel <- 'Password Requested At',
-		required <- false,
+		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'password_requested_at',
 		details <- #DateAndTime,
@@ -310,7 +390,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 	passwordChangedAt : ORM!SingletonDate (
 		name <- 'passwordChangedAt',
 		displayLabel <- 'Password Changed At',
-		required <- false,
+		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'password_changed_at',
 		details <- #DateAndTime,
@@ -320,7 +400,7 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'credentialsExpired',
 		displayLabel <- 'Credentials Expired',
 		dataType <- website.getDataType('Boolean'),
-		required <- false,
+		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'credentials_expired',
 		persistentType <- website.getPersistentType('Boolean'),
@@ -329,30 +409,26 @@ unique lazy rule implicitAuthenticationSystemEntity {
 	credentialsExpireAt : ORM!SingletonDate (
 		name <- 'credentialsExpireAt',
 		displayLabel <- 'Credentials Expire At',
-		required <- false,
+		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'credentials_expire_at',
 		details <- #DateAndTime,
 		ormType <- 'datetime'
 	),
-	roles : ORM!SingletonElement (
+	roles : ORM!CollectionElement (
 		name <- 'roles',
 		displayLabel <- 'Roles',
-		dataType <- website.getDataType('String'),
-		required <- true,
-		"unique" <- false,
+		singletonName <- 'role',
+		cardinality <- #Many,
 		columnName <- 'roles',
-		defaultValue <- roleDefault,
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
-	),
-	roleDefault : ORM!StringLiteral (
-		value <- '0.0.0.0'
+		collectionType <- website.getCollectionType('String'),
+		collectionOrmAllowAdd <- true,
+		collectionOrmAllowRemove <- true
 	),
 	lastLogin : ORM!SingletonDate (
 		name <- 'lastLogin',
 		displayLabel <- 'Last Login',
-		required <- true,
+		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'last_login',
 		details <- #DateAndTime,
@@ -366,8 +442,8 @@ unique lazy rule implicitAuthenticationSystemEntity {
 		name <- 'lastIp',
 		displayLabel <- 'lastIp',
 		dataType <- website.getDataType('String'),
-		required <- true,
-		"unique" <- true,
+		cardinality <- #Required,
+		"unique" <- false,
 		columnName <- 'last_ip',
 		defaultValue <- lastIpDefault,
 		persistentType <- website.getPersistentType('String'),

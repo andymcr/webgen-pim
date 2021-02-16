@@ -38,7 +38,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL atMostOneSelectAction='actions-&gt;select(a | a.oclIsKindOf(SelectAction))-&gt;size() &lt; 2' noDeleteActions='actions-&gt;select(a | a.oclIsKindOf(DeleteAction))-&gt;isEmpty()'"
  * @generated
  */
-public interface UnitFeature extends UnitField, InlineActionContainer {
+public interface UnitFeature extends UnitField, ActionContainer {
 	/**
 	 * Returns the value of the '<em><b>Display Label</b></em>' attribute.
 	 * The default value is <code>""</code>.

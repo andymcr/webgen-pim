@@ -49,6 +49,10 @@
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationKey" lowerBound="1"
         eType="#//AuthenticationKeyTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="ROLE_SECURITY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="ROLE_SECURITY"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>

@@ -17,7 +17,6 @@ rule Website {
 		dataTypes <- website.dataTypes,
 		entities <- website.entities,
 		collectionTypes <- website.entities
-			->select(c | c.oclIsTypeOf(Website!Entity))
 			->collect(e | e.features)->flatten()
 			->select(f | not f.oclIsKindOf(Website!DateAttribute))
 			->select(f | f.cardinality = #Many)
@@ -129,6 +128,7 @@ lazy rule CollectionType {
 lazy rule InverseCollectionType {
 	from website: Website!Feature
 	to orm : ORM!CollectionType (
+		name <- 'InverseCollection'.concat(website.partOf.name),
 		elementType <- website.partOf,
 		collectionType <- website.inverseCollectionType()
 	)

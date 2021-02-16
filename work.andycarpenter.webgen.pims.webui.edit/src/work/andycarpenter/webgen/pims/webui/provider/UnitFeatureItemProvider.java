@@ -91,9 +91,9 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InlineActionContainer_actionNavigationClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_actionNavigationClass_feature", "_UI_InlineActionContainer_type"),
-				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
+				 getString("_UI_ActionContainer_actionNavigationClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_actionNavigationClass_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -113,9 +113,9 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InlineActionContainer_defaultLocalAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InlineActionContainer_defaultLocalAnchorClass_feature", "_UI_InlineActionContainer_type"),
-				 WebuiPackage.Literals.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
+				 getString("_UI_ActionContainer_defaultLocalAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_defaultLocalAnchorClass_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -444,7 +444,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS);
+			childrenFeatures.add(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS);
 			childrenFeatures.add(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE);
 			childrenFeatures.add(WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN);
 		}
@@ -531,18 +531,28 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createSelectAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createDeleteAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createFeatureSupportAction()));
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createInstanceOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createContainerOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createGeneralOperationAction()));
 
 		newChildDescriptors.add
 			(createChildParameter

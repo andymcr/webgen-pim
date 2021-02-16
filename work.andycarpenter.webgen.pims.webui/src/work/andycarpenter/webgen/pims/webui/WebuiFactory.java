@@ -238,15 +238,6 @@ public interface WebuiFactory extends EFactory {
 	CaptchaField createCaptchaField();
 
 	/**
-	 * Returns a new object of class '<em>Unit Support Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unit Support Action</em>'.
-	 * @generated
-	 */
-	UnitSupportAction createUnitSupportAction();
-
-	/**
 	 * Returns a new object of class '<em>Create Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -373,13 +364,31 @@ public interface WebuiFactory extends EFactory {
 	DeleteAction createDeleteAction();
 
 	/**
-	 * Returns a new object of class '<em>Feature Support Action</em>'.
+	 * Returns a new object of class '<em>Instance Operation Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Support Action</em>'.
+	 * @return a new object of class '<em>Instance Operation Action</em>'.
 	 * @generated
 	 */
-	FeatureSupportAction createFeatureSupportAction();
+	InstanceOperationAction createInstanceOperationAction();
+
+	/**
+	 * Returns a new object of class '<em>Container Operation Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Container Operation Action</em>'.
+	 * @generated
+	 */
+	ContainerOperationAction createContainerOperationAction();
+
+	/**
+	 * Returns a new object of class '<em>General Operation Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>General Operation Action</em>'.
+	 * @generated
+	 */
+	GeneralOperationAction createGeneralOperationAction();
 
 	/**
 	 * Returns a new object of class '<em>Badge</em>'.

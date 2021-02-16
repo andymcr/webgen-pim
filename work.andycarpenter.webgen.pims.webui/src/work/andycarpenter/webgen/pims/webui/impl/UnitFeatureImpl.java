@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.expression.Expression;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
-import work.andycarpenter.webgen.pims.webui.InlineAction;
-import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
+import work.andycarpenter.webgen.pims.webui.Action;
+import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -61,7 +61,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InlineAction> actions;
+	protected EList<Action> actions;
 
 	/**
 	 * The default value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
@@ -428,9 +428,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public EList<InlineAction> getActions() {
+	public EList<Action> getActions() {
 		if (actions == null) {
-			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.UNIT_FEATURE__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
+			actions = new EObjectContainmentWithInverseEList<Action>(Action.class, this, WebuiPackage.UNIT_FEATURE__ACTIONS, WebuiPackage.ACTION__USED_BY);
 		}
 		return actions;
 	}
@@ -987,7 +987,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
-				getActions().addAll((Collection<? extends InlineAction>)newValue);
+				getActions().addAll((Collection<? extends Action>)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass((String)newValue);
@@ -1173,11 +1173,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
+		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
-				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
+				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
+				case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -1191,11 +1191,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
+		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
-				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
-				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
+				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
+				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
+				case WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}

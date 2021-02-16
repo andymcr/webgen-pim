@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
-import work.andycarpenter.webgen.pims.webui.InlineAction;
-import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -27,9 +25,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getRowClass <em>Row Class</em>}</li>
@@ -44,56 +39,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsUnit {
-	/**
-	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InlineAction> actions;
-
-	/**
-	 * The default value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActionNavigationClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ACTION_NAVIGATION_CLASS_EDEFAULT = " ";
-
-	/**
-	 * The cached value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActionNavigationClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT = " ";
-
-	/**
-	 * The cached value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String defaultLocalAnchorClass = DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getBadges() <em>Badges</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -132,7 +77,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ROW_CLASS_EDEFAULT = "row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3";
+	protected static final String ROW_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
@@ -152,7 +97,7 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "col";
+	protected static final String COLUMN_CLASS_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
@@ -281,65 +226,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.CARDS_UNIT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<InlineAction> getActions() {
-		if (actions == null) {
-			actions = new EObjectContainmentWithInverseEList<InlineAction>(InlineAction.class, this, WebuiPackage.CARDS_UNIT__ACTIONS, WebuiPackage.INLINE_ACTION__USED_BY);
-		}
-		return actions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getActionNavigationClass() {
-		return actionNavigationClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setActionNavigationClass(String newActionNavigationClass) {
-		String oldActionNavigationClass = actionNavigationClass;
-		actionNavigationClass = newActionNavigationClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDefaultLocalAnchorClass() {
-		return defaultLocalAnchorClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultLocalAnchorClass(String newDefaultLocalAnchorClass) {
-		String oldDefaultLocalAnchorClass = defaultLocalAnchorClass;
-		defaultLocalAnchorClass = newDefaultLocalAnchorClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS, oldDefaultLocalAnchorClass, defaultLocalAnchorClass));
 	}
 
 	/**
@@ -548,8 +434,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActions()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBadges()).basicAdd(otherEnd, msgs);
 		}
@@ -564,8 +448,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return ((InternalEList<?>)getBadges()).basicRemove(otherEnd, msgs);
 		}
@@ -580,12 +462,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				return getActions();
-			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
-				return getActionNavigationClass();
-			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return getDefaultLocalAnchorClass();
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return getBadges();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
@@ -617,16 +493,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				getActions().clear();
-				getActions().addAll((Collection<? extends InlineAction>)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
-				setActionNavigationClass((String)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass((String)newValue);
-				return;
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
 				getBadges().addAll((Collection<? extends Badge>)newValue);
@@ -667,15 +533,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				getActions().clear();
-				return;
-			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
-				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				getBadges().clear();
 				return;
@@ -715,12 +572,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT__ACTIONS:
-				return actions != null && !actions.isEmpty();
-			case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS:
-				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
-			case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.CARDS_UNIT__BADGES:
 				return badges != null && !badges.isEmpty();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
@@ -749,51 +600,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.CARDS_UNIT__ACTIONS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS;
-				case WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == InlineActionContainer.class) {
-			switch (baseFeatureID) {
-				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTIONS: return WebuiPackage.CARDS_UNIT__ACTIONS;
-				case WebuiPackage.INLINE_ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.CARDS_UNIT__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.INLINE_ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.CARDS_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (actionNavigationClass: ");
-		result.append(actionNavigationClass);
-		result.append(", defaultLocalAnchorClass: ");
-		result.append(defaultLocalAnchorClass);
-		result.append(", overlaySingleSelectAction: ");
+		result.append(" (overlaySingleSelectAction: ");
 		result.append(overlaySingleSelectAction);
 		result.append(", rowClass: ");
 		result.append(rowClass);

@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -20,9 +19,10 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.service.Service;
 
+import work.andycarpenter.webgen.pims.webui.Action;
+import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.UnitField;
-import work.andycarpenter.webgen.pims.webui.UnitSupportAction;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -33,12 +33,14 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getMessageWhenHidden <em>Message When Hidden</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getSupportActions <em>Support Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeaderClass <em>Header Class</em>}</li>
@@ -52,6 +54,56 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class DynamicUnitImpl extends ContentUnitImpl implements DynamicUnit {
+	/**
+	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Action> actions;
+
+	/**
+	 * The default value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_NAVIGATION_CLASS_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getActionNavigationClass() <em>Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultLocalAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultLocalAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultLocalAnchorClass = DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT;
+
 	/**
 	 * The cached setting delegate for the '{@link #getContentTypes() <em>Content Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -111,16 +163,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected String messageWhenHidden = MESSAGE_WHEN_HIDDEN_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSupportActions() <em>Support Actions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSupportActions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<UnitSupportAction> supportActions;
 
 	/**
 	 * The default value of the '{@link #getHeader() <em>Header</em>}' attribute.
@@ -306,6 +348,65 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EList<Action> getActions() {
+		if (actions == null) {
+			actions = new EObjectContainmentWithInverseEList<Action>(Action.class, this, WebuiPackage.DYNAMIC_UNIT__ACTIONS, WebuiPackage.ACTION__USED_BY);
+		}
+		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getActionNavigationClass() {
+		return actionNavigationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setActionNavigationClass(String newActionNavigationClass) {
+		String oldActionNavigationClass = actionNavigationClass;
+		actionNavigationClass = newActionNavigationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultLocalAnchorClass() {
+		return defaultLocalAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultLocalAnchorClass(String newDefaultLocalAnchorClass) {
+		String oldDefaultLocalAnchorClass = defaultLocalAnchorClass;
+		defaultLocalAnchorClass = newDefaultLocalAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS, oldDefaultLocalAnchorClass, defaultLocalAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Entity> getContentTypes() {
@@ -404,19 +505,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		messageWhenHidden = newMessageWhenHidden;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN, oldMessageWhenHidden, messageWhenHidden));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<UnitSupportAction> getSupportActions() {
-		if (supportActions == null) {
-			supportActions = new EObjectContainmentEList<UnitSupportAction>(UnitSupportAction.class, this, WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS);
-		}
-		return supportActions;
 	}
 
 	/**
@@ -612,6 +700,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActions()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDisplayFields()).basicAdd(otherEnd, msgs);
 		}
@@ -626,12 +716,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return ((InternalEList<?>)getDisplayFields()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				return basicSetHideWhen(null, msgs);
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
-				return ((InternalEList<?>)getSupportActions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -644,6 +734,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				return getActions();
+			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+				return getActionNavigationClass();
+			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				return getDefaultLocalAnchorClass();
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
 				return getContentTypes();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -654,8 +750,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getHideWhen();
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 				return getMessageWhenHidden();
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
-				return getSupportActions();
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 				return getHeader();
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
@@ -685,6 +779,16 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				getActions().clear();
+				getActions().addAll((Collection<? extends Action>)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				setDefaultLocalAnchorClass((String)newValue);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				getDisplayFields().addAll((Collection<? extends UnitField>)newValue);
@@ -698,10 +802,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 				setMessageWhenHidden((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
-				getSupportActions().clear();
-				getSupportActions().addAll((Collection<? extends UnitSupportAction>)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 				setHeader((String)newValue);
@@ -739,6 +839,15 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				getActions().clear();
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				return;
@@ -750,9 +859,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 				setMessageWhenHidden(MESSAGE_WHEN_HIDDEN_EDEFAULT);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
-				getSupportActions().clear();
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 				setHeader(HEADER_EDEFAULT);
@@ -790,6 +896,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+				return actions != null && !actions.isEmpty();
+			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
+			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
+				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
 				return CONTENT_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -800,8 +912,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return hideWhen != null;
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 				return MESSAGE_WHEN_HIDDEN_EDEFAULT == null ? messageWhenHidden != null : !MESSAGE_WHEN_HIDDEN_EDEFAULT.equals(messageWhenHidden);
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
-				return supportActions != null && !supportActions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 				return HEADER_EDEFAULT == null ? header != null : !HEADER_EDEFAULT.equals(header);
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
@@ -828,11 +938,51 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ActionContainer.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.DYNAMIC_UNIT__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
+				case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
+				case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ActionContainer.class) {
+			switch (baseFeatureID) {
+				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.DYNAMIC_UNIT__ACTIONS;
+				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
+				case WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (messageWhenHidden: ");
+		result.append(" (actionNavigationClass: ");
+		result.append(actionNavigationClass);
+		result.append(", defaultLocalAnchorClass: ");
+		result.append(defaultLocalAnchorClass);
+		result.append(", messageWhenHidden: ");
 		result.append(messageWhenHidden);
 		result.append(", header: ");
 		result.append(header);

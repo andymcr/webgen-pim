@@ -183,12 +183,12 @@ public class TransformUsingEmftVm {
 				ormModelName, ormModel, ormInputModels, null);
 			executeRefiningPass("PersistenceImplicitStatic", ormModelName,
 				ormModel, ormInputModels, null);
-			executeRefiningPass("PersistenceImplicitRepositories", ormModelName,
-					ormModel, ormInputModels, null);
 			executeRefiningPass("PersistenceImplicitAuthentication",
 				ormModelName, ormModel, ormInputModels, null);
 			executeRefiningPass("PersistenceImplicitAuthentication2",
 				ormModelName, ormModel, ormInputModels, null);
+			executeRefiningPass("PersistenceImplicitRepositories", ormModelName,
+					ormModel, ormInputModels, null);
 			ormModel.getResource().save(Collections.emptyMap());
 	
 			final Map<String, Model> serviceInputModels = new HashMap<String, Model>();

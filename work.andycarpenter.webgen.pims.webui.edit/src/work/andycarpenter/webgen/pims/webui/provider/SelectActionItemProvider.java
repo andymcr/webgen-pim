@@ -19,10 +19,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
+import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.InlineActionContainer;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.SelectAction;
 import work.andycarpenter.webgen.pims.webui.SelectableUnit;
@@ -37,7 +36,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SelectActionItemProvider extends InlineActionItemProvider {
+public class SelectActionItemProvider extends ActionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -203,8 +202,31 @@ public class SelectActionItemProvider extends InlineActionItemProvider {
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 	}
 
-	protected WebUI getWebUI(final InlineActionContainer container) {
-		if (container instanceof CollectionUnit) {
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == WebuiPackage.Literals.ACTION__DISPLAY_WHEN ||
+			childFeature == WebuiPackage.Literals.ACTION__ENABLE_WHEN;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
+	}
+
+	protected WebUI getWebUI(final ActionContainer container) {
+		if (container instanceof DynamicUnit) {
 			return ((DynamicUnit) container).getPageDisplayedOn().getWebUI();
 		} else if (container instanceof UnitFeature) {
 			return ((UnitFeature) container).getDisplayedOn().getPageDisplayedOn().getWebUI();

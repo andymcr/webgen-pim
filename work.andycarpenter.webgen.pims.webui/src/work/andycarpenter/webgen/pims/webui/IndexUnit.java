@@ -19,7 +19,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface IndexUnit extends CollectionUnit, InlineActionContainer {
+public interface IndexUnit extends CollectionUnit {
 	/**
 	 * Returns the value of the '<em><b>Display Option</b></em>' attribute.
 	 * The default value is <code>"Grid"</code>.

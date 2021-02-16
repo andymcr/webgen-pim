@@ -21,7 +21,6 @@ import work.andycarpenter.webgen.pims.service.Service;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getMessageWhenHidden <em>Message When Hidden</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getSupportActions <em>Support Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeaderClass <em>Header Class</em>}</li>
@@ -38,7 +37,7 @@ import work.andycarpenter.webgen.pims.service.Service;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let features : Collection(persistence::Feature)\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t-&gt;select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t-&gt;forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)'"
  * @generated
  */
-public interface DynamicUnit extends ContentUnit {
+public interface DynamicUnit extends ContentUnit, ActionContainer {
 	/**
 	 * Returns the value of the '<em><b>Content Types</b></em>' reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
@@ -138,22 +137,6 @@ public interface DynamicUnit extends ContentUnit {
 	 * @generated
 	 */
 	void setMessageWhenHidden(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Support Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.UnitSupportAction}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Support Actions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Support Actions</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_SupportActions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<UnitSupportAction> getSupportActions();
 
 	/**
 	 * Returns the value of the '<em><b>Header</b></em>' attribute.

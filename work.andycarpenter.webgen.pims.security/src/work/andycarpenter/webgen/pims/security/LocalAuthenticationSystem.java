@@ -15,6 +15,8 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isAllowRememberMe <em>Allow Remember Me</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isAllowSelfRegistration <em>Allow Self Registration</em>}</li>
@@ -83,6 +85,52 @@ public interface LocalAuthenticationSystem extends Authentication {
 	 * @generated
 	 */
 	void setAuthenticationKey(AuthenticationKeyTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>View Role</b></em>' attribute.
+	 * The default value is <code>"ROLE_SECURITY"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>View Role</em>' attribute.
+	 * @see #setViewRole(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_ViewRole()
+	 * @model default="ROLE_SECURITY"
+	 * @generated
+	 */
+	String getViewRole();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>View Role</em>' attribute.
+	 * @see #getViewRole()
+	 * @generated
+	 */
+	void setViewRole(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Edit Role</b></em>' attribute.
+	 * The default value is <code>"ROLE_SECURITY"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Edit Role</em>' attribute.
+	 * @see #setEditRole(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_EditRole()
+	 * @model default="ROLE_SECURITY"
+	 * @generated
+	 */
+	String getEditRole();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Edit Role</em>' attribute.
+	 * @see #getEditRole()
+	 * @generated
+	 */
+	void setEditRole(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Use Captcha</b></em>' attribute.

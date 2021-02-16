@@ -96,7 +96,9 @@ helper def: findOrmDataType(name : String) : ORM!DataType
 	= ORM!DataType.allInstancesFrom('orm')->any(d | d.name = name);
 
 helper def: findOrmCollectionType(name : String) : ORM!CollectionType
-	= ORM!CollectionType.allInstancesFrom('orm')->any(c | c.elementType.name = name);
+	= ORM!CollectionType.allInstancesFrom('orm')
+		->select(c | not c.elementType.oclIsUndefined())
+		->any(c | c.elementType.name = name);
 
 helper context Website!Feature def: findOrmTargetEntity() : ORM!Entity
 	= thisModule.findOrmEntity(self.targetEntity.name);

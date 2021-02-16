@@ -100,7 +100,6 @@ abstract rule CollectionAttribute {
 rule SingletonElement {
 	from website : Website!DataTypeAttribute (website.cardinality <> #Many)
 	to orm : ORM!SingletonElement (
-		dataType <- thisModule.findOrmDataType(website.dataType.name),
 		persistentType <- 
 			if not website.persistentType.oclIsUndefined() and website.persistentType <> '' then
 				website.persistentType
@@ -113,6 +112,7 @@ rule SingletonElement {
 			else 
 				website.dataType.ormType()
 			endif,
+		dataType <- thisModule.findOrmDataType(website.dataType.name),
 		obfuscateFormFields <- website.obfuscateFormFields,
 		caseInsensitive <- website.caseInsensitive,
 		encrypt <- website.encrypt

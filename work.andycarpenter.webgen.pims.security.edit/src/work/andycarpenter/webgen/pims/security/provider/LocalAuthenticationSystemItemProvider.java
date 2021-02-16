@@ -47,6 +47,8 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 
 			addAuthenticationPropertyDescriptor(object);
 			addAuthenticationKeyPropertyDescriptor(object);
+			addViewRolePropertyDescriptor(object);
+			addEditRolePropertyDescriptor(object);
 			addUseCaptchaPropertyDescriptor(object);
 			addAllowRememberMePropertyDescriptor(object);
 			addAllowSelfRegistrationPropertyDescriptor(object);
@@ -98,6 +100,50 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the View Role feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addViewRolePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LocalAuthenticationSystem_viewRole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_viewRole_feature", "_UI_LocalAuthenticationSystem_type"),
+				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Edit Role feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEditRolePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LocalAuthenticationSystem_editRole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_editRole_feature", "_UI_LocalAuthenticationSystem_type"),
+				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -272,6 +318,8 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 
 		switch (notification.getFeatureID(LocalAuthenticationSystem.class)) {
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_SELF_REGISTRATION:

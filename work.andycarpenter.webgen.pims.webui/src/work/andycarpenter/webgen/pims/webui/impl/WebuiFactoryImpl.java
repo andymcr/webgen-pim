@@ -81,7 +81,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
 			case WebuiPackage.DATE_FIELD: return createDateField();
 			case WebuiPackage.CAPTCHA_FIELD: return createCaptchaField();
-			case WebuiPackage.UNIT_SUPPORT_ACTION: return createUnitSupportAction();
 			case WebuiPackage.CREATE_UNIT: return createCreateUnit();
 			case WebuiPackage.CREATE_UPDATE_UNIT: return createCreateUpdateUnit();
 			case WebuiPackage.UPDATE_UNIT: return createUpdateUnit();
@@ -97,7 +96,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.SEARCH_UNIT: return createSearchUnit();
 			case WebuiPackage.SELECT_ACTION: return createSelectAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
-			case WebuiPackage.FEATURE_SUPPORT_ACTION: return createFeatureSupportAction();
+			case WebuiPackage.INSTANCE_OPERATION_ACTION: return createInstanceOperationAction();
+			case WebuiPackage.CONTAINER_OPERATION_ACTION: return createContainerOperationAction();
+			case WebuiPackage.GENERAL_OPERATION_ACTION: return createGeneralOperationAction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -423,17 +424,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public UnitSupportAction createUnitSupportAction() {
-		UnitSupportActionImpl unitSupportAction = new UnitSupportActionImpl();
-		return unitSupportAction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CreateUnit createCreateUnit() {
 		CreateUnitImpl createUnit = new CreateUnitImpl();
 		return createUnit;
@@ -588,9 +578,31 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public FeatureSupportAction createFeatureSupportAction() {
-		FeatureSupportActionImpl featureSupportAction = new FeatureSupportActionImpl();
-		return featureSupportAction;
+	public InstanceOperationAction createInstanceOperationAction() {
+		InstanceOperationActionImpl instanceOperationAction = new InstanceOperationActionImpl();
+		return instanceOperationAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ContainerOperationAction createContainerOperationAction() {
+		ContainerOperationActionImpl containerOperationAction = new ContainerOperationActionImpl();
+		return containerOperationAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GeneralOperationAction createGeneralOperationAction() {
+		GeneralOperationActionImpl generalOperationAction = new GeneralOperationActionImpl();
+		return generalOperationAction;
 	}
 
 	/**

@@ -156,8 +156,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateDateField((DateField)value, diagnostics, context);
 			case WebuiPackage.CAPTCHA_FIELD:
 				return validateCaptchaField((CaptchaField)value, diagnostics, context);
-			case WebuiPackage.UNIT_SUPPORT_ACTION:
-				return validateUnitSupportAction((UnitSupportAction)value, diagnostics, context);
 			case WebuiPackage.SELECTABLE_UNIT:
 				return validateSelectableUnit((SelectableUnit)value, diagnostics, context);
 			case WebuiPackage.SINGLETON_UNIT:
@@ -198,16 +196,22 @@ public class WebuiValidator extends EObjectValidator {
 				return validateControlUnit((ControlUnit)value, diagnostics, context);
 			case WebuiPackage.SEARCH_UNIT:
 				return validateSearchUnit((SearchUnit)value, diagnostics, context);
-			case WebuiPackage.INLINE_ACTION_CONTAINER:
-				return validateInlineActionContainer((InlineActionContainer)value, diagnostics, context);
-			case WebuiPackage.INLINE_ACTION:
-				return validateInlineAction((InlineAction)value, diagnostics, context);
+			case WebuiPackage.ACTION_CONTAINER:
+				return validateActionContainer((ActionContainer)value, diagnostics, context);
+			case WebuiPackage.ACTION:
+				return validateAction((Action)value, diagnostics, context);
 			case WebuiPackage.SELECT_ACTION:
 				return validateSelectAction((SelectAction)value, diagnostics, context);
 			case WebuiPackage.DELETE_ACTION:
 				return validateDeleteAction((DeleteAction)value, diagnostics, context);
-			case WebuiPackage.FEATURE_SUPPORT_ACTION:
-				return validateFeatureSupportAction((FeatureSupportAction)value, diagnostics, context);
+			case WebuiPackage.OPERATION_ACTION:
+				return validateOperationAction((OperationAction)value, diagnostics, context);
+			case WebuiPackage.INSTANCE_OPERATION_ACTION:
+				return validateInstanceOperationAction((InstanceOperationAction)value, diagnostics, context);
+			case WebuiPackage.CONTAINER_OPERATION_ACTION:
+				return validateContainerOperationAction((ContainerOperationAction)value, diagnostics, context);
+			case WebuiPackage.GENERAL_OPERATION_ACTION:
+				return validateGeneralOperationAction((GeneralOperationAction)value, diagnostics, context);
 			case WebuiPackage.INPUT_TECHNOLOGIES:
 				return validateInputTechnologies((InputTechnologies)value, diagnostics, context);
 			case WebuiPackage.AJAX_TECHNOLOGIES:
@@ -555,6 +559,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dynamicUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dynamicUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dynamicUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(dynamicUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(dynamicUnit, diagnostics, context);
 		return result;
 	}
@@ -635,7 +640,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(unitFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(unitFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(unitFeature, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(unitFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(unitFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitFeature, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitFeature, diagnostics, context);
 		return result;
@@ -714,7 +719,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(unitElement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(unitElement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitElement, diagnostics, context);
 		return result;
@@ -735,7 +740,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(unitAssociation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(unitAssociation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitAssociation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitAssociation_optionsValidChoice(unitAssociation, diagnostics, context);
@@ -750,8 +755,8 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\n" +
 		"\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n" +
-		"\t\t->select(r : Persistence::Repository | r.serves = targetEntity)\n" +
-		"\t\t->collect(r : Persistence::Repository | r.selections)\n" +
+		"\t\t->select(r : persistence::Repository | r.serves = targetEntity)\n" +
+		"\t\t->collect(r : persistence::Repository | r.selections)\n" +
 		"\t\t->includes(options)";
 
 	/**
@@ -919,25 +924,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUnitSupportAction(UnitSupportAction unitSupportAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(unitSupportAction, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(unitSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(unitSupportAction, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateSelectableUnit(SelectableUnit selectableUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(selectableUnit, diagnostics, context);
 	}
@@ -958,6 +944,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(singletonUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(singletonUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(singletonUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(singletonUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(singletonUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(singletonUnit, diagnostics, context);
 		return result;
@@ -1013,6 +1000,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(collectionUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(collectionUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(collectionUnit, diagnostics, context);
@@ -1099,6 +1087,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(editUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(editUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(editUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(editUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(editUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(editUnit, diagnostics, context);
 		return result;
@@ -1120,6 +1109,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(createUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(createUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(createUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(createUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(createUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(createUnit, diagnostics, context);
 		return result;
@@ -1141,6 +1131,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(createUpdateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(createUpdateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(createUpdateUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(createUpdateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(createUpdateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(createUpdateUnit, diagnostics, context);
 		return result;
@@ -1162,6 +1153,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(updateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(updateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(updateUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(updateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(updateUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(updateUnit, diagnostics, context);
 		return result;
@@ -1183,6 +1175,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(mapUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(mapUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(mapUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(mapUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(mapUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(mapUnit, diagnostics, context);
 		return result;
@@ -1204,6 +1197,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(detailsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(detailsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDetailsUnit_selectionValidChoice(detailsUnit, diagnostics, context);
@@ -1218,10 +1212,10 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
-		"\tpageDisplayedOn.webUI.services.services\n" +
-		"\t\t->select(s : service::Service | not s.serves.oclIsUndefined())\n" +
-		"\t\t->select(s : service::Service | contentType = s.serves)\n" +
-		"\t\t->collect(s : service::Service | s.selections)\n" +
+		"\tpageDisplayedOn.webUI.persistence.repositories\n" +
+		"\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n" +
+		"\t\t->select(s : persistence::Repository | contentType = s.serves)\n" +
+		"\t\t->collect(s : persistence::Repository | s.selections)\n" +
 		"\t\t->includes(selection)";
 
 	/**
@@ -1291,10 +1285,10 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(indexUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(indexUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(indexUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1314,10 +1308,10 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(cardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(cardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(cardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(cardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(cardsUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(cardsUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1337,10 +1331,10 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(textCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(textCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(textCardsUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(textCardsUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1360,10 +1354,10 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dateCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dateCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dateCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(dateCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(dateCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(dateCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(dateCardsUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(dateCardsUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1383,6 +1377,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(controlUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(controlUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(controlUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(controlUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(controlUnit, diagnostics, context);
 		return result;
 	}
@@ -1403,8 +1398,57 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(searchUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(searchUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(searchUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(searchUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(searchUnit, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateActionContainer(ActionContainer actionContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(actionContainer, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(actionContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(actionContainer, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the atMostOneDeleteAction constraint of '<em>Action Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ACTION_CONTAINER__AT_MOST_ONE_DELETE_ACTION__EEXPRESSION = "actions->select(a | a.oclIsKindOf(DeleteAction))->size() < 2";
+
+	/**
+	 * Validates the atMostOneDeleteAction constraint of '<em>Action Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateActionContainer_atMostOneDeleteAction(ActionContainer actionContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebuiPackage.Literals.ACTION_CONTAINER,
+				 actionContainer,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "atMostOneDeleteAction",
+				 ACTION_CONTAINER__AT_MOST_ONE_DELETE_ACTION__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -1423,6 +1467,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(imageUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(imageUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(imageUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(imageUnit, diagnostics, context);
@@ -1445,10 +1490,10 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageCardsUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(imageCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(imageCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(imageCardsUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(imageCardsUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(imageCardsUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1468,6 +1513,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(sliderUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(sliderUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(sliderUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(sliderUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(sliderUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(sliderUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(sliderUnit, diagnostics, context);
@@ -1490,6 +1536,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(galleryUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(galleryUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(galleryUnit, diagnostics, context);
@@ -1501,47 +1548,37 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateInlineActionContainer(InlineActionContainer inlineActionContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(inlineActionContainer, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(inlineActionContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInlineActionContainer_atMostOneDeleteAction(inlineActionContainer, diagnostics, context);
+	public boolean validateAction(Action action, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(action, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(action, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(action, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the atMostOneDeleteAction constraint of '<em>Inline Action Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String INLINE_ACTION_CONTAINER__AT_MOST_ONE_DELETE_ACTION__EEXPRESSION = "actions->select(a | a.oclIsKindOf(DeleteAction))->size() < 2";
-
-	/**
-	 * Validates the atMostOneDeleteAction constraint of '<em>Inline Action Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateInlineActionContainer_atMostOneDeleteAction(InlineActionContainer inlineActionContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(WebuiPackage.Literals.INLINE_ACTION_CONTAINER,
-				 inlineActionContainer,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "atMostOneDeleteAction",
-				 INLINE_ACTION_CONTAINER__AT_MOST_ONE_DELETE_ACTION__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
+	public boolean validateOperationAction(OperationAction operationAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(operationAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(operationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(operationAction, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1549,17 +1586,55 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateInlineAction(InlineAction inlineAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(inlineAction, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(inlineAction, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(inlineAction, diagnostics, context);
+	public boolean validateInstanceOperationAction(InstanceOperationAction instanceOperationAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(instanceOperationAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(instanceOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(instanceOperationAction, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateContainerOperationAction(ContainerOperationAction containerOperationAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(containerOperationAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(containerOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(containerOperationAction, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGeneralOperationAction(GeneralOperationAction generalOperationAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(generalOperationAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(generalOperationAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(generalOperationAction, diagnostics, context);
 		return result;
 	}
 
@@ -1636,25 +1711,6 @@ public class WebuiValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeatureSupportAction(FeatureSupportAction featureSupportAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(featureSupportAction, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(featureSupportAction, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(featureSupportAction, diagnostics, context);
-		return result;
 	}
 
 	/**

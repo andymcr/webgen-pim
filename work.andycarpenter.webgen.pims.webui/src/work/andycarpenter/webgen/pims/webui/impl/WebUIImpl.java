@@ -40,6 +40,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultRowClass <em>Default Row Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultColumnClass <em>Default Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardClass <em>Default Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardHeaderClass <em>Default Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
@@ -160,6 +162,46 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultRowClass() <em>Default Row Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultRowClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ROW_CLASS_EDEFAULT = "row";
+
+	/**
+	 * The cached value of the '{@link #getDefaultRowClass() <em>Default Row Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultRowClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultRowClass = DEFAULT_ROW_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultColumnClass() <em>Default Column Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultColumnClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_COLUMN_CLASS_EDEFAULT = "col";
+
+	/**
+	 * The cached value of the '{@link #getDefaultColumnClass() <em>Default Column Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultColumnClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultColumnClass = DEFAULT_COLUMN_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultCardClass() <em>Default Card Class</em>}' attribute.
@@ -681,6 +723,52 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultRowClass() {
+		return defaultRowClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultRowClass(String newDefaultRowClass) {
+		String oldDefaultRowClass = defaultRowClass;
+		defaultRowClass = newDefaultRowClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS, oldDefaultRowClass, defaultRowClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultColumnClass() {
+		return defaultColumnClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultColumnClass(String newDefaultColumnClass) {
+		String oldDefaultColumnClass = defaultColumnClass;
+		defaultColumnClass = newDefaultColumnClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS, oldDefaultColumnClass, defaultColumnClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultCardClass() {
 		return defaultCardClass;
 	}
@@ -1098,6 +1186,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
+				return getDefaultRowClass();
+			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
+				return getDefaultColumnClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 				return getDefaultCardClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
@@ -1165,6 +1257,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
+				setDefaultRowClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
+				setDefaultColumnClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 				setDefaultCardClass((String)newValue);
@@ -1247,6 +1345,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
+				setDefaultRowClass(DEFAULT_ROW_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
+				setDefaultColumnClass(DEFAULT_COLUMN_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 				setDefaultCardClass(DEFAULT_CARD_CLASS_EDEFAULT);
 				return;
@@ -1321,6 +1425,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
+				return DEFAULT_ROW_CLASS_EDEFAULT == null ? defaultRowClass != null : !DEFAULT_ROW_CLASS_EDEFAULT.equals(defaultRowClass);
+			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
+				return DEFAULT_COLUMN_CLASS_EDEFAULT == null ? defaultColumnClass != null : !DEFAULT_COLUMN_CLASS_EDEFAULT.equals(defaultColumnClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
 				return DEFAULT_CARD_CLASS_EDEFAULT == null ? defaultCardClass != null : !DEFAULT_CARD_CLASS_EDEFAULT.equals(defaultCardClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_HEADER_CLASS:
@@ -1373,6 +1481,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultRowClass: ");
+		result.append(defaultRowClass);
+		result.append(", defaultColumnClass: ");
+		result.append(defaultColumnClass);
 		result.append(", defaultCardClass: ");
 		result.append(defaultCardClass);
 		result.append(", defaultCardHeaderClass: ");

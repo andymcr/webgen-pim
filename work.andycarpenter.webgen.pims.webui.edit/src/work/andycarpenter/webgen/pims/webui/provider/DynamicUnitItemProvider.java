@@ -62,6 +62,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActionNavigationClassPropertyDescriptor(object);
+			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addContentTypesPropertyDescriptor(object);
 			addServicesUsedPropertyDescriptor(object);
 			addMessageWhenHiddenPropertyDescriptor(object);
@@ -75,6 +77,50 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addUnitFieldValueClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Action Navigation Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActionNavigationClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActionContainer_actionNavigationClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_actionNavigationClass_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Local Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultLocalAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActionContainer_defaultLocalAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_defaultLocalAnchorClass_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -331,9 +377,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS);
 			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS);
 			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN);
-			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__SUPPORT_ACTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -378,6 +424,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DynamicUnit.class)) {
+			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
@@ -389,9 +437,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
-			case WebuiPackage.DYNAMIC_UNIT__SUPPORT_ACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -408,6 +456,31 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createSelectAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createDeleteAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createInstanceOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createContainerOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createGeneralOperationAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -483,11 +556,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.DYNAMIC_UNIT__SUPPORT_ACTIONS,
-				 WebuiFactory.eINSTANCE.createUnitSupportAction()));
 	}
 
 	protected List<Entity> getContentType(final DynamicUnit unit) {
