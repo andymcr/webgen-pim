@@ -13,12 +13,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.service.Service;
-
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -38,7 +35,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeader <em>Header</em>}</li>
@@ -123,16 +119,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected EList<UnitField> displayFields;
-
-	/**
-	 * The cached value of the '{@link #getServicesUsed() <em>Services Used</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServicesUsed()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Service> servicesUsed;
 
 	/**
 	 * The cached value of the '{@link #getHideWhen() <em>Hide When</em>}' containment reference.
@@ -424,19 +410,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			displayFields = new EObjectContainmentWithInverseEList<UnitField>(UnitField.class, this, WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS, WebuiPackage.UNIT_FIELD__DISPLAYED_ON);
 		}
 		return displayFields;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Service> getServicesUsed() {
-		if (servicesUsed == null) {
-			servicesUsed = new EObjectResolvingEList<Service>(Service.class, this, WebuiPackage.DYNAMIC_UNIT__SERVICES_USED);
-		}
-		return servicesUsed;
 	}
 
 	/**
@@ -744,8 +717,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getContentTypes();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return getDisplayFields();
-			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:
-				return getServicesUsed();
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				return getHideWhen();
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
@@ -792,10 +763,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				getDisplayFields().addAll((Collection<? extends UnitField>)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:
-				getServicesUsed().clear();
-				getServicesUsed().addAll((Collection<? extends Service>)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				setHideWhen((Predicate)newValue);
@@ -851,9 +818,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:
-				getServicesUsed().clear();
-				return;
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				setHideWhen((Predicate)null);
 				return;
@@ -906,8 +870,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return CONTENT_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return displayFields != null && !displayFields.isEmpty();
-			case WebuiPackage.DYNAMIC_UNIT__SERVICES_USED:
-				return servicesUsed != null && !servicesUsed.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				return hideWhen != null;
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:

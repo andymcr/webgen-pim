@@ -5,7 +5,6 @@ package work.andycarpenter.webgen.pims.webui;
 import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.service.Service;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +17,6 @@ import work.andycarpenter.webgen.pims.service.Service;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getServicesUsed <em>Services Used</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeader <em>Header</em>}</li>
@@ -68,22 +66,6 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	EList<UnitField> getDisplayFields();
-
-	/**
-	 * Returns the value of the '<em><b>Services Used</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.service.Service}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Services Used</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services Used</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ServicesUsed()
-	 * @model
-	 * @generated
-	 */
-	EList<Service> getServicesUsed();
 
 	/**
 	 * Returns the value of the '<em><b>Hide When</b></em>' containment reference.
