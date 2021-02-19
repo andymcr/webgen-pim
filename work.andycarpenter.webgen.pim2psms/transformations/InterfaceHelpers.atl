@@ -33,6 +33,11 @@ helper context Website!SingletonUnit def: findRepositoriesUsed() : Sequence(ORM!
 			Sequence{ self.contentType.repository.findRepository() }
 		endif;
 
+helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
+	= self.actionServices()->collect(s | s.findService())
+		->asSet()
+		->asSequence()->sortedBy(s | s.name);
+
 helper context Website!DynamicUnit def: actionServices() : Sequence(Website!Service)
 	= if self.oclIsKindOf(Website!ActionContainer) then
 			self.actions

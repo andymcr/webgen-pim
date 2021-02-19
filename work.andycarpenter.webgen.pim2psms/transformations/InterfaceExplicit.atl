@@ -260,6 +260,7 @@ abstract rule DynamicUnit {
 	to waf : WAF!DynamicUnit (
 		displayFields <- website.displayFields,
 		repositoriesUsed <- website.findRepositoriesUsed(),
+		servicesUsed <- website.findServicesUsed(),
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden(),
 		actions <- website.actions,

@@ -241,14 +241,15 @@ unique lazy rule implicitAuthenticationEntity {
 		features <- Sequence{username, usernameCanonical, email, emailCanonical,
 				password, enabled, locked, expired, expiresAt, confirmationToken,
 				passwordRequestedAt, passwordChangedAt, credentialsExpired,
-				credentialsExpireAt, roles, lastLogin, lastIp}
+				credentialsExpireAt, roles, lastLogin, lastIp, userDetails}
 			->union(
 				if website.allowRememberMe and false then
 					Sequence{thisModule.implicitAutoLoginOpposite(website)}
 				else
 					Sequence{}
 				endif),
-		labels <- Sequence{label}
+		labels <- Sequence{label},
+		implementsUserInterface <- true
 	),
 	label : ORM!ModelLabel (
 		name <- 'default',
@@ -283,7 +284,6 @@ unique lazy rule implicitAuthenticationEntity {
 		displayLabel <- 'Email',
 		dataType <- website.getDataType('Email'),
 		cardinality <- #Required,
-		primaryKey <- true,
 		"unique" <- true,
 		caseInsensitive <- true,
 		columnName <- 'email',
@@ -451,6 +451,30 @@ unique lazy rule implicitAuthenticationEntity {
 	),
 	lastIpDefault : ORM!StringLiteral (
 		value <- '0.0.0.0'
+	),
+	userDetails : ORM!SingletonAssociation (
+		name <- 'userDetails',
+		displayLabel <- 'User details',
+		owningEnd <- true,
+		visible <- true,
+		associationRelationship <- #OneToOne,
+		columnName <- website.user.name.createAssociationColumnName(),
+		opposite <- thisModule.implicitUserAuthentication(website)
+	)
+	do {
+		orm;
+	}
+}
+
+lazy rule implicitUserAuthentication {
+	from website: Website!Authentication
+	to orm : ORM!SingletonAssociation (
+		partOf <- thisModule.findOrmEntity(website.user.name),
+		name <- 'authentication',
+		displayLabel <- 'Authentication',
+		owningEnd <- false,
+		visible <- false,
+		associationRelationship <- #OneToOne
 	)
 	do {
 		orm;
