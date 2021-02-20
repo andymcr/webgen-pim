@@ -24,6 +24,16 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass <em>Default Style Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass <em>Default Section Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass <em>Default Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass <em>Default Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass <em>Default Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultColumnClass <em>Default Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}</li>
@@ -33,7 +43,6 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
@@ -212,6 +221,213 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultDateTimeFormat(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Style Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Style Class</em>' attribute.
+	 * @see #setDefaultStyleClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultStyleClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultStyleClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass <em>Default Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Style Class</em>' attribute.
+	 * @see #getDefaultStyleClass()
+	 * @generated
+	 */
+	void setDefaultStyleClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Section Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Section Class</em>' attribute.
+	 * @see #setDefaultSectionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSectionClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultSectionClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass <em>Default Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Section Class</em>' attribute.
+	 * @see #getDefaultSectionClass()
+	 * @generated
+	 */
+	void setDefaultSectionClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Caption Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Caption Class</em>' attribute.
+	 * @see #setDefaultCaptionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCaptionClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultCaptionClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass <em>Default Caption Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Caption Class</em>' attribute.
+	 * @see #getDefaultCaptionClass()
+	 * @generated
+	 */
+	void setDefaultCaptionClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Content Class</em>' attribute.
+	 * @see #setDefaultContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass <em>Default Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Content Class</em>' attribute.
+	 * @see #getDefaultContentClass()
+	 * @generated
+	 */
+	void setDefaultContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Details Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Details Content Class</em>' attribute.
+	 * @see #setDefaultDetailsContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultDetailsContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultDetailsContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Details Content Class</em>' attribute.
+	 * @see #getDefaultDetailsContentClass()
+	 * @generated
+	 */
+	void setDefaultDetailsContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Index Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Index Content Class</em>' attribute.
+	 * @see #setDefaultIndexContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultIndexContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultIndexContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Index Content Class</em>' attribute.
+	 * @see #getDefaultIndexContentClass()
+	 * @generated
+	 */
+	void setDefaultIndexContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Cards Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Cards Content Class</em>' attribute.
+	 * @see #setDefaultCardsContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardsContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultCardsContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Cards Content Class</em>' attribute.
+	 * @see #getDefaultCardsContentClass()
+	 * @generated
+	 */
+	void setDefaultCardsContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Edit Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Edit Content Class</em>' attribute.
+	 * @see #setDefaultEditContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultEditContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultEditContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Edit Content Class</em>' attribute.
+	 * @see #getDefaultEditContentClass()
+	 * @generated
+	 */
+	void setDefaultEditContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Static Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Static Content Class</em>' attribute.
+	 * @see #setDefaultStaticContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultStaticContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultStaticContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Static Content Class</em>' attribute.
+	 * @see #getDefaultStaticContentClass()
+	 * @generated
+	 */
+	void setDefaultStaticContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Row Class</b></em>' attribute.

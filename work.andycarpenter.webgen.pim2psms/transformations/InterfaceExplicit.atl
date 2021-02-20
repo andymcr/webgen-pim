@@ -178,7 +178,7 @@ rule Page {
 				website.parentPage.targetPage
 			endif,
 		units <- website.units,
-		styleClass <- website.styleClass.replaceAll(',', ' ')
+		styleClass <- website.styleClass()
 	)
 }
 
@@ -215,25 +215,10 @@ abstract rule ContentUnit {
 		requiresRole <- website.requiresRole.trim(),
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
-		sectionClass <-
-			if website.sectionClass.trim() <> '' then
-				website.sectiontClass.trim()
-			else
-				OclUndefined
-			endif,
+		sectionClass <- website.sectionClass(),
 		omitCaption <- website.omitCaption,
-		captionClass <-
-			if website.captionClass.trim() <> '' then
-				website.captionClass.trim()
-			else
-				OclUndefined
-			endif,
-		contentClass <-
-			if website.contentClass.trim() <> '' then
-				website.contentClass.trim()
-			else
-				OclUndefined
-			endif
+		captionClass <- website.captionClass(),
+		contentClass <- website.contentClass()
 	)
 }
 

@@ -81,27 +81,6 @@ helper context Website!UnitElement def: defaultDisplayValue() : String
 			self.attribute.defaultDisplayValue()
 		endif;
 
-helper context Website!Feature def: displayClass() : Boolean
-	= if self.displayClass.trim() <> '' then
-			self.displayClass.replaceAll(',', ' ').trim()
-		else
-			OclUndefined
-		endif;
-
-helper context Website!UnitAssociation def: displayClass() : Boolean
-	= if self.displayClass.trim() <> '' then
-			self.displayClass.replaceAll(',', ' ').trim()
-		else
-			self.association.displayClass()
-		endif;
-
-helper context Website!UnitElement def: displayClass() : Boolean
-	= if self.displayClass.trim() <> '' then
-			self.displayClass.replaceAll(',', ' ').trim()
-		else
-			self.attribute.displayClass()
-		endif;
-
 helper context Website!Feature def: displayLabel() : String
 	= if self.displayLabel.trim() <> '' then
 			self.displayLabel.trim()
@@ -220,6 +199,195 @@ helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
 helper context Website!UnitLabel def: hasCustomisedDisplayLabel() : Boolean
 	= false;
 
+
+helper context Website!Page def: styleClass() : String
+	= if self.styleClass.trim() <> '' then
+			self.styleClass.trim()
+		else if thisModule.findWebsiteUI().defaultStyleClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultStyleClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!ContentUnit def: sectionClass() : String
+	= if self.sectionClass.trim() <> '' then
+			self.sectionClass.trim()
+		else if thisModule.findWebsiteUI().defaultSectionClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultSectionClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!ContentUnit def: captionClass() : String
+	= if self.captionClass.trim() <> '' then
+			self.captionClass.trim()
+		else if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCaptionClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!DetailsUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+		else if thisModule.findWebsiteUI().defaultDetailsContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultDetailsContentnClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!IndexUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+		else if thisModule.findWebsiteUI().defaultIndexContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultIndexContentClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!CardsUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardsContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardsContentnClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!EditUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+		else if thisModule.findWebsiteUI().defaultEditContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultEditContentClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!SliderUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+--		else if thisModule.findWebsiteUI().defaultSliderContentClass.trim() <> '' then
+--			thisModule.findWebsiteUI().defaultSliderContentClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif;-- endif;
+
+helper context Website!GalleryUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+--		else if thisModule.findWebsiteUI().defaultGalleryContentClass.trim() <> '' then
+--			thisModule.findWebsiteUI().defaultGalleryContentClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif;-- endif;
+
+		helper context Website!StaticUnit def: contentClass() : String
+	= if self.contentClass.trim() <> '' then
+			self.contentClass.trim()
+		else if thisModule.findWebsiteUI().defaultStaticContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultStaticContentClass
+		else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultContentnClass
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!DynamicUnit def: fieldListClass() : String
+	= if self.fieldListClass.trim() <> '' then
+			self.fieldListClass.trim()
+		else if thisModule.findWebsiteUI().defaultFieldListClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultFieldListClass
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: rowClass() : String
+	= if self.rowClass.trim() <> '' then
+			self.rowClass.trim()
+		else if thisModule.findWebsiteUI().defaultRowClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultRowClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: columnClass() : String
+	= if self.columnClass.trim() <> '' then
+			self.columnClass.trim()
+		else if thisModule.findWebsiteUI().defaultColumnClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultColumnClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: cardClass() : String
+	= if self.cardClass.trim() <> '' then
+			self.cardClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: cardHeaderClass() : String
+	= if self.cardHeaderClass.trim() <> '' then
+			self.cardHeaderClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardHeaderClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardHeaderClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: cardBodyClass() : String
+	= if self.cardBodyClass.trim() <> '' then
+			self.cardBodyClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardBodyClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardBodyClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!CardsUnit def: cardFooterClass() : String
+	= if self.cardFooterClass.trim() <> '' then
+			self.cardFooterClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardFooterClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardFooterClass.trim()
+		else
+			OclUndefined
+		endif endif;
+
+helper context Website!Feature def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			OclUndefined
+		endif;
+
+helper context Website!UnitAssociation def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			self.association.displayClass()
+		endif;
+
+helper context Website!UnitElement def: displayClass() : Boolean
+	= if self.displayClass.trim() <> '' then
+			self.displayClass.replaceAll(',', ' ').trim()
+		else
+			self.attribute.displayClass()
+		endif;
+
 helper context Website!Feature def: headerClass() : String
 	= if self.headerClass.trim() <> '' then
 			self.headerClass.replaceAll(',', ' ').trim()
@@ -261,15 +429,6 @@ helper context Website!UnitElement def: footerClass() : String
 		else
 			self.attribute.footerClass()
 		endif;
-
-helper context Website!DynamicUnit def: fieldListClass() : String
-	= if self.fieldListClass.trim() <> '' then
-			self.fieldListClass.trim()
-		else if thisModule.findWebsiteUI().defaultFieldListClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultFieldListClass
-		else
-			OclUndefined
-		endif endif;
 
 helper context Website!UnitFeature def: fieldLabelClass() : String
 	= if self.fieldLabelClass.trim() <> '' then
@@ -429,60 +588,6 @@ helper context Website!DynamicUnit def: messageWhenHidden() : String
 		else
 			OclUndefined
 		endif;
-
-helper context Website!CardsUnit def: cardClass() : String
-	= if self.cardClass.trim() <> '' then
-			self.cardClass.trim()
-		else if thisModule.findWebsiteUI().defaultCardClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultCardClass.trim()
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!CardsUnit def: rowClass() : String
-	= if self.rowClass.trim() <> '' then
-			self.rowClass.trim()
-		else if thisModule.findWebsiteUI().defaultRowClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultRowClass.trim()
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!CardsUnit def: columnClass() : String
-	= if self.columnClass.trim() <> '' then
-			self.columnClass.trim()
-		else if thisModule.findWebsiteUI().defaultColumnClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultColumnClass.trim()
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!CardsUnit def: cardHeaderClass() : String
-	= if self.cardHeaderClass.trim() <> '' then
-			self.cardHeaderClass.trim()
-		else if thisModule.findWebsiteUI().defaultCardHeaderClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultCardHeaderClass.trim()
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!CardsUnit def: cardBodyClass() : String
-	= if self.cardBodyClass.trim() <> '' then
-			self.cardBodyClass.trim()
-		else if thisModule.findWebsiteUI().defaultCardBodyClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultCardBodyClass.trim()
-		else
-			OclUndefined
-		endif endif;
-
-helper context Website!CardsUnit def: cardFooterClass() : String
-	= if self.cardFooterClass.trim() <> '' then
-			self.cardFooterClass.trim()
-		else if thisModule.findWebsiteUI().defaultCardFooterClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultCardFooterClass.trim()
-		else
-			OclUndefined
-		endif endif;
 
 helper context Website!ActionContainer def: actionNavigationClass() : String
 	= if self.actionNavigationClass.trim() <> '' then

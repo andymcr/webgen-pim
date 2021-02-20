@@ -68,6 +68,16 @@ public class WebUIItemProvider
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
+			addDefaultStyleClassPropertyDescriptor(object);
+			addDefaultSectionClassPropertyDescriptor(object);
+			addDefaultCaptionClassPropertyDescriptor(object);
+			addDefaultContentClassPropertyDescriptor(object);
+			addDefaultDetailsContentClassPropertyDescriptor(object);
+			addDefaultIndexContentClassPropertyDescriptor(object);
+			addDefaultCardsContentClassPropertyDescriptor(object);
+			addDefaultEditContentClassPropertyDescriptor(object);
+			addDefaultStaticContentClassPropertyDescriptor(object);
+			addDefaultFieldListClassPropertyDescriptor(object);
 			addDefaultRowClassPropertyDescriptor(object);
 			addDefaultColumnClassPropertyDescriptor(object);
 			addDefaultCardClassPropertyDescriptor(object);
@@ -77,7 +87,6 @@ public class WebUIItemProvider
 			addDefaultBadgeClassPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
-			addDefaultFieldListClassPropertyDescriptor(object);
 			addDefaultFieldLabelClassPropertyDescriptor(object);
 			addDefaultFieldValueClassPropertyDescriptor(object);
 			addDefaultInputGroupClassPropertyDescriptor(object);
@@ -197,6 +206,204 @@ public class WebUIItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Style Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultStyleClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultStyleClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultStyleClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_STYLE_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Section Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSectionClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSectionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSectionClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SECTION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Caption Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCaptionClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCaptionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCaptionClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CAPTION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Details Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultDetailsContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultDetailsContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultDetailsContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Index Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultIndexContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultIndexContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cards Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardsContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardsContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardsContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Edit Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultEditContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultEditContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultEditContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Static Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultStaticContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultStaticContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultStaticContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -668,6 +875,16 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
+			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
@@ -677,7 +894,6 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:

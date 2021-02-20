@@ -40,6 +40,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStyleClass <em>Default Style Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSectionClass <em>Default Section Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCaptionClass <em>Default Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultContentClass <em>Default Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultEditContentClass <em>Default Edit Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticContentClass <em>Default Static Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultRowClass <em>Default Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultColumnClass <em>Default Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardClass <em>Default Card Class</em>}</li>
@@ -49,7 +59,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
@@ -162,6 +171,206 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultStyleClass() <em>Default Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_STYLE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultStyleClass() <em>Default Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultStyleClass = DEFAULT_STYLE_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSectionClass() <em>Default Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSectionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SECTION_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSectionClass() <em>Default Section Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSectionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSectionClass = DEFAULT_SECTION_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCaptionClass() <em>Default Caption Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCaptionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CAPTION_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCaptionClass() <em>Default Caption Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCaptionClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCaptionClass = DEFAULT_CAPTION_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultContentClass() <em>Default Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultContentClass() <em>Default Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultContentClass = DEFAULT_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultDetailsContentClass() <em>Default Details Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultDetailsContentClass() <em>Default Details Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultDetailsContentClass = DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultIndexContentClass() <em>Default Index Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultIndexContentClass() <em>Default Index Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultIndexContentClass = DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardsContentClass() <em>Default Cards Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardsContentClass() <em>Default Cards Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardsContentClass = DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultEditContentClass() <em>Default Edit Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultEditContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultEditContentClass() <em>Default Edit Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultEditContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultEditContentClass = DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultStaticContentClass() <em>Default Static Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultStaticContentClass() <em>Default Static Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultStaticContentClass = DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldListClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FIELD_LIST_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFieldListClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFieldListClass = DEFAULT_FIELD_LIST_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultRowClass() <em>Default Row Class</em>}' attribute.
@@ -342,26 +551,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultFieldListClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DEFAULT_FIELD_LIST_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getDefaultFieldListClass() <em>Default Field List Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultFieldListClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String defaultFieldListClass = DEFAULT_FIELD_LIST_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultFieldLabelClass() <em>Default Field Label Class</em>}' attribute.
@@ -715,6 +904,213 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		defaultDateTimeFormat = newDefaultDateTimeFormat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT, oldDefaultDateTimeFormat, defaultDateTimeFormat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultStyleClass() {
+		return defaultStyleClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultStyleClass(String newDefaultStyleClass) {
+		String oldDefaultStyleClass = defaultStyleClass;
+		defaultStyleClass = newDefaultStyleClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS, oldDefaultStyleClass, defaultStyleClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSectionClass() {
+		return defaultSectionClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSectionClass(String newDefaultSectionClass) {
+		String oldDefaultSectionClass = defaultSectionClass;
+		defaultSectionClass = newDefaultSectionClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS, oldDefaultSectionClass, defaultSectionClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCaptionClass() {
+		return defaultCaptionClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCaptionClass(String newDefaultCaptionClass) {
+		String oldDefaultCaptionClass = defaultCaptionClass;
+		defaultCaptionClass = newDefaultCaptionClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS, oldDefaultCaptionClass, defaultCaptionClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultContentClass() {
+		return defaultContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultContentClass(String newDefaultContentClass) {
+		String oldDefaultContentClass = defaultContentClass;
+		defaultContentClass = newDefaultContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS, oldDefaultContentClass, defaultContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultDetailsContentClass() {
+		return defaultDetailsContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultDetailsContentClass(String newDefaultDetailsContentClass) {
+		String oldDefaultDetailsContentClass = defaultDetailsContentClass;
+		defaultDetailsContentClass = newDefaultDetailsContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS, oldDefaultDetailsContentClass, defaultDetailsContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultIndexContentClass() {
+		return defaultIndexContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultIndexContentClass(String newDefaultIndexContentClass) {
+		String oldDefaultIndexContentClass = defaultIndexContentClass;
+		defaultIndexContentClass = newDefaultIndexContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS, oldDefaultIndexContentClass, defaultIndexContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCardsContentClass() {
+		return defaultCardsContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardsContentClass(String newDefaultCardsContentClass) {
+		String oldDefaultCardsContentClass = defaultCardsContentClass;
+		defaultCardsContentClass = newDefaultCardsContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS, oldDefaultCardsContentClass, defaultCardsContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultEditContentClass() {
+		return defaultEditContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultEditContentClass(String newDefaultEditContentClass) {
+		String oldDefaultEditContentClass = defaultEditContentClass;
+		defaultEditContentClass = newDefaultEditContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS, oldDefaultEditContentClass, defaultEditContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultStaticContentClass() {
+		return defaultStaticContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultStaticContentClass(String newDefaultStaticContentClass) {
+		String oldDefaultStaticContentClass = defaultStaticContentClass;
+		defaultStaticContentClass = newDefaultStaticContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS, oldDefaultStaticContentClass, defaultStaticContentClass));
 	}
 
 	/**
@@ -1186,6 +1582,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
+				return getDefaultStyleClass();
+			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
+				return getDefaultSectionClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
+				return getDefaultCaptionClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
+				return getDefaultContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
+				return getDefaultDetailsContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+				return getDefaultIndexContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
+				return getDefaultCardsContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+				return getDefaultEditContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
+				return getDefaultStaticContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				return getDefaultFieldListClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 				return getDefaultRowClass();
 			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
@@ -1204,8 +1620,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultActionNavigationClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return getDefaultAnchorClass();
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
-				return getDefaultFieldListClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				return getDefaultFieldLabelClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
@@ -1258,6 +1672,36 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
+				setDefaultStyleClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
+				setDefaultSectionClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
+				setDefaultCaptionClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
+				setDefaultContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
+				setDefaultDetailsContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+				setDefaultIndexContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
+				setDefaultCardsContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+				setDefaultEditContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
+				setDefaultStaticContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				setDefaultFieldListClass((String)newValue);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 				setDefaultRowClass((String)newValue);
 				return;
@@ -1284,9 +1728,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass((String)newValue);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
-				setDefaultFieldListClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				setDefaultFieldLabelClass((String)newValue);
@@ -1345,6 +1786,36 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
+				setDefaultStyleClass(DEFAULT_STYLE_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
+				setDefaultSectionClass(DEFAULT_SECTION_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
+				setDefaultCaptionClass(DEFAULT_CAPTION_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
+				setDefaultContentClass(DEFAULT_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
+				setDefaultDetailsContentClass(DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+				setDefaultIndexContentClass(DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
+				setDefaultCardsContentClass(DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+				setDefaultEditContentClass(DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
+				setDefaultStaticContentClass(DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				setDefaultFieldListClass(DEFAULT_FIELD_LIST_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 				setDefaultRowClass(DEFAULT_ROW_CLASS_EDEFAULT);
 				return;
@@ -1371,9 +1842,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
-				setDefaultFieldListClass(DEFAULT_FIELD_LIST_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				setDefaultFieldLabelClass(DEFAULT_FIELD_LABEL_CLASS_EDEFAULT);
@@ -1425,6 +1893,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
+				return DEFAULT_STYLE_CLASS_EDEFAULT == null ? defaultStyleClass != null : !DEFAULT_STYLE_CLASS_EDEFAULT.equals(defaultStyleClass);
+			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
+				return DEFAULT_SECTION_CLASS_EDEFAULT == null ? defaultSectionClass != null : !DEFAULT_SECTION_CLASS_EDEFAULT.equals(defaultSectionClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
+				return DEFAULT_CAPTION_CLASS_EDEFAULT == null ? defaultCaptionClass != null : !DEFAULT_CAPTION_CLASS_EDEFAULT.equals(defaultCaptionClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
+				return DEFAULT_CONTENT_CLASS_EDEFAULT == null ? defaultContentClass != null : !DEFAULT_CONTENT_CLASS_EDEFAULT.equals(defaultContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
+				return DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT == null ? defaultDetailsContentClass != null : !DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT.equals(defaultDetailsContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+				return DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT == null ? defaultIndexContentClass != null : !DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT.equals(defaultIndexContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
+				return DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT == null ? defaultCardsContentClass != null : !DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT.equals(defaultCardsContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+				return DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT == null ? defaultEditContentClass != null : !DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT.equals(defaultEditContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
+				return DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT == null ? defaultStaticContentClass != null : !DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT.equals(defaultStaticContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+				return DEFAULT_FIELD_LIST_CLASS_EDEFAULT == null ? defaultFieldListClass != null : !DEFAULT_FIELD_LIST_CLASS_EDEFAULT.equals(defaultFieldListClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 				return DEFAULT_ROW_CLASS_EDEFAULT == null ? defaultRowClass != null : !DEFAULT_ROW_CLASS_EDEFAULT.equals(defaultRowClass);
 			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
@@ -1443,8 +1931,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
-				return DEFAULT_FIELD_LIST_CLASS_EDEFAULT == null ? defaultFieldListClass != null : !DEFAULT_FIELD_LIST_CLASS_EDEFAULT.equals(defaultFieldListClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				return DEFAULT_FIELD_LABEL_CLASS_EDEFAULT == null ? defaultFieldLabelClass != null : !DEFAULT_FIELD_LABEL_CLASS_EDEFAULT.equals(defaultFieldLabelClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
@@ -1481,6 +1967,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultStyleClass: ");
+		result.append(defaultStyleClass);
+		result.append(", defaultSectionClass: ");
+		result.append(defaultSectionClass);
+		result.append(", defaultCaptionClass: ");
+		result.append(defaultCaptionClass);
+		result.append(", defaultContentClass: ");
+		result.append(defaultContentClass);
+		result.append(", defaultDetailsContentClass: ");
+		result.append(defaultDetailsContentClass);
+		result.append(", defaultIndexContentClass: ");
+		result.append(defaultIndexContentClass);
+		result.append(", defaultCardsContentClass: ");
+		result.append(defaultCardsContentClass);
+		result.append(", defaultEditContentClass: ");
+		result.append(defaultEditContentClass);
+		result.append(", defaultStaticContentClass: ");
+		result.append(defaultStaticContentClass);
+		result.append(", defaultFieldListClass: ");
+		result.append(defaultFieldListClass);
 		result.append(", defaultRowClass: ");
 		result.append(defaultRowClass);
 		result.append(", defaultColumnClass: ");
@@ -1499,8 +2005,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultActionNavigationClass);
 		result.append(", defaultAnchorClass: ");
 		result.append(defaultAnchorClass);
-		result.append(", defaultFieldListClass: ");
-		result.append(defaultFieldListClass);
 		result.append(", defaultFieldLabelClass: ");
 		result.append(defaultFieldLabelClass);
 		result.append(", defaultFieldValueClass: ");

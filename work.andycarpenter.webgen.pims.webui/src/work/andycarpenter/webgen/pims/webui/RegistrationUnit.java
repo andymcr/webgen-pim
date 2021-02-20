@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Registration Unit</b></em>'.
@@ -12,5 +14,5 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface RegistrationUnit extends DynamicUnit, work.andycarpenter.webgen.pims.security.SecurityUnit {
+public interface RegistrationUnit extends DynamicUnit, SecurityUnit {
 } // RegistrationUnit

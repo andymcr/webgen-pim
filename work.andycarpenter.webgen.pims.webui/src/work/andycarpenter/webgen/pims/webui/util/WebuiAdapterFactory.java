@@ -14,6 +14,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
 
 /**
@@ -349,7 +350,7 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseSecurityUnit(work.andycarpenter.webgen.pims.security.SecurityUnit object) {
+			public Adapter caseSecurityUnit(SecurityUnit object) {
 				return createSecurityUnitAdapter();
 			}
 			@Override

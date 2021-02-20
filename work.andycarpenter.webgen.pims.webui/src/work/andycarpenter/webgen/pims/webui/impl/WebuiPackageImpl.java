@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.image.ImagePackage;
 
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
+import work.andycarpenter.webgen.pims.security.SecurityPackage;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
 
 import work.andycarpenter.webgen.pims.webui.Action;
@@ -636,7 +637,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		ExpressionPackage.eINSTANCE.eClass();
 		ImagePackage.eINSTANCE.eClass();
 		PersistencePackage.eINSTANCE.eClass();
-		work.andycarpenter.webgen.pims.security.SecurityPackage.eINSTANCE.eClass();
+		SecurityPackage.eINSTANCE.eClass();
 		ServicePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -749,7 +750,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultRowClass() {
+	public EAttribute getWebUI_DefaultStyleClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -759,7 +760,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultColumnClass() {
+	public EAttribute getWebUI_DefaultSectionClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -769,7 +770,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultCardClass() {
+	public EAttribute getWebUI_DefaultCaptionClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -779,7 +780,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultCardHeaderClass() {
+	public EAttribute getWebUI_DefaultContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -789,7 +790,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultCardBodyClass() {
+	public EAttribute getWebUI_DefaultDetailsContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -799,7 +800,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultCardFooterClass() {
+	public EAttribute getWebUI_DefaultIndexContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -809,7 +810,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultBadgeClass() {
+	public EAttribute getWebUI_DefaultCardsContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -819,7 +820,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultActionNavigationClass() {
+	public EAttribute getWebUI_DefaultEditContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -829,8 +830,98 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultAnchorClass() {
+	public EAttribute getWebUI_DefaultStaticContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultRowClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultColumnClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultCardClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultCardHeaderClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultCardBodyClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultCardFooterClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultBadgeClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultActionNavigationClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWebUI_DefaultAnchorClass() {
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(25);
 	}
 
 	/**
@@ -850,7 +941,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultFieldLabelClass() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(17);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(26);
 	}
 
 	/**
@@ -860,7 +951,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultFieldValueClass() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(18);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(27);
 	}
 
 	/**
@@ -870,7 +961,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultInputGroupClass() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(19);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(28);
 	}
 
 	/**
@@ -880,7 +971,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultInputLabelClass() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(20);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(29);
 	}
 
 	/**
@@ -890,7 +981,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultInputValueClass() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(21);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(30);
 	}
 
 	/**
@@ -900,7 +991,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_DefaultMaximumUploadSize() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(22);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(31);
 	}
 
 	/**
@@ -910,7 +1001,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_InputTechnology() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(23);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(32);
 	}
 
 	/**
@@ -920,7 +1011,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getWebUI_AjaxTechnology() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(24);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(33);
 	}
 
 	/**
@@ -3840,6 +3931,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TIME_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_TIME_FORMAT);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_STYLE_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_SECTION_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CAPTION_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INDEX_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARDS_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_EDIT_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_STATIC_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FIELD_LIST_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ROW_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_COLUMN_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARD_CLASS);
@@ -3849,7 +3950,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_BADGE_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ANCHOR_CLASS);
-		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FIELD_LIST_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FIELD_LABEL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FIELD_VALUE_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INPUT_GROUP_CLASS);
@@ -4241,7 +4341,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 		ExpressionPackage theExpressionPackage = (ExpressionPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionPackage.eNS_URI);
 		ImagePackage theImagePackage = (ImagePackage)EPackage.Registry.INSTANCE.getEPackage(ImagePackage.eNS_URI);
-		work.andycarpenter.webgen.pims.security.SecurityPackage theSecurityPackage = (work.andycarpenter.webgen.pims.security.SecurityPackage)EPackage.Registry.INSTANCE.getEPackage(work.andycarpenter.webgen.pims.security.SecurityPackage.eNS_URI);
+		SecurityPackage theSecurityPackage = (SecurityPackage)EPackage.Registry.INSTANCE.getEPackage(SecurityPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -4330,6 +4430,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultDateFormat(), ecorePackage.getEString(), "defaultDateFormat", "jS F Y", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultTimeFormat(), ecorePackage.getEString(), "defaultTimeFormat", "G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDateTimeFormat(), ecorePackage.getEString(), "defaultDateTimeFormat", "jS F Y G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getWebUI_DefaultStyleClass(), ecorePackage.getEString(), "defaultStyleClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultSectionClass(), ecorePackage.getEString(), "defaultSectionClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultCaptionClass(), ecorePackage.getEString(), "defaultCaptionClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultContentClass(), ecorePackage.getEString(), "defaultContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultDetailsContentClass(), ecorePackage.getEString(), "defaultDetailsContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultIndexContentClass(), ecorePackage.getEString(), "defaultIndexContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultCardsContentClass(), ecorePackage.getEString(), "defaultCardsContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultEditContentClass(), ecorePackage.getEString(), "defaultEditContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultStaticContentClass(), ecorePackage.getEString(), "defaultStaticContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultFieldListClass(), ecorePackage.getEString(), "defaultFieldListClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultRowClass(), ecorePackage.getEString(), "defaultRowClass", "row", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultColumnClass(), ecorePackage.getEString(), "defaultColumnClass", "col", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardClass(), ecorePackage.getEString(), "defaultCardClass", "card rounded shadow-sm h-100", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4339,7 +4449,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultBadgeClass(), ecorePackage.getEString(), "defaultBadgeClass", "badge", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultActionNavigationClass(), ecorePackage.getEString(), "defaultActionNavigationClass", "nav", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultAnchorClass(), ecorePackage.getEString(), "defaultAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getWebUI_DefaultFieldListClass(), ecorePackage.getEString(), "defaultFieldListClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultFieldLabelClass(), ecorePackage.getEString(), "defaultFieldLabelClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultFieldValueClass(), ecorePackage.getEString(), "defaultFieldValueClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultInputGroupClass(), ecorePackage.getEString(), "defaultInputGroupClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

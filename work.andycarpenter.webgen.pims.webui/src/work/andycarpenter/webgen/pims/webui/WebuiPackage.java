@@ -135,85 +135,85 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DATE_TIME_FORMAT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Style Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ROW_CLASS = 7;
+	int WEB_UI__DEFAULT_STYLE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_COLUMN_CLASS = 8;
+	int WEB_UI__DEFAULT_SECTION_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_CLASS = 9;
+	int WEB_UI__DEFAULT_CAPTION_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 10;
+	int WEB_UI__DEFAULT_CONTENT_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Details Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 11;
+	int WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Index Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 12;
+	int WEB_UI__DEFAULT_INDEX_CONTENT_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Cards Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_BADGE_CLASS = 13;
+	int WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Edit Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 14;
+	int WEB_UI__DEFAULT_EDIT_CONTENT_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Static Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 15;
+	int WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
@@ -225,13 +225,94 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 16;
 
 	/**
+	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_ROW_CLASS = 17;
+
+	/**
+	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_COLUMN_CLASS = 18;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_CLASS = 19;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 20;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 21;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 22;
+
+	/**
+	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_BADGE_CLASS = 23;
+
+	/**
+	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 24;
+
+	/**
+	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 25;
+
+	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 17;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -240,7 +321,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 18;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -249,7 +330,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 19;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -258,7 +339,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 20;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 29;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -267,7 +348,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 21;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 30;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -276,7 +357,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 22;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -285,7 +366,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 23;
+	int WEB_UI__INPUT_TECHNOLOGY = 32;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -294,7 +375,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 24;
+	int WEB_UI__AJAX_TECHNOLOGY = 33;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -303,7 +384,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 25;
+	int WEB_UI_FEATURE_COUNT = 34;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -15915,6 +15996,105 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultDateTimeFormat();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass <em>Default Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Style Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultStyleClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass <em>Default Section Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Section Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSectionClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass <em>Default Caption Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Caption Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCaptionClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass <em>Default Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Details Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultDetailsContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Index Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultIndexContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Cards Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCardsContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Edit Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultEditContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Static Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultStaticContentClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass <em>Default Row Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19300,6 +19480,78 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_DATE_TIME_FORMAT = eINSTANCE.getWebUI_DefaultDateTimeFormat();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Style Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_STYLE_CLASS = eINSTANCE.getWebUI_DefaultStyleClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Section Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SECTION_CLASS = eINSTANCE.getWebUI_DefaultSectionClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Caption Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CAPTION_CLASS = eINSTANCE.getWebUI_DefaultCaptionClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Details Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultDetailsContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Index Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_INDEX_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultIndexContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Cards Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultCardsContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Edit Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_EDIT_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultEditContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Static Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultStaticContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Row Class</b></em>' attribute feature.

@@ -288,7 +288,15 @@ unique lazy rule implicitLoginUnit {
 					(f.name = 'email' and website.authenticationKey = #Email)
 					or (f.name = 'username' and website.authenticationKey <> #Email)
 					or f.name = 'password')
-				->collect(f | thisModule.implicitUnitAttribute(f))
+				->collect(f | thisModule.implicitUnitAttribute(f)),
+		contentClass <- 
+			if thisModule.findWebsiteUI().defaultEditContentClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultEditContentClass.trim()
+			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultContentClass.trim()
+			else
+				OclUndefined
+			endif endif
 	)
 }
 

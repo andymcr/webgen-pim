@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Logout Unit</b></em>'.
@@ -12,5 +14,5 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface LogoutUnit extends DynamicUnit, work.andycarpenter.webgen.pims.security.SecurityUnit {
+public interface LogoutUnit extends DynamicUnit, SecurityUnit {
 } // LogoutUnit

@@ -12,6 +12,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
 
 /**
@@ -1741,7 +1742,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSecurityUnit(work.andycarpenter.webgen.pims.security.SecurityUnit object) {
+	public T caseSecurityUnit(SecurityUnit object) {
 		return null;
 	}
 
