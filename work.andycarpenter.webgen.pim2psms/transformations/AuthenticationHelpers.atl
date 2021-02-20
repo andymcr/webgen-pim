@@ -1,0 +1,86 @@
+-- @atlcompiler emftvm
+
+library AuthenticationHelpers;
+
+
+helper context Website!Security def: isLocallyAuthenticated() : Boolean
+	= if self.authentication.oclIsUndefined() then
+			false
+		else
+			self.authentication.oclIsTypeOf(Website!LocalAuthenticationSystem)
+		endif;
+
+helper context Website!Security def: hasImplicitAuthenticationPage() : Boolean
+	= if not self.isLocallyAuthenticated() then	
+			false
+		else
+			self.authentication.authenticationModel.oclIsUndefined()
+		endif;
+
+helper context Website!Security def: hasImplicitSecurityPage() : Boolean
+	= if not self.isLocallyAuthenticated() then	
+			false
+		else
+			let authentication : Website!LocalAuthenticationSystem
+				= self.authentication
+				in
+					authentication.registrationUnit.oclIsUndefined()
+						and authentication.allowSelfRegistration
+					or authentication.loginUnit.oclIsUndefined()
+					or authentication.logoutUnit.oclIsUndefined()
+					or authentication.forgottonPasswordUnit.oclIsUndefined()
+		endif;
+
+
+	helper context Website!Authentication def: getDataType(name : String) : ORM!DataType
+	= let dataType : ORM!DataType = thisModule.findOrmDataType(name)
+		in if not dataType.oclIsUndefined() then
+			dataType
+		else
+			let webGenModel : Website!WebGenModel = thisModule.findWebGenModel()
+			in if name = 'Boolean' then
+					thisModule.implicitBooleanDataType(webGenModel)
+				else if name = 'Email' then
+					thisModule.implicitEmailDataType(webGenModel)
+				else if name = 'String' then
+					thisModule.implicitStringDataType(webGenModel)
+				else
+					OclUndefined
+				endif endif endif
+		endif;
+
+helper context Website!Authentication def: getCollectionType(name : String) : ORM!DataType
+	= let collectionType : ORM!CollectionType = thisModule.findOrmCollectionType(name)
+		in if not collectionType.oclIsUndefined() then
+			collectionType
+		else
+			if name = 'String' then
+				thisModule.implicitStringCollectionType(self)
+			else
+				OclUndefined
+			endif
+		endif;
+
+helper context Website!Authentication def: getOrmType(name : String) : String
+	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
+		in if dataType.oclIsUndefined() then
+			if name = 'Email' then
+				'String'
+			else
+				name
+			endif
+		else
+			dataType.ormType()
+		endif;
+
+helper context Website!Authentication def: getPersistentType(name : String) : String
+	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
+		in if dataType.oclIsUndefined() then
+			if name = 'Email' then
+				'String'
+			else
+				name
+			endif
+		else
+			dataType.persistentType()
+		endif;

@@ -11,6 +11,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes;
 import work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +21,15 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthentication <em>Authentication</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthenticationModel <em>Authentication Model</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthenticationName <em>Authentication Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getAuthenticationKey <em>Authentication Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getResetPasswordRequestModel <em>Reset Password Request Model</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getResetPasswordRequestName <em>Reset Password Request Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getRegistrationUnit <em>Registration Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getLoginUnit <em>Login Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getLogoutUnit <em>Logout Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getForgottenPasswordUnit <em>Forgotten Password Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getViewRole <em>View Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#isUseCaptcha <em>Use Captcha</em>}</li>
@@ -36,14 +44,34 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  */
 public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements LocalAuthenticationSystem {
 	/**
-	 * The cached value of the '{@link #getAuthentication() <em>Authentication</em>}' reference.
+	 * The cached value of the '{@link #getAuthenticationModel() <em>Authentication Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAuthentication()
+	 * @see #getAuthenticationModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity authentication;
+	protected Entity authenticationModel;
+
+	/**
+	 * The default value of the '{@link #getAuthenticationName() <em>Authentication Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthenticationName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHENTICATION_NAME_EDEFAULT = "Authentication";
+
+	/**
+	 * The cached value of the '{@link #getAuthenticationName() <em>Authentication Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthenticationName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authenticationName = AUTHENTICATION_NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAuthenticationKey() <em>Authentication Key</em>}' attribute.
@@ -53,7 +81,7 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final AuthenticationKeyTypes AUTHENTICATION_KEY_EDEFAULT = AuthenticationKeyTypes.EMAIL;
+	protected static final AuthenticationKeyTypes AUTHENTICATION_KEY_EDEFAULT = AuthenticationKeyTypes.ANY;
 
 	/**
 	 * The cached value of the '{@link #getAuthenticationKey() <em>Authentication Key</em>}' attribute.
@@ -64,6 +92,76 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @ordered
 	 */
 	protected AuthenticationKeyTypes authenticationKey = AUTHENTICATION_KEY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getResetPasswordRequestModel() <em>Reset Password Request Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetPasswordRequestModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected Entity resetPasswordRequestModel;
+
+	/**
+	 * The default value of the '{@link #getResetPasswordRequestName() <em>Reset Password Request Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetPasswordRequestName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESET_PASSWORD_REQUEST_NAME_EDEFAULT = "ResetPasswordRequest";
+
+	/**
+	 * The cached value of the '{@link #getResetPasswordRequestName() <em>Reset Password Request Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetPasswordRequestName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String resetPasswordRequestName = RESET_PASSWORD_REQUEST_NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRegistrationUnit() <em>Registration Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistrationUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected SecurityUnit registrationUnit;
+
+	/**
+	 * The cached value of the '{@link #getLoginUnit() <em>Login Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoginUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected SecurityUnit loginUnit;
+
+	/**
+	 * The cached value of the '{@link #getLogoutUnit() <em>Logout Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLogoutUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected SecurityUnit logoutUnit;
+
+	/**
+	 * The cached value of the '{@link #getForgottenPasswordUnit() <em>Forgotten Password Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected SecurityUnit forgottenPasswordUnit;
 
 	/**
 	 * The default value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
@@ -250,16 +348,16 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public Entity getAuthentication() {
-		if (authentication != null && authentication.eIsProxy()) {
-			InternalEObject oldAuthentication = (InternalEObject)authentication;
-			authentication = (Entity)eResolveProxy(oldAuthentication);
-			if (authentication != oldAuthentication) {
+	public Entity getAuthenticationModel() {
+		if (authenticationModel != null && authenticationModel.eIsProxy()) {
+			InternalEObject oldAuthenticationModel = (InternalEObject)authenticationModel;
+			authenticationModel = (Entity)eResolveProxy(oldAuthenticationModel);
+			if (authenticationModel != oldAuthenticationModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION, oldAuthentication, authentication));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL, oldAuthenticationModel, authenticationModel));
 			}
 		}
-		return authentication;
+		return authenticationModel;
 	}
 
 	/**
@@ -267,8 +365,8 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetAuthentication() {
-		return authentication;
+	public Entity basicGetAuthenticationModel() {
+		return authenticationModel;
 	}
 
 	/**
@@ -277,11 +375,34 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setAuthentication(Entity newAuthentication) {
-		Entity oldAuthentication = authentication;
-		authentication = newAuthentication;
+	public void setAuthenticationModel(Entity newAuthenticationModel) {
+		Entity oldAuthenticationModel = authenticationModel;
+		authenticationModel = newAuthenticationModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION, oldAuthentication, authentication));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL, oldAuthenticationModel, authenticationModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAuthenticationName() {
+		return authenticationName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthenticationName(String newAuthenticationName) {
+		String oldAuthenticationName = authenticationName;
+		authenticationName = newAuthenticationName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME, oldAuthenticationName, authenticationName));
 	}
 
 	/**
@@ -305,6 +426,229 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 		authenticationKey = newAuthenticationKey == null ? AUTHENTICATION_KEY_EDEFAULT : newAuthenticationKey;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY, oldAuthenticationKey, authenticationKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity getResetPasswordRequestModel() {
+		if (resetPasswordRequestModel != null && resetPasswordRequestModel.eIsProxy()) {
+			InternalEObject oldResetPasswordRequestModel = (InternalEObject)resetPasswordRequestModel;
+			resetPasswordRequestModel = (Entity)eResolveProxy(oldResetPasswordRequestModel);
+			if (resetPasswordRequestModel != oldResetPasswordRequestModel) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL, oldResetPasswordRequestModel, resetPasswordRequestModel));
+			}
+		}
+		return resetPasswordRequestModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetResetPasswordRequestModel() {
+		return resetPasswordRequestModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetPasswordRequestModel(Entity newResetPasswordRequestModel) {
+		Entity oldResetPasswordRequestModel = resetPasswordRequestModel;
+		resetPasswordRequestModel = newResetPasswordRequestModel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL, oldResetPasswordRequestModel, resetPasswordRequestModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getResetPasswordRequestName() {
+		return resetPasswordRequestName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetPasswordRequestName(String newResetPasswordRequestName) {
+		String oldResetPasswordRequestName = resetPasswordRequestName;
+		resetPasswordRequestName = newResetPasswordRequestName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME, oldResetPasswordRequestName, resetPasswordRequestName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SecurityUnit getRegistrationUnit() {
+		if (registrationUnit != null && registrationUnit.eIsProxy()) {
+			InternalEObject oldRegistrationUnit = (InternalEObject)registrationUnit;
+			registrationUnit = (SecurityUnit)eResolveProxy(oldRegistrationUnit);
+			if (registrationUnit != oldRegistrationUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT, oldRegistrationUnit, registrationUnit));
+			}
+		}
+		return registrationUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SecurityUnit basicGetRegistrationUnit() {
+		return registrationUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRegistrationUnit(SecurityUnit newRegistrationUnit) {
+		SecurityUnit oldRegistrationUnit = registrationUnit;
+		registrationUnit = newRegistrationUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT, oldRegistrationUnit, registrationUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SecurityUnit getLoginUnit() {
+		if (loginUnit != null && loginUnit.eIsProxy()) {
+			InternalEObject oldLoginUnit = (InternalEObject)loginUnit;
+			loginUnit = (SecurityUnit)eResolveProxy(oldLoginUnit);
+			if (loginUnit != oldLoginUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT, oldLoginUnit, loginUnit));
+			}
+		}
+		return loginUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SecurityUnit basicGetLoginUnit() {
+		return loginUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLoginUnit(SecurityUnit newLoginUnit) {
+		SecurityUnit oldLoginUnit = loginUnit;
+		loginUnit = newLoginUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT, oldLoginUnit, loginUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SecurityUnit getLogoutUnit() {
+		if (logoutUnit != null && logoutUnit.eIsProxy()) {
+			InternalEObject oldLogoutUnit = (InternalEObject)logoutUnit;
+			logoutUnit = (SecurityUnit)eResolveProxy(oldLogoutUnit);
+			if (logoutUnit != oldLogoutUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT, oldLogoutUnit, logoutUnit));
+			}
+		}
+		return logoutUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SecurityUnit basicGetLogoutUnit() {
+		return logoutUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLogoutUnit(SecurityUnit newLogoutUnit) {
+		SecurityUnit oldLogoutUnit = logoutUnit;
+		logoutUnit = newLogoutUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT, oldLogoutUnit, logoutUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SecurityUnit getForgottenPasswordUnit() {
+		if (forgottenPasswordUnit != null && forgottenPasswordUnit.eIsProxy()) {
+			InternalEObject oldForgottenPasswordUnit = (InternalEObject)forgottenPasswordUnit;
+			forgottenPasswordUnit = (SecurityUnit)eResolveProxy(oldForgottenPasswordUnit);
+			if (forgottenPasswordUnit != oldForgottenPasswordUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT, oldForgottenPasswordUnit, forgottenPasswordUnit));
+			}
+		}
+		return forgottenPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SecurityUnit basicGetForgottenPasswordUnit() {
+		return forgottenPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setForgottenPasswordUnit(SecurityUnit newForgottenPasswordUnit) {
+		SecurityUnit oldForgottenPasswordUnit = forgottenPasswordUnit;
+		forgottenPasswordUnit = newForgottenPasswordUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT, oldForgottenPasswordUnit, forgottenPasswordUnit));
 	}
 
 	/**
@@ -499,11 +843,30 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				if (resolve) return getAuthentication();
-				return basicGetAuthentication();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL:
+				if (resolve) return getAuthenticationModel();
+				return basicGetAuthenticationModel();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME:
+				return getAuthenticationName();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				return getAuthenticationKey();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL:
+				if (resolve) return getResetPasswordRequestModel();
+				return basicGetResetPasswordRequestModel();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME:
+				return getResetPasswordRequestName();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT:
+				if (resolve) return getRegistrationUnit();
+				return basicGetRegistrationUnit();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT:
+				if (resolve) return getLoginUnit();
+				return basicGetLoginUnit();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT:
+				if (resolve) return getLogoutUnit();
+				return basicGetLogoutUnit();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
+				if (resolve) return getForgottenPasswordUnit();
+				return basicGetForgottenPasswordUnit();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				return getViewRole();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
@@ -532,11 +895,32 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				setAuthentication((Entity)newValue);
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL:
+				setAuthenticationModel((Entity)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME:
+				setAuthenticationName((String)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey((AuthenticationKeyTypes)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL:
+				setResetPasswordRequestModel((Entity)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME:
+				setResetPasswordRequestName((String)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT:
+				setRegistrationUnit((SecurityUnit)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT:
+				setLoginUnit((SecurityUnit)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT:
+				setLogoutUnit((SecurityUnit)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
+				setForgottenPasswordUnit((SecurityUnit)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				setViewRole((String)newValue);
@@ -574,11 +958,32 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				setAuthentication((Entity)null);
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL:
+				setAuthenticationModel((Entity)null);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME:
+				setAuthenticationName(AUTHENTICATION_NAME_EDEFAULT);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				setAuthenticationKey(AUTHENTICATION_KEY_EDEFAULT);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL:
+				setResetPasswordRequestModel((Entity)null);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME:
+				setResetPasswordRequestName(RESET_PASSWORD_REQUEST_NAME_EDEFAULT);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT:
+				setRegistrationUnit((SecurityUnit)null);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT:
+				setLoginUnit((SecurityUnit)null);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT:
+				setLogoutUnit((SecurityUnit)null);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
+				setForgottenPasswordUnit((SecurityUnit)null);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				setViewRole(VIEW_ROLE_EDEFAULT);
@@ -616,10 +1021,24 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION:
-				return authentication != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL:
+				return authenticationModel != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME:
+				return AUTHENTICATION_NAME_EDEFAULT == null ? authenticationName != null : !AUTHENTICATION_NAME_EDEFAULT.equals(authenticationName);
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 				return authenticationKey != AUTHENTICATION_KEY_EDEFAULT;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL:
+				return resetPasswordRequestModel != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME:
+				return RESET_PASSWORD_REQUEST_NAME_EDEFAULT == null ? resetPasswordRequestName != null : !RESET_PASSWORD_REQUEST_NAME_EDEFAULT.equals(resetPasswordRequestName);
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT:
+				return registrationUnit != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT:
+				return loginUnit != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT:
+				return logoutUnit != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
+				return forgottenPasswordUnit != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				return VIEW_ROLE_EDEFAULT == null ? viewRole != null : !VIEW_ROLE_EDEFAULT.equals(viewRole);
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
@@ -650,8 +1069,12 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (authenticationKey: ");
+		result.append(" (authenticationName: ");
+		result.append(authenticationName);
+		result.append(", authenticationKey: ");
 		result.append(authenticationKey);
+		result.append(", resetPasswordRequestName: ");
+		result.append(resetPasswordRequestName);
 		result.append(", viewRole: ");
 		result.append(viewRole);
 		result.append(", editRole: ");

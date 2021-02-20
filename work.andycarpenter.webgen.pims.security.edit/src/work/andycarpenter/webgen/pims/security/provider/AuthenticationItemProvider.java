@@ -63,6 +63,7 @@ public class AuthenticationItemProvider
 			addSecurityPropertyDescriptor(object);
 			addUserPropertyDescriptor(object);
 			addUserKeyPropertyDescriptor(object);
+			addRegistrationLabelPropertyDescriptor(object);
 			addLoginLabelPropertyDescriptor(object);
 			addLogoutLabelPropertyDescriptor(object);
 		}
@@ -144,6 +145,28 @@ public class AuthenticationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Registration Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRegistrationLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_registrationLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Login Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -195,7 +218,7 @@ public class AuthenticationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Authentication)object).getLoginLabel();
+		String label = ((Authentication)object).getRegistrationLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Authentication_type") :
 			getString("_UI_Authentication_type") + " " + label;
@@ -214,6 +237,7 @@ public class AuthenticationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Authentication.class)) {
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
 			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

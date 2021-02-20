@@ -28,6 +28,7 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getSecurity <em>Security</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUser <em>User</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUserKey <em>User Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getRegistrationLabel <em>Registration Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLoginLabel <em>Login Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLogoutLabel <em>Logout Label</em>}</li>
  * </ul>
@@ -54,6 +55,26 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected Attribute userKey;
+
+	/**
+	 * The default value of the '{@link #getRegistrationLabel() <em>Registration Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistrationLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REGISTRATION_LABEL_EDEFAULT = "Register";
+
+	/**
+	 * The cached value of the '{@link #getRegistrationLabel() <em>Registration Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistrationLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String registrationLabel = REGISTRATION_LABEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLoginLabel() <em>Login Label</em>}' attribute.
@@ -243,6 +264,29 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
+	public String getRegistrationLabel() {
+		return registrationLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRegistrationLabel(String newRegistrationLabel) {
+		String oldRegistrationLabel = registrationLabel;
+		registrationLabel = newRegistrationLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL, oldRegistrationLabel, registrationLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getLoginLabel() {
 		return loginLabel;
 	}
@@ -343,6 +387,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				if (resolve) return getUserKey();
 				return basicGetUserKey();
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
+				return getRegistrationLabel();
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
 				return getLoginLabel();
 			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
@@ -367,6 +413,9 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				return;
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
+				setRegistrationLabel((String)newValue);
 				return;
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
 				setLoginLabel((String)newValue);
@@ -395,6 +444,9 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)null);
 				return;
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
+				setRegistrationLabel(REGISTRATION_LABEL_EDEFAULT);
+				return;
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
 				setLoginLabel(LOGIN_LABEL_EDEFAULT);
 				return;
@@ -419,6 +471,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				return user != null;
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				return userKey != null;
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
+				return REGISTRATION_LABEL_EDEFAULT == null ? registrationLabel != null : !REGISTRATION_LABEL_EDEFAULT.equals(registrationLabel);
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
 				return LOGIN_LABEL_EDEFAULT == null ? loginLabel != null : !LOGIN_LABEL_EDEFAULT.equals(loginLabel);
 			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
@@ -437,7 +491,9 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (loginLabel: ");
+		result.append(" (registrationLabel: ");
+		result.append(registrationLabel);
+		result.append(", loginLabel: ");
 		result.append(loginLabel);
 		result.append(", logoutLabel: ");
 		result.append(logoutLabel);

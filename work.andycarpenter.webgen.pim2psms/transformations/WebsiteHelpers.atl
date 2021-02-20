@@ -71,6 +71,16 @@ helper context Website!BusinessOperation def: findBusinessOperation() : Service!
 	= self.definedBy.findService().getBusinessOperation(self.name);
 
 
+helper context Website!Page def: findWafPage() : WAF!Page
+	= WAF!Page.allInstancesFrom('waf')->any(s | s.name = self.name);
+
+helper context WAF!Page def: getWafUnit(name : String) : WAF!ContentUnit
+	= self.units->any(u | u.name = name);
+
+helper context Website!ContentUnit def: findWafUnit() : WAF!ContentUnit
+	= self.displayedOn.findWafPage().getWafUnit(self.name);
+
+
 helper context Website!UnitField def: dateFormat() : String
 	= if not self.dateFormat.oclIsUndefined() and self.dateFormat <> '' then
 			self.dateFormat

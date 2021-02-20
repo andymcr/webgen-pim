@@ -84,6 +84,10 @@ public class SecurityAdapterFactory extends AdapterFactoryImpl {
 				return createCasAuthenticationAdapter();
 			}
 			@Override
+			public Adapter caseSecurityUnit(SecurityUnit object) {
+				return createSecurityUnitAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -156,6 +160,20 @@ public class SecurityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCasAuthenticationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.security.SecurityUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.security.SecurityUnit
+	 * @generated
+	 */
+	public Adapter createSecurityUnitAdapter() {
 		return null;
 	}
 

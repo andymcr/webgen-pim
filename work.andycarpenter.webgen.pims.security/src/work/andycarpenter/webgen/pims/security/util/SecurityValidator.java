@@ -93,6 +93,8 @@ public class SecurityValidator extends EObjectValidator {
 				return validateLocalAuthenticationSystem((LocalAuthenticationSystem)value, diagnostics, context);
 			case SecurityPackage.CAS_AUTHENTICATION:
 				return validateCasAuthentication((CasAuthentication)value, diagnostics, context);
+			case SecurityPackage.SECURITY_UNIT:
+				return validateSecurityUnit((SecurityUnit)value, diagnostics, context);
 			case SecurityPackage.AUTHENTICATION_KEY_TYPES:
 				return validateAuthenticationKeyTypes((AuthenticationKeyTypes)value, diagnostics, context);
 			default:
@@ -258,6 +260,15 @@ public class SecurityValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateAuthentication_userKeyFromUser(casAuthentication, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAuthentication_userKeyRequiredAttribute(casAuthentication, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSecurityUnit(SecurityUnit securityUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(securityUnit, diagnostics, context);
 	}
 
 	/**

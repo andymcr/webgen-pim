@@ -64,7 +64,7 @@ public class CasAuthenticationItemProvider extends AuthenticationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CasAuthentication)object).getLoginLabel();
+		String label = ((CasAuthentication)object).getRegistrationLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_CasAuthentication_type") :
 			getString("_UI_CasAuthentication_type") + " " + label;

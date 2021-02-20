@@ -14,6 +14,7 @@ import work.andycarpenter.webgen.pims.image.provider.ImageEditPlugin;
 
 import work.andycarpenter.webgen.pims.persistence.provider.PersistenceEditPlugin;
 
+import work.andycarpenter.webgen.pims.security.provider.SecurityEditPlugin;
 import work.andycarpenter.webgen.pims.service.provider.ServiceEditPlugin;
 
 /**
@@ -52,6 +53,7 @@ public final class WebuiEditPlugin extends EMFPlugin {
 		     ExpressionEditPlugin.INSTANCE,
 		     ImageEditPlugin.INSTANCE,
 		     PersistenceEditPlugin.INSTANCE,
+		     SecurityEditPlugin.INSTANCE,
 		     ServiceEditPlugin.INSTANCE,
 		   });
 	}

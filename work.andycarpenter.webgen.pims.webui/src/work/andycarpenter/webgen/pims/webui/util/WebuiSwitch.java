@@ -572,6 +572,54 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.REGISTRATION_UNIT: {
+				RegistrationUnit registrationUnit = (RegistrationUnit)theEObject;
+				T result = caseRegistrationUnit(registrationUnit);
+				if (result == null) result = caseDynamicUnit(registrationUnit);
+				if (result == null) result = caseSecurityUnit(registrationUnit);
+				if (result == null) result = caseContentUnit(registrationUnit);
+				if (result == null) result = caseActionContainer(registrationUnit);
+				if (result == null) result = caseNamedDisplayElement(registrationUnit);
+				if (result == null) result = caseNamedElement(registrationUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.LOGIN_UNIT: {
+				LoginUnit loginUnit = (LoginUnit)theEObject;
+				T result = caseLoginUnit(loginUnit);
+				if (result == null) result = caseDynamicUnit(loginUnit);
+				if (result == null) result = caseSecurityUnit(loginUnit);
+				if (result == null) result = caseContentUnit(loginUnit);
+				if (result == null) result = caseActionContainer(loginUnit);
+				if (result == null) result = caseNamedDisplayElement(loginUnit);
+				if (result == null) result = caseNamedElement(loginUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.LOGOUT_UNIT: {
+				LogoutUnit logoutUnit = (LogoutUnit)theEObject;
+				T result = caseLogoutUnit(logoutUnit);
+				if (result == null) result = caseDynamicUnit(logoutUnit);
+				if (result == null) result = caseSecurityUnit(logoutUnit);
+				if (result == null) result = caseContentUnit(logoutUnit);
+				if (result == null) result = caseActionContainer(logoutUnit);
+				if (result == null) result = caseNamedDisplayElement(logoutUnit);
+				if (result == null) result = caseNamedElement(logoutUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: {
+				ForgottenPasswordUnit forgottenPasswordUnit = (ForgottenPasswordUnit)theEObject;
+				T result = caseForgottenPasswordUnit(forgottenPasswordUnit);
+				if (result == null) result = caseDynamicUnit(forgottenPasswordUnit);
+				if (result == null) result = caseSecurityUnit(forgottenPasswordUnit);
+				if (result == null) result = caseContentUnit(forgottenPasswordUnit);
+				if (result == null) result = caseActionContainer(forgottenPasswordUnit);
+				if (result == null) result = caseNamedDisplayElement(forgottenPasswordUnit);
+				if (result == null) result = caseNamedElement(forgottenPasswordUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.ACTION_CONTAINER: {
 				ActionContainer actionContainer = (ActionContainer)theEObject;
 				T result = caseActionContainer(actionContainer);
@@ -1368,6 +1416,66 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Registration Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Registration Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRegistrationUnit(RegistrationUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Login Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Login Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLoginUnit(LoginUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Logout Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Logout Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLogoutUnit(LogoutUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Forgotten Password Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Forgotten Password Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForgottenPasswordUnit(ForgottenPasswordUnit object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Action Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1619,6 +1727,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSecurityUnit(work.andycarpenter.webgen.pims.security.SecurityUnit object) {
 		return null;
 	}
 

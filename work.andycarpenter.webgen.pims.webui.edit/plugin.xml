@@ -31,4 +31,5 @@
             uri="http://cs.man.ac.uk/mdsd/webgen/service"
             class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$ServiceChildCreationExtender"/>
    </extension>
+
 </plugin>

@@ -788,6 +788,41 @@ rule SearchUnit {
 }
 
 
+abstract rule SecurityUnit {
+	from website : Website!SecurityUnit
+	to waf : WAF!SecurityUnit (
+	)
+}
+
+-- @extends DynamicUnit
+rule RegistrationUnit {
+	from website : Website!RegistrationUnit
+	to waf : WAF!RegistrationUnit (
+	)
+}
+
+-- @extends DynamicUnit
+rule LoginUnit {
+	from website : Website!LoginUnit
+	to waf : WAF!LoginUnit (
+	)
+}
+
+-- @extends DynamicUnit
+rule LogoutUnit {
+	from website : Website!LogoutUnit
+	to waf : WAF!LogoutUnit (
+	)
+}
+
+-- @extends DynamicUnit
+rule ForgottenPasswordUnit {
+	from website : Website!ForgottenPasswordUnit
+	to waf : WAF!ForgottenPasswordUnit (
+	)
+}
+
+
 abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (

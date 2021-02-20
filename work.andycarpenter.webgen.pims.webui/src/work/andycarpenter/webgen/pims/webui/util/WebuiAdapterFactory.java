@@ -277,6 +277,22 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createSearchUnitAdapter();
 			}
 			@Override
+			public Adapter caseRegistrationUnit(RegistrationUnit object) {
+				return createRegistrationUnitAdapter();
+			}
+			@Override
+			public Adapter caseLoginUnit(LoginUnit object) {
+				return createLoginUnitAdapter();
+			}
+			@Override
+			public Adapter caseLogoutUnit(LogoutUnit object) {
+				return createLogoutUnitAdapter();
+			}
+			@Override
+			public Adapter caseForgottenPasswordUnit(ForgottenPasswordUnit object) {
+				return createForgottenPasswordUnitAdapter();
+			}
+			@Override
 			public Adapter caseActionContainer(ActionContainer object) {
 				return createActionContainerAdapter();
 			}
@@ -331,6 +347,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVariable(Variable object) {
 				return createVariableAdapter();
+			}
+			@Override
+			public Adapter caseSecurityUnit(work.andycarpenter.webgen.pims.security.SecurityUnit object) {
+				return createSecurityUnitAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1025,6 +1045,62 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.RegistrationUnit <em>Registration Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.RegistrationUnit
+	 * @generated
+	 */
+	public Adapter createRegistrationUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.LoginUnit <em>Login Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.LoginUnit
+	 * @generated
+	 */
+	public Adapter createLoginUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.LogoutUnit <em>Logout Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.LogoutUnit
+	 * @generated
+	 */
+	public Adapter createLogoutUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit <em>Forgotten Password Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit
+	 * @generated
+	 */
+	public Adapter createForgottenPasswordUnitAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1259,6 +1335,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.security.SecurityUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.security.SecurityUnit
+	 * @generated
+	 */
+	public Adapter createSecurityUnitAdapter() {
 		return null;
 	}
 

@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getSecurity <em>Security</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUserKey <em>User Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationLabel <em>Registration Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginLabel <em>Login Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutLabel <em>Logout Label</em>}</li>
  * </ul>
@@ -109,6 +110,29 @@ public interface Authentication extends EObject {
 	 * @generated
 	 */
 	void setUserKey(Attribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Registration Label</b></em>' attribute.
+	 * The default value is <code>"Register"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Registration Label</em>' attribute.
+	 * @see #setRegistrationLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_RegistrationLabel()
+	 * @model default="Register" ordered="false"
+	 * @generated
+	 */
+	String getRegistrationLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationLabel <em>Registration Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Registration Label</em>' attribute.
+	 * @see #getRegistrationLabel()
+	 * @generated
+	 */
+	void setRegistrationLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Login Label</b></em>' attribute.

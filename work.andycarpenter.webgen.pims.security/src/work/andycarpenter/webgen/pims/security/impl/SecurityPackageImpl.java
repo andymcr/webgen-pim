@@ -25,6 +25,7 @@ import work.andycarpenter.webgen.pims.security.Security;
 import work.andycarpenter.webgen.pims.security.SecurityFactory;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 
+import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.security.util.SecurityValidator;
 
 /**
@@ -61,6 +62,13 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	private EClass casAuthenticationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass securityUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -231,7 +239,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_LoginLabel() {
+	public EAttribute getAuthentication_RegistrationLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -241,8 +249,18 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_LogoutLabel() {
+	public EAttribute getAuthentication_LoginLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LogoutLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -261,7 +279,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getLocalAuthenticationSystem_Authentication() {
+	public EReference getLocalAuthenticationSystem_AuthenticationModel() {
 		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -271,7 +289,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLocalAuthenticationSystem_AuthenticationKey() {
+	public EAttribute getLocalAuthenticationSystem_AuthenticationName() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -281,7 +299,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLocalAuthenticationSystem_ViewRole() {
+	public EAttribute getLocalAuthenticationSystem_AuthenticationKey() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -291,8 +309,8 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLocalAuthenticationSystem_EditRole() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(3);
+	public EReference getLocalAuthenticationSystem_ResetPasswordRequestModel() {
+		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -301,7 +319,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLocalAuthenticationSystem_UseCaptcha() {
+	public EAttribute getLocalAuthenticationSystem_ResetPasswordRequestName() {
 		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -311,8 +329,78 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
+	public EReference getLocalAuthenticationSystem_RegistrationUnit() {
+		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLocalAuthenticationSystem_LoginUnit() {
+		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLocalAuthenticationSystem_LogoutUnit() {
+		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLocalAuthenticationSystem_ForgottenPasswordUnit() {
+		return (EReference)localAuthenticationSystemEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLocalAuthenticationSystem_ViewRole() {
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLocalAuthenticationSystem_EditRole() {
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLocalAuthenticationSystem_UseCaptcha() {
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getLocalAuthenticationSystem_AllowRememberMe() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -322,7 +410,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 */
 	@Override
 	public EAttribute getLocalAuthenticationSystem_AllowSelfRegistration() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -332,7 +420,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 */
 	@Override
 	public EAttribute getLocalAuthenticationSystem_TrackLoginAttempts() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -342,7 +430,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 */
 	@Override
 	public EAttribute getLocalAuthenticationSystem_UseEmailActivation() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -352,7 +440,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 */
 	@Override
 	public EAttribute getLocalAuthenticationSystem_SendWelcomeEmail() {
-		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)localAuthenticationSystemEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -363,6 +451,16 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	@Override
 	public EClass getCasAuthentication() {
 		return casAuthenticationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSecurityUnit() {
+		return securityUnitEClass;
 	}
 
 	/**
@@ -413,12 +511,20 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		createEReference(authenticationEClass, AUTHENTICATION__SECURITY);
 		createEReference(authenticationEClass, AUTHENTICATION__USER);
 		createEReference(authenticationEClass, AUTHENTICATION__USER_KEY);
+		createEAttribute(authenticationEClass, AUTHENTICATION__REGISTRATION_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__LOGIN_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__LOGOUT_LABEL);
 
 		localAuthenticationSystemEClass = createEClass(LOCAL_AUTHENTICATION_SYSTEM);
-		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL);
+		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME);
 		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL);
+		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT);
+		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT);
 		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE);
 		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE);
 		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA);
@@ -429,6 +535,8 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		createEAttribute(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__SEND_WELCOME_EMAIL);
 
 		casAuthenticationEClass = createEClass(CAS_AUTHENTICATION);
+
+		securityUnitEClass = createEClass(SECURITY_UNIT);
 
 		// Create enums
 		authenticationKeyTypesEEnum = createEEnum(AUTHENTICATION_KEY_TYPES);
@@ -478,12 +586,20 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		initEReference(getAuthentication_Security(), this.getSecurity(), this.getSecurity_Authentication(), "security", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAuthentication_User(), thePersistencePackage.getEntity(), null, "user", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAuthentication_UserKey(), thePersistencePackage.getAttribute(), null, "userKey", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_RegistrationLabel(), ecorePackage.getEString(), "registrationLabel", "Register", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_LoginLabel(), ecorePackage.getEString(), "loginLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_LogoutLabel(), ecorePackage.getEString(), "logoutLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(localAuthenticationSystemEClass, LocalAuthenticationSystem.class, "LocalAuthenticationSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocalAuthenticationSystem_Authentication(), thePersistencePackage.getEntity(), null, "authentication", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_AuthenticationModel(), thePersistencePackage.getEntity(), null, "authenticationModel", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLocalAuthenticationSystem_AuthenticationName(), ecorePackage.getEString(), "authenticationName", "Authentication", 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocalAuthenticationSystem_AuthenticationKey(), this.getAuthenticationKeyTypes(), "authenticationKey", null, 1, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_ResetPasswordRequestModel(), thePersistencePackage.getEntity(), null, "resetPasswordRequestModel", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocalAuthenticationSystem_ResetPasswordRequestName(), ecorePackage.getEString(), "resetPasswordRequestName", "ResetPasswordRequest", 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_RegistrationUnit(), this.getSecurityUnit(), null, "registrationUnit", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_LoginUnit(), this.getSecurityUnit(), null, "loginUnit", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_LogoutUnit(), this.getSecurityUnit(), null, "logoutUnit", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalAuthenticationSystem_ForgottenPasswordUnit(), this.getSecurityUnit(), null, "forgottenPasswordUnit", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocalAuthenticationSystem_ViewRole(), ecorePackage.getEString(), "viewRole", "ROLE_SECURITY", 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocalAuthenticationSystem_EditRole(), ecorePackage.getEString(), "editRole", "ROLE_SECURITY", 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocalAuthenticationSystem_UseCaptcha(), ecorePackage.getEBoolean(), "useCaptcha", "true", 1, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -495,10 +611,12 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 
 		initEClass(casAuthenticationEClass, CasAuthentication.class, "CasAuthentication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(securityUnitEClass, SecurityUnit.class, "SecurityUnit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(authenticationKeyTypesEEnum, AuthenticationKeyTypes.class, "AuthenticationKeyTypes");
+		addEEnumLiteral(authenticationKeyTypesEEnum, AuthenticationKeyTypes.ANY);
 		addEEnumLiteral(authenticationKeyTypesEEnum, AuthenticationKeyTypes.EMAIL);
-		addEEnumLiteral(authenticationKeyTypesEEnum, AuthenticationKeyTypes.SCREEN_NAME);
 		addEEnumLiteral(authenticationKeyTypesEEnum, AuthenticationKeyTypes.USERNAME);
 
 		// Create resource

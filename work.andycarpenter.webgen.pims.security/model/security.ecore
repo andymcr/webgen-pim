@@ -28,14 +28,16 @@
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userKey" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="registrationLabel" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Register"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loginLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Login"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoutLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Logout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationKeyTypes">
-    <eLiterals name="Email"/>
-    <eLiterals name="ScreenName" value="1"/>
+    <eLiterals name="Any"/>
+    <eLiterals name="Email" value="1"/>
     <eLiterals name="Username" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LocalAuthenticationSystem" eSuperTypes="#//Authentication">
@@ -45,10 +47,21 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="captchaRequiresKeys" value="-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()&#xD;&#xA;true"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authenticationModel" ordered="false"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Authentication"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationKey" lowerBound="1"
         eType="#//AuthenticationKeyTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resetPasswordRequestModel"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resetPasswordRequestName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="ResetPasswordRequest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="registrationUnit" eType="#//SecurityUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loginUnit" eType="#//SecurityUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logoutUnit" eType="#//SecurityUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forgottenPasswordUnit"
+        eType="#//SecurityUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="ROLE_SECURITY"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="editRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -73,4 +86,5 @@
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CasAuthentication" eSuperTypes="#//Authentication"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityUnit" abstract="true" interface="true"/>
 </ecore:EPackage>

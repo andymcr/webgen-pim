@@ -328,6 +328,42 @@ public interface WebuiFactory extends EFactory {
 	SearchUnit createSearchUnit();
 
 	/**
+	 * Returns a new object of class '<em>Registration Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Registration Unit</em>'.
+	 * @generated
+	 */
+	RegistrationUnit createRegistrationUnit();
+
+	/**
+	 * Returns a new object of class '<em>Login Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Login Unit</em>'.
+	 * @generated
+	 */
+	LoginUnit createLoginUnit();
+
+	/**
+	 * Returns a new object of class '<em>Logout Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Logout Unit</em>'.
+	 * @generated
+	 */
+	LogoutUnit createLogoutUnit();
+
+	/**
+	 * Returns a new object of class '<em>Forgotten Password Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Forgotten Password Unit</em>'.
+	 * @generated
+	 */
+	ForgottenPasswordUnit createForgottenPasswordUnit();
+
+	/**
 	 * Returns a new object of class '<em>Slider Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

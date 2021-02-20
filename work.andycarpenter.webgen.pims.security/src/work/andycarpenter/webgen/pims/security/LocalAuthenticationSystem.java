@@ -13,8 +13,15 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthentication <em>Authentication</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationModel <em>Authentication Model</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationName <em>Authentication Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestModel <em>Reset Password Request Model</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestName <em>Reset Password Request Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getRegistrationUnit <em>Registration Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLoginUnit <em>Login Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLogoutUnit <em>Logout Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getForgottenPasswordUnit <em>Forgotten Password Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isUseCaptcha <em>Use Captcha</em>}</li>
@@ -32,30 +39,49 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  */
 public interface LocalAuthenticationSystem extends Authentication {
 	/**
-	 * Returns the value of the '<em><b>Authentication</b></em>' reference.
+	 * Returns the value of the '<em><b>Authentication Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Authentication</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Authentication</em>' reference.
-	 * @see #setAuthentication(Entity)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_Authentication()
+	 * @return the value of the '<em>Authentication Model</em>' reference.
+	 * @see #setAuthenticationModel(Entity)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_AuthenticationModel()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Entity getAuthentication();
+	Entity getAuthenticationModel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthentication <em>Authentication</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationModel <em>Authentication Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Authentication</em>' reference.
-	 * @see #getAuthentication()
+	 * @param value the new value of the '<em>Authentication Model</em>' reference.
+	 * @see #getAuthenticationModel()
 	 * @generated
 	 */
-	void setAuthentication(Entity value);
+	void setAuthenticationModel(Entity value);
+
+	/**
+	 * Returns the value of the '<em><b>Authentication Name</b></em>' attribute.
+	 * The default value is <code>"Authentication"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authentication Name</em>' attribute.
+	 * @see #setAuthenticationName(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_AuthenticationName()
+	 * @model default="Authentication"
+	 * @generated
+	 */
+	String getAuthenticationName();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationName <em>Authentication Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authentication Name</em>' attribute.
+	 * @see #getAuthenticationName()
+	 * @generated
+	 */
+	void setAuthenticationName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Authentication Key</b></em>' attribute.
@@ -85,6 +111,139 @@ public interface LocalAuthenticationSystem extends Authentication {
 	 * @generated
 	 */
 	void setAuthenticationKey(AuthenticationKeyTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Password Request Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Password Request Model</em>' reference.
+	 * @see #setResetPasswordRequestModel(Entity)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_ResetPasswordRequestModel()
+	 * @model
+	 * @generated
+	 */
+	Entity getResetPasswordRequestModel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestModel <em>Reset Password Request Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Password Request Model</em>' reference.
+	 * @see #getResetPasswordRequestModel()
+	 * @generated
+	 */
+	void setResetPasswordRequestModel(Entity value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Password Request Name</b></em>' attribute.
+	 * The default value is <code>"ResetPasswordRequest"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Password Request Name</em>' attribute.
+	 * @see #setResetPasswordRequestName(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_ResetPasswordRequestName()
+	 * @model default="ResetPasswordRequest"
+	 * @generated
+	 */
+	String getResetPasswordRequestName();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestName <em>Reset Password Request Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Password Request Name</em>' attribute.
+	 * @see #getResetPasswordRequestName()
+	 * @generated
+	 */
+	void setResetPasswordRequestName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Registration Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Registration Unit</em>' reference.
+	 * @see #setRegistrationUnit(SecurityUnit)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_RegistrationUnit()
+	 * @model
+	 * @generated
+	 */
+	SecurityUnit getRegistrationUnit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getRegistrationUnit <em>Registration Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Registration Unit</em>' reference.
+	 * @see #getRegistrationUnit()
+	 * @generated
+	 */
+	void setRegistrationUnit(SecurityUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Login Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Login Unit</em>' reference.
+	 * @see #setLoginUnit(SecurityUnit)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_LoginUnit()
+	 * @model
+	 * @generated
+	 */
+	SecurityUnit getLoginUnit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLoginUnit <em>Login Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Login Unit</em>' reference.
+	 * @see #getLoginUnit()
+	 * @generated
+	 */
+	void setLoginUnit(SecurityUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Logout Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Logout Unit</em>' reference.
+	 * @see #setLogoutUnit(SecurityUnit)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_LogoutUnit()
+	 * @model
+	 * @generated
+	 */
+	SecurityUnit getLogoutUnit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLogoutUnit <em>Logout Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Logout Unit</em>' reference.
+	 * @see #getLogoutUnit()
+	 * @generated
+	 */
+	void setLogoutUnit(SecurityUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Forgotten Password Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Forgotten Password Unit</em>' reference.
+	 * @see #setForgottenPasswordUnit(SecurityUnit)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_ForgottenPasswordUnit()
+	 * @model
+	 * @generated
+	 */
+	SecurityUnit getForgottenPasswordUnit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getForgottenPasswordUnit <em>Forgotten Password Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Forgotten Password Unit</em>' reference.
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	void setForgottenPasswordUnit(SecurityUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>View Role</b></em>' attribute.

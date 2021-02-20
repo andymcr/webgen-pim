@@ -19,6 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum AuthenticationKeyTypes implements Enumerator {
 	/**
+	 * The '<em><b>Any</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ANY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ANY(0, "Any", "Any"), /**
 	 * The '<em><b>Email</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,17 +34,7 @@ public enum AuthenticationKeyTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EMAIL(0, "Email", "Email"),
-
-	/**
-	 * The '<em><b>Screen Name</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SCREEN_NAME_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	SCREEN_NAME(1, "ScreenName", "ScreenName"),
+	EMAIL(1, "Email", "Email"),
 
 	/**
 	 * The '<em><b>Username</b></em>' literal object.
@@ -47,6 +45,17 @@ public enum AuthenticationKeyTypes implements Enumerator {
 	 * @ordered
 	 */
 	USERNAME(2, "Username", "Username");
+
+	/**
+	 * The '<em><b>Any</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ANY
+	 * @model name="Any"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ANY_VALUE = 0;
 
 	/**
 	 * The '<em><b>Email</b></em>' literal value.
@@ -61,22 +70,7 @@ public enum AuthenticationKeyTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EMAIL_VALUE = 0;
-
-	/**
-	 * The '<em><b>Screen Name</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Screen Name</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #SCREEN_NAME
-	 * @model name="ScreenName"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int SCREEN_NAME_VALUE = 1;
+	public static final int EMAIL_VALUE = 1;
 
 	/**
 	 * The '<em><b>Username</b></em>' literal value.
@@ -101,8 +95,8 @@ public enum AuthenticationKeyTypes implements Enumerator {
 	 */
 	private static final AuthenticationKeyTypes[] VALUES_ARRAY =
 		new AuthenticationKeyTypes[] {
+			ANY,
 			EMAIL,
-			SCREEN_NAME,
 			USERNAME,
 		};
 
@@ -160,8 +154,8 @@ public enum AuthenticationKeyTypes implements Enumerator {
 	 */
 	public static AuthenticationKeyTypes get(int value) {
 		switch (value) {
+			case ANY_VALUE: return ANY;
 			case EMAIL_VALUE: return EMAIL;
-			case SCREEN_NAME_VALUE: return SCREEN_NAME;
 			case USERNAME_VALUE: return USERNAME;
 		}
 		return null;

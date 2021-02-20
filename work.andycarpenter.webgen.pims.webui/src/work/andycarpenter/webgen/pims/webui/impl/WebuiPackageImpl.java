@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import work.andycarpenter.webgen.pims.base.BasePackage;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
@@ -50,6 +49,7 @@ import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.FeaturePathLabel;
+import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.GeneralOperationAction;
 import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
@@ -59,6 +59,8 @@ import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.InputTechnologies;
 import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
+import work.andycarpenter.webgen.pims.webui.LoginUnit;
+import work.andycarpenter.webgen.pims.webui.LogoutUnit;
 import work.andycarpenter.webgen.pims.webui.MapUnit;
 import work.andycarpenter.webgen.pims.webui.Menu;
 import work.andycarpenter.webgen.pims.webui.MenuEntry;
@@ -70,6 +72,7 @@ import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.Query;
 import work.andycarpenter.webgen.pims.webui.QueryParameter;
+import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.SearchUnit;
 import work.andycarpenter.webgen.pims.webui.SelectAction;
@@ -425,6 +428,34 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass registrationUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loginUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass logoutUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass forgottenPasswordUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass actionContainerEClass = null;
 
 	/**
@@ -605,6 +636,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		ExpressionPackage.eINSTANCE.eClass();
 		ImagePackage.eINSTANCE.eClass();
 		PersistencePackage.eINSTANCE.eClass();
+		work.andycarpenter.webgen.pims.security.SecurityPackage.eINSTANCE.eClass();
 		ServicePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -3137,6 +3169,46 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getRegistrationUnit() {
+		return registrationUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLoginUnit() {
+		return loginUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLogoutUnit() {
+		return logoutUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getForgottenPasswordUnit() {
+		return forgottenPasswordUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getActionContainer() {
 		return actionContainerEClass;
 	}
@@ -4084,6 +4156,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		searchUnitEClass = createEClass(SEARCH_UNIT);
 		createEReference(searchUnitEClass, SEARCH_UNIT__RESULTS_DESTINATION);
 
+		registrationUnitEClass = createEClass(REGISTRATION_UNIT);
+
+		loginUnitEClass = createEClass(LOGIN_UNIT);
+
+		logoutUnitEClass = createEClass(LOGOUT_UNIT);
+
+		forgottenPasswordUnitEClass = createEClass(FORGOTTEN_PASSWORD_UNIT);
+
 		actionContainerEClass = createEClass(ACTION_CONTAINER);
 		createEReference(actionContainerEClass, ACTION_CONTAINER__ACTIONS);
 		createEAttribute(actionContainerEClass, ACTION_CONTAINER__ACTION_NAVIGATION_CLASS);
@@ -4161,6 +4241,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 		ExpressionPackage theExpressionPackage = (ExpressionPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionPackage.eNS_URI);
 		ImagePackage theImagePackage = (ImagePackage)EPackage.Registry.INSTANCE.getEPackage(ImagePackage.eNS_URI);
+		work.andycarpenter.webgen.pims.security.SecurityPackage theSecurityPackage = (work.andycarpenter.webgen.pims.security.SecurityPackage)EPackage.Registry.INSTANCE.getEPackage(work.andycarpenter.webgen.pims.security.SecurityPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -4224,6 +4305,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		galleryUnitEClass.getESuperTypes().add(this.getImageUnit());
 		controlUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		searchUnitEClass.getESuperTypes().add(this.getControlUnit());
+		registrationUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		registrationUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
+		loginUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		loginUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
+		logoutUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		logoutUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
+		forgottenPasswordUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		forgottenPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		selectActionEClass.getESuperTypes().add(this.getAction());
 		deleteActionEClass.getESuperTypes().add(this.getAction());
@@ -4556,6 +4645,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(searchUnitEClass, SearchUnit.class, "SearchUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSearchUnit_ResultsDestination(), this.getIndexUnit(), null, "resultsDestination", null, 1, 1, SearchUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(registrationUnitEClass, RegistrationUnit.class, "RegistrationUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(loginUnitEClass, LoginUnit.class, "LoginUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(logoutUnitEClass, LogoutUnit.class, "LogoutUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(forgottenPasswordUnitEClass, ForgottenPasswordUnit.class, "ForgottenPasswordUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(actionContainerEClass, ActionContainer.class, "ActionContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionContainer_Actions(), this.getAction(), this.getAction_UsedBy(), "actions", null, 0, -1, ActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
