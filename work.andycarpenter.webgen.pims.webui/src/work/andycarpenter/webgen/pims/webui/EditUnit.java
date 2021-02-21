@@ -16,6 +16,8 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmDestination <em>Confirm Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}</li>
@@ -104,6 +106,52 @@ public interface EditUnit extends SingletonUnit {
 	 * @generated
 	 */
 	void setConfirmLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Confirm Message</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Confirm Message</em>' attribute.
+	 * @see #setConfirmMessage(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmMessage()
+	 * @model default="" ordered="false"
+	 * @generated
+	 */
+	String getConfirmMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Confirm Message</em>' attribute.
+	 * @see #getConfirmMessage()
+	 * @generated
+	 */
+	void setConfirmMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Success Message</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Success Message</em>' attribute.
+	 * @see #setSuccessMessage(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_SuccessMessage()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSuccessMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Success Message</em>' attribute.
+	 * @see #getSuccessMessage()
+	 * @generated
+	 */
+	void setSuccessMessage(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Cancel Destination</b></em>' reference.

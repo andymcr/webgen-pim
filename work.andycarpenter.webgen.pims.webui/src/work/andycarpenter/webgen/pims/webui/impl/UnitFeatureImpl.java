@@ -46,7 +46,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldLabelClass <em>Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldValueClass <em>Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputGroupClass <em>Input Group Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayClass <em>Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
@@ -362,26 +361,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected String inputGroupClass = INPUT_GROUP_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DISPLAY_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String displayClass = DISPLAY_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
@@ -853,29 +832,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public String getDisplayClass() {
-		return displayClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDisplayClass(String newDisplayClass) {
-		String oldDisplayClass = displayClass;
-		displayClass = newDisplayClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS, oldDisplayClass, displayClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getFooterClass() {
 		return footerClass;
 	}
@@ -968,8 +924,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return getFieldValueClass();
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				return getInputGroupClass();
-			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
-				return getDisplayClass();
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				return getFooterClass();
 		}
@@ -1037,9 +991,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				setInputGroupClass((String)newValue);
 				return;
-			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
-				setDisplayClass((String)newValue);
-				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				setFooterClass((String)newValue);
 				return;
@@ -1106,9 +1057,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				setInputGroupClass(INPUT_GROUP_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
-				setDisplayClass(DISPLAY_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				setFooterClass(FOOTER_CLASS_EDEFAULT);
 				return;
@@ -1158,8 +1106,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return FIELD_VALUE_CLASS_EDEFAULT == null ? fieldValueClass != null : !FIELD_VALUE_CLASS_EDEFAULT.equals(fieldValueClass);
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
 				return INPUT_GROUP_CLASS_EDEFAULT == null ? inputGroupClass != null : !INPUT_GROUP_CLASS_EDEFAULT.equals(inputGroupClass);
-			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
-				return DISPLAY_CLASS_EDEFAULT == null ? displayClass != null : !DISPLAY_CLASS_EDEFAULT.equals(displayClass);
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
@@ -1240,8 +1186,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(fieldValueClass);
 		result.append(", inputGroupClass: ");
 		result.append(inputGroupClass);
-		result.append(", displayClass: ");
-		result.append(displayClass);
 		result.append(", footerClass: ");
 		result.append(footerClass);
 		result.append(')');

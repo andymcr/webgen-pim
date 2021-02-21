@@ -31,9 +31,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getPluralisedName <em>Pluralised Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getColumnName <em>Column Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getSerializationGroups <em>Serialization Groups</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getDisplayClass <em>Display Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Feature#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature()
@@ -492,86 +489,5 @@ public interface Feature extends NamedDisplayElement {
 	 * @generated
 	 */
 	EList<SerializationGroup> getSerializationGroups();
-
-	/**
-	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Header Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Header Class</em>' attribute.
-	 * @see #setHeaderClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_HeaderClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getHeaderClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getHeaderClass <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Header Class</em>' attribute.
-	 * @see #getHeaderClass()
-	 * @generated
-	 */
-	void setHeaderClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Display Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Display Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Display Class</em>' attribute.
-	 * @see #setDisplayClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_DisplayClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getDisplayClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getDisplayClass <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Display Class</em>' attribute.
-	 * @see #getDisplayClass()
-	 * @generated
-	 */
-	void setDisplayClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Footer Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Footer Class</em>' attribute.
-	 * @see #setFooterClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getFeature_FooterClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getFooterClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Feature#getFooterClass <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Footer Class</em>' attribute.
-	 * @see #getFooterClass()
-	 * @generated
-	 */
-	void setFooterClass(String value);
 
 } // Feature

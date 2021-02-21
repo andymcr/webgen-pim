@@ -48,9 +48,6 @@ import work.andycarpenter.webgen.pims.persistence.isHasChoices;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getPluralisedName <em>Pluralised Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getColumnName <em>Column Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getSerializationGroups <em>Serialization Groups</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getDisplayClass <em>Display Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -365,66 +362,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @ordered
 	 */
 	protected EList<SerializationGroup> serializationGroups;
-
-	/**
-	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String HEADER_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String headerClass = HEADER_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DISPLAY_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getDisplayClass() <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String displayClass = DISPLAY_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -852,75 +789,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 	 * @generated
 	 */
 	@Override
-	public String getHeaderClass() {
-		return headerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setHeaderClass(String newHeaderClass) {
-		String oldHeaderClass = headerClass;
-		headerClass = newHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.FEATURE__HEADER_CLASS, oldHeaderClass, headerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDisplayClass() {
-		return displayClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDisplayClass(String newDisplayClass) {
-		String oldDisplayClass = displayClass;
-		displayClass = newDisplayClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.FEATURE__DISPLAY_CLASS, oldDisplayClass, displayClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFooterClass() {
-		return footerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFooterClass(String newFooterClass) {
-		String oldFooterClass = footerClass;
-		footerClass = newFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.FEATURE__FOOTER_CLASS, oldFooterClass, footerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PersistencePackage.FEATURE__PART_OF:
@@ -1001,12 +869,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				return getColumnName();
 			case PersistencePackage.FEATURE__SERIALIZATION_GROUPS:
 				return getSerializationGroups();
-			case PersistencePackage.FEATURE__HEADER_CLASS:
-				return getHeaderClass();
-			case PersistencePackage.FEATURE__DISPLAY_CLASS:
-				return getDisplayClass();
-			case PersistencePackage.FEATURE__FOOTER_CLASS:
-				return getFooterClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1072,15 +934,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				getSerializationGroups().clear();
 				getSerializationGroups().addAll((Collection<? extends SerializationGroup>)newValue);
 				return;
-			case PersistencePackage.FEATURE__HEADER_CLASS:
-				setHeaderClass((String)newValue);
-				return;
-			case PersistencePackage.FEATURE__DISPLAY_CLASS:
-				setDisplayClass((String)newValue);
-				return;
-			case PersistencePackage.FEATURE__FOOTER_CLASS:
-				setFooterClass((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1144,15 +997,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 			case PersistencePackage.FEATURE__SERIALIZATION_GROUPS:
 				getSerializationGroups().clear();
 				return;
-			case PersistencePackage.FEATURE__HEADER_CLASS:
-				setHeaderClass(HEADER_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.FEATURE__DISPLAY_CLASS:
-				setDisplayClass(DISPLAY_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.FEATURE__FOOTER_CLASS:
-				setFooterClass(FOOTER_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1199,12 +1043,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 				return COLUMN_NAME_EDEFAULT == null ? columnName != null : !COLUMN_NAME_EDEFAULT.equals(columnName);
 			case PersistencePackage.FEATURE__SERIALIZATION_GROUPS:
 				return serializationGroups != null && !serializationGroups.isEmpty();
-			case PersistencePackage.FEATURE__HEADER_CLASS:
-				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case PersistencePackage.FEATURE__DISPLAY_CLASS:
-				return DISPLAY_CLASS_EDEFAULT == null ? displayClass != null : !DISPLAY_CLASS_EDEFAULT.equals(displayClass);
-			case PersistencePackage.FEATURE__FOOTER_CLASS:
-				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1249,12 +1087,6 @@ public abstract class FeatureImpl extends NamedDisplayElementImpl implements Fea
 		result.append(pluralisedName);
 		result.append(", columnName: ");
 		result.append(columnName);
-		result.append(", headerClass: ");
-		result.append(headerClass);
-		result.append(", displayClass: ");
-		result.append(displayClass);
-		result.append(", footerClass: ");
-		result.append(footerClass);
 		result.append(')');
 		return result.toString();
 	}

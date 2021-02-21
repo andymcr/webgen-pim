@@ -198,13 +198,31 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>Default Edit Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Form Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_EDIT_CONTENT_CLASS = 14;
+	int WEB_UI__DEFAULT_FORM_CONTENT_CLASS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Default Slider Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS = 15;
+
+	/**
+	 * The feature id for the '<em><b>Default Gallery Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Content Class</b></em>' attribute.
@@ -213,7 +231,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = 15;
+	int WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
@@ -222,7 +240,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 16;
+	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
@@ -231,7 +249,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ROW_CLASS = 17;
+	int WEB_UI__DEFAULT_ROW_CLASS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
@@ -240,7 +258,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_COLUMN_CLASS = 18;
+	int WEB_UI__DEFAULT_COLUMN_CLASS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
@@ -249,7 +267,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_CLASS = 19;
+	int WEB_UI__DEFAULT_CARD_CLASS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
@@ -258,7 +276,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 20;
+	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
@@ -267,7 +285,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 21;
+	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
@@ -276,7 +294,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 22;
+	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
@@ -285,16 +303,79 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_BADGE_CLASS = 23;
+	int WEB_UI__DEFAULT_BADGE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Control Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 24;
+	int WEB_UI__DEFAULT_CONTROL_CLASS = 26;
+
+	/**
+	 * The feature id for the '<em><b>Default Details Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = 27;
+
+	/**
+	 * The feature id for the '<em><b>Default Index Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_INDEX_CONTROL_CLASS = 28;
+
+	/**
+	 * The feature id for the '<em><b>Default Cards Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = 29;
+
+	/**
+	 * The feature id for the '<em><b>Default Form Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_FORM_CONTROL_CLASS = 30;
+
+	/**
+	 * The feature id for the '<em><b>Default Slider Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = 31;
+
+	/**
+	 * The feature id for the '<em><b>Default Gallery Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = 32;
+
+	/**
+	 * The feature id for the '<em><b>Default Static Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = 33;
 
 	/**
 	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
@@ -303,7 +384,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 25;
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
@@ -312,7 +393,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 26;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 35;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -321,7 +402,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 27;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 36;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -330,7 +411,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 28;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 37;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -339,7 +420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 29;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 38;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -348,7 +429,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 30;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 39;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -357,7 +438,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 31;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 40;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -366,7 +447,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 32;
+	int WEB_UI__INPUT_TECHNOLOGY = 41;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -375,7 +456,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 33;
+	int WEB_UI__AJAX_TECHNOLOGY = 42;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -384,7 +465,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 34;
+	int WEB_UI_FEATURE_COUNT = 43;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -2204,22 +2285,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__DISPLAY_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
-
-	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -2228,7 +2300,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 19;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -2482,15 +2554,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__DISPLAY_CLASS = UNIT_FEATURE__DISPLAY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -2816,15 +2879,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__DISPLAY_CLASS = UNIT_FEATURE__DISPLAY_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -5542,13 +5596,31 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 3;
+	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
@@ -5557,7 +5629,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
@@ -5566,7 +5638,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 5;
+	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -5575,7 +5647,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -5584,7 +5656,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -5910,6 +5982,24 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
@@ -6280,6 +6370,24 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
@@ -6679,6 +6787,24 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7056,6 +7182,24 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
@@ -13704,7 +13848,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__NAME = DYNAMIC_UNIT__NAME;
+	int LOGIN_UNIT__NAME = EDIT_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -13713,7 +13857,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
+	int LOGIN_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -13722,7 +13866,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int LOGIN_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -13731,7 +13875,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int LOGIN_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -13740,7 +13884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
+	int LOGIN_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -13749,7 +13893,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
+	int LOGIN_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -13758,7 +13902,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__PURPOSE_SUMMARY = DYNAMIC_UNIT__PURPOSE_SUMMARY;
+	int LOGIN_UNIT__PURPOSE_SUMMARY = EDIT_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -13767,7 +13911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
+	int LOGIN_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -13776,7 +13920,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
+	int LOGIN_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -13785,7 +13929,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int LOGIN_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -13794,7 +13938,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
+	int LOGIN_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -13803,7 +13947,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int LOGIN_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -13812,7 +13956,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int LOGIN_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -13821,7 +13965,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
+	int LOGIN_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -13830,7 +13974,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__ACTIONS = DYNAMIC_UNIT__ACTIONS;
+	int LOGIN_UNIT__ACTIONS = EDIT_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -13839,7 +13983,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
+	int LOGIN_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Default Local Anchor Class</b></em>' attribute.
@@ -13848,7 +13992,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
+	int LOGIN_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS = EDIT_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
@@ -13857,7 +14001,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int LOGIN_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -13866,7 +14010,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
+	int LOGIN_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -13875,7 +14019,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__HIDE_WHEN = DYNAMIC_UNIT__HIDE_WHEN;
+	int LOGIN_UNIT__HIDE_WHEN = EDIT_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -13884,7 +14028,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__MESSAGE_WHEN_HIDDEN = DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN;
+	int LOGIN_UNIT__MESSAGE_WHEN_HIDDEN = EDIT_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -13893,7 +14037,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__HEADER = DYNAMIC_UNIT__HEADER;
+	int LOGIN_UNIT__HEADER = EDIT_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -13902,7 +14046,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__FOOTER = DYNAMIC_UNIT__FOOTER;
+	int LOGIN_UNIT__FOOTER = EDIT_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -13911,7 +14055,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
+	int LOGIN_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -13920,7 +14064,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int LOGIN_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13929,7 +14073,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
+	int LOGIN_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -13938,7 +14082,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
+	int LOGIN_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
@@ -13947,7 +14091,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
+	int LOGIN_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
@@ -13956,7 +14100,106 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
+	int LOGIN_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Login Unit</em>' class.
@@ -13965,7 +14208,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+	int LOGIN_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Login Unit</em>' class.
@@ -13974,7 +14217,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 0;
+	int LOGIN_UNIT_OPERATION_COUNT = EDIT_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.LogoutUnitImpl <em>Logout Unit</em>}' class.
@@ -16073,15 +16316,37 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultCardsContentClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass <em>Default Form Content Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Edit Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass()
+	 * @return the meta object for the attribute '<em>Default Form Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultEditContentClass();
+	EAttribute getWebUI_DefaultFormContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass <em>Default Slider Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Slider Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSliderContentClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Gallery Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultGalleryContentClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}'.
@@ -16172,15 +16437,92 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultBadgeClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass <em>Default Control Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Action Navigation Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass()
+	 * @return the meta object for the attribute '<em>Default Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultActionNavigationClass();
+	EAttribute getWebUI_DefaultControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass <em>Default Details Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Details Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultDetailsControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Index Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultIndexControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Cards Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCardsControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass <em>Default Form Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Form Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultFormControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Slider Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSliderControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Gallery Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultGalleryControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass <em>Default Static Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Static Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultStaticControlClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}'.
@@ -17255,17 +17597,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_InputGroupClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_DisplayClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooterClass <em>Footer Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18270,6 +18601,28 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEditUnit_ConfirmLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Confirm Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_ConfirmMessage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Success Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_SuccessMessage();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}'.
@@ -19538,12 +19891,28 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultCardsContentClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Edit Content Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Form Content Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_EDIT_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultEditContentClass();
+		EAttribute WEB_UI__DEFAULT_FORM_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultFormContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Slider Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultSliderContentClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Gallery Content Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultGalleryContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Static Content Class</b></em>' attribute feature.
@@ -19610,12 +19979,68 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_BADGE_CLASS = eINSTANCE.getWebUI_DefaultBadgeClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Action Navigation Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Control Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = eINSTANCE.getWebUI_DefaultActionNavigationClass();
+		EAttribute WEB_UI__DEFAULT_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Details Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultDetailsControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Index Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_INDEX_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultIndexControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Cards Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultCardsControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Form Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_FORM_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultFormControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Slider Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultSliderControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Gallery Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultGalleryControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Static Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultStaticControlClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Anchor Class</b></em>' attribute feature.
@@ -20444,14 +20869,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__INPUT_GROUP_CLASS = eINSTANCE.getUnitFeature_InputGroupClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__DISPLAY_CLASS = eINSTANCE.getUnitFeature_DisplayClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21228,6 +21645,22 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EDIT_UNIT__CONFIRM_LABEL = eINSTANCE.getEditUnit_ConfirmLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Confirm Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__CONFIRM_MESSAGE = eINSTANCE.getEditUnit_ConfirmMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Success Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__SUCCESS_MESSAGE = eINSTANCE.getEditUnit_SuccessMessage();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel Destination</b></em>' reference feature.

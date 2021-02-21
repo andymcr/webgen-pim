@@ -22,10 +22,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#isTargetPrimaryKey <em>Target Primary Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetColumnName <em>Target Column Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayLabel <em>Target Display Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass <em>Target Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass <em>Target Input Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass <em>Target Display Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass <em>Target Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}</li>
  * </ul>
  *
@@ -265,111 +261,6 @@ public interface Association extends Feature {
 	 * @generated
 	 */
 	void setTargetDisplayLabel(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Header Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Header Class</em>' attribute.
-	 * @see #setTargetHeaderClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_TargetHeaderClass()
-	 * @model
-	 * @generated
-	 */
-	String getTargetHeaderClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass <em>Target Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Header Class</em>' attribute.
-	 * @see #getTargetHeaderClass()
-	 * @generated
-	 */
-	void setTargetHeaderClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Input Class</b></em>' attribute.
-	 * The default value is <code>"input_association"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Input Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Input Class</em>' attribute.
-	 * @see #setTargetInputClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_TargetInputClass()
-	 * @model default="input_association"
-	 * @generated
-	 */
-	String getTargetInputClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass <em>Target Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Input Class</em>' attribute.
-	 * @see #getTargetInputClass()
-	 * @generated
-	 */
-	void setTargetInputClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Display Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Display Class</em>' attribute.
-	 * @see #setTargetDisplayClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_TargetDisplayClass()
-	 * @model
-	 * @generated
-	 */
-	String getTargetDisplayClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass <em>Target Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Display Class</em>' attribute.
-	 * @see #getTargetDisplayClass()
-	 * @generated
-	 */
-	void setTargetDisplayClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Footer Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Footer Class</em>' attribute.
-	 * @see #setTargetFooterClass(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociation_TargetFooterClass()
-	 * @model
-	 * @generated
-	 */
-	String getTargetFooterClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass <em>Target Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Footer Class</em>' attribute.
-	 * @see #getTargetFooterClass()
-	 * @generated
-	 */
-	void setTargetFooterClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Serialization Max Depth</b></em>' attribute.

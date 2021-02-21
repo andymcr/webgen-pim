@@ -65,9 +65,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 			addPluralisedNamePropertyDescriptor(object);
 			addColumnNamePropertyDescriptor(object);
 			addSerializationGroupsPropertyDescriptor(object);
-			addHeaderClassPropertyDescriptor(object);
-			addDisplayClassPropertyDescriptor(object);
-			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -425,72 +422,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Header Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHeaderClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feature_headerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_headerClass_feature", "_UI_Feature_type"),
-				 PersistencePackage.Literals.FEATURE__HEADER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Display Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDisplayClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feature_displayClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_displayClass_feature", "_UI_Feature_type"),
-				 PersistencePackage.Literals.FEATURE__DISPLAY_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Footer Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFooterClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feature_footerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_footerClass_feature", "_UI_Feature_type"),
-				 PersistencePackage.Literals.FEATURE__FOOTER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -533,9 +464,6 @@ public class FeatureItemProvider extends NamedDisplayElementItemProvider {
 			case PersistencePackage.FEATURE__PLURALISED_NAME:
 			case PersistencePackage.FEATURE__COLUMN_NAME:
 			case PersistencePackage.FEATURE__SERIALIZATION_GROUPS:
-			case PersistencePackage.FEATURE__HEADER_CLASS:
-			case PersistencePackage.FEATURE__DISPLAY_CLASS:
-			case PersistencePackage.FEATURE__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

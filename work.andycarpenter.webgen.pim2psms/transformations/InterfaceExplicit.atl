@@ -252,9 +252,9 @@ abstract rule DynamicUnit {
 		header <- website.header,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
-		controlClass <- website.controlClass,
-		footerClass <- website.footerClass,
-		fieldListClass <- website.fieldListClass()
+		fieldListClass <- website.fieldListClass(),
+		controlClass <- website.controlClass(),
+		footerClass <- website.footerClass
 	)
 }
 
@@ -287,9 +287,11 @@ abstract rule UnitFeature {
 		emptyDisplayValue <- website.emptyDisplayValue(),
 		autofocus <- website.autofocus,
 		footer <- website.footer,
+		headerClass <- website.headerClass(),
 		fieldLabelClass <- website.fieldLabelClass(),
 		fieldValueClass <- website.fieldValueClass(),
-		inputGroupClass <- website.inputGroupClass()
+		inputGroupClass <- website.inputGroupClass(),
+		footerClass <- website.footerClass()
 	)
 }
 
@@ -302,10 +304,7 @@ rule UnitAttribute {
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholder <- website.placeholder(),
 		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
-		validationPattern <- website.validationPattern,
-		headerClass <- website.headerClass(),
-		displayClass <- website.displayClass(),
-		footerClass <- website.footerClass()
+		validationPattern <- website.validationPattern
 	)
 }
 
@@ -324,10 +323,7 @@ rule UnitAssociation {
 				website.filteredOptions
 			else
 				website.filteredOptions.findFilter()
-			endif,
-		headerClass <- website.headerClass(),
-		displayClass <- website.displayClass(),
-		footerClass <- website.footerClass()
+			endif
 	)
 }
 
@@ -567,6 +563,18 @@ abstract rule EditUnit {
 					'Edit'
 				endif endif endif endif
 			endif,
+		confirmMessage <-
+			if website.confirmMessage.trim() <> '' then
+				website.confirmMessage.trim()
+			else
+				OclUndefined
+			endif,
+		successMessage <-
+			if website.successMessage.trim() <> '' then
+				website.successMessage.trim()
+			else
+				OclUndefined
+			endif,
 		cancelDestination <- website.cancelDestination,
 		cancelLabel <-
 			if not website.cancelLabel.oclIsUndefined() and website.cancelLabel <> '' then
@@ -779,28 +787,28 @@ abstract rule SecurityUnit {
 	)
 }
 
--- @extends DynamicUnit
+-- @extends DynamicUnit, SecurityUnit
 rule RegistrationUnit {
 	from website : Website!RegistrationUnit
 	to waf : WAF!RegistrationUnit (
 	)
 }
 
--- @extends DynamicUnit
+-- @extends EditUnit, SecurityUnit
 rule LoginUnit {
 	from website : Website!LoginUnit
 	to waf : WAF!LoginUnit (
 	)
 }
 
--- @extends DynamicUnit
+-- @extends DynamicUnit, SecurityUnit
 rule LogoutUnit {
 	from website : Website!LogoutUnit
 	to waf : WAF!LogoutUnit (
 	)
 }
 
--- @extends DynamicUnit
+-- @extends DynamicUnit, SecurityUnit
 rule ForgottenPasswordUnit {
 	from website : Website!ForgottenPasswordUnit
 	to waf : WAF!ForgottenPasswordUnit (

@@ -64,9 +64,6 @@
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/pluralisedName"/>
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/columnName"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EReference persistence.ecore#//Feature/serializationGroups"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/headerClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/displayClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Feature/footerClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Attribute">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Attribute/hidden"/>
@@ -94,10 +91,6 @@
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetPrimaryKey"/>
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetColumnName"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayLabel"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetHeaderClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetInputClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/serializationMaxDepth"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//AssociationReference">

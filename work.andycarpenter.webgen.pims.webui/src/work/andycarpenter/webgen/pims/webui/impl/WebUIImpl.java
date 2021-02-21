@@ -47,7 +47,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultEditContentClass <em>Default Edit Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormContentClass <em>Default Form Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderContentClass <em>Default Slider Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticContentClass <em>Default Static Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultRowClass <em>Default Row Class</em>}</li>
@@ -57,7 +59,14 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultControlClass <em>Default Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsControlClass <em>Default Details Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexControlClass <em>Default Index Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsControlClass <em>Default Cards Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormControlClass <em>Default Form Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticControlClass <em>Default Static Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
@@ -313,24 +322,64 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultCardsContentClass = DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultEditContentClass() <em>Default Edit Content Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultFormContentClass() <em>Default Form Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultEditContentClass()
+	 * @see #getDefaultFormContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT = "";
+	protected static final String DEFAULT_FORM_CONTENT_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultEditContentClass() <em>Default Edit Content Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultFormContentClass() <em>Default Form Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultEditContentClass()
+	 * @see #getDefaultFormContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultEditContentClass = DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT;
+	protected String defaultFormContentClass = DEFAULT_FORM_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSliderContentClass() <em>Default Slider Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SLIDER_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSliderContentClass() <em>Default Slider Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSliderContentClass = DEFAULT_SLIDER_CONTENT_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultGalleryContentClass() <em>Default Gallery Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_GALLERY_CONTENT_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultGalleryContentClass() <em>Default Gallery Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryContentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultGalleryContentClass = DEFAULT_GALLERY_CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultStaticContentClass() <em>Default Static Content Class</em>}' attribute.
@@ -513,24 +562,164 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultBadgeClass = DEFAULT_BADGE_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultControlClass() <em>Default Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultActionNavigationClass()
+	 * @see #getDefaultControlClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT = "nav";
+	protected static final String DEFAULT_CONTROL_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultControlClass() <em>Default Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultActionNavigationClass()
+	 * @see #getDefaultControlClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultActionNavigationClass = DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT;
+	protected String defaultControlClass = DEFAULT_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultDetailsControlClass() <em>Default Details Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultDetailsControlClass() <em>Default Details Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultDetailsControlClass = DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultIndexControlClass() <em>Default Index Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultIndexControlClass() <em>Default Index Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultIndexControlClass = DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardsControlClass() <em>Default Cards Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardsControlClass() <em>Default Cards Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardsControlClass = DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFormControlClass() <em>Default Form Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFormControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FORM_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFormControlClass() <em>Default Form Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFormControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFormControlClass = DEFAULT_FORM_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSliderControlClass() <em>Default Slider Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SLIDER_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSliderControlClass() <em>Default Slider Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSliderControlClass = DEFAULT_SLIDER_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultGalleryControlClass() <em>Default Gallery Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultGalleryControlClass() <em>Default Gallery Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultGalleryControlClass = DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultStaticControlClass() <em>Default Static Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultStaticControlClass() <em>Default Static Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultStaticControlClass = DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
@@ -1073,8 +1262,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultEditContentClass() {
-		return defaultEditContentClass;
+	public String getDefaultFormContentClass() {
+		return defaultFormContentClass;
 	}
 
 	/**
@@ -1083,11 +1272,57 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultEditContentClass(String newDefaultEditContentClass) {
-		String oldDefaultEditContentClass = defaultEditContentClass;
-		defaultEditContentClass = newDefaultEditContentClass;
+	public void setDefaultFormContentClass(String newDefaultFormContentClass) {
+		String oldDefaultFormContentClass = defaultFormContentClass;
+		defaultFormContentClass = newDefaultFormContentClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS, oldDefaultEditContentClass, defaultEditContentClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS, oldDefaultFormContentClass, defaultFormContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSliderContentClass() {
+		return defaultSliderContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSliderContentClass(String newDefaultSliderContentClass) {
+		String oldDefaultSliderContentClass = defaultSliderContentClass;
+		defaultSliderContentClass = newDefaultSliderContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS, oldDefaultSliderContentClass, defaultSliderContentClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultGalleryContentClass() {
+		return defaultGalleryContentClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultGalleryContentClass(String newDefaultGalleryContentClass) {
+		String oldDefaultGalleryContentClass = defaultGalleryContentClass;
+		defaultGalleryContentClass = newDefaultGalleryContentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS, oldDefaultGalleryContentClass, defaultGalleryContentClass));
 	}
 
 	/**
@@ -1280,8 +1515,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultActionNavigationClass() {
-		return defaultActionNavigationClass;
+	public String getDefaultControlClass() {
+		return defaultControlClass;
 	}
 
 	/**
@@ -1290,11 +1525,172 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultActionNavigationClass(String newDefaultActionNavigationClass) {
-		String oldDefaultActionNavigationClass = defaultActionNavigationClass;
-		defaultActionNavigationClass = newDefaultActionNavigationClass;
+	public void setDefaultControlClass(String newDefaultControlClass) {
+		String oldDefaultControlClass = defaultControlClass;
+		defaultControlClass = newDefaultControlClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS, oldDefaultActionNavigationClass, defaultActionNavigationClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS, oldDefaultControlClass, defaultControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultDetailsControlClass() {
+		return defaultDetailsControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultDetailsControlClass(String newDefaultDetailsControlClass) {
+		String oldDefaultDetailsControlClass = defaultDetailsControlClass;
+		defaultDetailsControlClass = newDefaultDetailsControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS, oldDefaultDetailsControlClass, defaultDetailsControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultIndexControlClass() {
+		return defaultIndexControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultIndexControlClass(String newDefaultIndexControlClass) {
+		String oldDefaultIndexControlClass = defaultIndexControlClass;
+		defaultIndexControlClass = newDefaultIndexControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS, oldDefaultIndexControlClass, defaultIndexControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCardsControlClass() {
+		return defaultCardsControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardsControlClass(String newDefaultCardsControlClass) {
+		String oldDefaultCardsControlClass = defaultCardsControlClass;
+		defaultCardsControlClass = newDefaultCardsControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS, oldDefaultCardsControlClass, defaultCardsControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultFormControlClass() {
+		return defaultFormControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultFormControlClass(String newDefaultFormControlClass) {
+		String oldDefaultFormControlClass = defaultFormControlClass;
+		defaultFormControlClass = newDefaultFormControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS, oldDefaultFormControlClass, defaultFormControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSliderControlClass() {
+		return defaultSliderControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSliderControlClass(String newDefaultSliderControlClass) {
+		String oldDefaultSliderControlClass = defaultSliderControlClass;
+		defaultSliderControlClass = newDefaultSliderControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS, oldDefaultSliderControlClass, defaultSliderControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultGalleryControlClass() {
+		return defaultGalleryControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultGalleryControlClass(String newDefaultGalleryControlClass) {
+		String oldDefaultGalleryControlClass = defaultGalleryControlClass;
+		defaultGalleryControlClass = newDefaultGalleryControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS, oldDefaultGalleryControlClass, defaultGalleryControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultStaticControlClass() {
+		return defaultStaticControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultStaticControlClass(String newDefaultStaticControlClass) {
+		String oldDefaultStaticControlClass = defaultStaticControlClass;
+		defaultStaticControlClass = newDefaultStaticControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS, oldDefaultStaticControlClass, defaultStaticControlClass));
 	}
 
 	/**
@@ -1596,8 +1992,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultIndexContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				return getDefaultCardsContentClass();
-			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
-				return getDefaultEditContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
+				return getDefaultFormContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
+				return getDefaultSliderContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
+				return getDefaultGalleryContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 				return getDefaultStaticContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
@@ -1616,8 +2016,22 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultCardFooterClass();
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 				return getDefaultBadgeClass();
-			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
-				return getDefaultActionNavigationClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
+				return getDefaultControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
+				return getDefaultDetailsControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+				return getDefaultIndexControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
+				return getDefaultCardsControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
+				return getDefaultFormControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
+				return getDefaultSliderControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
+				return getDefaultGalleryControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
+				return getDefaultStaticControlClass();
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return getDefaultAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
@@ -1693,8 +2107,14 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				setDefaultCardsContentClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
-				setDefaultEditContentClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
+				setDefaultFormContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
+				setDefaultSliderContentClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
+				setDefaultGalleryContentClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 				setDefaultStaticContentClass((String)newValue);
@@ -1723,8 +2143,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 				setDefaultBadgeClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
-				setDefaultActionNavigationClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
+				setDefaultControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
+				setDefaultDetailsControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+				setDefaultIndexControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
+				setDefaultCardsControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
+				setDefaultFormControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
+				setDefaultSliderControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
+				setDefaultGalleryControlClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
+				setDefaultStaticControlClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass((String)newValue);
@@ -1807,8 +2248,14 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				setDefaultCardsContentClass(DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
-				setDefaultEditContentClass(DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
+				setDefaultFormContentClass(DEFAULT_FORM_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
+				setDefaultSliderContentClass(DEFAULT_SLIDER_CONTENT_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
+				setDefaultGalleryContentClass(DEFAULT_GALLERY_CONTENT_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 				setDefaultStaticContentClass(DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT);
@@ -1837,8 +2284,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 				setDefaultBadgeClass(DEFAULT_BADGE_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
-				setDefaultActionNavigationClass(DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
+				setDefaultControlClass(DEFAULT_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
+				setDefaultDetailsControlClass(DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+				setDefaultIndexControlClass(DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
+				setDefaultCardsControlClass(DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
+				setDefaultFormControlClass(DEFAULT_FORM_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
+				setDefaultSliderControlClass(DEFAULT_SLIDER_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
+				setDefaultGalleryControlClass(DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
+				setDefaultStaticControlClass(DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
@@ -1907,8 +2375,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT == null ? defaultIndexContentClass != null : !DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT.equals(defaultIndexContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				return DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT == null ? defaultCardsContentClass != null : !DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT.equals(defaultCardsContentClass);
-			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
-				return DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT == null ? defaultEditContentClass != null : !DEFAULT_EDIT_CONTENT_CLASS_EDEFAULT.equals(defaultEditContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
+				return DEFAULT_FORM_CONTENT_CLASS_EDEFAULT == null ? defaultFormContentClass != null : !DEFAULT_FORM_CONTENT_CLASS_EDEFAULT.equals(defaultFormContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
+				return DEFAULT_SLIDER_CONTENT_CLASS_EDEFAULT == null ? defaultSliderContentClass != null : !DEFAULT_SLIDER_CONTENT_CLASS_EDEFAULT.equals(defaultSliderContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
+				return DEFAULT_GALLERY_CONTENT_CLASS_EDEFAULT == null ? defaultGalleryContentClass != null : !DEFAULT_GALLERY_CONTENT_CLASS_EDEFAULT.equals(defaultGalleryContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 				return DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT == null ? defaultStaticContentClass != null : !DEFAULT_STATIC_CONTENT_CLASS_EDEFAULT.equals(defaultStaticContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
@@ -1927,8 +2399,22 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_CARD_FOOTER_CLASS_EDEFAULT == null ? defaultCardFooterClass != null : !DEFAULT_CARD_FOOTER_CLASS_EDEFAULT.equals(defaultCardFooterClass);
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 				return DEFAULT_BADGE_CLASS_EDEFAULT == null ? defaultBadgeClass != null : !DEFAULT_BADGE_CLASS_EDEFAULT.equals(defaultBadgeClass);
-			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
-				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
+				return DEFAULT_CONTROL_CLASS_EDEFAULT == null ? defaultControlClass != null : !DEFAULT_CONTROL_CLASS_EDEFAULT.equals(defaultControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
+				return DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT == null ? defaultDetailsControlClass != null : !DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT.equals(defaultDetailsControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+				return DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT == null ? defaultIndexControlClass != null : !DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT.equals(defaultIndexControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
+				return DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT == null ? defaultCardsControlClass != null : !DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT.equals(defaultCardsControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
+				return DEFAULT_FORM_CONTROL_CLASS_EDEFAULT == null ? defaultFormControlClass != null : !DEFAULT_FORM_CONTROL_CLASS_EDEFAULT.equals(defaultFormControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
+				return DEFAULT_SLIDER_CONTROL_CLASS_EDEFAULT == null ? defaultSliderControlClass != null : !DEFAULT_SLIDER_CONTROL_CLASS_EDEFAULT.equals(defaultSliderControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
+				return DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT == null ? defaultGalleryControlClass != null : !DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT.equals(defaultGalleryControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
+				return DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT == null ? defaultStaticControlClass != null : !DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT.equals(defaultStaticControlClass);
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
@@ -1981,8 +2467,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultIndexContentClass);
 		result.append(", defaultCardsContentClass: ");
 		result.append(defaultCardsContentClass);
-		result.append(", defaultEditContentClass: ");
-		result.append(defaultEditContentClass);
+		result.append(", defaultFormContentClass: ");
+		result.append(defaultFormContentClass);
+		result.append(", defaultSliderContentClass: ");
+		result.append(defaultSliderContentClass);
+		result.append(", defaultGalleryContentClass: ");
+		result.append(defaultGalleryContentClass);
 		result.append(", defaultStaticContentClass: ");
 		result.append(defaultStaticContentClass);
 		result.append(", defaultFieldListClass: ");
@@ -2001,8 +2491,22 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultCardFooterClass);
 		result.append(", defaultBadgeClass: ");
 		result.append(defaultBadgeClass);
-		result.append(", defaultActionNavigationClass: ");
-		result.append(defaultActionNavigationClass);
+		result.append(", defaultControlClass: ");
+		result.append(defaultControlClass);
+		result.append(", defaultDetailsControlClass: ");
+		result.append(defaultDetailsControlClass);
+		result.append(", defaultIndexControlClass: ");
+		result.append(defaultIndexControlClass);
+		result.append(", defaultCardsControlClass: ");
+		result.append(defaultCardsControlClass);
+		result.append(", defaultFormControlClass: ");
+		result.append(defaultFormControlClass);
+		result.append(", defaultSliderControlClass: ");
+		result.append(defaultSliderControlClass);
+		result.append(", defaultGalleryControlClass: ");
+		result.append(defaultGalleryControlClass);
+		result.append(", defaultStaticControlClass: ");
+		result.append(defaultStaticControlClass);
 		result.append(", defaultAnchorClass: ");
 		result.append(defaultAnchorClass);
 		result.append(", defaultFieldLabelClass: ");

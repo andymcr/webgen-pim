@@ -14,5 +14,5 @@ import work.andycarpenter.webgen.pims.security.SecurityUnit;
  * @model
  * @generated
  */
-public interface LoginUnit extends DynamicUnit, SecurityUnit {
+public interface LoginUnit extends EditUnit, SecurityUnit {
 } // LoginUnit

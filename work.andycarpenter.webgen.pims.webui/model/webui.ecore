@@ -41,7 +41,11 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultEditContentClass"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFormContentClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSliderContentClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultGalleryContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStaticContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
@@ -63,9 +67,22 @@
         defaultValueLiteral="card-footer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultBadgeClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="badge"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultActionNavigationClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="nav"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIndexControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFormControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSliderControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultGalleryControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStaticControlClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultAnchorClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFieldLabelClass"
@@ -304,8 +321,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
@@ -582,6 +597,10 @@
         eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmMessage" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" ordered="false"
         eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabel" ordered="false"
@@ -714,7 +733,7 @@
         lowerBound="1" eType="#//IndexUnit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegistrationUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LoginUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoginUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LogoutUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForgottenPasswordUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ActionContainer" abstract="true" interface="true">

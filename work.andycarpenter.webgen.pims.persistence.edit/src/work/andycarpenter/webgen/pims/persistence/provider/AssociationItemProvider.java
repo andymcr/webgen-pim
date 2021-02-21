@@ -56,10 +56,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			addTargetPrimaryKeyPropertyDescriptor(object);
 			addTargetColumnNamePropertyDescriptor(object);
 			addTargetDisplayLabelPropertyDescriptor(object);
-			addTargetHeaderClassPropertyDescriptor(object);
-			addTargetInputClassPropertyDescriptor(object);
-			addTargetDisplayClassPropertyDescriptor(object);
-			addTargetFooterClassPropertyDescriptor(object);
 			addSerializationMaxDepthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -242,94 +238,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Target Header Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetHeaderClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Association_targetHeaderClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_targetHeaderClass_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__TARGET_HEADER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target Input Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetInputClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Association_targetInputClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_targetInputClass_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__TARGET_INPUT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target Display Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetDisplayClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Association_targetDisplayClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_targetDisplayClass_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__TARGET_DISPLAY_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target Footer Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetFooterClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Association_targetFooterClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_targetFooterClass_feature", "_UI_Association_type"),
-				 PersistencePackage.Literals.ASSOCIATION__TARGET_FOOTER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Serialization Max Depth feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,10 +325,6 @@ public class AssociationItemProvider extends FeatureItemProvider {
 			case PersistencePackage.ASSOCIATION__TARGET_PRIMARY_KEY:
 			case PersistencePackage.ASSOCIATION__TARGET_COLUMN_NAME:
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_LABEL:
-			case PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS:
-			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
-			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
-			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

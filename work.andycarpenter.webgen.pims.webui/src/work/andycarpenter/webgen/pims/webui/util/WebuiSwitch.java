@@ -588,8 +588,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.LOGIN_UNIT: {
 				LoginUnit loginUnit = (LoginUnit)theEObject;
 				T result = caseLoginUnit(loginUnit);
-				if (result == null) result = caseDynamicUnit(loginUnit);
+				if (result == null) result = caseEditUnit(loginUnit);
 				if (result == null) result = caseSecurityUnit(loginUnit);
+				if (result == null) result = caseSingletonUnit(loginUnit);
+				if (result == null) result = caseDynamicUnit(loginUnit);
 				if (result == null) result = caseContentUnit(loginUnit);
 				if (result == null) result = caseActionContainer(loginUnit);
 				if (result == null) result = caseNamedDisplayElement(loginUnit);

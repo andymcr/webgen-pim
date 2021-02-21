@@ -14,7 +14,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class LoginUnitImpl extends DynamicUnitImpl implements LoginUnit {
+public class LoginUnitImpl extends EditUnitImpl implements LoginUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -379,40 +379,13 @@ public interface PersistencePackage extends EPackage {
 	int FEATURE__SERIALIZATION_GROUPS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE__DISPLAY_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
-
-	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
+	int FEATURE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Feature</em>' class.
@@ -603,33 +576,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ATTRIBUTE__SERIALIZATION_GROUPS = FEATURE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__HEADER_CLASS = FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__DISPLAY_CLASS = FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__FOOTER_CLASS = FEATURE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -921,33 +867,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__SERIALIZATION_GROUPS = FEATURE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__HEADER_CLASS = FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__DISPLAY_CLASS = FEATURE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__FOOTER_CLASS = FEATURE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1029,49 +948,13 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION__TARGET_DISPLAY_LABEL = FEATURE_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_HEADER_CLASS = FEATURE_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_INPUT_CLASS = FEATURE_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_DISPLAY_CLASS = FEATURE_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_FOOTER_CLASS = FEATURE_FEATURE_COUNT + 12;
-
-	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 13;
+	int ASSOCIATION__SERIALIZATION_MAX_DEPTH = FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -1080,7 +963,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 14;
+	int ASSOCIATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -1866,33 +1749,6 @@ public interface PersistencePackage extends EPackage {
 	int DATA_TYPE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2218,33 +2074,6 @@ public interface PersistencePackage extends EPackage {
 	int DATE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2552,33 +2381,6 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2875,33 +2677,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -3340,33 +3115,6 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3699,33 +3447,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__HEADER_CLASS = RESOURCE_ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__DISPLAY_CLASS = RESOURCE_ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__FOOTER_CLASS = RESOURCE_ATTRIBUTE__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
@@ -4062,33 +3783,6 @@ public interface PersistencePackage extends EPackage {
 	int LOCATION_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__HEADER_CLASS = ATTRIBUTE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__DISPLAY_CLASS = ATTRIBUTE__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__FOOTER_CLASS = ATTRIBUTE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4378,33 +4072,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT__SERIALIZATION_GROUPS = ASSOCIATION__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__HEADER_CLASS = ASSOCIATION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__DISPLAY_CLASS = ASSOCIATION__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__FOOTER_CLASS = ASSOCIATION__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4484,42 +4151,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_LABEL = ASSOCIATION__TARGET_DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_HEADER_CLASS = ASSOCIATION__TARGET_HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_INPUT_CLASS = ASSOCIATION__TARGET_INPUT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_DISPLAY_CLASS = ASSOCIATION__TARGET_DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -4748,33 +4379,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITH_CONTAINMENT__SERIALIZATION_GROUPS = ASSOCIATION__SERIALIZATION_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__HEADER_CLASS = ASSOCIATION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__DISPLAY_CLASS = ASSOCIATION__DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__FOOTER_CLASS = ASSOCIATION__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Keys</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4854,42 +4458,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_LABEL = ASSOCIATION__TARGET_DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Target Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_HEADER_CLASS = ASSOCIATION__TARGET_HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_INPUT_CLASS = ASSOCIATION__TARGET_INPUT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Display Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_DISPLAY_CLASS = ASSOCIATION__TARGET_DISPLAY_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Target Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT__TARGET_FOOTER_CLASS = ASSOCIATION__TARGET_FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Max Depth</b></em>' attribute.
@@ -5814,39 +5382,6 @@ public interface PersistencePackage extends EPackage {
 	EReference getFeature_SerializationGroups();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getHeaderClass <em>Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getHeaderClass()
-	 * @see #getFeature()
-	 * @generated
-	 */
-	EAttribute getFeature_HeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getDisplayClass <em>Display Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getDisplayClass()
-	 * @see #getFeature()
-	 * @generated
-	 */
-	EAttribute getFeature_DisplayClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Feature#getFooterClass <em>Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Feature#getFooterClass()
-	 * @see #getFeature()
-	 * @generated
-	 */
-	EAttribute getFeature_FooterClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6074,50 +5609,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAssociation_TargetDisplayLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass <em>Target Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetHeaderClass()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_TargetHeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass <em>Target Input Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetInputClass()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_TargetInputClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass <em>Target Display Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Display Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetDisplayClass()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_TargetDisplayClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass <em>Target Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Association#getTargetFooterClass()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_TargetFooterClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Association#getSerializationMaxDepth <em>Serialization Max Depth</em>}'.
@@ -7561,30 +7052,6 @@ public interface PersistencePackage extends EPackage {
 		EReference FEATURE__SERIALIZATION_GROUPS = eINSTANCE.getFeature_SerializationGroups();
 
 		/**
-		 * The meta object literal for the '<em><b>Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE__HEADER_CLASS = eINSTANCE.getFeature_HeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE__DISPLAY_CLASS = eINSTANCE.getFeature_DisplayClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE__FOOTER_CLASS = eINSTANCE.getFeature_FooterClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7755,38 +7222,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSOCIATION__TARGET_DISPLAY_LABEL = eINSTANCE.getAssociation_TargetDisplayLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__TARGET_HEADER_CLASS = eINSTANCE.getAssociation_TargetHeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Input Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__TARGET_INPUT_CLASS = eINSTANCE.getAssociation_TargetInputClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Display Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__TARGET_DISPLAY_CLASS = eINSTANCE.getAssociation_TargetDisplayClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__TARGET_FOOTER_CLASS = eINSTANCE.getAssociation_TargetFooterClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Serialization Max Depth</b></em>' attribute feature.

@@ -28,7 +28,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldLabelClass <em>Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldValueClass <em>Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
@@ -400,33 +399,6 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @generated
 	 */
 	void setInputGroupClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Display Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Display Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Display Class</em>' attribute.
-	 * @see #setDisplayClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DisplayClass()
-	 * @model default="" ordered="false"
-	 * @generated
-	 */
-	String getDisplayClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayClass <em>Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Display Class</em>' attribute.
-	 * @see #getDisplayClass()
-	 * @generated
-	 */
-	void setDisplayClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.

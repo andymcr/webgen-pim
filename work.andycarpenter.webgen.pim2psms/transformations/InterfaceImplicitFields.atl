@@ -98,33 +98,44 @@ lazy abstract rule implicitUnitFeature {
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
 		title <- partialWaf.displayLabel,
-		headerClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.headerClass
-					endif,
-		displayClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.displayClass
-					endif,
-		footerClass <-
-			let feature : Website!Feature
-				= thisModule.findWebsiteEntity(partialWaf.partOf.name)
-					.getFeature(partialWaf.name)
-				in if feature.oclIsUndefined() then
-						'?? XXXX ??'
-					else
-						feature.footerClass
-					endif
+		fieldLabelClass <-
+			if partialWaf.partOf.oclIsKindOf(WAF!EditUnit) then
+				if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultInputLabelClass.trim()
+				else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldLabelClass.trim()
+				else
+					OclUndefined
+				endif endif
+			else
+				if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldLabelClass.trim()
+				else
+					OclUndefined
+				endif
+			endif,
+		fieldValueClass <-
+			if partialWaf.partOf.oclIsKindOf(WAF!EditUnit) then
+				if thisModule.findWebsiteUI().defaultInputValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultInputValueClass.trim()
+				else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldValueClass.trim()
+				else
+					OclUndefined
+				endif endif
+			else
+				if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
+					thisModule.findWebsiteUI().defaultFieldValueClass.trim()
+				else
+					OclUndefined
+				endif
+			endif,
+		inputGroupClass <-
+			if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultInputGroupClass.trim()
+			else
+				OclUndefined
+			endif
 	)
 }
 

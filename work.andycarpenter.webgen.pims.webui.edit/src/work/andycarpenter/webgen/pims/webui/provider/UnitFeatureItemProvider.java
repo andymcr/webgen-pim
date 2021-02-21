@@ -74,7 +74,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addFieldLabelClassPropertyDescriptor(object);
 			addFieldValueClassPropertyDescriptor(object);
 			addInputGroupClassPropertyDescriptor(object);
-			addDisplayClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -389,28 +388,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Display Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDisplayClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_displayClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_displayClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__DISPLAY_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Footer Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -505,7 +482,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
 			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
 			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-			case WebuiPackage.UNIT_FEATURE__DISPLAY_CLASS:
 			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

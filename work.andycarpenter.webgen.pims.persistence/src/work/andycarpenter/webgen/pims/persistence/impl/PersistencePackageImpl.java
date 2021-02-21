@@ -688,36 +688,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFeature_HeaderClass() {
-		return (EAttribute)featureEClass.getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFeature_DisplayClass() {
-		return (EAttribute)featureEClass.getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFeature_FooterClass() {
-		return (EAttribute)featureEClass.getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -928,48 +898,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAssociation_TargetHeaderClass() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociation_TargetInputClass() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociation_TargetDisplayClass() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociation_TargetFooterClass() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getAssociation_SerializationMaxDepth() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)associationEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2131,9 +2061,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(featureEClass, FEATURE__PLURALISED_NAME);
 		createEAttribute(featureEClass, FEATURE__COLUMN_NAME);
 		createEReference(featureEClass, FEATURE__SERIALIZATION_GROUPS);
-		createEAttribute(featureEClass, FEATURE__HEADER_CLASS);
-		createEAttribute(featureEClass, FEATURE__DISPLAY_CLASS);
-		createEAttribute(featureEClass, FEATURE__FOOTER_CLASS);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__HIDDEN);
@@ -2157,10 +2084,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_PRIMARY_KEY);
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_COLUMN_NAME);
 		createEAttribute(associationEClass, ASSOCIATION__TARGET_DISPLAY_LABEL);
-		createEAttribute(associationEClass, ASSOCIATION__TARGET_HEADER_CLASS);
-		createEAttribute(associationEClass, ASSOCIATION__TARGET_INPUT_CLASS);
-		createEAttribute(associationEClass, ASSOCIATION__TARGET_DISPLAY_CLASS);
-		createEAttribute(associationEClass, ASSOCIATION__TARGET_FOOTER_CLASS);
 		createEAttribute(associationEClass, ASSOCIATION__SERIALIZATION_MAX_DEPTH);
 
 		associationReferenceEClass = createEClass(ASSOCIATION_REFERENCE);
@@ -2397,9 +2320,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getFeature_PluralisedName(), ecorePackage.getEString(), "pluralisedName", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_ColumnName(), ecorePackage.getEString(), "columnName", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getFeature_SerializationGroups(), this.getSerializationGroup(), null, "serializationGroups", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFeature_HeaderClass(), ecorePackage.getEString(), "headerClass", "", 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFeature_DisplayClass(), ecorePackage.getEString(), "displayClass", "", 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFeature_FooterClass(), ecorePackage.getEString(), "footerClass", "", 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttribute_Hidden(), ecorePackage.getEBoolean(), "hidden", "false", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2423,10 +2343,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAssociation_TargetPrimaryKey(), ecorePackage.getEBoolean(), "targetPrimaryKey", "false", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_TargetColumnName(), ecorePackage.getEString(), "targetColumnName", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_TargetDisplayLabel(), ecorePackage.getEString(), "targetDisplayLabel", "", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_TargetHeaderClass(), ecorePackage.getEString(), "targetHeaderClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_TargetInputClass(), ecorePackage.getEString(), "targetInputClass", "input_association", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_TargetDisplayClass(), ecorePackage.getEString(), "targetDisplayClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_TargetFooterClass(), ecorePackage.getEString(), "targetFooterClass", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_SerializationMaxDepth(), ecorePackage.getEInt(), "serializationMaxDepth", "1", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationReferenceEClass, AssociationReference.class, "AssociationReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

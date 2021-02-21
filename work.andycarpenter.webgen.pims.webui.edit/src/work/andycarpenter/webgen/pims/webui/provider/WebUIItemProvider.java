@@ -75,7 +75,9 @@ public class WebUIItemProvider
 			addDefaultDetailsContentClassPropertyDescriptor(object);
 			addDefaultIndexContentClassPropertyDescriptor(object);
 			addDefaultCardsContentClassPropertyDescriptor(object);
-			addDefaultEditContentClassPropertyDescriptor(object);
+			addDefaultFormContentClassPropertyDescriptor(object);
+			addDefaultSliderContentClassPropertyDescriptor(object);
+			addDefaultGalleryContentClassPropertyDescriptor(object);
 			addDefaultStaticContentClassPropertyDescriptor(object);
 			addDefaultFieldListClassPropertyDescriptor(object);
 			addDefaultRowClassPropertyDescriptor(object);
@@ -85,7 +87,14 @@ public class WebUIItemProvider
 			addDefaultCardBodyClassPropertyDescriptor(object);
 			addDefaultCardFooterClassPropertyDescriptor(object);
 			addDefaultBadgeClassPropertyDescriptor(object);
-			addDefaultActionNavigationClassPropertyDescriptor(object);
+			addDefaultControlClassPropertyDescriptor(object);
+			addDefaultDetailsControlClassPropertyDescriptor(object);
+			addDefaultIndexControlClassPropertyDescriptor(object);
+			addDefaultCardsControlClassPropertyDescriptor(object);
+			addDefaultFormControlClassPropertyDescriptor(object);
+			addDefaultSliderControlClassPropertyDescriptor(object);
+			addDefaultGalleryControlClassPropertyDescriptor(object);
+			addDefaultStaticControlClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultFieldLabelClassPropertyDescriptor(object);
 			addDefaultFieldValueClassPropertyDescriptor(object);
@@ -364,19 +373,63 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Edit Content Class feature.
+	 * This adds a property descriptor for the Default Form Content Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultEditContentClassPropertyDescriptor(Object object) {
+	protected void addDefaultFormContentClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultEditContentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultEditContentClass_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS,
+				 getString("_UI_WebUI_defaultFormContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFormContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Slider Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSliderContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSliderContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSliderContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Gallery Content Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultGalleryContentClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultGalleryContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultGalleryContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -562,19 +615,173 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Action Navigation Class feature.
+	 * This adds a property descriptor for the Default Control Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultActionNavigationClassPropertyDescriptor(Object object) {
+	protected void addDefaultControlClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultActionNavigationClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultActionNavigationClass_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS,
+				 getString("_UI_WebUI_defaultControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Details Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultDetailsControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultDetailsControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultDetailsControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Index Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultIndexControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultIndexControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cards Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardsControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardsControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardsControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Form Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultFormControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultFormControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFormControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Slider Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSliderControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSliderControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSliderControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Gallery Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultGalleryControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultGalleryControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultGalleryControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Static Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultStaticControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultStaticControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultStaticControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS,
 				 true,
 				 false,
 				 false,
@@ -882,7 +1089,9 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_EDIT_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
@@ -892,7 +1101,14 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_BODY_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_FOOTER_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:

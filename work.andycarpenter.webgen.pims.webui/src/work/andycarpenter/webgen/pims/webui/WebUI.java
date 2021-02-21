@@ -31,7 +31,9 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass <em>Default Form Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass <em>Default Slider Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass <em>Default Row Class</em>}</li>
@@ -41,7 +43,14 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass <em>Default Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass <em>Default Details Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass <em>Default Form Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass <em>Default Static Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
@@ -384,27 +393,73 @@ public interface WebUI extends EObject {
 	void setDefaultCardsContentClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Edit Content Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Form Content Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Edit Content Class</em>' attribute.
-	 * @see #setDefaultEditContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultEditContentClass()
+	 * @return the value of the '<em>Default Form Content Class</em>' attribute.
+	 * @see #setDefaultFormContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultFormContentClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getDefaultEditContentClass();
+	String getDefaultFormContentClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultEditContentClass <em>Default Edit Content Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass <em>Default Form Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Edit Content Class</em>' attribute.
-	 * @see #getDefaultEditContentClass()
+	 * @param value the new value of the '<em>Default Form Content Class</em>' attribute.
+	 * @see #getDefaultFormContentClass()
 	 * @generated
 	 */
-	void setDefaultEditContentClass(String value);
+	void setDefaultFormContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Slider Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Slider Content Class</em>' attribute.
+	 * @see #setDefaultSliderContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSliderContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultSliderContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass <em>Default Slider Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Slider Content Class</em>' attribute.
+	 * @see #getDefaultSliderContentClass()
+	 * @generated
+	 */
+	void setDefaultSliderContentClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Gallery Content Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Gallery Content Class</em>' attribute.
+	 * @see #setDefaultGalleryContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultGalleryContentClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultGalleryContentClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Gallery Content Class</em>' attribute.
+	 * @see #getDefaultGalleryContentClass()
+	 * @generated
+	 */
+	void setDefaultGalleryContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Static Content Class</b></em>' attribute.
@@ -591,27 +646,188 @@ public interface WebUI extends EObject {
 	void setDefaultBadgeClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Action Navigation Class</b></em>' attribute.
-	 * The default value is <code>"nav"</code>.
+	 * Returns the value of the '<em><b>Default Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Action Navigation Class</em>' attribute.
-	 * @see #setDefaultActionNavigationClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultActionNavigationClass()
-	 * @model default="nav" ordered="false"
+	 * @return the value of the '<em>Default Control Class</em>' attribute.
+	 * @see #setDefaultControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultControlClass()
+	 * @model default=""
 	 * @generated
 	 */
-	String getDefaultActionNavigationClass();
+	String getDefaultControlClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass <em>Default Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Action Navigation Class</em>' attribute.
-	 * @see #getDefaultActionNavigationClass()
+	 * @param value the new value of the '<em>Default Control Class</em>' attribute.
+	 * @see #getDefaultControlClass()
 	 * @generated
 	 */
-	void setDefaultActionNavigationClass(String value);
+	void setDefaultControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Details Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Details Control Class</em>' attribute.
+	 * @see #setDefaultDetailsControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultDetailsControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultDetailsControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass <em>Default Details Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Details Control Class</em>' attribute.
+	 * @see #getDefaultDetailsControlClass()
+	 * @generated
+	 */
+	void setDefaultDetailsControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Index Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Index Control Class</em>' attribute.
+	 * @see #setDefaultIndexControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultIndexControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultIndexControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Index Control Class</em>' attribute.
+	 * @see #getDefaultIndexControlClass()
+	 * @generated
+	 */
+	void setDefaultIndexControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Cards Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Cards Control Class</em>' attribute.
+	 * @see #setDefaultCardsControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCardsControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultCardsControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Cards Control Class</em>' attribute.
+	 * @see #getDefaultCardsControlClass()
+	 * @generated
+	 */
+	void setDefaultCardsControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Form Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Form Control Class</em>' attribute.
+	 * @see #setDefaultFormControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultFormControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultFormControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass <em>Default Form Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Form Control Class</em>' attribute.
+	 * @see #getDefaultFormControlClass()
+	 * @generated
+	 */
+	void setDefaultFormControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Slider Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Slider Control Class</em>' attribute.
+	 * @see #setDefaultSliderControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSliderControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultSliderControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Slider Control Class</em>' attribute.
+	 * @see #getDefaultSliderControlClass()
+	 * @generated
+	 */
+	void setDefaultSliderControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Gallery Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Gallery Control Class</em>' attribute.
+	 * @see #setDefaultGalleryControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultGalleryControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultGalleryControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Gallery Control Class</em>' attribute.
+	 * @see #getDefaultGalleryControlClass()
+	 * @generated
+	 */
+	void setDefaultGalleryControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Static Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Static Control Class</em>' attribute.
+	 * @see #setDefaultStaticControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultStaticControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultStaticControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass <em>Default Static Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Static Control Class</em>' attribute.
+	 * @see #getDefaultStaticControlClass()
+	 * @generated
+	 */
+	void setDefaultStaticControlClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Anchor Class</b></em>' attribute.

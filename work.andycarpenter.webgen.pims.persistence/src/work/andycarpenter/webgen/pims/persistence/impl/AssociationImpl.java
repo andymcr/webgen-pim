@@ -39,10 +39,6 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#isTargetPrimaryKey <em>Target Primary Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetColumnName <em>Target Column Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetDisplayLabel <em>Target Display Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetHeaderClass <em>Target Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetInputClass <em>Target Input Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetDisplayClass <em>Target Display Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getTargetFooterClass <em>Target Footer Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationImpl#getSerializationMaxDepth <em>Serialization Max Depth</em>}</li>
  * </ul>
  *
@@ -208,86 +204,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * @ordered
 	 */
 	protected String targetDisplayLabel = TARGET_DISPLAY_LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTargetHeaderClass() <em>Target Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_HEADER_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetHeaderClass() <em>Target Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetHeaderClass = TARGET_HEADER_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTargetInputClass() <em>Target Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetInputClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_INPUT_CLASS_EDEFAULT = "input_association";
-
-	/**
-	 * The cached value of the '{@link #getTargetInputClass() <em>Target Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetInputClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetInputClass = TARGET_INPUT_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTargetDisplayClass() <em>Target Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_DISPLAY_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetDisplayClass() <em>Target Display Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetDisplayClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetDisplayClass = TARGET_DISPLAY_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTargetFooterClass() <em>Target Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_FOOTER_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetFooterClass() <em>Target Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetFooterClass = TARGET_FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSerializationMaxDepth() <em>Serialization Max Depth</em>}' attribute.
@@ -570,98 +486,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 	 * @generated
 	 */
 	@Override
-	public String getTargetHeaderClass() {
-		return targetHeaderClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTargetHeaderClass(String newTargetHeaderClass) {
-		String oldTargetHeaderClass = targetHeaderClass;
-		targetHeaderClass = newTargetHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS, oldTargetHeaderClass, targetHeaderClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getTargetInputClass() {
-		return targetInputClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTargetInputClass(String newTargetInputClass) {
-		String oldTargetInputClass = targetInputClass;
-		targetInputClass = newTargetInputClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS, oldTargetInputClass, targetInputClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getTargetDisplayClass() {
-		return targetDisplayClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTargetDisplayClass(String newTargetDisplayClass) {
-		String oldTargetDisplayClass = targetDisplayClass;
-		targetDisplayClass = newTargetDisplayClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS, oldTargetDisplayClass, targetDisplayClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getTargetFooterClass() {
-		return targetFooterClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTargetFooterClass(String newTargetFooterClass) {
-		String oldTargetFooterClass = targetFooterClass;
-		targetFooterClass = newTargetFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS, oldTargetFooterClass, targetFooterClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public int getSerializationMaxDepth() {
 		return serializationMaxDepth;
 	}
@@ -741,14 +565,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 				return getTargetColumnName();
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_LABEL:
 				return getTargetDisplayLabel();
-			case PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS:
-				return getTargetHeaderClass();
-			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
-				return getTargetInputClass();
-			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
-				return getTargetDisplayClass();
-			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
-				return getTargetFooterClass();
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				return getSerializationMaxDepth();
 		}
@@ -792,18 +608,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_LABEL:
 				setTargetDisplayLabel((String)newValue);
 				return;
-			case PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS:
-				setTargetHeaderClass((String)newValue);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
-				setTargetInputClass((String)newValue);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
-				setTargetDisplayClass((String)newValue);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
-				setTargetFooterClass((String)newValue);
-				return;
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				setSerializationMaxDepth((Integer)newValue);
 				return;
@@ -846,18 +650,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_LABEL:
 				setTargetDisplayLabel(TARGET_DISPLAY_LABEL_EDEFAULT);
 				return;
-			case PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS:
-				setTargetHeaderClass(TARGET_HEADER_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
-				setTargetInputClass(TARGET_INPUT_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
-				setTargetDisplayClass(TARGET_DISPLAY_CLASS_EDEFAULT);
-				return;
-			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
-				setTargetFooterClass(TARGET_FOOTER_CLASS_EDEFAULT);
-				return;
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				setSerializationMaxDepth(SERIALIZATION_MAX_DEPTH_EDEFAULT);
 				return;
@@ -891,14 +683,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 				return TARGET_COLUMN_NAME_EDEFAULT == null ? targetColumnName != null : !TARGET_COLUMN_NAME_EDEFAULT.equals(targetColumnName);
 			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_LABEL:
 				return TARGET_DISPLAY_LABEL_EDEFAULT == null ? targetDisplayLabel != null : !TARGET_DISPLAY_LABEL_EDEFAULT.equals(targetDisplayLabel);
-			case PersistencePackage.ASSOCIATION__TARGET_HEADER_CLASS:
-				return TARGET_HEADER_CLASS_EDEFAULT == null ? targetHeaderClass != null : !TARGET_HEADER_CLASS_EDEFAULT.equals(targetHeaderClass);
-			case PersistencePackage.ASSOCIATION__TARGET_INPUT_CLASS:
-				return TARGET_INPUT_CLASS_EDEFAULT == null ? targetInputClass != null : !TARGET_INPUT_CLASS_EDEFAULT.equals(targetInputClass);
-			case PersistencePackage.ASSOCIATION__TARGET_DISPLAY_CLASS:
-				return TARGET_DISPLAY_CLASS_EDEFAULT == null ? targetDisplayClass != null : !TARGET_DISPLAY_CLASS_EDEFAULT.equals(targetDisplayClass);
-			case PersistencePackage.ASSOCIATION__TARGET_FOOTER_CLASS:
-				return TARGET_FOOTER_CLASS_EDEFAULT == null ? targetFooterClass != null : !TARGET_FOOTER_CLASS_EDEFAULT.equals(targetFooterClass);
 			case PersistencePackage.ASSOCIATION__SERIALIZATION_MAX_DEPTH:
 				return serializationMaxDepth != SERIALIZATION_MAX_DEPTH_EDEFAULT;
 		}
@@ -929,14 +713,6 @@ public abstract class AssociationImpl extends FeatureImpl implements Association
 		result.append(targetColumnName);
 		result.append(", targetDisplayLabel: ");
 		result.append(targetDisplayLabel);
-		result.append(", targetHeaderClass: ");
-		result.append(targetHeaderClass);
-		result.append(", targetInputClass: ");
-		result.append(targetInputClass);
-		result.append(", targetDisplayClass: ");
-		result.append(targetDisplayClass);
-		result.append(", targetFooterClass: ");
-		result.append(targetFooterClass);
 		result.append(", serializationMaxDepth: ");
 		result.append(serializationMaxDepth);
 		result.append(')');
