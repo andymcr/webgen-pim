@@ -239,7 +239,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_RegistrationLabel() {
+	public EAttribute getAuthentication_RegistrationName() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -249,7 +249,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_LoginLabel() {
+	public EAttribute getAuthentication_RegistrationLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -259,8 +259,68 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_LogoutLabel() {
+	public EAttribute getAuthentication_RegistrationUri() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LoginName() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LoginLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LoginUri() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LogoutName() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LogoutLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_LogoutUri() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -511,9 +571,15 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		createEReference(authenticationEClass, AUTHENTICATION__SECURITY);
 		createEReference(authenticationEClass, AUTHENTICATION__USER);
 		createEReference(authenticationEClass, AUTHENTICATION__USER_KEY);
+		createEAttribute(authenticationEClass, AUTHENTICATION__REGISTRATION_NAME);
 		createEAttribute(authenticationEClass, AUTHENTICATION__REGISTRATION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__REGISTRATION_URI);
+		createEAttribute(authenticationEClass, AUTHENTICATION__LOGIN_NAME);
 		createEAttribute(authenticationEClass, AUTHENTICATION__LOGIN_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__LOGIN_URI);
+		createEAttribute(authenticationEClass, AUTHENTICATION__LOGOUT_NAME);
 		createEAttribute(authenticationEClass, AUTHENTICATION__LOGOUT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__LOGOUT_URI);
 
 		localAuthenticationSystemEClass = createEClass(LOCAL_AUTHENTICATION_SYSTEM);
 		createEReference(localAuthenticationSystemEClass, LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_MODEL);
@@ -586,9 +652,15 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		initEReference(getAuthentication_Security(), this.getSecurity(), this.getSecurity_Authentication(), "security", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAuthentication_User(), thePersistencePackage.getEntity(), null, "user", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAuthentication_UserKey(), thePersistencePackage.getAttribute(), null, "userKey", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_RegistrationName(), ecorePackage.getEString(), "registrationName", "registration", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_RegistrationLabel(), ecorePackage.getEString(), "registrationLabel", "Register", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_RegistrationUri(), ecorePackage.getEString(), "registrationUri", "register", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_LoginName(), ecorePackage.getEString(), "loginName", "login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_LoginLabel(), ecorePackage.getEString(), "loginLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_LoginUri(), ecorePackage.getEString(), "loginUri", "login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_LogoutName(), ecorePackage.getEString(), "logoutName", "logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_LogoutLabel(), ecorePackage.getEString(), "logoutLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_LogoutUri(), ecorePackage.getEString(), "logoutUri", "logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(localAuthenticationSystemEClass, LocalAuthenticationSystem.class, "LocalAuthenticationSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocalAuthenticationSystem_AuthenticationModel(), thePersistencePackage.getEntity(), null, "authenticationModel", null, 0, 1, LocalAuthenticationSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

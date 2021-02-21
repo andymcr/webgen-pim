@@ -28,12 +28,24 @@
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userKey" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="registrationName" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="registration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="registrationLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Register"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="registrationUri" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="register"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loginName" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="login"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loginLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Login"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loginUri" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="login"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoutName" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="logout"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoutLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Logout"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logoutUri" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="logout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationKeyTypes">
     <eLiterals name="Any"/>

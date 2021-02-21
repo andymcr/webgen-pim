@@ -151,13 +151,40 @@ public interface SecurityPackage extends EPackage {
 	int AUTHENTICATION__USER_KEY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__REGISTRATION_NAME = 3;
+
+	/**
 	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__REGISTRATION_LABEL = 3;
+	int AUTHENTICATION__REGISTRATION_LABEL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__REGISTRATION_URI = 5;
+
+	/**
+	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__LOGIN_NAME = 6;
 
 	/**
 	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
@@ -166,7 +193,25 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGIN_LABEL = 4;
+	int AUTHENTICATION__LOGIN_LABEL = 7;
+
+	/**
+	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__LOGIN_URI = 8;
+
+	/**
+	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__LOGOUT_NAME = 9;
 
 	/**
 	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
@@ -175,7 +220,16 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGOUT_LABEL = 5;
+	int AUTHENTICATION__LOGOUT_LABEL = 10;
+
+	/**
+	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__LOGOUT_URI = 11;
 
 	/**
 	 * The number of structural features of the '<em>Authentication</em>' class.
@@ -184,7 +238,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION_FEATURE_COUNT = 6;
+	int AUTHENTICATION_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Authentication</em>' class.
@@ -233,6 +287,15 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__USER_KEY = AUTHENTICATION__USER_KEY;
 
 	/**
+	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_NAME = AUTHENTICATION__REGISTRATION_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,6 +303,24 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_LABEL = AUTHENTICATION__REGISTRATION_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_URI = AUTHENTICATION__REGISTRATION_URI;
+
+	/**
+	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_NAME = AUTHENTICATION__LOGIN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
@@ -251,6 +332,24 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_LABEL = AUTHENTICATION__LOGIN_LABEL;
 
 	/**
+	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_URI = AUTHENTICATION__LOGIN_URI;
+
+	/**
+	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_NAME = AUTHENTICATION__LOGOUT_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,6 +357,15 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_LABEL = AUTHENTICATION__LOGOUT_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_URI = AUTHENTICATION__LOGOUT_URI;
 
 	/**
 	 * The feature id for the '<em><b>Authentication Model</b></em>' reference.
@@ -468,6 +576,15 @@ public interface SecurityPackage extends EPackage {
 	int CAS_AUTHENTICATION__USER_KEY = AUTHENTICATION__USER_KEY;
 
 	/**
+	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__REGISTRATION_NAME = AUTHENTICATION__REGISTRATION_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -475,6 +592,24 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAS_AUTHENTICATION__REGISTRATION_LABEL = AUTHENTICATION__REGISTRATION_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__REGISTRATION_URI = AUTHENTICATION__REGISTRATION_URI;
+
+	/**
+	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__LOGIN_NAME = AUTHENTICATION__LOGIN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
@@ -486,6 +621,24 @@ public interface SecurityPackage extends EPackage {
 	int CAS_AUTHENTICATION__LOGIN_LABEL = AUTHENTICATION__LOGIN_LABEL;
 
 	/**
+	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__LOGIN_URI = AUTHENTICATION__LOGIN_URI;
+
+	/**
+	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__LOGOUT_NAME = AUTHENTICATION__LOGOUT_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -493,6 +646,15 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAS_AUTHENTICATION__LOGOUT_LABEL = AUTHENTICATION__LOGOUT_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__LOGOUT_URI = AUTHENTICATION__LOGOUT_URI;
 
 	/**
 	 * The number of structural features of the '<em>Cas Authentication</em>' class.
@@ -638,6 +800,17 @@ public interface SecurityPackage extends EPackage {
 	EReference getAuthentication_UserKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationName <em>Registration Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Registration Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getRegistrationName()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_RegistrationName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationLabel <em>Registration Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -647,6 +820,28 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAuthentication_RegistrationLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationUri <em>Registration Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Registration Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getRegistrationUri()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_RegistrationUri();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginName <em>Login Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Login Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLoginName()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_LoginName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginLabel <em>Login Label</em>}'.
@@ -660,6 +855,28 @@ public interface SecurityPackage extends EPackage {
 	EAttribute getAuthentication_LoginLabel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginUri <em>Login Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Login Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLoginUri()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_LoginUri();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutName <em>Logout Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Logout Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLogoutName()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_LogoutName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutLabel <em>Logout Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -669,6 +886,17 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAuthentication_LogoutLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutUri <em>Logout Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Logout Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLogoutUri()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_LogoutUri();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem <em>Local Authentication System</em>}'.
@@ -989,12 +1217,36 @@ public interface SecurityPackage extends EPackage {
 		EReference AUTHENTICATION__USER_KEY = eINSTANCE.getAuthentication_UserKey();
 
 		/**
+		 * The meta object literal for the '<em><b>Registration Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__REGISTRATION_NAME = eINSTANCE.getAuthentication_RegistrationName();
+
+		/**
 		 * The meta object literal for the '<em><b>Registration Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute AUTHENTICATION__REGISTRATION_LABEL = eINSTANCE.getAuthentication_RegistrationLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Registration Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__REGISTRATION_URI = eINSTANCE.getAuthentication_RegistrationUri();
+
+		/**
+		 * The meta object literal for the '<em><b>Login Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__LOGIN_NAME = eINSTANCE.getAuthentication_LoginName();
 
 		/**
 		 * The meta object literal for the '<em><b>Login Label</b></em>' attribute feature.
@@ -1005,12 +1257,36 @@ public interface SecurityPackage extends EPackage {
 		EAttribute AUTHENTICATION__LOGIN_LABEL = eINSTANCE.getAuthentication_LoginLabel();
 
 		/**
+		 * The meta object literal for the '<em><b>Login Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__LOGIN_URI = eINSTANCE.getAuthentication_LoginUri();
+
+		/**
+		 * The meta object literal for the '<em><b>Logout Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__LOGOUT_NAME = eINSTANCE.getAuthentication_LogoutName();
+
+		/**
 		 * The meta object literal for the '<em><b>Logout Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute AUTHENTICATION__LOGOUT_LABEL = eINSTANCE.getAuthentication_LogoutLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Logout Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__LOGOUT_URI = eINSTANCE.getAuthentication_LogoutUri();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl <em>Local Authentication System</em>}' class.

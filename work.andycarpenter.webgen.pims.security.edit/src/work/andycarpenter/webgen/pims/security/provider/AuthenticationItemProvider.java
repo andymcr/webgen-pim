@@ -63,9 +63,15 @@ public class AuthenticationItemProvider
 			addSecurityPropertyDescriptor(object);
 			addUserPropertyDescriptor(object);
 			addUserKeyPropertyDescriptor(object);
+			addRegistrationNamePropertyDescriptor(object);
 			addRegistrationLabelPropertyDescriptor(object);
+			addRegistrationUriPropertyDescriptor(object);
+			addLoginNamePropertyDescriptor(object);
 			addLoginLabelPropertyDescriptor(object);
+			addLoginUriPropertyDescriptor(object);
+			addLogoutNamePropertyDescriptor(object);
 			addLogoutLabelPropertyDescriptor(object);
+			addLogoutUriPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -145,6 +151,28 @@ public class AuthenticationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Registration Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRegistrationNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_registrationName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Registration Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -163,6 +191,50 @@ public class AuthenticationItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Registration Uri feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRegistrationUriPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_registrationUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_URI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Login Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoginNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_loginName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_loginName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__LOGIN_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -189,6 +261,50 @@ public class AuthenticationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Login Uri feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoginUriPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_loginUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_loginUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__LOGIN_URI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Logout Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLogoutNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_logoutName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_logoutName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__LOGOUT_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Logout Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,6 +327,28 @@ public class AuthenticationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Logout Uri feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLogoutUriPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_logoutUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_logoutUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__LOGOUT_URI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,7 +356,7 @@ public class AuthenticationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Authentication)object).getRegistrationLabel();
+		String label = ((Authentication)object).getRegistrationName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Authentication_type") :
 			getString("_UI_Authentication_type") + " " + label;
@@ -237,9 +375,15 @@ public class AuthenticationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Authentication.class)) {
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
 			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
+			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
+			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
 			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
+			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
+			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
 			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
+			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
