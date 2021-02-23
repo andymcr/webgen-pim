@@ -72,8 +72,8 @@ rule WafModel {
 		useDbSessionStorage <- website.websiteProperties.useDbSessionStorage,
 		inputTechnology <- thisModule.findWebsiteUI().inputTechnology,
 		ajaxTechnology <- thisModule.findWebsiteUI().ajaxTechnology,
-		captchaSiteKey <- thisModule.findWebsiteSecurity().captchaSiteKey,
-		captchaSecretKey <- thisModule.findWebsiteSecurity().captchaSecretKey,
+		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
+		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
 		textEditorURL <-
 			if website.websiteProperties.textEditorURL.oclIsUndefined() then
 				OclUndefined
@@ -794,7 +794,7 @@ rule RegistrationUnit {
 	)
 }
 
--- @extends EditUnit, SecurityUnit
+-- @extends DynamicUnit, EditUnit
 rule LoginUnit {
 	from website : Website!LoginUnit
 	to waf : WAF!LoginUnit (
@@ -849,12 +849,20 @@ abstract rule Action {
 			else
 				OclUndefined
 			endif,
-		anchorClass <- website.anchorClass(),
+		anchorClass <- website.usedBy.anchorClass(website),
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass
 	)
 }
 
+
+-- @extends Action
+rule SecurityAction {
+	from website : Website!SecurityAction
+	to waf : WAF!SecurityAction (
+		target <- website.target
+	)
+}
 
 -- @extends Action
 rule SelectAction {

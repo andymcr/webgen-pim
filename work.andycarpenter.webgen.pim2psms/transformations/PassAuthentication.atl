@@ -59,10 +59,7 @@ abstract rule Authentication {
 				OclUndefined
 			else
 				website.userKey.findOrmAttribute()
-			endif,
-		registrationLabel <- website.registrationLabel,
-		loginLabel <- website.loginLabel,
-		logoutLabel <- website.logoutLabel
+			endif
 	)
 }
 
@@ -113,6 +110,151 @@ rule LocalAuthenticationSystem {
 rule CasAuthentication {
 	from website : Website!CasAuthentication
 	to waf : WAF!CasAuthentication (
+		loginLabel <- website.loginLabel,
+		logoutLabel <- website.logoutLabel
+	)
+}
+
+
+unique lazy rule implicitSecurityPage {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!Page (
+		name <- 'Security',
+		displayLabel <- 'Security',
+		units <-
+			if website.registrationUnit.oclIsUndefined() then
+				Sequence{ thisModule.implicitRegistrationUnit(website) }
+			else
+				Sequence{}
+			endif
+			->union(if website.loginUnit.oclIsUndefined() then
+					Sequence{ thisModule.implicitLoginUnit(website) }
+				else
+					Sequence{}
+				endif)
+			->union(if website.logoutUnit.oclIsUndefined() then
+					Sequence{ thisModule.implicitLogoutUnit(website) }
+				else
+					Sequence{}
+				endif)
+			->union(if website.forgottenPasswordUnit.oclIsUndefined() then
+					Sequence{ thisModule.implicitForgottenPasswordUnit(website) }
+				else
+					Sequence{}
+				endif)
+	)
+}
+
+unique lazy rule implicitRegistrationUnit {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!RegistrationUnit (
+		name <- website.implicitRegistrationName,
+		displayLabel <- website.implicitRegistrationLabel,
+		uriElement <- website.implicitRegistrationUri
+	)
+}
+
+unique lazy rule implicitLoginUnit {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!LoginUnit (
+		name <- website.implicitLoginName,
+		displayLabel <- website.implicitLoginLabel,
+		uriElement <- website.implicitLoginUri,
+		contentType <-
+			if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName)
+			else
+				thisModule.findOrmEntity(website.authentication.name)
+			endif,
+		displayFields <-
+			if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName)
+			else
+				thisModule.findOrmEntity(website.authentication.name)
+			endif.features
+				->select(f |
+					(f.name = 'email' and website.authenticationKey = #Email)
+					or (f.name = 'username' and website.authenticationKey <> #Email)
+					or f.name = 'password')
+				->collect(f | thisModule.implicitUnitAttribute(f)),
+		confirmLabel <- website.implicitLoginLabel,
+		actions <- Sequence{recoverAction}
+			->union(if website.allowSelfRegistration then
+					Sequence{ thisModule.implicitRegistrationAction(website)}
+				else
+					Sequence{}
+				endif),
+		captionClass <-
+			if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultCaptionClass.trim()
+			else
+				OclUndefined
+			endif,
+		contentClass <- 
+			if thisModule.findWebsiteUI().defaultFormContentClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultFormContentClass.trim()
+			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultContentClass.trim()
+			else
+				OclUndefined
+			endif endif,
+		controlClass <- 
+			if thisModule.findWebsiteUI().defaultFormControlClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultFormControlClass.trim()
+			else if thisModule.findWebsiteUI().defaultControlClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultControlClass.trim()
+			else
+				OclUndefined
+			endif endif
+	),
+	recoverAction : WAF!SecurityAction (
+		name <- website.implicitForgottenPasswordName,
+		displayLabel <- website.implicitForgottenPasswordLabel,
+		target <- thisModule.implicitForgottenPasswordUnit(website),
+		anchorClass <-
+			if thisModule.findWebsiteUI().defaultFormAnchorClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultFormAnchorClass.trim()
+			else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultAnchorClass.trim()
+			else
+				OclUndefined
+			endif endif
+	)
+}
+
+unique lazy rule implicitRegistrationAction {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!SecurityAction (
+		name <- website.implicitRegistrationName,
+		displayLabel <- website.implicitRegistrationLabel,
+		target <- thisModule.implicitRegistrationUnit(website),
+		anchorClass <-
+			if thisModule.findWebsiteUI().defaultFormAnchorClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultFormAnchorClass.trim()
+			else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultAnchorClass.trim()
+			else
+				OclUndefined
+			endif endif
+	)
+}
+
+
+unique lazy rule implicitLogoutUnit {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!LogoutUnit (
+		name <- website.implicitLogoutName,
+		displayLabel <- website.implicitLogoutLabel,
+		uriElement <- website.implicitLogoutUri
+	)
+}
+
+unique lazy rule implicitForgottenPasswordUnit {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!ForgottenPasswordUnit (
+		name <- website.implicitForgottenPasswordName,
+		displayLabel <- website.implicitForgottenPasswordLabel,
+		uriElement <- website.implicitForgottenPasswordUri
 	)
 }
 
@@ -189,7 +331,13 @@ unique lazy rule implicitAuthenticationsPage {
 				thisModule.findWebsiteUI().defaultControlClass.trim()
 			else
 				OclUndefined
-			endif endif
+			endif endif,
+		actionNavigationClass <- 
+			if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
+				thisModule.findWebsiteUI().defaultActionNavigationClass.trim()
+			else
+				OclUndefined
+			endif
 	),
 	elementTitle : WAF!FeaturePathAttribute (
 		attribute <- 
@@ -267,118 +415,6 @@ unique lazy rule implicitAuthenticationsPage {
 		waf;
 	}
 }
-
-unique lazy rule implicitSecurityPage {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!Page (
-		name <- 'Security',
-		displayLabel <- 'Security',
-		units <-
-			if website.registrationUnit.oclIsUndefined() then
-				Sequence{ thisModule.implicitRegistrationUnit(website) }
-			else
-				Sequence{}
-			endif
-			->union(if website.loginUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitLoginUnit(website) }
-				else
-					Sequence{}
-				endif)
-			->union(if website.logoutUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitLogoutUnit(website) }
-				else
-					Sequence{}
-				endif)
-			->union(if website.forgottenPasswordUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitForgottenPasswordUnit(website) }
-				else
-					Sequence{}
-				endif)
-	)
-}
-
-unique lazy rule implicitRegistrationUnit {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!RegistrationUnit (
-		name <- website.registrationName,
-		displayLabel <- website.registrationLabel,
-		uriElement <- website.registrationUri
-	)
-}
-
-unique lazy rule implicitLoginUnit {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!LoginUnit (
-		name <- website.loginName,
-		displayLabel <- website.loginLabel,
-		uriElement <- website.loginUri,
-		contentType <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authentication.name)
-			endif,
---		repositoriesUsed <-
---			if website.authenticationModel.oclIsUndefined() then
---				Sequence{ thisModule.findRepository(website.authenticationName) }
---			else
---				Sequence{ thisModule.findRepository(website.authentication.name) }
---			endif,
-		displayFields <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authentication.name)
-			endif.features
-				->select(f |
-					(f.name = 'email' and website.authenticationKey = #Email)
-					or (f.name = 'username' and website.authenticationKey <> #Email)
-					or f.name = 'password')
-				->collect(f | thisModule.implicitUnitAttribute(f)),
-		confirmLabel <- website.loginLabel,
-		captionClass <-
-			if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCaptionClass.trim()
-			else
-				OclUndefined
-			endif,
-		contentClass <- 
-			if thisModule.findWebsiteUI().defaultFormContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormContentClass.trim()
-			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultContentClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		controlClass <- 
-			if thisModule.findWebsiteUI().defaultFormControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormControlClass.trim()
-			else if thisModule.findWebsiteUI().defaultControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultControlClass.trim()
-			else
-				OclUndefined
-			endif endif
-	)
-}
-
-unique lazy rule implicitLogoutUnit {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!LogoutUnit (
-		name <- website.logoutName,
-		displayLabel <- website.logoutLabel,
-		uriElement <- website.logoutUri
-	)
-}
-
-unique lazy rule implicitForgottenPasswordUnit {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!ForgottenPasswordUnit (
-		name <- 'reset',
-		displayLabel <- 'Password Recovery',
-		uriElement <- 'reset-password'
-	)
-}
-
 
 lazy abstract rule implicitUnitFeature {
 	from partialWaf : ORM!Feature

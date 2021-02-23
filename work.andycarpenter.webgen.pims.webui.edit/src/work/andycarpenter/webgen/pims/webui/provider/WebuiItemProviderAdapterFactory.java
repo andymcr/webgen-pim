@@ -980,6 +980,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SecurityAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SecurityActionItemProvider securityActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.SecurityAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSecurityActionAdapter() {
+		if (securityActionItemProvider == null) {
+			securityActionItemProvider = new SecurityActionItemProvider(this);
+		}
+
+		return securityActionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SliderUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -61,7 +61,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addActionNavigationClassPropertyDescriptor(object);
-			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addDisplayLabelPropertyDescriptor(object);
 			addRequiredPropertyDescriptor(object);
 			addCollectionUiAllowAddPropertyDescriptor(object);
@@ -93,28 +92,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 				 getString("_UI_ActionContainer_actionNavigationClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_actionNavigationClass_feature", "_UI_ActionContainer_type"),
 				 WebuiPackage.Literals.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Default Local Anchor Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDefaultLocalAnchorClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ActionContainer_defaultLocalAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_defaultLocalAnchorClass_feature", "_UI_ActionContainer_type"),
-				 WebuiPackage.Literals.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -469,7 +446,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 
 		switch (notification.getFeatureID(UnitFeature.class)) {
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD:
@@ -504,6 +480,11 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createSecurityAction()));
 
 		newChildDescriptors.add
 			(createChildParameter

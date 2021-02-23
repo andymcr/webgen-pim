@@ -31,7 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayLabel <em>Display Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isRequired <em>Required</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getForcedValue <em>Forced Value</em>}</li>
@@ -81,26 +80,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT = " ";
-
-	/**
-	 * The cached value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String defaultLocalAnchorClass = DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
@@ -435,29 +414,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		actionNavigationClass = newActionNavigationClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDefaultLocalAnchorClass() {
-		return defaultLocalAnchorClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultLocalAnchorClass(String newDefaultLocalAnchorClass) {
-		String oldDefaultLocalAnchorClass = defaultLocalAnchorClass;
-		defaultLocalAnchorClass = newDefaultLocalAnchorClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS, oldDefaultLocalAnchorClass, defaultLocalAnchorClass));
 	}
 
 	/**
@@ -894,8 +850,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return getActions();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 				return getActionNavigationClass();
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return getDefaultLocalAnchorClass();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 				return getDisplayLabel();
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
@@ -945,9 +899,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return;
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 				setDisplayLabel((String)newValue);
@@ -1012,9 +963,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 				setDisplayLabel(DISPLAY_LABEL_EDEFAULT);
 				return;
@@ -1076,8 +1024,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
-			case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 				return DISPLAY_LABEL_EDEFAULT == null ? displayLabel != null : !DISPLAY_LABEL_EDEFAULT.equals(displayLabel);
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
@@ -1123,7 +1069,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -1141,7 +1086,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			switch (baseFeatureID) {
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.UNIT_FEATURE__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -1160,8 +1104,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (actionNavigationClass: ");
 		result.append(actionNavigationClass);
-		result.append(", defaultLocalAnchorClass: ");
-		result.append(defaultLocalAnchorClass);
 		result.append(", displayLabel: ");
 		result.append(displayLabel);
 		result.append(", required: ");

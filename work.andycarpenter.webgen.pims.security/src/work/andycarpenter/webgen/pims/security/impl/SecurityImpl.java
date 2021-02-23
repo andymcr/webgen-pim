@@ -23,54 +23,12 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.SecurityImpl#getCaptchaSiteKey <em>Captcha Site Key</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.SecurityImpl#getCaptchaSecretKey <em>Captcha Secret Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.SecurityImpl#getAuthentication <em>Authentication</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SecurityImpl extends MinimalEObjectImpl.Container implements Security {
-	/**
-	 * The default value of the '{@link #getCaptchaSiteKey() <em>Captcha Site Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCaptchaSiteKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CAPTCHA_SITE_KEY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCaptchaSiteKey() <em>Captcha Site Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCaptchaSiteKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected String captchaSiteKey = CAPTCHA_SITE_KEY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCaptchaSecretKey() <em>Captcha Secret Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCaptchaSecretKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CAPTCHA_SECRET_KEY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCaptchaSecretKey() <em>Captcha Secret Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCaptchaSecretKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected String captchaSecretKey = CAPTCHA_SECRET_KEY_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getAuthentication() <em>Authentication</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -98,52 +56,6 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	@Override
 	protected EClass eStaticClass() {
 		return SecurityPackage.Literals.SECURITY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCaptchaSiteKey() {
-		return captchaSiteKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCaptchaSiteKey(String newCaptchaSiteKey) {
-		String oldCaptchaSiteKey = captchaSiteKey;
-		captchaSiteKey = newCaptchaSiteKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.SECURITY__CAPTCHA_SITE_KEY, oldCaptchaSiteKey, captchaSiteKey));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCaptchaSecretKey() {
-		return captchaSecretKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCaptchaSecretKey(String newCaptchaSecretKey) {
-		String oldCaptchaSecretKey = captchaSecretKey;
-		captchaSecretKey = newCaptchaSecretKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.SECURITY__CAPTCHA_SECRET_KEY, oldCaptchaSecretKey, captchaSecretKey));
 	}
 
 	/**
@@ -229,10 +141,6 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SecurityPackage.SECURITY__CAPTCHA_SITE_KEY:
-				return getCaptchaSiteKey();
-			case SecurityPackage.SECURITY__CAPTCHA_SECRET_KEY:
-				return getCaptchaSecretKey();
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				return getAuthentication();
 		}
@@ -247,12 +155,6 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SecurityPackage.SECURITY__CAPTCHA_SITE_KEY:
-				setCaptchaSiteKey((String)newValue);
-				return;
-			case SecurityPackage.SECURITY__CAPTCHA_SECRET_KEY:
-				setCaptchaSecretKey((String)newValue);
-				return;
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				setAuthentication((Authentication)newValue);
 				return;
@@ -268,12 +170,6 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SecurityPackage.SECURITY__CAPTCHA_SITE_KEY:
-				setCaptchaSiteKey(CAPTCHA_SITE_KEY_EDEFAULT);
-				return;
-			case SecurityPackage.SECURITY__CAPTCHA_SECRET_KEY:
-				setCaptchaSecretKey(CAPTCHA_SECRET_KEY_EDEFAULT);
-				return;
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				setAuthentication((Authentication)null);
 				return;
@@ -289,32 +185,10 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SecurityPackage.SECURITY__CAPTCHA_SITE_KEY:
-				return CAPTCHA_SITE_KEY_EDEFAULT == null ? captchaSiteKey != null : !CAPTCHA_SITE_KEY_EDEFAULT.equals(captchaSiteKey);
-			case SecurityPackage.SECURITY__CAPTCHA_SECRET_KEY:
-				return CAPTCHA_SECRET_KEY_EDEFAULT == null ? captchaSecretKey != null : !CAPTCHA_SECRET_KEY_EDEFAULT.equals(captchaSecretKey);
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				return authentication != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (captchaSiteKey: ");
-		result.append(captchaSiteKey);
-		result.append(", captchaSecretKey: ");
-		result.append(captchaSecretKey);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SecurityImpl

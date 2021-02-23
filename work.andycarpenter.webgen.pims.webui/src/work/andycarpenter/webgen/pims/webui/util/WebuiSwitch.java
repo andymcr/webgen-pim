@@ -637,6 +637,15 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.SECURITY_ACTION: {
+				SecurityAction securityAction = (SecurityAction)theEObject;
+				T result = caseSecurityAction(securityAction);
+				if (result == null) result = caseAction(securityAction);
+				if (result == null) result = caseNamedDisplayElement(securityAction);
+				if (result == null) result = caseNamedElement(securityAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.SELECT_ACTION: {
 				SelectAction selectAction = (SelectAction)theEObject;
 				T result = caseSelectAction(selectAction);
@@ -1565,6 +1574,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAction(Action object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Security Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Security Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSecurityAction(SecurityAction object) {
 		return null;
 	}
 

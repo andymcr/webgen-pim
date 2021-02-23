@@ -69,31 +69,13 @@ public interface SecurityPackage extends EPackage {
 	int SECURITY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Captcha Site Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECURITY__CAPTCHA_SITE_KEY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Captcha Secret Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECURITY__CAPTCHA_SECRET_KEY = 1;
-
-	/**
 	 * The feature id for the '<em><b>Authentication</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY__AUTHENTICATION = 2;
+	int SECURITY__AUTHENTICATION = 0;
 
 	/**
 	 * The number of structural features of the '<em>Security</em>' class.
@@ -102,7 +84,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_FEATURE_COUNT = 3;
+	int SECURITY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Security</em>' class.
@@ -151,85 +133,112 @@ public interface SecurityPackage extends EPackage {
 	int AUTHENTICATION__USER_KEY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__REGISTRATION_NAME = 3;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_NAME = 3;
 
 	/**
-	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__REGISTRATION_LABEL = 4;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL = 4;
 
 	/**
-	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__REGISTRATION_URI = 5;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_URI = 5;
 
 	/**
-	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGIN_NAME = 6;
+	int AUTHENTICATION__IMPLICIT_LOGIN_NAME = 6;
 
 	/**
-	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGIN_LABEL = 7;
+	int AUTHENTICATION__IMPLICIT_LOGIN_LABEL = 7;
 
 	/**
-	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGIN_URI = 8;
+	int AUTHENTICATION__IMPLICIT_LOGIN_URI = 8;
 
 	/**
-	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGOUT_NAME = 9;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_NAME = 9;
 
 	/**
-	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGOUT_LABEL = 10;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_LABEL = 10;
 
 	/**
-	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__LOGOUT_URI = 11;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_URI = 11;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME = 12;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL = 13;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = 14;
 
 	/**
 	 * The number of structural features of the '<em>Authentication</em>' class.
@@ -238,7 +247,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION_FEATURE_COUNT = 12;
+	int AUTHENTICATION_FEATURE_COUNT = 15;
 
 	/**
 	 * The number of operations of the '<em>Authentication</em>' class.
@@ -287,85 +296,112 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__USER_KEY = AUTHENTICATION__USER_KEY;
 
 	/**
-	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_NAME = AUTHENTICATION__REGISTRATION_NAME;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_REGISTRATION_NAME = AUTHENTICATION__IMPLICIT_REGISTRATION_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_LABEL = AUTHENTICATION__REGISTRATION_LABEL;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_REGISTRATION_LABEL = AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_URI = AUTHENTICATION__REGISTRATION_URI;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_REGISTRATION_URI = AUTHENTICATION__IMPLICIT_REGISTRATION_URI;
 
 	/**
-	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_NAME = AUTHENTICATION__LOGIN_NAME;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGIN_NAME = AUTHENTICATION__IMPLICIT_LOGIN_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_LABEL = AUTHENTICATION__LOGIN_LABEL;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGIN_LABEL = AUTHENTICATION__IMPLICIT_LOGIN_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_URI = AUTHENTICATION__LOGIN_URI;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGIN_URI = AUTHENTICATION__IMPLICIT_LOGIN_URI;
 
 	/**
-	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_NAME = AUTHENTICATION__LOGOUT_NAME;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGOUT_NAME = AUTHENTICATION__IMPLICIT_LOGOUT_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_LABEL = AUTHENTICATION__LOGOUT_LABEL;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGOUT_LABEL = AUTHENTICATION__IMPLICIT_LOGOUT_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Logout Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_URI = AUTHENTICATION__LOGOUT_URI;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_LOGOUT_URI = AUTHENTICATION__IMPLICIT_LOGOUT_URI;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_NAME = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_LABEL = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_URI = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI;
 
 	/**
 	 * The feature id for the '<em><b>Authentication Model</b></em>' reference.
@@ -576,40 +612,112 @@ public interface SecurityPackage extends EPackage {
 	int CAS_AUTHENTICATION__USER_KEY = AUTHENTICATION__USER_KEY;
 
 	/**
-	 * The feature id for the '<em><b>Registration Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__REGISTRATION_NAME = AUTHENTICATION__REGISTRATION_NAME;
+	int CAS_AUTHENTICATION__IMPLICIT_REGISTRATION_NAME = AUTHENTICATION__IMPLICIT_REGISTRATION_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Registration Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__REGISTRATION_LABEL = AUTHENTICATION__REGISTRATION_LABEL;
+	int CAS_AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL = AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Registration Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Registration Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__REGISTRATION_URI = AUTHENTICATION__REGISTRATION_URI;
+	int CAS_AUTHENTICATION__IMPLICIT_REGISTRATION_URI = AUTHENTICATION__IMPLICIT_REGISTRATION_URI;
 
 	/**
-	 * The feature id for the '<em><b>Login Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Login Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__LOGIN_NAME = AUTHENTICATION__LOGIN_NAME;
+	int CAS_AUTHENTICATION__IMPLICIT_LOGIN_NAME = AUTHENTICATION__IMPLICIT_LOGIN_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Login Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_LOGIN_LABEL = AUTHENTICATION__IMPLICIT_LOGIN_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Login Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_LOGIN_URI = AUTHENTICATION__IMPLICIT_LOGIN_URI;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Logout Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_LOGOUT_NAME = AUTHENTICATION__IMPLICIT_LOGOUT_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Logout Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_LOGOUT_LABEL = AUTHENTICATION__IMPLICIT_LOGOUT_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Logout Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_LOGOUT_URI = AUTHENTICATION__IMPLICIT_LOGOUT_URI;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI;
 
 	/**
 	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
@@ -618,25 +726,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__LOGIN_LABEL = AUTHENTICATION__LOGIN_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Login Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAS_AUTHENTICATION__LOGIN_URI = AUTHENTICATION__LOGIN_URI;
-
-	/**
-	 * The feature id for the '<em><b>Logout Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAS_AUTHENTICATION__LOGOUT_NAME = AUTHENTICATION__LOGOUT_NAME;
+	int CAS_AUTHENTICATION__LOGIN_LABEL = AUTHENTICATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Logout Label</b></em>' attribute.
@@ -645,16 +735,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__LOGOUT_LABEL = AUTHENTICATION__LOGOUT_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Logout Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAS_AUTHENTICATION__LOGOUT_URI = AUTHENTICATION__LOGOUT_URI;
+	int CAS_AUTHENTICATION__LOGOUT_LABEL = AUTHENTICATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cas Authentication</em>' class.
@@ -663,7 +744,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 0;
+	int CAS_AUTHENTICATION_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Cas Authentication</em>' class.
@@ -724,28 +805,6 @@ public interface SecurityPackage extends EPackage {
 	EClass getSecurity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Security#getCaptchaSiteKey <em>Captcha Site Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Captcha Site Key</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Security#getCaptchaSiteKey()
-	 * @see #getSecurity()
-	 * @generated
-	 */
-	EAttribute getSecurity_CaptchaSiteKey();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Security#getCaptchaSecretKey <em>Captcha Secret Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Captcha Secret Key</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Security#getCaptchaSecretKey()
-	 * @see #getSecurity()
-	 * @generated
-	 */
-	EAttribute getSecurity_CaptchaSecretKey();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.security.Security#getAuthentication <em>Authentication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -800,103 +859,136 @@ public interface SecurityPackage extends EPackage {
 	EReference getAuthentication_UserKey();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationName <em>Registration Name</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationName <em>Implicit Registration Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Registration Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getRegistrationName()
+	 * @return the meta object for the attribute '<em>Implicit Registration Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationName()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_RegistrationName();
+	EAttribute getAuthentication_ImplicitRegistrationName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationLabel <em>Registration Label</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationLabel <em>Implicit Registration Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Registration Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getRegistrationLabel()
+	 * @return the meta object for the attribute '<em>Implicit Registration Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationLabel()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_RegistrationLabel();
+	EAttribute getAuthentication_ImplicitRegistrationLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getRegistrationUri <em>Registration Uri</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUri <em>Implicit Registration Uri</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Registration Uri</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getRegistrationUri()
+	 * @return the meta object for the attribute '<em>Implicit Registration Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUri()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_RegistrationUri();
+	EAttribute getAuthentication_ImplicitRegistrationUri();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginName <em>Login Name</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginName <em>Implicit Login Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Login Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLoginName()
+	 * @return the meta object for the attribute '<em>Implicit Login Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginName()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LoginName();
+	EAttribute getAuthentication_ImplicitLoginName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginLabel <em>Login Label</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginLabel <em>Implicit Login Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Login Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLoginLabel()
+	 * @return the meta object for the attribute '<em>Implicit Login Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginLabel()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LoginLabel();
+	EAttribute getAuthentication_ImplicitLoginLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLoginUri <em>Login Uri</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginUri <em>Implicit Login Uri</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Login Uri</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLoginUri()
+	 * @return the meta object for the attribute '<em>Implicit Login Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginUri()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LoginUri();
+	EAttribute getAuthentication_ImplicitLoginUri();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutName <em>Logout Name</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutName <em>Implicit Logout Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Logout Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLogoutName()
+	 * @return the meta object for the attribute '<em>Implicit Logout Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutName()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LogoutName();
+	EAttribute getAuthentication_ImplicitLogoutName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutLabel <em>Logout Label</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutLabel <em>Implicit Logout Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Logout Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLogoutLabel()
+	 * @return the meta object for the attribute '<em>Implicit Logout Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutLabel()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LogoutLabel();
+	EAttribute getAuthentication_ImplicitLogoutLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getLogoutUri <em>Logout Uri</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutUri <em>Implicit Logout Uri</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Logout Uri</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getLogoutUri()
+	 * @return the meta object for the attribute '<em>Implicit Logout Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutUri()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_LogoutUri();
+	EAttribute getAuthentication_ImplicitLogoutUri();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordName <em>Implicit Forgotten Password Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordName()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordLabel <em>Implicit Forgotten Password Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordLabel()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUri <em>Implicit Forgotten Password Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Uri</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUri()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordUri();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem <em>Local Authentication System</em>}'.
@@ -1106,6 +1198,28 @@ public interface SecurityPackage extends EPackage {
 	EClass getCasAuthentication();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.CasAuthentication#getLoginLabel <em>Login Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Login Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.CasAuthentication#getLoginLabel()
+	 * @see #getCasAuthentication()
+	 * @generated
+	 */
+	EAttribute getCasAuthentication_LoginLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.CasAuthentication#getLogoutLabel <em>Logout Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Logout Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.CasAuthentication#getLogoutLabel()
+	 * @see #getCasAuthentication()
+	 * @generated
+	 */
+	EAttribute getCasAuthentication_LogoutLabel();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.SecurityUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1159,22 +1273,6 @@ public interface SecurityPackage extends EPackage {
 		EClass SECURITY = eINSTANCE.getSecurity();
 
 		/**
-		 * The meta object literal for the '<em><b>Captcha Site Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SECURITY__CAPTCHA_SITE_KEY = eINSTANCE.getSecurity_CaptchaSiteKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Captcha Secret Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SECURITY__CAPTCHA_SECRET_KEY = eINSTANCE.getSecurity_CaptchaSecretKey();
-
-		/**
 		 * The meta object literal for the '<em><b>Authentication</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1217,76 +1315,100 @@ public interface SecurityPackage extends EPackage {
 		EReference AUTHENTICATION__USER_KEY = eINSTANCE.getAuthentication_UserKey();
 
 		/**
-		 * The meta object literal for the '<em><b>Registration Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Registration Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__REGISTRATION_NAME = eINSTANCE.getAuthentication_RegistrationName();
+		EAttribute AUTHENTICATION__IMPLICIT_REGISTRATION_NAME = eINSTANCE.getAuthentication_ImplicitRegistrationName();
 
 		/**
-		 * The meta object literal for the '<em><b>Registration Label</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Registration Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__REGISTRATION_LABEL = eINSTANCE.getAuthentication_RegistrationLabel();
+		EAttribute AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL = eINSTANCE.getAuthentication_ImplicitRegistrationLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Registration Uri</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Registration Uri</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__REGISTRATION_URI = eINSTANCE.getAuthentication_RegistrationUri();
+		EAttribute AUTHENTICATION__IMPLICIT_REGISTRATION_URI = eINSTANCE.getAuthentication_ImplicitRegistrationUri();
 
 		/**
-		 * The meta object literal for the '<em><b>Login Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Login Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGIN_NAME = eINSTANCE.getAuthentication_LoginName();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGIN_NAME = eINSTANCE.getAuthentication_ImplicitLoginName();
 
 		/**
-		 * The meta object literal for the '<em><b>Login Label</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Login Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGIN_LABEL = eINSTANCE.getAuthentication_LoginLabel();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGIN_LABEL = eINSTANCE.getAuthentication_ImplicitLoginLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Login Uri</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Login Uri</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGIN_URI = eINSTANCE.getAuthentication_LoginUri();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGIN_URI = eINSTANCE.getAuthentication_ImplicitLoginUri();
 
 		/**
-		 * The meta object literal for the '<em><b>Logout Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Logout Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGOUT_NAME = eINSTANCE.getAuthentication_LogoutName();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGOUT_NAME = eINSTANCE.getAuthentication_ImplicitLogoutName();
 
 		/**
-		 * The meta object literal for the '<em><b>Logout Label</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Logout Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGOUT_LABEL = eINSTANCE.getAuthentication_LogoutLabel();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGOUT_LABEL = eINSTANCE.getAuthentication_ImplicitLogoutLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Logout Uri</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Logout Uri</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__LOGOUT_URI = eINSTANCE.getAuthentication_LogoutUri();
+		EAttribute AUTHENTICATION__IMPLICIT_LOGOUT_URI = eINSTANCE.getAuthentication_ImplicitLogoutUri();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME = eINSTANCE.getAuthentication_ImplicitForgottenPasswordName();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL = eINSTANCE.getAuthentication_ImplicitForgottenPasswordLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = eINSTANCE.getAuthentication_ImplicitForgottenPasswordUri();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl <em>Local Authentication System</em>}' class.
@@ -1443,6 +1565,22 @@ public interface SecurityPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CAS_AUTHENTICATION = eINSTANCE.getCasAuthentication();
+
+		/**
+		 * The meta object literal for the '<em><b>Login Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAS_AUTHENTICATION__LOGIN_LABEL = eINSTANCE.getCasAuthentication_LoginLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Logout Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAS_AUTHENTICATION__LOGOUT_LABEL = eINSTANCE.getCasAuthentication_LogoutLabel();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.SecurityUnit <em>Unit</em>}' class.

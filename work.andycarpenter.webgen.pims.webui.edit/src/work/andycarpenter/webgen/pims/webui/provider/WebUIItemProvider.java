@@ -68,6 +68,8 @@ public class WebUIItemProvider
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
+			addDefaultCancelLabelPropertyDescriptor(object);
+			addDefaultSaveLabelPropertyDescriptor(object);
 			addDefaultStyleClassPropertyDescriptor(object);
 			addDefaultSectionClassPropertyDescriptor(object);
 			addDefaultCaptionClassPropertyDescriptor(object);
@@ -95,12 +97,20 @@ public class WebUIItemProvider
 			addDefaultSliderControlClassPropertyDescriptor(object);
 			addDefaultGalleryControlClassPropertyDescriptor(object);
 			addDefaultStaticControlClassPropertyDescriptor(object);
-			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultFieldLabelClassPropertyDescriptor(object);
 			addDefaultFieldValueClassPropertyDescriptor(object);
 			addDefaultInputGroupClassPropertyDescriptor(object);
 			addDefaultInputLabelClassPropertyDescriptor(object);
 			addDefaultInputValueClassPropertyDescriptor(object);
+			addDefaultActionNavigationClassPropertyDescriptor(object);
+			addDefaultAnchorClassPropertyDescriptor(object);
+			addDefaultDetailsAnchorClassPropertyDescriptor(object);
+			addDefaultIndexAnchorClassPropertyDescriptor(object);
+			addDefaultCardsAnchorClassPropertyDescriptor(object);
+			addDefaultFormAnchorClassPropertyDescriptor(object);
+			addDefaultSliderAnchorClassPropertyDescriptor(object);
+			addDefaultGalleryAnchorClassPropertyDescriptor(object);
+			addDefaultStaticAnchorClassPropertyDescriptor(object);
 			addDefaultMaximumUploadSizePropertyDescriptor(object);
 			addInputTechnologyPropertyDescriptor(object);
 			addAjaxTechnologyPropertyDescriptor(object);
@@ -210,6 +220,50 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultDateTimeFormat_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultDateTimeFormat_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_DATE_TIME_FORMAT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Save Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSaveLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSaveLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSaveLabel_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SAVE_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cancel Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCancelLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCancelLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCancelLabel_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CANCEL_LABEL,
 				 true,
 				 false,
 				 false,
@@ -813,6 +867,160 @@ public class WebUIItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Default Details Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultDetailsAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultDetailsAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultDetailsAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Index Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultIndexAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultIndexAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cards Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCardsAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCardsAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCardsAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Form Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultFormAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultFormAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultFormAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Slider Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSliderAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSliderAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSliderAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Gallery Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultGalleryAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultGalleryAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultGalleryAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Static Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultStaticAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultStaticAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultStaticAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Default Field List Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -936,6 +1144,28 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultInputValueClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultInputValueClass_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_INPUT_VALUE_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Action Navigation Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultActionNavigationClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultActionNavigationClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultActionNavigationClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -1082,6 +1312,8 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
 			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
@@ -1109,12 +1341,20 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
 			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:

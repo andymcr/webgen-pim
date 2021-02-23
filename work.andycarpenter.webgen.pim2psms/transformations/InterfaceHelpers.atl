@@ -444,6 +444,91 @@ helper context Website!StaticUnit def: controlClass() : String
 			OclUndefined
 		endif endif endif;
 
+helper context Website!DetailsUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultDetailsAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultDetailsAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!IndexUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultIndexAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultIndexAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!CardsUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultCardsAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultCardsAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!EditUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultFormAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultFormAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!SliderUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultSliderAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultSliderAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!GalleryUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultGalleryAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultGalleryAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+helper context Website!StaticUnit def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultStaticAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultStaticAnchorClass.trim()
+		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultAnchorClass.trim()
+		else
+			OclUndefined
+		endif endif endif;
+
+-- TODO finish
+helper context Website!UnitAssociation def: anchorClass(action : Website!Action) : String
+	= if action.anchorClass.trim() <> '' then
+			action.anchorClass.trim()
+		else
+			OclUndefined
+		endif;
+
 helper context Website!UnitFeature def: headerClass() : String
 	= if self.headerClass.trim() <> '' then
 			self.headerClass.trim()
@@ -618,22 +703,10 @@ helper context Website!DynamicUnit def: messageWhenHidden() : String
 		endif;
 
 helper context Website!ActionContainer def: actionNavigationClass() : String
-	= -- if self.actionNavigationClass.trim() <> '' then
---			self.actionNavigationClass.trim()
---		else if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
---			thisModule.findWebsiteUI().defaultActionNavigationClass
---		else
-			OclUndefined
-;--		endif endif;
-
-helper context Website!Action def: anchorClass() : String
-	= if self.anchorClass.trim() <> '' then
-			self.anchorClass.trim()
-		else if self.refImmediateComposite().defaultLocalAnchorClass.trim() <> '' then
-			self.refImmediateComposite().defaultLocalAnchorClass.trim()
-		else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultAnchorClass
+	=  if self.actionNavigationClass.trim() <> '' then
+			self.actionNavigationClass.trim()
+		else if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
+			thisModule.findWebsiteUI().defaultActionNavigationClass.trim()
 		else
 			OclUndefined
-		endif endif endif;
-
+		endif endif;

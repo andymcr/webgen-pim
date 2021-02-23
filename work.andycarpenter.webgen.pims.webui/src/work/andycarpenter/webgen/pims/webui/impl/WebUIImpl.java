@@ -40,6 +40,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCancelLabel <em>Default Cancel Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSaveLabel <em>Default Save Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStyleClass <em>Default Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSectionClass <em>Default Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCaptionClass <em>Default Caption Class</em>}</li>
@@ -67,12 +69,20 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticControlClass <em>Default Static Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultInputValueClass <em>Default Input Value Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsAnchorClass <em>Default Details Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexAnchorClass <em>Default Index Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsAnchorClass <em>Default Cards Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormAnchorClass <em>Default Form Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderAnchorClass <em>Default Slider Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryAnchorClass <em>Default Gallery Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticAnchorClass <em>Default Static Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getInputTechnology <em>Input Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getAjaxTechnology <em>Ajax Technology</em>}</li>
@@ -180,6 +190,46 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultDateTimeFormat = DEFAULT_DATE_TIME_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCancelLabel() <em>Default Cancel Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCancelLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CANCEL_LABEL_EDEFAULT = "Cancel";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCancelLabel() <em>Default Cancel Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCancelLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCancelLabel = DEFAULT_CANCEL_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSaveLabel() <em>Default Save Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSaveLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SAVE_LABEL_EDEFAULT = "Save";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSaveLabel() <em>Default Save Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSaveLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSaveLabel = DEFAULT_SAVE_LABEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultStyleClass() <em>Default Style Class</em>}' attribute.
@@ -722,26 +772,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultStaticControlClass = DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DEFAULT_ANCHOR_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getDefaultFieldLabelClass() <em>Default Field Label Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -840,6 +870,186 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultInputValueClass = DEFAULT_INPUT_VALUE_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultActionNavigationClass() <em>Default Action Navigation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultActionNavigationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultActionNavigationClass = DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultAnchorClass() <em>Default Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultAnchorClass = DEFAULT_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultDetailsAnchorClass() <em>Default Details Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultDetailsAnchorClass() <em>Default Details Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDetailsAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultDetailsAnchorClass = DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultIndexAnchorClass() <em>Default Index Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultIndexAnchorClass() <em>Default Index Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultIndexAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultIndexAnchorClass = DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultCardsAnchorClass() <em>Default Cards Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCardsAnchorClass() <em>Default Cards Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCardsAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCardsAnchorClass = DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultFormAnchorClass() <em>Default Form Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFormAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_FORM_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultFormAnchorClass() <em>Default Form Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultFormAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultFormAnchorClass = DEFAULT_FORM_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSliderAnchorClass() <em>Default Slider Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SLIDER_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSliderAnchorClass() <em>Default Slider Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSliderAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSliderAnchorClass = DEFAULT_SLIDER_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultGalleryAnchorClass() <em>Default Gallery Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_GALLERY_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultGalleryAnchorClass() <em>Default Gallery Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultGalleryAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultGalleryAnchorClass = DEFAULT_GALLERY_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultStaticAnchorClass() <em>Default Static Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getDefaultStaticAnchorClass() <em>Default Static Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultStaticAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultStaticAnchorClass = DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultMaximumUploadSize() <em>Default Maximum Upload Size</em>}' attribute.
@@ -1093,6 +1303,52 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		defaultDateTimeFormat = newDefaultDateTimeFormat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT, oldDefaultDateTimeFormat, defaultDateTimeFormat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSaveLabel() {
+		return defaultSaveLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSaveLabel(String newDefaultSaveLabel) {
+		String oldDefaultSaveLabel = defaultSaveLabel;
+		defaultSaveLabel = newDefaultSaveLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL, oldDefaultSaveLabel, defaultSaveLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCancelLabel() {
+		return defaultCancelLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCancelLabel(String newDefaultCancelLabel) {
+		String oldDefaultCancelLabel = defaultCancelLabel;
+		defaultCancelLabel = newDefaultCancelLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL, oldDefaultCancelLabel, defaultCancelLabel));
 	}
 
 	/**
@@ -1722,6 +1978,167 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultDetailsAnchorClass() {
+		return defaultDetailsAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultDetailsAnchorClass(String newDefaultDetailsAnchorClass) {
+		String oldDefaultDetailsAnchorClass = defaultDetailsAnchorClass;
+		defaultDetailsAnchorClass = newDefaultDetailsAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS, oldDefaultDetailsAnchorClass, defaultDetailsAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultIndexAnchorClass() {
+		return defaultIndexAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultIndexAnchorClass(String newDefaultIndexAnchorClass) {
+		String oldDefaultIndexAnchorClass = defaultIndexAnchorClass;
+		defaultIndexAnchorClass = newDefaultIndexAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS, oldDefaultIndexAnchorClass, defaultIndexAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCardsAnchorClass() {
+		return defaultCardsAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCardsAnchorClass(String newDefaultCardsAnchorClass) {
+		String oldDefaultCardsAnchorClass = defaultCardsAnchorClass;
+		defaultCardsAnchorClass = newDefaultCardsAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS, oldDefaultCardsAnchorClass, defaultCardsAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultFormAnchorClass() {
+		return defaultFormAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultFormAnchorClass(String newDefaultFormAnchorClass) {
+		String oldDefaultFormAnchorClass = defaultFormAnchorClass;
+		defaultFormAnchorClass = newDefaultFormAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS, oldDefaultFormAnchorClass, defaultFormAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSliderAnchorClass() {
+		return defaultSliderAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSliderAnchorClass(String newDefaultSliderAnchorClass) {
+		String oldDefaultSliderAnchorClass = defaultSliderAnchorClass;
+		defaultSliderAnchorClass = newDefaultSliderAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS, oldDefaultSliderAnchorClass, defaultSliderAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultGalleryAnchorClass() {
+		return defaultGalleryAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultGalleryAnchorClass(String newDefaultGalleryAnchorClass) {
+		String oldDefaultGalleryAnchorClass = defaultGalleryAnchorClass;
+		defaultGalleryAnchorClass = newDefaultGalleryAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS, oldDefaultGalleryAnchorClass, defaultGalleryAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultStaticAnchorClass() {
+		return defaultStaticAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultStaticAnchorClass(String newDefaultStaticAnchorClass) {
+		String oldDefaultStaticAnchorClass = defaultStaticAnchorClass;
+		defaultStaticAnchorClass = newDefaultStaticAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS, oldDefaultStaticAnchorClass, defaultStaticAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultFieldListClass() {
 		return defaultFieldListClass;
 	}
@@ -1860,6 +2277,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultActionNavigationClass() {
+		return defaultActionNavigationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultActionNavigationClass(String newDefaultActionNavigationClass) {
+		String oldDefaultActionNavigationClass = defaultActionNavigationClass;
+		defaultActionNavigationClass = newDefaultActionNavigationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS, oldDefaultActionNavigationClass, defaultActionNavigationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getDefaultMaximumUploadSize() {
 		return defaultMaximumUploadSize;
 	}
@@ -1978,6 +2418,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return getDefaultDateTimeFormat();
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+				return getDefaultCancelLabel();
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
+				return getDefaultSaveLabel();
 			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
 				return getDefaultStyleClass();
 			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
@@ -2032,8 +2476,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultGalleryControlClass();
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
 				return getDefaultStaticControlClass();
-			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
-				return getDefaultAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				return getDefaultFieldLabelClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
@@ -2044,6 +2486,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultInputLabelClass();
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 				return getDefaultInputValueClass();
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				return getDefaultActionNavigationClass();
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				return getDefaultAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
+				return getDefaultDetailsAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+				return getDefaultIndexAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
+				return getDefaultCardsAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
+				return getDefaultFormAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
+				return getDefaultSliderAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
+				return getDefaultGalleryAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
+				return getDefaultStaticAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return getDefaultMaximumUploadSize();
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -2085,6 +2545,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+				setDefaultCancelLabel((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
+				setDefaultSaveLabel((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
 				setDefaultStyleClass((String)newValue);
@@ -2167,9 +2633,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
 				setDefaultStaticControlClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
-				setDefaultAnchorClass((String)newValue);
-				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				setDefaultFieldLabelClass((String)newValue);
 				return;
@@ -2184,6 +2647,33 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 				setDefaultInputValueClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				setDefaultActionNavigationClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
+				setDefaultDetailsAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+				setDefaultIndexAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
+				setDefaultCardsAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
+				setDefaultFormAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
+				setDefaultSliderAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
+				setDefaultGalleryAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
+				setDefaultStaticAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize((Integer)newValue);
@@ -2226,6 +2716,12 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				setDefaultDateTimeFormat(DEFAULT_DATE_TIME_FORMAT_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+				setDefaultCancelLabel(DEFAULT_CANCEL_LABEL_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
+				setDefaultSaveLabel(DEFAULT_SAVE_LABEL_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
 				setDefaultStyleClass(DEFAULT_STYLE_CLASS_EDEFAULT);
@@ -2308,9 +2804,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
 				setDefaultStaticControlClass(DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
-				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				setDefaultFieldLabelClass(DEFAULT_FIELD_LABEL_CLASS_EDEFAULT);
 				return;
@@ -2325,6 +2818,33 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 				setDefaultInputValueClass(DEFAULT_INPUT_VALUE_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				setDefaultActionNavigationClass(DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				setDefaultAnchorClass(DEFAULT_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
+				setDefaultDetailsAnchorClass(DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+				setDefaultIndexAnchorClass(DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
+				setDefaultCardsAnchorClass(DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
+				setDefaultFormAnchorClass(DEFAULT_FORM_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
+				setDefaultSliderAnchorClass(DEFAULT_SLIDER_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
+				setDefaultGalleryAnchorClass(DEFAULT_GALLERY_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
+				setDefaultStaticAnchorClass(DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize(DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT);
@@ -2361,6 +2881,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_TIME_FORMAT_EDEFAULT == null ? defaultTimeFormat != null : !DEFAULT_TIME_FORMAT_EDEFAULT.equals(defaultTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+				return DEFAULT_CANCEL_LABEL_EDEFAULT == null ? defaultCancelLabel != null : !DEFAULT_CANCEL_LABEL_EDEFAULT.equals(defaultCancelLabel);
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
+				return DEFAULT_SAVE_LABEL_EDEFAULT == null ? defaultSaveLabel != null : !DEFAULT_SAVE_LABEL_EDEFAULT.equals(defaultSaveLabel);
 			case WebuiPackage.WEB_UI__DEFAULT_STYLE_CLASS:
 				return DEFAULT_STYLE_CLASS_EDEFAULT == null ? defaultStyleClass != null : !DEFAULT_STYLE_CLASS_EDEFAULT.equals(defaultStyleClass);
 			case WebuiPackage.WEB_UI__DEFAULT_SECTION_CLASS:
@@ -2415,8 +2939,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT == null ? defaultGalleryControlClass != null : !DEFAULT_GALLERY_CONTROL_CLASS_EDEFAULT.equals(defaultGalleryControlClass);
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
 				return DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT == null ? defaultStaticControlClass != null : !DEFAULT_STATIC_CONTROL_CLASS_EDEFAULT.equals(defaultStaticControlClass);
-			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
-				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
 				return DEFAULT_FIELD_LABEL_CLASS_EDEFAULT == null ? defaultFieldLabelClass != null : !DEFAULT_FIELD_LABEL_CLASS_EDEFAULT.equals(defaultFieldLabelClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
@@ -2427,6 +2949,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_INPUT_LABEL_CLASS_EDEFAULT == null ? defaultInputLabelClass != null : !DEFAULT_INPUT_LABEL_CLASS_EDEFAULT.equals(defaultInputLabelClass);
 			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 				return DEFAULT_INPUT_VALUE_CLASS_EDEFAULT == null ? defaultInputValueClass != null : !DEFAULT_INPUT_VALUE_CLASS_EDEFAULT.equals(defaultInputValueClass);
+			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
+				return DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT == null ? defaultActionNavigationClass != null : !DEFAULT_ACTION_NAVIGATION_CLASS_EDEFAULT.equals(defaultActionNavigationClass);
+			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
+				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
+				return DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT == null ? defaultDetailsAnchorClass != null : !DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT.equals(defaultDetailsAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+				return DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT == null ? defaultIndexAnchorClass != null : !DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT.equals(defaultIndexAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
+				return DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT == null ? defaultCardsAnchorClass != null : !DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT.equals(defaultCardsAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
+				return DEFAULT_FORM_ANCHOR_CLASS_EDEFAULT == null ? defaultFormAnchorClass != null : !DEFAULT_FORM_ANCHOR_CLASS_EDEFAULT.equals(defaultFormAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
+				return DEFAULT_SLIDER_ANCHOR_CLASS_EDEFAULT == null ? defaultSliderAnchorClass != null : !DEFAULT_SLIDER_ANCHOR_CLASS_EDEFAULT.equals(defaultSliderAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
+				return DEFAULT_GALLERY_ANCHOR_CLASS_EDEFAULT == null ? defaultGalleryAnchorClass != null : !DEFAULT_GALLERY_ANCHOR_CLASS_EDEFAULT.equals(defaultGalleryAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
+				return DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT == null ? defaultStaticAnchorClass != null : !DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT.equals(defaultStaticAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return defaultMaximumUploadSize != DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
 			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
@@ -2453,6 +2993,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultTimeFormat);
 		result.append(", defaultDateTimeFormat: ");
 		result.append(defaultDateTimeFormat);
+		result.append(", defaultCancelLabel: ");
+		result.append(defaultCancelLabel);
+		result.append(", defaultSaveLabel: ");
+		result.append(defaultSaveLabel);
 		result.append(", defaultStyleClass: ");
 		result.append(defaultStyleClass);
 		result.append(", defaultSectionClass: ");
@@ -2507,8 +3051,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultGalleryControlClass);
 		result.append(", defaultStaticControlClass: ");
 		result.append(defaultStaticControlClass);
-		result.append(", defaultAnchorClass: ");
-		result.append(defaultAnchorClass);
 		result.append(", defaultFieldLabelClass: ");
 		result.append(defaultFieldLabelClass);
 		result.append(", defaultFieldValueClass: ");
@@ -2519,6 +3061,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultInputLabelClass);
 		result.append(", defaultInputValueClass: ");
 		result.append(defaultInputValueClass);
+		result.append(", defaultActionNavigationClass: ");
+		result.append(defaultActionNavigationClass);
+		result.append(", defaultAnchorClass: ");
+		result.append(defaultAnchorClass);
+		result.append(", defaultDetailsAnchorClass: ");
+		result.append(defaultDetailsAnchorClass);
+		result.append(", defaultIndexAnchorClass: ");
+		result.append(defaultIndexAnchorClass);
+		result.append(", defaultCardsAnchorClass: ");
+		result.append(defaultCardsAnchorClass);
+		result.append(", defaultFormAnchorClass: ");
+		result.append(defaultFormAnchorClass);
+		result.append(", defaultSliderAnchorClass: ");
+		result.append(defaultSliderAnchorClass);
+		result.append(", defaultGalleryAnchorClass: ");
+		result.append(defaultGalleryAnchorClass);
+		result.append(", defaultStaticAnchorClass: ");
+		result.append(defaultStaticAnchorClass);
 		result.append(", defaultMaximumUploadSize: ");
 		result.append(defaultMaximumUploadSize);
 		result.append(", inputTechnology: ");

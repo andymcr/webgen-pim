@@ -63,7 +63,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addActionNavigationClassPropertyDescriptor(object);
-			addDefaultLocalAnchorClassPropertyDescriptor(object);
 			addContentTypesPropertyDescriptor(object);
 			addMessageWhenHiddenPropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
@@ -92,28 +91,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 getString("_UI_ActionContainer_actionNavigationClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_actionNavigationClass_feature", "_UI_ActionContainer_type"),
 				 WebuiPackage.Literals.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Default Local Anchor Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDefaultLocalAnchorClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ActionContainer_defaultLocalAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_defaultLocalAnchorClass_feature", "_UI_ActionContainer_type"),
-				 WebuiPackage.Literals.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -402,7 +379,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 		switch (notification.getFeatureID(DynamicUnit.class)) {
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
-			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
@@ -433,6 +409,11 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createSecurityAction()));
 
 		newChildDescriptors.add
 			(createChildParameter

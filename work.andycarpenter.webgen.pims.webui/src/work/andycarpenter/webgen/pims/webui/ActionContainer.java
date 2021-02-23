@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActionNavigationClass <em>Action Navigation Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionContainer()
@@ -63,28 +62,5 @@ public interface ActionContainer extends EObject {
 	 * @generated
 	 */
 	void setActionNavigationClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Default Local Anchor Class</b></em>' attribute.
-	 * The default value is <code>" "</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Local Anchor Class</em>' attribute.
-	 * @see #setDefaultLocalAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionContainer_DefaultLocalAnchorClass()
-	 * @model default=" "
-	 * @generated
-	 */
-	String getDefaultLocalAnchorClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Local Anchor Class</em>' attribute.
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 */
-	void setDefaultLocalAnchorClass(String value);
 
 } // ActionContainer

@@ -32,7 +32,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDefaultLocalAnchorClass <em>Default Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentTypes <em>Content Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
@@ -79,26 +78,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT = " ";
-
-	/**
-	 * The cached value of the '{@link #getDefaultLocalAnchorClass() <em>Default Local Anchor Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultLocalAnchorClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String defaultLocalAnchorClass = DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The cached setting delegate for the '{@link #getContentTypes() <em>Content Types</em>}' reference list.
@@ -363,29 +342,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		actionNavigationClass = newActionNavigationClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS, oldActionNavigationClass, actionNavigationClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDefaultLocalAnchorClass() {
-		return defaultLocalAnchorClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultLocalAnchorClass(String newDefaultLocalAnchorClass) {
-		String oldDefaultLocalAnchorClass = defaultLocalAnchorClass;
-		defaultLocalAnchorClass = newDefaultLocalAnchorClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS, oldDefaultLocalAnchorClass, defaultLocalAnchorClass));
 	}
 
 	/**
@@ -711,8 +667,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getActions();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return getActionNavigationClass();
-			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return getDefaultLocalAnchorClass();
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
 				return getContentTypes();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -756,9 +710,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
@@ -812,9 +763,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				setDefaultLocalAnchorClass(DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				return;
@@ -864,8 +812,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
-			case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS:
-				return DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT == null ? defaultLocalAnchorClass != null : !DEFAULT_LOCAL_ANCHOR_CLASS_EDEFAULT.equals(defaultLocalAnchorClass);
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
 				return CONTENT_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -905,7 +851,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			switch (derivedFeatureID) {
 				case WebuiPackage.DYNAMIC_UNIT__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -923,7 +868,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			switch (baseFeatureID) {
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.DYNAMIC_UNIT__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
-				case WebuiPackage.ACTION_CONTAINER__DEFAULT_LOCAL_ANCHOR_CLASS: return WebuiPackage.DYNAMIC_UNIT__DEFAULT_LOCAL_ANCHOR_CLASS;
 				default: return -1;
 			}
 		}
@@ -942,8 +886,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (actionNavigationClass: ");
 		result.append(actionNavigationClass);
-		result.append(", defaultLocalAnchorClass: ");
-		result.append(defaultLocalAnchorClass);
 		result.append(", messageWhenHidden: ");
 		result.append(messageWhenHidden);
 		result.append(", header: ");

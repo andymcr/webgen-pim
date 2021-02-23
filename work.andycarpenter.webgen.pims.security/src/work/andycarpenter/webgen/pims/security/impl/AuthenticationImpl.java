@@ -28,15 +28,18 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getSecurity <em>Security</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUser <em>User</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUserKey <em>User Key</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getRegistrationName <em>Registration Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getRegistrationLabel <em>Registration Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getRegistrationUri <em>Registration Uri</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLoginName <em>Login Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLoginLabel <em>Login Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLoginUri <em>Login Uri</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLogoutName <em>Logout Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLogoutLabel <em>Logout Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getLogoutUri <em>Logout Uri</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationName <em>Implicit Registration Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationLabel <em>Implicit Registration Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationUri <em>Implicit Registration Uri</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLoginName <em>Implicit Login Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLoginLabel <em>Implicit Login Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLoginUri <em>Implicit Login Uri</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLogoutName <em>Implicit Logout Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLogoutLabel <em>Implicit Logout Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitLogoutUri <em>Implicit Logout Uri</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordName <em>Implicit Forgotten Password Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordLabel <em>Implicit Forgotten Password Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUri <em>Implicit Forgotten Password Uri</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,184 +66,244 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	protected Attribute userKey;
 
 	/**
-	 * The default value of the '{@link #getRegistrationName() <em>Registration Name</em>}' attribute.
+	 * The default value of the '{@link #getImplicitRegistrationName() <em>Implicit Registration Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationName()
+	 * @see #getImplicitRegistrationName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REGISTRATION_NAME_EDEFAULT = "registration";
+	protected static final String IMPLICIT_REGISTRATION_NAME_EDEFAULT = "registration";
 
 	/**
-	 * The cached value of the '{@link #getRegistrationName() <em>Registration Name</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitRegistrationName() <em>Implicit Registration Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationName()
+	 * @see #getImplicitRegistrationName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String registrationName = REGISTRATION_NAME_EDEFAULT;
+	protected String implicitRegistrationName = IMPLICIT_REGISTRATION_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRegistrationLabel() <em>Registration Label</em>}' attribute.
+	 * The default value of the '{@link #getImplicitRegistrationLabel() <em>Implicit Registration Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationLabel()
+	 * @see #getImplicitRegistrationLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REGISTRATION_LABEL_EDEFAULT = "Register";
+	protected static final String IMPLICIT_REGISTRATION_LABEL_EDEFAULT = "Create Account";
 
 	/**
-	 * The cached value of the '{@link #getRegistrationLabel() <em>Registration Label</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitRegistrationLabel() <em>Implicit Registration Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationLabel()
+	 * @see #getImplicitRegistrationLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String registrationLabel = REGISTRATION_LABEL_EDEFAULT;
+	protected String implicitRegistrationLabel = IMPLICIT_REGISTRATION_LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRegistrationUri() <em>Registration Uri</em>}' attribute.
+	 * The default value of the '{@link #getImplicitRegistrationUri() <em>Implicit Registration Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationUri()
+	 * @see #getImplicitRegistrationUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REGISTRATION_URI_EDEFAULT = "register";
+	protected static final String IMPLICIT_REGISTRATION_URI_EDEFAULT = "register";
 
 	/**
-	 * The cached value of the '{@link #getRegistrationUri() <em>Registration Uri</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitRegistrationUri() <em>Implicit Registration Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationUri()
+	 * @see #getImplicitRegistrationUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected String registrationUri = REGISTRATION_URI_EDEFAULT;
+	protected String implicitRegistrationUri = IMPLICIT_REGISTRATION_URI_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLoginName() <em>Login Name</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLoginName() <em>Implicit Login Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginName()
+	 * @see #getImplicitLoginName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGIN_NAME_EDEFAULT = "login";
+	protected static final String IMPLICIT_LOGIN_NAME_EDEFAULT = "login";
 
 	/**
-	 * The cached value of the '{@link #getLoginName() <em>Login Name</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLoginName() <em>Implicit Login Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginName()
+	 * @see #getImplicitLoginName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String loginName = LOGIN_NAME_EDEFAULT;
+	protected String implicitLoginName = IMPLICIT_LOGIN_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLoginLabel() <em>Login Label</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLoginLabel() <em>Implicit Login Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginLabel()
+	 * @see #getImplicitLoginLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGIN_LABEL_EDEFAULT = "Login";
+	protected static final String IMPLICIT_LOGIN_LABEL_EDEFAULT = "Login";
 
 	/**
-	 * The cached value of the '{@link #getLoginLabel() <em>Login Label</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLoginLabel() <em>Implicit Login Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginLabel()
+	 * @see #getImplicitLoginLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String loginLabel = LOGIN_LABEL_EDEFAULT;
+	protected String implicitLoginLabel = IMPLICIT_LOGIN_LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLoginUri() <em>Login Uri</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLoginUri() <em>Implicit Login Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginUri()
+	 * @see #getImplicitLoginUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGIN_URI_EDEFAULT = "login";
+	protected static final String IMPLICIT_LOGIN_URI_EDEFAULT = "login";
 
 	/**
-	 * The cached value of the '{@link #getLoginUri() <em>Login Uri</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLoginUri() <em>Implicit Login Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoginUri()
+	 * @see #getImplicitLoginUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected String loginUri = LOGIN_URI_EDEFAULT;
+	protected String implicitLoginUri = IMPLICIT_LOGIN_URI_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLogoutName() <em>Logout Name</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLogoutName() <em>Implicit Logout Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutName()
+	 * @see #getImplicitLogoutName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGOUT_NAME_EDEFAULT = "logout";
+	protected static final String IMPLICIT_LOGOUT_NAME_EDEFAULT = "logout";
 
 	/**
-	 * The cached value of the '{@link #getLogoutName() <em>Logout Name</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLogoutName() <em>Implicit Logout Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutName()
+	 * @see #getImplicitLogoutName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String logoutName = LOGOUT_NAME_EDEFAULT;
+	protected String implicitLogoutName = IMPLICIT_LOGOUT_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLogoutLabel() <em>Logout Label</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLogoutLabel() <em>Implicit Logout Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutLabel()
+	 * @see #getImplicitLogoutLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGOUT_LABEL_EDEFAULT = "Logout";
+	protected static final String IMPLICIT_LOGOUT_LABEL_EDEFAULT = "Logout";
 
 	/**
-	 * The cached value of the '{@link #getLogoutLabel() <em>Logout Label</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLogoutLabel() <em>Implicit Logout Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutLabel()
+	 * @see #getImplicitLogoutLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String logoutLabel = LOGOUT_LABEL_EDEFAULT;
+	protected String implicitLogoutLabel = IMPLICIT_LOGOUT_LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLogoutUri() <em>Logout Uri</em>}' attribute.
+	 * The default value of the '{@link #getImplicitLogoutUri() <em>Implicit Logout Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutUri()
+	 * @see #getImplicitLogoutUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOGOUT_URI_EDEFAULT = "logout";
+	protected static final String IMPLICIT_LOGOUT_URI_EDEFAULT = "logout";
 
 	/**
-	 * The cached value of the '{@link #getLogoutUri() <em>Logout Uri</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitLogoutUri() <em>Implicit Logout Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogoutUri()
+	 * @see #getImplicitLogoutUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected String logoutUri = LOGOUT_URI_EDEFAULT;
+	protected String implicitLogoutUri = IMPLICIT_LOGOUT_URI_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordName() <em>Implicit Forgotten Password Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_NAME_EDEFAULT = "reset";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordName() <em>Implicit Forgotten Password Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordName = IMPLICIT_FORGOTTEN_PASSWORD_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordLabel() <em>Implicit Forgotten Password Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_LABEL_EDEFAULT = "Forgotten Password";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordLabel() <em>Implicit Forgotten Password Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordLabel = IMPLICIT_FORGOTTEN_PASSWORD_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordUri() <em>Implicit Forgotten Password Uri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUri()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT = "reset-password";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordUri() <em>Implicit Forgotten Password Uri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUri()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordUri = IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,8 +453,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getRegistrationName() {
-		return registrationName;
+	public String getImplicitRegistrationName() {
+		return implicitRegistrationName;
 	}
 
 	/**
@@ -400,11 +463,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setRegistrationName(String newRegistrationName) {
-		String oldRegistrationName = registrationName;
-		registrationName = newRegistrationName;
+	public void setImplicitRegistrationName(String newImplicitRegistrationName) {
+		String oldImplicitRegistrationName = implicitRegistrationName;
+		implicitRegistrationName = newImplicitRegistrationName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__REGISTRATION_NAME, oldRegistrationName, registrationName));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME, oldImplicitRegistrationName, implicitRegistrationName));
 	}
 
 	/**
@@ -413,8 +476,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getRegistrationLabel() {
-		return registrationLabel;
+	public String getImplicitRegistrationLabel() {
+		return implicitRegistrationLabel;
 	}
 
 	/**
@@ -423,11 +486,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setRegistrationLabel(String newRegistrationLabel) {
-		String oldRegistrationLabel = registrationLabel;
-		registrationLabel = newRegistrationLabel;
+	public void setImplicitRegistrationLabel(String newImplicitRegistrationLabel) {
+		String oldImplicitRegistrationLabel = implicitRegistrationLabel;
+		implicitRegistrationLabel = newImplicitRegistrationLabel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL, oldRegistrationLabel, registrationLabel));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL, oldImplicitRegistrationLabel, implicitRegistrationLabel));
 	}
 
 	/**
@@ -436,8 +499,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getRegistrationUri() {
-		return registrationUri;
+	public String getImplicitRegistrationUri() {
+		return implicitRegistrationUri;
 	}
 
 	/**
@@ -446,11 +509,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setRegistrationUri(String newRegistrationUri) {
-		String oldRegistrationUri = registrationUri;
-		registrationUri = newRegistrationUri;
+	public void setImplicitRegistrationUri(String newImplicitRegistrationUri) {
+		String oldImplicitRegistrationUri = implicitRegistrationUri;
+		implicitRegistrationUri = newImplicitRegistrationUri;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__REGISTRATION_URI, oldRegistrationUri, registrationUri));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI, oldImplicitRegistrationUri, implicitRegistrationUri));
 	}
 
 	/**
@@ -459,8 +522,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLoginName() {
-		return loginName;
+	public String getImplicitLoginName() {
+		return implicitLoginName;
 	}
 
 	/**
@@ -469,11 +532,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLoginName(String newLoginName) {
-		String oldLoginName = loginName;
-		loginName = newLoginName;
+	public void setImplicitLoginName(String newImplicitLoginName) {
+		String oldImplicitLoginName = implicitLoginName;
+		implicitLoginName = newImplicitLoginName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGIN_NAME, oldLoginName, loginName));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME, oldImplicitLoginName, implicitLoginName));
 	}
 
 	/**
@@ -482,8 +545,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLoginLabel() {
-		return loginLabel;
+	public String getImplicitLoginLabel() {
+		return implicitLoginLabel;
 	}
 
 	/**
@@ -492,11 +555,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLoginLabel(String newLoginLabel) {
-		String oldLoginLabel = loginLabel;
-		loginLabel = newLoginLabel;
+	public void setImplicitLoginLabel(String newImplicitLoginLabel) {
+		String oldImplicitLoginLabel = implicitLoginLabel;
+		implicitLoginLabel = newImplicitLoginLabel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGIN_LABEL, oldLoginLabel, loginLabel));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL, oldImplicitLoginLabel, implicitLoginLabel));
 	}
 
 	/**
@@ -505,8 +568,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLoginUri() {
-		return loginUri;
+	public String getImplicitLoginUri() {
+		return implicitLoginUri;
 	}
 
 	/**
@@ -515,11 +578,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLoginUri(String newLoginUri) {
-		String oldLoginUri = loginUri;
-		loginUri = newLoginUri;
+	public void setImplicitLoginUri(String newImplicitLoginUri) {
+		String oldImplicitLoginUri = implicitLoginUri;
+		implicitLoginUri = newImplicitLoginUri;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGIN_URI, oldLoginUri, loginUri));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI, oldImplicitLoginUri, implicitLoginUri));
 	}
 
 	/**
@@ -528,8 +591,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLogoutName() {
-		return logoutName;
+	public String getImplicitLogoutName() {
+		return implicitLogoutName;
 	}
 
 	/**
@@ -538,11 +601,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLogoutName(String newLogoutName) {
-		String oldLogoutName = logoutName;
-		logoutName = newLogoutName;
+	public void setImplicitLogoutName(String newImplicitLogoutName) {
+		String oldImplicitLogoutName = implicitLogoutName;
+		implicitLogoutName = newImplicitLogoutName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGOUT_NAME, oldLogoutName, logoutName));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME, oldImplicitLogoutName, implicitLogoutName));
 	}
 
 	/**
@@ -551,8 +614,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLogoutLabel() {
-		return logoutLabel;
+	public String getImplicitLogoutLabel() {
+		return implicitLogoutLabel;
 	}
 
 	/**
@@ -561,11 +624,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLogoutLabel(String newLogoutLabel) {
-		String oldLogoutLabel = logoutLabel;
-		logoutLabel = newLogoutLabel;
+	public void setImplicitLogoutLabel(String newImplicitLogoutLabel) {
+		String oldImplicitLogoutLabel = implicitLogoutLabel;
+		implicitLogoutLabel = newImplicitLogoutLabel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGOUT_LABEL, oldLogoutLabel, logoutLabel));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL, oldImplicitLogoutLabel, implicitLogoutLabel));
 	}
 
 	/**
@@ -574,8 +637,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getLogoutUri() {
-		return logoutUri;
+	public String getImplicitLogoutUri() {
+		return implicitLogoutUri;
 	}
 
 	/**
@@ -584,11 +647,80 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setLogoutUri(String newLogoutUri) {
-		String oldLogoutUri = logoutUri;
-		logoutUri = newLogoutUri;
+	public void setImplicitLogoutUri(String newImplicitLogoutUri) {
+		String oldImplicitLogoutUri = implicitLogoutUri;
+		implicitLogoutUri = newImplicitLogoutUri;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__LOGOUT_URI, oldLogoutUri, logoutUri));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI, oldImplicitLogoutUri, implicitLogoutUri));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordName() {
+		return implicitForgottenPasswordName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordName(String newImplicitForgottenPasswordName) {
+		String oldImplicitForgottenPasswordName = implicitForgottenPasswordName;
+		implicitForgottenPasswordName = newImplicitForgottenPasswordName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME, oldImplicitForgottenPasswordName, implicitForgottenPasswordName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordLabel() {
+		return implicitForgottenPasswordLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordLabel(String newImplicitForgottenPasswordLabel) {
+		String oldImplicitForgottenPasswordLabel = implicitForgottenPasswordLabel;
+		implicitForgottenPasswordLabel = newImplicitForgottenPasswordLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL, oldImplicitForgottenPasswordLabel, implicitForgottenPasswordLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordUri() {
+		return implicitForgottenPasswordUri;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordUri(String newImplicitForgottenPasswordUri) {
+		String oldImplicitForgottenPasswordUri = implicitForgottenPasswordUri;
+		implicitForgottenPasswordUri = newImplicitForgottenPasswordUri;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI, oldImplicitForgottenPasswordUri, implicitForgottenPasswordUri));
 	}
 
 	/**
@@ -651,24 +783,30 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				if (resolve) return getUserKey();
 				return basicGetUserKey();
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
-				return getRegistrationName();
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
-				return getRegistrationLabel();
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
-				return getRegistrationUri();
-			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
-				return getLoginName();
-			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
-				return getLoginLabel();
-			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
-				return getLoginUri();
-			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
-				return getLogoutName();
-			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
-				return getLogoutLabel();
-			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
-				return getLogoutUri();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
+				return getImplicitRegistrationName();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+				return getImplicitRegistrationLabel();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
+				return getImplicitRegistrationUri();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
+				return getImplicitLoginName();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+				return getImplicitLoginLabel();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
+				return getImplicitLoginUri();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
+				return getImplicitLogoutName();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+				return getImplicitLogoutLabel();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
+				return getImplicitLogoutUri();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
+				return getImplicitForgottenPasswordName();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+				return getImplicitForgottenPasswordLabel();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
+				return getImplicitForgottenPasswordUri();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -690,32 +828,41 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
-				setRegistrationName((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
+				setImplicitRegistrationName((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
-				setRegistrationLabel((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+				setImplicitRegistrationLabel((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
-				setRegistrationUri((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
+				setImplicitRegistrationUri((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
-				setLoginName((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
+				setImplicitLoginName((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
-				setLoginLabel((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+				setImplicitLoginLabel((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
-				setLoginUri((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
+				setImplicitLoginUri((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
-				setLogoutName((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
+				setImplicitLogoutName((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
-				setLogoutLabel((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+				setImplicitLogoutLabel((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
-				setLogoutUri((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
+				setImplicitLogoutUri((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
+				setImplicitForgottenPasswordName((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+				setImplicitForgottenPasswordLabel((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
+				setImplicitForgottenPasswordUri((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -738,32 +885,41 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				setUserKey((Attribute)null);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
-				setRegistrationName(REGISTRATION_NAME_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
+				setImplicitRegistrationName(IMPLICIT_REGISTRATION_NAME_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
-				setRegistrationLabel(REGISTRATION_LABEL_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+				setImplicitRegistrationLabel(IMPLICIT_REGISTRATION_LABEL_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
-				setRegistrationUri(REGISTRATION_URI_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
+				setImplicitRegistrationUri(IMPLICIT_REGISTRATION_URI_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
-				setLoginName(LOGIN_NAME_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
+				setImplicitLoginName(IMPLICIT_LOGIN_NAME_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
-				setLoginLabel(LOGIN_LABEL_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+				setImplicitLoginLabel(IMPLICIT_LOGIN_LABEL_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
-				setLoginUri(LOGIN_URI_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
+				setImplicitLoginUri(IMPLICIT_LOGIN_URI_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
-				setLogoutName(LOGOUT_NAME_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
+				setImplicitLogoutName(IMPLICIT_LOGOUT_NAME_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
-				setLogoutLabel(LOGOUT_LABEL_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+				setImplicitLogoutLabel(IMPLICIT_LOGOUT_LABEL_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
-				setLogoutUri(LOGOUT_URI_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
+				setImplicitLogoutUri(IMPLICIT_LOGOUT_URI_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
+				setImplicitForgottenPasswordName(IMPLICIT_FORGOTTEN_PASSWORD_NAME_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+				setImplicitForgottenPasswordLabel(IMPLICIT_FORGOTTEN_PASSWORD_LABEL_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
+				setImplicitForgottenPasswordUri(IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -783,24 +939,30 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				return user != null;
 			case SecurityPackage.AUTHENTICATION__USER_KEY:
 				return userKey != null;
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
-				return REGISTRATION_NAME_EDEFAULT == null ? registrationName != null : !REGISTRATION_NAME_EDEFAULT.equals(registrationName);
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
-				return REGISTRATION_LABEL_EDEFAULT == null ? registrationLabel != null : !REGISTRATION_LABEL_EDEFAULT.equals(registrationLabel);
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
-				return REGISTRATION_URI_EDEFAULT == null ? registrationUri != null : !REGISTRATION_URI_EDEFAULT.equals(registrationUri);
-			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
-				return LOGIN_NAME_EDEFAULT == null ? loginName != null : !LOGIN_NAME_EDEFAULT.equals(loginName);
-			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
-				return LOGIN_LABEL_EDEFAULT == null ? loginLabel != null : !LOGIN_LABEL_EDEFAULT.equals(loginLabel);
-			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
-				return LOGIN_URI_EDEFAULT == null ? loginUri != null : !LOGIN_URI_EDEFAULT.equals(loginUri);
-			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
-				return LOGOUT_NAME_EDEFAULT == null ? logoutName != null : !LOGOUT_NAME_EDEFAULT.equals(logoutName);
-			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
-				return LOGOUT_LABEL_EDEFAULT == null ? logoutLabel != null : !LOGOUT_LABEL_EDEFAULT.equals(logoutLabel);
-			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
-				return LOGOUT_URI_EDEFAULT == null ? logoutUri != null : !LOGOUT_URI_EDEFAULT.equals(logoutUri);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
+				return IMPLICIT_REGISTRATION_NAME_EDEFAULT == null ? implicitRegistrationName != null : !IMPLICIT_REGISTRATION_NAME_EDEFAULT.equals(implicitRegistrationName);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+				return IMPLICIT_REGISTRATION_LABEL_EDEFAULT == null ? implicitRegistrationLabel != null : !IMPLICIT_REGISTRATION_LABEL_EDEFAULT.equals(implicitRegistrationLabel);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
+				return IMPLICIT_REGISTRATION_URI_EDEFAULT == null ? implicitRegistrationUri != null : !IMPLICIT_REGISTRATION_URI_EDEFAULT.equals(implicitRegistrationUri);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
+				return IMPLICIT_LOGIN_NAME_EDEFAULT == null ? implicitLoginName != null : !IMPLICIT_LOGIN_NAME_EDEFAULT.equals(implicitLoginName);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+				return IMPLICIT_LOGIN_LABEL_EDEFAULT == null ? implicitLoginLabel != null : !IMPLICIT_LOGIN_LABEL_EDEFAULT.equals(implicitLoginLabel);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
+				return IMPLICIT_LOGIN_URI_EDEFAULT == null ? implicitLoginUri != null : !IMPLICIT_LOGIN_URI_EDEFAULT.equals(implicitLoginUri);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
+				return IMPLICIT_LOGOUT_NAME_EDEFAULT == null ? implicitLogoutName != null : !IMPLICIT_LOGOUT_NAME_EDEFAULT.equals(implicitLogoutName);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+				return IMPLICIT_LOGOUT_LABEL_EDEFAULT == null ? implicitLogoutLabel != null : !IMPLICIT_LOGOUT_LABEL_EDEFAULT.equals(implicitLogoutLabel);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
+				return IMPLICIT_LOGOUT_URI_EDEFAULT == null ? implicitLogoutUri != null : !IMPLICIT_LOGOUT_URI_EDEFAULT.equals(implicitLogoutUri);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
+				return IMPLICIT_FORGOTTEN_PASSWORD_NAME_EDEFAULT == null ? implicitForgottenPasswordName != null : !IMPLICIT_FORGOTTEN_PASSWORD_NAME_EDEFAULT.equals(implicitForgottenPasswordName);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+				return IMPLICIT_FORGOTTEN_PASSWORD_LABEL_EDEFAULT == null ? implicitForgottenPasswordLabel != null : !IMPLICIT_FORGOTTEN_PASSWORD_LABEL_EDEFAULT.equals(implicitForgottenPasswordLabel);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
+				return IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT == null ? implicitForgottenPasswordUri != null : !IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT.equals(implicitForgottenPasswordUri);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -815,24 +977,30 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (registrationName: ");
-		result.append(registrationName);
-		result.append(", registrationLabel: ");
-		result.append(registrationLabel);
-		result.append(", registrationUri: ");
-		result.append(registrationUri);
-		result.append(", loginName: ");
-		result.append(loginName);
-		result.append(", loginLabel: ");
-		result.append(loginLabel);
-		result.append(", loginUri: ");
-		result.append(loginUri);
-		result.append(", logoutName: ");
-		result.append(logoutName);
-		result.append(", logoutLabel: ");
-		result.append(logoutLabel);
-		result.append(", logoutUri: ");
-		result.append(logoutUri);
+		result.append(" (implicitRegistrationName: ");
+		result.append(implicitRegistrationName);
+		result.append(", implicitRegistrationLabel: ");
+		result.append(implicitRegistrationLabel);
+		result.append(", implicitRegistrationUri: ");
+		result.append(implicitRegistrationUri);
+		result.append(", implicitLoginName: ");
+		result.append(implicitLoginName);
+		result.append(", implicitLoginLabel: ");
+		result.append(implicitLoginLabel);
+		result.append(", implicitLoginUri: ");
+		result.append(implicitLoginUri);
+		result.append(", implicitLogoutName: ");
+		result.append(implicitLogoutName);
+		result.append(", implicitLogoutLabel: ");
+		result.append(implicitLogoutLabel);
+		result.append(", implicitLogoutUri: ");
+		result.append(implicitLogoutUri);
+		result.append(", implicitForgottenPasswordName: ");
+		result.append(implicitForgottenPasswordName);
+		result.append(", implicitForgottenPasswordLabel: ");
+		result.append(implicitForgottenPasswordLabel);
+		result.append(", implicitForgottenPasswordUri: ");
+		result.append(implicitForgottenPasswordUri);
 		result.append(')');
 		return result.toString();
 	}

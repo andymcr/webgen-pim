@@ -63,15 +63,18 @@ public class AuthenticationItemProvider
 			addSecurityPropertyDescriptor(object);
 			addUserPropertyDescriptor(object);
 			addUserKeyPropertyDescriptor(object);
-			addRegistrationNamePropertyDescriptor(object);
-			addRegistrationLabelPropertyDescriptor(object);
-			addRegistrationUriPropertyDescriptor(object);
-			addLoginNamePropertyDescriptor(object);
-			addLoginLabelPropertyDescriptor(object);
-			addLoginUriPropertyDescriptor(object);
-			addLogoutNamePropertyDescriptor(object);
-			addLogoutLabelPropertyDescriptor(object);
-			addLogoutUriPropertyDescriptor(object);
+			addImplicitRegistrationNamePropertyDescriptor(object);
+			addImplicitRegistrationLabelPropertyDescriptor(object);
+			addImplicitRegistrationUriPropertyDescriptor(object);
+			addImplicitLoginNamePropertyDescriptor(object);
+			addImplicitLoginLabelPropertyDescriptor(object);
+			addImplicitLoginUriPropertyDescriptor(object);
+			addImplicitLogoutNamePropertyDescriptor(object);
+			addImplicitLogoutLabelPropertyDescriptor(object);
+			addImplicitLogoutUriPropertyDescriptor(object);
+			addImplicitForgottenPasswordNamePropertyDescriptor(object);
+			addImplicitForgottenPasswordLabelPropertyDescriptor(object);
+			addImplicitForgottenPasswordUriPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -151,19 +154,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Registration Name feature.
+	 * This adds a property descriptor for the Implicit Registration Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRegistrationNamePropertyDescriptor(Object object) {
+	protected void addImplicitRegistrationNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_registrationName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationName_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_NAME,
+				 getString("_UI_Authentication_implicitRegistrationName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME,
 				 true,
 				 false,
 				 false,
@@ -173,19 +176,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Registration Label feature.
+	 * This adds a property descriptor for the Implicit Registration Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRegistrationLabelPropertyDescriptor(Object object) {
+	protected void addImplicitRegistrationLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_registrationLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_LABEL,
+				 getString("_UI_Authentication_implicitRegistrationLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL,
 				 true,
 				 false,
 				 false,
@@ -195,19 +198,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Registration Uri feature.
+	 * This adds a property descriptor for the Implicit Registration Uri feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRegistrationUriPropertyDescriptor(Object object) {
+	protected void addImplicitRegistrationUriPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_registrationUri_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_registrationUri_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__REGISTRATION_URI,
+				 getString("_UI_Authentication_implicitRegistrationUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_URI,
 				 true,
 				 false,
 				 false,
@@ -217,19 +220,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Login Name feature.
+	 * This adds a property descriptor for the Implicit Login Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLoginNamePropertyDescriptor(Object object) {
+	protected void addImplicitLoginNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_loginName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_loginName_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGIN_NAME,
+				 getString("_UI_Authentication_implicitLoginName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_NAME,
 				 true,
 				 false,
 				 false,
@@ -239,19 +242,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Login Label feature.
+	 * This adds a property descriptor for the Implicit Login Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLoginLabelPropertyDescriptor(Object object) {
+	protected void addImplicitLoginLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_loginLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_loginLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGIN_LABEL,
+				 getString("_UI_Authentication_implicitLoginLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_LABEL,
 				 true,
 				 false,
 				 false,
@@ -261,19 +264,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Login Uri feature.
+	 * This adds a property descriptor for the Implicit Login Uri feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLoginUriPropertyDescriptor(Object object) {
+	protected void addImplicitLoginUriPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_loginUri_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_loginUri_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGIN_URI,
+				 getString("_UI_Authentication_implicitLoginUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_URI,
 				 true,
 				 false,
 				 false,
@@ -283,19 +286,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Logout Name feature.
+	 * This adds a property descriptor for the Implicit Logout Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLogoutNamePropertyDescriptor(Object object) {
+	protected void addImplicitLogoutNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_logoutName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_logoutName_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGOUT_NAME,
+				 getString("_UI_Authentication_implicitLogoutName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_NAME,
 				 true,
 				 false,
 				 false,
@@ -305,19 +308,19 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Logout Label feature.
+	 * This adds a property descriptor for the Implicit Logout Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLogoutLabelPropertyDescriptor(Object object) {
+	protected void addImplicitLogoutLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_logoutLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_logoutLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGOUT_LABEL,
+				 getString("_UI_Authentication_implicitLogoutLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL,
 				 true,
 				 false,
 				 false,
@@ -327,19 +330,85 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Logout Uri feature.
+	 * This adds a property descriptor for the Implicit Logout Uri feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLogoutUriPropertyDescriptor(Object object) {
+	protected void addImplicitLogoutUriPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_logoutUri_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_logoutUri_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__LOGOUT_URI,
+				 getString("_UI_Authentication_implicitLogoutUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_URI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Uri feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordUriPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI,
 				 true,
 				 false,
 				 false,
@@ -356,7 +425,7 @@ public class AuthenticationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Authentication)object).getRegistrationName();
+		String label = ((Authentication)object).getImplicitRegistrationName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Authentication_type") :
 			getString("_UI_Authentication_type") + " " + label;
@@ -375,15 +444,18 @@ public class AuthenticationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Authentication.class)) {
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_NAME:
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_LABEL:
-			case SecurityPackage.AUTHENTICATION__REGISTRATION_URI:
-			case SecurityPackage.AUTHENTICATION__LOGIN_NAME:
-			case SecurityPackage.AUTHENTICATION__LOGIN_LABEL:
-			case SecurityPackage.AUTHENTICATION__LOGIN_URI:
-			case SecurityPackage.AUTHENTICATION__LOGOUT_NAME:
-			case SecurityPackage.AUTHENTICATION__LOGOUT_LABEL:
-			case SecurityPackage.AUTHENTICATION__LOGOUT_URI:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

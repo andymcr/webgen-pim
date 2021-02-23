@@ -459,7 +459,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LocalAuthenticationSystem)object).getRegistrationName();
+		String label = ((LocalAuthenticationSystem)object).getImplicitRegistrationName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LocalAuthenticationSystem_type") :
 			getString("_UI_LocalAuthenticationSystem_type") + " " + label;

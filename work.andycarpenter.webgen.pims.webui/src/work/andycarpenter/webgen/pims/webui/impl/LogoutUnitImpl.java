@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import work.andycarpenter.webgen.pims.webui.LogoutUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
