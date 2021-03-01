@@ -56,7 +56,7 @@ rule WafModel {
 		api <- api,
 		menus <- website.webUI.menus,
 		pages <- website.webUI.pages,
-		siteName <- '?',
+		siteName <- 'sps',
 		siteTitle <- website.websiteProperties.siteTitle,
 		webmasterEmail <- website.websiteProperties.webmasterEmail,
 		copyrightText <-
@@ -82,7 +82,57 @@ rule WafModel {
 			endif,
 		topNavigationId <- website.websiteProperties.topNavigationId,
 		siteTemplate <- website.websiteProperties.siteTemplate,
-		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable
+		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable,
+		defaultStyleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		defaultSectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		defaultCaptionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		defaultContentClass <- thisModule.findWebsiteUI().defaultContentClass,
+		defaultCardsContentClass <- thisModule.findWebsiteUI().defaultCardsContentClass,
+		defaultDetailsContentClass <- thisModule.findWebsiteUI().defaultDetailsContentClass,
+		defaultFormContentClass <- thisModule.findWebsiteUI().defaultFormContentClass,
+		defaultGalleryContentClass <- thisModule.findWebsiteUI().defaultGalleryContentClass,
+		defaultIndexContentClass <- thisModule.findWebsiteUI().defaultIndexContentClass,
+		defaultSliderContentClass <- thisModule.findWebsiteUI().defaultSliderContentClass,
+		defaultStaticContentClass <- thisModule.findWebsiteUI().defaultStaticContentClass,
+		defaultFieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
+		defaultRowClass <- thisModule.findWebsiteUI().defaultRowClass,
+		defaultColumnClass <- thisModule.findWebsiteUI().defaultColumnClass,
+		defaultCardClass <- thisModule.findWebsiteUI().defaultCardClass,
+		defaultCardHeaderClass <- thisModule.findWebsiteUI().defaultCardHeaderClass,
+		defaultCardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
+		defaultCardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
+		defaultControlClass <- thisModule.findWebsiteUI().defaultControlClass,
+		defaultCardsControlClass <- thisModule.findWebsiteUI().defaultCardsControlClass,
+		defaultDetailsControlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
+		defaultFormControlClass <- thisModule.findWebsiteUI().defaultFormControlClass,
+		defaultGalleryControlClass <- thisModule.findWebsiteUI().defaultGalleryControlClass,
+		defaultIndexControlClass <- thisModule.findWebsiteUI().defaultIndexControlClass,
+		defaultSliderControlClass <- thisModule.findWebsiteUI().defaultSliderControlClass,
+		defaultStaticControlClass <- thisModule.findWebsiteUI().defaultStaticControlClass,
+		defaultFieldLabelClass <- thisModule.findWebsiteUI().defaultFieldLabelClass,
+		defaultInputGroupClass <- thisModule.findWebsiteUI().defaultInputGroupClass,
+--		defaultCardsFieldLabelClass <- thisModule.findWebsiteUI().defaultCardsFieldLabelClass,
+--		defaultDetailsFieldLabelClass <- thisModule.findWebsiteUI().defaultDetailsFieldLabelClass,
+--		defaultFormFieldLabelClass <- thisModule.findWebsiteUI().defaultFormFieldLabelClass,
+--		defaultGalleryFieldLabelClass <- thisModule.findWebsiteUI().defaultGalleryFieldLabelClass,
+--		defaultIndexFieldLabelClass <- thisModule.findWebsiteUI().defaultIndexFieldLabelClass,
+--		defaultSliderFieldLabelClass <- thisModule.findWebsiteUI().defaultSliderFieldLabelClass,
+		defaultFieldValueClass <- thisModule.findWebsiteUI().defaultFieldValueClass,
+--		defaultCardsFieldValueClass <- thisModule.findWebsiteUI().defaultCardsFieldValueClass,
+--		defaultDetailsFieldValueClass <- thisModule.findWebsiteUI().defaultDetailsFieldValueClass,
+--		defaultFormFieldValueClass <- thisModule.findWebsiteUI().defaultFormFieldValueClass,
+--		defaultGalleryFieldValueClass <- thisModule.findWebsiteUI().defaultGalleryFieldValueClass,
+--		defaultIndexFieldValueClass <- thisModule.findWebsiteUI().defaultIndexFieldValueClass,
+--		defaultSliderFieldValueClass <- thisModule.findWebsiteUI().defaultSliderFieldValueClass,
+		defaultActionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass,
+		defaultAnchorClass <- thisModule.findWebsiteUI().defaultAnchorClass,
+		defaultCardsAnchorClass <- thisModule.findWebsiteUI().defaultCardsAnchorClass,
+		defaultDetailsAnchorClass <- thisModule.findWebsiteUI().defaultDetailsAnchorClass,
+		defaultFormAnchorClass <- thisModule.findWebsiteUI().defaultFormAnchorClass,
+		defaultGalleryAnchorClass <- thisModule.findWebsiteUI().defaultGalleryAnchorClass,
+		defaultIndexAnchorClass <- thisModule.findWebsiteUI().defaultIndexAnchorClass,
+		defaultSliderAnchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass,
+		defaultStaticAnchorClass <- thisModule.findWebsiteUI().defaultStaticAnchorClass
 	)
 }
 
@@ -146,7 +196,7 @@ abstract rule MenuEntry {
 rule SubmenuEntry {
 	from website : Website!SubmenuEntry
 	to waf : WAF!SubmenuEntry (
-		requiresRole <- website.requiresRole.trim()
+		authorisationRoles <- website.requiresRole
 	)
 }
 
@@ -178,7 +228,7 @@ rule Page {
 				website.parentPage.targetPage
 			endif,
 		units <- website.units,
-		styleClass <- website.styleClass()
+		localStyleClass <- website.styleClass
 	)
 }
 
@@ -212,13 +262,13 @@ abstract rule ContentUnit {
 				''
 			endif endif,
 		routeActuals <- website.routeActuals,
-		requiresRole <- website.requiresRole.trim(),
+		authorisationRoles <- website.requiresRole,
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
-		sectionClass <- website.sectionClass(),
+		localSectionClass <- website.sectionClass,
 		omitCaption <- website.omitCaption,
-		captionClass <- website.captionClass(),
-		contentClass <- website.contentClass()
+		localCaptionClass <- website.captionClass,
+		localContentClass <- website.contentClass
 	)
 }
 
@@ -248,12 +298,15 @@ abstract rule DynamicUnit {
 		servicesUsed <- website.findServicesUsed(),
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden(),
-		actions <- website.actions,
+		allActions <- website.actions,
 		header <- website.header,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
-		fieldListClass <- website.fieldListClass(),
-		controlClass <- website.controlClass(),
+		localFieldListClass <- website.fieldListClass,
+--		localFieldLabelClass <- website.fieldLabelClass,
+--		localFieldValueClass <- website.fieldValueClass,
+		localControlClass <- website.controlClass,
+--		localAnchorClass <- website.anchorClass,
 		footerClass <- website.footerClass
 	)
 }
@@ -265,13 +318,13 @@ abstract rule UnitField {
 		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
 		title <- website.title(),
 		hasCustomisedTitle <- website.title() <> website.displayLabel(),
-		requiresRole <- website.requiresRole.trim(),
+		authorisationRoles <- website.requiresRole,
 		hideWhen <- website.hideWhen,
 		escapeHTML <- website.escapeHTML,
 		collectionDisplayOption <- website.collectionDisplayOption,
 		truncate <- website.truncate,
 		dateFormat <- website.dateFormat(),
-		disableInput <- website.disableInput
+		disabledInput <- website.disableInput
 	)
 }
 
@@ -287,11 +340,11 @@ abstract rule UnitFeature {
 		emptyDisplayValue <- website.emptyDisplayValue(),
 		autofocus <- website.autofocus,
 		footer <- website.footer,
-		headerClass <- website.headerClass(),
-		fieldLabelClass <- website.fieldLabelClass(),
-		fieldValueClass <- website.fieldValueClass(),
-		inputGroupClass <- website.inputGroupClass(),
-		footerClass <- website.footerClass()
+		headerClass <- website.headerClass,
+		localFieldLabelClass <- website.fieldLabelClass,
+		localFieldValueClass <- website.fieldValueClass,
+		localInputGroupClass <- website.inputGroupClass,
+		footerClass <- website.footerClass
 	)
 }
 
@@ -300,7 +353,7 @@ rule UnitAttribute {
 	from website : Website!UnitElement
 	to waf : WAF!UnitAttribute (
 		attribute <- website.attribute.findOrmAttribute(),
-		defaultValue <- website.defaultValue,
+		attributeDefaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholder <- website.placeholder(),
 		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
@@ -318,7 +371,7 @@ rule UnitAssociation {
 			else
 				website.options.findSelection()
 			endif,
-		filteredOptions <-
+		optionsFilter <-
 			if website.filteredOptions.oclIsUndefined() then
 				website.filteredOptions
 			else
@@ -405,7 +458,7 @@ abstract rule InterfaceField {
 	from website : Website!InterfaceField
 	to waf : WAF!InterfaceField (
 		required <- website.required,
-		defaultValue <- website.defaultValue,
+		fieldDefaultValue <- website.defaultValue,
 		mustMatch <- website.mustMatch,
 		placeholder <- website.placeholder(),
 		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
@@ -475,7 +528,12 @@ abstract rule CollectionUnit {
 			endif,
 		elementTitle <- website.elementTitle,
 		truncateElementTitle <- website.truncateElementTitle,
-		contentType <- website.contentType->collect(e | e.findOrmEntity()),
+		contentType <-
+			if website.contentType->isEmpty() then
+				website.contentType
+			else
+				website.contentType->first().findOrmEntity()
+			endif,
 		selection <-
 			if website.selection.oclIsUndefined() then
 				website.selection
@@ -689,12 +747,12 @@ abstract rule CardsUnit {
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		rowClass <- website.rowClass(),
-		columnClass <- website.columnClass(),
-		cardClass <- website.cardClass(),
-		cardHeaderClass <- website.cardHeaderClass(),
-		cardBodyClass <- website.cardBodyClass(),
-		cardFooterClass <- website.cardFooterClass()
+		localRowClass <- website.rowClass,
+		localColumnClass <- website.columnClass,
+		localCardClass <- website.cardClass,
+		localCardHeaderClass <- website.cardHeaderClass,
+		localCardBodyClass <- website.cardBodyClass,
+		localCardFooterClass <- website.cardFooterClass
 	)
 }
 
@@ -819,8 +877,8 @@ rule ForgottenPasswordUnit {
 abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (
-		actions <- website.actions,
-		actionNavigationClass <- website.actionNavigationClass()
+		allActions <- website.actions,
+		localActionNavigationClass <- website.actionNavigationClass
 	)
 }
 
@@ -849,7 +907,7 @@ abstract rule Action {
 			else
 				OclUndefined
 			endif,
-		anchorClass <- website.usedBy.anchorClass(website),
+		anchorClass <- website.anchorClass,
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass
 	)
@@ -885,12 +943,7 @@ rule DeleteAction {
 			else
 				website.name.createLabel().concat('?')
 			endif endif,
-		requiresRole <-
-			if website.requiresRole.trim() <> '' then
-				website.requiresRole.trim()
-			else
-				website.usedBy.requiresRole.trim()
-			endif,
+		localAuthorisationRoles <- website.requiresRole,
 		uriElement <-
 			if website.uriElement <> '' then
 				website.uriElement
@@ -911,12 +964,7 @@ abstract rule OperationAction {
 				website.operation.findBusinessOperation()
 			endif,
 		fileExtension <- website.fileExtension,
-		requiresRole <-
-			if website.requiresRole.trim() <> '' then
-				website.requiresRole.trim()
-			else
-				website.usedBy.requiresRole.trim()
-			endif,
+		localAuthorisationRoles <- website.requiresRole,
 		uriElement <-
 			if website.uriElement <> '' then
 				website.uriElement

@@ -178,47 +178,17 @@ unique lazy rule implicitLoginUnit {
 					or f.name = 'password')
 				->collect(f | thisModule.implicitUnitAttribute(f)),
 		confirmLabel <- website.implicitLoginLabel,
-		actions <- Sequence{recoverAction}
+		allActions <- Sequence{recoverAction}
 			->union(if website.allowSelfRegistration then
 					Sequence{ thisModule.implicitRegistrationAction(website)}
 				else
 					Sequence{}
-				endif),
-		captionClass <-
-			if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCaptionClass.trim()
-			else
-				OclUndefined
-			endif,
-		contentClass <- 
-			if thisModule.findWebsiteUI().defaultFormContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormContentClass.trim()
-			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultContentClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		controlClass <- 
-			if thisModule.findWebsiteUI().defaultFormControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormControlClass.trim()
-			else if thisModule.findWebsiteUI().defaultControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultControlClass.trim()
-			else
-				OclUndefined
-			endif endif
+				endif)
 	),
 	recoverAction : WAF!SecurityAction (
 		name <- website.implicitForgottenPasswordName,
 		displayLabel <- website.implicitForgottenPasswordLabel,
-		target <- thisModule.implicitForgottenPasswordUnit(website),
-		anchorClass <-
-			if thisModule.findWebsiteUI().defaultFormAnchorClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormAnchorClass.trim()
-			else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultAnchorClass.trim()
-			else
-				OclUndefined
-			endif endif
+		target <- thisModule.implicitForgottenPasswordUnit(website)
 	)
 }
 
@@ -227,15 +197,7 @@ unique lazy rule implicitRegistrationAction {
 	to waf : WAF!SecurityAction (
 		name <- website.implicitRegistrationName,
 		displayLabel <- website.implicitRegistrationLabel,
-		target <- thisModule.implicitRegistrationUnit(website),
-		anchorClass <-
-			if thisModule.findWebsiteUI().defaultFormAnchorClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormAnchorClass.trim()
-			else if thisModule.findWebsiteUI().defaultAnchorClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultAnchorClass.trim()
-			else
-				OclUndefined
-			endif endif
+		target <- thisModule.implicitRegistrationUnit(website)
 	)
 }
 
@@ -276,16 +238,16 @@ unique lazy rule implicitAuthenticationsPage {
 	authentications : WAF!TextCardsUnit (
 		name <- 'authentications',
 		displayLabel <- 'Authentications',
-		requiresRole <- website.viewRole,
+		authorisationRoles <- website.viewRole,
 		omitCaption <- false,
 		defaultPaginationSize <- 12,
 		nextPageLabel <- '>',
 		previousPageLabel <- '<',
 		contentType <-
 			if website.authenticationModel.oclIsUndefined() then
-				Sequence{thisModule.findOrmEntity(website.authenticationName)}
+				thisModule.findOrmEntity(website.authenticationName)
 			else
-				Sequence{thisModule.findOrmEntity(website.authentication.name)}
+				thisModule.findOrmEntity(website.authentication.name)
 			endif,
 		repositoriesUsed <-
 			if website.authenticationModel.oclIsUndefined() then
@@ -302,42 +264,7 @@ unique lazy rule implicitAuthenticationsPage {
 				->select(f | f.name = 'email' or f.name = 'roles')
 				->collect(f | thisModule.implicitUnitAttribute(f)),
 		elementTitle <- elementTitle,
-		actions <- Sequence{editAction, deleteAction},
-		captionClass <-
-			if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCaptionClass.trim()
-			else
-				OclUndefined
-			endif,
-		contentClass <- 
-			if thisModule.findWebsiteUI().defaultCardsContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCardsContentClass.trim()
-			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultContentClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		rowClass <- thisModule.findWebsiteUI().defaultRowClass,
-		columnClass <- thisModule.findWebsiteUI().defaultColumnClass,
-		cardClass <- thisModule.findWebsiteUI().defaultCardClass,
-		cardHeaderClass <- thisModule.findWebsiteUI().defaultCardHeaderClass,
-		cardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
-		cardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
-		fieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
-		controlClass <- 
-			if thisModule.findWebsiteUI().defaultCardsControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCardsControlClass.trim()
-			else if thisModule.findWebsiteUI().defaultControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultControlClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		actionNavigationClass <- 
-			if thisModule.findWebsiteUI().defaultActionNavigationClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultActionNavigationClass.trim()
-			else
-				OclUndefined
-			endif
+		allActions <- Sequence{editAction, deleteAction}
 	),
 	elementTitle : WAF!FeaturePathAttribute (
 		attribute <- 
@@ -347,19 +274,17 @@ unique lazy rule implicitAuthenticationsPage {
 	editAction : WAF!SelectAction (
 		name <- 'edit',
 		displayLabel <- 'Edit',
-		target <- edit,
-		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
+		target <- edit
 	),
 	deleteAction : WAF!DeleteAction (
 		name <- 'delete',
 		displayLabel <- 'Delete',
-		requiresRole <- website.editRole,
-		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
+		localAuthorisationRoles <- website.editRole
 	),
 	edit : WAF!UpdateUnit (
 		name <- 'edit',
 		displayLabel <- 'Edit Authentication',
-		requiresRole <- website.editRole,
+		authorisationRoles <- website.editRole,
 		omitCaption <- false,
 		confirmLabel <- 'Save',
 		contentType <-
@@ -387,29 +312,7 @@ unique lazy rule implicitAuthenticationsPage {
 						thisModule.implicitUnitDateAttribute(f)
 					else
 						thisModule.implicitUnitAttribute(f)
-					endif),
-		captionClass <-
-			if thisModule.findWebsiteUI().defaultCaptionClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultCaptionClass.trim()
-			else
-				OclUndefined
-			endif,
-		contentClass <- 
-			if thisModule.findWebsiteUI().defaultFormContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormContentClass.trim()
-			else if thisModule.findWebsiteUI().defaultContentClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultContentClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		controlClass <- 
-			if thisModule.findWebsiteUI().defaultFormControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFormControlClass.trim()
-			else if thisModule.findWebsiteUI().defaultControlClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultControlClass.trim()
-			else
-				OclUndefined
-			endif endif
+					endif)
 	)
 	do {
 		waf;
@@ -422,29 +325,7 @@ lazy abstract rule implicitUnitFeature {
 		displayLabel <- partialWaf.displayLabel,
 		title <- partialWaf.displayLabel,
 		truncate <- true,
-		collectionDisplayOption <- #PageDirection,
-		inputGroupClass <-
-			if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultInputGroupClass.trim()
-			else
-				OclUndefined
-			endif,
-		fieldLabelClass <-
-			if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultInputLabelClass.trim()
-			else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFieldLabelClass.trim()
-			else
-				OclUndefined
-			endif endif,
-		fieldValueClass <-
-			if thisModule.findWebsiteUI().defaultInputValueClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultInputValueClass.trim()
-			else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultFieldValueClass.trim()
-			else
-				OclUndefined
-			endif endif
+		collectionDisplayOption <- #PageDirection
 	)
 }
 
@@ -479,8 +360,7 @@ unique lazy rule implicitRememberMeField {
 		dataType <- thisModule.findOrmDataType('Boolean'),
 		required <- false,
 		displayLabel <- 'Remember Me',
-		interfaceType <- thisModule.findWebsiteDataType('Boolean').interfaceType,
-		inputClass <- 'input_checkbox'
+		interfaceType <- thisModule.findWebsiteDataType('Boolean').interfaceType
 	)
 	do {
 		waf;

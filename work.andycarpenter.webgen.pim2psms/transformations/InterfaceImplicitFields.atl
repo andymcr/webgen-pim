@@ -73,20 +73,19 @@ abstract rule CollectionUnit {
 	from partialWaf : WAF!CollectionUnit
 	to waf : WAF!CollectionUnit (
 		displayFields <-
-			if partialWaf.displayFields->notEmpty() or partialWaf.contentType->isEmpty() then
+			if partialWaf.displayFields->notEmpty() or partialWaf.contentType->oclIsUndefined() then
 				partialWaf.displayFields
 			else
-				partialWaf.contentType->first().features
+				partialWaf.contentType.features
 					->select(f | f.oclIsKindOf(WAF!Attribute))
 					->collect(f | thisModule.implicitUnitAttribute(f))
 				->union(
 					if not partialWaf.oclIsKindOf(WAF!IndexUnit) and not waf.oclIsTypeOf(WAF!CreateUnit) then
 						Sequence{}
 					else
-						partialWaf.contentType
-							->collect(e | e.features)->flatten()
+						partialWaf.contentType.allFeatures
 							->select(f | f.oclIsKindOf(WAF!Association))
-							->select(f | f.visible or f.container)
+							->select(f | f.visible or f.isContainer)
 							->collect(f | thisModule.implicitUnitAssociation(f))
 					endif)
 				endif
@@ -97,45 +96,7 @@ lazy abstract rule implicitUnitFeature {
 	from partialWaf : WAF!Feature
 	to waf : WAF!UnitFeature (
 		displayLabel <- partialWaf.displayLabel,
-		title <- partialWaf.displayLabel,
-		fieldLabelClass <-
-			if partialWaf.partOf.oclIsKindOf(WAF!EditUnit) then
-				if thisModule.findWebsiteUI().defaultInputLabelClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultInputLabelClass.trim()
-				else if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultFieldLabelClass.trim()
-				else
-					OclUndefined
-				endif endif
-			else
-				if thisModule.findWebsiteUI().defaultFieldLabelClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultFieldLabelClass.trim()
-				else
-					OclUndefined
-				endif
-			endif,
-		fieldValueClass <-
-			if partialWaf.partOf.oclIsKindOf(WAF!EditUnit) then
-				if thisModule.findWebsiteUI().defaultInputValueClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultInputValueClass.trim()
-				else if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultFieldValueClass.trim()
-				else
-					OclUndefined
-				endif endif
-			else
-				if thisModule.findWebsiteUI().defaultFieldValueClass.trim() <> '' then
-					thisModule.findWebsiteUI().defaultFieldValueClass.trim()
-				else
-					OclUndefined
-				endif
-			endif,
-		inputGroupClass <-
-			if thisModule.findWebsiteUI().defaultInputGroupClass.trim() <> '' then
-				thisModule.findWebsiteUI().defaultInputGroupClass.trim()
-			else
-				OclUndefined
-			endif
+		title <- partialWaf.displayLabel
 	)
 }
 

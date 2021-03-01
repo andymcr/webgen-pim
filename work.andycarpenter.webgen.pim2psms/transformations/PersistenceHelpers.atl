@@ -279,26 +279,6 @@ helper context Website!Selection def: findSelection() : ORM!Selection
 helper context ORM!Selection def: getFilter(name : String) : ORM!Filter
 	= self.filters->any(f | f.name = name);
 
---helper context Website!Feature def: findOrmFeature(reference : Website!ServiceFeatureReference) : ORM!Feature
---	= if self.oclIsKindOf(Website!Attribute) then
---			self.findOrmAttribute()
---		else 
---			let selection : Website!Selection = reference.findContainingSelection()
---			in if selection.oclIsUndefined() then
---					OclUndefined
---				else
---					if reference.findContainingSelection().usedBy.serves = self.partOf then
---						self.findOrmSourceAssociation()
---					else if reference.findContainingSelection().usedBy.serves = self.targetEntity then
---						self.findOrmTargetAssociation()
---					else if selection.joins->includes(self.partOf) then
---						self.findOrmSourceAssociation()
---					else
---						self.findOrmTargetAssociation()
---					endif endif endif
---				endif
---		endif;
-
 helper context Website!Selection def: entities(joins : Sequence(Website!Association)) : Sequence(Website!Entity)
 	= if joins->isEmpty() then
 			Sequence{self.definedBy.serves}
@@ -391,13 +371,4 @@ helper context Website!Attribute def: dateFormat() : String
 			else
 				thisModule.findWebsiteUI().defaultDateTimeFormat
 			endif endif
-		endif endif;
-
-helper context Website!Entity def: getContainer() : ORM!Entity
-	= if self.associationEnds->isEmpty() then
-			OclUndefined
-		else if self.associationEnds->exists(a | a.oclIsKindOf(Website!AssociationWithContainment)) then
-			self.associationEnds->any(a | a.oclIsKindOf(Website!AssociationWithContainment)).partOf.findOrmEntity()
-		else
-			OclUndefined
 		endif endif;

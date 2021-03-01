@@ -167,7 +167,7 @@ unique lazy rule implicitAuthenticationEntity {
 		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
 		displayLabel <- website.authenticationName.createLabel(),
-		features <- Sequence{username, usernameCanonical, email, emailCanonical,
+		allFeatures <- Sequence{username, usernameCanonical, email, emailCanonical,
 				password, enabled, locked, expired, expiresAt, confirmationToken,
 				passwordRequestedAt, passwordChangedAt, credentialsExpired,
 				credentialsExpireAt, roles, lastLogin, lastIp, userDetails}
@@ -191,7 +191,7 @@ unique lazy rule implicitAuthenticationEntity {
 	username : ORM!SingletonElement (
 		name <- 'username',
 		displayLabel <- 'Username',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- true,
 		columnName <- 'username',
@@ -201,7 +201,7 @@ unique lazy rule implicitAuthenticationEntity {
 	usernameCanonical : ORM!SingletonElement (
 		name <- 'usernameCanonical',
 		displayLabel <- 'Username (Canonical)',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- true,
 		columnName <- 'username_canonical',
@@ -211,7 +211,7 @@ unique lazy rule implicitAuthenticationEntity {
 	email : ORM!SingletonElement (
 		name <- 'email',
 		displayLabel <- 'Email',
-		dataType <- website.getDataType('Email'),
+		attributeDataType <- website.getDataType('Email'),
 		cardinality <- #Required,
 		"unique" <- true,
 		caseInsensitive <- true,
@@ -222,7 +222,7 @@ unique lazy rule implicitAuthenticationEntity {
 	emailCanonical : ORM!SingletonElement (
 		name <- 'emailCanonical',
 		displayLabel <- 'Email (Canonical)',
-		dataType <- website.getDataType('Email'),
+		attributeDataType <- website.getDataType('Email'),
 		cardinality <- #Required,
 		"unique" <- true,
 		caseInsensitive <- true,
@@ -233,7 +233,7 @@ unique lazy rule implicitAuthenticationEntity {
 	password : ORM!SingletonElement (
 		name <- 'password',
 		displayLabel <- 'Password',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
 		obfuscateFormFields <- true,
@@ -245,12 +245,12 @@ unique lazy rule implicitAuthenticationEntity {
 	enabled : ORM!SingletonElement (
 		name <- 'enabled',
 		displayLabel <- 'Enabled',
-		dataType <- website.getDataType('Boolean'),
+		attributeDataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'enabled',
-		defaultValue <- enabledDefault,
+		attributeDefaultValue <- enabledDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
@@ -260,12 +260,12 @@ unique lazy rule implicitAuthenticationEntity {
 	locked : ORM!SingletonElement (
 		name <- 'localed',
 		displayLabel <- 'Locked',
-		dataType <- website.getDataType('Boolean'),
+		attributeDataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'locked',
-		defaultValue <- lockedDefault,
+		attributeDefaultValue <- lockedDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
@@ -275,12 +275,12 @@ unique lazy rule implicitAuthenticationEntity {
 	expired : ORM!SingletonElement (
 		name <- 'expired',
 		displayLabel <- 'Expired',
-		dataType <- website.getDataType('Boolean'),
+		attributeDataType <- website.getDataType('Boolean'),
 		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'expired',
-		defaultValue <- expiredDefault,
+		attributeDefaultValue <- expiredDefault,
 		persistentType <- website.getPersistentType('Boolean'),
 		ormType <- website.getOrmType('Boolean')
 	),
@@ -291,7 +291,7 @@ unique lazy rule implicitAuthenticationEntity {
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
 		cardinality <- #Optional,
-		defaultValue <- lastLoginDefault,
+		attributeDefaultValue <- lastLoginDefault,
 		"unique" <- false,
 		columnName <- 'expires_at',
 		details <- #DateAndTime,
@@ -300,7 +300,7 @@ unique lazy rule implicitAuthenticationEntity {
 	confirmationToken : ORM!SingletonElement (
 		name <- 'confirmationToken',
 		displayLabel <- 'Confirmation Token',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'confirmation_token',
@@ -328,7 +328,7 @@ unique lazy rule implicitAuthenticationEntity {
 	credentialsExpired : ORM!SingletonElement (
 		name <- 'credentialsExpired',
 		displayLabel <- 'Credentials Expired',
-		dataType <- website.getDataType('Boolean'),
+		attributeDataType <- website.getDataType('Boolean'),
 		cardinality <- #Optional,
 		"unique" <- false,
 		columnName <- 'credentials_expired',
@@ -361,7 +361,7 @@ unique lazy rule implicitAuthenticationEntity {
 		"unique" <- false,
 		columnName <- 'last_login',
 		details <- #DateAndTime,
-		defaultValue <- lastLoginDefault,
+		attributeDefaultValue <- lastLoginDefault,
 		ormType <- 'datetime'
 	),
 	lastLoginDefault : ORM!StringLiteral (
@@ -370,11 +370,11 @@ unique lazy rule implicitAuthenticationEntity {
 	lastIp : ORM!SingletonElement (
 		name <- 'lastIp',
 		displayLabel <- 'lastIp',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'last_ip',
-		defaultValue <- lastIpDefault,
+		attributeDefaultValue <- lastIpDefault,
 		persistentType <- website.getPersistentType('String'),
 		ormType <- website.getOrmType('String')
 	),
@@ -384,7 +384,7 @@ unique lazy rule implicitAuthenticationEntity {
 	userDetails : ORM!SingletonAssociation (
 		name <- 'userDetails',
 		displayLabel <- 'User details',
-		owningEnd <- true,
+		associationOwningEnd <- true,
 		visible <- true,
 		associationRelationship <- #OneToOne,
 		columnName <- website.user.name.createAssociationColumnName(),
@@ -401,7 +401,7 @@ lazy rule implicitUserAuthentication {
 		partOf <- thisModule.findOrmEntity(website.user.name),
 		name <- website.authenticationName.lowercaseFirst(),
 		displayLabel <- website.authenticationName,
-		owningEnd <- false,
+		associationOwningEnd <- false,
 		visible <- false,
 		associationRelationship <- #OneToOne
 	)
@@ -418,12 +418,12 @@ lazy rule implicitResetPasswordRequestEntity {
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		displayLabel <- website.resetPasswordRequestName.createLabel(),
-		features <- Sequence{selector, hashedToken, requestedAt, expiresAt, user}
+		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user}
 	),
 	selector : ORM!SingletonElement (
 		name <- 'selector',
 		displayLabel <- 'Selector',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'selector',
@@ -433,7 +433,7 @@ lazy rule implicitResetPasswordRequestEntity {
 	hashedToken : ORM!SingletonElement (
 		name <- 'ipAddress',
 		displayLabel <- 'IP Address',
-		dataType <- website.getDataType('String'),
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'hashed_token',
@@ -461,7 +461,7 @@ lazy rule implicitResetPasswordRequestEntity {
 	user : ORM!SingletonAssociation (
 		name <- 'user',
 		displayLabel <- 'User',
-		owningEnd <- true,
+		associationOwningEnd <- true,
 		visible <- true,
 		associationRelationship <- #OneToOne,
 		columnName <- website.user.name.createAssociationColumnName(),
@@ -478,7 +478,7 @@ lazy rule implicitUserAuthentication2 {
 		partOf <- thisModule.findOrmEntity(website.user.name),
 		name <- website.resetPasswordRequestName.lowercaseFirst(),
 		displayLabel <- website.resetPasswordRequestName,
-		owningEnd <- false,
+		associationOwningEnd <- false,
 		visible <- false,
 		associationRelationship <- #OneToOne
 	)
