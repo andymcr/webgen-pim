@@ -267,8 +267,8 @@ abstract rule ContentUnit {
 		alternative <- website.alternative,
 		localSectionClass <- website.sectionClass,
 		omitCaption <- website.omitCaption,
-		localCaptionClass <- website.captionClass,
-		localContentClass <- website.contentClass
+		localCaptionClass <- website.localCaptionClass,
+		localContentClass <- website.localContentClass
 	)
 }
 
@@ -302,11 +302,11 @@ abstract rule DynamicUnit {
 		header <- website.header,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
-		localFieldListClass <- website.fieldListClass,
---		localFieldLabelClass <- website.fieldLabelClass,
---		localFieldValueClass <- website.fieldValueClass,
-		localControlClass <- website.controlClass,
---		localAnchorClass <- website.anchorClass,
+		localFieldListClass <- website.localFieldListClass,
+		localFieldLabelClass <- website.localFieldLabelClass,
+		localFieldValueClass <- website.localFieldValueClass,
+		localControlClass <- website.localControlClass,
+		localAnchorClass <- website.localAnchorClass,
 		footerClass <- website.footerClass
 	)
 }
@@ -621,18 +621,8 @@ abstract rule EditUnit {
 					'Edit'
 				endif endif endif endif
 			endif,
-		confirmMessage <-
-			if website.confirmMessage.trim() <> '' then
-				website.confirmMessage.trim()
-			else
-				OclUndefined
-			endif,
-		successMessage <-
-			if website.successMessage.trim() <> '' then
-				website.successMessage.trim()
-			else
-				OclUndefined
-			endif,
+		confirmMessage <- website.confirmMessage,
+		successMessage <- website.successMessage,
 		cancelDestination <- website.cancelDestination,
 		cancelLabel <-
 			if not website.cancelLabel.oclIsUndefined() and website.cancelLabel <> '' then
@@ -889,25 +879,10 @@ abstract rule Action {
 		disable <- website.disable,
 		displayWhen <- website.displayWhen,
 		enableWhen <- website.enableWhen,
-		confirmMessage <-
-			if website.confirmMessage.trim() <> '' then
-				website.confirmMessage.trim()
-			else
-				OclUndefined
-			endif,
-		successMessage <-
-			if website.successMessage.trim() <> '' then
-				website.successMessage.trim()
-			else
-				OclUndefined
-			endif,
-		failureMessage <-
-			if website.failureMessage.trim() <> '' then
-				website.failuremMessage.trim()
-			else
-				OclUndefined
-			endif,
-		anchorClass <- website.anchorClass,
+		confirmMessage <- website.confirmMessage,
+		successMessage <- website.successMessage,
+		failureMessage <- website.failureMessage,
+		localAnchorClass <- website.anchorClass,
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass
 	)

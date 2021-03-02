@@ -33,9 +33,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getFilteredOptions <em>Filtered Options</em>}</li>
  * </ul>
@@ -84,6 +84,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	protected FeatureChildPath childFeature;
 
 	/**
+	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPES).getSettingDelegate();
+
+	/**
 	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,16 +112,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate TARGET_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__TARGET_ENTITY).getSettingDelegate();
-
-	/**
-	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainingTypes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPES).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getOptions() <em>Options</em>}' reference.
@@ -465,13 +465,13 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return basicGetValueDisplay();
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return getChildFeature();
+			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
+				return getContainingTypes();
 			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return isIsSourceAssociation();
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
 				if (resolve) return getTargetEntity();
 				return basicGetTargetEntity();
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
-				return getContainingTypes();
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				if (resolve) return getOptions();
 				return basicGetOptions();
@@ -558,12 +558,12 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return valueDisplay != null;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return childFeature != null;
+			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
+				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
-				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				return options != null;
 			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:

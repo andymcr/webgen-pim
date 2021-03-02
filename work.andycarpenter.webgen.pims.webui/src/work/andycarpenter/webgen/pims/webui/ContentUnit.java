@@ -23,8 +23,8 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAlternative <em>Alternative</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getCaptionClass <em>Caption Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass <em>Local Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass <em>Local Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
@@ -262,54 +262,50 @@ public interface ContentUnit extends NamedDisplayElement {
 	void setOmitCaption(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Caption Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Caption Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Caption Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Caption Class</em>' attribute.
-	 * @see #setCaptionClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_CaptionClass()
+	 * @return the value of the '<em>Local Caption Class</em>' attribute.
+	 * @see #setLocalCaptionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_LocalCaptionClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getCaptionClass();
+	String getLocalCaptionClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getCaptionClass <em>Caption Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass <em>Local Caption Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Caption Class</em>' attribute.
-	 * @see #getCaptionClass()
+	 * @param value the new value of the '<em>Local Caption Class</em>' attribute.
+	 * @see #getLocalCaptionClass()
 	 * @generated
 	 */
-	void setCaptionClass(String value);
+	void setLocalCaptionClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Content Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Content Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Class</em>' attribute.
-	 * @see #setContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_ContentClass()
+	 * @return the value of the '<em>Local Content Class</em>' attribute.
+	 * @see #setLocalContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_LocalContentClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getContentClass();
+	String getLocalContentClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass <em>Local Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Class</em>' attribute.
-	 * @see #getContentClass()
+	 * @param value the new value of the '<em>Local Content Class</em>' attribute.
+	 * @see #getLocalContentClass()
 	 * @generated
 	 */
-	void setContentClass(String value);
+	void setLocalContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Page Displayed On</b></em>' reference.

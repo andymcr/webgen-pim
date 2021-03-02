@@ -216,9 +216,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitCaption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localCaptionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentClass" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localContentClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pageDisplayedOn" eType="#//Page"
         changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
@@ -270,16 +270,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="unit_header"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="unit_control"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldListClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localAnchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="unit_footer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldListClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitFieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitFieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CollectionDisplayOptions">
     <eLiterals name="LineDirection"/>
@@ -371,24 +373,24 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(r : persistence::Repository | r.serves = targetEntity)&#xA;&#x9;&#x9;->collect(r : persistence::Repository | r.selections)&#xA;&#x9;&#x9;->includes(options)"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingTypes" upperBound="-1"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
+        changeable="false" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="displayedOn.contentTypes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSourceAssociation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;displayedOn.contentTypes->collect(e | e.associations)->includes(association)"/>
+        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;containingTypes->includes(association.partOf)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation then&#xA;&#x9;&#x9;association.targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;association.partOf&#xA;&#x9;endif&#xA;endif"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containingTypes" upperBound="-1"
-        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
-        changeable="false" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="displayedOn.contentTypes"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
@@ -415,7 +417,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xD;&#xA;&#x9;if partOf.oclIsTypeOf(UnitAssociation) then&#xD;&#xA;&#x9;&#x9;partOf.oclAsType(UnitAssociation).targetEntity.associations->includes(association)&#xD;&#xA;&#x9;else if partOf.oclIsTypeOf(FeaturePathAssociation) then&#xD;&#xA;&#x9;&#x9;partOf.oclAsType(FeaturePathAssociation).targetEntity.associations->includes(association)&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;partOf.oclAsType(ChildPathAssociation).targetEntity.associations->includes(association)&#xD;&#xA;&#x9;endif endif"/>
+        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;containingType.associations->includes(association)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
@@ -455,7 +457,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;let unit : DynamicUnit = self.oclAsType(ecore::EObject).eContainer().oclAsType(UnitField).displayedOn&#xA;&#x9;&#x9;&#x9;in if unit.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsTypeOf(Badge) then&#xA;&#x9;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType->includes(self.association.partOf)&#xA;&#x9;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(expression::Expression) then&#xA;&#x9;&#x9;if rootContainer.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;let collectionUnit : CollectionUnit = rootContainer.oclAsType(CollectionUnit)&#xA;&#x9;&#x9;&#x9;in if collectionUnit.containingType.oclIsUndefined() then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;collectionUnit.containingType.associations->includes(association.partOf)&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(SingletonUnit) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;let unit : DynamicUnit = rootContainer.oclAsType(UnitField).displayedOn&#xA;&#x9;&#x9;&#x9;&#x9;in if unit.oclIsKindOf(CollectionUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(CollectionUnit).contentType->includes(association.partOf)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;unit.oclAsType(SingletonUnit).contentType = association.partOf&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;endif endif endif&#xA;&#x9;else&#xA;&#x9;&#x9;true&#xA;&#x9;endif endif endif endif endif"/>
+        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;containingTypes->includes(association.partOf)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
@@ -791,7 +793,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingTypes" upperBound="-1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if usedBy.oclIsTypeOf(CollectionUnit) then&#xA;&#x9;usedBy.oclAsType(CollectionUnit).contentTypes&#xA;else if usedBy.oclIsTypeOf(UnitAssociation) then&#xA;&#x9;OrderedSet{usedBy.oclAsType(UnitAssociation).targetEntity}&#xA;else&#xA;&#x9;OrderedSet{}&#xA;endif endif"/>
+        <details key="derivation" value="if usedBy.oclIsKindOf(DynamicUnit) then&#xA;&#x9;usedBy.oclAsType(DynamicUnit).contentTypes&#xA;else if usedBy.oclIsKindOf(UnitFeature) then&#xA;&#x9;usedBy.oclAsType(UnitFeature).displayedOn.contentTypes&#xA;else&#xA;&#x9;OrderedSet{}&#xA;endif endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

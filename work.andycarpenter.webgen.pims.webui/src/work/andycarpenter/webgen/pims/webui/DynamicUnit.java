@@ -22,11 +22,12 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass <em>Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldListClass <em>Local Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass <em>Local Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
@@ -200,31 +201,119 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	void setHeaderClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Control Class</b></em>' attribute.
-	 * The default value is <code>"unit_control"</code>.
+	 * Returns the value of the '<em><b>Local Field List Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Control Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Control Class</em>' attribute.
-	 * @see #setControlClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ControlClass()
-	 * @model default="unit_control"
+	 * @return the value of the '<em>Local Field List Class</em>' attribute.
+	 * @see #setLocalFieldListClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalFieldListClass()
+	 * @model default=""
 	 * @generated
 	 */
-	String getControlClass();
+	String getLocalFieldListClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass <em>Control Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldListClass <em>Local Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Control Class</em>' attribute.
-	 * @see #getControlClass()
+	 * @param value the new value of the '<em>Local Field List Class</em>' attribute.
+	 * @see #getLocalFieldListClass()
 	 * @generated
 	 */
-	void setControlClass(String value);
+	void setLocalFieldListClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Field Label Class</em>' attribute.
+	 * @see #setLocalFieldLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalFieldLabelClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalFieldLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Field Label Class</em>' attribute.
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 */
+	void setLocalFieldLabelClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Field Value Class</em>' attribute.
+	 * @see #setLocalFieldValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalFieldValueClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalFieldValueClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Field Value Class</em>' attribute.
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 */
+	void setLocalFieldValueClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Control Class</em>' attribute.
+	 * @see #setLocalControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass <em>Local Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Control Class</em>' attribute.
+	 * @see #getLocalControlClass()
+	 * @generated
+	 */
+	void setLocalControlClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Anchor Class</em>' attribute.
+	 * @see #setLocalAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalAnchorClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalAnchorClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Anchor Class</em>' attribute.
+	 * @see #getLocalAnchorClass()
+	 * @generated
+	 */
+	void setLocalAnchorClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
@@ -252,74 +341,5 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	void setFooterClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Field List Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field List Class</em>' attribute.
-	 * @see #setFieldListClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FieldListClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getFieldListClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field List Class</em>' attribute.
-	 * @see #getFieldListClass()
-	 * @generated
-	 */
-	void setFieldListClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit Field Label Class</em>' attribute.
-	 * @see #setUnitFieldLabelClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_UnitFieldLabelClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getUnitFieldLabelClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit Field Label Class</em>' attribute.
-	 * @see #getUnitFieldLabelClass()
-	 * @generated
-	 */
-	void setUnitFieldLabelClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit Field Value Class</em>' attribute.
-	 * @see #setUnitFieldValueClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_UnitFieldValueClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getUnitFieldValueClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit Field Value Class</em>' attribute.
-	 * @see #getUnitFieldValueClass()
-	 * @generated
-	 */
-	void setUnitFieldValueClass(String value);
 
 } // DynamicUnit

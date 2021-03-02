@@ -108,7 +108,7 @@ public class TimeLiteralItemProvider
 				 false,
 				 false,
 				 null,
-				 getString("_UI_DEbugPropertyCategory"),
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

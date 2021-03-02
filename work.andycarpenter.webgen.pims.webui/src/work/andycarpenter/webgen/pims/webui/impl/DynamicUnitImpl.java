@@ -39,11 +39,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getControlClass <em>Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldListClass <em>Local Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalControlClass <em>Local Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFieldListClass <em>Field List Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getUnitFieldLabelClass <em>Unit Field Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getUnitFieldValueClass <em>Unit Field Value Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -190,24 +191,104 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String headerClass = HEADER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getControlClass() <em>Control Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalFieldListClass() <em>Local Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getControlClass()
+	 * @see #getLocalFieldListClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTROL_CLASS_EDEFAULT = "unit_control";
+	protected static final String LOCAL_FIELD_LIST_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getControlClass() <em>Control Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalFieldListClass() <em>Local Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getControlClass()
+	 * @see #getLocalFieldListClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String controlClass = CONTROL_CLASS_EDEFAULT;
+	protected String localFieldListClass = LOCAL_FIELD_LIST_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldLabelClass = LOCAL_FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldValueClass = LOCAL_FIELD_VALUE_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalControlClass() <em>Local Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalControlClass() <em>Local Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localControlClass = LOCAL_CONTROL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalAnchorClass() <em>Local Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalAnchorClass() <em>Local Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localAnchorClass = LOCAL_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
@@ -228,66 +309,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected String footerClass = FOOTER_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFieldListClass() <em>Field List Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldListClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIELD_LIST_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFieldListClass() <em>Field List Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldListClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldListClass = FIELD_LIST_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUnitFieldLabelClass() <em>Unit Field Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitFieldLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String UNIT_FIELD_LABEL_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getUnitFieldLabelClass() <em>Unit Field Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitFieldLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String unitFieldLabelClass = UNIT_FIELD_LABEL_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUnitFieldValueClass() <em>Unit Field Value Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitFieldValueClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String UNIT_FIELD_VALUE_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getUnitFieldValueClass() <em>Unit Field Value Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnitFieldValueClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String unitFieldValueClass = UNIT_FIELD_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -511,8 +532,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public String getControlClass() {
-		return controlClass;
+	public String getLocalFieldListClass() {
+		return localFieldListClass;
 	}
 
 	/**
@@ -521,11 +542,103 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public void setControlClass(String newControlClass) {
-		String oldControlClass = controlClass;
-		controlClass = newControlClass;
+	public void setLocalFieldListClass(String newLocalFieldListClass) {
+		String oldLocalFieldListClass = localFieldListClass;
+		localFieldListClass = newLocalFieldListClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS, oldControlClass, controlClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS, oldLocalFieldListClass, localFieldListClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldLabelClass() {
+		return localFieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldLabelClass(String newLocalFieldLabelClass) {
+		String oldLocalFieldLabelClass = localFieldLabelClass;
+		localFieldLabelClass = newLocalFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS, oldLocalFieldLabelClass, localFieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldValueClass() {
+		return localFieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldValueClass(String newLocalFieldValueClass) {
+		String oldLocalFieldValueClass = localFieldValueClass;
+		localFieldValueClass = newLocalFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS, oldLocalFieldValueClass, localFieldValueClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalControlClass() {
+		return localControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalControlClass(String newLocalControlClass) {
+		String oldLocalControlClass = localControlClass;
+		localControlClass = newLocalControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS, oldLocalControlClass, localControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalAnchorClass() {
+		return localAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalAnchorClass(String newLocalAnchorClass) {
+		String oldLocalAnchorClass = localAnchorClass;
+		localAnchorClass = newLocalAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS, oldLocalAnchorClass, localAnchorClass));
 	}
 
 	/**
@@ -549,75 +662,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		footerClass = newFooterClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS, oldFooterClass, footerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFieldListClass() {
-		return fieldListClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFieldListClass(String newFieldListClass) {
-		String oldFieldListClass = fieldListClass;
-		fieldListClass = newFieldListClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS, oldFieldListClass, fieldListClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getUnitFieldLabelClass() {
-		return unitFieldLabelClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUnitFieldLabelClass(String newUnitFieldLabelClass) {
-		String oldUnitFieldLabelClass = unitFieldLabelClass;
-		unitFieldLabelClass = newUnitFieldLabelClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS, oldUnitFieldLabelClass, unitFieldLabelClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getUnitFieldValueClass() {
-		return unitFieldValueClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUnitFieldValueClass(String newUnitFieldValueClass) {
-		String oldUnitFieldValueClass = unitFieldValueClass;
-		unitFieldValueClass = newUnitFieldValueClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS, oldUnitFieldValueClass, unitFieldValueClass));
 	}
 
 	/**
@@ -681,16 +725,18 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getFooter();
 			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 				return getHeaderClass();
-			case WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS:
-				return getControlClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
+				return getLocalFieldListClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
+				return getLocalFieldLabelClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
+				return getLocalFieldValueClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
+				return getLocalControlClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
+				return getLocalAnchorClass();
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return getFooterClass();
-			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
-				return getFieldListClass();
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS:
-				return getUnitFieldLabelClass();
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS:
-				return getUnitFieldValueClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -730,20 +776,23 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 				setHeaderClass((String)newValue);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS:
-				setControlClass((String)newValue);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
+				setLocalFieldListClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
+				setLocalControlClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
+				setLocalAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
-				setFieldListClass((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS:
-				setUnitFieldLabelClass((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS:
-				setUnitFieldValueClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -781,20 +830,23 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 				setHeaderClass(HEADER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS:
-				setControlClass(CONTROL_CLASS_EDEFAULT);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
+				setLocalFieldListClass(LOCAL_FIELD_LIST_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass(LOCAL_FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass(LOCAL_FIELD_VALUE_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
+				setLocalControlClass(LOCAL_CONTROL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
+				setLocalAnchorClass(LOCAL_ANCHOR_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass(FOOTER_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
-				setFieldListClass(FIELD_LIST_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS:
-				setUnitFieldLabelClass(UNIT_FIELD_LABEL_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS:
-				setUnitFieldValueClass(UNIT_FIELD_VALUE_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -826,16 +878,18 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
 			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case WebuiPackage.DYNAMIC_UNIT__CONTROL_CLASS:
-				return CONTROL_CLASS_EDEFAULT == null ? controlClass != null : !CONTROL_CLASS_EDEFAULT.equals(controlClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
+				return LOCAL_FIELD_LIST_CLASS_EDEFAULT == null ? localFieldListClass != null : !LOCAL_FIELD_LIST_CLASS_EDEFAULT.equals(localFieldListClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
+				return LOCAL_FIELD_LABEL_CLASS_EDEFAULT == null ? localFieldLabelClass != null : !LOCAL_FIELD_LABEL_CLASS_EDEFAULT.equals(localFieldLabelClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
+				return LOCAL_FIELD_VALUE_CLASS_EDEFAULT == null ? localFieldValueClass != null : !LOCAL_FIELD_VALUE_CLASS_EDEFAULT.equals(localFieldValueClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
+				return LOCAL_CONTROL_CLASS_EDEFAULT == null ? localControlClass != null : !LOCAL_CONTROL_CLASS_EDEFAULT.equals(localControlClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
+				return LOCAL_ANCHOR_CLASS_EDEFAULT == null ? localAnchorClass != null : !LOCAL_ANCHOR_CLASS_EDEFAULT.equals(localAnchorClass);
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
-			case WebuiPackage.DYNAMIC_UNIT__FIELD_LIST_CLASS:
-				return FIELD_LIST_CLASS_EDEFAULT == null ? fieldListClass != null : !FIELD_LIST_CLASS_EDEFAULT.equals(fieldListClass);
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS:
-				return UNIT_FIELD_LABEL_CLASS_EDEFAULT == null ? unitFieldLabelClass != null : !UNIT_FIELD_LABEL_CLASS_EDEFAULT.equals(unitFieldLabelClass);
-			case WebuiPackage.DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS:
-				return UNIT_FIELD_VALUE_CLASS_EDEFAULT == null ? unitFieldValueClass != null : !UNIT_FIELD_VALUE_CLASS_EDEFAULT.equals(unitFieldValueClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -894,16 +948,18 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(footer);
 		result.append(", headerClass: ");
 		result.append(headerClass);
-		result.append(", controlClass: ");
-		result.append(controlClass);
+		result.append(", localFieldListClass: ");
+		result.append(localFieldListClass);
+		result.append(", localFieldLabelClass: ");
+		result.append(localFieldLabelClass);
+		result.append(", localFieldValueClass: ");
+		result.append(localFieldValueClass);
+		result.append(", localControlClass: ");
+		result.append(localControlClass);
+		result.append(", localAnchorClass: ");
+		result.append(localAnchorClass);
 		result.append(", footerClass: ");
 		result.append(footerClass);
-		result.append(", fieldListClass: ");
-		result.append(fieldListClass);
-		result.append(", unitFieldLabelClass: ");
-		result.append(unitFieldLabelClass);
-		result.append(", unitFieldValueClass: ");
-		result.append(unitFieldValueClass);
 		result.append(')');
 		return result.toString();
 	}

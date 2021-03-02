@@ -17,9 +17,9 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes <em>Containing Types</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}</li>
  * </ul>
@@ -41,7 +41,7 @@ public interface UnitAssociation extends UnitFeature, AssociationReference {
 	 * @return the value of the '<em>Is Source Association</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_IsSourceAssociation()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tdisplayedOn.contentTypes-&gt;collect(e | e.associations)-&gt;includes(association)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tcontainingTypes-&gt;includes(association.partOf)'"
 	 * @generated
 	 */
 	boolean isIsSourceAssociation();

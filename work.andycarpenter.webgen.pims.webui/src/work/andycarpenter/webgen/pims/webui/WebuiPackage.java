@@ -1298,22 +1298,22 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1507,22 +1507,22 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__OMIT_CAPTION = CONTENT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+	int STATIC_UNIT__LOCAL_CAPTION_CLASS = CONTENT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
+	int STATIC_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1670,22 +1670,22 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__OMIT_CAPTION = CONTENT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_SITEMAP_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+	int CREATE_SITEMAP_UNIT__LOCAL_CAPTION_CLASS = CONTENT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_SITEMAP_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
+	int CREATE_SITEMAP_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1842,22 +1842,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__OMIT_CAPTION = CONTENT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CAPTION_CLASS = CONTENT_UNIT__CAPTION_CLASS;
+	int DYNAMIC_UNIT__LOCAL_CAPTION_CLASS = CONTENT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTENT_CLASS = CONTENT_UNIT__CONTENT_CLASS;
+	int DYNAMIC_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1950,13 +1950,49 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1965,34 +2001,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
+	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -2001,7 +2010,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 14;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -2980,13 +2989,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__CONTAINING_TYPES = UNIT_FEATURE_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
@@ -2995,16 +3013,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__CONTAINING_TYPES = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference.
@@ -4559,22 +4568,22 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int SINGLETON_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int SINGLETON_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -4667,13 +4676,49 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int SINGLETON_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -4683,33 +4728,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -4857,22 +4875,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int COLLECTION_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int COLLECTION_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -4965,13 +4983,49 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -4981,33 +5035,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -5425,22 +5452,22 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__OMIT_CAPTION = SINGLETON_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CAPTION_CLASS = SINGLETON_UNIT__CAPTION_CLASS;
+	int EDIT_UNIT__LOCAL_CAPTION_CLASS = SINGLETON_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONTENT_CLASS = SINGLETON_UNIT__CONTENT_CLASS;
+	int EDIT_UNIT__LOCAL_CONTENT_CLASS = SINGLETON_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -5533,13 +5560,49 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__HEADER_CLASS = SINGLETON_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONTROL_CLASS = SINGLETON_UNIT__CONTROL_CLASS;
+	int EDIT_UNIT__LOCAL_FIELD_LIST_CLASS = SINGLETON_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS = SINGLETON_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS = SINGLETON_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -5549,33 +5612,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__FOOTER_CLASS = SINGLETON_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__UNIT_FIELD_LABEL_CLASS = SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__UNIT_FIELD_VALUE_CLASS = SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -5804,22 +5840,22 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+	int CREATE_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
+	int CREATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -5912,13 +5948,49 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
+	int CREATE_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -5928,33 +6000,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6183,22 +6228,22 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+	int CREATE_UPDATE_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
+	int CREATE_UPDATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -6291,13 +6336,49 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
+	int CREATE_UPDATE_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -6307,33 +6388,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6589,22 +6643,22 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+	int UPDATE_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
+	int UPDATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -6697,13 +6751,49 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
+	int UPDATE_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -6713,33 +6803,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6977,22 +7040,22 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+	int MAP_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
+	int MAP_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7085,13 +7148,49 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
+	int MAP_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -7101,33 +7200,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7392,22 +7464,22 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__OMIT_CAPTION = SINGLETON_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__CAPTION_CLASS = SINGLETON_UNIT__CAPTION_CLASS;
+	int DETAILS_UNIT__LOCAL_CAPTION_CLASS = SINGLETON_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__CONTENT_CLASS = SINGLETON_UNIT__CONTENT_CLASS;
+	int DETAILS_UNIT__LOCAL_CONTENT_CLASS = SINGLETON_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7500,13 +7572,49 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__HEADER_CLASS = SINGLETON_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__CONTROL_CLASS = SINGLETON_UNIT__CONTROL_CLASS;
+	int DETAILS_UNIT__LOCAL_FIELD_LIST_CLASS = SINGLETON_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_FIELD_LABEL_CLASS = SINGLETON_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_FIELD_VALUE_CLASS = SINGLETON_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -7516,33 +7624,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_UNIT__FOOTER_CLASS = SINGLETON_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__FIELD_LIST_CLASS = SINGLETON_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__UNIT_FIELD_LABEL_CLASS = SINGLETON_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__UNIT_FIELD_VALUE_CLASS = SINGLETON_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7708,22 +7789,22 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+	int INDEX_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
+	int INDEX_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7816,13 +7897,49 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__HEADER_CLASS = COLLECTION_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTROL_CLASS = COLLECTION_UNIT__CONTROL_CLASS;
+	int INDEX_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -7832,33 +7949,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -8294,22 +8384,22 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+	int CARDS_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
+	int CARDS_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -8402,13 +8492,49 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__HEADER_CLASS = COLLECTION_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CONTROL_CLASS = COLLECTION_UNIT__CONTROL_CLASS;
+	int CARDS_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -8418,33 +8544,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9115,22 +9214,22 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CAPTION_CLASS = CARDS_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -9223,13 +9322,49 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_FIELD_LIST_CLASS = CARDS_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS = CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS = CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9239,33 +9374,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -9754,22 +9862,22 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CAPTION_CLASS = CARDS_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -9862,13 +9970,49 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_FIELD_LIST_CLASS = CARDS_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS = CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS = CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9878,33 +10022,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10402,22 +10519,22 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__CAPTION_CLASS = COLLECTION_UNIT__CAPTION_CLASS;
+	int IMAGE_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__CONTENT_CLASS = COLLECTION_UNIT__CONTENT_CLASS;
+	int IMAGE_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -10510,13 +10627,49 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__HEADER_CLASS = COLLECTION_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__CONTROL_CLASS = COLLECTION_UNIT__CONTROL_CLASS;
+	int IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -10526,33 +10679,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FIELD_LIST_CLASS = COLLECTION_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS = COLLECTION_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS = COLLECTION_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10996,22 +11122,22 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__OMIT_CAPTION = CARDS_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CAPTION_CLASS = CARDS_UNIT__CAPTION_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CAPTION_CLASS = CARDS_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CONTENT_CLASS = CARDS_UNIT__CONTENT_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -11104,13 +11230,49 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__HEADER_CLASS = CARDS_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CONTROL_CLASS = CARDS_UNIT__CONTROL_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_FIELD_LIST_CLASS = CARDS_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS = CARDS_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS = CARDS_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -11120,33 +11282,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__FOOTER_CLASS = CARDS_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__FIELD_LIST_CLASS = CARDS_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__UNIT_FIELD_LABEL_CLASS = CARDS_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__UNIT_FIELD_VALUE_CLASS = CARDS_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -11698,22 +11833,22 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__OMIT_CAPTION = IMAGE_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CAPTION_CLASS = IMAGE_UNIT__CAPTION_CLASS;
+	int SLIDER_UNIT__LOCAL_CAPTION_CLASS = IMAGE_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTENT_CLASS = IMAGE_UNIT__CONTENT_CLASS;
+	int SLIDER_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -11806,13 +11941,49 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__HEADER_CLASS = IMAGE_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTROL_CLASS = IMAGE_UNIT__CONTROL_CLASS;
+	int SLIDER_UNIT__LOCAL_FIELD_LIST_CLASS = IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_FIELD_LABEL_CLASS = IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_FIELD_VALUE_CLASS = IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -11822,33 +11993,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__FOOTER_CLASS = IMAGE_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__UNIT_FIELD_LABEL_CLASS = IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__UNIT_FIELD_VALUE_CLASS = IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12310,22 +12454,22 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__OMIT_CAPTION = IMAGE_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CAPTION_CLASS = IMAGE_UNIT__CAPTION_CLASS;
+	int GALLERY_UNIT__LOCAL_CAPTION_CLASS = IMAGE_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTENT_CLASS = IMAGE_UNIT__CONTENT_CLASS;
+	int GALLERY_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -12418,13 +12562,49 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__HEADER_CLASS = IMAGE_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTROL_CLASS = IMAGE_UNIT__CONTROL_CLASS;
+	int GALLERY_UNIT__LOCAL_FIELD_LIST_CLASS = IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_FIELD_LABEL_CLASS = IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_FIELD_VALUE_CLASS = IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -12434,33 +12614,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__FOOTER_CLASS = IMAGE_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__FIELD_LIST_CLASS = IMAGE_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__UNIT_FIELD_LABEL_CLASS = IMAGE_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__UNIT_FIELD_VALUE_CLASS = IMAGE_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12931,22 +13084,22 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int CONTROL_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int CONTROL_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -13039,13 +13192,49 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int CONTROL_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13055,33 +13244,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -13228,22 +13390,22 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__OMIT_CAPTION = CONTROL_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__CAPTION_CLASS = CONTROL_UNIT__CAPTION_CLASS;
+	int SEARCH_UNIT__LOCAL_CAPTION_CLASS = CONTROL_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__CONTENT_CLASS = CONTROL_UNIT__CONTENT_CLASS;
+	int SEARCH_UNIT__LOCAL_CONTENT_CLASS = CONTROL_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -13336,13 +13498,49 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__HEADER_CLASS = CONTROL_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__CONTROL_CLASS = CONTROL_UNIT__CONTROL_CLASS;
+	int SEARCH_UNIT__LOCAL_FIELD_LIST_CLASS = CONTROL_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTROL_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTROL_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_CONTROL_CLASS = CONTROL_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_ANCHOR_CLASS = CONTROL_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13352,33 +13550,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__FOOTER_CLASS = CONTROL_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__FIELD_LIST_CLASS = CONTROL_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__UNIT_FIELD_LABEL_CLASS = CONTROL_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__UNIT_FIELD_VALUE_CLASS = CONTROL_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -13544,22 +13715,22 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int REGISTRATION_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int REGISTRATION_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -13652,13 +13823,49 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int REGISTRATION_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13668,33 +13875,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Registration Unit</em>' class.
@@ -13824,22 +14004,22 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CAPTION_CLASS = EDIT_UNIT__CAPTION_CLASS;
+	int LOGIN_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTENT_CLASS = EDIT_UNIT__CONTENT_CLASS;
+	int LOGIN_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -13932,13 +14112,49 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTROL_CLASS = EDIT_UNIT__CONTROL_CLASS;
+	int LOGIN_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13948,33 +14164,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__FIELD_LIST_CLASS = EDIT_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__UNIT_FIELD_LABEL_CLASS = EDIT_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__UNIT_FIELD_VALUE_CLASS = EDIT_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -14203,22 +14392,22 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int LOGOUT_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int LOGOUT_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -14311,13 +14500,49 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int LOGOUT_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -14327,33 +14552,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGOUT_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Logout Unit</em>' class.
@@ -14483,22 +14681,22 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__CAPTION_CLASS = DYNAMIC_UNIT__CAPTION_CLASS;
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONTENT_CLASS = DYNAMIC_UNIT__CONTENT_CLASS;
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -14591,13 +14789,49 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONTROL_CLASS = DYNAMIC_UNIT__CONTROL_CLASS;
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -14607,33 +14841,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__FIELD_LIST_CLASS = DYNAMIC_UNIT__FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__UNIT_FIELD_LABEL_CLASS = DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__UNIT_FIELD_VALUE_CLASS = DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Forgotten Password Unit</em>' class.
@@ -17173,26 +17380,26 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_OmitCaption();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getCaptionClass <em>Caption Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass <em>Local Caption Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Caption Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getCaptionClass()
+	 * @return the meta object for the attribute '<em>Local Caption Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass()
 	 * @see #getContentUnit()
 	 * @generated
 	 */
-	EAttribute getContentUnit_CaptionClass();
+	EAttribute getContentUnit_LocalCaptionClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass <em>Content Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass <em>Local Content Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getContentClass()
+	 * @return the meta object for the attribute '<em>Local Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass()
 	 * @see #getContentUnit()
 	 * @generated
 	 */
-	EAttribute getContentUnit_ContentClass();
+	EAttribute getContentUnit_LocalContentClass();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}'.
@@ -17389,15 +17596,59 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnit_HeaderClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass <em>Control Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldListClass <em>Local Field List Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getControlClass()
+	 * @return the meta object for the attribute '<em>Local Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldListClass()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EAttribute getDynamicUnit_ControlClass();
+	EAttribute getDynamicUnit_LocalFieldListClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass <em>Local Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalFieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass <em>Local Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalFieldValueClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass <em>Local Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalAnchorClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}'.
@@ -17409,39 +17660,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDynamicUnit_FooterClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass <em>Field List Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field List Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getFieldListClass()
-	 * @see #getDynamicUnit()
-	 * @generated
-	 */
-	EAttribute getDynamicUnit_FieldListClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass <em>Unit Field Label Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit Field Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldLabelClass()
-	 * @see #getDynamicUnit()
-	 * @generated
-	 */
-	EAttribute getDynamicUnit_UnitFieldLabelClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass <em>Unit Field Value Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit Field Value Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getUnitFieldValueClass()
-	 * @see #getDynamicUnit()
-	 * @generated
-	 */
-	EAttribute getDynamicUnit_UnitFieldValueClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitField <em>Unit Field</em>}'.
@@ -20667,20 +20885,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__OMIT_CAPTION = eINSTANCE.getContentUnit_OmitCaption();
 
 		/**
-		 * The meta object literal for the '<em><b>Caption Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Caption Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENT_UNIT__CAPTION_CLASS = eINSTANCE.getContentUnit_CaptionClass();
+		EAttribute CONTENT_UNIT__LOCAL_CAPTION_CLASS = eINSTANCE.getContentUnit_LocalCaptionClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Content Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENT_UNIT__CONTENT_CLASS = eINSTANCE.getContentUnit_ContentClass();
+		EAttribute CONTENT_UNIT__LOCAL_CONTENT_CLASS = eINSTANCE.getContentUnit_LocalContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Page Displayed On</b></em>' reference feature.
@@ -20835,12 +21053,44 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT__HEADER_CLASS = eINSTANCE.getDynamicUnit_HeaderClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Control Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Field List Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DYNAMIC_UNIT__CONTROL_CLASS = eINSTANCE.getDynamicUnit_ControlClass();
+		EAttribute DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = eINSTANCE.getDynamicUnit_LocalFieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnit_LocalFieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnit_LocalFieldValueClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = eINSTANCE.getDynamicUnit_LocalControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = eINSTANCE.getDynamicUnit_LocalAnchorClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
@@ -20849,30 +21099,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DYNAMIC_UNIT__FOOTER_CLASS = eINSTANCE.getDynamicUnit_FooterClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Field List Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DYNAMIC_UNIT__FIELD_LIST_CLASS = eINSTANCE.getDynamicUnit_FieldListClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit Field Label Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DYNAMIC_UNIT__UNIT_FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnit_UnitFieldLabelClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit Field Value Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DYNAMIC_UNIT__UNIT_FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnit_UnitFieldValueClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl <em>Unit Field</em>}' class.

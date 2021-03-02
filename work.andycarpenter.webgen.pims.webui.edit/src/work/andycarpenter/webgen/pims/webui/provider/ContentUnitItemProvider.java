@@ -59,8 +59,8 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			addAlternativePropertyDescriptor(object);
 			addSectionClassPropertyDescriptor(object);
 			addOmitCaptionPropertyDescriptor(object);
-			addCaptionClassPropertyDescriptor(object);
-			addContentClassPropertyDescriptor(object);
+			addLocalCaptionClassPropertyDescriptor(object);
+			addLocalContentClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -220,19 +220,19 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Caption Class feature.
+	 * This adds a property descriptor for the Local Caption Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCaptionClassPropertyDescriptor(Object object) {
+	protected void addLocalCaptionClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContentUnit_captionClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_captionClass_feature", "_UI_ContentUnit_type"),
-				 WebuiPackage.Literals.CONTENT_UNIT__CAPTION_CLASS,
+				 getString("_UI_ContentUnit_localCaptionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_localCaptionClass_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__LOCAL_CAPTION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -242,19 +242,19 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Class feature.
+	 * This adds a property descriptor for the Local Content Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContentClassPropertyDescriptor(Object object) {
+	protected void addLocalContentClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContentUnit_contentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_contentClass_feature", "_UI_ContentUnit_type"),
-				 WebuiPackage.Literals.CONTENT_UNIT__CONTENT_CLASS,
+				 getString("_UI_ContentUnit_localContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_localContentClass_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__LOCAL_CONTENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -327,8 +327,8 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
-			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
-			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS:

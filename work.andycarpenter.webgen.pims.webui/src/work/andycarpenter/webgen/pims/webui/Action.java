@@ -291,7 +291,7 @@ public interface Action extends NamedDisplayElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Containing Types</em>' reference list.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ContainingTypes()
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsTypeOf(CollectionUnit) then\n\tusedBy.oclAsType(CollectionUnit).contentTypes\nelse if usedBy.oclIsTypeOf(UnitAssociation) then\n\tOrderedSet{usedBy.oclAsType(UnitAssociation).targetEntity}\nelse\n\tOrderedSet{}\nendif endif'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsKindOf(DynamicUnit) then\n\tusedBy.oclAsType(DynamicUnit).contentTypes\nelse if usedBy.oclIsKindOf(UnitFeature) then\n\tusedBy.oclAsType(UnitFeature).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif'"
 	 * @generated
 	 */
 	EList<Entity> getContainingTypes();

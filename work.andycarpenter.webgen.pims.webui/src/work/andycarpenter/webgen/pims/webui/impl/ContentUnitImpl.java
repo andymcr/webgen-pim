@@ -42,8 +42,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getAlternative <em>Alternative</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isOmitCaption <em>Omit Caption</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getCaptionClass <em>Caption Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getContentClass <em>Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalCaptionClass <em>Local Caption Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalContentClass <em>Local Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
@@ -201,44 +201,44 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	protected boolean omitCaption = OMIT_CAPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCaptionClass() <em>Caption Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalCaptionClass() <em>Local Caption Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCaptionClass()
+	 * @see #getLocalCaptionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CAPTION_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CAPTION_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCaptionClass() <em>Caption Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalCaptionClass() <em>Local Caption Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCaptionClass()
+	 * @see #getLocalCaptionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String captionClass = CAPTION_CLASS_EDEFAULT;
+	protected String localCaptionClass = LOCAL_CAPTION_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalContentClass() <em>Local Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
+	 * @see #getLocalContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTENT_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CONTENT_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getContentClass() <em>Content Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalContentClass() <em>Local Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContentClass()
+	 * @see #getLocalContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String contentClass = CONTENT_CLASS_EDEFAULT;
+	protected String localContentClass = LOCAL_CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The cached setting delegate for the '{@link #getPageDisplayedOn() <em>Page Displayed On</em>}' reference.
@@ -492,8 +492,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getCaptionClass() {
-		return captionClass;
+	public String getLocalCaptionClass() {
+		return localCaptionClass;
 	}
 
 	/**
@@ -502,11 +502,11 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setCaptionClass(String newCaptionClass) {
-		String oldCaptionClass = captionClass;
-		captionClass = newCaptionClass;
+	public void setLocalCaptionClass(String newLocalCaptionClass) {
+		String oldLocalCaptionClass = localCaptionClass;
+		localCaptionClass = newLocalCaptionClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__CAPTION_CLASS, oldCaptionClass, captionClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS, oldLocalCaptionClass, localCaptionClass));
 	}
 
 	/**
@@ -515,8 +515,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getContentClass() {
-		return contentClass;
+	public String getLocalContentClass() {
+		return localContentClass;
 	}
 
 	/**
@@ -525,11 +525,11 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setContentClass(String newContentClass) {
-		String oldContentClass = contentClass;
-		contentClass = newContentClass;
+	public void setLocalContentClass(String newLocalContentClass) {
+		String oldLocalContentClass = localContentClass;
+		localContentClass = newLocalContentClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__CONTENT_CLASS, oldContentClass, contentClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS, oldLocalContentClass, localContentClass));
 	}
 
 	/**
@@ -636,10 +636,10 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return getSectionClass();
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return isOmitCaption();
-			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
-				return getCaptionClass();
-			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
-				return getContentClass();
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
+				return getLocalCaptionClass();
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
+				return getLocalContentClass();
 			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
 				if (resolve) return getPageDisplayedOn();
 				return basicGetPageDisplayedOn();
@@ -684,11 +684,11 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption((Boolean)newValue);
 				return;
-			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
-				setCaptionClass((String)newValue);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
+				setLocalCaptionClass((String)newValue);
 				return;
-			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
-				setContentClass((String)newValue);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
+				setLocalContentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -729,11 +729,11 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption(OMIT_CAPTION_EDEFAULT);
 				return;
-			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
-				setCaptionClass(CAPTION_CLASS_EDEFAULT);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
+				setLocalCaptionClass(LOCAL_CAPTION_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
-				setContentClass(CONTENT_CLASS_EDEFAULT);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
+				setLocalContentClass(LOCAL_CONTENT_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -765,10 +765,10 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return SECTION_CLASS_EDEFAULT == null ? sectionClass != null : !SECTION_CLASS_EDEFAULT.equals(sectionClass);
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return omitCaption != OMIT_CAPTION_EDEFAULT;
-			case WebuiPackage.CONTENT_UNIT__CAPTION_CLASS:
-				return CAPTION_CLASS_EDEFAULT == null ? captionClass != null : !CAPTION_CLASS_EDEFAULT.equals(captionClass);
-			case WebuiPackage.CONTENT_UNIT__CONTENT_CLASS:
-				return CONTENT_CLASS_EDEFAULT == null ? contentClass != null : !CONTENT_CLASS_EDEFAULT.equals(contentClass);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
+				return LOCAL_CAPTION_CLASS_EDEFAULT == null ? localCaptionClass != null : !LOCAL_CAPTION_CLASS_EDEFAULT.equals(localCaptionClass);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
+				return LOCAL_CONTENT_CLASS_EDEFAULT == null ? localContentClass != null : !LOCAL_CONTENT_CLASS_EDEFAULT.equals(localContentClass);
 			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
 				return isSetPageDisplayedOn();
 		}
@@ -799,10 +799,10 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		result.append(sectionClass);
 		result.append(", omitCaption: ");
 		result.append(omitCaption);
-		result.append(", captionClass: ");
-		result.append(captionClass);
-		result.append(", contentClass: ");
-		result.append(contentClass);
+		result.append(", localCaptionClass: ");
+		result.append(localCaptionClass);
+		result.append(", localContentClass: ");
+		result.append(localContentClass);
 		result.append(')');
 		return result.toString();
 	}
