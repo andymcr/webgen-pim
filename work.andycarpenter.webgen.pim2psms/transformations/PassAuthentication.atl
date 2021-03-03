@@ -322,8 +322,6 @@ unique lazy rule implicitAuthenticationsPage {
 lazy abstract rule implicitUnitFeature {
 	from partialWaf : ORM!Feature
 	to waf : WAF!UnitFeature (
-		displayLabel <- partialWaf.displayLabel,
-		title <- partialWaf.displayLabel,
 		truncate <- true,
 		collectionDisplayOption <- #PageDirection
 	)
@@ -333,8 +331,7 @@ lazy abstract rule implicitUnitFeature {
 lazy rule implicitUnitAttribute {
 	from partialWaf : ORM!Attribute
 	to waf : WAF!UnitAttribute (
-		attribute <- partialWaf,
-		placeholder <- partialWaf.name.createLabel()
+		attribute <- partialWaf
 	)
 	do {
 		waf;

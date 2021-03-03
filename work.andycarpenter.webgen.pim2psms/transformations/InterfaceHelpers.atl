@@ -88,52 +88,6 @@ helper context Website!Feature def: displayLabel() : String
 			self.name.createLabel()
 		endif;
 
-helper context Website!Association def: targetDisplayLabel() : String
-	= if self.targetDisplayLabel.trim() <> '' then
-			self.targetDisplayLabel.trim()
-		else
-			self.targetFeatureName().createLabel()
-		endif;
-
-helper context Website!UnitAssociation def: displayLabel() : String
-	= if self.displayLabel.trim() <> '' then
-			self.displayLabel.trim()
-		else
-			if self.childFeature.oclIsUndefined() then
-				if self.isSourceAssociation then
-					self.association.displayLabel()
-				else
-					self.association.targetDisplayLabel()
-				endif 
-			else
-				self.childFeature.displayLabel()
-			endif
-		endif;
-
-helper context Website!UnitElement def: displayLabel() : String
-	= if self.displayLabel.trim() <> '' then
-			self.displayLabel.trim()
-		else
-			self.attribute.displayLabel()
-		endif;
-
-helper context Website!UnitLabel def: displayLabel() : String
-	= OclUndefined;
-
-helper context Website!ChildPathAssociation def: displayLabel() : String
-	= if self.childFeature.oclIsUndefined() then
-				if self.isSourceAssociation then
-					self.association.displayLabel()
-				else
-					self.association.targetDisplayLabel()
-				endif 
-			else
-				self.childFeature.displayLabel()
-			endif;
-
-helper context Website!ChildPathAttribute def: displayLabel() : String
-	= self.attribute.displayLabel();
-
 helper context Website!Feature def: emptyDisplayValue() : String
 	= if self.emptyDisplayValue.trim() <> '' then
 			self.emptyDisplayValue.trim()
@@ -155,17 +109,6 @@ helper context Website!UnitElement def: emptyDisplayValue() : String
 			self.attribute.emptyDisplayValue()
 		endif;
 
-helper context Website!Expression def: findContainingSelection() : Website!Selection
-	= if self.refImmediateComposite().oclIsUndefined() then
-			OclUndefined
-		else if self.refImmediateComposite().oclIsTypeOf(Website!Selection) then
-			self.refImmediateComposite()
-		else if self.refImmediateComposite().oclIsKindOf(Website!Expression) then
-			self.refImmediateComposite().findContainingSelection()
-		else
-			OclUndefined
-		endif endif endif ;
-
 helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
 	= if entity.features->includes(self) then
 			thisModule.findOrmEntity(entity.name)
@@ -178,26 +121,6 @@ helper context Website!Attribute def: findOrmLabel() : ORM!Label
 
 helper context Website!ModelLabel def: findOrmLabel() : ORM!Label
 	= thisModule.findOrmEntity(self.labelFor.name).getOrmLabel(self.name);
-
-helper context Website!InterfaceField def: hasCustomisedDisplayLabel() : Boolean
-	= true;
-
-helper context Website!UnitAssociation def: hasCustomisedDisplayLabel() : Boolean
-	= if self.childFeature.oclIsUndefined() then
-			if self.isSourceAssociation then
-				self.displayLabel() <> self.association.displayLabel()
-			else
-				self.displayLabel() <> self.association.targetDisplayLabel()
-			endif
-		else
-			true
-		endif;
-
-helper context Website!UnitElement def: hasCustomisedDisplayLabel() : Boolean
-	= self.displayLabel() <> self.attribute.displayLabel();
-
-helper context Website!UnitLabel def: hasCustomisedDisplayLabel() : Boolean
-	= false;
 
 
 helper context Website!Attribute def: interfaceType() : String
@@ -237,48 +160,6 @@ helper context Website!DataTypeField def: interfaceType() : String
 				self.name.lowercaseFirst()
 			endif
 		endif;
-
-helper context Website!Feature def: placeholder() : String
-	= if self.placeholder.trim() <> '' then
-			self.placeholder.trim()
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!UnitElement def: placeholder() : String
-	= if self.placeholder.trim() <> '' then
-			self.placeholder.trim()
-		else
-			self.attribute.placeholder()
-		endif;
-
-helper context Website!Feature def: title() : String
-	= if self.title.trim() <> '' then
-			self.title.trim()
-		else
-			self.name.createLabel()
-		endif;
-
-helper context Website!UnitAssociation def: title() : String
-	= if self.title.trim() <> '' then
-			self.title.trim()
-		else
-			if self.isSourceAssociation then
-				self.association.title()
-			else
-				self.association.targetDisplayLabel()
-			endif
-		endif;
-
-helper context Website!UnitElement def: title() : String
-	= if self.title.trim() <> '' then
-			self.title.trim()
-		else
-			self.attribute.title()
-		endif;
-
-helper context Website!UnitLabel def: title() : String
-	= OclUndefined;
 
 helper context Website!InterfaceField def: validationPattern() : String
 	= if self.validationPattern.trim() <> '' then

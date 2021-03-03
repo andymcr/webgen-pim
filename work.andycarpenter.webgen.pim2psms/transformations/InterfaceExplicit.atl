@@ -33,7 +33,7 @@ abstract rule NamedDisplayElement {
 	from website : Website!NamedDisplayElement
 	to waf : WAF!NamedDisplayElement (
 		displayLabel <-
-			if not website.displayLabel.oclIsUndefined() and website.displayLabel.trim() <> '' then
+			if website.displayLabel.trim() <> '' then
 				website.displayLabel.trim()
 			else
 				website.name.createLabel()
@@ -314,10 +314,7 @@ abstract rule DynamicUnit {
 abstract rule UnitField {
 	from website : Website!UnitField
 	to waf : WAF!UnitField (
-		displayLabel <- website.displayLabel(),
-		hasCustomisedDisplayLabel <- website.hasCustomisedDisplayLabel(),
-		title <- website.title(),
-		hasCustomisedTitle <- website.title() <> website.displayLabel(),
+		localTitle <- website.title,
 		authorisationRoles <- website.requiresRole,
 		hideWhen <- website.hideWhen,
 		escapeHTML <- website.escapeHTML,
@@ -332,6 +329,7 @@ abstract rule UnitField {
 abstract rule UnitFeature {
 	from website : Website!UnitFeature
 	to waf : WAF!UnitFeature (
+		displayLabel <- website.displayLabel,
 		forcedValue <- website.forcedValue,
 		collectionUiAllowAdd <- website.collectionUiAllowAdd,
 		collectionUiAllowRemove <- website.collectionUiAllowRemove,
@@ -355,8 +353,7 @@ rule UnitAttribute {
 		attribute <- website.attribute.findOrmAttribute(),
 		attributeDefaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
-		placeholder <- website.placeholder(),
-		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
+		localPlaceholder <- website.placeholder,
 		validationPattern <- website.validationPattern
 	)
 }
@@ -460,8 +457,7 @@ abstract rule InterfaceField {
 		required <- website.required,
 		fieldDefaultValue <- website.defaultValue,
 		mustMatch <- website.mustMatch,
-		placeholder <- website.placeholder(),
-		hasCustomisedPlaceholder <- website.placeholder() <> website.displayLabel(),
+		localPlaceholder <- website.placeholder,
 		validationPattern <- website.validationPattern(),
 		inputClass <- website.inputClass
 	)

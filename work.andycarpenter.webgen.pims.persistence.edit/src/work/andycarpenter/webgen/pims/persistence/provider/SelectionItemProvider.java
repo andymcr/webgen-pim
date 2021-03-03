@@ -487,8 +487,9 @@ public class SelectionItemProvider
 		final Set<Entity> entities = new HashSet<Entity>();
 		entities.add(selection.getDefinedBy().getServes());
 		final Set<Association> joins = new HashSet<Association>(selection.getJoins());
-		while (!joins.isEmpty()) {
-			final Set<Association> handled = new HashSet<Association>();
+		final Set<Association> handled = new HashSet<Association>();
+		do {
+			handled.clear();
 			for (Association join : joins) {
 				if (entities.contains(join.getPartOf())) {
 					entities.add(join.getTargetEntity());
@@ -499,7 +500,7 @@ public class SelectionItemProvider
 				}
 			}
 			joins.removeAll(handled);
-		}
+		} while (!joins.isEmpty() && !handled.isEmpty());
 
 		return entities;
 	}

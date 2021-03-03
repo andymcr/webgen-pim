@@ -95,8 +95,7 @@ abstract rule CollectionUnit {
 lazy abstract rule implicitUnitFeature {
 	from partialWaf : WAF!Feature
 	to waf : WAF!UnitFeature (
-		displayLabel <- partialWaf.displayLabel,
-		title <- partialWaf.displayLabel
+		displayLabel <- partialWaf.displayLabel
 	)
 }
 
@@ -104,8 +103,7 @@ lazy abstract rule implicitUnitFeature {
 lazy rule implicitUnitAttribute {
 	from partialWaf : WAF!Attribute
 	to waf : WAF!UnitAttribute (
-		attribute <- partialWaf,
-		placeholder <- partialWaf.name.createLabel()
+		attribute <- partialWaf
 	)
 	do {
 		waf;
