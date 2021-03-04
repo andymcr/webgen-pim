@@ -57,6 +57,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			addAllFeaturesPropertyDescriptor(object);
 			addAllAssociationsPropertyDescriptor(object);
 			addContainingAssociationPropertyDescriptor(object);
+			addContainingTypePropertyDescriptor(object);
 			addKeysPropertyDescriptor(object);
 			addUniquePropertyDescriptor(object);
 			addContainerUniquePropertyDescriptor(object);
@@ -243,7 +244,29 @@ public class EntityItemProvider extends ClassifierItemProvider {
 				 false,
 				 false,
 				 null,
-				 getString("_UI_ModelPropertyCategory"),
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Containing Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entity_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_containingType_feature", "_UI_Entity_type"),
+				 PersistencePackage.Literals.ENTITY__CONTAINING_TYPE,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

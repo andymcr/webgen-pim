@@ -43,6 +43,7 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAllFeatures <em>All Features</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAllAssociations <em>All Associations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getContainingAssociation <em>Containing Association</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getKeys <em>Keys</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getUnique <em>Unique</em>}</li>
@@ -168,6 +169,16 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_ASSOCIATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ENTITY__CONTAINING_ASSOCIATION).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ENTITY__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getKeys() <em>Keys</em>}' reference list.
@@ -512,6 +523,45 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@Override
+	public boolean isSetContainingAssociation() {
+		return CONTAINING_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetContainingType() {
+		return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<ModelLabel> getLabels() {
 		if (labels == null) {
 			labels = new EObjectContainmentWithInverseEList<ModelLabel>(ModelLabel.class, this, PersistencePackage.ENTITY__LABELS, PersistencePackage.MODEL_LABEL__LABEL_FOR);
@@ -815,6 +865,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__CONTAINING_ASSOCIATION:
 				if (resolve) return getContainingAssociation();
 				return basicGetContainingAssociation();
+			case PersistencePackage.ENTITY__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 			case PersistencePackage.ENTITY__KEYS:
 				return getKeys();
 			case PersistencePackage.ENTITY__LABELS:
@@ -988,7 +1041,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__ALL_ASSOCIATIONS:
 				return ALL_ASSOCIATIONS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case PersistencePackage.ENTITY__CONTAINING_ASSOCIATION:
-				return CONTAINING_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+				return isSetContainingAssociation();
+			case PersistencePackage.ENTITY__CONTAINING_TYPE:
+				return isSetContainingType();
 			case PersistencePackage.ENTITY__KEYS:
 				return keys != null && !keys.isEmpty();
 			case PersistencePackage.ENTITY__LABELS:

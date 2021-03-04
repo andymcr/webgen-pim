@@ -3253,13 +3253,22 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH__CONTAINING_TYPES = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH__USE_CONTAINER_AS_CONTEXT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Feature Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+	int FEATURE_PATH_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Feature Path</em>' class.
@@ -3306,6 +3315,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3379,6 +3397,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3488,6 +3515,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_PATH_LABEL__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18194,6 +18230,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getFeaturePath_ContainingTypes();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext <em>Use Container As Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Use Container As Context</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext()
+	 * @see #getFeaturePath()
+	 * @generated
+	 */
+	EAttribute getFeaturePath_UseContainerAsContext();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute <em>Feature Path Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21505,6 +21552,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FEATURE_PATH__CONTAINING_TYPES = eINSTANCE.getFeaturePath_ContainingTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Container As Context</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE_PATH__USE_CONTAINER_AS_CONTEXT = eINSTANCE.getFeaturePath_UseContainerAsContext();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAttributeImpl <em>Feature Path Attribute</em>}' class.

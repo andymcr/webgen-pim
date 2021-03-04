@@ -2358,6 +2358,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFeaturePath_UseContainerAsContext() {
+		return (EAttribute)featurePathEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFeaturePathAttribute() {
 		return featurePathAttributeEClass;
 	}
@@ -4341,6 +4351,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		featurePathEClass = createEClass(FEATURE_PATH);
 		createEReference(featurePathEClass, FEATURE_PATH__CONTAINING_TYPES);
+		createEAttribute(featurePathEClass, FEATURE_PATH__USE_CONTAINER_AS_CONTEXT);
 
 		featurePathAttributeEClass = createEClass(FEATURE_PATH_ATTRIBUTE);
 		createEAttribute(featurePathAttributeEClass, FEATURE_PATH_ATTRIBUTE__NAME);
@@ -4864,6 +4875,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(featurePathEClass, FeaturePath.class, "FeaturePath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeaturePath_ContainingTypes(), thePersistencePackage.getEntity(), null, "containingTypes", null, 0, -1, FeaturePath.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeaturePath_UseContainerAsContext(), ecorePackage.getEBoolean(), "useContainerAsContext", "false", 0, 1, FeaturePath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featurePathAttributeEClass, FeaturePathAttribute.class, "FeaturePathAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFeaturePathAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeaturePathAttribute.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -5304,7 +5316,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (getFeaturePath_ContainingTypes(),
 		   source,
 		   new String[] {
-			   "derivation", "if rootContainer.oclIsKindOf(DynamicUnit) then\n\trootContainer.oclAsType(DynamicUnit).contentTypes\nelse if rootContainer.oclIsKindOf(UnitField) then\n\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\nelse if rootContainer.oclIsKindOf(Action) then\n\trootContainer.oclAsType(Action).containingTypes\nelse if rootContainer.oclIsTypeOf(Badge) then\n\trootContainer.oclAsType(Badge).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif endif endif"
+			   "derivation", "let directTypes : OrderedSet(persistence::Entity)\n\t= if rootContainer.oclIsKindOf(DynamicUnit) then\n\t\t\trootContainer.oclAsType(DynamicUnit).contentTypes\n\t\telse if rootContainer.oclIsKindOf(UnitField) then\n\t\t\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\n\t\telse if rootContainer.oclIsKindOf(Action) then\n\t\t\trootContainer.oclAsType(Action).containingTypes\n\t\telse if rootContainer.oclIsTypeOf(Badge) then\n\t\t\trootContainer.oclAsType(Badge).displayedOn.contentTypes\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif endif endif\n\tin if useContainerAsContext then\n\t\t\tdirectTypes\n\t\t\t\t->select(e | not e.containingAssociation.oclIsUndefined())\n\t\t\t\t->collect(e | e.containingType)\n\t\t\t\t->asOrderedSet()\n\t\telse\n\t\t\tdirectTypes\n\t\tendif"
 		   });
 		addAnnotation
 		  (getFeaturePathAttribute_Name(),

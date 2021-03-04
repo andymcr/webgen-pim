@@ -58,11 +58,11 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case PersistencePackage.PERSISTENCE: return createPersistence();
+			case PersistencePackage.ENTITY: return createEntity();
 			case PersistencePackage.SERIALIZATION_GROUP: return createSerializationGroup();
 			case PersistencePackage.MODEL_LABEL: return createModelLabel();
 			case PersistencePackage.MODEL_LABEL_ATTRIBUTE: return createModelLabelAttribute();
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION: return createModelLabelAssociation();
-			case PersistencePackage.ENTITY: return createEntity();
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE: return createDataTypeAttribute();
 			case PersistencePackage.DATE_ATTRIBUTE: return createDateAttribute();
 			case PersistencePackage.URL_ATTRIBUTE: return createUrlAttribute();

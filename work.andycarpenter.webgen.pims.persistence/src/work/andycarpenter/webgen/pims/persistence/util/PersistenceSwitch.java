@@ -77,6 +77,15 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PersistencePackage.ENTITY: {
+				Entity entity = (Entity)theEObject;
+				T result = caseEntity(entity);
+				if (result == null) result = caseClassifier(entity);
+				if (result == null) result = caseNamedDisplayElement(entity);
+				if (result == null) result = caseNamedElement(entity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PersistencePackage.SERIALIZATION_GROUP: {
 				SerializationGroup serializationGroup = (SerializationGroup)theEObject;
 				T result = caseSerializationGroup(serializationGroup);
@@ -154,15 +163,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				ModelLabelAssociation modelLabelAssociation = (ModelLabelAssociation)theEObject;
 				T result = caseModelLabelAssociation(modelLabelAssociation);
 				if (result == null) result = caseModelLabelFeature(modelLabelAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.ENTITY: {
-				Entity entity = (Entity)theEObject;
-				T result = caseEntity(entity);
-				if (result == null) result = caseClassifier(entity);
-				if (result == null) result = caseNamedDisplayElement(entity);
-				if (result == null) result = caseNamedElement(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

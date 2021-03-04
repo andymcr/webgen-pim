@@ -253,6 +253,7 @@
     <genClasses image="false" ecoreClass="webui.ecore#//FeaturePath">
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference webui.ecore#//FeaturePath/containingTypes"/>
+      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePath/useContainerAsContext"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//FeaturePathAttribute">
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathAttribute/name"/>

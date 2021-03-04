@@ -4,12 +4,14 @@ package work.andycarpenter.webgen.pims.webui.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
@@ -30,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#isUseContainerAsContext <em>Use Container As Context</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +67,26 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH__CONTAINING_TYPES).getSettingDelegate();
+
+	/**
+	 * The default value of the '{@link #isUseContainerAsContext() <em>Use Container As Context</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseContainerAsContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_CONTAINER_AS_CONTEXT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseContainerAsContext() <em>Use Container As Context</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseContainerAsContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useContainerAsContext = USE_CONTAINER_AS_CONTEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,6 +166,29 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
+	public boolean isUseContainerAsContext() {
+		return useContainerAsContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUseContainerAsContext(boolean newUseContainerAsContext) {
+		boolean oldUseContainerAsContext = useContainerAsContext;
+		useContainerAsContext = newUseContainerAsContext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT, oldUseContainerAsContext, useContainerAsContext));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.FEATURE_PATH__SUFFIXES:
@@ -152,6 +198,8 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 				return basicGetRootContainer();
 			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPES:
 				return getContainingTypes();
+			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
+				return isUseContainerAsContext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,6 +217,9 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 				getSuffixes().clear();
 				getSuffixes().addAll((Collection<? extends String>)newValue);
 				return;
+			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
+				setUseContainerAsContext((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +234,9 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case WebuiPackage.FEATURE_PATH__SUFFIXES:
 				getSuffixes().clear();
+				return;
+			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
+				setUseContainerAsContext(USE_CONTAINER_AS_CONTEXT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -202,6 +256,8 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 				return isSetRootContainer();
 			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPES:
 				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
+				return useContainerAsContext != USE_CONTAINER_AS_CONTEXT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -218,6 +274,8 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (suffixes: ");
 		result.append(suffixes);
+		result.append(", useContainerAsContext: ");
+		result.append(useContainerAsContext);
 		result.append(')');
 		return result.toString();
 	}

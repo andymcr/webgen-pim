@@ -1179,7 +1179,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EReference getEntity_Keys() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(9);
+		return (EReference)entityEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1248,8 +1248,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_Labels() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(10);
+	public EReference getEntity_ContainingType() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1258,7 +1258,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_Unique() {
+	public EReference getEntity_Labels() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1268,7 +1268,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_ContainerUnique() {
+	public EReference getEntity_Unique() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -1278,7 +1278,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_Repository() {
+	public EReference getEntity_ContainerUnique() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -1288,8 +1288,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_TableName() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(14);
+	public EReference getEntity_Repository() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1298,7 +1298,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyName() {
+	public EAttribute getEntity_TableName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -1308,7 +1308,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyPersistentType() {
+	public EAttribute getEntity_AutoKeyName() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -1318,7 +1318,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AutoKeyGenerationStrategy() {
+	public EAttribute getEntity_AutoKeyPersistentType() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -1328,7 +1328,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_ImplementsUserInterface() {
+	public EAttribute getEntity_AutoKeyGenerationStrategy() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -1338,8 +1338,18 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_AllowFormTypeCustomisation() {
+	public EAttribute getEntity_ImplementsUserInterface() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntity_AllowFormTypeCustomisation() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(20);
 	}
 
 	/**
@@ -2041,6 +2051,29 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(persistenceEClass, PERSISTENCE__TIMESTAMP_CREATION);
 		createEAttribute(persistenceEClass, PERSISTENCE__TIMESTAMP_UPDATES);
 
+		entityEClass = createEClass(ENTITY);
+		createEAttribute(entityEClass, ENTITY__SINGLETON_NAME);
+		createEAttribute(entityEClass, ENTITY__PLURALISED_NAME);
+		createEReference(entityEClass, ENTITY__FEATURES);
+		createEReference(entityEClass, ENTITY__ATTRIBUTES);
+		createEReference(entityEClass, ENTITY__ASSOCIATIONS);
+		createEReference(entityEClass, ENTITY__ASSOCIATION_ENDS);
+		createEReference(entityEClass, ENTITY__ALL_FEATURES);
+		createEReference(entityEClass, ENTITY__ALL_ASSOCIATIONS);
+		createEReference(entityEClass, ENTITY__CONTAINING_ASSOCIATION);
+		createEReference(entityEClass, ENTITY__CONTAINING_TYPE);
+		createEReference(entityEClass, ENTITY__KEYS);
+		createEReference(entityEClass, ENTITY__LABELS);
+		createEReference(entityEClass, ENTITY__UNIQUE);
+		createEReference(entityEClass, ENTITY__CONTAINER_UNIQUE);
+		createEReference(entityEClass, ENTITY__REPOSITORY);
+		createEAttribute(entityEClass, ENTITY__TABLE_NAME);
+		createEAttribute(entityEClass, ENTITY__AUTO_KEY_NAME);
+		createEAttribute(entityEClass, ENTITY__AUTO_KEY_PERSISTENT_TYPE);
+		createEAttribute(entityEClass, ENTITY__AUTO_KEY_GENERATION_STRATEGY);
+		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_USER_INTERFACE);
+		createEAttribute(entityEClass, ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION);
+
 		serializationGroupEClass = createEClass(SERIALIZATION_GROUP);
 
 		featureEClass = createEClass(FEATURE);
@@ -2115,28 +2148,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__ASSOCIATION);
 		createEReference(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY);
 		createEAttribute(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION);
-
-		entityEClass = createEClass(ENTITY);
-		createEAttribute(entityEClass, ENTITY__SINGLETON_NAME);
-		createEAttribute(entityEClass, ENTITY__PLURALISED_NAME);
-		createEReference(entityEClass, ENTITY__FEATURES);
-		createEReference(entityEClass, ENTITY__ATTRIBUTES);
-		createEReference(entityEClass, ENTITY__ASSOCIATIONS);
-		createEReference(entityEClass, ENTITY__ASSOCIATION_ENDS);
-		createEReference(entityEClass, ENTITY__ALL_FEATURES);
-		createEReference(entityEClass, ENTITY__ALL_ASSOCIATIONS);
-		createEReference(entityEClass, ENTITY__CONTAINING_ASSOCIATION);
-		createEReference(entityEClass, ENTITY__KEYS);
-		createEReference(entityEClass, ENTITY__LABELS);
-		createEReference(entityEClass, ENTITY__UNIQUE);
-		createEReference(entityEClass, ENTITY__CONTAINER_UNIQUE);
-		createEReference(entityEClass, ENTITY__REPOSITORY);
-		createEAttribute(entityEClass, ENTITY__TABLE_NAME);
-		createEAttribute(entityEClass, ENTITY__AUTO_KEY_NAME);
-		createEAttribute(entityEClass, ENTITY__AUTO_KEY_PERSISTENT_TYPE);
-		createEAttribute(entityEClass, ENTITY__AUTO_KEY_GENERATION_STRATEGY);
-		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_USER_INTERFACE);
-		createEAttribute(entityEClass, ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION);
 
 		dataTypeAttributeEClass = createEClass(DATA_TYPE_ATTRIBUTE);
 		createEReference(dataTypeAttributeEClass, DATA_TYPE_ATTRIBUTE__DATA_TYPE);
@@ -2259,6 +2270,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		entityEClass.getESuperTypes().add(theBasePackage.getClassifier());
 		serializationGroupEClass.getESuperTypes().add(theBasePackage.getNamedElement());
 		featureEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		attributeEClass.getESuperTypes().add(this.getFeature());
@@ -2268,7 +2280,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		modelLabelEClass.getESuperTypes().add(this.getLabel());
 		modelLabelAttributeEClass.getESuperTypes().add(this.getModelLabelFeature());
 		modelLabelAssociationEClass.getESuperTypes().add(this.getModelLabelFeature());
-		entityEClass.getESuperTypes().add(theBasePackage.getClassifier());
 		dataTypeAttributeEClass.getESuperTypes().add(this.getAttribute());
 		dateAttributeEClass.getESuperTypes().add(this.getAttribute());
 		urlAttributeEClass.getESuperTypes().add(this.getAttribute());
@@ -2299,6 +2310,29 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getPersistence_DatabaseTechnology(), this.getDatabaseTechnologies(), "databaseTechnology", "MySql", 1, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPersistence_TimestampCreation(), ecorePackage.getEBoolean(), "timestampCreation", "true", 0, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPersistence_TimestampUpdates(), ecorePackage.getEBoolean(), "timestampUpdates", "true", 0, 1, Persistence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntity_SingletonName(), ecorePackage.getEString(), "singletonName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_PluralisedName(), ecorePackage.getEString(), "pluralisedName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Features(), this.getFeature(), this.getFeature_PartOf(), "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Associations(), this.getAssociation(), null, "associations", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_AssociationEnds(), this.getAssociation(), this.getAssociation_TargetEntity(), "associationEnds", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_AllFeatures(), this.getFeature(), null, "allFeatures", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_AllAssociations(), this.getAssociation(), null, "allAssociations", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_ContainingAssociation(), this.getAssociationWithContainment(), null, "containingAssociation", null, 0, 1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_ContainingType(), this.getEntity(), null, "containingType", null, 0, 1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Keys(), this.getFeature(), null, "keys", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Labels(), this.getModelLabel(), this.getModelLabel_LabelFor(), "labels", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Unique(), this.getFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_ContainerUnique(), this.getFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Repository(), this.getRepository(), this.getRepository_Serves(), "repository", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_AutoKeyName(), ecorePackage.getEString(), "autoKeyName", "id", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_AutoKeyPersistentType(), ecorePackage.getEString(), "autoKeyPersistentType", "integer", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_AutoKeyGenerationStrategy(), ecorePackage.getEString(), "autoKeyGenerationStrategy", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_ImplementsUserInterface(), ecorePackage.getEBoolean(), "implementsUserInterface", "false", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_AllowFormTypeCustomisation(), ecorePackage.getEBoolean(), "allowFormTypeCustomisation", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serializationGroupEClass, SerializationGroup.class, "SerializationGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2374,28 +2408,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEReference(getModelLabelAssociation_Association(), this.getAssociation(), null, "association", null, 1, 1, ModelLabelAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelLabelAssociation_ValueDisplay(), this.getModelLabel(), null, "valueDisplay", null, 0, 1, ModelLabelAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelLabelAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, ModelLabelAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntity_SingletonName(), ecorePackage.getEString(), "singletonName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_PluralisedName(), ecorePackage.getEString(), "pluralisedName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Features(), this.getFeature(), this.getFeature_PartOf(), "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Associations(), this.getAssociation(), null, "associations", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_AssociationEnds(), this.getAssociation(), this.getAssociation_TargetEntity(), "associationEnds", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_AllFeatures(), this.getFeature(), null, "allFeatures", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_AllAssociations(), this.getAssociation(), null, "allAssociations", null, 0, -1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_ContainingAssociation(), this.getAssociationWithContainment(), null, "containingAssociation", null, 0, 1, Entity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Keys(), this.getFeature(), null, "keys", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Labels(), this.getModelLabel(), this.getModelLabel_LabelFor(), "labels", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Unique(), this.getFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_ContainerUnique(), this.getFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Repository(), this.getRepository(), this.getRepository_Serves(), "repository", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_AutoKeyName(), ecorePackage.getEString(), "autoKeyName", "id", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_AutoKeyPersistentType(), ecorePackage.getEString(), "autoKeyPersistentType", "integer", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_AutoKeyGenerationStrategy(), ecorePackage.getEString(), "autoKeyGenerationStrategy", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_ImplementsUserInterface(), ecorePackage.getEBoolean(), "implementsUserInterface", "false", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_AllowFormTypeCustomisation(), ecorePackage.getEBoolean(), "allowFormTypeCustomisation", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeAttributeEClass, DataTypeAttribute.class, "DataTypeAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataTypeAttribute_DataType(), theBasePackage.getDataType(), null, "dataType", null, 1, 1, DataTypeAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2538,16 +2550,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 			   "constraints", "classifierNameUnique"
 		   });
 		addAnnotation
-		  (featureEClass,
-		   source,
-		   new String[] {
-			   "constraints", "primaryKeyRequired"
-		   });
-		addAnnotation
 		  (entityEClass,
 		   source,
 		   new String[] {
 			   "constraints", "featureNameUniqueWithinEntity keysFromLocalFeatures"
+		   });
+		addAnnotation
+		  (featureEClass,
+		   source,
+		   new String[] {
+			   "constraints", "primaryKeyRequired"
 		   });
 		addAnnotation
 		  (associationWithoutContainmentEClass,
@@ -2570,24 +2582,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		   source,
 		   new String[] {
 			   "classifierNameUnique", "dataTypes->isUnique(name) and entities->isUnique(name)"
-		   });
-		addAnnotation
-		  (featureEClass,
-		   source,
-		   new String[] {
-			   "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
-		   });
-		addAnnotation
-		  (getAssociationReference_Name(),
-		   source,
-		   new String[] {
-			   "derivation", "if association.oclIsUndefined() then\n\t\'\'\nelse\n\tassociation.name\nendif"
-		   });
-		addAnnotation
-		  (getModelLabelAssociation_IsSourceAssociation(),
-		   source,
-		   new String[] {
-			   "derivation", "not association.oclIsUndefined() implies\n\tpartOf.labelFor.features->includes(association)"
 		   });
 		addAnnotation
 		  (entityEClass,
@@ -2625,6 +2619,30 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		   source,
 		   new String[] {
 			   "derivation", "associationEnds->any(e | e.oclIsTypeOf(AssociationWithContainment)).oclAsType(AssociationWithContainment)"
+		   });
+		addAnnotation
+		  (getEntity_ContainingType(),
+		   source,
+		   new String[] {
+			   "derivation", "if containingAssociation.oclIsUndefined() then\n\tnull\nelse\n\tcontainingAssociation.partOf\nendif"
+		   });
+		addAnnotation
+		  (featureEClass,
+		   source,
+		   new String[] {
+			   "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
+		   });
+		addAnnotation
+		  (getAssociationReference_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if association.oclIsUndefined() then\n\t\'\'\nelse\n\tassociation.name\nendif"
+		   });
+		addAnnotation
+		  (getModelLabelAssociation_IsSourceAssociation(),
+		   source,
+		   new String[] {
+			   "derivation", "not association.oclIsUndefined() implies\n\tpartOf.labelFor.features->includes(association)"
 		   });
 		addAnnotation
 		  (associationWithoutContainmentEClass,

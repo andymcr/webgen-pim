@@ -416,6 +416,7 @@ rule ChildPathAssociation {
 abstract rule FeaturePath {
 	from website : Website!FeaturePath
 	to waf : WAF!FeaturePath (
+		useContainerAsContext <- website.useContainerAsContext
 	)
 }
 

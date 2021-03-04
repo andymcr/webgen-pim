@@ -77,6 +77,10 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createPersistenceAdapter();
 			}
 			@Override
+			public Adapter caseEntity(Entity object) {
+				return createEntityAdapter();
+			}
+			@Override
 			public Adapter caseSerializationGroup(SerializationGroup object) {
 				return createSerializationGroupAdapter();
 			}
@@ -119,10 +123,6 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModelLabelAssociation(ModelLabelAssociation object) {
 				return createModelLabelAssociationAdapter();
-			}
-			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
 			}
 			@Override
 			public Adapter caseDataTypeAttribute(DataTypeAttribute object) {

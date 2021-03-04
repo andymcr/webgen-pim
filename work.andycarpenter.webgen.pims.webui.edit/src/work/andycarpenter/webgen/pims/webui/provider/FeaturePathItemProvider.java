@@ -61,6 +61,7 @@ public class FeaturePathItemProvider
 			addSuffixesPropertyDescriptor(object);
 			addRootContainerPropertyDescriptor(object);
 			addContainingTypesPropertyDescriptor(object);
+			addUseContainerAsContextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -132,6 +133,28 @@ public class FeaturePathItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Use Container As Context feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUseContainerAsContextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePath_useContainerAsContext_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePath_useContainerAsContext_feature", "_UI_FeaturePath_type"),
+				 WebuiPackage.Literals.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_BusinessPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,7 +162,8 @@ public class FeaturePathItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_FeaturePath_type");
+		FeaturePath featurePath = (FeaturePath)object;
+		return getString("_UI_FeaturePath_type") + " " + featurePath.isUseContainerAsContext();
 	}
 	
 
@@ -156,6 +180,7 @@ public class FeaturePathItemProvider
 
 		switch (notification.getFeatureID(FeaturePath.class)) {
 			case WebuiPackage.FEATURE_PATH__SUFFIXES:
+			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

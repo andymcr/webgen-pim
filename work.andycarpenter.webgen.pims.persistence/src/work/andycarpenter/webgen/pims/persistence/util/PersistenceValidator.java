@@ -96,6 +96,8 @@ public class PersistenceValidator extends EObjectValidator {
 		switch (classifierID) {
 			case PersistencePackage.PERSISTENCE:
 				return validatePersistence((Persistence)value, diagnostics, context);
+			case PersistencePackage.ENTITY:
+				return validateEntity((Entity)value, diagnostics, context);
 			case PersistencePackage.SERIALIZATION_GROUP:
 				return validateSerializationGroup((SerializationGroup)value, diagnostics, context);
 			case PersistencePackage.FEATURE:
@@ -118,8 +120,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateModelLabelAttribute((ModelLabelAttribute)value, diagnostics, context);
 			case PersistencePackage.MODEL_LABEL_ASSOCIATION:
 				return validateModelLabelAssociation((ModelLabelAssociation)value, diagnostics, context);
-			case PersistencePackage.ENTITY:
-				return validateEntity((Entity)value, diagnostics, context);
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE:
 				return validateDataTypeAttribute((DataTypeAttribute)value, diagnostics, context);
 			case PersistencePackage.DATE_ATTRIBUTE:

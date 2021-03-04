@@ -438,9 +438,11 @@
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
         changeable="false" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;rootContainer.oclAsType(DynamicUnit).contentTypes&#xA;else if rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;rootContainer.oclAsType(UnitField).displayedOn.contentTypes&#xA;else if rootContainer.oclIsKindOf(Action) then&#xA;&#x9;rootContainer.oclAsType(Action).containingTypes&#xA;else if rootContainer.oclIsTypeOf(Badge) then&#xA;&#x9;rootContainer.oclAsType(Badge).displayedOn.contentTypes&#xA;else&#xA;&#x9;OrderedSet{}&#xA;endif endif endif endif"/>
+        <details key="derivation" value="let directTypes : OrderedSet(persistence::Entity)&#xA;&#x9;= if rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(DynamicUnit).contentTypes&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(UnitField).displayedOn.contentTypes&#xA;&#x9;&#x9;else if rootContainer.oclIsKindOf(Action) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(Action).containingTypes&#xA;&#x9;&#x9;else if rootContainer.oclIsTypeOf(Badge) then&#xA;&#x9;&#x9;&#x9;rootContainer.oclAsType(Badge).displayedOn.contentTypes&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;OrderedSet{}&#xA;&#x9;&#x9;endif endif endif endif&#xA;&#x9;in if useContainerAsContext then&#xA;&#x9;&#x9;&#x9;directTypes&#xA;&#x9;&#x9;&#x9;&#x9;->select(e | not e.containingAssociation.oclIsUndefined())&#xA;&#x9;&#x9;&#x9;&#x9;->collect(e | e.containingType)&#xA;&#x9;&#x9;&#x9;&#x9;->asOrderedSet()&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;directTypes&#xA;&#x9;&#x9;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useContainerAsContext"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FeaturePathAttribute" eSuperTypes="#//FeaturePath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

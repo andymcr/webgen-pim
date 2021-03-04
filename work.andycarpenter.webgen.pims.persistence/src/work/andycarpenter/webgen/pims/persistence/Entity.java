@@ -23,6 +23,7 @@ import work.andycarpenter.webgen.pims.base.Classifier;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAllFeatures <em>All Features</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAllAssociations <em>All Associations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainingAssociation <em>Containing Association</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getKeys <em>Keys</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getUnique <em>Unique</em>}</li>
@@ -219,12 +220,46 @@ public interface Entity extends Classifier {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Containing Association</em>' reference.
+	 * @see #isSetContainingAssociation()
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_ContainingAssociation()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='associationEnds-&gt;any(e | e.oclIsTypeOf(AssociationWithContainment)).oclAsType(AssociationWithContainment)'"
 	 * @generated
 	 */
 	AssociationWithContainment getContainingAssociation();
+
+	/**
+	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainingAssociation <em>Containing Association</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Containing Association</em>' reference is set.
+	 * @see #getContainingAssociation()
+	 * @generated
+	 */
+	boolean isSetContainingAssociation();
+
+	/**
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see #isSetContainingType()
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_ContainingType()
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if containingAssociation.oclIsUndefined() then\n\tnull\nelse\n\tcontainingAssociation.partOf\nendif'"
+	 * @generated
+	 */
+	Entity getContainingType();
+
+	/**
+	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainingType <em>Containing Type</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Containing Type</em>' reference is set.
+	 * @see #getContainingType()
+	 * @generated
+	 */
+	boolean isSetContainingType();
 
 	/**
 	 * Returns the value of the '<em><b>Labels</b></em>' containment reference list.
