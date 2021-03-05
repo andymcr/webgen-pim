@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeader <em>Header</em>}</li>
@@ -115,6 +116,29 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	EList<UnitField> getDisplayFields();
+
+	/**
+	 * Returns the value of the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Has When Fields Empty Add Implicit Fields</em>' attribute.
+	 * @see #setHasWhenFieldsEmptyAddImplicitFields(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isHasWhenFieldsEmptyAddImplicitFields();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Has When Fields Empty Add Implicit Fields</em>' attribute.
+	 * @see #isHasWhenFieldsEmptyAddImplicitFields()
+	 * @generated
+	 */
+	void setHasWhenFieldsEmptyAddImplicitFields(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Hide When</b></em>' containment reference.

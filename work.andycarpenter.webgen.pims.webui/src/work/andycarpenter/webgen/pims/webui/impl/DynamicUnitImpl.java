@@ -37,6 +37,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeader <em>Header</em>}</li>
@@ -122,6 +123,26 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected EList<UnitField> displayFields;
+
+	/**
+	 * The default value of the '{@link #isHasWhenFieldsEmptyAddImplicitFields() <em>Has When Fields Empty Add Implicit Fields</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHasWhenFieldsEmptyAddImplicitFields()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isHasWhenFieldsEmptyAddImplicitFields() <em>Has When Fields Empty Add Implicit Fields</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHasWhenFieldsEmptyAddImplicitFields()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean hasWhenFieldsEmptyAddImplicitFields = HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getHideWhen() <em>Hide When</em>}' containment reference.
@@ -489,6 +510,29 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
+	public boolean isHasWhenFieldsEmptyAddImplicitFields() {
+		return hasWhenFieldsEmptyAddImplicitFields;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHasWhenFieldsEmptyAddImplicitFields(boolean newHasWhenFieldsEmptyAddImplicitFields) {
+		boolean oldHasWhenFieldsEmptyAddImplicitFields = hasWhenFieldsEmptyAddImplicitFields;
+		hasWhenFieldsEmptyAddImplicitFields = newHasWhenFieldsEmptyAddImplicitFields;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS, oldHasWhenFieldsEmptyAddImplicitFields, hasWhenFieldsEmptyAddImplicitFields));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Predicate getHideWhen() {
 		return hideWhen;
 	}
@@ -819,6 +863,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getRouteActuals();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return getDisplayFields();
+			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
+				return isHasWhenFieldsEmptyAddImplicitFields();
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				return getHideWhen();
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
@@ -871,6 +917,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				getDisplayFields().addAll((Collection<? extends UnitField>)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
+				setHasWhenFieldsEmptyAddImplicitFields((Boolean)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				setHideWhen((Predicate)newValue);
@@ -932,6 +981,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				return;
+			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
+				setHasWhenFieldsEmptyAddImplicitFields(HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS_EDEFAULT);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				setHideWhen((Predicate)null);
 				return;
@@ -989,6 +1041,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return routeActuals != null && !routeActuals.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return displayFields != null && !displayFields.isEmpty();
+			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
+				return hasWhenFieldsEmptyAddImplicitFields != HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS_EDEFAULT;
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				return hideWhen != null;
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
@@ -1061,6 +1115,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (actionNavigationClass: ");
 		result.append(actionNavigationClass);
+		result.append(", hasWhenFieldsEmptyAddImplicitFields: ");
+		result.append(hasWhenFieldsEmptyAddImplicitFields);
 		result.append(", messageWhenHidden: ");
 		result.append(messageWhenHidden);
 		result.append(", header: ");

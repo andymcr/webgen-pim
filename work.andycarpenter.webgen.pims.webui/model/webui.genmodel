@@ -161,13 +161,14 @@
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//CreateSitemapUnit/filename"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//DynamicUnit">
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Model"
-          ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/contentType"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Debug" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/containingType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/routeActuals"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/contentType"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/containingType"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+          ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/routeActuals"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
           ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/displayFields"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/hasWhenFieldsEmptyAddImplicitFields"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference webui.ecore#//DynamicUnit/hideWhen"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/messageWhenHidden"/>

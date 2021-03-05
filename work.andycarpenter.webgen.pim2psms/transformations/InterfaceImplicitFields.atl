@@ -49,7 +49,9 @@ abstract rule SingletonUnit {
 	from partialWaf : WAF!SingletonUnit
 	to waf : WAF!SingletonUnit (
 		displayFields <-
-			if partialWaf.displayFields->notEmpty() or partialWaf.contentType.oclIsUndefined() then
+			if partialWaf.displayFields->notEmpty()
+					or partialWaf.contentType.oclIsUndefined()
+					or  not partialWaf.hasWhenFieldsEmptyAddImplicitFields then
 				partialWaf.displayFields
 			else
 				partialWaf.contentType.features
@@ -73,7 +75,9 @@ abstract rule CollectionUnit {
 	from partialWaf : WAF!CollectionUnit
 	to waf : WAF!CollectionUnit (
 		displayFields <-
-			if partialWaf.displayFields->notEmpty() or partialWaf.contentType->oclIsUndefined() then
+			if partialWaf.displayFields->notEmpty()
+					or partialWaf.contentType.oclIsUndefined()
+					or  not partialWaf.hasWhenFieldsEmptyAddImplicitFields then
 				partialWaf.displayFields
 			else
 				partialWaf.contentType.features

@@ -14,7 +14,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -71,10 +70,6 @@ public class FeaturePathAttributeItemProvider extends FeaturePathItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof FeaturePathAttribute) {
 						final FeaturePathAttribute path = (FeaturePathAttribute) object;
-						if (path.getRootContainer() instanceof CollectionUnit
-								&& !path.isUseContainerAsContext()) {
-							return Collections.emptySet();
-						}
 						return  path.getContainingType().getAttributes();
 					}
 

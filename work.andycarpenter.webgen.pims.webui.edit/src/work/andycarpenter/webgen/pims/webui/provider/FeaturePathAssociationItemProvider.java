@@ -21,7 +21,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -105,10 +104,6 @@ public class FeaturePathAssociationItemProvider extends FeaturePathItemProvider 
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof FeaturePathAssociation) {
 						final FeaturePathAssociation path = (FeaturePathAssociation) object;
-						if (path.getRootContainer() instanceof CollectionUnit
-								&& !path.isUseContainerAsContext()) {
-							return Collections.emptySet();
-						}
 						return path.getContainingType().getAllAssociations();
 					}
 

@@ -862,6 +862,9 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
+		if (contentType == null) {
+			return Collections.emptySet();
+		}
 		final Set<Selection> selections = new HashSet<Selection>();
 		for (Repository repository : webUI.getPersistence().getRepositories()) {
 			if (contentType.equals(repository.getServes())) {

@@ -255,6 +255,8 @@
         eType="#//RouteActual" containment="true" eOpposite="#//RouteActual/actualFor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayFields" upperBound="-1"
         eType="#//UnitField" containment="true" eOpposite="#//UnitField/displayedOn"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasWhenFieldsEmptyAddImplicitFields"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hideWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="messageWhenHidden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

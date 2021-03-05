@@ -1842,13 +1842,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 6;
+	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -1857,7 +1866,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 7;
+	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -1866,7 +1875,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 8;
+	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -1875,7 +1884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 9;
+	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1884,7 +1893,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -1893,7 +1902,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -1902,7 +1911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -1911,7 +1920,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
+	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -1920,7 +1929,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
+	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -1929,7 +1938,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 15;
+	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -1938,7 +1947,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 16;
+	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -1947,7 +1956,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 17;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -4658,6 +4667,15 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4963,6 +4981,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -5524,6 +5551,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__DISPLAY_FIELDS = SINGLETON_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = SINGLETON_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5912,6 +5948,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6298,6 +6343,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -6715,6 +6769,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7110,6 +7173,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -7536,6 +7608,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__DISPLAY_FIELDS = SINGLETON_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = SINGLETON_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7859,6 +7940,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -8436,6 +8526,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -9250,6 +9349,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9878,6 +9986,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -10519,6 +10636,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11102,6 +11228,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__DISPLAY_FIELDS = CARDS_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CARDS_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -11797,6 +11932,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__DISPLAY_FIELDS = IMAGE_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12398,6 +12542,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__DISPLAY_FIELDS = IMAGE_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -13012,6 +13165,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13325,6 +13487,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__DISPLAY_FIELDS = CONTROL_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CONTROL_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -13661,6 +13832,15 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13957,6 +14137,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -14347,6 +14536,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
 
 	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14643,6 +14841,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -17451,6 +17658,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDynamicUnit_DisplayFields();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Has When Fields Empty Add Implicit Fields</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#isHasWhenFieldsEmptyAddImplicitFields()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}'.
@@ -20898,6 +21116,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DYNAMIC_UNIT__DISPLAY_FIELDS = eINSTANCE.getDynamicUnit_DisplayFields();
+
+		/**
+		 * The meta object literal for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = eINSTANCE.getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields();
 
 		/**
 		 * The meta object literal for the '<em><b>Hide When</b></em>' containment reference feature.

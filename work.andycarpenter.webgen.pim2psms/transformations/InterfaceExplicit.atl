@@ -285,10 +285,11 @@ abstract rule DynamicUnit {
 	from website : Website!DynamicUnit
 	to waf : WAF!DynamicUnit (
 		contentType <- website.contentType.findOrmEntity(),
-		displayFields <- website.displayFields,
 		repositoriesUsed <- website.findRepositoriesUsed(),
 		servicesUsed <- website.findServicesUsed(),
 		routeActuals <- website.routeActuals,
+		displayFields <- website.displayFields,
+		hasWhenFieldsEmptyAddImplicitFields <- website.hasWhenFieldsEmptyAddImplicitFields,
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden(),
 		allActions <- website.actions,

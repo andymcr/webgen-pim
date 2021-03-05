@@ -1768,8 +1768,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields() {
+		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getDynamicUnit_HideWhen() {
-		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(4);
+		return (EReference)dynamicUnitEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1779,16 +1789,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getDynamicUnit_MessageWhenHidden() {
-		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDynamicUnit_Header() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1798,7 +1798,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_Footer() {
+	public EAttribute getDynamicUnit_Header() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1808,7 +1808,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_HeaderClass() {
+	public EAttribute getDynamicUnit_Footer() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1818,7 +1818,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalFieldListClass() {
+	public EAttribute getDynamicUnit_HeaderClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1828,7 +1828,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalFieldLabelClass() {
+	public EAttribute getDynamicUnit_LocalFieldListClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1838,7 +1838,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalFieldValueClass() {
+	public EAttribute getDynamicUnit_LocalFieldLabelClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1848,7 +1848,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalControlClass() {
+	public EAttribute getDynamicUnit_LocalFieldValueClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -1858,7 +1858,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalAnchorClass() {
+	public EAttribute getDynamicUnit_LocalControlClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -1868,8 +1868,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_FooterClass() {
+	public EAttribute getDynamicUnit_LocalAnchorClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDynamicUnit_FooterClass() {
+		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -4250,6 +4260,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__CONTAINING_TYPE);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__ROUTE_ACTUALS);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__DISPLAY_FIELDS);
+		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS);
 		createEReference(dynamicUnitEClass, DYNAMIC_UNIT__HIDE_WHEN);
 		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN);
 		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__HEADER);
@@ -4771,6 +4782,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getDynamicUnit_ContainingType(), thePersistencePackage.getEntity(), null, "containingType", null, 0, 1, DynamicUnit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_RouteActuals(), this.getRouteActual(), this.getRouteActual_ActualFor(), "routeActuals", null, 0, -1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_DisplayFields(), this.getUnitField(), this.getUnitField_DisplayedOn(), "displayFields", null, 0, -1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields(), ecorePackage.getEBoolean(), "hasWhenFieldsEmptyAddImplicitFields", "true", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamicUnit_HideWhen(), theExpressionPackage.getPredicate(), null, "hideWhen", null, 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDynamicUnit_MessageWhenHidden(), ecorePackage.getEString(), "messageWhenHidden", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDynamicUnit_Header(), ecorePackage.getEString(), "header", null, 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

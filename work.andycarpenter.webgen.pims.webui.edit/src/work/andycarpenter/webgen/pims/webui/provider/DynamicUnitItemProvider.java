@@ -50,6 +50,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addActionNavigationClassPropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
+			addHasWhenFieldsEmptyAddImplicitFieldsPropertyDescriptor(object);
 			addMessageWhenHiddenPropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
@@ -100,7 +101,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 getString("_UI_DynamicUnit_contentType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_contentType_feature", "_UI_DynamicUnit_type"),
 				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTENT_TYPE,
-				 false,
+				 true,
 				 false,
 				 false,
 				 null,
@@ -122,11 +123,33 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 getString("_UI_DynamicUnit_containingType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_containingType_feature", "_UI_DynamicUnit_type"),
 				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTAINING_TYPE,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
 				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has When Fields Empty Add Implicit Fields feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasWhenFieldsEmptyAddImplicitFieldsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_hasWhenFieldsEmptyAddImplicitFields_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_hasWhenFieldsEmptyAddImplicitFields_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -411,6 +434,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 		switch (notification.getFeatureID(DynamicUnit.class)) {
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
+			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
