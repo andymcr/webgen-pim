@@ -2,11 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -40,7 +37,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -227,14 +224,14 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
-	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContainingTypes()
+	 * @see #getContainingType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.ACTION__CONTAINING_TYPES).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.ACTION__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -577,10 +574,28 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Entity> getContainingTypes() {
-		return (EList<Entity>)CONTAINING_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContainingType(Entity newContainingType) {
+		CONTAINING_TYPE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newContainingType);
 	}
 
 	/**
@@ -661,8 +676,9 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return getHeaderClass();
 			case WebuiPackage.ACTION__FOOTER_CLASS:
 				return getFooterClass();
-			case WebuiPackage.ACTION__CONTAINING_TYPES:
-				return getContainingTypes();
+			case WebuiPackage.ACTION__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -672,7 +688,6 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -709,9 +724,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 			case WebuiPackage.ACTION__FOOTER_CLASS:
 				setFooterClass((String)newValue);
 				return;
-			case WebuiPackage.ACTION__CONTAINING_TYPES:
-				getContainingTypes().clear();
-				getContainingTypes().addAll((Collection<? extends Entity>)newValue);
+			case WebuiPackage.ACTION__CONTAINING_TYPE:
+				setContainingType((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -758,8 +772,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 			case WebuiPackage.ACTION__FOOTER_CLASS:
 				setFooterClass(FOOTER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.ACTION__CONTAINING_TYPES:
-				getContainingTypes().clear();
+			case WebuiPackage.ACTION__CONTAINING_TYPE:
+				setContainingType((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -795,8 +809,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
 			case WebuiPackage.ACTION__FOOTER_CLASS:
 				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
-			case WebuiPackage.ACTION__CONTAINING_TYPES:
-				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.ACTION__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

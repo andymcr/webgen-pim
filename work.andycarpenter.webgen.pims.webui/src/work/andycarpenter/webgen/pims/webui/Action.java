@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
@@ -27,7 +26,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getFooterClass <em>Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction()
@@ -285,15 +284,25 @@ public interface Action extends NamedDisplayElement {
 	void setFooterClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Containing Types</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containing Types</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ContainingTypes()
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsKindOf(DynamicUnit) then\n\tusedBy.oclAsType(DynamicUnit).contentTypes\nelse if usedBy.oclIsKindOf(UnitFeature) then\n\tusedBy.oclAsType(UnitFeature).displayedOn.contentTypes\nelse\n\tOrderedSet{}\nendif endif'"
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see #setContainingType(Entity)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ContainingType()
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsKindOf(DynamicUnit) then\n\tusedBy.oclAsType(DynamicUnit).contentType\nelse if usedBy.oclIsKindOf(UnitFeature) then\n\tusedBy.oclAsType(UnitFeature).displayedOn.contentType\nelse\n\tnull\nendif endif'"
 	 * @generated
 	 */
-	EList<Entity> getContainingTypes();
+	Entity getContainingType();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getContainingType <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Containing Type</em>' reference.
+	 * @see #getContainingType()
+	 * @generated
+	 */
+	void setContainingType(Entity value);
 
 } // Action

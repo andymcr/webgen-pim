@@ -67,9 +67,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.QUERY_PARAMETER: return createQueryParameter();
 			case WebuiPackage.PAGE: return createPage();
 			case WebuiPackage.PAGE_LINK: return createPageLink();
-			case WebuiPackage.ROUTE_ACTUAL: return createRouteActual();
 			case WebuiPackage.STATIC_UNIT: return createStaticUnit();
 			case WebuiPackage.CREATE_SITEMAP_UNIT: return createCreateSitemapUnit();
+			case WebuiPackage.ROUTE_ACTUAL: return createRouteActual();
 			case WebuiPackage.UNIT_ELEMENT: return createUnitElement();
 			case WebuiPackage.UNIT_ASSOCIATION: return createUnitAssociation();
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE: return createChildPathAttribute();

@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -20,9 +19,6 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getElementTitle <em>Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType <em>Content Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType <em>Select Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindContainerSelection <em>Find Container Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitContainerLoad <em>Omit Container Load</em>}</li>
@@ -136,66 +132,6 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setTruncateElementTitle(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Type</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Type</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Type</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ContentType()
-	 * @model required="true"
-	 * @generated
-	 */
-	EList<Entity> getContentType();
-
-	/**
-	 * Returns the value of the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Select Type</em>' reference.
-	 * @see #setSelectType(Entity)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_SelectType()
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if selection.oclIsUndefined() then\n\tnull\nelse if selection.selectPath-&gt;isEmpty() then\n\tnull\nelse\n\tselection.selectPath-&gt;last().partOf\nendif endif'"
-	 * @generated
-	 */
-	Entity getSelectType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType <em>Select Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Select Type</em>' reference.
-	 * @see #getSelectType()
-	 * @generated
-	 */
-	void setSelectType(Entity value);
-
-	/**
-	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containing Type</em>' reference.
-	 * @see #setContainingType(Entity)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ContainingType()
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if not selectType.oclIsUndefined() then\n\tselectType\nelse let contained : persistence::Entity \n\t= contentType-&gt;any(e | not e.containingAssociation.oclIsUndefined())\n\tin if contained.oclIsUndefined() then\n\t\t\tnull\n\t\telse\n\t\t\tcontained.containingAssociation.partOf\n\t\tendif\nendif'"
-	 * @generated
-	 */
-	Entity getContainingType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContainingType <em>Containing Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Containing Type</em>' reference.
-	 * @see #getContainingType()
-	 * @generated
-	 */
-	void setContainingType(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Selection</b></em>' reference.

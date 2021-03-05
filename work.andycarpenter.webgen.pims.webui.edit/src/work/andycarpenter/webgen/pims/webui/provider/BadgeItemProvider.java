@@ -5,10 +5,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -27,8 +24,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -117,11 +112,7 @@ public class BadgeItemProvider
 					public Collection<?> getChoiceOfValues(Object object) {
 						if (object instanceof Badge) {
 							final Badge badge = (Badge) object;
-							final Set<Label> attributes = new HashSet<Label>();
-							for (Entity entity : badge.getDisplayedOn().getContentType()) {
-								attributes.addAll(entity.getAttributes());
-							}
-							return attributes;
+							return badge.getDisplayedOn().getContentType().getAttributes();
 						}
 						return Collections.emptySet();
 					}

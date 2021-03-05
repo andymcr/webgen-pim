@@ -5,10 +5,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,8 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -74,12 +70,12 @@ public class FeaturePathAttributeItemProvider extends FeaturePathItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof FeaturePathAttribute) {
-						final Set<Attribute> attributes = new HashSet<Attribute>();
 						final FeaturePathAttribute path = (FeaturePathAttribute) object;
-						for (Entity entity :  path.getContainingTypes()) {
-							attributes.addAll(entity.getAttributes());
+						if (path.getRootContainer() instanceof CollectionUnit
+								&& !path.isUseContainerAsContext()) {
+							return Collections.emptySet();
 						}
-						return attributes;
+						return  path.getContainingType().getAttributes();
 					}
 
 					return Collections.emptySet();

@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 
 /**
@@ -15,7 +14,6 @@ import work.andycarpenter.webgen.pims.persistence.Label;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getTitle <em>Title</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType <em>Content Type</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit()
@@ -50,31 +48,5 @@ public interface SingletonUnit extends DynamicUnit {
 	 * @generated
 	 */
 	void setTitle(Label value);
-
-	/**
-	 * Returns the value of the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Type</em>' reference.
-	 * @see #setContentType(Entity)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit_ContentType()
-	 * @model required="true"
-	 * @generated
-	 */
-	Entity getContentType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType <em>Content Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content Type</em>' reference.
-	 * @see #getContentType()
-	 * @generated
-	 */
-	void setContentType(Entity value);
 
 } // SingletonUnit

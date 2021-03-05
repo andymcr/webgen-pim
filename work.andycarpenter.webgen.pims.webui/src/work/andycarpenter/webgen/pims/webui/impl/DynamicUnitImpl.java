@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
+import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.UnitField;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -32,7 +33,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentTypes <em>Content Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContainingType <em>Containing Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getMessageWhenHidden <em>Message When Hidden</em>}</li>
@@ -81,14 +84,34 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
 
 	/**
-	 * The cached setting delegate for the '{@link #getContentTypes() <em>Content Types</em>}' reference list.
+	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContentTypes()
+	 * @see #getContentType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTENT_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.DYNAMIC_UNIT__CONTENT_TYPES).getSettingDelegate();
+	protected Entity contentType;
+
+	/**
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.DYNAMIC_UNIT__CONTAINING_TYPE).getSettingDelegate();
+
+	/**
+	 * The cached value of the '{@link #getRouteActuals() <em>Route Actuals</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRouteActuals()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RouteActual> routeActuals;
 
 	/**
 	 * The cached value of the '{@link #getDisplayFields() <em>Display Fields</em>}' containment reference list.
@@ -370,10 +393,81 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Entity> getContentTypes() {
-		return (EList<Entity>)CONTENT_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getContentType() {
+		if (contentType != null && contentType.eIsProxy()) {
+			InternalEObject oldContentType = (InternalEObject)contentType;
+			contentType = (Entity)eResolveProxy(oldContentType);
+			if (contentType != oldContentType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE, oldContentType, contentType));
+			}
+		}
+		return contentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContentType() {
+		return contentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContentType(Entity newContentType) {
+		Entity oldContentType = contentType;
+		contentType = newContentType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE, oldContentType, contentType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetContainingType() {
+		return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<RouteActual> getRouteActuals() {
+		if (routeActuals == null) {
+			routeActuals = new EObjectContainmentWithInverseEList<RouteActual>(RouteActual.class, this, WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR);
+		}
+		return routeActuals;
 	}
 
 	/**
@@ -675,6 +769,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActions()).basicAdd(otherEnd, msgs);
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRouteActuals()).basicAdd(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDisplayFields()).basicAdd(otherEnd, msgs);
 		}
@@ -691,6 +787,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				return ((InternalEList<?>)getRouteActuals()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return ((InternalEList<?>)getDisplayFields()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
@@ -711,8 +809,14 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getActions();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return getActionNavigationClass();
-			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
-				return getContentTypes();
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
+				if (resolve) return getContentType();
+				return basicGetContentType();
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				return getRouteActuals();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return getDisplayFields();
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
@@ -756,6 +860,13 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
+				setContentType((Entity)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				getRouteActuals().clear();
+				getRouteActuals().addAll((Collection<? extends RouteActual>)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
@@ -812,6 +923,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				setActionNavigationClass(ACTION_NAVIGATION_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
+				setContentType((Entity)null);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				getRouteActuals().clear();
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				getDisplayFields().clear();
 				return;
@@ -864,8 +981,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
-			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPES:
-				return CONTENT_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
+				return contentType != null;
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINING_TYPE:
+				return isSetContainingType();
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
+				return routeActuals != null && !routeActuals.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 				return displayFields != null && !displayFields.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:

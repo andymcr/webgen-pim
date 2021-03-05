@@ -5,7 +5,10 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,7 +17,12 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
+import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -70,7 +78,9 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof DetailsUnit) {
-						return getSelections((DetailsUnit) object);
+						final DetailsUnit unit = (DetailsUnit) object;
+						return getSelections(unit.getDisplayedOn().getWebUI(),
+								unit.getContentType());
 					}
 					return Collections.emptySet();
 				}
@@ -163,6 +173,17 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
+		final Set<Selection> selections = new HashSet<Selection>();
+		for (Repository repository : webUI.getPersistence().getRepositories()) {
+			if (contentType.equals(repository.getServes())) {
+				selections.addAll(repository.getSelections());
+			}
+		}
+
+		return selections;
 	}
 
 }

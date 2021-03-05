@@ -5,10 +5,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,11 +19,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
-import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -87,7 +81,7 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitElement) {
 						final UnitElement attribute = (UnitElement) object;
-						return getAttributes(attribute.getDisplayedOn());
+						return attribute.getDisplayedOn().getContentType().getAttributes();
 					}
 
 					return Collections.emptySet();
@@ -392,16 +386,6 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	protected Set<Attribute> getAttributes(final DynamicUnit unit) {
-		final Set<Attribute> attributes = new HashSet<Attribute>();
-
-		for (Entity entity : getContentType(unit)) {
-			attributes.addAll(entity.getAttributes());
-		}
-
-		return attributes;
 	}
 
 }

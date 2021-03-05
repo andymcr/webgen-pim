@@ -4,14 +4,9 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -20,17 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
-import work.andycarpenter.webgen.pims.persistence.Repository;
-import work.andycarpenter.webgen.pims.persistence.Selection;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
-import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -63,7 +48,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addActionNavigationClassPropertyDescriptor(object);
-			addContentTypesPropertyDescriptor(object);
+			addContentTypePropertyDescriptor(object);
+			addContainingTypePropertyDescriptor(object);
 			addMessageWhenHiddenPropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
@@ -101,22 +87,44 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Types feature.
+	 * This adds a property descriptor for the Content Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContentTypesPropertyDescriptor(Object object) {
+	protected void addContentTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_contentTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_contentTypes_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTENT_TYPES,
+				 getString("_UI_DynamicUnit_contentType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_contentType_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTENT_TYPE,
 				 false,
 				 false,
 				 false,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Containing Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainingTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_containingType_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTAINING_TYPE,
+				 true,
+				 false,
+				 true,
 				 null,
 				 getString("_UI_DebugPropertyCategory"),
 				 null));
@@ -140,7 +148,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_BusinessPropertyCategory"),
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -355,6 +363,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS);
+			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__ROUTE_ACTUALS);
 			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS);
 			childrenFeatures.add(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN);
 		}
@@ -415,6 +424,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
+			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
 			case WebuiPackage.DYNAMIC_UNIT__HIDE_WHEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -463,6 +473,11 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createGeneralOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.DYNAMIC_UNIT__ROUTE_ACTUALS,
+				 WebuiFactory.eINSTANCE.createRouteActual()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -538,144 +553,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
-	}
-
-	protected List<Entity> getContentType(final DynamicUnit unit) {
-		final List<Entity> contentType = new LinkedList<Entity>();
-
-		if (unit instanceof SingletonUnit) {
-			final SingletonUnit singleton = (SingletonUnit) unit;
-			if (singleton.getContentType() != null) {
-				contentType.add(singleton.getContentType());
-				return contentType;
-			}
-		}
-
-		if (unit instanceof CollectionUnit) {
-			final CollectionUnit collection = (CollectionUnit) unit;
-			if (collection.getContentType().size() > 0) {
-				contentType.addAll(collection.getContentType());
-				return contentType;
-			}
-		}
-
-		return contentType;
-	}
-
-	protected Entity getRoutingType(final DynamicUnit unit) {
-		if (unit instanceof SingletonUnit) {
-			final SingletonUnit singleton = (SingletonUnit) unit;
-			return singleton.getContentType();
-		}
-
-		if (unit instanceof CollectionUnit) {
-			final CollectionUnit collection = (CollectionUnit) unit;
-			if (collection.getSelection() != null) {
-				if (!collection.getSelection().getSelectPath().isEmpty()) {
-					return collection.getSelection().getSelectPath().get(
-							collection.getSelection().getSelectPath().size() - 1)
-							.getTargetEntity();
-				}
-			}
-			final Association association = getContainingAssociation(unit);
-			if (association != null) {
-				association.getPartOf();
-			}
-		}
-
-		return null;
-	}
-
-	protected Set<Attribute> getAttributes(final DynamicUnit unit) {
-		final Set<Attribute> attributes = new HashSet<Attribute>();
-
-		for (Entity entity : getContentType(unit)) {
-			attributes.addAll(entity.getAttributes());
-		}
-
-		return attributes;
-	}
-
-	protected Set<Association> getAssociations(final DynamicUnit unit) {
-		final Set<Association> associations = new HashSet<Association>();
-
-		for (Entity entity : getContentType(unit)) {
-			associations.addAll(entity.getAllAssociations());
-		}
-
-		return associations;
-	}
-
-	protected AssociationWithContainment getContainingAssociation(final Entity type) {
-		for (Association association : type.getAllAssociations()) {
-			if (association instanceof AssociationWithContainment) {
-				if (!type.getAssociations().contains(association)) {
-					return (AssociationWithContainment) association;
-				}
-			}
-		}
-
-		return null;
-	}
-
-	protected AssociationWithContainment getContainingAssociation(final DynamicUnit unit) {
-		for (Entity type : getContentType(unit)) {
-			final AssociationWithContainment association = getContainingAssociation(type);
-			if (association != null) {
-				return association;
-			}
-		}
-
-		return null;
-	}
-
-	protected Set<Label> getLabels(final Entity entityOrView) {
-		final Set<Label> labels = new HashSet<Label>();
-		labels.addAll(entityOrView.getAttributes());
-		labels.addAll(entityOrView.getLabels());
-
-		return labels;
-	}
-
-	protected Set<Selection> getSelections(final WebUI webUI, final Entity entity) {
-		final Set<Selection> selections = new HashSet<Selection>();
-		for (Repository repository : webUI.getPersistence().getRepositories()) {
-			if (repository.getServes() == entity) {
-				selections.addAll(repository.getSelections());
-			}
-		}
-
-		return selections;
-	}
-
-	protected Set<Selection> getSelections(final DynamicUnit unit) {
-		final Set<Selection> selections = new HashSet<Selection>();
-		final List<Entity> contentType = getContentType(unit);
-		if (!contentType.isEmpty()) {
-			final WebUI webUI = unit.getPageDisplayedOn().getWebUI();
-			selections.addAll(getSelections(webUI, contentType.get(0)));
-		}
-
-		return selections;
-	}
-
-	protected Set<Selection> getContainerSelections(final CollectionUnit unit) {
-		final WebUI webUI = unit.getPageDisplayedOn().getWebUI();
-		final Set<Selection> selections = new HashSet<Selection>();
-		if (unit.getSelection().getSelectPath().isEmpty()) {
-			for (Entity type : getContentType(unit)) {
-				final AssociationWithContainment association = getContainingAssociation(type);
-				if (association != null) {
-					selections.addAll(getSelections(webUI, association.getPartOf()));
-				}
-			}
-		} else {
-			final EList<Association> path = unit.getSelection().getSelectPath();
-			final List<Association> last = path.subList(path.size() -1, path.size()); 
-			selections.addAll(getSelections(webUI, last.get(0).getPartOf()));
-		}
-
-		return selections;
 	}
 
 }

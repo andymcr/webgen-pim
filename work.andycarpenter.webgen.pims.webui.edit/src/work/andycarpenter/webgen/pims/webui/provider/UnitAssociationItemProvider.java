@@ -19,7 +19,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
@@ -62,7 +61,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addNamePropertyDescriptor(object);
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
-			addContainingTypesPropertyDescriptor(object);
+			addContainingTypePropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
 			addFilteredOptionsPropertyDescriptor(object);
 		}
@@ -111,11 +110,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
-						final Set<Association> associations = new HashSet<Association>();
-						for (Entity entity : association.getContainingTypes()) {
-							associations.addAll(entity.getAllAssociations());
-						}
-						return associations;
+						return association.getDisplayedOn().getContentType().getAllAssociations();
 					}
 
 					return Collections.emptySet();
@@ -157,19 +152,19 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Containing Types feature.
+	 * This adds a property descriptor for the Containing Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContainingTypesPropertyDescriptor(Object object) {
+	protected void addContainingTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_containingTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_containingTypes_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPES,
+				 getString("_UI_UnitAssociation_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_containingType_feature", "_UI_UnitAssociation_type"),
+				 WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPE,
 				 false,
 				 false,
 				 false,
@@ -199,7 +194,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
 						if (association.getTargetEntity() != null) {
-							return getSelections(getPageDisplayedOn(association).getWebUI(),
+							return getSelections(association.getDisplayedOn().getDisplayedOn().getWebUI(),
 								association.getTargetEntity());
 						}
 					}
@@ -232,7 +227,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 							return association.getOptions().getFilters();
 						} else {
 							final Set<Filter> filters = new HashSet<Filter>();
-							for (Selection selection : getSelections(getPageDisplayedOn(association).getWebUI(),
+							for (Selection selection : getSelections(association.getDisplayedOn().getDisplayedOn().getWebUI(),
 									association.getTargetEntity())) {
 								filters.addAll(selection.getFilters());
 							}

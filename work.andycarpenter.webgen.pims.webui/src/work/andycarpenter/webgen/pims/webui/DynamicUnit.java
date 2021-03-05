@@ -15,7 +15,9 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes <em>Content Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getMessageWhenHidden <em>Message When Hidden</em>}</li>
@@ -33,22 +35,68 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='featuresMustBeFromContentType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='let entities : OrderedSet(persistence::Entity)\n\t= if self.oclIsKindOf(SingletonUnit) then\n\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n\t\telse if self.oclIsKindOf(CollectionUnit) then\n\t\t\tself.oclAsType(CollectionUnit).contentType\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif\n\tin let features : Collection(persistence::Feature)\n\t\t= entities-&gt;collect(eov | eov.allFeatures)\n\t\tin displayFields\n\t\t\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t\t\t-&gt;select(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\t\t\telse\n\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\t\t\tendif)\n\t\t\t-&gt;forAll(f | \n\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\t\t\telse\n\t\t\t\t\tfeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\t\t\tendif)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='displayFields\n\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t-&gt;select(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t-&gt;forAll(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tcontentType.features-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.features-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)'"
  * @generated
  */
 public interface DynamicUnit extends ContentUnit, ActionContainer {
 	/**
-	 * Returns the value of the '<em><b>Content Types</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
+	 * Returns the value of the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content Types</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ContentTypes()
-	 * @model changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.oclIsKindOf(SingletonUnit) then\n\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\nelse if self.oclIsKindOf(CollectionUnit) then\n\tself.oclAsType(CollectionUnit).contentType\nelse\n\tOrderedSet{}\nendif endif'"
+	 * @return the value of the '<em>Content Type</em>' reference.
+	 * @see #setContentType(Entity)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ContentType()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<Entity> getContentTypes();
+	Entity getContentType();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentType <em>Content Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Content Type</em>' reference.
+	 * @see #getContentType()
+	 * @generated
+	 */
+	void setContentType(Entity value);
+
+	/**
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see #isSetContainingType()
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ContainingType()
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.oclIsKindOf(CollectionUnit) then\n\tlet collectionUnit : CollectionUnit = self.oclAsType(CollectionUnit)\n\tin if not collectionUnit.findContainerSelection.oclIsUndefined() then\n\t\t\tcollectionUnit.findContainerSelection.definedBy.serves\n\t\telse if not collectionUnit.selection.oclIsUndefined() then\n\t\t\tif collectionUnit.selection.selectPath-&gt;notEmpty() then\n\t\t\t\tif collectionUnit.contentType = collectionUnit.selection.selectPath-&gt;first().partOf then\n\t\t\t\t\tcollectionUnit.selection.selectPath-&gt;last().targetEntity\n\t\t\t\telse\n\t\t\t\t\tcollectionUnit.selection.selectPath-&gt;last().partOf\n\t\t\t\tendif\n\t\t\telse\n\t\t\t\tcontentType.containingType\n\t\t\tendif\n\t\telse\n\t\t\tcontentType.containingType\n\t\tendif endif\n else if self.oclIsKindOf(DetailsUnit) then\n\tlet detailsUnit : DetailsUnit = self.oclAsType(DetailsUnit)\n\tin if not detailsUnit.selection.oclIsUndefined() then\n\t\tif detailsUnit.selection.selectPath-&gt;notEmpty() then\n\t\t\tdetailsUnit.selection.selectPath-&gt;last().targetEntity\n\t\telse\n\t\t\tdetailsUnit.contentType.containingType\n\t\tendif\n\telse\n\t\tcontentType.containingType\n\tendif\nelse\n\tcontentType.containingType\nendif endif\n'"
+	 * @generated
+	 */
+	Entity getContainingType();
+
+	/**
+	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Containing Type</em>' reference is set.
+	 * @see #getContainingType()
+	 * @generated
+	 */
+	boolean isSetContainingType();
+
+	/**
+	 * Returns the value of the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.RouteActual}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.RouteActual#getActualFor <em>Actual For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Route Actuals</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_RouteActuals()
+	 * @see work.andycarpenter.webgen.pims.webui.RouteActual#getActualFor
+	 * @model opposite="actualFor" containment="true"
+	 * @generated
+	 */
+	EList<RouteActual> getRouteActuals();
 
 	/**
 	 * Returns the value of the '<em><b>Display Fields</b></em>' containment reference list.

@@ -27,7 +27,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
 public interface RouteActual extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Actual For</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRouteActuals <em>Route Actuals</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals <em>Route Actuals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Actual For</em>' container reference isn't clear,
@@ -35,13 +35,13 @@ public interface RouteActual extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual For</em>' container reference.
-	 * @see #setActualFor(ContentUnit)
+	 * @see #setActualFor(DynamicUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getRouteActual_ActualFor()
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getRouteActuals
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals
 	 * @model opposite="routeActuals" required="true" transient="false"
 	 * @generated
 	 */
-	ContentUnit getActualFor();
+	DynamicUnit getActualFor();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.RouteActual#getActualFor <em>Actual For</em>}' container reference.
@@ -51,7 +51,7 @@ public interface RouteActual extends EObject {
 	 * @see #getActualFor()
 	 * @generated
 	 */
-	void setActualFor(ContentUnit value);
+	void setActualFor(DynamicUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Route Parameter</b></em>' reference.

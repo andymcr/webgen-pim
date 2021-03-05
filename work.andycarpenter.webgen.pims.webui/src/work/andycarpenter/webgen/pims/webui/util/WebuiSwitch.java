@@ -161,12 +161,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.ROUTE_ACTUAL: {
-				RouteActual routeActual = (RouteActual)theEObject;
-				T result = caseRouteActual(routeActual);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.STATIC_UNIT: {
 				StaticUnit staticUnit = (StaticUnit)theEObject;
 				T result = caseStaticUnit(staticUnit);
@@ -192,6 +186,12 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseActionContainer(dynamicUnit);
 				if (result == null) result = caseNamedDisplayElement(dynamicUnit);
 				if (result == null) result = caseNamedElement(dynamicUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.ROUTE_ACTUAL: {
+				RouteActual routeActual = (RouteActual)theEObject;
+				T result = caseRouteActual(routeActual);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

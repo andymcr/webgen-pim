@@ -16,8 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.expression.Expression;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-
-import work.andycarpenter.webgen.pims.webui.ContentUnit;
+import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -82,9 +81,9 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * @generated
 	 */
 	@Override
-	public ContentUnit getActualFor() {
+	public DynamicUnit getActualFor() {
 		if (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR) return null;
-		return (ContentUnit)eInternalContainer();
+		return (DynamicUnit)eInternalContainer();
 	}
 
 	/**
@@ -92,7 +91,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetActualFor(ContentUnit newActualFor, NotificationChain msgs) {
+	public NotificationChain basicSetActualFor(DynamicUnit newActualFor, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newActualFor, WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR, msgs);
 		return msgs;
 	}
@@ -103,7 +102,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	 * @generated
 	 */
 	@Override
-	public void setActualFor(ContentUnit newActualFor) {
+	public void setActualFor(DynamicUnit newActualFor) {
 		if (newActualFor != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR && newActualFor != null)) {
 			if (EcoreUtil.isAncestor(this, newActualFor))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -111,7 +110,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newActualFor != null)
-				msgs = ((InternalEObject)newActualFor).eInverseAdd(this, WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS, ContentUnit.class, msgs);
+				msgs = ((InternalEObject)newActualFor).eInverseAdd(this, WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS, DynamicUnit.class, msgs);
 			msgs = basicSetActualFor(newActualFor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -215,7 +214,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetActualFor((ContentUnit)otherEnd, msgs);
+				return basicSetActualFor((DynamicUnit)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -245,7 +244,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
-				return eInternalContainer().eInverseRemove(this, WebuiPackage.CONTENT_UNIT__ROUTE_ACTUALS, ContentUnit.class, msgs);
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS, DynamicUnit.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -278,7 +277,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
-				setActualFor((ContentUnit)newValue);
+				setActualFor((DynamicUnit)newValue);
 				return;
 			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
 				setRouteParameter((Attribute)newValue);
@@ -299,7 +298,7 @@ public class RouteActualImpl extends MinimalEObjectImpl.Container implements Rou
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.ROUTE_ACTUAL__ACTUAL_FOR:
-				setActualFor((ContentUnit)null);
+				setActualFor((DynamicUnit)null);
 				return;
 			case WebuiPackage.ROUTE_ACTUAL__ROUTE_PARAMETER:
 				setRouteParameter((Attribute)null);

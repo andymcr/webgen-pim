@@ -31,7 +31,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getRootContainer <em>Root Container</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl#isUseContainerAsContext <em>Use Container As Context</em>}</li>
  * </ul>
  *
@@ -59,14 +59,14 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
-	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContainingTypes()
+	 * @see #getContainingType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH__CONTAINING_TYPES).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.FEATURE_PATH__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #isUseContainerAsContext() <em>Use Container As Context</em>}' attribute.
@@ -154,10 +154,18 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Entity> getContainingTypes() {
-		return (EList<Entity>)CONTAINING_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -196,8 +204,9 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 			case WebuiPackage.FEATURE_PATH__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
-			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPES:
-				return getContainingTypes();
+			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
 				return isUseContainerAsContext();
 		}
@@ -254,8 +263,8 @@ public abstract class FeaturePathImpl extends MinimalEObjectImpl.Container imple
 				return suffixes != null && !suffixes.isEmpty();
 			case WebuiPackage.FEATURE_PATH__ROOT_CONTAINER:
 				return isSetRootContainer();
-			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPES:
-				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.FEATURE_PATH__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.FEATURE_PATH__USE_CONTAINER_AS_CONTEXT:
 				return useContainerAsContext != USE_CONTAINER_AS_CONTEXT_EDEFAULT;
 		}

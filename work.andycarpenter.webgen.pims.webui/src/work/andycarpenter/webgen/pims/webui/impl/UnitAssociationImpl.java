@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -33,7 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
@@ -84,14 +83,14 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	protected FeatureChildPath childFeature;
 
 	/**
-	 * The cached setting delegate for the '{@link #getContainingTypes() <em>Containing Types</em>}' reference list.
+	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContainingTypes()
+	 * @see #getContainingType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPES).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
@@ -303,6 +302,25 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
+	public Entity getContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetContainingType() {
+		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isIsSourceAssociation() {
 		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -324,17 +342,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 */
 	public Entity basicGetTargetEntity() {
 		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Entity> getContainingTypes() {
-		return (EList<Entity>)CONTAINING_TYPES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -465,8 +472,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return basicGetValueDisplay();
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return getChildFeature();
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
-				return getContainingTypes();
+			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE:
+				if (resolve) return getContainingType();
+				return basicGetContainingType();
 			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return isIsSourceAssociation();
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
@@ -558,8 +566,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return valueDisplay != null;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return childFeature != null;
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPES:
-				return CONTAINING_TYPES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE:
+				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
 				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:

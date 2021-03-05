@@ -34,7 +34,7 @@ public interface FeaturePathAssociation extends FeaturePath, AssociationReferenc
 	 * @return the value of the '<em>Is Source Association</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePathAssociation_IsSourceAssociation()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tcontainingTypes-&gt;includes(association.partOf)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tcontainingType = association.partOf'"
 	 * @generated
 	 */
 	boolean isIsSourceAssociation();

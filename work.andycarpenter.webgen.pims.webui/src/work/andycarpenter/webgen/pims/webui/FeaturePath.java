@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 
@@ -15,7 +14,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext <em>Use Container As Context</em>}</li>
  * </ul>
  *
@@ -26,17 +25,16 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
 public interface FeaturePath extends Variable {
 
 	/**
-	 * Returns the value of the '<em><b>Containing Types</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containing Types</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePath_ContainingTypes()
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getFeaturePath_ContainingType()
 	 * @model changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='let directTypes : OrderedSet(persistence::Entity)\n\t= if rootContainer.oclIsKindOf(DynamicUnit) then\n\t\t\trootContainer.oclAsType(DynamicUnit).contentTypes\n\t\telse if rootContainer.oclIsKindOf(UnitField) then\n\t\t\trootContainer.oclAsType(UnitField).displayedOn.contentTypes\n\t\telse if rootContainer.oclIsKindOf(Action) then\n\t\t\trootContainer.oclAsType(Action).containingTypes\n\t\telse if rootContainer.oclIsTypeOf(Badge) then\n\t\t\trootContainer.oclAsType(Badge).displayedOn.contentTypes\n\t\telse\n\t\t\tOrderedSet{}\n\t\tendif endif endif endif\n\tin if useContainerAsContext then\n\t\t\tdirectTypes\n\t\t\t\t-&gt;select(e | not e.containingAssociation.oclIsUndefined())\n\t\t\t\t-&gt;collect(e | e.containingType)\n\t\t\t\t-&gt;asOrderedSet()\n\t\telse\n\t\t\tdirectTypes\n\t\tendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if rootContainer.oclIsKindOf(DynamicUnit) then\n\tif useContainerAsContext then\n\t\trootContainer.oclAsType(DynamicUnit).containingType\n\telse\n\t\trootContainer.oclAsType(DynamicUnit).contentType\n\tendif\nelse\n\tlet directType : persistence::Entity\n\t\t= if rootContainer.oclIsKindOf(UnitField) then\n\t\t\t\trootContainer.oclAsType(UnitField).displayedOn.contentType\n\t\t\telse if rootContainer.oclIsKindOf(Action) then\n\t\t\t\trootContainer.oclAsType(Action).containingType\n\t\t\telse if rootContainer.oclIsTypeOf(Badge) then\n\t\t\t\trootContainer.oclAsType(Badge).displayedOn.contentType\n\t\t\telse\n\t\t\t\tnull\n\t\t\tendif endif endif\n\t\tin if useContainerAsContext then\n\t\t\t\tif directType.oclIsUndefined() then\n\t\t\t\t\tnull\n\t\t\t\telse\n\t\t\t\t\tdirectType.containingType\n\t\t\t\tendif\n\t\t\telse\n\t\t\t\tdirectType\n\t\t\tendif\nendif'"
 	 * @generated
 	 */
-	EList<Entity> getContainingTypes();
+	Entity getContainingType();
 
 	/**
 	 * Returns the value of the '<em><b>Use Container As Context</b></em>' attribute.

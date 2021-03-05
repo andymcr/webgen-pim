@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
@@ -17,7 +16,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes <em>Containing Types</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
@@ -31,6 +30,18 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  */
 public interface UnitAssociation extends UnitFeature, AssociationReference {
 	/**
+	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containing Type</em>' reference.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_ContainingType()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='displayedOn.contentType'"
+	 * @generated
+	 */
+	Entity getContainingType();
+
+	/**
 	 * Returns the value of the '<em><b>Is Source Association</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -41,7 +52,7 @@ public interface UnitAssociation extends UnitFeature, AssociationReference {
 	 * @return the value of the '<em>Is Source Association</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_IsSourceAssociation()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tcontainingTypes-&gt;includes(association.partOf)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='not association.oclIsUndefined() implies\n\tcontainingType = association.partOf'"
 	 * @generated
 	 */
 	boolean isIsSourceAssociation();
@@ -61,19 +72,6 @@ public interface UnitAssociation extends UnitFeature, AssociationReference {
 	 * @generated
 	 */
 	Entity getTargetEntity();
-
-	/**
-	 * Returns the value of the '<em><b>Containing Types</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Entity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containing Types</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_ContainingTypes()
-	 * @model changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='displayedOn.contentTypes'"
-	 * @generated
-	 */
-	EList<Entity> getContainingTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' reference.

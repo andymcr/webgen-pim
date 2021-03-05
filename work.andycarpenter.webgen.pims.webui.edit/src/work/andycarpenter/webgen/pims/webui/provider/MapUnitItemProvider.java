@@ -121,8 +121,9 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof MapUnit) {
+						final MapUnit mapUnit = (MapUnit) object;
 						final Set<LocationAttribute> attributes = new HashSet<LocationAttribute>();
-						for (Attribute attribute : getAttributes((MapUnit) object)) {
+						for (Attribute attribute : mapUnit.getContentType().getAttributes()) {
 							if (attribute instanceof LocationAttribute) {
 								attributes.add((LocationAttribute) attribute);
 							}
@@ -155,7 +156,8 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof MapUnit) {
-						return getAttributes((MapUnit) object);
+						final MapUnit mapUnit = (MapUnit) object;
+						return mapUnit.getContentType().getAttributes();
 					}
 
 					return Collections.emptySet();

@@ -61,7 +61,7 @@ public class ActionItemProvider
 			addAnchorClassPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
-			addContainingTypesPropertyDescriptor(object);
+			addContainingTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -243,24 +243,24 @@ public class ActionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Containing Types feature.
+	 * This adds a property descriptor for the Containing Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContainingTypesPropertyDescriptor(Object object) {
+	protected void addContainingTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Action_containingTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_containingTypes_feature", "_UI_Action_type"),
-				 WebuiPackage.Literals.ACTION__CONTAINING_TYPES,
+				 getString("_UI_Action_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Action_containingType_feature", "_UI_Action_type"),
+				 WebuiPackage.Literals.ACTION__CONTAINING_TYPE,
 				 true,
 				 false,
 				 true,
 				 null,
-				 getString("_UI_DebugPropertyCategory"),
+				 null,
 				 null));
 	}
 

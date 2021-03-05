@@ -14,10 +14,10 @@ helper context Website!CollectionUnit def: findContainerRepository() : ORM!Repos
 		endif;
 
 helper context Website!CollectionUnit def: findRepositoriesUsed() : Sequence(ORM!Repository)
-	= if self.contentType->isEmpty() then
+	= if self.contentType.oclIsUndefined() then
 			Sequence{}
 		else
-			Sequence{ self.contentType->first().repository.findRepository() }
+			Sequence{ self.contentType.repository.findRepository() }
 				->union(let containerRepository : ODM!Repository = self.findContainerRepository()
 							in if self.omitContainerLoad or containerRepository.oclIsUndefined() then
 									Sequence{}

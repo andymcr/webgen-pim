@@ -4,16 +4,11 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -21,22 +16,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-
-import work.andycarpenter.webgen.pims.expression.Expression;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
-import work.andycarpenter.webgen.pims.webui.Action;
-import work.andycarpenter.webgen.pims.webui.ActionContainer;
-import work.andycarpenter.webgen.pims.webui.Badge;
-import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
-import work.andycarpenter.webgen.pims.webui.UnitAssociation;
-import work.andycarpenter.webgen.pims.webui.UnitElement;
-import work.andycarpenter.webgen.pims.webui.UnitField;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.ChildPath} object.
@@ -125,199 +104,4 @@ public class ChildPathItemProvider
 		return WebuiEditPlugin.INSTANCE;
 	}
 
-	protected Entity getParentTypeX(final FeatureChildPath child) {
-		Entity parentTarget;
-		if (child.getPartOf() instanceof UnitAssociation) {
-			parentTarget = getTargetX((UnitAssociation) child.getPartOf());
-		} else if (child.getPartOf() instanceof FeaturePathAssociation) {
-			parentTarget = getTargetX((FeaturePathAssociation) child.getPartOf());
-		} else {
-			final ChildPathAssociation parent = (ChildPathAssociation) child.getPartOf();
-			if (getParentTypeX(parent).equals(parent.getAssociation().getPartOf())) {
-				parentTarget = parent.getAssociation().getTargetEntity();
-			} else {
-				parentTarget = parent.getAssociation().getPartOf();
-			}
-		}
-		return parentTarget;
-	}
-
-	protected Entity getTargetX(final UnitAssociation association) {
-		final Set<Entity> entities = getContentTypesX(association.getDisplayedOn());
-		if (entities.contains(association.getAssociation().getPartOf())) {
-			return association.getAssociation().getTargetEntity();
-		} else{
-			return association.getAssociation().getPartOf();
-		}
-	}
-
-	protected Set<Entity> getContentTypesX(final DynamicUnit unit) {
-		final Set<Entity> contentType = new HashSet<Entity>();
-
-		if (unit instanceof SingletonUnit) {
-			final SingletonUnit singleton = (SingletonUnit) unit;
-			if (singleton.getContentType() != null) {
-				contentType.add(singleton.getContentType());
-				return contentType;
-			}
-		}
-
-		if (unit instanceof CollectionUnit) {
-			final CollectionUnit collection = (CollectionUnit) unit;
-			contentType.addAll(collection.getContentType());
-			return contentType;
-		}
-
-		return contentType;
-	}
-
-	protected Entity getTargetX(final FeaturePathAssociation path) {
-		if (path.eContainer() instanceof DynamicUnit) {
-			final Set<Entity> contentType
-				= getContentTypesX((DynamicUnit) path.eContainer());
-			if (contentType.contains(path.getAssociation().getPartOf())) {
-				return path.getAssociation().getTargetEntity();
-			} else{
-				return path.getAssociation().getPartOf();
-			}
-
-		} else if (path.eContainer() instanceof Action) {
-			final Set<Entity> entities
-				= getEntitiesX((ActionContainer) path.eContainer().eContainer());
-			if (entities.contains(path.getAssociation().getPartOf())) {
-				return path.getAssociation().getTargetEntity();
-			} else{
-				return path.getAssociation().getPartOf();
-			}
-
-		} else if (path.eContainer() instanceof Badge) {
-			final Set<Entity> entities
-				= getEntitiesX((Badge) path.eContainer());
-			if (entities.contains(path.getAssociation().getPartOf())) {
-				return path.getAssociation().getTargetEntity();
-			} else{
-				return path.getAssociation().getPartOf();
-			}
-
-		} else if (path.eContainer() instanceof Expression) {
-			final Set<Entity> entities
-				= getEntitiesX((Expression) path.eContainer());
-			if (entities.contains(path.getAssociation().getPartOf())) {
-				return path.getAssociation().getTargetEntity();
-			} else{
-				return path.getAssociation().getPartOf();
-			}
-
-		} else {
-			return null;
-		}
-	}
-
-	protected Set<Entity> getEntitiesX(final ActionContainer container) {
-		final Set<Entity> entities = new HashSet<Entity>();
-		if (container instanceof CollectionUnit) {
-			entities.addAll(((CollectionUnit) container).getContentType());
-		} else if (container instanceof UnitElement) {
-			entities.add(getParentTypeX(
-				((UnitElement) container).getAttribute()));
-		} else if (container instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) container).getAssociation().getPartOf());
-		}
-
-		return entities;
-	}
-
-	protected Set<Entity> getEntitiesX(final Badge badge) {
-		final Set<Entity> entities = new HashSet<Entity>();
-		if (badge.eContainer() instanceof CollectionUnit) {
-			entities.addAll(((CollectionUnit) badge.eContainer()).getContentType());
-		} else if (badge.eContainer() instanceof UnitElement) {
-			entities.add(getParentTypeX(
-				((UnitElement) badge.eContainer()).getAttribute()));
-		} else if (badge.eContainer() instanceof UnitAssociation) {
-			entities.add(((UnitAssociation) badge.eContainer()).getAssociation().getPartOf());
-		}
-
-		return entities;
-	}
-
-	protected Set<Entity> getEntitiesX(final Expression expression) {
-		final DynamicUnit unit = getDynamicUnitContextX(expression);
-		if (unit != null) {
-			return getContentTypesX(unit);
-		}
-
-		final ActionContainer action = getActionContextX(expression);
-		if (action != null) {
-			return getEntitiesX(action);
-		}
-
-		final Badge badge = getBadgeContextX(expression);
-		if (badge != null) {
-			return getEntitiesX(badge);
-		}
-
-		return Collections.emptySet();
-	}
-
-	protected Entity getParentTypeX(final Attribute attribute) {
-		return attribute.getPartOf();
-	}
-
-	protected Object getContextX(final Object object) {
-		if (object instanceof EObject) {
-			return ((EObject) object).eContainer();
-		} else {
-			return null;
-		}
-	}
-
-	protected DynamicUnit getDynamicUnitContextX(final Object object) {
-		Object container = getContextX(object);
-		while (container != null) {
-			if (container instanceof DynamicUnit) {
-				return (DynamicUnit) container;
-			}
-			container = getContextX(container);
-		}
-
-		return null;
-	}
-
-	protected UnitField getUnitFieldContextX(final Object object) {
-		Object container = getContextX(object);
-		while (container != null) {
-			if (container instanceof UnitField) {
-				return (UnitField) container;
-			}
-			container = getContextX(container);
-		}
-
-		return null;
-	}
-
-	protected ActionContainer getActionContextX(final Object object) { 
-	Object container = getContextX(object); 
- 		while (container != null) { 
- 			if (container instanceof ActionContainer) { 
- 				return (ActionContainer) container; 
- 			} 
- 			container = getContextX(container); 
- 		} 
- 
- 		return null; 
-	}
- 
-	protected Badge getBadgeContextX(final Object object) { 
-	Object container = getContextX(object); 
- 		while (container != null) { 
- 			if (container instanceof Badge) { 
- 				return (Badge) container; 
- 			} 
- 			container = getContextX(container); 
- 		} 
- 
- 		return null; 
-	}
- 
 }

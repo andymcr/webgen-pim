@@ -4,10 +4,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,8 +14,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -239,24 +234,6 @@ public class ImageUnitItemProvider extends CollectionUnitItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	protected Entity getSelectType(final ImageUnit unit) {
-		if (unit.getSelection() == null) {
-			return null;
-		}
-		Entity pathType = null;
-		Set<Entity> entities = new HashSet<Entity>(unit.getContentType());
-		for (Association element : unit.getSelection().getSelectPath()) {
-			if (entities.contains(element.getPartOf())) {
-				pathType = element.getTargetEntity();
-			} else {
-				pathType = element.getPartOf();
-			}
-			entities.add(element.getPartOf());
-			entities.add(element.getTargetEntity());
-		}
-		return pathType;
 	}
 
 }

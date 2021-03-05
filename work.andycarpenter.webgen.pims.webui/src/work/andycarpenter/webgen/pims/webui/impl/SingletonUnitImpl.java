@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -21,7 +20,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SingletonUnitImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SingletonUnitImpl#getContentType <em>Content Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,16 +34,6 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * @ordered
 	 */
 	protected Label title;
-	/**
-	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContentType()
-	 * @generated
-	 * @ordered
-	 */
-	protected Entity contentType;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,54 +99,11 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 	 * @generated
 	 */
 	@Override
-	public Entity getContentType() {
-		if (contentType != null && contentType.eIsProxy()) {
-			InternalEObject oldContentType = (InternalEObject)contentType;
-			contentType = (Entity)eResolveProxy(oldContentType);
-			if (contentType != oldContentType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE, oldContentType, contentType));
-			}
-		}
-		return contentType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetContentType() {
-		return contentType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setContentType(Entity newContentType) {
-		Entity oldContentType = contentType;
-		contentType = newContentType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE, oldContentType, contentType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.SINGLETON_UNIT__TITLE:
 				if (resolve) return getTitle();
 				return basicGetTitle();
-			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
-				if (resolve) return getContentType();
-				return basicGetContentType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,9 +118,6 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 		switch (featureID) {
 			case WebuiPackage.SINGLETON_UNIT__TITLE:
 				setTitle((Label)newValue);
-				return;
-			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
-				setContentType((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,9 +134,6 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 			case WebuiPackage.SINGLETON_UNIT__TITLE:
 				setTitle((Label)null);
 				return;
-			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
-				setContentType((Entity)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -209,8 +148,6 @@ public abstract class SingletonUnitImpl extends DynamicUnitImpl implements Singl
 		switch (featureID) {
 			case WebuiPackage.SINGLETON_UNIT__TITLE:
 				return title != null;
-			case WebuiPackage.SINGLETON_UNIT__CONTENT_TYPE:
-				return contentType != null;
 		}
 		return super.eIsSet(featureID);
 	}

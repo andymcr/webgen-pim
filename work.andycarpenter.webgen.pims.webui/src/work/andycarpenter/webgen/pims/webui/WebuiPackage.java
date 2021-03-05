@@ -1235,22 +1235,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_UNIT__ROUTE_ACTUALS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__REQUIRES_ROLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int CONTENT_UNIT__REQUIRES_ROLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -1259,7 +1250,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__PURPOSE_SUMMARY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int CONTENT_UNIT__PURPOSE_SUMMARY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -1268,7 +1259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int CONTENT_UNIT__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -1277,7 +1268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1286,7 +1277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -1295,7 +1286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -1304,7 +1295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -1313,7 +1304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -1322,7 +1313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__PAGE_DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int CONTENT_UNIT__PAGE_DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Content Unit</em>' class.
@@ -1331,7 +1322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Content Unit</em>' class.
@@ -1350,52 +1341,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRouteActual()
 	 * @generated
 	 */
-	int ROUTE_ACTUAL = 12;
-
-	/**
-	 * The feature id for the '<em><b>Actual For</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTE_ACTUAL__ACTUAL_FOR = 0;
-
-	/**
-	 * The feature id for the '<em><b>Route Parameter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTE_ACTUAL__ROUTE_PARAMETER = 1;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTE_ACTUAL__VALUE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Route Actual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTE_ACTUAL_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Route Actual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTE_ACTUAL_OPERATION_COUNT = 0;
+	int ROUTE_ACTUAL = 15;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitImpl <em>Static Unit</em>}' class.
@@ -1405,7 +1351,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnit()
 	 * @generated
 	 */
-	int STATIC_UNIT = 13;
+	int STATIC_UNIT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1442,15 +1388,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIC_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_UNIT__ROUTE_ACTUALS = CONTENT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -1568,7 +1505,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateSitemapUnit()
 	 * @generated
 	 */
-	int CREATE_SITEMAP_UNIT = 14;
+	int CREATE_SITEMAP_UNIT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1605,15 +1542,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_SITEMAP_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_SITEMAP_UNIT__ROUTE_ACTUALS = CONTENT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -1740,7 +1668,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnit()
 	 * @generated
 	 */
-	int DYNAMIC_UNIT = 15;
+	int DYNAMIC_UNIT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1777,15 +1705,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__ROUTE_ACTUALS = CONTENT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -1887,13 +1806,31 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS = CONTENT_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTENT_TYPES = CONTENT_UNIT_FEATURE_COUNT + 2;
+	int DYNAMIC_UNIT__CONTENT_TYPE = CONTENT_UNIT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__CONTAINING_TYPE = CONTENT_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__ROUTE_ACTUALS = CONTENT_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -1902,7 +1839,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 3;
+	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -1911,7 +1848,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 4;
+	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -1920,7 +1857,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 5;
+	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -1929,7 +1866,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 6;
+	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -1938,7 +1875,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 7;
+	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -1947,7 +1884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 8;
+	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -1956,7 +1893,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 9;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -1965,7 +1902,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 10;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -1974,7 +1911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -1983,7 +1920,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -1992,7 +1929,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
+	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -2001,7 +1938,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
+	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -2010,7 +1947,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 15;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -2020,6 +1957,51 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT_OPERATION_COUNT = CONTENT_UNIT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Actual For</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE_ACTUAL__ACTUAL_FOR = 0;
+
+	/**
+	 * The feature id for the '<em><b>Route Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE_ACTUAL__ROUTE_PARAMETER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE_ACTUAL__VALUE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Route Actual</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE_ACTUAL_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Route Actual</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE_ACTUAL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl <em>Unit Field</em>}' class.
@@ -2989,13 +2971,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__CONTAINING_TYPES = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ASSOCIATION__CONTAINING_TYPE = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
@@ -3244,13 +3226,13 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH__CONTAINING_TYPES = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+	int FEATURE_PATH__CONTAINING_TYPE = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -3308,13 +3290,13 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH_ATTRIBUTE__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -3390,13 +3372,13 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH_ASSOCIATION__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -3508,13 +3490,13 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH_LABEL__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_LABEL__CONTAINING_TYPES = FEATURE_PATH__CONTAINING_TYPES;
+	int FEATURE_PATH_LABEL__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -4541,15 +4523,6 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4649,13 +4622,31 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int SINGLETON_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -4775,22 +4766,13 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__TITLE = DYNAMIC_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Singleton Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 2;
+	int SINGLETON_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Singleton Unit</em>' class.
@@ -4846,15 +4828,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -4956,13 +4929,31 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int COLLECTION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -5100,40 +5091,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE = DYNAMIC_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__SELECT_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
+	int COLLECTION_UNIT__SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -5142,7 +5106,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -5151,7 +5115,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -5160,7 +5124,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -5169,7 +5133,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -5178,7 +5142,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -5187,7 +5151,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -5196,7 +5160,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -5205,7 +5169,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -5214,7 +5178,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -5223,7 +5187,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -5232,7 +5196,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -5241,7 +5205,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -5250,7 +5214,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 19;
+	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -5259,7 +5223,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 20;
+	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -5268,7 +5232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 21;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -5277,7 +5241,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 22;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -5286,7 +5250,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 23;
+	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -5295,7 +5259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 24;
+	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -5304,7 +5268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 25;
+	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -5313,7 +5277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 26;
+	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -5322,7 +5286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 27;
+	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -5331,7 +5295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -5340,7 +5304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 29;
+	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -5349,7 +5313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 30;
+	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -5358,7 +5322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 31;
+	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -5367,7 +5331,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 32;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 29;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -5423,15 +5387,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT = SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__ROUTE_ACTUALS = SINGLETON_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -5533,13 +5488,31 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__ACTION_NAVIGATION_CLASS = SINGLETON_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONTENT_TYPES = SINGLETON_UNIT__CONTENT_TYPES;
+	int EDIT_UNIT__CONTENT_TYPE = SINGLETON_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CONTAINING_TYPE = SINGLETON_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__ROUTE_ACTUALS = SINGLETON_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -5657,15 +5630,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__TITLE = SINGLETON_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__CONTENT_TYPE = SINGLETON_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -5813,15 +5777,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5921,13 +5876,31 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
+	int CREATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -6045,15 +6018,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__TITLE = EDIT_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -6201,15 +6165,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6309,13 +6264,31 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
+	int CREATE_UPDATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -6433,15 +6406,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -6616,15 +6580,6 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6724,13 +6679,31 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
+	int UPDATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -6848,15 +6821,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -7013,15 +6977,6 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7121,13 +7076,31 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
+	int MAP_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7245,15 +7218,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__TITLE = EDIT_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -7437,15 +7401,6 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__CREATE_DEFAULT_URI_ELEMENT = SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__ROUTE_ACTUALS = SINGLETON_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7545,13 +7500,31 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__ACTION_NAVIGATION_CLASS = SINGLETON_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__CONTENT_TYPES = SINGLETON_UNIT__CONTENT_TYPES;
+	int DETAILS_UNIT__CONTENT_TYPE = SINGLETON_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__CONTAINING_TYPE = SINGLETON_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__ROUTE_ACTUALS = SINGLETON_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7671,15 +7644,6 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__TITLE = SINGLETON_UNIT__TITLE;
 
 	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__CONTENT_TYPE = SINGLETON_UNIT__CONTENT_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7760,15 +7724,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -7870,13 +7825,31 @@ public interface WebuiPackage extends EPackage {
 	int INDEX_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
+	int INDEX_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -8012,33 +7985,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDEX_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -8357,15 +8303,6 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8465,13 +8402,31 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
+	int CARDS_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -8607,33 +8562,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -9187,15 +9115,6 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9295,13 +9214,31 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__ACTION_NAVIGATION_CLASS = CARDS_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
+	int TEXT_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -9437,33 +9374,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -9835,15 +9745,6 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9943,13 +9844,31 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__ACTION_NAVIGATION_CLASS = CARDS_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
+	int DATE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -10085,33 +10004,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -10492,15 +10384,6 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10600,13 +10483,31 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__CONTENT_TYPES = COLLECTION_UNIT__CONTENT_TYPES;
+	int IMAGE_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -10742,33 +10643,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__SELECT_TYPE = COLLECTION_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -11095,15 +10969,6 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11203,13 +11068,31 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__ACTION_NAVIGATION_CLASS = CARDS_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CONTENT_TYPES = CARDS_UNIT__CONTENT_TYPES;
+	int IMAGE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__ROUTE_ACTUALS = CARDS_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -11345,33 +11228,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__TRUNCATE_ELEMENT_TITLE = CARDS_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__CONTENT_TYPE = CARDS_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__SELECT_TYPE = CARDS_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__CONTAINING_TYPE = CARDS_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -11806,15 +11662,6 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__CREATE_DEFAULT_URI_ELEMENT = IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11914,13 +11761,31 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__ACTION_NAVIGATION_CLASS = IMAGE_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTENT_TYPES = IMAGE_UNIT__CONTENT_TYPES;
+	int SLIDER_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -12056,33 +11921,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__TRUNCATE_ELEMENT_TITLE = IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__SELECT_TYPE = IMAGE_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -12427,15 +12265,6 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__CREATE_DEFAULT_URI_ELEMENT = IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12535,13 +12364,31 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__ACTION_NAVIGATION_CLASS = IMAGE_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTENT_TYPES = IMAGE_UNIT__CONTENT_TYPES;
+	int GALLERY_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -12677,33 +12524,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__TRUNCATE_ELEMENT_TITLE = IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Select Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__SELECT_TYPE = IMAGE_UNIT__SELECT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -13057,15 +12877,6 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13165,13 +12976,31 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int CONTROL_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -13363,15 +13192,6 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTROL_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__ROUTE_ACTUALS = CONTROL_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13471,13 +13291,31 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__ACTION_NAVIGATION_CLASS = CONTROL_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__CONTENT_TYPES = CONTROL_UNIT__CONTENT_TYPES;
+	int SEARCH_UNIT__CONTENT_TYPE = CONTROL_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__CONTAINING_TYPE = CONTROL_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__ROUTE_ACTUALS = CONTROL_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -13688,15 +13526,6 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13796,13 +13625,31 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int REGISTRATION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -13977,15 +13824,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14085,13 +13923,31 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONTENT_TYPES = EDIT_UNIT__CONTENT_TYPES;
+	int LOGIN_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -14209,15 +14065,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__TITLE = EDIT_UNIT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -14365,15 +14212,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14473,13 +14311,31 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int LOGOUT_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -14654,15 +14510,6 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14762,13 +14609,31 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Content Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONTENT_TYPES = DYNAMIC_UNIT__CONTENT_TYPES;
+	int FORGOTTEN_PASSWORD_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -15070,13 +14935,13 @@ public interface WebuiPackage extends EPackage {
 	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONTAINING_TYPES = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -15224,13 +15089,13 @@ public interface WebuiPackage extends EPackage {
 	int SECURITY_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_ACTION__CONTAINING_TYPES = ACTION__CONTAINING_TYPES;
+	int SECURITY_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -15387,13 +15252,13 @@ public interface WebuiPackage extends EPackage {
 	int SELECT_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECT_ACTION__CONTAINING_TYPES = ACTION__CONTAINING_TYPES;
+	int SELECT_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -15549,13 +15414,13 @@ public interface WebuiPackage extends EPackage {
 	int DELETE_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_ACTION__CONTAINING_TYPES = ACTION__CONTAINING_TYPES;
+	int DELETE_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -15711,13 +15576,13 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__CONTAINING_TYPES = ACTION__CONTAINING_TYPES;
+	int OPERATION_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -15901,13 +15766,13 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_OPERATION_ACTION__CONTAINING_TYPES = OPERATION_ACTION__CONTAINING_TYPES;
+	int INSTANCE_OPERATION_ACTION__CONTAINING_TYPE = OPERATION_ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -16091,13 +15956,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_OPERATION_ACTION__CONTAINING_TYPES = OPERATION_ACTION__CONTAINING_TYPES;
+	int CONTAINER_OPERATION_ACTION__CONTAINING_TYPE = OPERATION_ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -16281,13 +16146,13 @@ public interface WebuiPackage extends EPackage {
 	int GENERAL_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Containing Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERAL_OPERATION_ACTION__CONTAINING_TYPES = OPERATION_ACTION__CONTAINING_TYPES;
+	int GENERAL_OPERATION_ACTION__CONTAINING_TYPE = OPERATION_ACTION__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -17339,17 +17204,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_CreateDefaultUriElement();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRouteActuals <em>Route Actuals</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Route Actuals</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getRouteActuals()
-	 * @see #getContentUnit()
-	 * @generated
-	 */
-	EReference getContentUnit_RouteActuals();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17555,15 +17409,37 @@ public interface WebuiPackage extends EPackage {
 	EClass getDynamicUnit();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes <em>Content Types</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentType <em>Content Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Content Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentTypes()
+	 * @return the meta object for the reference '<em>Content Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentType()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EReference getDynamicUnit_ContentTypes();
+	EReference getDynamicUnit_ContentType();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EReference getDynamicUnit_ContainingType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals <em>Route Actuals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Route Actuals</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EReference getDynamicUnit_RouteActuals();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}'.
@@ -18068,6 +17944,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getUnitAssociation();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingType <em>Containing Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingType()
+	 * @see #getUnitAssociation()
+	 * @generated
+	 */
+	EReference getUnitAssociation_ContainingType();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18088,17 +17975,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnitAssociation_TargetEntity();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes <em>Containing Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Containing Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingTypes()
-	 * @see #getUnitAssociation()
-	 * @generated
-	 */
-	EReference getUnitAssociation_ContainingTypes();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}'.
@@ -18219,15 +18095,15 @@ public interface WebuiPackage extends EPackage {
 	EClass getFeaturePath();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingTypes <em>Containing Types</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingType <em>Containing Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Containing Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingTypes()
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingType()
 	 * @see #getFeaturePath()
 	 * @generated
 	 */
-	EReference getFeaturePath_ContainingTypes();
+	EReference getFeaturePath_ContainingType();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext <em>Use Container As Context</em>}'.
@@ -18572,17 +18448,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getSingletonUnit_Title();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType <em>Content Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Content Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SingletonUnit#getContentType()
-	 * @see #getSingletonUnit()
-	 * @generated
-	 */
-	EReference getSingletonUnit_ContentType();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit <em>Collection Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18624,39 +18489,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCollectionUnit_TruncateElementTitle();
-
-	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType <em>Content Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Content Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getContentType()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EReference getCollectionUnit_ContentType();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType <em>Select Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Select Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelectType()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EReference getCollectionUnit_SelectType();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getContainingType <em>Containing Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Containing Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getContainingType()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EReference getCollectionUnit_ContainingType();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}'.
@@ -19825,15 +19657,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getAction_FooterClass();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.Action#getContainingTypes <em>Containing Types</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Action#getContainingType <em>Containing Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Containing Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Action#getContainingTypes()
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Action#getContainingType()
 	 * @see #getAction()
 	 * @generated
 	 */
-	EReference getAction_ContainingTypes();
+	EReference getAction_ContainingType();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SecurityAction <em>Security Action</em>}'.
@@ -20876,14 +20708,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT = eINSTANCE.getContentUnit_CreateDefaultUriElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Route Actuals</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT_UNIT__ROUTE_ACTUALS = eINSTANCE.getContentUnit_RouteActuals();
-
-		/**
 		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21044,12 +20868,28 @@ public interface WebuiPackage extends EPackage {
 		EClass DYNAMIC_UNIT = eINSTANCE.getDynamicUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Content Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DYNAMIC_UNIT__CONTENT_TYPES = eINSTANCE.getDynamicUnit_ContentTypes();
+		EReference DYNAMIC_UNIT__CONTENT_TYPE = eINSTANCE.getDynamicUnit_ContentType();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DYNAMIC_UNIT__CONTAINING_TYPE = eINSTANCE.getDynamicUnit_ContainingType();
+
+		/**
+		 * The meta object literal for the '<em><b>Route Actuals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DYNAMIC_UNIT__ROUTE_ACTUALS = eINSTANCE.getDynamicUnit_RouteActuals();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Fields</b></em>' containment reference list feature.
@@ -21428,6 +21268,14 @@ public interface WebuiPackage extends EPackage {
 		EClass UNIT_ASSOCIATION = eINSTANCE.getUnitAssociation();
 
 		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_ASSOCIATION__CONTAINING_TYPE = eINSTANCE.getUnitAssociation_ContainingType();
+
+		/**
 		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21442,14 +21290,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNIT_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getUnitAssociation_TargetEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_ASSOCIATION__CONTAINING_TYPES = eINSTANCE.getUnitAssociation_ContainingTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Options</b></em>' reference feature.
@@ -21546,12 +21386,12 @@ public interface WebuiPackage extends EPackage {
 		EClass FEATURE_PATH = eINSTANCE.getFeaturePath();
 
 		/**
-		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE_PATH__CONTAINING_TYPES = eINSTANCE.getFeaturePath_ContainingTypes();
+		EReference FEATURE_PATH__CONTAINING_TYPE = eINSTANCE.getFeaturePath_ContainingType();
 
 		/**
 		 * The meta object literal for the '<em><b>Use Container As Context</b></em>' attribute feature.
@@ -21830,14 +21670,6 @@ public interface WebuiPackage extends EPackage {
 		EReference SINGLETON_UNIT__TITLE = eINSTANCE.getSingletonUnit_Title();
 
 		/**
-		 * The meta object literal for the '<em><b>Content Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SINGLETON_UNIT__CONTENT_TYPE = eINSTANCE.getSingletonUnit_ContentType();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl <em>Collection Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21870,30 +21702,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE = eINSTANCE.getCollectionUnit_TruncateElementTitle();
-
-		/**
-		 * The meta object literal for the '<em><b>Content Type</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLECTION_UNIT__CONTENT_TYPE = eINSTANCE.getCollectionUnit_ContentType();
-
-		/**
-		 * The meta object literal for the '<em><b>Select Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLECTION_UNIT__SELECT_TYPE = eINSTANCE.getCollectionUnit_SelectType();
-
-		/**
-		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLECTION_UNIT__CONTAINING_TYPE = eINSTANCE.getCollectionUnit_ContainingType();
 
 		/**
 		 * The meta object literal for the '<em><b>Selection</b></em>' reference feature.
@@ -22804,12 +22612,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute ACTION__FOOTER_CLASS = eINSTANCE.getAction_FooterClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Containing Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTION__CONTAINING_TYPES = eINSTANCE.getAction_ContainingTypes();
+		EReference ACTION__CONTAINING_TYPE = eINSTANCE.getAction_ContainingType();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SecurityActionImpl <em>Security Action</em>}' class.

@@ -30,17 +30,12 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -104,7 +99,7 @@ public class RouteActualItemProvider
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof RouteActual) {
 						final RouteActual actual = (RouteActual) object;
-						return getKeys(getContentType(actual.getActualFor()));
+						return getKeys(actual.getActualFor().getContentType());
 					}
 
 					return Collections.emptySet();
@@ -322,19 +317,6 @@ public class RouteActualItemProvider
 		return WebuiEditPlugin.INSTANCE;
 	}
 
-	private Entity getContentType(final ContentUnit unit) {
-		if (unit instanceof SingletonUnit)
-			return ((SingletonUnit) unit).getContentType();
-		else if (unit instanceof CollectionUnit) {
-			final CollectionUnit collectionUnit = (CollectionUnit) unit;
-			if (collectionUnit.getContentType().isEmpty())
-				return null;
-			else
-				return collectionUnit.getContentType().get(0);
-		} else
-			return null;
-	}
-
 	private Set<Attribute> getKeys(final Entity entity) {
 		final Set<Attribute> keys = new HashSet<Attribute>();
 		for (Feature feature : entity.getKeys()) {
@@ -342,25 +324,11 @@ public class RouteActualItemProvider
 				keys.add((Attribute) feature);
 			}
 		}
-		final Entity parent = getParent(entity);
+		final Entity parent = entity.getContainingType();
 		if (parent != null) {
 			keys.addAll(getKeys(parent));
 		}
 		return keys;
-	}
-
-	private Entity getParent(final Entity entity) {
-		if (!(entity instanceof Entity)) {
-			return null;
-		}
-		for (Association end : ((Entity) entity).getAssociationEnds()) {
-			if (end instanceof AssociationWithContainment) {
-				final AssociationWithContainment association = (AssociationWithContainment) end;
-				return association.getPartOf();
-			}
-		}
-
-		return null;
 	}
 
 }

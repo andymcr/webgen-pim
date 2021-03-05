@@ -4,10 +4,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -21,13 +18,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.Page;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -694,40 +686,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	protected Set<Entity> getContentType(final DynamicUnit unit) {
-		final Set<Entity> contentType = new HashSet<Entity>();
-
-		if (unit instanceof SingletonUnit) {
-			final SingletonUnit singleton = (SingletonUnit) unit;
-			if (singleton.getContentType() != null) {
-				contentType.add(singleton.getContentType());
-				return contentType;
-			}
-		}
-
-		if (unit instanceof CollectionUnit) {
-			final CollectionUnit collection = (CollectionUnit) unit;
-			contentType.addAll(collection.getContentType());
-			return contentType;
-		}
-
-		return contentType;
-	}
-
-	protected Page getPageDisplayedOn(final UnitFeature feature) {
-		return getPageDisplayedOn(feature.getDisplayedOn());
-	}
-
-	protected Page getPageDisplayedOn(final DynamicUnit unit) {
-		if (unit.getDisplayedOn() instanceof Page) {
-			return (Page) unit.getDisplayedOn();
-		} else if (unit.getDisplayedOn() instanceof DynamicUnit) {
-			return getPageDisplayedOn((DynamicUnit) unit.getDisplayedOn());
-		}
-
-		return null;
 	}
 
 }

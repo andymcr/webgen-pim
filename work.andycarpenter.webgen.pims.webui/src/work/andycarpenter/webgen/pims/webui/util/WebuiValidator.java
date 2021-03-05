@@ -118,14 +118,14 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePageLink((PageLink)value, diagnostics, context);
 			case WebuiPackage.CONTENT_UNIT:
 				return validateContentUnit((ContentUnit)value, diagnostics, context);
-			case WebuiPackage.ROUTE_ACTUAL:
-				return validateRouteActual((RouteActual)value, diagnostics, context);
 			case WebuiPackage.STATIC_UNIT:
 				return validateStaticUnit((StaticUnit)value, diagnostics, context);
 			case WebuiPackage.CREATE_SITEMAP_UNIT:
 				return validateCreateSitemapUnit((CreateSitemapUnit)value, diagnostics, context);
 			case WebuiPackage.DYNAMIC_UNIT:
 				return validateDynamicUnit((DynamicUnit)value, diagnostics, context);
+			case WebuiPackage.ROUTE_ACTUAL:
+				return validateRouteActual((RouteActual)value, diagnostics, context);
 			case WebuiPackage.UNIT_FIELD:
 				return validateUnitField((UnitField)value, diagnostics, context);
 			case WebuiPackage.UNIT_FEATURE:
@@ -580,30 +580,20 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "let entities : OrderedSet(persistence::Entity)\n" +
-		"\t= if self.oclIsKindOf(SingletonUnit) then\n" +
-		"\t\t\tOrderedSet{self.oclAsType(SingletonUnit).contentType}\n" +
-		"\t\telse if self.oclIsKindOf(CollectionUnit) then\n" +
-		"\t\t\tself.oclAsType(CollectionUnit).contentType\n" +
+	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "displayFields\n" +
+		"\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n" +
+		"\t->select(f | \n" +
+		"\t\tif f.oclIsTypeOf(UnitElement) then\n" +
+		"\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n" +
 		"\t\telse\n" +
-		"\t\t\tOrderedSet{}\n" +
-		"\t\tendif endif\n" +
-		"\tin let features : Collection(persistence::Feature)\n" +
-		"\t\t= entities->collect(eov | eov.allFeatures)\n" +
-		"\t\tin displayFields\n" +
-		"\t\t\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n" +
-		"\t\t\t->select(f | \n" +
-		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n" +
-		"\t\t\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n" +
-		"\t\t\t\telse\n" +
-		"\t\t\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n" +
-		"\t\t\t\tendif)\n" +
-		"\t\t\t->forAll(f | \n" +
-		"\t\t\t\tif f.oclIsTypeOf(UnitElement) then\n" +
-		"\t\t\t\t\tfeatures->includes(f.oclAsType(UnitElement).attribute)\n" +
-		"\t\t\t\telse\n" +
-		"\t\t\t\t\tfeatures->includes(f.oclAsType(UnitAssociation).association)\n" +
-		"\t\t\t\tendif)";
+		"\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n" +
+		"\t\tendif)\n" +
+		"\t->forAll(f | \n" +
+		"\t\tif f.oclIsTypeOf(UnitElement) then\n" +
+		"\t\t\tcontentType.features->includes(f.oclAsType(UnitElement).attribute)\n" +
+		"\t\telse\n" +
+		"\t\t\tcontentType.features->includes(f.oclAsType(UnitAssociation).association)\n" +
+		"\t\tendif)";
 
 	/**
 	 * Validates the featuresMustBeFromContentType constraint of '<em>Dynamic Unit</em>'.

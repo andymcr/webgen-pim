@@ -122,10 +122,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createContentUnitAdapter();
 			}
 			@Override
-			public Adapter caseRouteActual(RouteActual object) {
-				return createRouteActualAdapter();
-			}
-			@Override
 			public Adapter caseStaticUnit(StaticUnit object) {
 				return createStaticUnitAdapter();
 			}
@@ -136,6 +132,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDynamicUnit(DynamicUnit object) {
 				return createDynamicUnitAdapter();
+			}
+			@Override
+			public Adapter caseRouteActual(RouteActual object) {
+				return createRouteActualAdapter();
 			}
 			@Override
 			public Adapter caseUnitField(UnitField object) {

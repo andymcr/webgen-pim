@@ -5,10 +5,7 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,8 +14,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.webui.FeaturePathLabel;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -74,12 +69,8 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof FeaturePathLabel) {
-						final Set<Label> labels = new HashSet<Label>();
 						final FeaturePathLabel path = (FeaturePathLabel) object;
-						for (Entity entity : path.getContainingTypes()) {
-							labels.addAll(entity.getLabels());
-						}
-						return labels;
+						return path.getContainingType().getLabels();
 					}
 
 					return Collections.emptySet();

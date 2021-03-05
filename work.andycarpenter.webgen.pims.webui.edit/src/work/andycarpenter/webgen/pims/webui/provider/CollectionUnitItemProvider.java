@@ -19,11 +19,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.Association;
-import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
+import work.andycarpenter.webgen.pims.persistence.Repository;
+import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
+import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -57,9 +58,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 
 			addUnitTitlePropertyDescriptor(object);
 			addTruncateElementTitlePropertyDescriptor(object);
-			addContentTypePropertyDescriptor(object);
-			addSelectTypePropertyDescriptor(object);
-			addContainingTypePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addFindContainerSelectionPropertyDescriptor(object);
 			addOmitContainerLoadPropertyDescriptor(object);
@@ -114,17 +112,9 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 							return Collections.emptySet();
 						}
 						final Set<Label> labels = new HashSet<Label>();
-						final Entity selectType = getSelectType(unit);
-						if (selectType != null) {
-							labels.addAll(selectType.getAttributes());
-							labels.addAll(selectType.getLabels());
-						} else if (unit.getContentType().size() > 0){
-							final AssociationWithContainment containingAssociation
-								= getContainingAssociation(unit.getContentType().get(0));
-							if (containingAssociation != null) {
-								labels.addAll(containingAssociation.getPartOf().getAttributes());
-								labels.addAll(containingAssociation.getPartOf().getLabels());
-							}
+						if (unit.getContainingType() != null) {
+							labels.addAll(unit.getContainingType().getAttributes());
+							labels.addAll(unit.getContainingType().getLabels());
 						}
 						return labels;
 					}
@@ -157,72 +147,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Content Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContentTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_contentType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_contentType_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__CONTENT_TYPE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Select Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_selectType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_selectType_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__SELECT_TYPE,
-				 false,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Containing Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContainingTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_containingType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_containingType_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__CONTAINING_TYPE,
-				 false,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Selection feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,7 +165,9 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
-						return getSelections((CollectionUnit) object);
+						final CollectionUnit unit = (CollectionUnit) object;
+						return getSelections(unit.getDisplayedOn().getWebUI(),
+								unit.getContentType());
 					}
 					return Collections.emptySet();
 				}
@@ -267,7 +193,11 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
-						return getContainerSelections((CollectionUnit) object);
+						final CollectionUnit unit = (CollectionUnit) object;
+						if (unit.getContainingType() != null) {
+							return getSelections(unit.getDisplayedOn().getWebUI(),
+									unit.getContainingType());
+						}
 					}
 
 					return Collections.emptySet();
@@ -316,7 +246,9 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
-						return getSelections((CollectionUnit) object);
+						final CollectionUnit unit = (CollectionUnit) object;
+						return getSelections(unit.getDisplayedOn().getWebUI(),
+								unit.getContentType());
 					}
 					return Collections.emptySet();
 				}
@@ -929,22 +861,15 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
 	}
 
-	protected Entity getSelectType(final CollectionUnit unit) {
-		if (unit.getSelection() == null) {
-			return null;
-		}
-		Entity pathType = null;
-		Set<Entity> entities = new HashSet<Entity>(unit.getContentType());
-		for (Association element : unit.getSelection().getSelectPath()) {
-			if (entities.contains(element.getPartOf())) {
-				pathType = element.getTargetEntity();
-			} else {
-				pathType = element.getPartOf();
+	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
+		final Set<Selection> selections = new HashSet<Selection>();
+		for (Repository repository : webUI.getPersistence().getRepositories()) {
+			if (contentType.equals(repository.getServes())) {
+				selections.addAll(repository.getSelections());
 			}
-			entities.add(element.getPartOf());
-			entities.add(element.getTargetEntity());
 		}
-		return pathType;
+
+		return selections;
 	}
 
 }

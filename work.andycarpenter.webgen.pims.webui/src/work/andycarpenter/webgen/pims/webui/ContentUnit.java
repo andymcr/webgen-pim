@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 
 /**
@@ -16,7 +15,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isCreateDefaultUriElement <em>Create Default Uri Element</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriElement <em>Uri Element</em>}</li>
@@ -87,24 +85,6 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setCreateDefaultUriElement(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.RouteActual}.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.RouteActual#getActualFor <em>Actual For</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Route Actuals</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Route Actuals</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_RouteActuals()
-	 * @see work.andycarpenter.webgen.pims.webui.RouteActual#getActualFor
-	 * @model opposite="actualFor" containment="true"
-	 * @generated
-	 */
-	EList<RouteActual> getRouteActuals();
 
 	/**
 	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.
