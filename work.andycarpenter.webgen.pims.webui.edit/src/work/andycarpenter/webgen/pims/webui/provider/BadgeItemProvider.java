@@ -65,7 +65,7 @@ public class BadgeItemProvider
 
 			addIconNamePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
-			addBadgeClassPropertyDescriptor(object);
+			addLocalBadgeClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -120,19 +120,19 @@ public class BadgeItemProvider
 		}
 
 	/**
-	 * This adds a property descriptor for the Badge Class feature.
+	 * This adds a property descriptor for the Local Badge Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addBadgeClassPropertyDescriptor(Object object) {
+	protected void addLocalBadgeClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Badge_badgeClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Badge_badgeClass_feature", "_UI_Badge_type"),
-				 WebuiPackage.Literals.BADGE__BADGE_CLASS,
+				 getString("_UI_Badge_localBadgeClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Badge_localBadgeClass_feature", "_UI_Badge_type"),
+				 WebuiPackage.Literals.BADGE__LOCAL_BADGE_CLASS,
 				 true,
 				 false,
 				 false,
@@ -211,7 +211,7 @@ public class BadgeItemProvider
 
 		switch (notification.getFeatureID(Badge.class)) {
 			case WebuiPackage.BADGE__ICON_NAME:
-			case WebuiPackage.BADGE__BADGE_CLASS:
+			case WebuiPackage.BADGE__LOCAL_BADGE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.BADGE__VALUE:

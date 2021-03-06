@@ -47,13 +47,13 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOverlaySingleSelectActionPropertyDescriptor(object);
-			addRowClassPropertyDescriptor(object);
-			addColumnClassPropertyDescriptor(object);
-			addCardClassPropertyDescriptor(object);
-			addCardHeaderClassPropertyDescriptor(object);
-			addCardBodyClassPropertyDescriptor(object);
-			addCardFooterClassPropertyDescriptor(object);
-			addUnitBadgeClassPropertyDescriptor(object);
+			addLocalRowClassPropertyDescriptor(object);
+			addLocalColumnClassPropertyDescriptor(object);
+			addLocalCardClassPropertyDescriptor(object);
+			addLocalCardHeaderClassPropertyDescriptor(object);
+			addLocalCardBodyClassPropertyDescriptor(object);
+			addLocalCardFooterClassPropertyDescriptor(object);
+			addLocalBadgeClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,19 +81,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Row Class feature.
+	 * This adds a property descriptor for the Local Row Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRowClassPropertyDescriptor(Object object) {
+	protected void addLocalRowClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_rowClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_rowClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__ROW_CLASS,
+				 getString("_UI_CardsUnit_localRowClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localRowClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_ROW_CLASS,
 				 true,
 				 false,
 				 false,
@@ -103,19 +103,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Column Class feature.
+	 * This adds a property descriptor for the Local Column Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addColumnClassPropertyDescriptor(Object object) {
+	protected void addLocalColumnClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_columnClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_columnClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__COLUMN_CLASS,
+				 getString("_UI_CardsUnit_localColumnClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localColumnClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_COLUMN_CLASS,
 				 true,
 				 false,
 				 false,
@@ -125,19 +125,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Card Class feature.
+	 * This adds a property descriptor for the Local Card Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCardClassPropertyDescriptor(Object object) {
+	protected void addLocalCardClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_cardClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_cardClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__CARD_CLASS,
+				 getString("_UI_CardsUnit_localCardClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localCardClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_CARD_CLASS,
 				 true,
 				 false,
 				 false,
@@ -147,19 +147,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Card Header Class feature.
+	 * This adds a property descriptor for the Local Card Header Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCardHeaderClassPropertyDescriptor(Object object) {
+	protected void addLocalCardHeaderClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_cardHeaderClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_cardHeaderClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__CARD_HEADER_CLASS,
+				 getString("_UI_CardsUnit_localCardHeaderClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localCardHeaderClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS,
 				 true,
 				 false,
 				 false,
@@ -169,19 +169,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Card Body Class feature.
+	 * This adds a property descriptor for the Local Card Body Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCardBodyClassPropertyDescriptor(Object object) {
+	protected void addLocalCardBodyClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_cardBodyClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_cardBodyClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__CARD_BODY_CLASS,
+				 getString("_UI_CardsUnit_localCardBodyClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localCardBodyClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_CARD_BODY_CLASS,
 				 true,
 				 false,
 				 false,
@@ -191,19 +191,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Card Footer Class feature.
+	 * This adds a property descriptor for the Local Card Footer Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCardFooterClassPropertyDescriptor(Object object) {
+	protected void addLocalCardFooterClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_cardFooterClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_cardFooterClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__CARD_FOOTER_CLASS,
+				 getString("_UI_CardsUnit_localCardFooterClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localCardFooterClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS,
 				 true,
 				 false,
 				 false,
@@ -213,19 +213,19 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Unit Badge Class feature.
+	 * This adds a property descriptor for the Local Badge Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUnitBadgeClassPropertyDescriptor(Object object) {
+	protected void addLocalBadgeClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CardsUnit_unitBadgeClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_unitBadgeClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__UNIT_BADGE_CLASS,
+				 getString("_UI_CardsUnit_localBadgeClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localBadgeClass_feature", "_UI_CardsUnit_type"),
+				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_BADGE_CLASS,
 				 true,
 				 false,
 				 false,
@@ -292,13 +292,13 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 
 		switch (notification.getFeatureID(CardsUnit.class)) {
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
-			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
-			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
-			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
-			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
-			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
-			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS:
+			case WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.CARDS_UNIT__BADGES:
