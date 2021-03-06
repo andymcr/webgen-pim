@@ -226,6 +226,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/grouping"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
           propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//Selection/selectPath"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Selection/pathType"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Data Access"
           ecoreFeature="ecore:EReference persistence.ecore#//Selection/filters"/>
       <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Selection/methodName"/>

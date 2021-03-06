@@ -67,6 +67,7 @@ public class SelectionItemProvider
 			addLimitPropertyDescriptor(object);
 			addGroupingPropertyDescriptor(object);
 			addSelectPathPropertyDescriptor(object);
+			addPathTypePropertyDescriptor(object);
 			addMethodNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -113,13 +114,8 @@ public class SelectionItemProvider
 			@Override
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
-					final Set<Entity> entities = getEntities((Selection) object);
-					final Set<Feature> fields = new HashSet<Feature>();
-					for (Entity entity : entities) {
-						fields.addAll(entity.getFeatures());
-					}
-
-					return fields;
+					final Selection selection = (Selection) object;
+					return selection.getDefinedBy().getServes().getAllFeatures();
 				}
 
 				return Collections.emptySet();
@@ -146,9 +142,9 @@ public class SelectionItemProvider
 			@Override
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
-					final Set<Entity> entities = getEntities((Selection) object);
+					final Selection selection = (Selection) object;
 					final Set<Association> associations = new HashSet<Association>();
-					for (Entity entity : entities) {
+					for (Entity entity : getEntities(selection)) {
 						associations.addAll(entity.getAllAssociations());
 					}
 
@@ -223,13 +219,13 @@ public class SelectionItemProvider
 			@Override
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
-					final Set<Entity> entities = getEntities((Selection) object);
-					final Set<Feature> fields = new HashSet<Feature>();
-					for (Entity entity : entities) {
-						fields.addAll(entity.getFeatures());
+					final Selection selection = (Selection) object;
+					final Set<Feature> features = new HashSet<Feature>();
+					for (Entity entity : getEntities(selection)) {
+						features.addAll(entity.getFeatures());
 					}
 
-					return fields;
+					return features;
 				}
 
 				return Collections.emptySet();
@@ -257,34 +253,38 @@ public class SelectionItemProvider
 			public Collection<?> getChoiceOfValues(Object object) {
 				if (object instanceof Selection) {
 					final Selection selection = (Selection) object;
-					final Association last
-						= selection.getSelectPath().isEmpty()
-							? null
-							: selection.getSelectPath().get(selection.getSelectPath().size() - 1);
-					final Association penultimate
-						= selection.getSelectPath().size() < 2
-							? null
-							: selection.getSelectPath().get(selection.getSelectPath().size() - 2);
-					final Set<Association> fields = new HashSet<Association>();
-					if ((last == null) || (penultimate == null)) {
-						final Set<Entity> entities = getEntities((Selection) object);
-						for (Entity entity : entities) {
-							fields.addAll(entity.getAllAssociations());
-						}
+					if (selection.getPathType() == null) {
+						return selection.getDefinedBy().getServes().getAllAssociations();
+					} else {
+						return selection.getPathType().getAllAssociations();
 					}
-					if (last != null) {
-						fields.addAll(last.getTargetEntity().getAllAssociations());
-						if (penultimate != null) {
-							fields.addAll(penultimate.getTargetEntity().getAllAssociations());
-						}
-					}
-
-					return fields;
 				}
 
 				return Collections.emptySet();
 			}
 		});
+	}
+
+	/**
+	 * This adds a property descriptor for the Path Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPathTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Selection_pathType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Selection_pathType_feature", "_UI_Selection_type"),
+				 PersistencePackage.Literals.SELECTION__PATH_TYPE,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -486,21 +486,10 @@ public class SelectionItemProvider
 	protected Set<Entity> getEntities(final Selection selection) {
 		final Set<Entity> entities = new HashSet<Entity>();
 		entities.add(selection.getDefinedBy().getServes());
-		final Set<Association> joins = new HashSet<Association>(selection.getJoins());
-		final Set<Association> handled = new HashSet<Association>();
-		do {
-			handled.clear();
-			for (Association join : joins) {
-				if (entities.contains(join.getPartOf())) {
-					entities.add(join.getTargetEntity());
-					handled.add(join);
-				} else if (entities.contains(join.getTargetEntity())) {
-					entities.add(join.getPartOf());
-					handled.add(join);
-				}
-			}
-			joins.removeAll(handled);
-		} while (!joins.isEmpty() && !handled.isEmpty());
+		for (Association join : selection.getJoins()) {
+			entities.add(join.getPartOf());
+			entities.add(join.getTargetEntity());
+		}
 
 		return entities;
 	}

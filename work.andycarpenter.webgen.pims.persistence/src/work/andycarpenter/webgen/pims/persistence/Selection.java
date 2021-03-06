@@ -25,6 +25,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getLimit <em>Limit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -184,6 +185,29 @@ public interface Selection extends NamedElement, FormalParameterList {
 	 * @generated
 	 */
 	EList<Association> getSelectPath();
+
+	/**
+	 * Returns the value of the '<em><b>Path Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Path Type</em>' reference.
+	 * @see #isSetPathType()
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getSelection_PathType()
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if selectPath-&gt;isEmpty() then\n\tnull\nelse if selectPath-&gt;size() = 1 then\n\tif selectPath-&gt;first().partOf = self.definedBy.serves then\n\t\tselectPath-&gt;first().targetEntity\n\telse\n\t\tselectPath-&gt;first().partOf\n\tendif\nelse\n\tselectPath-&gt;subOrderedSet(2, selectPath-&gt;size() )\n\t\t-&gt;iterate(a; result : Entity = if selectPath-&gt;first().partOf = self.definedBy.serves then\n\t\t\t\t\t\tselectPath-&gt;first().targetEntity\n\t\t\t\t\telse\n\t\t\t\t\t\tselectPath-&gt;first().partOf\n\t\t\t\t\tendif\n\t\t\t| if a.partOf = result then\n\t\t\t\t\ta.targetEntity\n\t\t\t\telse\n\t\t\t\t\ta.partOf\n\t\t\t\tendif )\nendif endif'"
+	 * @generated
+	 */
+	Entity getPathType();
+
+	/**
+	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Path Type</em>' reference is set.
+	 * @see #getPathType()
+	 * @generated
+	 */
+	boolean isSetPathType();
 
 	/**
 	 * Returns the value of the '<em><b>Filters</b></em>' containment reference list.

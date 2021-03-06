@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -24,6 +25,7 @@ import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Order;
@@ -49,6 +51,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getLimit <em>Limit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getSelectPath <em>Select Path</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getPathType <em>Path Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -165,6 +168,16 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @ordered
 	 */
 	protected EList<Association> selectPath;
+
+	/**
+	 * The cached setting delegate for the '{@link #getPathType() <em>Path Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate PATH_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.SELECTION__PATH_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getFilters() <em>Filters</em>}' containment reference list.
@@ -433,6 +446,35 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @generated
 	 */
 	@Override
+	public Entity getPathType() {
+		return (Entity)PATH_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetPathType() {
+		return (Entity)PATH_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetPathType() {
+		return PATH_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<Filter> getFilters() {
 		if (filters == null) {
 			filters = new EObjectContainmentWithInverseEList<Filter>(Filter.class, this, PersistencePackage.SELECTION__FILTERS, PersistencePackage.FILTER__SELECTION);
@@ -548,6 +590,9 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return getGrouping();
 			case PersistencePackage.SELECTION__SELECT_PATH:
 				return getSelectPath();
+			case PersistencePackage.SELECTION__PATH_TYPE:
+				if (resolve) return getPathType();
+				return basicGetPathType();
 			case PersistencePackage.SELECTION__FILTERS:
 				return getFilters();
 			case PersistencePackage.SELECTION__METHOD_NAME:
@@ -688,6 +733,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return grouping != null && !grouping.isEmpty();
 			case PersistencePackage.SELECTION__SELECT_PATH:
 				return selectPath != null && !selectPath.isEmpty();
+			case PersistencePackage.SELECTION__PATH_TYPE:
+				return isSetPathType();
 			case PersistencePackage.SELECTION__FILTERS:
 				return filters != null && !filters.isEmpty();
 			case PersistencePackage.SELECTION__METHOD_NAME:

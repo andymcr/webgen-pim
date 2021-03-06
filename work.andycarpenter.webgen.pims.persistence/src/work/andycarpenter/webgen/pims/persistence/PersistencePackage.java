@@ -4742,13 +4742,22 @@ public interface PersistencePackage extends EPackage {
 	int SELECTION__SELECT_PATH = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Path Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__PATH_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__FILTERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
+	int SELECTION__FILTERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
@@ -4757,7 +4766,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__METHOD_NAME = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 11;
+	int SELECTION__METHOD_NAME = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Selection</em>' class.
@@ -4766,7 +4775,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 12;
+	int SELECTION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Selection</em>' class.
@@ -6631,6 +6640,17 @@ public interface PersistencePackage extends EPackage {
 	EReference getSelection_SelectPath();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Path Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getPathType()
+	 * @see #getSelection()
+	 * @generated
+	 */
+	EReference getSelection_PathType();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8040,6 +8060,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SELECTION__SELECT_PATH = eINSTANCE.getSelection_SelectPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Path Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION__PATH_TYPE = eINSTANCE.getSelection_PathType();
 
 		/**
 		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.

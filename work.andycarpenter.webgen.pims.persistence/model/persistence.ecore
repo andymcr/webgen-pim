@@ -355,6 +355,12 @@
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectPath" upperBound="-1"
         eType="#//Association"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathType" eType="#//Entity"
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="if selectPath->isEmpty() then&#xA;&#x9;null&#xA;else if selectPath->size() = 1 then&#xA;&#x9;if selectPath->first().partOf = self.definedBy.serves then&#xA;&#x9;&#x9;selectPath->first().targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;selectPath->first().partOf&#xA;&#x9;endif&#xA;else&#xA;&#x9;selectPath->subOrderedSet(2, selectPath->size() )&#xA;&#x9;&#x9;->iterate(a; result : Entity = if selectPath->first().partOf = self.definedBy.serves then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;selectPath->first().targetEntity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;selectPath->first().partOf&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;| if a.partOf = result then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;a.targetEntity&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;a.partOf&#xA;&#x9;&#x9;&#x9;&#x9;endif )&#xA;endif endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filters" upperBound="-1"
         eType="#//Filter" containment="true" eOpposite="#//Filter/selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

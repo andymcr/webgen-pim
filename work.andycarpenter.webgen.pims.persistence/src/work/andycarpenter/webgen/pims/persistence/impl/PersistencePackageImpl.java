@@ -1838,7 +1838,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getSelection_Filters() {
+	public EReference getSelection_PathType() {
 		return (EReference)selectionEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1848,8 +1848,18 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EReference getSelection_Filters() {
+		return (EReference)selectionEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getSelection_MethodName() {
-		return (EAttribute)selectionEClass.getEStructuralFeatures().get(10);
+		return (EAttribute)selectionEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -2211,6 +2221,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(selectionEClass, SELECTION__LIMIT);
 		createEReference(selectionEClass, SELECTION__GROUPING);
 		createEReference(selectionEClass, SELECTION__SELECT_PATH);
+		createEReference(selectionEClass, SELECTION__PATH_TYPE);
 		createEReference(selectionEClass, SELECTION__FILTERS);
 		createEAttribute(selectionEClass, SELECTION__METHOD_NAME);
 
@@ -2471,6 +2482,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getSelection_Limit(), ecorePackage.getEInt(), "limit", "0", 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSelection_Grouping(), this.getFeature(), null, "grouping", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSelection_SelectPath(), this.getAssociation(), null, "selectPath", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelection_PathType(), this.getEntity(), null, "pathType", null, 0, 1, Selection.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSelection_Filters(), this.getFilter(), this.getFilter_Selection(), "filters", null, 0, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSelection_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2649,6 +2661,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		   source,
 		   new String[] {
 			   "oneToManyAssociationsMustBeBidirectional", "cardinality = Cardinality::Optional and targetCardinality = Cardinality::Required implies bidirectional"
+		   });
+		addAnnotation
+		  (getSelection_PathType(),
+		   source,
+		   new String[] {
+			   "derivation", "if selectPath->isEmpty() then\n\tnull\nelse if selectPath->size() = 1 then\n\tif selectPath->first().partOf = self.definedBy.serves then\n\t\tselectPath->first().targetEntity\n\telse\n\t\tselectPath->first().partOf\n\tendif\nelse\n\tselectPath->subOrderedSet(2, selectPath->size() )\n\t\t->iterate(a; result : Entity = if selectPath->first().partOf = self.definedBy.serves then\n\t\t\t\t\t\tselectPath->first().targetEntity\n\t\t\t\t\telse\n\t\t\t\t\t\tselectPath->first().partOf\n\t\t\t\t\tendif\n\t\t\t| if a.partOf = result then\n\t\t\t\t\ta.targetEntity\n\t\t\t\telse\n\t\t\t\t\ta.partOf\n\t\t\t\tendif )\nendif endif"
 		   });
 	}
 
