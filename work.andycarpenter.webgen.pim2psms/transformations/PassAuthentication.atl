@@ -249,12 +249,6 @@ unique lazy rule implicitAuthenticationsPage {
 			else
 				thisModule.findOrmEntity(website.authentication.name)
 			endif,
-		repositoriesUsed <-
-			if website.authenticationModel.oclIsUndefined() then
-				Sequence{ thisModule.findRepository(website.authenticationName) }
-			else
-				Sequence{ thisModule.findRepository(website.authentication.name) }
-			endif,
 		displayFields <-
 			if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName)
@@ -292,12 +286,6 @@ unique lazy rule implicitAuthenticationsPage {
 				thisModule.findOrmEntity(website.authenticationName)
 			else
 				thisModule.findOrmEntity(website.authentication.name)
-			endif,
-		repositoriesUsed <-
-			if website.authenticationModel.oclIsUndefined() then
-				Sequence{ thisModule.findRepository(website.authenticationName) }
-			else
-				Sequence{ thisModule.findRepository(website.authentication.name) }
 			endif,
 		displayFields <-
 			if website.authenticationModel.oclIsUndefined() then

@@ -3308,7 +3308,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_RowClass() {
+	public EAttribute getCardsUnit_LocalRowClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3318,7 +3318,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_ColumnClass() {
+	public EAttribute getCardsUnit_LocalColumnClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3328,7 +3328,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_CardClass() {
+	public EAttribute getCardsUnit_LocalCardClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3338,7 +3338,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_CardHeaderClass() {
+	public EAttribute getCardsUnit_LocalCardHeaderClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3348,7 +3348,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_CardBodyClass() {
+	public EAttribute getCardsUnit_LocalCardBodyClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -3358,7 +3358,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_CardFooterClass() {
+	public EAttribute getCardsUnit_LocalCardFooterClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3368,7 +3368,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCardsUnit_UnitBadgeClass() {
+	public EAttribute getCardsUnit_LocalBadgeClass() {
 		return (EAttribute)cardsUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -4048,7 +4048,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getBadge_BadgeClass() {
+	public EAttribute getBadge_LocalBadgeClass() {
 		return (EAttribute)badgeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -4445,13 +4445,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		cardsUnitEClass = createEClass(CARDS_UNIT);
 		createEReference(cardsUnitEClass, CARDS_UNIT__BADGES);
 		createEAttribute(cardsUnitEClass, CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__ROW_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__COLUMN_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_HEADER_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_BODY_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__CARD_FOOTER_CLASS);
-		createEAttribute(cardsUnitEClass, CARDS_UNIT__UNIT_BADGE_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_ROW_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_COLUMN_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_CARD_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_CARD_HEADER_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_CARD_BODY_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS);
+		createEAttribute(cardsUnitEClass, CARDS_UNIT__LOCAL_BADGE_CLASS);
 
 		badgeEClass = createEClass(BADGE);
 		createEReference(badgeEClass, BADGE__DISPLAYED_ON);
@@ -4459,7 +4459,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(badgeEClass, BADGE__VALUE);
 		createEReference(badgeEClass, BADGE__TITLE);
 		createEReference(badgeEClass, BADGE__DISPLAY_WHEN);
-		createEAttribute(badgeEClass, BADGE__BADGE_CLASS);
+		createEAttribute(badgeEClass, BADGE__LOCAL_BADGE_CLASS);
 
 		textCardsUnitEClass = createEClass(TEXT_CARDS_UNIT);
 
@@ -4967,13 +4967,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(cardsUnitEClass, CardsUnit.class, "CardsUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCardsUnit_Badges(), this.getBadge(), this.getBadge_DisplayedOn(), "badges", null, 0, -1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCardsUnit_OverlaySingleSelectAction(), ecorePackage.getEBoolean(), "overlaySingleSelectAction", null, 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCardsUnit_RowClass(), ecorePackage.getEString(), "rowClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCardsUnit_ColumnClass(), ecorePackage.getEString(), "columnClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCardsUnit_CardClass(), ecorePackage.getEString(), "cardClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCardsUnit_CardHeaderClass(), ecorePackage.getEString(), "cardHeaderClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCardsUnit_CardBodyClass(), ecorePackage.getEString(), "cardBodyClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCardsUnit_CardFooterClass(), ecorePackage.getEString(), "cardFooterClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCardsUnit_UnitBadgeClass(), ecorePackage.getEString(), "unitBadgeClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalRowClass(), ecorePackage.getEString(), "localRowClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalColumnClass(), ecorePackage.getEString(), "localColumnClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalCardClass(), ecorePackage.getEString(), "localCardClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalCardHeaderClass(), ecorePackage.getEString(), "localCardHeaderClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalCardBodyClass(), ecorePackage.getEString(), "localCardBodyClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalCardFooterClass(), ecorePackage.getEString(), "localCardFooterClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardsUnit_LocalBadgeClass(), ecorePackage.getEString(), "localBadgeClass", "", 0, 1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(badgeEClass, Badge.class, "Badge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBadge_DisplayedOn(), this.getCardsUnit(), this.getCardsUnit_Badges(), "displayedOn", null, 1, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4981,7 +4981,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getBadge_Value(), this.getFeaturePath(), null, "value", null, 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBadge_Title(), thePersistencePackage.getAttribute(), null, "title", null, 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBadge_DisplayWhen(), theExpressionPackage.getPredicate(), null, "displayWhen", null, 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBadge_BadgeClass(), ecorePackage.getEString(), "badgeClass", "", 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBadge_LocalBadgeClass(), ecorePackage.getEString(), "localBadgeClass", "", 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(textCardsUnitEClass, TextCardsUnit.class, "TextCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

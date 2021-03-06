@@ -32,7 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayWhen <em>Display When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getBadgeClass <em>Badge Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getLocalBadgeClass <em>Local Badge Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,24 +89,24 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	protected Predicate displayWhen;
 
 	/**
-	 * The default value of the '{@link #getBadgeClass() <em>Badge Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalBadgeClass() <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBadgeClass()
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BADGE_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_BADGE_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getBadgeClass() <em>Badge Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalBadgeClass() <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBadgeClass()
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String badgeClass = BADGE_CLASS_EDEFAULT;
+	protected String localBadgeClass = LOCAL_BADGE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -329,8 +329,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
-	public String getBadgeClass() {
-		return badgeClass;
+	public String getLocalBadgeClass() {
+		return localBadgeClass;
 	}
 
 	/**
@@ -339,11 +339,11 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
-	public void setBadgeClass(String newBadgeClass) {
-		String oldBadgeClass = badgeClass;
-		badgeClass = newBadgeClass;
+	public void setLocalBadgeClass(String newLocalBadgeClass) {
+		String oldLocalBadgeClass = localBadgeClass;
+		localBadgeClass = newLocalBadgeClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__BADGE_CLASS, oldBadgeClass, badgeClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__LOCAL_BADGE_CLASS, oldLocalBadgeClass, localBadgeClass));
 	}
 
 	/**
@@ -413,8 +413,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return basicGetTitle();
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return getDisplayWhen();
-			case WebuiPackage.BADGE__BADGE_CLASS:
-				return getBadgeClass();
+			case WebuiPackage.BADGE__LOCAL_BADGE_CLASS:
+				return getLocalBadgeClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -442,8 +442,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)newValue);
 				return;
-			case WebuiPackage.BADGE__BADGE_CLASS:
-				setBadgeClass((String)newValue);
+			case WebuiPackage.BADGE__LOCAL_BADGE_CLASS:
+				setLocalBadgeClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -472,8 +472,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				setDisplayWhen((Predicate)null);
 				return;
-			case WebuiPackage.BADGE__BADGE_CLASS:
-				setBadgeClass(BADGE_CLASS_EDEFAULT);
+			case WebuiPackage.BADGE__LOCAL_BADGE_CLASS:
+				setLocalBadgeClass(LOCAL_BADGE_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -497,8 +497,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return title != null;
 			case WebuiPackage.BADGE__DISPLAY_WHEN:
 				return displayWhen != null;
-			case WebuiPackage.BADGE__BADGE_CLASS:
-				return BADGE_CLASS_EDEFAULT == null ? badgeClass != null : !BADGE_CLASS_EDEFAULT.equals(badgeClass);
+			case WebuiPackage.BADGE__LOCAL_BADGE_CLASS:
+				return LOCAL_BADGE_CLASS_EDEFAULT == null ? localBadgeClass != null : !LOCAL_BADGE_CLASS_EDEFAULT.equals(localBadgeClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -515,8 +515,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (iconName: ");
 		result.append(iconName);
-		result.append(", badgeClass: ");
-		result.append(badgeClass);
+		result.append(", localBadgeClass: ");
+		result.append(localBadgeClass);
 		result.append(')');
 		return result.toString();
 	}

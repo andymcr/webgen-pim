@@ -6,33 +6,6 @@ uses WebsiteHelpers;
 uses PersistenceHelpers;
 
 
-helper context Website!CollectionUnit def: findContainerRepository() : ORM!Repository
-	= if self.containingType.oclIsUndefined() then
-			OclUndefined
-		else
-			self.containingType.repository.findRepository()
-		endif;
-
-helper context Website!CollectionUnit def: findRepositoriesUsed() : Sequence(ORM!Repository)
-	= if self.contentType.oclIsUndefined() then
-			Sequence{}
-		else
-			Sequence{ self.contentType.repository.findRepository() }
-				->union(let containerRepository : ODM!Repository = self.findContainerRepository()
-							in if self.omitContainerLoad or containerRepository.oclIsUndefined() then
-									Sequence{}
-								else
-									Sequence{ containerRepository }
-								endif)
-		endif;
-
-helper context Website!SingletonUnit def: findRepositoriesUsed() : Sequence(ORM!Repository)
-	= if self.contentType.oclIsUndefined() then
-			Sequence{}
-		else
-			Sequence{ self.contentType.repository.findRepository() }
-		endif;
-
 helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
 	= self.actionServices()->collect(s | s.findService())
 		->asSet()
@@ -48,17 +21,6 @@ helper context Website!DynamicUnit def: actionServices() : Sequence(Website!Serv
 			Sequence{}
 		endif;
 	
-
-helper context Website!Badge def: badgeClass() : String
-	= if self.badgeClass.trim() <> '' then
-			self.badgeClass.trim()
-		else if self.displayedOn.unitBadgeClass.trim() <> '' then
-			self.displayedOn.unitBadgeClass.trim()
-		else if thisModule.findWebsiteUI().defaultBadgeClass.trim() <> '' then
-			thisModule.findWebsiteUI().defaultBadgeClass.trim() 
-		else
-			OclUndefined
-		endif endif endif;
 
 helper context Website!Feature def: defaultDisplayValue() : String
 	= if self.defaultDisplayValue.trim() <> '' then

@@ -8915,67 +8915,67 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int CARDS_UNIT__LOCAL_ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int CARDS_UNIT__LOCAL_COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int CARDS_UNIT__LOCAL_CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_HEADER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Body Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_BODY_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__LOCAL_CARD_BODY_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__UNIT_BADGE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
+	int CARDS_UNIT__LOCAL_BADGE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -9151,13 +9151,13 @@ public interface WebuiPackage extends EPackage {
 	int BADGE__DISPLAY_WHEN = 4;
 
 	/**
-	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BADGE__BADGE_CLASS = 5;
+	int BADGE__LOCAL_BADGE_CLASS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Badge</em>' class.
@@ -9736,67 +9736,67 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CARD_CLASS = CARDS_UNIT__LOCAL_CARD_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = CARDS_UNIT__LOCAL_CARD_HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Body Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CARD_BODY_CLASS = CARDS_UNIT__LOCAL_CARD_BODY_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_BADGE_CLASS = CARDS_UNIT__LOCAL_BADGE_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Text Cards Unit</em>' class.
@@ -10375,67 +10375,67 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CARD_CLASS = CARDS_UNIT__LOCAL_CARD_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = CARDS_UNIT__LOCAL_CARD_HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Body Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CARD_BODY_CLASS = CARDS_UNIT__LOCAL_CARD_BODY_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_BADGE_CLASS = CARDS_UNIT__LOCAL_BADGE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Element Date</b></em>' containment reference.
@@ -11617,67 +11617,67 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__ROW_CLASS = CARDS_UNIT__ROW_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__COLUMN_CLASS = CARDS_UNIT__COLUMN_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CARD_CLASS = CARDS_UNIT__CARD_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CARD_CLASS = CARDS_UNIT__LOCAL_CARD_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Header Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CARD_HEADER_CLASS = CARDS_UNIT__CARD_HEADER_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = CARDS_UNIT__LOCAL_CARD_HEADER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Body Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CARD_BODY_CLASS = CARDS_UNIT__CARD_BODY_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CARD_BODY_CLASS = CARDS_UNIT__LOCAL_CARD_BODY_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Card Footer Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__CARD_FOOTER_CLASS = CARDS_UNIT__CARD_FOOTER_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__UNIT_BADGE_CLASS = CARDS_UNIT__UNIT_BADGE_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_BADGE_CLASS = CARDS_UNIT__LOCAL_BADGE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -19328,81 +19328,81 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_OverlaySingleSelectAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass <em>Local Row Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Row Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass()
+	 * @return the meta object for the attribute '<em>Local Row Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_RowClass();
+	EAttribute getCardsUnit_LocalRowClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass <em>Local Column Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass()
+	 * @return the meta object for the attribute '<em>Local Column Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_ColumnClass();
+	EAttribute getCardsUnit_LocalColumnClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardClass <em>Local Card Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Card Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass()
+	 * @return the meta object for the attribute '<em>Local Card Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_CardClass();
+	EAttribute getCardsUnit_LocalCardClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass <em>Card Header Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardHeaderClass <em>Local Card Header Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Card Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass()
+	 * @return the meta object for the attribute '<em>Local Card Header Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardHeaderClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_CardHeaderClass();
+	EAttribute getCardsUnit_LocalCardHeaderClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardBodyClass <em>Local Card Body Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Card Body Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass()
+	 * @return the meta object for the attribute '<em>Local Card Body Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardBodyClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_CardBodyClass();
+	EAttribute getCardsUnit_LocalCardBodyClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardFooterClass <em>Local Card Footer Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Card Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass()
+	 * @return the meta object for the attribute '<em>Local Card Footer Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardFooterClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_CardFooterClass();
+	EAttribute getCardsUnit_LocalCardFooterClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalBadgeClass <em>Local Badge Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit Badge Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass()
+	 * @return the meta object for the attribute '<em>Local Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalBadgeClass()
 	 * @see #getCardsUnit()
 	 * @generated
 	 */
-	EAttribute getCardsUnit_UnitBadgeClass();
+	EAttribute getCardsUnit_LocalBadgeClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TextCardsUnit <em>Text Cards Unit</em>}'.
@@ -20120,15 +20120,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getBadge_DisplayWhen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Badge#getLocalBadgeClass <em>Local Badge Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Badge Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass()
+	 * @return the meta object for the attribute '<em>Local Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Badge#getLocalBadgeClass()
 	 * @see #getBadge()
 	 * @generated
 	 */
-	EAttribute getBadge_BadgeClass();
+	EAttribute getBadge_LocalBadgeClass();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}'.
@@ -22402,60 +22402,60 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = eINSTANCE.getCardsUnit_OverlaySingleSelectAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Row Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Row Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__ROW_CLASS = eINSTANCE.getCardsUnit_RowClass();
+		EAttribute CARDS_UNIT__LOCAL_ROW_CLASS = eINSTANCE.getCardsUnit_LocalRowClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Column Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Column Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__COLUMN_CLASS = eINSTANCE.getCardsUnit_ColumnClass();
+		EAttribute CARDS_UNIT__LOCAL_COLUMN_CLASS = eINSTANCE.getCardsUnit_LocalColumnClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Card Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Card Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__CARD_CLASS = eINSTANCE.getCardsUnit_CardClass();
+		EAttribute CARDS_UNIT__LOCAL_CARD_CLASS = eINSTANCE.getCardsUnit_LocalCardClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Card Header Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Card Header Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__CARD_HEADER_CLASS = eINSTANCE.getCardsUnit_CardHeaderClass();
+		EAttribute CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = eINSTANCE.getCardsUnit_LocalCardHeaderClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Card Body Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Card Body Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__CARD_BODY_CLASS = eINSTANCE.getCardsUnit_CardBodyClass();
+		EAttribute CARDS_UNIT__LOCAL_CARD_BODY_CLASS = eINSTANCE.getCardsUnit_LocalCardBodyClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Card Footer Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Card Footer Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__CARD_FOOTER_CLASS = eINSTANCE.getCardsUnit_CardFooterClass();
+		EAttribute CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = eINSTANCE.getCardsUnit_LocalCardFooterClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Unit Badge Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Badge Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDS_UNIT__UNIT_BADGE_CLASS = eINSTANCE.getCardsUnit_UnitBadgeClass();
+		EAttribute CARDS_UNIT__LOCAL_BADGE_CLASS = eINSTANCE.getCardsUnit_LocalBadgeClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
@@ -23038,12 +23038,12 @@ public interface WebuiPackage extends EPackage {
 		EReference BADGE__DISPLAY_WHEN = eINSTANCE.getBadge_DisplayWhen();
 
 		/**
-		 * The meta object literal for the '<em><b>Badge Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Badge Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BADGE__BADGE_CLASS = eINSTANCE.getBadge_BadgeClass();
+		EAttribute BADGE__LOCAL_BADGE_CLASS = eINSTANCE.getBadge_LocalBadgeClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}' enum.

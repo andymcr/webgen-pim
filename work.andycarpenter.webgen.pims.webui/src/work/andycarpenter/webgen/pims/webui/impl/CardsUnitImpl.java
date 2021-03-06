@@ -27,13 +27,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getRowClass <em>Row Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getColumnClass <em>Column Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardClass <em>Card Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardHeaderClass <em>Card Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardBodyClass <em>Card Body Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getCardFooterClass <em>Card Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getUnitBadgeClass <em>Unit Badge Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalRowClass <em>Local Row Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalColumnClass <em>Local Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardClass <em>Local Card Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardHeaderClass <em>Local Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardBodyClass <em>Local Card Body Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardFooterClass <em>Local Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalBadgeClass <em>Local Badge Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,144 +70,144 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	protected boolean overlaySingleSelectAction = OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalRowClass() <em>Local Row Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRowClass()
+	 * @see #getLocalRowClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ROW_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_ROW_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalRowClass() <em>Local Row Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRowClass()
+	 * @see #getLocalRowClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String rowClass = ROW_CLASS_EDEFAULT;
+	protected String localRowClass = LOCAL_ROW_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalColumnClass() <em>Local Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
+	 * @see #getLocalColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_COLUMN_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalColumnClass() <em>Local Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
+	 * @see #getLocalColumnClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String columnClass = COLUMN_CLASS_EDEFAULT;
+	protected String localColumnClass = LOCAL_COLUMN_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalCardClass() <em>Local Card Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardClass()
+	 * @see #getLocalCardClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CARD_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalCardClass() <em>Local Card Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardClass()
+	 * @see #getLocalCardClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String cardClass = CARD_CLASS_EDEFAULT;
+	protected String localCardClass = LOCAL_CARD_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCardHeaderClass() <em>Card Header Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalCardHeaderClass() <em>Local Card Header Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardHeaderClass()
+	 * @see #getLocalCardHeaderClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_HEADER_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CARD_HEADER_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCardHeaderClass() <em>Card Header Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalCardHeaderClass() <em>Local Card Header Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardHeaderClass()
+	 * @see #getLocalCardHeaderClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String cardHeaderClass = CARD_HEADER_CLASS_EDEFAULT;
+	protected String localCardHeaderClass = LOCAL_CARD_HEADER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCardBodyClass() <em>Card Body Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalCardBodyClass() <em>Local Card Body Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardBodyClass()
+	 * @see #getLocalCardBodyClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_BODY_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CARD_BODY_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCardBodyClass() <em>Card Body Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalCardBodyClass() <em>Local Card Body Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardBodyClass()
+	 * @see #getLocalCardBodyClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String cardBodyClass = CARD_BODY_CLASS_EDEFAULT;
+	protected String localCardBodyClass = LOCAL_CARD_BODY_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCardFooterClass() <em>Card Footer Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalCardFooterClass() <em>Local Card Footer Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardFooterClass()
+	 * @see #getLocalCardFooterClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARD_FOOTER_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_CARD_FOOTER_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCardFooterClass() <em>Card Footer Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalCardFooterClass() <em>Local Card Footer Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCardFooterClass()
+	 * @see #getLocalCardFooterClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String cardFooterClass = CARD_FOOTER_CLASS_EDEFAULT;
+	protected String localCardFooterClass = LOCAL_CARD_FOOTER_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnitBadgeClass() <em>Unit Badge Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalBadgeClass() <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitBadgeClass()
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UNIT_BADGE_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_BADGE_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getUnitBadgeClass() <em>Unit Badge Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalBadgeClass() <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitBadgeClass()
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String unitBadgeClass = UNIT_BADGE_CLASS_EDEFAULT;
+	protected String localBadgeClass = LOCAL_BADGE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,8 +270,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getRowClass() {
-		return rowClass;
+	public String getLocalRowClass() {
+		return localRowClass;
 	}
 
 	/**
@@ -280,11 +280,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setRowClass(String newRowClass) {
-		String oldRowClass = rowClass;
-		rowClass = newRowClass;
+	public void setLocalRowClass(String newLocalRowClass) {
+		String oldLocalRowClass = localRowClass;
+		localRowClass = newLocalRowClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__ROW_CLASS, oldRowClass, rowClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS, oldLocalRowClass, localRowClass));
 	}
 
 	/**
@@ -293,8 +293,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getColumnClass() {
-		return columnClass;
+	public String getLocalColumnClass() {
+		return localColumnClass;
 	}
 
 	/**
@@ -303,11 +303,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setColumnClass(String newColumnClass) {
-		String oldColumnClass = columnClass;
-		columnClass = newColumnClass;
+	public void setLocalColumnClass(String newLocalColumnClass) {
+		String oldLocalColumnClass = localColumnClass;
+		localColumnClass = newLocalColumnClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__COLUMN_CLASS, oldColumnClass, columnClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS, oldLocalColumnClass, localColumnClass));
 	}
 
 	/**
@@ -316,8 +316,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getCardClass() {
-		return cardClass;
+	public String getLocalCardClass() {
+		return localCardClass;
 	}
 
 	/**
@@ -326,11 +326,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setCardClass(String newCardClass) {
-		String oldCardClass = cardClass;
-		cardClass = newCardClass;
+	public void setLocalCardClass(String newLocalCardClass) {
+		String oldLocalCardClass = localCardClass;
+		localCardClass = newLocalCardClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_CLASS, oldCardClass, cardClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS, oldLocalCardClass, localCardClass));
 	}
 
 	/**
@@ -339,8 +339,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getCardHeaderClass() {
-		return cardHeaderClass;
+	public String getLocalCardHeaderClass() {
+		return localCardHeaderClass;
 	}
 
 	/**
@@ -349,11 +349,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setCardHeaderClass(String newCardHeaderClass) {
-		String oldCardHeaderClass = cardHeaderClass;
-		cardHeaderClass = newCardHeaderClass;
+	public void setLocalCardHeaderClass(String newLocalCardHeaderClass) {
+		String oldLocalCardHeaderClass = localCardHeaderClass;
+		localCardHeaderClass = newLocalCardHeaderClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS, oldCardHeaderClass, cardHeaderClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS, oldLocalCardHeaderClass, localCardHeaderClass));
 	}
 
 	/**
@@ -362,8 +362,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getCardBodyClass() {
-		return cardBodyClass;
+	public String getLocalCardBodyClass() {
+		return localCardBodyClass;
 	}
 
 	/**
@@ -372,11 +372,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setCardBodyClass(String newCardBodyClass) {
-		String oldCardBodyClass = cardBodyClass;
-		cardBodyClass = newCardBodyClass;
+	public void setLocalCardBodyClass(String newLocalCardBodyClass) {
+		String oldLocalCardBodyClass = localCardBodyClass;
+		localCardBodyClass = newLocalCardBodyClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS, oldCardBodyClass, cardBodyClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS, oldLocalCardBodyClass, localCardBodyClass));
 	}
 
 	/**
@@ -385,8 +385,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getCardFooterClass() {
-		return cardFooterClass;
+	public String getLocalCardFooterClass() {
+		return localCardFooterClass;
 	}
 
 	/**
@@ -395,11 +395,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setCardFooterClass(String newCardFooterClass) {
-		String oldCardFooterClass = cardFooterClass;
-		cardFooterClass = newCardFooterClass;
+	public void setLocalCardFooterClass(String newLocalCardFooterClass) {
+		String oldLocalCardFooterClass = localCardFooterClass;
+		localCardFooterClass = newLocalCardFooterClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS, oldCardFooterClass, cardFooterClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS, oldLocalCardFooterClass, localCardFooterClass));
 	}
 
 	/**
@@ -408,8 +408,8 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getUnitBadgeClass() {
-		return unitBadgeClass;
+	public String getLocalBadgeClass() {
+		return localBadgeClass;
 	}
 
 	/**
@@ -418,11 +418,11 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public void setUnitBadgeClass(String newUnitBadgeClass) {
-		String oldUnitBadgeClass = unitBadgeClass;
-		unitBadgeClass = newUnitBadgeClass;
+	public void setLocalBadgeClass(String newLocalBadgeClass) {
+		String oldLocalBadgeClass = localBadgeClass;
+		localBadgeClass = newLocalBadgeClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS, oldUnitBadgeClass, unitBadgeClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS, oldLocalBadgeClass, localBadgeClass));
 	}
 
 	/**
@@ -466,20 +466,20 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getBadges();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return isOverlaySingleSelectAction();
-			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
-				return getRowClass();
-			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
-				return getColumnClass();
-			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
-				return getCardClass();
-			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
-				return getCardHeaderClass();
-			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
-				return getCardBodyClass();
-			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
-				return getCardFooterClass();
-			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
-				return getUnitBadgeClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
+				return getLocalRowClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
+				return getLocalColumnClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
+				return getLocalCardClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
+				return getLocalCardHeaderClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:
+				return getLocalCardBodyClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS:
+				return getLocalCardFooterClass();
+			case WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS:
+				return getLocalBadgeClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -500,26 +500,26 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction((Boolean)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
-				setRowClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
+				setLocalRowClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
-				setColumnClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
+				setLocalColumnClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
-				setCardClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
+				setLocalCardClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
-				setCardHeaderClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
+				setLocalCardHeaderClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
-				setCardBodyClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:
+				setLocalCardBodyClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
-				setCardFooterClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS:
+				setLocalCardFooterClass((String)newValue);
 				return;
-			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
-				setUnitBadgeClass((String)newValue);
+			case WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS:
+				setLocalBadgeClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -539,26 +539,26 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction(OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
-				setRowClass(ROW_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
+				setLocalRowClass(LOCAL_ROW_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
-				setColumnClass(COLUMN_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
+				setLocalColumnClass(LOCAL_COLUMN_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
-				setCardClass(CARD_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
+				setLocalCardClass(LOCAL_CARD_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
-				setCardHeaderClass(CARD_HEADER_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
+				setLocalCardHeaderClass(LOCAL_CARD_HEADER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
-				setCardBodyClass(CARD_BODY_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:
+				setLocalCardBodyClass(LOCAL_CARD_BODY_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
-				setCardFooterClass(CARD_FOOTER_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS:
+				setLocalCardFooterClass(LOCAL_CARD_FOOTER_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
-				setUnitBadgeClass(UNIT_BADGE_CLASS_EDEFAULT);
+			case WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS:
+				setLocalBadgeClass(LOCAL_BADGE_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -576,20 +576,20 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return badges != null && !badges.isEmpty();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return overlaySingleSelectAction != OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
-			case WebuiPackage.CARDS_UNIT__ROW_CLASS:
-				return ROW_CLASS_EDEFAULT == null ? rowClass != null : !ROW_CLASS_EDEFAULT.equals(rowClass);
-			case WebuiPackage.CARDS_UNIT__COLUMN_CLASS:
-				return COLUMN_CLASS_EDEFAULT == null ? columnClass != null : !COLUMN_CLASS_EDEFAULT.equals(columnClass);
-			case WebuiPackage.CARDS_UNIT__CARD_CLASS:
-				return CARD_CLASS_EDEFAULT == null ? cardClass != null : !CARD_CLASS_EDEFAULT.equals(cardClass);
-			case WebuiPackage.CARDS_UNIT__CARD_HEADER_CLASS:
-				return CARD_HEADER_CLASS_EDEFAULT == null ? cardHeaderClass != null : !CARD_HEADER_CLASS_EDEFAULT.equals(cardHeaderClass);
-			case WebuiPackage.CARDS_UNIT__CARD_BODY_CLASS:
-				return CARD_BODY_CLASS_EDEFAULT == null ? cardBodyClass != null : !CARD_BODY_CLASS_EDEFAULT.equals(cardBodyClass);
-			case WebuiPackage.CARDS_UNIT__CARD_FOOTER_CLASS:
-				return CARD_FOOTER_CLASS_EDEFAULT == null ? cardFooterClass != null : !CARD_FOOTER_CLASS_EDEFAULT.equals(cardFooterClass);
-			case WebuiPackage.CARDS_UNIT__UNIT_BADGE_CLASS:
-				return UNIT_BADGE_CLASS_EDEFAULT == null ? unitBadgeClass != null : !UNIT_BADGE_CLASS_EDEFAULT.equals(unitBadgeClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
+				return LOCAL_ROW_CLASS_EDEFAULT == null ? localRowClass != null : !LOCAL_ROW_CLASS_EDEFAULT.equals(localRowClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
+				return LOCAL_COLUMN_CLASS_EDEFAULT == null ? localColumnClass != null : !LOCAL_COLUMN_CLASS_EDEFAULT.equals(localColumnClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
+				return LOCAL_CARD_CLASS_EDEFAULT == null ? localCardClass != null : !LOCAL_CARD_CLASS_EDEFAULT.equals(localCardClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
+				return LOCAL_CARD_HEADER_CLASS_EDEFAULT == null ? localCardHeaderClass != null : !LOCAL_CARD_HEADER_CLASS_EDEFAULT.equals(localCardHeaderClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:
+				return LOCAL_CARD_BODY_CLASS_EDEFAULT == null ? localCardBodyClass != null : !LOCAL_CARD_BODY_CLASS_EDEFAULT.equals(localCardBodyClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS:
+				return LOCAL_CARD_FOOTER_CLASS_EDEFAULT == null ? localCardFooterClass != null : !LOCAL_CARD_FOOTER_CLASS_EDEFAULT.equals(localCardFooterClass);
+			case WebuiPackage.CARDS_UNIT__LOCAL_BADGE_CLASS:
+				return LOCAL_BADGE_CLASS_EDEFAULT == null ? localBadgeClass != null : !LOCAL_BADGE_CLASS_EDEFAULT.equals(localBadgeClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -606,20 +606,20 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (overlaySingleSelectAction: ");
 		result.append(overlaySingleSelectAction);
-		result.append(", rowClass: ");
-		result.append(rowClass);
-		result.append(", columnClass: ");
-		result.append(columnClass);
-		result.append(", cardClass: ");
-		result.append(cardClass);
-		result.append(", cardHeaderClass: ");
-		result.append(cardHeaderClass);
-		result.append(", cardBodyClass: ");
-		result.append(cardBodyClass);
-		result.append(", cardFooterClass: ");
-		result.append(cardFooterClass);
-		result.append(", unitBadgeClass: ");
-		result.append(unitBadgeClass);
+		result.append(", localRowClass: ");
+		result.append(localRowClass);
+		result.append(", localColumnClass: ");
+		result.append(localColumnClass);
+		result.append(", localCardClass: ");
+		result.append(localCardClass);
+		result.append(", localCardHeaderClass: ");
+		result.append(localCardHeaderClass);
+		result.append(", localCardBodyClass: ");
+		result.append(localCardBodyClass);
+		result.append(", localCardFooterClass: ");
+		result.append(localCardFooterClass);
+		result.append(", localBadgeClass: ");
+		result.append(localBadgeClass);
 		result.append(')');
 		return result.toString();
 	}

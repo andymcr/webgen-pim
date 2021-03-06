@@ -15,13 +15,13 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass <em>Card Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass <em>Local Row Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass <em>Local Column Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardClass <em>Local Card Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardHeaderClass <em>Local Card Header Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardBodyClass <em>Local Card Body Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardFooterClass <em>Local Card Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalBadgeClass <em>Local Badge Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit()
@@ -74,172 +74,164 @@ public interface CardsUnit extends CollectionUnit {
 	void setOverlaySingleSelectAction(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Row Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Row Class</em>' attribute.
-	 * @see #setRowClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_RowClass()
+	 * @return the value of the '<em>Local Row Class</em>' attribute.
+	 * @see #setLocalRowClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalRowClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getRowClass();
+	String getLocalRowClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getRowClass <em>Row Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass <em>Local Row Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Row Class</em>' attribute.
-	 * @see #getRowClass()
+	 * @param value the new value of the '<em>Local Row Class</em>' attribute.
+	 * @see #getLocalRowClass()
 	 * @generated
 	 */
-	void setRowClass(String value);
+	void setLocalRowClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Column Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Column Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Column Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Column Class</em>' attribute.
-	 * @see #setColumnClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_ColumnClass()
+	 * @return the value of the '<em>Local Column Class</em>' attribute.
+	 * @see #setLocalColumnClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalColumnClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getColumnClass();
+	String getLocalColumnClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getColumnClass <em>Column Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass <em>Local Column Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Column Class</em>' attribute.
-	 * @see #getColumnClass()
+	 * @param value the new value of the '<em>Local Column Class</em>' attribute.
+	 * @see #getLocalColumnClass()
 	 * @generated
 	 */
-	void setColumnClass(String value);
+	void setLocalColumnClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Card Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Card Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Card Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Card Class</em>' attribute.
-	 * @see #setCardClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardClass()
+	 * @return the value of the '<em>Local Card Class</em>' attribute.
+	 * @see #setLocalCardClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalCardClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getCardClass();
+	String getLocalCardClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardClass <em>Card Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardClass <em>Local Card Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Card Class</em>' attribute.
-	 * @see #getCardClass()
+	 * @param value the new value of the '<em>Local Card Class</em>' attribute.
+	 * @see #getLocalCardClass()
 	 * @generated
 	 */
-	void setCardClass(String value);
+	void setLocalCardClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Card Header Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Card Header Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Card Header Class</em>' attribute.
-	 * @see #setCardHeaderClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardHeaderClass()
+	 * @return the value of the '<em>Local Card Header Class</em>' attribute.
+	 * @see #setLocalCardHeaderClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalCardHeaderClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getCardHeaderClass();
+	String getLocalCardHeaderClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardHeaderClass <em>Card Header Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardHeaderClass <em>Local Card Header Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Card Header Class</em>' attribute.
-	 * @see #getCardHeaderClass()
+	 * @param value the new value of the '<em>Local Card Header Class</em>' attribute.
+	 * @see #getLocalCardHeaderClass()
 	 * @generated
 	 */
-	void setCardHeaderClass(String value);
+	void setLocalCardHeaderClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Card Body Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Card Body Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Card Body Class</em>' attribute.
-	 * @see #setCardBodyClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardBodyClass()
+	 * @return the value of the '<em>Local Card Body Class</em>' attribute.
+	 * @see #setLocalCardBodyClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalCardBodyClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getCardBodyClass();
+	String getLocalCardBodyClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardBodyClass <em>Card Body Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardBodyClass <em>Local Card Body Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Card Body Class</em>' attribute.
-	 * @see #getCardBodyClass()
+	 * @param value the new value of the '<em>Local Card Body Class</em>' attribute.
+	 * @see #getLocalCardBodyClass()
 	 * @generated
 	 */
-	void setCardBodyClass(String value);
+	void setLocalCardBodyClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Card Footer Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Card Footer Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Card Footer Class</em>' attribute.
-	 * @see #setCardFooterClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_CardFooterClass()
+	 * @return the value of the '<em>Local Card Footer Class</em>' attribute.
+	 * @see #setLocalCardFooterClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalCardFooterClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getCardFooterClass();
+	String getLocalCardFooterClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getCardFooterClass <em>Card Footer Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardFooterClass <em>Local Card Footer Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Card Footer Class</em>' attribute.
-	 * @see #getCardFooterClass()
+	 * @param value the new value of the '<em>Local Card Footer Class</em>' attribute.
+	 * @see #getLocalCardFooterClass()
 	 * @generated
 	 */
-	void setCardFooterClass(String value);
+	void setLocalCardFooterClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Unit Badge Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Badge Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit Badge Class</em>' attribute.
-	 * @see #setUnitBadgeClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_UnitBadgeClass()
+	 * @return the value of the '<em>Local Badge Class</em>' attribute.
+	 * @see #setLocalBadgeClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalBadgeClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getUnitBadgeClass();
+	String getLocalBadgeClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getUnitBadgeClass <em>Unit Badge Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalBadgeClass <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit Badge Class</em>' attribute.
-	 * @see #getUnitBadgeClass()
+	 * @param value the new value of the '<em>Local Badge Class</em>' attribute.
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 */
-	void setUnitBadgeClass(String value);
+	void setLocalBadgeClass(String value);
 
 } // CardsUnit

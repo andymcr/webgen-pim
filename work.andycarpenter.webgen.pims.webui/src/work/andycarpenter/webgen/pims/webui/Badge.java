@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getDisplayWhen <em>Display When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Badge#getLocalBadgeClass <em>Local Badge Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge()
@@ -158,26 +158,26 @@ public interface Badge extends EObject {
 	void setDisplayWhen(Predicate value);
 
 	/**
-	 * Returns the value of the '<em><b>Badge Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Badge Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Badge Class</em>' attribute.
-	 * @see #setBadgeClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_BadgeClass()
+	 * @return the value of the '<em>Local Badge Class</em>' attribute.
+	 * @see #setLocalBadgeClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_LocalBadgeClass()
 	 * @model default="" ordered="false"
 	 * @generated
 	 */
-	String getBadgeClass();
+	String getLocalBadgeClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getBadgeClass <em>Badge Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getLocalBadgeClass <em>Local Badge Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Badge Class</em>' attribute.
-	 * @see #getBadgeClass()
+	 * @param value the new value of the '<em>Local Badge Class</em>' attribute.
+	 * @see #getLocalBadgeClass()
 	 * @generated
 	 */
-	void setBadgeClass(String value);
+	void setLocalBadgeClass(String value);
 
 } // Badge

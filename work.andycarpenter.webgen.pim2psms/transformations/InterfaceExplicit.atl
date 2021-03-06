@@ -101,6 +101,7 @@ rule WafModel {
 		defaultCardHeaderClass <- thisModule.findWebsiteUI().defaultCardHeaderClass,
 		defaultCardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
 		defaultCardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
+		defaultBadgeClass <- thisModule.findWebsiteUI().defaultBadgeClass,
 		defaultControlClass <- thisModule.findWebsiteUI().defaultControlClass,
 		defaultCardsControlClass <- thisModule.findWebsiteUI().defaultCardsControlClass,
 		defaultDetailsControlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
@@ -285,7 +286,6 @@ abstract rule DynamicUnit {
 	from website : Website!DynamicUnit
 	to waf : WAF!DynamicUnit (
 		contentType <- website.contentType.findOrmEntity(),
-		repositoriesUsed <- website.findRepositoriesUsed(),
 		servicesUsed <- website.findServicesUsed(),
 		routeActuals <- website.routeActuals,
 		displayFields <- website.displayFields,
@@ -539,7 +539,6 @@ abstract rule CollectionUnit {
 			else
 				website.containingType.findOrmEntity()
 			endif,
-		containerRepository <- website.findContainerRepository(),
 		findContainerSelection <-
 			if website.findContainerSelection.oclIsUndefined() then
 				website.findContainerSelection
@@ -729,12 +728,13 @@ abstract rule CardsUnit {
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		localRowClass <- website.rowClass,
-		localColumnClass <- website.columnClass,
-		localCardClass <- website.cardClass,
-		localCardHeaderClass <- website.cardHeaderClass,
-		localCardBodyClass <- website.cardBodyClass,
-		localCardFooterClass <- website.cardFooterClass
+		localRowClass <- website.localRowClass,
+		localColumnClass <- website.localColumnClass,
+		localCardClass <- website.localCardClass,
+		localCardHeaderClass <- website.localCardHeaderClass,
+		localCardBodyClass <- website.localCardBodyClass,
+		localCardFooterClass <- website.localCardFooterClass,
+		localBadgeClass <- website.localBadgeClass
 	)
 }
 
@@ -975,7 +975,7 @@ rule Badge {
 				website.title.findOrmLabel()
 			endif,
 		displayWhen <- website.displayWhen,
-		badgeClass <- website.badgeClass()
+		localBadgeClass <- website.localBadgeClass
 	)
 }
 
