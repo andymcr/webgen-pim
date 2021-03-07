@@ -84,7 +84,7 @@ abstract rule CollectionUnit {
 					->select(f | f.oclIsKindOf(WAF!Attribute))
 					->collect(f | thisModule.implicitUnitAttribute(f))
 				->union(
-					if not partialWaf.oclIsKindOf(WAF!IndexUnit) and not waf.oclIsTypeOf(WAF!CreateUnit) then
+					if not partialWaf.oclIsKindOf(WAF!TabularUnit) and not waf.oclIsTypeOf(WAF!CreateUnit) then
 						Sequence{}
 					else
 						partialWaf.contentType.allFeatures
@@ -162,30 +162,9 @@ rule DetailsUnit {
 }
 
 -- @extends CollectionUnit
-abstract rule IndexUnit {
-	from partialWaf : WAF!IndexUnit
-	to waf : WAF!IndexUnit (
-	)
-}
-
--- @extends IndexUnit
-rule IndexGridUnit {
-	from partialWaf : WAF!IndexGridUnit
-	to waf : WAF!IndexGridUnit (
-	)
-}
-
--- @extends IndexUnit
-rule IndexPageDirectionUnit {
-	from partialWaf : WAF!IndexPageDirectionUnit
-	to waf : WAF!IndexPageDirectionUnit (
-	)
-}
-
--- @extends IndexUnit
-rule IndexLineDirectionUnit {
-	from partialWaf : WAF!IndexLineDirectionUnit
-	to waf : WAF!IndexLineDirectionUnit (
+rule TabularUnit {
+	from partialWaf : WAF!TabularUnit
+	to waf : WAF!TabularUnit (
 	)
 }
 

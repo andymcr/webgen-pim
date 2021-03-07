@@ -31,7 +31,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass <em>Default Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass <em>Default Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass <em>Default Tabular Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass <em>Default Form Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass <em>Default Slider Content Class</em>}</li>
@@ -47,7 +47,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass <em>Default Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass <em>Default Details Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass <em>Default Tabular Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass <em>Default Form Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
@@ -61,7 +61,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsAnchorClass <em>Default Details Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexAnchorClass <em>Default Index Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass <em>Default Tabular Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsAnchorClass <em>Default Cards Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormAnchorClass <em>Default Form Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderAnchorClass <em>Default Slider Anchor Class</em>}</li>
@@ -403,27 +403,27 @@ public interface WebUI extends EObject {
 	void setDefaultDetailsContentClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Index Content Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Tabular Content Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Index Content Class</em>' attribute.
-	 * @see #setDefaultIndexContentClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultIndexContentClass()
+	 * @return the value of the '<em>Default Tabular Content Class</em>' attribute.
+	 * @see #setDefaultTabularContentClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultTabularContentClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getDefaultIndexContentClass();
+	String getDefaultTabularContentClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass <em>Default Tabular Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Index Content Class</em>' attribute.
-	 * @see #getDefaultIndexContentClass()
+	 * @param value the new value of the '<em>Default Tabular Content Class</em>' attribute.
+	 * @see #getDefaultTabularContentClass()
 	 * @generated
 	 */
-	void setDefaultIndexContentClass(String value);
+	void setDefaultTabularContentClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Cards Content Class</b></em>' attribute.
@@ -748,27 +748,27 @@ public interface WebUI extends EObject {
 	void setDefaultDetailsControlClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Index Control Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Tabular Control Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Index Control Class</em>' attribute.
-	 * @see #setDefaultIndexControlClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultIndexControlClass()
+	 * @return the value of the '<em>Default Tabular Control Class</em>' attribute.
+	 * @see #setDefaultTabularControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultTabularControlClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getDefaultIndexControlClass();
+	String getDefaultTabularControlClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass <em>Default Tabular Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Index Control Class</em>' attribute.
-	 * @see #getDefaultIndexControlClass()
+	 * @param value the new value of the '<em>Default Tabular Control Class</em>' attribute.
+	 * @see #getDefaultTabularControlClass()
 	 * @generated
 	 */
-	void setDefaultIndexControlClass(String value);
+	void setDefaultTabularControlClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Cards Control Class</b></em>' attribute.
@@ -932,27 +932,27 @@ public interface WebUI extends EObject {
 	void setDefaultDetailsAnchorClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Index Anchor Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Tabular Anchor Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Index Anchor Class</em>' attribute.
-	 * @see #setDefaultIndexAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultIndexAnchorClass()
+	 * @return the value of the '<em>Default Tabular Anchor Class</em>' attribute.
+	 * @see #setDefaultTabularAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultTabularAnchorClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getDefaultIndexAnchorClass();
+	String getDefaultTabularAnchorClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexAnchorClass <em>Default Index Anchor Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass <em>Default Tabular Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Index Anchor Class</em>' attribute.
-	 * @see #getDefaultIndexAnchorClass()
+	 * @param value the new value of the '<em>Default Tabular Anchor Class</em>' attribute.
+	 * @see #getDefaultTabularAnchorClass()
 	 * @generated
 	 */
-	void setDefaultIndexAnchorClass(String value);
+	void setDefaultTabularAnchorClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Cards Anchor Class</b></em>' attribute.

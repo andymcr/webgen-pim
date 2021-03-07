@@ -234,8 +234,8 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createDetailsUnitAdapter();
 			}
 			@Override
-			public Adapter caseIndexUnit(IndexUnit object) {
-				return createIndexUnitAdapter();
+			public Adapter caseTabularUnit(TabularUnit object) {
+				return createTabularUnitAdapter();
 			}
 			@Override
 			public Adapter caseCardsUnit(CardsUnit object) {
@@ -966,16 +966,16 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.IndexUnit <em>Index Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.TabularUnit <em>Tabular Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit
+	 * @see work.andycarpenter.webgen.pims.webui.TabularUnit
 	 * @generated
 	 */
-	public Adapter createIndexUnitAdapter() {
+	public Adapter createTabularUnitAdapter() {
 		return null;
 	}
 

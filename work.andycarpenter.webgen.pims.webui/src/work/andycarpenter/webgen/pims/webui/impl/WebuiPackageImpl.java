@@ -55,8 +55,6 @@ import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.GeneralOperationAction;
 import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
-import work.andycarpenter.webgen.pims.webui.IndexDisplayOption;
-import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.InputTechnologies;
 import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
@@ -83,6 +81,7 @@ import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.SliderUnit;
 import work.andycarpenter.webgen.pims.webui.StaticUnit;
 import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
+import work.andycarpenter.webgen.pims.webui.TabularUnit;
 import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
@@ -388,7 +387,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass indexUnitEClass = null;
+	private EClass tabularUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -585,13 +584,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EEnum paginationControlPlacementsEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum indexDisplayOptionEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -828,7 +820,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultIndexContentClass() {
+	public EAttribute getWebUI_DefaultTabularContentClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -978,7 +970,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultIndexControlClass() {
+	public EAttribute getWebUI_DefaultTabularControlClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -1058,7 +1050,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_DefaultIndexAnchorClass() {
+	public EAttribute getWebUI_DefaultTabularAnchorClass() {
 		return (EAttribute)webUIEClass.getEStructuralFeatures().get(44);
 	}
 
@@ -3248,8 +3240,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getIndexUnit() {
-		return indexUnitEClass;
+	public EClass getTabularUnit() {
+		return tabularUnitEClass;
 	}
 
 	/**
@@ -3258,18 +3250,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getIndexUnit_DisplayOption() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getIndexUnit_RowClasses() {
-		return (EAttribute)indexUnitEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTabularUnit_RowClasses() {
+		return (EAttribute)tabularUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4108,16 +4090,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EEnum getIndexDisplayOption() {
-		return indexDisplayOptionEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public WebuiFactory getWebuiFactory() {
 		return (WebuiFactory)getEFactoryInstance();
 	}
@@ -4156,7 +4128,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CAPTION_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CONTENT_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS);
-		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INDEX_CONTENT_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARDS_CONTENT_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FORM_CONTENT_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS);
@@ -4172,7 +4144,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_BADGE_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CONTROL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS);
-		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INDEX_CONTROL_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARDS_CONTROL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FORM_CONTROL_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS);
@@ -4186,7 +4158,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS);
-		createEAttribute(webUIEClass, WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS);
+		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_FORM_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS);
@@ -4438,9 +4410,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(detailsUnitEClass, DETAILS_UNIT__SELECTION);
 		createEAttribute(detailsUnitEClass, DETAILS_UNIT__OMIT_FIELD_LABELS);
 
-		indexUnitEClass = createEClass(INDEX_UNIT);
-		createEAttribute(indexUnitEClass, INDEX_UNIT__DISPLAY_OPTION);
-		createEAttribute(indexUnitEClass, INDEX_UNIT__ROW_CLASSES);
+		tabularUnitEClass = createEClass(TABULAR_UNIT);
+		createEAttribute(tabularUnitEClass, TABULAR_UNIT__ROW_CLASSES);
 
 		cardsUnitEClass = createEClass(CARDS_UNIT);
 		createEReference(cardsUnitEClass, CARDS_UNIT__BADGES);
@@ -4549,7 +4520,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		pageTopMenuOptionsEEnum = createEEnum(PAGE_TOP_MENU_OPTIONS);
 		collectionDisplayOptionsEEnum = createEEnum(COLLECTION_DISPLAY_OPTIONS);
 		paginationControlPlacementsEEnum = createEEnum(PAGINATION_CONTROL_PLACEMENTS);
-		indexDisplayOptionEEnum = createEEnum(INDEX_DISPLAY_OPTION);
 	}
 
 	/**
@@ -4634,7 +4604,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		mapUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		detailsUnitEClass.getESuperTypes().add(this.getSingletonUnit());
 		detailsUnitEClass.getESuperTypes().add(this.getSelectableUnit());
-		indexUnitEClass.getESuperTypes().add(this.getCollectionUnit());
+		tabularUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		cardsUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		textCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
 		dateCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
@@ -4678,7 +4648,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultCaptionClass(), ecorePackage.getEString(), "defaultCaptionClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultContentClass(), ecorePackage.getEString(), "defaultContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDetailsContentClass(), ecorePackage.getEString(), "defaultDetailsContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultIndexContentClass(), ecorePackage.getEString(), "defaultIndexContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultTabularContentClass(), ecorePackage.getEString(), "defaultTabularContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardsContentClass(), ecorePackage.getEString(), "defaultCardsContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultFormContentClass(), ecorePackage.getEString(), "defaultFormContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultSliderContentClass(), ecorePackage.getEString(), "defaultSliderContentClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4694,7 +4664,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultBadgeClass(), ecorePackage.getEString(), "defaultBadgeClass", "badge", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultControlClass(), ecorePackage.getEString(), "defaultControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDetailsControlClass(), ecorePackage.getEString(), "defaultDetailsControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultIndexControlClass(), ecorePackage.getEString(), "defaultIndexControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultTabularControlClass(), ecorePackage.getEString(), "defaultTabularControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardsControlClass(), ecorePackage.getEString(), "defaultCardsControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultFormControlClass(), ecorePackage.getEString(), "defaultFormControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultSliderControlClass(), ecorePackage.getEString(), "defaultSliderControlClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4708,7 +4678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultActionNavigationClass(), ecorePackage.getEString(), "defaultActionNavigationClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultAnchorClass(), ecorePackage.getEString(), "defaultAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDetailsAnchorClass(), ecorePackage.getEString(), "defaultDetailsAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultIndexAnchorClass(), ecorePackage.getEString(), "defaultIndexAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultTabularAnchorClass(), ecorePackage.getEString(), "defaultTabularAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCardsAnchorClass(), ecorePackage.getEString(), "defaultCardsAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultFormAnchorClass(), ecorePackage.getEString(), "defaultFormAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultSliderAnchorClass(), ecorePackage.getEString(), "defaultSliderAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4960,9 +4930,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getDetailsUnit_Selection(), thePersistencePackage.getSelection(), null, "selection", null, 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDetailsUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 0, 1, DetailsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(indexUnitEClass, IndexUnit.class, "IndexUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIndexUnit_DisplayOption(), this.getIndexDisplayOption(), "displayOption", "Grid", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIndexUnit_RowClasses(), ecorePackage.getEString(), "rowClasses", "odd_row,even_row", 0, 1, IndexUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(tabularUnitEClass, TabularUnit.class, "TabularUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTabularUnit_RowClasses(), ecorePackage.getEString(), "rowClasses", "odd_row,even_row", 0, 1, TabularUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cardsUnitEClass, CardsUnit.class, "CardsUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCardsUnit_Badges(), this.getBadge(), this.getBadge_DisplayedOn(), "badges", null, 0, -1, CardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5014,7 +4983,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getControlUnit_CancelLabel(), ecorePackage.getEString(), "cancelLabel", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(searchUnitEClass, SearchUnit.class, "SearchUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSearchUnit_ResultsDestination(), this.getIndexUnit(), null, "resultsDestination", null, 1, 1, SearchUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSearchUnit_ResultsDestination(), this.getTabularUnit(), null, "resultsDestination", null, 1, 1, SearchUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(registrationUnitEClass, RegistrationUnit.class, "RegistrationUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5088,11 +5057,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.BELOW);
 		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE);
 		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE_AND_BELOW);
-
-		initEEnum(indexDisplayOptionEEnum, IndexDisplayOption.class, "IndexDisplayOption");
-		addEEnumLiteral(indexDisplayOptionEEnum, IndexDisplayOption.GRID);
-		addEEnumLiteral(indexDisplayOptionEEnum, IndexDisplayOption.PAGE_DIRECTION);
-		addEEnumLiteral(indexDisplayOptionEEnum, IndexDisplayOption.LINE_DIRECTION);
 
 		// Create resource
 		createResource(eNS_URI);

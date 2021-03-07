@@ -198,13 +198,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>Default Index Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Tabular Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INDEX_CONTENT_CLASS = 14;
+	int WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Content Class</b></em>' attribute.
@@ -342,13 +342,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>Default Index Control Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Tabular Control Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INDEX_CONTROL_CLASS = 30;
+	int WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = 30;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Control Class</b></em>' attribute.
@@ -468,13 +468,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>Default Index Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Tabular Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS = 44;
+	int WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = 44;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Anchor Class</b></em>' attribute.
@@ -7761,14 +7761,14 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT_OPERATION_COUNT = SINGLETON_UNIT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl <em>Index Unit</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TabularUnitImpl <em>Tabular Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.TabularUnitImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int INDEX_UNIT = 40;
+	int TABULAR_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7777,7 +7777,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__NAME = COLLECTION_UNIT__NAME;
+	int TABULAR_UNIT__NAME = COLLECTION_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -7786,7 +7786,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
+	int TABULAR_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -7795,7 +7795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DISPLAYED_ON = COLLECTION_UNIT__DISPLAYED_ON;
+	int TABULAR_UNIT__DISPLAYED_ON = COLLECTION_UNIT__DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -7804,7 +7804,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int TABULAR_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -7813,7 +7813,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
+	int TABULAR_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -7822,7 +7822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PURPOSE_SUMMARY = COLLECTION_UNIT__PURPOSE_SUMMARY;
+	int TABULAR_UNIT__PURPOSE_SUMMARY = COLLECTION_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -7831,7 +7831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
+	int TABULAR_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -7840,7 +7840,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
+	int TABULAR_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -7849,7 +7849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+	int TABULAR_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -7858,7 +7858,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
+	int TABULAR_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -7867,7 +7867,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
+	int TABULAR_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -7876,7 +7876,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
+	int TABULAR_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -7885,7 +7885,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
+	int TABULAR_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -7894,7 +7894,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ACTIONS = COLLECTION_UNIT__ACTIONS;
+	int TABULAR_UNIT__ACTIONS = COLLECTION_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -7903,7 +7903,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
+	int TABULAR_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
@@ -7912,7 +7912,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
+	int TABULAR_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -7921,7 +7921,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
+	int TABULAR_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -7930,7 +7930,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
+	int TABULAR_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -7939,7 +7939,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
+	int TABULAR_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
@@ -7948,7 +7948,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+	int TABULAR_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -7957,7 +7957,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__HIDE_WHEN = COLLECTION_UNIT__HIDE_WHEN;
+	int TABULAR_UNIT__HIDE_WHEN = COLLECTION_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -7966,7 +7966,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__MESSAGE_WHEN_HIDDEN = COLLECTION_UNIT__MESSAGE_WHEN_HIDDEN;
+	int TABULAR_UNIT__MESSAGE_WHEN_HIDDEN = COLLECTION_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -7975,7 +7975,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__HEADER = COLLECTION_UNIT__HEADER;
+	int TABULAR_UNIT__HEADER = COLLECTION_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -7984,7 +7984,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FOOTER = COLLECTION_UNIT__FOOTER;
+	int TABULAR_UNIT__FOOTER = COLLECTION_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -7993,7 +7993,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__HEADER_CLASS = COLLECTION_UNIT__HEADER_CLASS;
+	int TABULAR_UNIT__HEADER_CLASS = COLLECTION_UNIT__HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -8002,7 +8002,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
+	int TABULAR_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -8011,7 +8011,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
+	int TABULAR_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -8020,7 +8020,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
+	int TABULAR_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -8029,7 +8029,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
+	int TABULAR_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -8038,7 +8038,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
+	int TABULAR_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -8047,7 +8047,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
+	int TABULAR_UNIT__FOOTER_CLASS = COLLECTION_UNIT__FOOTER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -8056,7 +8056,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
+	int TABULAR_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
@@ -8065,7 +8065,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ELEMENT_TITLE = COLLECTION_UNIT__ELEMENT_TITLE;
+	int TABULAR_UNIT__ELEMENT_TITLE = COLLECTION_UNIT__ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -8074,7 +8074,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
+	int TABULAR_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -8083,7 +8083,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__SELECTION = COLLECTION_UNIT__SELECTION;
+	int TABULAR_UNIT__SELECTION = COLLECTION_UNIT__SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -8092,7 +8092,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
+	int TABULAR_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
@@ -8101,7 +8101,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__OMIT_CONTAINER_LOAD = COLLECTION_UNIT__OMIT_CONTAINER_LOAD;
+	int TABULAR_UNIT__OMIT_CONTAINER_LOAD = COLLECTION_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -8110,7 +8110,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
+	int TABULAR_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -8119,7 +8119,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+	int TABULAR_UNIT__FILTER = COLLECTION_UNIT__FILTER;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -8128,7 +8128,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
+	int TABULAR_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -8137,7 +8137,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
+	int TABULAR_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -8146,7 +8146,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
+	int TABULAR_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -8155,7 +8155,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__DEFAULT_PAGINATION_SIZE = COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
+	int TABULAR_UNIT__DEFAULT_PAGINATION_SIZE = COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -8164,7 +8164,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
+	int TABULAR_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -8173,7 +8173,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
+	int TABULAR_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -8182,7 +8182,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
+	int TABULAR_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -8191,7 +8191,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
+	int TABULAR_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -8200,7 +8200,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
+	int TABULAR_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -8209,7 +8209,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
+	int TABULAR_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -8218,7 +8218,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
+	int TABULAR_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -8227,7 +8227,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
+	int TABULAR_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -8236,7 +8236,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
+	int TABULAR_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -8245,7 +8245,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
+	int TABULAR_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -8254,7 +8254,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
+	int TABULAR_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -8263,7 +8263,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
+	int TABULAR_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -8272,7 +8272,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
+	int TABULAR_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -8281,7 +8281,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
+	int TABULAR_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -8290,7 +8290,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
+	int TABULAR_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -8299,7 +8299,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
+	int TABULAR_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -8308,16 +8308,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Display Option</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_UNIT__DISPLAY_OPTION = COLLECTION_UNIT_FEATURE_COUNT + 0;
+	int TABULAR_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Row Classes</b></em>' attribute.
@@ -8326,25 +8317,25 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 1;
+	int TABULAR_UNIT__ROW_CLASSES = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Index Unit</em>' class.
+	 * The number of structural features of the '<em>Tabular Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int TABULAR_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Index Unit</em>' class.
+	 * The number of operations of the '<em>Tabular Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
+	int TABULAR_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl <em>Cards Unit</em>}' class.
@@ -16466,17 +16457,6 @@ public interface WebuiPackage extends EPackage {
 	int PAGINATION_CONTROL_PLACEMENTS = 68;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.IndexDisplayOption <em>Index Display Option</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.IndexDisplayOption
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexDisplayOption()
-	 * @generated
-	 */
-	int INDEX_DISPLAY_OPTION = 69;
-
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16641,15 +16621,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultDetailsContentClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass <em>Default Index Content Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass <em>Default Tabular Content Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Index Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexContentClass()
+	 * @return the meta object for the attribute '<em>Default Tabular Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultIndexContentClass();
+	EAttribute getWebUI_DefaultTabularContentClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}'.
@@ -16806,15 +16786,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultDetailsControlClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass <em>Default Index Control Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass <em>Default Tabular Control Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Index Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexControlClass()
+	 * @return the meta object for the attribute '<em>Default Tabular Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultIndexControlClass();
+	EAttribute getWebUI_DefaultTabularControlClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}'.
@@ -16894,15 +16874,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultDetailsAnchorClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexAnchorClass <em>Default Index Anchor Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass <em>Default Tabular Anchor Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Index Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultIndexAnchorClass()
+	 * @return the meta object for the attribute '<em>Default Tabular Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EAttribute getWebUI_DefaultIndexAnchorClass();
+	EAttribute getWebUI_DefaultTabularAnchorClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsAnchorClass <em>Default Cards Anchor Class</em>}'.
@@ -19264,36 +19244,25 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDetailsUnit_OmitFieldLabels();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.IndexUnit <em>Index Unit</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TabularUnit <em>Tabular Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Index Unit</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit
+	 * @return the meta object for class '<em>Tabular Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.TabularUnit
 	 * @generated
 	 */
-	EClass getIndexUnit();
+	EClass getTabularUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getDisplayOption <em>Display Option</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display Option</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#getDisplayOption()
-	 * @see #getIndexUnit()
-	 * @generated
-	 */
-	EAttribute getIndexUnit_DisplayOption();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.IndexUnit#getRowClasses <em>Row Classes</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.TabularUnit#getRowClasses <em>Row Classes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Row Classes</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexUnit#getRowClasses()
-	 * @see #getIndexUnit()
+	 * @see work.andycarpenter.webgen.pims.webui.TabularUnit#getRowClasses()
+	 * @see #getTabularUnit()
 	 * @generated
 	 */
-	EAttribute getIndexUnit_RowClasses();
+	EAttribute getTabularUnit_RowClasses();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CardsUnit <em>Cards Unit</em>}'.
@@ -20181,16 +20150,6 @@ public interface WebuiPackage extends EPackage {
 	EEnum getPaginationControlPlacements();
 
 	/**
-	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.IndexDisplayOption <em>Index Display Option</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Index Display Option</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.IndexDisplayOption
-	 * @generated
-	 */
-	EEnum getIndexDisplayOption();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20336,12 +20295,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultDetailsContentClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Index Content Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Tabular Content Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_INDEX_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultIndexContentClass();
+		EAttribute WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultTabularContentClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Cards Content Class</b></em>' attribute feature.
@@ -20456,12 +20415,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultDetailsControlClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Index Control Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Tabular Control Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_INDEX_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultIndexControlClass();
+		EAttribute WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultTabularControlClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Cards Control Class</b></em>' attribute feature.
@@ -20520,12 +20479,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultDetailsAnchorClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Index Anchor Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Tabular Anchor Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultIndexAnchorClass();
+		EAttribute WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultTabularAnchorClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Cards Anchor Class</b></em>' attribute feature.
@@ -22350,22 +22309,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DETAILS_UNIT__OMIT_FIELD_LABELS = eINSTANCE.getDetailsUnit_OmitFieldLabels();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl <em>Index Unit</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TabularUnitImpl <em>Tabular Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.IndexUnitImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexUnit()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.TabularUnitImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 		 * @generated
 		 */
-		EClass INDEX_UNIT = eINSTANCE.getIndexUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Option</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INDEX_UNIT__DISPLAY_OPTION = eINSTANCE.getIndexUnit_DisplayOption();
+		EClass TABULAR_UNIT = eINSTANCE.getTabularUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Row Classes</b></em>' attribute feature.
@@ -22373,7 +22324,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INDEX_UNIT__ROW_CLASSES = eINSTANCE.getIndexUnit_RowClasses();
+		EAttribute TABULAR_UNIT__ROW_CLASSES = eINSTANCE.getTabularUnit_RowClasses();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl <em>Cards Unit</em>}' class.
@@ -23094,16 +23045,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum PAGINATION_CONTROL_PLACEMENTS = eINSTANCE.getPaginationControlPlacements();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.IndexDisplayOption <em>Index Display Option</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.IndexDisplayOption
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getIndexDisplayOption()
-		 * @generated
-		 */
-		EEnum INDEX_DISPLAY_OPTION = eINSTANCE.getIndexDisplayOption();
 
 	}
 

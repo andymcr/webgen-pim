@@ -27,8 +27,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
-import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.Query;
+import work.andycarpenter.webgen.pims.webui.TabularUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -202,8 +202,8 @@ public class QueryItemProvider
 		if (query.eContainer() instanceof ActionMenuEntry) {
 			final ActionMenuEntry entry
 				= (ActionMenuEntry) query.eContainer();
-			if (entry.getDestination() instanceof IndexUnit) {
-				return ((IndexUnit) entry.getDestination()).getSupportedFilters();
+			if (entry.getDestination() instanceof TabularUnit) {
+				return ((TabularUnit) entry.getDestination()).getSupportedFilters();
 			}
 		}
 

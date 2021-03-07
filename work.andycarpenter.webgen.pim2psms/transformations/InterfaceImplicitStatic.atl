@@ -44,7 +44,7 @@ unique lazy rule implicitStaticTextPage {
 						thisModule.findWafMenu(sideMenu.name)
 					endif
 	),
-	text : WAF!IndexGridUnit (
+	text : WAF!TabularUnit (
 		name <- 'Text',
 		displayLabel <- 'Text',
 		contentType <- Sequence{thisModule.findOrmEntity('StaticText')},
@@ -58,13 +58,13 @@ unique lazy rule implicitStaticTextPage {
 				in features
 					->collect(f | thisModule.implicitUnitAttribute(f)),
 		actions <- Sequence{editTextAction},
-		styleClass <- 'unit index_unit',
+		styleClass <- '',
 		headerClass <- 'unit_header',
 		captionClass <- 'unit_caption',
 		controlClass <- 'unit_control',
 		footerClass <- 'unit_footer',
 		errorClass <- 'error',
-		contentClass <- 'index_layout framed',
+		contentClass <- '',
 		rowClasses <- 'odd_row even_row'
 	),
 	editTextAction : WAF!SelectAction (

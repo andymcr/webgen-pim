@@ -434,16 +434,16 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.INDEX_UNIT: {
-				IndexUnit indexUnit = (IndexUnit)theEObject;
-				T result = caseIndexUnit(indexUnit);
-				if (result == null) result = caseCollectionUnit(indexUnit);
-				if (result == null) result = caseDynamicUnit(indexUnit);
-				if (result == null) result = caseSelectableUnit(indexUnit);
-				if (result == null) result = caseContentUnit(indexUnit);
-				if (result == null) result = caseActionContainer(indexUnit);
-				if (result == null) result = caseNamedDisplayElement(indexUnit);
-				if (result == null) result = caseNamedElement(indexUnit);
+			case WebuiPackage.TABULAR_UNIT: {
+				TabularUnit tabularUnit = (TabularUnit)theEObject;
+				T result = caseTabularUnit(tabularUnit);
+				if (result == null) result = caseCollectionUnit(tabularUnit);
+				if (result == null) result = caseDynamicUnit(tabularUnit);
+				if (result == null) result = caseSelectableUnit(tabularUnit);
+				if (result == null) result = caseContentUnit(tabularUnit);
+				if (result == null) result = caseActionContainer(tabularUnit);
+				if (result == null) result = caseNamedDisplayElement(tabularUnit);
+				if (result == null) result = caseNamedElement(tabularUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1338,17 +1338,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Index Unit</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Tabular Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Index Unit</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Tabular Unit</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndexUnit(IndexUnit object) {
+	public T caseTabularUnit(TabularUnit object) {
 		return null;
 	}
 

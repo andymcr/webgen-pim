@@ -91,7 +91,7 @@ rule WafModel {
 		defaultDetailsContentClass <- thisModule.findWebsiteUI().defaultDetailsContentClass,
 		defaultFormContentClass <- thisModule.findWebsiteUI().defaultFormContentClass,
 		defaultGalleryContentClass <- thisModule.findWebsiteUI().defaultGalleryContentClass,
-		defaultIndexContentClass <- thisModule.findWebsiteUI().defaultIndexContentClass,
+		defaultTabularContentClass <- thisModule.findWebsiteUI().defaultTabularContentClass,
 		defaultSliderContentClass <- thisModule.findWebsiteUI().defaultSliderContentClass,
 		defaultStaticContentClass <- thisModule.findWebsiteUI().defaultStaticContentClass,
 		defaultFieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
@@ -107,23 +107,22 @@ rule WafModel {
 		defaultDetailsControlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
 		defaultFormControlClass <- thisModule.findWebsiteUI().defaultFormControlClass,
 		defaultGalleryControlClass <- thisModule.findWebsiteUI().defaultGalleryControlClass,
-		defaultIndexControlClass <- thisModule.findWebsiteUI().defaultIndexControlClass,
+		defaultTabularControlClass <- thisModule.findWebsiteUI().defaultTabularControlClass,
 		defaultSliderControlClass <- thisModule.findWebsiteUI().defaultSliderControlClass,
-		defaultStaticControlClass <- thisModule.findWebsiteUI().defaultStaticControlClass,
 		defaultFieldLabelClass <- thisModule.findWebsiteUI().defaultFieldLabelClass,
 		defaultInputGroupClass <- thisModule.findWebsiteUI().defaultInputGroupClass,
 --		defaultCardsFieldLabelClass <- thisModule.findWebsiteUI().defaultCardsFieldLabelClass,
 --		defaultDetailsFieldLabelClass <- thisModule.findWebsiteUI().defaultDetailsFieldLabelClass,
 --		defaultFormFieldLabelClass <- thisModule.findWebsiteUI().defaultFormFieldLabelClass,
 --		defaultGalleryFieldLabelClass <- thisModule.findWebsiteUI().defaultGalleryFieldLabelClass,
---		defaultIndexFieldLabelClass <- thisModule.findWebsiteUI().defaultIndexFieldLabelClass,
+--		defaultTabularFieldLabelClass <- thisModule.findWebsiteUI().defaultTabularFieldLabelClass,
 --		defaultSliderFieldLabelClass <- thisModule.findWebsiteUI().defaultSliderFieldLabelClass,
 		defaultFieldValueClass <- thisModule.findWebsiteUI().defaultFieldValueClass,
 --		defaultCardsFieldValueClass <- thisModule.findWebsiteUI().defaultCardsFieldValueClass,
 --		defaultDetailsFieldValueClass <- thisModule.findWebsiteUI().defaultDetailsFieldValueClass,
 --		defaultFormFieldValueClass <- thisModule.findWebsiteUI().defaultFormFieldValueClass,
 --		defaultGalleryFieldValueClass <- thisModule.findWebsiteUI().defaultGalleryFieldValueClass,
---		defaultIndexFieldValueClass <- thisModule.findWebsiteUI().defaultIndexFieldValueClass,
+--		defaultTabularFieldValueClass <- thisModule.findWebsiteUI().defaultTabularFieldValueClass,
 --		defaultSliderFieldValueClass <- thisModule.findWebsiteUI().defaultSliderFieldValueClass,
 		defaultActionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass,
 		defaultAnchorClass <- thisModule.findWebsiteUI().defaultAnchorClass,
@@ -131,9 +130,8 @@ rule WafModel {
 		defaultDetailsAnchorClass <- thisModule.findWebsiteUI().defaultDetailsAnchorClass,
 		defaultFormAnchorClass <- thisModule.findWebsiteUI().defaultFormAnchorClass,
 		defaultGalleryAnchorClass <- thisModule.findWebsiteUI().defaultGalleryAnchorClass,
-		defaultIndexAnchorClass <- thisModule.findWebsiteUI().defaultIndexAnchorClass,
-		defaultSliderAnchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass,
-		defaultStaticAnchorClass <- thisModule.findWebsiteUI().defaultStaticAnchorClass
+		defaultTabularAnchorClass <- thisModule.findWebsiteUI().defaultTabularAnchorClass,
+		defaultSliderAnchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass
 	)
 }
 
@@ -291,7 +289,7 @@ abstract rule DynamicUnit {
 		displayFields <- website.displayFields,
 		hasWhenFieldsEmptyAddImplicitFields <- website.hasWhenFieldsEmptyAddImplicitFields,
 		hideWhen <- website.hideWhen,
-		messageWhenHidden <- website.messageWhenHidden(),
+		messageWhenHidden <- website.messageWhenHidden,
 		allActions <- website.actions,
 		header <- website.header,
 		footer <- website.footer,
@@ -694,31 +692,10 @@ rule DetailsUnit {
 }
 
 -- @extends CollectionUnit
-abstract rule IndexUnit {
-	from website : Website!IndexUnit
-	to waf : WAF!IndexUnit (
-		rowClasses <- website.rowClasses.replaceAll(',', ' ')
-	)
-}
-
--- @extends IndexUnit
-rule IndexGridUnit {
-	from website : Website!IndexUnit (website.displayOption = #Grid)
-	to waf : WAF!IndexGridUnit (
-	)
-}
-
--- @extends IndexUnit
-rule IndexPageDirectionUnit {
-	from website : Website!IndexUnit (website.displayOption = #PageDirection)
-	to waf : WAF!IndexPageDirectionUnit (
-	)
-}
-
--- @extends IndexUnit
-rule IndexLineDirectionUnit {
-	from website : Website!IndexUnit (website.displayOption = #LineDirection)
-	to waf : WAF!IndexLineDirectionUnit (
+rule TabularUnit {
+	from website : Website!TabularUnit
+	to waf : WAF!TabularUnit (
+		rowClasses <- website.rowClasses
 	)
 }
 

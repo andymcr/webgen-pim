@@ -174,8 +174,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateMapUnit((MapUnit)value, diagnostics, context);
 			case WebuiPackage.DETAILS_UNIT:
 				return validateDetailsUnit((DetailsUnit)value, diagnostics, context);
-			case WebuiPackage.INDEX_UNIT:
-				return validateIndexUnit((IndexUnit)value, diagnostics, context);
+			case WebuiPackage.TABULAR_UNIT:
+				return validateTabularUnit((TabularUnit)value, diagnostics, context);
 			case WebuiPackage.CARDS_UNIT:
 				return validateCardsUnit((CardsUnit)value, diagnostics, context);
 			case WebuiPackage.BADGE:
@@ -232,8 +232,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateCollectionDisplayOptions((CollectionDisplayOptions)value, diagnostics, context);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return validatePaginationControlPlacements((PaginationControlPlacements)value, diagnostics, context);
-			case WebuiPackage.INDEX_DISPLAY_OPTION:
-				return validateIndexDisplayOption((IndexDisplayOption)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -1274,21 +1272,21 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateIndexUnit(IndexUnit indexUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(indexUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(indexUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(indexUnit, diagnostics, context);
+	public boolean validateTabularUnit(TabularUnit tabularUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tabularUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(tabularUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(tabularUnit, diagnostics, context);
 		return result;
 	}
 
@@ -1868,15 +1866,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatePaginationControlPlacements(PaginationControlPlacements paginationControlPlacements, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateIndexDisplayOption(IndexDisplayOption indexDisplayOption, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

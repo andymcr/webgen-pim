@@ -283,13 +283,13 @@ public interface WebuiFactory extends EFactory {
 	DetailsUnit createDetailsUnit();
 
 	/**
-	 * Returns a new object of class '<em>Index Unit</em>'.
+	 * Returns a new object of class '<em>Tabular Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Index Unit</em>'.
+	 * @return a new object of class '<em>Tabular Unit</em>'.
 	 * @generated
 	 */
-	IndexUnit createIndexUnit();
+	TabularUnit createTabularUnit();
 
 	/**
 	 * Returns a new object of class '<em>Text Cards Unit</em>'.

@@ -8,9 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import work.andycarpenter.webgen.pims.webui.IndexUnit;
 import work.andycarpenter.webgen.pims.webui.SearchUnit;
+import work.andycarpenter.webgen.pims.webui.TabularUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -35,7 +34,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * @generated
 	 * @ordered
 	 */
-	protected IndexUnit resultsDestination;
+	protected TabularUnit resultsDestination;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +61,10 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * @generated
 	 */
 	@Override
-	public IndexUnit getResultsDestination() {
+	public TabularUnit getResultsDestination() {
 		if (resultsDestination != null && resultsDestination.eIsProxy()) {
 			InternalEObject oldResultsDestination = (InternalEObject)resultsDestination;
-			resultsDestination = (IndexUnit)eResolveProxy(oldResultsDestination);
+			resultsDestination = (TabularUnit)eResolveProxy(oldResultsDestination);
 			if (resultsDestination != oldResultsDestination) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION, oldResultsDestination, resultsDestination));
@@ -79,7 +78,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndexUnit basicGetResultsDestination() {
+	public TabularUnit basicGetResultsDestination() {
 		return resultsDestination;
 	}
 
@@ -89,8 +88,8 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	 * @generated
 	 */
 	@Override
-	public void setResultsDestination(IndexUnit newResultsDestination) {
-		IndexUnit oldResultsDestination = resultsDestination;
+	public void setResultsDestination(TabularUnit newResultsDestination) {
+		TabularUnit oldResultsDestination = resultsDestination;
 		resultsDestination = newResultsDestination;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION, oldResultsDestination, resultsDestination));
@@ -120,7 +119,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
-				setResultsDestination((IndexUnit)newValue);
+				setResultsDestination((TabularUnit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,7 +134,7 @@ public class SearchUnitImpl extends ControlUnitImpl implements SearchUnit {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.SEARCH_UNIT__RESULTS_DESTINATION:
-				setResultsDestination((IndexUnit)null);
+				setResultsDestination((TabularUnit)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -86,7 +86,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.UPDATE_UNIT: return createUpdateUnit();
 			case WebuiPackage.MAP_UNIT: return createMapUnit();
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
-			case WebuiPackage.INDEX_UNIT: return createIndexUnit();
+			case WebuiPackage.TABULAR_UNIT: return createTabularUnit();
 			case WebuiPackage.BADGE: return createBadge();
 			case WebuiPackage.TEXT_CARDS_UNIT: return createTextCardsUnit();
 			case WebuiPackage.DATE_CARDS_UNIT: return createDateCardsUnit();
@@ -127,8 +127,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return createCollectionDisplayOptionsFromString(eDataType, initialValue);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return createPaginationControlPlacementsFromString(eDataType, initialValue);
-			case WebuiPackage.INDEX_DISPLAY_OPTION:
-				return createIndexDisplayOptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -152,8 +150,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return convertCollectionDisplayOptionsToString(eDataType, instanceValue);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return convertPaginationControlPlacementsToString(eDataType, instanceValue);
-			case WebuiPackage.INDEX_DISPLAY_OPTION:
-				return convertIndexDisplayOptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -484,9 +480,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public IndexUnit createIndexUnit() {
-		IndexUnitImpl indexUnit = new IndexUnitImpl();
-		return indexUnit;
+	public TabularUnit createTabularUnit() {
+		TabularUnitImpl tabularUnit = new TabularUnitImpl();
+		return tabularUnit;
 	}
 
 	/**
@@ -773,26 +769,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	public String convertPaginationControlPlacementsToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IndexDisplayOption createIndexDisplayOptionFromString(EDataType eDataType, String initialValue) {
-		IndexDisplayOption result = IndexDisplayOption.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIndexDisplayOptionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

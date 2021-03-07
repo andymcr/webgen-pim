@@ -237,7 +237,7 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.PAGE__UNITS,
-				 WebuiFactory.eINSTANCE.createIndexUnit()));
+				 WebuiFactory.eINSTANCE.createTabularUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter

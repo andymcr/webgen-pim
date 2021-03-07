@@ -41,7 +41,7 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIndexContentClass"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsContentClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
@@ -75,7 +75,7 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsControlClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIndexControlClass"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularControlClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsControlClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
@@ -106,7 +106,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsAnchorClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIndexAnchorClass"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularAnchorClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsAnchorClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
@@ -654,14 +654,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="IndexDisplayOption">
-    <eLiterals name="Grid"/>
-    <eLiterals name="PageDirection" value="1"/>
-    <eLiterals name="LineDirection" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexUnit" eSuperTypes="#//CollectionUnit">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayOption" ordered="false"
-        eType="#//IndexDisplayOption" defaultValueLiteral="Grid"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TabularUnit" eSuperTypes="#//CollectionUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowClasses" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="odd_row,even_row"/>
   </eClassifiers>
@@ -741,7 +734,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SearchUnit" eSuperTypes="#//ControlUnit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultsDestination" ordered="false"
-        lowerBound="1" eType="#//IndexUnit"/>
+        lowerBound="1" eType="#//TabularUnit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegistrationUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LoginUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>

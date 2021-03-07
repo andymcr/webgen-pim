@@ -47,7 +47,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCaptionClass <em>Default Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultContentClass <em>Default Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsContentClass <em>Default Details Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexContentClass <em>Default Index Content Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTabularContentClass <em>Default Tabular Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsContentClass <em>Default Cards Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormContentClass <em>Default Form Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderContentClass <em>Default Slider Content Class</em>}</li>
@@ -63,7 +63,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultBadgeClass <em>Default Badge Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultControlClass <em>Default Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsControlClass <em>Default Details Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexControlClass <em>Default Index Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTabularControlClass <em>Default Tabular Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsControlClass <em>Default Cards Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormControlClass <em>Default Form Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
@@ -77,7 +77,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsAnchorClass <em>Default Details Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultIndexAnchorClass <em>Default Index Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTabularAnchorClass <em>Default Tabular Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsAnchorClass <em>Default Cards Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormAnchorClass <em>Default Form Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderAnchorClass <em>Default Slider Anchor Class</em>}</li>
@@ -332,24 +332,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultDetailsContentClass = DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultIndexContentClass() <em>Default Index Content Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultTabularContentClass() <em>Default Tabular Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexContentClass()
+	 * @see #getDefaultTabularContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT = "";
+	protected static final String DEFAULT_TABULAR_CONTENT_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultIndexContentClass() <em>Default Index Content Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultTabularContentClass() <em>Default Tabular Content Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexContentClass()
+	 * @see #getDefaultTabularContentClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultIndexContentClass = DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT;
+	protected String defaultTabularContentClass = DEFAULT_TABULAR_CONTENT_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultCardsContentClass() <em>Default Cards Content Class</em>}' attribute.
@@ -652,24 +652,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultDetailsControlClass = DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultIndexControlClass() <em>Default Index Control Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultTabularControlClass() <em>Default Tabular Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexControlClass()
+	 * @see #getDefaultTabularControlClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT = "";
+	protected static final String DEFAULT_TABULAR_CONTROL_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultIndexControlClass() <em>Default Index Control Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultTabularControlClass() <em>Default Tabular Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexControlClass()
+	 * @see #getDefaultTabularControlClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultIndexControlClass = DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT;
+	protected String defaultTabularControlClass = DEFAULT_TABULAR_CONTROL_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultCardsControlClass() <em>Default Cards Control Class</em>}' attribute.
@@ -932,24 +932,24 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultDetailsAnchorClass = DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultIndexAnchorClass() <em>Default Index Anchor Class</em>}' attribute.
+	 * The default value of the '{@link #getDefaultTabularAnchorClass() <em>Default Tabular Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexAnchorClass()
+	 * @see #getDefaultTabularAnchorClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT = "";
+	protected static final String DEFAULT_TABULAR_ANCHOR_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDefaultIndexAnchorClass() <em>Default Index Anchor Class</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultTabularAnchorClass() <em>Default Tabular Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultIndexAnchorClass()
+	 * @see #getDefaultTabularAnchorClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultIndexAnchorClass = DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT;
+	protected String defaultTabularAnchorClass = DEFAULT_TABULAR_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultCardsAnchorClass() <em>Default Cards Anchor Class</em>}' attribute.
@@ -1472,8 +1472,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultIndexContentClass() {
-		return defaultIndexContentClass;
+	public String getDefaultTabularContentClass() {
+		return defaultTabularContentClass;
 	}
 
 	/**
@@ -1482,11 +1482,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultIndexContentClass(String newDefaultIndexContentClass) {
-		String oldDefaultIndexContentClass = defaultIndexContentClass;
-		defaultIndexContentClass = newDefaultIndexContentClass;
+	public void setDefaultTabularContentClass(String newDefaultTabularContentClass) {
+		String oldDefaultTabularContentClass = defaultTabularContentClass;
+		defaultTabularContentClass = newDefaultTabularContentClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS, oldDefaultIndexContentClass, defaultIndexContentClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS, oldDefaultTabularContentClass, defaultTabularContentClass));
 	}
 
 	/**
@@ -1817,8 +1817,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultIndexControlClass() {
-		return defaultIndexControlClass;
+	public String getDefaultTabularControlClass() {
+		return defaultTabularControlClass;
 	}
 
 	/**
@@ -1827,11 +1827,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultIndexControlClass(String newDefaultIndexControlClass) {
-		String oldDefaultIndexControlClass = defaultIndexControlClass;
-		defaultIndexControlClass = newDefaultIndexControlClass;
+	public void setDefaultTabularControlClass(String newDefaultTabularControlClass) {
+		String oldDefaultTabularControlClass = defaultTabularControlClass;
+		defaultTabularControlClass = newDefaultTabularControlClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS, oldDefaultIndexControlClass, defaultIndexControlClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS, oldDefaultTabularControlClass, defaultTabularControlClass));
 	}
 
 	/**
@@ -2001,8 +2001,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultIndexAnchorClass() {
-		return defaultIndexAnchorClass;
+	public String getDefaultTabularAnchorClass() {
+		return defaultTabularAnchorClass;
 	}
 
 	/**
@@ -2011,11 +2011,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultIndexAnchorClass(String newDefaultIndexAnchorClass) {
-		String oldDefaultIndexAnchorClass = defaultIndexAnchorClass;
-		defaultIndexAnchorClass = newDefaultIndexAnchorClass;
+	public void setDefaultTabularAnchorClass(String newDefaultTabularAnchorClass) {
+		String oldDefaultTabularAnchorClass = defaultTabularAnchorClass;
+		defaultTabularAnchorClass = newDefaultTabularAnchorClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS, oldDefaultIndexAnchorClass, defaultIndexAnchorClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS, oldDefaultTabularAnchorClass, defaultTabularAnchorClass));
 	}
 
 	/**
@@ -2432,8 +2432,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
 				return getDefaultDetailsContentClass();
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
-				return getDefaultIndexContentClass();
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS:
+				return getDefaultTabularContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				return getDefaultCardsContentClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
@@ -2464,8 +2464,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultControlClass();
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
 				return getDefaultDetailsControlClass();
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
-				return getDefaultIndexControlClass();
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS:
+				return getDefaultTabularControlClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
 				return getDefaultCardsControlClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
@@ -2492,8 +2492,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
 				return getDefaultDetailsAnchorClass();
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
-				return getDefaultIndexAnchorClass();
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS:
+				return getDefaultTabularAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
 				return getDefaultCardsAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
@@ -2567,8 +2567,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
 				setDefaultDetailsContentClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
-				setDefaultIndexContentClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS:
+				setDefaultTabularContentClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				setDefaultCardsContentClass((String)newValue);
@@ -2615,8 +2615,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
 				setDefaultDetailsControlClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
-				setDefaultIndexControlClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS:
+				setDefaultTabularControlClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
 				setDefaultCardsControlClass((String)newValue);
@@ -2657,8 +2657,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
 				setDefaultDetailsAnchorClass((String)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
-				setDefaultIndexAnchorClass((String)newValue);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS:
+				setDefaultTabularAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
 				setDefaultCardsAnchorClass((String)newValue);
@@ -2738,8 +2738,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
 				setDefaultDetailsContentClass(DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
-				setDefaultIndexContentClass(DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS:
+				setDefaultTabularContentClass(DEFAULT_TABULAR_CONTENT_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				setDefaultCardsContentClass(DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT);
@@ -2786,8 +2786,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
 				setDefaultDetailsControlClass(DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
-				setDefaultIndexControlClass(DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS:
+				setDefaultTabularControlClass(DEFAULT_TABULAR_CONTROL_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
 				setDefaultCardsControlClass(DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT);
@@ -2828,8 +2828,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
 				setDefaultDetailsAnchorClass(DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
-				setDefaultIndexAnchorClass(DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS:
+				setDefaultTabularAnchorClass(DEFAULT_TABULAR_ANCHOR_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
 				setDefaultCardsAnchorClass(DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT);
@@ -2895,8 +2895,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_CONTENT_CLASS_EDEFAULT == null ? defaultContentClass != null : !DEFAULT_CONTENT_CLASS_EDEFAULT.equals(defaultContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
 				return DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT == null ? defaultDetailsContentClass != null : !DEFAULT_DETAILS_CONTENT_CLASS_EDEFAULT.equals(defaultDetailsContentClass);
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
-				return DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT == null ? defaultIndexContentClass != null : !DEFAULT_INDEX_CONTENT_CLASS_EDEFAULT.equals(defaultIndexContentClass);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS:
+				return DEFAULT_TABULAR_CONTENT_CLASS_EDEFAULT == null ? defaultTabularContentClass != null : !DEFAULT_TABULAR_CONTENT_CLASS_EDEFAULT.equals(defaultTabularContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 				return DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT == null ? defaultCardsContentClass != null : !DEFAULT_CARDS_CONTENT_CLASS_EDEFAULT.equals(defaultCardsContentClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
@@ -2927,8 +2927,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_CONTROL_CLASS_EDEFAULT == null ? defaultControlClass != null : !DEFAULT_CONTROL_CLASS_EDEFAULT.equals(defaultControlClass);
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
 				return DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT == null ? defaultDetailsControlClass != null : !DEFAULT_DETAILS_CONTROL_CLASS_EDEFAULT.equals(defaultDetailsControlClass);
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
-				return DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT == null ? defaultIndexControlClass != null : !DEFAULT_INDEX_CONTROL_CLASS_EDEFAULT.equals(defaultIndexControlClass);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS:
+				return DEFAULT_TABULAR_CONTROL_CLASS_EDEFAULT == null ? defaultTabularControlClass != null : !DEFAULT_TABULAR_CONTROL_CLASS_EDEFAULT.equals(defaultTabularControlClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
 				return DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT == null ? defaultCardsControlClass != null : !DEFAULT_CARDS_CONTROL_CLASS_EDEFAULT.equals(defaultCardsControlClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
@@ -2955,8 +2955,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_ANCHOR_CLASS_EDEFAULT == null ? defaultAnchorClass != null : !DEFAULT_ANCHOR_CLASS_EDEFAULT.equals(defaultAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
 				return DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT == null ? defaultDetailsAnchorClass != null : !DEFAULT_DETAILS_ANCHOR_CLASS_EDEFAULT.equals(defaultDetailsAnchorClass);
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
-				return DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT == null ? defaultIndexAnchorClass != null : !DEFAULT_INDEX_ANCHOR_CLASS_EDEFAULT.equals(defaultIndexAnchorClass);
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS:
+				return DEFAULT_TABULAR_ANCHOR_CLASS_EDEFAULT == null ? defaultTabularAnchorClass != null : !DEFAULT_TABULAR_ANCHOR_CLASS_EDEFAULT.equals(defaultTabularAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
 				return DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT == null ? defaultCardsAnchorClass != null : !DEFAULT_CARDS_ANCHOR_CLASS_EDEFAULT.equals(defaultCardsAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
@@ -3007,8 +3007,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultContentClass);
 		result.append(", defaultDetailsContentClass: ");
 		result.append(defaultDetailsContentClass);
-		result.append(", defaultIndexContentClass: ");
-		result.append(defaultIndexContentClass);
+		result.append(", defaultTabularContentClass: ");
+		result.append(defaultTabularContentClass);
 		result.append(", defaultCardsContentClass: ");
 		result.append(defaultCardsContentClass);
 		result.append(", defaultFormContentClass: ");
@@ -3039,8 +3039,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultControlClass);
 		result.append(", defaultDetailsControlClass: ");
 		result.append(defaultDetailsControlClass);
-		result.append(", defaultIndexControlClass: ");
-		result.append(defaultIndexControlClass);
+		result.append(", defaultTabularControlClass: ");
+		result.append(defaultTabularControlClass);
 		result.append(", defaultCardsControlClass: ");
 		result.append(defaultCardsControlClass);
 		result.append(", defaultFormControlClass: ");
@@ -3067,8 +3067,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultAnchorClass);
 		result.append(", defaultDetailsAnchorClass: ");
 		result.append(defaultDetailsAnchorClass);
-		result.append(", defaultIndexAnchorClass: ");
-		result.append(defaultIndexAnchorClass);
+		result.append(", defaultTabularAnchorClass: ");
+		result.append(defaultTabularAnchorClass);
 		result.append(", defaultCardsAnchorClass: ");
 		result.append(defaultCardsAnchorClass);
 		result.append(", defaultFormAnchorClass: ");

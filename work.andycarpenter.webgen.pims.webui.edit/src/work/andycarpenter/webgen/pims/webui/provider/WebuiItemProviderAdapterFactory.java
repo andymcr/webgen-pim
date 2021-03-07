@@ -773,26 +773,26 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.IndexUnit} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.TabularUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IndexUnitItemProvider indexUnitItemProvider;
+	protected TabularUnitItemProvider tabularUnitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.IndexUnit}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.TabularUnit}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIndexUnitAdapter() {
-		if (indexUnitItemProvider == null) {
-			indexUnitItemProvider = new IndexUnitItemProvider(this);
+	public Adapter createTabularUnitAdapter() {
+		if (tabularUnitItemProvider == null) {
+			tabularUnitItemProvider = new TabularUnitItemProvider(this);
 		}
 
-		return indexUnitItemProvider;
+		return tabularUnitItemProvider;
 	}
 
 	/**

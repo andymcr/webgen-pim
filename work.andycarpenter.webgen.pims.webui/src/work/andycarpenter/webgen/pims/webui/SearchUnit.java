@@ -29,12 +29,12 @@ public interface SearchUnit extends ControlUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results Destination</em>' reference.
-	 * @see #setResultsDestination(IndexUnit)
+	 * @see #setResultsDestination(TabularUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSearchUnit_ResultsDestination()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	IndexUnit getResultsDestination();
+	TabularUnit getResultsDestination();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SearchUnit#getResultsDestination <em>Results Destination</em>}' reference.
@@ -44,6 +44,6 @@ public interface SearchUnit extends ControlUnit {
 	 * @see #getResultsDestination()
 	 * @generated
 	 */
-	void setResultsDestination(IndexUnit value);
+	void setResultsDestination(TabularUnit value);
 
 } // SearchUnit

@@ -75,7 +75,7 @@ public class WebUIItemProvider
 			addDefaultCaptionClassPropertyDescriptor(object);
 			addDefaultContentClassPropertyDescriptor(object);
 			addDefaultDetailsContentClassPropertyDescriptor(object);
-			addDefaultIndexContentClassPropertyDescriptor(object);
+			addDefaultTabularContentClassPropertyDescriptor(object);
 			addDefaultCardsContentClassPropertyDescriptor(object);
 			addDefaultFormContentClassPropertyDescriptor(object);
 			addDefaultSliderContentClassPropertyDescriptor(object);
@@ -91,7 +91,7 @@ public class WebUIItemProvider
 			addDefaultBadgeClassPropertyDescriptor(object);
 			addDefaultControlClassPropertyDescriptor(object);
 			addDefaultDetailsControlClassPropertyDescriptor(object);
-			addDefaultIndexControlClassPropertyDescriptor(object);
+			addDefaultTabularControlClassPropertyDescriptor(object);
 			addDefaultCardsControlClassPropertyDescriptor(object);
 			addDefaultFormControlClassPropertyDescriptor(object);
 			addDefaultSliderControlClassPropertyDescriptor(object);
@@ -105,7 +105,7 @@ public class WebUIItemProvider
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultDetailsAnchorClassPropertyDescriptor(object);
-			addDefaultIndexAnchorClassPropertyDescriptor(object);
+			addDefaultTabularAnchorClassPropertyDescriptor(object);
 			addDefaultCardsAnchorClassPropertyDescriptor(object);
 			addDefaultFormAnchorClassPropertyDescriptor(object);
 			addDefaultSliderAnchorClassPropertyDescriptor(object);
@@ -383,19 +383,19 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Index Content Class feature.
+	 * This adds a property descriptor for the Default Tabular Content Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultIndexContentClassPropertyDescriptor(Object object) {
+	protected void addDefaultTabularContentClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultIndexContentClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexContentClass_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS,
+				 getString("_UI_WebUI_defaultTabularContentClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultTabularContentClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS,
 				 true,
 				 false,
 				 false,
@@ -713,19 +713,19 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Index Control Class feature.
+	 * This adds a property descriptor for the Default Tabular Control Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultIndexControlClassPropertyDescriptor(Object object) {
+	protected void addDefaultTabularControlClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultIndexControlClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexControlClass_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS,
+				 getString("_UI_WebUI_defaultTabularControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultTabularControlClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS,
 				 true,
 				 false,
 				 false,
@@ -889,19 +889,19 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Index Anchor Class feature.
+	 * This adds a property descriptor for the Default Tabular Anchor Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultIndexAnchorClassPropertyDescriptor(Object object) {
+	protected void addDefaultTabularAnchorClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultIndexAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultIndexAnchorClass_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS,
+				 getString("_UI_WebUI_defaultTabularAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultTabularAnchorClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -1319,7 +1319,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_CAPTION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTENT_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS:
@@ -1335,7 +1335,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_BADGE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_CONTROL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
@@ -1349,7 +1349,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INDEX_ANCHOR_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS:
