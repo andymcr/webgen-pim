@@ -47,6 +47,7 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOnSaveContinueEditingPropertyDescriptor(object);
+			addDisplayEmptyFormPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,6 +71,28 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Display Empty Form feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDisplayEmptyFormPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UpdateUnit_displayEmptyForm_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UpdateUnit_displayEmptyForm_feature", "_UI_UpdateUnit_type"),
+				 WebuiPackage.Literals.UPDATE_UNIT__DISPLAY_EMPTY_FORM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -121,6 +144,7 @@ public class UpdateUnitItemProvider extends EditUnitItemProvider {
 
 		switch (notification.getFeatureID(UpdateUnit.class)) {
 			case WebuiPackage.UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
+			case WebuiPackage.UPDATE_UNIT__DISPLAY_EMPTY_FORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

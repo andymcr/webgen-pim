@@ -13,6 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#isDisplayEmptyForm <em>Display Empty Form</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit()
@@ -46,5 +47,28 @@ public interface UpdateUnit extends EditUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setOnSaveContinueEditing(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Display Empty Form</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Display Empty Form</em>' attribute.
+	 * @see #setDisplayEmptyForm(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit_DisplayEmptyForm()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isDisplayEmptyForm();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#isDisplayEmptyForm <em>Display Empty Form</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Display Empty Form</em>' attribute.
+	 * @see #isDisplayEmptyForm()
+	 * @generated
+	 */
+	void setDisplayEmptyForm(boolean value);
 
 } // UpdateUnit

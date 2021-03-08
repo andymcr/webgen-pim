@@ -356,6 +356,7 @@
     <genClasses ecoreClass="webui.ecore#//CreateUnit"/>
     <genClasses ecoreClass="webui.ecore#//UpdateUnit">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//UpdateUnit/onSaveContinueEditing"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UpdateUnit/displayEmptyForm"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CreateUpdateUnit">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//CreateUpdateUnit/onSaveContinueEditing"/>

@@ -639,6 +639,15 @@ rule CreateUnit {
 }
 
 -- @extends EditUnit, SelectableUnit
+rule UpdateUnit {
+	from website : Website!UpdateUnit
+	to waf : WAF!UpdateUnit (
+		onSaveContinueEditing <- website.onSaveContinueEditing,
+		displayEmptyForm <- website.displayEmptyForm
+	)
+}
+
+-- @extends EditUnit, SelectableUnit
 rule CreateUpdateUnit {
 	from website : Website!CreateUpdateUnit
 	to waf : WAF!CreateUpdateUnit (
@@ -666,14 +675,6 @@ rule MapUnit {
 			else
 				website.placeName.findOrmAttribute()
 			endif
-	)
-}
-
--- @extends EditUnit, SelectableUnit
-rule UpdateUnit {
-	from website : Website!UpdateUnit
-	to waf : WAF!UpdateUnit (
-		onSaveContinueEditing <- website.onSaveContinueEditing
 	)
 }
 

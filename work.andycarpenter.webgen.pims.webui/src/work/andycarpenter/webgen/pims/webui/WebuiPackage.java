@@ -6562,13 +6562,22 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Display Empty Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__DISPLAY_EMPTY_FORM = EDIT_UNIT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Update Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 1;
+	int UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Update Unit</em>' class.
@@ -19158,6 +19167,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUpdateUnit_OnSaveContinueEditing();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UpdateUnit#isDisplayEmptyForm <em>Display Empty Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display Empty Form</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UpdateUnit#isDisplayEmptyForm()
+	 * @see #getUpdateUnit()
+	 * @generated
+	 */
+	EAttribute getUpdateUnit_DisplayEmptyForm();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.MapUnit <em>Map Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22239,6 +22259,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING = eINSTANCE.getUpdateUnit_OnSaveContinueEditing();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Empty Form</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATE_UNIT__DISPLAY_EMPTY_FORM = eINSTANCE.getUpdateUnit_DisplayEmptyForm();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.MapUnitImpl <em>Map Unit</em>}' class.
