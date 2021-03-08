@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getCreateUriElement <em>Create Uri Element</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getUpdateUriElement <em>Update Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CreateUpdateUnitImpl#getClearLabel <em>Clear Label</em>}</li>
  * </ul>
  *
@@ -48,24 +48,24 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	protected boolean onSaveContinueEditing = ON_SAVE_CONTINUE_EDITING_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCreateUriElement() <em>Create Uri Element</em>}' attribute.
+	 * The default value of the '{@link #getUpdateUriElement() <em>Update Uri Element</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCreateUriElement()
+	 * @see #getUpdateUriElement()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CREATE_URI_ELEMENT_EDEFAULT = "";
+	protected static final String UPDATE_URI_ELEMENT_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getCreateUriElement() <em>Create Uri Element</em>}' attribute.
+	 * The cached value of the '{@link #getUpdateUriElement() <em>Update Uri Element</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCreateUriElement()
+	 * @see #getUpdateUriElement()
 	 * @generated
 	 * @ordered
 	 */
-	protected String createUriElement = CREATE_URI_ELEMENT_EDEFAULT;
+	protected String updateUriElement = UPDATE_URI_ELEMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClearLabel() <em>Clear Label</em>}' attribute.
@@ -135,8 +135,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * @generated
 	 */
 	@Override
-	public String getCreateUriElement() {
-		return createUriElement;
+	public String getUpdateUriElement() {
+		return updateUriElement;
 	}
 
 	/**
@@ -145,11 +145,11 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 	 * @generated
 	 */
 	@Override
-	public void setCreateUriElement(String newCreateUriElement) {
-		String oldCreateUriElement = createUriElement;
-		createUriElement = newCreateUriElement;
+	public void setUpdateUriElement(String newUpdateUriElement) {
+		String oldUpdateUriElement = updateUriElement;
+		updateUriElement = newUpdateUriElement;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT, oldCreateUriElement, createUriElement));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT, oldUpdateUriElement, updateUriElement));
 	}
 
 	/**
@@ -185,8 +185,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 		switch (featureID) {
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				return isOnSaveContinueEditing();
-			case WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT:
-				return getCreateUriElement();
+			case WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT:
+				return getUpdateUriElement();
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				return getClearLabel();
 		}
@@ -204,8 +204,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				setOnSaveContinueEditing((Boolean)newValue);
 				return;
-			case WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT:
-				setCreateUriElement((String)newValue);
+			case WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT:
+				setUpdateUriElement((String)newValue);
 				return;
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				setClearLabel((String)newValue);
@@ -225,8 +225,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				setOnSaveContinueEditing(ON_SAVE_CONTINUE_EDITING_EDEFAULT);
 				return;
-			case WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT:
-				setCreateUriElement(CREATE_URI_ELEMENT_EDEFAULT);
+			case WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT:
+				setUpdateUriElement(UPDATE_URI_ELEMENT_EDEFAULT);
 				return;
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				setClearLabel(CLEAR_LABEL_EDEFAULT);
@@ -245,8 +245,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 		switch (featureID) {
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
 				return onSaveContinueEditing != ON_SAVE_CONTINUE_EDITING_EDEFAULT;
-			case WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT:
-				return CREATE_URI_ELEMENT_EDEFAULT == null ? createUriElement != null : !CREATE_URI_ELEMENT_EDEFAULT.equals(createUriElement);
+			case WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT:
+				return UPDATE_URI_ELEMENT_EDEFAULT == null ? updateUriElement != null : !UPDATE_URI_ELEMENT_EDEFAULT.equals(updateUriElement);
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				return CLEAR_LABEL_EDEFAULT == null ? clearLabel != null : !CLEAR_LABEL_EDEFAULT.equals(clearLabel);
 		}
@@ -265,8 +265,8 @@ public class CreateUpdateUnitImpl extends EditUnitImpl implements CreateUpdateUn
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (onSaveContinueEditing: ");
 		result.append(onSaveContinueEditing);
-		result.append(", createUriElement: ");
-		result.append(createUriElement);
+		result.append(", updateUriElement: ");
+		result.append(updateUriElement);
 		result.append(", clearLabel: ");
 		result.append(clearLabel);
 		result.append(')');

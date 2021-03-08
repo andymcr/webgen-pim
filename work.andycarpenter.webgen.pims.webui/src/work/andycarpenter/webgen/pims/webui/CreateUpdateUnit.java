@@ -13,7 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#isOnSaveContinueEditing <em>On Save Continue Editing</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getCreateUriElement <em>Create Uri Element</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getUpdateUriElement <em>Update Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getClearLabel <em>Clear Label</em>}</li>
  * </ul>
  *
@@ -50,31 +50,27 @@ public interface CreateUpdateUnit extends EditUnit, SelectableUnit {
 	void setOnSaveContinueEditing(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Create Uri Element</b></em>' attribute.
+	 * Returns the value of the '<em><b>Update Uri Element</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Create Uri Element</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Create Uri Element</em>' attribute.
-	 * @see #setCreateUriElement(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit_CreateUriElement()
+	 * @return the value of the '<em>Update Uri Element</em>' attribute.
+	 * @see #setUpdateUriElement(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit_UpdateUriElement()
 	 * @model default=""
 	 * @generated
 	 */
-	String getCreateUriElement();
+	String getUpdateUriElement();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getCreateUriElement <em>Create Uri Element</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CreateUpdateUnit#getUpdateUriElement <em>Update Uri Element</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Create Uri Element</em>' attribute.
-	 * @see #getCreateUriElement()
+	 * @param value the new value of the '<em>Update Uri Element</em>' attribute.
+	 * @see #getUpdateUriElement()
 	 * @generated
 	 */
-	void setCreateUriElement(String value);
+	void setUpdateUriElement(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Clear Label</b></em>' attribute.

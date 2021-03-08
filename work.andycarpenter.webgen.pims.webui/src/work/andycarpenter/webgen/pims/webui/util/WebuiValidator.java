@@ -166,10 +166,10 @@ public class WebuiValidator extends EObjectValidator {
 				return validateEditUnit((EditUnit)value, diagnostics, context);
 			case WebuiPackage.CREATE_UNIT:
 				return validateCreateUnit((CreateUnit)value, diagnostics, context);
-			case WebuiPackage.CREATE_UPDATE_UNIT:
-				return validateCreateUpdateUnit((CreateUpdateUnit)value, diagnostics, context);
 			case WebuiPackage.UPDATE_UNIT:
 				return validateUpdateUnit((UpdateUnit)value, diagnostics, context);
+			case WebuiPackage.CREATE_UPDATE_UNIT:
+				return validateCreateUpdateUnit((CreateUpdateUnit)value, diagnostics, context);
 			case WebuiPackage.MAP_UNIT:
 				return validateMapUnit((MapUnit)value, diagnostics, context);
 			case WebuiPackage.DETAILS_UNIT:

@@ -3120,7 +3120,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCreateUpdateUnit_CreateUriElement() {
+	public EAttribute getCreateUpdateUnit_UpdateUriElement() {
 		return (EAttribute)createUpdateUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -4392,13 +4392,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		createUnitEClass = createEClass(CREATE_UNIT);
 
-		createUpdateUnitEClass = createEClass(CREATE_UPDATE_UNIT);
-		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING);
-		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT);
-		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__CLEAR_LABEL);
-
 		updateUnitEClass = createEClass(UPDATE_UNIT);
 		createEAttribute(updateUnitEClass, UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING);
+
+		createUpdateUnitEClass = createEClass(CREATE_UPDATE_UNIT);
+		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING);
+		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT);
+		createEAttribute(createUpdateUnitEClass, CREATE_UPDATE_UNIT__CLEAR_LABEL);
 
 		mapUnitEClass = createEClass(MAP_UNIT);
 		createEAttribute(mapUnitEClass, MAP_UNIT__READ_ONLY);
@@ -4596,10 +4596,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		collectionUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		editUnitEClass.getESuperTypes().add(this.getSingletonUnit());
 		createUnitEClass.getESuperTypes().add(this.getEditUnit());
-		createUpdateUnitEClass.getESuperTypes().add(this.getEditUnit());
-		createUpdateUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		updateUnitEClass.getESuperTypes().add(this.getEditUnit());
 		updateUnitEClass.getESuperTypes().add(this.getSelectableUnit());
+		createUpdateUnitEClass.getESuperTypes().add(this.getEditUnit());
+		createUpdateUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		mapUnitEClass.getESuperTypes().add(this.getEditUnit());
 		mapUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		detailsUnitEClass.getESuperTypes().add(this.getSingletonUnit());
@@ -4912,13 +4912,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(createUnitEClass, CreateUnit.class, "CreateUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(createUpdateUnitEClass, CreateUpdateUnit.class, "CreateUpdateUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCreateUpdateUnit_OnSaveContinueEditing(), ecorePackage.getEBoolean(), "onSaveContinueEditing", "false", 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreateUpdateUnit_CreateUriElement(), ecorePackage.getEString(), "createUriElement", "", 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreateUpdateUnit_ClearLabel(), ecorePackage.getEString(), "clearLabel", null, 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(updateUnitEClass, UpdateUnit.class, "UpdateUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUpdateUnit_OnSaveContinueEditing(), ecorePackage.getEBoolean(), "onSaveContinueEditing", "false", 0, 1, UpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(createUpdateUnitEClass, CreateUpdateUnit.class, "CreateUpdateUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCreateUpdateUnit_OnSaveContinueEditing(), ecorePackage.getEBoolean(), "onSaveContinueEditing", "false", 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCreateUpdateUnit_UpdateUriElement(), ecorePackage.getEString(), "updateUriElement", "", 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCreateUpdateUnit_ClearLabel(), ecorePackage.getEString(), "clearLabel", null, 0, 1, CreateUpdateUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(mapUnitEClass, MapUnit.class, "MapUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMapUnit_ReadOnly(), ecorePackage.getEBoolean(), "readOnly", "true", 0, 1, MapUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

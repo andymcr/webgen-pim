@@ -82,8 +82,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.DATE_FIELD: return createDateField();
 			case WebuiPackage.CAPTCHA_FIELD: return createCaptchaField();
 			case WebuiPackage.CREATE_UNIT: return createCreateUnit();
-			case WebuiPackage.CREATE_UPDATE_UNIT: return createCreateUpdateUnit();
 			case WebuiPackage.UPDATE_UNIT: return createUpdateUnit();
+			case WebuiPackage.CREATE_UPDATE_UNIT: return createCreateUpdateUnit();
 			case WebuiPackage.MAP_UNIT: return createMapUnit();
 			case WebuiPackage.DETAILS_UNIT: return createDetailsUnit();
 			case WebuiPackage.TABULAR_UNIT: return createTabularUnit();

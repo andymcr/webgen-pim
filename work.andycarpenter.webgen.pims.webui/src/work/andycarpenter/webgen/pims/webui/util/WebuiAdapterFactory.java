@@ -218,12 +218,12 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCreateUnitAdapter();
 			}
 			@Override
-			public Adapter caseCreateUpdateUnit(CreateUpdateUnit object) {
-				return createCreateUpdateUnitAdapter();
-			}
-			@Override
 			public Adapter caseUpdateUnit(UpdateUnit object) {
 				return createUpdateUnitAdapter();
+			}
+			@Override
+			public Adapter caseCreateUpdateUnit(CreateUpdateUnit object) {
+				return createCreateUpdateUnitAdapter();
 			}
 			@Override
 			public Adapter caseMapUnit(MapUnit object) {

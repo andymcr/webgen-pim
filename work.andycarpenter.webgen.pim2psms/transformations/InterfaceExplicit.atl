@@ -589,7 +589,7 @@ abstract rule EditUnit {
 			if website.uriElement.trim() <> '' then
 				website.uriElement.trim()
 			else if website.createDefaultUriElement then
-				'update'
+				'create'
 			else
 				''
 			endif endif,
@@ -643,11 +643,11 @@ rule CreateUpdateUnit {
 	from website : Website!CreateUpdateUnit
 	to waf : WAF!CreateUpdateUnit (
 		onSaveContinueEditing <- website.onSaveContinueEditing,
-		createUriElement <-
-			if website.createUriElement.trim() <> '' then
-				website.createUriElement.trim()
+		updateUriElement <-
+			if website.updateUriElement.trim() <> '' then
+				website.updateUriElement.trim()
 			else
-				'create'
+				'update'
 			endif,
 		clearLabel <- website.clearLabel
 	)

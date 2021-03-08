@@ -379,20 +379,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.CREATE_UPDATE_UNIT: {
-				CreateUpdateUnit createUpdateUnit = (CreateUpdateUnit)theEObject;
-				T result = caseCreateUpdateUnit(createUpdateUnit);
-				if (result == null) result = caseEditUnit(createUpdateUnit);
-				if (result == null) result = caseSelectableUnit(createUpdateUnit);
-				if (result == null) result = caseSingletonUnit(createUpdateUnit);
-				if (result == null) result = caseDynamicUnit(createUpdateUnit);
-				if (result == null) result = caseContentUnit(createUpdateUnit);
-				if (result == null) result = caseActionContainer(createUpdateUnit);
-				if (result == null) result = caseNamedDisplayElement(createUpdateUnit);
-				if (result == null) result = caseNamedElement(createUpdateUnit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.UPDATE_UNIT: {
 				UpdateUnit updateUnit = (UpdateUnit)theEObject;
 				T result = caseUpdateUnit(updateUnit);
@@ -404,6 +390,20 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseActionContainer(updateUnit);
 				if (result == null) result = caseNamedDisplayElement(updateUnit);
 				if (result == null) result = caseNamedElement(updateUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CREATE_UPDATE_UNIT: {
+				CreateUpdateUnit createUpdateUnit = (CreateUpdateUnit)theEObject;
+				T result = caseCreateUpdateUnit(createUpdateUnit);
+				if (result == null) result = caseEditUnit(createUpdateUnit);
+				if (result == null) result = caseSelectableUnit(createUpdateUnit);
+				if (result == null) result = caseSingletonUnit(createUpdateUnit);
+				if (result == null) result = caseDynamicUnit(createUpdateUnit);
+				if (result == null) result = caseContentUnit(createUpdateUnit);
+				if (result == null) result = caseActionContainer(createUpdateUnit);
+				if (result == null) result = caseNamedDisplayElement(createUpdateUnit);
+				if (result == null) result = caseNamedElement(createUpdateUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -47,7 +47,7 @@ public class CreateUpdateUnitItemProvider extends EditUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOnSaveContinueEditingPropertyDescriptor(object);
-			addCreateUriElementPropertyDescriptor(object);
+			addUpdateUriElementPropertyDescriptor(object);
 			addClearLabelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -76,19 +76,19 @@ public class CreateUpdateUnitItemProvider extends EditUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Create Uri Element feature.
+	 * This adds a property descriptor for the Update Uri Element feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCreateUriElementPropertyDescriptor(Object object) {
+	protected void addUpdateUriElementPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CreateUpdateUnit_createUriElement_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CreateUpdateUnit_createUriElement_feature", "_UI_CreateUpdateUnit_type"),
-				 WebuiPackage.Literals.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT,
+				 getString("_UI_CreateUpdateUnit_updateUriElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CreateUpdateUnit_updateUriElement_feature", "_UI_CreateUpdateUnit_type"),
+				 WebuiPackage.Literals.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT,
 				 true,
 				 false,
 				 false,
@@ -167,7 +167,7 @@ public class CreateUpdateUnitItemProvider extends EditUnitItemProvider {
 
 		switch (notification.getFeatureID(CreateUpdateUnit.class)) {
 			case WebuiPackage.CREATE_UPDATE_UNIT__ON_SAVE_CONTINUE_EDITING:
-			case WebuiPackage.CREATE_UPDATE_UNIT__CREATE_URI_ELEMENT:
+			case WebuiPackage.CREATE_UPDATE_UNIT__UPDATE_URI_ELEMENT:
 			case WebuiPackage.CREATE_UPDATE_UNIT__CLEAR_LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
