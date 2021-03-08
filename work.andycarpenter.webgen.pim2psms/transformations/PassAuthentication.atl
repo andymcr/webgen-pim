@@ -232,7 +232,7 @@ unique lazy rule implicitAuthenticationsPage {
 			endif,
 		name <- 'ManageAuthentications',
 		displayLabel <- 'Manage Authentications',
-		units <- Sequence{authentications, edit},
+		units <- Sequence{authentications, update},
 		uriElement <- 'authentications'
 	),
 	authentications : WAF!TextCardsUnit (
@@ -258,26 +258,27 @@ unique lazy rule implicitAuthenticationsPage {
 				->select(f | f.name = 'email' or f.name = 'roles')
 				->collect(f | thisModule.implicitUnitAttribute(f)),
 		elementTitle <- elementTitle,
-		allActions <- Sequence{editAction, deleteAction}
+		allActions <- Sequence{updateAction, deleteAction}
 	),
 	elementTitle : WAF!FeaturePathAttribute (
 		attribute <- 
 			thisModule.findOrmEntity(website.authenticationName).features
 				->any(f | f.name = 'username')
 	),
-	editAction : WAF!SelectAction (
-		name <- 'edit',
-		displayLabel <- 'Edit',
-		target <- edit
+	updateAction : WAF!SelectAction (
+		name <- 'update',
+		displayLabel <- 'Update',
+		target <- update
 	),
 	deleteAction : WAF!DeleteAction (
 		name <- 'delete',
 		displayLabel <- 'Delete',
-		localAuthorisationRoles <- website.editRole
+		localAuthorisationRoles <- website.editRole,
+		uriElement <- 'delete'
 	),
-	edit : WAF!UpdateUnit (
-		name <- 'edit',
-		displayLabel <- 'Edit Authentication',
+	update : WAF!UpdateUnit (
+		name <- 'update',
+		displayLabel <- 'Update Authentication',
 		authorisationRoles <- website.editRole,
 		omitCaption <- false,
 		confirmLabel <- 'Save',
@@ -300,7 +301,8 @@ unique lazy rule implicitAuthenticationsPage {
 						thisModule.implicitUnitDateAttribute(f)
 					else
 						thisModule.implicitUnitAttribute(f)
-					endif)
+					endif),
+		uriElement <- 'update'
 	)
 	do {
 		waf;
