@@ -274,6 +274,7 @@ unique lazy rule implicitAuthenticationsPage {
 		name <- 'delete',
 		displayLabel <- 'Delete',
 		localAuthorisationRoles <- website.editRole,
+		confirmMessage <- 'Delete authentication?',
 		uriElement <- 'delete'
 	),
 	update : WAF!UpdateUnit (
@@ -302,6 +303,7 @@ unique lazy rule implicitAuthenticationsPage {
 					else
 						thisModule.implicitUnitAttribute(f)
 					endif),
+		successMessage <- 'Authentication saved',
 		uriElement <- 'update'
 	)
 	do {
