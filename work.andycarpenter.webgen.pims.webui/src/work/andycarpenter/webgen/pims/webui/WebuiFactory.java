@@ -436,6 +436,15 @@ public interface WebuiFactory extends EFactory {
 	GeneralOperationAction createGeneralOperationAction();
 
 	/**
+	 * Returns a new object of class '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message</em>'.
+	 * @generated
+	 */
+	Message createMessage();
+
+	/**
 	 * Returns a new object of class '<em>Badge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

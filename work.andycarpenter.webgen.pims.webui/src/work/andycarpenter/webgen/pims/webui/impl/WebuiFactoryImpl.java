@@ -104,6 +104,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.INSTANCE_OPERATION_ACTION: return createInstanceOperationAction();
 			case WebuiPackage.CONTAINER_OPERATION_ACTION: return createContainerOperationAction();
 			case WebuiPackage.GENERAL_OPERATION_ACTION: return createGeneralOperationAction();
+			case WebuiPackage.MESSAGE: return createMessage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -659,6 +660,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public GeneralOperationAction createGeneralOperationAction() {
 		GeneralOperationActionImpl generalOperationAction = new GeneralOperationActionImpl();
 		return generalOperationAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Message createMessage() {
+		MessageImpl message = new MessageImpl();
+		return message;
 	}
 
 	/**

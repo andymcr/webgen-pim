@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.webui.EditUnit;
+import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -49,8 +50,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 
 			addConfirmDestinationPropertyDescriptor(object);
 			addConfirmLabelPropertyDescriptor(object);
-			addConfirmMessagePropertyDescriptor(object);
-			addSuccessMessagePropertyDescriptor(object);
 			addCancelDestinationPropertyDescriptor(object);
 			addCancelLabelPropertyDescriptor(object);
 			addCustomiseValuesPropertyDescriptor(object);
@@ -100,50 +99,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Confirm Message feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConfirmMessagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EditUnit_confirmMessage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_confirmMessage_feature", "_UI_EditUnit_type"),
-				 WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Success Message feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuccessMessagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EditUnit_successMessage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_successMessage_feature", "_UI_EditUnit_type"),
-				 WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
 				 null));
 	}
 
@@ -248,6 +203,8 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN);
+			childrenFeatures.add(WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE);
+			childrenFeatures.add(WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE);
 		}
 		return childrenFeatures;
 	}
@@ -293,14 +250,14 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 
 		switch (notification.getFeatureID(EditUnit.class)) {
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
-			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
-			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
+			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
+			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -362,6 +319,16 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE,
+				 WebuiFactory.eINSTANCE.createMessage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE,
+				 WebuiFactory.eINSTANCE.createMessage()));
 	}
 
 	/**
@@ -377,7 +344,9 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 
 		boolean qualify =
 			childFeature == WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN ||
-			childFeature == WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN;
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE;
 
 		if (qualify) {
 			return getString

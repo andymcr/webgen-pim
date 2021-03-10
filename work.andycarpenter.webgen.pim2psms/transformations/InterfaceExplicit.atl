@@ -716,6 +716,23 @@ abstract rule CardsUnit {
 	)
 }
 
+rule Badge {
+	from website : Website!Badge
+	to waf : WAF!Badge (
+		iconName <- website.iconName,
+		value <- website.value,
+		title <-
+			if website.title.oclIsUndefined() then
+				OclUndefined
+			else
+				website.title.findOrmLabel()
+			endif,
+		displayWhen <- website.displayWhen,
+		localBadgeClass <- website.localBadgeClass
+	)
+}
+
+
 -- @extends CardsUnit
 rule TextCardsUnit {
 	from website : Website!TextCardsUnit
@@ -941,23 +958,6 @@ rule GeneralOperationAction {
 }
 
 
-rule Badge {
-	from website : Website!Badge
-	to waf : WAF!Badge (
-		iconName <- website.iconName,
-		value <- website.value,
-		title <-
-			if website.title.oclIsUndefined() then
-				OclUndefined
-			else
-				website.title.findOrmLabel()
-			endif,
-		displayWhen <- website.displayWhen,
-		localBadgeClass <- website.localBadgeClass
-	)
-}
-
-
 rule ConstantReference {
 	from website : Website!ConstantReference (website.isInterfaceExpression())
 	to waf : WAF!ConstantReference (
@@ -967,5 +967,14 @@ rule ConstantReference {
 			else
 				website.value.findServiceConstant()
 			endif
+	)
+}
+
+
+rule Message {
+	from website : Website!Message
+	to waf : WAF!Message (
+		text <- website.text,
+		features <- website.features
 	)
 }

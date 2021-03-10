@@ -608,10 +608,10 @@
         eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmMessage" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="confirmMessage" eType="#//Message"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successMessage" eType="#//Message"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" ordered="false"
         eType="#//Page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabel" ordered="false"
@@ -814,4 +814,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="InstanceOperationAction" eSuperTypes="#//OperationAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerOperationAction" eSuperTypes="#//OperationAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralOperationAction" eSuperTypes="#//OperationAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//FeaturePath" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

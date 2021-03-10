@@ -222,6 +222,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateContainerOperationAction((ContainerOperationAction)value, diagnostics, context);
 			case WebuiPackage.GENERAL_OPERATION_ACTION:
 				return validateGeneralOperationAction((GeneralOperationAction)value, diagnostics, context);
+			case WebuiPackage.MESSAGE:
+				return validateMessage((Message)value, diagnostics, context);
 			case WebuiPackage.INPUT_TECHNOLOGIES:
 				return validateInputTechnologies((InputTechnologies)value, diagnostics, context);
 			case WebuiPackage.AJAX_TECHNOLOGIES:
@@ -1738,6 +1740,15 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(generalOperationAction, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(generalOperationAction, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMessage(Message message, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(message, diagnostics, context);
 	}
 
 	/**

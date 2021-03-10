@@ -345,8 +345,8 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmDestination"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/confirmLabel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/confirmMessage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/successMessage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmMessage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/successMessage"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/cancelDestination"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/cancelLabel"/>
@@ -485,5 +485,9 @@
     <genClasses ecoreClass="webui.ecore#//InstanceOperationAction"/>
     <genClasses ecoreClass="webui.ecore#//ContainerOperationAction"/>
     <genClasses ecoreClass="webui.ecore#//GeneralOperationAction"/>
+    <genClasses ecoreClass="webui.ecore#//Message">
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Message/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Message/features"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.webui.EditUnit;
+import work.andycarpenter.webgen.pims.webui.Message;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -78,44 +79,24 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	protected String confirmLabel = CONFIRM_LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' attribute.
+	 * The cached value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConfirmMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONFIRM_MESSAGE_EDEFAULT = "";
+	protected Message confirmMessage;
 
 	/**
-	 * The cached value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConfirmMessage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String confirmMessage = CONFIRM_MESSAGE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSuccessMessage() <em>Success Message</em>}' attribute.
+	 * The cached value of the '{@link #getSuccessMessage() <em>Success Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSuccessMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SUCCESS_MESSAGE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getSuccessMessage() <em>Success Message</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuccessMessage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String successMessage = SUCCESS_MESSAGE_EDEFAULT;
+	protected Message successMessage;
 
 	/**
 	 * The cached value of the '{@link #getCancelDestination() <em>Cancel Destination</em>}' reference.
@@ -320,7 +301,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public String getConfirmMessage() {
+	public Message getConfirmMessage() {
 		return confirmMessage;
 	}
 
@@ -329,12 +310,14 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setConfirmMessage(String newConfirmMessage) {
-		String oldConfirmMessage = confirmMessage;
+	public NotificationChain basicSetConfirmMessage(Message newConfirmMessage, NotificationChain msgs) {
+		Message oldConfirmMessage = confirmMessage;
 		confirmMessage = newConfirmMessage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE, oldConfirmMessage, confirmMessage));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE, oldConfirmMessage, newConfirmMessage);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -343,7 +326,27 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public String getSuccessMessage() {
+	public void setConfirmMessage(Message newConfirmMessage) {
+		if (newConfirmMessage != confirmMessage) {
+			NotificationChain msgs = null;
+			if (confirmMessage != null)
+				msgs = ((InternalEObject)confirmMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE, null, msgs);
+			if (newConfirmMessage != null)
+				msgs = ((InternalEObject)newConfirmMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE, null, msgs);
+			msgs = basicSetConfirmMessage(newConfirmMessage, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE, newConfirmMessage, newConfirmMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Message getSuccessMessage() {
 		return successMessage;
 	}
 
@@ -352,12 +355,34 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setSuccessMessage(String newSuccessMessage) {
-		String oldSuccessMessage = successMessage;
+	public NotificationChain basicSetSuccessMessage(Message newSuccessMessage, NotificationChain msgs) {
+		Message oldSuccessMessage = successMessage;
 		successMessage = newSuccessMessage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE, oldSuccessMessage, successMessage));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE, oldSuccessMessage, newSuccessMessage);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSuccessMessage(Message newSuccessMessage) {
+		if (newSuccessMessage != successMessage) {
+			NotificationChain msgs = null;
+			if (successMessage != null)
+				msgs = ((InternalEObject)successMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE, null, msgs);
+			if (newSuccessMessage != null)
+				msgs = ((InternalEObject)newSuccessMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE, null, msgs);
+			msgs = basicSetSuccessMessage(newSuccessMessage, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE, newSuccessMessage, newSuccessMessage));
 	}
 
 	/**
@@ -479,6 +504,10 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		switch (featureID) {
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return basicSetDisableWhen(null, msgs);
+			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
+				return basicSetConfirmMessage(null, msgs);
+			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
+				return basicSetSuccessMessage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -533,10 +562,10 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setConfirmLabel((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
-				setConfirmMessage((String)newValue);
+				setConfirmMessage((Message)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
-				setSuccessMessage((String)newValue);
+				setSuccessMessage((Message)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
 				setCancelDestination((Page)newValue);
@@ -572,10 +601,10 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setConfirmLabel(CONFIRM_LABEL_EDEFAULT);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
-				setConfirmMessage(CONFIRM_MESSAGE_EDEFAULT);
+				setConfirmMessage((Message)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
-				setSuccessMessage(SUCCESS_MESSAGE_EDEFAULT);
+				setSuccessMessage((Message)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
 				setCancelDestination((Page)null);
@@ -608,9 +637,9 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
 				return CONFIRM_LABEL_EDEFAULT == null ? confirmLabel != null : !CONFIRM_LABEL_EDEFAULT.equals(confirmLabel);
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
-				return CONFIRM_MESSAGE_EDEFAULT == null ? confirmMessage != null : !CONFIRM_MESSAGE_EDEFAULT.equals(confirmMessage);
+				return confirmMessage != null;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
-				return SUCCESS_MESSAGE_EDEFAULT == null ? successMessage != null : !SUCCESS_MESSAGE_EDEFAULT.equals(successMessage);
+				return successMessage != null;
 			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
 				return cancelDestination != null;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
@@ -635,10 +664,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (confirmLabel: ");
 		result.append(confirmLabel);
-		result.append(", confirmMessage: ");
-		result.append(confirmMessage);
-		result.append(", successMessage: ");
-		result.append(successMessage);
 		result.append(", cancelLabel: ");
 		result.append(cancelLabel);
 		result.append(", customiseValues: ");

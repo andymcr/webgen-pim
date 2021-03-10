@@ -108,50 +108,48 @@ public interface EditUnit extends SingletonUnit {
 	void setConfirmLabel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Confirm Message</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * Returns the value of the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Confirm Message</em>' attribute.
-	 * @see #setConfirmMessage(String)
+	 * @return the value of the '<em>Confirm Message</em>' containment reference.
+	 * @see #setConfirmMessage(Message)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmMessage()
-	 * @model default="" ordered="false"
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getConfirmMessage();
+	Message getConfirmMessage();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Confirm Message</em>' attribute.
+	 * @param value the new value of the '<em>Confirm Message</em>' containment reference.
 	 * @see #getConfirmMessage()
 	 * @generated
 	 */
-	void setConfirmMessage(String value);
+	void setConfirmMessage(Message value);
 
 	/**
-	 * Returns the value of the '<em><b>Success Message</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * Returns the value of the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Success Message</em>' attribute.
-	 * @see #setSuccessMessage(String)
+	 * @return the value of the '<em>Success Message</em>' containment reference.
+	 * @see #setSuccessMessage(Message)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_SuccessMessage()
-	 * @model default=""
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getSuccessMessage();
+	Message getSuccessMessage();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Success Message</em>' attribute.
+	 * @param value the new value of the '<em>Success Message</em>' containment reference.
 	 * @see #getSuccessMessage()
 	 * @generated
 	 */
-	void setSuccessMessage(String value);
+	void setSuccessMessage(Message value);
 
 	/**
 	 * Returns the value of the '<em><b>Cancel Destination</b></em>' reference.

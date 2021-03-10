@@ -236,7 +236,9 @@ public class MapUnitItemProvider extends EditUnitItemProvider {
 
 		boolean qualify =
 			childFeature == WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN ||
-			childFeature == WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN;
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE;
 
 		if (qualify) {
 			return getString

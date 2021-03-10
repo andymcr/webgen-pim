@@ -5695,7 +5695,7 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5704,7 +5704,7 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6092,7 +6092,7 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6101,7 +6101,7 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6499,7 +6499,7 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6508,7 +6508,7 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6904,7 +6904,7 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6913,7 +6913,7 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7328,7 +7328,7 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7337,7 +7337,7 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14283,7 +14283,7 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14292,7 +14292,7 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -16416,6 +16416,52 @@ public interface WebuiPackage extends EPackage {
 	int GENERAL_OPERATION_ACTION_OPERATION_COUNT = OPERATION_ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.MessageImpl <em>Message</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.MessageImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
+	 * @generated
+	 */
+	int MESSAGE = 64;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__TEXT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__FEATURES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InputTechnologies <em>Input Technologies</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16423,7 +16469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInputTechnologies()
 	 * @generated
 	 */
-	int INPUT_TECHNOLOGIES = 64;
+	int INPUT_TECHNOLOGIES = 65;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AjaxTechnologies <em>Ajax Technologies</em>}' enum.
@@ -16433,7 +16479,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAjaxTechnologies()
 	 * @generated
 	 */
-	int AJAX_TECHNOLOGIES = 65;
+	int AJAX_TECHNOLOGIES = 66;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -16443,7 +16489,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 66;
+	int PAGE_TOP_MENU_OPTIONS = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -16453,7 +16499,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 67;
+	int COLLECTION_DISPLAY_OPTIONS = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -16463,7 +16509,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 68;
+	int PAGINATION_CONTROL_PLACEMENTS = 69;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -19027,26 +19073,26 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getEditUnit_ConfirmLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Confirm Message</em>'.
+	 * @return the meta object for the containment reference '<em>Confirm Message</em>'.
 	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage()
 	 * @see #getEditUnit()
 	 * @generated
 	 */
-	EAttribute getEditUnit_ConfirmMessage();
+	EReference getEditUnit_ConfirmMessage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Success Message</em>'.
+	 * @return the meta object for the containment reference '<em>Success Message</em>'.
 	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage()
 	 * @see #getEditUnit()
 	 * @generated
 	 */
-	EAttribute getEditUnit_SuccessMessage();
+	EReference getEditUnit_SuccessMessage();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}'.
@@ -19978,6 +20024,38 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGeneralOperationAction();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Message
+	 * @generated
+	 */
+	EClass getMessage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Message#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Message#getText()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EAttribute getMessage_Text();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.Message#getFeatures <em>Features</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Features</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Message#getFeatures()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Features();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SelectAction <em>Select Action</em>}'.
@@ -22151,20 +22229,20 @@ public interface WebuiPackage extends EPackage {
 		EAttribute EDIT_UNIT__CONFIRM_LABEL = eINSTANCE.getEditUnit_ConfirmLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Confirm Message</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Confirm Message</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EDIT_UNIT__CONFIRM_MESSAGE = eINSTANCE.getEditUnit_ConfirmMessage();
+		EReference EDIT_UNIT__CONFIRM_MESSAGE = eINSTANCE.getEditUnit_ConfirmMessage();
 
 		/**
-		 * The meta object literal for the '<em><b>Success Message</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Success Message</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EDIT_UNIT__SUCCESS_MESSAGE = eINSTANCE.getEditUnit_SuccessMessage();
+		EReference EDIT_UNIT__SUCCESS_MESSAGE = eINSTANCE.getEditUnit_SuccessMessage();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel Destination</b></em>' reference feature.
@@ -22913,6 +22991,32 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GENERAL_OPERATION_ACTION = eINSTANCE.getGeneralOperationAction();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.MessageImpl <em>Message</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.MessageImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
+		 * @generated
+		 */
+		EClass MESSAGE = eINSTANCE.getMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE__TEXT = eINSTANCE.getMessage_Text();
+
+		/**
+		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__FEATURES = eINSTANCE.getMessage_Features();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
