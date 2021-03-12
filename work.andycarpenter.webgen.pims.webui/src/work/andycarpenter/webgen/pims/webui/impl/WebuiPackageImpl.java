@@ -33,6 +33,7 @@ import work.andycarpenter.webgen.pims.webui.ChildPathAttribute;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.ContainerOperationAction;
+import work.andycarpenter.webgen.pims.webui.ContainerSelectAction;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.ControlUnit;
 import work.andycarpenter.webgen.pims.webui.CreateSitemapUnit;
@@ -57,6 +58,7 @@ import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.InputTechnologies;
 import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
+import work.andycarpenter.webgen.pims.webui.InstanceSelectAction;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
 import work.andycarpenter.webgen.pims.webui.LoginUnit;
 import work.andycarpenter.webgen.pims.webui.LogoutUnit;
@@ -543,6 +545,20 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass selectActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass containerSelectActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instanceSelectActionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2268,7 +2284,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUnitAssociation_FilteredOptions() {
+	public EReference getUnitAssociation_OptionsFilter() {
 		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3988,6 +4004,26 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getContainerSelectAction() {
+		return containerSelectActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getInstanceSelectAction() {
+		return instanceSelectActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDeleteAction() {
 		return deleteActionEClass;
 	}
@@ -4339,7 +4375,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__TARGET_ENTITY);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
-		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__FILTERED_OPTIONS);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS_FILTER);
 
 		childPathAttributeEClass = createEClass(CHILD_PATH_ATTRIBUTE);
 		createEAttribute(childPathAttributeEClass, CHILD_PATH_ATTRIBUTE__NAME);
@@ -4543,13 +4579,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		securityActionEClass = createEClass(SECURITY_ACTION);
 		createEReference(securityActionEClass, SECURITY_ACTION__TARGET);
 
+		deleteActionEClass = createEClass(DELETE_ACTION);
+		createEAttribute(deleteActionEClass, DELETE_ACTION__REQUIRES_ROLE);
+		createEAttribute(deleteActionEClass, DELETE_ACTION__URI_ELEMENT);
+
 		selectActionEClass = createEClass(SELECT_ACTION);
 		createEReference(selectActionEClass, SELECT_ACTION__TARGET);
 		createEReference(selectActionEClass, SELECT_ACTION__VALUE_PATH);
 
-		deleteActionEClass = createEClass(DELETE_ACTION);
-		createEAttribute(deleteActionEClass, DELETE_ACTION__REQUIRES_ROLE);
-		createEAttribute(deleteActionEClass, DELETE_ACTION__URI_ELEMENT);
+		containerSelectActionEClass = createEClass(CONTAINER_SELECT_ACTION);
+
+		instanceSelectActionEClass = createEClass(INSTANCE_SELECT_ACTION);
 
 		operationActionEClass = createEClass(OPERATION_ACTION);
 		createEReference(operationActionEClass, OPERATION_ACTION__OPERATION);
@@ -4557,9 +4597,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(operationActionEClass, OPERATION_ACTION__REQUIRES_ROLE);
 		createEAttribute(operationActionEClass, OPERATION_ACTION__URI_ELEMENT);
 
-		instanceOperationActionEClass = createEClass(INSTANCE_OPERATION_ACTION);
-
 		containerOperationActionEClass = createEClass(CONTAINER_OPERATION_ACTION);
+
+		instanceOperationActionEClass = createEClass(INSTANCE_OPERATION_ACTION);
 
 		generalOperationActionEClass = createEClass(GENERAL_OPERATION_ACTION);
 
@@ -4678,11 +4718,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		forgottenPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		securityActionEClass.getESuperTypes().add(this.getAction());
-		selectActionEClass.getESuperTypes().add(this.getAction());
 		deleteActionEClass.getESuperTypes().add(this.getAction());
+		selectActionEClass.getESuperTypes().add(this.getAction());
+		containerSelectActionEClass.getESuperTypes().add(this.getSelectAction());
+		instanceSelectActionEClass.getESuperTypes().add(this.getSelectAction());
 		operationActionEClass.getESuperTypes().add(this.getAction());
-		instanceOperationActionEClass.getESuperTypes().add(this.getOperationAction());
 		containerOperationActionEClass.getESuperTypes().add(this.getOperationAction());
+		instanceOperationActionEClass.getESuperTypes().add(this.getOperationAction());
 		generalOperationActionEClass.getESuperTypes().add(this.getOperationAction());
 
 		// Initialize classes, features, and operations; add parameters
@@ -4864,7 +4906,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getUnitAssociation_IsSourceAssociation(), ecorePackage.getEBoolean(), "isSourceAssociation", null, 1, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_TargetEntity(), thePersistencePackage.getEntity(), null, "targetEntity", null, 0, 1, UnitAssociation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_Options(), thePersistencePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitAssociation_FilteredOptions(), thePersistencePackage.getFilter(), null, "filteredOptions", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_OptionsFilter(), thePersistencePackage.getFilter(), null, "optionsFilter", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(childPathAttributeEClass, ChildPathAttribute.class, "ChildPathAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChildPathAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChildPathAttribute.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -5068,13 +5110,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(securityActionEClass, SecurityAction.class, "SecurityAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSecurityAction_Target(), theSecurityPackage.getSecurityUnit(), null, "target", null, 1, 1, SecurityAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(selectActionEClass, SelectAction.class, "SelectAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSelectAction_Target(), this.getSelectableUnit(), null, "target", null, 1, 1, SelectAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectAction_ValuePath(), this.getFeaturePath(), null, "valuePath", null, 0, 1, SelectAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(deleteActionEClass, DeleteAction.class, "DeleteAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDeleteAction_RequiresRole(), ecorePackage.getEString(), "requiresRole", "", 0, 1, DeleteAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeleteAction_UriElement(), ecorePackage.getEString(), "uriElement", "", 0, 1, DeleteAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(selectActionEClass, SelectAction.class, "SelectAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSelectAction_Target(), this.getSelectableUnit(), null, "target", null, 1, 1, SelectAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelectAction_ValuePath(), this.getFeaturePath(), null, "valuePath", null, 0, 1, SelectAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(containerSelectActionEClass, ContainerSelectAction.class, "ContainerSelectAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(instanceSelectActionEClass, InstanceSelectAction.class, "InstanceSelectAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationActionEClass, OperationAction.class, "OperationAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationAction_Operation(), theServicePackage.getBusinessOperation(), null, "operation", null, 1, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5082,9 +5128,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getOperationAction_RequiresRole(), ecorePackage.getEString(), "requiresRole", "", 0, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperationAction_UriElement(), ecorePackage.getEString(), "uriElement", "", 0, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(instanceOperationActionEClass, InstanceOperationAction.class, "InstanceOperationAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(containerOperationActionEClass, ContainerOperationAction.class, "ContainerOperationAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(instanceOperationActionEClass, InstanceOperationAction.class, "InstanceOperationAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(generalOperationActionEClass, GeneralOperationAction.class, "GeneralOperationAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

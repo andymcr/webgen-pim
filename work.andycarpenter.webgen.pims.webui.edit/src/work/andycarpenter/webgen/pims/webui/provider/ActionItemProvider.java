@@ -260,7 +260,7 @@ public class ActionItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

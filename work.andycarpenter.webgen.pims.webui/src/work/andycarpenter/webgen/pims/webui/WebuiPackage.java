@@ -3016,13 +3016,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Filtered Options</b></em>' reference.
+	 * The feature id for the '<em><b>Options Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__FILTERED_OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION__OPTIONS_FILTER = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -9083,7 +9083,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 58;
+	int SELECT_ACTION = 59;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -9093,7 +9093,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 59;
+	int DELETE_ACTION = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -15332,24 +15332,6 @@ public interface WebuiPackage extends EPackage {
 	int SECURITY_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__NAME = ACTION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl <em>Operation Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15357,151 +15339,27 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 60;
+	int OPERATION_ACTION = 62;
 
 	/**
-	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
-	 * @ordered
 	 */
-	int SELECT_ACTION__USED_BY = ACTION__USED_BY;
+	int CONTAINER_SELECT_ACTION = 60;
 
 	/**
-	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
-	 * @ordered
 	 */
-	int SELECT_ACTION__ICON_NAME = ACTION__ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__DISABLE = ACTION__DISABLE;
-
-	/**
-	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__DISPLAY_WHEN = ACTION__DISPLAY_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__ENABLE_WHEN = ACTION__ENABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__CONFIRM_MESSAGE = ACTION__CONFIRM_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__SUCCESS_MESSAGE = ACTION__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__TARGET = ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Value Path</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__VALUE_PATH = ACTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Select Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Select Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+	int INSTANCE_SELECT_ACTION = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15664,6 +15522,492 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__USED_BY = ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__ICON_NAME = ACTION__ICON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__DISABLE = ACTION__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__DISPLAY_WHEN = ACTION__DISPLAY_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__ENABLE_WHEN = ACTION__ENABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__CONFIRM_MESSAGE = ACTION__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__SUCCESS_MESSAGE = ACTION__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__TARGET = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__VALUE_PATH = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__NAME = SELECT_ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__DISPLAY_LABEL = SELECT_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__USED_BY = SELECT_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__ICON_NAME = SELECT_ACTION__ICON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__DISABLE = SELECT_ACTION__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__DISPLAY_WHEN = SELECT_ACTION__DISPLAY_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__ENABLE_WHEN = SELECT_ACTION__ENABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__CONFIRM_MESSAGE = SELECT_ACTION__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__SUCCESS_MESSAGE = SELECT_ACTION__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__FAILURE_MESSAGE = SELECT_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__ANCHOR_CLASS = SELECT_ACTION__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__HEADER_CLASS = SELECT_ACTION__HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__FOOTER_CLASS = SELECT_ACTION__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__CONTAINING_TYPE = SELECT_ACTION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__TARGET = SELECT_ACTION__TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Value Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__VALUE_PATH = SELECT_ACTION__VALUE_PATH;
+
+	/**
+	 * The number of structural features of the '<em>Container Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION_FEATURE_COUNT = SELECT_ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Container Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION_OPERATION_COUNT = SELECT_ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__NAME = SELECT_ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__DISPLAY_LABEL = SELECT_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__USED_BY = SELECT_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__ICON_NAME = SELECT_ACTION__ICON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__DISABLE = SELECT_ACTION__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__DISPLAY_WHEN = SELECT_ACTION__DISPLAY_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__ENABLE_WHEN = SELECT_ACTION__ENABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__CONFIRM_MESSAGE = SELECT_ACTION__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__SUCCESS_MESSAGE = SELECT_ACTION__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__FAILURE_MESSAGE = SELECT_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__ANCHOR_CLASS = SELECT_ACTION__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__HEADER_CLASS = SELECT_ACTION__HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__FOOTER_CLASS = SELECT_ACTION__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__CONTAINING_TYPE = SELECT_ACTION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__TARGET = SELECT_ACTION__TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Value Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__VALUE_PATH = SELECT_ACTION__VALUE_PATH;
+
+	/**
+	 * The number of structural features of the '<em>Instance Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION_FEATURE_COUNT = SELECT_ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Instance Select Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION_OPERATION_COUNT = SELECT_ACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15853,187 +16197,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 61;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__NAME = OPERATION_ACTION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__DISPLAY_LABEL = OPERATION_ACTION__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Used By</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__USED_BY = OPERATION_ACTION__USED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__ICON_NAME = OPERATION_ACTION__ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__DISABLE = OPERATION_ACTION__DISABLE;
-
-	/**
-	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__DISPLAY_WHEN = OPERATION_ACTION__DISPLAY_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__ENABLE_WHEN = OPERATION_ACTION__ENABLE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__CONFIRM_MESSAGE = OPERATION_ACTION__CONFIRM_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__SUCCESS_MESSAGE = OPERATION_ACTION__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__FAILURE_MESSAGE = OPERATION_ACTION__FAILURE_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__ANCHOR_CLASS = OPERATION_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__HEADER_CLASS = OPERATION_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__CONTAINING_TYPE = OPERATION_ACTION__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__FILE_EXTENSION = OPERATION_ACTION__FILE_EXTENSION;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__REQUIRES_ROLE = OPERATION_ACTION__REQUIRES_ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__URI_ELEMENT = OPERATION_ACTION__URI_ELEMENT;
-
-	/**
-	 * The number of structural features of the '<em>Instance Operation Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION_FEATURE_COUNT = OPERATION_ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Instance Operation Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION_OPERATION_COUNT = OPERATION_ACTION_OPERATION_COUNT + 0;
+	int INSTANCE_OPERATION_ACTION = 64;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -16043,7 +16207,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 62;
+	int CONTAINER_OPERATION_ACTION = 63;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16226,6 +16390,186 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_OPERATION_ACTION_OPERATION_COUNT = OPERATION_ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__NAME = OPERATION_ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__DISPLAY_LABEL = OPERATION_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__USED_BY = OPERATION_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__ICON_NAME = OPERATION_ACTION__ICON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__DISABLE = OPERATION_ACTION__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__DISPLAY_WHEN = OPERATION_ACTION__DISPLAY_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__ENABLE_WHEN = OPERATION_ACTION__ENABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__CONFIRM_MESSAGE = OPERATION_ACTION__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__SUCCESS_MESSAGE = OPERATION_ACTION__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__FAILURE_MESSAGE = OPERATION_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__ANCHOR_CLASS = OPERATION_ACTION__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__HEADER_CLASS = OPERATION_ACTION__HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__CONTAINING_TYPE = OPERATION_ACTION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__FILE_EXTENSION = OPERATION_ACTION__FILE_EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__REQUIRES_ROLE = OPERATION_ACTION__REQUIRES_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__URI_ELEMENT = OPERATION_ACTION__URI_ELEMENT;
+
+	/**
+	 * The number of structural features of the '<em>Instance Operation Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION_FEATURE_COUNT = OPERATION_ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Instance Operation Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION_OPERATION_COUNT = OPERATION_ACTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GeneralOperationActionImpl <em>General Operation Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16233,7 +16577,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 63;
+	int GENERAL_OPERATION_ACTION = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16423,7 +16767,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 64;
+	int MESSAGE = 66;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -16469,7 +16813,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInputTechnologies()
 	 * @generated
 	 */
-	int INPUT_TECHNOLOGIES = 65;
+	int INPUT_TECHNOLOGIES = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.AjaxTechnologies <em>Ajax Technologies</em>}' enum.
@@ -16479,7 +16823,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAjaxTechnologies()
 	 * @generated
 	 */
-	int AJAX_TECHNOLOGIES = 66;
+	int AJAX_TECHNOLOGIES = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -16489,7 +16833,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 67;
+	int PAGE_TOP_MENU_OPTIONS = 69;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -16499,7 +16843,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 68;
+	int COLLECTION_DISPLAY_OPTIONS = 70;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -16509,7 +16853,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 69;
+	int PAGINATION_CONTROL_PLACEMENTS = 71;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -18241,15 +18585,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getUnitAssociation_Options();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Filtered Options</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions()
+	 * @return the meta object for the reference '<em>Options Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter()
 	 * @see #getUnitAssociation()
 	 * @generated
 	 */
-	EReference getUnitAssociation_FilteredOptions();
+	EReference getUnitAssociation_OptionsFilter();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute <em>Child Path Attribute</em>}'.
@@ -20090,6 +20434,26 @@ public interface WebuiPackage extends EPackage {
 	EReference getSelectAction_ValuePath();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ContainerSelectAction <em>Container Select Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Container Select Action</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContainerSelectAction
+	 * @generated
+	 */
+	EClass getContainerSelectAction();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.InstanceSelectAction <em>Instance Select Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instance Select Action</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceSelectAction
+	 * @generated
+	 */
+	EClass getInstanceSelectAction();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DeleteAction <em>Delete Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21583,12 +21947,12 @@ public interface WebuiPackage extends EPackage {
 		EReference UNIT_ASSOCIATION__OPTIONS = eINSTANCE.getUnitAssociation_Options();
 
 		/**
-		 * The meta object literal for the '<em><b>Filtered Options</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Options Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNIT_ASSOCIATION__FILTERED_OPTIONS = eINSTANCE.getUnitAssociation_FilteredOptions();
+		EReference UNIT_ASSOCIATION__OPTIONS_FILTER = eINSTANCE.getUnitAssociation_OptionsFilter();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl <em>Child Path Attribute</em>}' class.
@@ -23043,6 +23407,26 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SELECT_ACTION__VALUE_PATH = eINSTANCE.getSelectAction_ValuePath();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
+		 * @generated
+		 */
+		EClass CONTAINER_SELECT_ACTION = eINSTANCE.getContainerSelectAction();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
+		 * @generated
+		 */
+		EClass INSTANCE_SELECT_ACTION = eINSTANCE.getInstanceSelectAction();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.

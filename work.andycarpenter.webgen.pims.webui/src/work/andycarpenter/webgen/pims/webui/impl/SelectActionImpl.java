@@ -29,7 +29,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class SelectActionImpl extends ActionImpl implements SelectAction {
+public abstract class SelectActionImpl extends ActionImpl implements SelectAction {
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->

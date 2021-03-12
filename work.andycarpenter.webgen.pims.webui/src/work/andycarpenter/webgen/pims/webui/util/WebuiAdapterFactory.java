@@ -306,24 +306,32 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createSecurityActionAdapter();
 			}
 			@Override
+			public Adapter caseDeleteAction(DeleteAction object) {
+				return createDeleteActionAdapter();
+			}
+			@Override
 			public Adapter caseSelectAction(SelectAction object) {
 				return createSelectActionAdapter();
 			}
 			@Override
-			public Adapter caseDeleteAction(DeleteAction object) {
-				return createDeleteActionAdapter();
+			public Adapter caseContainerSelectAction(ContainerSelectAction object) {
+				return createContainerSelectActionAdapter();
+			}
+			@Override
+			public Adapter caseInstanceSelectAction(InstanceSelectAction object) {
+				return createInstanceSelectActionAdapter();
 			}
 			@Override
 			public Adapter caseOperationAction(OperationAction object) {
 				return createOperationActionAdapter();
 			}
 			@Override
-			public Adapter caseInstanceOperationAction(InstanceOperationAction object) {
-				return createInstanceOperationActionAdapter();
-			}
-			@Override
 			public Adapter caseContainerOperationAction(ContainerOperationAction object) {
 				return createContainerOperationActionAdapter();
+			}
+			@Override
+			public Adapter caseInstanceOperationAction(InstanceOperationAction object) {
+				return createInstanceOperationActionAdapter();
 			}
 			@Override
 			public Adapter caseGeneralOperationAction(GeneralOperationAction object) {
@@ -1288,6 +1296,34 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSelectActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ContainerSelectAction <em>Container Select Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ContainerSelectAction
+	 * @generated
+	 */
+	public Adapter createContainerSelectActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.InstanceSelectAction <em>Instance Select Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceSelectAction
+	 * @generated
+	 */
+	public Adapter createInstanceSelectActionAdapter() {
 		return null;
 	}
 

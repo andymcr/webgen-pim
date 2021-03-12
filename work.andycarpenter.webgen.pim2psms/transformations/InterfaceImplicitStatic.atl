@@ -67,7 +67,7 @@ unique lazy rule implicitStaticTextPage {
 		contentClass <- '',
 		rowClasses <- 'odd_row even_row'
 	),
-	editTextAction : WAF!SelectAction (
+	editTextAction : WAF!InstanceSelectAction (
 		name <- 'edit',
 		displayLabel <- 'Edit',
 		target <- editText

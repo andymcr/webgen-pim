@@ -36,7 +36,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getFilteredOptions <em>Filtered Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptionsFilter <em>Options Filter</em>}</li>
  * </ul>
  *
  * @generated
@@ -123,14 +123,14 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	protected Selection options;
 
 	/**
-	 * The cached value of the '{@link #getFilteredOptions() <em>Filtered Options</em>}' reference.
+	 * The cached value of the '{@link #getOptionsFilter() <em>Options Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFilteredOptions()
+	 * @see #getOptionsFilter()
 	 * @generated
 	 * @ordered
 	 */
-	protected Filter filteredOptions;
+	protected Filter optionsFilter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,16 +390,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public Filter getFilteredOptions() {
-		if (filteredOptions != null && filteredOptions.eIsProxy()) {
-			InternalEObject oldFilteredOptions = (InternalEObject)filteredOptions;
-			filteredOptions = (Filter)eResolveProxy(oldFilteredOptions);
-			if (filteredOptions != oldFilteredOptions) {
+	public Filter getOptionsFilter() {
+		if (optionsFilter != null && optionsFilter.eIsProxy()) {
+			InternalEObject oldOptionsFilter = (InternalEObject)optionsFilter;
+			optionsFilter = (Filter)eResolveProxy(oldOptionsFilter);
+			if (optionsFilter != oldOptionsFilter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS, oldFilteredOptions, filteredOptions));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER, oldOptionsFilter, optionsFilter));
 			}
 		}
-		return filteredOptions;
+		return optionsFilter;
 	}
 
 	/**
@@ -407,8 +407,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Filter basicGetFilteredOptions() {
-		return filteredOptions;
+	public Filter basicGetOptionsFilter() {
+		return optionsFilter;
 	}
 
 	/**
@@ -417,11 +417,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public void setFilteredOptions(Filter newFilteredOptions) {
-		Filter oldFilteredOptions = filteredOptions;
-		filteredOptions = newFilteredOptions;
+	public void setOptionsFilter(Filter newOptionsFilter) {
+		Filter oldOptionsFilter = optionsFilter;
+		optionsFilter = newOptionsFilter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS, oldFilteredOptions, filteredOptions));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER, oldOptionsFilter, optionsFilter));
 	}
 
 	/**
@@ -483,9 +483,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				if (resolve) return getOptions();
 				return basicGetOptions();
-			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
-				if (resolve) return getFilteredOptions();
-				return basicGetFilteredOptions();
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
+				if (resolve) return getOptionsFilter();
+				return basicGetOptionsFilter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -513,8 +513,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)newValue);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
-				setFilteredOptions((Filter)newValue);
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
+				setOptionsFilter((Filter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -543,8 +543,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)null);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
-				setFilteredOptions((Filter)null);
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
+				setOptionsFilter((Filter)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -574,8 +574,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				return options != null;
-			case WebuiPackage.UNIT_ASSOCIATION__FILTERED_OPTIONS:
-				return filteredOptions != null;
+			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
+				return optionsFilter != null;
 		}
 		return super.eIsSet(featureID);
 	}

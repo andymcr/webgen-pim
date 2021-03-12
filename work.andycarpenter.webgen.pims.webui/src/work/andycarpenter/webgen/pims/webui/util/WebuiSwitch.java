@@ -646,6 +646,15 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.DELETE_ACTION: {
+				DeleteAction deleteAction = (DeleteAction)theEObject;
+				T result = caseDeleteAction(deleteAction);
+				if (result == null) result = caseAction(deleteAction);
+				if (result == null) result = caseNamedDisplayElement(deleteAction);
+				if (result == null) result = caseNamedElement(deleteAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.SELECT_ACTION: {
 				SelectAction selectAction = (SelectAction)theEObject;
 				T result = caseSelectAction(selectAction);
@@ -655,12 +664,23 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.DELETE_ACTION: {
-				DeleteAction deleteAction = (DeleteAction)theEObject;
-				T result = caseDeleteAction(deleteAction);
-				if (result == null) result = caseAction(deleteAction);
-				if (result == null) result = caseNamedDisplayElement(deleteAction);
-				if (result == null) result = caseNamedElement(deleteAction);
+			case WebuiPackage.CONTAINER_SELECT_ACTION: {
+				ContainerSelectAction containerSelectAction = (ContainerSelectAction)theEObject;
+				T result = caseContainerSelectAction(containerSelectAction);
+				if (result == null) result = caseSelectAction(containerSelectAction);
+				if (result == null) result = caseAction(containerSelectAction);
+				if (result == null) result = caseNamedDisplayElement(containerSelectAction);
+				if (result == null) result = caseNamedElement(containerSelectAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.INSTANCE_SELECT_ACTION: {
+				InstanceSelectAction instanceSelectAction = (InstanceSelectAction)theEObject;
+				T result = caseInstanceSelectAction(instanceSelectAction);
+				if (result == null) result = caseSelectAction(instanceSelectAction);
+				if (result == null) result = caseAction(instanceSelectAction);
+				if (result == null) result = caseNamedDisplayElement(instanceSelectAction);
+				if (result == null) result = caseNamedElement(instanceSelectAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -673,16 +693,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.INSTANCE_OPERATION_ACTION: {
-				InstanceOperationAction instanceOperationAction = (InstanceOperationAction)theEObject;
-				T result = caseInstanceOperationAction(instanceOperationAction);
-				if (result == null) result = caseOperationAction(instanceOperationAction);
-				if (result == null) result = caseAction(instanceOperationAction);
-				if (result == null) result = caseNamedDisplayElement(instanceOperationAction);
-				if (result == null) result = caseNamedElement(instanceOperationAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.CONTAINER_OPERATION_ACTION: {
 				ContainerOperationAction containerOperationAction = (ContainerOperationAction)theEObject;
 				T result = caseContainerOperationAction(containerOperationAction);
@@ -690,6 +700,16 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAction(containerOperationAction);
 				if (result == null) result = caseNamedDisplayElement(containerOperationAction);
 				if (result == null) result = caseNamedElement(containerOperationAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.INSTANCE_OPERATION_ACTION: {
+				InstanceOperationAction instanceOperationAction = (InstanceOperationAction)theEObject;
+				T result = caseInstanceOperationAction(instanceOperationAction);
+				if (result == null) result = caseOperationAction(instanceOperationAction);
+				if (result == null) result = caseAction(instanceOperationAction);
+				if (result == null) result = caseNamedDisplayElement(instanceOperationAction);
+				if (result == null) result = caseNamedElement(instanceOperationAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1685,6 +1705,36 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSelectAction(SelectAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Container Select Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Container Select Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContainerSelectAction(ContainerSelectAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instance Select Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instance Select Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstanceSelectAction(InstanceSelectAction object) {
 		return null;
 	}
 

@@ -210,16 +210,20 @@ public class WebuiValidator extends EObjectValidator {
 				return validateAction((Action)value, diagnostics, context);
 			case WebuiPackage.SECURITY_ACTION:
 				return validateSecurityAction((SecurityAction)value, diagnostics, context);
-			case WebuiPackage.SELECT_ACTION:
-				return validateSelectAction((SelectAction)value, diagnostics, context);
 			case WebuiPackage.DELETE_ACTION:
 				return validateDeleteAction((DeleteAction)value, diagnostics, context);
+			case WebuiPackage.SELECT_ACTION:
+				return validateSelectAction((SelectAction)value, diagnostics, context);
+			case WebuiPackage.CONTAINER_SELECT_ACTION:
+				return validateContainerSelectAction((ContainerSelectAction)value, diagnostics, context);
+			case WebuiPackage.INSTANCE_SELECT_ACTION:
+				return validateInstanceSelectAction((InstanceSelectAction)value, diagnostics, context);
 			case WebuiPackage.OPERATION_ACTION:
 				return validateOperationAction((OperationAction)value, diagnostics, context);
-			case WebuiPackage.INSTANCE_OPERATION_ACTION:
-				return validateInstanceOperationAction((InstanceOperationAction)value, diagnostics, context);
 			case WebuiPackage.CONTAINER_OPERATION_ACTION:
 				return validateContainerOperationAction((ContainerOperationAction)value, diagnostics, context);
+			case WebuiPackage.INSTANCE_OPERATION_ACTION:
+				return validateInstanceOperationAction((InstanceOperationAction)value, diagnostics, context);
 			case WebuiPackage.GENERAL_OPERATION_ACTION:
 				return validateGeneralOperationAction((GeneralOperationAction)value, diagnostics, context);
 			case WebuiPackage.MESSAGE:
@@ -1767,6 +1771,44 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(selectAction, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(selectAction, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(selectAction, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateContainerSelectAction(ContainerSelectAction containerSelectAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(containerSelectAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(containerSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(containerSelectAction, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateInstanceSelectAction(InstanceSelectAction instanceSelectAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(instanceSelectAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(instanceSelectAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(instanceSelectAction, diagnostics, context);
 		return result;
 	}
 

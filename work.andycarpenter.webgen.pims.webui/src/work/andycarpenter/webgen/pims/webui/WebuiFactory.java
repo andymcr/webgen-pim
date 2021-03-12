@@ -391,15 +391,6 @@ public interface WebuiFactory extends EFactory {
 	GalleryUnit createGalleryUnit();
 
 	/**
-	 * Returns a new object of class '<em>Select Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Select Action</em>'.
-	 * @generated
-	 */
-	SelectAction createSelectAction();
-
-	/**
 	 * Returns a new object of class '<em>Delete Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -407,6 +398,24 @@ public interface WebuiFactory extends EFactory {
 	 * @generated
 	 */
 	DeleteAction createDeleteAction();
+
+	/**
+	 * Returns a new object of class '<em>Container Select Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Container Select Action</em>'.
+	 * @generated
+	 */
+	ContainerSelectAction createContainerSelectAction();
+
+	/**
+	 * Returns a new object of class '<em>Instance Select Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instance Select Action</em>'.
+	 * @generated
+	 */
+	InstanceSelectAction createInstanceSelectAction();
 
 	/**
 	 * Returns a new object of class '<em>Instance Operation Action</em>'.

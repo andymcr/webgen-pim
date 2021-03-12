@@ -481,22 +481,27 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createSelectAction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createDeleteAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
-				 WebuiFactory.eINSTANCE.createInstanceOperationAction()));
+				 WebuiFactory.eINSTANCE.createContainerSelectAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createInstanceSelectAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
 				 WebuiFactory.eINSTANCE.createContainerOperationAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION_CONTAINER__ACTIONS,
+				 WebuiFactory.eINSTANCE.createInstanceOperationAction()));
 
 		newChildDescriptors.add
 			(createChildParameter

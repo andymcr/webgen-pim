@@ -369,10 +369,10 @@ rule UnitAssociation {
 				website.options.findSelection()
 			endif,
 		optionsFilter <-
-			if website.filteredOptions.oclIsUndefined() then
-				website.filteredOptions
+			if website.optionsFilter.oclIsUndefined() then
+				website.optionsFilter
 			else
-				website.filteredOptions.findFilter()
+				website.optionsFilter.findFilter()
 			endif
 	)
 }
@@ -885,15 +885,6 @@ rule SecurityAction {
 }
 
 -- @extends Action
-rule SelectAction {
-	from website : Website!SelectAction
-	to waf : WAF!SelectAction (
-		target <- website.target,
-		valuePath <- website.valuePath
-	)
-}
-
--- @extends Action
 rule DeleteAction {
 	from website : Website!DeleteAction 
 	to waf : WAF!DeleteAction (
@@ -912,6 +903,29 @@ rule DeleteAction {
 			else
 				website.name.createName()
 			endif
+	)
+}
+
+-- @extends Action
+abstract rule SelectAction {
+	from website : Website!SelectAction
+	to waf : WAF!SelectAction (
+		target <- website.target,
+		valuePath <- website.valuePath
+	)
+}
+
+-- @extends SelectAction
+rule ContainerSelectAction {
+	from website : Website!ContainerSelectAction
+	to waf : WAF!ContainerSelectAction (
+	)
+}
+
+-- @extends SelectAction
+rule InstanceSelectAction {
+	from website : Website!InstanceSelectAction
+	to waf : WAF!InstanceSelectAction (
 	)
 }
 

@@ -233,7 +233,7 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/filteredOptions"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/optionsFilter"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ChildPathAttribute">
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//ChildPathAttribute/name"/>
@@ -459,11 +459,16 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/anchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/footerClass"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//Action/containingType"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Debug" propertySortChoices="true"
+          ecoreFeature="ecore:EReference webui.ecore#//Action/containingType"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SecurityAction">
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//SecurityAction/target"/>
+    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//DeleteAction">
+      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//DeleteAction/requiresRole"/>
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//DeleteAction/uriElement"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SelectAction">
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
@@ -471,10 +476,8 @@
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
           ecoreFeature="ecore:EReference webui.ecore#//SelectAction/valuePath"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//DeleteAction">
-      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//DeleteAction/requiresRole"/>
-      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//DeleteAction/uriElement"/>
-    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//ContainerSelectAction"/>
+    <genClasses ecoreClass="webui.ecore#//InstanceSelectAction"/>
     <genClasses image="false" ecoreClass="webui.ecore#//OperationAction">
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//OperationAction/operation"/>
@@ -482,8 +485,8 @@
       <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//OperationAction/requiresRole"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//OperationAction/uriElement"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//InstanceOperationAction"/>
     <genClasses ecoreClass="webui.ecore#//ContainerOperationAction"/>
+    <genClasses ecoreClass="webui.ecore#//InstanceOperationAction"/>
     <genClasses ecoreClass="webui.ecore#//GeneralOperationAction"/>
     <genClasses ecoreClass="webui.ecore#//Message">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Message/text"/>

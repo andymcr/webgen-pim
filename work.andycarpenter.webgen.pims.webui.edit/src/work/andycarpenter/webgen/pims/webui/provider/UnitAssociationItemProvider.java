@@ -63,7 +63,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addValueDisplayPropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
-			addFilteredOptionsPropertyDescriptor(object);
+			addOptionsFilterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -204,18 +204,18 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Filtered Options feature.
+	 * This adds a property descriptor for the Options Filter feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addFilteredOptionsPropertyDescriptor(Object object) {
+	protected void addOptionsFilterPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_UnitAssociation_filteredOptions_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_filteredOptions_feature", "_UI_UnitAssociation_type"),
-			WebuiPackage.Literals.UNIT_ASSOCIATION__FILTERED_OPTIONS,
+			getString("_UI_UnitAssociation_optionsFilter_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_optionsFilter_feature", "_UI_UnitAssociation_type"),
+			WebuiPackage.Literals.UNIT_ASSOCIATION__OPTIONS_FILTER,
 			true, false, true, null,
 			getString("_UI_InterfacePropertyCategory"),
 			null) {
@@ -229,6 +229,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 							final Set<Filter> filters = new HashSet<Filter>();
 							for (Selection selection : getSelections(association.getDisplayedOn().getDisplayedOn().getWebUI(),
 									association.getTargetEntity())) {
+System.err.println("Selection  "+selection.getName());
 								filters.addAll(selection.getFilters());
 							}
 							return filters;

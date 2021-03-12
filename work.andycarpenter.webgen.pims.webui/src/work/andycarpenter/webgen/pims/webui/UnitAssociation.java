@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
@@ -100,29 +100,25 @@ public interface UnitAssociation extends UnitFeature, AssociationReference {
 	void setOptions(Selection value);
 
 	/**
-	 * Returns the value of the '<em><b>Filtered Options</b></em>' reference.
+	 * Returns the value of the '<em><b>Options Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Filtered Options</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filtered Options</em>' reference.
-	 * @see #setFilteredOptions(Filter)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_FilteredOptions()
+	 * @return the value of the '<em>Options Filter</em>' reference.
+	 * @see #setOptionsFilter(Filter)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_OptionsFilter()
 	 * @model
 	 * @generated
 	 */
-	Filter getFilteredOptions();
+	Filter getOptionsFilter();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getFilteredOptions <em>Filtered Options</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Filtered Options</em>' reference.
-	 * @see #getFilteredOptions()
+	 * @param value the new value of the '<em>Options Filter</em>' reference.
+	 * @see #getOptionsFilter()
 	 * @generated
 	 */
-	void setFilteredOptions(Filter value);
+	void setOptionsFilter(Filter value);
 
 } // UnitAssociation

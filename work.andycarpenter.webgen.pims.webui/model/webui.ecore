@@ -396,7 +396,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="filteredOptions" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionsFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChildPathAttribute" eSuperTypes="../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//FeatureChildPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -784,12 +784,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SelectAction" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//SelectableUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valuePath" eType="#//FeaturePath"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeleteAction" eSuperTypes="#//Action">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="canOnlyDeleteSingletons"/>
@@ -802,6 +796,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectAction" abstract="true" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//SelectableUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valuePath" eType="#//FeaturePath"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerSelectAction" eSuperTypes="#//SelectAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceSelectAction" eSuperTypes="#//SelectAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="OperationAction" abstract="true" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//BusinessOperation"/>
@@ -811,8 +813,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InstanceOperationAction" eSuperTypes="#//OperationAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerOperationAction" eSuperTypes="#//OperationAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceOperationAction" eSuperTypes="#//OperationAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralOperationAction" eSuperTypes="#//OperationAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

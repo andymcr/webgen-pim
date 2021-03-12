@@ -1049,29 +1049,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SelectAction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectActionItemProvider selectActionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.SelectAction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectActionAdapter() {
-		if (selectActionItemProvider == null) {
-			selectActionItemProvider = new SelectActionItemProvider(this);
-		}
-
-		return selectActionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DeleteAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1092,6 +1069,52 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 		}
 
 		return deleteActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ContainerSelectAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContainerSelectActionItemProvider containerSelectActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ContainerSelectAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createContainerSelectActionAdapter() {
+		if (containerSelectActionItemProvider == null) {
+			containerSelectActionItemProvider = new ContainerSelectActionItemProvider(this);
+		}
+
+		return containerSelectActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.InstanceSelectAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InstanceSelectActionItemProvider instanceSelectActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.InstanceSelectAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInstanceSelectActionAdapter() {
+		if (instanceSelectActionItemProvider == null) {
+			instanceSelectActionItemProvider = new InstanceSelectActionItemProvider(this);
+		}
+
+		return instanceSelectActionItemProvider;
 	}
 
 	/**

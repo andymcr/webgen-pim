@@ -99,10 +99,11 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.LOGOUT_UNIT: return createLogoutUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
 			case WebuiPackage.SECURITY_ACTION: return createSecurityAction();
-			case WebuiPackage.SELECT_ACTION: return createSelectAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
-			case WebuiPackage.INSTANCE_OPERATION_ACTION: return createInstanceOperationAction();
+			case WebuiPackage.CONTAINER_SELECT_ACTION: return createContainerSelectAction();
+			case WebuiPackage.INSTANCE_SELECT_ACTION: return createInstanceSelectAction();
 			case WebuiPackage.CONTAINER_OPERATION_ACTION: return createContainerOperationAction();
+			case WebuiPackage.INSTANCE_OPERATION_ACTION: return createInstanceOperationAction();
 			case WebuiPackage.GENERAL_OPERATION_ACTION: return createGeneralOperationAction();
 			case WebuiPackage.MESSAGE: return createMessage();
 			default:
@@ -613,9 +614,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public SelectAction createSelectAction() {
-		SelectActionImpl selectAction = new SelectActionImpl();
-		return selectAction;
+	public DeleteAction createDeleteAction() {
+		DeleteActionImpl deleteAction = new DeleteActionImpl();
+		return deleteAction;
 	}
 
 	/**
@@ -624,9 +625,20 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public DeleteAction createDeleteAction() {
-		DeleteActionImpl deleteAction = new DeleteActionImpl();
-		return deleteAction;
+	public ContainerSelectAction createContainerSelectAction() {
+		ContainerSelectActionImpl containerSelectAction = new ContainerSelectActionImpl();
+		return containerSelectAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InstanceSelectAction createInstanceSelectAction() {
+		InstanceSelectActionImpl instanceSelectAction = new InstanceSelectActionImpl();
+		return instanceSelectAction;
 	}
 
 	/**
