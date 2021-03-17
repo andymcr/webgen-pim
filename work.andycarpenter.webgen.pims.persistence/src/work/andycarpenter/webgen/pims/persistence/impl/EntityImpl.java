@@ -54,7 +54,6 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyGenerationStrategy <em>Auto Key Generation Strategy</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#isImplementsUserInterface <em>Implements User Interface</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#isAllowFormTypeCustomisation <em>Allow Form Type Customisation</em>}</li>
  * </ul>
  *
  * @generated
@@ -329,26 +328,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected boolean implementsUserInterface = IMPLEMENTS_USER_INTERFACE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isAllowFormTypeCustomisation() <em>Allow Form Type Customisation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isAllowFormTypeCustomisation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean ALLOW_FORM_TYPE_CUSTOMISATION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isAllowFormTypeCustomisation() <em>Allow Form Type Customisation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isAllowFormTypeCustomisation()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean allowFormTypeCustomisation = ALLOW_FORM_TYPE_CUSTOMISATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -777,29 +756,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean isAllowFormTypeCustomisation() {
-		return allowFormTypeCustomisation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAllowFormTypeCustomisation(boolean newAllowFormTypeCustomisation) {
-		boolean oldAllowFormTypeCustomisation = allowFormTypeCustomisation;
-		allowFormTypeCustomisation = newAllowFormTypeCustomisation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION, oldAllowFormTypeCustomisation, allowFormTypeCustomisation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -889,8 +845,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return getAutoKeyGenerationStrategy();
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				return isImplementsUserInterface();
-			case PersistencePackage.ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION:
-				return isAllowFormTypeCustomisation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -952,9 +906,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				setImplementsUserInterface((Boolean)newValue);
 				return;
-			case PersistencePackage.ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION:
-				setAllowFormTypeCustomisation((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1009,9 +960,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				setImplementsUserInterface(IMPLEMENTS_USER_INTERFACE_EDEFAULT);
 				return;
-			case PersistencePackage.ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION:
-				setAllowFormTypeCustomisation(ALLOW_FORM_TYPE_CUSTOMISATION_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1064,8 +1012,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return AUTO_KEY_GENERATION_STRATEGY_EDEFAULT == null ? autoKeyGenerationStrategy != null : !AUTO_KEY_GENERATION_STRATEGY_EDEFAULT.equals(autoKeyGenerationStrategy);
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				return implementsUserInterface != IMPLEMENTS_USER_INTERFACE_EDEFAULT;
-			case PersistencePackage.ENTITY__ALLOW_FORM_TYPE_CUSTOMISATION:
-				return allowFormTypeCustomisation != ALLOW_FORM_TYPE_CUSTOMISATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1094,8 +1040,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 		result.append(autoKeyGenerationStrategy);
 		result.append(", implementsUserInterface: ");
 		result.append(implementsUserInterface);
-		result.append(", allowFormTypeCustomisation: ");
-		result.append(allowFormTypeCustomisation);
 		result.append(')');
 		return result.toString();
 	}
