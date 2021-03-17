@@ -174,8 +174,7 @@ unique lazy rule implicitLoginUnit {
 			endif.features
 				->select(f |
 					(f.name = 'email' and website.authenticationKey = #Email)
-					or (f.name = 'username' and website.authenticationKey <> #Email)
-					or f.name = 'password')
+					or (f.name = 'username' and website.authenticationKey <> #Email))
 				->collect(f | thisModule.implicitUnitAttribute(f))
 			->union(
 					Sequence{thisModule.implicitPasswordField(website)}),
@@ -352,7 +351,9 @@ lazy rule implicitPasswordField {
 	to waf : WAF!DataTypeField (
 		name <- 'plainPassword',
 		displayLabel <- 'Password',
-		obfuscateFormFields <- true
+		obfuscateFormFields <- true,
+		localTitle <- 'Password',
+		localPlaceholder <- 'Password'
 	)
 	do {
 		waf;
