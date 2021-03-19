@@ -262,6 +262,8 @@ rule SingletonImage {
 rule SingletonLocation {
 	from website : Website!LocationAttribute (website.cardinality <> #Many)
 	to orm : ORM!SingletonLocation (
+		persistentType <- thisModule.findWebsiteDataType('String').persistentType(),
+		ormType <- thisModule.findWebsiteDataType('String').ormType()
 	)
 }
 
