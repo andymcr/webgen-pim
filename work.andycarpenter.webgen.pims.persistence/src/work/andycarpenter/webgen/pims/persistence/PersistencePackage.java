@@ -479,13 +479,22 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
 
 	/**
+	 * The feature id for the '<em><b>Implements Reset Password Interface</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 20;
+
+	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 20;
+	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -6107,6 +6116,17 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getEntity_ImplementsUserInterface();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsResetPasswordInterface <em>Implements Reset Password Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implements Reset Password Interface</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Entity#isImplementsResetPasswordInterface()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_ImplementsResetPasswordInterface();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DataTypeAttribute <em>Data Type Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7618,6 +7638,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ENTITY__IMPLEMENTS_USER_INTERFACE = eINSTANCE.getEntity_ImplementsUserInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Implements Reset Password Interface</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE = eINSTANCE.getEntity_ImplementsResetPasswordInterface();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.

@@ -54,6 +54,7 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyGenerationStrategy <em>Auto Key Generation Strategy</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#isImplementsUserInterface <em>Implements User Interface</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#isImplementsResetPasswordInterface <em>Implements Reset Password Interface</em>}</li>
  * </ul>
  *
  * @generated
@@ -328,6 +329,26 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected boolean implementsUserInterface = IMPLEMENTS_USER_INTERFACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isImplementsResetPasswordInterface() <em>Implements Reset Password Interface</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImplementsResetPasswordInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IMPLEMENTS_RESET_PASSWORD_INTERFACE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isImplementsResetPasswordInterface() <em>Implements Reset Password Interface</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImplementsResetPasswordInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean implementsResetPasswordInterface = IMPLEMENTS_RESET_PASSWORD_INTERFACE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -756,6 +777,29 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public boolean isImplementsResetPasswordInterface() {
+		return implementsResetPasswordInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplementsResetPasswordInterface(boolean newImplementsResetPasswordInterface) {
+		boolean oldImplementsResetPasswordInterface = implementsResetPasswordInterface;
+		implementsResetPasswordInterface = newImplementsResetPasswordInterface;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE, oldImplementsResetPasswordInterface, implementsResetPasswordInterface));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -845,6 +889,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return getAutoKeyGenerationStrategy();
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				return isImplementsUserInterface();
+			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
+				return isImplementsResetPasswordInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -906,6 +952,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				setImplementsUserInterface((Boolean)newValue);
 				return;
+			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
+				setImplementsResetPasswordInterface((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -960,6 +1009,9 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				setImplementsUserInterface(IMPLEMENTS_USER_INTERFACE_EDEFAULT);
 				return;
+			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
+				setImplementsResetPasswordInterface(IMPLEMENTS_RESET_PASSWORD_INTERFACE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1012,6 +1064,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return AUTO_KEY_GENERATION_STRATEGY_EDEFAULT == null ? autoKeyGenerationStrategy != null : !AUTO_KEY_GENERATION_STRATEGY_EDEFAULT.equals(autoKeyGenerationStrategy);
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
 				return implementsUserInterface != IMPLEMENTS_USER_INTERFACE_EDEFAULT;
+			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
+				return implementsResetPasswordInterface != IMPLEMENTS_RESET_PASSWORD_INTERFACE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1040,6 +1094,8 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 		result.append(autoKeyGenerationStrategy);
 		result.append(", implementsUserInterface: ");
 		result.append(implementsUserInterface);
+		result.append(", implementsResetPasswordInterface: ");
+		result.append(implementsResetPasswordInterface);
 		result.append(')');
 		return result.toString();
 	}

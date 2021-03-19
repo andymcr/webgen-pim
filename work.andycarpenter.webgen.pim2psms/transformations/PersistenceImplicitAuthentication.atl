@@ -420,7 +420,7 @@ lazy rule implicitResetPasswordRequestEntity {
 		autoKeyPersistentType <- 'integer',
 		displayLabel <- website.resetPasswordRequestName.createLabel(),
 		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user},
-		implementResetPasswordInterface <- true
+		implementsResetPasswordInterface <- true
 	),
 	selector : ORM!SingletonElement (
 		name <- 'selector',

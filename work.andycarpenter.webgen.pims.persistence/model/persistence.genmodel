@@ -68,7 +68,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyPersistentType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/autoKeyGenerationStrategy"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/implementsUserInterface"/>
+      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/implementsUserInterface"/>
+      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute persistence.ecore#//Entity/implementsResetPasswordInterface"/>
     </genClasses>
     <genClasses ecoreClass="persistence.ecore#//SerializationGroup"/>
     <genClasses image="false" ecoreClass="persistence.ecore#//Feature">

@@ -67,6 +67,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			addAutoKeyPersistentTypePropertyDescriptor(object);
 			addAutoKeyGenerationStrategyPropertyDescriptor(object);
 			addImplementsUserInterfacePropertyDescriptor(object);
+			addImplementsResetPasswordInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -441,7 +442,29 @@ public class EntityItemProvider extends ClassifierItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
+				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implements Reset Password Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsResetPasswordInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entity_implementsResetPasswordInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_implementsResetPasswordInterface_feature", "_UI_Entity_type"),
+				 PersistencePackage.Literals.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -521,6 +544,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			case PersistencePackage.ENTITY__AUTO_KEY_PERSISTENT_TYPE:
 			case PersistencePackage.ENTITY__AUTO_KEY_GENERATION_STRATEGY:
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
+			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PersistencePackage.ENTITY__FEATURES:

@@ -165,7 +165,8 @@ rule Entity {
 		autoKeyName <- website.autoKeyName.createAttributeColumnName(),
 		autoKeyPersistentType <- website.autoKeyPersistentType,
 		autoKeyGenerationStrategy <- website.autoKeyGenerationStrategy,
-		implementsUserInterface <- website.implementsUserInterface
+		implementsUserInterface <- website.implementsUserInterface,
 --		implementForumUser <- website.forumUser
+		implementsResetPasswordInterface <- website.implementsResetPasswordInterface
 	)
 }
