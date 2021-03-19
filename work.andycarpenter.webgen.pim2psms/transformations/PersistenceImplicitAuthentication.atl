@@ -112,7 +112,7 @@ rule OrmModel {
 }
 
 unique lazy rule implicitBooleanDataType {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!DataType (
 		name <- 'Boolean',
 		displayLabel <- 'Boolean'
@@ -123,7 +123,7 @@ unique lazy rule implicitBooleanDataType {
 }
 
 unique lazy rule implicitEmailDataType {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!DataType (
 		name <- 'Email',
 		displayLabel <- 'Email'
@@ -134,7 +134,7 @@ unique lazy rule implicitEmailDataType {
 }
 
 unique lazy rule implicitStringDataType {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!DataType (
 		name <- 'String',
 		displayLabel <- 'String'
@@ -145,7 +145,7 @@ unique lazy rule implicitStringDataType {
 }
 
 unique lazy rule implicitStringCollectionType {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!CollectionType (
 		name <- 'String',
 		elementType <- website.getDataType('String'),
@@ -159,7 +159,7 @@ unique lazy rule implicitStringCollectionType {
 
 
 unique lazy rule implicitAuthenticationEntity {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.authenticationName,
 		tableName <- 'authentications',
@@ -384,6 +384,7 @@ unique lazy rule implicitAuthenticationEntity {
 	userDetails : ORM!SingletonAssociation (
 		name <- 'userDetails',
 		displayLabel <- 'User details',
+		cardinality <- #Required,
 		associationOwningEnd <- true,
 		visible <- true,
 		associationRelationship <- #OneToOne,
@@ -396,7 +397,7 @@ unique lazy rule implicitAuthenticationEntity {
 }
 
 lazy rule implicitUserAuthentication {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!SingletonAssociation (
 		partOf <- thisModule.findOrmEntity(website.user.name),
 		name <- website.authenticationName.lowercaseFirst(),
@@ -411,14 +412,15 @@ lazy rule implicitUserAuthentication {
 }
 
 lazy rule implicitResetPasswordRequestEntity {
-	from website: Website!Authentication
+	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.resetPasswordRequestName,
 		tableName <- 'resetpasswordrequests',
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		displayLabel <- website.resetPasswordRequestName.createLabel(),
-		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user}
+		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user},
+		implementResetPasswordInterface <- true
 	),
 	selector : ORM!SingletonElement (
 		name <- 'selector',
@@ -461,11 +463,18 @@ lazy rule implicitResetPasswordRequestEntity {
 	user : ORM!SingletonAssociation (
 		name <- 'user',
 		displayLabel <- 'User',
+		cardinality <- #Required,
 		associationOwningEnd <- true,
 		visible <- true,
-		associationRelationship <- #OneToOne,
-		columnName <- website.user.name.createAssociationColumnName(),
-		opposite <- thisModule.implicitUserAuthentication2(website)
+		associationRelationship <- #ManyToOne,
+		columnName <-
+			if website.authenticationModel.oclIsUndefined() then
+				website.authenticationName.createAssociationColumnName()
+			else
+				website.authenticationModel.name.createAssociationColumnName()
+			endif,
+		opposite <- thisModule.implicitUserAuthentication2(website),
+		serializationMaxDepth <- 0
 	)
 	do {
 		orm;
@@ -473,14 +482,19 @@ lazy rule implicitResetPasswordRequestEntity {
 }
 
 lazy rule implicitUserAuthentication2 {
-	from website: Website!Authentication
-	to orm : ORM!SingletonAssociation (
-		partOf <- thisModule.findOrmEntity(website.user.name),
+	from website: Website!LocalAuthenticationSystem
+	to orm : ORM!CollectionAssociation (
+		partOf <-
+			if website.authenticationModel.oclIsUndefined() then
+				thisModule.implicitAuthenticationEntity(website)
+			else
+				thisModule.findOrmEntity(website.authenticationModel.name)
+			endif,
 		name <- website.resetPasswordRequestName.lowercaseFirst(),
 		displayLabel <- website.resetPasswordRequestName,
 		associationOwningEnd <- false,
 		visible <- false,
-		associationRelationship <- #OneToOne
+		associationRelationship <- #OneToMany
 	)
 	do {
 		orm;

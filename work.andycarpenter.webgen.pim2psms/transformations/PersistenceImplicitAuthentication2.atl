@@ -4,25 +4,38 @@
 -- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
 
 module PersistenceImplicitAuthentication2;
-create dummyOrm : ORM refining orm : ORM;
+create dummyOrm : ORM refining orm : ORM, website : Website;
 
 uses WebsiteHelpers;
 
 
-rule CollectionAssociation {
-	from partialOrm: ORM!CollectionAssociation
-	to orm : ORM!CollectionAssociation (
-		opposite <-
-			if partialOrm.name = 'autoLogin'
-					and partialOrm.partOf.name = 'Authentication' then
-				let autoLogin : ORM!Entity = thisModule.findOrmEntity('AutoLogin')
-					in if not autoLogin.oclIsUndefined() then
-							autoLogin.getOrmFeature('authentication')
-						else
-							OclUndefined
-						endif
-			else
-				partialOrm.opposite
-			endif
-	)
-}
+--rule CollectionAssociation {
+--	from partialOrm: ORM!SingletonAssociation (opposite.oclIsUndefined)
+--	to orm : ORM!SingletonAssociation (
+--		opposite <-
+--			let security : Website!Security = thisModule.findWebsiteSecurity()
+--				in if not security.isLocallyAuthenticated() then
+--						partialOrm.opposite
+--					else
+--						let authentication : Website!LocalAuthenticationSystem
+--							= security.authentication
+--							in if not authentication.resetPasswordRequestModel.oclIsUndefined() then
+--									partialOrm.opposite
+--								else
+--									Sequence{thisModule.implicitResetPasswordRequestEntity(authentication)}
+--								endif
+--					endif
+--							in if security.hasImplicitAuthenticationPage() then
+--							if partialOrm.name = 'autoLogin'
+--					and partialOrm.partOf.name = 'Authentication' then
+--				let autoLogin : ORM!Entity = thisModule.findOrmEntity('AutoLogin')
+--					in if not autoLogin.oclIsUndefined() then
+--							autoLogin.getOrmFeature('authentication')
+--						else
+--							OclUndefined
+--						endif
+--			else
+--				partialOrm.opposite
+--			endif
+--	)
+--}
