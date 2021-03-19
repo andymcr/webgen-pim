@@ -350,7 +350,6 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/cancelDestination"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/cancelLabel"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/customiseValues"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/unitInputGroupClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CreateUnit"/>

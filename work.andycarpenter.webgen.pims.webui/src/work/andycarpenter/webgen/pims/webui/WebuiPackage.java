@@ -5731,22 +5731,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__CUSTOMISE_VALUES = SINGLETON_UNIT_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 8;
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -5755,7 +5746,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 9;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -6126,15 +6117,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -6535,15 +6517,6 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
-
-	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6938,15 +6911,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -7362,15 +7326,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -14319,15 +14274,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CUSTOMISE_VALUES = EDIT_UNIT__CUSTOMISE_VALUES;
-
-	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19461,17 +19407,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getEditUnit_CancelLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Customise Values</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues()
-	 * @see #getEditUnit()
-	 * @generated
-	 */
-	EAttribute getEditUnit_CustomiseValues();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22623,14 +22558,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EDIT_UNIT__CANCEL_LABEL = eINSTANCE.getEditUnit_CancelLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Customise Values</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDIT_UNIT__CUSTOMISE_VALUES = eINSTANCE.getEditUnit_CustomiseValues();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit Input Group Class</b></em>' attribute feature.

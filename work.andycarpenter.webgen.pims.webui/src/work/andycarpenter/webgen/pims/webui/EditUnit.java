@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
  * </ul>
  *
@@ -202,32 +201,6 @@ public interface EditUnit extends SingletonUnit {
 	 * @generated
 	 */
 	void setCancelLabel(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Customise Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Customise Values</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customise Values</em>' attribute.
-	 * @see #setCustomiseValues(boolean)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CustomiseValues()
-	 * @model
-	 * @generated
-	 */
-	boolean isCustomiseValues();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#isCustomiseValues <em>Customise Values</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Customise Values</em>' attribute.
-	 * @see #isCustomiseValues()
-	 * @generated
-	 */
-	void setCustomiseValues(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit Input Group Class</b></em>' attribute.

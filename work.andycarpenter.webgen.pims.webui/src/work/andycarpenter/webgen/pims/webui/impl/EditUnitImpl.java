@@ -31,7 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelLabel <em>Cancel Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#isCustomiseValues <em>Customise Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
  * </ul>
  *
@@ -127,26 +126,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @ordered
 	 */
 	protected String cancelLabel = CANCEL_LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isCustomiseValues() <em>Customise Values</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCustomiseValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean CUSTOMISE_VALUES_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isCustomiseValues() <em>Customise Values</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCustomiseValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean customiseValues = CUSTOMISE_VALUES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUnitInputGroupClass() <em>Unit Input Group Class</em>}' attribute.
@@ -454,29 +433,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public boolean isCustomiseValues() {
-		return customiseValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCustomiseValues(boolean newCustomiseValues) {
-		boolean oldCustomiseValues = customiseValues;
-		customiseValues = newCustomiseValues;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES, oldCustomiseValues, customiseValues));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getUnitInputGroupClass() {
 		return unitInputGroupClass;
 	}
@@ -536,8 +492,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return basicGetCancelDestination();
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				return getCancelLabel();
-			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
-				return isCustomiseValues();
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				return getUnitInputGroupClass();
 		}
@@ -572,9 +526,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel((String)newValue);
-				return;
-			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
-				setCustomiseValues((Boolean)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				setUnitInputGroupClass((String)newValue);
@@ -612,9 +563,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel(CANCEL_LABEL_EDEFAULT);
 				return;
-			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
-				setCustomiseValues(CUSTOMISE_VALUES_EDEFAULT);
-				return;
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				setUnitInputGroupClass(UNIT_INPUT_GROUP_CLASS_EDEFAULT);
 				return;
@@ -644,8 +592,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return cancelDestination != null;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				return CANCEL_LABEL_EDEFAULT == null ? cancelLabel != null : !CANCEL_LABEL_EDEFAULT.equals(cancelLabel);
-			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
-				return customiseValues != CUSTOMISE_VALUES_EDEFAULT;
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				return UNIT_INPUT_GROUP_CLASS_EDEFAULT == null ? unitInputGroupClass != null : !UNIT_INPUT_GROUP_CLASS_EDEFAULT.equals(unitInputGroupClass);
 		}
@@ -666,8 +612,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		result.append(confirmLabel);
 		result.append(", cancelLabel: ");
 		result.append(cancelLabel);
-		result.append(", customiseValues: ");
-		result.append(customiseValues);
 		result.append(", unitInputGroupClass: ");
 		result.append(unitInputGroupClass);
 		result.append(')');

@@ -52,7 +52,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			addConfirmLabelPropertyDescriptor(object);
 			addCancelDestinationPropertyDescriptor(object);
 			addCancelLabelPropertyDescriptor(object);
-			addCustomiseValuesPropertyDescriptor(object);
 			addUnitInputGroupClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -147,28 +146,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Customise Values feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCustomiseValuesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EditUnit_customiseValues_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_customiseValues_feature", "_UI_EditUnit_type"),
-				 WebuiPackage.Literals.EDIT_UNIT__CUSTOMISE_VALUES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Unit Input Group Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -251,7 +228,6 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 		switch (notification.getFeatureID(EditUnit.class)) {
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
-			case WebuiPackage.EDIT_UNIT__CUSTOMISE_VALUES:
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
