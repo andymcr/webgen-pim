@@ -38,6 +38,12 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass <em>Default Definition Field List Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass <em>Default Row Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultColumnClass <em>Default Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}</li>
@@ -53,11 +59,6 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass <em>Default Static Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsAnchorClass <em>Default Details Anchor Class</em>}</li>
@@ -1091,6 +1092,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultFieldListClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Definition Field List Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Definition Field List Class</em>' attribute.
+	 * @see #setDefaultDefinitionFieldListClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultDefinitionFieldListClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultDefinitionFieldListClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass <em>Default Definition Field List Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Definition Field List Class</em>' attribute.
+	 * @see #getDefaultDefinitionFieldListClass()
+	 * @generated
+	 */
+	void setDefaultDefinitionFieldListClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Field Label Class</b></em>' attribute.

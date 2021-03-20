@@ -56,6 +56,12 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultGalleryContentClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultStaticContentClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldListClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDefinitionFieldListClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldLabelClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldValueClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputGroupClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputLabelClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputValueClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultRowClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultColumnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCardClass"/>
@@ -71,11 +77,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultSliderControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultGalleryControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultStaticControlClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldLabelClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultFieldValueClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputGroupClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputLabelClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultInputValueClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultActionNavigationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultAnchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDetailsAnchorClass"/>

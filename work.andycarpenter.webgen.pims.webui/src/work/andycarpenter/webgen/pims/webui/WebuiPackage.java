@@ -261,139 +261,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Definition Field List Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ROW_CLASS = 21;
-
-	/**
-	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_COLUMN_CLASS = 22;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_CLASS = 23;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 24;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 25;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 26;
-
-	/**
-	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_BADGE_CLASS = 27;
-
-	/**
-	 * The feature id for the '<em><b>Default Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CONTROL_CLASS = 28;
-
-	/**
-	 * The feature id for the '<em><b>Default Details Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = 29;
-
-	/**
-	 * The feature id for the '<em><b>Default Tabular Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = 30;
-
-	/**
-	 * The feature id for the '<em><b>Default Cards Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = 31;
-
-	/**
-	 * The feature id for the '<em><b>Default Form Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FORM_CONTROL_CLASS = 32;
-
-	/**
-	 * The feature id for the '<em><b>Default Slider Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = 33;
-
-	/**
-	 * The feature id for the '<em><b>Default Gallery Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = 34;
-
-	/**
-	 * The feature id for the '<em><b>Default Static Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = 35;
+	int WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
@@ -402,7 +276,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 36;
+	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
@@ -411,7 +285,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 37;
+	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
@@ -420,7 +294,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 38;
+	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
@@ -429,7 +303,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 39;
+	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
@@ -438,7 +312,142 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 40;
+	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 26;
+
+	/**
+	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_ROW_CLASS = 27;
+
+	/**
+	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_COLUMN_CLASS = 28;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_CLASS = 29;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 30;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 31;
+
+	/**
+	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 32;
+
+	/**
+	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_BADGE_CLASS = 33;
+
+	/**
+	 * The feature id for the '<em><b>Default Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CONTROL_CLASS = 34;
+
+	/**
+	 * The feature id for the '<em><b>Default Details Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = 35;
+
+	/**
+	 * The feature id for the '<em><b>Default Tabular Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = 36;
+
+	/**
+	 * The feature id for the '<em><b>Default Cards Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = 37;
+
+	/**
+	 * The feature id for the '<em><b>Default Form Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_FORM_CONTROL_CLASS = 38;
+
+	/**
+	 * The feature id for the '<em><b>Default Slider Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = 39;
+
+	/**
+	 * The feature id for the '<em><b>Default Gallery Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = 40;
+
+	/**
+	 * The feature id for the '<em><b>Default Static Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
@@ -447,7 +456,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 41;
+	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 42;
 
 	/**
 	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
@@ -456,7 +465,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 42;
+	int WEB_UI__DEFAULT_ANCHOR_CLASS = 43;
 
 	/**
 	 * The feature id for the '<em><b>Default Details Anchor Class</b></em>' attribute.
@@ -465,7 +474,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = 43;
+	int WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = 44;
 
 	/**
 	 * The feature id for the '<em><b>Default Tabular Anchor Class</b></em>' attribute.
@@ -474,7 +483,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = 44;
+	int WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = 45;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Anchor Class</b></em>' attribute.
@@ -483,7 +492,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS = 45;
+	int WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS = 46;
 
 	/**
 	 * The feature id for the '<em><b>Default Form Anchor Class</b></em>' attribute.
@@ -492,7 +501,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_ANCHOR_CLASS = 46;
+	int WEB_UI__DEFAULT_FORM_ANCHOR_CLASS = 47;
 
 	/**
 	 * The feature id for the '<em><b>Default Slider Anchor Class</b></em>' attribute.
@@ -501,7 +510,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS = 47;
+	int WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS = 48;
 
 	/**
 	 * The feature id for the '<em><b>Default Gallery Anchor Class</b></em>' attribute.
@@ -510,7 +519,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS = 48;
+	int WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS = 49;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Anchor Class</b></em>' attribute.
@@ -519,7 +528,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS = 49;
+	int WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS = 50;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -528,7 +537,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 50;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 51;
 
 	/**
 	 * The feature id for the '<em><b>Input Technology</b></em>' attribute.
@@ -537,7 +546,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__INPUT_TECHNOLOGY = 51;
+	int WEB_UI__INPUT_TECHNOLOGY = 52;
 
 	/**
 	 * The feature id for the '<em><b>Ajax Technology</b></em>' attribute.
@@ -546,7 +555,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__AJAX_TECHNOLOGY = 52;
+	int WEB_UI__AJAX_TECHNOLOGY = 53;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -555,7 +564,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 53;
+	int WEB_UI_FEATURE_COUNT = 54;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -17296,6 +17305,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultFieldListClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass <em>Default Definition Field List Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Definition Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultDefinitionFieldListClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20930,6 +20950,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_FIELD_LIST_CLASS = eINSTANCE.getWebUI_DefaultFieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Definition Field List Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS = eINSTANCE.getWebUI_DefaultDefinitionFieldListClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Field Label Class</b></em>' attribute feature.

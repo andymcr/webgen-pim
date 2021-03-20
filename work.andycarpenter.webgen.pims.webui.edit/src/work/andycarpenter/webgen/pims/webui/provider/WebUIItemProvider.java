@@ -82,6 +82,12 @@ public class WebUIItemProvider
 			addDefaultGalleryContentClassPropertyDescriptor(object);
 			addDefaultStaticContentClassPropertyDescriptor(object);
 			addDefaultFieldListClassPropertyDescriptor(object);
+			addDefaultDefinitionFieldListClassPropertyDescriptor(object);
+			addDefaultFieldLabelClassPropertyDescriptor(object);
+			addDefaultFieldValueClassPropertyDescriptor(object);
+			addDefaultInputGroupClassPropertyDescriptor(object);
+			addDefaultInputLabelClassPropertyDescriptor(object);
+			addDefaultInputValueClassPropertyDescriptor(object);
 			addDefaultRowClassPropertyDescriptor(object);
 			addDefaultColumnClassPropertyDescriptor(object);
 			addDefaultCardClassPropertyDescriptor(object);
@@ -97,11 +103,6 @@ public class WebUIItemProvider
 			addDefaultSliderControlClassPropertyDescriptor(object);
 			addDefaultGalleryControlClassPropertyDescriptor(object);
 			addDefaultStaticControlClassPropertyDescriptor(object);
-			addDefaultFieldLabelClassPropertyDescriptor(object);
-			addDefaultFieldValueClassPropertyDescriptor(object);
-			addDefaultInputGroupClassPropertyDescriptor(object);
-			addDefaultInputLabelClassPropertyDescriptor(object);
-			addDefaultInputValueClassPropertyDescriptor(object);
 			addDefaultActionNavigationClassPropertyDescriptor(object);
 			addDefaultAnchorClassPropertyDescriptor(object);
 			addDefaultDetailsAnchorClassPropertyDescriptor(object);
@@ -1043,6 +1044,28 @@ public class WebUIItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Default Definition Field List Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultDefinitionFieldListClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultDefinitionFieldListClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultDefinitionFieldListClass_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Default Field Label Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1326,6 +1349,12 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTENT_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LIST_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
+			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ROW_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_COLUMN_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_CARD_CLASS:
@@ -1341,11 +1370,6 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_CONTROL_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_LABEL_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_FIELD_VALUE_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_GROUP_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_LABEL_CLASS:
-			case WebuiPackage.WEB_UI__DEFAULT_INPUT_VALUE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS:
