@@ -24,7 +24,6 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getFrameworkTechnology <em>Framework Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#isUseDbSessionStorage <em>Use Db Session Storage</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getTextEditorURL <em>Text Editor URL</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getTopNavigationId <em>Top Navigation Id</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteTemplate <em>Site Template</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#isStaticUnitsEditable <em>Static Units Editable</em>}</li>
  * </ul>
@@ -271,33 +270,6 @@ public interface WebsiteProperties extends EObject {
 	 * @generated
 	 */
 	void setTextEditorURL(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Top Navigation Id</b></em>' attribute.
-	 * The default value is <code>"topnav"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top Navigation Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top Navigation Id</em>' attribute.
-	 * @see #setTopNavigationId(String)
-	 * @see work.andycarpenter.webgen.pims.website.WebsitePackage#getWebsiteProperties_TopNavigationId()
-	 * @model default="topnav" required="true" ordered="false"
-	 * @generated
-	 */
-	String getTopNavigationId();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getTopNavigationId <em>Top Navigation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top Navigation Id</em>' attribute.
-	 * @see #getTopNavigationId()
-	 * @generated
-	 */
-	void setTopNavigationId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Site Template</b></em>' attribute.

@@ -18,8 +18,8 @@ import work.andycarpenter.webgen.pims.service.Services;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPersistence <em>Persistence</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getServices <em>Services</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getMenus <em>Menus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
@@ -69,13 +69,11 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryAnchorClass <em>Default Gallery Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticAnchorClass <em>Default Static Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getInputTechnology <em>Input Technology</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getAjaxTechnology <em>Ajax Technology</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='pageNameUnique menuNameUnique '"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL pageNameUnique='pages-&gt;isUnique(name)' menuNameUnique='menus-&gt;isUnique(name)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='pageNameUnique'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL pageNameUnique='pages-&gt;isUnique(name)'"
  * @generated
  */
 public interface WebUI extends EObject {
@@ -102,6 +100,30 @@ public interface WebUI extends EObject {
 	void setPersistence(Persistence value);
 
 	/**
+	 * Returns the value of the '<em><b>Navigation</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Navigation#getPartOf <em>Part Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navigation</em>' containment reference.
+	 * @see #setNavigation(Navigation)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_Navigation()
+	 * @see work.andycarpenter.webgen.pims.webui.Navigation#getPartOf
+	 * @model opposite="partOf" containment="true" required="true"
+	 * @generated
+	 */
+	Navigation getNavigation();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getNavigation <em>Navigation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navigation</em>' containment reference.
+	 * @see #getNavigation()
+	 * @generated
+	 */
+	void setNavigation(Navigation value);
+
+	/**
 	 * Returns the value of the '<em><b>Services</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -126,22 +148,6 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setServices(Services value);
-
-	/**
-	 * Returns the value of the '<em><b>Menus</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Menu}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Menus</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Menus</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_Menus()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Menu> getMenus();
 
 	/**
 	 * Returns the value of the '<em><b>Pages</b></em>' containment reference list.
@@ -1280,65 +1286,5 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultMaximumUploadSize(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Input Technology</b></em>' attribute.
-	 * The default value is <code>"Html"</code>.
-	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.webui.InputTechnologies}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Technology</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Technology</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.webui.InputTechnologies
-	 * @see #setInputTechnology(InputTechnologies)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_InputTechnology()
-	 * @model default="Html"
-	 * @generated
-	 */
-	InputTechnologies getInputTechnology();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getInputTechnology <em>Input Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Technology</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.webui.InputTechnologies
-	 * @see #getInputTechnology()
-	 * @generated
-	 */
-	void setInputTechnology(InputTechnologies value);
-
-	/**
-	 * Returns the value of the '<em><b>Ajax Technology</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
-	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.webui.AjaxTechnologies}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ajax Technology</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ajax Technology</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.webui.AjaxTechnologies
-	 * @see #setAjaxTechnology(AjaxTechnologies)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_AjaxTechnology()
-	 * @model default="None"
-	 * @generated
-	 */
-	AjaxTechnologies getAjaxTechnology();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getAjaxTechnology <em>Ajax Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ajax Technology</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.webui.AjaxTechnologies
-	 * @see #getAjaxTechnology()
-	 * @generated
-	 */
-	void setAjaxTechnology(AjaxTechnologies value);
 
 } // WebUI

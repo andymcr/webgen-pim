@@ -64,7 +64,6 @@ public class WebUIItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPersistencePropertyDescriptor(object);
-			addServicesPropertyDescriptor(object);
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
@@ -113,8 +112,6 @@ public class WebUIItemProvider
 			addDefaultGalleryAnchorClassPropertyDescriptor(object);
 			addDefaultStaticAnchorClassPropertyDescriptor(object);
 			addDefaultMaximumUploadSizePropertyDescriptor(object);
-			addInputTechnologyPropertyDescriptor(object);
-			addAjaxTechnologyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -138,28 +135,6 @@ public class WebUIItemProvider
 				 true,
 				 null,
 				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Services feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addServicesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WebUI_services_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_services_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__SERVICES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_BusinessPropertyCategory"),
 				 null));
 	}
 
@@ -1220,50 +1195,6 @@ public class WebUIItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Input Technology feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputTechnologyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WebUI_inputTechnology_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_inputTechnology_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__INPUT_TECHNOLOGY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Ajax Technology feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAjaxTechnologyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WebUI_ajaxTechnology_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_ajaxTechnology_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__AJAX_TECHNOLOGY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -1275,7 +1206,7 @@ public class WebUIItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__MENUS);
+			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__NAVIGATION);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__PAGES);
 		}
 		return childrenFeatures;
@@ -1380,11 +1311,9 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
-			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
-			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case WebuiPackage.WEB_UI__MENUS:
+			case WebuiPackage.WEB_UI__NAVIGATION:
 			case WebuiPackage.WEB_UI__PAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -1405,13 +1334,8 @@ public class WebUIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__MENUS,
-				 WebuiFactory.eINSTANCE.createMenu()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__MENUS,
-				 WebuiFactory.eINSTANCE.createSubmenuEntry()));
+				(WebuiPackage.Literals.WEB_UI__NAVIGATION,
+				 WebuiFactory.eINSTANCE.createNavigation()));
 
 		newChildDescriptors.add
 			(createChildParameter

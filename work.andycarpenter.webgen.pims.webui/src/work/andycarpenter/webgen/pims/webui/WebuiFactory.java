@@ -31,6 +31,15 @@ public interface WebuiFactory extends EFactory {
 	WebUI createWebUI();
 
 	/**
+	 * Returns a new object of class '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation</em>'.
+	 * @generated
+	 */
+	Navigation createNavigation();
+
+	/**
 	 * Returns a new object of class '<em>Menu</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -54,7 +54,7 @@ rule WafModel {
 				Sequence{}
 			endif,
 		api <- api,
-		menus <- website.webUI.menus,
+		navigation <- website.webUI.navigation,
 		pages <- website.webUI.pages,
 		siteName <- 'sps',
 		siteTitle <- website.websiteProperties.siteTitle,
@@ -66,12 +66,8 @@ rule WafModel {
 				'&copy; '.concat(website.websiteProperties.siteTitle).concat(' {{ \'now\' | date(\'Y\') }}')
 			endif,
 		metaDescription <- website.websiteProperties.metaDescription,
-		logoImage <- website.websiteProperties.logoImage,
-		logoFilters <- website.websiteProperties.logoFilters,
 		frameworkTechnology <- website.frameworkTechnology,
 		useDbSessionStorage <- website.websiteProperties.useDbSessionStorage,
-		inputTechnology <- thisModule.findWebsiteUI().inputTechnology,
-		ajaxTechnology <- thisModule.findWebsiteUI().ajaxTechnology,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
 		textEditorURL <-
@@ -80,12 +76,11 @@ rule WafModel {
 			else
 				website.websiteProperties.textEditorURL.cleanString()
 			endif,
-		topNavigationId <- website.websiteProperties.topNavigationId,
 		siteTemplate <- website.websiteProperties.siteTemplate,
 		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable,
 		defaultStyles <- defaultStyles
 	),
-	defaultStyles : WAF!WafStyle (
+	defaultStyles : WAF!WafStyles (
 		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
 		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
 		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
@@ -151,43 +146,17 @@ rule WafModel {
 	)
 }
 
-
--- @extends NamedElement
-rule ImageManipulation {
-	from website : Website!ImageManipulation
-	to waf : WAF!ImageManipulation (
-		jpegQuality <- website.jpegQuality,
-		filters <- website.filters
+rule Navigation {
+	from website : Website!Navigation
+	to waf : WAF!Navigation (
+		menus <- website.menus,
+		navbarClass <- website.navbarClass,
+		logoImage <- thisModule.findWebGenModel().websiteProperties.logoImage,
+		logoFilters <- thisModule.findWebGenModel().websiteProperties.logoFilters,
+		authenticationMenuPlacement <- website.authenticationMenuPlacement,
+		authenticationBarClass <- website.authenticationBarClass
 	)
 }
-
-abstract rule ImageFilter {
-	from website : Website!ImageFilter
-	to waf : WAF!ImageFilter (
-	)
-}
-
--- @extends ImageFilter
-rule BackgroundFilter {
-	from website : Website!BackgroundFilter
-	to waf : WAF!BackgroundFilter (
-		color <- website.color,
-		width <- website.width,
-		height <- website.height,
-		position <- website.position
-	)
-}
--- @extends ImageFilter
-rule ThumbnailFilter {
-	from website : Website!ThumbnailFilter
-	to waf : WAF!ThumbnailFilter (
-		width <- website.width,
-		height <- website.height,
-		mode <- website.mode
-	)
-}
-
-
 
 -- @extends NamedDisplayElement
 rule Menu {
@@ -230,6 +199,43 @@ rule EditStaticTextMenuEntry {
 	to waf : WAF!EditStaticTextMenuEntry (
 	)
 }
+
+
+-- @extends NamedElement
+rule ImageManipulation {
+	from website : Website!ImageManipulation
+	to waf : WAF!ImageManipulation (
+		jpegQuality <- website.jpegQuality,
+		filters <- website.filters
+	)
+}
+
+abstract rule ImageFilter {
+	from website : Website!ImageFilter
+	to waf : WAF!ImageFilter (
+	)
+}
+
+-- @extends ImageFilter
+rule BackgroundFilter {
+	from website : Website!BackgroundFilter
+	to waf : WAF!BackgroundFilter (
+		color <- website.color,
+		width <- website.width,
+		height <- website.height,
+		position <- website.position
+	)
+}
+-- @extends ImageFilter
+rule ThumbnailFilter {
+	from website : Website!ThumbnailFilter
+	to waf : WAF!ThumbnailFilter (
+		width <- website.width,
+		height <- website.height,
+		mode <- website.mode
+	)
+}
+
 
 -- @extends NamedDisplayElement
 rule Page {

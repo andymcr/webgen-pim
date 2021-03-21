@@ -58,6 +58,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case WebuiPackage.WEB_UI: return createWebUI();
+			case WebuiPackage.NAVIGATION: return createNavigation();
 			case WebuiPackage.MENU: return createMenu();
 			case WebuiPackage.SUBMENU_ENTRY: return createSubmenuEntry();
 			case WebuiPackage.ACTION_MENU_ENTRY: return createActionMenuEntry();
@@ -119,10 +120,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case WebuiPackage.INPUT_TECHNOLOGIES:
-				return createInputTechnologiesFromString(eDataType, initialValue);
-			case WebuiPackage.AJAX_TECHNOLOGIES:
-				return createAjaxTechnologiesFromString(eDataType, initialValue);
+			case WebuiPackage.AUTHENTICATION_MENU_PLACEMENT:
+				return createAuthenticationMenuPlacementFromString(eDataType, initialValue);
 			case WebuiPackage.PAGE_TOP_MENU_OPTIONS:
 				return createPageTopMenuOptionsFromString(eDataType, initialValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
@@ -142,10 +141,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case WebuiPackage.INPUT_TECHNOLOGIES:
-				return convertInputTechnologiesToString(eDataType, instanceValue);
-			case WebuiPackage.AJAX_TECHNOLOGIES:
-				return convertAjaxTechnologiesToString(eDataType, instanceValue);
+			case WebuiPackage.AUTHENTICATION_MENU_PLACEMENT:
+				return convertAuthenticationMenuPlacementToString(eDataType, instanceValue);
 			case WebuiPackage.PAGE_TOP_MENU_OPTIONS:
 				return convertPageTopMenuOptionsToString(eDataType, instanceValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
@@ -166,6 +163,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public WebUI createWebUI() {
 		WebUIImpl webUI = new WebUIImpl();
 		return webUI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Navigation createNavigation() {
+		NavigationImpl navigation = new NavigationImpl();
+		return navigation;
 	}
 
 	/**
@@ -690,50 +698,30 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AuthenticationMenuPlacement createAuthenticationMenuPlacementFromString(EDataType eDataType, String initialValue) {
+		AuthenticationMenuPlacement result = AuthenticationMenuPlacement.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAuthenticationMenuPlacementToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Badge createBadge() {
 		BadgeImpl badge = new BadgeImpl();
 		return badge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputTechnologies createInputTechnologiesFromString(EDataType eDataType, String initialValue) {
-		InputTechnologies result = InputTechnologies.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertInputTechnologiesToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AjaxTechnologies createAjaxTechnologiesFromString(EDataType eDataType, String initialValue) {
-		AjaxTechnologies result = AjaxTechnologies.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertAjaxTechnologiesToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -12,15 +12,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.service.Services;
-
-import work.andycarpenter.webgen.pims.webui.AjaxTechnologies;
-import work.andycarpenter.webgen.pims.webui.InputTechnologies;
-import work.andycarpenter.webgen.pims.webui.Menu;
+import work.andycarpenter.webgen.pims.webui.Navigation;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -34,8 +30,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPersistence <em>Persistence</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getServices <em>Services</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getMenus <em>Menus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPages <em>Pages</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
@@ -85,8 +81,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryAnchorClass <em>Default Gallery Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticAnchorClass <em>Default Static Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getInputTechnology <em>Input Technology</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getAjaxTechnology <em>Ajax Technology</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,6 +97,16 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected Persistence persistence;
 
 	/**
+	 * The cached value of the '{@link #getNavigation() <em>Navigation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavigation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Navigation navigation;
+
+	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,16 +115,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected Services services;
-
-	/**
-	 * The cached value of the '{@link #getMenus() <em>Menus</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMenus()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Menu> menus;
 
 	/**
 	 * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
@@ -1093,46 +1087,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected int defaultMaximumUploadSize = DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInputTechnology() <em>Input Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final InputTechnologies INPUT_TECHNOLOGY_EDEFAULT = InputTechnologies.HTML;
-
-	/**
-	 * The cached value of the '{@link #getInputTechnology() <em>Input Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected InputTechnologies inputTechnology = INPUT_TECHNOLOGY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAjaxTechnology() <em>Ajax Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAjaxTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final AjaxTechnologies AJAX_TECHNOLOGY_EDEFAULT = AjaxTechnologies.NONE;
-
-	/**
-	 * The cached value of the '{@link #getAjaxTechnology() <em>Ajax Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAjaxTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected AjaxTechnologies ajaxTechnology = AJAX_TECHNOLOGY_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1197,6 +1151,51 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public Navigation getNavigation() {
+		return navigation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNavigation(Navigation newNavigation, NotificationChain msgs) {
+		Navigation oldNavigation = navigation;
+		navigation = newNavigation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__NAVIGATION, oldNavigation, newNavigation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNavigation(Navigation newNavigation) {
+		if (newNavigation != navigation) {
+			NotificationChain msgs = null;
+			if (navigation != null)
+				msgs = ((InternalEObject)navigation).eInverseRemove(this, WebuiPackage.NAVIGATION__PART_OF, Navigation.class, msgs);
+			if (newNavigation != null)
+				msgs = ((InternalEObject)newNavigation).eInverseAdd(this, WebuiPackage.NAVIGATION__PART_OF, Navigation.class, msgs);
+			msgs = basicSetNavigation(newNavigation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__NAVIGATION, newNavigation, newNavigation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Services getServices() {
 		if (services != null && services.eIsProxy()) {
 			InternalEObject oldServices = (InternalEObject)services;
@@ -1229,19 +1228,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		services = newServices;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__SERVICES, oldServices, services));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Menu> getMenus() {
-		if (menus == null) {
-			menus = new EObjectContainmentEList<Menu>(Menu.class, this, WebuiPackage.WEB_UI__MENUS);
-		}
-		return menus;
 	}
 
 	/**
@@ -2366,56 +2352,14 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public InputTechnologies getInputTechnology() {
-		return inputTechnology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInputTechnology(InputTechnologies newInputTechnology) {
-		InputTechnologies oldInputTechnology = inputTechnology;
-		inputTechnology = newInputTechnology == null ? INPUT_TECHNOLOGY_EDEFAULT : newInputTechnology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__INPUT_TECHNOLOGY, oldInputTechnology, inputTechnology));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AjaxTechnologies getAjaxTechnology() {
-		return ajaxTechnology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAjaxTechnology(AjaxTechnologies newAjaxTechnology) {
-		AjaxTechnologies oldAjaxTechnology = ajaxTechnology;
-		ajaxTechnology = newAjaxTechnology == null ? AJAX_TECHNOLOGY_EDEFAULT : newAjaxTechnology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__AJAX_TECHNOLOGY, oldAjaxTechnology, ajaxTechnology));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				if (navigation != null)
+					msgs = ((InternalEObject)navigation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__NAVIGATION, null, msgs);
+				return basicSetNavigation((Navigation)otherEnd, msgs);
 			case WebuiPackage.WEB_UI__PAGES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPages()).basicAdd(otherEnd, msgs);
 		}
@@ -2430,8 +2374,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.WEB_UI__MENUS:
-				return ((InternalEList<?>)getMenus()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				return basicSetNavigation(null, msgs);
 			case WebuiPackage.WEB_UI__PAGES:
 				return ((InternalEList<?>)getPages()).basicRemove(otherEnd, msgs);
 		}
@@ -2449,11 +2393,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__PERSISTENCE:
 				if (resolve) return getPersistence();
 				return basicGetPersistence();
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				return getNavigation();
 			case WebuiPackage.WEB_UI__SERVICES:
 				if (resolve) return getServices();
 				return basicGetServices();
-			case WebuiPackage.WEB_UI__MENUS:
-				return getMenus();
 			case WebuiPackage.WEB_UI__PAGES:
 				return getPages();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
@@ -2552,10 +2496,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultStaticAnchorClass();
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return getDefaultMaximumUploadSize();
-			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
-				return getInputTechnology();
-			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:
-				return getAjaxTechnology();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -2572,12 +2512,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__PERSISTENCE:
 				setPersistence((Persistence)newValue);
 				return;
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				setNavigation((Navigation)newValue);
+				return;
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)newValue);
-				return;
-			case WebuiPackage.WEB_UI__MENUS:
-				getMenus().clear();
-				getMenus().addAll((Collection<? extends Menu>)newValue);
 				return;
 			case WebuiPackage.WEB_UI__PAGES:
 				getPages().clear();
@@ -2727,12 +2666,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize((Integer)newValue);
 				return;
-			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
-				setInputTechnology((InputTechnologies)newValue);
-				return;
-			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:
-				setAjaxTechnology((AjaxTechnologies)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -2748,11 +2681,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__PERSISTENCE:
 				setPersistence((Persistence)null);
 				return;
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				setNavigation((Navigation)null);
+				return;
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)null);
-				return;
-			case WebuiPackage.WEB_UI__MENUS:
-				getMenus().clear();
 				return;
 			case WebuiPackage.WEB_UI__PAGES:
 				getPages().clear();
@@ -2901,12 +2834,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				setDefaultMaximumUploadSize(DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT);
 				return;
-			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
-				setInputTechnology(INPUT_TECHNOLOGY_EDEFAULT);
-				return;
-			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:
-				setAjaxTechnology(AJAX_TECHNOLOGY_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -2921,10 +2848,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		switch (featureID) {
 			case WebuiPackage.WEB_UI__PERSISTENCE:
 				return persistence != null;
+			case WebuiPackage.WEB_UI__NAVIGATION:
+				return navigation != null;
 			case WebuiPackage.WEB_UI__SERVICES:
 				return services != null;
-			case WebuiPackage.WEB_UI__MENUS:
-				return menus != null && !menus.isEmpty();
 			case WebuiPackage.WEB_UI__PAGES:
 				return pages != null && !pages.isEmpty();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
@@ -3023,10 +2950,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT == null ? defaultStaticAnchorClass != null : !DEFAULT_STATIC_ANCHOR_CLASS_EDEFAULT.equals(defaultStaticAnchorClass);
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				return defaultMaximumUploadSize != DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
-			case WebuiPackage.WEB_UI__INPUT_TECHNOLOGY:
-				return inputTechnology != INPUT_TECHNOLOGY_EDEFAULT;
-			case WebuiPackage.WEB_UI__AJAX_TECHNOLOGY:
-				return ajaxTechnology != AJAX_TECHNOLOGY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -3137,10 +3060,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultStaticAnchorClass);
 		result.append(", defaultMaximumUploadSize: ");
 		result.append(defaultMaximumUploadSize);
-		result.append(", inputTechnology: ");
-		result.append(inputTechnology);
-		result.append(", ajaxTechnology: ");
-		result.append(ajaxTechnology);
 		result.append(')');
 		return result.toString();
 	}

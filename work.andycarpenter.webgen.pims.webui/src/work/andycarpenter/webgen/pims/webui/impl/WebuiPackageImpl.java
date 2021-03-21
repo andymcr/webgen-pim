@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
-import work.andycarpenter.webgen.pims.webui.AjaxTechnologies;
+import work.andycarpenter.webgen.pims.webui.AuthenticationMenuPlacement;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CaptchaField;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
@@ -56,7 +56,6 @@ import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.GeneralOperationAction;
 import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
-import work.andycarpenter.webgen.pims.webui.InputTechnologies;
 import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
 import work.andycarpenter.webgen.pims.webui.InstanceSelectAction;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
@@ -67,6 +66,7 @@ import work.andycarpenter.webgen.pims.webui.Menu;
 import work.andycarpenter.webgen.pims.webui.MenuEntry;
 import work.andycarpenter.webgen.pims.webui.MenuFeature;
 import work.andycarpenter.webgen.pims.webui.Message;
+import work.andycarpenter.webgen.pims.webui.Navigation;
 import work.andycarpenter.webgen.pims.webui.OperationAction;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.PageLink;
@@ -111,6 +111,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass webUIEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -544,6 +551,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum authenticationMenuPlacementEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass selectActionEClass = null;
 
 	/**
@@ -573,20 +587,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass badgeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum inputTechnologiesEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum ajaxTechnologiesEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -714,7 +714,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_Services() {
+	public EReference getWebUI_Navigation() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -724,7 +724,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_Menus() {
+	public EReference getWebUI_Services() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1224,8 +1224,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_InputTechnology() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(52);
+	public EClass getNavigation() {
+		return navigationEClass;
 	}
 
 	/**
@@ -1234,8 +1234,48 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWebUI_AjaxTechnology() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(53);
+	public EReference getNavigation_PartOf() {
+		return (EReference)navigationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNavigation_Menus() {
+		return (EReference)navigationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigation_NavbarClass() {
+		return (EAttribute)navigationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigation_AuthenticationMenuPlacement() {
+		return (EAttribute)navigationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigation_AuthenticationBarClass() {
+		return (EAttribute)navigationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3974,6 +4014,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getAuthenticationMenuPlacement() {
+		return authenticationMenuPlacementEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSelectAction() {
 		return selectActionEClass;
 	}
@@ -4124,26 +4174,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EEnum getInputTechnologies() {
-		return inputTechnologiesEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EEnum getAjaxTechnologies() {
-		return ajaxTechnologiesEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getPageTopMenuOptions() {
 		return pageTopMenuOptionsEEnum;
 	}
@@ -4199,8 +4229,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		// Create classes and their features
 		webUIEClass = createEClass(WEB_UI);
 		createEReference(webUIEClass, WEB_UI__PERSISTENCE);
+		createEReference(webUIEClass, WEB_UI__NAVIGATION);
 		createEReference(webUIEClass, WEB_UI__SERVICES);
-		createEReference(webUIEClass, WEB_UI__MENUS);
 		createEReference(webUIEClass, WEB_UI__PAGES);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TIME_FORMAT);
@@ -4250,8 +4280,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE);
-		createEAttribute(webUIEClass, WEB_UI__INPUT_TECHNOLOGY);
-		createEAttribute(webUIEClass, WEB_UI__AJAX_TECHNOLOGY);
+
+		navigationEClass = createEClass(NAVIGATION);
+		createEReference(navigationEClass, NAVIGATION__PART_OF);
+		createEReference(navigationEClass, NAVIGATION__MENUS);
+		createEAttribute(navigationEClass, NAVIGATION__NAVBAR_CLASS);
+		createEAttribute(navigationEClass, NAVIGATION__AUTHENTICATION_MENU_PLACEMENT);
+		createEAttribute(navigationEClass, NAVIGATION__AUTHENTICATION_BAR_CLASS);
 
 		menuEClass = createEClass(MENU);
 		createEReference(menuEClass, MENU__ENTRIES);
@@ -4608,8 +4643,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(messageEClass, MESSAGE__FEATURES);
 
 		// Create enums
-		inputTechnologiesEEnum = createEEnum(INPUT_TECHNOLOGIES);
-		ajaxTechnologiesEEnum = createEEnum(AJAX_TECHNOLOGIES);
+		authenticationMenuPlacementEEnum = createEEnum(AUTHENTICATION_MENU_PLACEMENT);
 		pageTopMenuOptionsEEnum = createEEnum(PAGE_TOP_MENU_OPTIONS);
 		collectionDisplayOptionsEEnum = createEEnum(COLLECTION_DISPLAY_OPTIONS);
 		paginationControlPlacementsEEnum = createEEnum(PAGINATION_CONTROL_PLACEMENTS);
@@ -4730,8 +4764,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(webUIEClass, WebUI.class, "WebUI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWebUI_Persistence(), thePersistencePackage.getPersistence(), null, "persistence", null, 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebUI_Navigation(), this.getNavigation(), this.getNavigation_PartOf(), "navigation", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_Services(), theServicePackage.getServices(), null, "services", null, 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebUI_Menus(), this.getMenu(), null, "menus", null, 0, -1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_Pages(), this.getPage(), this.getPage_WebUI(), "pages", null, 0, -1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDateFormat(), ecorePackage.getEString(), "defaultDateFormat", "jS F Y", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultTimeFormat(), ecorePackage.getEString(), "defaultTimeFormat", "G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4781,8 +4815,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultGalleryAnchorClass(), ecorePackage.getEString(), "defaultGalleryAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultStaticAnchorClass(), ecorePackage.getEString(), "defaultStaticAnchorClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultMaximumUploadSize(), ecorePackage.getEInt(), "defaultMaximumUploadSize", "2000000", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getWebUI_InputTechnology(), this.getInputTechnologies(), "inputTechnology", "Html", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_AjaxTechnology(), this.getAjaxTechnologies(), "ajaxTechnology", "None", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNavigation_PartOf(), this.getWebUI(), this.getWebUI_Navigation(), "partOf", null, 1, 1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigation_Menus(), this.getMenu(), null, "menus", null, 0, -1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigation_NavbarClass(), ecorePackage.getEString(), "navbarClass", "navbar", 0, 1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigation_AuthenticationMenuPlacement(), this.getAuthenticationMenuPlacement(), "authenticationMenuPlacement", null, 0, 1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigation_AuthenticationBarClass(), ecorePackage.getEString(), "authenticationBarClass", "nav", 0, 1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(menuEClass, Menu.class, "Menu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMenu_Entries(), this.getMenuEntry(), this.getMenuEntry_PartOf(), "entries", null, 0, -1, Menu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5139,14 +5178,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getMessage_Features(), this.getFeaturePath(), null, "features", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(inputTechnologiesEEnum, InputTechnologies.class, "InputTechnologies");
-		addEEnumLiteral(inputTechnologiesEEnum, InputTechnologies.HTML);
-		addEEnumLiteral(inputTechnologiesEEnum, InputTechnologies.JQUERY_UI);
-
-		initEEnum(ajaxTechnologiesEEnum, AjaxTechnologies.class, "AjaxTechnologies");
-		addEEnumLiteral(ajaxTechnologiesEEnum, AjaxTechnologies.NONE);
-		addEEnumLiteral(ajaxTechnologiesEEnum, AjaxTechnologies.JQUERY);
-		addEEnumLiteral(ajaxTechnologiesEEnum, AjaxTechnologies.ANGULAR_JS);
+		initEEnum(authenticationMenuPlacementEEnum, AuthenticationMenuPlacement.class, "AuthenticationMenuPlacement");
+		addEEnumLiteral(authenticationMenuPlacementEEnum, AuthenticationMenuPlacement.ABOVE);
+		addEEnumLiteral(authenticationMenuPlacementEEnum, AuthenticationMenuPlacement.BELOW);
+		addEEnumLiteral(authenticationMenuPlacementEEnum, AuthenticationMenuPlacement.INTEGRATED);
 
 		initEEnum(pageTopMenuOptionsEEnum, PageTopMenuOptions.class, "PageTopMenuOptions");
 		addEEnumLiteral(pageTopMenuOptionsEEnum, PageTopMenuOptions.NEVER_INCLUDE);
@@ -5192,7 +5227,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (webUIEClass,
 		   source,
 		   new String[] {
-			   "constraints", "pageNameUnique menuNameUnique "
+			   "constraints", "pageNameUnique"
+		   });
+		addAnnotation
+		  (navigationEClass,
+		   source,
+		   new String[] {
+			   "constraints", "menuNameUnique "
 		   });
 		addAnnotation
 		  (pageEClass,
@@ -5262,7 +5303,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (webUIEClass,
 		   source,
 		   new String[] {
-			   "pageNameUnique", "pages->isUnique(name)",
+			   "pageNameUnique", "pages->isUnique(name)"
+		   });
+		addAnnotation
+		  (navigationEClass,
+		   source,
+		   new String[] {
 			   "menuNameUnique", "menus->isUnique(name)"
 		   });
 		addAnnotation

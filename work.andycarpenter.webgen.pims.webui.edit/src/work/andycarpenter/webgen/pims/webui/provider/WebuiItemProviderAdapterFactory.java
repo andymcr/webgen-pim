@@ -129,6 +129,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.Navigation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NavigationItemProvider navigationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.Navigation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNavigationAdapter() {
+		if (navigationItemProvider == null) {
+			navigationItemProvider = new NavigationItemProvider(this);
+		}
+
+		return navigationItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.Menu} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

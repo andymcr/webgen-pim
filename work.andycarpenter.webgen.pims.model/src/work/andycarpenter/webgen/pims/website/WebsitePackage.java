@@ -249,22 +249,13 @@ public interface WebsitePackage extends EPackage {
 	int WEBSITE_PROPERTIES__TEXT_EDITOR_URL = 8;
 
 	/**
-	 * The feature id for the '<em><b>Top Navigation Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEBSITE_PROPERTIES__TOP_NAVIGATION_ID = 9;
-
-	/**
 	 * The feature id for the '<em><b>Site Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__SITE_TEMPLATE = 10;
+	int WEBSITE_PROPERTIES__SITE_TEMPLATE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Static Units Editable</b></em>' attribute.
@@ -273,7 +264,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE = 11;
+	int WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE = 10;
 
 	/**
 	 * The number of structural features of the '<em>Properties</em>' class.
@@ -282,7 +273,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES_FEATURE_COUNT = 12;
+	int WEBSITE_PROPERTIES_FEATURE_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.website.FrameworkTechnologies <em>Framework Technologies</em>}' enum.
@@ -514,17 +505,6 @@ public interface WebsitePackage extends EPackage {
 	EAttribute getWebsiteProperties_TextEditorURL();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getTopNavigationId <em>Top Navigation Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Top Navigation Id</em>'.
-	 * @see work.andycarpenter.webgen.pims.website.WebsiteProperties#getTopNavigationId()
-	 * @see #getWebsiteProperties()
-	 * @generated
-	 */
-	EAttribute getWebsiteProperties_TopNavigationId();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteTemplate <em>Site Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -741,14 +721,6 @@ public interface WebsitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEBSITE_PROPERTIES__TEXT_EDITOR_URL = eINSTANCE.getWebsiteProperties_TextEditorURL();
-
-		/**
-		 * The meta object literal for the '<em><b>Top Navigation Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEBSITE_PROPERTIES__TOP_NAVIGATION_ID = eINSTANCE.getWebsiteProperties_TopNavigationId();
 
 		/**
 		 * The meta object literal for the '<em><b>Site Template</b></em>' attribute feature.

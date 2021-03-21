@@ -78,6 +78,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createWebUIAdapter();
 			}
 			@Override
+			public Adapter caseNavigation(Navigation object) {
+				return createNavigationAdapter();
+			}
+			@Override
 			public Adapter caseMenu(Menu object) {
 				return createMenuAdapter();
 			}
@@ -400,6 +404,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWebUIAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Navigation <em>Navigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.Navigation
+	 * @generated
+	 */
+	public Adapter createNavigationAdapter() {
 		return null;
 	}
 

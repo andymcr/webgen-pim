@@ -96,6 +96,8 @@ public class WebuiValidator extends EObjectValidator {
 		switch (classifierID) {
 			case WebuiPackage.WEB_UI:
 				return validateWebUI((WebUI)value, diagnostics, context);
+			case WebuiPackage.NAVIGATION:
+				return validateNavigation((Navigation)value, diagnostics, context);
 			case WebuiPackage.MENU:
 				return validateMenu((Menu)value, diagnostics, context);
 			case WebuiPackage.MENU_ENTRY:
@@ -228,10 +230,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateGeneralOperationAction((GeneralOperationAction)value, diagnostics, context);
 			case WebuiPackage.MESSAGE:
 				return validateMessage((Message)value, diagnostics, context);
-			case WebuiPackage.INPUT_TECHNOLOGIES:
-				return validateInputTechnologies((InputTechnologies)value, diagnostics, context);
-			case WebuiPackage.AJAX_TECHNOLOGIES:
-				return validateAjaxTechnologies((AjaxTechnologies)value, diagnostics, context);
+			case WebuiPackage.AUTHENTICATION_MENU_PLACEMENT:
+				return validateAuthenticationMenuPlacement((AuthenticationMenuPlacement)value, diagnostics, context);
 			case WebuiPackage.PAGE_TOP_MENU_OPTIONS:
 				return validatePageTopMenuOptions((PageTopMenuOptions)value, diagnostics, context);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
@@ -259,7 +259,6 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(webUI, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(webUI, diagnostics, context);
 		if (result || diagnostics != null) result &= validateWebUI_pageNameUnique(webUI, diagnostics, context);
-		if (result || diagnostics != null) result &= validateWebUI_menuNameUnique(webUI, diagnostics, context);
 		return result;
 	}
 
@@ -270,27 +269,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String WEB_UI__PAGE_NAME_UNIQUE__EEXPRESSION = "pages->isUnique(name)";
-
-	/**
-	 * Validates the menuNameUnique constraint of '<em>Web UI</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateWebUI_menuNameUnique(WebUI webUI, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(WebuiPackage.Literals.WEB_UI,
-				 webUI,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "menuNameUnique",
-				 WEB_UI__MENU_NAME_UNIQUE__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
 
 	/**
 	 * Validates the pageNameUnique constraint of '<em>Web UI</em>'.
@@ -314,12 +292,52 @@ public class WebuiValidator extends EObjectValidator {
 	}
 
 	/**
-	 * The cached validation expression for the menuNameUnique constraint of '<em>Web UI</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String WEB_UI__MENU_NAME_UNIQUE__EEXPRESSION = "menus->isUnique(name)";
+	public boolean validateNavigation(Navigation navigation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(navigation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(navigation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateNavigation_menuNameUnique(navigation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the menuNameUnique constraint of '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String NAVIGATION__MENU_NAME_UNIQUE__EEXPRESSION = "menus->isUnique(name)";
+
+	/**
+	 * Validates the menuNameUnique constraint of '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNavigation_menuNameUnique(Navigation navigation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebuiPackage.Literals.NAVIGATION,
+				 navigation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "menuNameUnique",
+				 NAVIGATION__MENU_NAME_UNIQUE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1760,6 +1778,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateAuthenticationMenuPlacement(AuthenticationMenuPlacement authenticationMenuPlacement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateSelectAction(SelectAction selectAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(selectAction, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(selectAction, diagnostics, context);
@@ -1875,24 +1902,6 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validateBadge(Badge badge, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(badge, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateInputTechnologies(InputTechnologies inputTechnologies, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAjaxTechnologies(AjaxTechnologies ajaxTechnologies, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
 	}
 
 	/**

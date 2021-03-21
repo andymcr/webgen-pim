@@ -33,7 +33,6 @@ import work.andycarpenter.webgen.pims.website.WebsiteProperties;
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getFrameworkTechnology <em>Framework Technology</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#isUseDbSessionStorage <em>Use Db Session Storage</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getTextEditorURL <em>Text Editor URL</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getTopNavigationId <em>Top Navigation Id</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSiteTemplate <em>Site Template</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#isStaticUnitsEditable <em>Static Units Editable</em>}</li>
  * </ul>
@@ -210,26 +209,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @ordered
 	 */
 	protected String textEditorURL = TEXT_EDITOR_URL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTopNavigationId() <em>Top Navigation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTopNavigationId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TOP_NAVIGATION_ID_EDEFAULT = "topnav";
-
-	/**
-	 * The cached value of the '{@link #getTopNavigationId() <em>Top Navigation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTopNavigationId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String topNavigationId = TOP_NAVIGATION_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSiteTemplate() <em>Site Template</em>}' attribute.
@@ -520,29 +499,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @generated
 	 */
 	@Override
-	public String getTopNavigationId() {
-		return topNavigationId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTopNavigationId(String newTopNavigationId) {
-		String oldTopNavigationId = topNavigationId;
-		topNavigationId = newTopNavigationId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__TOP_NAVIGATION_ID, oldTopNavigationId, topNavigationId));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getSiteTemplate() {
 		return siteTemplate;
 	}
@@ -610,8 +566,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return isUseDbSessionStorage();
 			case WebsitePackage.WEBSITE_PROPERTIES__TEXT_EDITOR_URL:
 				return getTextEditorURL();
-			case WebsitePackage.WEBSITE_PROPERTIES__TOP_NAVIGATION_ID:
-				return getTopNavigationId();
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				return getSiteTemplate();
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
@@ -654,9 +608,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__TEXT_EDITOR_URL:
 				setTextEditorURL((String)newValue);
-				return;
-			case WebsitePackage.WEBSITE_PROPERTIES__TOP_NAVIGATION_ID:
-				setTopNavigationId((String)newValue);
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				setSiteTemplate((String)newValue);
@@ -703,9 +654,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 			case WebsitePackage.WEBSITE_PROPERTIES__TEXT_EDITOR_URL:
 				setTextEditorURL(TEXT_EDITOR_URL_EDEFAULT);
 				return;
-			case WebsitePackage.WEBSITE_PROPERTIES__TOP_NAVIGATION_ID:
-				setTopNavigationId(TOP_NAVIGATION_ID_EDEFAULT);
-				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				setSiteTemplate(SITE_TEMPLATE_EDEFAULT);
 				return;
@@ -742,8 +690,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return useDbSessionStorage != USE_DB_SESSION_STORAGE_EDEFAULT;
 			case WebsitePackage.WEBSITE_PROPERTIES__TEXT_EDITOR_URL:
 				return TEXT_EDITOR_URL_EDEFAULT == null ? textEditorURL != null : !TEXT_EDITOR_URL_EDEFAULT.equals(textEditorURL);
-			case WebsitePackage.WEBSITE_PROPERTIES__TOP_NAVIGATION_ID:
-				return TOP_NAVIGATION_ID_EDEFAULT == null ? topNavigationId != null : !TOP_NAVIGATION_ID_EDEFAULT.equals(topNavigationId);
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				return SITE_TEMPLATE_EDEFAULT == null ? siteTemplate != null : !SITE_TEMPLATE_EDEFAULT.equals(siteTemplate);
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
@@ -778,8 +724,6 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 		result.append(useDbSessionStorage);
 		result.append(", textEditorURL: ");
 		result.append(textEditorURL);
-		result.append(", topNavigationId: ");
-		result.append(topNavigationId);
 		result.append(", siteTemplate: ");
 		result.append(siteTemplate);
 		result.append(", staticUnitsEditable: ");

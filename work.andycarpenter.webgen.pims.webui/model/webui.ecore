@@ -8,16 +8,15 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="WebUI">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="pageNameUnique menuNameUnique "/>
+      <details key="constraints" value="pageNameUnique"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="pageNameUnique" value="pages->isUnique(name)"/>
-      <details key="menuNameUnique" value="menus->isUnique(name)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Persistence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="navigation" lowerBound="1"
+        eType="#//Navigation" containment="true" eOpposite="#//Navigation/partOf"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Services"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="menus" upperBound="-1"
-        eType="#//Menu" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
         eType="#//Page" containment="true" eOpposite="#//Page/webUI"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDateFormat" ordered="false"
@@ -123,19 +122,29 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultMaximumUploadSize"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="2000000"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputTechnology" eType="#//InputTechnologies"
-        defaultValueLiteral="Html"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ajaxTechnology" eType="#//AjaxTechnologies"
-        defaultValueLiteral="None"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="InputTechnologies">
-    <eLiterals name="Html"/>
-    <eLiterals name="jQueryUI" value="1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Navigation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="menuNameUnique "/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="menuNameUnique" value="menus->isUnique(name)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOf" lowerBound="1"
+        eType="#//WebUI" eOpposite="#//WebUI/navigation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="menus" upperBound="-1"
+        eType="#//Menu" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navbarClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="navbar"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationMenuPlacement"
+        eType="#//AuthenticationMenuPlacement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationBarClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="nav"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="AjaxTechnologies">
-    <eLiterals name="None"/>
-    <eLiterals name="jQuery" value="1"/>
-    <eLiterals name="AngularJS" value="2"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationMenuPlacement">
+    <eLiterals name="Above"/>
+    <eLiterals name="Below" value="1"/>
+    <eLiterals name="Integrated" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
