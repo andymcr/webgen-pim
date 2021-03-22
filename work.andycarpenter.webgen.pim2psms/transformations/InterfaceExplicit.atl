@@ -78,34 +78,35 @@ rule WafModel {
 			endif,
 		siteTemplate <- website.websiteProperties.siteTemplate,
 		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable,
-		defaultStyles <- defaultStyles
+		defaultStyles <- defaultStyles,
+		defaultCardsStyles <- defaultCardsStyles,
+		defaultDetailsStyles <- defaultDetailsStyles,
+		defaultFormStyles <- defaultFormStyles,
+		defaultGalleryStyles <- defaultGalleryStyles,
+		defaultSliderStyles <- defaultSliderStyles,
+		defaultStaticStyles <- defaultStaticStyles,
+		defaultTabularStyles <- defaultTabularStyles
 	),
-	defaultStyles : WAF!WafStyles (
+	defaultStyles : WAF!DynamicUnitStyles (
 		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
 		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
 		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
 		contentClass <- thisModule.findWebsiteUI().defaultContentClass,
-		cardsContentClass <- thisModule.findWebsiteUI().defaultCardsContentClass,
-		detailsContentClass <- thisModule.findWebsiteUI().defaultDetailsContentClass,
-		formContentClass <- thisModule.findWebsiteUI().defaultFormContentClass,
-		galleryContentClass <- thisModule.findWebsiteUI().defaultGalleryContentClass,
-		sliderContentClass <- thisModule.findWebsiteUI().defaultSliderContentClass,
-		staticContentClass <- thisModule.findWebsiteUI().defaultStaticContentClass,
-		tabularContentClass <- thisModule.findWebsiteUI().defaultTabularContentClass,
 		fieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
---		cardsFieldListClass <- thisModule.findWebsiteUI().defaultCardsFieldListClass,
---		detailsFieldListClass <- thisModule.findWebsiteUI().defaultDetailsFieldListClass,
---		formFieldListClass <- thisModule.findWebsiteUI().defaultFormFieldListClass,
---		galleryFieldListClass <- thisModule.findWebsiteUI().defaultGalleryFieldListClass,
---		sliderFieldListClass <- thisModule.findWebsiteUI().defaultSliderFieldListClass,
---		tabularFieldListClass <- thisModule.findWebsiteUI().defaultTabularFieldListClass,
 		definitionFieldListClass <- thisModule.findWebsiteUI().defaultDefinitionFieldListClass,
---		cardsDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultCardsDefinitionFieldListClass,
---		detailsDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultDetailsDefinitionFieldListClass,
---		formDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultFormFieldDefinitionListClass,
---		galleryDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultGalleryDefinitionFieldListClass,
---		sliderDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultSliderDefinitionFieldListClass,
---		tabularDefinitionFieldListClass <- thisModule.findWebsiteUI().defaultTabularDefinitionFieldListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultControlClass,
+		fieldLabelClass <- thisModule.findWebsiteUI().defaultFieldLabelClass,
+		fieldValueClass <- thisModule.findWebsiteUI().defaultFieldValueClass,
+		actionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
+	),
+	defaultCardsStyles : WAF!CardsUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultCardsContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultCardsFieldListClass,
+--		fefinitionFieldListClass <- thisModule.findWebsiteUI().defaultCardsDefinitionFieldListClass,
 		rowClass <- thisModule.findWebsiteUI().defaultRowClass,
 		columnClass <- thisModule.findWebsiteUI().defaultColumnClass,
 		cardClass <- thisModule.findWebsiteUI().defaultCardClass,
@@ -113,36 +114,77 @@ rule WafModel {
 		cardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
 		cardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
 		badgeClass <- thisModule.findWebsiteUI().defaultBadgeClass,
-		controlClass <- thisModule.findWebsiteUI().defaultControlClass,
-		cardsControlClass <- thisModule.findWebsiteUI().defaultCardsControlClass,
-		detailsControlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
-		formControlClass <- thisModule.findWebsiteUI().defaultFormControlClass,
-		galleryControlClass <- thisModule.findWebsiteUI().defaultGalleryControlClass,
-		sliderControlClass <- thisModule.findWebsiteUI().defaultSliderControlClass,
-		tabularControlClass <- thisModule.findWebsiteUI().defaultTabularControlClass,
-		fieldLabelClass <- thisModule.findWebsiteUI().defaultFieldLabelClass,
+		controlClass <- thisModule.findWebsiteUI().defaultCardsControlClass,
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultCardsFieldLabelClass,
+--		fieldValueClass <- thisModule.findWebsiteUI().defaultCardsFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultCardsAnchorClass
+	),
+	defaultDetailsStyles : WAF!DynamicUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultDetailsContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultDetailsFieldListClass,
+--		definitionFieldListClass <- thisModule.findWebsiteUI().defaultDetailsDefinitionFieldListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultDetailsFieldLabelClass,
+--		cieldValueClass <- thisModule.findWebsiteUI().defaultDetailsFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultDetailsAnchorClass
+	),
+	defaultFormStyles : WAF!FormUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultFormContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultFormFieldListClass,
+--		definitionFieldListClass <- thisModule.findWebsiteUI().defaultFormFieldDefinitionListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultFormControlClass,
 		inputGroupClass <- thisModule.findWebsiteUI().defaultInputGroupClass,
---		cardsFieldLabelClass <- thisModule.findWebsiteUI().defaultCardsFieldLabelClass,
---		detailsFieldLabelClass <- thisModule.findWebsiteUI().defaultDetailsFieldLabelClass,
---		formFieldLabelClass <- thisModule.findWebsiteUI().defaultFormFieldLabelClass,
---		galleryFieldLabelClass <- thisModule.findWebsiteUI().defaultGalleryFieldLabelClass,
---		sliderFieldLabelClass <- thisModule.findWebsiteUI().defaultSliderFieldLabelClass,
---		tabularFieldLabelClass <- thisModule.findWebsiteUI().defaultTabularFieldLabelClass,
-		fieldValueClass <- thisModule.findWebsiteUI().defaultFieldValueClass,
---		cardsFieldValueClass <- thisModule.findWebsiteUI().defaultCardsFieldValueClass,
---		detailsFieldValueClass <- thisModule.findWebsiteUI().defaultDetailsFieldValueClass,
---		formFieldValueClass <- thisModule.findWebsiteUI().defaultFormFieldValueClass,
---		galleryFieldValueClass <- thisModule.findWebsiteUI().defaultGalleryFieldValueClass,
---		sliderFieldValueClass <- thisModule.findWebsiteUI().defaultSliderFieldValueClass,
---		tabularFieldValueClass <- thisModule.findWebsiteUI().defaultTabularFieldValueClass,
-		actionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass,
-		cardsAnchorClass <- thisModule.findWebsiteUI().defaultCardsAnchorClass,
-		detailsAnchorClass <- thisModule.findWebsiteUI().defaultDetailsAnchorClass,
-		formAnchorClass <- thisModule.findWebsiteUI().defaultFormAnchorClass,
-		galleryAnchorClass <- thisModule.findWebsiteUI().defaultGalleryAnchorClass,
-		sliderAnchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass,
-		tabularAnchorClass <- thisModule.findWebsiteUI().defaultTabularAnchorClass
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultFormFieldLabelClass,
+--		fieldValueClass <- thisModule.findWebsiteUI().defaultFormFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultFormAnchorClass
+	),
+	defaultGalleryStyles : WAF!DynamicUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultGalleryContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultGalleryFieldListClass,
+--		definitionFieldListClass <- thisModule.findWebsiteUI().defaultGalleryDefinitionFieldListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultGalleryControlClass,
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultGalleryFieldLabelClass,
+--		fieldValueClass <- thisModule.findWebsiteUI().defaultGalleryFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultGalleryAnchorClass
+	),
+	defaultSliderStyles : WAF!DynamicUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultSliderContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultSliderFieldListClass,
+--		definitionFieldListClass <- thisModule.findWebsiteUI().defaultSliderDefinitionFieldListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultSliderControlClass,
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultSliderFieldLabelClass,
+--		fieldValueClass <- thisModule.findWebsiteUI().defaultSliderFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass
+	),
+	defaultStaticStyles : WAF!ContentUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultStaticContentClass
+	),
+	defaultTabularStyles : WAF!DynamicUnitStyles (
+		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
+		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultTabularContentClass,
+--		fieldListClass <- thisModule.findWebsiteUI().defaultTabularFieldListClass,
+--		definitionFieldListClass <- thisModule.findWebsiteUI().defaultTabularDefinitionFieldListClass,
+		controlClass <- thisModule.findWebsiteUI().defaultTabularControlClass,
+--		fieldLabelClass <- thisModule.findWebsiteUI().defaultTabularFieldLabelClass,
+--		fieldValueClass <- thisModule.findWebsiteUI().defaultTabularFieldValueClass,
+		anchorClass <- thisModule.findWebsiteUI().defaultTabularAnchorClass
 	)
 }
 
@@ -188,8 +230,7 @@ rule SubmenuEntry {
 rule ActionMenuEntry {
 	from website : Website!ActionMenuEntry
 	to waf : WAF!ActionMenuEntry (
-		action <- website.destination,
-		"query" <- website."query"
+		action <- website.destination
 	)
 }
 
@@ -253,22 +294,6 @@ rule Page {
 	)
 }
 
-
-rule Query {
-	from website : Website!Query
-	to waf : WAF!Query (
-		filter <- website.filter,
-		parameters <- website.parameters
-	)
-}
-
-rule QueryParameter {
-	from website : Website!QueryParameter
-	to waf : WAF!QueryParameter (
-		formal <- website.formal,
-		value <- website.value
-	)
-}
 
 -- @extends NamedDisplayElement
 abstract rule ContentUnit {

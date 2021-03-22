@@ -10,34 +10,6 @@ create dummyWaf : WAF refining waf : WAF, orm : ORM;
 uses PersistenceHelpers;
 
 
-rule QueryParameterWithout {
-	from partialWaf : WAF!QueryParameter (partialWaf.parameter.oclIsUndefined())
-	to waf : WAF!QueryParameter (
-		parameter <-
-			if not partialWaf.refImmediateComposite().selection.oclIsUndefined() then
-				partialWaf.refImmediateComposite().selection.parameters->any(p | p.name = partialWaf.name)
-			else
-				OclUndefined
-			endif
-	)
-}
-
-rule QueryWithoutActuals {
-	from partialWaf : WAF!Query (partialWaf.parameters->isEmpty())
-	to waf : WAF!Query (
-		parameters <- Sequence{thisModule.implicitQueryParameter(partialWaf)}
-	)
-}
-
-lazy rule implicitQueryParameter {
-	from partialWaf : WAF!Query
-	to waf : WAF!QueryParameter (
-		formal <- partialWaf.filter.parameters->first(),
-		value <- partialWaf.filter.parameters->first().defaultValue
-	)
-}
-
-
 abstract rule DynamicUnit {
 	from partialWaf : WAF!DynamicUnit
 	to waf : WAF!DynamicUnit (
