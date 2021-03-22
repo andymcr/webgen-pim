@@ -15,7 +15,9 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteName <em>Site Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteTitle <em>Site Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getLocale <em>Locale</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getWebmasterEmail <em>Webmaster Email</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getCopyrightText <em>Copyright Text</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getMetaDescription <em>Meta Description</em>}</li>
@@ -33,6 +35,28 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  * @generated
  */
 public interface WebsiteProperties extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Site Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Site Name</em>' attribute.
+	 * @see #setSiteName(String)
+	 * @see work.andycarpenter.webgen.pims.website.WebsitePackage#getWebsiteProperties_SiteName()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getSiteName();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteName <em>Site Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Site Name</em>' attribute.
+	 * @see #getSiteName()
+	 * @generated
+	 */
+	void setSiteName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Site Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,6 +82,29 @@ public interface WebsiteProperties extends EObject {
 	 * @generated
 	 */
 	void setSiteTitle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Locale</b></em>' attribute.
+	 * The default value is <code>"en"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Locale</em>' attribute.
+	 * @see #setLocale(String)
+	 * @see work.andycarpenter.webgen.pims.website.WebsitePackage#getWebsiteProperties_Locale()
+	 * @model default="en" required="true"
+	 * @generated
+	 */
+	String getLocale();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getLocale <em>Locale</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Locale</em>' attribute.
+	 * @see #getLocale()
+	 * @generated
+	 */
+	void setLocale(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Webmaster Email</b></em>' attribute.

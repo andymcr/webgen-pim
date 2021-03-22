@@ -45,6 +45,7 @@ abstract rule NamedDisplayElement {
 rule WafModel {
 	from website : Website!WebGenModel, orm : ORM!OrmModel, service : Service!ServiceModel, api : API!API
 	to waf : WAF!WafModel (
+		siteProperties <- website.websiteProperties,
 		persistence <- orm,
 		business <- service,
 		imageManipulations <-
@@ -56,28 +57,8 @@ rule WafModel {
 		api <- api,
 		navigation <- website.webUI.navigation,
 		pages <- website.webUI.pages,
-		siteName <- 'sps',
-		siteTitle <- website.websiteProperties.siteTitle,
-		webmasterEmail <- website.websiteProperties.webmasterEmail,
-		copyrightText <-
-			if not website.websiteProperties.copyrightText.oclIsUndefined() and website.websiteProperties.copyrightText <> '' then
-				website.websiteProperties.copyrightText
-			else
-				'&copy; '.concat(website.websiteProperties.siteTitle).concat(' {{ \'now\' | date(\'Y\') }}')
-			endif,
-		metaDescription <- website.websiteProperties.metaDescription,
-		frameworkTechnology <- website.frameworkTechnology,
-		useDbSessionStorage <- website.websiteProperties.useDbSessionStorage,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
-		textEditorURL <-
-			if website.websiteProperties.textEditorURL.oclIsUndefined() then
-				OclUndefined
-			else
-				website.websiteProperties.textEditorURL.cleanString()
-			endif,
-		siteTemplate <- website.websiteProperties.siteTemplate,
-		staticUnitsEditable <- website.websiteProperties.staticUnitsEditable,
 		defaultStyles <- defaultStyles,
 		defaultCardsStyles <- defaultCardsStyles,
 		defaultDetailsStyles <- defaultDetailsStyles,
@@ -188,13 +169,40 @@ rule WafModel {
 	)
 }
 
+rule SiteProperties {
+	from website : Website!WebsiteProperties
+	to waf : WAF!SiteProperties (
+		siteName <- website.siteName,
+		siteTitle <- website.siteTitle,
+		locale <- website.locale,
+		webmasterEmail <- website.webmasterEmail,
+		copyrightText <-
+			if not website.copyrightText.oclIsUndefined() and website.copyrightText <> '' then
+				website.copyrightText
+			else
+				'&copy; '.concat(website.siteTitle).concat(' {{ \'now\' | date(\'Y\') }}')
+			endif,
+		metaDescription <- website.metaDescription,
+		logoImage <- website.logoImage,
+		logoFilters <- website.logoFilters,
+		frameworkTechnology <- website.frameworkTechnology,
+		useDbSessionStorage <- website.useDbSessionStorage,
+		textEditorURL <-
+			if website.textEditorURL.oclIsUndefined() then
+				OclUndefined
+			else
+				website.textEditorURL.cleanString()
+			endif,
+		siteTemplate <- website.siteTemplate,
+		staticUnitsEditable <- website.staticUnitsEditable
+	)
+}
+
 rule Navigation {
 	from website : Website!Navigation
 	to waf : WAF!Navigation (
 		menus <- website.menus,
 		navbarClass <- website.navbarClass,
-		logoImage <- thisModule.findWebGenModel().websiteProperties.logoImage,
-		logoFilters <- thisModule.findWebGenModel().websiteProperties.logoFilters,
 		authenticationMenuPlacement <- website.authenticationMenuPlacement,
 		authenticationBarClass <- website.authenticationBarClass
 	)

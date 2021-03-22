@@ -168,13 +168,31 @@ public interface WebsitePackage extends EPackage {
 	int WEBSITE_PROPERTIES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Site Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEBSITE_PROPERTIES__SITE_NAME = 0;
+
+	/**
 	 * The feature id for the '<em><b>Site Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__SITE_TITLE = 0;
+	int WEBSITE_PROPERTIES__SITE_TITLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Locale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEBSITE_PROPERTIES__LOCALE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Webmaster Email</b></em>' attribute.
@@ -183,7 +201,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__WEBMASTER_EMAIL = 1;
+	int WEBSITE_PROPERTIES__WEBMASTER_EMAIL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Copyright Text</b></em>' attribute.
@@ -192,7 +210,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__COPYRIGHT_TEXT = 2;
+	int WEBSITE_PROPERTIES__COPYRIGHT_TEXT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Meta Description</b></em>' attribute.
@@ -201,7 +219,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__META_DESCRIPTION = 3;
+	int WEBSITE_PROPERTIES__META_DESCRIPTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Logo Image</b></em>' attribute.
@@ -210,7 +228,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__LOGO_IMAGE = 4;
+	int WEBSITE_PROPERTIES__LOGO_IMAGE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Logo Filters</b></em>' reference.
@@ -219,7 +237,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__LOGO_FILTERS = 5;
+	int WEBSITE_PROPERTIES__LOGO_FILTERS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Framework Technology</b></em>' attribute.
@@ -228,7 +246,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__FRAMEWORK_TECHNOLOGY = 6;
+	int WEBSITE_PROPERTIES__FRAMEWORK_TECHNOLOGY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Use Db Session Storage</b></em>' attribute.
@@ -237,7 +255,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__USE_DB_SESSION_STORAGE = 7;
+	int WEBSITE_PROPERTIES__USE_DB_SESSION_STORAGE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Text Editor URL</b></em>' attribute.
@@ -246,7 +264,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__TEXT_EDITOR_URL = 8;
+	int WEBSITE_PROPERTIES__TEXT_EDITOR_URL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Site Template</b></em>' attribute.
@@ -255,7 +273,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__SITE_TEMPLATE = 9;
+	int WEBSITE_PROPERTIES__SITE_TEMPLATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Static Units Editable</b></em>' attribute.
@@ -264,7 +282,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE = 10;
+	int WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE = 12;
 
 	/**
 	 * The number of structural features of the '<em>Properties</em>' class.
@@ -273,7 +291,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEBSITE_PROPERTIES_FEATURE_COUNT = 11;
+	int WEBSITE_PROPERTIES_FEATURE_COUNT = 13;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.website.FrameworkTechnologies <em>Framework Technologies</em>}' enum.
@@ -406,6 +424,17 @@ public interface WebsitePackage extends EPackage {
 	EClass getWebsiteProperties();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteName <em>Site Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Site Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteName()
+	 * @see #getWebsiteProperties()
+	 * @generated
+	 */
+	EAttribute getWebsiteProperties_SiteName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteTitle <em>Site Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,6 +444,17 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebsiteProperties_SiteTitle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getLocale <em>Locale</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Locale</em>'.
+	 * @see work.andycarpenter.webgen.pims.website.WebsiteProperties#getLocale()
+	 * @see #getWebsiteProperties()
+	 * @generated
+	 */
+	EAttribute getWebsiteProperties_Locale();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getWebmasterEmail <em>Webmaster Email</em>}'.
@@ -651,12 +691,28 @@ public interface WebsitePackage extends EPackage {
 		EClass WEBSITE_PROPERTIES = eINSTANCE.getWebsiteProperties();
 
 		/**
+		 * The meta object literal for the '<em><b>Site Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEBSITE_PROPERTIES__SITE_NAME = eINSTANCE.getWebsiteProperties_SiteName();
+
+		/**
 		 * The meta object literal for the '<em><b>Site Title</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute WEBSITE_PROPERTIES__SITE_TITLE = eINSTANCE.getWebsiteProperties_SiteTitle();
+
+		/**
+		 * The meta object literal for the '<em><b>Locale</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEBSITE_PROPERTIES__LOCALE = eINSTANCE.getWebsiteProperties_Locale();
 
 		/**
 		 * The meta object literal for the '<em><b>Webmaster Email</b></em>' attribute feature.

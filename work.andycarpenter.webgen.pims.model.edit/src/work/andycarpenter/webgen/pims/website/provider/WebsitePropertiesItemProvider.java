@@ -60,7 +60,9 @@ public class WebsitePropertiesItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSiteNamePropertyDescriptor(object);
 			addSiteTitlePropertyDescriptor(object);
+			addLocalePropertyDescriptor(object);
 			addWebmasterEmailPropertyDescriptor(object);
 			addCopyrightTextPropertyDescriptor(object);
 			addMetaDescriptionPropertyDescriptor(object);
@@ -73,6 +75,28 @@ public class WebsitePropertiesItemProvider
 			addStaticUnitsEditablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Site Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSiteNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebsiteProperties_siteName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebsiteProperties_siteName_feature", "_UI_WebsiteProperties_type"),
+				 WebsitePackage.Literals.WEBSITE_PROPERTIES__SITE_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SitePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -89,6 +113,28 @@ public class WebsitePropertiesItemProvider
 				 getString("_UI_WebsiteProperties_siteTitle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebsiteProperties_siteTitle_feature", "_UI_WebsiteProperties_type"),
 				 WebsitePackage.Literals.WEBSITE_PROPERTIES__SITE_TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SitePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Locale feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebsiteProperties_locale_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebsiteProperties_locale_feature", "_UI_WebsiteProperties_type"),
+				 WebsitePackage.Literals.WEBSITE_PROPERTIES__LOCALE,
 				 true,
 				 false,
 				 false,
@@ -181,7 +227,7 @@ public class WebsitePropertiesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_SitePropertyCategory"),
 				 null));
 	}
 
@@ -203,7 +249,7 @@ public class WebsitePropertiesItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_SitePropertyCategory"),
 				 null));
 	}
 
@@ -269,7 +315,7 @@ public class WebsitePropertiesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_SitePropertyCategory"),
+				 getString("_UI_FrameworkPropertyCategory"),
 				 null));
 	}
 
@@ -291,7 +337,7 @@ public class WebsitePropertiesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_FrameworkPropertyCategory"),
 				 null));
 	}
 
@@ -313,7 +359,7 @@ public class WebsitePropertiesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_SitePropertyCategory"),
+				 getString("_UI_FrameworkPropertyCategory"),
 				 null));
 	}
 
@@ -336,7 +382,7 @@ public class WebsitePropertiesItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((WebsiteProperties)object).getSiteTitle();
+		String label = ((WebsiteProperties)object).getSiteName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_WebsiteProperties_type") :
 			getString("_UI_WebsiteProperties_type") + " " + label;
@@ -355,7 +401,9 @@ public class WebsitePropertiesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WebsiteProperties.class)) {
+			case WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME:
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE:
+			case WebsitePackage.WEBSITE_PROPERTIES__LOCALE:
 			case WebsitePackage.WEBSITE_PROPERTIES__WEBMASTER_EMAIL:
 			case WebsitePackage.WEBSITE_PROPERTIES__COPYRIGHT_TEXT:
 			case WebsitePackage.WEBSITE_PROPERTIES__META_DESCRIPTION:

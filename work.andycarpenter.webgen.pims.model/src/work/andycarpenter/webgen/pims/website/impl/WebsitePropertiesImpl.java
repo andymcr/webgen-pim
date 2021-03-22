@@ -24,7 +24,9 @@ import work.andycarpenter.webgen.pims.website.WebsiteProperties;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSiteName <em>Site Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSiteTitle <em>Site Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getLocale <em>Locale</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getWebmasterEmail <em>Webmaster Email</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getCopyrightText <em>Copyright Text</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getMetaDescription <em>Meta Description</em>}</li>
@@ -40,6 +42,26 @@ import work.andycarpenter.webgen.pims.website.WebsiteProperties;
  * @generated
  */
 public class WebsitePropertiesImpl extends EObjectImpl implements WebsiteProperties {
+	/**
+	 * The default value of the '{@link #getSiteName() <em>Site Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSiteName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SITE_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSiteName() <em>Site Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSiteName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String siteName = SITE_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getSiteTitle() <em>Site Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,6 +81,26 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @ordered
 	 */
 	protected String siteTitle = SITE_TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocale() <em>Locale</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocale()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCALE_EDEFAULT = "en";
+
+	/**
+	 * The cached value of the '{@link #getLocale() <em>Locale</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocale()
+	 * @generated
+	 * @ordered
+	 */
+	protected String locale = LOCALE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWebmasterEmail() <em>Webmaster Email</em>}' attribute.
@@ -275,6 +317,29 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @generated
 	 */
 	@Override
+	public String getSiteName() {
+		return siteName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSiteName(String newSiteName) {
+		String oldSiteName = siteName;
+		siteName = newSiteName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME, oldSiteName, siteName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getSiteTitle() {
 		return siteTitle;
 	}
@@ -290,6 +355,29 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 		siteTitle = newSiteTitle;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE, oldSiteTitle, siteTitle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocale() {
+		return locale;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocale(String newLocale) {
+		String oldLocale = locale;
+		locale = newLocale;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__LOCALE, oldLocale, locale));
 	}
 
 	/**
@@ -547,8 +635,12 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME:
+				return getSiteName();
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE:
 				return getSiteTitle();
+			case WebsitePackage.WEBSITE_PROPERTIES__LOCALE:
+				return getLocale();
 			case WebsitePackage.WEBSITE_PROPERTIES__WEBMASTER_EMAIL:
 				return getWebmasterEmail();
 			case WebsitePackage.WEBSITE_PROPERTIES__COPYRIGHT_TEXT:
@@ -582,8 +674,14 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME:
+				setSiteName((String)newValue);
+				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE:
 				setSiteTitle((String)newValue);
+				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__LOCALE:
+				setLocale((String)newValue);
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__WEBMASTER_EMAIL:
 				setWebmasterEmail((String)newValue);
@@ -627,8 +725,14 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME:
+				setSiteName(SITE_NAME_EDEFAULT);
+				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE:
 				setSiteTitle(SITE_TITLE_EDEFAULT);
+				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__LOCALE:
+				setLocale(LOCALE_EDEFAULT);
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__WEBMASTER_EMAIL:
 				setWebmasterEmail(WEBMASTER_EMAIL_EDEFAULT);
@@ -672,8 +776,12 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebsitePackage.WEBSITE_PROPERTIES__SITE_NAME:
+				return SITE_NAME_EDEFAULT == null ? siteName != null : !SITE_NAME_EDEFAULT.equals(siteName);
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TITLE:
 				return SITE_TITLE_EDEFAULT == null ? siteTitle != null : !SITE_TITLE_EDEFAULT.equals(siteTitle);
+			case WebsitePackage.WEBSITE_PROPERTIES__LOCALE:
+				return LOCALE_EDEFAULT == null ? locale != null : !LOCALE_EDEFAULT.equals(locale);
 			case WebsitePackage.WEBSITE_PROPERTIES__WEBMASTER_EMAIL:
 				return WEBMASTER_EMAIL_EDEFAULT == null ? webmasterEmail != null : !WEBMASTER_EMAIL_EDEFAULT.equals(webmasterEmail);
 			case WebsitePackage.WEBSITE_PROPERTIES__COPYRIGHT_TEXT:
@@ -708,8 +816,12 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteTitle: ");
+		result.append(" (siteName: ");
+		result.append(siteName);
+		result.append(", siteTitle: ");
 		result.append(siteTitle);
+		result.append(", locale: ");
+		result.append(locale);
 		result.append(", webmasterEmail: ");
 		result.append(webmasterEmail);
 		result.append(", copyrightText: ");
