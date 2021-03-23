@@ -1,7 +1,7 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/orm.xcore
 
 module PersistenceImplicitAuthentication;
 create dummyOrm : ORM refining orm : ORM, website : Website;
@@ -162,7 +162,7 @@ unique lazy rule implicitAuthenticationEntity {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.authenticationName,
-		tableName <- 'authentications',
+		tableName <- 'security.authentications',
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
@@ -415,7 +415,7 @@ lazy rule implicitResetPasswordRequestEntity {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.resetPasswordRequestName,
-		tableName <- 'resetpasswordrequests',
+		tableName <- 'security.resetpasswordrequests',
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		displayLabel <- website.resetPasswordRequestName.createLabel(),

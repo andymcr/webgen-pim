@@ -12,14 +12,14 @@ helper context String def: createName() : String
 	= if self.trim().replaceAll('[A-Z]', '') = '' then
 			self.trim()
 		else
-			self.trim().lowercaseFirst().replaceAll('([A-Z])', '_$1')
+			self.trim().lowercaseFirst().replaceAll('([A-Z]+)', '_$1')
 		endif;
 
 helper context String def: createLabel() : String
 	= if self.trim().replaceAll('[A-Z]', '') = '' then
 			self.trim()
 		else
-			self.replaceAll('([A-Z])', ' $1').trim().uppercaseFirst()
+			self.replaceAll('([A-Z]+)', ' $1').trim().uppercaseFirst()
 		endif;
 
 helper context String def: cleanString() : String

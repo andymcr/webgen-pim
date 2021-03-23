@@ -1,8 +1,8 @@
 -- @atlcompiler emftvm 
 --
 -- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
--- @path ORM=/work.andycarpenter.psms.orm/model/orm.ecore
--- @path WAF=/work.andycarpenter.psms.waf/model/Waf.ecore
+-- @path ORM=/work.andycarpenter.psms.orm/model/orm.xcore
+-- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xcore
 
 module PassAuthentication;
 create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM;
@@ -71,9 +71,15 @@ rule LocalAuthenticationSystem {
 			if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName)
 			else
-				thisModule.findOrmEntity(website.authentication.name)
+				thisModule.findOrmEntity(website.authenticationModel.name)
 			endif,
 		authenticationKey <- website.authenticationKey,
+		resetPasswordRequestModel <-
+			if website.resetPasswordRequestModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.resetPasswordRequestName)
+			else
+				thisModule.findOrmEntity(website.resetPasswordRequestModel.name)
+			endif,
 		registrationUnit <-
 			if website.registrationUnit.oclIsUndefined() then
 				thisModule.implicitRegistrationUnit(website)
