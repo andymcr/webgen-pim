@@ -684,8 +684,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: {
 				ForgottenPasswordUnit forgottenPasswordUnit = (ForgottenPasswordUnit)theEObject;
 				T result = caseForgottenPasswordUnit(forgottenPasswordUnit);
-				if (result == null) result = caseDynamicUnit(forgottenPasswordUnit);
+				if (result == null) result = caseEditUnit(forgottenPasswordUnit);
 				if (result == null) result = caseSecurityUnit(forgottenPasswordUnit);
+				if (result == null) result = caseSingletonUnit(forgottenPasswordUnit);
+				if (result == null) result = caseDynamicUnit(forgottenPasswordUnit);
 				if (result == null) result = caseContentUnit(forgottenPasswordUnit);
 				if (result == null) result = caseActionContainer(forgottenPasswordUnit);
 				if (result == null) result = caseNamedDisplayElement(forgottenPasswordUnit);

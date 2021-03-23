@@ -13,7 +13,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class ForgottenPasswordUnitImpl extends DynamicUnitImpl implements ForgottenPasswordUnit {
+public class ForgottenPasswordUnitImpl extends EditUnitImpl implements ForgottenPasswordUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

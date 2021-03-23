@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
+import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit} object.
@@ -17,7 +18,7 @@ import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ForgottenPasswordUnitItemProvider extends DynamicUnitItemProvider {
+public class ForgottenPasswordUnitItemProvider extends EditUnitItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -92,6 +93,31 @@ public class ForgottenPasswordUnitItemProvider extends DynamicUnitItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__DISABLE_WHEN ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__CONFIRM_MESSAGE ||
+			childFeature == WebuiPackage.Literals.EDIT_UNIT__SUCCESS_MESSAGE;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

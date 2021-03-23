@@ -14,5 +14,5 @@ import work.andycarpenter.webgen.pims.security.SecurityUnit;
  * @model
  * @generated
  */
-public interface ForgottenPasswordUnit extends DynamicUnit, SecurityUnit {
+public interface ForgottenPasswordUnit extends EditUnit, SecurityUnit {
 } // ForgottenPasswordUnit

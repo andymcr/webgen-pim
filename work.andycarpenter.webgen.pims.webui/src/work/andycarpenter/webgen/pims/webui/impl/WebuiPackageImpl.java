@@ -4708,7 +4708,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		loginUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		logoutUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		logoutUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
-		forgottenPasswordUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		forgottenPasswordUnitEClass.getESuperTypes().add(this.getEditUnit());
 		forgottenPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		securityActionEClass.getESuperTypes().add(this.getAction());
