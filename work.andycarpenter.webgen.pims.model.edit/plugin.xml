@@ -11,7 +11,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated website -->
       <factory
-            uri="http://www.cs.man.ac.uk/mdsd/2010/Website"
+            uri="http://andycarpenter.work/pim/Website"
             class="work.andycarpenter.webgen.pims.website.provider.WebsiteItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

@@ -106,12 +106,44 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createMenuFeatureAdapter();
 			}
 			@Override
-			public Adapter caseQuery(Query object) {
-				return createQueryAdapter();
+			public Adapter caseContentUnitStyles(ContentUnitStyles object) {
+				return createContentUnitStylesAdapter();
 			}
 			@Override
-			public Adapter caseQueryParameter(QueryParameter object) {
-				return createQueryParameterAdapter();
+			public Adapter caseDynamicUnitStyles(DynamicUnitStyles object) {
+				return createDynamicUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseDefaultUnitStyles(DefaultUnitStyles object) {
+				return createDefaultUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseCardsUnitStyles(CardsUnitStyles object) {
+				return createCardsUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseDetailsUnitStyles(DetailsUnitStyles object) {
+				return createDetailsUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseFormUnitStyles(FormUnitStyles object) {
+				return createFormUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseGalleryUnitStyles(GalleryUnitStyles object) {
+				return createGalleryUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseSliderUnitStyles(SliderUnitStyles object) {
+				return createSliderUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseStaticUnitStyles(StaticUnitStyles object) {
+				return createStaticUnitStylesAdapter();
+			}
+			@Override
+			public Adapter caseTabularUnitStyles(TabularUnitStyles object) {
+				return createTabularUnitStylesAdapter();
 			}
 			@Override
 			public Adapter casePage(Page object) {
@@ -506,30 +538,142 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Query <em>Query</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ContentUnitStyles <em>Content Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.Query
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnitStyles
 	 * @generated
 	 */
-	public Adapter createQueryAdapter() {
+	public Adapter createContentUnitStylesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.QueryParameter <em>Query Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles <em>Dynamic Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.QueryParameter
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles
 	 * @generated
 	 */
-	public Adapter createQueryParameterAdapter() {
+	public Adapter createDynamicUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DefaultUnitStyles <em>Default Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.DefaultUnitStyles
+	 * @generated
+	 */
+	public Adapter createDefaultUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles <em>Cards Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles
+	 * @generated
+	 */
+	public Adapter createCardsUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles <em>Details Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.DetailsUnitStyles
+	 * @generated
+	 */
+	public Adapter createDetailsUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FormUnitStyles <em>Form Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.FormUnitStyles
+	 * @generated
+	 */
+	public Adapter createFormUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles <em>Gallery Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnitStyles
+	 * @generated
+	 */
+	public Adapter createGalleryUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles <em>Slider Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.SliderUnitStyles
+	 * @generated
+	 */
+	public Adapter createSliderUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.StaticUnitStyles <em>Static Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.StaticUnitStyles
+	 * @generated
+	 */
+	public Adapter createStaticUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.TabularUnitStyles <em>Tabular Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.TabularUnitStyles
+	 * @generated
+	 */
+	public Adapter createTabularUnitStylesAdapter() {
 		return null;
 	}
 

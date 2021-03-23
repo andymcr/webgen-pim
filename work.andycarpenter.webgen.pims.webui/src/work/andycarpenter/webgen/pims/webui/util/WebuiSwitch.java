@@ -133,15 +133,79 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.QUERY: {
-				Query query = (Query)theEObject;
-				T result = caseQuery(query);
+			case WebuiPackage.CONTENT_UNIT_STYLES: {
+				ContentUnitStyles contentUnitStyles = (ContentUnitStyles)theEObject;
+				T result = caseContentUnitStyles(contentUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.QUERY_PARAMETER: {
-				QueryParameter queryParameter = (QueryParameter)theEObject;
-				T result = caseQueryParameter(queryParameter);
+			case WebuiPackage.DYNAMIC_UNIT_STYLES: {
+				DynamicUnitStyles dynamicUnitStyles = (DynamicUnitStyles)theEObject;
+				T result = caseDynamicUnitStyles(dynamicUnitStyles);
+				if (result == null) result = caseContentUnitStyles(dynamicUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.DEFAULT_UNIT_STYLES: {
+				DefaultUnitStyles defaultUnitStyles = (DefaultUnitStyles)theEObject;
+				T result = caseDefaultUnitStyles(defaultUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(defaultUnitStyles);
+				if (result == null) result = caseContentUnitStyles(defaultUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CARDS_UNIT_STYLES: {
+				CardsUnitStyles cardsUnitStyles = (CardsUnitStyles)theEObject;
+				T result = caseCardsUnitStyles(cardsUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(cardsUnitStyles);
+				if (result == null) result = caseContentUnitStyles(cardsUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.DETAILS_UNIT_STYLES: {
+				DetailsUnitStyles detailsUnitStyles = (DetailsUnitStyles)theEObject;
+				T result = caseDetailsUnitStyles(detailsUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(detailsUnitStyles);
+				if (result == null) result = caseContentUnitStyles(detailsUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FORM_UNIT_STYLES: {
+				FormUnitStyles formUnitStyles = (FormUnitStyles)theEObject;
+				T result = caseFormUnitStyles(formUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(formUnitStyles);
+				if (result == null) result = caseContentUnitStyles(formUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.GALLERY_UNIT_STYLES: {
+				GalleryUnitStyles galleryUnitStyles = (GalleryUnitStyles)theEObject;
+				T result = caseGalleryUnitStyles(galleryUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(galleryUnitStyles);
+				if (result == null) result = caseContentUnitStyles(galleryUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.SLIDER_UNIT_STYLES: {
+				SliderUnitStyles sliderUnitStyles = (SliderUnitStyles)theEObject;
+				T result = caseSliderUnitStyles(sliderUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(sliderUnitStyles);
+				if (result == null) result = caseContentUnitStyles(sliderUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.STATIC_UNIT_STYLES: {
+				StaticUnitStyles staticUnitStyles = (StaticUnitStyles)theEObject;
+				T result = caseStaticUnitStyles(staticUnitStyles);
+				if (result == null) result = caseContentUnitStyles(staticUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.TABULAR_UNIT_STYLES: {
+				TabularUnitStyles tabularUnitStyles = (TabularUnitStyles)theEObject;
+				T result = caseTabularUnitStyles(tabularUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(tabularUnitStyles);
+				if (result == null) result = caseContentUnitStyles(tabularUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -860,32 +924,152 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Content Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Content Unit Styles</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuery(Query object) {
+	public T caseContentUnitStyles(ContentUnitStyles object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Query Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamic Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Query Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamic Unit Styles</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQueryParameter(QueryParameter object) {
+	public T caseDynamicUnitStyles(DynamicUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Default Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Default Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDefaultUnitStyles(DefaultUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cards Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cards Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCardsUnitStyles(CardsUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Details Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Details Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDetailsUnitStyles(DetailsUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Form Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Form Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFormUnitStyles(FormUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gallery Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gallery Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGalleryUnitStyles(GalleryUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Slider Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Slider Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSliderUnitStyles(SliderUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Static Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Static Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStaticUnitStyles(StaticUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tabular Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tabular Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTabularUnitStyles(TabularUnitStyles object) {
 		return null;
 	}
 

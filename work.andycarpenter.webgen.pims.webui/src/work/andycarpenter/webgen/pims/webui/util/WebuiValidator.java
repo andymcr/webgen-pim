@@ -110,10 +110,26 @@ public class WebuiValidator extends EObjectValidator {
 				return validateEditStaticTextMenuEntry((EditStaticTextMenuEntry)value, diagnostics, context);
 			case WebuiPackage.MENU_FEATURE:
 				return validateMenuFeature((MenuFeature)value, diagnostics, context);
-			case WebuiPackage.QUERY:
-				return validateQuery((Query)value, diagnostics, context);
-			case WebuiPackage.QUERY_PARAMETER:
-				return validateQueryParameter((QueryParameter)value, diagnostics, context);
+			case WebuiPackage.CONTENT_UNIT_STYLES:
+				return validateContentUnitStyles((ContentUnitStyles)value, diagnostics, context);
+			case WebuiPackage.DYNAMIC_UNIT_STYLES:
+				return validateDynamicUnitStyles((DynamicUnitStyles)value, diagnostics, context);
+			case WebuiPackage.DEFAULT_UNIT_STYLES:
+				return validateDefaultUnitStyles((DefaultUnitStyles)value, diagnostics, context);
+			case WebuiPackage.CARDS_UNIT_STYLES:
+				return validateCardsUnitStyles((CardsUnitStyles)value, diagnostics, context);
+			case WebuiPackage.DETAILS_UNIT_STYLES:
+				return validateDetailsUnitStyles((DetailsUnitStyles)value, diagnostics, context);
+			case WebuiPackage.FORM_UNIT_STYLES:
+				return validateFormUnitStyles((FormUnitStyles)value, diagnostics, context);
+			case WebuiPackage.GALLERY_UNIT_STYLES:
+				return validateGalleryUnitStyles((GalleryUnitStyles)value, diagnostics, context);
+			case WebuiPackage.SLIDER_UNIT_STYLES:
+				return validateSliderUnitStyles((SliderUnitStyles)value, diagnostics, context);
+			case WebuiPackage.STATIC_UNIT_STYLES:
+				return validateStaticUnitStyles((StaticUnitStyles)value, diagnostics, context);
+			case WebuiPackage.TABULAR_UNIT_STYLES:
+				return validateTabularUnitStyles((TabularUnitStyles)value, diagnostics, context);
 			case WebuiPackage.PAGE:
 				return validatePage((Page)value, diagnostics, context);
 			case WebuiPackage.PAGE_LINK:
@@ -438,8 +454,8 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateQuery(Query query, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(query, diagnostics, context);
+	public boolean validateContentUnitStyles(ContentUnitStyles contentUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(contentUnitStyles, diagnostics, context);
 	}
 
 	/**
@@ -447,8 +463,80 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateQueryParameter(QueryParameter queryParameter, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(queryParameter, diagnostics, context);
+	public boolean validateDynamicUnitStyles(DynamicUnitStyles dynamicUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dynamicUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDefaultUnitStyles(DefaultUnitStyles defaultUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(defaultUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCardsUnitStyles(CardsUnitStyles cardsUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(cardsUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDetailsUnitStyles(DetailsUnitStyles detailsUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(detailsUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFormUnitStyles(FormUnitStyles formUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(formUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGalleryUnitStyles(GalleryUnitStyles galleryUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(galleryUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSliderUnitStyles(SliderUnitStyles sliderUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(sliderUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStaticUnitStyles(StaticUnitStyles staticUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(staticUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTabularUnitStyles(TabularUnitStyles tabularUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tabularUnitStyles, diagnostics, context);
 	}
 
 	/**

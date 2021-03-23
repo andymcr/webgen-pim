@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated security -->
       <factory
-            uri="http://cs.man.ac.uk/mdsd/webgen/security"
+            uri="http://andycarpenter.work/pim/security"
             class="work.andycarpenter.webgen.pims.security.provider.SecurityItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

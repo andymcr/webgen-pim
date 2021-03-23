@@ -40,7 +40,7 @@ public interface ExpressionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/expression";
+	String eNS_URI = "http://andycarpenter.work/pim/expression";
 
 	/**
 	 * The package namespace name.

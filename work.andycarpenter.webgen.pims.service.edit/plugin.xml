@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated service -->
       <factory
-            uri="http://cs.man.ac.uk/mdsd/webgen/service"
+            uri="http://andycarpenter.work/pim/service"
             class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -22,10 +22,10 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated service -->
       <extender
-            uri="http://cs.man.ac.uk/mdsd/webgen/expression"
+            uri="http://andycarpenter.work/pim/expression"
             class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
       <extender
-            uri="http://cs.man.ac.uk/mdsd/webgen/persistence"
+            uri="http://andycarpenter.work/pim/persistence"
             class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory$PersistenceChildCreationExtender"/>
    </extension>
 </plugin>

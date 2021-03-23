@@ -40,7 +40,7 @@ public interface SecurityPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/security";
+	String eNS_URI = "http://andycarpenter.work/pim/security";
 
 	/**
 	 * The package namespace name.

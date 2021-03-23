@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated service -->
       <package
-            uri="http://cs.man.ac.uk/mdsd/webgen/service"
+            uri="http://andycarpenter.work/pim/service"
             class="work.andycarpenter.webgen.pims.service.ServicePackage"
             genModel="model/service.genmodel"/>
    </extension>

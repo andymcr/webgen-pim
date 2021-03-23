@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated persistence -->
       <factory
-            uri="http://cs.man.ac.uk/mdsd/webgen/persistence"
+            uri="http://andycarpenter.work/pim/persistence"
             class="work.andycarpenter.webgen.pims.persistence.provider.PersistenceItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

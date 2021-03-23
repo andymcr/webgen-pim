@@ -59,113 +59,15 @@ rule WafModel {
 		pages <- website.webUI.pages,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
-		defaultStyles <- defaultStyles,
-		defaultCardsStyles <- defaultCardsStyles,
-		defaultDetailsStyles <- defaultDetailsStyles,
-		defaultFormStyles <- defaultFormStyles,
-		defaultGalleryStyles <- defaultGalleryStyles,
-		defaultSliderStyles <- defaultSliderStyles,
-		defaultStaticStyles <- defaultStaticStyles,
-		defaultTabularStyles <- defaultTabularStyles
-	),
-	defaultStyles : WAF!DynamicUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultContentClass,
-		fieldListClass <- thisModule.findWebsiteUI().defaultFieldListClass,
-		definitionFieldListClass <- thisModule.findWebsiteUI().defaultDefinitionFieldListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultControlClass,
-		fieldLabelClass <- thisModule.findWebsiteUI().defaultFieldLabelClass,
-		fieldValueClass <- thisModule.findWebsiteUI().defaultFieldValueClass,
-		actionNavigationClass <- thisModule.findWebsiteUI().defaultActionNavigationClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultAnchorClass
-	),
-	defaultCardsStyles : WAF!CardsUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultCardsContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultCardsFieldListClass,
---		fefinitionFieldListClass <- thisModule.findWebsiteUI().defaultCardsDefinitionFieldListClass,
-		rowClass <- thisModule.findWebsiteUI().defaultRowClass,
-		columnClass <- thisModule.findWebsiteUI().defaultColumnClass,
-		cardClass <- thisModule.findWebsiteUI().defaultCardClass,
-		cardHeaderClass <- thisModule.findWebsiteUI().defaultCardHeaderClass,
-		cardBodyClass <- thisModule.findWebsiteUI().defaultCardBodyClass,
-		cardFooterClass <- thisModule.findWebsiteUI().defaultCardFooterClass,
-		badgeClass <- thisModule.findWebsiteUI().defaultBadgeClass,
-		controlClass <- thisModule.findWebsiteUI().defaultCardsControlClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultCardsFieldLabelClass,
---		fieldValueClass <- thisModule.findWebsiteUI().defaultCardsFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultCardsAnchorClass
-	),
-	defaultDetailsStyles : WAF!DynamicUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultDetailsContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultDetailsFieldListClass,
---		definitionFieldListClass <- thisModule.findWebsiteUI().defaultDetailsDefinitionFieldListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultDetailsControlClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultDetailsFieldLabelClass,
---		cieldValueClass <- thisModule.findWebsiteUI().defaultDetailsFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultDetailsAnchorClass
-	),
-	defaultFormStyles : WAF!FormUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultFormContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultFormFieldListClass,
---		definitionFieldListClass <- thisModule.findWebsiteUI().defaultFormFieldDefinitionListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultFormControlClass,
-		inputGroupClass <- thisModule.findWebsiteUI().defaultInputGroupClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultFormFieldLabelClass,
---		fieldValueClass <- thisModule.findWebsiteUI().defaultFormFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultFormAnchorClass
-	),
-	defaultGalleryStyles : WAF!DynamicUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultGalleryContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultGalleryFieldListClass,
---		definitionFieldListClass <- thisModule.findWebsiteUI().defaultGalleryDefinitionFieldListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultGalleryControlClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultGalleryFieldLabelClass,
---		fieldValueClass <- thisModule.findWebsiteUI().defaultGalleryFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultGalleryAnchorClass
-	),
-	defaultSliderStyles : WAF!DynamicUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultSliderContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultSliderFieldListClass,
---		definitionFieldListClass <- thisModule.findWebsiteUI().defaultSliderDefinitionFieldListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultSliderControlClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultSliderFieldLabelClass,
---		fieldValueClass <- thisModule.findWebsiteUI().defaultSliderFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultSliderAnchorClass
-	),
-	defaultStaticStyles : WAF!ContentUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultStaticContentClass
-	),
-	defaultTabularStyles : WAF!DynamicUnitStyles (
-		styleClass <- thisModule.findWebsiteUI().defaultStyleClass,
-		sectionClass <- thisModule.findWebsiteUI().defaultSectionClass,
-		captionClass <- thisModule.findWebsiteUI().defaultCaptionClass,
-		contentClass <- thisModule.findWebsiteUI().defaultTabularContentClass,
---		fieldListClass <- thisModule.findWebsiteUI().defaultTabularFieldListClass,
---		definitionFieldListClass <- thisModule.findWebsiteUI().defaultTabularDefinitionFieldListClass,
-		controlClass <- thisModule.findWebsiteUI().defaultTabularControlClass,
---		fieldLabelClass <- thisModule.findWebsiteUI().defaultTabularFieldLabelClass,
---		fieldValueClass <- thisModule.findWebsiteUI().defaultTabularFieldValueClass,
-		anchorClass <- thisModule.findWebsiteUI().defaultTabularAnchorClass
+		defaultPageStyleClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
+		defaultStyles <- thisModule.findWebsiteUI().defaultStyles,
+		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
+		defaultDetailsStyles <- thisModule.findWebsiteUI().defaultDetailsStyles,
+		defaultFormStyles <- thisModule.findWebsiteUI().defaultFormStyles,
+		defaultGalleryStyles <- thisModule.findWebsiteUI().defaultGalleryStyles,
+		defaultSliderStyles <- thisModule.findWebsiteUI().defaultSliderStyles,
+		defaultStaticStyles <- thisModule.findWebsiteUI().defaultStaticStyles,
+		defaultTabularStyles <- thisModule.findWebsiteUI().defaultTabularStyles
 	)
 }
 
@@ -249,6 +151,93 @@ rule EditStaticTextMenuEntry {
 	)
 }
 
+abstract rule ContentUnitStyles {
+	from website : Website!ContentUnitStyles
+	to waf : WAF!ContentUnitStyles (
+		sectionClass <- website.sectionClass,
+		captionClass <- website.captionClass,
+		contentClass <- website.contentClass
+	)
+}
+
+-- @extends ContentUnitStyles
+abstract rule DynamicUnitStyles {
+	from website : Website!DynamicUnitStyles
+	to waf : WAF!DynamicUnitStyles (
+		fieldListClass <- website.fieldListClass,
+		definitionFieldListClass <- website.definitionFieldListClass,
+		fieldLabelClass <- website.fieldLabelClass,
+		fieldValueClass <- website.fieldValueClass,
+		controlClass <- website.controlClass,
+		actionNavigationClass <- website.actionNavigationClass,
+		anchorClass <- website.anchorClass
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule DefaultUnitStyles {
+	from website : Website!DefaultUnitStyles
+	to waf : WAF!DefaultUnitStyles (
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule CardsUnitStyles {
+	from website : Website!CardsUnitStyles
+	to waf : WAF!CardsUnitStyles (
+		rowClass <- website.rowClass,
+		columnClass <- website.columnClass,
+		cardClass <- website.cardClass,
+		cardHeaderClass <- website.cardHeaderClass,
+		cardBodyClass <- website.cardBodyClass,
+		cardFooterClass <- website.cardFooterClass,
+		badgeClass <- website.badgeClass
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule DetailsUnitStyles {
+	from website : Website!DetailsUnitStyles
+	to waf : WAF!DetailsUnitStyles (
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule FormUnitStyles {
+	from website : Website!FormUnitStyles
+	to waf : WAF!FormUnitStyles (
+		inputGroupClass <- website.inputGroupClass
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule GalleryUnitStyles {
+	from website : Website!GalleryUnitStyles
+	to waf : WAF!GalleryUnitStyles (
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule SliderUnitStyles {
+	from website : Website!SliderUnitStyles
+	to waf : WAF!SliderUnitStyles (
+	)
+}
+
+-- @extends ContentUnitStyles
+rule StaticUnitStyles {
+	from website : Website!StaticUnitStyles
+	to waf : WAF!StaticUnitStyles (
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule TabularUnitStyles {
+	from website : Website!TabularUnitStyles
+	to waf : WAF!TabularUnitStyles (
+	)
+}
+
 
 -- @extends NamedElement
 rule ImageManipulation {
@@ -298,7 +287,7 @@ rule Page {
 				website.parentPage.targetPage
 			endif,
 		units <- website.units,
-		localStyleClass <- website.styleClass
+		localPageStyleClass <- website.styleClass
 	)
 }
 

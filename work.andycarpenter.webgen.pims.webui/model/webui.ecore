@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webui" nsURI="http://cs.man.ac.uk/mdsd/webgen/webui" nsPrefix="webgen-webui">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webui" nsURI="http://andycarpenter.work/pim/webui" nsPrefix="webgen-webui">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -30,98 +30,32 @@
         defaultValueLiteral="Cancel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSaveLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Save"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStyleClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSectionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCaptionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultContentClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsContentClass"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPageStyleClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFormContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSliderContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultGalleryContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStaticContentClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFieldListClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDefinitionFieldListClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFieldLabelClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFieldValueClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInputGroupClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInputLabelClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInputValueClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultRowClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="row"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultColumnClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="col"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card rounded shadow-sm h-100"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardHeaderClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="card-header"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardBodyClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="card-body"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardFooterClass"
-        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="card-footer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultBadgeClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="badge"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFormControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSliderControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultGalleryControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStaticControlClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultActionNavigationClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultAnchorClass" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDetailsAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTabularAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCardsAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFormAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSliderAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultGalleryAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultStaticAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultStyles" lowerBound="1"
+        eType="#//DefaultUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultCardsStyles" lowerBound="1"
+        eType="#//CardsUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultDetailsStyles" lowerBound="1"
+        eType="#//DetailsUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultFormStyles" lowerBound="1"
+        eType="#//FormUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultGalleryStyles" lowerBound="1"
+        eType="#//GalleryUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultSliderStyles" lowerBound="1"
+        eType="#//SliderUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultStaticStyles" lowerBound="1"
+        eType="#//StaticUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultTabularStyles" lowerBound="1"
+        eType="#//TabularUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultMaximumUploadSize"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="2000000"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationMenuPlacement">
+    <eLiterals name="Above"/>
+    <eLiterals name="Below" value="1"/>
+    <eLiterals name="Integrated" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Navigation">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -140,11 +74,6 @@
         eType="#//AuthenticationMenuPlacement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationBarClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="nav"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationMenuPlacement">
-    <eLiterals name="Above"/>
-    <eLiterals name="Below" value="1"/>
-    <eLiterals name="Integrated" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
@@ -171,6 +100,56 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditStaticTextMenuEntry" eSuperTypes="#//MenuEntry ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="MenuFeature" eSuperTypes="#//MenuEntry"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentUnitStyles" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicUnitStyles" abstract="true" eSuperTypes="#//ContentUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldListClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="definitionFieldListClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionNavigationClass"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardsUnitStyles" eSuperTypes="#//DynamicUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="row"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="col"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardHeaderClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card-heder"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardBodyClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card-body"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardFooterClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="card-footer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="badgeClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="badge"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DetailsUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FormUnitStyles" eSuperTypes="#//DynamicUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticUnitStyles" eSuperTypes="#//ContentUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
   <eClassifiers xsi:type="ecore:EEnum" name="PageTopMenuOptions">
     <eLiterals name="NeverInclude"/>
     <eLiterals name="AlwaysInclude"/>

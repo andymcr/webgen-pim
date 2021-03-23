@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated base -->
       <factory
-            uri="http://cs.man.ac.uk/mdsd/webgen/base"
+            uri="http://andycarpenter.work/pim/base"
             class="work.andycarpenter.webgen.pims.base.provider.BaseItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

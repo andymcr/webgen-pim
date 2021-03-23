@@ -85,22 +85,76 @@ public interface WebuiFactory extends EFactory {
 	MenuFeature createMenuFeature();
 
 	/**
-	 * Returns a new object of class '<em>Query</em>'.
+	 * Returns a new object of class '<em>Default Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Query</em>'.
+	 * @return a new object of class '<em>Default Unit Styles</em>'.
 	 * @generated
 	 */
-	Query createQuery();
+	DefaultUnitStyles createDefaultUnitStyles();
 
 	/**
-	 * Returns a new object of class '<em>Query Parameter</em>'.
+	 * Returns a new object of class '<em>Cards Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Query Parameter</em>'.
+	 * @return a new object of class '<em>Cards Unit Styles</em>'.
 	 * @generated
 	 */
-	QueryParameter createQueryParameter();
+	CardsUnitStyles createCardsUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Details Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Details Unit Styles</em>'.
+	 * @generated
+	 */
+	DetailsUnitStyles createDetailsUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Form Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Form Unit Styles</em>'.
+	 * @generated
+	 */
+	FormUnitStyles createFormUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Gallery Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gallery Unit Styles</em>'.
+	 * @generated
+	 */
+	GalleryUnitStyles createGalleryUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Slider Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Slider Unit Styles</em>'.
+	 * @generated
+	 */
+	SliderUnitStyles createSliderUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Static Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Static Unit Styles</em>'.
+	 * @generated
+	 */
+	StaticUnitStyles createStaticUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Tabular Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tabular Unit Styles</em>'.
+	 * @generated
+	 */
+	TabularUnitStyles createTabularUnitStyles();
 
 	/**
 	 * Returns a new object of class '<em>Page</em>'.

@@ -64,8 +64,14 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.ACTION_MENU_ENTRY: return createActionMenuEntry();
 			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY: return createEditStaticTextMenuEntry();
 			case WebuiPackage.MENU_FEATURE: return createMenuFeature();
-			case WebuiPackage.QUERY: return createQuery();
-			case WebuiPackage.QUERY_PARAMETER: return createQueryParameter();
+			case WebuiPackage.DEFAULT_UNIT_STYLES: return createDefaultUnitStyles();
+			case WebuiPackage.CARDS_UNIT_STYLES: return createCardsUnitStyles();
+			case WebuiPackage.DETAILS_UNIT_STYLES: return createDetailsUnitStyles();
+			case WebuiPackage.FORM_UNIT_STYLES: return createFormUnitStyles();
+			case WebuiPackage.GALLERY_UNIT_STYLES: return createGalleryUnitStyles();
+			case WebuiPackage.SLIDER_UNIT_STYLES: return createSliderUnitStyles();
+			case WebuiPackage.STATIC_UNIT_STYLES: return createStaticUnitStyles();
+			case WebuiPackage.TABULAR_UNIT_STYLES: return createTabularUnitStyles();
 			case WebuiPackage.PAGE: return createPage();
 			case WebuiPackage.PAGE_LINK: return createPageLink();
 			case WebuiPackage.STATIC_UNIT: return createStaticUnit();
@@ -237,9 +243,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public Query createQuery() {
-		QueryImpl query = new QueryImpl();
-		return query;
+	public DefaultUnitStyles createDefaultUnitStyles() {
+		DefaultUnitStylesImpl defaultUnitStyles = new DefaultUnitStylesImpl();
+		return defaultUnitStyles;
 	}
 
 	/**
@@ -248,9 +254,75 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public QueryParameter createQueryParameter() {
-		QueryParameterImpl queryParameter = new QueryParameterImpl();
-		return queryParameter;
+	public CardsUnitStyles createCardsUnitStyles() {
+		CardsUnitStylesImpl cardsUnitStyles = new CardsUnitStylesImpl();
+		return cardsUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DetailsUnitStyles createDetailsUnitStyles() {
+		DetailsUnitStylesImpl detailsUnitStyles = new DetailsUnitStylesImpl();
+		return detailsUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FormUnitStyles createFormUnitStyles() {
+		FormUnitStylesImpl formUnitStyles = new FormUnitStylesImpl();
+		return formUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GalleryUnitStyles createGalleryUnitStyles() {
+		GalleryUnitStylesImpl galleryUnitStyles = new GalleryUnitStylesImpl();
+		return galleryUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SliderUnitStyles createSliderUnitStyles() {
+		SliderUnitStylesImpl sliderUnitStyles = new SliderUnitStylesImpl();
+		return sliderUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public StaticUnitStyles createStaticUnitStyles() {
+		StaticUnitStylesImpl staticUnitStyles = new StaticUnitStylesImpl();
+		return staticUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TabularUnitStyles createTabularUnitStyles() {
+		TabularUnitStylesImpl tabularUnitStyles = new TabularUnitStylesImpl();
+		return tabularUnitStyles;
 	}
 
 	/**

@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated base -->
       <package
-            uri="http://cs.man.ac.uk/mdsd/webgen/base"
+            uri="http://andycarpenter.work/pim/base"
             class="work.andycarpenter.webgen.pims.base.BasePackage"
             genModel="model/base.genmodel"/>
    </extension>

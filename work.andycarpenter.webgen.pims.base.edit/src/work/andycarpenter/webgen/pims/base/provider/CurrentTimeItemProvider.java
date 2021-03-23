@@ -109,7 +109,7 @@ public class CurrentTimeItemProvider
 				 false,
 				 false,
 				 null,
-				 getString("_UI_DEbugPropertyCategory"),
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

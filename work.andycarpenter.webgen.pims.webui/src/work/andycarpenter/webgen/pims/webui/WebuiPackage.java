@@ -43,7 +43,7 @@ public interface WebuiPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/webui";
+	String eNS_URI = "http://andycarpenter.work/pim/webui";
 
 	/**
 	 * The package namespace name.
@@ -153,382 +153,85 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_SAVE_LABEL = 8;
 
 	/**
-	 * The feature id for the '<em><b>Default Style Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Page Style Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STYLE_CLASS = 9;
+	int WEB_UI__DEFAULT_PAGE_STYLE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>Default Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SECTION_CLASS = 10;
+	int WEB_UI__DEFAULT_STYLES = 10;
 
 	/**
-	 * The feature id for the '<em><b>Default Caption Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Cards Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CAPTION_CLASS = 11;
+	int WEB_UI__DEFAULT_CARDS_STYLES = 11;
 
 	/**
-	 * The feature id for the '<em><b>Default Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Details Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CONTENT_CLASS = 12;
+	int WEB_UI__DEFAULT_DETAILS_STYLES = 12;
 
 	/**
-	 * The feature id for the '<em><b>Default Details Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Form Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = 13;
+	int WEB_UI__DEFAULT_FORM_STYLES = 13;
 
 	/**
-	 * The feature id for the '<em><b>Default Tabular Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Gallery Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS = 14;
+	int WEB_UI__DEFAULT_GALLERY_STYLES = 14;
 
 	/**
-	 * The feature id for the '<em><b>Default Cards Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Slider Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = 15;
+	int WEB_UI__DEFAULT_SLIDER_STYLES = 15;
 
 	/**
-	 * The feature id for the '<em><b>Default Form Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Static Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_CONTENT_CLASS = 16;
+	int WEB_UI__DEFAULT_STATIC_STYLES = 16;
 
 	/**
-	 * The feature id for the '<em><b>Default Slider Content Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Tabular Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS = 17;
-
-	/**
-	 * The feature id for the '<em><b>Default Gallery Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS = 18;
-
-	/**
-	 * The feature id for the '<em><b>Default Static Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = 19;
-
-	/**
-	 * The feature id for the '<em><b>Default Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FIELD_LIST_CLASS = 20;
-
-	/**
-	 * The feature id for the '<em><b>Default Definition Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS = 21;
-
-	/**
-	 * The feature id for the '<em><b>Default Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FIELD_LABEL_CLASS = 22;
-
-	/**
-	 * The feature id for the '<em><b>Default Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FIELD_VALUE_CLASS = 23;
-
-	/**
-	 * The feature id for the '<em><b>Default Input Group Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_INPUT_GROUP_CLASS = 24;
-
-	/**
-	 * The feature id for the '<em><b>Default Input Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_INPUT_LABEL_CLASS = 25;
-
-	/**
-	 * The feature id for the '<em><b>Default Input Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_INPUT_VALUE_CLASS = 26;
-
-	/**
-	 * The feature id for the '<em><b>Default Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_ROW_CLASS = 27;
-
-	/**
-	 * The feature id for the '<em><b>Default Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_COLUMN_CLASS = 28;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_CLASS = 29;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_HEADER_CLASS = 30;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_BODY_CLASS = 31;
-
-	/**
-	 * The feature id for the '<em><b>Default Card Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARD_FOOTER_CLASS = 32;
-
-	/**
-	 * The feature id for the '<em><b>Default Badge Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_BADGE_CLASS = 33;
-
-	/**
-	 * The feature id for the '<em><b>Default Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CONTROL_CLASS = 34;
-
-	/**
-	 * The feature id for the '<em><b>Default Details Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = 35;
-
-	/**
-	 * The feature id for the '<em><b>Default Tabular Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = 36;
-
-	/**
-	 * The feature id for the '<em><b>Default Cards Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = 37;
-
-	/**
-	 * The feature id for the '<em><b>Default Form Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FORM_CONTROL_CLASS = 38;
-
-	/**
-	 * The feature id for the '<em><b>Default Slider Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = 39;
-
-	/**
-	 * The feature id for the '<em><b>Default Gallery Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = 40;
-
-	/**
-	 * The feature id for the '<em><b>Default Static Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = 41;
-
-	/**
-	 * The feature id for the '<em><b>Default Action Navigation Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = 42;
-
-	/**
-	 * The feature id for the '<em><b>Default Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_ANCHOR_CLASS = 43;
-
-	/**
-	 * The feature id for the '<em><b>Default Details Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = 44;
-
-	/**
-	 * The feature id for the '<em><b>Default Tabular Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = 45;
-
-	/**
-	 * The feature id for the '<em><b>Default Cards Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS = 46;
-
-	/**
-	 * The feature id for the '<em><b>Default Form Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_FORM_ANCHOR_CLASS = 47;
-
-	/**
-	 * The feature id for the '<em><b>Default Slider Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS = 48;
-
-	/**
-	 * The feature id for the '<em><b>Default Gallery Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS = 49;
-
-	/**
-	 * The feature id for the '<em><b>Default Static Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS = 50;
+	int WEB_UI__DEFAULT_TABULAR_STYLES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -537,7 +240,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 51;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 18;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -546,7 +249,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 52;
+	int WEB_UI_FEATURE_COUNT = 19;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -914,22 +617,13 @@ public interface WebuiPackage extends EPackage {
 	int ACTION_MENU_ENTRY__DESTINATION = MENU_ENTRY_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Query</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION_MENU_ENTRY__QUERY = MENU_ENTRY_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Action Menu Entry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_MENU_ENTRY_FEATURE_COUNT = MENU_ENTRY_FEATURE_COUNT + 4;
+	int ACTION_MENU_ENTRY_FEATURE_COUNT = MENU_ENTRY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Action Menu Entry</em>' class.
@@ -1033,87 +727,1130 @@ public interface WebuiPackage extends EPackage {
 	int MENU_FEATURE_OPERATION_COUNT = MENU_ENTRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.QueryImpl <em>Query</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitStylesImpl <em>Content Unit Styles</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.QueryImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getQuery()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ContentUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnitStyles()
 	 * @generated
 	 */
-	int QUERY = 8;
+	int CONTENT_UNIT_STYLES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__FILTER = 0;
+	int CONTENT_UNIT_STYLES__SECTION_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__PARAMETERS = 1;
+	int CONTENT_UNIT_STYLES__CAPTION_CLASS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Query</em>' class.
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_FEATURE_COUNT = 2;
+	int CONTENT_UNIT_STYLES__CONTENT_CLASS = 2;
 
 	/**
-	 * The number of operations of the '<em>Query</em>' class.
+	 * The number of structural features of the '<em>Content Unit Styles</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_OPERATION_COUNT = 0;
+	int CONTENT_UNIT_STYLES_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.QueryParameterImpl <em>Query Parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.QueryParameterImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getQueryParameter()
-	 * @generated
-	 */
-	int QUERY_PARAMETER = 9;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The number of operations of the '<em>Content Unit Styles</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_PARAMETER__VALUE = 0;
+	int CONTENT_UNIT_STYLES_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Query Parameter</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitStylesImpl <em>Dynamic Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.DynamicUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnitStyles()
+	 * @generated
+	 */
+	int DYNAMIC_UNIT_STYLES = 9;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_PARAMETER_FEATURE_COUNT = 1;
+	int DYNAMIC_UNIT_STYLES__SECTION_CLASS = CONTENT_UNIT_STYLES__SECTION_CLASS;
 
 	/**
-	 * The number of operations of the '<em>Query Parameter</em>' class.
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_PARAMETER_OPERATION_COUNT = 0;
+	int DYNAMIC_UNIT_STYLES__CAPTION_CLASS = CONTENT_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__CONTENT_CLASS = CONTENT_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__CONTROL_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES__ANCHOR_CLASS = CONTENT_UNIT_STYLES_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Dynamic Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES_FEATURE_COUNT = CONTENT_UNIT_STYLES_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Dynamic Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT_STYLES_OPERATION_COUNT = CONTENT_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl <em>Default Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDefaultUnitStyles()
+	 * @generated
+	 */
+	int DEFAULT_UNIT_STYLES = 10;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Default Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Default Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl <em>Cards Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnitStyles()
+	 * @generated
+	 */
+	int CARDS_UNIT_STYLES = 11;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__ROW_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__COLUMN_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CARD_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CARD_HEADER_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CARD_BODY_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__BADGE_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Cards Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Cards Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl <em>Details Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnitStyles()
+	 * @generated
+	 */
+	int DETAILS_UNIT_STYLES = 12;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Details Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Details Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FormUnitStylesImpl <em>Form Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.FormUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFormUnitStyles()
+	 * @generated
+	 */
+	int FORM_UNIT_STYLES = 13;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES__INPUT_GROUP_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Form Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Form Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitStylesImpl <em>Gallery Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.GalleryUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnitStyles()
+	 * @generated
+	 */
+	int GALLERY_UNIT_STYLES = 14;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Gallery Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Gallery Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitStylesImpl <em>Slider Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.SliderUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnitStyles()
+	 * @generated
+	 */
+	int SLIDER_UNIT_STYLES = 15;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Slider Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Slider Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitStylesImpl <em>Static Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.StaticUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnitStyles()
+	 * @generated
+	 */
+	int STATIC_UNIT_STYLES = 16;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT_STYLES__SECTION_CLASS = CONTENT_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT_STYLES__CAPTION_CLASS = CONTENT_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT_STYLES__CONTENT_CLASS = CONTENT_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Static Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT_STYLES_FEATURE_COUNT = CONTENT_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Static Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT_STYLES_OPERATION_COUNT = CONTENT_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TabularUnitStylesImpl <em>Tabular Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.TabularUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnitStyles()
+	 * @generated
+	 */
+	int TABULAR_UNIT_STYLES = 17;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Tabular Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tabular Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl <em>Page</em>}' class.
@@ -1123,7 +1860,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPage()
 	 * @generated
 	 */
-	int PAGE = 10;
+	int PAGE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1223,7 +1960,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageLink()
 	 * @generated
 	 */
-	int PAGE_LINK = 11;
+	int PAGE_LINK = 19;
 
 	/**
 	 * The feature id for the '<em><b>Target Page</b></em>' reference.
@@ -1260,7 +1997,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnit()
 	 * @generated
 	 */
-	int CONTENT_UNIT = 12;
+	int CONTENT_UNIT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1405,7 +2142,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRouteActual()
 	 * @generated
 	 */
-	int ROUTE_ACTUAL = 16;
+	int ROUTE_ACTUAL = 24;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitImpl <em>Static Unit</em>}' class.
@@ -1415,7 +2152,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnit()
 	 * @generated
 	 */
-	int STATIC_UNIT = 13;
+	int STATIC_UNIT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1569,7 +2306,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateSitemapUnit()
 	 * @generated
 	 */
-	int CREATE_SITEMAP_UNIT = 14;
+	int CREATE_SITEMAP_UNIT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1732,7 +2469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnit()
 	 * @generated
 	 */
-	int DYNAMIC_UNIT = 15;
+	int DYNAMIC_UNIT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2084,7 +2821,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitField()
 	 * @generated
 	 */
-	int UNIT_FIELD = 17;
+	int UNIT_FIELD = 25;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -2193,7 +2930,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitFeature()
 	 * @generated
 	 */
-	int UNIT_FEATURE = 18;
+	int UNIT_FEATURE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -2455,7 +3192,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitElement()
 	 * @generated
 	 */
-	int UNIT_ELEMENT = 19;
+	int UNIT_ELEMENT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -2771,7 +3508,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitAssociation()
 	 * @generated
 	 */
-	int UNIT_ASSOCIATION = 20;
+	int UNIT_ASSOCIATION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3114,7 +3851,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAttribute()
 	 * @generated
 	 */
-	int CHILD_PATH_ATTRIBUTE = 21;
+	int CHILD_PATH_ATTRIBUTE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -3178,7 +3915,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAssociation()
 	 * @generated
 	 */
-	int CHILD_PATH_ASSOCIATION = 22;
+	int CHILD_PATH_ASSOCIATION = 30;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -3278,7 +4015,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePath()
 	 * @generated
 	 */
-	int FEATURE_PATH = 23;
+	int FEATURE_PATH = 31;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3342,7 +4079,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAttribute()
 	 * @generated
 	 */
-	int FEATURE_PATH_ATTRIBUTE = 24;
+	int FEATURE_PATH_ATTRIBUTE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3424,7 +4161,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
 	 * @generated
 	 */
-	int FEATURE_PATH_ASSOCIATION = 25;
+	int FEATURE_PATH_ASSOCIATION = 33;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3542,7 +4279,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathLabel()
 	 * @generated
 	 */
-	int FEATURE_PATH_LABEL = 26;
+	int FEATURE_PATH_LABEL = 34;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -3624,7 +4361,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 27;
+	int UNIT_LABEL = 35;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3751,7 +4488,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 28;
+	int INTERFACE_FIELD = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3932,7 +4669,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 29;
+	int DATA_TYPE_FIELD = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4149,7 +4886,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 30;
+	int DATE_FIELD = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4348,7 +5085,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCaptchaField()
 	 * @generated
 	 */
-	int CAPTCHA_FIELD = 31;
+	int CAPTCHA_FIELD = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4529,7 +5266,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 32;
+	int SELECTABLE_UNIT = 40;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -4557,7 +5294,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 33;
+	int SINGLETON_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4873,7 +5610,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 34;
+	int COLLECTION_UNIT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5441,7 +6178,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 35;
+	int EDIT_UNIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5829,7 +6566,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 36;
+	int CREATE_UNIT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6217,7 +6954,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 38;
+	int CREATE_UPDATE_UNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -6227,7 +6964,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 37;
+	int UPDATE_UNIT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7038,7 +7775,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 39;
+	int MAP_UNIT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7462,7 +8199,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 40;
+	int DETAILS_UNIT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7796,7 +8533,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 41;
+	int TABULAR_UNIT = 49;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8373,7 +9110,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 42;
+	int CARDS_UNIT = 50;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9022,7 +9759,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 44;
+	int TEXT_CARDS_UNIT = 52;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -9032,7 +9769,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 45;
+	int DATE_CARDS_UNIT = 53;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -9042,7 +9779,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 50;
+	int CONTROL_UNIT = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -9052,7 +9789,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 51;
+	int SEARCH_UNIT = 59;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
@@ -9062,7 +9799,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 46;
+	int IMAGE_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -9072,7 +9809,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 47;
+	int IMAGE_CARDS_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -9082,7 +9819,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 48;
+	int SLIDER_UNIT = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -9092,7 +9829,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 49;
+	int GALLERY_UNIT = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -9102,7 +9839,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 60;
+	int SELECT_ACTION = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -9112,7 +9849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 59;
+	int DELETE_ACTION = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -9122,7 +9859,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 43;
+	int BADGE = 51;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -13677,7 +14414,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 52;
+	int REGISTRATION_UNIT = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13984,7 +14721,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 53;
+	int LOGIN_UNIT = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14372,7 +15109,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 54;
+	int LOGOUT_UNIT = 62;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14679,7 +15416,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 55;
+	int FORGOTTEN_PASSWORD_UNIT = 63;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14986,7 +15723,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 56;
+	int ACTION_CONTAINER = 64;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -15032,7 +15769,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 57;
+	int ACTION = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15186,7 +15923,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 58;
+	int SECURITY_ACTION = 66;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15349,7 +16086,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 63;
+	int OPERATION_ACTION = 71;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -15359,7 +16096,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 61;
+	int CONTAINER_SELECT_ACTION = 69;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -15369,7 +16106,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 62;
+	int INSTANCE_SELECT_ACTION = 70;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16207,7 +16944,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 65;
+	int INSTANCE_OPERATION_ACTION = 73;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -16217,7 +16954,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 64;
+	int CONTAINER_OPERATION_ACTION = 72;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16587,7 +17324,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 66;
+	int GENERAL_OPERATION_ACTION = 74;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16777,7 +17514,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 67;
+	int MESSAGE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -16823,7 +17560,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 68;
+	int AUTHENTICATION_MENU_PLACEMENT = 76;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -16833,7 +17570,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 69;
+	int PAGE_TOP_MENU_OPTIONS = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -16843,7 +17580,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 70;
+	int COLLECTION_DISPLAY_OPTIONS = 78;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -16853,7 +17590,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 71;
+	int PAGINATION_CONTROL_PLACEMENTS = 79;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -16954,6 +17691,105 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultSaveLabel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Page Style Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultPageStyleClass();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles <em>Default Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles <em>Default Cards Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Cards Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultCardsStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsStyles <em>Default Details Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Details Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultDetailsStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormStyles <em>Default Form Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Form Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultFormStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryStyles <em>Default Gallery Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Gallery Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultGalleryStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderStyles <em>Default Slider Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Slider Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultSliderStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticStyles <em>Default Static Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Static Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultStaticStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularStyles <em>Default Tabular Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Tabular Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultTabularStyles();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16963,468 +17799,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultCancelLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass <em>Default Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyleClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultStyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass <em>Default Section Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Section Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSectionClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultSectionClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass <em>Default Caption Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Caption Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCaptionClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCaptionClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass <em>Default Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass <em>Default Details Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Details Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultDetailsContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass <em>Default Tabular Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Tabular Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultTabularContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass <em>Default Cards Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Cards Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardsContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass <em>Default Form Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Form Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFormContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass <em>Default Slider Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Slider Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultSliderContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass <em>Default Gallery Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Gallery Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultGalleryContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass <em>Default Static Content Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Static Content Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticContentClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultStaticContentClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass <em>Default Row Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Row Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultRowClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultRowClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultColumnClass <em>Default Column Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Column Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultColumnClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultColumnClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass <em>Default Card Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Card Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass <em>Default Card Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Card Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardHeaderClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardHeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass <em>Default Card Body Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Card Body Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardBodyClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardBodyClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass <em>Default Card Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Card Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardFooterClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardFooterClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass <em>Default Badge Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Badge Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultBadgeClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultBadgeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass <em>Default Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass <em>Default Details Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Details Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultDetailsControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass <em>Default Tabular Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Tabular Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultTabularControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass <em>Default Cards Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Cards Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardsControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass <em>Default Form Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Form Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFormControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass <em>Default Slider Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Slider Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultSliderControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass <em>Default Gallery Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Gallery Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultGalleryControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass <em>Default Static Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Static Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticControlClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultStaticControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass <em>Default Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsAnchorClass <em>Default Details Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Details Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultDetailsAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass <em>Default Tabular Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Tabular Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultTabularAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsAnchorClass <em>Default Cards Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Cards Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCardsAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormAnchorClass <em>Default Form Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Form Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFormAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderAnchorClass <em>Default Slider Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Slider Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultSliderAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryAnchorClass <em>Default Gallery Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Gallery Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultGalleryAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticAnchorClass <em>Default Static Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Static Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticAnchorClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultStaticAnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass <em>Default Field List Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Field List Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldListClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFieldListClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass <em>Default Definition Field List Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Definition Field List Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDefinitionFieldListClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultDefinitionFieldListClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass <em>Default Field Label Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Field Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldLabelClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFieldLabelClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass <em>Default Field Value Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Field Value Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFieldValueClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultFieldValueClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass <em>Default Input Group Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Input Group Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputGroupClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultInputGroupClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass <em>Default Input Label Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Input Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputLabelClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultInputLabelClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass <em>Default Input Value Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Input Value Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultInputValueClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultInputValueClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass <em>Default Action Navigation Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Action Navigation Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultActionNavigationClass()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultActionNavigationClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}'.
@@ -17631,17 +18005,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getActionMenuEntry_Destination();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry#getQuery <em>Query</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Query</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ActionMenuEntry#getQuery()
-	 * @see #getActionMenuEntry()
-	 * @generated
-	 */
-	EReference getActionMenuEntry_Query();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry <em>Edit Static Text Menu Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17662,57 +18025,302 @@ public interface WebuiPackage extends EPackage {
 	EClass getMenuFeature();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Query <em>Query</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ContentUnitStyles <em>Content Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Query</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Query
+	 * @return the meta object for class '<em>Content Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnitStyles
 	 * @generated
 	 */
-	EClass getQuery();
+	EClass getContentUnitStyles();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Query#getFilter <em>Filter</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getSectionClass <em>Section Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Filter</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Query#getFilter()
-	 * @see #getQuery()
+	 * @return the meta object for the attribute '<em>Section Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getSectionClass()
+	 * @see #getContentUnitStyles()
 	 * @generated
 	 */
-	EReference getQuery_Filter();
+	EAttribute getContentUnitStyles_SectionClass();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.Query#getParameters <em>Parameters</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getCaptionClass <em>Caption Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Query#getParameters()
-	 * @see #getQuery()
+	 * @return the meta object for the attribute '<em>Caption Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getCaptionClass()
+	 * @see #getContentUnitStyles()
 	 * @generated
 	 */
-	EReference getQuery_Parameters();
+	EAttribute getContentUnitStyles_CaptionClass();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.QueryParameter <em>Query Parameter</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getContentClass <em>Content Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Query Parameter</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.QueryParameter
+	 * @return the meta object for the attribute '<em>Content Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnitStyles#getContentClass()
+	 * @see #getContentUnitStyles()
 	 * @generated
 	 */
-	EClass getQueryParameter();
+	EAttribute getContentUnitStyles_ContentClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.QueryParameter#getValue <em>Value</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles <em>Dynamic Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.QueryParameter#getValue()
-	 * @see #getQueryParameter()
+	 * @return the meta object for class '<em>Dynamic Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles
 	 * @generated
 	 */
-	EAttribute getQueryParameter_Value();
+	EClass getDynamicUnitStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldListClass <em>Field List Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldListClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_FieldListClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getDefinitionFieldListClass <em>Definition Field List Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Definition Field List Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getDefinitionFieldListClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_DefinitionFieldListClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldLabelClass <em>Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldLabelClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_FieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldValueClass <em>Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getFieldValueClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_FieldValueClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getControlClass <em>Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getControlClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_ControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getActionNavigationClass <em>Action Navigation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Action Navigation Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getActionNavigationClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_ActionNavigationClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getAnchorClass <em>Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnitStyles#getAnchorClass()
+	 * @see #getDynamicUnitStyles()
+	 * @generated
+	 */
+	EAttribute getDynamicUnitStyles_AnchorClass();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DefaultUnitStyles <em>Default Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Default Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DefaultUnitStyles
+	 * @generated
+	 */
+	EClass getDefaultUnitStyles();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles <em>Cards Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cards Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles
+	 * @generated
+	 */
+	EClass getCardsUnitStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass <em>Row Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Row Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_RowClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass <em>Column Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Column Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_ColumnClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardClass <em>Card Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Card Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_CardClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardHeaderClass <em>Card Header Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Card Header Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardHeaderClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_CardHeaderClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardBodyClass <em>Card Body Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Card Body Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardBodyClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_CardBodyClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardFooterClass <em>Card Footer Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Card Footer Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardFooterClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_CardFooterClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getBadgeClass <em>Badge Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Badge Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getBadgeClass()
+	 * @see #getCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCardsUnitStyles_BadgeClass();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles <em>Details Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Details Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DetailsUnitStyles
+	 * @generated
+	 */
+	EClass getDetailsUnitStyles();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FormUnitStyles <em>Form Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Form Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FormUnitStyles
+	 * @generated
+	 */
+	EClass getFormUnitStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FormUnitStyles#getInputGroupClass <em>Input Group Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Group Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FormUnitStyles#getInputGroupClass()
+	 * @see #getFormUnitStyles()
+	 * @generated
+	 */
+	EAttribute getFormUnitStyles_InputGroupClass();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles <em>Gallery Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gallery Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnitStyles
+	 * @generated
+	 */
+	EClass getGalleryUnitStyles();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles <em>Slider Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Slider Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.SliderUnitStyles
+	 * @generated
+	 */
+	EClass getSliderUnitStyles();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.StaticUnitStyles <em>Static Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Static Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.StaticUnitStyles
+	 * @generated
+	 */
+	EClass getStaticUnitStyles();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TabularUnitStyles <em>Tabular Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tabular Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.TabularUnitStyles
+	 * @generated
+	 */
+	EClass getTabularUnitStyles();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Page <em>Page</em>}'.
@@ -20742,348 +21350,84 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_SAVE_LABEL = eINSTANCE.getWebUI_DefaultSaveLabel();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Page Style Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_PAGE_STYLE_CLASS = eINSTANCE.getWebUI_DefaultPageStyleClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_STYLES = eINSTANCE.getWebUI_DefaultStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Cards Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_CARDS_STYLES = eINSTANCE.getWebUI_DefaultCardsStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Details Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_DETAILS_STYLES = eINSTANCE.getWebUI_DefaultDetailsStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Form Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_FORM_STYLES = eINSTANCE.getWebUI_DefaultFormStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Gallery Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_GALLERY_STYLES = eINSTANCE.getWebUI_DefaultGalleryStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Slider Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_SLIDER_STYLES = eINSTANCE.getWebUI_DefaultSliderStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Static Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_STATIC_STYLES = eINSTANCE.getWebUI_DefaultStaticStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Tabular Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_TABULAR_STYLES = eINSTANCE.getWebUI_DefaultTabularStyles();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Cancel Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_CANCEL_LABEL = eINSTANCE.getWebUI_DefaultCancelLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_STYLE_CLASS = eINSTANCE.getWebUI_DefaultStyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Section Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_SECTION_CLASS = eINSTANCE.getWebUI_DefaultSectionClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Caption Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CAPTION_CLASS = eINSTANCE.getWebUI_DefaultCaptionClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Details Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_DETAILS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultDetailsContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Tabular Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_TABULAR_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultTabularContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Cards Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARDS_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultCardsContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Form Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FORM_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultFormContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Slider Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_SLIDER_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultSliderContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Gallery Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_GALLERY_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultGalleryContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Static Content Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_STATIC_CONTENT_CLASS = eINSTANCE.getWebUI_DefaultStaticContentClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Row Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_ROW_CLASS = eINSTANCE.getWebUI_DefaultRowClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Column Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_COLUMN_CLASS = eINSTANCE.getWebUI_DefaultColumnClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Card Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARD_CLASS = eINSTANCE.getWebUI_DefaultCardClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Card Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARD_HEADER_CLASS = eINSTANCE.getWebUI_DefaultCardHeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Card Body Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARD_BODY_CLASS = eINSTANCE.getWebUI_DefaultCardBodyClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Card Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARD_FOOTER_CLASS = eINSTANCE.getWebUI_DefaultCardFooterClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Badge Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_BADGE_CLASS = eINSTANCE.getWebUI_DefaultBadgeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Details Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_DETAILS_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultDetailsControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Tabular Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_TABULAR_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultTabularControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Cards Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARDS_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultCardsControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Form Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FORM_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultFormControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Slider Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_SLIDER_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultSliderControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Gallery Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_GALLERY_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultGalleryControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Static Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_STATIC_CONTROL_CLASS = eINSTANCE.getWebUI_DefaultStaticControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Details Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_DETAILS_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultDetailsAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Tabular Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_TABULAR_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultTabularAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Cards Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CARDS_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultCardsAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Form Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FORM_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultFormAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Slider Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_SLIDER_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultSliderAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Gallery Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_GALLERY_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultGalleryAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Static Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_STATIC_ANCHOR_CLASS = eINSTANCE.getWebUI_DefaultStaticAnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Field List Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FIELD_LIST_CLASS = eINSTANCE.getWebUI_DefaultFieldListClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Definition Field List Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_DEFINITION_FIELD_LIST_CLASS = eINSTANCE.getWebUI_DefaultDefinitionFieldListClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Field Label Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FIELD_LABEL_CLASS = eINSTANCE.getWebUI_DefaultFieldLabelClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Field Value Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_FIELD_VALUE_CLASS = eINSTANCE.getWebUI_DefaultFieldValueClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Input Group Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_INPUT_GROUP_CLASS = eINSTANCE.getWebUI_DefaultInputGroupClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Input Label Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_INPUT_LABEL_CLASS = eINSTANCE.getWebUI_DefaultInputLabelClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Input Value Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_INPUT_VALUE_CLASS = eINSTANCE.getWebUI_DefaultInputValueClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Action Navigation Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_ACTION_NAVIGATION_CLASS = eINSTANCE.getWebUI_DefaultActionNavigationClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Maximum Upload Size</b></em>' attribute feature.
@@ -21248,14 +21592,6 @@ public interface WebuiPackage extends EPackage {
 		EReference ACTION_MENU_ENTRY__DESTINATION = eINSTANCE.getActionMenuEntry_Destination();
 
 		/**
-		 * The meta object literal for the '<em><b>Query</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTION_MENU_ENTRY__QUERY = eINSTANCE.getActionMenuEntry_Query();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditStaticTextMenuEntryImpl <em>Edit Static Text Menu Entry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21276,48 +21612,248 @@ public interface WebuiPackage extends EPackage {
 		EClass MENU_FEATURE = eINSTANCE.getMenuFeature();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.QueryImpl <em>Query</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitStylesImpl <em>Content Unit Styles</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.QueryImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getQuery()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ContentUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnitStyles()
 		 * @generated
 		 */
-		EClass QUERY = eINSTANCE.getQuery();
+		EClass CONTENT_UNIT_STYLES = eINSTANCE.getContentUnitStyles();
 
 		/**
-		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Section Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference QUERY__FILTER = eINSTANCE.getQuery_Filter();
+		EAttribute CONTENT_UNIT_STYLES__SECTION_CLASS = eINSTANCE.getContentUnitStyles_SectionClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Caption Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference QUERY__PARAMETERS = eINSTANCE.getQuery_Parameters();
+		EAttribute CONTENT_UNIT_STYLES__CAPTION_CLASS = eINSTANCE.getContentUnitStyles_CaptionClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.QueryParameterImpl <em>Query Parameter</em>}' class.
+		 * The meta object literal for the '<em><b>Content Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.QueryParameterImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getQueryParameter()
 		 * @generated
 		 */
-		EClass QUERY_PARAMETER = eINSTANCE.getQueryParameter();
+		EAttribute CONTENT_UNIT_STYLES__CONTENT_CLASS = eINSTANCE.getContentUnitStyles_ContentClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitStylesImpl <em>Dynamic Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.DynamicUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnitStyles()
+		 * @generated
+		 */
+		EClass DYNAMIC_UNIT_STYLES = eINSTANCE.getDynamicUnitStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Field List Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUERY_PARAMETER__VALUE = eINSTANCE.getQueryParameter_Value();
+		EAttribute DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS = eINSTANCE.getDynamicUnitStyles_FieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition Field List Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = eINSTANCE.getDynamicUnitStyles_DefinitionFieldListClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS = eINSTANCE.getDynamicUnitStyles_FieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS = eINSTANCE.getDynamicUnitStyles_FieldValueClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__CONTROL_CLASS = eINSTANCE.getDynamicUnitStyles_ControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Navigation Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS = eINSTANCE.getDynamicUnitStyles_ActionNavigationClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT_STYLES__ANCHOR_CLASS = eINSTANCE.getDynamicUnitStyles_AnchorClass();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl <em>Default Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDefaultUnitStyles()
+		 * @generated
+		 */
+		EClass DEFAULT_UNIT_STYLES = eINSTANCE.getDefaultUnitStyles();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl <em>Cards Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnitStyles()
+		 * @generated
+		 */
+		EClass CARDS_UNIT_STYLES = eINSTANCE.getCardsUnitStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Row Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__ROW_CLASS = eINSTANCE.getCardsUnitStyles_RowClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Column Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__COLUMN_CLASS = eINSTANCE.getCardsUnitStyles_ColumnClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Card Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__CARD_CLASS = eINSTANCE.getCardsUnitStyles_CardClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Card Header Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__CARD_HEADER_CLASS = eINSTANCE.getCardsUnitStyles_CardHeaderClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Card Body Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__CARD_BODY_CLASS = eINSTANCE.getCardsUnitStyles_CardBodyClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Card Footer Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = eINSTANCE.getCardsUnitStyles_CardFooterClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Badge Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDS_UNIT_STYLES__BADGE_CLASS = eINSTANCE.getCardsUnitStyles_BadgeClass();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl <em>Details Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnitStyles()
+		 * @generated
+		 */
+		EClass DETAILS_UNIT_STYLES = eINSTANCE.getDetailsUnitStyles();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FormUnitStylesImpl <em>Form Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.FormUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFormUnitStyles()
+		 * @generated
+		 */
+		EClass FORM_UNIT_STYLES = eINSTANCE.getFormUnitStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Group Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORM_UNIT_STYLES__INPUT_GROUP_CLASS = eINSTANCE.getFormUnitStyles_InputGroupClass();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitStylesImpl <em>Gallery Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.GalleryUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnitStyles()
+		 * @generated
+		 */
+		EClass GALLERY_UNIT_STYLES = eINSTANCE.getGalleryUnitStyles();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitStylesImpl <em>Slider Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.SliderUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnitStyles()
+		 * @generated
+		 */
+		EClass SLIDER_UNIT_STYLES = eINSTANCE.getSliderUnitStyles();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitStylesImpl <em>Static Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.StaticUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnitStyles()
+		 * @generated
+		 */
+		EClass STATIC_UNIT_STYLES = eINSTANCE.getStaticUnitStyles();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TabularUnitStylesImpl <em>Tabular Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.TabularUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnitStyles()
+		 * @generated
+		 */
+		EClass TABULAR_UNIT_STYLES = eINSTANCE.getTabularUnitStyles();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl <em>Page</em>}' class.

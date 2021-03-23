@@ -41,7 +41,7 @@ public interface BasePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/base";
+	String eNS_URI = "http://andycarpenter.work/pim/base";
 
 	/**
 	 * The package namespace name.

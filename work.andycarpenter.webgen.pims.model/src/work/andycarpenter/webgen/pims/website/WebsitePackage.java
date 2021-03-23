@@ -39,7 +39,7 @@ public interface WebsitePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.cs.man.ac.uk/mdsd/2010/Website";
+	String eNS_URI = "http://andycarpenter.work/pim/Website";
 
 	/**
 	 * The package namespace name.

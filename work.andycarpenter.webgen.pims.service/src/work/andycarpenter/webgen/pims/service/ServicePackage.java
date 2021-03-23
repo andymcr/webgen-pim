@@ -44,7 +44,7 @@ public interface ServicePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/service";
+	String eNS_URI = "http://andycarpenter.work/pim/service";
 
 	/**
 	 * The package namespace name.

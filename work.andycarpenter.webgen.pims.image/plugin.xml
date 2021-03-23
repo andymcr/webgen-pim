@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated image -->
       <package
-            uri="http://cs.man.ac.uk/mdsd/webgen/image"
+            uri="http://andycarpenter.work/pim/image"
             class="work.andycarpenter.webgen.pims.image.ImagePackage"
             genModel="model/image.genmodel"/>
    </extension>

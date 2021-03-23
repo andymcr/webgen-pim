@@ -14,7 +14,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry#getDestination <em>Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry#getQuery <em>Query</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionMenuEntry()
@@ -47,31 +46,5 @@ public interface ActionMenuEntry extends MenuEntry, NamedDisplayElement {
 	 * @generated
 	 */
 	void setDestination(ContentUnit value);
-
-	/**
-	 * Returns the value of the '<em><b>Query</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Query</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Query</em>' containment reference.
-	 * @see #setQuery(Query)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionMenuEntry_Query()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Query getQuery();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry#getQuery <em>Query</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Query</em>' containment reference.
-	 * @see #getQuery()
-	 * @generated
-	 */
-	void setQuery(Query value);
 
 } // ActionMenuEntry

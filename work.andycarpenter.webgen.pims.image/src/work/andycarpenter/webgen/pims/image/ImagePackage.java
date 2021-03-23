@@ -41,7 +41,7 @@ public interface ImagePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/image";
+	String eNS_URI = "http://andycarpenter.work/pim/image";
 
 	/**
 	 * The package namespace name.

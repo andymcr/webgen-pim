@@ -42,7 +42,7 @@ public interface PersistencePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.man.ac.uk/mdsd/webgen/persistence";
+	String eNS_URI = "http://andycarpenter.work/pim/persistence";
 
 	/**
 	 * The package namespace name.

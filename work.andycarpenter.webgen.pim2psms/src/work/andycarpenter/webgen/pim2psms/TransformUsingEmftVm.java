@@ -34,7 +34,7 @@ public class TransformUsingEmftVm {
 		if (websiteMetamodel == null) {
 			websiteMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			websiteMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://www.cs.man.ac.uk/mdsd/2010/Website"), true));
+				URI.createURI("http://andycarpenter.work/pim/Website"), true));
 		}
 
 		return websiteMetamodel;

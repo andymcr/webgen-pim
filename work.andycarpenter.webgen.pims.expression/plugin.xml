@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated expression -->
       <package
-            uri="http://cs.man.ac.uk/mdsd/webgen/expression"
+            uri="http://andycarpenter.work/pim/expression"
             class="work.andycarpenter.webgen.pims.expression.ExpressionPackage"
             genModel="model/expression.genmodel"/>
    </extension>

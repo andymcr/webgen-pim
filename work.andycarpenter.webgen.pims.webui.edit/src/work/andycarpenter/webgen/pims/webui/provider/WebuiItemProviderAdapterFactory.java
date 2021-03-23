@@ -267,49 +267,187 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.Query} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DefaultUnitStyles} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QueryItemProvider queryItemProvider;
+	protected DefaultUnitStylesItemProvider defaultUnitStylesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.Query}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.DefaultUnitStyles}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createQueryAdapter() {
-		if (queryItemProvider == null) {
-			queryItemProvider = new QueryItemProvider(this);
+	public Adapter createDefaultUnitStylesAdapter() {
+		if (defaultUnitStylesItemProvider == null) {
+			defaultUnitStylesItemProvider = new DefaultUnitStylesItemProvider(this);
 		}
 
-		return queryItemProvider;
+		return defaultUnitStylesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.QueryParameter} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QueryParameterItemProvider queryParameterItemProvider;
+	protected CardsUnitStylesItemProvider cardsUnitStylesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.QueryParameter}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createQueryParameterAdapter() {
-		if (queryParameterItemProvider == null) {
-			queryParameterItemProvider = new QueryParameterItemProvider(this);
+	public Adapter createCardsUnitStylesAdapter() {
+		if (cardsUnitStylesItemProvider == null) {
+			cardsUnitStylesItemProvider = new CardsUnitStylesItemProvider(this);
 		}
 
-		return queryParameterItemProvider;
+		return cardsUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DetailsUnitStylesItemProvider detailsUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDetailsUnitStylesAdapter() {
+		if (detailsUnitStylesItemProvider == null) {
+			detailsUnitStylesItemProvider = new DetailsUnitStylesItemProvider(this);
+		}
+
+		return detailsUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FormUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FormUnitStylesItemProvider formUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FormUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFormUnitStylesAdapter() {
+		if (formUnitStylesItemProvider == null) {
+			formUnitStylesItemProvider = new FormUnitStylesItemProvider(this);
+		}
+
+		return formUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GalleryUnitStylesItemProvider galleryUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGalleryUnitStylesAdapter() {
+		if (galleryUnitStylesItemProvider == null) {
+			galleryUnitStylesItemProvider = new GalleryUnitStylesItemProvider(this);
+		}
+
+		return galleryUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SliderUnitStylesItemProvider sliderUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSliderUnitStylesAdapter() {
+		if (sliderUnitStylesItemProvider == null) {
+			sliderUnitStylesItemProvider = new SliderUnitStylesItemProvider(this);
+		}
+
+		return sliderUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.StaticUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StaticUnitStylesItemProvider staticUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.StaticUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStaticUnitStylesAdapter() {
+		if (staticUnitStylesItemProvider == null) {
+			staticUnitStylesItemProvider = new StaticUnitStylesItemProvider(this);
+		}
+
+		return staticUnitStylesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.TabularUnitStyles} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TabularUnitStylesItemProvider tabularUnitStylesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.TabularUnitStyles}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTabularUnitStylesAdapter() {
+		if (tabularUnitStylesItemProvider == null) {
+			tabularUnitStylesItemProvider = new TabularUnitStylesItemProvider(this);
+		}
+
+		return tabularUnitStylesItemProvider;
 	}
 
 	/**
