@@ -229,7 +229,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitRegistrationLabel() {
+	public EAttribute getAuthentication_ImplicitRegistrationUnitLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -239,7 +239,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitRegistrationUri() {
+	public EAttribute getAuthentication_ImplicitRegistrationActionLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -249,7 +249,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLoginName() {
+	public EAttribute getAuthentication_ImplicitRegistrationConfirmLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -259,7 +259,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLoginLabel() {
+	public EAttribute getAuthentication_ImplicitRegistrationUri() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -269,7 +269,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLoginUri() {
+	public EAttribute getAuthentication_ImplicitLoginName() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -279,7 +279,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLogoutName() {
+	public EAttribute getAuthentication_ImplicitLoginUnitLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -289,7 +289,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLogoutLabel() {
+	public EAttribute getAuthentication_ImplicitLoginActionLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -299,7 +299,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitLogoutUri() {
+	public EAttribute getAuthentication_ImplicitLoginConfirmLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -309,7 +309,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitForgottenPasswordName() {
+	public EAttribute getAuthentication_ImplicitLoginUri() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -319,7 +319,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitForgottenPasswordLabel() {
+	public EAttribute getAuthentication_ImplicitLogoutName() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -329,8 +329,88 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthentication_ImplicitForgottenPasswordUri() {
+	public EAttribute getAuthentication_ImplicitLogoutUnitLabel() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitLogoutActionLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitLogoutConfirmLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitLogoutUri() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitForgottenPasswordName() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitForgottenPasswordUnitLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitForgottenPasswordActionLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitForgottenPasswordConfirmLabel() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthentication_ImplicitForgottenPasswordUri() {
+		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(22);
 	}
 
 	/**
@@ -600,16 +680,24 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		createEReference(authenticationEClass, AUTHENTICATION__USER);
 		createEReference(authenticationEClass, AUTHENTICATION__USER_KEY);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_NAME);
-		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_ACTION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_CONFIRM_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_REGISTRATION_URI);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_NAME);
-		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_UNIT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_ACTION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_CONFIRM_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGIN_URI);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_NAME);
-		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_UNIT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_ACTION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_CONFIRM_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_LOGOUT_URI);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME);
-		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL);
+		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL);
 		createEAttribute(authenticationEClass, AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI);
 
 		localAuthenticationSystemEClass = createEClass(LOCAL_AUTHENTICATION_SYSTEM);
@@ -684,16 +772,24 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		initEReference(getAuthentication_User(), thePersistencePackage.getEntity(), null, "user", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAuthentication_UserKey(), thePersistencePackage.getAttribute(), null, "userKey", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitRegistrationName(), ecorePackage.getEString(), "implicitRegistrationName", "registration", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAuthentication_ImplicitRegistrationLabel(), ecorePackage.getEString(), "implicitRegistrationLabel", "Create Account", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitRegistrationUnitLabel(), ecorePackage.getEString(), "implicitRegistrationUnitLabel", "Create Account", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitRegistrationActionLabel(), ecorePackage.getEString(), "implicitRegistrationActionLabel", "Create Account", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitRegistrationConfirmLabel(), ecorePackage.getEString(), "implicitRegistrationConfirmLabel", "Create Account", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitRegistrationUri(), ecorePackage.getEString(), "implicitRegistrationUri", "register", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitLoginName(), ecorePackage.getEString(), "implicitLoginName", "login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAuthentication_ImplicitLoginLabel(), ecorePackage.getEString(), "implicitLoginLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLoginUnitLabel(), ecorePackage.getEString(), "implicitLoginUnitLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLoginActionLabel(), ecorePackage.getEString(), "implicitLoginActionLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLoginConfirmLabel(), ecorePackage.getEString(), "implicitLoginConfirmLabel", "Login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitLoginUri(), ecorePackage.getEString(), "implicitLoginUri", "login", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitLogoutName(), ecorePackage.getEString(), "implicitLogoutName", "logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAuthentication_ImplicitLogoutLabel(), ecorePackage.getEString(), "implicitLogoutLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLogoutUnitLabel(), ecorePackage.getEString(), "implicitLogoutUnitLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLogoutActionLabel(), ecorePackage.getEString(), "implicitLogoutActionLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitLogoutConfirmLabel(), ecorePackage.getEString(), "implicitLogoutConfirmLabel", "Logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitLogoutUri(), ecorePackage.getEString(), "implicitLogoutUri", "logout", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitForgottenPasswordName(), ecorePackage.getEString(), "implicitForgottenPasswordName", "reset", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAuthentication_ImplicitForgottenPasswordLabel(), ecorePackage.getEString(), "implicitForgottenPasswordLabel", "Forgotten Password", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitForgottenPasswordUnitLabel(), ecorePackage.getEString(), "implicitForgottenPasswordUnitLabel", "Reset Password", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitForgottenPasswordActionLabel(), ecorePackage.getEString(), "implicitForgottenPasswordActionLabel", "Forgotten Password", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAuthentication_ImplicitForgottenPasswordConfirmLabel(), ecorePackage.getEString(), "implicitForgottenPasswordConfirmLabel", "Reset Password", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAuthentication_ImplicitForgottenPasswordUri(), ecorePackage.getEString(), "implicitForgottenPasswordUri", "reset-password", 0, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(localAuthenticationSystemEClass, LocalAuthenticationSystem.class, "LocalAuthenticationSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

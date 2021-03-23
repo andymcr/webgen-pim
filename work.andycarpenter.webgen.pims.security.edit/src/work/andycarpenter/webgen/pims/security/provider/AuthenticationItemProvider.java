@@ -64,16 +64,24 @@ public class AuthenticationItemProvider
 			addUserPropertyDescriptor(object);
 			addUserKeyPropertyDescriptor(object);
 			addImplicitRegistrationNamePropertyDescriptor(object);
-			addImplicitRegistrationLabelPropertyDescriptor(object);
+			addImplicitRegistrationUnitLabelPropertyDescriptor(object);
+			addImplicitRegistrationActionLabelPropertyDescriptor(object);
+			addImplicitRegistrationConfirmLabelPropertyDescriptor(object);
 			addImplicitRegistrationUriPropertyDescriptor(object);
 			addImplicitLoginNamePropertyDescriptor(object);
-			addImplicitLoginLabelPropertyDescriptor(object);
+			addImplicitLoginUnitLabelPropertyDescriptor(object);
+			addImplicitLoginActionLabelPropertyDescriptor(object);
+			addImplicitLoginConfirmLabelPropertyDescriptor(object);
 			addImplicitLoginUriPropertyDescriptor(object);
 			addImplicitLogoutNamePropertyDescriptor(object);
-			addImplicitLogoutLabelPropertyDescriptor(object);
+			addImplicitLogoutUnitLabelPropertyDescriptor(object);
+			addImplicitLogoutActionLabelPropertyDescriptor(object);
+			addImplicitLogoutConfirmLabelPropertyDescriptor(object);
 			addImplicitLogoutUriPropertyDescriptor(object);
 			addImplicitForgottenPasswordNamePropertyDescriptor(object);
-			addImplicitForgottenPasswordLabelPropertyDescriptor(object);
+			addImplicitForgottenPasswordUnitLabelPropertyDescriptor(object);
+			addImplicitForgottenPasswordActionLabelPropertyDescriptor(object);
+			addImplicitForgottenPasswordConfirmLabelPropertyDescriptor(object);
 			addImplicitForgottenPasswordUriPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -176,19 +184,63 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Registration Label feature.
+	 * This adds a property descriptor for the Implicit Registration Unit Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplicitRegistrationLabelPropertyDescriptor(Object object) {
+	protected void addImplicitRegistrationUnitLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitRegistrationLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL,
+				 getString("_UI_Authentication_implicitRegistrationUnitLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationUnitLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Registration Action Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitRegistrationActionLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitRegistrationActionLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationActionLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_ACTION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Registration Confirm Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitRegistrationConfirmLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitRegistrationConfirmLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitRegistrationConfirmLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_REGISTRATION_CONFIRM_LABEL,
 				 true,
 				 false,
 				 false,
@@ -242,19 +294,63 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Login Label feature.
+	 * This adds a property descriptor for the Implicit Login Unit Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplicitLoginLabelPropertyDescriptor(Object object) {
+	protected void addImplicitLoginUnitLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitLoginLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_LABEL,
+				 getString("_UI_Authentication_implicitLoginUnitLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginUnitLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_UNIT_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Login Action Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitLoginActionLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitLoginActionLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginActionLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_ACTION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Login Confirm Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitLoginConfirmLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitLoginConfirmLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLoginConfirmLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGIN_CONFIRM_LABEL,
 				 true,
 				 false,
 				 false,
@@ -308,19 +404,63 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Logout Label feature.
+	 * This adds a property descriptor for the Implicit Logout Unit Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplicitLogoutLabelPropertyDescriptor(Object object) {
+	protected void addImplicitLogoutUnitLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitLogoutLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL,
+				 getString("_UI_Authentication_implicitLogoutUnitLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutUnitLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_UNIT_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Logout Action Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitLogoutActionLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitLogoutActionLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutActionLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_ACTION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Logout Confirm Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitLogoutConfirmLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitLogoutConfirmLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitLogoutConfirmLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_LOGOUT_CONFIRM_LABEL,
 				 true,
 				 false,
 				 false,
@@ -374,24 +514,68 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Forgotten Password Label feature.
+	 * This adds a property descriptor for the Implicit Forgotten Password Unit Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplicitForgottenPasswordLabelPropertyDescriptor(Object object) {
+	protected void addImplicitForgottenPasswordUnitLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitForgottenPasswordLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordLabel_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL,
+				 getString("_UI_Authentication_implicitForgottenPasswordUnitLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUnitLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Action Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordActionLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordActionLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordActionLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Confirm Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordConfirmLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordConfirmLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordConfirmLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -445,16 +629,24 @@ public class AuthenticationItemProvider
 
 		switch (notification.getFeatureID(Authentication.class)) {
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_ACTION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_CONFIRM_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_URI:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_NAME:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_UNIT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_ACTION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_CONFIRM_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGIN_URI:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_NAME:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_UNIT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_ACTION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_CONFIRM_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_LOGOUT_URI:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

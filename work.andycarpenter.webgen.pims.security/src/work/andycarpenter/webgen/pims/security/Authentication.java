@@ -20,16 +20,24 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUserKey <em>User Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationName <em>Implicit Registration Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationLabel <em>Implicit Registration Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUnitLabel <em>Implicit Registration Unit Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationActionLabel <em>Implicit Registration Action Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationConfirmLabel <em>Implicit Registration Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUri <em>Implicit Registration Uri</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginName <em>Implicit Login Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginLabel <em>Implicit Login Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginUnitLabel <em>Implicit Login Unit Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginActionLabel <em>Implicit Login Action Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginConfirmLabel <em>Implicit Login Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginUri <em>Implicit Login Uri</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutName <em>Implicit Logout Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutLabel <em>Implicit Logout Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutUnitLabel <em>Implicit Logout Unit Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutActionLabel <em>Implicit Logout Action Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutConfirmLabel <em>Implicit Logout Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutUri <em>Implicit Logout Uri</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordName <em>Implicit Forgotten Password Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordLabel <em>Implicit Forgotten Password Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUnitLabel <em>Implicit Forgotten Password Unit Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordActionLabel <em>Implicit Forgotten Password Action Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordConfirmLabel <em>Implicit Forgotten Password Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUri <em>Implicit Forgotten Password Uri</em>}</li>
  * </ul>
  *
@@ -144,27 +152,73 @@ public interface Authentication extends EObject {
 	void setImplicitRegistrationName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Implicit Registration Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Implicit Registration Unit Label</b></em>' attribute.
 	 * The default value is <code>"Create Account"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implicit Registration Label</em>' attribute.
-	 * @see #setImplicitRegistrationLabel(String)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitRegistrationLabel()
+	 * @return the value of the '<em>Implicit Registration Unit Label</em>' attribute.
+	 * @see #setImplicitRegistrationUnitLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitRegistrationUnitLabel()
 	 * @model default="Create Account" ordered="false"
 	 * @generated
 	 */
-	String getImplicitRegistrationLabel();
+	String getImplicitRegistrationUnitLabel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationLabel <em>Implicit Registration Label</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUnitLabel <em>Implicit Registration Unit Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implicit Registration Label</em>' attribute.
-	 * @see #getImplicitRegistrationLabel()
+	 * @param value the new value of the '<em>Implicit Registration Unit Label</em>' attribute.
+	 * @see #getImplicitRegistrationUnitLabel()
 	 * @generated
 	 */
-	void setImplicitRegistrationLabel(String value);
+	void setImplicitRegistrationUnitLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Registration Action Label</b></em>' attribute.
+	 * The default value is <code>"Create Account"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Registration Action Label</em>' attribute.
+	 * @see #setImplicitRegistrationActionLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitRegistrationActionLabel()
+	 * @model default="Create Account"
+	 * @generated
+	 */
+	String getImplicitRegistrationActionLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationActionLabel <em>Implicit Registration Action Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Registration Action Label</em>' attribute.
+	 * @see #getImplicitRegistrationActionLabel()
+	 * @generated
+	 */
+	void setImplicitRegistrationActionLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Registration Confirm Label</b></em>' attribute.
+	 * The default value is <code>"Create Account"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Registration Confirm Label</em>' attribute.
+	 * @see #setImplicitRegistrationConfirmLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitRegistrationConfirmLabel()
+	 * @model default="Create Account"
+	 * @generated
+	 */
+	String getImplicitRegistrationConfirmLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationConfirmLabel <em>Implicit Registration Confirm Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Registration Confirm Label</em>' attribute.
+	 * @see #getImplicitRegistrationConfirmLabel()
+	 * @generated
+	 */
+	void setImplicitRegistrationConfirmLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Registration Uri</b></em>' attribute.
@@ -213,27 +267,73 @@ public interface Authentication extends EObject {
 	void setImplicitLoginName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Implicit Login Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Implicit Login Unit Label</b></em>' attribute.
 	 * The default value is <code>"Login"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implicit Login Label</em>' attribute.
-	 * @see #setImplicitLoginLabel(String)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLoginLabel()
+	 * @return the value of the '<em>Implicit Login Unit Label</em>' attribute.
+	 * @see #setImplicitLoginUnitLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLoginUnitLabel()
 	 * @model default="Login" ordered="false"
 	 * @generated
 	 */
-	String getImplicitLoginLabel();
+	String getImplicitLoginUnitLabel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginLabel <em>Implicit Login Label</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginUnitLabel <em>Implicit Login Unit Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implicit Login Label</em>' attribute.
-	 * @see #getImplicitLoginLabel()
+	 * @param value the new value of the '<em>Implicit Login Unit Label</em>' attribute.
+	 * @see #getImplicitLoginUnitLabel()
 	 * @generated
 	 */
-	void setImplicitLoginLabel(String value);
+	void setImplicitLoginUnitLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Login Action Label</b></em>' attribute.
+	 * The default value is <code>"Login"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Login Action Label</em>' attribute.
+	 * @see #setImplicitLoginActionLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLoginActionLabel()
+	 * @model default="Login"
+	 * @generated
+	 */
+	String getImplicitLoginActionLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginActionLabel <em>Implicit Login Action Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Login Action Label</em>' attribute.
+	 * @see #getImplicitLoginActionLabel()
+	 * @generated
+	 */
+	void setImplicitLoginActionLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Login Confirm Label</b></em>' attribute.
+	 * The default value is <code>"Login"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Login Confirm Label</em>' attribute.
+	 * @see #setImplicitLoginConfirmLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLoginConfirmLabel()
+	 * @model default="Login"
+	 * @generated
+	 */
+	String getImplicitLoginConfirmLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLoginConfirmLabel <em>Implicit Login Confirm Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Login Confirm Label</em>' attribute.
+	 * @see #getImplicitLoginConfirmLabel()
+	 * @generated
+	 */
+	void setImplicitLoginConfirmLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Login Uri</b></em>' attribute.
@@ -282,27 +382,73 @@ public interface Authentication extends EObject {
 	void setImplicitLogoutName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Implicit Logout Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Implicit Logout Unit Label</b></em>' attribute.
 	 * The default value is <code>"Logout"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implicit Logout Label</em>' attribute.
-	 * @see #setImplicitLogoutLabel(String)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLogoutLabel()
+	 * @return the value of the '<em>Implicit Logout Unit Label</em>' attribute.
+	 * @see #setImplicitLogoutUnitLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLogoutUnitLabel()
 	 * @model default="Logout" ordered="false"
 	 * @generated
 	 */
-	String getImplicitLogoutLabel();
+	String getImplicitLogoutUnitLabel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutLabel <em>Implicit Logout Label</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutUnitLabel <em>Implicit Logout Unit Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implicit Logout Label</em>' attribute.
-	 * @see #getImplicitLogoutLabel()
+	 * @param value the new value of the '<em>Implicit Logout Unit Label</em>' attribute.
+	 * @see #getImplicitLogoutUnitLabel()
 	 * @generated
 	 */
-	void setImplicitLogoutLabel(String value);
+	void setImplicitLogoutUnitLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Logout Action Label</b></em>' attribute.
+	 * The default value is <code>"Logout"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Logout Action Label</em>' attribute.
+	 * @see #setImplicitLogoutActionLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLogoutActionLabel()
+	 * @model default="Logout"
+	 * @generated
+	 */
+	String getImplicitLogoutActionLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutActionLabel <em>Implicit Logout Action Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Logout Action Label</em>' attribute.
+	 * @see #getImplicitLogoutActionLabel()
+	 * @generated
+	 */
+	void setImplicitLogoutActionLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Logout Confirm Label</b></em>' attribute.
+	 * The default value is <code>"Logout"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Logout Confirm Label</em>' attribute.
+	 * @see #setImplicitLogoutConfirmLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitLogoutConfirmLabel()
+	 * @model default="Logout"
+	 * @generated
+	 */
+	String getImplicitLogoutConfirmLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitLogoutConfirmLabel <em>Implicit Logout Confirm Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Logout Confirm Label</em>' attribute.
+	 * @see #getImplicitLogoutConfirmLabel()
+	 * @generated
+	 */
+	void setImplicitLogoutConfirmLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Logout Uri</b></em>' attribute.
@@ -351,27 +497,73 @@ public interface Authentication extends EObject {
 	void setImplicitForgottenPasswordName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Implicit Forgotten Password Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Unit Label</b></em>' attribute.
+	 * The default value is <code>"Reset Password"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Forgotten Password Unit Label</em>' attribute.
+	 * @see #setImplicitForgottenPasswordUnitLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordUnitLabel()
+	 * @model default="Reset Password" ordered="false"
+	 * @generated
+	 */
+	String getImplicitForgottenPasswordUnitLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUnitLabel <em>Implicit Forgotten Password Unit Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Forgotten Password Unit Label</em>' attribute.
+	 * @see #getImplicitForgottenPasswordUnitLabel()
+	 * @generated
+	 */
+	void setImplicitForgottenPasswordUnitLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Action Label</b></em>' attribute.
 	 * The default value is <code>"Forgotten Password"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implicit Forgotten Password Label</em>' attribute.
-	 * @see #setImplicitForgottenPasswordLabel(String)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordLabel()
-	 * @model default="Forgotten Password" ordered="false"
+	 * @return the value of the '<em>Implicit Forgotten Password Action Label</em>' attribute.
+	 * @see #setImplicitForgottenPasswordActionLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordActionLabel()
+	 * @model default="Forgotten Password"
 	 * @generated
 	 */
-	String getImplicitForgottenPasswordLabel();
+	String getImplicitForgottenPasswordActionLabel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordLabel <em>Implicit Forgotten Password Label</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordActionLabel <em>Implicit Forgotten Password Action Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implicit Forgotten Password Label</em>' attribute.
-	 * @see #getImplicitForgottenPasswordLabel()
+	 * @param value the new value of the '<em>Implicit Forgotten Password Action Label</em>' attribute.
+	 * @see #getImplicitForgottenPasswordActionLabel()
 	 * @generated
 	 */
-	void setImplicitForgottenPasswordLabel(String value);
+	void setImplicitForgottenPasswordActionLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Confirm Label</b></em>' attribute.
+	 * The default value is <code>"Reset Password"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Forgotten Password Confirm Label</em>' attribute.
+	 * @see #setImplicitForgottenPasswordConfirmLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordConfirmLabel()
+	 * @model default="Reset Password"
+	 * @generated
+	 */
+	String getImplicitForgottenPasswordConfirmLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordConfirmLabel <em>Implicit Forgotten Password Confirm Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Forgotten Password Confirm Label</em>' attribute.
+	 * @see #getImplicitForgottenPasswordConfirmLabel()
+	 * @generated
+	 */
+	void setImplicitForgottenPasswordConfirmLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.

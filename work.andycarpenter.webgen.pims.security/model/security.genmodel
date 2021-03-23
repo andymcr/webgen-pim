@@ -23,16 +23,24 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Security"
           propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//Authentication/userKey"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationUnitLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationActionLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationConfirmLabel"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitRegistrationUri"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginUnitLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginActionLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginConfirmLabel"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLoginUri"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutUnitLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutActionLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutConfirmLabel"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitLogoutUri"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordUnitLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordActionLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordConfirmLabel"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/implicitForgottenPasswordUri"/>
     </genClasses>
     <genClasses ecoreClass="security.ecore#//LocalAuthenticationSystem">

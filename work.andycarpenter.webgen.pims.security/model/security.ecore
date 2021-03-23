@@ -27,30 +27,48 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationName"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="registration"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationLabel"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationUnitLabel"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Create Account"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationActionLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Create Account"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationConfirmLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Create Account"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitRegistrationUri"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="register"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginName" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="login"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginLabel" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginUnitLabel"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Login"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginActionLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Login"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginConfirmLabel"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Login"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLoginUri" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="login"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutName" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="logout"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutLabel" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutUnitLabel"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Logout"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutActionLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Logout"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutConfirmLabel"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Logout"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitLogoutUri" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="logout"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordName"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="reset"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordLabel"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUnitLabel"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Forgotten Password"/>
+        defaultValueLiteral="Reset Password"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordActionLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Forgotten Password"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordConfirmLabel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Reset Password"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUri"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="reset-password"/>
