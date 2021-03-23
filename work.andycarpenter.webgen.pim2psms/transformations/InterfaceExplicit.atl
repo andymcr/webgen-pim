@@ -359,6 +359,7 @@ abstract rule UnitField {
 	from website : Website!UnitField
 	to waf : WAF!UnitField (
 		localTitle <- website.title,
+		localHelp <- website.help,
 		authorisationRoles <- website.requiresRole,
 		hideWhen <- website.hideWhen,
 		escapeHTML <- website.escapeHTML,

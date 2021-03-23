@@ -55,6 +55,7 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 
 			addRequiresRolePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
+			addHelpPropertyDescriptor(object);
 			addEscapeHTMLPropertyDescriptor(object);
 			addCollectionDisplayOptionPropertyDescriptor(object);
 			addTruncatePropertyDescriptor(object);
@@ -106,6 +107,28 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 				 getString("_UI_UnitField_title_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UnitField_title_feature", "_UI_UnitField_type"),
 				 WebuiPackage.Literals.UNIT_FIELD__TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Help feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHelpPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitField_help_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitField_help_feature", "_UI_UnitField_type"),
+				 WebuiPackage.Literals.UNIT_FIELD__HELP,
 				 true,
 				 false,
 				 false,
@@ -415,6 +438,7 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 		switch (notification.getFeatureID(InterfaceField.class)) {
 			case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE:
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
+			case WebuiPackage.INTERFACE_FIELD__HELP:
 			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
 			case WebuiPackage.INTERFACE_FIELD__TRUNCATE:

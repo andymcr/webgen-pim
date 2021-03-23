@@ -34,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHelp <em>Help</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isTruncate <em>Truncate</em>}</li>
@@ -99,6 +100,26 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHelp() <em>Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHelp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HELP_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getHelp() <em>Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHelp()
+	 * @generated
+	 * @ordered
+	 */
+	protected String help = HELP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isEscapeHTML() <em>Escape HTML</em>}' attribute.
@@ -469,6 +490,29 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 */
 	@Override
+	public String getHelp() {
+		return help;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHelp(String newHelp) {
+		String oldHelp = help;
+		help = newHelp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__HELP, oldHelp, help));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isEscapeHTML() {
 		return escapeHTML;
 	}
@@ -795,6 +839,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return getHideWhen();
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				return getTitle();
+			case WebuiPackage.INTERFACE_FIELD__HELP:
+				return getHelp();
 			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
 				return isEscapeHTML();
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
@@ -841,6 +887,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return;
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				setTitle((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__HELP:
+				setHelp((String)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
 				setEscapeHTML((Boolean)newValue);
@@ -899,6 +948,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
+			case WebuiPackage.INTERFACE_FIELD__HELP:
+				setHelp(HELP_EDEFAULT);
+				return;
 			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
 				setEscapeHTML(ESCAPE_HTML_EDEFAULT);
 				return;
@@ -952,6 +1004,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return hideWhen != null;
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+			case WebuiPackage.INTERFACE_FIELD__HELP:
+				return HELP_EDEFAULT == null ? help != null : !HELP_EDEFAULT.equals(help);
 			case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML:
 				return escapeHTML != ESCAPE_HTML_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION:
@@ -991,6 +1045,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE: return WebuiPackage.UNIT_FIELD__REQUIRES_ROLE;
 				case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN: return WebuiPackage.UNIT_FIELD__HIDE_WHEN;
 				case WebuiPackage.INTERFACE_FIELD__TITLE: return WebuiPackage.UNIT_FIELD__TITLE;
+				case WebuiPackage.INTERFACE_FIELD__HELP: return WebuiPackage.UNIT_FIELD__HELP;
 				case WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML: return WebuiPackage.UNIT_FIELD__ESCAPE_HTML;
 				case WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION;
 				case WebuiPackage.INTERFACE_FIELD__TRUNCATE: return WebuiPackage.UNIT_FIELD__TRUNCATE;
@@ -1015,6 +1070,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE: return WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE;
 				case WebuiPackage.UNIT_FIELD__HIDE_WHEN: return WebuiPackage.INTERFACE_FIELD__HIDE_WHEN;
 				case WebuiPackage.UNIT_FIELD__TITLE: return WebuiPackage.INTERFACE_FIELD__TITLE;
+				case WebuiPackage.UNIT_FIELD__HELP: return WebuiPackage.INTERFACE_FIELD__HELP;
 				case WebuiPackage.UNIT_FIELD__ESCAPE_HTML: return WebuiPackage.INTERFACE_FIELD__ESCAPE_HTML;
 				case WebuiPackage.UNIT_FIELD__COLLECTION_DISPLAY_OPTION: return WebuiPackage.INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION;
 				case WebuiPackage.UNIT_FIELD__TRUNCATE: return WebuiPackage.INTERFACE_FIELD__TRUNCATE;
@@ -1040,6 +1096,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		result.append(requiresRole);
 		result.append(", title: ");
 		result.append(title);
+		result.append(", help: ");
+		result.append(help);
 		result.append(", escapeHTML: ");
 		result.append(escapeHTML);
 		result.append(", collectionDisplayOption: ");

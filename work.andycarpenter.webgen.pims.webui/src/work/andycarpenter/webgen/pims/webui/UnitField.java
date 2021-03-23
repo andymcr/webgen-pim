@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getTitle <em>Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHelp <em>Help</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isEscapeHTML <em>Escape HTML</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getCollectionDisplayOption <em>Collection Display Option</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isTruncate <em>Truncate</em>}</li>
@@ -137,6 +138,29 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setTitle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Help</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Help</em>' attribute.
+	 * @see #setHelp(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_Help()
+	 * @model default=""
+	 * @generated
+	 */
+	String getHelp();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getHelp <em>Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Help</em>' attribute.
+	 * @see #getHelp()
+	 * @generated
+	 */
+	void setHelp(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Escape HTML</b></em>' attribute.
