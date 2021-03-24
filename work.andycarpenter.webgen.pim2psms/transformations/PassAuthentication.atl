@@ -393,7 +393,13 @@ lazy rule implicitUsernameField {
 			else
 				'Username'
 			endif,
-		localHelp <- 'Hello Andy'
+		localHelp <- 'Hello Andy',
+		fieldDataType <-
+			if website.authenticationKey = #Email then
+				thisModule.findOrmDataType('Email')
+			else
+				thisModule.findOrmDataType('String')
+			endif
 	)
 	do {
 		waf;
@@ -407,7 +413,8 @@ lazy rule implicitPasswordField {
 		displayLabel <- 'Password',
 		obfuscateFormFields <- true,
 		localTitle <- 'Password',
-		localPlaceholder <- 'Password'
+		localPlaceholder <- 'Password',
+		fieldDataType <- thisModule.findOrmDataType('String')
 	)
 	do {
 		waf;
