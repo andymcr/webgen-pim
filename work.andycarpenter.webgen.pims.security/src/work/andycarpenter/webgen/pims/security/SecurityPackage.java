@@ -304,13 +304,40 @@ public interface SecurityPackage extends EPackage {
 	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = 21;
 
 	/**
-	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Request</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = 22;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = 22;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Email Sent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = 23;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Reset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET = 24;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = 25;
 
 	/**
 	 * The number of structural features of the '<em>Authentication</em>' class.
@@ -319,7 +346,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION_FEATURE_COUNT = 23;
+	int AUTHENTICATION_FEATURE_COUNT = 26;
 
 	/**
 	 * The number of operations of the '<em>Authentication</em>' class.
@@ -539,13 +566,40 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Request</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_URI = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI;
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Email Sent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Reset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Authentication Model</b></em>' reference.
@@ -927,13 +981,40 @@ public interface SecurityPackage extends EPackage {
 	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Request</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI;
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Email Sent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Reset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET;
+
+	/**
+	 * The feature id for the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAS_AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Login Label</b></em>' attribute.
@@ -1284,15 +1365,48 @@ public interface SecurityPackage extends EPackage {
 	EAttribute getAuthentication_ImplicitForgottenPasswordConfirmLabel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUri <em>Implicit Forgotten Password Uri</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriRequest <em>Implicit Forgotten Password Uri Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Uri</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUri()
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Uri Request</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriRequest()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EAttribute getAuthentication_ImplicitForgottenPasswordUri();
+	EAttribute getAuthentication_ImplicitForgottenPasswordUriRequest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriEmailSent <em>Implicit Forgotten Password Uri Email Sent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Uri Email Sent</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriEmailSent()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordUriEmailSent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriReset <em>Implicit Forgotten Password Uri Reset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Uri Reset</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriReset()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordUriReset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSubject <em>Implicit Forgotten Password Email Subject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Implicit Forgotten Password Email Subject</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSubject()
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	EAttribute getAuthentication_ImplicitForgottenPasswordEmailSubject();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem <em>Local Authentication System</em>}'.
@@ -1771,12 +1885,36 @@ public interface SecurityPackage extends EPackage {
 		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = eINSTANCE.getAuthentication_ImplicitForgottenPasswordConfirmLabel();
 
 		/**
-		 * The meta object literal for the '<em><b>Implicit Forgotten Password Uri</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Uri Request</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI = eINSTANCE.getAuthentication_ImplicitForgottenPasswordUri();
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = eINSTANCE.getAuthentication_ImplicitForgottenPasswordUriRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Uri Email Sent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = eINSTANCE.getAuthentication_ImplicitForgottenPasswordUriEmailSent();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Uri Reset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET = eINSTANCE.getAuthentication_ImplicitForgottenPasswordUriReset();
+
+		/**
+		 * The meta object literal for the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = eINSTANCE.getAuthentication_ImplicitForgottenPasswordEmailSubject();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl <em>Local Authentication System</em>}' class.

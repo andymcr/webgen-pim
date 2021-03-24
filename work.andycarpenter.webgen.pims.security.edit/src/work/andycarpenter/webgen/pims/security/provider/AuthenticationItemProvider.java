@@ -82,7 +82,10 @@ public class AuthenticationItemProvider
 			addImplicitForgottenPasswordUnitLabelPropertyDescriptor(object);
 			addImplicitForgottenPasswordActionLabelPropertyDescriptor(object);
 			addImplicitForgottenPasswordConfirmLabelPropertyDescriptor(object);
-			addImplicitForgottenPasswordUriPropertyDescriptor(object);
+			addImplicitForgottenPasswordUriRequestPropertyDescriptor(object);
+			addImplicitForgottenPasswordUriEmailSentPropertyDescriptor(object);
+			addImplicitForgottenPasswordUriResetPropertyDescriptor(object);
+			addImplicitForgottenPasswordEmailSubjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -531,7 +534,7 @@ public class AuthenticationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -553,7 +556,7 @@ public class AuthenticationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -575,29 +578,95 @@ public class AuthenticationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Forgotten Password Uri feature.
+	 * This adds a property descriptor for the Implicit Forgotten Password Uri Request feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplicitForgottenPasswordUriPropertyDescriptor(Object object) {
+	protected void addImplicitForgottenPasswordUriRequestPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitForgottenPasswordUri_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUri_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI,
+				 getString("_UI_Authentication_implicitForgottenPasswordUriRequest_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUriRequest_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Uri Email Sent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordUriEmailSentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordUriEmailSent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUriEmailSent_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Uri Reset feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordUriResetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordUriReset_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUriReset_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavugationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Email Subject feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordEmailSubjectPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordEmailSubject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordEmailSubject_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -647,7 +716,10 @@ public class AuthenticationItemProvider
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

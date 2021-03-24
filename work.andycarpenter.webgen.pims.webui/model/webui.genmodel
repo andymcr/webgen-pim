@@ -431,7 +431,11 @@
     <genClasses ecoreClass="webui.ecore#//RegistrationUnit"/>
     <genClasses ecoreClass="webui.ecore#//LoginUnit"/>
     <genClasses ecoreClass="webui.ecore#//LogoutUnit"/>
-    <genClasses ecoreClass="webui.ecore#//ForgottenPasswordUnit"/>
+    <genClasses ecoreClass="webui.ecore#//ForgottenPasswordUnit">
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//ForgottenPasswordUnit/uriEmailSent"/>
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//ForgottenPasswordUnit/uriResetPassword"/>
+      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//ForgottenPasswordUnit/emailSubject"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//ActionContainer">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
           ecoreFeature="ecore:EReference webui.ecore#//ActionContainer/actions"/>

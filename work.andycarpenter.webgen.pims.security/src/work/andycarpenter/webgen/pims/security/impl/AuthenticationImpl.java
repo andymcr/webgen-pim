@@ -47,7 +47,10 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUnitLabel <em>Implicit Forgotten Password Unit Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordActionLabel <em>Implicit Forgotten Password Action Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordConfirmLabel <em>Implicit Forgotten Password Confirm Label</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUri <em>Implicit Forgotten Password Uri</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUriRequest <em>Implicit Forgotten Password Uri Request</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUriEmailSent <em>Implicit Forgotten Password Uri Email Sent</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordUriReset <em>Implicit Forgotten Password Uri Reset</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitForgottenPasswordEmailSubject <em>Implicit Forgotten Password Email Subject</em>}</li>
  * </ul>
  *
  * @generated
@@ -454,24 +457,84 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	protected String implicitForgottenPasswordConfirmLabel = IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getImplicitForgottenPasswordUri() <em>Implicit Forgotten Password Uri</em>}' attribute.
+	 * The default value of the '{@link #getImplicitForgottenPasswordUriRequest() <em>Implicit Forgotten Password Uri Request</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImplicitForgottenPasswordUri()
+	 * @see #getImplicitForgottenPasswordUriRequest()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT = "reset-password";
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST_EDEFAULT = "reset-password";
 
 	/**
-	 * The cached value of the '{@link #getImplicitForgottenPasswordUri() <em>Implicit Forgotten Password Uri</em>}' attribute.
+	 * The cached value of the '{@link #getImplicitForgottenPasswordUriRequest() <em>Implicit Forgotten Password Uri Request</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImplicitForgottenPasswordUri()
+	 * @see #getImplicitForgottenPasswordUriRequest()
 	 * @generated
 	 * @ordered
 	 */
-	protected String implicitForgottenPasswordUri = IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT;
+	protected String implicitForgottenPasswordUriRequest = IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordUriEmailSent() <em>Implicit Forgotten Password Uri Email Sent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUriEmailSent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT_EDEFAULT = "check-email";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordUriEmailSent() <em>Implicit Forgotten Password Uri Email Sent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUriEmailSent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordUriEmailSent = IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordUriReset() <em>Implicit Forgotten Password Uri Reset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUriReset()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET_EDEFAULT = "reset";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordUriReset() <em>Implicit Forgotten Password Uri Reset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordUriReset()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordUriReset = IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImplicitForgottenPasswordEmailSubject() <em>Implicit Forgotten Password Email Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordEmailSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT_EDEFAULT = "Your password reset request";
+
+	/**
+	 * The cached value of the '{@link #getImplicitForgottenPasswordEmailSubject() <em>Implicit Forgotten Password Email Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplicitForgottenPasswordEmailSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected String implicitForgottenPasswordEmailSubject = IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1058,8 +1121,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public String getImplicitForgottenPasswordUri() {
-		return implicitForgottenPasswordUri;
+	public String getImplicitForgottenPasswordUriRequest() {
+		return implicitForgottenPasswordUriRequest;
 	}
 
 	/**
@@ -1068,11 +1131,80 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setImplicitForgottenPasswordUri(String newImplicitForgottenPasswordUri) {
-		String oldImplicitForgottenPasswordUri = implicitForgottenPasswordUri;
-		implicitForgottenPasswordUri = newImplicitForgottenPasswordUri;
+	public void setImplicitForgottenPasswordUriRequest(String newImplicitForgottenPasswordUriRequest) {
+		String oldImplicitForgottenPasswordUriRequest = implicitForgottenPasswordUriRequest;
+		implicitForgottenPasswordUriRequest = newImplicitForgottenPasswordUriRequest;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI, oldImplicitForgottenPasswordUri, implicitForgottenPasswordUri));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST, oldImplicitForgottenPasswordUriRequest, implicitForgottenPasswordUriRequest));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordUriEmailSent() {
+		return implicitForgottenPasswordUriEmailSent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordUriEmailSent(String newImplicitForgottenPasswordUriEmailSent) {
+		String oldImplicitForgottenPasswordUriEmailSent = implicitForgottenPasswordUriEmailSent;
+		implicitForgottenPasswordUriEmailSent = newImplicitForgottenPasswordUriEmailSent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT, oldImplicitForgottenPasswordUriEmailSent, implicitForgottenPasswordUriEmailSent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordUriReset() {
+		return implicitForgottenPasswordUriReset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordUriReset(String newImplicitForgottenPasswordUriReset) {
+		String oldImplicitForgottenPasswordUriReset = implicitForgottenPasswordUriReset;
+		implicitForgottenPasswordUriReset = newImplicitForgottenPasswordUriReset;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET, oldImplicitForgottenPasswordUriReset, implicitForgottenPasswordUriReset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImplicitForgottenPasswordEmailSubject() {
+		return implicitForgottenPasswordEmailSubject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplicitForgottenPasswordEmailSubject(String newImplicitForgottenPasswordEmailSubject) {
+		String oldImplicitForgottenPasswordEmailSubject = implicitForgottenPasswordEmailSubject;
+		implicitForgottenPasswordEmailSubject = newImplicitForgottenPasswordEmailSubject;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT, oldImplicitForgottenPasswordEmailSubject, implicitForgottenPasswordEmailSubject));
 	}
 
 	/**
@@ -1173,8 +1305,14 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				return getImplicitForgottenPasswordActionLabel();
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 				return getImplicitForgottenPasswordConfirmLabel();
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
-				return getImplicitForgottenPasswordUri();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
+				return getImplicitForgottenPasswordUriRequest();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
+				return getImplicitForgottenPasswordUriEmailSent();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
+				return getImplicitForgottenPasswordUriReset();
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
+				return getImplicitForgottenPasswordEmailSubject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1253,8 +1391,17 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 				setImplicitForgottenPasswordConfirmLabel((String)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
-				setImplicitForgottenPasswordUri((String)newValue);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
+				setImplicitForgottenPasswordUriRequest((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
+				setImplicitForgottenPasswordUriEmailSent((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
+				setImplicitForgottenPasswordUriReset((String)newValue);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
+				setImplicitForgottenPasswordEmailSubject((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1334,8 +1481,17 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 				setImplicitForgottenPasswordConfirmLabel(IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL_EDEFAULT);
 				return;
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
-				setImplicitForgottenPasswordUri(IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
+				setImplicitForgottenPasswordUriRequest(IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
+				setImplicitForgottenPasswordUriEmailSent(IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
+				setImplicitForgottenPasswordUriReset(IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET_EDEFAULT);
+				return;
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
+				setImplicitForgottenPasswordEmailSubject(IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1393,8 +1549,14 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 				return IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL_EDEFAULT == null ? implicitForgottenPasswordActionLabel != null : !IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL_EDEFAULT.equals(implicitForgottenPasswordActionLabel);
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 				return IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL_EDEFAULT == null ? implicitForgottenPasswordConfirmLabel != null : !IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL_EDEFAULT.equals(implicitForgottenPasswordConfirmLabel);
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI:
-				return IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT == null ? implicitForgottenPasswordUri != null : !IMPLICIT_FORGOTTEN_PASSWORD_URI_EDEFAULT.equals(implicitForgottenPasswordUri);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
+				return IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST_EDEFAULT == null ? implicitForgottenPasswordUriRequest != null : !IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST_EDEFAULT.equals(implicitForgottenPasswordUriRequest);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
+				return IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT_EDEFAULT == null ? implicitForgottenPasswordUriEmailSent != null : !IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT_EDEFAULT.equals(implicitForgottenPasswordUriEmailSent);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
+				return IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET_EDEFAULT == null ? implicitForgottenPasswordUriReset != null : !IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET_EDEFAULT.equals(implicitForgottenPasswordUriReset);
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
+				return IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT_EDEFAULT == null ? implicitForgottenPasswordEmailSubject != null : !IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT_EDEFAULT.equals(implicitForgottenPasswordEmailSubject);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1447,8 +1609,14 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 		result.append(implicitForgottenPasswordActionLabel);
 		result.append(", implicitForgottenPasswordConfirmLabel: ");
 		result.append(implicitForgottenPasswordConfirmLabel);
-		result.append(", implicitForgottenPasswordUri: ");
-		result.append(implicitForgottenPasswordUri);
+		result.append(", implicitForgottenPasswordUriRequest: ");
+		result.append(implicitForgottenPasswordUriRequest);
+		result.append(", implicitForgottenPasswordUriEmailSent: ");
+		result.append(implicitForgottenPasswordUriEmailSent);
+		result.append(", implicitForgottenPasswordUriReset: ");
+		result.append(implicitForgottenPasswordUriReset);
+		result.append(", implicitForgottenPasswordEmailSubject: ");
+		result.append(implicitForgottenPasswordEmailSubject);
 		result.append(')');
 		return result.toString();
 	}

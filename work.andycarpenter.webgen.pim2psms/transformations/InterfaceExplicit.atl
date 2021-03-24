@@ -891,6 +891,9 @@ rule LogoutUnit {
 rule ForgottenPasswordUnit {
 	from website : Website!ForgottenPasswordUnit
 	to waf : WAF!ForgottenPasswordUnit (
+		uriEmailSent <- website.uriEmailSent,
+		uriReset <- website.reset,
+		emailSubject <- website.emailSubject
 	)
 }
 

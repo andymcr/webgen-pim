@@ -69,9 +69,18 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Forgotten Password"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordConfirmLabel"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Reset Password"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUri"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUriRequest"
         ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="reset-password"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUriEmailSent"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="check-email"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordUriReset"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="reset"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implicitForgottenPasswordEmailSubject"
+        ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Your password reset request"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationKeyTypes">
     <eLiterals name="Any"/>

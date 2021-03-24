@@ -222,7 +222,9 @@ unique lazy rule implicitForgottenPasswordUnit {
 	to waf : WAF!ForgottenPasswordUnit (
 		name <- website.implicitForgottenPasswordName,
 		displayLabel <- website.implicitForgottenPasswordUnitLabel,
-		uriElement <- website.implicitForgottenPasswordUri,
+		uriElement <- website.implicitForgottenPasswordUriRequest,
+		uriEmailSent <- website.implicitForgottenPasswordUriEmailSent,
+		uriResetPassword <- website.implicitForgottenPasswordUriReset,
 		contentType <-
 			if website.resetPasswordRequestModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.resetPasswordRequestName)
@@ -237,7 +239,8 @@ unique lazy rule implicitForgottenPasswordUnit {
 					Sequence{ thisModule.implicitRegistrationAction(website)}
 				else
 					Sequence{}
-				endif)
+				endif),
+		emailSubject <- website.implicitForgottenPasswordEmailSubject
 	)
 }
 

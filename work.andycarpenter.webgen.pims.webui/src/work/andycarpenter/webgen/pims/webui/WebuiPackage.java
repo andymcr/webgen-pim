@@ -15860,13 +15860,40 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Uri Email Sent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT = EDIT_UNIT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Uri Reset Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD = EDIT_UNIT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Email Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT = EDIT_UNIT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Forgotten Password Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
+	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Forgotten Password Unit</em>' class.
@@ -20743,6 +20770,39 @@ public interface WebuiPackage extends EPackage {
 	EClass getForgottenPasswordUnit();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriEmailSent <em>Uri Email Sent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uri Email Sent</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriEmailSent()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_UriEmailSent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriResetPassword <em>Uri Reset Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uri Reset Password</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriResetPassword()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_UriResetPassword();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSubject <em>Email Subject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email Subject</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSubject()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_EmailSubject();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -23781,6 +23841,30 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FORGOTTEN_PASSWORD_UNIT = eINSTANCE.getForgottenPasswordUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Uri Email Sent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT = eINSTANCE.getForgottenPasswordUnit_UriEmailSent();
+
+		/**
+		 * The meta object literal for the '<em><b>Uri Reset Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD = eINSTANCE.getForgottenPasswordUnit_UriResetPassword();
+
+		/**
+		 * The meta object literal for the '<em><b>Email Subject</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT = eINSTANCE.getForgottenPasswordUnit_EmailSubject();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}' class.

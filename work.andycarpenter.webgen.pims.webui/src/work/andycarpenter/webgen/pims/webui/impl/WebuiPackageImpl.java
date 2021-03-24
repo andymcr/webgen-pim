@@ -3528,6 +3528,36 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getForgottenPasswordUnit_UriEmailSent() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getForgottenPasswordUnit_UriResetPassword() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getForgottenPasswordUnit_EmailSubject() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getActionContainer() {
 		return actionContainerEClass;
 	}
@@ -4554,6 +4584,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		logoutUnitEClass = createEClass(LOGOUT_UNIT);
 
 		forgottenPasswordUnitEClass = createEClass(FORGOTTEN_PASSWORD_UNIT);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT);
 
 		actionContainerEClass = createEClass(ACTION_CONTAINER);
 		createEReference(actionContainerEClass, ACTION_CONTAINER__ACTIONS);
@@ -5096,6 +5129,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(logoutUnitEClass, LogoutUnit.class, "LogoutUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(forgottenPasswordUnitEClass, ForgottenPasswordUnit.class, "ForgottenPasswordUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getForgottenPasswordUnit_UriEmailSent(), ecorePackage.getEString(), "uriEmailSent", "", 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForgottenPasswordUnit_UriResetPassword(), ecorePackage.getEString(), "uriResetPassword", "", 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForgottenPasswordUnit_EmailSubject(), ecorePackage.getEString(), "emailSubject", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionContainerEClass, ActionContainer.class, "ActionContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionContainer_Actions(), this.getAction(), this.getAction_UsedBy(), "actions", null, 0, -1, ActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
