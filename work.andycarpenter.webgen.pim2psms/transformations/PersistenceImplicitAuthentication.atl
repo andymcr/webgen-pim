@@ -162,7 +162,7 @@ unique lazy rule implicitAuthenticationEntity {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.authenticationName,
-		tableName <- 'security.authentications',
+		tableName <- 'authentications',
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
@@ -415,7 +415,7 @@ lazy rule implicitResetPasswordRequestEntity {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
 		name <- website.resetPasswordRequestName,
-		tableName <- 'security.resetpasswordrequests',
+		tableName <- 'resetpasswordrequests',
 		autoKeyName <- 'id',
 		autoKeyPersistentType <- 'integer',
 		displayLabel <- website.resetPasswordRequestName.createLabel(),
@@ -425,7 +425,12 @@ lazy rule implicitResetPasswordRequestEntity {
 	selector : ORM!SingletonElement (
 		name <- 'selector',
 		displayLabel <- 'Selector',
-		attributeDataType <- website.getDataType('String'),
+		attributeDataType <-
+			if website.authenticationKey = #Email then
+				website.getDataType('Email')
+			else
+				website.getDataType('String')
+			endif,
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'selector',
