@@ -26,7 +26,6 @@ import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
 import work.andycarpenter.webgen.pims.webui.AuthenticationMenuPlacement;
 import work.andycarpenter.webgen.pims.webui.Badge;
-import work.andycarpenter.webgen.pims.webui.CaptchaField;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
 import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
@@ -385,13 +384,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass dateFieldEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass captchaFieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2688,16 +2680,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getCaptchaField() {
-		return captchaFieldEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getSelectableUnit() {
 		return selectableUnitEClass;
 	}
@@ -3038,8 +3020,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEditUnit_DisableWhen() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEditUnit_UseCaptcha() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3048,7 +3030,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEditUnit_ConfirmDestination() {
+	public EReference getEditUnit_DisableWhen() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3058,8 +3040,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getEditUnit_ConfirmDestination() {
+		return (EReference)editUnitEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getEditUnit_ConfirmLabel() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3069,16 +3061,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getEditUnit_ConfirmMessage() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEditUnit_SuccessMessage() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3088,7 +3070,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEditUnit_CancelDestination() {
+	public EReference getEditUnit_SuccessMessage() {
 		return (EReference)editUnitEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3098,8 +3080,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getEditUnit_CancelDestination() {
+		return (EReference)editUnitEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getEditUnit_CancelLabel() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -3109,7 +3101,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getEditUnit_UnitInputGroupClass() {
-		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -4453,8 +4445,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(dateFieldEClass, DATE_FIELD__DETAILS);
 		createEAttribute(dateFieldEClass, DATE_FIELD__FORMAT);
 
-		captchaFieldEClass = createEClass(CAPTCHA_FIELD);
-
 		selectableUnitEClass = createEClass(SELECTABLE_UNIT);
 
 		singletonUnitEClass = createEClass(SINGLETON_UNIT);
@@ -4492,6 +4482,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS);
 
 		editUnitEClass = createEClass(EDIT_UNIT);
+		createEAttribute(editUnitEClass, EDIT_UNIT__USE_CAPTCHA);
 		createEReference(editUnitEClass, EDIT_UNIT__DISABLE_WHEN);
 		createEReference(editUnitEClass, EDIT_UNIT__CONFIRM_DESTINATION);
 		createEAttribute(editUnitEClass, EDIT_UNIT__CONFIRM_LABEL);
@@ -4721,7 +4712,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		interfaceFieldEClass.getESuperTypes().add(this.getUnitField());
 		dataTypeFieldEClass.getESuperTypes().add(this.getInterfaceField());
 		dateFieldEClass.getESuperTypes().add(this.getInterfaceField());
-		captchaFieldEClass.getESuperTypes().add(this.getInterfaceField());
 		singletonUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		collectionUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		collectionUnitEClass.getESuperTypes().add(this.getSelectableUnit());
@@ -4998,8 +4988,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getDateField_Details(), thePersistencePackage.getDateDetails(), "details", "DateOnly", 1, 1, DateField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDateField_Format(), ecorePackage.getEString(), "format", null, 0, 1, DateField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(captchaFieldEClass, CaptchaField.class, "CaptchaField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(selectableUnitEClass, SelectableUnit.class, "SelectableUnit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(singletonUnitEClass, SingletonUnit.class, "SingletonUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5037,6 +5025,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCollectionUnit_PaginationAnchorClass(), ecorePackage.getEString(), "paginationAnchorClass", "page-link", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(editUnitEClass, EditUnit.class, "EditUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEditUnit_UseCaptcha(), ecorePackage.getEBoolean(), "useCaptcha", "false", 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_DisableWhen(), theExpressionPackage.getPredicate(), null, "disableWhen", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_ConfirmDestination(), this.getPage(), null, "confirmDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEditUnit_ConfirmLabel(), ecorePackage.getEString(), "confirmLabel", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

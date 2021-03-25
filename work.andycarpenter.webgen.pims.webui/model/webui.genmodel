@@ -287,7 +287,6 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DateField/details"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DateField/format"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//CaptchaField"/>
     <genClasses image="false" ecoreClass="webui.ecore#//SelectableUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//SingletonUnit">
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
@@ -333,6 +332,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//EditUnit">
+      <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/useCaptcha"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference webui.ecore#//EditUnit/disableWhen"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"

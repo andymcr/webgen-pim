@@ -499,7 +499,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CaptchaField" eSuperTypes="#//InterfaceField"/>
   <eClassifiers xsi:type="ecore:EClass" name="SelectableUnit" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingletonUnit" abstract="true" eSuperTypes="#//DynamicUnit">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -583,6 +582,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="page-link"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditUnit" abstract="true" eSuperTypes="#//SingletonUnit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="disableWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmDestination" ordered="false"

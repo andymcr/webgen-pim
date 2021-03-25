@@ -5150,196 +5150,6 @@ public interface WebuiPackage extends EPackage {
 	int DATE_FIELD_OPERATION_COUNT = INTERFACE_FIELD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CaptchaFieldImpl <em>Captcha Field</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.CaptchaFieldImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCaptchaField()
-	 * @generated
-	 */
-	int CAPTCHA_FIELD = 39;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__NAME = INTERFACE_FIELD__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__DISPLAY_LABEL = INTERFACE_FIELD__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__DISPLAYED_ON = INTERFACE_FIELD__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__REQUIRES_ROLE = INTERFACE_FIELD__REQUIRES_ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__HIDE_WHEN = INTERFACE_FIELD__HIDE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__TITLE = INTERFACE_FIELD__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Help</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__HELP = INTERFACE_FIELD__HELP;
-
-	/**
-	 * The feature id for the '<em><b>Escape HTML</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__ESCAPE_HTML = INTERFACE_FIELD__ESCAPE_HTML;
-
-	/**
-	 * The feature id for the '<em><b>Collection Display Option</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__COLLECTION_DISPLAY_OPTION = INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION;
-
-	/**
-	 * The feature id for the '<em><b>Truncate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__TRUNCATE = INTERFACE_FIELD__TRUNCATE;
-
-	/**
-	 * The feature id for the '<em><b>Date Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__DATE_FORMAT = INTERFACE_FIELD__DATE_FORMAT;
-
-	/**
-	 * The feature id for the '<em><b>Disable Input</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__DISABLE_INPUT = INTERFACE_FIELD__DISABLE_INPUT;
-
-	/**
-	 * The feature id for the '<em><b>Required</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__REQUIRED = INTERFACE_FIELD__REQUIRED;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__DEFAULT_VALUE = INTERFACE_FIELD__DEFAULT_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Must Match</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__MUST_MATCH = INTERFACE_FIELD__MUST_MATCH;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__INPUT_CLASS = INTERFACE_FIELD__INPUT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__PLACEHOLDER = INTERFACE_FIELD__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD__VALIDATION_PATTERN = INTERFACE_FIELD__VALIDATION_PATTERN;
-
-	/**
-	 * The number of structural features of the '<em>Captcha Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD_FEATURE_COUNT = INTERFACE_FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Captcha Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPTCHA_FIELD_OPERATION_COUNT = INTERFACE_FIELD_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.SelectableUnit <em>Selectable Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5347,7 +5157,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 40;
+	int SELECTABLE_UNIT = 39;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -5375,7 +5185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 41;
+	int SINGLETON_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5691,7 +5501,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 42;
+	int COLLECTION_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6259,7 +6069,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 43;
+	int EDIT_UNIT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6550,13 +6360,22 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__TITLE = SINGLETON_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__USE_CAPTCHA = SINGLETON_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__DISABLE_WHEN = SINGLETON_UNIT_FEATURE_COUNT + 0;
+	int EDIT_UNIT__DISABLE_WHEN = SINGLETON_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
@@ -6565,7 +6384,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 1;
+	int EDIT_UNIT__CONFIRM_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
@@ -6574,7 +6393,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 2;
+	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -6583,7 +6402,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 3;
+	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
@@ -6592,7 +6411,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
@@ -6601,7 +6420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 5;
+	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
@@ -6610,7 +6429,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -6619,7 +6438,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -6628,7 +6447,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 8;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -6647,7 +6466,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 44;
+	int CREATE_UNIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6938,6 +6757,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7035,7 +6863,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 46;
+	int CREATE_UPDATE_UNIT = 45;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -7045,7 +6873,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 45;
+	int UPDATE_UNIT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7334,6 +7162,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
 
 	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
@@ -7732,6 +7569,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7856,7 +7702,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 47;
+	int MAP_UNIT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8147,6 +7993,15 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8280,7 +8135,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 48;
+	int DETAILS_UNIT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8614,7 +8469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 49;
+	int TABULAR_UNIT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9191,7 +9046,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 50;
+	int CARDS_UNIT = 49;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9840,7 +9695,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 52;
+	int TEXT_CARDS_UNIT = 51;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -9850,7 +9705,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 53;
+	int DATE_CARDS_UNIT = 52;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -9860,7 +9715,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 58;
+	int CONTROL_UNIT = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -9870,7 +9725,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 59;
+	int SEARCH_UNIT = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
@@ -9880,7 +9735,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 54;
+	int IMAGE_UNIT = 53;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -9890,7 +9745,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 55;
+	int IMAGE_CARDS_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -9900,7 +9755,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 56;
+	int SLIDER_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -9910,7 +9765,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 57;
+	int GALLERY_UNIT = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -9920,7 +9775,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 68;
+	int SELECT_ACTION = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -9930,7 +9785,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 67;
+	int DELETE_ACTION = 66;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -9940,7 +9795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 51;
+	int BADGE = 50;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -14495,7 +14350,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 60;
+	int REGISTRATION_UNIT = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14802,7 +14657,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 61;
+	int LOGIN_UNIT = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15093,6 +14948,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15190,7 +15054,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 62;
+	int LOGOUT_UNIT = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15497,7 +15361,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 63;
+	int FORGOTTEN_PASSWORD_UNIT = 62;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15788,6 +15652,15 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__TITLE = EDIT_UNIT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
 	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15912,7 +15785,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 64;
+	int ACTION_CONTAINER = 63;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -15958,7 +15831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 65;
+	int ACTION = 64;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16112,7 +15985,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 66;
+	int SECURITY_ACTION = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16275,7 +16148,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 71;
+	int OPERATION_ACTION = 70;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -16285,7 +16158,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 69;
+	int CONTAINER_SELECT_ACTION = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -16295,7 +16168,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 70;
+	int INSTANCE_SELECT_ACTION = 69;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17133,7 +17006,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 73;
+	int INSTANCE_OPERATION_ACTION = 72;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -17143,7 +17016,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 72;
+	int CONTAINER_OPERATION_ACTION = 71;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17513,7 +17386,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 74;
+	int GENERAL_OPERATION_ACTION = 73;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17703,7 +17576,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 75;
+	int MESSAGE = 74;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -17749,7 +17622,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 76;
+	int AUTHENTICATION_MENU_PLACEMENT = 75;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -17759,7 +17632,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 77;
+	int PAGE_TOP_MENU_OPTIONS = 76;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -17769,7 +17642,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 78;
+	int COLLECTION_DISPLAY_OPTIONS = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -17779,7 +17652,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 79;
+	int PAGINATION_CONTROL_PLACEMENTS = 78;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -19866,16 +19739,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDateField_Format();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CaptchaField <em>Captcha Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Captcha Field</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CaptchaField
-	 * @generated
-	 */
-	EClass getCaptchaField();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SelectableUnit <em>Selectable Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20244,6 +20107,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEditUnit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#isUseCaptcha <em>Use Captcha</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Use Captcha</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#isUseCaptcha()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_UseCaptcha();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getDisableWhen <em>Disable When</em>}'.
@@ -23131,16 +23005,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DATE_FIELD__FORMAT = eINSTANCE.getDateField_Format();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CaptchaFieldImpl <em>Captcha Field</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.CaptchaFieldImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCaptchaField()
-		 * @generated
-		 */
-		EClass CAPTCHA_FIELD = eINSTANCE.getCaptchaField();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.SelectableUnit <em>Selectable Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -23419,6 +23283,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EDIT_UNIT = eINSTANCE.getEditUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Captcha</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__USE_CAPTCHA = eINSTANCE.getEditUnit_UseCaptcha();
 
 		/**
 		 * The meta object literal for the '<em><b>Disable When</b></em>' containment reference feature.

@@ -155,6 +155,7 @@ unique lazy rule implicitRegistrationUnit {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!RegistrationUnit (
 		name <- website.implicitRegistrationName,
+--		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitRegistrationUnitLabel,
 		uriElement <- website.implicitRegistrationUri
 	)
@@ -164,6 +165,7 @@ unique lazy rule implicitLoginUnit {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!LoginUnit (
 		name <- website.implicitLoginName,
+		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitLoginUnitLabel,
 		uriElement <- website.implicitLoginUri,
 		contentType <-
@@ -221,6 +223,7 @@ unique lazy rule implicitForgottenPasswordUnit {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!ForgottenPasswordUnit (
 		name <- website.implicitForgottenPasswordName,
+		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitForgottenPasswordUnitLabel,
 		uriElement <- website.implicitForgottenPasswordUriRequest,
 		uriEmailSent <- website.implicitForgottenPasswordUriEmailSent,
@@ -432,17 +435,6 @@ unique lazy rule implicitRememberMeField {
 		required <- false,
 		displayLabel <- 'Remember Me',
 		interfaceType <- thisModule.findWebsiteDataType('Boolean').interfaceType
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitCaptchaField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!CaptchaField (
-		name <- 'captcha',
-		displayLabel <- 'Captcha'
 	)
 	do {
 		waf;

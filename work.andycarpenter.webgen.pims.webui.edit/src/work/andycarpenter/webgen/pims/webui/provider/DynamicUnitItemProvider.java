@@ -536,11 +536,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.DYNAMIC_UNIT__DISPLAY_FIELDS,
-				 WebuiFactory.eINSTANCE.createCaptchaField()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 

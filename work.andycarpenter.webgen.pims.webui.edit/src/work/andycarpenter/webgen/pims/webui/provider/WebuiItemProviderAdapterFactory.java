@@ -796,29 +796,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CaptchaField} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CaptchaFieldItemProvider captchaFieldItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.CaptchaField}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCaptchaFieldAdapter() {
-		if (captchaFieldItemProvider == null) {
-			captchaFieldItemProvider = new CaptchaFieldItemProvider(this);
-		}
-
-		return captchaFieldItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.CreateUnit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

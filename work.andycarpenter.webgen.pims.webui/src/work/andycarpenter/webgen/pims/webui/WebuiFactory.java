@@ -292,15 +292,6 @@ public interface WebuiFactory extends EFactory {
 	DateField createDateField();
 
 	/**
-	 * Returns a new object of class '<em>Captcha Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Captcha Field</em>'.
-	 * @generated
-	 */
-	CaptchaField createCaptchaField();
-
-	/**
 	 * Returns a new object of class '<em>Create Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -24,6 +24,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmDestination <em>Confirm Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmLabel <em>Confirm Label</em>}</li>
@@ -37,6 +38,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit {
+	/**
+	 * The default value of the '{@link #isUseCaptcha() <em>Use Captcha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseCaptcha()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_CAPTCHA_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseCaptcha() <em>Use Captcha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseCaptcha()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useCaptcha = USE_CAPTCHA_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getDisableWhen() <em>Disable When</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -164,6 +185,29 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.EDIT_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isUseCaptcha() {
+		return useCaptcha;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUseCaptcha(boolean newUseCaptcha) {
+		boolean oldUseCaptcha = useCaptcha;
+		useCaptcha = newUseCaptcha;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__USE_CAPTCHA, oldUseCaptcha, useCaptcha));
 	}
 
 	/**
@@ -476,6 +520,8 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.EDIT_UNIT__USE_CAPTCHA:
+				return isUseCaptcha();
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return getDisableWhen();
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
@@ -506,6 +552,9 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.EDIT_UNIT__USE_CAPTCHA:
+				setUseCaptcha((Boolean)newValue);
+				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)newValue);
 				return;
@@ -542,6 +591,9 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.EDIT_UNIT__USE_CAPTCHA:
+				setUseCaptcha(USE_CAPTCHA_EDEFAULT);
+				return;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				setDisableWhen((Predicate)null);
 				return;
@@ -578,6 +630,8 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.EDIT_UNIT__USE_CAPTCHA:
+				return useCaptcha != USE_CAPTCHA_EDEFAULT;
 			case WebuiPackage.EDIT_UNIT__DISABLE_WHEN:
 				return disableWhen != null;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
@@ -608,7 +662,9 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (confirmLabel: ");
+		result.append(" (useCaptcha: ");
+		result.append(useCaptcha);
+		result.append(", confirmLabel: ");
 		result.append(confirmLabel);
 		result.append(", cancelLabel: ");
 		result.append(cancelLabel);

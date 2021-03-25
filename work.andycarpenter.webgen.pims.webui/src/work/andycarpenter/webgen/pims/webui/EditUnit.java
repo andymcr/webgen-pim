@@ -13,6 +13,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmDestination <em>Confirm Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}</li>
@@ -28,6 +29,29 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * @generated
  */
 public interface EditUnit extends SingletonUnit {
+	/**
+	 * Returns the value of the '<em><b>Use Captcha</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Use Captcha</em>' attribute.
+	 * @see #setUseCaptcha(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_UseCaptcha()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isUseCaptcha();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#isUseCaptcha <em>Use Captcha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Use Captcha</em>' attribute.
+	 * @see #isUseCaptcha()
+	 * @generated
+	 */
+	void setUseCaptcha(boolean value);
+
 	/**
 	 * Returns the value of the '<em><b>Disable When</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

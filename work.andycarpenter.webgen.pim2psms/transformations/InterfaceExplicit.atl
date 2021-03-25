@@ -529,13 +529,6 @@ rule DateField {
 	)
 }
 
--- @extends InterfaceField
-rule CaptchaField {
-	from website : Website!CaptchaField
-	to waf : WAF!CaptchaField (
-	)
-}
-
 abstract rule SelectableUnit {
 	from website : Website!SelectableUnit
 	to waf : WAF!SelectableUnit (
@@ -629,6 +622,7 @@ abstract rule CollectionUnit {
 abstract rule EditUnit {
 	from website : Website!EditUnit
 	to waf : WAF!EditUnit (
+		useCaptcha <- website.useCaptcha,
 		disableWhen <- website.disableWhen,
 		uriElement <-
 			if website.uriElement.trim() <> '' then

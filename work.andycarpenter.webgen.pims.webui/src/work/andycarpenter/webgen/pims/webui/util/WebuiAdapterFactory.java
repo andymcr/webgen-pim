@@ -230,10 +230,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createDateFieldAdapter();
 			}
 			@Override
-			public Adapter caseCaptchaField(CaptchaField object) {
-				return createCaptchaFieldAdapter();
-			}
-			@Override
 			public Adapter caseSelectableUnit(SelectableUnit object) {
 				return createSelectableUnitAdapter();
 			}
@@ -996,20 +992,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDateFieldAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CaptchaField <em>Captcha Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.CaptchaField
-	 * @generated
-	 */
-	public Adapter createCaptchaFieldAdapter() {
 		return null;
 	}
 

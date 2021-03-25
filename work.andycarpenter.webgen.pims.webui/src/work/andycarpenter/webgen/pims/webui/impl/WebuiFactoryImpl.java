@@ -87,7 +87,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.UNIT_LABEL: return createUnitLabel();
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
 			case WebuiPackage.DATE_FIELD: return createDateField();
-			case WebuiPackage.CAPTCHA_FIELD: return createCaptchaField();
 			case WebuiPackage.CREATE_UNIT: return createCreateUnit();
 			case WebuiPackage.UPDATE_UNIT: return createUpdateUnit();
 			case WebuiPackage.CREATE_UPDATE_UNIT: return createCreateUpdateUnit();
@@ -488,17 +487,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public DateField createDateField() {
 		DateFieldImpl dateField = new DateFieldImpl();
 		return dateField;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CaptchaField createCaptchaField() {
-		CaptchaFieldImpl captchaField = new CaptchaFieldImpl();
-		return captchaField;
 	}
 
 	/**

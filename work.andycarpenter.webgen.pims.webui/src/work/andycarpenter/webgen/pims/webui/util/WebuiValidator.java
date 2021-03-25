@@ -172,8 +172,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validateDataTypeField((DataTypeField)value, diagnostics, context);
 			case WebuiPackage.DATE_FIELD:
 				return validateDateField((DateField)value, diagnostics, context);
-			case WebuiPackage.CAPTCHA_FIELD:
-				return validateCaptchaField((CaptchaField)value, diagnostics, context);
 			case WebuiPackage.SELECTABLE_UNIT:
 				return validateSelectableUnit((SelectableUnit)value, diagnostics, context);
 			case WebuiPackage.SINGLETON_UNIT:
@@ -1007,25 +1005,6 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dateField, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dateField, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dateField, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCaptchaField(CaptchaField captchaField, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(captchaField, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(captchaField, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(captchaField, diagnostics, context);
 		return result;
 	}
 
