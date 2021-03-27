@@ -9775,7 +9775,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 67;
+	int SELECT_ACTION = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -9785,7 +9785,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 66;
+	int DELETE_ACTION = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -15733,22 +15733,22 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Reset Password Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT = EDIT_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Uri Email Sent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT = EDIT_UNIT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Uri Reset Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD = EDIT_UNIT_FEATURE_COUNT + 1;
+	int FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT = EDIT_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Email Subject</b></em>' attribute.
@@ -15760,13 +15760,40 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT = EDIT_UNIT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Email Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE = EDIT_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Email Sent Caption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION = EDIT_UNIT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Email Sent Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE = EDIT_UNIT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Forgotten Password Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 3;
+	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Forgotten Password Unit</em>' class.
@@ -15778,6 +15805,403 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT_OPERATION_COUNT = EDIT_UNIT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ResetPasswordUnitImpl <em>Reset Password Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ResetPasswordUnitImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
+	 * @generated
+	 */
+	int RESET_PASSWORD_UNIT = 63;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__NAME = EDIT_UNIT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__PURPOSE_SUMMARY = EDIT_UNIT__PURPOSE_SUMMARY;
+
+	/**
+	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
+
+	/**
+	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__ACTIONS = EDIT_UNIT__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
+
+	/**
+	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+
+	/**
+	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__HIDE_WHEN = EDIT_UNIT__HIDE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__MESSAGE_WHEN_HIDDEN = EDIT_UNIT__MESSAGE_WHEN_HIDDEN;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__HEADER = EDIT_UNIT__HEADER;
+
+	/**
+	 * The feature id for the '<em><b>Footer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__FOOTER = EDIT_UNIT__FOOTER;
+
+	/**
+	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
+	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Reset Password Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Reset Password Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT_OPERATION_COUNT = EDIT_UNIT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15785,7 +16209,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 63;
+	int ACTION_CONTAINER = 64;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -15831,7 +16255,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 64;
+	int ACTION = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15985,7 +16409,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 65;
+	int SECURITY_ACTION = 66;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16148,7 +16572,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 70;
+	int OPERATION_ACTION = 71;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -16158,7 +16582,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 68;
+	int CONTAINER_SELECT_ACTION = 69;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -16168,7 +16592,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 69;
+	int INSTANCE_SELECT_ACTION = 70;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17006,7 +17430,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 72;
+	int INSTANCE_OPERATION_ACTION = 73;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -17016,7 +17440,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 71;
+	int CONTAINER_OPERATION_ACTION = 72;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17386,7 +17810,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 73;
+	int GENERAL_OPERATION_ACTION = 74;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17576,7 +18000,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 74;
+	int MESSAGE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -17622,7 +18046,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 75;
+	int AUTHENTICATION_MENU_PLACEMENT = 76;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -17632,7 +18056,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 76;
+	int PAGE_TOP_MENU_OPTIONS = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -17642,7 +18066,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 77;
+	int COLLECTION_DISPLAY_OPTIONS = 78;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -17652,7 +18076,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 78;
+	int PAGINATION_CONTROL_PLACEMENTS = 79;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -20644,6 +21068,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getForgottenPasswordUnit();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getResetPasswordUnit <em>Reset Password Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reset Password Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getResetPasswordUnit()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EReference getForgottenPasswordUnit_ResetPasswordUnit();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriEmailSent <em>Uri Email Sent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20655,17 +21090,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getForgottenPasswordUnit_UriEmailSent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriResetPassword <em>Uri Reset Password</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Uri Reset Password</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getUriResetPassword()
-	 * @see #getForgottenPasswordUnit()
-	 * @generated
-	 */
-	EAttribute getForgottenPasswordUnit_UriResetPassword();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSubject <em>Email Subject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20675,6 +21099,49 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getForgottenPasswordUnit_EmailSubject();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailMessage <em>Email Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailMessage()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_EmailMessage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSentCaption <em>Email Sent Caption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email Sent Caption</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSentCaption()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_EmailSentCaption();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSentMessage <em>Email Sent Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email Sent Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit#getEmailSentMessage()
+	 * @see #getForgottenPasswordUnit()
+	 * @generated
+	 */
+	EAttribute getForgottenPasswordUnit_EmailSentMessage();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ResetPasswordUnit <em>Reset Password Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reset Password Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ResetPasswordUnit
+	 * @generated
+	 */
+	EClass getResetPasswordUnit();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}'.
@@ -23715,6 +24182,14 @@ public interface WebuiPackage extends EPackage {
 		EClass FORGOTTEN_PASSWORD_UNIT = eINSTANCE.getForgottenPasswordUnit();
 
 		/**
+		 * The meta object literal for the '<em><b>Reset Password Unit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT = eINSTANCE.getForgottenPasswordUnit_ResetPasswordUnit();
+
+		/**
 		 * The meta object literal for the '<em><b>Uri Email Sent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -23723,20 +24198,46 @@ public interface WebuiPackage extends EPackage {
 		EAttribute FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT = eINSTANCE.getForgottenPasswordUnit_UriEmailSent();
 
 		/**
-		 * The meta object literal for the '<em><b>Uri Reset Password</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD = eINSTANCE.getForgottenPasswordUnit_UriResetPassword();
-
-		/**
 		 * The meta object literal for the '<em><b>Email Subject</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT = eINSTANCE.getForgottenPasswordUnit_EmailSubject();
+
+		/**
+		 * The meta object literal for the '<em><b>Email Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE = eINSTANCE.getForgottenPasswordUnit_EmailMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Email Sent Caption</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION = eINSTANCE.getForgottenPasswordUnit_EmailSentCaption();
+
+		/**
+		 * The meta object literal for the '<em><b>Email Sent Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE = eINSTANCE.getForgottenPasswordUnit_EmailSentMessage();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ResetPasswordUnitImpl <em>Reset Password Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ResetPasswordUnitImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
+		 * @generated
+		 */
+		EClass RESET_PASSWORD_UNIT = eINSTANCE.getResetPasswordUnit();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}' class.

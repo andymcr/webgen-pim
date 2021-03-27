@@ -104,6 +104,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.LOGIN_UNIT: return createLoginUnit();
 			case WebuiPackage.LOGOUT_UNIT: return createLogoutUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
+			case WebuiPackage.RESET_PASSWORD_UNIT: return createResetPasswordUnit();
 			case WebuiPackage.SECURITY_ACTION: return createSecurityAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.CONTAINER_SELECT_ACTION: return createContainerSelectAction();
@@ -641,6 +642,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public ForgottenPasswordUnit createForgottenPasswordUnit() {
 		ForgottenPasswordUnitImpl forgottenPasswordUnit = new ForgottenPasswordUnitImpl();
 		return forgottenPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResetPasswordUnit createResetPasswordUnit() {
+		ResetPasswordUnitImpl resetPasswordUnit = new ResetPasswordUnitImpl();
+		return resetPasswordUnit;
 	}
 
 	/**

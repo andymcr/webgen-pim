@@ -885,9 +885,19 @@ rule LogoutUnit {
 rule ForgottenPasswordUnit {
 	from website : Website!ForgottenPasswordUnit
 	to waf : WAF!ForgottenPasswordUnit (
+		resetPasswordUnit <- website.resetPasswordUnit,
 		uriEmailSent <- website.uriEmailSent,
-		uriReset <- website.reset,
-		emailSubject <- website.emailSubject
+		emailSubject <- website.emailSubject,
+		emailMessage <- website.emailMessage,
+		emailSentCaption <- website.emailSentCaption,
+		emailSentMessage <- website.emailSetMessage
+	)
+}
+
+-- @extends DynamicUnit, EditUnit
+rule ResetPasswordUnit {
+	from website : Website!ResetPasswordUnit
+	to waf : WAF!ResetPasswordUnit (
 	)
 }
 

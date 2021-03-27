@@ -474,12 +474,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mustMatch" ordered="false"
-        eType="#//UnitField"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="input_attribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="placeholder" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repeatedField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationPattern" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
   </eClassifiers>
@@ -723,13 +723,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoginUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LogoutUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForgottenPasswordUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resetPasswordUnit" lowerBound="1"
+        eType="#//ResetPasswordUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriEmailSent" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriResetPassword" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailSubject" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailMessage" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailSentCaption" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailSentMessage" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetPasswordUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ActionContainer" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="atMostOneDeleteAction"/>

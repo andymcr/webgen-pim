@@ -220,6 +220,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateLogoutUnit((LogoutUnit)value, diagnostics, context);
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT:
 				return validateForgottenPasswordUnit((ForgottenPasswordUnit)value, diagnostics, context);
+			case WebuiPackage.RESET_PASSWORD_UNIT:
+				return validateResetPasswordUnit((ResetPasswordUnit)value, diagnostics, context);
 			case WebuiPackage.ACTION_CONTAINER:
 				return validateActionContainer((ActionContainer)value, diagnostics, context);
 			case WebuiPackage.ACTION:
@@ -1575,6 +1577,28 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(forgottenPasswordUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(forgottenPasswordUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(forgottenPasswordUnit, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateResetPasswordUnit(ResetPasswordUnit resetPasswordUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(resetPasswordUnit, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(resetPasswordUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(resetPasswordUnit, diagnostics, context);
 		return result;
 	}
 

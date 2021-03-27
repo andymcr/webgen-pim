@@ -4,8 +4,10 @@ package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
+import work.andycarpenter.webgen.pims.webui.ResetPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -16,14 +18,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getResetPasswordUnit <em>Reset Password Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getUriEmailSent <em>Uri Email Sent</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getUriResetPassword <em>Uri Reset Password</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getEmailSubject <em>Email Subject</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getEmailMessage <em>Email Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getEmailSentCaption <em>Email Sent Caption</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ForgottenPasswordUnitImpl#getEmailSentMessage <em>Email Sent Message</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ForgottenPasswordUnitImpl extends EditUnitImpl implements ForgottenPasswordUnit {
+	/**
+	 * The cached value of the '{@link #getResetPasswordUnit() <em>Reset Password Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetPasswordUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected ResetPasswordUnit resetPasswordUnit;
 	/**
 	 * The default value of the '{@link #getUriEmailSent() <em>Uri Email Sent</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,24 +56,6 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	 * @ordered
 	 */
 	protected String uriEmailSent = URI_EMAIL_SENT_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getUriResetPassword() <em>Uri Reset Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUriResetPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URI_RESET_PASSWORD_EDEFAULT = "";
-	/**
-	 * The cached value of the '{@link #getUriResetPassword() <em>Uri Reset Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUriResetPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected String uriResetPassword = URI_RESET_PASSWORD_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getEmailSubject() <em>Email Subject</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,6 +76,61 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	protected String emailSubject = EMAIL_SUBJECT_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getEmailMessage() <em>Email Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_MESSAGE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getEmailMessage() <em>Email Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emailMessage = EMAIL_MESSAGE_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getEmailSentCaption() <em>Email Sent Caption</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailSentCaption()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_SENT_CAPTION_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getEmailSentCaption() <em>Email Sent Caption</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailSentCaption()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emailSentCaption = EMAIL_SENT_CAPTION_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getEmailSentMessage() <em>Email Sent Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailSentMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_SENT_MESSAGE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getEmailSentMessage() <em>Email Sent Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailSentMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emailSentMessage = EMAIL_SENT_MESSAGE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,6 +147,46 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResetPasswordUnit getResetPasswordUnit() {
+		if (resetPasswordUnit != null && resetPasswordUnit.eIsProxy()) {
+			InternalEObject oldResetPasswordUnit = (InternalEObject)resetPasswordUnit;
+			resetPasswordUnit = (ResetPasswordUnit)eResolveProxy(oldResetPasswordUnit);
+			if (resetPasswordUnit != oldResetPasswordUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT, oldResetPasswordUnit, resetPasswordUnit));
+			}
+		}
+		return resetPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResetPasswordUnit basicGetResetPasswordUnit() {
+		return resetPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetPasswordUnit(ResetPasswordUnit newResetPasswordUnit) {
+		ResetPasswordUnit oldResetPasswordUnit = resetPasswordUnit;
+		resetPasswordUnit = newResetPasswordUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT, oldResetPasswordUnit, resetPasswordUnit));
 	}
 
 	/**
@@ -127,29 +218,6 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	 * @generated
 	 */
 	@Override
-	public String getUriResetPassword() {
-		return uriResetPassword;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUriResetPassword(String newUriResetPassword) {
-		String oldUriResetPassword = uriResetPassword;
-		uriResetPassword = newUriResetPassword;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD, oldUriResetPassword, uriResetPassword));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getEmailSubject() {
 		return emailSubject;
 	}
@@ -173,14 +241,90 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	 * @generated
 	 */
 	@Override
+	public String getEmailMessage() {
+		return emailMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmailMessage(String newEmailMessage) {
+		String oldEmailMessage = emailMessage;
+		emailMessage = newEmailMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE, oldEmailMessage, emailMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getEmailSentCaption() {
+		return emailSentCaption;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmailSentCaption(String newEmailSentCaption) {
+		String oldEmailSentCaption = emailSentCaption;
+		emailSentCaption = newEmailSentCaption;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION, oldEmailSentCaption, emailSentCaption));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getEmailSentMessage() {
+		return emailSentMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmailSentMessage(String newEmailSentMessage) {
+		String oldEmailSentMessage = emailSentMessage;
+		emailSentMessage = newEmailSentMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE, oldEmailSentMessage, emailSentMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT:
+				if (resolve) return getResetPasswordUnit();
+				return basicGetResetPasswordUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT:
 				return getUriEmailSent();
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD:
-				return getUriResetPassword();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT:
 				return getEmailSubject();
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE:
+				return getEmailMessage();
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION:
+				return getEmailSentCaption();
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE:
+				return getEmailSentMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -193,14 +337,23 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT:
+				setResetPasswordUnit((ResetPasswordUnit)newValue);
+				return;
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT:
 				setUriEmailSent((String)newValue);
 				return;
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD:
-				setUriResetPassword((String)newValue);
-				return;
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT:
 				setEmailSubject((String)newValue);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE:
+				setEmailMessage((String)newValue);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION:
+				setEmailSentCaption((String)newValue);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE:
+				setEmailSentMessage((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,14 +367,23 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT:
+				setResetPasswordUnit((ResetPasswordUnit)null);
+				return;
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT:
 				setUriEmailSent(URI_EMAIL_SENT_EDEFAULT);
 				return;
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD:
-				setUriResetPassword(URI_RESET_PASSWORD_EDEFAULT);
-				return;
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT:
 				setEmailSubject(EMAIL_SUBJECT_EDEFAULT);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE:
+				setEmailMessage(EMAIL_MESSAGE_EDEFAULT);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION:
+				setEmailSentCaption(EMAIL_SENT_CAPTION_EDEFAULT);
+				return;
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE:
+				setEmailSentMessage(EMAIL_SENT_MESSAGE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -235,12 +397,18 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT:
+				return resetPasswordUnit != null;
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT:
 				return URI_EMAIL_SENT_EDEFAULT == null ? uriEmailSent != null : !URI_EMAIL_SENT_EDEFAULT.equals(uriEmailSent);
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD:
-				return URI_RESET_PASSWORD_EDEFAULT == null ? uriResetPassword != null : !URI_RESET_PASSWORD_EDEFAULT.equals(uriResetPassword);
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT:
 				return EMAIL_SUBJECT_EDEFAULT == null ? emailSubject != null : !EMAIL_SUBJECT_EDEFAULT.equals(emailSubject);
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE:
+				return EMAIL_MESSAGE_EDEFAULT == null ? emailMessage != null : !EMAIL_MESSAGE_EDEFAULT.equals(emailMessage);
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION:
+				return EMAIL_SENT_CAPTION_EDEFAULT == null ? emailSentCaption != null : !EMAIL_SENT_CAPTION_EDEFAULT.equals(emailSentCaption);
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE:
+				return EMAIL_SENT_MESSAGE_EDEFAULT == null ? emailSentMessage != null : !EMAIL_SENT_MESSAGE_EDEFAULT.equals(emailSentMessage);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -257,10 +425,14 @@ public class ForgottenPasswordUnitImpl extends EditUnitImpl implements Forgotten
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (uriEmailSent: ");
 		result.append(uriEmailSent);
-		result.append(", uriResetPassword: ");
-		result.append(uriResetPassword);
 		result.append(", emailSubject: ");
 		result.append(emailSubject);
+		result.append(", emailMessage: ");
+		result.append(emailMessage);
+		result.append(", emailSentCaption: ");
+		result.append(emailSentCaption);
+		result.append(", emailSentMessage: ");
+		result.append(emailSentMessage);
 		result.append(')');
 		return result.toString();
 	}

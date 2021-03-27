@@ -1118,6 +1118,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ResetPasswordUnit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetPasswordUnitItemProvider resetPasswordUnitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ResetPasswordUnit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetPasswordUnitAdapter() {
+		if (resetPasswordUnitItemProvider == null) {
+			resetPasswordUnitItemProvider = new ResetPasswordUnitItemProvider(this);
+		}
+
+		return resetPasswordUnitItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SecurityAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

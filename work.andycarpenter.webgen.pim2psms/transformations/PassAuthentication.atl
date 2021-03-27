@@ -144,7 +144,8 @@ unique lazy rule implicitSecurityPage {
 					Sequence{}
 				endif)
 			->union(if website.forgottenPasswordUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitForgottenPasswordUnit(website) }
+					Sequence{ thisModule.implicitForgottenPasswordUnit(website),
+							thisModule.implicitResetPasswordUnit(website) }
 				else
 					Sequence{}
 				endif)
@@ -157,7 +158,8 @@ unique lazy rule implicitRegistrationUnit {
 		name <- website.implicitRegistrationName,
 --		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitRegistrationUnitLabel,
-		uriElement <- website.implicitRegistrationUri
+		uriElement <- website.implicitRegistrationUri --,
+--		confirmLabel <- website.implicitRegistrationConfirmLabel
 	)
 }
 
@@ -216,18 +218,20 @@ unique lazy rule implicitLogoutUnit {
 	to waf : WAF!LogoutUnit (
 		name <- website.implicitLogoutName,
 		displayLabel <- website.implicitLogoutConfirmLabel,
-		uriElement <- website.implicitLogoutUri	)
+		uriElement <- website.implicitLogoutUri --,
+--		confirmLabel <- website.implicitLogoutConfirmLabel
+	)
 }
 
 unique lazy rule implicitForgottenPasswordUnit {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!ForgottenPasswordUnit (
 		name <- website.implicitForgottenPasswordName,
+		resetPasswordUnit <- thisModule.implicitResetPasswordUnit(website),
 		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitForgottenPasswordUnitLabel,
 		uriElement <- website.implicitForgottenPasswordUriRequest,
 		uriEmailSent <- website.implicitForgottenPasswordUriEmailSent,
-		uriResetPassword <- website.implicitForgottenPasswordUriReset,
 		contentType <-
 			if website.resetPasswordRequestModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.resetPasswordRequestName)
@@ -243,7 +247,32 @@ unique lazy rule implicitForgottenPasswordUnit {
 				else
 					Sequence{}
 				endif),
-		emailSubject <- website.implicitForgottenPasswordEmailSubject
+		emailSubject <- website.implicitForgottenPasswordEmailSubject,
+		emailMessage <- website.implicitForgottenPasswordEmailMessage,
+		emailSentCaption <- website.implicitForgottenPasswordEmailSentCaption,
+		emailSentMessage <- website.implicitForgottenPasswordEmailSentMessage
+	)
+}
+
+unique lazy rule implicitResetPasswordUnit {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!ResetPasswordUnit (
+		name <- website.implicitResetPasswordName,
+--		useCaptcha <- website.useCaptcha,
+		displayLabel <- website.implicitResetPasswordUnitLabel,
+		uriElement <- website.implicitResetPasswordUri,
+		contentType <-
+			if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName)
+			else
+				thisModule.findOrmEntity(website.authentication.name)
+			endif,
+		displayFields <-
+			Sequence{
+				thisModule.implicitNewPasswordField(website),
+				thisModule.implicitConfirmPasswordField(website)
+			},
+		confirmLabel <- website.implicitResetPasswordConfirmLabel
 	)
 }
 
@@ -399,7 +428,7 @@ lazy rule implicitUsernameField {
 			else
 				'Username'
 			endif,
-		localHelp <- 'Hello Andy',
+		localHelp <- 'Enter your email address and we we will send you a link to reset your password',
 		fieldDataType <-
 			if website.authenticationKey = #Email then
 				thisModule.findOrmDataType('Email')
@@ -420,6 +449,36 @@ lazy rule implicitPasswordField {
 		obfuscateFormFields <- true,
 		localTitle <- 'Password',
 		localPlaceholder <- 'Password',
+		fieldDataType <- thisModule.findOrmDataType('String')
+	)
+	do {
+		waf;
+	}
+}
+
+lazy rule implicitNewPasswordField {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!DataTypeField (
+		name <- 'plainPassword',
+		displayLabel <- 'New Password',
+		obfuscateFormFields <- true,
+		localTitle <- 'New Password',
+		localPlaceholder <- 'New Password',
+		fieldDataType <- thisModule.findOrmDataType('String')
+	)
+	do {
+		waf;
+	}
+}
+
+lazy rule implicitConfirmPasswordField {
+	from website : Website!LocalAuthenticationSystem
+	to waf : WAF!DataTypeField (
+		name <- 'confirmPassword',
+		displayLabel <- 'Confirm Password',
+		obfuscateFormFields <- true,
+		localTitle <- 'Confirm Password',
+		localPlaceholder <- 'Confirm Password',
 		fieldDataType <- thisModule.findOrmDataType('String')
 	)
 	do {

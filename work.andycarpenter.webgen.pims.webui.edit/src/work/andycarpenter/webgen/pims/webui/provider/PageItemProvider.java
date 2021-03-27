@@ -288,6 +288,11 @@ public class PageItemProvider extends NamedDisplayElementItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.PAGE__UNITS,
 				 WebuiFactory.eINSTANCE.createForgottenPasswordUnit()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.PAGE__UNITS,
+				 WebuiFactory.eINSTANCE.createResetPasswordUnit()));
 	}
 
 	/**

@@ -43,11 +43,36 @@ public class ForgottenPasswordUnitItemProvider extends EditUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addResetPasswordUnitPropertyDescriptor(object);
 			addUriEmailSentPropertyDescriptor(object);
-			addUriResetPasswordPropertyDescriptor(object);
 			addEmailSubjectPropertyDescriptor(object);
+			addEmailMessagePropertyDescriptor(object);
+			addEmailSentCaptionPropertyDescriptor(object);
+			addEmailSentMessagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Password Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetPasswordUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ForgottenPasswordUnit_resetPasswordUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_resetPasswordUnit_feature", "_UI_ForgottenPasswordUnit_type"),
+				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -64,28 +89,6 @@ public class ForgottenPasswordUnitItemProvider extends EditUnitItemProvider {
 				 getString("_UI_ForgottenPasswordUnit_uriEmailSent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_uriEmailSent_feature", "_UI_ForgottenPasswordUnit_type"),
 				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_NavigationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uri Reset Password feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUriResetPasswordPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ForgottenPasswordUnit_uriResetPassword_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_uriResetPassword_feature", "_UI_ForgottenPasswordUnit_type"),
-				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD,
 				 true,
 				 false,
 				 false,
@@ -113,6 +116,72 @@ public class ForgottenPasswordUnitItemProvider extends EditUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Email Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmailMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ForgottenPasswordUnit_emailMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_emailMessage_feature", "_UI_ForgottenPasswordUnit_type"),
+				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Email Sent Caption feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmailSentCaptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ForgottenPasswordUnit_emailSentCaption_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_emailSentCaption_feature", "_UI_ForgottenPasswordUnit_type"),
+				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Email Sent Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmailSentMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ForgottenPasswordUnit_emailSentMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ForgottenPasswordUnit_emailSentMessage_feature", "_UI_ForgottenPasswordUnit_type"),
+				 WebuiPackage.Literals.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -155,8 +224,10 @@ public class ForgottenPasswordUnitItemProvider extends EditUnitItemProvider {
 
 		switch (notification.getFeatureID(ForgottenPasswordUnit.class)) {
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT:
-			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD:
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT:
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE:
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION:
+			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

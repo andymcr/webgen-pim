@@ -685,6 +685,20 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.RESET_PASSWORD_UNIT: {
+				ResetPasswordUnit resetPasswordUnit = (ResetPasswordUnit)theEObject;
+				T result = caseResetPasswordUnit(resetPasswordUnit);
+				if (result == null) result = caseEditUnit(resetPasswordUnit);
+				if (result == null) result = caseSecurityUnit(resetPasswordUnit);
+				if (result == null) result = caseSingletonUnit(resetPasswordUnit);
+				if (result == null) result = caseDynamicUnit(resetPasswordUnit);
+				if (result == null) result = caseContentUnit(resetPasswordUnit);
+				if (result == null) result = caseActionContainer(resetPasswordUnit);
+				if (result == null) result = caseNamedDisplayElement(resetPasswordUnit);
+				if (result == null) result = caseNamedElement(resetPasswordUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.ACTION_CONTAINER: {
 				ActionContainer actionContainer = (ActionContainer)theEObject;
 				T result = caseActionContainer(actionContainer);
@@ -1692,6 +1706,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseForgottenPasswordUnit(ForgottenPasswordUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reset Password Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reset Password Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResetPasswordUnit(ResetPasswordUnit object) {
 		return null;
 	}
 

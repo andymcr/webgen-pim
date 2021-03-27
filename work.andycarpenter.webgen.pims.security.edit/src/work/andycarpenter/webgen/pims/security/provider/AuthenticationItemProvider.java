@@ -84,8 +84,15 @@ public class AuthenticationItemProvider
 			addImplicitForgottenPasswordConfirmLabelPropertyDescriptor(object);
 			addImplicitForgottenPasswordUriRequestPropertyDescriptor(object);
 			addImplicitForgottenPasswordUriEmailSentPropertyDescriptor(object);
-			addImplicitForgottenPasswordUriResetPropertyDescriptor(object);
 			addImplicitForgottenPasswordEmailSubjectPropertyDescriptor(object);
+			addImplicitForgottenPasswordEmailMessagePropertyDescriptor(object);
+			addImplicitForgottenPasswordEmailSentCaptionPropertyDescriptor(object);
+			addImplicitForgottenPasswordEmailSentMessagePropertyDescriptor(object);
+			addImplicitResetPasswordNamePropertyDescriptor(object);
+			addImplicitResetPasswordUnitLabelPropertyDescriptor(object);
+			addImplicitResetPasswordActionLabelPropertyDescriptor(object);
+			addImplicitResetPasswordConfirmLabelPropertyDescriptor(object);
+			addImplicitResetPasswordUriPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -627,28 +634,6 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Implicit Forgotten Password Uri Reset feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImplicitForgottenPasswordUriResetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Authentication_implicitForgottenPasswordUriReset_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordUriReset_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_NavugationPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Implicit Forgotten Password Email Subject feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -667,6 +652,182 @@ public class AuthenticationItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Email Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordEmailMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordEmailMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordEmailMessage_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Email Sent Caption feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordEmailSentCaptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordEmailSentCaption_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordEmailSentCaption_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_CAPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Forgotten Password Email Sent Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitForgottenPasswordEmailSentMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitForgottenPasswordEmailSentMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitForgottenPasswordEmailSentMessage_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Reset Password Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitResetPasswordNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitResetPasswordName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitResetPasswordName_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Reset Password Unit Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitResetPasswordUnitLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitResetPasswordUnitLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitResetPasswordUnitLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_UNIT_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Reset Password Action Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitResetPasswordActionLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitResetPasswordActionLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitResetPasswordActionLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_ACTION_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Reset Password Confirm Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitResetPasswordConfirmLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitResetPasswordConfirmLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitResetPasswordConfirmLabel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_CONFIRM_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implicit Reset Password Uri feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplicitResetPasswordUriPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Authentication_implicitResetPasswordUri_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_implicitResetPasswordUri_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_URI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
 				 null));
 	}
 
@@ -718,8 +879,15 @@ public class AuthenticationItemProvider
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT:
-			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_RESET:
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_MESSAGE:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_CAPTION:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_MESSAGE:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_NAME:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_UNIT_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_ACTION_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_CONFIRM_LABEL:
+			case SecurityPackage.AUTHENTICATION__IMPLICIT_RESET_PASSWORD_URI:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -326,6 +326,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createForgottenPasswordUnitAdapter();
 			}
 			@Override
+			public Adapter caseResetPasswordUnit(ResetPasswordUnit object) {
+				return createResetPasswordUnitAdapter();
+			}
+			@Override
 			public Adapter caseActionContainer(ActionContainer object) {
 				return createActionContainerAdapter();
 			}
@@ -1258,6 +1262,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForgottenPasswordUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ResetPasswordUnit <em>Reset Password Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ResetPasswordUnit
+	 * @generated
+	 */
+	public Adapter createResetPasswordUnitAdapter() {
 		return null;
 	}
 

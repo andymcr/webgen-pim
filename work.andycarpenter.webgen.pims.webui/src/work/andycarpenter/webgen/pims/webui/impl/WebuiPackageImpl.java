@@ -79,6 +79,7 @@ import work.andycarpenter.webgen.pims.webui.PageLink;
 import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
+import work.andycarpenter.webgen.pims.webui.ResetPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.SearchUnit;
 import work.andycarpenter.webgen.pims.webui.SecurityAction;
@@ -517,6 +518,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass forgottenPasswordUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass resetPasswordUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3520,8 +3528,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getForgottenPasswordUnit_UriEmailSent() {
-		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(0);
+	public EReference getForgottenPasswordUnit_ResetPasswordUnit() {
+		return (EReference)forgottenPasswordUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3530,7 +3538,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getForgottenPasswordUnit_UriResetPassword() {
+	public EAttribute getForgottenPasswordUnit_UriEmailSent() {
 		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3542,6 +3550,46 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EAttribute getForgottenPasswordUnit_EmailSubject() {
 		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getForgottenPasswordUnit_EmailMessage() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getForgottenPasswordUnit_EmailSentCaption() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getForgottenPasswordUnit_EmailSentMessage() {
+		return (EAttribute)forgottenPasswordUnitEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getResetPasswordUnit() {
+		return resetPasswordUnitEClass;
 	}
 
 	/**
@@ -4575,9 +4623,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		logoutUnitEClass = createEClass(LOGOUT_UNIT);
 
 		forgottenPasswordUnitEClass = createEClass(FORGOTTEN_PASSWORD_UNIT);
+		createEReference(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__RESET_PASSWORD_UNIT);
 		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__URI_EMAIL_SENT);
-		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__URI_RESET_PASSWORD);
 		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__EMAIL_SUBJECT);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__EMAIL_MESSAGE);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_CAPTION);
+		createEAttribute(forgottenPasswordUnitEClass, FORGOTTEN_PASSWORD_UNIT__EMAIL_SENT_MESSAGE);
+
+		resetPasswordUnitEClass = createEClass(RESET_PASSWORD_UNIT);
 
 		actionContainerEClass = createEClass(ACTION_CONTAINER);
 		createEReference(actionContainerEClass, ACTION_CONTAINER__ACTIONS);
@@ -4744,6 +4797,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		logoutUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		forgottenPasswordUnitEClass.getESuperTypes().add(this.getEditUnit());
 		forgottenPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
+		resetPasswordUnitEClass.getESuperTypes().add(this.getEditUnit());
+		resetPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		securityActionEClass.getESuperTypes().add(this.getAction());
 		deleteActionEClass.getESuperTypes().add(this.getAction());
@@ -5118,9 +5173,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(logoutUnitEClass, LogoutUnit.class, "LogoutUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(forgottenPasswordUnitEClass, ForgottenPasswordUnit.class, "ForgottenPasswordUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getForgottenPasswordUnit_ResetPasswordUnit(), this.getResetPasswordUnit(), null, "resetPasswordUnit", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForgottenPasswordUnit_UriEmailSent(), ecorePackage.getEString(), "uriEmailSent", "", 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getForgottenPasswordUnit_UriResetPassword(), ecorePackage.getEString(), "uriResetPassword", "", 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForgottenPasswordUnit_EmailSubject(), ecorePackage.getEString(), "emailSubject", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForgottenPasswordUnit_EmailMessage(), ecorePackage.getEString(), "emailMessage", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForgottenPasswordUnit_EmailSentCaption(), ecorePackage.getEString(), "emailSentCaption", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForgottenPasswordUnit_EmailSentMessage(), ecorePackage.getEString(), "emailSentMessage", null, 1, 1, ForgottenPasswordUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(resetPasswordUnitEClass, ResetPasswordUnit.class, "ResetPasswordUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(actionContainerEClass, ActionContainer.class, "ActionContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionContainer_Actions(), this.getAction(), this.getAction_UsedBy(), "actions", null, 0, -1, ActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -418,6 +418,15 @@ public interface WebuiFactory extends EFactory {
 	ForgottenPasswordUnit createForgottenPasswordUnit();
 
 	/**
+	 * Returns a new object of class '<em>Reset Password Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reset Password Unit</em>'.
+	 * @generated
+	 */
+	ResetPasswordUnit createResetPasswordUnit();
+
+	/**
 	 * Returns a new object of class '<em>Security Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

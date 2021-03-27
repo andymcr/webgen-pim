@@ -40,8 +40,15 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordConfirmLabel <em>Implicit Forgotten Password Confirm Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriRequest <em>Implicit Forgotten Password Uri Request</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriEmailSent <em>Implicit Forgotten Password Uri Email Sent</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriReset <em>Implicit Forgotten Password Uri Reset</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSubject <em>Implicit Forgotten Password Email Subject</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailMessage <em>Implicit Forgotten Password Email Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSentCaption <em>Implicit Forgotten Password Email Sent Caption</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSentMessage <em>Implicit Forgotten Password Email Sent Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordName <em>Implicit Reset Password Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordUnitLabel <em>Implicit Reset Password Unit Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordActionLabel <em>Implicit Reset Password Action Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordConfirmLabel <em>Implicit Reset Password Confirm Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordUri <em>Implicit Reset Password Uri</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication()
@@ -478,13 +485,13 @@ public interface Authentication extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Forgotten Password Name</b></em>' attribute.
-	 * The default value is <code>"reset"</code>.
+	 * The default value is <code>"forgotten"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implicit Forgotten Password Name</em>' attribute.
 	 * @see #setImplicitForgottenPasswordName(String)
 	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordName()
-	 * @model default="reset" ordered="false"
+	 * @model default="forgotten" ordered="false"
 	 * @generated
 	 */
 	String getImplicitForgottenPasswordName();
@@ -501,13 +508,13 @@ public interface Authentication extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Forgotten Password Unit Label</b></em>' attribute.
-	 * The default value is <code>"Reset Password"</code>.
+	 * The default value is <code>"Reset Password Request"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implicit Forgotten Password Unit Label</em>' attribute.
 	 * @see #setImplicitForgottenPasswordUnitLabel(String)
 	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordUnitLabel()
-	 * @model default="Reset Password" ordered="false"
+	 * @model default="Reset Password Request" ordered="false"
 	 * @generated
 	 */
 	String getImplicitForgottenPasswordUnitLabel();
@@ -615,29 +622,6 @@ public interface Authentication extends EObject {
 	void setImplicitForgottenPasswordUriEmailSent(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Implicit Forgotten Password Uri Reset</b></em>' attribute.
-	 * The default value is <code>"reset"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implicit Forgotten Password Uri Reset</em>' attribute.
-	 * @see #setImplicitForgottenPasswordUriReset(String)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordUriReset()
-	 * @model default="reset" ordered="false"
-	 * @generated
-	 */
-	String getImplicitForgottenPasswordUriReset();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordUriReset <em>Implicit Forgotten Password Uri Reset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implicit Forgotten Password Uri Reset</em>' attribute.
-	 * @see #getImplicitForgottenPasswordUriReset()
-	 * @generated
-	 */
-	void setImplicitForgottenPasswordUriReset(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute.
 	 * The default value is <code>"Your password reset request"</code>.
 	 * <!-- begin-user-doc -->
@@ -659,5 +643,189 @@ public interface Authentication extends EObject {
 	 * @generated
 	 */
 	void setImplicitForgottenPasswordEmailSubject(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Email Message</b></em>' attribute.
+	 * The default value is <code>"Your password reset request"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Forgotten Password Email Message</em>' attribute.
+	 * @see #setImplicitForgottenPasswordEmailMessage(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordEmailMessage()
+	 * @model default="Your password reset request" ordered="false"
+	 * @generated
+	 */
+	String getImplicitForgottenPasswordEmailMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailMessage <em>Implicit Forgotten Password Email Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Forgotten Password Email Message</em>' attribute.
+	 * @see #getImplicitForgottenPasswordEmailMessage()
+	 * @generated
+	 */
+	void setImplicitForgottenPasswordEmailMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Email Sent Caption</b></em>' attribute.
+	 * The default value is <code>"Your password reset request"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Forgotten Password Email Sent Caption</em>' attribute.
+	 * @see #setImplicitForgottenPasswordEmailSentCaption(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordEmailSentCaption()
+	 * @model default="Your password reset request" ordered="false"
+	 * @generated
+	 */
+	String getImplicitForgottenPasswordEmailSentCaption();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSentCaption <em>Implicit Forgotten Password Email Sent Caption</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Forgotten Password Email Sent Caption</em>' attribute.
+	 * @see #getImplicitForgottenPasswordEmailSentCaption()
+	 * @generated
+	 */
+	void setImplicitForgottenPasswordEmailSentCaption(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Forgotten Password Email Sent Message</b></em>' attribute.
+	 * The default value is <code>"Your password reset request"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Forgotten Password Email Sent Message</em>' attribute.
+	 * @see #setImplicitForgottenPasswordEmailSentMessage(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitForgottenPasswordEmailSentMessage()
+	 * @model default="Your password reset request" ordered="false"
+	 * @generated
+	 */
+	String getImplicitForgottenPasswordEmailSentMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitForgottenPasswordEmailSentMessage <em>Implicit Forgotten Password Email Sent Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Forgotten Password Email Sent Message</em>' attribute.
+	 * @see #getImplicitForgottenPasswordEmailSentMessage()
+	 * @generated
+	 */
+	void setImplicitForgottenPasswordEmailSentMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Reset Password Name</b></em>' attribute.
+	 * The default value is <code>"reset"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Reset Password Name</em>' attribute.
+	 * @see #setImplicitResetPasswordName(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitResetPasswordName()
+	 * @model default="reset" ordered="false"
+	 * @generated
+	 */
+	String getImplicitResetPasswordName();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordName <em>Implicit Reset Password Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Reset Password Name</em>' attribute.
+	 * @see #getImplicitResetPasswordName()
+	 * @generated
+	 */
+	void setImplicitResetPasswordName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Reset Password Unit Label</b></em>' attribute.
+	 * The default value is <code>"Reset Password"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Reset Password Unit Label</em>' attribute.
+	 * @see #setImplicitResetPasswordUnitLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitResetPasswordUnitLabel()
+	 * @model default="Reset Password" ordered="false"
+	 * @generated
+	 */
+	String getImplicitResetPasswordUnitLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordUnitLabel <em>Implicit Reset Password Unit Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Reset Password Unit Label</em>' attribute.
+	 * @see #getImplicitResetPasswordUnitLabel()
+	 * @generated
+	 */
+	void setImplicitResetPasswordUnitLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Reset Password Action Label</b></em>' attribute.
+	 * The default value is <code>"Reset Password"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Reset Password Action Label</em>' attribute.
+	 * @see #setImplicitResetPasswordActionLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitResetPasswordActionLabel()
+	 * @model default="Reset Password"
+	 * @generated
+	 */
+	String getImplicitResetPasswordActionLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordActionLabel <em>Implicit Reset Password Action Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Reset Password Action Label</em>' attribute.
+	 * @see #getImplicitResetPasswordActionLabel()
+	 * @generated
+	 */
+	void setImplicitResetPasswordActionLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Reset Password Confirm Label</b></em>' attribute.
+	 * The default value is <code>"Set Password"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Reset Password Confirm Label</em>' attribute.
+	 * @see #setImplicitResetPasswordConfirmLabel(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitResetPasswordConfirmLabel()
+	 * @model default="Set Password"
+	 * @generated
+	 */
+	String getImplicitResetPasswordConfirmLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordConfirmLabel <em>Implicit Reset Password Confirm Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Reset Password Confirm Label</em>' attribute.
+	 * @see #getImplicitResetPasswordConfirmLabel()
+	 * @generated
+	 */
+	void setImplicitResetPasswordConfirmLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Implicit Reset Password Uri</b></em>' attribute.
+	 * The default value is <code>"reset"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implicit Reset Password Uri</em>' attribute.
+	 * @see #setImplicitResetPasswordUri(String)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_ImplicitResetPasswordUri()
+	 * @model default="reset" ordered="false"
+	 * @generated
+	 */
+	String getImplicitResetPasswordUri();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitResetPasswordUri <em>Implicit Reset Password Uri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implicit Reset Password Uri</em>' attribute.
+	 * @see #getImplicitResetPasswordUri()
+	 * @generated
+	 */
+	void setImplicitResetPasswordUri(String value);
 
 } // Authentication
