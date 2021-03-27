@@ -42,10 +42,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isDisableInput <em>Disable Input</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isRequired <em>Required</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDefaultValue <em>Default Value</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getMustMatch <em>Must Match</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getInputClass <em>Input Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getValidationPattern <em>Validation Pattern</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isRepeatedField <em>Repeated Field</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getSecondDisplayLabel <em>Second Display Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getSecondTitle <em>Second Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getSecondPlaceholder <em>Second Placeholder</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getSecondHelp <em>Second Help</em>}</li>
  * </ul>
  *
  * @generated
@@ -262,36 +265,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	protected String defaultValue = DEFAULT_VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMustMatch() <em>Must Match</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMustMatch()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnitField mustMatch;
-
-	/**
-	 * The default value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INPUT_CLASS_EDEFAULT = "input_attribute";
-
-	/**
-	 * The cached value of the '{@link #getInputClass() <em>Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String inputClass = INPUT_CLASS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,6 +303,106 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected String validationPattern = VALIDATION_PATTERN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isRepeatedField() <em>Repeated Field</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRepeatedField()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean REPEATED_FIELD_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isRepeatedField() <em>Repeated Field</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRepeatedField()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean repeatedField = REPEATED_FIELD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecondDisplayLabel() <em>Second Display Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondDisplayLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECOND_DISPLAY_LABEL_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecondDisplayLabel() <em>Second Display Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondDisplayLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String secondDisplayLabel = SECOND_DISPLAY_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecondTitle() <em>Second Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECOND_TITLE_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecondTitle() <em>Second Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String secondTitle = SECOND_TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecondPlaceholder() <em>Second Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondPlaceholder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECOND_PLACEHOLDER_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecondPlaceholder() <em>Second Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondPlaceholder()
+	 * @generated
+	 * @ordered
+	 */
+	protected String secondPlaceholder = SECOND_PLACEHOLDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecondHelp() <em>Second Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondHelp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECOND_HELP_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecondHelp() <em>Second Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecondHelp()
+	 * @generated
+	 * @ordered
+	 */
+	protected String secondHelp = SECOND_HELP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -674,69 +747,6 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 */
 	@Override
-	public UnitField getMustMatch() {
-		if (mustMatch != null && mustMatch.eIsProxy()) {
-			InternalEObject oldMustMatch = (InternalEObject)mustMatch;
-			mustMatch = (UnitField)eResolveProxy(oldMustMatch);
-			if (mustMatch != oldMustMatch) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.INTERFACE_FIELD__MUST_MATCH, oldMustMatch, mustMatch));
-			}
-		}
-		return mustMatch;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnitField basicGetMustMatch() {
-		return mustMatch;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMustMatch(UnitField newMustMatch) {
-		UnitField oldMustMatch = mustMatch;
-		mustMatch = newMustMatch;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__MUST_MATCH, oldMustMatch, mustMatch));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getInputClass() {
-		return inputClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInputClass(String newInputClass) {
-		String oldInputClass = inputClass;
-		inputClass = newInputClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__INPUT_CLASS, oldInputClass, inputClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getPlaceholder() {
 		return placeholder;
 	}
@@ -752,6 +762,121 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		placeholder = newPlaceholder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__PLACEHOLDER, oldPlaceholder, placeholder));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isRepeatedField() {
+		return repeatedField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRepeatedField(boolean newRepeatedField) {
+		boolean oldRepeatedField = repeatedField;
+		repeatedField = newRepeatedField;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD, oldRepeatedField, repeatedField));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSecondDisplayLabel() {
+		return secondDisplayLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecondDisplayLabel(String newSecondDisplayLabel) {
+		String oldSecondDisplayLabel = secondDisplayLabel;
+		secondDisplayLabel = newSecondDisplayLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL, oldSecondDisplayLabel, secondDisplayLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSecondTitle() {
+		return secondTitle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecondTitle(String newSecondTitle) {
+		String oldSecondTitle = secondTitle;
+		secondTitle = newSecondTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__SECOND_TITLE, oldSecondTitle, secondTitle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSecondPlaceholder() {
+		return secondPlaceholder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecondPlaceholder(String newSecondPlaceholder) {
+		String oldSecondPlaceholder = secondPlaceholder;
+		secondPlaceholder = newSecondPlaceholder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER, oldSecondPlaceholder, secondPlaceholder));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSecondHelp() {
+		return secondHelp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecondHelp(String newSecondHelp) {
+		String oldSecondHelp = secondHelp;
+		secondHelp = newSecondHelp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__SECOND_HELP, oldSecondHelp, secondHelp));
 	}
 
 	/**
@@ -855,15 +980,20 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return isRequired();
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
 				return getDefaultValue();
-			case WebuiPackage.INTERFACE_FIELD__MUST_MATCH:
-				if (resolve) return getMustMatch();
-				return basicGetMustMatch();
-			case WebuiPackage.INTERFACE_FIELD__INPUT_CLASS:
-				return getInputClass();
 			case WebuiPackage.INTERFACE_FIELD__PLACEHOLDER:
 				return getPlaceholder();
 			case WebuiPackage.INTERFACE_FIELD__VALIDATION_PATTERN:
 				return getValidationPattern();
+			case WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD:
+				return isRepeatedField();
+			case WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL:
+				return getSecondDisplayLabel();
+			case WebuiPackage.INTERFACE_FIELD__SECOND_TITLE:
+				return getSecondTitle();
+			case WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER:
+				return getSecondPlaceholder();
+			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
+				return getSecondHelp();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -912,17 +1042,26 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
 				setDefaultValue((String)newValue);
 				return;
-			case WebuiPackage.INTERFACE_FIELD__MUST_MATCH:
-				setMustMatch((UnitField)newValue);
-				return;
-			case WebuiPackage.INTERFACE_FIELD__INPUT_CLASS:
-				setInputClass((String)newValue);
-				return;
 			case WebuiPackage.INTERFACE_FIELD__PLACEHOLDER:
 				setPlaceholder((String)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__VALIDATION_PATTERN:
 				setValidationPattern((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD:
+				setRepeatedField((Boolean)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL:
+				setSecondDisplayLabel((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_TITLE:
+				setSecondTitle((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER:
+				setSecondPlaceholder((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
+				setSecondHelp((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -972,17 +1111,26 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
 				setDefaultValue(DEFAULT_VALUE_EDEFAULT);
 				return;
-			case WebuiPackage.INTERFACE_FIELD__MUST_MATCH:
-				setMustMatch((UnitField)null);
-				return;
-			case WebuiPackage.INTERFACE_FIELD__INPUT_CLASS:
-				setInputClass(INPUT_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.INTERFACE_FIELD__PLACEHOLDER:
 				setPlaceholder(PLACEHOLDER_EDEFAULT);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__VALIDATION_PATTERN:
 				setValidationPattern(VALIDATION_PATTERN_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD:
+				setRepeatedField(REPEATED_FIELD_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL:
+				setSecondDisplayLabel(SECOND_DISPLAY_LABEL_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_TITLE:
+				setSecondTitle(SECOND_TITLE_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER:
+				setSecondPlaceholder(SECOND_PLACEHOLDER_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
+				setSecondHelp(SECOND_HELP_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1020,14 +1168,20 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return required != REQUIRED_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
 				return DEFAULT_VALUE_EDEFAULT == null ? defaultValue != null : !DEFAULT_VALUE_EDEFAULT.equals(defaultValue);
-			case WebuiPackage.INTERFACE_FIELD__MUST_MATCH:
-				return mustMatch != null;
-			case WebuiPackage.INTERFACE_FIELD__INPUT_CLASS:
-				return INPUT_CLASS_EDEFAULT == null ? inputClass != null : !INPUT_CLASS_EDEFAULT.equals(inputClass);
 			case WebuiPackage.INTERFACE_FIELD__PLACEHOLDER:
 				return PLACEHOLDER_EDEFAULT == null ? placeholder != null : !PLACEHOLDER_EDEFAULT.equals(placeholder);
 			case WebuiPackage.INTERFACE_FIELD__VALIDATION_PATTERN:
 				return VALIDATION_PATTERN_EDEFAULT == null ? validationPattern != null : !VALIDATION_PATTERN_EDEFAULT.equals(validationPattern);
+			case WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD:
+				return repeatedField != REPEATED_FIELD_EDEFAULT;
+			case WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL:
+				return SECOND_DISPLAY_LABEL_EDEFAULT == null ? secondDisplayLabel != null : !SECOND_DISPLAY_LABEL_EDEFAULT.equals(secondDisplayLabel);
+			case WebuiPackage.INTERFACE_FIELD__SECOND_TITLE:
+				return SECOND_TITLE_EDEFAULT == null ? secondTitle != null : !SECOND_TITLE_EDEFAULT.equals(secondTitle);
+			case WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER:
+				return SECOND_PLACEHOLDER_EDEFAULT == null ? secondPlaceholder != null : !SECOND_PLACEHOLDER_EDEFAULT.equals(secondPlaceholder);
+			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
+				return SECOND_HELP_EDEFAULT == null ? secondHelp != null : !SECOND_HELP_EDEFAULT.equals(secondHelp);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1112,12 +1266,20 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		result.append(required);
 		result.append(", defaultValue: ");
 		result.append(defaultValue);
-		result.append(", inputClass: ");
-		result.append(inputClass);
 		result.append(", placeholder: ");
 		result.append(placeholder);
 		result.append(", validationPattern: ");
 		result.append(validationPattern);
+		result.append(", repeatedField: ");
+		result.append(repeatedField);
+		result.append(", secondDisplayLabel: ");
+		result.append(secondDisplayLabel);
+		result.append(", secondTitle: ");
+		result.append(secondTitle);
+		result.append(", secondPlaceholder: ");
+		result.append(secondPlaceholder);
+		result.append(", secondHelp: ");
+		result.append(secondHelp);
 		result.append(')');
 		return result.toString();
 	}

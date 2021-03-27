@@ -2568,27 +2568,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInterfaceField_MustMatch() {
-		return (EReference)interfaceFieldEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInterfaceField_InputClass() {
-		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getInterfaceField_Placeholder() {
+		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterfaceField_RepeatedField() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2598,8 +2588,48 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInterfaceField_ValidationPattern() {
+	public EAttribute getInterfaceField_SecondDisplayLabel() {
 		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterfaceField_SecondTitle() {
+		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterfaceField_SecondPlaceholder() {
+		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterfaceField_SecondHelp() {
+		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterfaceField_ValidationPattern() {
+		return (EAttribute)interfaceFieldEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -4478,10 +4508,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		interfaceFieldEClass = createEClass(INTERFACE_FIELD);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__REQUIRED);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__DEFAULT_VALUE);
-		createEReference(interfaceFieldEClass, INTERFACE_FIELD__MUST_MATCH);
-		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__INPUT_CLASS);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__PLACEHOLDER);
 		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__VALIDATION_PATTERN);
+		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__REPEATED_FIELD);
+		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__SECOND_DISPLAY_LABEL);
+		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__SECOND_TITLE);
+		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__SECOND_PLACEHOLDER);
+		createEAttribute(interfaceFieldEClass, INTERFACE_FIELD__SECOND_HELP);
 
 		dataTypeFieldEClass = createEClass(DATA_TYPE_FIELD);
 		createEReference(dataTypeFieldEClass, DATA_TYPE_FIELD__DATA_TYPE);
@@ -5028,10 +5061,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(interfaceFieldEClass, InterfaceField.class, "InterfaceField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterfaceField_Required(), ecorePackage.getEBoolean(), "required", null, 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getInterfaceField_DefaultValue(), ecorePackage.getEString(), "defaultValue", null, 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getInterfaceField_MustMatch(), this.getUnitField(), null, "mustMatch", null, 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getInterfaceField_InputClass(), ecorePackage.getEString(), "inputClass", "input_attribute", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getInterfaceField_Placeholder(), ecorePackage.getEString(), "placeholder", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getInterfaceField_ValidationPattern(), ecorePackage.getEString(), "validationPattern", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getInterfaceField_RepeatedField(), ecorePackage.getEBoolean(), "repeatedField", "false", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceField_SecondDisplayLabel(), ecorePackage.getEString(), "secondDisplayLabel", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceField_SecondTitle(), ecorePackage.getEString(), "secondTitle", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceField_SecondPlaceholder(), ecorePackage.getEString(), "secondPlaceholder", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceField_SecondHelp(), ecorePackage.getEString(), "secondHelp", "", 0, 1, InterfaceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeFieldEClass, DataTypeField.class, "DataTypeField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataTypeField_DataType(), theBasePackage.getDataType(), null, "dataType", null, 1, 1, DataTypeField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

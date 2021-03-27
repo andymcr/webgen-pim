@@ -228,10 +228,6 @@ public class TransformUsingEmftVm {
 			final Model wafTraceModelP7 = createModel("trace_waf_p4");
 			executeRefiningPass("PassAuthentication", wafModelName, wafModel,
 				wafInputModels, wafTraceModelP7);
-	
-			final Model wafTraceModelP8 = createModel("trace_waf_p5");
-			executeRefiningPass("PassAuthentication2", wafModelName, wafModel,
-				wafInputModels, wafTraceModelP8);
 			wafModel.getResource().save(Collections.emptyMap());
 		} catch (Exception e) {
 			System.err.println(e);

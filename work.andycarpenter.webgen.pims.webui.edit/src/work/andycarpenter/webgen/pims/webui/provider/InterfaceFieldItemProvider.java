@@ -63,10 +63,13 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 			addDisableInputPropertyDescriptor(object);
 			addRequiredPropertyDescriptor(object);
 			addDefaultValuePropertyDescriptor(object);
-			addMustMatchPropertyDescriptor(object);
-			addInputClassPropertyDescriptor(object);
 			addPlaceholderPropertyDescriptor(object);
 			addValidationPatternPropertyDescriptor(object);
+			addRepeatedFieldPropertyDescriptor(object);
+			addSecondDisplayLabelPropertyDescriptor(object);
+			addSecondTitlePropertyDescriptor(object);
+			addSecondPlaceholderPropertyDescriptor(object);
+			addSecondHelpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -292,50 +295,6 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 	}
 
 	/**
-	 * This adds a property descriptor for the Must Match feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMustMatchPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_InterfaceField_mustMatch_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_mustMatch_feature", "_UI_InterfaceField_type"),
-				 WebuiPackage.Literals.INTERFACE_FIELD__MUST_MATCH,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_InterfaceField_inputClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_inputClass_feature", "_UI_InterfaceField_type"),
-				 WebuiPackage.Literals.INTERFACE_FIELD__INPUT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Placeholder feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,6 +308,116 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 				 getString("_UI_InterfaceField_placeholder_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_placeholder_feature", "_UI_InterfaceField_type"),
 				 WebuiPackage.Literals.INTERFACE_FIELD__PLACEHOLDER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Repeated Field feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRepeatedFieldPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InterfaceField_repeatedField_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_repeatedField_feature", "_UI_InterfaceField_type"),
+				 WebuiPackage.Literals.INTERFACE_FIELD__REPEATED_FIELD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Second Display Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecondDisplayLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InterfaceField_secondDisplayLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_secondDisplayLabel_feature", "_UI_InterfaceField_type"),
+				 WebuiPackage.Literals.INTERFACE_FIELD__SECOND_DISPLAY_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Second Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecondTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InterfaceField_secondTitle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_secondTitle_feature", "_UI_InterfaceField_type"),
+				 WebuiPackage.Literals.INTERFACE_FIELD__SECOND_TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Second Placeholder feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecondPlaceholderPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InterfaceField_secondPlaceholder_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_secondPlaceholder_feature", "_UI_InterfaceField_type"),
+				 WebuiPackage.Literals.INTERFACE_FIELD__SECOND_PLACEHOLDER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Second Help feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecondHelpPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InterfaceField_secondHelp_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceField_secondHelp_feature", "_UI_InterfaceField_type"),
+				 WebuiPackage.Literals.INTERFACE_FIELD__SECOND_HELP,
 				 true,
 				 false,
 				 false,
@@ -446,9 +515,13 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 			case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT:
 			case WebuiPackage.INTERFACE_FIELD__REQUIRED:
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
-			case WebuiPackage.INTERFACE_FIELD__INPUT_CLASS:
 			case WebuiPackage.INTERFACE_FIELD__PLACEHOLDER:
 			case WebuiPackage.INTERFACE_FIELD__VALIDATION_PATTERN:
+			case WebuiPackage.INTERFACE_FIELD__REPEATED_FIELD:
+			case WebuiPackage.INTERFACE_FIELD__SECOND_DISPLAY_LABEL:
+			case WebuiPackage.INTERFACE_FIELD__SECOND_TITLE:
+			case WebuiPackage.INTERFACE_FIELD__SECOND_PLACEHOLDER:
+			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:

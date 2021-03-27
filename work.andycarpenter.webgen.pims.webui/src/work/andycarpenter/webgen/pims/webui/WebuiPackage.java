@@ -4662,31 +4662,13 @@ public interface WebuiPackage extends EPackage {
 	int INTERFACE_FIELD__DEFAULT_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Must Match</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_FIELD__MUST_MATCH = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_FIELD__INPUT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
-
-	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -4695,7 +4677,52 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Repeated Field</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__REPEATED_FIELD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Second Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__SECOND_DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Second Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__SECOND_TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Second Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__SECOND_PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Second Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__SECOND_HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Interface Field</em>' class.
@@ -4704,7 +4731,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Interface Field</em>' class.
@@ -4852,24 +4879,6 @@ public interface WebuiPackage extends EPackage {
 	int DATA_TYPE_FIELD__DEFAULT_VALUE = INTERFACE_FIELD__DEFAULT_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Must Match</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_FIELD__MUST_MATCH = INTERFACE_FIELD__MUST_MATCH;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_FIELD__INPUT_CLASS = INTERFACE_FIELD__INPUT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4886,6 +4895,51 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE_FIELD__VALIDATION_PATTERN = INTERFACE_FIELD__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Repeated Field</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__REPEATED_FIELD = INTERFACE_FIELD__REPEATED_FIELD;
+
+	/**
+	 * The feature id for the '<em><b>Second Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__SECOND_DISPLAY_LABEL = INTERFACE_FIELD__SECOND_DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Second Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__SECOND_TITLE = INTERFACE_FIELD__SECOND_TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Second Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__SECOND_PLACEHOLDER = INTERFACE_FIELD__SECOND_PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Second Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__SECOND_HELP = INTERFACE_FIELD__SECOND_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Data Type</b></em>' reference.
@@ -5078,24 +5132,6 @@ public interface WebuiPackage extends EPackage {
 	int DATE_FIELD__DEFAULT_VALUE = INTERFACE_FIELD__DEFAULT_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Must Match</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_FIELD__MUST_MATCH = INTERFACE_FIELD__MUST_MATCH;
-
-	/**
-	 * The feature id for the '<em><b>Input Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_FIELD__INPUT_CLASS = INTERFACE_FIELD__INPUT_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5112,6 +5148,51 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_FIELD__VALIDATION_PATTERN = INTERFACE_FIELD__VALIDATION_PATTERN;
+
+	/**
+	 * The feature id for the '<em><b>Repeated Field</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__REPEATED_FIELD = INTERFACE_FIELD__REPEATED_FIELD;
+
+	/**
+	 * The feature id for the '<em><b>Second Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__SECOND_DISPLAY_LABEL = INTERFACE_FIELD__SECOND_DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Second Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__SECOND_TITLE = INTERFACE_FIELD__SECOND_TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Second Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__SECOND_PLACEHOLDER = INTERFACE_FIELD__SECOND_PLACEHOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Second Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__SECOND_HELP = INTERFACE_FIELD__SECOND_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' attribute.
@@ -20033,28 +20114,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getInterfaceField_DefaultValue();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getMustMatch <em>Must Match</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Must Match</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getMustMatch()
-	 * @see #getInterfaceField()
-	 * @generated
-	 */
-	EReference getInterfaceField_MustMatch();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getInputClass <em>Input Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getInputClass()
-	 * @see #getInterfaceField()
-	 * @generated
-	 */
-	EAttribute getInterfaceField_InputClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getPlaceholder <em>Placeholder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20064,6 +20123,61 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInterfaceField_Placeholder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#isRepeatedField <em>Repeated Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Repeated Field</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#isRepeatedField()
+	 * @see #getInterfaceField()
+	 * @generated
+	 */
+	EAttribute getInterfaceField_RepeatedField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondDisplayLabel <em>Second Display Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Second Display Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondDisplayLabel()
+	 * @see #getInterfaceField()
+	 * @generated
+	 */
+	EAttribute getInterfaceField_SecondDisplayLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondTitle <em>Second Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Second Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondTitle()
+	 * @see #getInterfaceField()
+	 * @generated
+	 */
+	EAttribute getInterfaceField_SecondTitle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondPlaceholder <em>Second Placeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Second Placeholder</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondPlaceholder()
+	 * @see #getInterfaceField()
+	 * @generated
+	 */
+	EAttribute getInterfaceField_SecondPlaceholder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondHelp <em>Second Help</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Second Help</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondHelp()
+	 * @see #getInterfaceField()
+	 * @generated
+	 */
+	EAttribute getInterfaceField_SecondHelp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getValidationPattern <em>Validation Pattern</em>}'.
@@ -23372,28 +23486,52 @@ public interface WebuiPackage extends EPackage {
 		EAttribute INTERFACE_FIELD__DEFAULT_VALUE = eINSTANCE.getInterfaceField_DefaultValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Must Match</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERFACE_FIELD__MUST_MATCH = eINSTANCE.getInterfaceField_MustMatch();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTERFACE_FIELD__INPUT_CLASS = eINSTANCE.getInterfaceField_InputClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Placeholder</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute INTERFACE_FIELD__PLACEHOLDER = eINSTANCE.getInterfaceField_Placeholder();
+
+		/**
+		 * The meta object literal for the '<em><b>Repeated Field</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_FIELD__REPEATED_FIELD = eINSTANCE.getInterfaceField_RepeatedField();
+
+		/**
+		 * The meta object literal for the '<em><b>Second Display Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_FIELD__SECOND_DISPLAY_LABEL = eINSTANCE.getInterfaceField_SecondDisplayLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Second Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_FIELD__SECOND_TITLE = eINSTANCE.getInterfaceField_SecondTitle();
+
+		/**
+		 * The meta object literal for the '<em><b>Second Placeholder</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_FIELD__SECOND_PLACEHOLDER = eINSTANCE.getInterfaceField_SecondPlaceholder();
+
+		/**
+		 * The meta object literal for the '<em><b>Second Help</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_FIELD__SECOND_HELP = eINSTANCE.getInterfaceField_SecondHelp();
 
 		/**
 		 * The meta object literal for the '<em><b>Validation Pattern</b></em>' attribute feature.

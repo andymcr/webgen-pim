@@ -15,10 +15,13 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#isRequired <em>Required</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getDefaultValue <em>Default Value</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getMustMatch <em>Must Match</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getInputClass <em>Input Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getPlaceholder <em>Placeholder</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getValidationPattern <em>Validation Pattern</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#isRepeatedField <em>Repeated Field</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondDisplayLabel <em>Second Display Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondTitle <em>Second Title</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondPlaceholder <em>Second Placeholder</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondHelp <em>Second Help</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField()
@@ -79,59 +82,6 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	void setDefaultValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Must Match</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Must Match</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Must Match</em>' reference.
-	 * @see #setMustMatch(UnitField)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_MustMatch()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	UnitField getMustMatch();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getMustMatch <em>Must Match</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Must Match</em>' reference.
-	 * @see #getMustMatch()
-	 * @generated
-	 */
-	void setMustMatch(UnitField value);
-
-	/**
-	 * Returns the value of the '<em><b>Input Class</b></em>' attribute.
-	 * The default value is <code>"input_attribute"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Class</em>' attribute.
-	 * @see #setInputClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_InputClass()
-	 * @model default="input_attribute" ordered="false"
-	 * @generated
-	 */
-	String getInputClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getInputClass <em>Input Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Class</em>' attribute.
-	 * @see #getInputClass()
-	 * @generated
-	 */
-	void setInputClass(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
@@ -157,6 +107,121 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @generated
 	 */
 	void setPlaceholder(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Repeated Field</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Repeated Field</em>' attribute.
+	 * @see #setRepeatedField(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_RepeatedField()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isRepeatedField();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#isRepeatedField <em>Repeated Field</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Repeated Field</em>' attribute.
+	 * @see #isRepeatedField()
+	 * @generated
+	 */
+	void setRepeatedField(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Second Display Label</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Second Display Label</em>' attribute.
+	 * @see #setSecondDisplayLabel(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_SecondDisplayLabel()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecondDisplayLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondDisplayLabel <em>Second Display Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Second Display Label</em>' attribute.
+	 * @see #getSecondDisplayLabel()
+	 * @generated
+	 */
+	void setSecondDisplayLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Second Title</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Second Title</em>' attribute.
+	 * @see #setSecondTitle(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_SecondTitle()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecondTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondTitle <em>Second Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Second Title</em>' attribute.
+	 * @see #getSecondTitle()
+	 * @generated
+	 */
+	void setSecondTitle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Second Placeholder</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Second Placeholder</em>' attribute.
+	 * @see #setSecondPlaceholder(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_SecondPlaceholder()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecondPlaceholder();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondPlaceholder <em>Second Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Second Placeholder</em>' attribute.
+	 * @see #getSecondPlaceholder()
+	 * @generated
+	 */
+	void setSecondPlaceholder(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Second Help</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Second Help</em>' attribute.
+	 * @see #setSecondHelp(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_SecondHelp()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecondHelp();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.InterfaceField#getSecondHelp <em>Second Help</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Second Help</em>' attribute.
+	 * @see #getSecondHelp()
+	 * @generated
+	 */
+	void setSecondHelp(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Validation Pattern</b></em>' attribute.

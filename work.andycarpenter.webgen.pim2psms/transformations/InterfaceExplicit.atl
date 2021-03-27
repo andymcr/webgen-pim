@@ -505,7 +505,10 @@ abstract rule InterfaceField {
 		mustMatch <- website.mustMatch,
 		localPlaceholder <- website.placeholder,
 		validationPattern <- website.validationPattern(),
-		inputClass <- website.inputClass
+		repeatedField <- website.repeatedField,
+		secondDisplayLabel <- website.secondDisplayLabel,
+		secondPlaceholder <- website.secondPlaceholder,
+		secondHelp <- website.secondHelp
 	)
 }
 

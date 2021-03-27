@@ -268,10 +268,7 @@ unique lazy rule implicitResetPasswordUnit {
 				thisModule.findOrmEntity(website.authentication.name)
 			endif,
 		displayFields <-
-			Sequence{
-				thisModule.implicitNewPasswordField(website),
-				thisModule.implicitConfirmPasswordField(website)
-			},
+			Sequence{thisModule.implicitNewPasswordField(website)},
 		confirmLabel <- website.implicitResetPasswordConfirmLabel
 	)
 }
@@ -462,24 +459,13 @@ lazy rule implicitNewPasswordField {
 		name <- 'plainPassword',
 		displayLabel <- 'New Password',
 		obfuscateFormFields <- true,
+		repeatedField <- true,
 		localTitle <- 'New Password',
 		localPlaceholder <- 'New Password',
-		fieldDataType <- thisModule.findOrmDataType('String')
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitConfirmPasswordField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <- 'confirmPassword',
-		displayLabel <- 'Confirm Password',
-		obfuscateFormFields <- true,
-		localTitle <- 'Confirm Password',
-		localPlaceholder <- 'Confirm Password',
-		fieldDataType <- thisModule.findOrmDataType('String')
+		fieldDataType <- thisModule.findOrmDataType('String'),
+		secondDisplayLabel <- 'Confirm Password',
+		secondTitle <- 'Confirm Password',
+		secondPlaceholder <- 'Confirm Password'
 	)
 	do {
 		waf;
