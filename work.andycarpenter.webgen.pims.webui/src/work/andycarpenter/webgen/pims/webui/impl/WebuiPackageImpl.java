@@ -4822,7 +4822,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		galleryUnitEClass.getESuperTypes().add(this.getImageUnit());
 		controlUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		searchUnitEClass.getESuperTypes().add(this.getControlUnit());
-		registrationUnitEClass.getESuperTypes().add(this.getDynamicUnit());
+		registrationUnitEClass.getESuperTypes().add(this.getEditUnit());
 		registrationUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		loginUnitEClass.getESuperTypes().add(this.getEditUnit());
 		loginUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());

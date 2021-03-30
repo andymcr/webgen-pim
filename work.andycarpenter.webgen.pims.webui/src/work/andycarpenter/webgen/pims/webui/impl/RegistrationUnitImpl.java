@@ -13,7 +13,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class RegistrationUnitImpl extends DynamicUnitImpl implements RegistrationUnit {
+public class RegistrationUnitImpl extends EditUnitImpl implements RegistrationUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

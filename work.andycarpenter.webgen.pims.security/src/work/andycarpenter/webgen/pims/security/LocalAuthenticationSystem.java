@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLoginUnit <em>Login Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getLogoutUnit <em>Logout Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getForgottenPasswordUnit <em>Forgotten Password Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordUnit <em>Reset Password Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isUseCaptcha <em>Use Captcha</em>}</li>
@@ -244,6 +245,28 @@ public interface LocalAuthenticationSystem extends Authentication {
 	 * @generated
 	 */
 	void setForgottenPasswordUnit(SecurityUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Password Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Password Unit</em>' reference.
+	 * @see #setResetPasswordUnit(SecurityUnit)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_ResetPasswordUnit()
+	 * @model
+	 * @generated
+	 */
+	SecurityUnit getResetPasswordUnit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordUnit <em>Reset Password Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Password Unit</em>' reference.
+	 * @see #getResetPasswordUnit()
+	 * @generated
+	 */
+	void setResetPasswordUnit(SecurityUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>View Role</b></em>' attribute.

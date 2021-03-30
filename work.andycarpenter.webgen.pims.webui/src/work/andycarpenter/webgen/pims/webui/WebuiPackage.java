@@ -14440,7 +14440,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__NAME = DYNAMIC_UNIT__NAME;
+	int REGISTRATION_UNIT__NAME = EDIT_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -14449,7 +14449,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
+	int REGISTRATION_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -14458,7 +14458,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int REGISTRATION_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -14467,7 +14467,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -14476,7 +14476,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
+	int REGISTRATION_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -14485,7 +14485,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__PURPOSE_SUMMARY = DYNAMIC_UNIT__PURPOSE_SUMMARY;
+	int REGISTRATION_UNIT__PURPOSE_SUMMARY = EDIT_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -14494,7 +14494,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
+	int REGISTRATION_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -14503,7 +14503,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
+	int REGISTRATION_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -14512,7 +14512,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int REGISTRATION_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -14521,7 +14521,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__OMIT_CAPTION = DYNAMIC_UNIT__OMIT_CAPTION;
+	int REGISTRATION_UNIT__OMIT_CAPTION = EDIT_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -14530,7 +14530,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_CAPTION_CLASS = DYNAMIC_UNIT__LOCAL_CAPTION_CLASS;
+	int REGISTRATION_UNIT__LOCAL_CAPTION_CLASS = EDIT_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -14539,7 +14539,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
+	int REGISTRATION_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
@@ -14548,7 +14548,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
+	int REGISTRATION_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -14557,7 +14557,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__ACTIONS = DYNAMIC_UNIT__ACTIONS;
+	int REGISTRATION_UNIT__ACTIONS = EDIT_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -14566,7 +14566,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
+	int REGISTRATION_UNIT__ACTION_NAVIGATION_CLASS = EDIT_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
@@ -14575,7 +14575,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONTENT_TYPE = DYNAMIC_UNIT__CONTENT_TYPE;
+	int REGISTRATION_UNIT__CONTENT_TYPE = EDIT_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -14584,7 +14584,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONTAINING_TYPE = DYNAMIC_UNIT__CONTAINING_TYPE;
+	int REGISTRATION_UNIT__CONTAINING_TYPE = EDIT_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -14593,7 +14593,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__ROUTE_ACTUALS = DYNAMIC_UNIT__ROUTE_ACTUALS;
+	int REGISTRATION_UNIT__ROUTE_ACTUALS = EDIT_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -14602,7 +14602,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__DISPLAY_FIELDS = DYNAMIC_UNIT__DISPLAY_FIELDS;
+	int REGISTRATION_UNIT__DISPLAY_FIELDS = EDIT_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
@@ -14611,7 +14611,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+	int REGISTRATION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = EDIT_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -14620,7 +14620,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__HIDE_WHEN = DYNAMIC_UNIT__HIDE_WHEN;
+	int REGISTRATION_UNIT__HIDE_WHEN = EDIT_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -14629,7 +14629,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__MESSAGE_WHEN_HIDDEN = DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN;
+	int REGISTRATION_UNIT__MESSAGE_WHEN_HIDDEN = EDIT_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -14638,7 +14638,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__HEADER = DYNAMIC_UNIT__HEADER;
+	int REGISTRATION_UNIT__HEADER = EDIT_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -14647,7 +14647,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__FOOTER = DYNAMIC_UNIT__FOOTER;
+	int REGISTRATION_UNIT__FOOTER = EDIT_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -14656,7 +14656,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__HEADER_CLASS = DYNAMIC_UNIT__HEADER_CLASS;
+	int REGISTRATION_UNIT__HEADER_CLASS = EDIT_UNIT__HEADER_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -14665,7 +14665,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_FIELD_LIST_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS;
+	int REGISTRATION_UNIT__LOCAL_FIELD_LIST_CLASS = EDIT_UNIT__LOCAL_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -14674,7 +14674,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_FIELD_LABEL_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS;
+	int REGISTRATION_UNIT__LOCAL_FIELD_LABEL_CLASS = EDIT_UNIT__LOCAL_FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -14683,7 +14683,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_FIELD_VALUE_CLASS = DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS;
+	int REGISTRATION_UNIT__LOCAL_FIELD_VALUE_CLASS = EDIT_UNIT__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -14692,7 +14692,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
+	int REGISTRATION_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -14701,7 +14701,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
+	int REGISTRATION_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -14710,7 +14710,97 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__FOOTER_CLASS = DYNAMIC_UNIT__FOOTER_CLASS;
+	int REGISTRATION_UNIT__FOOTER_CLASS = EDIT_UNIT__FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__TITLE = EDIT_UNIT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__USE_CAPTCHA = EDIT_UNIT__USE_CAPTCHA;
+
+	/**
+	 * The feature id for the '<em><b>Disable When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__DISABLE_WHEN = EDIT_UNIT__DISABLE_WHEN;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CONFIRM_MESSAGE = EDIT_UNIT__CONFIRM_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__UNIT_INPUT_GROUP_CLASS = EDIT_UNIT__UNIT_INPUT_GROUP_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Registration Unit</em>' class.
@@ -14719,7 +14809,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 0;
+	int REGISTRATION_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Registration Unit</em>' class.
@@ -14728,7 +14818,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 0;
+	int REGISTRATION_UNIT_OPERATION_COUNT = EDIT_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.LoginUnitImpl <em>Login Unit</em>}' class.

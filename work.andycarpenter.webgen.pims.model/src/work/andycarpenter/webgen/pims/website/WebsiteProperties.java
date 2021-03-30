@@ -27,6 +27,8 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#isUseDbSessionStorage <em>Use Db Session Storage</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getTextEditorURL <em>Text Editor URL</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSiteTemplate <em>Site Template</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSecurityFromEmail <em>Security From Email</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSecurityFromName <em>Security From Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#isStaticUnitsEditable <em>Static Units Editable</em>}</li>
  * </ul>
  *
@@ -343,6 +345,52 @@ public interface WebsiteProperties extends EObject {
 	 * @generated
 	 */
 	void setSiteTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Security From Email</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Security From Email</em>' attribute.
+	 * @see #setSecurityFromEmail(String)
+	 * @see work.andycarpenter.webgen.pims.website.WebsitePackage#getWebsiteProperties_SecurityFromEmail()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecurityFromEmail();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSecurityFromEmail <em>Security From Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Security From Email</em>' attribute.
+	 * @see #getSecurityFromEmail()
+	 * @generated
+	 */
+	void setSecurityFromEmail(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Security From Name</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Security From Name</em>' attribute.
+	 * @see #setSecurityFromName(String)
+	 * @see work.andycarpenter.webgen.pims.website.WebsitePackage#getWebsiteProperties_SecurityFromName()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSecurityFromName();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.website.WebsiteProperties#getSecurityFromName <em>Security From Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Security From Name</em>' attribute.
+	 * @see #getSecurityFromName()
+	 * @generated
+	 */
+	void setSecurityFromName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Static Units Editable</b></em>' attribute.

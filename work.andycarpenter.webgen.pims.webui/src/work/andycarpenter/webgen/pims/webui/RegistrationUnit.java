@@ -14,5 +14,5 @@ import work.andycarpenter.webgen.pims.security.SecurityUnit;
  * @model
  * @generated
  */
-public interface RegistrationUnit extends DynamicUnit, SecurityUnit {
+public interface RegistrationUnit extends EditUnit, SecurityUnit {
 } // RegistrationUnit

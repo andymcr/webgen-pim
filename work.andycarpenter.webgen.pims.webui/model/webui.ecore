@@ -725,7 +725,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultsDestination" ordered="false"
         lowerBound="1" eType="#//TabularUnit"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RegistrationUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RegistrationUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LoginUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LogoutUnit" eSuperTypes="#//DynamicUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForgottenPasswordUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit">

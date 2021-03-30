@@ -72,6 +72,8 @@ public class WebsitePropertiesItemProvider
 			addUseDbSessionStoragePropertyDescriptor(object);
 			addTextEditorURLPropertyDescriptor(object);
 			addSiteTemplatePropertyDescriptor(object);
+			addSecurityFromEmailPropertyDescriptor(object);
+			addSecurityFromNamePropertyDescriptor(object);
 			addStaticUnitsEditablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -342,6 +344,50 @@ public class WebsitePropertiesItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Security From Email feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecurityFromEmailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebsiteProperties_securityFromEmail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebsiteProperties_securityFromEmail_feature", "_UI_WebsiteProperties_type"),
+				 WebsitePackage.Literals.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Security From Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSecurityFromNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebsiteProperties_securityFromName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebsiteProperties_securityFromName_feature", "_UI_WebsiteProperties_type"),
+				 WebsitePackage.Literals.WEBSITE_PROPERTIES__SECURITY_FROM_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Static Units Editable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -412,6 +458,8 @@ public class WebsitePropertiesItemProvider
 			case WebsitePackage.WEBSITE_PROPERTIES__USE_DB_SESSION_STORAGE:
 			case WebsitePackage.WEBSITE_PROPERTIES__TEXT_EDITOR_URL:
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL:
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME:
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

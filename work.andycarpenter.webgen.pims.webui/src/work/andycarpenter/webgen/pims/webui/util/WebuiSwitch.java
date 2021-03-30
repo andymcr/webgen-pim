@@ -636,8 +636,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.REGISTRATION_UNIT: {
 				RegistrationUnit registrationUnit = (RegistrationUnit)theEObject;
 				T result = caseRegistrationUnit(registrationUnit);
-				if (result == null) result = caseDynamicUnit(registrationUnit);
+				if (result == null) result = caseEditUnit(registrationUnit);
 				if (result == null) result = caseSecurityUnit(registrationUnit);
+				if (result == null) result = caseSingletonUnit(registrationUnit);
+				if (result == null) result = caseDynamicUnit(registrationUnit);
 				if (result == null) result = caseContentUnit(registrationUnit);
 				if (result == null) result = caseActionContainer(registrationUnit);
 				if (result == null) result = caseNamedDisplayElement(registrationUnit);

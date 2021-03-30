@@ -61,14 +61,16 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Persistence"
           propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/resetPasswordRequestModel"/>
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute security.ecore#//LocalAuthenticationSystem/resetPasswordRequestName"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/registrationUnit"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/loginUnit"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/logoutUnit"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/forgottenPasswordUnit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/registrationUnit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/loginUnit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/logoutUnit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/forgottenPasswordUnit"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference security.ecore#//LocalAuthenticationSystem/resetPasswordUnit"/>
       <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute security.ecore#//LocalAuthenticationSystem/viewRole"/>
       <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute security.ecore#//LocalAuthenticationSystem/editRole"/>
       <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute security.ecore#//LocalAuthenticationSystem/useCaptcha"/>

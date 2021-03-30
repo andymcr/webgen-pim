@@ -809,13 +809,22 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Reset Password Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>View Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = AUTHENTICATION_FEATURE_COUNT + 9;
+	int LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = AUTHENTICATION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Edit Role</b></em>' attribute.
@@ -824,7 +833,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = AUTHENTICATION_FEATURE_COUNT + 10;
+	int LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = AUTHENTICATION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
@@ -833,7 +842,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA = AUTHENTICATION_FEATURE_COUNT + 11;
+	int LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA = AUTHENTICATION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Allow Remember Me</b></em>' attribute.
@@ -842,7 +851,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME = AUTHENTICATION_FEATURE_COUNT + 12;
+	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME = AUTHENTICATION_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Allow Self Registration</b></em>' attribute.
@@ -851,7 +860,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_SELF_REGISTRATION = AUTHENTICATION_FEATURE_COUNT + 13;
+	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_SELF_REGISTRATION = AUTHENTICATION_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Track Login Attempts</b></em>' attribute.
@@ -860,7 +869,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__TRACK_LOGIN_ATTEMPTS = AUTHENTICATION_FEATURE_COUNT + 14;
+	int LOCAL_AUTHENTICATION_SYSTEM__TRACK_LOGIN_ATTEMPTS = AUTHENTICATION_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Use Email Activation</b></em>' attribute.
@@ -869,7 +878,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USE_EMAIL_ACTIVATION = AUTHENTICATION_FEATURE_COUNT + 15;
+	int LOCAL_AUTHENTICATION_SYSTEM__USE_EMAIL_ACTIVATION = AUTHENTICATION_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Send Welcome Email</b></em>' attribute.
@@ -878,7 +887,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__SEND_WELCOME_EMAIL = AUTHENTICATION_FEATURE_COUNT + 16;
+	int LOCAL_AUTHENTICATION_SYSTEM__SEND_WELCOME_EMAIL = AUTHENTICATION_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Local Authentication System</em>' class.
@@ -887,7 +896,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 17;
+	int LOCAL_AUTHENTICATION_SYSTEM_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Local Authentication System</em>' class.
@@ -1784,6 +1793,17 @@ public interface SecurityPackage extends EPackage {
 	EReference getLocalAuthenticationSystem_ForgottenPasswordUnit();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordUnit <em>Reset Password Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reset Password Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordUnit()
+	 * @see #getLocalAuthenticationSystem()
+	 * @generated
+	 */
+	EReference getLocalAuthenticationSystem_ResetPasswordUnit();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2319,6 +2339,14 @@ public interface SecurityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT = eINSTANCE.getLocalAuthenticationSystem_ForgottenPasswordUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Password Unit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = eINSTANCE.getLocalAuthenticationSystem_ResetPasswordUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>View Role</b></em>' attribute feature.

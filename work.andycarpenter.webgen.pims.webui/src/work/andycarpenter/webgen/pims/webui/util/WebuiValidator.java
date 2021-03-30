@@ -1512,6 +1512,7 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(registrationUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(registrationUnit, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(registrationUnit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSingletonUnit_canOnlyTitleWithSingletons(registrationUnit, diagnostics, context);
 		return result;
 	}
 

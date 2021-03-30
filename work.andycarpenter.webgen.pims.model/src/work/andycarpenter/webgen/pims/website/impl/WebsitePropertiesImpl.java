@@ -36,6 +36,8 @@ import work.andycarpenter.webgen.pims.website.WebsiteProperties;
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#isUseDbSessionStorage <em>Use Db Session Storage</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getTextEditorURL <em>Text Editor URL</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSiteTemplate <em>Site Template</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSecurityFromEmail <em>Security From Email</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#getSecurityFromName <em>Security From Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.website.impl.WebsitePropertiesImpl#isStaticUnitsEditable <em>Static Units Editable</em>}</li>
  * </ul>
  *
@@ -271,6 +273,46 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @ordered
 	 */
 	protected String siteTemplate = SITE_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecurityFromEmail() <em>Security From Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecurityFromEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECURITY_FROM_EMAIL_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecurityFromEmail() <em>Security From Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecurityFromEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String securityFromEmail = SECURITY_FROM_EMAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSecurityFromName() <em>Security From Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecurityFromName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECURITY_FROM_NAME_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getSecurityFromName() <em>Security From Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecurityFromName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String securityFromName = SECURITY_FROM_NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isStaticUnitsEditable() <em>Static Units Editable</em>}' attribute.
@@ -610,6 +652,52 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 	 * @generated
 	 */
 	@Override
+	public String getSecurityFromEmail() {
+		return securityFromEmail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecurityFromEmail(String newSecurityFromEmail) {
+		String oldSecurityFromEmail = securityFromEmail;
+		securityFromEmail = newSecurityFromEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL, oldSecurityFromEmail, securityFromEmail));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSecurityFromName() {
+		return securityFromName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSecurityFromName(String newSecurityFromName) {
+		String oldSecurityFromName = securityFromName;
+		securityFromName = newSecurityFromName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME, oldSecurityFromName, securityFromName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isStaticUnitsEditable() {
 		return staticUnitsEditable;
 	}
@@ -660,6 +748,10 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return getTextEditorURL();
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				return getSiteTemplate();
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL:
+				return getSecurityFromEmail();
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME:
+				return getSecurityFromName();
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
 				return isStaticUnitsEditable();
 		}
@@ -709,6 +801,12 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				setSiteTemplate((String)newValue);
+				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL:
+				setSecurityFromEmail((String)newValue);
+				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME:
+				setSecurityFromName((String)newValue);
 				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
 				setStaticUnitsEditable((Boolean)newValue);
@@ -761,6 +859,12 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				setSiteTemplate(SITE_TEMPLATE_EDEFAULT);
 				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL:
+				setSecurityFromEmail(SECURITY_FROM_EMAIL_EDEFAULT);
+				return;
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME:
+				setSecurityFromName(SECURITY_FROM_NAME_EDEFAULT);
+				return;
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
 				setStaticUnitsEditable(STATIC_UNITS_EDITABLE_EDEFAULT);
 				return;
@@ -800,6 +904,10 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 				return TEXT_EDITOR_URL_EDEFAULT == null ? textEditorURL != null : !TEXT_EDITOR_URL_EDEFAULT.equals(textEditorURL);
 			case WebsitePackage.WEBSITE_PROPERTIES__SITE_TEMPLATE:
 				return SITE_TEMPLATE_EDEFAULT == null ? siteTemplate != null : !SITE_TEMPLATE_EDEFAULT.equals(siteTemplate);
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_EMAIL:
+				return SECURITY_FROM_EMAIL_EDEFAULT == null ? securityFromEmail != null : !SECURITY_FROM_EMAIL_EDEFAULT.equals(securityFromEmail);
+			case WebsitePackage.WEBSITE_PROPERTIES__SECURITY_FROM_NAME:
+				return SECURITY_FROM_NAME_EDEFAULT == null ? securityFromName != null : !SECURITY_FROM_NAME_EDEFAULT.equals(securityFromName);
 			case WebsitePackage.WEBSITE_PROPERTIES__STATIC_UNITS_EDITABLE:
 				return staticUnitsEditable != STATIC_UNITS_EDITABLE_EDEFAULT;
 		}
@@ -838,6 +946,10 @@ public class WebsitePropertiesImpl extends EObjectImpl implements WebsitePropert
 		result.append(textEditorURL);
 		result.append(", siteTemplate: ");
 		result.append(siteTemplate);
+		result.append(", securityFromEmail: ");
+		result.append(securityFromEmail);
+		result.append(", securityFromName: ");
+		result.append(securityFromName);
 		result.append(", staticUnitsEditable: ");
 		result.append(staticUnitsEditable);
 		result.append(')');

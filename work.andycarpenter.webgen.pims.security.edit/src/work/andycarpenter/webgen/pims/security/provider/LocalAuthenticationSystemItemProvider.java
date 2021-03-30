@@ -54,6 +54,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 			addLoginUnitPropertyDescriptor(object);
 			addLogoutUnitPropertyDescriptor(object);
 			addForgottenPasswordUnitPropertyDescriptor(object);
+			addResetPasswordUnitPropertyDescriptor(object);
 			addViewRolePropertyDescriptor(object);
 			addEditRolePropertyDescriptor(object);
 			addUseCaptchaPropertyDescriptor(object);
@@ -194,7 +195,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 true,
 				 null,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -216,7 +217,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 true,
 				 null,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -238,7 +239,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 true,
 				 null,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -260,7 +261,29 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 true,
 				 null,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Password Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetPasswordUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LocalAuthenticationSystem_resetPasswordUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_resetPasswordUnit_feature", "_UI_LocalAuthenticationSystem_type"),
+				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
