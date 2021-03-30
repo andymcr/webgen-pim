@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.security.SecurityUnit;
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getLoginUnit <em>Login Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getLogoutUnit <em>Logout Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getForgottenPasswordUnit <em>Forgotten Password Unit</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getResetPasswordUnit <em>Reset Password Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getViewRole <em>View Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#getEditRole <em>Edit Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.LocalAuthenticationSystemImpl#isUseCaptcha <em>Use Captcha</em>}</li>
@@ -162,6 +163,16 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @ordered
 	 */
 	protected SecurityUnit forgottenPasswordUnit;
+
+	/**
+	 * The cached value of the '{@link #getResetPasswordUnit() <em>Reset Password Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetPasswordUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected SecurityUnit resetPasswordUnit;
 
 	/**
 	 * The default value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
@@ -657,6 +668,46 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
+	public SecurityUnit getResetPasswordUnit() {
+		if (resetPasswordUnit != null && resetPasswordUnit.eIsProxy()) {
+			InternalEObject oldResetPasswordUnit = (InternalEObject)resetPasswordUnit;
+			resetPasswordUnit = (SecurityUnit)eResolveProxy(oldResetPasswordUnit);
+			if (resetPasswordUnit != oldResetPasswordUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT, oldResetPasswordUnit, resetPasswordUnit));
+			}
+		}
+		return resetPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SecurityUnit basicGetResetPasswordUnit() {
+		return resetPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetPasswordUnit(SecurityUnit newResetPasswordUnit) {
+		SecurityUnit oldResetPasswordUnit = resetPasswordUnit;
+		resetPasswordUnit = newResetPasswordUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT, oldResetPasswordUnit, resetPasswordUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getViewRole() {
 		return viewRole;
 	}
@@ -867,6 +918,9 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
 				if (resolve) return getForgottenPasswordUnit();
 				return basicGetForgottenPasswordUnit();
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT:
+				if (resolve) return getResetPasswordUnit();
+				return basicGetResetPasswordUnit();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				return getViewRole();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
@@ -921,6 +975,9 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
 				setForgottenPasswordUnit((SecurityUnit)newValue);
+				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT:
+				setResetPasswordUnit((SecurityUnit)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				setViewRole((String)newValue);
@@ -985,6 +1042,9 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
 				setForgottenPasswordUnit((SecurityUnit)null);
 				return;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT:
+				setResetPasswordUnit((SecurityUnit)null);
+				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				setViewRole(VIEW_ROLE_EDEFAULT);
 				return;
@@ -1039,6 +1099,8 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				return logoutUnit != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT:
 				return forgottenPasswordUnit != null;
+			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT:
+				return resetPasswordUnit != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 				return VIEW_ROLE_EDEFAULT == null ? viewRole != null : !VIEW_ROLE_EDEFAULT.equals(viewRole);
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
