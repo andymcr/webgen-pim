@@ -134,7 +134,7 @@ unique lazy rule implicitSecurityPage {
 		name <- 'Security',
 		displayLabel <- 'Security',
 		units <-
-			if website.registrationUnit.oclIsUndefined() then
+			if website.registrationUnit.oclIsUndefined() and website.allowSelfRegistration then
 				Sequence{ thisModule.implicitRegistrationUnit(website) }
 			else
 				Sequence{}
