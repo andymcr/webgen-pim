@@ -254,6 +254,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateCollectionDisplayOptions((CollectionDisplayOptions)value, diagnostics, context);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return validatePaginationControlPlacements((PaginationControlPlacements)value, diagnostics, context);
+			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
+				return validateContainerActionsPlacement((ContainerActionsPlacement)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -2021,6 +2023,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatePaginationControlPlacements(PaginationControlPlacements paginationControlPlacements, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateContainerActionsPlacement(ContainerActionsPlacement containerActionsPlacement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

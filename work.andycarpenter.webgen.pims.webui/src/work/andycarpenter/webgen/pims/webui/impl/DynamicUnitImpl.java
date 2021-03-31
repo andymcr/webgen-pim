@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
+import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.UnitField;
@@ -31,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentType <em>Content Type</em>}</li>
@@ -54,6 +56,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class DynamicUnitImpl extends ContentUnitImpl implements DynamicUnit {
+	/**
+	 * The default value of the '{@link #getContainerActionsPlacement() <em>Container Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainerActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ContainerActionsPlacement CONTAINER_ACTIONS_PLACEMENT_EDEFAULT = ContainerActionsPlacement.ABOVE;
+
+	/**
+	 * The cached value of the '{@link #getContainerActionsPlacement() <em>Container Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainerActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContainerActionsPlacement containerActionsPlacement = CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -371,6 +393,29 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.DYNAMIC_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ContainerActionsPlacement getContainerActionsPlacement() {
+		return containerActionsPlacement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContainerActionsPlacement(ContainerActionsPlacement newContainerActionsPlacement) {
+		ContainerActionsPlacement oldContainerActionsPlacement = containerActionsPlacement;
+		containerActionsPlacement = newContainerActionsPlacement == null ? CONTAINER_ACTIONS_PLACEMENT_EDEFAULT : newContainerActionsPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT, oldContainerActionsPlacement, containerActionsPlacement));
 	}
 
 	/**
@@ -849,6 +894,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
+				return getContainerActionsPlacement();
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return getActions();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
@@ -900,6 +947,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
+				setContainerActionsPlacement((ContainerActionsPlacement)newValue);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends Action>)newValue);
@@ -966,6 +1016,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
+				setContainerActionsPlacement(CONTAINER_ACTIONS_PLACEMENT_EDEFAULT);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				getActions().clear();
 				return;
@@ -1029,6 +1082,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
+				return containerActionsPlacement != CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
@@ -1078,6 +1133,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
+				case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT;
 				case WebuiPackage.DYNAMIC_UNIT__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1095,6 +1151,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
+				case WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.DYNAMIC_UNIT__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1113,7 +1170,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (actionNavigationClass: ");
+		result.append(" (containerActionsPlacement: ");
+		result.append(containerActionsPlacement);
+		result.append(", actionNavigationClass: ");
 		result.append(actionNavigationClass);
 		result.append(", hasWhenFieldsEmptyAddImplicitFields: ");
 		result.append(hasWhenFieldsEmptyAddImplicitFields);

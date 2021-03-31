@@ -27,6 +27,11 @@
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/Above"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/AboveAndBelow"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//ContainerActionsPlacement">
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Above"/>
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Below"/>
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Float"/>
+    </genEnums>
     <genClasses ecoreClass="webui.ecore#//WebUI">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/persistence"/>
       <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
@@ -35,6 +40,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/services"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory=""
           propertyDescription="" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/pages"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/useFormFloatingLabels"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultTimeFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateTimeFormat"/>
@@ -444,6 +450,7 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ResetPasswordUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ActionContainer">
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/containerActionsPlacement"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
           ecoreFeature="ecore:EReference webui.ecore#//ActionContainer/actions"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/actionNavigationClass"/>

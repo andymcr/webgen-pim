@@ -57,6 +57,7 @@ rule WafModel {
 		api <- api,
 		navigation <- website.webUI.navigation,
 		pages <- website.webUI.pages,
+		useFormFloatingLabels <- thisModule.findWebsiteUI().useFormFloatingLabels,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
 		defaultPageStyleClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
@@ -908,6 +909,7 @@ rule ResetPasswordUnit {
 abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (
+		containerActionsPlacement <- website.containerActionsPlacement,
 		allActions <- website.actions,
 		localActionNavigationClass <- website.actionNavigationClass
 	)

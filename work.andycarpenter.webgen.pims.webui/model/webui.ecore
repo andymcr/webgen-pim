@@ -19,6 +19,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Services"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
         eType="#//Page" containment="true" eOpposite="#//Page/webUI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useFormFloatingLabels"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDateFormat" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="jS F Y"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTimeFormat" ordered="false"
@@ -743,6 +745,11 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResetPasswordUnit" eSuperTypes="#//EditUnit ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//SecurityUnit"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ContainerActionsPlacement">
+    <eLiterals name="Above"/>
+    <eLiterals name="Below" value="1"/>
+    <eLiterals name="Float" value="2"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionContainer" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="atMostOneDeleteAction"/>
@@ -750,6 +757,8 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="atMostOneDeleteAction" value="actions->select(a | a.oclIsKindOf(DeleteAction))->size() &lt; 2"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerActionsPlacement"
+        eType="#//ContainerActionsPlacement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//Action" containment="true" eOpposite="#//Action/usedBy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionNavigationClass"

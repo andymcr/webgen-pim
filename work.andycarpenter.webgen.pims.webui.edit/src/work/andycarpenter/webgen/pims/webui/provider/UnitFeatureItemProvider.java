@@ -52,6 +52,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addContainerActionsPlacementPropertyDescriptor(object);
 			addActionNavigationClassPropertyDescriptor(object);
 			addDisplayLabelPropertyDescriptor(object);
 			addRequiredPropertyDescriptor(object);
@@ -68,6 +69,28 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Container Actions Placement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainerActionsPlacementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActionContainer_containerActionsPlacement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_containerActionsPlacement_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -437,6 +460,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UnitFeature.class)) {
+			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_LABEL:
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:

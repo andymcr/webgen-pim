@@ -21,6 +21,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getServices <em>Services</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
@@ -133,6 +134,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	EList<Page> getPages();
+
+	/**
+	 * Returns the value of the '<em><b>Use Form Floating Labels</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Use Form Floating Labels</em>' attribute.
+	 * @see #setUseFormFloatingLabels(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_UseFormFloatingLabels()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isUseFormFloatingLabels();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Use Form Floating Labels</em>' attribute.
+	 * @see #isUseFormFloatingLabels()
+	 * @generated
+	 */
+	void setUseFormFloatingLabels(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Date Format</b></em>' attribute.

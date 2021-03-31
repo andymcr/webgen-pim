@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
+import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -29,6 +30,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayLabel <em>Display Label</em>}</li>
@@ -51,6 +53,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeature {
+	/**
+	 * The default value of the '{@link #getContainerActionsPlacement() <em>Container Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainerActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ContainerActionsPlacement CONTAINER_ACTIONS_PLACEMENT_EDEFAULT = ContainerActionsPlacement.ABOVE;
+
+	/**
+	 * The cached value of the '{@link #getContainerActionsPlacement() <em>Container Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainerActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContainerActionsPlacement containerActionsPlacement = CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -378,6 +400,29 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.UNIT_FEATURE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ContainerActionsPlacement getContainerActionsPlacement() {
+		return containerActionsPlacement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setContainerActionsPlacement(ContainerActionsPlacement newContainerActionsPlacement) {
+		ContainerActionsPlacement oldContainerActionsPlacement = containerActionsPlacement;
+		containerActionsPlacement = newContainerActionsPlacement == null ? CONTAINER_ACTIONS_PLACEMENT_EDEFAULT : newContainerActionsPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT, oldContainerActionsPlacement, containerActionsPlacement));
 	}
 
 	/**
@@ -846,6 +891,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
+				return getContainerActionsPlacement();
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return getActions();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
@@ -893,6 +940,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
+				setContainerActionsPlacement((ContainerActionsPlacement)newValue);
+				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends Action>)newValue);
@@ -957,6 +1007,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
+				setContainerActionsPlacement(CONTAINER_ACTIONS_PLACEMENT_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
 				return;
@@ -1020,6 +1073,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
+				return containerActionsPlacement != CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
@@ -1067,6 +1122,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT;
 				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1084,6 +1140,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
+				case WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT;
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1102,7 +1159,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (actionNavigationClass: ");
+		result.append(" (containerActionsPlacement: ");
+		result.append(containerActionsPlacement);
+		result.append(", actionNavigationClass: ");
 		result.append(actionNavigationClass);
 		result.append(", displayLabel: ");
 		result.append(displayLabel);

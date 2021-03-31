@@ -41,6 +41,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getServices <em>Services</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPages <em>Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
@@ -100,6 +101,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected EList<Page> pages;
+
+	/**
+	 * The default value of the '{@link #isUseFormFloatingLabels() <em>Use Form Floating Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseFormFloatingLabels()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_FORM_FLOATING_LABELS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseFormFloatingLabels() <em>Use Form Floating Labels</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseFormFloatingLabels()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useFormFloatingLabels = USE_FORM_FLOATING_LABELS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultDateFormat() <em>Default Date Format</em>}' attribute.
@@ -476,6 +497,29 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			pages = new EObjectContainmentWithInverseEList<Page>(Page.class, this, WebuiPackage.WEB_UI__PAGES, WebuiPackage.PAGE__WEB_UI);
 		}
 		return pages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isUseFormFloatingLabels() {
+		return useFormFloatingLabels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUseFormFloatingLabels(boolean newUseFormFloatingLabels) {
+		boolean oldUseFormFloatingLabels = useFormFloatingLabels;
+		useFormFloatingLabels = newUseFormFloatingLabels;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS, oldUseFormFloatingLabels, useFormFloatingLabels));
 	}
 
 	/**
@@ -1068,6 +1112,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return basicGetServices();
 			case WebuiPackage.WEB_UI__PAGES:
 				return getPages();
+			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
+				return isUseFormFloatingLabels();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 				return getDefaultDateFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
@@ -1123,6 +1169,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__PAGES:
 				getPages().clear();
 				getPages().addAll((Collection<? extends Page>)newValue);
+				return;
+			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
+				setUseFormFloatingLabels((Boolean)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 				setDefaultDateFormat((String)newValue);
@@ -1193,6 +1242,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__PAGES:
 				getPages().clear();
 				return;
+			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
+				setUseFormFloatingLabels(USE_FORM_FLOATING_LABELS_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 				setDefaultDateFormat(DEFAULT_DATE_FORMAT_EDEFAULT);
 				return;
@@ -1258,6 +1310,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return services != null;
 			case WebuiPackage.WEB_UI__PAGES:
 				return pages != null && !pages.isEmpty();
+			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
+				return useFormFloatingLabels != USE_FORM_FLOATING_LABELS_EDEFAULT;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 				return DEFAULT_DATE_FORMAT_EDEFAULT == null ? defaultDateFormat != null : !DEFAULT_DATE_FORMAT_EDEFAULT.equals(defaultDateFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
@@ -1302,7 +1356,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (defaultDateFormat: ");
+		result.append(" (useFormFloatingLabels: ");
+		result.append(useFormFloatingLabels);
+		result.append(", defaultDateFormat: ");
 		result.append(defaultDateFormat);
 		result.append(", defaultTimeFormat: ");
 		result.append(defaultTimeFormat);

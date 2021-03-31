@@ -134,6 +134,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return createCollectionDisplayOptionsFromString(eDataType, initialValue);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return createPaginationControlPlacementsFromString(eDataType, initialValue);
+			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
+				return createContainerActionsPlacementFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -155,6 +157,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return convertCollectionDisplayOptionsToString(eDataType, instanceValue);
 			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
 				return convertPaginationControlPlacementsToString(eDataType, instanceValue);
+			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
+				return convertContainerActionsPlacementToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -853,6 +857,26 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	public String convertPaginationControlPlacementsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContainerActionsPlacement createContainerActionsPlacementFromString(EDataType eDataType, String initialValue) {
+		ContainerActionsPlacement result = ContainerActionsPlacement.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertContainerActionsPlacementToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

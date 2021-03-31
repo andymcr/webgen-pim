@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  * </ul>
@@ -26,6 +27,31 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ActionContainer extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Container Actions Placement</b></em>' attribute.
+	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Container Actions Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement
+	 * @see #setContainerActionsPlacement(ContainerActionsPlacement)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionContainer_ContainerActionsPlacement()
+	 * @model
+	 * @generated
+	 */
+	ContainerActionsPlacement getContainerActionsPlacement();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getContainerActionsPlacement <em>Container Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Container Actions Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement
+	 * @see #getContainerActionsPlacement()
+	 * @generated
+	 */
+	void setContainerActionsPlacement(ContainerActionsPlacement value);
+
 	/**
 	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Action}.

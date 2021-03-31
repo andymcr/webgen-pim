@@ -64,6 +64,7 @@ public class WebUIItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPersistencePropertyDescriptor(object);
+			addUseFormFloatingLabelsPropertyDescriptor(object);
 			addDefaultDateFormatPropertyDescriptor(object);
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
@@ -94,6 +95,28 @@ public class WebUIItemProvider
 				 true,
 				 null,
 				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Use Form Floating Labels feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUseFormFloatingLabelsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_useFormFloatingLabels_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_useFormFloatingLabels_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__USE_FORM_FLOATING_LABELS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -309,10 +332,8 @@ public class WebUIItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((WebUI)object).getDefaultDateFormat();
-		return label == null || label.length() == 0 ?
-			getString("_UI_WebUI_type") :
-			getString("_UI_WebUI_type") + " " + label;
+		WebUI webUI = (WebUI)object;
+		return getString("_UI_WebUI_type") + " " + webUI.isUseFormFloatingLabels();
 	}
 	
 
@@ -328,6 +349,7 @@ public class WebUIItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WebUI.class)) {
+			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
