@@ -114,6 +114,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createDynamicUnitStylesAdapter();
 			}
 			@Override
+			public Adapter caseCollectionUnitStyles(CollectionUnitStyles object) {
+				return createCollectionUnitStylesAdapter();
+			}
+			@Override
 			public Adapter caseDefaultUnitStyles(DefaultUnitStyles object) {
 				return createDefaultUnitStylesAdapter();
 			}
@@ -576,6 +580,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDefaultUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles <em>Collection Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles
+	 * @generated
+	 */
+	public Adapter createCollectionUnitStylesAdapter() {
 		return null;
 	}
 

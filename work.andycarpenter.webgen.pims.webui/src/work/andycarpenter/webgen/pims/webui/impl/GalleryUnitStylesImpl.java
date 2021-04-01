@@ -14,7 +14,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class GalleryUnitStylesImpl extends DynamicUnitStylesImpl implements GalleryUnitStyles {
+public class GalleryUnitStylesImpl extends CollectionUnitStylesImpl implements GalleryUnitStyles {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

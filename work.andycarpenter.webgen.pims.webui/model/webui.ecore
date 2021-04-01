@@ -126,8 +126,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DefaultUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CardsUnitStyles" eSuperTypes="#//DynamicUnitStyles">
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionUnitStyles" eSuperTypes="#//DynamicUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceAnchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardsUnitStyles" eSuperTypes="#//CollectionUnitStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="row"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -148,10 +154,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="StaticUnitStyles" eSuperTypes="#//ContentUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
   <eClassifiers xsi:type="ecore:EEnum" name="PageTopMenuOptions">
     <eLiterals name="NeverInclude"/>
     <eLiterals name="AlwaysInclude"/>

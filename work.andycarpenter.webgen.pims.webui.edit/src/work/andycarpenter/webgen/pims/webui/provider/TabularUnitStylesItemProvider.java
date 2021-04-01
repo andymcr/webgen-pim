@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TabularUnitStylesItemProvider extends DynamicUnitStylesItemProvider {
+public class TabularUnitStylesItemProvider extends CollectionUnitStylesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -170,19 +170,27 @@ abstract rule DynamicUnitStyles {
 		fieldLabelClass <- website.fieldLabelClass,
 		fieldValueClass <- website.fieldValueClass,
 		controlClass <- website.controlClass,
-		actionNavigationClass <- website.actionNavigationClass,
 		anchorClass <- website.anchorClass
 	)
 }
 
 -- @extends DynamicUnitStyles
+rule CollectionUnitStyles {
+	from website : Website!CollectionUnitStyles
+	to waf : WAF!CollectionUnitStyles (
+		instanceControlClass <- website.instanceControlClass,
+		instanceAnchorClass <- website.instanceAnchorClass
+	)
+}
+
+-- @extends CollectionUnitStyles
 rule DefaultUnitStyles {
 	from website : Website!DefaultUnitStyles
 	to waf : WAF!DefaultUnitStyles (
 	)
 }
 
--- @extends DynamicUnitStyles
+-- @extends CollectionUnitStyles
 rule CardsUnitStyles {
 	from website : Website!CardsUnitStyles
 	to waf : WAF!CardsUnitStyles (
@@ -211,14 +219,14 @@ rule FormUnitStyles {
 	)
 }
 
--- @extends DynamicUnitStyles
+-- @extends CollectionUnitStyles
 rule GalleryUnitStyles {
 	from website : Website!GalleryUnitStyles
 	to waf : WAF!GalleryUnitStyles (
 	)
 }
 
--- @extends DynamicUnitStyles
+-- @extends CollectionUnitStyles
 rule SliderUnitStyles {
 	from website : Website!SliderUnitStyles
 	to waf : WAF!SliderUnitStyles (
@@ -232,7 +240,7 @@ rule StaticUnitStyles {
 	)
 }
 
--- @extends DynamicUnitStyles
+-- @extends CollectionUnitStyles
 rule TabularUnitStyles {
 	from website : Website!TabularUnitStyles
 	to waf : WAF!TabularUnitStyles (
@@ -910,8 +918,7 @@ abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (
 		containerActionsPlacement <- website.containerActionsPlacement,
-		allActions <- website.actions,
-		localActionNavigationClass <- website.actionNavigationClass
+		allActions <- website.actions
 	)
 }
 
@@ -919,6 +926,7 @@ abstract rule ActionContainer {
 abstract rule Action {
 	from website : Website!Action
 	to waf : WAF!Action (
+		iconName <- website.iconName,
 		disable <- website.disable,
 		displayWhen <- website.displayWhen,
 		enableWhen <- website.enableWhen,

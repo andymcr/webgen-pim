@@ -99,6 +99,10 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/actionNavigationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/anchorClass"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles">
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceControlClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceAnchorClass"/>
+    </genClasses>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//CardsUnitStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/rowClass"/>

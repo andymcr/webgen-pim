@@ -13,5 +13,5 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface TabularUnitStyles extends DynamicUnitStyles {
+public interface TabularUnitStyles extends CollectionUnitStyles {
 } // TabularUnitStyles

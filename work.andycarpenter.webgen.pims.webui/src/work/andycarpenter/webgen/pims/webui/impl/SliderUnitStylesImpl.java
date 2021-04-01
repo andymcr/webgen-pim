@@ -14,7 +14,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class SliderUnitStylesImpl extends DynamicUnitStylesImpl implements SliderUnitStyles {
+public class SliderUnitStylesImpl extends CollectionUnitStylesImpl implements SliderUnitStyles {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -13,5 +13,5 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface SliderUnitStyles extends DynamicUnitStyles {
+public interface SliderUnitStyles extends CollectionUnitStyles {
 } // SliderUnitStyles

@@ -14,7 +14,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class TabularUnitStylesImpl extends DynamicUnitStylesImpl implements TabularUnitStyles {
+public class TabularUnitStylesImpl extends CollectionUnitStylesImpl implements TabularUnitStyles {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

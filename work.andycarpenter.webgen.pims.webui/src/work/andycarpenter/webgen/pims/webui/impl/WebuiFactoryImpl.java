@@ -64,6 +64,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.ACTION_MENU_ENTRY: return createActionMenuEntry();
 			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY: return createEditStaticTextMenuEntry();
 			case WebuiPackage.MENU_FEATURE: return createMenuFeature();
+			case WebuiPackage.COLLECTION_UNIT_STYLES: return createCollectionUnitStyles();
 			case WebuiPackage.DEFAULT_UNIT_STYLES: return createDefaultUnitStyles();
 			case WebuiPackage.CARDS_UNIT_STYLES: return createCardsUnitStyles();
 			case WebuiPackage.DETAILS_UNIT_STYLES: return createDetailsUnitStyles();
@@ -250,6 +251,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public DefaultUnitStyles createDefaultUnitStyles() {
 		DefaultUnitStylesImpl defaultUnitStyles = new DefaultUnitStylesImpl();
 		return defaultUnitStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CollectionUnitStyles createCollectionUnitStyles() {
+		CollectionUnitStylesImpl collectionUnitStyles = new CollectionUnitStylesImpl();
+		return collectionUnitStyles;
 	}
 
 	/**

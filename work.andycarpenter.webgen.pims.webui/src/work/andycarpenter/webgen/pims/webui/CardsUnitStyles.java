@@ -25,7 +25,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface CardsUnitStyles extends DynamicUnitStyles {
+public interface CardsUnitStyles extends CollectionUnitStyles {
 	/**
 	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.
 	 * The default value is <code>"row"</code>.
