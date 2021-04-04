@@ -60,7 +60,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addTruncateElementTitlePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
 			addFindContainerSelectionPropertyDescriptor(object);
-			addOmitContainerLoadPropertyDescriptor(object);
 			addFindElementSelectionPropertyDescriptor(object);
 			addFilterPropertyDescriptor(object);
 			addSupportedFiltersPropertyDescriptor(object);
@@ -108,9 +107,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						if (unit.isOmitContainerLoad()) {
-							return Collections.emptySet();
-						}
 						final Set<Label> labels = new HashSet<Label>();
 						if (unit.getContainingType() != null) {
 							labels.addAll(unit.getContainingType().getAttributes());
@@ -203,28 +199,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 					return Collections.emptySet();
 				}
 		});
-	}
-
-	/**
-	 * This adds a property descriptor for the Omit Container Load feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOmitContainerLoadPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_omitContainerLoad_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_omitContainerLoad_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__OMIT_CONTAINER_LOAD,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_BusinessPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -804,7 +778,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 
 		switch (notification.getFeatureID(CollectionUnit.class)) {
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
-			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
 			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:

@@ -97,6 +97,8 @@ rule SiteProperties {
 				website.textEditorURL.cleanString()
 			endif,
 		siteTemplate <- website.siteTemplate,
+		securityFromEmail <- website.securityFromEmail,
+		securityFromName <- website.securityFromName,
 		staticUnitsEditable <- website.staticUnitsEditable
 	)
 }
@@ -351,7 +353,9 @@ abstract rule DynamicUnit {
 		localFieldLabelClass <- website.localFieldLabelClass,
 		localFieldValueClass <- website.localFieldValueClass,
 		localControlClass <- website.localControlClass,
+		localInstanceControlClass <- website.localInstanceControlClass,
 		localAnchorClass <- website.localAnchorClass,
+		localInstanceAnchorClass <- website.localInstanceAnchorClass,
 		footerClass <- website.footerClass
 	)
 }
@@ -580,7 +584,6 @@ abstract rule CollectionUnit {
 			else
 				website.selection.findSelection()
 			endif,
-		omitContainerLoad <- website.omitContainerLoad,
 		containerType <-
 			if website.containingType.oclIsUndefined() then
 				website.containingType
@@ -918,6 +921,7 @@ abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (
 		containerActionsPlacement <- website.containerActionsPlacement,
+		instanceActionsPlacement <- website.instanceActionsPlacement,
 		allActions <- website.actions
 	)
 }

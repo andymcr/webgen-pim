@@ -33,7 +33,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isOmitContainerLoad <em>Omit Container Load</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSupportedFilters <em>Supported Filters</em>}</li>
@@ -121,26 +120,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected Selection findContainerSelection;
-
-	/**
-	 * The default value of the '{@link #isOmitContainerLoad() <em>Omit Container Load</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitContainerLoad()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OMIT_CONTAINER_LOAD_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOmitContainerLoad() <em>Omit Container Load</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOmitContainerLoad()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean omitContainerLoad = OMIT_CONTAINER_LOAD_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFindElementSelection() <em>Find Element Selection</em>}' reference.
@@ -785,29 +764,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
-	public boolean isOmitContainerLoad() {
-		return omitContainerLoad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOmitContainerLoad(boolean newOmitContainerLoad) {
-		boolean oldOmitContainerLoad = omitContainerLoad;
-		omitContainerLoad = newOmitContainerLoad;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD, oldOmitContainerLoad, omitContainerLoad));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Selection getFindElementSelection() {
 		if (findElementSelection != null && findElementSelection.eIsProxy()) {
 			InternalEObject oldFindElementSelection = (InternalEObject)findElementSelection;
@@ -1390,8 +1346,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FIND_CONTAINER_SELECTION:
 				if (resolve) return getFindContainerSelection();
 				return basicGetFindContainerSelection();
-			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
-				return isOmitContainerLoad();
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				if (resolve) return getFindElementSelection();
 				return basicGetFindElementSelection();
@@ -1467,9 +1421,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return;
 			case WebuiPackage.COLLECTION_UNIT__FIND_CONTAINER_SELECTION:
 				setFindContainerSelection((Selection)newValue);
-				return;
-			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
-				setOmitContainerLoad((Boolean)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				setFindElementSelection((Selection)newValue);
@@ -1568,9 +1519,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FIND_CONTAINER_SELECTION:
 				setFindContainerSelection((Selection)null);
 				return;
-			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
-				setOmitContainerLoad(OMIT_CONTAINER_LOAD_EDEFAULT);
-				return;
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				setFindElementSelection((Selection)null);
 				return;
@@ -1662,8 +1610,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return selection != null;
 			case WebuiPackage.COLLECTION_UNIT__FIND_CONTAINER_SELECTION:
 				return findContainerSelection != null;
-			case WebuiPackage.COLLECTION_UNIT__OMIT_CONTAINER_LOAD:
-				return omitContainerLoad != OMIT_CONTAINER_LOAD_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				return findElementSelection != null;
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
@@ -1726,8 +1672,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (truncateElementTitle: ");
 		result.append(truncateElementTitle);
-		result.append(", omitContainerLoad: ");
-		result.append(omitContainerLoad);
 		result.append(", emptyMessage: ");
 		result.append(emptyMessage);
 		result.append(", omitFieldLabels: ");

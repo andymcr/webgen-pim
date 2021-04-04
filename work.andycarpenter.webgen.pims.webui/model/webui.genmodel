@@ -32,6 +32,10 @@
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Below"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Float"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//InstanceActionsPlacement">
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//InstanceActionsPlacement/Footer"/>
+      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//InstanceActionsPlacement/Float"/>
+    </genEnums>
     <genClasses ecoreClass="webui.ecore#//WebUI">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/persistence"/>
       <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
@@ -176,7 +180,9 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localFieldLabelClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localFieldValueClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localControlClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceAnchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/footerClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//RouteActual">
@@ -314,7 +320,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/selection"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findContainerSelection"/>
-      <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/omitContainerLoad"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findElementSelection"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
@@ -455,6 +460,7 @@
     <genClasses ecoreClass="webui.ecore#//ResetPasswordUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ActionContainer">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/containerActionsPlacement"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/instanceActionsPlacement"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
           ecoreFeature="ecore:EReference webui.ecore#//ActionContainer/actions"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/actionNavigationClass"/>

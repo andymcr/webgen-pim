@@ -21,7 +21,6 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindContainerSelection <em>Find Container Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitContainerLoad <em>Omit Container Load</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSupportedFilters <em>Supported Filters</em>}</li>
@@ -184,33 +183,6 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setFindContainerSelection(Selection value);
-
-	/**
-	 * Returns the value of the '<em><b>Omit Container Load</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Omit Container Load</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Omit Container Load</em>' attribute.
-	 * @see #setOmitContainerLoad(boolean)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_OmitContainerLoad()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isOmitContainerLoad();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitContainerLoad <em>Omit Container Load</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Omit Container Load</em>' attribute.
-	 * @see #isOmitContainerLoad()
-	 * @generated
-	 */
-	void setOmitContainerLoad(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Find Element Selection</b></em>' reference.
