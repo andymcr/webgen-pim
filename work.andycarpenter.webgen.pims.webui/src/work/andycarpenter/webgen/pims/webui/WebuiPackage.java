@@ -2833,13 +2833,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT = CONTENT_UNIT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT = CONTENT_UNIT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__ACTIONS = CONTENT_UNIT_FEATURE_COUNT + 1;
+	int DYNAMIC_UNIT__ACTIONS = CONTENT_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -2848,7 +2857,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS = CONTENT_UNIT_FEATURE_COUNT + 2;
+	int DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS = CONTENT_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
@@ -2857,7 +2866,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTENT_TYPE = CONTENT_UNIT_FEATURE_COUNT + 3;
+	int DYNAMIC_UNIT__CONTENT_TYPE = CONTENT_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -2866,7 +2875,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__CONTAINING_TYPE = CONTENT_UNIT_FEATURE_COUNT + 4;
+	int DYNAMIC_UNIT__CONTAINING_TYPE = CONTENT_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -2875,7 +2884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__ROUTE_ACTUALS = CONTENT_UNIT_FEATURE_COUNT + 5;
+	int DYNAMIC_UNIT__ROUTE_ACTUALS = CONTENT_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -2884,7 +2893,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 6;
+	int DYNAMIC_UNIT__DISPLAY_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
@@ -2893,7 +2902,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 7;
+	int DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = CONTENT_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -2902,7 +2911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 8;
+	int DYNAMIC_UNIT__HIDE_WHEN = CONTENT_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -2911,7 +2920,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 9;
+	int DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN = CONTENT_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -2920,7 +2929,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 10;
+	int DYNAMIC_UNIT__HEADER = CONTENT_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -2929,7 +2938,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 11;
+	int DYNAMIC_UNIT__FOOTER = CONTENT_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -2938,7 +2947,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 12;
+	int DYNAMIC_UNIT__HEADER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -2947,7 +2956,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 13;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -2956,7 +2965,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 14;
+	int DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -2965,7 +2974,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 15;
+	int DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS = CONTENT_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -2974,7 +2983,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 16;
+	int DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = CONTENT_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -2983,7 +3001,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 17;
+	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 19;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -2992,7 +3019,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 18;
+	int DYNAMIC_UNIT__FOOTER_CLASS = CONTENT_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -3001,7 +3028,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 19;
+	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -3285,13 +3312,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 1;
+	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -3300,7 +3336,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__ACTION_NAVIGATION_CLASS = UNIT_FIELD_FEATURE_COUNT + 2;
+	int UNIT_FEATURE__ACTION_NAVIGATION_CLASS = UNIT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -3309,7 +3345,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 3;
+	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -3318,7 +3354,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 4;
+	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Forced Value</b></em>' containment reference.
@@ -3327,7 +3363,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 5;
+	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Add</b></em>' attribute.
@@ -3336,7 +3372,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 6;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Remove</b></em>' attribute.
@@ -3345,7 +3381,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 7;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -3354,7 +3390,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 8;
+	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
@@ -3363,7 +3399,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 9;
+	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -3372,7 +3408,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 10;
+	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -3381,7 +3417,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 11;
+	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Autofocus</b></em>' attribute.
@@ -3390,7 +3426,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -3399,7 +3435,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -3408,7 +3444,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -3417,7 +3453,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
@@ -3426,7 +3462,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -3435,7 +3471,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -3444,7 +3480,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 18;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -3563,6 +3599,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__CONTAINER_ACTIONS_PLACEMENT = UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__INSTANCE_ACTIONS_PLACEMENT = UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -3897,6 +3942,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__CONTAINER_ACTIONS_PLACEMENT = UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__INSTANCE_ACTIONS_PLACEMENT = UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -5666,6 +5720,15 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__CONTAINER_ACTIONS_PLACEMENT = DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__INSTANCE_ACTIONS_PLACEMENT = DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5810,6 +5873,15 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5817,6 +5889,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -5991,6 +6072,15 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT = DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT = DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6135,6 +6225,15 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6142,6 +6241,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -6198,22 +6306,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FIND_CONTAINER_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__OMIT_CONTAINER_LOAD = DYNAMIC_UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
+	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -6222,7 +6321,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -6231,7 +6330,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -6240,7 +6339,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6249,7 +6348,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -6258,7 +6357,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -6267,7 +6366,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -6276,7 +6375,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -6285,7 +6384,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -6294,7 +6393,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -6303,7 +6402,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -6312,7 +6411,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -6321,7 +6420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -6330,7 +6429,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 19;
+	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -6339,7 +6438,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 20;
+	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -6348,7 +6447,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 21;
+	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -6357,7 +6456,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 22;
+	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -6366,7 +6465,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 23;
+	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -6375,7 +6474,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 24;
+	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -6384,7 +6483,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 25;
+	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -6393,7 +6492,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 26;
+	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -6402,7 +6501,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
+	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -6411,7 +6510,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -6420,7 +6519,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 29;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 28;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -6568,6 +6667,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT = SINGLETON_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT = SINGLETON_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6712,6 +6820,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__LOCAL_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6719,6 +6836,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -6974,6 +7100,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7118,6 +7253,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7125,6 +7269,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -7390,6 +7543,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7534,6 +7696,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7541,6 +7712,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -7804,6 +7984,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7948,6 +8137,15 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7955,6 +8153,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -8237,6 +8444,15 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8381,6 +8597,15 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8388,6 +8613,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -8679,6 +8913,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__CONTAINER_ACTIONS_PLACEMENT = SINGLETON_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__INSTANCE_ACTIONS_PLACEMENT = SINGLETON_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8823,6 +9066,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__LOCAL_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8830,6 +9082,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9022,6 +9283,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9166,6 +9436,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9173,6 +9452,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9227,15 +9515,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__OMIT_CONTAINER_LOAD = COLLECTION_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -9608,6 +9887,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9752,6 +10040,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9759,6 +10056,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -9813,15 +10119,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__OMIT_CONTAINER_LOAD = COLLECTION_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -10438,6 +10735,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT = CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT = CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10582,6 +10888,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10589,6 +10904,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -10643,15 +10967,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -11086,6 +11401,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT = CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT = CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11230,6 +11554,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11237,6 +11570,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -11291,15 +11633,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -11743,6 +12076,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11887,6 +12229,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11894,6 +12245,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -11948,15 +12308,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__OMIT_CONTAINER_LOAD = COLLECTION_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -12346,6 +12697,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT = CARDS_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT = CARDS_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12490,6 +12850,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__LOCAL_CONTROL_CLASS = CARDS_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = CARDS_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12497,6 +12866,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -12551,15 +12929,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__FIND_CONTAINER_SELECTION = CARDS_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__OMIT_CONTAINER_LOAD = CARDS_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -13057,6 +13426,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__CONTAINER_ACTIONS_PLACEMENT = IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__INSTANCE_ACTIONS_PLACEMENT = IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13201,6 +13579,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13208,6 +13595,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13262,15 +13658,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__FIND_CONTAINER_SELECTION = IMAGE_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__OMIT_CONTAINER_LOAD = IMAGE_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -13678,6 +14065,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__CONTAINER_ACTIONS_PLACEMENT = IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__INSTANCE_ACTIONS_PLACEMENT = IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13822,6 +14218,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13829,6 +14234,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -13883,15 +14297,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__FIND_CONTAINER_SELECTION = IMAGE_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Omit Container Load</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__OMIT_CONTAINER_LOAD = IMAGE_UNIT__OMIT_CONTAINER_LOAD;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -14308,6 +14713,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__CONTAINER_ACTIONS_PLACEMENT = DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__INSTANCE_ACTIONS_PLACEMENT = DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14452,6 +14866,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14459,6 +14882,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -14641,6 +15073,15 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__CONTAINER_ACTIONS_PLACEMENT = CONTROL_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__INSTANCE_ACTIONS_PLACEMENT = CONTROL_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14785,6 +15226,15 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__LOCAL_CONTROL_CLASS = CONTROL_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = CONTROL_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14792,6 +15242,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__LOCAL_ANCHOR_CLASS = CONTROL_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CONTROL_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -14993,6 +15452,15 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15137,6 +15605,15 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15144,6 +15621,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -15399,6 +15885,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15543,6 +16038,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15550,6 +16054,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -15805,6 +16318,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__CONTAINER_ACTIONS_PLACEMENT = DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__INSTANCE_ACTIONS_PLACEMENT = DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15949,6 +16471,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__LOCAL_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15956,6 +16487,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGOUT_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -16121,6 +16661,15 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16265,6 +16814,15 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16272,6 +16830,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -16581,6 +17148,15 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__CONTAINER_ACTIONS_PLACEMENT = EDIT_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__INSTANCE_ACTIONS_PLACEMENT = EDIT_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16725,6 +17301,15 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__LOCAL_CONTROL_CLASS = EDIT_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = EDIT_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16732,6 +17317,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -16870,13 +17464,22 @@ public interface WebuiPackage extends EPackage {
 	int ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT = 1;
+
+	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_CONTAINER__ACTIONS = 1;
+	int ACTION_CONTAINER__ACTIONS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -16885,7 +17488,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_CONTAINER__ACTION_NAVIGATION_CLASS = 2;
+	int ACTION_CONTAINER__ACTION_NAVIGATION_CLASS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Action Container</em>' class.
@@ -16894,7 +17497,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_CONTAINER_FEATURE_COUNT = 3;
+	int ACTION_CONTAINER_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Action Container</em>' class.
@@ -18747,6 +19350,16 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_ACTIONS_PLACEMENT = 81;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
+	 * @generated
+	 */
+	int INSTANCE_ACTIONS_PLACEMENT = 82;
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20008,6 +20621,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnit_LocalControlClass();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass <em>Local Instance Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Instance Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalInstanceControlClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20017,6 +20641,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDynamicUnit_LocalAnchorClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Instance Anchor Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass()
+	 * @see #getDynamicUnit()
+	 * @generated
+	 */
+	EAttribute getDynamicUnit_LocalInstanceAnchorClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}'.
@@ -21003,17 +21638,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getCollectionUnit_FindContainerSelection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitContainerLoad <em>Omit Container Load</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Omit Container Load</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitContainerLoad()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_OmitContainerLoad();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21909,6 +22533,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getActionContainer_ContainerActionsPlacement();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getInstanceActionsPlacement <em>Instance Actions Placement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instance Actions Placement</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ActionContainer#getInstanceActionsPlacement()
+	 * @see #getActionContainer()
+	 * @generated
+	 */
+	EAttribute getActionContainer_InstanceActionsPlacement();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActions <em>Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22590,6 +23225,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getContainerActionsPlacement();
+
+	/**
+	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Instance Actions Placement</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement
+	 * @generated
+	 */
+	EEnum getInstanceActionsPlacement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -23603,12 +24248,28 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT__LOCAL_CONTROL_CLASS = eINSTANCE.getDynamicUnit_LocalControlClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Local Instance Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = eINSTANCE.getDynamicUnit_LocalInstanceControlClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Local Anchor Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = eINSTANCE.getDynamicUnit_LocalAnchorClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Instance Anchor Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = eINSTANCE.getDynamicUnit_LocalInstanceAnchorClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
@@ -24373,14 +25034,6 @@ public interface WebuiPackage extends EPackage {
 		EReference COLLECTION_UNIT__FIND_CONTAINER_SELECTION = eINSTANCE.getCollectionUnit_FindContainerSelection();
 
 		/**
-		 * The meta object literal for the '<em><b>Omit Container Load</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__OMIT_CONTAINER_LOAD = eINSTANCE.getCollectionUnit_OmitContainerLoad();
-
-		/**
 		 * The meta object literal for the '<em><b>Find Element Selection</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25081,6 +25734,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT = eINSTANCE.getActionContainer_ContainerActionsPlacement();
 
 		/**
+		 * The meta object literal for the '<em><b>Instance Actions Placement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT = eINSTANCE.getActionContainer_InstanceActionsPlacement();
+
+		/**
 		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25633,6 +26294,16 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CONTAINER_ACTIONS_PLACEMENT = eINSTANCE.getContainerActionsPlacement();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
+		 * @generated
+		 */
+		EEnum INSTANCE_ACTIONS_PLACEMENT = eINSTANCE.getInstanceActionsPlacement();
 
 	}
 

@@ -258,6 +258,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePaginationControlPlacements((PaginationControlPlacements)value, diagnostics, context);
 			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
 				return validateContainerActionsPlacement((ContainerActionsPlacement)value, diagnostics, context);
+			case WebuiPackage.INSTANCE_ACTIONS_PLACEMENT:
+				return validateInstanceActionsPlacement((InstanceActionsPlacement)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -2043,6 +2045,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateContainerActionsPlacement(ContainerActionsPlacement containerActionsPlacement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateInstanceActionsPlacement(InstanceActionsPlacement instanceActionsPlacement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

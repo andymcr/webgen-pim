@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
+import work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
 import work.andycarpenter.webgen.pims.webui.UnitField;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -33,6 +34,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getInstanceActionsPlacement <em>Instance Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentType <em>Content Type</em>}</li>
@@ -49,7 +51,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalControlClass <em>Local Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
@@ -75,6 +79,26 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected ContainerActionsPlacement containerActionsPlacement = CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInstanceActionsPlacement() <em>Instance Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstanceActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final InstanceActionsPlacement INSTANCE_ACTIONS_PLACEMENT_EDEFAULT = InstanceActionsPlacement.FOOTER;
+
+	/**
+	 * The cached value of the '{@link #getInstanceActionsPlacement() <em>Instance Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstanceActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected InstanceActionsPlacement instanceActionsPlacement = INSTANCE_ACTIONS_PLACEMENT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
@@ -337,6 +361,26 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String localControlClass = LOCAL_CONTROL_CLASS_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getLocalInstanceControlClass() <em>Local Instance Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInstanceControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalInstanceControlClass() <em>Local Instance Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInstanceControlClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localInstanceControlClass = LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getLocalAnchorClass() <em>Local Anchor Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -355,6 +399,26 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected String localAnchorClass = LOCAL_ANCHOR_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalInstanceAnchorClass() <em>Local Instance Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInstanceAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalInstanceAnchorClass() <em>Local Instance Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInstanceAnchorClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localInstanceAnchorClass = LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
@@ -416,6 +480,29 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		containerActionsPlacement = newContainerActionsPlacement == null ? CONTAINER_ACTIONS_PLACEMENT_EDEFAULT : newContainerActionsPlacement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT, oldContainerActionsPlacement, containerActionsPlacement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InstanceActionsPlacement getInstanceActionsPlacement() {
+		return instanceActionsPlacement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInstanceActionsPlacement(InstanceActionsPlacement newInstanceActionsPlacement) {
+		InstanceActionsPlacement oldInstanceActionsPlacement = instanceActionsPlacement;
+		instanceActionsPlacement = newInstanceActionsPlacement == null ? INSTANCE_ACTIONS_PLACEMENT_EDEFAULT : newInstanceActionsPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT, oldInstanceActionsPlacement, instanceActionsPlacement));
 	}
 
 	/**
@@ -807,6 +894,29 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
+	public String getLocalInstanceControlClass() {
+		return localInstanceControlClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalInstanceControlClass(String newLocalInstanceControlClass) {
+		String oldLocalInstanceControlClass = localInstanceControlClass;
+		localInstanceControlClass = newLocalInstanceControlClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS, oldLocalInstanceControlClass, localInstanceControlClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getLocalAnchorClass() {
 		return localAnchorClass;
 	}
@@ -822,6 +932,29 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		localAnchorClass = newLocalAnchorClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS, oldLocalAnchorClass, localAnchorClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalInstanceAnchorClass() {
+		return localInstanceAnchorClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalInstanceAnchorClass(String newLocalInstanceAnchorClass) {
+		String oldLocalInstanceAnchorClass = localInstanceAnchorClass;
+		localInstanceAnchorClass = newLocalInstanceAnchorClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS, oldLocalInstanceAnchorClass, localInstanceAnchorClass));
 	}
 
 	/**
@@ -896,6 +1029,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
 				return getContainerActionsPlacement();
+			case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT:
+				return getInstanceActionsPlacement();
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return getActions();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
@@ -930,8 +1065,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getLocalFieldValueClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
 				return getLocalControlClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
+				return getLocalInstanceControlClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				return getLocalAnchorClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
+				return getLocalInstanceAnchorClass();
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return getFooterClass();
 		}
@@ -949,6 +1088,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
 				setContainerActionsPlacement((ContainerActionsPlacement)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT:
+				setInstanceActionsPlacement((InstanceActionsPlacement)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				getActions().clear();
@@ -998,8 +1140,14 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
 				setLocalControlClass((String)newValue);
 				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
+				setLocalInstanceControlClass((String)newValue);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				setLocalAnchorClass((String)newValue);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
+				setLocalInstanceAnchorClass((String)newValue);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass((String)newValue);
@@ -1018,6 +1166,9 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
 				setContainerActionsPlacement(CONTAINER_ACTIONS_PLACEMENT_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT:
+				setInstanceActionsPlacement(INSTANCE_ACTIONS_PLACEMENT_EDEFAULT);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				getActions().clear();
@@ -1064,8 +1215,14 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
 				setLocalControlClass(LOCAL_CONTROL_CLASS_EDEFAULT);
 				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
+				setLocalInstanceControlClass(LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				setLocalAnchorClass(LOCAL_ANCHOR_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
+				setLocalInstanceAnchorClass(LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				setFooterClass(FOOTER_CLASS_EDEFAULT);
@@ -1084,6 +1241,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		switch (featureID) {
 			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
 				return containerActionsPlacement != CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+			case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT:
+				return instanceActionsPlacement != INSTANCE_ACTIONS_PLACEMENT_EDEFAULT;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
@@ -1116,8 +1275,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return LOCAL_FIELD_VALUE_CLASS_EDEFAULT == null ? localFieldValueClass != null : !LOCAL_FIELD_VALUE_CLASS_EDEFAULT.equals(localFieldValueClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
 				return LOCAL_CONTROL_CLASS_EDEFAULT == null ? localControlClass != null : !LOCAL_CONTROL_CLASS_EDEFAULT.equals(localControlClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
+				return LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT == null ? localInstanceControlClass != null : !LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT.equals(localInstanceControlClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				return LOCAL_ANCHOR_CLASS_EDEFAULT == null ? localAnchorClass != null : !LOCAL_ANCHOR_CLASS_EDEFAULT.equals(localAnchorClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
+				return LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT == null ? localInstanceAnchorClass != null : !LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT.equals(localInstanceAnchorClass);
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
@@ -1134,6 +1297,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT;
+				case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT;
 				case WebuiPackage.DYNAMIC_UNIT__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1152,6 +1316,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT;
+				case WebuiPackage.ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT: return WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT;
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.DYNAMIC_UNIT__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1172,6 +1337,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (containerActionsPlacement: ");
 		result.append(containerActionsPlacement);
+		result.append(", instanceActionsPlacement: ");
+		result.append(instanceActionsPlacement);
 		result.append(", actionNavigationClass: ");
 		result.append(actionNavigationClass);
 		result.append(", hasWhenFieldsEmptyAddImplicitFields: ");
@@ -1192,8 +1359,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(localFieldValueClass);
 		result.append(", localControlClass: ");
 		result.append(localControlClass);
+		result.append(", localInstanceControlClass: ");
+		result.append(localInstanceControlClass);
 		result.append(", localAnchorClass: ");
 		result.append(localAnchorClass);
+		result.append(", localInstanceAnchorClass: ");
+		result.append(localInstanceAnchorClass);
 		result.append(", footerClass: ");
 		result.append(footerClass);
 		result.append(')');

@@ -48,6 +48,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addContainerActionsPlacementPropertyDescriptor(object);
+			addInstanceActionsPlacementPropertyDescriptor(object);
 			addActionNavigationClassPropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
@@ -60,7 +61,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addLocalFieldLabelClassPropertyDescriptor(object);
 			addLocalFieldValueClassPropertyDescriptor(object);
 			addLocalControlClassPropertyDescriptor(object);
+			addLocalInstanceControlClassPropertyDescriptor(object);
 			addLocalAnchorClassPropertyDescriptor(object);
+			addLocalInstanceAnchorClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -80,6 +83,28 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 getString("_UI_ActionContainer_containerActionsPlacement_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_containerActionsPlacement_feature", "_UI_ActionContainer_type"),
 				 WebuiPackage.Literals.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Instance Actions Placement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInstanceActionsPlacementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActionContainer_instanceActionsPlacement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionContainer_instanceActionsPlacement_feature", "_UI_ActionContainer_type"),
+				 WebuiPackage.Literals.ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT,
 				 true,
 				 false,
 				 false,
@@ -353,6 +378,28 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Local Instance Control Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalInstanceControlClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_localInstanceControlClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_localInstanceControlClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Local Anchor Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -366,6 +413,28 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 getString("_UI_DynamicUnit_localAnchorClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_localAnchorClass_feature", "_UI_DynamicUnit_type"),
 				 WebuiPackage.Literals.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Local Instance Anchor Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalInstanceAnchorClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DynamicUnit_localInstanceAnchorClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_localInstanceAnchorClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS,
 				 true,
 				 false,
 				 false,
@@ -457,6 +526,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 
 		switch (notification.getFeatureID(DynamicUnit.class)) {
 			case WebuiPackage.DYNAMIC_UNIT__CONTAINER_ACTIONS_PLACEMENT:
+			case WebuiPackage.DYNAMIC_UNIT__INSTANCE_ACTIONS_PLACEMENT:
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
 			case WebuiPackage.DYNAMIC_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS:
@@ -468,7 +538,9 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

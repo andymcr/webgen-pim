@@ -29,7 +29,9 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass <em>Local Control Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
@@ -365,6 +367,29 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	void setLocalControlClass(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Local Instance Control Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Instance Control Class</em>' attribute.
+	 * @see #setLocalInstanceControlClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalInstanceControlClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalInstanceControlClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass <em>Local Instance Control Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Instance Control Class</em>' attribute.
+	 * @see #getLocalInstanceControlClass()
+	 * @generated
+	 */
+	void setLocalInstanceControlClass(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Local Anchor Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
@@ -386,6 +411,29 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	void setLocalAnchorClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Instance Anchor Class</em>' attribute.
+	 * @see #setLocalInstanceAnchorClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalInstanceAnchorClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalInstanceAnchorClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Instance Anchor Class</em>' attribute.
+	 * @see #getLocalInstanceAnchorClass()
+	 * @generated
+	 */
+	void setLocalInstanceAnchorClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.

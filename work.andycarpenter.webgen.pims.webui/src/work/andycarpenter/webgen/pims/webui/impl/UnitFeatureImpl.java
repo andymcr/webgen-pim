@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
+import work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -31,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInstanceActionsPlacement <em>Instance Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayLabel <em>Display Label</em>}</li>
@@ -72,6 +74,26 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected ContainerActionsPlacement containerActionsPlacement = CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInstanceActionsPlacement() <em>Instance Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstanceActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final InstanceActionsPlacement INSTANCE_ACTIONS_PLACEMENT_EDEFAULT = InstanceActionsPlacement.FOOTER;
+
+	/**
+	 * The cached value of the '{@link #getInstanceActionsPlacement() <em>Instance Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstanceActionsPlacement()
+	 * @generated
+	 * @ordered
+	 */
+	protected InstanceActionsPlacement instanceActionsPlacement = INSTANCE_ACTIONS_PLACEMENT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
@@ -423,6 +445,29 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		containerActionsPlacement = newContainerActionsPlacement == null ? CONTAINER_ACTIONS_PLACEMENT_EDEFAULT : newContainerActionsPlacement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT, oldContainerActionsPlacement, containerActionsPlacement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InstanceActionsPlacement getInstanceActionsPlacement() {
+		return instanceActionsPlacement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInstanceActionsPlacement(InstanceActionsPlacement newInstanceActionsPlacement) {
+		InstanceActionsPlacement oldInstanceActionsPlacement = instanceActionsPlacement;
+		instanceActionsPlacement = newInstanceActionsPlacement == null ? INSTANCE_ACTIONS_PLACEMENT_EDEFAULT : newInstanceActionsPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT, oldInstanceActionsPlacement, instanceActionsPlacement));
 	}
 
 	/**
@@ -893,6 +938,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				return getContainerActionsPlacement();
+			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
+				return getInstanceActionsPlacement();
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return getActions();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
@@ -942,6 +989,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				setContainerActionsPlacement((ContainerActionsPlacement)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
+				setInstanceActionsPlacement((InstanceActionsPlacement)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
@@ -1010,6 +1060,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				setContainerActionsPlacement(CONTAINER_ACTIONS_PLACEMENT_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
+				setInstanceActionsPlacement(INSTANCE_ACTIONS_PLACEMENT_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				getActions().clear();
 				return;
@@ -1075,6 +1128,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		switch (featureID) {
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				return containerActionsPlacement != CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
+			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
+				return instanceActionsPlacement != INSTANCE_ACTIONS_PLACEMENT_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
@@ -1123,6 +1178,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT;
+				case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT;
 				case WebuiPackage.UNIT_FEATURE__ACTIONS: return WebuiPackage.ACTION_CONTAINER__ACTIONS;
 				case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS: return WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1141,6 +1197,7 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT;
+				case WebuiPackage.ACTION_CONTAINER__INSTANCE_ACTIONS_PLACEMENT: return WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT;
 				case WebuiPackage.ACTION_CONTAINER__ACTIONS: return WebuiPackage.UNIT_FEATURE__ACTIONS;
 				case WebuiPackage.ACTION_CONTAINER__ACTION_NAVIGATION_CLASS: return WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS;
 				default: return -1;
@@ -1161,6 +1218,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (containerActionsPlacement: ");
 		result.append(containerActionsPlacement);
+		result.append(", instanceActionsPlacement: ");
+		result.append(instanceActionsPlacement);
 		result.append(", actionNavigationClass: ");
 		result.append(actionNavigationClass);
 		result.append(", displayLabel: ");

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getInstanceActionsPlacement <em>Instance Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActionNavigationClass <em>Action Navigation Class</em>}</li>
  * </ul>
@@ -51,6 +52,31 @@ public interface ActionContainer extends EObject {
 	 * @generated
 	 */
 	void setContainerActionsPlacement(ContainerActionsPlacement value);
+
+	/**
+	 * Returns the value of the '<em><b>Instance Actions Placement</b></em>' attribute.
+	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Instance Actions Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement
+	 * @see #setInstanceActionsPlacement(InstanceActionsPlacement)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionContainer_InstanceActionsPlacement()
+	 * @model
+	 * @generated
+	 */
+	InstanceActionsPlacement getInstanceActionsPlacement();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getInstanceActionsPlacement <em>Instance Actions Placement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Instance Actions Placement</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement
+	 * @see #getInstanceActionsPlacement()
+	 * @generated
+	 */
+	void setInstanceActionsPlacement(InstanceActionsPlacement value);
 
 	/**
 	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
