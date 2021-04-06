@@ -708,16 +708,16 @@ public class WebuiValidator extends EObjectValidator {
 	protected static final String DYNAMIC_UNIT__FEATURES_MUST_BE_FROM_CONTENT_TYPE__EEXPRESSION = "displayFields\n" +
 		"\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n" +
 		"\t->select(f | \n" +
-		"\t\tif f.oclIsTypeOf(UnitElement) then\n" +
+		"\t\tif f.oclIsKindOf(UnitElement) then\n" +
 		"\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n" +
 		"\t\telse\n" +
 		"\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n" +
 		"\t\tendif)\n" +
 		"\t->forAll(f | \n" +
-		"\t\tif f.oclIsTypeOf(UnitElement) then\n" +
-		"\t\t\tcontentType.features->includes(f.oclAsType(UnitElement).attribute)\n" +
+		"\t\tif f.oclIsKindOf(UnitElement) then\n" +
+		"\t\t\tcontentType.allFeatures->includes(f.oclAsType(UnitElement).attribute)\n" +
 		"\t\telse\n" +
-		"\t\t\tcontentType.features->includes(f.oclAsType(UnitAssociation).association)\n" +
+		"\t\t\tcontentType.allFeatures->includes(f.oclAsType(UnitAssociation).association)\n" +
 		"\t\tendif)";
 
 	/**

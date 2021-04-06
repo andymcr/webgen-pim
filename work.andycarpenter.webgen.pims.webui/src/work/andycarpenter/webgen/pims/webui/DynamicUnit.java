@@ -38,7 +38,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='featuresMustBeFromContentType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='displayFields\n\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t-&gt;select(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t-&gt;forAll(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tcontentType.features-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.features-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='displayFields\n\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t-&gt;select(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t-&gt;forAll(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tcontentType.allFeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.allFeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)'"
  * @generated
  */
 public interface DynamicUnit extends ContentUnit, ActionContainer {

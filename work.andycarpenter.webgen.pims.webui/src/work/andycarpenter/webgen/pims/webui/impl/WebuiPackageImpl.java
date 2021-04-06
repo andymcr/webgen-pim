@@ -5559,7 +5559,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (dynamicUnitEClass,
 		   source,
 		   new String[] {
-			   "featuresMustBeFromContentType", "displayFields\n\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t->select(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t->forAll(f | \n\t\tif f.oclIsTypeOf(UnitElement) then\n\t\t\tcontentType.features->includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.features->includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)"
+			   "featuresMustBeFromContentType", "displayFields\n\t->select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t->select(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t->forAll(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tcontentType.allFeatures->includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.allFeatures->includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)"
 		   });
 		addAnnotation
 		  (getDynamicUnit_ContainingType(),
