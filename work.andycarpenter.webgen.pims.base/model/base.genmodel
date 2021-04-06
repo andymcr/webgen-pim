@@ -18,12 +18,14 @@
     <genClasses image="false" ecoreClass="base.ecore#//Classifier"/>
     <genClasses ecoreClass="base.ecore#//DataType">
       <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute base.ecore#//DataType/persistentType"/>
-      <genFeatures createChild="false" propertyCategory="Persistence" ecoreFeature="ecore:EAttribute base.ecore#//DataType/ormType"/>
+      <genFeatures createChild="false" propertyCategory="ORM" ecoreFeature="ecore:EAttribute base.ecore#//DataType/ormType"/>
+      <genFeatures createChild="false" propertyCategory="WAF" ecoreFeature="ecore:EAttribute base.ecore#//DataType/wafType"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//DataType/interfaceType"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//DataType/validationPattern"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute base.ecore#//DataType/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="base.ecore#//EnumerationType">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//EnumerationType/enumerations"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+          ecoreFeature="ecore:EReference base.ecore#//EnumerationType/enumerations"/>
     </genClasses>
     <genClasses ecoreClass="base.ecore#//EnumerationLiteral"/>
     <genClasses ecoreClass="base.ecore#//CurrentTime">
@@ -31,7 +33,8 @@
     </genClasses>
     <genClasses ecoreClass="base.ecore#//CurrentUser"/>
     <genClasses image="false" ecoreClass="base.ecore#//FormalParameterList">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//FormalParameterList/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
+          ecoreFeature="ecore:EReference base.ecore#//FormalParameterList/parameters"/>
     </genClasses>
     <genClasses ecoreClass="base.ecore#//FormalParameter">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference base.ecore#//FormalParameter/formalFor"/>

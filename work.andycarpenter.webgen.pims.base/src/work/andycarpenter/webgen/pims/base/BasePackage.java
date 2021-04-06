@@ -235,13 +235,22 @@ public interface BasePackage extends EPackage {
 	int DATA_TYPE__ORM_TYPE = CLASSIFIER_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Waf Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__WAF_TYPE = CLASSIFIER_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__INTERFACE_TYPE = CLASSIFIER_FEATURE_COUNT + 2;
+	int DATA_TYPE__INTERFACE_TYPE = CLASSIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -250,7 +259,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__VALIDATION_PATTERN = CLASSIFIER_FEATURE_COUNT + 3;
+	int DATA_TYPE__VALIDATION_PATTERN = CLASSIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
@@ -259,7 +268,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 4;
+	int DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Data Type</em>' class.
@@ -315,6 +324,15 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENUMERATION_TYPE__ORM_TYPE = DATA_TYPE__ORM_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Waf Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_TYPE__WAF_TYPE = DATA_TYPE__WAF_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
@@ -777,6 +795,17 @@ public interface BasePackage extends EPackage {
 	EAttribute getDataType_OrmType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.DataType#getWafType <em>Waf Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Waf Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.DataType#getWafType()
+	 * @see #getDataType()
+	 * @generated
+	 */
+	EAttribute getDataType_WafType();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.DataType#getInterfaceType <em>Interface Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1072,6 +1101,14 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATA_TYPE__ORM_TYPE = eINSTANCE.getDataType_OrmType();
+
+		/**
+		 * The meta object literal for the '<em><b>Waf Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_TYPE__WAF_TYPE = eINSTANCE.getDataType_WafType();
 
 		/**
 		 * The meta object literal for the '<em><b>Interface Type</b></em>' attribute feature.

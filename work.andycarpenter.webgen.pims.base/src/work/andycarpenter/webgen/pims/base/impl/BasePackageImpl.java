@@ -272,7 +272,7 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDataType_InterfaceType() {
+	public EAttribute getDataType_WafType() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -282,8 +282,18 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDataType_ValidationPattern() {
+	public EAttribute getDataType_InterfaceType() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDataType_ValidationPattern() {
+		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -496,6 +506,7 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		dataTypeEClass = createEClass(DATA_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__PERSISTENT_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__ORM_TYPE);
+		createEAttribute(dataTypeEClass, DATA_TYPE__WAF_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__INTERFACE_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__VALIDATION_PATTERN);
 
@@ -577,6 +588,7 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDataType_PersistentType(), ecorePackage.getEString(), "persistentType", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_OrmType(), ecorePackage.getEString(), "ormType", "", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataType_WafType(), ecorePackage.getEString(), "wafType", "", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_InterfaceType(), ecorePackage.getEString(), "interfaceType", "", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_ValidationPattern(), ecorePackage.getEString(), "validationPattern", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 

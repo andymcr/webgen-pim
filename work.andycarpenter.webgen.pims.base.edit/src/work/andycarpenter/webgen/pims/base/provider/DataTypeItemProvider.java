@@ -47,6 +47,7 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 
 			addPersistentTypePropertyDescriptor(object);
 			addOrmTypePropertyDescriptor(object);
+			addWafTypePropertyDescriptor(object);
 			addInterfaceTypePropertyDescriptor(object);
 			addValidationPatternPropertyDescriptor(object);
 		}
@@ -93,7 +94,29 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_PersistencePropertyCategory"),
+				 getString("_UI_ORMPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Waf Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWafTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DataType_wafType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataType_wafType_feature", "_UI_DataType_type"),
+				 BasePackage.Literals.DATA_TYPE__WAF_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_WAFPropertyCategory"),
 				 null));
 	}
 
@@ -137,7 +160,7 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
+				 getString("_UI_ModelPropertyCategory"),
 				 null));
 	}
 
@@ -181,6 +204,7 @@ public class DataTypeItemProvider extends ClassifierItemProvider {
 		switch (notification.getFeatureID(DataType.class)) {
 			case BasePackage.DATA_TYPE__PERSISTENT_TYPE:
 			case BasePackage.DATA_TYPE__ORM_TYPE:
+			case BasePackage.DATA_TYPE__WAF_TYPE:
 			case BasePackage.DATA_TYPE__INTERFACE_TYPE:
 			case BasePackage.DATA_TYPE__VALIDATION_PATTERN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

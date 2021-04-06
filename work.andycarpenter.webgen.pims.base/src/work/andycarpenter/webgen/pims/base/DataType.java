@@ -14,6 +14,7 @@ package work.andycarpenter.webgen.pims.base;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getPersistentType <em>Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getOrmType <em>Orm Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getWafType <em>Waf Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getInterfaceType <em>Interface Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.DataType#getValidationPattern <em>Validation Pattern</em>}</li>
  * </ul>
@@ -75,6 +76,29 @@ public interface DataType extends Classifier {
 	 * @generated
 	 */
 	void setOrmType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Waf Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Waf Type</em>' attribute.
+	 * @see #setWafType(String)
+	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getDataType_WafType()
+	 * @model default=""
+	 * @generated
+	 */
+	String getWafType();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.base.DataType#getWafType <em>Waf Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Waf Type</em>' attribute.
+	 * @see #getWafType()
+	 * @generated
+	 */
+	void setWafType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Interface Type</b></em>' attribute.
