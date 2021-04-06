@@ -87,12 +87,12 @@ public interface FormalParameter extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Type</em>' reference.
-	 * @see #setDataType(DataType)
+	 * @see #setDataType(Classifier)
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getFormalParameter_DataType()
 	 * @model
 	 * @generated
 	 */
-	DataType getDataType();
+	Classifier getDataType();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.base.FormalParameter#getDataType <em>Data Type</em>}' reference.
@@ -102,7 +102,7 @@ public interface FormalParameter extends NamedElement {
 	 * @see #getDataType()
 	 * @generated
 	 */
-	void setDataType(DataType value);
+	void setDataType(Classifier value);
 
 	/**
 	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.

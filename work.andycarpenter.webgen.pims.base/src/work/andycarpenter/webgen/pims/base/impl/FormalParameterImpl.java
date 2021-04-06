@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import work.andycarpenter.webgen.pims.base.BasePackage;
-import work.andycarpenter.webgen.pims.base.DataType;
+import work.andycarpenter.webgen.pims.base.Classifier;
 import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
 
@@ -63,7 +63,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * @generated
 	 * @ordered
 	 */
-	protected DataType dataType;
+	protected Classifier dataType;
 
 	/**
 	 * The default value of the '{@link #getPlaceholder() <em>Placeholder</em>}' attribute.
@@ -196,10 +196,10 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * @generated
 	 */
 	@Override
-	public DataType getDataType() {
+	public Classifier getDataType() {
 		if (dataType != null && dataType.eIsProxy()) {
 			InternalEObject oldDataType = (InternalEObject)dataType;
-			dataType = (DataType)eResolveProxy(oldDataType);
+			dataType = (Classifier)eResolveProxy(oldDataType);
 			if (dataType != oldDataType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BasePackage.FORMAL_PARAMETER__DATA_TYPE, oldDataType, dataType));
@@ -213,7 +213,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType basicGetDataType() {
+	public Classifier basicGetDataType() {
 		return dataType;
 	}
 
@@ -223,8 +223,8 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 	 * @generated
 	 */
 	@Override
-	public void setDataType(DataType newDataType) {
-		DataType oldDataType = dataType;
+	public void setDataType(Classifier newDataType) {
+		Classifier oldDataType = dataType;
 		dataType = newDataType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BasePackage.FORMAL_PARAMETER__DATA_TYPE, oldDataType, dataType));
@@ -358,7 +358,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 				setDefaultValue((String)newValue);
 				return;
 			case BasePackage.FORMAL_PARAMETER__DATA_TYPE:
-				setDataType((DataType)newValue);
+				setDataType((Classifier)newValue);
 				return;
 			case BasePackage.FORMAL_PARAMETER__PLACEHOLDER:
 				setPlaceholder((String)newValue);
@@ -385,7 +385,7 @@ public class FormalParameterImpl extends NamedElementImpl implements FormalParam
 				setDefaultValue(DEFAULT_VALUE_EDEFAULT);
 				return;
 			case BasePackage.FORMAL_PARAMETER__DATA_TYPE:
-				setDataType((DataType)null);
+				setDataType((Classifier)null);
 				return;
 			case BasePackage.FORMAL_PARAMETER__PLACEHOLDER:
 				setPlaceholder(PLACEHOLDER_EDEFAULT);

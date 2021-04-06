@@ -87,6 +87,10 @@ rule SerializationGroup {
 rule DataType {
 	from website : Website!DataType (website.oclIsTypeOf(Website!DataType))
 	to orm : ORM!DataType (
+		persistentType <- website.persistentType(),
+		ormType <- website.ormType(),
+		interfaceType <- website.interfaceType,
+		validationPattern <- website.validationPattern
 	)
 }
 

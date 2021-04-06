@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated base -->
       <extender
-            uri="http://cs.man.ac.uk/mdsd/webgen/expression"
+            uri="http://andycarpenter.work/pim/expression"
             class="work.andycarpenter.webgen.pims.base.provider.BaseItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
    </extension>
 </plugin>

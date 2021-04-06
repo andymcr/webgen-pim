@@ -66,9 +66,9 @@ helper context Website!DataType def: persistentType() : String
 			self.persistentType
 		else
 			if self.oclIsTypeOf(Website!EnumerationType) then
-				'Integer'
+				'integer'
 			else
-				self.name
+				self.name.toLowerCase()
 			endif
 		endif;
 
@@ -92,8 +92,8 @@ helper context Website!Association def: inverseFeatureTypeNoted(noted : Set(Webs
 helper def: findWebsiteDataType(name : String) : Website!Entity
 	= Website!DataType.allInstancesFrom('website')->any(t | t.name = name);
 
-helper def: findOrmDataType(name : String) : ORM!DataType
-	= ORM!DataType.allInstancesFrom('orm')->any(d | d.name = name);
+helper def: findOrmDataType(name : String) : ORM!Classifier
+	= ORM!Classifier.allInstancesFrom('orm')->any(d | d.name = name);
 
 helper def: findOrmCollectionType(name : String) : ORM!CollectionType
 	= ORM!CollectionType.allInstancesFrom('orm')
@@ -109,7 +109,7 @@ helper context Website!DataType def: ormType() : String
 		else
 			let typeName : String
 				= if self.oclIsTypeOf(Website!EnumerationType) then
-						'Integer'
+						'int'
 					else if self.name = 'TextBlock' then
 						'String'
 					else
