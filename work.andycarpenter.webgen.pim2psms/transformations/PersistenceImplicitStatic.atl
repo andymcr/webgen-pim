@@ -71,7 +71,7 @@ unique lazy rule implicitStaticEntity {
 		keys <- Sequence{name},
 		labels <- Sequence{label}
 	),
-	name : ORM!SingletonElement (
+	name : ORM!DataTypeAttribute (
 		name <- 'name',
 		displayLabel <- 'Name',
 		dataType <- website.getDataType('String'),
@@ -80,7 +80,7 @@ unique lazy rule implicitStaticEntity {
 		"unique" <- true,
 		columnName <- 'name'.createAttributeColumnName()
 	),
-	content : ORM!SingletonElement (
+	content : ORM!DataTypeAttribute (
 		name <- 'content',
 		displayLabel <- 'Content',
 		dataType <- website.getDataType('TextBlock'),

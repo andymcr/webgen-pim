@@ -61,18 +61,6 @@ helper context Website!Entity def: createEntityColumnName() : String
 	= self.name.createName().concat('_id');
 
 
-helper context Website!DataType def: persistentType() : String
-	= if not self.persistentType.oclIsUndefined() and self.persistentType <> '' then
-			self.persistentType
-		else
-			if self.oclIsTypeOf(Website!EnumerationType) then
-				'integer'
-			else
-				self.name.toLowerCase()
-			endif
-		endif;
-
-
 helper context Website!Attribute def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean
 	= noted->select(e | e.oclIsKindOf(Website!Attribute))
 		->exists(e | e.dataType = self.dataType 
@@ -103,14 +91,26 @@ helper def: findOrmCollectionType(name : String) : ORM!CollectionType
 helper context Website!Feature def: findOrmTargetEntity() : ORM!Entity
 	= thisModule.findOrmEntity(self.targetEntity.name);
 
+helper context Website!DataType def: persistentType() : String
+	= if self.persistentType <> '' then
+			self.persistentType
+		else
+			if self.oclIsTypeOf(Website!EnumerationType) then
+				'integer'
+			else
+				self.name.toLowerCase()
+			endif
+		endif;
+
+
 helper context Website!DataType def: ormType() : String
-	= if not self.ormType.oclIsUndefined() and self.ormType <> '' then
+	= if self.ormType <> '' then
 			self.ormType
 		else
 			let typeName : String
 				= if self.oclIsTypeOf(Website!EnumerationType) then
-						'int'
-					else if self.name = 'TextBlock' then
+						'Integer'
+					else if self.name = 'Textarea' then
 						'String'
 					else
 						self.name
@@ -121,6 +121,24 @@ helper context Website!DataType def: ormType() : String
 					else
 						typeName
 					endif
+		endif;
+
+helper context Website!DataType def: wafType() : String
+	= if self.wafType <> '' then
+			self.wafType
+		else if self.oclIsTypeOf(Website!EnumerationType) then
+			'int'
+		else if self.name = 'Textarea' then
+			'string'
+		else
+			self.name.toLowerCase()
+		endif endif endif;
+
+helper context Website!DataType def: interfaceType() : String
+	= if self.interfaceType <> '' then
+			self.interfaceType
+		else
+			self.name
 		endif;
 
 
@@ -213,7 +231,7 @@ helper context Website!Feature def: inverseCollectionType() : ORM!CollectionType
 
 
 helper context Website!Attribute def: validationPattern() : String
-	= if not self.validationPattern.oclIsUndefined() and self.validationPattern <> '' then
+	= if self.validationPattern <> '' then
 			self.validationPattern
 		else
 			if self.oclIsTypeOf(Website!DataTypeAttribute) then

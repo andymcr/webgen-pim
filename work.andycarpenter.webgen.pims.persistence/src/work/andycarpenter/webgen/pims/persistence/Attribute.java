@@ -16,9 +16,6 @@ import work.andycarpenter.webgen.pims.expression.Expression;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#isHidden <em>Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#isContainerUnique <em>Container Unique</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType <em>Persistent Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType <em>Orm Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType <em>Interface Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getSlugFields <em>Slug Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Attribute#getDefaultValue <em>Default Value</em>}</li>
@@ -83,87 +80,6 @@ public interface Attribute extends Feature, Label {
 	 * @generated
 	 */
 	void setContainerUnique(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Persistent Type</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Persistent Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Persistent Type</em>' attribute.
-	 * @see #setPersistentType(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_PersistentType()
-	 * @model default=""
-	 * @generated
-	 */
-	String getPersistentType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType <em>Persistent Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Persistent Type</em>' attribute.
-	 * @see #getPersistentType()
-	 * @generated
-	 */
-	void setPersistentType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Orm Type</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Orm Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Orm Type</em>' attribute.
-	 * @see #setOrmType(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_OrmType()
-	 * @model default=""
-	 * @generated
-	 */
-	String getOrmType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType <em>Orm Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Orm Type</em>' attribute.
-	 * @see #getOrmType()
-	 * @generated
-	 */
-	void setOrmType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Interface Type</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Interface Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interface Type</em>' attribute.
-	 * @see #setInterfaceType(String)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAttribute_InterfaceType()
-	 * @model default=""
-	 * @generated
-	 */
-	String getInterfaceType();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType <em>Interface Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Interface Type</em>' attribute.
-	 * @see #getInterfaceType()
-	 * @generated
-	 */
-	void setInterfaceType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Slug Fields</b></em>' reference list.

@@ -718,38 +718,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_PersistentType() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_OrmType() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_InterfaceType() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getAttribute_SlugFields() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(5);
+		return (EReference)attributeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -759,7 +729,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getAttribute_Unique() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -769,7 +739,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EReference getAttribute_DefaultValue() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(7);
+		return (EReference)attributeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -779,7 +749,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getAttribute_Placeholder() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -789,7 +759,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getAttribute_ValidationPattern() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2108,9 +2078,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__HIDDEN);
 		createEAttribute(attributeEClass, ATTRIBUTE__CONTAINER_UNIQUE);
-		createEAttribute(attributeEClass, ATTRIBUTE__PERSISTENT_TYPE);
-		createEAttribute(attributeEClass, ATTRIBUTE__ORM_TYPE);
-		createEAttribute(attributeEClass, ATTRIBUTE__INTERFACE_TYPE);
 		createEReference(attributeEClass, ATTRIBUTE__SLUG_FIELDS);
 		createEAttribute(attributeEClass, ATTRIBUTE__UNIQUE);
 		createEReference(attributeEClass, ATTRIBUTE__DEFAULT_VALUE);
@@ -2369,9 +2336,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttribute_Hidden(), ecorePackage.getEBoolean(), "hidden", "false", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttribute_ContainerUnique(), ecorePackage.getEBoolean(), "containerUnique", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_PersistentType(), ecorePackage.getEString(), "persistentType", "", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_OrmType(), ecorePackage.getEString(), "ormType", "", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_InterfaceType(), ecorePackage.getEString(), "interfaceType", "", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttribute_SlugFields(), this.getAttribute(), null, "slugFields", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttribute_Unique(), ecorePackage.getEBoolean(), "unique", "false", 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttribute_DefaultValue(), theExpressionPackage.getExpression(), null, "defaultValue", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2667,6 +2631,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		   source,
 		   new String[] {
 			   "derivation", "if selectPath->isEmpty() then\n\tnull\nelse if selectPath->size() = 1 then\n\tif selectPath->first().partOf = self.definedBy.serves then\n\t\tselectPath->first().targetEntity\n\telse\n\t\tselectPath->first().partOf\n\tendif\nelse\n\tselectPath->subOrderedSet(2, selectPath->size() )\n\t\t->iterate(a; result : Entity = if selectPath->first().partOf = self.definedBy.serves then\n\t\t\t\t\t\tselectPath->first().targetEntity\n\t\t\t\t\telse\n\t\t\t\t\t\tselectPath->first().partOf\n\t\t\t\t\tendif\n\t\t\t| if a.partOf = result then\n\t\t\t\t\ta.targetEntity\n\t\t\t\telse\n\t\t\t\t\ta.partOf\n\t\t\t\tendif )\nendif endif"
+		   });
+		addAnnotation
+		  (getRepositoryFeatureReference_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tfeature.name\nendif"
 		   });
 	}
 

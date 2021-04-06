@@ -54,9 +54,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 
 			addHiddenPropertyDescriptor(object);
 			addContainerUniquePropertyDescriptor(object);
-			addPersistentTypePropertyDescriptor(object);
-			addOrmTypePropertyDescriptor(object);
-			addInterfaceTypePropertyDescriptor(object);
 			addSlugFieldsPropertyDescriptor(object);
 			addUniquePropertyDescriptor(object);
 			addPlaceholderPropertyDescriptor(object);
@@ -106,72 +103,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Persistent Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPersistentTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attribute_persistentType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_persistentType_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__PERSISTENT_TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_PersistencePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Orm Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrmTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attribute_ormType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_ormType_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__ORM_TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_OrmPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Interface Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInterfaceTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attribute_interfaceType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_interfaceType_feature", "_UI_Attribute_type"),
-				 PersistencePackage.Literals.ATTRIBUTE__INTERFACE_TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -322,9 +253,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 		switch (notification.getFeatureID(Attribute.class)) {
 			case PersistencePackage.ATTRIBUTE__HIDDEN:
 			case PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE:
-			case PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE:
-			case PersistencePackage.ATTRIBUTE__ORM_TYPE:
-			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
 			case PersistencePackage.ATTRIBUTE__UNIQUE:
 			case PersistencePackage.ATTRIBUTE__PLACEHOLDER:
 			case PersistencePackage.ATTRIBUTE__VALIDATION_PATTERN:

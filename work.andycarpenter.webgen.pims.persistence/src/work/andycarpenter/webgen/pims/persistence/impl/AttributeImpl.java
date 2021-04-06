@@ -29,9 +29,6 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#isContainerUnique <em>Container Unique</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getPersistentType <em>Persistent Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getOrmType <em>Orm Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getInterfaceType <em>Interface Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getSlugFields <em>Slug Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#isUnique <em>Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeImpl#getDefaultValue <em>Default Value</em>}</li>
@@ -81,66 +78,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 	 * @ordered
 	 */
 	protected boolean containerUnique = CONTAINER_UNIQUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPersistentType() <em>Persistent Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPersistentType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PERSISTENT_TYPE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getPersistentType() <em>Persistent Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPersistentType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String persistentType = PERSISTENT_TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getOrmType() <em>Orm Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrmType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ORM_TYPE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getOrmType() <em>Orm Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrmType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ormType = ORM_TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getInterfaceType() <em>Interface Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInterfaceType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INTERFACE_TYPE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getInterfaceType() <em>Interface Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInterfaceType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String interfaceType = INTERFACE_TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSlugFields() <em>Slug Fields</em>}' reference list.
@@ -285,75 +222,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 		containerUnique = newContainerUnique;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE, oldContainerUnique, containerUnique));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getPersistentType() {
-		return persistentType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPersistentType(String newPersistentType) {
-		String oldPersistentType = persistentType;
-		persistentType = newPersistentType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE, oldPersistentType, persistentType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getOrmType() {
-		return ormType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOrmType(String newOrmType) {
-		String oldOrmType = ormType;
-		ormType = newOrmType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__ORM_TYPE, oldOrmType, ormType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getInterfaceType() {
-		return interfaceType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInterfaceType(String newInterfaceType) {
-		String oldInterfaceType = interfaceType;
-		interfaceType = newInterfaceType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ATTRIBUTE__INTERFACE_TYPE, oldInterfaceType, interfaceType));
 	}
 
 	/**
@@ -509,12 +377,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return isHidden();
 			case PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE:
 				return isContainerUnique();
-			case PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE:
-				return getPersistentType();
-			case PersistencePackage.ATTRIBUTE__ORM_TYPE:
-				return getOrmType();
-			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
-				return getInterfaceType();
 			case PersistencePackage.ATTRIBUTE__SLUG_FIELDS:
 				return getSlugFields();
 			case PersistencePackage.ATTRIBUTE__UNIQUE:
@@ -543,15 +405,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return;
 			case PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE:
 				setContainerUnique((Boolean)newValue);
-				return;
-			case PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE:
-				setPersistentType((String)newValue);
-				return;
-			case PersistencePackage.ATTRIBUTE__ORM_TYPE:
-				setOrmType((String)newValue);
-				return;
-			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
-				setInterfaceType((String)newValue);
 				return;
 			case PersistencePackage.ATTRIBUTE__SLUG_FIELDS:
 				getSlugFields().clear();
@@ -587,15 +440,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 			case PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE:
 				setContainerUnique(CONTAINER_UNIQUE_EDEFAULT);
 				return;
-			case PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE:
-				setPersistentType(PERSISTENT_TYPE_EDEFAULT);
-				return;
-			case PersistencePackage.ATTRIBUTE__ORM_TYPE:
-				setOrmType(ORM_TYPE_EDEFAULT);
-				return;
-			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
-				setInterfaceType(INTERFACE_TYPE_EDEFAULT);
-				return;
 			case PersistencePackage.ATTRIBUTE__SLUG_FIELDS:
 				getSlugFields().clear();
 				return;
@@ -627,12 +471,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 				return hidden != HIDDEN_EDEFAULT;
 			case PersistencePackage.ATTRIBUTE__CONTAINER_UNIQUE:
 				return containerUnique != CONTAINER_UNIQUE_EDEFAULT;
-			case PersistencePackage.ATTRIBUTE__PERSISTENT_TYPE:
-				return PERSISTENT_TYPE_EDEFAULT == null ? persistentType != null : !PERSISTENT_TYPE_EDEFAULT.equals(persistentType);
-			case PersistencePackage.ATTRIBUTE__ORM_TYPE:
-				return ORM_TYPE_EDEFAULT == null ? ormType != null : !ORM_TYPE_EDEFAULT.equals(ormType);
-			case PersistencePackage.ATTRIBUTE__INTERFACE_TYPE:
-				return INTERFACE_TYPE_EDEFAULT == null ? interfaceType != null : !INTERFACE_TYPE_EDEFAULT.equals(interfaceType);
 			case PersistencePackage.ATTRIBUTE__SLUG_FIELDS:
 				return slugFields != null && !slugFields.isEmpty();
 			case PersistencePackage.ATTRIBUTE__UNIQUE:
@@ -661,12 +499,6 @@ public abstract class AttributeImpl extends FeatureImpl implements Attribute {
 		result.append(hidden);
 		result.append(", containerUnique: ");
 		result.append(containerUnique);
-		result.append(", persistentType: ");
-		result.append(persistentType);
-		result.append(", ormType: ");
-		result.append(ormType);
-		result.append(", interfaceType: ");
-		result.append(interfaceType);
 		result.append(", unique: ");
 		result.append(unique);
 		result.append(", placeholder: ");

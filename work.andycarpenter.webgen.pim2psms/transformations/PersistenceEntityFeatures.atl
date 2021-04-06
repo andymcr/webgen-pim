@@ -75,140 +75,36 @@ abstract rule Attribute {
 				website.columnName.createAttributeColumnName()
 			else
 				website.name.createAttributeColumnName()
-			endif,
+			endif
+	)
+}
+
+-- @extends Attribute
+rule DataTypeAttribute {
+	from website : Website!DataTypeAttribute
+	to orm : ORM!DataTypeAttribute (
+		attributeDataType <- thisModule.findOrmDataType(website.dataType.name),
+		obfuscateFormFields <- website.obfuscateFormFields,
+		caseInsensitive <- website.caseInsensitive,
+		encrypt <- website.encrypt,
+		"unique" <- website."unique",
+		containerUnique <- website.containerUnique,
 		validationPattern <- website.validationPattern()
 	)
 }
 
 -- @extends Attribute
-abstract rule SingletonAttribute {
-	from website : Website!Attribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonAttribute (
-		"unique" <- website."unique",
-		containerUnique <- website.containerUnique
-	)
-}
-
--- @extends Attribute
-abstract rule CollectionAttribute {
-	from website : Website!Attribute (website.cardinality = #Many)
-	to orm : ORM!CollectionAttribute (
-	)
-}
-
--- @extends SingletonAttribute
-rule SingletonElement {
-	from website : Website!DataTypeAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonElement (
-		persistentType <- 
-			if not website.persistentType.oclIsUndefined() and website.persistentType <> '' then
-				website.persistentType
-			else
-				website.dataType.persistentType()
-			endif,
-		ormType <- 
-			if not website.ormType.oclIsUndefined() and website.ormType <> '' then
-				website.ormType
-			else 
-				website.dataType.ormType()
-			endif,
-		attributeDataType <- thisModule.findOrmDataType(website.dataType.name),
-		obfuscateFormFields <- website.obfuscateFormFields,
-		caseInsensitive <- website.caseInsensitive,
-		encrypt <- website.encrypt
-	)
-}
-
--- @extends CollectionAttribute
-rule CollectionElement {
-	from website : Website!DataTypeAttribute (website.cardinality = #Many)
-	to orm : ORM!CollectionElement (
-		collectionType <- thisModule.findOrmCollectionType(website.dataType.name),
-		ormType <- 'array'
-	)
-}
-
-abstract rule DateAttribute {
+rule DateAttribute {
 	from website : Website!DateAttribute
 	to orm : ORM!DateAttribute (
-		persistentType <- 
-			if not website.persistentType.oclIsUndefined() and website.persistentType <> '' then
-				website.persistentType
-			else
-				if website.details = #DateOnly then
-					'date'
-				else if website.details = #TimeOnly then
-					'time'
-				else
-					'datetime'
-				endif endif
-			endif,
-		ormType <- 
-			if not website.ormType.oclIsUndefined() and website.ormType <> '' then
-				website.ormType
-			else 
-				if website.details = #DateOnly then
-					'date'
-				else if website.details = #TimeOnly then
-					'time'
-				else
-					'datetime'
-				endif endif
-			endif,
 		details <- website.details
 	)
 }
 
--- @extends SingletonAttribute, DateAttribute
-rule SingletonDate {
-	from website : Website!DateAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonDate (
-	)
-}
-
--- @extends CollectionAttribute, DateAttribute
-rule CollectionDate {
-	from website : Website!DateAttribute (website.cardinality = #Many)
-	to orm : ORM!CollectionDate (
-	)
-}
-
--- @extends SingletonAttribute
-rule SingletonURL {
-	from website : Website!UrlAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonURL (
-		displayValue <- website.displayValue,
-		persistentType <-
-			if not website.persistentType.oclIsUndefined() and website.persistentType <> '' then
-				website.persistentType
-			else
-				thisModule.findWebsiteDataType('String').persistentType()
-			endif,
-		ormType <-
-			if not website.ormType.oclIsUndefined() and website.ormType <> '' then
-				website.ormType
-			else 
-				thisModule.findWebsiteDataType('String').ormType()
-			endif
-	)
-}
-
--- @extends SingletonAttribute
-abstract rule SingletonResource {
-	from website : Website!ResourceAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonResource (
-		persistentType <-
-			if not website.persistentType.oclIsUndefined() and website.persistentType <> '' then
-				website.persistentType
-			else
-				thisModule.findWebsiteDataType('String').persistentType()
-			endif,
-		ormType <-
-			if not website.ormType.oclIsUndefined() and website.ormType <> '' then
-				website.ormType
-			else 
-				thisModule.findWebsiteDataType('String').ormType()
-			endif,
+-- @extends Feature
+abstract rule ResourceFeature {
+	from website : Website!ResourceAttribute
+	to orm : ORM!ResourceFeature (
 		maximumUploadSize <-
 			if website.maximumUploadSize > 0 then
 				website.maximumUploadSize
@@ -244,26 +140,24 @@ rule DatePathElement {
 	)
 }
 
--- @extends SingletonResource
-rule SingletonFile {
-	from website : Website!FileAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonFile (
+-- @extends ResourceFeature
+rule FileResource {
+	from website : Website!FileAttribute
+	to orm : ORM!FileResource (
 	)
 }
 
--- @extends SingletonResource
-rule SingletonImage {
-	from website : Website!ImageAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonImage (
+-- @extends ResourceFeature
+rule ImageResource {
+	from website : Website!ImageAttribute
+	to orm : ORM!ImageResource (
 	)
 }
 
--- @extends SingletonAttribute
-rule SingletonLocation {
-	from website : Website!LocationAttribute (website.cardinality <> #Many)
-	to orm : ORM!SingletonLocation (
-		persistentType <- thisModule.findWebsiteDataType('String').persistentType(),
-		ormType <- thisModule.findWebsiteDataType('String').ormType()
+-- @extends Feature
+rule LocationFeature {
+	from website : Website!LocationAttribute
+	to orm : ORM!LocationFeature (
 	)
 }
 
@@ -286,15 +180,16 @@ abstract rule Association {
 -- @extends Association
 rule OneToOneAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality <> #Many and website.targetCardinality <> #Many)
-	to orm : ORM!SingletonAssociation (
+	to orm : ORM!Association (
 		associationRelationship <- #OneToOne,
 		opposite <- associationEnd,
 		associationOwningEnd <- website.cardinality = #Required or website.targetCardinality <> #Required
 	),
-	associationEnd : ORM!SingletonAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
+		cardinality <- website.targetCardinality,
 		associationRelationship <- #OneToOne,
 		opposite <- orm,
 		associationOwningEnd <- website.cardinality <> #Required and website.targetCardinality = #Required,
@@ -314,15 +209,16 @@ rule OneToOneAssociationWithoutContainment {
 -- @extends Association
 rule ManyToOneAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality <> #Many and website.targetCardinality = #Many)
-	to orm : ORM!SingletonAssociation (
+	to orm : ORM!Association (
 		associationRelationship <- #ManyToOne,
 		opposite <- associationEnd,
 		associationOwningEnd <- true
 	),
-	associationEnd : ORM!CollectionAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
+		cardinality <- website.targetCardinality,
 		associationRelationship <- #OneToMany,
 		opposite <- orm,
 		associationOwningEnd <- false,
@@ -336,16 +232,16 @@ rule ManyToOneAssociationWithoutContainment {
 -- @extends Association
 rule OneToManyAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality = #Many and website.targetCardinality <> #Many)
-	to orm : ORM!CollectionAssociation (
-		collectionType <- thisModule.findOrmCollection(website.targetEntity.name),
+	to orm : ORM!Association (
 		associationRelationship <- #OneToMany,
 		opposite <- associationEnd,
 		associationOwningEnd <- false
 	),
-	associationEnd : ORM!SingletonAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
+		cardinality <- website.targetCardinality,
 		associationRelationship <- #ManyToOne,
 		opposite <- orm,
 		associationOwningEnd <- true,
@@ -365,8 +261,7 @@ rule OneToManyAssociationWithoutContainment {
 -- @extends Association
 rule ManyToManyAssociationWithoutContainment {
 	from website : Website!AssociationWithoutContainment (website.cardinality = #Many and website.targetCardinality = #Many)
-	to orm : ORM!CollectionAssociation (
-		collectionType <- thisModule.findOrmCollection(website.targetEntity.name),
+	to orm : ORM!Association (
 		associationRelationship <- #ManyToMany,
 		opposite <- associationEnd,
 		associationOwningEnd <- true,
@@ -377,10 +272,11 @@ rule ManyToManyAssociationWithoutContainment {
 				website.partOf.createEntityColumnName()
 			endif
 	),
-	associationEnd : ORM!CollectionAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
+		cardinality <- website.targetCardinality,
 		associationRelationship <- #ManyToMany,
 		opposite <- orm,
 		associationOwningEnd <- false,
@@ -400,13 +296,13 @@ rule ManyToManyAssociationWithoutContainment {
 -- @extends Association
 rule OneToOneAssociationWithContainment {
 	from website : Website!AssociationWithContainment (website.cardinality <> #Many)
-	to orm : ORM!SingletonAssociation (
+	to orm : ORM!Association (
 		associationRelationship <- #OneToOne,
 		opposite <- associationEnd,
 		associationContains <- true,
 		visible <- website.sourceVisible
 	),
-	associationEnd : ORM!SingletonAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),
@@ -431,13 +327,13 @@ rule OneToOneAssociationWithContainment {
 -- @extends Association
 rule OneToManyAssociationWithContainment {
 	from website : Website!AssociationWithContainment (website.cardinality = #Many)
-	to orm : ORM!CollectionAssociation (
+	to orm : ORM!Association (
 		associationRelationship <- #OneToMany,
 		opposite <- associationEnd,
 		associationContains <- true,
 		visible <- website.sourceVisible
 	),
-	associationEnd : ORM!SingletonAssociation (
+	associationEnd : ORM!Association (
 		name <- website.targetFeatureName(),
 		displayLabel <- website.targetDisplayLabel(),
 		partOf <- thisModule.findOrmEntity(website.targetEntity.name),

@@ -42,15 +42,7 @@ rule Website {
 		databaseTechnology <- website.databaseTechnology,
 		ormTechnology <- website.ormTechnology,
 		timestampCreation <- website.timestampCreation,
-		timestampUpdates <- website.timestampUpdates,
-		hasCustomOrmTypes <-
-			website.entities
-				->select(c | c.oclIsTypeOf(Website!Entity))
-				->collect(e | e.features)->flatten()
-				->select(f | f.oclIsKindOf(Website!Attribute))
-				->select(a | not a.ormType.oclIsUndefined())
-				->select(a | a.ormType.trim() <> '')
-				->notEmpty()
+		timestampUpdates <- website.timestampUpdates
 	)
 }
 
@@ -89,7 +81,8 @@ rule DataType {
 	to orm : ORM!DataType (
 		persistentType <- website.persistentType(),
 		ormType <- website.ormType(),
-		interfaceType <- website.interfaceType,
+		wafType <- website.wafType(),
+		interfaceType <- website.interfaceType(),
 		validationPattern <- website.validationPattern
 	)
 }

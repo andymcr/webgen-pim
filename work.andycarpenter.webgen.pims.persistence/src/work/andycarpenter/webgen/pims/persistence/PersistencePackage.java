@@ -911,40 +911,13 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE__CONTAINER_UNIQUE = FEATURE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__PERSISTENT_TYPE = FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__ORM_TYPE = FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__INTERFACE_TYPE = FEATURE_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__SLUG_FIELDS = FEATURE_FEATURE_COUNT + 5;
+	int ATTRIBUTE__SLUG_FIELDS = FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -953,7 +926,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__UNIQUE = FEATURE_FEATURE_COUNT + 6;
+	int ATTRIBUTE__UNIQUE = FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -962,7 +935,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__DEFAULT_VALUE = FEATURE_FEATURE_COUNT + 7;
+	int ATTRIBUTE__DEFAULT_VALUE = FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -971,7 +944,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__PLACEHOLDER = FEATURE_FEATURE_COUNT + 8;
+	int ATTRIBUTE__PLACEHOLDER = FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -980,7 +953,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__VALIDATION_PATTERN = FEATURE_FEATURE_COUNT + 9;
+	int ATTRIBUTE__VALIDATION_PATTERN = FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -989,7 +962,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 10;
+	int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -1776,33 +1749,6 @@ public interface PersistencePackage extends EPackage {
 	int DATA_TYPE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2101,33 +2047,6 @@ public interface PersistencePackage extends EPackage {
 	int DATE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2408,33 +2327,6 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2704,33 +2596,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -3142,33 +3007,6 @@ public interface PersistencePackage extends EPackage {
 	int FILE_ATTRIBUTE__CONTAINER_UNIQUE = RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__PERSISTENT_TYPE = RESOURCE_ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__ORM_TYPE = RESOURCE_ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__INTERFACE_TYPE = RESOURCE_ATTRIBUTE__INTERFACE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3476,33 +3314,6 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_ATTRIBUTE__CONTAINER_UNIQUE = RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__PERSISTENT_TYPE = RESOURCE_ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__ORM_TYPE = RESOURCE_ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__INTERFACE_TYPE = RESOURCE_ATTRIBUTE__INTERFACE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3808,33 +3619,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Persistent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__PERSISTENT_TYPE = ATTRIBUTE__PERSISTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Orm Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__ORM_TYPE = ATTRIBUTE__ORM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Interface Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_ATTRIBUTE__INTERFACE_TYPE = ATTRIBUTE__INTERFACE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
@@ -5430,39 +5214,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAttribute_ContainerUnique();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType <em>Persistent Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Persistent Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getPersistentType()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_PersistentType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType <em>Orm Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Orm Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getOrmType()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_OrmType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType <em>Interface Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Interface Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Attribute#getInterfaceType()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_InterfaceType();
 
 	/**
 	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Attribute#getSlugFields <em>Slug Fields</em>}'.
@@ -7116,30 +6867,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ATTRIBUTE__CONTAINER_UNIQUE = eINSTANCE.getAttribute_ContainerUnique();
-
-		/**
-		 * The meta object literal for the '<em><b>Persistent Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__PERSISTENT_TYPE = eINSTANCE.getAttribute_PersistentType();
-
-		/**
-		 * The meta object literal for the '<em><b>Orm Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__ORM_TYPE = eINSTANCE.getAttribute_OrmType();
-
-		/**
-		 * The meta object literal for the '<em><b>Interface Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__INTERFACE_TYPE = eINSTANCE.getAttribute_InterfaceType();
 
 		/**
 		 * The meta object literal for the '<em><b>Slug Fields</b></em>' reference list feature.

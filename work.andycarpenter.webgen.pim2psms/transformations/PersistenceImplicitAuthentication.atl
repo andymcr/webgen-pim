@@ -148,9 +148,7 @@ unique lazy rule implicitStringCollectionType {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!CollectionType (
 		name <- 'String',
-		elementType <- website.getDataType('String'),
-		persistenceType <- 'String',
-		ormType <- website.getPersistentType('array')
+		elementType <- website.getDataType('String')
 	)
 	do {
 		orm;
@@ -188,49 +186,41 @@ unique lazy rule implicitAuthenticationEntity {
 	labelFeature : ORM!ModelLabelAttribute (
 		attribute <- email
 	),
-	username : ORM!SingletonElement (
+	username : ORM!DataTypeAttribute (
 		name <- 'username',
 		displayLabel <- 'Username',
 		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- true,
-		columnName <- 'username',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'username'
 	),
-	usernameCanonical : ORM!SingletonElement (
+	usernameCanonical : ORM!DataTypeAttribute (
 		name <- 'usernameCanonical',
 		displayLabel <- 'Username (Canonical)',
 		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- true,
-		columnName <- 'username_canonical',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'username_canonical'
 	),
-	email : ORM!SingletonElement (
+	email : ORM!DataTypeAttribute (
 		name <- 'email',
 		displayLabel <- 'Email',
 		attributeDataType <- website.getDataType('Email'),
 		cardinality <- #Required,
 		"unique" <- true,
 		caseInsensitive <- true,
-		columnName <- 'email',
-		persistentType <- website.getPersistentType('Email'),
-		ormType <- website.getOrmType('Email')
+		columnName <- 'email'
 	),
-	emailCanonical : ORM!SingletonElement (
+	emailCanonical : ORM!DataTypeAttribute (
 		name <- 'emailCanonical',
 		displayLabel <- 'Email (Canonical)',
 		attributeDataType <- website.getDataType('Email'),
 		cardinality <- #Required,
 		"unique" <- true,
 		caseInsensitive <- true,
-		columnName <- 'email_canonical',
-		persistentType <- website.getPersistentType('Email'),
-		ormType <- website.getOrmType('Email')
+		columnName <- 'email_canonical'
 	),
-	password : ORM!SingletonElement (
+	password : ORM!DataTypeAttribute (
 		name <- 'password',
 		displayLabel <- 'Password',
 		attributeDataType <- website.getDataType('String'),
@@ -238,150 +228,122 @@ unique lazy rule implicitAuthenticationEntity {
 		"unique" <- false,
 		obfuscateFormFields <- true,
 		encrypt <- true,
-		columnName <- 'password',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'password'
 	),
-	enabled : ORM!SingletonElement (
+	enabled : ORM!DataTypeAttribute (
 		name <- 'enabled',
 		displayLabel <- 'Enabled',
 		attributeDataType <- website.getDataType('Boolean'),
-		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'enabled',
-		attributeDefaultValue <- enabledDefault,
-		persistentType <- website.getPersistentType('Boolean'),
-		ormType <- website.getOrmType('Boolean')
+		attributeDefaultValue <- enabledDefault
 	),
 	enabledDefault : ORM!BooleanLiteral (
 		value <- true
 	),
-	locked : ORM!SingletonElement (
+	locked : ORM!DataTypeAttribute (
 		name <- 'localed',
 		displayLabel <- 'Locked',
 		attributeDataType <- website.getDataType('Boolean'),
-		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'locked',
-		attributeDefaultValue <- lockedDefault,
-		persistentType <- website.getPersistentType('Boolean'),
-		ormType <- website.getOrmType('Boolean')
+		attributeDefaultValue <- lockedDefault
 	),
 	lockedDefault : ORM!BooleanLiteral (
 		value <- false
 	),
-	expired : ORM!SingletonElement (
+	expired : ORM!DataTypeAttribute (
 		name <- 'expired',
 		displayLabel <- 'Expired',
 		attributeDataType <- website.getDataType('Boolean'),
-		ormType <- website.getOrmType('Boolean'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'expired',
-		attributeDefaultValue <- expiredDefault,
-		persistentType <- website.getPersistentType('Boolean'),
-		ormType <- website.getOrmType('Boolean')
+		attributeDefaultValue <- expiredDefault
 	),
 	expiredDefault : ORM!BooleanLiteral (
 		value <- false
 	),
-	expiresAt : ORM!SingletonDate (
+	expiresAt : ORM!DateAttribute (
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
 		cardinality <- #Optional,
 		attributeDefaultValue <- lastLoginDefault,
-		"unique" <- false,
 		columnName <- 'expires_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	confirmationToken : ORM!SingletonElement (
+	confirmationToken : ORM!DataTypeAttribute (
 		name <- 'confirmationToken',
 		displayLabel <- 'Confirmation Token',
 		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Optional,
 		"unique" <- false,
-		columnName <- 'confirmation_token',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'confirmation_token'
 	),
-	passwordRequestedAt : ORM!SingletonDate (
+	passwordRequestedAt : ORM!DateAttribute (
 		name <- 'passwordRequestedAt',
 		displayLabel <- 'Password Requested At',
 		cardinality <- #Optional,
-		"unique" <- false,
 		columnName <- 'password_requested_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	passwordChangedAt : ORM!SingletonDate (
+	passwordChangedAt : ORM!DateAttribute (
 		name <- 'passwordChangedAt',
 		displayLabel <- 'Password Changed At',
 		cardinality <- #Optional,
-		"unique" <- false,
 		columnName <- 'password_changed_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	credentialsExpired : ORM!SingletonElement (
+	credentialsExpired : ORM!DataTypeAttribute (
 		name <- 'credentialsExpired',
 		displayLabel <- 'Credentials Expired',
 		attributeDataType <- website.getDataType('Boolean'),
 		cardinality <- #Optional,
 		"unique" <- false,
-		columnName <- 'credentials_expired',
-		persistentType <- website.getPersistentType('Boolean'),
-		ormType <- website.getOrmType('Boolean')
+		columnName <- 'credentials_expired'
 	),
-	credentialsExpireAt : ORM!SingletonDate (
+	credentialsExpireAt : ORM!DateAttribute (
 		name <- 'credentialsExpireAt',
 		displayLabel <- 'Credentials Expire At',
 		cardinality <- #Optional,
-		"unique" <- false,
 		columnName <- 'credentials_expire_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	roles : ORM!CollectionElement (
+	roles : ORM!DataTypeAttribute (
 		name <- 'roles',
 		displayLabel <- 'Roles',
 		singletonName <- 'role',
 		cardinality <- #Many,
 		columnName <- 'roles',
-		collectionType <- website.getCollectionType('String'),
 		collectionOrmAllowAdd <- true,
 		collectionOrmAllowRemove <- true
 	),
-	lastLogin : ORM!SingletonDate (
+	lastLogin : ORM!DateAttribute (
 		name <- 'lastLogin',
 		displayLabel <- 'Last Login',
 		cardinality <- #Required,
-		"unique" <- false,
 		columnName <- 'last_login',
 		details <- #DateAndTime,
-		attributeDefaultValue <- lastLoginDefault,
-		ormType <- 'datetime'
+		attributeDefaultValue <- lastLoginDefault
 	),
 	lastLoginDefault : ORM!StringLiteral (
 		value <- '0000-00-00 00:00:00'
 	),
-	lastIp : ORM!SingletonElement (
+	lastIp : ORM!DataTypeAttribute (
 		name <- 'lastIp',
 		displayLabel <- 'lastIp',
 		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'last_ip',
-		attributeDefaultValue <- lastIpDefault,
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		attributeDefaultValue <- lastIpDefault
 	),
 	lastIpDefault : ORM!StringLiteral (
 		value <- '0.0.0.0'
 	),
-	userDetails : ORM!SingletonAssociation (
+	userDetails : ORM!Association (
 		name <- 'userDetails',
 		displayLabel <- 'User details',
 		cardinality <- #Required,
@@ -398,7 +360,7 @@ unique lazy rule implicitAuthenticationEntity {
 
 lazy rule implicitUserAuthentication {
 	from website: Website!LocalAuthenticationSystem
-	to orm : ORM!SingletonAssociation (
+	to orm : ORM!Association (
 		partOf <- thisModule.findOrmEntity(website.user.name),
 		name <- website.authenticationName.lowercaseFirst(),
 		displayLabel <- website.authenticationName,
@@ -422,7 +384,7 @@ lazy rule implicitResetPasswordRequestEntity {
 		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user},
 		implementsResetPasswordInterface <- true
 	),
-	selector : ORM!SingletonElement (
+	selector : ORM!DataTypeAttribute (
 		name <- 'selector',
 		displayLabel <- 'Selector',
 		attributeDataType <-
@@ -433,39 +395,31 @@ lazy rule implicitResetPasswordRequestEntity {
 			endif,
 		cardinality <- #Required,
 		"unique" <- false,
-		columnName <- 'selector',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'selector'
 	),
-	hashedToken : ORM!SingletonElement (
+	hashedToken : ORM!DataTypeAttribute (
 		name <- 'ipAddress',
 		displayLabel <- 'IP Address',
 		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Required,
 		"unique" <- false,
-		columnName <- 'hashed_token',
-		persistentType <- website.getPersistentType('String'),
-		ormType <- website.getOrmType('String')
+		columnName <- 'hashed_token'
 	),
-	requestedAt : ORM!SingletonDate (
+	requestedAt : ORM!DateAttribute (
 		name <- 'requestedAt',
 		displayLabel <- 'Requested At',
 		cardinality <- #Required,
-		"unique" <- false,
 		columnName <- 'requested_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	expiresAt : ORM!SingletonDate (
+	expiresAt : ORM!DateAttribute (
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
 		cardinality <- #Required,
-		"unique" <- false,
 		columnName <- 'expires_at',
-		details <- #DateAndTime,
-		ormType <- 'datetime'
+		details <- #DateAndTime
 	),
-	user : ORM!SingletonAssociation (
+	user : ORM!Association (
 		name <- 'user',
 		displayLabel <- 'User',
 		cardinality <- #Required,
@@ -488,7 +442,7 @@ lazy rule implicitResetPasswordRequestEntity {
 
 lazy rule implicitUserAuthentication2 {
 	from website: Website!LocalAuthenticationSystem
-	to orm : ORM!CollectionAssociation (
+	to orm : ORM!Association (
 		partOf <-
 			if website.authenticationModel.oclIsUndefined() then
 				thisModule.implicitAuthenticationEntity(website)

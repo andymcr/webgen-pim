@@ -373,7 +373,7 @@ unique lazy rule implicitAuthenticationsPage {
 				->select(f | f.name <> 'password')
 				->select(f | f.oclIsKindOf(ORM!Attribute))
 				->collect(f | 
-					if f.oclIsTypeOf(ORM!SingletonDate) then
+					if f.oclIsTypeOf(ORM!DateAttribute) then
 						thisModule.implicitUnitDateAttribute(f)
 					else
 						thisModule.implicitUnitAttribute(f)
