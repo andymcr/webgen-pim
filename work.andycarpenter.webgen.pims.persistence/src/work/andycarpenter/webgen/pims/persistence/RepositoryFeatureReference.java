@@ -30,6 +30,7 @@ public interface RepositoryFeatureReference extends Variable {
 	 * @see #setName(String)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getRepositoryFeatureReference_Name()
 	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if feature.oclIsUndefined() then\n\t\'\'\nelse\n\tfeature.name\nendif'"
 	 * @generated
 	 */
 	String getName();

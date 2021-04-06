@@ -56,24 +56,14 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.REPOSITORY_FEATURE_REFERENCE__NAME).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
@@ -153,7 +143,7 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	public String getName() {
-		return name;
+		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -163,10 +153,7 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.REPOSITORY_FEATURE_REFERENCE__NAME, oldName, name));
+		NAME__ESETTING_DELEGATE.dynamicSet(this, null, 0, newName);
 	}
 
 	/**
@@ -266,7 +253,7 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 				getSuffixes().clear();
 				return;
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__NAME:
-				setName(NAME_EDEFAULT);
+				NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
 				return;
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__FEATURE:
 				setFeature((Feature)null);
@@ -288,7 +275,7 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__ROOT_CONTAINER:
 				return isSetRootContainer();
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__FEATURE:
 				return feature != null;
 		}
@@ -307,8 +294,6 @@ public class RepositoryFeatureReferenceImpl extends MinimalEObjectImpl.Container
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (suffixes: ");
 		result.append(suffixes);
-		result.append(", name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
