@@ -314,8 +314,9 @@ unique lazy rule implicitAuthenticationEntity {
 	roles : ORM!DataTypeAttribute (
 		name <- 'roles',
 		displayLabel <- 'Roles',
-		singletonName <- 'role',
+		attributeDataType <- website.getDataType('String'),
 		cardinality <- #Many,
+		singletonName <- 'role',
 		columnName <- 'roles',
 		collectionOrmAllowAdd <- true,
 		collectionOrmAllowRemove <- true
