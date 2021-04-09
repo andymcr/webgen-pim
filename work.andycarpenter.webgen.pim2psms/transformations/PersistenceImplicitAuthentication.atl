@@ -270,7 +270,6 @@ unique lazy rule implicitAuthenticationEntity {
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
 		cardinality <- #Optional,
-		attributeDefaultValue <- lastLoginDefault,
 		columnName <- 'expires_at',
 		details <- #DateAndTime
 	),
@@ -329,7 +328,7 @@ unique lazy rule implicitAuthenticationEntity {
 		details <- #DateAndTime,
 		attributeDefaultValue <- lastLoginDefault
 	),
-	lastLoginDefault : ORM!StringLiteral (
+	lastLoginDefault : ORM!TimeLiteral (
 		value <- '0000-00-00 00:00:00'
 	),
 	lastIp : ORM!DataTypeAttribute (
