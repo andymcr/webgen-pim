@@ -1,0 +1,71 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path Security=/work.andycarpenter.metamodel.security/model/security.xcore
+
+module Security;
+create security : Security from website : Website, orm : ORM;
+
+uses PersistenceHelpers;
+
+
+rule SecurityModel {
+	from website : Website!Security
+	to security : Security!Security (
+		authentication <- website.authentication
+	)
+}
+
+
+abstract rule Authentication {
+	from website : Website!Authentication
+	to security : Security!Authentication (
+		user <-
+			if website.user.oclIsUndefined() then
+				OclUndefined
+			else
+				thisModule.findOrmEntity(website.user.name)
+			endif,
+		userKey <-
+			if website.user.oclIsUndefined() 
+					or website.userKey.oclIsUndefined() then
+				OclUndefined
+			else
+				website.userKey.findOrmAttribute()
+			endif
+	)
+}
+
+-- @extends Authentication
+rule LocalAuthenticationSystem {
+	from website : Website!LocalAuthenticationSystem
+	to security : Security!LocalAuthenticationSystem (
+		authenticationModel <-
+			if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName)
+			else
+				thisModule.findOrmEntity(website.authenticationModel.name)
+			endif,
+		authenticationKey <- website.authenticationKey,
+		resetPasswordRequestModel <-
+			if website.resetPasswordRequestModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.resetPasswordRequestName)
+			else
+				thisModule.findOrmEntity(website.resetPasswordRequestModel.name)
+			endif,
+		useCaptcha <- website.useCaptcha,
+		allowRememberMe <- website.allowRememberMe,
+		allowSelfRegistration <- website.allowSelfRegistration,
+		useEmailActivation <- website.useEmailActivation,
+		sendWelcomeEmail <- website.sendWelcomeEmail
+	)
+}
+
+-- @extends Authentication
+rule CasAuthentication {
+	from website : Website!CasAuthentication
+	to security : Security!CasAuthentication (
+		loginLabel <- website.loginLabel,
+		logoutLabel <- website.logoutLabel
+	)
+}

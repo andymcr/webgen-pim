@@ -5,7 +5,7 @@
 -- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xcore
 
 module PassAuthentication;
-create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM;
+create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM, security : Security;
 
 uses PersistenceHelpers;
 uses AuthenticationHelpers;
@@ -38,94 +38,46 @@ rule WafModel {
 										else
 											Sequence{}
 										endif
-						endif endif),
-		authentication <- thisModule.findWebsiteSecurity().authentication
+						endif endif)
 	)
 }
 
 
-abstract rule Authentication {
-	from website : Website!Authentication
-	to waf : WAF!Authentication (
-		user <-
-			if website.user.oclIsUndefined() then
-				OclUndefined
-			else
-				thisModule.findOrmEntity(website.user.name)
-			endif,
-		userKey <-
-			if website.user.oclIsUndefined() 
-					or website.userKey.oclIsUndefined() then
-				OclUndefined
-			else
-				website.userKey.findOrmAttribute()
-			endif
-	)
-}
-
--- @extends Authentication
-rule LocalAuthenticationSystem {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!LocalAuthenticationSystem (
-		authenticationModel <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authenticationModel.name)
-			endif,
-		authenticationKey <- website.authenticationKey,
-		resetPasswordRequestModel <-
-			if website.resetPasswordRequestModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.resetPasswordRequestName)
-			else
-				thisModule.findOrmEntity(website.resetPasswordRequestModel.name)
-			endif,
-		registrationUnit <-
-			if website.registrationUnit.oclIsUndefined() then
-				thisModule.implicitRegistrationUnit(website)
-			else
-				website.registrationUnit.findWafUnit()
-			endif,
-		loginUnit <-
-			if website.loginUnit.oclIsUndefined() then
-				thisModule.implicitLoginUnit(website)
-			else
-				website.loginUnit.findWafUnit()
-			endif,
-		logoutUnit <-
-			if website.logoutUnit.oclIsUndefined() then
-				thisModule.implicitLogoutUnit(website)
-			else
-				website.logoutUnit.findWafUnit()
-			endif,
-		forgottenPasswordUnit <-
-			if website.forgottenPasswordUnit.oclIsUndefined() then
-				thisModule.implicitForgottenPasswordUnit(website)
-			else
-				website.forgottenPasswordUnit.findWafUnit()
-			endif,
-		resetPasswordUnit <-
-			if website.resetPasswordUnit.oclIsUndefined() then
-				thisModule.implicitResetPasswordUnit(website)
-			else
-				website.resetPasswordUnit.findWafUnit()
-			endif,
-		useCaptcha <- website.useCaptcha,
-		allowRememberMe <- website.allowRememberMe,
-		allowSelfRegistration <- website.allowSelfRegistration,
-		useEmailActivation <- website.useEmailActivation,
-		sendWelcomeEmail <- website.sendWelcomeEmail
-	)
-}
-
--- @extends Authentication
-rule CasAuthentication {
-	from website : Website!CasAuthentication
-	to waf : WAF!CasAuthentication (
-		loginLabel <- website.loginLabel,
-		logoutLabel <- website.logoutLabel
-	)
-}
+--rule LocalAuthenticationSystem {
+--	from website : Website!LocalAuthenticationSystem
+--	to security : Security!LocalAuthenticationSystem (
+--		registrationUnit <-
+--			if website.registrationUnit.oclIsUndefined() then
+--				thisModule.implicitRegistrationUnit(website)
+--			else
+--				website.registrationUnit.findWafUnit()
+--			endif,
+--		loginUnit <-
+--			if website.loginUnit.oclIsUndefined() then
+--				thisModule.implicitLoginUnit(website)
+--			else
+--				website.loginUnit.findWafUnit()
+--			endif,
+--		logoutUnit <-
+--			if website.logoutUnit.oclIsUndefined() then
+--				thisModule.implicitLogoutUnit(website)
+--			else
+--				website.logoutUnit.findWafUnit()
+--			endif,
+--		forgottenPasswordUnit <-
+--			if website.forgottenPasswordUnit.oclIsUndefined() then
+--				thisModule.implicitForgottenPasswordUnit(website)
+--			else
+--				website.forgottenPasswordUnit.findWafUnit()
+--			endif,
+--		resetPasswordUnit <-
+--			if website.resetPasswordUnit.oclIsUndefined() then
+--				thisModule.implicitResetPasswordUnit(website)
+--			else
+--				website.resetPasswordUnit.findWafUnit()
+--			endif
+--	)
+--}
 
 
 unique lazy rule implicitSecurityPage {

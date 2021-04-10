@@ -21,6 +21,7 @@ import org.eclipse.m2m.atl.emftvm.util.TimingData;
 
 public class TransformUsingEmftVm {
 	private ResourceSet resourceSet = new ResourceSetImpl();
+	private Metamodel securityMetamodel;
 	private Metamodel websiteMetamodel;
 	private Metamodel ormMetamodel;
 	private Metamodel serviceMetamodel;
@@ -48,6 +49,16 @@ public class TransformUsingEmftVm {
 		}
 
 		return ormMetamodel;
+	}
+
+	protected Metamodel getSecurityMetamodel() {
+		if (securityMetamodel == null) {
+			securityMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
+			securityMetamodel.setResource(resourceSet.getResource(
+				URI.createURI("http://andycarpenter.work/metamodel/Security"), true));
+		}
+
+		return securityMetamodel;
 	}
 
 	protected Metamodel getServiceMetamodel() {
@@ -119,6 +130,7 @@ public class TransformUsingEmftVm {
 		final ExecEnv env = EmftvmFactory.eINSTANCE.createExecEnv();
 		env.registerMetaModel("Website", getWebsiteMetamodel());
 		env.registerMetaModel("ORM", getOrmMetamodel());
+		env.registerMetaModel("Security", getSecurityMetamodel());
 		env.registerMetaModel("Service", getServiceMetamodel());
 		env.registerMetaModel("API", getApiMetamodel());
 		env.registerMetaModel("WAF", getWafMetamodel());
@@ -189,6 +201,14 @@ public class TransformUsingEmftVm {
 					ormModel, ormInputModels, null);
 			ormModel.getResource().save(Collections.emptyMap());
 	
+			final Map<String, Model> securityInputModels = new HashMap<String, Model>();
+			securityInputModels.put("website", getWebsiteModel());
+			securityInputModels.put("orm", ormModel);
+			final String securityModelName = "security";
+			final Model securityModel = executePassCreatingOutputModel("Security",
+				securityModelName, "security", securityInputModels, null);
+			securityModel.getResource().save(Collections.emptyMap());
+
 			final Map<String, Model> serviceInputModels = new HashMap<String, Model>();
 			serviceInputModels.put("website", getWebsiteModel());
 			serviceInputModels.put("orm", ormModel);
@@ -209,6 +229,7 @@ public class TransformUsingEmftVm {
 			final Map<String, Model> wafInputModels = new HashMap<String, Model>();
 			wafInputModels.put("website", getWebsiteModel());
 			wafInputModels.put("orm", ormModel);
+			wafInputModels.put("security", securityModel);
 			wafInputModels.put("service", serviceModel);
 			wafInputModels.put("api", apiModel);
 			final String wafModelName = "waf";
