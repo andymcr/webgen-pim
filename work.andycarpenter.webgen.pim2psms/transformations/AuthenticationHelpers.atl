@@ -2,6 +2,11 @@
 
 library AuthenticationHelpers;
 
+uses WebsiteHelpers;
+
+
+helper def: findWebsiteSecurity() : Website!Security
+	= thisModule.findWebGenModel().security;
 
 helper context Website!Security def: isLocallyAuthenticated() : Boolean
 	= if self.authentication.oclIsUndefined() then
@@ -47,40 +52,4 @@ helper context Website!Security def: hasImplicitSecurityPage() : Boolean
 				else
 					OclUndefined
 				endif endif endif
-		endif;
-
-helper context Website!Authentication def: getCollectionType(name : String) : ORM!DataType
-	= let collectionType : ORM!CollectionType = thisModule.findOrmCollectionType(name)
-		in if not collectionType.oclIsUndefined() then
-			collectionType
-		else
-			if name = 'String' then
-				thisModule.implicitStringCollectionType(self)
-			else
-				OclUndefined
-			endif
-		endif;
-
-helper context Website!Authentication def: getOrmType(name : String) : String
-	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
-		in if dataType.oclIsUndefined() then
-			if name = 'Email' then
-				'String'
-			else
-				name
-			endif
-		else
-			dataType.ormType()
-		endif;
-
-helper context Website!Authentication def: getPersistentType(name : String) : String
-	= let dataType : Website!DataType = thisModule.findWebsiteDataType(name)
-		in if dataType.oclIsUndefined() then
-			if name = 'Email' then
-				'String'
-			else
-				name
-			endif
-		else
-			dataType.persistentType()
 		endif;

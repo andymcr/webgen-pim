@@ -5,7 +5,7 @@
 -- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xecore
 
 module InterfaceExplicit;
-create waf : WAF from website : Website, orm : ORM, service : Service, api : API;
+create waf : WAF from website : Website, orm : ORM, security : Security, service : Service, api : API;
 
 uses WebsiteHelpers;
 uses PersistenceHelpers;
@@ -43,11 +43,12 @@ abstract rule NamedDisplayElement {
 
 
 rule WafModel {
-	from website : Website!WebGenModel, orm : ORM!OrmModel, service : Service!ServiceModel, api : API!API
+	from website : Website!WebGenModel, orm : ORM!OrmModel, security : Security!SecurityModel, service : Service!ServiceModel, api : API!API
 	to waf : WAF!WafModel (
-		siteProperties <- website.websiteProperties,
+		security <- security,
 		persistence <- orm,
 		business <- service,
+		siteProperties <- website.websiteProperties,
 		imageManipulations <-
 			if not website.images.oclIsUndefined() then
 				website.images.manipulations

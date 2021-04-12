@@ -11,7 +11,7 @@ uses PersistenceHelpers;
 
 rule SecurityModel {
 	from website : Website!Security
-	to security : Security!Security (
+	to security : Security!SecurityModel (
 		authentication <- website.authentication
 	)
 }
@@ -20,7 +20,7 @@ rule SecurityModel {
 abstract rule Authentication {
 	from website : Website!Authentication
 	to security : Security!Authentication (
-		user <-
+		userModel <-
 			if website.user.oclIsUndefined() then
 				OclUndefined
 			else

@@ -45,7 +45,7 @@ public class TransformUsingEmftVm {
 		if (ormMetamodel == null) {
 			ormMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			ormMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://andycarpenter.work/psm/ObjectRelationalMapping"), true));
+				URI.createURI("http://andycarpenter.work/metamodel/ObjectRelationalMapping"), true));
 		}
 
 		return ormMetamodel;
@@ -55,7 +55,7 @@ public class TransformUsingEmftVm {
 		if (securityMetamodel == null) {
 			securityMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			securityMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://andycarpenter.work/metamodel/Security"), true));
+				URI.createURI("http://andycarpenter.work/metamodel/security"), true));
 		}
 
 		return securityMetamodel;
@@ -65,7 +65,7 @@ public class TransformUsingEmftVm {
 		if (serviceMetamodel == null) {
 			serviceMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			serviceMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://andycarpenter.work/psm/service"), true));
+				URI.createURI("http://andycarpenter.work/metamodel/service"), true));
 		}
 
 		return serviceMetamodel;
@@ -75,7 +75,7 @@ public class TransformUsingEmftVm {
 		if (apiMetamodel == null) {
 			apiMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			apiMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://cs.manchester.ac.uk/mdsd/API"), true));
+				URI.createURI("http://andycarpenter.work/metamodel/api"), true));
 		}
 
 		return apiMetamodel;
@@ -85,7 +85,7 @@ public class TransformUsingEmftVm {
 		if (wafMetamodel == null) {
 			wafMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
 			wafMetamodel.setResource(resourceSet.getResource(
-				URI.createURI("http://andycarpenter.work/psm/WebApplicationFramework"), true));
+				URI.createURI("http://andycarpenter.work/metamodel/WebApplicationFramework"), true));
 		}
 
 		return wafMetamodel;
@@ -140,13 +140,13 @@ public class TransformUsingEmftVm {
 	}
 
 	protected void executePass(final ExecEnv env, final String moduleName,
-			final Map<String, Model> inputModels, final Model traceModel) {
+			final Map<String, Model> inputModels, final Map<String, Model> inOutModels) {
 		for (String inputName : inputModels.keySet()) {
 			env.registerInputModel(inputName, inputModels.get(inputName));
 		}
 
-		if (traceModel != null) {
-			env.registerInOutModel("trace", traceModel);
+		for (String inoutName : inOutModels.keySet()) {
+			env.registerInOutModel(inoutName, inOutModels.get(inoutName));
 		}
 
 		env.loadModule(getModuleResolver(), moduleName);
@@ -158,24 +158,24 @@ public class TransformUsingEmftVm {
 
 	protected Model executePassCreatingOutputModel(final String moduleName,
 			final String modelName, final String modelFileExtension,
-			final Map<String, Model> inputModels, final Model traceModel) {
+			final Map<String, Model> inputModels, final Map<String, Model> inOutModels) {
 		final ExecEnv env = createEnvironment();
 
 		Model passModel = createModel(modelFileExtension);
 		env.registerOutputModel(modelName, passModel);
 
-		executePass(env, moduleName, inputModels, traceModel);
+		executePass(env, moduleName, inputModels, inOutModels);
 
 		return passModel;
 	}
 
 	protected void executeRefiningPass(final String moduleName,
 			final String modelName, final Model model,
-			final Map<String, Model> inputModels, final Model traceModel) {
+			final Map<String, Model> inputModels, final Map<String, Model> inOutModels) {
 		final ExecEnv env = createEnvironment();
 		env.registerInOutModel(modelName, model);
 
-		executePass(env, moduleName, inputModels, traceModel);
+		executePass(env, moduleName, inputModels, inOutModels);
 	}
 
 	public void execute() throws IOException {
@@ -184,21 +184,21 @@ public class TransformUsingEmftVm {
 			ormInputModels.put("website", getWebsiteModel());
 			final String ormModelName = "orm";
 			final Model ormModel = executePassCreatingOutputModel("PersistenceTypes",
-				ormModelName, "orm", ormInputModels, null);
+				ormModelName, "orm", ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceEntityFeatures", ormModelName, ormModel,
-				ormInputModels, null);
+				ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceEntityLabels", ormModelName, ormModel,
-				ormInputModels, null);
+				ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceKeys",
-				ormModelName, ormModel, ormInputModels, null);
+				ormModelName, ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceRepositories",
-				ormModelName, ormModel, ormInputModels, null);
+				ormModelName, ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceImplicitStatic", ormModelName,
-				ormModel, ormInputModels, null);
+				ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceImplicitAuthentication",
-				ormModelName, ormModel, ormInputModels, null);
+				ormModelName, ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceImplicitRepositories", ormModelName,
-					ormModel, ormInputModels, null);
+					ormModel, ormInputModels, Collections.emptyMap());
 			ormModel.getResource().save(Collections.emptyMap());
 	
 			final Map<String, Model> securityInputModels = new HashMap<String, Model>();
@@ -206,7 +206,7 @@ public class TransformUsingEmftVm {
 			securityInputModels.put("orm", ormModel);
 			final String securityModelName = "security";
 			final Model securityModel = executePassCreatingOutputModel("Security",
-				securityModelName, "security", securityInputModels, null);
+				securityModelName, "security", securityInputModels, Collections.emptyMap());
 			securityModel.getResource().save(Collections.emptyMap());
 
 			final Map<String, Model> serviceInputModels = new HashMap<String, Model>();
@@ -214,7 +214,7 @@ public class TransformUsingEmftVm {
 			serviceInputModels.put("orm", ormModel);
 			final String serviceModelName = "service";
 			final Model serviceModel = executePassCreatingOutputModel("ServiceExplicit",
-				serviceModelName, "business", serviceInputModels, null);
+				serviceModelName, "business", serviceInputModels, Collections.emptyMap());
 			serviceModel.getResource().save(Collections.emptyMap());
 	
 			final Map<String, Model> apiInputModels = new HashMap<String, Model>();
@@ -223,32 +223,34 @@ public class TransformUsingEmftVm {
 			apiInputModels.put("service", serviceModel);
 			final String apiModelName = "api";
 			final Model apiModel = executePassCreatingOutputModel("API",
-				apiModelName, "api", apiInputModels, null);
+				apiModelName, "api", apiInputModels, Collections.emptyMap());
 			apiModel.getResource().save(Collections.emptyMap());
 	
 			final Map<String, Model> wafInputModels = new HashMap<String, Model>();
 			wafInputModels.put("website", getWebsiteModel());
 			wafInputModels.put("orm", ormModel);
-			wafInputModels.put("security", securityModel);
 			wafInputModels.put("service", serviceModel);
 			wafInputModels.put("api", apiModel);
+			final Map<String, Model> wafInOutModels = new HashMap<String, Model>();
+			wafInOutModels.put("security", securityModel);
 			final String wafModelName = "waf";
 	
 			final Model wafTraceModelP1 = createModel("trace_waf_p1");
 			final Model wafModel = executePassCreatingOutputModel("InterfaceExplicit",
-				wafModelName, "waf", wafInputModels, wafTraceModelP1);
+				wafModelName, "waf", wafInputModels, wafInOutModels);
 
 			final Model wafTraceModelP5 = createModel("trace_waf_p2");
 			executeRefiningPass("InterfaceImplicitStatic", wafModelName,
-				wafModel, wafInputModels, wafTraceModelP5);
+				wafModel, wafInputModels, wafInOutModels);
 	
 			final Model wafTraceModelP6 = createModel("trace_waf_p3");
 			executeRefiningPass("InterfaceImplicitFields", wafModelName, wafModel,
-				wafInputModels, wafTraceModelP6);
+				wafInputModels, wafInOutModels);
 	
 			final Model wafTraceModelP7 = createModel("trace_waf_p4");
 			executeRefiningPass("PassAuthentication", wafModelName, wafModel,
-				wafInputModels, wafTraceModelP7);
+				wafInputModels, wafInOutModels);
+			securityModel.getResource().save(Collections.emptyMap());
 			wafModel.getResource().save(Collections.emptyMap());
 		} catch (Exception e) {
 			System.err.println(e);

@@ -5,7 +5,7 @@
 -- @path WAF=/work.andycarpenter.psms.waf/model/Waf.xcore
 
 module PassAuthentication;
-create dummyWaf : WAF refining waf : WAF, website : Website, orm : ORM, security : Security;
+create dummyWaf : WAF, dummySecurity : Security refining waf : WAF, website : Website, orm : ORM, security : Security;
 
 uses PersistenceHelpers;
 uses AuthenticationHelpers;
@@ -43,41 +43,51 @@ rule WafModel {
 }
 
 
---rule LocalAuthenticationSystem {
---	from website : Website!LocalAuthenticationSystem
---	to security : Security!LocalAuthenticationSystem (
---		registrationUnit <-
---			if website.registrationUnit.oclIsUndefined() then
---				thisModule.implicitRegistrationUnit(website)
---			else
---				website.registrationUnit.findWafUnit()
---			endif,
---		loginUnit <-
---			if website.loginUnit.oclIsUndefined() then
---				thisModule.implicitLoginUnit(website)
---			else
---				website.loginUnit.findWafUnit()
---			endif,
---		logoutUnit <-
---			if website.logoutUnit.oclIsUndefined() then
---				thisModule.implicitLogoutUnit(website)
---			else
---				website.logoutUnit.findWafUnit()
---			endif,
---		forgottenPasswordUnit <-
---			if website.forgottenPasswordUnit.oclIsUndefined() then
---				thisModule.implicitForgottenPasswordUnit(website)
---			else
---				website.forgottenPasswordUnit.findWafUnit()
---			endif,
---		resetPasswordUnit <-
---			if website.resetPasswordUnit.oclIsUndefined() then
---				thisModule.implicitResetPasswordUnit(website)
---			else
---				website.resetPasswordUnit.findWafUnit()
---			endif
---	)
---}
+rule LocalAuthenticationSystem {
+	from partialSecurity : Security!LocalAuthenticationSystem
+	to security : Security!LocalAuthenticationSystem (
+		registrationUnit <-
+			let authentication : Website!LocalAuthenticationSystem
+				= thisModule.findWebsiteSecurity().authentication
+				in if authentication.registrationUnit.oclIsUndefined() then
+						thisModule.implicitRegistrationUnit(authentication)
+					else
+						authentication.registrationUnit.findWafUnit()
+					endif,
+		loginUnit <-
+			let authentication : Website!LocalAuthenticationSystem
+				= thisModule.findWebsiteSecurity().authentication
+				in if authentication.loginUnit.oclIsUndefined() then
+						thisModule.implicitLoginUnit(authentication)
+					else
+						authentication.loginUnit.findWafUnit()
+					endif,
+		logoutUnit <-
+			let authentication : Website!LocalAuthenticationSystem
+				= thisModule.findWebsiteSecurity().authentication
+				in if authentication.logoutUnit.oclIsUndefined() then
+						thisModule.implicitLogoutUnit(authentication)
+					else
+						authentication.logoutUnit.findWafUnit()
+					endif,
+		forgottenPasswordUnit <-
+			let authentication : Website!LocalAuthenticationSystem
+				= thisModule.findWebsiteSecurity().authentication
+				in if authentication.forgottenPasswordUnit.oclIsUndefined() then
+						thisModule.implicitForgottenPasswordUnit(authentication)
+					else
+						authentication.forgottenPasswordUnit.findWafUnit()
+					endif,
+		resetPasswordUnit <-
+			let authentication : Website!LocalAuthenticationSystem
+				= thisModule.findWebsiteSecurity().authentication
+				in if authentication.resetPasswordUnit.oclIsUndefined() then
+						thisModule.implicitResetPasswordUnit(authentication)
+					else
+						authentication.resetPasswordUnit.findWafUnit()
+					endif
+	)
+}
 
 
 unique lazy rule implicitSecurityPage {

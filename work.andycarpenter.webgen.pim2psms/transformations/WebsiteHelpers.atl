@@ -36,9 +36,6 @@ helper def: findWebGenModel() : Website!WebGenModel
 helper def: findWebsiteProperties() : Website!WebsiteProperties
 	= thisModule.findWebGenModel().websiteProperties;
 
-helper def: findWebsiteSecurity() : Website!Security
-	= thisModule.findWebGenModel().security;
-
 helper def: findWebsiteUI() : Website!Persistence
 	= thisModule.findWebGenModel().webUI;
 
