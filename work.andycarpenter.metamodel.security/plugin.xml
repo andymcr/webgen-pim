@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Waf -->
+      <package
+            uri="http://andycarpenter.work/metamodel/Security"
+            class="work.andycarpenter.metamodel.security.SecurityPackage"
+            genModel="model/Security.xcore"/>
+   </extension>
+
+null
+</plugin>

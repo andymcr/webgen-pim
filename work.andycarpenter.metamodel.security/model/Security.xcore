@@ -1,0 +1,75 @@
+@Ecore(
+	nsURI="http://andycarpenter.work/metamodel/security",
+	nsPrefix="security"
+)
+@GenModel(
+	editDirectory="/work.andycarpenter.metamodel.security.edit/src",
+	editPluginID="work.andycarpenter.metamodel.security.edit",
+	childCreationExtenders="true")
+package work.andycarpenter.metamodel.security
+
+import work.andycarpenter.metamodel.orm.Attribute
+import work.andycarpenter.metamodel.orm.Entity
+
+
+class SecurityModel {
+	contains Authentication[1] authentication
+	derived readonly unsettable transient volatile boolean isAuthenticated get {
+		authentication !== null
+	}
+	derived readonly unsettable transient volatile boolean isCasAuthenticated get {
+		if (isAuthenticated)
+			authentication instanceof CasAuthentication
+		else
+			false
+	}
+	refers derived readonly unsettable transient volatile CasAuthentication casAuthentication get {
+		if (isCasAuthenticated)
+			authentication as CasAuthentication
+	}
+	derived readonly unsettable transient volatile boolean isLocallyAuthenticated get {
+		if (isAuthenticated)
+			authentication instanceof LocalAuthenticationSystem
+		else
+			false
+	}
+	refers derived readonly unsettable transient volatile LocalAuthenticationSystem localAuthentication get {
+		if (isLocallyAuthenticated)
+			authentication as LocalAuthenticationSystem
+	}
+}
+
+abstract class Authentication {
+	refers Entity[1] userModel
+	refers Attribute[1] userKey
+}
+
+enum AuthenticationKeyTypes {
+	Any = 0
+	Email = 1
+	Username = 2
+}
+
+class LocalAuthenticationSystem extends Authentication {
+	refers Entity[1] authenticationModel
+	AuthenticationKeyTypes[1] authenticationKey
+	refers Entity[1] resetPasswordRequestModel
+	refers SecurityUnit registrationUnit
+	refers SecurityUnit[1] loginUnit
+	refers SecurityUnit[1] logoutUnit
+	refers SecurityUnit forgottenPasswordUnit
+	refers SecurityUnit[1] resetPasswordUnit
+	boolean useCaptcha
+	boolean allowRememberMe
+	boolean allowSelfRegistration
+	boolean useEmailActivation = "true"
+	boolean sendWelcomeEmail = "true"
+}
+
+class CasAuthentication extends Authentication {
+	String[1] loginLabel
+	String logoutLabel
+}
+
+interface SecurityUnit {
+}
