@@ -59,9 +59,10 @@ rule FormalParameter {
 
 
 rule ServiceModel {
-	from website : Website!Services
+	from website : Website!Services, orm : ORM!OrmModel
 	to service : Service!ServiceModel (
-		services <- website.services
+		services <- website.services,
+		persistence <- orm
 	)
 }
 
