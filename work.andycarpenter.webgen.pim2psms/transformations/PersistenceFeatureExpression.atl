@@ -92,7 +92,7 @@ rule PredicateBooleanVariable {
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isPresistenceFeatureExpression())
 	to orm : ORM!PredicateBooleanOperator (
-		expressions <- website.expressions,
+		predicates <- website.expressions,
 		operator <- website.operator
 	)
 }
@@ -112,15 +112,6 @@ rule PredicateComparisonOperator {
 	to orm : ORM!PredicateComparisonOperator (
 		left <- website.left,
 		operator <- website.operator,
-		right <- website.right
-	)
-}
-
--- @extends Predicate
-rule PredicateIsOperator {
-	from website : Website!PredicateIsOperator (website.isPresistenceFeatureExpression())
-	to orm : ORM!PredicateIsOperator (
-		left <- website.left,
 		right <- website.right
 	)
 }

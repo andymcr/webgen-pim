@@ -53,7 +53,6 @@ abstract rule Feature {
 			else
 				website.pluralisedName
 			endif,
-		booleanIsHasChoice <- website.booleanIsHasChoice,
 		encodeUriKey <- website.encodeUriKey,
 		collectionOrmAllowAdd <- website.collectionOrmAllowAdd,
 		collectionOrmAllowRemove <- website.collectionOrmAllowRemove,
@@ -75,7 +74,8 @@ abstract rule Attribute {
 				website.columnName.createAttributeColumnName()
 			else
 				website.name.createAttributeColumnName()
-			endif
+			endif,
+		booleanIsHasChoice <- website.booleanIsHasChoice
 	)
 }
 

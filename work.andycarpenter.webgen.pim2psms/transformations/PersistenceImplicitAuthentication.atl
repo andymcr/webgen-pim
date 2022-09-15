@@ -168,7 +168,7 @@ unique lazy rule implicitAuthenticationEntity {
 		allFeatures <- Sequence{username, usernameCanonical, email, emailCanonical,
 				password, enabled, locked, expired, expiresAt, confirmationToken,
 				passwordRequestedAt, passwordChangedAt, credentialsExpired,
-				credentialsExpireAt, roles, lastLogin, lastIp, userDetails}
+				credentialsExpireAt, roles, lastLogin, lastIp}
 			->union(
 				if website.allowRememberMe and false then
 					Sequence{thisModule.implicitAutoLoginOpposite(website)}
@@ -342,37 +342,37 @@ unique lazy rule implicitAuthenticationEntity {
 	),
 	lastIpDefault : ORM!StringLiteral (
 		value <- '0.0.0.0'
-	),
-	userDetails : ORM!Association (
-		name <- 'userDetails',
-		displayLabel <- 'User details',
-		cardinality <- #Required,
-		associationOwningEnd <- true,
-		visible <- true,
-		associationRelationship <- #OneToOne,
-		columnName <- website.user.name.createAssociationColumnName(),
-		opposite <- thisModule.implicitUserAuthentication(website)
+--	),
+--	userDetails : ORM!Association (
+--		name <- 'userDetails',
+--		displayLabel <- 'User details',
+--		cardinality <- #Required,
+--		associationOwningEnd <- true,
+--		visible <- true,
+--		associationRelationship <- #OneToOne,
+--		columnName <- website.user.name.createAssociationColumnName(),
+--		opposite <- thisModule.implicitUserAuthentication(website)
 	)
 	do {
 		orm;
 	}
 }
 
-lazy rule implicitUserAuthentication {
-	from website: Website!LocalAuthenticationSystem
-	to orm : ORM!Association (
-		partOf <- thisModule.findOrmEntity(website.user.name),
-		name <- website.authenticationName.lowercaseFirst(),
-		displayLabel <- website.authenticationName,
-		associationOwningEnd <- false,
-		visible <- false,
-		associationRelationship <- #OneToOne
-	)
-	do {
-		orm;
-	}
-}
-
+--lazy rule implicitUserAuthentication {
+--	from website: Website!LocalAuthenticationSystem
+--	to orm : ORM!Association (
+--		partOf <- thisModule.findOrmEntity(website.user.name),
+--		name <- website.authenticationName.lowercaseFirst(),
+--		displayLabel <- website.authenticationName,
+--		associationOwningEnd <- false,
+--		visible <- false,
+--		associationRelationship <- #OneToOne
+--	)
+--	do {
+--		orm;
+--	}
+--}
+--
 lazy rule implicitResetPasswordRequestEntity {
 	from website: Website!LocalAuthenticationSystem
 	to orm : ORM!Entity (
@@ -432,7 +432,7 @@ lazy rule implicitResetPasswordRequestEntity {
 			else
 				website.authenticationModel.name.createAssociationColumnName()
 			endif,
-		opposite <- thisModule.implicitUserAuthentication2(website),
+--		opposite <- thisModule.implicitUserAuthentication2(website),
 		serializationMaxDepth <- 0
 	)
 	do {
@@ -440,22 +440,22 @@ lazy rule implicitResetPasswordRequestEntity {
 	}
 }
 
-lazy rule implicitUserAuthentication2 {
-	from website: Website!LocalAuthenticationSystem
-	to orm : ORM!Association (
-		partOf <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.implicitAuthenticationEntity(website)
-			else
-				thisModule.findOrmEntity(website.authenticationModel.name)
-			endif,
-		name <- website.resetPasswordRequestName.lowercaseFirst(),
-		displayLabel <- website.resetPasswordRequestName,
-		associationOwningEnd <- false,
-		visible <- false,
-		associationRelationship <- #OneToMany
-	)
-	do {
-		orm;
-	}
-}
+--lazy rule implicitUserAuthentication2 {
+--	from website: Website!LocalAuthenticationSystem
+--	to orm : ORM!Association (
+--		partOf <-
+--			if website.authenticationModel.oclIsUndefined() then
+--				thisModule.implicitAuthenticationEntity(website)
+--			else
+--				thisModule.findOrmEntity(website.authenticationModel.name)
+--			endif,
+--		name <- website.resetPasswordRequestName.lowercaseFirst(),
+--		displayLabel <- website.resetPasswordRequestName,
+--		associationOwningEnd <- false,
+--		visible <- false,
+--		associationRelationship <- #OneToMany
+--	)
+--	do {
+--		orm;
+--	}
+--}

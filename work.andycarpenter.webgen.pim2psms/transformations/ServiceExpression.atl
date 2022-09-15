@@ -118,15 +118,6 @@ rule PredicateInOperator {
 }
 
 -- @extends Predicate
-rule PredicateIsOperator {
-	from website : Website!PredicateIsOperator (website.isServiceExpression())
-	to service : Service!PredicateIsOperator (
-		left <- website.left,
-		right <- website.right
-	)
-}
-
--- @extends Predicate
 rule PredicateLikeOperator {
 	from website : Website!PredicateLikeOperator (website.isServiceExpression())
 	to service : Service!PredicateLikeOperator (
