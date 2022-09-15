@@ -10,5 +10,57 @@
             project="true">
       </wizard>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="work.andycarpenter.webgen.ui.Ecore2ORM"
+            id="work.andycarpenter.webgen.ui.ecore2orm"
+            name="ecore2orm">
+      </command>
+      <command
+            defaultHandler="work.andycarpenter.webgen.ui.Ecore2WAF"
+            id="work.andycarpenter.webgen.ui.ecore2waf"
+            name="ecore2waf">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?endof">
+         <menu
+               id="ecore2dsl"
+               label="Ecore 2 DSL">
+            <command
+                  commandId="work.andycarpenter.webgen.ui.ecore2orm"
+                  label="Ecore 2 ORM DSL"
+                  style="push"
+                  tooltip="Converts ecore to DSL">
+            </command>
+            <command
+                  commandId="work.andycarpenter.webgen.ui.ecore2waf"
+                  label="Ecore 2 WAF DSL"
+                  style="push">
+            </command>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="orm">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+   </extension>
 
 </plugin>
