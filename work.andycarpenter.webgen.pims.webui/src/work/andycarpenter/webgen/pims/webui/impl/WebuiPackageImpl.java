@@ -8,19 +8,14 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import work.andycarpenter.webgen.pims.base.BasePackage;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-
 import work.andycarpenter.webgen.pims.image.ImagePackage;
-
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
-
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;

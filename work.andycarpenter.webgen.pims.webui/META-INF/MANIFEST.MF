@@ -20,6 +20,7 @@ Require-Bundle: org.eclipse.core.runtime,
  work.andycarpenter.webgen.pims.presistence;visibility:=reexport,
  work.andycarpenter.webgen.pims.security;visibility:=reexport,
  work.andycarpenter.webgen.pims.service;visibility:=reexport,
- work.andycarpenter.webgen.pims.image;visibility:=reexport
+ work.andycarpenter.webgen.pims.image;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
-

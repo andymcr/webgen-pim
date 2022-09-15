@@ -9,9 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
-
 import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;

@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
-
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;

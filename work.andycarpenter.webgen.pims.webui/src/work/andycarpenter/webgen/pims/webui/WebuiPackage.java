@@ -17826,6 +17826,24 @@ public interface WebuiPackage extends EPackage {
 	int SECURITY_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl <em>Operation Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17854,24 +17872,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	int INSTANCE_SELECT_ACTION = 71;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELETE_ACTION__NAME = ACTION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELETE_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.

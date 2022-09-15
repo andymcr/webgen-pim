@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;

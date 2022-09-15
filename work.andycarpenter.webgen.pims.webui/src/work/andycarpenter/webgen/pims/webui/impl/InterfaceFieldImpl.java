@@ -9,13 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
-
 import work.andycarpenter.webgen.pims.expression.Predicate;
-
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;

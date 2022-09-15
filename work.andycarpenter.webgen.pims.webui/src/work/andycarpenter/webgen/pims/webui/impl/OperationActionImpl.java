@@ -8,9 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
-
 import work.andycarpenter.webgen.pims.webui.OperationAction;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
