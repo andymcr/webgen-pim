@@ -9,9 +9,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
+import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.TabularUnitStyles} object.
@@ -41,8 +45,54 @@ public class TabularUnitStylesItemProvider extends CollectionUnitStylesItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addHeaderClassPropertyDescriptor(object);
+			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Header Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHeaderClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TabularUnitStyles_headerClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TabularUnitStyles_headerClass_feature", "_UI_TabularUnitStyles_type"),
+				 WebuiPackage.Literals.TABULAR_UNIT_STYLES__HEADER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Footer Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFooterClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TabularUnitStyles_footerClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TabularUnitStyles_footerClass_feature", "_UI_TabularUnitStyles_type"),
+				 WebuiPackage.Literals.TABULAR_UNIT_STYLES__FOOTER_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -81,6 +131,13 @@ public class TabularUnitStylesItemProvider extends CollectionUnitStylesItemProvi
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(TabularUnitStyles.class)) {
+			case WebuiPackage.TABULAR_UNIT_STYLES__HEADER_CLASS:
+			case WebuiPackage.TABULAR_UNIT_STYLES__FOOTER_CLASS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

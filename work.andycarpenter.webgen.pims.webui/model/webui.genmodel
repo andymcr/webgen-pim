@@ -124,7 +124,10 @@
     <genClasses ecoreClass="webui.ecore#//GalleryUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//SliderUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//StaticUnitStyles"/>
-    <genClasses ecoreClass="webui.ecore#//TabularUnitStyles"/>
+    <genClasses ecoreClass="webui.ecore#//TabularUnitStyles">
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnitStyles/headerClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnitStyles/footerClass"/>
+    </genClasses>
     <genClasses ecoreClass="webui.ecore#//Page">
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//Page/webUI"/>
@@ -175,7 +178,6 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/messageWhenHidden"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/header"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/footer"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localFieldListClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localFieldLabelClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localFieldValueClass"/>
@@ -183,7 +185,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localAnchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceAnchorClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/footerClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//RouteActual">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//RouteActual/actualFor"/>
@@ -386,6 +387,8 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//DetailsUnit/omitFieldLabels"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//TabularUnit">
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnit/headerClassOverride"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnit/footerClassOverride"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnit/rowClasses"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CardsUnit">

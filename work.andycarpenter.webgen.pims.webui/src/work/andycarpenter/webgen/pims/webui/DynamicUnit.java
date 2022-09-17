@@ -24,7 +24,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooter <em>Footer</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldListClass <em>Local Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
@@ -32,7 +31,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
@@ -248,33 +246,6 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	void setFooter(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.
-	 * The default value is <code>"unit_header"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Header Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Header Class</em>' attribute.
-	 * @see #setHeaderClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_HeaderClass()
-	 * @model default="unit_header"
-	 * @generated
-	 */
-	String getHeaderClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getHeaderClass <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Header Class</em>' attribute.
-	 * @see #getHeaderClass()
-	 * @generated
-	 */
-	void setHeaderClass(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Local Field List Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
@@ -434,32 +405,5 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	void setLocalInstanceAnchorClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
-	 * The default value is <code>"unit_footer"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Footer Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Footer Class</em>' attribute.
-	 * @see #setFooterClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_FooterClass()
-	 * @model default="unit_footer"
-	 * @generated
-	 */
-	String getFooterClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getFooterClass <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Footer Class</em>' attribute.
-	 * @see #getFooterClass()
-	 * @generated
-	 */
-	void setFooterClass(String value);
 
 } // DynamicUnit

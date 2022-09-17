@@ -157,7 +157,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="StaticUnitStyles" eSuperTypes="#//ContentUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PageTopMenuOptions">
     <eLiterals name="NeverInclude"/>
     <eLiterals name="AlwaysInclude"/>
@@ -250,8 +253,6 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="unit_header"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldListClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -266,8 +267,6 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localInstanceAnchorClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="unit_footer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RouteActual">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actualFor" lowerBound="1"
@@ -654,6 +653,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TabularUnit" eSuperTypes="#//CollectionUnit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClassOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClassOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowClasses" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="odd_row,even_row"/>
   </eClassifiers>

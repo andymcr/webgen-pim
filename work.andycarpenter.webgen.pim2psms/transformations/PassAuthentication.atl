@@ -166,7 +166,12 @@ unique lazy rule implicitLoginUnit {
 					or (f.name = 'username' and website.authenticationKey <> #Email))
 				->collect(f | thisModule.implicitUnitAttribute(f))
 			->union(
-					Sequence{thisModule.implicitLoginPasswordField(website)}),
+					Sequence{thisModule.implicitLoginPasswordField(website)})
+			->union(if website.allowRememberMe then
+						Sequence{thisModule.implicitRememberMeField(website)}
+					else
+						Sequence{}
+					endif),
 		confirmLabel <- website.implicitLoginConfirmLabel,
 		allActions <- Sequence{recoverAction}
 			->union(if website.allowSelfRegistration then
@@ -397,13 +402,13 @@ lazy rule implicitUsernameField {
 			else
 				'Username'
 			endif,
-		localTitle <-
+		fieldTitle <-
 			if website.authenticationKey = #Email then
 				'Email'
 			else
 				'Username'
 			endif,
-		localPlaceholder <-
+		fieldPlaceholder <-
 			if website.authenticationKey = #Email then
 				'Email'
 			else
@@ -416,7 +421,7 @@ lazy rule implicitUsernameField {
 			else
 				thisModule.findOrmDataType('String')
 			endif,
-		localRequired <- true
+		fieldRequired <- true
 	)
 	do {
 		waf;
@@ -429,11 +434,11 @@ lazy rule implicitRegistrationPasswordField {
 		name <- 'plainPassword',
 		displayLabel <- 'Password',
 		validationPattern <- '^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])\\w{8,}$',
-		localRequired <- true,
+		fieldRequired <- true,
 		obfuscateFormFields <- true,
 		repeatedField <- true,
-		localTitle <- 'Password',
-		localPlaceholder <- 'Password',
+		fieldTitle <- 'Password',
+		fieldPlaceholder <- 'Password',
 		fieldDataType <- thisModule.findOrmDataType('String'),
 		secondDisplayLabel <- 'Confirm Password',
 		secondTitle <- 'Confirm Password',
@@ -449,10 +454,10 @@ lazy rule implicitLoginPasswordField {
 	to waf : WAF!DataTypeField (
 		name <- 'plainPassword',
 		displayLabel <- 'Password',
-		localRequired <- true,
+		fieldRequired <- true,
 		obfuscateFormFields <- true,
-		localTitle <- 'Password',
-		localPlaceholder <- 'Password',
+		fieldTitle <- 'Password',
+		fieldPlaceholder <- 'Password',
 		fieldDataType <- thisModule.findOrmDataType('String')
 	)
 	do {
@@ -466,10 +471,10 @@ lazy rule implicitResetPasswordField {
 		name <- 'plainPassword',
 		displayLabel <- 'New Password',
 		obfuscateFormFields <- true,
-		localRequired <- true,
+		fieldRequired <- true,
 		repeatedField <- true,
-		localTitle <- 'New Password',
-		localPlaceholder <- 'New Password',
+		fieldTitle <- 'New Password',
+		fieldPlaceholder <- 'New Password',
 		fieldDataType <- thisModule.findOrmDataType('String'),
 		secondDisplayLabel <- 'Confirm Password',
 		secondTitle <- 'Confirm Password',
@@ -484,8 +489,8 @@ unique lazy rule implicitRememberMeField {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!DataTypeField (
 		name <- 'rememberMe',
-		dataType <- thisModule.findOrmDataType('Boolean'),
-		localRequired <- false,
+		fieldDataType <- thisModule.findOrmDataType('Boolean'),
+		fieldRequired <- false,
 		displayLabel <- 'Remember Me',
 		interfaceType <- thisModule.findWebsiteDataType('Boolean').interfaceType
 	)

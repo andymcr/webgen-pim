@@ -46,7 +46,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getMessageWhenHidden <em>Message When Hidden</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooter <em>Footer</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldListClass <em>Local Field List Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
@@ -54,7 +53,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -261,26 +259,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String footer = FOOTER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String HEADER_CLASS_EDEFAULT = "unit_header";
-
-	/**
-	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String headerClass = HEADER_CLASS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getLocalFieldListClass() <em>Local Field List Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -419,26 +397,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected String localInstanceAnchorClass = LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = "unit_footer";
-
-	/**
-	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -779,29 +737,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public String getHeaderClass() {
-		return headerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setHeaderClass(String newHeaderClass) {
-		String oldHeaderClass = headerClass;
-		headerClass = newHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS, oldHeaderClass, headerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getLocalFieldListClass() {
 		return localFieldListClass;
 	}
@@ -962,29 +897,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getFooterClass() {
-		return footerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFooterClass(String newFooterClass) {
-		String oldFooterClass = footerClass;
-		footerClass = newFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS, oldFooterClass, footerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -1055,8 +967,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getHeader();
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
 				return getFooter();
-			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
-				return getHeaderClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
 				return getLocalFieldListClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
@@ -1071,8 +981,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getLocalAnchorClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
 				return getLocalInstanceAnchorClass();
-			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
-				return getFooterClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1125,9 +1033,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
 				setFooter((String)newValue);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
-				setHeaderClass((String)newValue);
-				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
 				setLocalFieldListClass((String)newValue);
 				return;
@@ -1148,9 +1053,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
 				setLocalInstanceAnchorClass((String)newValue);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
-				setFooterClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1200,9 +1102,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
 				setFooter(FOOTER_EDEFAULT);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
-				setHeaderClass(HEADER_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
 				setLocalFieldListClass(LOCAL_FIELD_LIST_CLASS_EDEFAULT);
 				return;
@@ -1223,9 +1122,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
 				setLocalInstanceAnchorClass(LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
-				setFooterClass(FOOTER_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1265,8 +1161,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return HEADER_EDEFAULT == null ? header != null : !HEADER_EDEFAULT.equals(header);
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
-			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
-				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
 				return LOCAL_FIELD_LIST_CLASS_EDEFAULT == null ? localFieldListClass != null : !LOCAL_FIELD_LIST_CLASS_EDEFAULT.equals(localFieldListClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
@@ -1281,8 +1175,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return LOCAL_ANCHOR_CLASS_EDEFAULT == null ? localAnchorClass != null : !LOCAL_ANCHOR_CLASS_EDEFAULT.equals(localAnchorClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
 				return LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT == null ? localInstanceAnchorClass != null : !LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT.equals(localInstanceAnchorClass);
-			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
-				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1349,8 +1241,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(header);
 		result.append(", footer: ");
 		result.append(footer);
-		result.append(", headerClass: ");
-		result.append(headerClass);
 		result.append(", localFieldListClass: ");
 		result.append(localFieldListClass);
 		result.append(", localFieldLabelClass: ");
@@ -1365,8 +1255,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(localAnchorClass);
 		result.append(", localInstanceAnchorClass: ");
 		result.append(localInstanceAnchorClass);
-		result.append(", footerClass: ");
-		result.append(footerClass);
 		result.append(')');
 		return result.toString();
 	}

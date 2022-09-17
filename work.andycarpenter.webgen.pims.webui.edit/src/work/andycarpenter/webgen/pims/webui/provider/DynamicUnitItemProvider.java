@@ -56,7 +56,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addMessageWhenHiddenPropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
-			addHeaderClassPropertyDescriptor(object);
 			addLocalFieldListClassPropertyDescriptor(object);
 			addLocalFieldLabelClassPropertyDescriptor(object);
 			addLocalFieldValueClassPropertyDescriptor(object);
@@ -64,7 +63,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addLocalInstanceControlClassPropertyDescriptor(object);
 			addLocalAnchorClassPropertyDescriptor(object);
 			addLocalInstanceAnchorClassPropertyDescriptor(object);
-			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -268,28 +266,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Header Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHeaderClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_headerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_headerClass_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__HEADER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Local Field List Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -444,28 +420,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Footer Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFooterClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_footerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_footerClass_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__FOOTER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -533,7 +487,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__MESSAGE_WHEN_HIDDEN:
 			case WebuiPackage.DYNAMIC_UNIT__HEADER:
 			case WebuiPackage.DYNAMIC_UNIT__FOOTER:
-			case WebuiPackage.DYNAMIC_UNIT__HEADER_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LIST_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_LABEL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_FIELD_VALUE_CLASS:
@@ -541,7 +494,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
-			case WebuiPackage.DYNAMIC_UNIT__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:

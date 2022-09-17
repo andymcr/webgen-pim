@@ -45,9 +45,55 @@ public class TabularUnitItemProvider extends CollectionUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addHeaderClassOverridePropertyDescriptor(object);
+			addFooterClassOverridePropertyDescriptor(object);
 			addRowClassesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Header Class Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHeaderClassOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TabularUnit_headerClassOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TabularUnit_headerClassOverride_feature", "_UI_TabularUnit_type"),
+				 WebuiPackage.Literals.TABULAR_UNIT__HEADER_CLASS_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Footer Class Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFooterClassOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TabularUnit_footerClassOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TabularUnit_footerClassOverride_feature", "_UI_TabularUnit_type"),
+				 WebuiPackage.Literals.TABULAR_UNIT__FOOTER_CLASS_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -110,6 +156,8 @@ public class TabularUnitItemProvider extends CollectionUnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TabularUnit.class)) {
+			case WebuiPackage.TABULAR_UNIT__HEADER_CLASS_OVERRIDE:
+			case WebuiPackage.TABULAR_UNIT__FOOTER_CLASS_OVERRIDE:
 			case WebuiPackage.TABULAR_UNIT__ROW_CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

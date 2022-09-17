@@ -61,8 +61,8 @@ rule WafModel {
 		useFormFloatingLabels <- thisModule.findWebsiteUI().useFormFloatingLabels,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
-		defaultPageStyleClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
-		defaultStyles <- thisModule.findWebsiteUI().defaultStyles,
+		defaultPageClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
+		defaultUnitStyles <- thisModule.findWebsiteUI().defaultStyles,
 		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
 		defaultDetailsStyles <- thisModule.findWebsiteUI().defaultDetailsStyles,
 		defaultFormStyles <- thisModule.findWebsiteUI().defaultFormStyles,
@@ -247,6 +247,8 @@ rule StaticUnitStyles {
 rule TabularUnitStyles {
 	from website : Website!TabularUnitStyles
 	to waf : WAF!TabularUnitStyles (
+		headerClass <- website.headerClass,
+		footerClass <- website.footerClass
 	)
 }
 
@@ -299,7 +301,7 @@ rule Page {
 				website.parentPage.targetPage
 			endif,
 		units <- website.units,
-		localPageStyleClass <- website.styleClass
+		pageClassOverride <- '' -- website.
 	)
 }
 
@@ -319,10 +321,10 @@ abstract rule ContentUnit {
 		authorisationRoles <- website.requiresRole,
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
-		localSectionClass <- website.sectionClass,
 		omitCaption <- website.omitCaption,
-		localCaptionClass <- website.localCaptionClass,
-		localContentClass <- website.localContentClass
+		sectionClassOverride <- website.sectionClass,
+		captionClassOverride <- website.localCaptionClass,
+		contentClassOverride <- website.localContentClass
 	)
 }
 
@@ -347,17 +349,12 @@ abstract rule DynamicUnit {
 		hideWhen <- website.hideWhen,
 		messageWhenHidden <- website.messageWhenHidden,
 		allActions <- website.actions,
-		header <- website.header,
 		footer <- website.footer,
-		headerClass <- website.headerClass,
 		localFieldListClass <- website.localFieldListClass,
 		localFieldLabelClass <- website.localFieldLabelClass,
 		localFieldValueClass <- website.localFieldValueClass,
 		localControlClass <- website.localControlClass,
-		localInstanceControlClass <- website.localInstanceControlClass,
-		localAnchorClass <- website.localAnchorClass,
-		localInstanceAnchorClass <- website.localInstanceAnchorClass,
-		footerClass <- website.footerClass
+		localAnchorClass <- website.localAnchorClass
 	)
 }
 
@@ -372,7 +369,6 @@ rule RouteActual {
 abstract rule UnitField {
 	from website : Website!UnitField
 	to waf : WAF!UnitField (
-		localTitle <- website.title,
 		localHelp <- website.help,
 		authorisationRoles <- website.requiresRole,
 		hideWhen <- website.hideWhen,
@@ -389,6 +385,7 @@ abstract rule UnitFeature {
 	from website : Website!UnitFeature
 	to waf : WAF!UnitFeature (
 		displayLabel <- website.displayLabel,
+		titleOverride <- website.title,
 		forcedValue <- website.forcedValue,
 		collectionUiAllowAdd <- website.collectionUiAllowAdd,
 		collectionUiAllowRemove <- website.collectionUiAllowRemove,
@@ -398,9 +395,9 @@ abstract rule UnitFeature {
 		autofocus <- website.autofocus,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
-		localFieldLabelClass <- website.fieldLabelClass,
-		localFieldValueClass <- website.fieldValueClass,
-		localInputGroupClass <- website.inputGroupClass,
+		inputGroupClassOverride <- website.inputGroupClass,
+		fieldLabelClassOverride <- website.fieldLabelClass,
+		fieldValueClassOverride <- website.fieldValueClass,
 		footerClass <- website.footerClass
 	)
 }
@@ -412,7 +409,7 @@ rule UnitAttribute {
 		attribute <- website.attribute.findOrmAttribute(),
 		attributeDefaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
-		localPlaceholder <- website.placeholder,
+		placeholderOverride <- website.placeholder,
 		validationPattern <- website.validationPattern
 	)
 }
@@ -514,10 +511,11 @@ rule UnitLabel {
 abstract rule InterfaceField {
 	from website : Website!InterfaceField
 	to waf : WAF!InterfaceField (
-		required <- website.required,
+		fieldRequired <- website.required,
 		fieldDefaultValue <- website.defaultValue,
 		mustMatch <- website.mustMatch,
-		localPlaceholder <- website.placeholder,
+		fieldTitle <- website.title,
+		fieldPlaceholder <- website.placeholder,
 		validationPattern <- website.validationPattern(),
 		repeatedField <- website.repeatedField,
 		secondDisplayLabel <- website.secondDisplayLabel,
@@ -750,7 +748,12 @@ rule DetailsUnit {
 rule TabularUnit {
 	from website : Website!TabularUnit
 	to waf : WAF!TabularUnit (
-		rowClasses <- website.rowClasses
+		header <- website.header,
+		localHeaderClass <- website.headerClassOverride,
+		localFooterClass <- website.footerClassOverride,
+		rowClasses <- website.rowClasses,
+		localInstanceControlClass <- website.localInstanceControlClass,
+		localInstanceAnchorClass <- website.localInstanceAnchorClass
 	)
 }
 
@@ -766,7 +769,9 @@ abstract rule CardsUnit {
 		localCardHeaderClass <- website.localCardHeaderClass,
 		localCardBodyClass <- website.localCardBodyClass,
 		localCardFooterClass <- website.localCardFooterClass,
-		localBadgeClass <- website.localBadgeClass
+		localBadgeClass <- website.localBadgeClass,
+		localInstanceControlClass <- website.localInstanceControlClass,
+		localInstanceAnchorClass <- website.localInstanceAnchorClass
 	)
 }
 
