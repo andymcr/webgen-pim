@@ -24,20 +24,9 @@ rule WafModel {
 							let authentication : Website!LocalAuthenticationSystem
 								= security.authentication
 								in if security.hasImplicitAuthenticationPage() then
-										if security.hasImplicitSecurityPage() then
-											Sequence{
-												thisModule.implicitAuthenticationsPage(authentication),
-												thisModule.implicitSecurityPage(authentication)
-											}
-										else
-											Sequence{thisModule.implicitAuthenticationsPage(authentication)}
-										endif
+										Sequence{thisModule.implicitAuthenticationsPage(authentication)}
 									else
-										if security.hasImplicitSecurityPage() then
-											Sequence{thisModule.implicitSecurityPage(authentication)}
-										else
-											Sequence{}
-										endif
+										Sequence{}
 						endif endif)
 	)
 }
@@ -46,160 +35,78 @@ rule WafModel {
 rule LocalAuthenticationSystem {
 	from partialSecurity : Security!LocalAuthenticationSystem
 	to security : Security!LocalAuthenticationSystem (
-		registrationUnit <-
+		registrationElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.registrationUnit.oclIsUndefined() then
-						thisModule.implicitRegistrationUnit(authentication)
+						if authentication.allowSelfRegistration then
+							thisModule.implicitRegistrationElement(authentication)
+						else
+							OclUndefined
+						endif
 					else
 						authentication.registrationUnit.findWafUnit()
 					endif,
-		loginUnit <-
+		loginElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.loginUnit.oclIsUndefined() then
-						thisModule.implicitLoginUnit(authentication)
+						thisModule.implicitLoginElement(authentication)
 					else
 						authentication.loginUnit.findWafUnit()
 					endif,
-		logoutUnit <-
+		logoutElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.logoutUnit.oclIsUndefined() then
-						thisModule.implicitLogoutUnit(authentication)
+						thisModule.implicitLogoutElement(authentication)
 					else
 						authentication.logoutUnit.findWafUnit()
 					endif,
-		forgottenPasswordUnit <-
+		forgottenPasswordElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.forgottenPasswordUnit.oclIsUndefined() then
-						thisModule.implicitForgottenPasswordUnit(authentication)
+						thisModule.implicitForgottenPasswordElement(authentication)
 					else
 						authentication.forgottenPasswordUnit.findWafUnit()
 					endif,
-		resetPasswordUnit <-
+		resetPasswordElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.resetPasswordUnit.oclIsUndefined() then
-						thisModule.implicitResetPasswordUnit(authentication)
+						thisModule.implicitResetPasswordElement(authentication)
 					else
 						authentication.resetPasswordUnit.findWafUnit()
 					endif
 	)
 }
 
-
-unique lazy rule implicitSecurityPage {
+unique lazy rule implicitRegistrationElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!Page (
-		name <- 'Security',
-		displayLabel <- 'Security',
-		units <-
-			if website.registrationUnit.oclIsUndefined() and website.allowSelfRegistration then
-				Sequence{ thisModule.implicitRegistrationUnit(website) }
-			else
-				Sequence{}
-			endif
-			->union(if website.loginUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitLoginUnit(website) }
-				else
-					Sequence{}
-				endif)
-			->union(if website.logoutUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitLogoutUnit(website) }
-				else
-					Sequence{}
-				endif)
-			->union(if website.forgottenPasswordUnit.oclIsUndefined() then
-					Sequence{ thisModule.implicitForgottenPasswordUnit(website),
-							thisModule.implicitResetPasswordUnit(website) }
-				else
-					Sequence{}
-				endif)
-	)
-}
-
-unique lazy rule implicitRegistrationUnit {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!RegistrationUnit (
+	to waf : Security!RegistrationElement (
 		name <- website.implicitRegistrationName,
-		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitRegistrationUnitLabel,
 		uriElement <- website.implicitRegistrationUri,
-		contentType <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authentication.name)
-			endif,
-		displayFields <-
-			Sequence{
-				thisModule.implicitUsernameField(website),
-				thisModule.implicitRegistrationPasswordField(website)
-			},
 		confirmLabel <- website.implicitRegistrationConfirmLabel
 	)
 }
 
-unique lazy rule implicitLoginUnit {
+
+unique lazy rule implicitLoginElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!LoginUnit (
+	to waf : Security!LoginElement (
 		name <- website.implicitLoginName,
-		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitLoginUnitLabel,
 		uriElement <- website.implicitLoginUri,
-		contentType <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authentication.name)
-			endif,
-		displayFields <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authenticationModel.name)
-			endif.features
-				->select(f |
-					(f.name = 'email' and website.authenticationKey = #Email)
-					or (f.name = 'username' and website.authenticationKey <> #Email))
-				->collect(f | thisModule.implicitUnitAttribute(f))
-			->union(
-					Sequence{thisModule.implicitLoginPasswordField(website)})
-			->union(if website.allowRememberMe then
-						Sequence{thisModule.implicitRememberMeField(website)}
-					else
-						Sequence{}
-					endif),
-		confirmLabel <- website.implicitLoginConfirmLabel,
-		allActions <- Sequence{recoverAction}
-			->union(if website.allowSelfRegistration then
-					Sequence{ thisModule.implicitRegistrationAction(website)}
-				else
-					Sequence{}
-				endif)
-	),
-	recoverAction : WAF!SecurityAction (
-		name <- website.implicitForgottenPasswordName,
-		displayLabel <- website.implicitForgottenPasswordActionLabel,
-		target <- thisModule.implicitForgottenPasswordUnit(website)
-	)
-}
-
-unique lazy rule implicitRegistrationAction {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!SecurityAction (
-		name <- website.implicitRegistrationName,
-		displayLabel <- website.implicitRegistrationActionLabel,
-		target <- thisModule.implicitRegistrationUnit(website)
+		confirmLabel <- website.implicitLoginConfirmLabel
 	)
 }
 
 
-unique lazy rule implicitLogoutUnit {
+unique lazy rule implicitLogoutElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!LogoutUnit (
+	to waf : Security!LogoutElement (
 		name <- website.implicitLogoutName,
 		displayLabel <- website.implicitLogoutConfirmLabel,
 		uriElement <- website.implicitLogoutUri --,
@@ -207,35 +114,15 @@ unique lazy rule implicitLogoutUnit {
 	)
 }
 
-unique lazy rule implicitForgottenPasswordUnit {
+
+unique lazy rule implicitForgottenPasswordElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!ForgottenPasswordUnit (
+	to waf : Security!ForgottenPasswordElement (
 		name <- website.implicitForgottenPasswordName,
-		resetPasswordUnit <-
-			if website.resetPasswordUnit.oclIsUndefined() then
-				thisModule.implicitResetPasswordUnit(website)
-			else
-				website.resetPasswordUnit.findWafUnit()
-			endif,
-		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitForgottenPasswordUnitLabel,
 		uriElement <- website.implicitForgottenPasswordUriRequest,
 		uriEmailSent <- website.implicitForgottenPasswordUriEmailSent,
-		contentType <-
-			if website.resetPasswordRequestModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.resetPasswordRequestName)
-			else
-				thisModule.findOrmEntity(website.resetPasswordRequestModel.name)
-			endif,
-		displayFields <-
-			Sequence{thisModule.implicitUsernameField(website)},
 		confirmLabel <- website.implicitForgottenPasswordConfirmLabel,
-		allActions <- Sequence{}
-			->union(if website.allowSelfRegistration then
-					Sequence{ thisModule.implicitRegistrationAction(website)}
-				else
-					Sequence{}
-				endif),
 		emailSubject <- website.implicitForgottenPasswordEmailSubject,
 		emailMessage <- website.implicitForgottenPasswordEmailMessage,
 		emailSentCaption <- website.implicitForgottenPasswordEmailSentCaption,
@@ -243,21 +130,13 @@ unique lazy rule implicitForgottenPasswordUnit {
 	)
 }
 
-unique lazy rule implicitResetPasswordUnit {
+
+unique lazy rule implicitResetPasswordElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!ResetPasswordUnit (
+	to waf : Security!ResetPasswordElement (
 		name <- website.implicitResetPasswordName,
-		useCaptcha <- website.useCaptcha,
 		displayLabel <- website.implicitResetPasswordUnitLabel,
 		uriElement <- website.implicitResetPasswordUri,
-		contentType <-
-			if website.authenticationModel.oclIsUndefined() then
-				thisModule.findOrmEntity(website.authenticationName)
-			else
-				thisModule.findOrmEntity(website.authentication.name)
-			endif,
-		displayFields <-
-			Sequence{thisModule.implicitResetPasswordField(website)},
 		confirmLabel <- website.implicitResetPasswordConfirmLabel
 	)
 }
@@ -266,12 +145,6 @@ unique lazy rule implicitResetPasswordUnit {
 unique lazy rule implicitAuthenticationsPage {
 	from website : Website!LocalAuthenticationSystem
 	to waf : WAF!Page (
-		parentPage <-
-			if website.security.hasImplicitSecurityPage() then
-				thisModule.implicitSecurityPage(website)
-			else
-				OclUndefined
-			endif,
 		name <- 'ManageAuthentications',
 		displayLabel <- 'Manage Authentications',
 		units <- Sequence{authentications, update},
@@ -282,23 +155,23 @@ unique lazy rule implicitAuthenticationsPage {
 		displayLabel <- 'Authentications',
 		authorisationRoles <- website.viewRole,
 		omitCaption <- false,
-		defaultPaginationSize <- 12,
-		nextPageLabel <- '>',
-		previousPageLabel <- '<',
 		contentType <-
 			if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName)
 			else
-				thisModule.findOrmEntity(website.authentication.name)
+				thisModule.findOrmEntity(website.authenticationModel.name)
 			endif,
 		displayFields <-
 			if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName)
 			else
-				thisModule.findOrmEntity(website.authentication.name)
+				thisModule.findOrmEntity(website.authenticationModel.name)
 			endif.features
 				->select(f | f.name = 'email' or f.name = 'roles')
 				->collect(f | thisModule.implicitUnitAttribute(f)),
+			defaultPaginationSize <- 12,
+		nextPageLabel <- '>',
+		previousPageLabel <- '<',
 		elementTitle <- elementTitle,
 		allActions <- Sequence{updateAction, deleteAction}
 	),
@@ -356,6 +229,7 @@ unique lazy rule implicitAuthenticationsPage {
 	}
 }
 
+
 lazy abstract rule implicitUnitFeature {
 	from partialWaf : ORM!Feature
 	to waf : WAF!UnitFeature (
@@ -381,118 +255,6 @@ lazy rule implicitUnitDateAttribute {
 	to waf : WAF!UnitAttribute (
 		attribute <- partialWaf,
 		dateFormat <- 'jS F Y G.i'
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitUsernameField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <-
-			if website.authenticationKey = #Email then
-				'email'
-			else
-				'username'
-			endif,
-		displayLabel <-
-			if website.authenticationKey = #Email then
-				'Email'
-			else
-				'Username'
-			endif,
-		fieldTitle <-
-			if website.authenticationKey = #Email then
-				'Email'
-			else
-				'Username'
-			endif,
-		fieldPlaceholder <-
-			if website.authenticationKey = #Email then
-				'Email'
-			else
-				'Username'
-			endif,
-		localHelp <- 'Enter your email address and we we will send you a link to reset your password',
-		fieldDataType <-
-			if website.authenticationKey = #Email then
-				thisModule.findOrmDataType('Email')
-			else
-				thisModule.findOrmDataType('String')
-			endif,
-		fieldRequired <- true
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitRegistrationPasswordField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <- 'plainPassword',
-		displayLabel <- 'Password',
-		validationPattern <- '^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])\\w{8,}$',
-		fieldRequired <- true,
-		obfuscateFormFields <- true,
-		repeatedField <- true,
-		fieldTitle <- 'Password',
-		fieldPlaceholder <- 'Password',
-		fieldDataType <- thisModule.findOrmDataType('String'),
-		secondDisplayLabel <- 'Confirm Password',
-		secondTitle <- 'Confirm Password',
-		secondPlaceholder <- 'Confirm Password'
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitLoginPasswordField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <- 'plainPassword',
-		displayLabel <- 'Password',
-		fieldRequired <- true,
-		obfuscateFormFields <- true,
-		fieldTitle <- 'Password',
-		fieldPlaceholder <- 'Password',
-		fieldDataType <- thisModule.findOrmDataType('String')
-	)
-	do {
-		waf;
-	}
-}
-
-lazy rule implicitResetPasswordField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <- 'plainPassword',
-		displayLabel <- 'New Password',
-		obfuscateFormFields <- true,
-		fieldRequired <- true,
-		repeatedField <- true,
-		fieldTitle <- 'New Password',
-		fieldPlaceholder <- 'New Password',
-		fieldDataType <- thisModule.findOrmDataType('String'),
-		secondDisplayLabel <- 'Confirm Password',
-		secondTitle <- 'Confirm Password',
-		secondPlaceholder <- 'Confirm Password'
-	)
-	do {
-		waf;
-	}
-}
-
-unique lazy rule implicitRememberMeField {
-	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!DataTypeField (
-		name <- 'rememberMe',
-		fieldDataType <- thisModule.findOrmDataType('Boolean'),
-		fieldRequired <- false,
-		displayLabel <- 'Remember Me',
-		interfaceType <- thisModule.findWebsiteDataType('Boolean').interfaceType
 	)
 	do {
 		waf;

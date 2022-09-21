@@ -46,14 +46,21 @@ rule LocalAuthenticationSystem {
 			else
 				thisModule.findOrmEntity(website.authenticationModel.name)
 			endif,
-		authenticationKey <- website.authenticationKey,
+			authenticationKey <- website.authenticationKey,
+		identifierFeture <-
+			if website.authenticationKey = #Username then
+				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('username')
+			else
+				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('email')
+			endif,
+		passwordFeature <- thisModule.findOrmEntity(website.authenticationName).getOrmFeature('password'),
 		resetPasswordRequestModel <-
 			if website.resetPasswordRequestModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.resetPasswordRequestName)
 			else
 				thisModule.findOrmEntity(website.resetPasswordRequestModel.name)
 			endif,
-		useCaptcha <- website.useCaptcha,
+		captcha <- website.useCaptcha,
 		allowRememberMe <- website.allowRememberMe,
 		allowSelfRegistration <- website.allowSelfRegistration,
 		useEmailActivation <- website.useEmailActivation,

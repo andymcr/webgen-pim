@@ -875,54 +875,6 @@ rule SearchUnit {
 }
 
 
-abstract rule SecurityUnit {
-	from website : Website!SecurityUnit
-	to waf : WAF!SecurityUnit (
-	)
-}
-
--- @extends DynamicUnit, SecurityUnit
-rule RegistrationUnit {
-	from website : Website!RegistrationUnit
-	to waf : WAF!RegistrationUnit (
-	)
-}
-
--- @extends DynamicUnit, EditUnit
-rule LoginUnit {
-	from website : Website!LoginUnit
-	to waf : WAF!LoginUnit (
-	)
-}
-
--- @extends DynamicUnit, SecurityUnit
-rule LogoutUnit {
-	from website : Website!LogoutUnit
-	to waf : WAF!LogoutUnit (
-	)
-}
-
--- @extends DynamicUnit, SecurityUnit
-rule ForgottenPasswordUnit {
-	from website : Website!ForgottenPasswordUnit
-	to waf : WAF!ForgottenPasswordUnit (
-		resetPasswordUnit <- website.resetPasswordUnit,
-		uriEmailSent <- website.uriEmailSent,
-		emailSubject <- website.emailSubject,
-		emailMessage <- website.emailMessage,
-		emailSentCaption <- website.emailSentCaption,
-		emailSentMessage <- website.emailSetMessage
-	)
-}
-
--- @extends DynamicUnit, EditUnit
-rule ResetPasswordUnit {
-	from website : Website!ResetPasswordUnit
-	to waf : WAF!ResetPasswordUnit (
-	)
-}
-
-
 abstract rule ActionContainer {
 	from website : Website!ActionContainer
 	to waf : WAF!ActionContainer (
@@ -946,15 +898,6 @@ abstract rule Action {
 		localAnchorClass <- website.anchorClass,
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass
-	)
-}
-
-
--- @extends Action
-rule SecurityAction {
-	from website : Website!SecurityAction
-	to waf : WAF!SecurityAction (
-		target <- website.target
 	)
 }
 
