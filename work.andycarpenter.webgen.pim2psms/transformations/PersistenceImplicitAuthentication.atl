@@ -165,16 +165,9 @@ unique lazy rule implicitAuthenticationEntity {
 		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
 		displayLabel <- website.authenticationName.createLabel(),
-		allFeatures <- Sequence{username, usernameCanonical, email, emailCanonical,
-				password, enabled, locked, expired, expiresAt, confirmationToken,
-				passwordRequestedAt, passwordChangedAt, credentialsExpired,
-				credentialsExpireAt, roles, lastLogin, lastIp}
-			->union(
-				if website.allowRememberMe and false then
-					Sequence{thisModule.implicitAutoLoginOpposite(website)}
-				else
-					Sequence{}
-				endif),
+		allFeatures <- Sequence{username, email, password, enabled, locked, expired, expiresAt,
+				confirmationToken, passwordRequestedAt, passwordChangedAt, credentialsExpired,
+				credentialsExpireAt, roles, lastLogin},
 		labels <- Sequence{label},
 		implementsUserInterface <- true
 	),
@@ -194,14 +187,6 @@ unique lazy rule implicitAuthenticationEntity {
 		"unique" <- true,
 		columnName <- 'username'
 	),
-	usernameCanonical : ORM!DataTypeAttribute (
-		name <- 'usernameCanonical',
-		displayLabel <- 'Username (Canonical)',
-		attributeDataType <- website.getDataType('String'),
-		cardinality <- #Required,
-		"unique" <- true,
-		columnName <- 'username_canonical'
-	),
 	email : ORM!DataTypeAttribute (
 		name <- 'email',
 		displayLabel <- 'Email',
@@ -210,15 +195,6 @@ unique lazy rule implicitAuthenticationEntity {
 		"unique" <- true,
 		caseInsensitive <- true,
 		columnName <- 'email'
-	),
-	emailCanonical : ORM!DataTypeAttribute (
-		name <- 'emailCanonical',
-		displayLabel <- 'Email (Canonical)',
-		attributeDataType <- website.getDataType('Email'),
-		cardinality <- #Required,
-		"unique" <- true,
-		caseInsensitive <- true,
-		columnName <- 'email_canonical'
 	),
 	password : ORM!DataTypeAttribute (
 		name <- 'password',
@@ -330,28 +306,6 @@ unique lazy rule implicitAuthenticationEntity {
 	),
 	lastLoginDefault : ORM!TimeLiteral (
 		value <- '0000-00-00 00:00:00'
-	),
-	lastIp : ORM!DataTypeAttribute (
-		name <- 'lastIp',
-		displayLabel <- 'lastIp',
-		attributeDataType <- website.getDataType('String'),
-		cardinality <- #Required,
-		"unique" <- false,
-		columnName <- 'last_ip',
-		attributeDefaultValue <- lastIpDefault
-	),
-	lastIpDefault : ORM!StringLiteral (
-		value <- '0.0.0.0'
---	),
---	userDetails : ORM!Association (
---		name <- 'userDetails',
---		displayLabel <- 'User details',
---		cardinality <- #Required,
---		associationOwningEnd <- true,
---		visible <- true,
---		associationRelationship <- #OneToOne,
---		columnName <- website.user.name.createAssociationColumnName(),
---		opposite <- thisModule.implicitUserAuthentication(website)
 	)
 	do {
 		orm;
