@@ -195,7 +195,10 @@ public class TransformUsingEmftVm {
 				ormModelName, ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceImplicitStatic", ormModelName,
 				ormModel, ormInputModels, Collections.emptyMap());
+// Next two transformatioms are separte as dependencies mean cannot to both in one pass
 			executeRefiningPass("PersistenceImplicitAuthentication",
+					ormModelName, ormModel, ormInputModels, Collections.emptyMap());
+			executeRefiningPass("PersistenceImplicitResetPassword",
 				ormModelName, ormModel, ormInputModels, Collections.emptyMap());
 			executeRefiningPass("PersistenceImplicitRepositories", ormModelName,
 					ormModel, ormInputModels, Collections.emptyMap());

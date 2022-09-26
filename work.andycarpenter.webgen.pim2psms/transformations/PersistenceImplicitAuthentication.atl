@@ -97,17 +97,6 @@ rule OrmModel {
 									Sequence{}
 								endif
 						endif)
-				->union(if not security.isLocallyAuthenticated() then
-							Sequence{}
-						else
-							let authentication : Website!LocalAuthenticationSystem
-								= security.authentication
-								in if authentication.resetPasswordRequestModel.oclIsUndefined() then
-										Sequence{thisModule.implicitResetPasswordRequestEntity(authentication)}
-									else
-										Sequence{}
-									endif
-						endif)
 	)
 }
 
@@ -165,9 +154,9 @@ unique lazy rule implicitAuthenticationEntity {
 		autoKeyPersistentType <- 'integer',
 		keys <- Sequence{email},
 		displayLabel <- website.authenticationName.createLabel(),
-		allFeatures <- Sequence{username, email, password, enabled, locked, expired, expiresAt,
-				confirmationToken, passwordRequestedAt, passwordChangedAt, credentialsExpired,
-				credentialsExpireAt, roles, lastLogin},
+		allFeatures <- Sequence{username, enabled, email, emailVerified, password, locked, expired,
+				expiresAt, confirmationToken, passwordRequestedAt, passwordChangedAt,
+				credentialsExpired, credentialsExpireAt, roles, lastLogin},
 		labels <- Sequence{label},
 		implementsUserInterface <- true
 	),
@@ -187,25 +176,6 @@ unique lazy rule implicitAuthenticationEntity {
 		"unique" <- true,
 		columnName <- 'username'
 	),
-	email : ORM!DataTypeAttribute (
-		name <- 'email',
-		displayLabel <- 'Email',
-		attributeDataType <- website.getDataType('Email'),
-		cardinality <- #Required,
-		"unique" <- true,
-		caseInsensitive <- true,
-		columnName <- 'email'
-	),
-	password : ORM!DataTypeAttribute (
-		name <- 'password',
-		displayLabel <- 'Password',
-		attributeDataType <- website.getDataType('String'),
-		cardinality <- #Required,
-		"unique" <- false,
-		obfuscateFormFields <- true,
-		encrypt <- true,
-		columnName <- 'password'
-	),
 	enabled : ORM!DataTypeAttribute (
 		name <- 'enabled',
 		displayLabel <- 'Enabled',
@@ -217,6 +187,37 @@ unique lazy rule implicitAuthenticationEntity {
 	),
 	enabledDefault : ORM!BooleanLiteral (
 		value <- true
+	),
+	email : ORM!DataTypeAttribute (
+		name <- 'email',
+		displayLabel <- 'Email',
+		attributeDataType <- website.getDataType('Email'),
+		cardinality <- #Required,
+		"unique" <- true,
+		caseInsensitive <- true,
+		columnName <- 'email'
+	),
+	emailVerified : ORM!DataTypeAttribute (
+		name <- 'emailVerified',
+		displayLabel <- 'Email Verified',
+		attributeDataType <- website.getDataType('Boolean'),
+		cardinality <- #Required,
+		"unique" <- false,
+		columnName <- 'email_verified',
+		attributeDefaultValue <- emailVerifiedDefault
+	),
+	emailVerifiedDefault : ORM!BooleanLiteral (
+		value <- false
+	),
+	password : ORM!DataTypeAttribute (
+		name <- 'password',
+		displayLabel <- 'Password',
+		attributeDataType <- website.getDataType('String'),
+		cardinality <- #Required,
+		"unique" <- false,
+		obfuscateFormFields <- true,
+		encrypt <- true,
+		columnName <- 'password'
 	),
 	locked : ORM!DataTypeAttribute (
 		name <- 'localed',
@@ -311,105 +312,3 @@ unique lazy rule implicitAuthenticationEntity {
 		orm;
 	}
 }
-
---lazy rule implicitUserAuthentication {
---	from website: Website!LocalAuthenticationSystem
---	to orm : ORM!Association (
---		partOf <- thisModule.findOrmEntity(website.user.name),
---		name <- website.authenticationName.lowercaseFirst(),
---		displayLabel <- website.authenticationName,
---		associationOwningEnd <- false,
---		visible <- false,
---		associationRelationship <- #OneToOne
---	)
---	do {
---		orm;
---	}
---}
---
-lazy rule implicitResetPasswordRequestEntity {
-	from website: Website!LocalAuthenticationSystem
-	to orm : ORM!Entity (
-		name <- website.resetPasswordRequestName,
-		tableName <- 'resetpasswordrequests',
-		autoKeyName <- 'id',
-		autoKeyPersistentType <- 'integer',
-		displayLabel <- website.resetPasswordRequestName.createLabel(),
-		allFeatures <- Sequence{selector, hashedToken, requestedAt, expiresAt, user},
-		implementsResetPasswordInterface <- true
-	),
-	selector : ORM!DataTypeAttribute (
-		name <- 'selector',
-		displayLabel <- 'Selector',
-		attributeDataType <-
-			if website.authenticationKey = #Email then
-				website.getDataType('Email')
-			else
-				website.getDataType('String')
-			endif,
-		cardinality <- #Required,
-		"unique" <- false,
-		columnName <- 'selector'
-	),
-	hashedToken : ORM!DataTypeAttribute (
-		name <- 'ipAddress',
-		displayLabel <- 'IP Address',
-		attributeDataType <- website.getDataType('String'),
-		cardinality <- #Required,
-		"unique" <- false,
-		columnName <- 'hashed_token'
-	),
-	requestedAt : ORM!DateAttribute (
-		name <- 'requestedAt',
-		displayLabel <- 'Requested At',
-		cardinality <- #Required,
-		columnName <- 'requested_at',
-		details <- #DateAndTime
-	),
-	expiresAt : ORM!DateAttribute (
-		name <- 'expiresAt',
-		displayLabel <- 'Expires At',
-		cardinality <- #Required,
-		columnName <- 'expires_at',
-		details <- #DateAndTime
-	),
-	user : ORM!Association (
-		name <- 'user',
-		displayLabel <- 'User',
-		cardinality <- #Required,
-		associationOwningEnd <- true,
-		visible <- true,
-		associationRelationship <- #ManyToOne,
-		columnName <-
-			if website.authenticationModel.oclIsUndefined() then
-				website.authenticationName.createAssociationColumnName()
-			else
-				website.authenticationModel.name.createAssociationColumnName()
-			endif,
---		opposite <- thisModule.implicitUserAuthentication2(website),
-		serializationMaxDepth <- 0
-	)
-	do {
-		orm;
-	}
-}
-
---lazy rule implicitUserAuthentication2 {
---	from website: Website!LocalAuthenticationSystem
---	to orm : ORM!Association (
---		partOf <-
---			if website.authenticationModel.oclIsUndefined() then
---				thisModule.implicitAuthenticationEntity(website)
---			else
---				thisModule.findOrmEntity(website.authenticationModel.name)
---			endif,
---		name <- website.resetPasswordRequestName.lowercaseFirst(),
---		displayLabel <- website.resetPasswordRequestName,
---		associationOwningEnd <- false,
---		visible <- false,
---		associationRelationship <- #OneToMany
---	)
---	do {
---		orm;
---	}
---}
