@@ -25,6 +25,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionMenuEntryImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionMenuEntryImpl#getDisplayLabel <em>Display Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionMenuEntryImpl#getDestination <em>Destination</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionMenuEntryImpl#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,6 +76,25 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * @ordered
 	 */
 	protected ContentUnit destination;
+
+	/**
+	 * The default value of the '{@link #isAlwaysVisible() <em>Always Visible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAlwaysVisible()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ALWAYS_VISIBLE_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isAlwaysVisible() <em>Always Visible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAlwaysVisible()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean alwaysVisible = ALWAYS_VISIBLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,6 +207,29 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 	 * @generated
 	 */
 	@Override
+	public boolean isAlwaysVisible() {
+		return alwaysVisible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAlwaysVisible(boolean newAlwaysVisible) {
+		boolean oldAlwaysVisible = alwaysVisible;
+		alwaysVisible = newAlwaysVisible;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE, oldAlwaysVisible, alwaysVisible));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.ACTION_MENU_ENTRY__NAME:
@@ -196,6 +239,8 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 			case WebuiPackage.ACTION_MENU_ENTRY__DESTINATION:
 				if (resolve) return getDestination();
 				return basicGetDestination();
+			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
+				return isAlwaysVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,6 +261,9 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 				return;
 			case WebuiPackage.ACTION_MENU_ENTRY__DESTINATION:
 				setDestination((ContentUnit)newValue);
+				return;
+			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
+				setAlwaysVisible((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -238,6 +286,9 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 			case WebuiPackage.ACTION_MENU_ENTRY__DESTINATION:
 				setDestination((ContentUnit)null);
 				return;
+			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
+				setAlwaysVisible(ALWAYS_VISIBLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +307,8 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 				return DISPLAY_LABEL_EDEFAULT == null ? displayLabel != null : !DISPLAY_LABEL_EDEFAULT.equals(displayLabel);
 			case WebuiPackage.ACTION_MENU_ENTRY__DESTINATION:
 				return destination != null;
+			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
+				return alwaysVisible != ALWAYS_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -318,6 +371,8 @@ public class ActionMenuEntryImpl extends MenuEntryImpl implements ActionMenuEntr
 		result.append(name);
 		result.append(", displayLabel: ");
 		result.append(displayLabel);
+		result.append(", alwaysVisible: ");
+		result.append(alwaysVisible);
 		result.append(')');
 		return result.toString();
 	}

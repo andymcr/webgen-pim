@@ -635,13 +635,22 @@ public interface WebuiPackage extends EPackage {
 	int ACTION_MENU_ENTRY__DESTINATION = MENU_ENTRY_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Always Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_MENU_ENTRY__ALWAYS_VISIBLE = MENU_ENTRY_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Action Menu Entry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_MENU_ENTRY_FEATURE_COUNT = MENU_ENTRY_FEATURE_COUNT + 3;
+	int ACTION_MENU_ENTRY_FEATURE_COUNT = MENU_ENTRY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Action Menu Entry</em>' class.
@@ -19407,6 +19416,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getActionMenuEntry_Destination();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry#isAlwaysVisible <em>Always Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Always Visible</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ActionMenuEntry#isAlwaysVisible()
+	 * @see #getActionMenuEntry()
+	 * @generated
+	 */
+	EAttribute getActionMenuEntry_AlwaysVisible();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry <em>Edit Static Text Menu Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -23236,6 +23256,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTION_MENU_ENTRY__DESTINATION = eINSTANCE.getActionMenuEntry_Destination();
+
+		/**
+		 * The meta object literal for the '<em><b>Always Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION_MENU_ENTRY__ALWAYS_VISIBLE = eINSTANCE.getActionMenuEntry_AlwaysVisible();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditStaticTextMenuEntryImpl <em>Edit Static Text Menu Entry</em>}' class.

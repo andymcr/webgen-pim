@@ -47,6 +47,7 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 			addNamePropertyDescriptor(object);
 			addDisplayLabelPropertyDescriptor(object);
 			addDestinationPropertyDescriptor(object);
+			addAlwaysVisiblePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -118,6 +119,28 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Always Visible feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlwaysVisiblePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActionMenuEntry_alwaysVisible_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActionMenuEntry_alwaysVisible_feature", "_UI_ActionMenuEntry_type"),
+				 WebuiPackage.Literals.ACTION_MENU_ENTRY__ALWAYS_VISIBLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ActionMenuEntry.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,6 +180,7 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 		switch (notification.getFeatureID(ActionMenuEntry.class)) {
 			case WebuiPackage.ACTION_MENU_ENTRY__NAME:
 			case WebuiPackage.ACTION_MENU_ENTRY__DISPLAY_LABEL:
+			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

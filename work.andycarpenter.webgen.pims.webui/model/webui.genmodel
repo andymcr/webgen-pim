@@ -87,6 +87,7 @@
     <genClasses ecoreClass="webui.ecore#//ActionMenuEntry">
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//ActionMenuEntry/destination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ActionMenuEntry/alwaysVisible"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//EditStaticTextMenuEntry"/>
     <genClasses ecoreClass="webui.ecore#//MenuFeature"/>

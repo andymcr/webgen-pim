@@ -1177,6 +1177,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getActionMenuEntry_AlwaysVisible() {
+		return (EAttribute)actionMenuEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEditStaticTextMenuEntry() {
 		return editStaticTextMenuEntryEClass;
 	}
@@ -4475,6 +4485,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		actionMenuEntryEClass = createEClass(ACTION_MENU_ENTRY);
 		createEReference(actionMenuEntryEClass, ACTION_MENU_ENTRY__DESTINATION);
+		createEAttribute(actionMenuEntryEClass, ACTION_MENU_ENTRY__ALWAYS_VISIBLE);
 
 		editStaticTextMenuEntryEClass = createEClass(EDIT_STATIC_TEXT_MENU_ENTRY);
 
@@ -5042,6 +5053,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(actionMenuEntryEClass, ActionMenuEntry.class, "ActionMenuEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionMenuEntry_Destination(), this.getContentUnit(), null, "destination", null, 1, 1, ActionMenuEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getActionMenuEntry_AlwaysVisible(), ecorePackage.getEBoolean(), "alwaysVisible", "false", 0, 1, ActionMenuEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(editStaticTextMenuEntryEClass, EditStaticTextMenuEntry.class, "EditStaticTextMenuEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

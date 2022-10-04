@@ -136,8 +136,7 @@ abstract rule MenuEntry {
 rule SubmenuEntry {
 	from website : Website!SubmenuEntry
 	to waf : WAF!SubmenuEntry (
-		authorisationRoles <- website.requiresRole,
-		alwaysVisible <- website.alwaysVisible
+		authorisationRoles <- website.requiresRole
 	)
 }
 
@@ -145,7 +144,8 @@ rule SubmenuEntry {
 rule ActionMenuEntry {
 	from website : Website!ActionMenuEntry
 	to waf : WAF!ActionMenuEntry (
-		action <- website.destination
+		action <- website.destination,
+		alwaysVisible <- website.alwaysVisible
 	)
 }
 

@@ -71,11 +71,11 @@ rule LocalAuthenticationSystem {
 					else
 						authentication.forgottenPasswordUnit.findWafUnit()
 					endif,
-		resetPasswordElement <-
+		changePasswordElement <-
 			let authentication : Website!LocalAuthenticationSystem
 				= thisModule.findWebsiteSecurity().authentication
 				in if authentication.resetPasswordUnit.oclIsUndefined() then
-						thisModule.implicitResetPasswordElement(authentication)
+						thisModule.implicitChangePasswordElement(authentication)
 					else
 						authentication.resetPasswordUnit.findWafUnit()
 					endif
@@ -86,9 +86,7 @@ unique lazy rule implicitRegistrationElement {
 	from website : Website!LocalAuthenticationSystem
 	to waf : Security!RegistrationElement (
 		name <- website.implicitRegistrationName,
-		displayLabel <- website.implicitRegistrationUnitLabel,
-		uriElement <- website.implicitRegistrationUri,
-		confirmLabel <- website.implicitRegistrationConfirmLabel
+		displayLabel <- website.implicitRegistrationUnitLabel
 	)
 }
 
@@ -97,9 +95,7 @@ unique lazy rule implicitLoginElement {
 	from website : Website!LocalAuthenticationSystem
 	to waf : Security!LoginElement (
 		name <- website.implicitLoginName,
-		displayLabel <- website.implicitLoginUnitLabel,
-		uriElement <- website.implicitLoginUri,
-		confirmLabel <- website.implicitLoginConfirmLabel
+		displayLabel <- website.implicitLoginUnitLabel
 	)
 }
 
@@ -108,9 +104,7 @@ unique lazy rule implicitLogoutElement {
 	from website : Website!LocalAuthenticationSystem
 	to waf : Security!LogoutElement (
 		name <- website.implicitLogoutName,
-		displayLabel <- website.implicitLogoutConfirmLabel,
-		uriElement <- website.implicitLogoutUri --,
---		confirmLabel <- website.implicitLogoutConfirmLabel
+		displayLabel <- website.implicitLogoutConfirmLabel
 	)
 }
 
@@ -120,24 +114,19 @@ unique lazy rule implicitForgottenPasswordElement {
 	to waf : Security!ForgottenPasswordElement (
 		name <- website.implicitForgottenPasswordName,
 		displayLabel <- website.implicitForgottenPasswordUnitLabel,
-		uriElement <- website.implicitForgottenPasswordUriRequest,
-		uriEmailSent <- website.implicitForgottenPasswordUriEmailSent,
-		confirmLabel <- website.implicitForgottenPasswordConfirmLabel,
-		emailSubject <- website.implicitForgottenPasswordEmailSubject,
-		emailMessage <- website.implicitForgottenPasswordEmailMessage,
-		emailSentCaption <- website.implicitForgottenPasswordEmailSentCaption,
-		emailSentMessage <- website.implicitForgottenPasswordEmailSentMessage
+		emailCheckSubject <- website.implicitForgottenPasswordEmailSubject,
+		emailCheckMessage <- website.implicitForgottenPasswordEmailMessage,
+		emailCheckSentCaption <- website.implicitForgottenPasswordEmailSentCaption,
+		emailCheckSentMessage <- website.implicitForgottenPasswordEmailSentMessage
 	)
 }
 
 
-unique lazy rule implicitResetPasswordElement {
+unique lazy rule implicitChangePasswordElement {
 	from website : Website!LocalAuthenticationSystem
-	to waf : Security!ResetPasswordElement (
+	to waf : Security!ChangePasswordElement (
 		name <- website.implicitResetPasswordName,
-		displayLabel <- website.implicitResetPasswordUnitLabel,
-		uriElement <- website.implicitResetPasswordUri,
-		confirmLabel <- website.implicitResetPasswordConfirmLabel
+		displayLabel <- website.implicitResetPasswordUnitLabel
 	)
 }
 

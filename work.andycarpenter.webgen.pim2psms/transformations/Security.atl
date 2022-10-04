@@ -64,7 +64,10 @@ rule LocalAuthenticationSystem {
 		allowRememberMe <- website.allowRememberMe,
 		allowSelfRegistration <- website.allowSelfRegistration,
 		useEmailActivation <- website.useEmailActivation,
-		sendWelcomeEmail <- website.sendWelcomeEmail
+		sendWelcomeEmail <- website.sendWelcomeEmail,
+		sectionClass <- thisModule.findWebsiteUI().defaultFormStyles.sectionClass,
+		captionClass <- thisModule.findWebsiteUI().defaultFormStyles.captionClass,
+		contentClass <- thisModule.findWebsiteUI().defaultFormStyles.contentClass
 	)
 }
 
