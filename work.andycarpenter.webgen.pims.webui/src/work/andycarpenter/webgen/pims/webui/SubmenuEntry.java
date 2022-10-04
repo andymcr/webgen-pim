@@ -13,6 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSubmenuEntry()
@@ -46,5 +47,28 @@ public interface SubmenuEntry extends Menu, MenuEntry {
 	 * @generated
 	 */
 	void setRequiresRole(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Always Visible</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Always Visible</em>' attribute.
+	 * @see #setAlwaysVisible(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSubmenuEntry_AlwaysVisible()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isAlwaysVisible();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Always Visible</em>' attribute.
+	 * @see #isAlwaysVisible()
+	 * @generated
+	 */
+	void setAlwaysVisible(boolean value);
 
 } // SubmenuEntry

@@ -13,7 +13,6 @@ import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
-import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -36,7 +35,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptionsFilter <em>Options Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isUseAutocomplete <em>Use Autocomplete</em>}</li>
  * </ul>
  *
  * @generated
@@ -123,14 +122,24 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	protected Selection options;
 
 	/**
-	 * The cached value of the '{@link #getOptionsFilter() <em>Options Filter</em>}' reference.
+	 * The default value of the '{@link #isUseAutocomplete() <em>Use Autocomplete</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOptionsFilter()
+	 * @see #isUseAutocomplete()
 	 * @generated
 	 * @ordered
 	 */
-	protected Filter optionsFilter;
+	protected static final boolean USE_AUTOCOMPLETE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseAutocomplete() <em>Use Autocomplete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseAutocomplete()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useAutocomplete = USE_AUTOCOMPLETE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,25 +399,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public Filter getOptionsFilter() {
-		if (optionsFilter != null && optionsFilter.eIsProxy()) {
-			InternalEObject oldOptionsFilter = (InternalEObject)optionsFilter;
-			optionsFilter = (Filter)eResolveProxy(oldOptionsFilter);
-			if (optionsFilter != oldOptionsFilter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER, oldOptionsFilter, optionsFilter));
-			}
-		}
-		return optionsFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Filter basicGetOptionsFilter() {
-		return optionsFilter;
+	public boolean isUseAutocomplete() {
+		return useAutocomplete;
 	}
 
 	/**
@@ -417,11 +409,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public void setOptionsFilter(Filter newOptionsFilter) {
-		Filter oldOptionsFilter = optionsFilter;
-		optionsFilter = newOptionsFilter;
+	public void setUseAutocomplete(boolean newUseAutocomplete) {
+		boolean oldUseAutocomplete = useAutocomplete;
+		useAutocomplete = newUseAutocomplete;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER, oldOptionsFilter, optionsFilter));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE, oldUseAutocomplete, useAutocomplete));
 	}
 
 	/**
@@ -483,9 +475,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				if (resolve) return getOptions();
 				return basicGetOptions();
-			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
-				if (resolve) return getOptionsFilter();
-				return basicGetOptionsFilter();
+			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
+				return isUseAutocomplete();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -513,8 +504,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)newValue);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
-				setOptionsFilter((Filter)newValue);
+			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
+				setUseAutocomplete((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -543,8 +534,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)null);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
-				setOptionsFilter((Filter)null);
+			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
+				setUseAutocomplete(USE_AUTOCOMPLETE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -574,8 +565,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				return options != null;
-			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS_FILTER:
-				return optionsFilter != null;
+			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
+				return useAutocomplete != USE_AUTOCOMPLETE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -616,6 +607,22 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (useAutocomplete: ");
+		result.append(useAutocomplete);
+		result.append(')');
+		return result.toString();
 	}
 
 } //UnitAssociationImpl

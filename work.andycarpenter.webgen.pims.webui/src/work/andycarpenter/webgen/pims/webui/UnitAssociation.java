@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.persistence.AssociationReference;
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
@@ -20,7 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
@@ -100,25 +99,26 @@ public interface UnitAssociation extends UnitFeature, AssociationReference {
 	void setOptions(Selection value);
 
 	/**
-	 * Returns the value of the '<em><b>Options Filter</b></em>' reference.
+	 * Returns the value of the '<em><b>Use Autocomplete</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Options Filter</em>' reference.
-	 * @see #setOptionsFilter(Filter)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_OptionsFilter()
-	 * @model
+	 * @return the value of the '<em>Use Autocomplete</em>' attribute.
+	 * @see #setUseAutocomplete(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_UseAutocomplete()
+	 * @model default="false"
 	 * @generated
 	 */
-	Filter getOptionsFilter();
+	boolean isUseAutocomplete();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Options Filter</em>' reference.
-	 * @see #getOptionsFilter()
+	 * @param value the new value of the '<em>Use Autocomplete</em>' attribute.
+	 * @see #isUseAutocomplete()
 	 * @generated
 	 */
-	void setOptionsFilter(Filter value);
+	void setUseAutocomplete(boolean value);
 
 } // UnitAssociation

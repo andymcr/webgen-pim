@@ -136,7 +136,8 @@ abstract rule MenuEntry {
 rule SubmenuEntry {
 	from website : Website!SubmenuEntry
 	to waf : WAF!SubmenuEntry (
-		authorisationRoles <- website.requiresRole
+		authorisationRoles <- website.requiresRole,
+		alwaysVisible <- website.alwaysVisible
 	)
 }
 
@@ -424,12 +425,7 @@ rule UnitAssociation {
 			else
 				website.options.findSelection()
 			endif,
-		optionsFilter <-
-			if website.optionsFilter.oclIsUndefined() then
-				website.optionsFilter
-			else
-				website.optionsFilter.findFilter()
-			endif
+		useAutocomplete <- website.useAutocomplete
 	)
 }
 

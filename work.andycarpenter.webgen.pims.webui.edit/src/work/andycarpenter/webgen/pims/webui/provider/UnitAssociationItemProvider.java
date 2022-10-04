@@ -20,7 +20,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Repository;
@@ -63,7 +62,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addValueDisplayPropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
-			addOptionsFilterPropertyDescriptor(object);
+			addUseAutocompletePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -204,40 +203,25 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Options Filter feature.
+	 * This adds a property descriptor for the Use Autocomplete feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	protected void addOptionsFilterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_UnitAssociation_optionsFilter_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_optionsFilter_feature", "_UI_UnitAssociation_type"),
-			WebuiPackage.Literals.UNIT_ASSOCIATION__OPTIONS_FILTER,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof UnitAssociation) {
-						final UnitAssociation association = (UnitAssociation) object;
-						if (association.getOptions() != null) {
-							return association.getOptions().getFilters();
-						} else {
-							final Set<Filter> filters = new HashSet<Filter>();
-							for (Selection selection : getSelections(association.getDisplayedOn().getDisplayedOn().getWebUI(),
-									association.getTargetEntity())) {
-System.err.println("Selection  "+selection.getName());
-								filters.addAll(selection.getFilters());
-							}
-							return filters;
-						}
-					}
-					return Collections.emptySet();
-				}
-		});
+	protected void addUseAutocompletePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitAssociation_useAutocomplete_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_useAutocomplete_feature", "_UI_UnitAssociation_type"),
+				 WebuiPackage.Literals.UNIT_ASSOCIATION__USE_AUTOCOMPLETE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -310,6 +294,7 @@ System.err.println("Selection  "+selection.getName());
 		switch (notification.getFeatureID(UnitAssociation.class)) {
 			case WebuiPackage.UNIT_ASSOCIATION__NAME:
 			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
+			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:

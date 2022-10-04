@@ -562,13 +562,22 @@ public interface WebuiPackage extends EPackage {
 	int SUBMENU_ENTRY__REQUIRES_ROLE = MENU_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Always Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMENU_ENTRY__ALWAYS_VISIBLE = MENU_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Submenu Entry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 2;
+	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Submenu Entry</em>' class.
@@ -4178,13 +4187,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Options Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Use Autocomplete</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__OPTIONS_FILTER = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -19366,6 +19375,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getSubmenuEntry_RequiresRole();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Always Visible</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible()
+	 * @see #getSubmenuEntry()
+	 * @generated
+	 */
+	EAttribute getSubmenuEntry_AlwaysVisible();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ActionMenuEntry <em>Action Menu Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20694,15 +20714,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getUnitAssociation_Options();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter <em>Options Filter</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Options Filter</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptionsFilter()
+	 * @return the meta object for the attribute '<em>Use Autocomplete</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete()
 	 * @see #getUnitAssociation()
 	 * @generated
 	 */
-	EReference getUnitAssociation_OptionsFilter();
+	EAttribute getUnitAssociation_UseAutocomplete();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute <em>Child Path Attribute</em>}'.
@@ -23192,6 +23212,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute SUBMENU_ENTRY__REQUIRES_ROLE = eINSTANCE.getSubmenuEntry_RequiresRole();
 
 		/**
+		 * The meta object literal for the '<em><b>Always Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMENU_ENTRY__ALWAYS_VISIBLE = eINSTANCE.getSubmenuEntry_AlwaysVisible();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ActionMenuEntryImpl <em>Action Menu Entry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24226,12 +24254,12 @@ public interface WebuiPackage extends EPackage {
 		EReference UNIT_ASSOCIATION__OPTIONS = eINSTANCE.getUnitAssociation_Options();
 
 		/**
-		 * The meta object literal for the '<em><b>Options Filter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Use Autocomplete</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNIT_ASSOCIATION__OPTIONS_FILTER = eINSTANCE.getUnitAssociation_OptionsFilter();
+		EAttribute UNIT_ASSOCIATION__USE_AUTOCOMPLETE = eINSTANCE.getUnitAssociation_UseAutocomplete();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl <em>Child Path Attribute</em>}' class.
