@@ -155,10 +155,11 @@ unique lazy rule implicitAuthenticationEntity {
 		keys <- Sequence{email},
 		displayLabel <- website.authenticationName.createLabel(),
 		allFeatures <- Sequence{username, enabled, email, emailVerified, password, locked, expired,
-				expiresAt, confirmationToken, passwordRequestedAt, passwordChangedAt,
+				expiresAt, passwordChangedAt,
 				credentialsExpired, credentialsExpireAt, roles, lastLogin},
 		labels <- Sequence{label},
-		implementsUserInterface <- true
+		implementsUserInterface <- true,
+		implementsPasswordAuthenticatedInterface <- true
 	),
 	label : ORM!ModelLabel (
 		name <- 'default',
@@ -248,21 +249,6 @@ unique lazy rule implicitAuthenticationEntity {
 		displayLabel <- 'Expires At',
 		cardinality <- #Optional,
 		columnName <- 'expires_at',
-		details <- #DateAndTime
-	),
-	confirmationToken : ORM!DataTypeAttribute (
-		name <- 'confirmationToken',
-		displayLabel <- 'Confirmation Token',
-		attributeDataType <- website.getDataType('String'),
-		cardinality <- #Optional,
-		"unique" <- false,
-		columnName <- 'confirmation_token'
-	),
-	passwordRequestedAt : ORM!DateAttribute (
-		name <- 'passwordRequestedAt',
-		displayLabel <- 'Password Requested At',
-		cardinality <- #Optional,
-		columnName <- 'password_requested_at',
 		details <- #DateAndTime
 	),
 	passwordChangedAt : ORM!DateAttribute (
