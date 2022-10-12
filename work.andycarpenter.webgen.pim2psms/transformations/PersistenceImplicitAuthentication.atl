@@ -247,14 +247,14 @@ unique lazy rule implicitAuthenticationEntity {
 	expiresAt : ORM!DateAttribute (
 		name <- 'expiresAt',
 		displayLabel <- 'Expires At',
-		cardinality <- #Optional,
+		cardinality <- #Required,
 		columnName <- 'expires_at',
 		details <- #DateAndTime
 	),
 	passwordChangedAt : ORM!DateAttribute (
 		name <- 'passwordChangedAt',
 		displayLabel <- 'Password Changed At',
-		cardinality <- #Optional,
+		cardinality <- #Required,
 		columnName <- 'password_changed_at',
 		details <- #DateAndTime
 	),
@@ -262,14 +262,14 @@ unique lazy rule implicitAuthenticationEntity {
 		name <- 'credentialsExpired',
 		displayLabel <- 'Credentials Expired',
 		attributeDataType <- website.getDataType('Boolean'),
-		cardinality <- #Optional,
+		cardinality <- #Required,
 		"unique" <- false,
 		columnName <- 'credentials_expired'
 	),
 	credentialsExpireAt : ORM!DateAttribute (
 		name <- 'credentialsExpireAt',
 		displayLabel <- 'Credentials Expire At',
-		cardinality <- #Optional,
+		cardinality <- #Required,
 		columnName <- 'credentials_expire_at',
 		details <- #DateAndTime
 	),
