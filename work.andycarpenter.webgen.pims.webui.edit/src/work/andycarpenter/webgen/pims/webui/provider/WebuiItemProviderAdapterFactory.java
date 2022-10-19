@@ -1302,6 +1302,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.TargetAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TargetActionItemProvider targetActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.TargetAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTargetActionAdapter() {
+		if (targetActionItemProvider == null) {
+			targetActionItemProvider = new TargetActionItemProvider(this);
+		}
+
+		return targetActionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.InstanceOperationAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -362,6 +362,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createInstanceSelectActionAdapter();
 			}
 			@Override
+			public Adapter caseTargetAction(TargetAction object) {
+				return createTargetActionAdapter();
+			}
+			@Override
 			public Adapter caseOperationAction(OperationAction object) {
 				return createOperationActionAdapter();
 			}
@@ -1574,6 +1578,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInstanceSelectActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.TargetAction <em>Target Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.TargetAction
+	 * @generated
+	 */
+	public Adapter createTargetActionAdapter() {
 		return null;
 	}
 

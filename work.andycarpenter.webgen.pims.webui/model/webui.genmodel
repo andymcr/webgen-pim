@@ -502,6 +502,7 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ContainerSelectAction"/>
     <genClasses ecoreClass="webui.ecore#//InstanceSelectAction"/>
+    <genClasses ecoreClass="webui.ecore#//TargetAction"/>
     <genClasses image="false" ecoreClass="webui.ecore#//OperationAction">
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//OperationAction/operation"/>

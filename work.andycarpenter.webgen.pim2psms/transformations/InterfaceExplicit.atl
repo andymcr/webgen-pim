@@ -942,6 +942,13 @@ rule InstanceSelectAction {
 	)
 }
 
+-- @extends SelectAction
+rule TargetAction {
+	from website : Website!TargetAction
+	to waf : WAF!TargetAction (
+	)
+}
+
 -- @extends Action
 abstract rule OperationAction {
 	from website : Website!OperationAction 

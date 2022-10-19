@@ -238,6 +238,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateContainerSelectAction((ContainerSelectAction)value, diagnostics, context);
 			case WebuiPackage.INSTANCE_SELECT_ACTION:
 				return validateInstanceSelectAction((InstanceSelectAction)value, diagnostics, context);
+			case WebuiPackage.TARGET_ACTION:
+				return validateTargetAction((TargetAction)value, diagnostics, context);
 			case WebuiPackage.OPERATION_ACTION:
 				return validateOperationAction((OperationAction)value, diagnostics, context);
 			case WebuiPackage.CONTAINER_OPERATION_ACTION:
@@ -1944,6 +1946,25 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(instanceSelectAction, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(instanceSelectAction, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(instanceSelectAction, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTargetAction(TargetAction targetAction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(targetAction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(targetAction, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(targetAction, diagnostics, context);
 		return result;
 	}
 

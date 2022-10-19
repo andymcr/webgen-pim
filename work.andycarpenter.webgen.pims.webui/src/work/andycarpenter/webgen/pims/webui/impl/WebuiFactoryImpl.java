@@ -110,6 +110,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.CONTAINER_SELECT_ACTION: return createContainerSelectAction();
 			case WebuiPackage.INSTANCE_SELECT_ACTION: return createInstanceSelectAction();
+			case WebuiPackage.TARGET_ACTION: return createTargetAction();
 			case WebuiPackage.CONTAINER_OPERATION_ACTION: return createContainerOperationAction();
 			case WebuiPackage.INSTANCE_OPERATION_ACTION: return createInstanceOperationAction();
 			case WebuiPackage.GENERAL_OPERATION_ACTION: return createGeneralOperationAction();
@@ -739,6 +740,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public InstanceSelectAction createInstanceSelectAction() {
 		InstanceSelectActionImpl instanceSelectAction = new InstanceSelectActionImpl();
 		return instanceSelectAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TargetAction createTargetAction() {
+		TargetActionImpl targetAction = new TargetActionImpl();
+		return targetAction;
 	}
 
 	/**

@@ -490,6 +490,15 @@ public interface WebuiFactory extends EFactory {
 	InstanceSelectAction createInstanceSelectAction();
 
 	/**
+	 * Returns a new object of class '<em>Target Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Target Action</em>'.
+	 * @generated
+	 */
+	TargetAction createTargetAction();
+
+	/**
 	 * Returns a new object of class '<em>Instance Operation Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

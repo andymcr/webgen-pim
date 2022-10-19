@@ -91,6 +91,7 @@ import work.andycarpenter.webgen.pims.webui.StaticUnitStyles;
 import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
 import work.andycarpenter.webgen.pims.webui.TabularUnit;
 import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
+import work.andycarpenter.webgen.pims.webui.TargetAction;
 import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
@@ -642,6 +643,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass instanceSelectActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass targetActionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -4267,6 +4275,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getTargetAction() {
+		return targetActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDeleteAction() {
 		return deleteActionEClass;
 	}
@@ -4859,6 +4877,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		instanceSelectActionEClass = createEClass(INSTANCE_SELECT_ACTION);
 
+		targetActionEClass = createEClass(TARGET_ACTION);
+
 		operationActionEClass = createEClass(OPERATION_ACTION);
 		createEReference(operationActionEClass, OPERATION_ACTION__OPERATION);
 		createEAttribute(operationActionEClass, OPERATION_ACTION__FILE_EXTENSION);
@@ -5002,6 +5022,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		selectActionEClass.getESuperTypes().add(this.getAction());
 		containerSelectActionEClass.getESuperTypes().add(this.getSelectAction());
 		instanceSelectActionEClass.getESuperTypes().add(this.getSelectAction());
+		targetActionEClass.getESuperTypes().add(this.getSelectAction());
 		operationActionEClass.getESuperTypes().add(this.getAction());
 		containerOperationActionEClass.getESuperTypes().add(this.getOperationAction());
 		instanceOperationActionEClass.getESuperTypes().add(this.getOperationAction());
@@ -5426,6 +5447,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(containerSelectActionEClass, ContainerSelectAction.class, "ContainerSelectAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(instanceSelectActionEClass, InstanceSelectAction.class, "InstanceSelectAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(targetActionEClass, TargetAction.class, "TargetAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationActionEClass, OperationAction.class, "OperationAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationAction_Operation(), theServicePackage.getBusinessOperation(), null, "operation", null, 1, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
