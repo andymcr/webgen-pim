@@ -68,6 +68,9 @@ helper context Website!BusinessOperation def: findBusinessOperation() : Service!
 	= self.definedBy.findService().getBusinessOperation(self.name);
 
 
+helper def: findWafPage(name : String) : WAF!Page
+	= WAF!Page.allInstancesFrom('waf')->any(s | s.name.toLowerCase() = name.toLowerCase());
+
 helper context Website!Page def: findWafPage() : WAF!Page
 	= WAF!Page.allInstancesFrom('waf')->any(s | s.name = self.name);
 

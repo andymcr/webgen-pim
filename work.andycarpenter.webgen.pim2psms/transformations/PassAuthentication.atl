@@ -136,6 +136,7 @@ unique lazy rule implicitAuthenticationsPage {
 	to waf : WAF!Page (
 		name <- 'ManageAuthentications',
 		displayLabel <- 'Manage Authentications',
+		parentPage <- thisModule.findWafPage('admin'),
 		units <- Sequence{authentications, update},
 		uriElement <- 'authentications'
 	),
