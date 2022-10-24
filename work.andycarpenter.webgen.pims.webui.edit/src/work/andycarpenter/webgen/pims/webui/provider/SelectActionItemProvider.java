@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
+import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.SelectAction;
 import work.andycarpenter.webgen.pims.webui.SelectableUnit;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
@@ -85,7 +85,7 @@ public class SelectActionItemProvider extends ActionItemProvider {
 						final SelectAction action = (SelectAction) object;
 						final Set<SelectableUnit> targets = new HashSet<SelectableUnit>();
 						WebUI xx = getWebUI(action.getUsedBy());
-						for (Page page : xx.getPages()) {
+						for (Controller page : xx.getControllers()) {
 							for (ContentUnit unit : page.getUnits()) {
 								if (unit instanceof SelectableUnit) {
 									targets.add((SelectableUnit) unit);
@@ -227,9 +227,9 @@ public class SelectActionItemProvider extends ActionItemProvider {
 
 	protected WebUI getWebUI(final ActionContainer container) {
 		if (container instanceof DynamicUnit) {
-			return ((DynamicUnit) container).getPageDisplayedOn().getWebUI();
+			return ((DynamicUnit) container).getController().getWebUI();
 		} else if (container instanceof UnitFeature) {
-			return ((UnitFeature) container).getDisplayedOn().getPageDisplayedOn().getWebUI();
+			return ((UnitFeature) container).getDisplayedOn().getController().getWebUI();
 		}
 		
 		return null;

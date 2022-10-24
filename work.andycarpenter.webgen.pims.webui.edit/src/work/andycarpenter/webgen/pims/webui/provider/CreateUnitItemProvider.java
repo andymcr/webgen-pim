@@ -65,7 +65,7 @@ public class CreateUnitItemProvider extends EditUnitItemProvider {
 	@Override
 	public String getText(Object object) {
 		final CreateUnit unit = (CreateUnit) object;
-		final Object displayedOn = unit.getDisplayedOn();
+		final Object displayedOn = unit.getController();
 		String parentLabel = "";
 		final IItemLabelProvider provider
 			= (IItemLabelProvider) adapterFactory.adapt(displayedOn, IItemLabelProvider.class);

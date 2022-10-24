@@ -5,14 +5,13 @@ package work.andycarpenter.webgen.pims.webui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
-import work.andycarpenter.webgen.pims.webui.Page;
+import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -23,7 +22,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getDisplayedOn <em>Displayed On</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getController <em>Controller</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isCreateDefaultUriElement <em>Create Default Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPurposeSummary <em>Purpose Summary</em>}</li>
@@ -33,7 +32,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalCaptionClass <em>Local Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalContentClass <em>Local Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
  * @generated
@@ -220,16 +218,6 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	protected String localContentClass = LOCAL_CONTENT_CLASS_EDEFAULT;
 
 	/**
-	 * The cached setting delegate for the '{@link #getPageDisplayedOn() <em>Page Displayed On</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageDisplayedOn()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate PAGE_DISPLAYED_ON__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CONTENT_UNIT__PAGE_DISPLAYED_ON).getSettingDelegate();
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -246,49 +234,6 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.CONTENT_UNIT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Page getDisplayedOn() {
-		if (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON) return null;
-		return (Page)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDisplayedOn(Page newDisplayedOn, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDisplayedOn, WebuiPackage.CONTENT_UNIT__DISPLAYED_ON, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDisplayedOn(Page newDisplayedOn) {
-		if (newDisplayedOn != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__DISPLAYED_ON && newDisplayedOn != null)) {
-			if (EcoreUtil.isAncestor(this, newDisplayedOn))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newDisplayedOn != null)
-				msgs = ((InternalEObject)newDisplayedOn).eInverseAdd(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
-			msgs = basicSetDisplayedOn(newDisplayedOn, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__DISPLAYED_ON, newDisplayedOn, newDisplayedOn));
 	}
 
 	/**
@@ -504,41 +449,12 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public Page getPageDisplayedOn() {
-		return (Page)PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Page basicGetPageDisplayedOn() {
-		return (Page)PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetPageDisplayedOn() {
-		return PAGE_DISPLAYED_ON__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDisplayedOn((Page)otherEnd, msgs);
+				return basicSetController((Controller)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -551,8 +467,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				return basicSetDisplayedOn(null, msgs);
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				return basicSetController(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -565,8 +481,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				return eInternalContainer().eInverseRemove(this, WebuiPackage.PAGE__UNITS, Page.class, msgs);
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.CONTROLLER__UNITS, Controller.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -577,10 +493,53 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
+	public Controller getController() {
+		if (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__CONTROLLER) return null;
+		return (Controller)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetController(Controller newController, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newController, WebuiPackage.CONTENT_UNIT__CONTROLLER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setController(Controller newController) {
+		if (newController != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CONTENT_UNIT__CONTROLLER && newController != null)) {
+			if (EcoreUtil.isAncestor(this, newController))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newController != null)
+				msgs = ((InternalEObject)newController).eInverseAdd(this, WebuiPackage.CONTROLLER__UNITS, Controller.class, msgs);
+			msgs = basicSetController(newController, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__CONTROLLER, newController, newController));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				return getDisplayedOn();
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				return getController();
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				return isCreateDefaultUriElement();
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
@@ -599,9 +558,6 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return getLocalCaptionClass();
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
 				return getLocalContentClass();
-			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
-				if (resolve) return getPageDisplayedOn();
-				return basicGetPageDisplayedOn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -614,8 +570,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				setDisplayedOn((Page)newValue);
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				setController((Controller)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement((Boolean)newValue);
@@ -656,8 +612,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				setDisplayedOn((Page)null);
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				setController((Controller)null);
 				return;
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				setCreateDefaultUriElement(CREATE_DEFAULT_URI_ELEMENT_EDEFAULT);
@@ -698,8 +654,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CONTENT_UNIT__DISPLAYED_ON:
-				return getDisplayedOn() != null;
+			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
+				return getController() != null;
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
 				return createDefaultUriElement != CREATE_DEFAULT_URI_ELEMENT_EDEFAULT;
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
@@ -718,8 +674,6 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return LOCAL_CAPTION_CLASS_EDEFAULT == null ? localCaptionClass != null : !LOCAL_CAPTION_CLASS_EDEFAULT.equals(localCaptionClass);
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:
 				return LOCAL_CONTENT_CLASS_EDEFAULT == null ? localContentClass != null : !LOCAL_CONTENT_CLASS_EDEFAULT.equals(localContentClass);
-			case WebuiPackage.CONTENT_UNIT__PAGE_DISPLAYED_ON:
-				return isSetPageDisplayedOn();
 		}
 		return super.eIsSet(featureID);
 	}

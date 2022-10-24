@@ -166,22 +166,31 @@ public interface WebuiFactory extends EFactory {
 	TabularUnitStyles createTabularUnitStyles();
 
 	/**
-	 * Returns a new object of class '<em>Page</em>'.
+	 * Returns a new object of class '<em>Controller Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Page</em>'.
+	 * @return a new object of class '<em>Controller Link</em>'.
 	 * @generated
 	 */
-	Page createPage();
+	ControllerLink createControllerLink();
 
 	/**
-	 * Returns a new object of class '<em>Page Link</em>'.
+	 * Returns a new object of class '<em>Single Page Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Page Link</em>'.
+	 * @return a new object of class '<em>Single Page Controller</em>'.
 	 * @generated
 	 */
-	PageLink createPageLink();
+	SinglePageController createSinglePageController();
+
+	/**
+	 * Returns a new object of class '<em>Multi Page Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multi Page Controller</em>'.
+	 * @generated
+	 */
+	MultiPageController createMultiPageController();
 
 	/**
 	 * Returns a new object of class '<em>Route Actual</em>'.

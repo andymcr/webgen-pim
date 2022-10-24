@@ -287,7 +287,7 @@ public class WebUIItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__NAVIGATION);
-			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__PAGES);
+			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__CONTROLLERS);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_STYLES);
@@ -360,7 +360,7 @@ public class WebUIItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.WEB_UI__NAVIGATION:
-			case WebuiPackage.WEB_UI__PAGES:
+			case WebuiPackage.WEB_UI__CONTROLLERS:
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
@@ -393,8 +393,13 @@ public class WebUIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__PAGES,
-				 WebuiFactory.eINSTANCE.createPage()));
+				(WebuiPackage.Literals.WEB_UI__CONTROLLERS,
+				 WebuiFactory.eINSTANCE.createSinglePageController()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.WEB_UI__CONTROLLERS,
+				 WebuiFactory.eINSTANCE.createMultiPageController()));
 
 		newChildDescriptors.add
 			(createChildParameter

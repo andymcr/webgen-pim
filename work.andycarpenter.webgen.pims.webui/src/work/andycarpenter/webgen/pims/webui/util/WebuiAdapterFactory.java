@@ -150,12 +150,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createTabularUnitStylesAdapter();
 			}
 			@Override
-			public Adapter casePage(Page object) {
-				return createPageAdapter();
+			public Adapter caseController(Controller object) {
+				return createControllerAdapter();
 			}
 			@Override
-			public Adapter casePageLink(PageLink object) {
-				return createPageLinkAdapter();
+			public Adapter caseControllerLink(ControllerLink object) {
+				return createControllerLinkAdapter();
+			}
+			@Override
+			public Adapter caseSinglePageController(SinglePageController object) {
+				return createSinglePageControllerAdapter();
+			}
+			@Override
+			public Adapter caseMultiPageController(MultiPageController object) {
+				return createMultiPageControllerAdapter();
 			}
 			@Override
 			public Adapter caseContentUnit(ContentUnit object) {
@@ -700,30 +708,58 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Page <em>Page</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.Page
+	 * @see work.andycarpenter.webgen.pims.webui.Controller
 	 * @generated
 	 */
-	public Adapter createPageAdapter() {
+	public Adapter createControllerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PageLink <em>Page Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ControllerLink <em>Controller Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PageLink
+	 * @see work.andycarpenter.webgen.pims.webui.ControllerLink
 	 * @generated
 	 */
-	public Adapter createPageLinkAdapter() {
+	public Adapter createControllerLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.SinglePageController <em>Single Page Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.SinglePageController
+	 * @generated
+	 */
+	public Adapter createSinglePageControllerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.MultiPageController <em>Multi Page Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.MultiPageController
+	 * @generated
+	 */
+	public Adapter createMultiPageControllerAdapter() {
 		return null;
 	}
 

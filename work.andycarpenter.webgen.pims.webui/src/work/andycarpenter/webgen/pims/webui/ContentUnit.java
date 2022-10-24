@@ -13,7 +13,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getController <em>Controller</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isCreateDefaultUriElement <em>Create Default Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPurposeSummary <em>Purpose Summary</em>}</li>
@@ -23,7 +23,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass <em>Local Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass <em>Local Content Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit()
@@ -31,34 +30,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * @generated
  */
 public interface ContentUnit extends NamedDisplayElement {
-	/**
-	 * Returns the value of the '<em><b>Displayed On</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Page#getUnits <em>Units</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Displayed On</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Displayed On</em>' container reference.
-	 * @see #setDisplayedOn(Page)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_DisplayedOn()
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getUnits
-	 * @model opposite="units" required="true" transient="false" ordered="false"
-	 * @generated
-	 */
-	Page getDisplayedOn();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Displayed On</em>' container reference.
-	 * @see #getDisplayedOn()
-	 * @generated
-	 */
-	void setDisplayedOn(Page value);
-
 	/**
 	 * Returns the value of the '<em><b>Create Default Uri Element</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
@@ -288,30 +259,27 @@ public interface ContentUnit extends NamedDisplayElement {
 	void setLocalContentClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Page Displayed On</b></em>' reference.
+	 * Returns the value of the '<em><b>Controller</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Controller#getUnits <em>Units</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Page Displayed On</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Page Displayed On</em>' reference.
-	 * @see #isSetPageDisplayedOn()
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_PageDisplayedOn()
-	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if displayedOn.oclIsTypeOf(Page) then\r\n\tdisplayedOn.oclAsType(Page)\r\nelse\r\n\tdisplayedOn.oclAsType(UnitAssociation).displayedOn.pageDisplayedOn\r\nendif'"
+	 * @return the value of the '<em>Controller</em>' container reference.
+	 * @see #setController(Controller)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_Controller()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getUnits
+	 * @model opposite="units" required="true" transient="false" ordered="false"
 	 * @generated
 	 */
-	Page getPageDisplayedOn();
+	Controller getController();
 
 	/**
-	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}' reference is set.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getController <em>Controller</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Page Displayed On</em>' reference is set.
-	 * @see #getPageDisplayedOn()
+	 * @param value the new value of the '<em>Controller</em>' container reference.
+	 * @see #getController()
 	 * @generated
 	 */
-	boolean isSetPageDisplayedOn();
+	void setController(Controller value);
 
 } // ContentUnit

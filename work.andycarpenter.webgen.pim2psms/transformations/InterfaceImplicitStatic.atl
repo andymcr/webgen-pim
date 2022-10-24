@@ -13,8 +13,8 @@ uses WebsiteHelpers;
 rule WafModel {
 	from partialWaf : WAF!WafModel
 	to waf : WAF!WafModel (
-		pages <- 
-			partialWaf.pages
+		controllers <- 
+			partialWaf.controllers
 				->union(
 					if thisModule.findWebsiteProperties().staticUnitsEditable then
 						Sequence{thisModule.implicitStaticTextPage(waf)}
@@ -26,10 +26,10 @@ rule WafModel {
 
 unique lazy rule implicitStaticTextPage {
 	from partialWaf : WAF!WafModel
-	to waf : WAF!Page (
+	to waf : WAF!SinglePageController (
 		name <- 'ManageStaticText',
 		displayLabel <- 'Manage Static Text',
-		units <- Sequence{text, editText},
+		units <- Sequence{textCollection, editText},
 		authenticated <- true,
 		uriElement <- 'static',
 		topMenuOption <- #IncludeWhenAuthenticated,
@@ -44,7 +44,7 @@ unique lazy rule implicitStaticTextPage {
 						thisModule.findWafMenu(sideMenu.name)
 					endif
 	),
-	text : WAF!TabularUnit (
+	textCollection : WAF!TabularUnit (
 		name <- 'Text',
 		displayLabel <- 'Text',
 		contentType <- Sequence{thisModule.findOrmEntity('StaticText')},
@@ -77,16 +77,15 @@ unique lazy rule implicitStaticTextPage {
 		displayLabel <- 'Add/Edit Static Text',
 		contentType <- thisModule.findOrmEntity('StaticText'),
 		omitCaption <- false,
+		confirmDestination <- textCollection,
 		confirmLabel <- 'Save',
 		clearLabel <- 'Clear',
 		displayFields <-
 			thisModule.findOrmEntity('StaticText').features
 				->collect(f | thisModule.implicitUnitAttribute(f)),
 		styleClass <- 'unit update_unit',
-		headerClass <- 'unit_header',
 		captionClass <- 'unit_caption',
 		controlClass <- 'unit_control',
-		footerClass <- 'unit_footer',
 		errorClass <- 'error',
 		contentClass <- 'input_form framed'
 	)

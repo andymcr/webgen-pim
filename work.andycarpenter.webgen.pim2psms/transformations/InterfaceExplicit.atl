@@ -57,7 +57,7 @@ rule WafModel {
 			endif,
 		api <- api,
 		navigation <- website.webUI.navigation,
-		pages <- website.webUI.pages,
+		controllers <- website.webUI.controllers,
 		useFormFloatingLabels <- thisModule.findWebsiteUI().useFormFloatingLabels,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
@@ -291,18 +291,32 @@ rule ThumbnailFilter {
 
 
 -- @extends NamedDisplayElement
-rule Page {
-	from website : Website!Page
-	to waf : WAF!Page (
+abstract rule Controller {
+	from website : Website!Controller
+	to waf : WAF!Controller (
 		uriElement <- website.uriElement.trim(),
-		parentPage <-
-			if website.parentPage.oclIsUndefined() then
+		parentController <-
+			if website.parentController.oclIsUndefined() then
 				OclUndefined
 			else
-				website.parentPage.targetPage
+				website.parentController.targetController
 			endif,
 		units <- website.units,
 		pageClassOverride <- '' -- website.
+	)
+}
+
+-- @extends Controller
+rule SinglePageController {
+	from website : Website!SinglePageController
+	to waf : WAF!SinglePageController (
+	)
+}
+
+-- @extends Controller
+rule MultiPageController {
+	from website : Website!MultiPageController
+	to waf : WAF!MultiPageController (
 	)
 }
 
@@ -642,7 +656,7 @@ abstract rule EditUnit {
 			else
 				''
 			endif endif,
-			confirmDestination <- website.confirmDestination,
+		confirmDestination <- website.confirmDestination,
 		confirmLabel <-
 			if not website.confirmLabel.oclIsUndefined() and website.confirmLabel <> '' then
 				website.confirmLabel

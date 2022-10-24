@@ -8,17 +8,17 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="WebUI">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="pageNameUnique"/>
+      <details key="constraints" value="controllerNameUnique"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="pageNameUnique" value="pages->isUnique(name)"/>
+      <details key="controllerNameUnique" value="controllers->isUnique(name)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Persistence"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="navigation" lowerBound="1"
         eType="#//Navigation" containment="true" eOpposite="#//Navigation/partOf"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//Services"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
-        eType="#//Page" containment="true" eOpposite="#//Page/webUI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" upperBound="-1"
+        eType="#//Controller" containment="true" eOpposite="#//Controller/webUI"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useFormFloatingLabels"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultDateFormat" ordered="false"
@@ -170,33 +170,35 @@
     <eLiterals name="AlwaysInclude"/>
     <eLiterals name="IncludeWhenAuthenticated"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Controller" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="contentUnitNameUniqueWithinPage"/>
+      <details key="constraints" value="contentUnitNameUniqueWithinController"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="contentUnitNameUniqueWithinPage" value="units->isUnique(name)"/>
+      <details key="contentUnitNameUniqueWithinController" value="units->isUnique(name)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="webUI" lowerBound="1" eType="#//WebUI"
-        eOpposite="#//WebUI/pages"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parentPage" ordered="false"
-        eType="#//PageLink" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="childPages" upperBound="-1"
-        eType="#//PageLink" eOpposite="#//PageLink/targetPage"/>
+        eOpposite="#//WebUI/controllers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentController" ordered="false"
+        eType="#//ControllerLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childControllers" upperBound="-1"
+        eType="#//ControllerLink" eOpposite="#//ControllerLink/targetController"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
-        eType="#//ContentUnit" containment="true" eOpposite="#//ContentUnit/displayedOn"/>
+        eType="#//ContentUnit" containment="true" eOpposite="#//ContentUnit/controller"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PageLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPage" lowerBound="1"
-        eType="#//Page" eOpposite="#//Page/childPages"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControllerLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetController" lowerBound="1"
+        eType="#//Controller" eOpposite="#//Controller/childControllers"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SinglePageController" eSuperTypes="#//Controller"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiPageController" eSuperTypes="#//Controller"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContentUnit" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" ordered="false"
-        lowerBound="1" eType="#//Page" eOpposite="#//Page/units"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controller" ordered="false"
+        lowerBound="1" eType="#//Controller" eOpposite="#//Controller/units"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createDefaultUriElement"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -212,12 +214,6 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localContentClass" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageDisplayedOn" eType="#//Page"
-        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if displayedOn.oclIsTypeOf(Page) then&#xD;&#xA;&#x9;displayedOn.oclAsType(Page)&#xD;&#xA;else&#xD;&#xA;&#x9;displayedOn.oclAsType(UnitAssociation).displayedOn.pageDisplayedOn&#xD;&#xA;endif"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaticUnit" eSuperTypes="#//ContentUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" ordered="false"
@@ -370,7 +366,7 @@
       <details key="constraints" value="optionsValidChoice"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xA;&#x9;displayedOn.pageDisplayedOn.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(r : persistence::Repository | r.serves = targetEntity)&#xA;&#x9;&#x9;->collect(r : persistence::Repository | r.selections)&#xA;&#x9;&#x9;->includes(options)"/>
+      <details key="optionsValidChoice" value="not options.oclIsUndefined() implies&#xA;&#x9;displayedOn.controller.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(r : persistence::Repository | r.serves = targetEntity)&#xA;&#x9;&#x9;->collect(r : persistence::Repository | r.selections)&#xA;&#x9;&#x9;->includes(options)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
         changeable="false" derived="true">
@@ -607,7 +603,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="disableWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmDestination" ordered="false"
-        eType="#//Page"/>
+        eType="#//ContentUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmMessage" eType="#//Message"
@@ -615,7 +611,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="successMessage" eType="#//Message"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" ordered="false"
-        eType="#//Page"/>
+        eType="#//ContentUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitInputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -651,7 +647,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="selectionMustBeSingleton" value="not selection.oclIsUndefined() implies&#xD;&#xA;&#x9;selection.limit = 1"/>
-      <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xA;&#x9;pageDisplayedOn.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(s : persistence::Repository | not s.serves.oclIsUndefined())&#xA;&#x9;&#x9;->select(s : persistence::Repository | contentType = s.serves)&#xA;&#x9;&#x9;->collect(s : persistence::Repository | s.selections)&#xA;&#x9;&#x9;->includes(selection)"/>
+      <details key="selectionValidChoice" value="not selection.oclIsUndefined() implies&#xA;&#x9;controller.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(s : persistence::Repository | not s.serves.oclIsUndefined())&#xA;&#x9;&#x9;->select(s : persistence::Repository | contentType = s.serves)&#xA;&#x9;&#x9;->collect(s : persistence::Repository | s.selections)&#xA;&#x9;&#x9;->includes(selection)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" ordered="false"
@@ -733,7 +729,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="submitLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" ordered="false"
-        eType="#//Page"/>
+        eType="#//Controller"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabel" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

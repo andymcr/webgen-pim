@@ -132,10 +132,14 @@ public class WebuiValidator extends EObjectValidator {
 				return validateStaticUnitStyles((StaticUnitStyles)value, diagnostics, context);
 			case WebuiPackage.TABULAR_UNIT_STYLES:
 				return validateTabularUnitStyles((TabularUnitStyles)value, diagnostics, context);
-			case WebuiPackage.PAGE:
-				return validatePage((Page)value, diagnostics, context);
-			case WebuiPackage.PAGE_LINK:
-				return validatePageLink((PageLink)value, diagnostics, context);
+			case WebuiPackage.CONTROLLER:
+				return validateController((Controller)value, diagnostics, context);
+			case WebuiPackage.CONTROLLER_LINK:
+				return validateControllerLink((ControllerLink)value, diagnostics, context);
+			case WebuiPackage.SINGLE_PAGE_CONTROLLER:
+				return validateSinglePageController((SinglePageController)value, diagnostics, context);
+			case WebuiPackage.MULTI_PAGE_CONTROLLER:
+				return validateMultiPageController((MultiPageController)value, diagnostics, context);
 			case WebuiPackage.CONTENT_UNIT:
 				return validateContentUnit((ContentUnit)value, diagnostics, context);
 			case WebuiPackage.STATIC_UNIT:
@@ -282,25 +286,25 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(webUI, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(webUI, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(webUI, diagnostics, context);
-		if (result || diagnostics != null) result &= validateWebUI_pageNameUnique(webUI, diagnostics, context);
+		if (result || diagnostics != null) result &= validateWebUI_controllerNameUnique(webUI, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the pageNameUnique constraint of '<em>Web UI</em>'.
+	 * The cached validation expression for the controllerNameUnique constraint of '<em>Web UI</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String WEB_UI__PAGE_NAME_UNIQUE__EEXPRESSION = "pages->isUnique(name)";
+	protected static final String WEB_UI__CONTROLLER_NAME_UNIQUE__EEXPRESSION = "controllers->isUnique(name)";
 
 	/**
-	 * Validates the pageNameUnique constraint of '<em>Web UI</em>'.
+	 * Validates the controllerNameUnique constraint of '<em>Web UI</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateWebUI_pageNameUnique(WebUI webUI, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateWebUI_controllerNameUnique(WebUI webUI, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(WebuiPackage.Literals.WEB_UI,
@@ -308,8 +312,8 @@ public class WebuiValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "pageNameUnique",
-				 WEB_UI__PAGE_NAME_UNIQUE__EEXPRESSION,
+				 "controllerNameUnique",
+				 WEB_UI__CONTROLLER_NAME_UNIQUE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -561,45 +565,45 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePage(Page page, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(page, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(page, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(page, diagnostics, context);
-		if (result || diagnostics != null) result &= validatePage_contentUnitNameUniqueWithinPage(page, diagnostics, context);
+	public boolean validateController(Controller controller, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(controller, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(controller, diagnostics, context);
+		if (result || diagnostics != null) result &= validateController_contentUnitNameUniqueWithinController(controller, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the contentUnitNameUniqueWithinPage constraint of '<em>Page</em>'.
+	 * The cached validation expression for the contentUnitNameUniqueWithinController constraint of '<em>Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String PAGE__CONTENT_UNIT_NAME_UNIQUE_WITHIN_PAGE__EEXPRESSION = "units->isUnique(name)";
+	protected static final String CONTROLLER__CONTENT_UNIT_NAME_UNIQUE_WITHIN_CONTROLLER__EEXPRESSION = "units->isUnique(name)";
 
 	/**
-	 * Validates the contentUnitNameUniqueWithinPage constraint of '<em>Page</em>'.
+	 * Validates the contentUnitNameUniqueWithinController constraint of '<em>Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePage_contentUnitNameUniqueWithinPage(Page page, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateController_contentUnitNameUniqueWithinController(Controller controller, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(WebuiPackage.Literals.PAGE,
-				 page,
+				(WebuiPackage.Literals.CONTROLLER,
+				 controller,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "contentUnitNameUniqueWithinPage",
-				 PAGE__CONTENT_UNIT_NAME_UNIQUE_WITHIN_PAGE__EEXPRESSION,
+				 "contentUnitNameUniqueWithinController",
+				 CONTROLLER__CONTENT_UNIT_NAME_UNIQUE_WITHIN_CONTROLLER__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -610,8 +614,48 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePageLink(PageLink pageLink, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pageLink, diagnostics, context);
+	public boolean validateControllerLink(ControllerLink controllerLink, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(controllerLink, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSinglePageController(SinglePageController singlePageController, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(singlePageController, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(singlePageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validateController_contentUnitNameUniqueWithinController(singlePageController, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultiPageController(MultiPageController multiPageController, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(multiPageController, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(multiPageController, diagnostics, context);
+		if (result || diagnostics != null) result &= validateController_contentUnitNameUniqueWithinController(multiPageController, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -881,7 +925,7 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\n" +
-		"\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n" +
+		"\tdisplayedOn.controller.webUI.persistence.repositories\n" +
 		"\t\t->select(r : persistence::Repository | r.serves = targetEntity)\n" +
 		"\t\t->collect(r : persistence::Repository | r.selections)\n" +
 		"\t\t->includes(options)";
@@ -1320,7 +1364,7 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
-		"\tpageDisplayedOn.webUI.persistence.repositories\n" +
+		"\tcontroller.webUI.persistence.repositories\n" +
 		"\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n" +
 		"\t\t->select(s : persistence::Repository | contentType = s.serves)\n" +
 		"\t\t->collect(s : persistence::Repository | s.selections)\n" +

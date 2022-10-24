@@ -87,12 +87,12 @@ public interface EditUnit extends SingletonUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Confirm Destination</em>' reference.
-	 * @see #setConfirmDestination(Page)
+	 * @see #setConfirmDestination(ContentUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmDestination()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Page getConfirmDestination();
+	ContentUnit getConfirmDestination();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmDestination <em>Confirm Destination</em>}' reference.
@@ -102,7 +102,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @see #getConfirmDestination()
 	 * @generated
 	 */
-	void setConfirmDestination(Page value);
+	void setConfirmDestination(ContentUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Confirm Label</b></em>' attribute.
@@ -183,12 +183,12 @@ public interface EditUnit extends SingletonUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cancel Destination</em>' reference.
-	 * @see #setCancelDestination(Page)
+	 * @see #setCancelDestination(ContentUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelDestination()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Page getCancelDestination();
+	ContentUnit getCancelDestination();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}' reference.
@@ -198,7 +198,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @see #getCancelDestination()
 	 * @generated
 	 */
-	void setCancelDestination(Page value);
+	void setCancelDestination(ContentUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Cancel Label</b></em>' attribute.

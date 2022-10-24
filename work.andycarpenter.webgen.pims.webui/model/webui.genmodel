@@ -42,8 +42,7 @@
           ecoreFeature="ecore:EReference webui.ecore#//WebUI/navigation"/>
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/services"/>
-      <genFeatures property="None" children="true" createChild="true" propertyCategory=""
-          propertyDescription="" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/pages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/controllers"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/useFormFloatingLabels"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultTimeFormat"/>
@@ -130,22 +129,24 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnitStyles/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnitStyles/footerClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//Page">
+    <genClasses ecoreClass="webui.ecore#//Controller">
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//Page/webUI"/>
+          ecoreFeature="ecore:EReference webui.ecore#//Controller/webUI"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
-          ecoreFeature="ecore:EReference webui.ecore#//Page/parentPage"/>
+          ecoreFeature="ecore:EReference webui.ecore#//Controller/parentController"/>
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//Page/childPages"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Page/units"/>
-      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//Page/uriElement"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Page/styleClass"/>
+          ecoreFeature="ecore:EReference webui.ecore#//Controller/childControllers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//Controller/units"/>
+      <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//Controller/uriElement"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Controller/styleClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//PageLink">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//PageLink/targetPage"/>
+    <genClasses ecoreClass="webui.ecore#//ControllerLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//ControllerLink/targetController"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//SinglePageController"/>
+    <genClasses ecoreClass="webui.ecore#//MultiPageController"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ContentUnit">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ContentUnit/displayedOn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ContentUnit/controller"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/createDefaultUriElement"/>
       <genFeatures createChild="false" propertyCategory="Security" propertyDescription=""
           ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/requiresRole"/>
@@ -156,8 +157,6 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/omitCaption"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/localCaptionClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/localContentClass"/>
-      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//ContentUnit/pageDisplayedOn"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//StaticUnit">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//StaticUnit/content"/>

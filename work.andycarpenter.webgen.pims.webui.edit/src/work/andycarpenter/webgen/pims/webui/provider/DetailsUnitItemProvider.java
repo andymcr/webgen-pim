@@ -79,7 +79,7 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof DetailsUnit) {
 						final DetailsUnit unit = (DetailsUnit) object;
-						return getSelections(unit.getDisplayedOn().getWebUI(),
+						return getSelections(unit.getController().getWebUI(),
 								unit.getContentType());
 					}
 					return Collections.emptySet();
@@ -129,7 +129,7 @@ public class DetailsUnitItemProvider extends SingletonUnitItemProvider {
 	@Override
 	public String getText(Object object) {
 		final DetailsUnit unit = (DetailsUnit) object;
-		final Object displayedOn = unit.getDisplayedOn();
+		final Object displayedOn = unit.getController();
 		String parentLabel = "";
 		final IItemLabelProvider provider
 			= (IItemLabelProvider) adapterFactory.adapt(displayedOn, IItemLabelProvider.class);

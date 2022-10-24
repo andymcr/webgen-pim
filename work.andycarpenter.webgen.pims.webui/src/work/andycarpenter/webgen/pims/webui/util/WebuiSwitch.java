@@ -222,17 +222,35 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PAGE: {
-				Page page = (Page)theEObject;
-				T result = casePage(page);
-				if (result == null) result = caseNamedDisplayElement(page);
-				if (result == null) result = caseNamedElement(page);
+			case WebuiPackage.CONTROLLER: {
+				Controller controller = (Controller)theEObject;
+				T result = caseController(controller);
+				if (result == null) result = caseNamedDisplayElement(controller);
+				if (result == null) result = caseNamedElement(controller);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PAGE_LINK: {
-				PageLink pageLink = (PageLink)theEObject;
-				T result = casePageLink(pageLink);
+			case WebuiPackage.CONTROLLER_LINK: {
+				ControllerLink controllerLink = (ControllerLink)theEObject;
+				T result = caseControllerLink(controllerLink);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.SINGLE_PAGE_CONTROLLER: {
+				SinglePageController singlePageController = (SinglePageController)theEObject;
+				T result = caseSinglePageController(singlePageController);
+				if (result == null) result = caseController(singlePageController);
+				if (result == null) result = caseNamedDisplayElement(singlePageController);
+				if (result == null) result = caseNamedElement(singlePageController);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.MULTI_PAGE_CONTROLLER: {
+				MultiPageController multiPageController = (MultiPageController)theEObject;
+				T result = caseMultiPageController(multiPageController);
+				if (result == null) result = caseController(multiPageController);
+				if (result == null) result = caseNamedDisplayElement(multiPageController);
+				if (result == null) result = caseNamedElement(multiPageController);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1120,32 +1138,62 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Page</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Page</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Controller</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePage(Page object) {
+	public T caseController(Controller object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Page Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Controller Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Page Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Controller Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePageLink(PageLink object) {
+	public T caseControllerLink(ControllerLink object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Single Page Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Single Page Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSinglePageController(SinglePageController object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Multi Page Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multi Page Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultiPageController(MultiPageController object) {
 		return null;
 	}
 

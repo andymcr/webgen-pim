@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.EditUnit;
 import work.andycarpenter.webgen.pims.webui.Message;
-import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -75,7 +75,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 * @ordered
 	 */
-	protected Page confirmDestination;
+	protected ContentUnit confirmDestination;
 
 	/**
 	 * The default value of the '{@link #getConfirmLabel() <em>Confirm Label</em>}' attribute.
@@ -125,7 +125,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 * @ordered
 	 */
-	protected Page cancelDestination;
+	protected ContentUnit cancelDestination;
 
 	/**
 	 * The default value of the '{@link #getCancelLabel() <em>Cancel Label</em>}' attribute.
@@ -260,10 +260,10 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public Page getConfirmDestination() {
+	public ContentUnit getConfirmDestination() {
 		if (confirmDestination != null && confirmDestination.eIsProxy()) {
 			InternalEObject oldConfirmDestination = (InternalEObject)confirmDestination;
-			confirmDestination = (Page)eResolveProxy(oldConfirmDestination);
+			confirmDestination = (ContentUnit)eResolveProxy(oldConfirmDestination);
 			if (confirmDestination != oldConfirmDestination) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION, oldConfirmDestination, confirmDestination));
@@ -277,7 +277,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Page basicGetConfirmDestination() {
+	public ContentUnit basicGetConfirmDestination() {
 		return confirmDestination;
 	}
 
@@ -287,8 +287,8 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public void setConfirmDestination(Page newConfirmDestination) {
-		Page oldConfirmDestination = confirmDestination;
+	public void setConfirmDestination(ContentUnit newConfirmDestination) {
+		ContentUnit oldConfirmDestination = confirmDestination;
 		confirmDestination = newConfirmDestination;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION, oldConfirmDestination, confirmDestination));
@@ -413,10 +413,10 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public Page getCancelDestination() {
+	public ContentUnit getCancelDestination() {
 		if (cancelDestination != null && cancelDestination.eIsProxy()) {
 			InternalEObject oldCancelDestination = (InternalEObject)cancelDestination;
-			cancelDestination = (Page)eResolveProxy(oldCancelDestination);
+			cancelDestination = (ContentUnit)eResolveProxy(oldCancelDestination);
 			if (cancelDestination != oldCancelDestination) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION, oldCancelDestination, cancelDestination));
@@ -430,7 +430,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Page basicGetCancelDestination() {
+	public ContentUnit basicGetCancelDestination() {
 		return cancelDestination;
 	}
 
@@ -440,8 +440,8 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public void setCancelDestination(Page newCancelDestination) {
-		Page oldCancelDestination = cancelDestination;
+	public void setCancelDestination(ContentUnit newCancelDestination) {
+		ContentUnit oldCancelDestination = cancelDestination;
 		cancelDestination = newCancelDestination;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION, oldCancelDestination, cancelDestination));
@@ -558,7 +558,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setDisableWhen((Predicate)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
-				setConfirmDestination((Page)newValue);
+				setConfirmDestination((ContentUnit)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
 				setConfirmLabel((String)newValue);
@@ -570,7 +570,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setSuccessMessage((Message)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((Page)newValue);
+				setCancelDestination((ContentUnit)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel((String)newValue);
@@ -597,7 +597,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setDisableWhen((Predicate)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
-				setConfirmDestination((Page)null);
+				setConfirmDestination((ContentUnit)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
 				setConfirmLabel(CONFIRM_LABEL_EDEFAULT);
@@ -609,7 +609,7 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				setSuccessMessage((Message)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((Page)null);
+				setCancelDestination((ContentUnit)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
 				setCancelLabel(CANCEL_LABEL_EDEFAULT);

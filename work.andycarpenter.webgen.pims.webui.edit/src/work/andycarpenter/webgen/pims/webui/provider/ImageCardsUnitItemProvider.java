@@ -241,7 +241,7 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 	@Override
 	public String getText(Object object) {
 		final ImageCardsUnit unit = (ImageCardsUnit) object;
-		final Object displayedOn = unit.getDisplayedOn();
+		final Object displayedOn = unit.getController();
 		String parentLabel = "";
 		final IItemLabelProvider provider
 			= (IItemLabelProvider) adapterFactory.adapt(displayedOn, IItemLabelProvider.class);

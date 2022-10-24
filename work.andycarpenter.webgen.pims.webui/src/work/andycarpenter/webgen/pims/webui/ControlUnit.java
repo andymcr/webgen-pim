@@ -57,12 +57,12 @@ public interface ControlUnit extends DynamicUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cancel Destination</em>' reference.
-	 * @see #setCancelDestination(Page)
+	 * @see #setCancelDestination(Controller)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit_CancelDestination()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Page getCancelDestination();
+	Controller getCancelDestination();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ControlUnit#getCancelDestination <em>Cancel Destination</em>}' reference.
@@ -72,7 +72,7 @@ public interface ControlUnit extends DynamicUnit {
 	 * @see #getCancelDestination()
 	 * @generated
 	 */
-	void setCancelDestination(Page value);
+	void setCancelDestination(Controller value);
 
 	/**
 	 * Returns the value of the '<em><b>Cancel Label</b></em>' attribute.

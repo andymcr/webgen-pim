@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.service.Services;
 import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
+import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
 import work.andycarpenter.webgen.pims.webui.DetailsUnitStyles;
 import work.andycarpenter.webgen.pims.webui.FormUnitStyles;
 import work.andycarpenter.webgen.pims.webui.GalleryUnitStyles;
 import work.andycarpenter.webgen.pims.webui.Navigation;
-import work.andycarpenter.webgen.pims.webui.Page;
 import work.andycarpenter.webgen.pims.webui.SliderUnitStyles;
 import work.andycarpenter.webgen.pims.webui.StaticUnitStyles;
 import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
@@ -40,7 +40,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPersistence <em>Persistence</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getServices <em>Services</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getPages <em>Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getControllers <em>Controllers</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
@@ -93,14 +93,14 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected Services services;
 
 	/**
-	 * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
+	 * The cached value of the '{@link #getControllers() <em>Controllers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPages()
+	 * @see #getControllers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Page> pages;
+	protected EList<Controller> controllers;
 
 	/**
 	 * The default value of the '{@link #isUseFormFloatingLabels() <em>Use Form Floating Labels</em>}' attribute.
@@ -492,11 +492,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public EList<Page> getPages() {
-		if (pages == null) {
-			pages = new EObjectContainmentWithInverseEList<Page>(Page.class, this, WebuiPackage.WEB_UI__PAGES, WebuiPackage.PAGE__WEB_UI);
+	public EList<Controller> getControllers() {
+		if (controllers == null) {
+			controllers = new EObjectContainmentWithInverseEList<Controller>(Controller.class, this, WebuiPackage.WEB_UI__CONTROLLERS, WebuiPackage.CONTROLLER__WEB_UI);
 		}
-		return pages;
+		return controllers;
 	}
 
 	/**
@@ -1056,8 +1056,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				if (navigation != null)
 					msgs = ((InternalEObject)navigation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__NAVIGATION, null, msgs);
 				return basicSetNavigation((Navigation)otherEnd, msgs);
-			case WebuiPackage.WEB_UI__PAGES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPages()).basicAdd(otherEnd, msgs);
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getControllers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -1072,8 +1072,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		switch (featureID) {
 			case WebuiPackage.WEB_UI__NAVIGATION:
 				return basicSetNavigation(null, msgs);
-			case WebuiPackage.WEB_UI__PAGES:
-				return ((InternalEList<?>)getPages()).basicRemove(otherEnd, msgs);
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				return ((InternalEList<?>)getControllers()).basicRemove(otherEnd, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
 				return basicSetDefaultStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
@@ -1110,8 +1110,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__SERVICES:
 				if (resolve) return getServices();
 				return basicGetServices();
-			case WebuiPackage.WEB_UI__PAGES:
-				return getPages();
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				return getControllers();
 			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
 				return isUseFormFloatingLabels();
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:
@@ -1166,9 +1166,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)newValue);
 				return;
-			case WebuiPackage.WEB_UI__PAGES:
-				getPages().clear();
-				getPages().addAll((Collection<? extends Page>)newValue);
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				getControllers().clear();
+				getControllers().addAll((Collection<? extends Controller>)newValue);
 				return;
 			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
 				setUseFormFloatingLabels((Boolean)newValue);
@@ -1239,8 +1239,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__SERVICES:
 				setServices((Services)null);
 				return;
-			case WebuiPackage.WEB_UI__PAGES:
-				getPages().clear();
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				getControllers().clear();
 				return;
 			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
 				setUseFormFloatingLabels(USE_FORM_FLOATING_LABELS_EDEFAULT);
@@ -1308,8 +1308,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return navigation != null;
 			case WebuiPackage.WEB_UI__SERVICES:
 				return services != null;
-			case WebuiPackage.WEB_UI__PAGES:
-				return pages != null && !pages.isEmpty();
+			case WebuiPackage.WEB_UI__CONTROLLERS:
+				return controllers != null && !controllers.isEmpty();
 			case WebuiPackage.WEB_UI__USE_FORM_FLOATING_LABELS:
 				return useFormFloatingLabels != USE_FORM_FLOATING_LABELS_EDEFAULT;
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_FORMAT:

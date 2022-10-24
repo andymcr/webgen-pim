@@ -474,49 +474,72 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.Page} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ControllerLink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PageItemProvider pageItemProvider;
+	protected ControllerLinkItemProvider controllerLinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.Page}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ControllerLink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPageAdapter() {
-		if (pageItemProvider == null) {
-			pageItemProvider = new PageItemProvider(this);
+	public Adapter createControllerLinkAdapter() {
+		if (controllerLinkItemProvider == null) {
+			controllerLinkItemProvider = new ControllerLinkItemProvider(this);
 		}
 
-		return pageItemProvider;
+		return controllerLinkItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.PageLink} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SinglePageController} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PageLinkItemProvider pageLinkItemProvider;
+	protected SinglePageControllerItemProvider singlePageControllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.PageLink}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.SinglePageController}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPageLinkAdapter() {
-		if (pageLinkItemProvider == null) {
-			pageLinkItemProvider = new PageLinkItemProvider(this);
+	public Adapter createSinglePageControllerAdapter() {
+		if (singlePageControllerItemProvider == null) {
+			singlePageControllerItemProvider = new SinglePageControllerItemProvider(this);
 		}
 
-		return pageLinkItemProvider;
+		return singlePageControllerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.MultiPageController} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MultiPageControllerItemProvider multiPageControllerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.MultiPageController}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMultiPageControllerAdapter() {
+		if (multiPageControllerItemProvider == null) {
+			multiPageControllerItemProvider = new MultiPageControllerItemProvider(this);
+		}
+
+		return multiPageControllerItemProvider;
 	}
 
 	/**

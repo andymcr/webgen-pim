@@ -99,13 +99,13 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__SERVICES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Pages</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Controllers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__PAGES = 3;
+	int WEB_UI__CONTROLLERS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Use Form Floating Labels</b></em>' attribute.
@@ -2124,14 +2124,14 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl <em>Page</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControllerImpl <em>Controller</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.PageImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPage()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ControllerImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getController()
 	 * @generated
 	 */
-	int PAGE = 19;
+	int CONTROLLER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2140,7 +2140,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
+	int CONTROLLER__NAME = BasePackage.NAMED_DISPLAY_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2149,7 +2149,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
+	int CONTROLLER__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Web UI</b></em>' container reference.
@@ -2158,25 +2158,25 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__WEB_UI = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+	int CONTROLLER__WEB_UI = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Parent Page</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parent Controller</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__PARENT_PAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+	int CONTROLLER__PARENT_CONTROLLER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Child Pages</b></em>' reference list.
+	 * The feature id for the '<em><b>Child Controllers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__CHILD_PAGES = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int CONTROLLER__CHILD_CONTROLLERS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Units</b></em>' containment reference list.
@@ -2185,7 +2185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__UNITS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int CONTROLLER__UNITS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -2194,7 +2194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int CONTROLLER__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -2203,62 +2203,262 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__STYLE_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int CONTROLLER__STYLE_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of structural features of the '<em>Page</em>' class.
+	 * The number of structural features of the '<em>Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int CONTROLLER_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The number of operations of the '<em>Page</em>' class.
+	 * The number of operations of the '<em>Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
+	int CONTROLLER_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageLinkImpl <em>Page Link</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControllerLinkImpl <em>Controller Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.PageLinkImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageLink()
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ControllerLinkImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControllerLink()
 	 * @generated
 	 */
-	int PAGE_LINK = 20;
+	int CONTROLLER_LINK = 20;
 
 	/**
-	 * The feature id for the '<em><b>Target Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE_LINK__TARGET_PAGE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Page Link</em>' class.
+	 * The feature id for the '<em><b>Target Controller</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_LINK_FEATURE_COUNT = 1;
+	int CONTROLLER_LINK__TARGET_CONTROLLER = 0;
 
 	/**
-	 * The number of operations of the '<em>Page Link</em>' class.
+	 * The number of structural features of the '<em>Controller Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_LINK_OPERATION_COUNT = 0;
+	int CONTROLLER_LINK_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Controller Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER_LINK_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SinglePageControllerImpl <em>Single Page Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.SinglePageControllerImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSinglePageController()
+	 * @generated
+	 */
+	int SINGLE_PAGE_CONTROLLER = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__NAME = CONTROLLER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__DISPLAY_LABEL = CONTROLLER__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Web UI</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__WEB_UI = CONTROLLER__WEB_UI;
+
+	/**
+	 * The feature id for the '<em><b>Parent Controller</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__PARENT_CONTROLLER = CONTROLLER__PARENT_CONTROLLER;
+
+	/**
+	 * The feature id for the '<em><b>Child Controllers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__CHILD_CONTROLLERS = CONTROLLER__CHILD_CONTROLLERS;
+
+	/**
+	 * The feature id for the '<em><b>Units</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__UNITS = CONTROLLER__UNITS;
+
+	/**
+	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__URI_ELEMENT = CONTROLLER__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER__STYLE_CLASS = CONTROLLER__STYLE_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Single Page Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER_FEATURE_COUNT = CONTROLLER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Single Page Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_PAGE_CONTROLLER_OPERATION_COUNT = CONTROLLER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.MultiPageControllerImpl <em>Multi Page Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.MultiPageControllerImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMultiPageController()
+	 * @generated
+	 */
+	int MULTI_PAGE_CONTROLLER = 22;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__NAME = CONTROLLER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__DISPLAY_LABEL = CONTROLLER__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Web UI</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__WEB_UI = CONTROLLER__WEB_UI;
+
+	/**
+	 * The feature id for the '<em><b>Parent Controller</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__PARENT_CONTROLLER = CONTROLLER__PARENT_CONTROLLER;
+
+	/**
+	 * The feature id for the '<em><b>Child Controllers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__CHILD_CONTROLLERS = CONTROLLER__CHILD_CONTROLLERS;
+
+	/**
+	 * The feature id for the '<em><b>Units</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__UNITS = CONTROLLER__UNITS;
+
+	/**
+	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__URI_ELEMENT = CONTROLLER__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER__STYLE_CLASS = CONTROLLER__STYLE_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Multi Page Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER_FEATURE_COUNT = CONTROLLER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Multi Page Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_PAGE_CONTROLLER_OPERATION_COUNT = CONTROLLER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl <em>Content Unit</em>}' class.
@@ -2268,7 +2468,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnit()
 	 * @generated
 	 */
-	int CONTENT_UNIT = 21;
+	int CONTENT_UNIT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2289,13 +2489,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+	int CONTENT_UNIT__CONTROLLER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -2379,22 +2579,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_UNIT__PAGE_DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
 	 * The number of structural features of the '<em>Content Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Content Unit</em>' class.
@@ -2413,7 +2604,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRouteActual()
 	 * @generated
 	 */
-	int ROUTE_ACTUAL = 25;
+	int ROUTE_ACTUAL = 27;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitImpl <em>Static Unit</em>}' class.
@@ -2423,7 +2614,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnit()
 	 * @generated
 	 */
-	int STATIC_UNIT = 22;
+	int STATIC_UNIT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2444,13 +2635,13 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__DISPLAY_LABEL = CONTENT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_UNIT__DISPLAYED_ON = CONTENT_UNIT__DISPLAYED_ON;
+	int STATIC_UNIT__CONTROLLER = CONTENT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -2534,15 +2725,6 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_UNIT__PAGE_DISPLAYED_ON = CONTENT_UNIT__PAGE_DISPLAYED_ON;
-
-	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2577,7 +2759,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateSitemapUnit()
 	 * @generated
 	 */
-	int CREATE_SITEMAP_UNIT = 23;
+	int CREATE_SITEMAP_UNIT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2598,13 +2780,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__DISPLAY_LABEL = CONTENT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_SITEMAP_UNIT__DISPLAYED_ON = CONTENT_UNIT__DISPLAYED_ON;
+	int CREATE_SITEMAP_UNIT__CONTROLLER = CONTENT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -2688,15 +2870,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_SITEMAP_UNIT__PAGE_DISPLAYED_ON = CONTENT_UNIT__PAGE_DISPLAYED_ON;
-
-	/**
 	 * The feature id for the '<em><b>Deployed URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2740,7 +2913,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnit()
 	 * @generated
 	 */
-	int DYNAMIC_UNIT = 24;
+	int DYNAMIC_UNIT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2761,13 +2934,13 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__DISPLAY_LABEL = CONTENT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__DISPLAYED_ON = CONTENT_UNIT__DISPLAYED_ON;
+	int DYNAMIC_UNIT__CONTROLLER = CONTENT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -2849,15 +3022,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT__LOCAL_CONTENT_CLASS = CONTENT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__PAGE_DISPLAYED_ON = CONTENT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -3110,7 +3274,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitField()
 	 * @generated
 	 */
-	int UNIT_FIELD = 26;
+	int UNIT_FIELD = 28;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3228,7 +3392,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitFeature()
 	 * @generated
 	 */
-	int UNIT_FEATURE = 27;
+	int UNIT_FEATURE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3517,7 +3681,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitElement()
 	 * @generated
 	 */
-	int UNIT_ELEMENT = 28;
+	int UNIT_ELEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -3860,7 +4024,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitAssociation()
 	 * @generated
 	 */
-	int UNIT_ASSOCIATION = 29;
+	int UNIT_ASSOCIATION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -4230,7 +4394,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAttribute()
 	 * @generated
 	 */
-	int CHILD_PATH_ATTRIBUTE = 30;
+	int CHILD_PATH_ATTRIBUTE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -4294,7 +4458,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAssociation()
 	 * @generated
 	 */
-	int CHILD_PATH_ASSOCIATION = 31;
+	int CHILD_PATH_ASSOCIATION = 33;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -4394,7 +4558,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePath()
 	 * @generated
 	 */
-	int FEATURE_PATH = 32;
+	int FEATURE_PATH = 34;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -4458,7 +4622,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAttribute()
 	 * @generated
 	 */
-	int FEATURE_PATH_ATTRIBUTE = 33;
+	int FEATURE_PATH_ATTRIBUTE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -4540,7 +4704,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
 	 * @generated
 	 */
-	int FEATURE_PATH_ASSOCIATION = 34;
+	int FEATURE_PATH_ASSOCIATION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -4658,7 +4822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathLabel()
 	 * @generated
 	 */
-	int FEATURE_PATH_LABEL = 35;
+	int FEATURE_PATH_LABEL = 37;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -4740,7 +4904,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 36;
+	int UNIT_LABEL = 38;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -4876,7 +5040,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 37;
+	int INTERFACE_FIELD = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5093,7 +5257,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 38;
+	int DATA_TYPE_FIELD = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5346,7 +5510,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 39;
+	int DATE_FIELD = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5581,7 +5745,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 40;
+	int SELECTABLE_UNIT = 42;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -5609,7 +5773,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 41;
+	int SINGLETON_UNIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5630,13 +5794,13 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int SINGLETON_UNIT__CONTROLLER = DYNAMIC_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -5718,15 +5882,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -5943,7 +6098,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 42;
+	int COLLECTION_UNIT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5964,13 +6119,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int COLLECTION_UNIT__CONTROLLER = DYNAMIC_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -6052,15 +6207,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -6520,7 +6666,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 43;
+	int EDIT_UNIT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6541,13 +6687,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__DISPLAY_LABEL = SINGLETON_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__DISPLAYED_ON = SINGLETON_UNIT__DISPLAYED_ON;
+	int EDIT_UNIT__CONTROLLER = SINGLETON_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -6629,15 +6775,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT__LOCAL_CONTENT_CLASS = SINGLETON_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__PAGE_DISPLAYED_ON = SINGLETON_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -6935,7 +7072,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 44;
+	int CREATE_UNIT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6956,13 +7093,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int CREATE_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -7044,15 +7181,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -7350,7 +7478,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 46;
+	int CREATE_UPDATE_UNIT = 48;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -7360,7 +7488,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 45;
+	int UPDATE_UNIT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7381,13 +7509,13 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int UPDATE_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -7469,15 +7597,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -7804,13 +7923,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int CREATE_UPDATE_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -7892,15 +8011,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -8225,7 +8335,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 47;
+	int MAP_UNIT = 49;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8246,13 +8356,13 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int MAP_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -8334,15 +8444,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -8676,7 +8777,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 48;
+	int DETAILS_UNIT = 50;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8697,13 +8798,13 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__DISPLAY_LABEL = SINGLETON_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__DISPLAYED_ON = SINGLETON_UNIT__DISPLAYED_ON;
+	int DETAILS_UNIT__CONTROLLER = SINGLETON_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -8785,15 +8886,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_UNIT__LOCAL_CONTENT_CLASS = SINGLETON_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__PAGE_DISPLAYED_ON = SINGLETON_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -9028,7 +9120,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 49;
+	int TABULAR_UNIT = 51;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9049,13 +9141,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT__DISPLAYED_ON = COLLECTION_UNIT__DISPLAYED_ON;
+	int TABULAR_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -9137,15 +9229,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -9632,7 +9715,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 50;
+	int CARDS_UNIT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9653,13 +9736,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__DISPLAYED_ON = COLLECTION_UNIT__DISPLAYED_ON;
+	int CARDS_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -9741,15 +9824,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -10290,7 +10364,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 52;
+	int TEXT_CARDS_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -10300,7 +10374,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 53;
+	int DATE_CARDS_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -10310,7 +10384,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 58;
+	int CONTROL_UNIT = 60;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -10320,7 +10394,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 59;
+	int SEARCH_UNIT = 61;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
@@ -10330,7 +10404,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 54;
+	int IMAGE_UNIT = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -10340,7 +10414,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 55;
+	int IMAGE_CARDS_UNIT = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -10350,7 +10424,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 56;
+	int SLIDER_UNIT = 58;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -10360,7 +10434,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 57;
+	int GALLERY_UNIT = 59;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -10370,7 +10444,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 69;
+	int SELECT_ACTION = 71;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -10380,7 +10454,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 68;
+	int DELETE_ACTION = 70;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -10390,7 +10464,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 51;
+	int BADGE = 53;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -10483,13 +10557,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
+	int TEXT_CARDS_UNIT__CONTROLLER = CARDS_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -10571,15 +10645,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -11131,13 +11196,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
+	int DATE_CARDS_UNIT__CONTROLLER = CARDS_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -11219,15 +11284,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -11788,13 +11844,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__DISPLAYED_ON = COLLECTION_UNIT__DISPLAYED_ON;
+	int IMAGE_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -11876,15 +11932,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PAGE_DISPLAYED_ON = COLLECTION_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -12391,13 +12438,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__DISPLAY_LABEL = CARDS_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__DISPLAYED_ON = CARDS_UNIT__DISPLAYED_ON;
+	int IMAGE_CARDS_UNIT__CONTROLLER = CARDS_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -12479,15 +12526,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__LOCAL_CONTENT_CLASS = CARDS_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PAGE_DISPLAYED_ON = CARDS_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -13102,13 +13140,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__DISPLAY_LABEL = IMAGE_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__DISPLAYED_ON = IMAGE_UNIT__DISPLAYED_ON;
+	int SLIDER_UNIT__CONTROLLER = IMAGE_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -13190,15 +13228,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PAGE_DISPLAYED_ON = IMAGE_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -13723,13 +13752,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__DISPLAY_LABEL = IMAGE_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__DISPLAYED_ON = IMAGE_UNIT__DISPLAYED_ON;
+	int GALLERY_UNIT__CONTROLLER = IMAGE_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -13811,15 +13840,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PAGE_DISPLAYED_ON = IMAGE_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -14353,13 +14373,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int CONTROL_UNIT__CONTROLLER = DYNAMIC_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -14441,15 +14461,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -14695,13 +14706,13 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__DISPLAY_LABEL = CONTROL_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__DISPLAYED_ON = CONTROL_UNIT__DISPLAYED_ON;
+	int SEARCH_UNIT__CONTROLLER = CONTROL_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -14783,15 +14794,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__LOCAL_CONTENT_CLASS = CONTROL_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__PAGE_DISPLAYED_ON = CONTROL_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -15035,7 +15037,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 60;
+	int REGISTRATION_UNIT = 62;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15056,13 +15058,13 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int REGISTRATION_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -15144,15 +15146,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -15450,7 +15443,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 61;
+	int LOGIN_UNIT = 63;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15471,13 +15464,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int LOGIN_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -15559,15 +15552,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -15865,7 +15849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 62;
+	int LOGOUT_UNIT = 64;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15886,13 +15870,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__DISPLAY_LABEL = DYNAMIC_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__DISPLAYED_ON = DYNAMIC_UNIT__DISPLAYED_ON;
+	int LOGOUT_UNIT__CONTROLLER = DYNAMIC_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -15974,15 +15958,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGOUT_UNIT__LOCAL_CONTENT_CLASS = DYNAMIC_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__PAGE_DISPLAYED_ON = DYNAMIC_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -16190,7 +16165,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 63;
+	int FORGOTTEN_PASSWORD_UNIT = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16211,13 +16186,13 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int FORGOTTEN_PASSWORD_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -16299,15 +16274,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -16659,7 +16625,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
 	 * @generated
 	 */
-	int RESET_PASSWORD_UNIT = 64;
+	int RESET_PASSWORD_UNIT = 66;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16680,13 +16646,13 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__DISPLAY_LABEL = EDIT_UNIT__DISPLAY_LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
+	 * The feature id for the '<em><b>Controller</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESET_PASSWORD_UNIT__DISPLAYED_ON = EDIT_UNIT__DISPLAYED_ON;
+	int RESET_PASSWORD_UNIT__CONTROLLER = EDIT_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -16768,15 +16734,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__LOCAL_CONTENT_CLASS = EDIT_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Page Displayed On</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESET_PASSWORD_UNIT__PAGE_DISPLAYED_ON = EDIT_UNIT__PAGE_DISPLAYED_ON;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -17074,7 +17031,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 65;
+	int ACTION_CONTAINER = 67;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -17138,7 +17095,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 66;
+	int ACTION = 68;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17292,7 +17249,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 67;
+	int SECURITY_ACTION = 69;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17473,7 +17430,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 73;
+	int OPERATION_ACTION = 75;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -17483,7 +17440,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 70;
+	int CONTAINER_SELECT_ACTION = 72;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -17493,7 +17450,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 71;
+	int INSTANCE_SELECT_ACTION = 73;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -18133,7 +18090,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTargetAction()
 	 * @generated
 	 */
-	int TARGET_ACTION = 72;
+	int TARGET_ACTION = 74;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18485,7 +18442,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 75;
+	int INSTANCE_OPERATION_ACTION = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -18495,7 +18452,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 74;
+	int CONTAINER_OPERATION_ACTION = 76;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18865,7 +18822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 76;
+	int GENERAL_OPERATION_ACTION = 78;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -19055,7 +19012,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 77;
+	int MESSAGE = 79;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -19101,7 +19058,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 78;
+	int AUTHENTICATION_MENU_PLACEMENT = 80;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -19111,7 +19068,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 79;
+	int PAGE_TOP_MENU_OPTIONS = 81;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -19121,7 +19078,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 80;
+	int COLLECTION_DISPLAY_OPTIONS = 82;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -19131,7 +19088,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 81;
+	int PAGINATION_CONTROL_PLACEMENTS = 83;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.
@@ -19141,7 +19098,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerActionsPlacement()
 	 * @generated
 	 */
-	int CONTAINER_ACTIONS_PLACEMENT = 82;
+	int CONTAINER_ACTIONS_PLACEMENT = 84;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
@@ -19151,7 +19108,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
 	 * @generated
 	 */
-	int INSTANCE_ACTIONS_PLACEMENT = 83;
+	int INSTANCE_ACTIONS_PLACEMENT = 85;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -19197,15 +19154,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getWebUI_Services();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}'.
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.WebUI#getControllers <em>Controllers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pages</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getPages()
+	 * @return the meta object for the containment reference list '<em>Controllers</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getControllers()
 	 * @see #getWebUI()
 	 * @generated
 	 */
-	EReference getWebUI_Pages();
+	EReference getWebUI_Controllers();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}'.
@@ -19971,101 +19928,121 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getTabularUnitStyles_FooterClass();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Page <em>Page</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Page</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page
+	 * @return the meta object for class '<em>Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Controller
 	 * @generated
 	 */
-	EClass getPage();
+	EClass getController();
 
 	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.Page#getWebUI <em>Web UI</em>}'.
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.Controller#getWebUI <em>Web UI</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Web UI</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getWebUI()
-	 * @see #getPage()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getWebUI()
+	 * @see #getController()
 	 * @generated
 	 */
-	EReference getPage_WebUI();
+	EReference getController_WebUI();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.Page#getParentPage <em>Parent Page</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.Controller#getParentController <em>Parent Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Parent Page</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getParentPage()
-	 * @see #getPage()
+	 * @return the meta object for the containment reference '<em>Parent Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getParentController()
+	 * @see #getController()
 	 * @generated
 	 */
-	EReference getPage_ParentPage();
+	EReference getController_ParentController();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.Page#getChildPages <em>Child Pages</em>}'.
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.Controller#getChildControllers <em>Child Controllers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Child Pages</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getChildPages()
-	 * @see #getPage()
+	 * @return the meta object for the reference list '<em>Child Controllers</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getChildControllers()
+	 * @see #getController()
 	 * @generated
 	 */
-	EReference getPage_ChildPages();
+	EReference getController_ChildControllers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.Page#getUnits <em>Units</em>}'.
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.Controller#getUnits <em>Units</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Units</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getUnits()
-	 * @see #getPage()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getUnits()
+	 * @see #getController()
 	 * @generated
 	 */
-	EReference getPage_Units();
+	EReference getController_Units();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Page#getUriElement <em>Uri Element</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Controller#getUriElement <em>Uri Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Uri Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getUriElement()
-	 * @see #getPage()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getUriElement()
+	 * @see #getController()
 	 * @generated
 	 */
-	EAttribute getPage_UriElement();
+	EAttribute getController_UriElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Page#getStyleClass <em>Style Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Controller#getStyleClass <em>Style Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getStyleClass()
-	 * @see #getPage()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getStyleClass()
+	 * @see #getController()
 	 * @generated
 	 */
-	EAttribute getPage_StyleClass();
+	EAttribute getController_StyleClass();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PageLink <em>Page Link</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ControllerLink <em>Controller Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Page Link</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.PageLink
+	 * @return the meta object for class '<em>Controller Link</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ControllerLink
 	 * @generated
 	 */
-	EClass getPageLink();
+	EClass getControllerLink();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PageLink#getTargetPage <em>Target Page</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ControllerLink#getTargetController <em>Target Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Page</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.PageLink#getTargetPage()
-	 * @see #getPageLink()
+	 * @return the meta object for the reference '<em>Target Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ControllerLink#getTargetController()
+	 * @see #getControllerLink()
 	 * @generated
 	 */
-	EReference getPageLink_TargetPage();
+	EReference getControllerLink_TargetController();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SinglePageController <em>Single Page Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Single Page Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.SinglePageController
+	 * @generated
+	 */
+	EClass getSinglePageController();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.MultiPageController <em>Multi Page Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multi Page Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.MultiPageController
+	 * @generated
+	 */
+	EClass getMultiPageController();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ContentUnit <em>Content Unit</em>}'.
@@ -20076,17 +20053,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getContentUnit();
-
-	/**
-	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn <em>Displayed On</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Displayed On</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getDisplayedOn()
-	 * @see #getContentUnit()
-	 * @generated
-	 */
-	EReference getContentUnit_DisplayedOn();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isCreateDefaultUriElement <em>Create Default Uri Element</em>}'.
@@ -20188,15 +20154,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_LocalContentClass();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn <em>Page Displayed On</em>}'.
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getController <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Page Displayed On</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getPageDisplayedOn()
+	 * @return the meta object for the container reference '<em>Controller</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getController()
 	 * @see #getContentUnit()
 	 * @generated
 	 */
-	EReference getContentUnit_PageDisplayedOn();
+	EReference getContentUnit_Controller();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.RouteActual <em>Route Actual</em>}'.
@@ -23142,12 +23108,12 @@ public interface WebuiPackage extends EPackage {
 		EReference WEB_UI__SERVICES = eINSTANCE.getWebUI_Services();
 
 		/**
-		 * The meta object literal for the '<em><b>Pages</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Controllers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WEB_UI__PAGES = eINSTANCE.getWebUI_Pages();
+		EReference WEB_UI__CONTROLLERS = eINSTANCE.getWebUI_Controllers();
 
 		/**
 		 * The meta object literal for the '<em><b>Use Form Floating Labels</b></em>' attribute feature.
@@ -23754,14 +23720,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute TABULAR_UNIT_STYLES__FOOTER_CLASS = eINSTANCE.getTabularUnitStyles_FooterClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageImpl <em>Page</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControllerImpl <em>Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.PageImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPage()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ControllerImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getController()
 		 * @generated
 		 */
-		EClass PAGE = eINSTANCE.getPage();
+		EClass CONTROLLER = eINSTANCE.getController();
 
 		/**
 		 * The meta object literal for the '<em><b>Web UI</b></em>' container reference feature.
@@ -23769,23 +23735,23 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE__WEB_UI = eINSTANCE.getPage_WebUI();
+		EReference CONTROLLER__WEB_UI = eINSTANCE.getController_WebUI();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent Page</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Parent Controller</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE__PARENT_PAGE = eINSTANCE.getPage_ParentPage();
+		EReference CONTROLLER__PARENT_CONTROLLER = eINSTANCE.getController_ParentController();
 
 		/**
-		 * The meta object literal for the '<em><b>Child Pages</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Child Controllers</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE__CHILD_PAGES = eINSTANCE.getPage_ChildPages();
+		EReference CONTROLLER__CHILD_CONTROLLERS = eINSTANCE.getController_ChildControllers();
 
 		/**
 		 * The meta object literal for the '<em><b>Units</b></em>' containment reference list feature.
@@ -23793,7 +23759,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE__UNITS = eINSTANCE.getPage_Units();
+		EReference CONTROLLER__UNITS = eINSTANCE.getController_Units();
 
 		/**
 		 * The meta object literal for the '<em><b>Uri Element</b></em>' attribute feature.
@@ -23801,7 +23767,7 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PAGE__URI_ELEMENT = eINSTANCE.getPage_UriElement();
+		EAttribute CONTROLLER__URI_ELEMENT = eINSTANCE.getController_UriElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
@@ -23809,25 +23775,45 @@ public interface WebuiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PAGE__STYLE_CLASS = eINSTANCE.getPage_StyleClass();
+		EAttribute CONTROLLER__STYLE_CLASS = eINSTANCE.getController_StyleClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PageLinkImpl <em>Page Link</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControllerLinkImpl <em>Controller Link</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.PageLinkImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageLink()
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ControllerLinkImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControllerLink()
 		 * @generated
 		 */
-		EClass PAGE_LINK = eINSTANCE.getPageLink();
+		EClass CONTROLLER_LINK = eINSTANCE.getControllerLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Page</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Controller</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE_LINK__TARGET_PAGE = eINSTANCE.getPageLink_TargetPage();
+		EReference CONTROLLER_LINK__TARGET_CONTROLLER = eINSTANCE.getControllerLink_TargetController();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SinglePageControllerImpl <em>Single Page Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.SinglePageControllerImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSinglePageController()
+		 * @generated
+		 */
+		EClass SINGLE_PAGE_CONTROLLER = eINSTANCE.getSinglePageController();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.MultiPageControllerImpl <em>Multi Page Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.MultiPageControllerImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMultiPageController()
+		 * @generated
+		 */
+		EClass MULTI_PAGE_CONTROLLER = eINSTANCE.getMultiPageController();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl <em>Content Unit</em>}' class.
@@ -23838,14 +23824,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTENT_UNIT = eINSTANCE.getContentUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Displayed On</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT_UNIT__DISPLAYED_ON = eINSTANCE.getContentUnit_DisplayedOn();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Default Uri Element</b></em>' attribute feature.
@@ -23920,12 +23898,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__LOCAL_CONTENT_CLASS = eINSTANCE.getContentUnit_LocalContentClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Page Displayed On</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Controller</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENT_UNIT__PAGE_DISPLAYED_ON = eINSTANCE.getContentUnit_PageDisplayedOn();
+		EReference CONTENT_UNIT__CONTROLLER = eINSTANCE.getContentUnit_Controller();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.RouteActualImpl <em>Route Actual</em>}' class.

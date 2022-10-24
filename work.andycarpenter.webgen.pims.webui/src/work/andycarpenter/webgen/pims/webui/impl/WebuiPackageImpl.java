@@ -34,6 +34,8 @@ import work.andycarpenter.webgen.pims.webui.ContainerSelectAction;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.ContentUnitStyles;
 import work.andycarpenter.webgen.pims.webui.ControlUnit;
+import work.andycarpenter.webgen.pims.webui.Controller;
+import work.andycarpenter.webgen.pims.webui.ControllerLink;
 import work.andycarpenter.webgen.pims.webui.CreateSitemapUnit;
 import work.andycarpenter.webgen.pims.webui.CreateUnit;
 import work.andycarpenter.webgen.pims.webui.CreateUpdateUnit;
@@ -70,10 +72,9 @@ import work.andycarpenter.webgen.pims.webui.Menu;
 import work.andycarpenter.webgen.pims.webui.MenuEntry;
 import work.andycarpenter.webgen.pims.webui.MenuFeature;
 import work.andycarpenter.webgen.pims.webui.Message;
+import work.andycarpenter.webgen.pims.webui.MultiPageController;
 import work.andycarpenter.webgen.pims.webui.Navigation;
 import work.andycarpenter.webgen.pims.webui.OperationAction;
-import work.andycarpenter.webgen.pims.webui.Page;
-import work.andycarpenter.webgen.pims.webui.PageLink;
 import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
@@ -83,6 +84,7 @@ import work.andycarpenter.webgen.pims.webui.SearchUnit;
 import work.andycarpenter.webgen.pims.webui.SecurityAction;
 import work.andycarpenter.webgen.pims.webui.SelectAction;
 import work.andycarpenter.webgen.pims.webui.SelectableUnit;
+import work.andycarpenter.webgen.pims.webui.SinglePageController;
 import work.andycarpenter.webgen.pims.webui.SingletonUnit;
 import work.andycarpenter.webgen.pims.webui.SliderUnit;
 import work.andycarpenter.webgen.pims.webui.SliderUnitStyles;
@@ -250,14 +252,28 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pageEClass = null;
+	private EClass controllerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pageLinkEClass = null;
+	private EClass controllerLinkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass singlePageControllerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiPageControllerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -825,7 +841,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_Pages() {
+	public EReference getWebUI_Controllers() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1545,8 +1561,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getPage() {
-		return pageEClass;
+	public EClass getController() {
+		return controllerEClass;
 	}
 
 	/**
@@ -1555,8 +1571,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_WebUI() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(0);
+	public EReference getController_WebUI() {
+		return (EReference)controllerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1565,8 +1581,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_ParentPage() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(1);
+	public EReference getController_ParentController() {
+		return (EReference)controllerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1575,8 +1591,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_ChildPages() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(2);
+	public EReference getController_ChildControllers() {
+		return (EReference)controllerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1585,8 +1601,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_Units() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(3);
+	public EReference getController_Units() {
+		return (EReference)controllerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1595,8 +1611,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPage_UriElement() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(4);
+	public EAttribute getController_UriElement() {
+		return (EAttribute)controllerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1605,8 +1621,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPage_StyleClass() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(5);
+	public EAttribute getController_StyleClass() {
+		return (EAttribute)controllerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1615,8 +1631,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getPageLink() {
-		return pageLinkEClass;
+	public EClass getControllerLink() {
+		return controllerLinkEClass;
 	}
 
 	/**
@@ -1625,8 +1641,28 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPageLink_TargetPage() {
-		return (EReference)pageLinkEClass.getEStructuralFeatures().get(0);
+	public EReference getControllerLink_TargetController() {
+		return (EReference)controllerLinkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSinglePageController() {
+		return singlePageControllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMultiPageController() {
+		return multiPageControllerEClass;
 	}
 
 	/**
@@ -1637,16 +1673,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EClass getContentUnit() {
 		return contentUnitEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getContentUnit_DisplayedOn() {
-		return (EReference)contentUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1745,8 +1771,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContentUnit_PageDisplayedOn() {
-		return (EReference)contentUnitEClass.getEStructuralFeatures().get(10);
+	public EReference getContentUnit_Controller() {
+		return (EReference)contentUnitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4462,7 +4488,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(webUIEClass, WEB_UI__PERSISTENCE);
 		createEReference(webUIEClass, WEB_UI__NAVIGATION);
 		createEReference(webUIEClass, WEB_UI__SERVICES);
-		createEReference(webUIEClass, WEB_UI__PAGES);
+		createEReference(webUIEClass, WEB_UI__CONTROLLERS);
 		createEAttribute(webUIEClass, WEB_UI__USE_FORM_FLOATING_LABELS);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_DATE_FORMAT);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_TIME_FORMAT);
@@ -4553,19 +4579,23 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(tabularUnitStylesEClass, TABULAR_UNIT_STYLES__HEADER_CLASS);
 		createEAttribute(tabularUnitStylesEClass, TABULAR_UNIT_STYLES__FOOTER_CLASS);
 
-		pageEClass = createEClass(PAGE);
-		createEReference(pageEClass, PAGE__WEB_UI);
-		createEReference(pageEClass, PAGE__PARENT_PAGE);
-		createEReference(pageEClass, PAGE__CHILD_PAGES);
-		createEReference(pageEClass, PAGE__UNITS);
-		createEAttribute(pageEClass, PAGE__URI_ELEMENT);
-		createEAttribute(pageEClass, PAGE__STYLE_CLASS);
+		controllerEClass = createEClass(CONTROLLER);
+		createEReference(controllerEClass, CONTROLLER__WEB_UI);
+		createEReference(controllerEClass, CONTROLLER__PARENT_CONTROLLER);
+		createEReference(controllerEClass, CONTROLLER__CHILD_CONTROLLERS);
+		createEReference(controllerEClass, CONTROLLER__UNITS);
+		createEAttribute(controllerEClass, CONTROLLER__URI_ELEMENT);
+		createEAttribute(controllerEClass, CONTROLLER__STYLE_CLASS);
 
-		pageLinkEClass = createEClass(PAGE_LINK);
-		createEReference(pageLinkEClass, PAGE_LINK__TARGET_PAGE);
+		controllerLinkEClass = createEClass(CONTROLLER_LINK);
+		createEReference(controllerLinkEClass, CONTROLLER_LINK__TARGET_CONTROLLER);
+
+		singlePageControllerEClass = createEClass(SINGLE_PAGE_CONTROLLER);
+
+		multiPageControllerEClass = createEClass(MULTI_PAGE_CONTROLLER);
 
 		contentUnitEClass = createEClass(CONTENT_UNIT);
-		createEReference(contentUnitEClass, CONTENT_UNIT__DISPLAYED_ON);
+		createEReference(contentUnitEClass, CONTENT_UNIT__CONTROLLER);
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT);
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__REQUIRES_ROLE);
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__PURPOSE_SUMMARY);
@@ -4575,7 +4605,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__OMIT_CAPTION);
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__LOCAL_CAPTION_CLASS);
 		createEAttribute(contentUnitEClass, CONTENT_UNIT__LOCAL_CONTENT_CLASS);
-		createEReference(contentUnitEClass, CONTENT_UNIT__PAGE_DISPLAYED_ON);
 
 		staticUnitEClass = createEClass(STATIC_UNIT);
 		createEAttribute(staticUnitEClass, STATIC_UNIT__CONTENT);
@@ -4958,7 +4987,9 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		sliderUnitStylesEClass.getESuperTypes().add(this.getCollectionUnitStyles());
 		staticUnitStylesEClass.getESuperTypes().add(this.getContentUnitStyles());
 		tabularUnitStylesEClass.getESuperTypes().add(this.getCollectionUnitStyles());
-		pageEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
+		controllerEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
+		singlePageControllerEClass.getESuperTypes().add(this.getController());
+		multiPageControllerEClass.getESuperTypes().add(this.getController());
 		contentUnitEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		staticUnitEClass.getESuperTypes().add(this.getContentUnit());
 		createSitemapUnitEClass.getESuperTypes().add(this.getContentUnit());
@@ -5033,7 +5064,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getWebUI_Persistence(), thePersistencePackage.getPersistence(), null, "persistence", null, 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_Navigation(), this.getNavigation(), this.getNavigation_PartOf(), "navigation", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_Services(), theServicePackage.getServices(), null, "services", null, 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebUI_Pages(), this.getPage(), this.getPage_WebUI(), "pages", null, 0, -1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebUI_Controllers(), this.getController(), this.getController_WebUI(), "controllers", null, 0, -1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_UseFormFloatingLabels(), ecorePackage.getEBoolean(), "useFormFloatingLabels", "false", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDateFormat(), ecorePackage.getEString(), "defaultDateFormat", "jS F Y", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getWebUI_DefaultTimeFormat(), ecorePackage.getEString(), "defaultTimeFormat", "G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -5124,19 +5155,23 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getTabularUnitStyles_HeaderClass(), ecorePackage.getEString(), "headerClass", null, 0, 1, TabularUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTabularUnitStyles_FooterClass(), ecorePackage.getEString(), "footerClass", null, 0, 1, TabularUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPage_WebUI(), this.getWebUI(), this.getWebUI_Pages(), "webUI", null, 1, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPage_ParentPage(), this.getPageLink(), null, "parentPage", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPage_ChildPages(), this.getPageLink(), this.getPageLink_TargetPage(), "childPages", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPage_Units(), this.getContentUnit(), this.getContentUnit_DisplayedOn(), "units", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_UriElement(), ecorePackage.getEString(), "uriElement", "", 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_StyleClass(), ecorePackage.getEString(), "styleClass", "", 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(controllerEClass, Controller.class, "Controller", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getController_WebUI(), this.getWebUI(), this.getWebUI_Controllers(), "webUI", null, 1, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getController_ParentController(), this.getControllerLink(), null, "parentController", null, 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getController_ChildControllers(), this.getControllerLink(), this.getControllerLink_TargetController(), "childControllers", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getController_Units(), this.getContentUnit(), this.getContentUnit_Controller(), "units", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getController_UriElement(), ecorePackage.getEString(), "uriElement", "", 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getController_StyleClass(), ecorePackage.getEString(), "styleClass", "", 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(pageLinkEClass, PageLink.class, "PageLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPageLink_TargetPage(), this.getPage(), this.getPage_ChildPages(), "targetPage", null, 1, 1, PageLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(controllerLinkEClass, ControllerLink.class, "ControllerLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getControllerLink_TargetController(), this.getController(), this.getController_ChildControllers(), "targetController", null, 1, 1, ControllerLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(singlePageControllerEClass, SinglePageController.class, "SinglePageController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(multiPageControllerEClass, MultiPageController.class, "MultiPageController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(contentUnitEClass, ContentUnit.class, "ContentUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContentUnit_DisplayedOn(), this.getPage(), this.getPage_Units(), "displayedOn", null, 1, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getContentUnit_Controller(), this.getController(), this.getController_Units(), "controller", null, 1, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getContentUnit_CreateDefaultUriElement(), ecorePackage.getEBoolean(), "createDefaultUriElement", "true", 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContentUnit_RequiresRole(), ecorePackage.getEString(), "requiresRole", "", 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContentUnit_PurposeSummary(), ecorePackage.getEString(), "purposeSummary", null, 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5146,7 +5181,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getContentUnit_OmitCaption(), ecorePackage.getEBoolean(), "omitCaption", null, 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContentUnit_LocalCaptionClass(), ecorePackage.getEString(), "localCaptionClass", "", 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContentUnit_LocalContentClass(), ecorePackage.getEString(), "localContentClass", "", 0, 1, ContentUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getContentUnit_PageDisplayedOn(), this.getPage(), null, "pageDisplayedOn", null, 0, 1, ContentUnit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(staticUnitEClass, StaticUnit.class, "StaticUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStaticUnit_Content(), ecorePackage.getEString(), "content", null, 0, 1, StaticUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -5311,11 +5345,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(editUnitEClass, EditUnit.class, "EditUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEditUnit_UseCaptcha(), ecorePackage.getEBoolean(), "useCaptcha", "false", 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_DisableWhen(), theExpressionPackage.getPredicate(), null, "disableWhen", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEditUnit_ConfirmDestination(), this.getPage(), null, "confirmDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEditUnit_ConfirmDestination(), this.getContentUnit(), null, "confirmDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEditUnit_ConfirmLabel(), ecorePackage.getEString(), "confirmLabel", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEditUnit_ConfirmMessage(), this.getMessage(), null, "confirmMessage", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_SuccessMessage(), this.getMessage(), null, "successMessage", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEditUnit_CancelDestination(), this.getPage(), null, "cancelDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEditUnit_CancelDestination(), this.getContentUnit(), null, "cancelDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEditUnit_CancelLabel(), ecorePackage.getEString(), "cancelLabel", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEditUnit_UnitInputGroupClass(), ecorePackage.getEString(), "unitInputGroupClass", "", 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -5391,7 +5425,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(controlUnitEClass, ControlUnit.class, "ControlUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getControlUnit_SubmitLabel(), ecorePackage.getEString(), "submitLabel", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getControlUnit_CancelDestination(), this.getPage(), null, "cancelDestination", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getControlUnit_CancelDestination(), this.getController(), null, "cancelDestination", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getControlUnit_CancelLabel(), ecorePackage.getEString(), "cancelLabel", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(searchUnitEClass, SearchUnit.class, "SearchUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5525,7 +5559,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (webUIEClass,
 		   source,
 		   new String[] {
-			   "constraints", "pageNameUnique"
+			   "constraints", "controllerNameUnique"
 		   });
 		addAnnotation
 		  (navigationEClass,
@@ -5534,10 +5568,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			   "constraints", "menuNameUnique "
 		   });
 		addAnnotation
-		  (pageEClass,
+		  (controllerEClass,
 		   source,
 		   new String[] {
-			   "constraints", "contentUnitNameUniqueWithinPage"
+			   "constraints", "contentUnitNameUniqueWithinController"
 		   });
 		addAnnotation
 		  (dynamicUnitEClass,
@@ -5601,7 +5635,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (webUIEClass,
 		   source,
 		   new String[] {
-			   "pageNameUnique", "pages->isUnique(name)"
+			   "controllerNameUnique", "controllers->isUnique(name)"
 		   });
 		addAnnotation
 		  (navigationEClass,
@@ -5610,16 +5644,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 			   "menuNameUnique", "menus->isUnique(name)"
 		   });
 		addAnnotation
-		  (pageEClass,
+		  (controllerEClass,
 		   source,
 		   new String[] {
-			   "contentUnitNameUniqueWithinPage", "units->isUnique(name)"
-		   });
-		addAnnotation
-		  (getContentUnit_PageDisplayedOn(),
-		   source,
-		   new String[] {
-			   "derivation", "if displayedOn.oclIsTypeOf(Page) then\r\n\tdisplayedOn.oclAsType(Page)\r\nelse\r\n\tdisplayedOn.oclAsType(UnitAssociation).displayedOn.pageDisplayedOn\r\nendif"
+			   "contentUnitNameUniqueWithinController", "units->isUnique(name)"
 		   });
 		addAnnotation
 		  (dynamicUnitEClass,
@@ -5650,7 +5678,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (unitAssociationEClass,
 		   source,
 		   new String[] {
-			   "optionsValidChoice", "not options.oclIsUndefined() implies\n\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n\t\t->select(r : persistence::Repository | r.serves = targetEntity)\n\t\t->collect(r : persistence::Repository | r.selections)\n\t\t->includes(options)"
+			   "optionsValidChoice", "not options.oclIsUndefined() implies\n\tdisplayedOn.controller.webUI.persistence.repositories\n\t\t->select(r : persistence::Repository | r.serves = targetEntity)\n\t\t->collect(r : persistence::Repository | r.selections)\n\t\t->includes(options)"
 		   });
 		addAnnotation
 		  (getUnitAssociation_ContainingType(),
@@ -5754,7 +5782,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   source,
 		   new String[] {
 			   "selectionMustBeSingleton", "not selection.oclIsUndefined() implies\r\n\tselection.limit = 1",
-			   "selectionValidChoice", "not selection.oclIsUndefined() implies\n\tpageDisplayedOn.webUI.persistence.repositories\n\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n\t\t->select(s : persistence::Repository | contentType = s.serves)\n\t\t->collect(s : persistence::Repository | s.selections)\n\t\t->includes(selection)"
+			   "selectionValidChoice", "not selection.oclIsUndefined() implies\n\tcontroller.webUI.persistence.repositories\n\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n\t\t->select(s : persistence::Repository | contentType = s.serves)\n\t\t->collect(s : persistence::Repository | s.selections)\n\t\t->includes(selection)"
 		   });
 		addAnnotation
 		  (actionContainerEClass,

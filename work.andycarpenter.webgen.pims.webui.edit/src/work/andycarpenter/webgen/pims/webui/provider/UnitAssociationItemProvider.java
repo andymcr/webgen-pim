@@ -193,7 +193,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					if (object instanceof UnitAssociation) {
 						final UnitAssociation association = (UnitAssociation) object;
 						if (association.getTargetEntity() != null) {
-							return getSelections(association.getDisplayedOn().getDisplayedOn().getWebUI(),
+							return getSelections(association.getDisplayedOn().getController().getWebUI(),
 								association.getTargetEntity());
 						}
 					}

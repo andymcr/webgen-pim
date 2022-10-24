@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPersistence <em>Persistence</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getNavigation <em>Navigation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getServices <em>Services</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getPages <em>Pages</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getControllers <em>Controllers</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#isUseFormFloatingLabels <em>Use Form Floating Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateFormat <em>Default Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
@@ -40,8 +40,8 @@ import work.andycarpenter.webgen.pims.service.Services;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='pageNameUnique'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL pageNameUnique='pages-&gt;isUnique(name)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='controllerNameUnique'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL controllerNameUnique='controllers-&gt;isUnique(name)'"
  * @generated
  */
 public interface WebUI extends EObject {
@@ -118,22 +118,18 @@ public interface WebUI extends EObject {
 	void setServices(Services value);
 
 	/**
-	 * Returns the value of the '<em><b>Pages</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Page}.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Page#getWebUI <em>Web UI</em>}'.
+	 * Returns the value of the '<em><b>Controllers</b></em>' containment reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Controller}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.Controller#getWebUI <em>Web UI</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pages</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pages</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_Pages()
-	 * @see work.andycarpenter.webgen.pims.webui.Page#getWebUI
+	 * @return the value of the '<em>Controllers</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_Controllers()
+	 * @see work.andycarpenter.webgen.pims.webui.Controller#getWebUI
 	 * @model opposite="webUI" containment="true"
 	 * @generated
 	 */
-	EList<Page> getPages();
+	EList<Controller> getControllers();
 
 	/**
 	 * Returns the value of the '<em><b>Use Form Floating Labels</b></em>' attribute.

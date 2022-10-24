@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.webui.ControlUnit;
-import work.andycarpenter.webgen.pims.webui.Page;
+import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -57,7 +57,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * @generated
 	 * @ordered
 	 */
-	protected Page cancelDestination;
+	protected Controller cancelDestination;
 
 	/**
 	 * The default value of the '{@link #getCancelLabel() <em>Cancel Label</em>}' attribute.
@@ -127,10 +127,10 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * @generated
 	 */
 	@Override
-	public Page getCancelDestination() {
+	public Controller getCancelDestination() {
 		if (cancelDestination != null && cancelDestination.eIsProxy()) {
 			InternalEObject oldCancelDestination = (InternalEObject)cancelDestination;
-			cancelDestination = (Page)eResolveProxy(oldCancelDestination);
+			cancelDestination = (Controller)eResolveProxy(oldCancelDestination);
 			if (cancelDestination != oldCancelDestination) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.CONTROL_UNIT__CANCEL_DESTINATION, oldCancelDestination, cancelDestination));
@@ -144,7 +144,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Page basicGetCancelDestination() {
+	public Controller basicGetCancelDestination() {
 		return cancelDestination;
 	}
 
@@ -154,8 +154,8 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 	 * @generated
 	 */
 	@Override
-	public void setCancelDestination(Page newCancelDestination) {
-		Page oldCancelDestination = cancelDestination;
+	public void setCancelDestination(Controller newCancelDestination) {
+		Controller oldCancelDestination = cancelDestination;
 		cancelDestination = newCancelDestination;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTROL_UNIT__CANCEL_DESTINATION, oldCancelDestination, cancelDestination));
@@ -215,7 +215,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 				setSubmitLabel((String)newValue);
 				return;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((Page)newValue);
+				setCancelDestination((Controller)newValue);
 				return;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				setCancelLabel((String)newValue);
@@ -236,7 +236,7 @@ public abstract class ControlUnitImpl extends DynamicUnitImpl implements Control
 				setSubmitLabel(SUBMIT_LABEL_EDEFAULT);
 				return;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((Page)null);
+				setCancelDestination((Controller)null);
 				return;
 			case WebuiPackage.CONTROL_UNIT__CANCEL_LABEL:
 				setCancelLabel(CANCEL_LABEL_EDEFAULT);

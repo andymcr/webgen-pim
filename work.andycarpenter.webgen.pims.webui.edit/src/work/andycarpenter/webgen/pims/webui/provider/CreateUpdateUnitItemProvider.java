@@ -139,7 +139,7 @@ public class CreateUpdateUnitItemProvider extends EditUnitItemProvider {
 	@Override
 	public String getText(Object object) {
 		final CreateUpdateUnit unit = (CreateUpdateUnit) object;
-		final Object displayedOn = unit.getDisplayedOn();
+		final Object displayedOn = unit.getController();
 		String parentLabel = "";
 		final IItemLabelProvider provider
 			= (IItemLabelProvider) adapterFactory.adapt(displayedOn, IItemLabelProvider.class);

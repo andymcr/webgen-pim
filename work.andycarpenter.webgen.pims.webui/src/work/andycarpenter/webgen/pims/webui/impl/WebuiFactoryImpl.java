@@ -73,8 +73,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.SLIDER_UNIT_STYLES: return createSliderUnitStyles();
 			case WebuiPackage.STATIC_UNIT_STYLES: return createStaticUnitStyles();
 			case WebuiPackage.TABULAR_UNIT_STYLES: return createTabularUnitStyles();
-			case WebuiPackage.PAGE: return createPage();
-			case WebuiPackage.PAGE_LINK: return createPageLink();
+			case WebuiPackage.CONTROLLER_LINK: return createControllerLink();
+			case WebuiPackage.SINGLE_PAGE_CONTROLLER: return createSinglePageController();
+			case WebuiPackage.MULTI_PAGE_CONTROLLER: return createMultiPageController();
 			case WebuiPackage.STATIC_UNIT: return createStaticUnit();
 			case WebuiPackage.CREATE_SITEMAP_UNIT: return createCreateSitemapUnit();
 			case WebuiPackage.ROUTE_ACTUAL: return createRouteActual();
@@ -352,9 +353,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public Page createPage() {
-		PageImpl page = new PageImpl();
-		return page;
+	public ControllerLink createControllerLink() {
+		ControllerLinkImpl controllerLink = new ControllerLinkImpl();
+		return controllerLink;
 	}
 
 	/**
@@ -363,9 +364,20 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public PageLink createPageLink() {
-		PageLinkImpl pageLink = new PageLinkImpl();
-		return pageLink;
+	public SinglePageController createSinglePageController() {
+		SinglePageControllerImpl singlePageController = new SinglePageControllerImpl();
+		return singlePageController;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public MultiPageController createMultiPageController() {
+		MultiPageControllerImpl multiPageController = new MultiPageControllerImpl();
+		return multiPageController;
 	}
 
 	/**

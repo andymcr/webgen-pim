@@ -162,7 +162,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						return getSelections(unit.getDisplayedOn().getWebUI(),
+						return getSelections(unit.getController().getWebUI(),
 								unit.getContentType());
 					}
 					return Collections.emptySet();
@@ -191,7 +191,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
 						if (unit.getContainingType() != null) {
-							return getSelections(unit.getDisplayedOn().getWebUI(),
+							return getSelections(unit.getController().getWebUI(),
 									unit.getContainingType());
 						}
 					}
@@ -221,7 +221,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						return getSelections(unit.getDisplayedOn().getWebUI(),
+						return getSelections(unit.getController().getWebUI(),
 								unit.getContentType());
 					}
 					return Collections.emptySet();

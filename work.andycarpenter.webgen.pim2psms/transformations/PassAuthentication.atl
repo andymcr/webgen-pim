@@ -15,7 +15,7 @@ uses WebsiteHelpers;
 rule WafModel {
 	from partialWaf : WAF!WafModel
 	to waf : WAF!WafModel (
-		pages <- partialWaf.pages
+		controllers <- partialWaf.controllers
 			->union(
 				let security : Website!Security = thisModule.findWebsiteSecurity()
 					in if not security.isLocallyAuthenticated() then
@@ -133,10 +133,10 @@ unique lazy rule implicitChangePasswordElement {
 
 unique lazy rule implicitAuthenticationsPage {
 	from website : Website!LocalAuthenticationSystem
-	to waf : WAF!Page (
+	to waf : WAF!MultiPageController (
 		name <- 'ManageAuthentications',
 		displayLabel <- 'Manage Authentications',
-		parentPage <- thisModule.findWafPage('admin'),
+		parentController <- thisModule.findWafController('admin'),
 		units <- Sequence{authentications, update},
 		uriElement <- 'authentications'
 	),
@@ -187,6 +187,7 @@ unique lazy rule implicitAuthenticationsPage {
 		displayLabel <- 'Update Authentication',
 		authorisationRoles <- website.editRole,
 		omitCaption <- false,
+		confirmDestination <- authentications,
 		confirmLabel <- 'Save',
 		contentType <-
 			if website.authenticationModel.oclIsUndefined() then

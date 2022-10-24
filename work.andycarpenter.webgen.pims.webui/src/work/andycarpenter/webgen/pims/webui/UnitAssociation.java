@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='optionsValidChoice'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() implies\n\tdisplayedOn.pageDisplayedOn.webUI.persistence.repositories\n\t\t-&gt;select(r : persistence::Repository | r.serves = targetEntity)\n\t\t-&gt;collect(r : persistence::Repository | r.selections)\n\t\t-&gt;includes(options)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() implies\n\tdisplayedOn.controller.webUI.persistence.repositories\n\t\t-&gt;select(r : persistence::Repository | r.serves = targetEntity)\n\t\t-&gt;collect(r : persistence::Repository | r.selections)\n\t\t-&gt;includes(options)'"
  * @generated
  */
 public interface UnitAssociation extends UnitFeature, AssociationReference {

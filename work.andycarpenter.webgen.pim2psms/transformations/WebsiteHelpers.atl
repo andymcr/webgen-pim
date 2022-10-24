@@ -68,17 +68,17 @@ helper context Website!BusinessOperation def: findBusinessOperation() : Service!
 	= self.definedBy.findService().getBusinessOperation(self.name);
 
 
-helper def: findWafPage(name : String) : WAF!Page
-	= WAF!Page.allInstancesFrom('waf')->any(s | s.name.toLowerCase() = name.toLowerCase());
+helper def: findWafController(name : String) : WAF!Controller
+	= WAF!Controller.allInstancesFrom('waf')->any(s | s.name.toLowerCase() = name.toLowerCase());
 
-helper context Website!Page def: findWafPage() : WAF!Page
-	= WAF!Page.allInstancesFrom('waf')->any(s | s.name = self.name);
+helper context Website!Controller def: findWafController() : WAF!Controller
+	= WAF!Controller.allInstancesFrom('waf')->any(s | s.name = self.name);
 
-helper context WAF!Page def: getWafUnit(name : String) : WAF!ContentUnit
+helper context WAF!Controller def: getWafUnit(name : String) : WAF!ContentUnit
 	= self.units->any(u | u.name = name);
 
 helper context Website!ContentUnit def: findWafUnit() : WAF!ContentUnit
-	= self.displayedOn.findWafPage().getWafUnit(self.name);
+	= self.displayedOn.findWafController().getWafUnit(self.name);
 
 
 helper context Website!UnitField def: dateFormat() : String
