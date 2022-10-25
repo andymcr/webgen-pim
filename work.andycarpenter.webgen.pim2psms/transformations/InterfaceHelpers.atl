@@ -6,22 +6,6 @@ uses WebsiteHelpers;
 uses PersistenceHelpers;
 
 
-helper context Website!DynamicUnit def: findServicesUsed() : Sequence(Service!Service)
-	= self.actionServices()->collect(s | s.findService())
-		->asSet()
-		->asSequence()->sortedBy(s | s.name);
-
-helper context Website!DynamicUnit def: actionServices() : Sequence(Website!Service)
-	= if self.oclIsKindOf(Website!ActionContainer) then
-			self.actions
-				->select(a | a.oclIsKindOf(Website!OperationAction))
-				->select(a | not a.operation.oclIsUndefined())
-				->collect(a | a.operation.definedBy)
-		else
-			Sequence{}
-		endif;
-	
-
 helper context Website!Feature def: defaultDisplayValue() : String
 	= if self.defaultDisplayValue.trim() <> '' then
 				self.defaultDisplayValue.trim()

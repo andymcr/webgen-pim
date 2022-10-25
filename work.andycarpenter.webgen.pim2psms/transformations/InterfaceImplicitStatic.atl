@@ -57,15 +57,7 @@ unique lazy rule implicitStaticTextPage {
 				= thisModule.findOrmEntity('StaticText').features
 				in features
 					->collect(f | thisModule.implicitUnitAttribute(f)),
-		actions <- Sequence{editTextAction},
-		styleClass <- '',
-		headerClass <- 'unit_header',
-		captionClass <- 'unit_caption',
-		controlClass <- 'unit_control',
-		footerClass <- 'unit_footer',
-		errorClass <- 'error',
-		contentClass <- '',
-		rowClasses <- 'odd_row even_row'
+		actions <- Sequence{editTextAction}
 	),
 	editTextAction : WAF!InstanceSelectAction (
 		name <- 'edit',
@@ -78,16 +70,11 @@ unique lazy rule implicitStaticTextPage {
 		contentType <- thisModule.findOrmEntity('StaticText'),
 		omitCaption <- false,
 		confirmDestination <- textCollection,
-		confirmLabel <- 'Save',
+		confirmLabel <- 'SaveX',
 		clearLabel <- 'Clear',
 		displayFields <-
 			thisModule.findOrmEntity('StaticText').features
-				->collect(f | thisModule.implicitUnitAttribute(f)),
-		styleClass <- 'unit update_unit',
-		captionClass <- 'unit_caption',
-		controlClass <- 'unit_control',
-		errorClass <- 'error',
-		contentClass <- 'input_form framed'
+				->collect(f | thisModule.implicitUnitAttribute(f))
 	)
 	do {
 		waf;

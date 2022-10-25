@@ -23,7 +23,7 @@ abstract rule SingletonUnit {
 		displayFields <-
 			if partialWaf.displayFields->notEmpty()
 					or partialWaf.contentType.oclIsUndefined()
-					or  not partialWaf.hasWhenFieldsEmptyAddImplicitFields then
+					or  not thisModule.findWebsiteUnit(partialWaf.name).hasWhenFieldsEmptyAddImplicitFields then
 				partialWaf.displayFields
 			else
 				partialWaf.contentType.features
@@ -49,7 +49,7 @@ abstract rule CollectionUnit {
 		displayFields <-
 			if partialWaf.displayFields->notEmpty()
 					or partialWaf.contentType.oclIsUndefined()
-					or  not partialWaf.hasWhenFieldsEmptyAddImplicitFields then
+					or  not  thisModule.findWebsiteUnit(partialWaf.name).hasWhenFieldsEmptyAddImplicitFields then
 				partialWaf.displayFields
 			else
 				partialWaf.contentType.features

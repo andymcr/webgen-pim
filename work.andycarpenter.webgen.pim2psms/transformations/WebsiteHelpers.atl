@@ -74,11 +74,15 @@ helper def: findWafController(name : String) : WAF!Controller
 helper context Website!Controller def: findWafController() : WAF!Controller
 	= WAF!Controller.allInstancesFrom('waf')->any(s | s.name = self.name);
 
-helper context WAF!Controller def: getWafUnit(name : String) : WAF!ContentUnit
-	= self.units->any(u | u.name = name);
+
+helper def: findWebsiteUnit(name : String) : Website!ContentUnit
+	= Website!ContentUnit.allInstancesFrom('website')->any(u | u.name = name);
 
 helper context Website!ContentUnit def: findWafUnit() : WAF!ContentUnit
 	= self.displayedOn.findWafController().getWafUnit(self.name);
+
+helper context WAF!Controller def: getWafUnit(name : String) : WAF!ContentUnit
+	= self.units->any(u | u.name = name);
 
 
 helper context Website!UnitField def: dateFormat() : String
