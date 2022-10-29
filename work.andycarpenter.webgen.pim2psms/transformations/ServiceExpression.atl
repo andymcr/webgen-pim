@@ -12,9 +12,12 @@ helper context Website!Expression def: isServiceExpression() : Boolean
 			false
 		else if self.rootContainer.oclIsKindOf(Website!Service) then
 			true
+		else if self.rootContainer.oclIsKindOf(Website!Constant)
+				and self.rootContainer.definedBy.oclIsKindOf(Website!Service) then
+			true
 		else
 			false
-		endif endif;
+		endif endif endif;
 
 
 rule NullLiteral {
