@@ -136,7 +136,7 @@ rule RepositoryFeatureReference {
 			if website.feature.oclIsKindOf(Website!Attribute) then
 				website.feature.findOrmAttribute()
 			else 
-				if website.rootContainer.oclIsUndefined() then
+				if website.rootContainer.oclIsUndefined() or website.feature.oclIsUndefined() then
 						OclUndefined
 					else
 						let x : Website!Entity

@@ -20,19 +20,7 @@ rule SecurityModel {
 abstract rule Authentication {
 	from website : Website!Authentication
 	to security : Security!Authentication (
-		userModel <-
-			if website.user.oclIsUndefined() then
-				OclUndefined
-			else
-				thisModule.findOrmEntity(website.user.name)
-			endif,
-		userKey <-
-			if website.user.oclIsUndefined() 
-					or website.userKey.oclIsUndefined() then
-				OclUndefined
-			else
-				website.userKey.findOrmAttribute()
-			endif
+		userModel <-thisModule.findOrmEntity(website.userModel.name)
 	)
 }
 
@@ -46,14 +34,36 @@ rule LocalAuthenticationSystem {
 			else
 				thisModule.findOrmEntity(website.authenticationModel.name)
 			endif,
-			authenticationKey <- website.authenticationKey,
-		identifierFeture <-
-			if website.authenticationKey = #Username then
+		userKey <-
+			if not website.userKey.oclIsUndefined() then
+				website.userKey.findOrmAttribute()
+			else if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('username')
 			else
-				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('email')
+				thisModule.findOrmEntity(website.authenticationModel.name).getOrmFeature('username')
+			endif endif,
+		authenticationKey <-
+			if not website.authenticationKey.oclIsUndefined() then
+				website.authenticationKey.findOrmAttribute()
+			else
+				thisModule.findOrmEntity(website.userModel.name).getOrmFeature('username')
 			endif,
-		passwordFeature <- thisModule.findOrmEntity(website.authenticationName).getOrmFeature('password'),
+		identifierFeature <-
+			if not website.identifierFeature.oclIsUndefined() then
+				website.identifierFeature.findOrmAttribute()
+			else if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('email')
+			else
+				thisModule.findOrmEntity(website.authenticationModel.name).getOrmFeature('email')
+			endif endif,
+		passwordFeature <-
+			if not website.passwordFeature.oclIsUndefined() then
+				website.passwordFeature.findOrmAttribute()
+			else if website.authenticationModel.oclIsUndefined() then
+				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('password')
+			else
+				thisModule.findOrmEntity(website.authenticationModel.name).getOrmFeature('password')
+			endif endif,
 		resetPasswordRequestModel <-
 			if website.resetPasswordRequestModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.resetPasswordRequestName)

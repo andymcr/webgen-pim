@@ -61,8 +61,7 @@ public class AuthenticationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addSecurityPropertyDescriptor(object);
-			addUserPropertyDescriptor(object);
-			addUserKeyPropertyDescriptor(object);
+			addUserModelPropertyDescriptor(object);
 			addImplicitRegistrationNamePropertyDescriptor(object);
 			addImplicitRegistrationUnitLabelPropertyDescriptor(object);
 			addImplicitRegistrationActionLabelPropertyDescriptor(object);
@@ -120,55 +119,25 @@ public class AuthenticationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the User feature.
+	 * This adds a property descriptor for the User Model feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUserPropertyDescriptor(Object object) {
+	protected void addUserModelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Authentication_user_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_user_feature", "_UI_Authentication_type"),
-				 SecurityPackage.Literals.AUTHENTICATION__USER,
+				 getString("_UI_Authentication_userModel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Authentication_userModel_feature", "_UI_Authentication_type"),
+				 SecurityPackage.Literals.AUTHENTICATION__USER_MODEL,
 				 true,
 				 false,
 				 true,
 				 null,
 				 getString("_UI_SecurityPropertyCategory"),
 				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the User Key feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addUserKeyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_Authentication_userKey_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_Authentication_userKey_feature", "_UI_Authentication_type"),
-			SecurityPackage.Literals.AUTHENTICATION__USER_KEY,
-			true, false, true, null,
-			getString("_UI_SecurityPropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof Authentication) {
-						final Authentication authentication = (Authentication) object;
-						if (authentication.getUser() != null) {
-							return authentication.getUser().getAttributes();
-						}
-					}
-
-					return super.getChoiceOfValues(object);
-				}
-			});
 	}
 
 	/**

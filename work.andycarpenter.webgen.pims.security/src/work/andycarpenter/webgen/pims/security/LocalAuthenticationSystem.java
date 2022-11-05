@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.security;
 
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
@@ -15,7 +16,10 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationModel <em>Authentication Model</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationName <em>Authentication Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getUserKey <em>User Key</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getIdentifierFeature <em>Identifier Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getPasswordFeature <em>Password Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestModel <em>Reset Password Request Model</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestName <em>Reset Password Request Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getRegistrationUnit <em>Registration Unit</em>}</li>
@@ -34,8 +38,8 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='captchaRequiresKeys'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL captchaRequiresKeys='-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()\r\ntrue'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='authenticationKeyFromUserModel authenticationKeyRequiredAttribute userKeyFromAuthhenticationModel userKeyRequiredAttribute'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL authenticationKeyFromUserModel='not userModel.oclIsUndefined() and not authenticationKey.oclIsUndefined() implies\n\tuserModel.features-&gt;includes(authenticationKey)' authenticationKeyRequiredAttribute='not authenticationKey.oclIsUndefined() implies\n\tauthenticationKey.cardinality = persistence::Cardinality::Required' userKeyFromAuthhenticationModel='not authenticationModel.oclIsUndefined() and not userKey.oclIsUndefined() implies\n\tauthenticationModel.features-&gt;includes(userKey)' userKeyRequiredAttribute='not userKey.oclIsUndefined() implies\n\tuserKey.cardinality = persistence::Cardinality::Required'"
  * @generated
  */
 public interface LocalAuthenticationSystem extends Authentication {
@@ -85,33 +89,92 @@ public interface LocalAuthenticationSystem extends Authentication {
 	void setAuthenticationName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Authentication Key</b></em>' attribute.
-	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes}.
+	 * Returns the value of the '<em><b>User Key</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Authentication Key</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Authentication Key</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes
-	 * @see #setAuthenticationKey(AuthenticationKeyTypes)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_AuthenticationKey()
-	 * @model required="true"
+	 * @return the value of the '<em>User Key</em>' reference.
+	 * @see #setUserKey(Attribute)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_UserKey()
+	 * @model
 	 * @generated
 	 */
-	AuthenticationKeyTypes getAuthenticationKey();
+	Attribute getUserKey();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getUserKey <em>User Key</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Authentication Key</em>' attribute.
-	 * @see work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes
+	 * @param value the new value of the '<em>User Key</em>' reference.
+	 * @see #getUserKey()
+	 * @generated
+	 */
+	void setUserKey(Attribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Authentication Key</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authentication Key</em>' reference.
+	 * @see #setAuthenticationKey(Attribute)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_AuthenticationKey()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Attribute getAuthenticationKey();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authentication Key</em>' reference.
 	 * @see #getAuthenticationKey()
 	 * @generated
 	 */
-	void setAuthenticationKey(AuthenticationKeyTypes value);
+	void setAuthenticationKey(Attribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Identifier Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Identifier Feature</em>' reference.
+	 * @see #setIdentifierFeature(Attribute)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_IdentifierFeature()
+	 * @model
+	 * @generated
+	 */
+	Attribute getIdentifierFeature();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getIdentifierFeature <em>Identifier Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Identifier Feature</em>' reference.
+	 * @see #getIdentifierFeature()
+	 * @generated
+	 */
+	void setIdentifierFeature(Attribute value);
+
+	/**
+	 * Returns the value of the '<em><b>Password Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Password Feature</em>' reference.
+	 * @see #setPasswordFeature(Attribute)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getLocalAuthenticationSystem_PasswordFeature()
+	 * @model
+	 * @generated
+	 */
+	Attribute getPasswordFeature();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getPasswordFeature <em>Password Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password Feature</em>' reference.
+	 * @see #getPasswordFeature()
+	 * @generated
+	 */
+	void setPasswordFeature(Attribute value);
 
 	/**
 	 * Returns the value of the '<em><b>Reset Password Request Model</b></em>' reference.

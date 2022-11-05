@@ -3,8 +3,6 @@
 package work.andycarpenter.webgen.pims.security;
 
 import org.eclipse.emf.ecore.EObject;
-
-import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
@@ -17,8 +15,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getSecurity <em>Security</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUserKey <em>User Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getUserModel <em>User Model</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationName <em>Implicit Registration Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationUnitLabel <em>Implicit Registration Unit Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationActionLabel <em>Implicit Registration Action Label</em>}</li>
@@ -53,8 +50,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *
  * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication()
  * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='userKeyFromUser userKeyRequiredAttribute'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL userKeyFromUser='not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n\tuser.features-&gt;includes(userKey)' userKeyRequiredAttribute='not userKey.oclIsUndefined() implies\n\tuserKey.cardinality = persistence::Cardinality::Required'"
  * @generated
  */
 public interface Authentication extends EObject {
@@ -87,56 +82,26 @@ public interface Authentication extends EObject {
 	void setSecurity(Security value);
 
 	/**
-	 * Returns the value of the '<em><b>User</b></em>' reference.
+	 * Returns the value of the '<em><b>User Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>User</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User</em>' reference.
-	 * @see #setUser(Entity)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_User()
+	 * @return the value of the '<em>User Model</em>' reference.
+	 * @see #setUserModel(Entity)
+	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_UserModel()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Entity getUser();
+	Entity getUserModel();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getUserModel <em>User Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User</em>' reference.
-	 * @see #getUser()
+	 * @param value the new value of the '<em>User Model</em>' reference.
+	 * @see #getUserModel()
 	 * @generated
 	 */
-	void setUser(Entity value);
-
-	/**
-	 * Returns the value of the '<em><b>User Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>User Key</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Key</em>' reference.
-	 * @see #setUserKey(Attribute)
-	 * @see work.andycarpenter.webgen.pims.security.SecurityPackage#getAuthentication_UserKey()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Attribute getUserKey();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.security.Authentication#getUserKey <em>User Key</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Key</em>' reference.
-	 * @see #getUserKey()
-	 * @generated
-	 */
-	void setUserKey(Attribute value);
+	void setUserModel(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Implicit Registration Name</b></em>' attribute.

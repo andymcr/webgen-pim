@@ -23,9 +23,11 @@ helper context Website!UnitAssociation def: defaultDisplayValue() : String
 helper context Website!UnitElement def: defaultDisplayValue() : String
 	= if self.defaultDisplayValue.trim() <> '' then
 			self.defaultDisplayValue.trim()
+		else if self.attribute.oclIsUndefined() then
+			''
 		else
 			self.attribute.defaultDisplayValue()
-		endif;
+		endif endif;
 
 helper context Website!Feature def: displayLabel() : String
 	= if self.displayLabel.trim() <> '' then
@@ -51,9 +53,11 @@ helper context Website!UnitAssociation def: emptyDisplayValue() : String
 helper context Website!UnitElement def: emptyDisplayValue() : String
 	= if self.emptyDisplayValue.trim() <> '' then
 			self.emptyDisplayValue.trim()
+		else if self.attribute.oclIsUndefined() then
+			''
 		else
 			self.attribute.emptyDisplayValue()
-		endif;
+		endif endif;
 
 helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
 	= if entity.features->includes(self) then

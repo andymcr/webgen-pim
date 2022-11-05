@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.security;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -115,22 +114,13 @@ public interface SecurityPackage extends EPackage {
 	int AUTHENTICATION__SECURITY = 0;
 
 	/**
-	 * The feature id for the '<em><b>User</b></em>' reference.
+	 * The feature id for the '<em><b>User Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__USER = 1;
-
-	/**
-	 * The feature id for the '<em><b>User Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTHENTICATION__USER_KEY = 2;
+	int AUTHENTICATION__USER_MODEL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
@@ -139,7 +129,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_REGISTRATION_NAME = 3;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Unit Label</b></em>' attribute.
@@ -148,7 +138,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL = 4;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Action Label</b></em>' attribute.
@@ -157,7 +147,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_REGISTRATION_ACTION_LABEL = 5;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_ACTION_LABEL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Confirm Label</b></em>' attribute.
@@ -166,7 +156,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_REGISTRATION_CONFIRM_LABEL = 6;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_CONFIRM_LABEL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Uri</b></em>' attribute.
@@ -175,7 +165,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_REGISTRATION_URI = 7;
+	int AUTHENTICATION__IMPLICIT_REGISTRATION_URI = 6;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Login Name</b></em>' attribute.
@@ -184,7 +174,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGIN_NAME = 8;
+	int AUTHENTICATION__IMPLICIT_LOGIN_NAME = 7;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Login Unit Label</b></em>' attribute.
@@ -193,7 +183,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGIN_UNIT_LABEL = 9;
+	int AUTHENTICATION__IMPLICIT_LOGIN_UNIT_LABEL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Login Action Label</b></em>' attribute.
@@ -202,7 +192,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGIN_ACTION_LABEL = 10;
+	int AUTHENTICATION__IMPLICIT_LOGIN_ACTION_LABEL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Login Confirm Label</b></em>' attribute.
@@ -211,7 +201,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGIN_CONFIRM_LABEL = 11;
+	int AUTHENTICATION__IMPLICIT_LOGIN_CONFIRM_LABEL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Login Uri</b></em>' attribute.
@@ -220,7 +210,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGIN_URI = 12;
+	int AUTHENTICATION__IMPLICIT_LOGIN_URI = 11;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Logout Name</b></em>' attribute.
@@ -229,7 +219,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGOUT_NAME = 13;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_NAME = 12;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Logout Unit Label</b></em>' attribute.
@@ -238,7 +228,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGOUT_UNIT_LABEL = 14;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_UNIT_LABEL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Logout Action Label</b></em>' attribute.
@@ -247,7 +237,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGOUT_ACTION_LABEL = 15;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_ACTION_LABEL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Logout Confirm Label</b></em>' attribute.
@@ -256,7 +246,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGOUT_CONFIRM_LABEL = 16;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_CONFIRM_LABEL = 15;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Logout Uri</b></em>' attribute.
@@ -265,7 +255,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_LOGOUT_URI = 17;
+	int AUTHENTICATION__IMPLICIT_LOGOUT_URI = 16;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Name</b></em>' attribute.
@@ -274,7 +264,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME = 18;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_NAME = 17;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Unit Label</b></em>' attribute.
@@ -283,7 +273,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL = 19;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_UNIT_LABEL = 18;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Action Label</b></em>' attribute.
@@ -292,7 +282,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL = 20;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_ACTION_LABEL = 19;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Confirm Label</b></em>' attribute.
@@ -301,7 +291,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = 21;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_CONFIRM_LABEL = 20;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Request</b></em>' attribute.
@@ -310,7 +300,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = 22;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_REQUEST = 21;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Uri Email Sent</b></em>' attribute.
@@ -319,7 +309,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = 23;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_URI_EMAIL_SENT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Email Subject</b></em>' attribute.
@@ -328,7 +318,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = 24;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SUBJECT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Email Message</b></em>' attribute.
@@ -337,7 +327,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_MESSAGE = 25;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_MESSAGE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Email Sent Caption</b></em>' attribute.
@@ -346,7 +336,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_CAPTION = 26;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_CAPTION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Forgotten Password Email Sent Message</b></em>' attribute.
@@ -355,7 +345,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_MESSAGE = 27;
+	int AUTHENTICATION__IMPLICIT_FORGOTTEN_PASSWORD_EMAIL_SENT_MESSAGE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Reset Password Name</b></em>' attribute.
@@ -364,7 +354,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_NAME = 28;
+	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_NAME = 27;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Reset Password Unit Label</b></em>' attribute.
@@ -373,7 +363,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_UNIT_LABEL = 29;
+	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_UNIT_LABEL = 28;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Reset Password Action Label</b></em>' attribute.
@@ -382,7 +372,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_ACTION_LABEL = 30;
+	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_ACTION_LABEL = 29;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Reset Password Confirm Label</b></em>' attribute.
@@ -391,7 +381,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_CONFIRM_LABEL = 31;
+	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_CONFIRM_LABEL = 30;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Reset Password Uri</b></em>' attribute.
@@ -400,7 +390,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_URI = 32;
+	int AUTHENTICATION__IMPLICIT_RESET_PASSWORD_URI = 31;
 
 	/**
 	 * The number of structural features of the '<em>Authentication</em>' class.
@@ -409,7 +399,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTHENTICATION_FEATURE_COUNT = 33;
+	int AUTHENTICATION_FEATURE_COUNT = 32;
 
 	/**
 	 * The number of operations of the '<em>Authentication</em>' class.
@@ -440,22 +430,13 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__SECURITY = AUTHENTICATION__SECURITY;
 
 	/**
-	 * The feature id for the '<em><b>User</b></em>' reference.
+	 * The feature id for the '<em><b>User Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USER = AUTHENTICATION__USER;
-
-	/**
-	 * The feature id for the '<em><b>User Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USER_KEY = AUTHENTICATION__USER_KEY;
+	int LOCAL_AUTHENTICATION_SYSTEM__USER_MODEL = AUTHENTICATION__USER_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
@@ -746,13 +727,40 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME = AUTHENTICATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Authentication Key</b></em>' attribute.
+	 * The feature id for the '<em><b>User Key</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY = AUTHENTICATION_FEATURE_COUNT + 2;
+	int LOCAL_AUTHENTICATION_SYSTEM__USER_KEY = AUTHENTICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Authentication Key</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY = AUTHENTICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Identifier Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__IDENTIFIER_FEATURE = AUTHENTICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Password Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_AUTHENTICATION_SYSTEM__PASSWORD_FEATURE = AUTHENTICATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Reset Password Request Model</b></em>' reference.
@@ -761,7 +769,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL = AUTHENTICATION_FEATURE_COUNT + 3;
+	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_MODEL = AUTHENTICATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Reset Password Request Name</b></em>' attribute.
@@ -770,7 +778,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME = AUTHENTICATION_FEATURE_COUNT + 4;
+	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME = AUTHENTICATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Registration Unit</b></em>' reference.
@@ -779,7 +787,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT = AUTHENTICATION_FEATURE_COUNT + 5;
+	int LOCAL_AUTHENTICATION_SYSTEM__REGISTRATION_UNIT = AUTHENTICATION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Login Unit</b></em>' reference.
@@ -788,7 +796,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT = AUTHENTICATION_FEATURE_COUNT + 6;
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGIN_UNIT = AUTHENTICATION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Logout Unit</b></em>' reference.
@@ -797,7 +805,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT = AUTHENTICATION_FEATURE_COUNT + 7;
+	int LOCAL_AUTHENTICATION_SYSTEM__LOGOUT_UNIT = AUTHENTICATION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Forgotten Password Unit</b></em>' reference.
@@ -806,7 +814,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 8;
+	int LOCAL_AUTHENTICATION_SYSTEM__FORGOTTEN_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Reset Password Unit</b></em>' reference.
@@ -815,7 +823,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 9;
+	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>View Role</b></em>' attribute.
@@ -824,7 +832,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = AUTHENTICATION_FEATURE_COUNT + 10;
+	int LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = AUTHENTICATION_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Edit Role</b></em>' attribute.
@@ -833,7 +841,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = AUTHENTICATION_FEATURE_COUNT + 11;
+	int LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = AUTHENTICATION_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Use Captcha</b></em>' attribute.
@@ -842,7 +850,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA = AUTHENTICATION_FEATURE_COUNT + 12;
+	int LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA = AUTHENTICATION_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Allow Remember Me</b></em>' attribute.
@@ -851,7 +859,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME = AUTHENTICATION_FEATURE_COUNT + 13;
+	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME = AUTHENTICATION_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Allow Self Registration</b></em>' attribute.
@@ -860,7 +868,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_SELF_REGISTRATION = AUTHENTICATION_FEATURE_COUNT + 14;
+	int LOCAL_AUTHENTICATION_SYSTEM__ALLOW_SELF_REGISTRATION = AUTHENTICATION_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Track Login Attempts</b></em>' attribute.
@@ -869,7 +877,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__TRACK_LOGIN_ATTEMPTS = AUTHENTICATION_FEATURE_COUNT + 15;
+	int LOCAL_AUTHENTICATION_SYSTEM__TRACK_LOGIN_ATTEMPTS = AUTHENTICATION_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Use Email Activation</b></em>' attribute.
@@ -878,7 +886,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__USE_EMAIL_ACTIVATION = AUTHENTICATION_FEATURE_COUNT + 16;
+	int LOCAL_AUTHENTICATION_SYSTEM__USE_EMAIL_ACTIVATION = AUTHENTICATION_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Send Welcome Email</b></em>' attribute.
@@ -887,7 +895,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM__SEND_WELCOME_EMAIL = AUTHENTICATION_FEATURE_COUNT + 17;
+	int LOCAL_AUTHENTICATION_SYSTEM__SEND_WELCOME_EMAIL = AUTHENTICATION_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>Local Authentication System</em>' class.
@@ -896,7 +904,7 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCAL_AUTHENTICATION_SYSTEM_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 18;
+	int LOCAL_AUTHENTICATION_SYSTEM_FEATURE_COUNT = AUTHENTICATION_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>Local Authentication System</em>' class.
@@ -927,22 +935,13 @@ public interface SecurityPackage extends EPackage {
 	int CAS_AUTHENTICATION__SECURITY = AUTHENTICATION__SECURITY;
 
 	/**
-	 * The feature id for the '<em><b>User</b></em>' reference.
+	 * The feature id for the '<em><b>User Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAS_AUTHENTICATION__USER = AUTHENTICATION__USER;
-
-	/**
-	 * The feature id for the '<em><b>User Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAS_AUTHENTICATION__USER_KEY = AUTHENTICATION__USER_KEY;
+	int CAS_AUTHENTICATION__USER_MODEL = AUTHENTICATION__USER_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Implicit Registration Name</b></em>' attribute.
@@ -1279,17 +1278,6 @@ public interface SecurityPackage extends EPackage {
 	int SECURITY_UNIT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes <em>Authentication Key Types</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes
-	 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getAuthenticationKeyTypes()
-	 * @generated
-	 */
-	int AUTHENTICATION_KEY_TYPES = 5;
-
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.Security <em>Security</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1332,26 +1320,15 @@ public interface SecurityPackage extends EPackage {
 	EReference getAuthentication_Security();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.Authentication#getUser <em>User</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.Authentication#getUserModel <em>User Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>User</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getUser()
+	 * @return the meta object for the reference '<em>User Model</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Authentication#getUserModel()
 	 * @see #getAuthentication()
 	 * @generated
 	 */
-	EReference getAuthentication_User();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.Authentication#getUserKey <em>User Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>User Key</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.Authentication#getUserKey()
-	 * @see #getAuthentication()
-	 * @generated
-	 */
-	EReference getAuthentication_UserKey();
+	EReference getAuthentication_UserModel();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.Authentication#getImplicitRegistrationName <em>Implicit Registration Name</em>}'.
@@ -1716,15 +1693,48 @@ public interface SecurityPackage extends EPackage {
 	EAttribute getLocalAuthenticationSystem_AuthenticationName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getUserKey <em>User Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Authentication Key</em>'.
+	 * @return the meta object for the reference '<em>User Key</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getUserKey()
+	 * @see #getLocalAuthenticationSystem()
+	 * @generated
+	 */
+	EReference getLocalAuthenticationSystem_UserKey();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey <em>Authentication Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Authentication Key</em>'.
 	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getAuthenticationKey()
 	 * @see #getLocalAuthenticationSystem()
 	 * @generated
 	 */
-	EAttribute getLocalAuthenticationSystem_AuthenticationKey();
+	EReference getLocalAuthenticationSystem_AuthenticationKey();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getIdentifierFeature <em>Identifier Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Identifier Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getIdentifierFeature()
+	 * @see #getLocalAuthenticationSystem()
+	 * @generated
+	 */
+	EReference getLocalAuthenticationSystem_IdentifierFeature();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getPasswordFeature <em>Password Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Password Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getPasswordFeature()
+	 * @see #getLocalAuthenticationSystem()
+	 * @generated
+	 */
+	EReference getLocalAuthenticationSystem_PasswordFeature();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getResetPasswordRequestModel <em>Reset Password Request Model</em>}'.
@@ -1934,16 +1944,6 @@ public interface SecurityPackage extends EPackage {
 	EClass getSecurityUnit();
 
 	/**
-	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes <em>Authentication Key Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Authentication Key Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes
-	 * @generated
-	 */
-	EEnum getAuthenticationKeyTypes();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2003,20 +2003,12 @@ public interface SecurityPackage extends EPackage {
 		EReference AUTHENTICATION__SECURITY = eINSTANCE.getAuthentication_Security();
 
 		/**
-		 * The meta object literal for the '<em><b>User</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>User Model</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AUTHENTICATION__USER = eINSTANCE.getAuthentication_User();
-
-		/**
-		 * The meta object literal for the '<em><b>User Key</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference AUTHENTICATION__USER_KEY = eINSTANCE.getAuthentication_UserKey();
+		EReference AUTHENTICATION__USER_MODEL = eINSTANCE.getAuthentication_UserModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Implicit Registration Name</b></em>' attribute feature.
@@ -2285,12 +2277,36 @@ public interface SecurityPackage extends EPackage {
 		EAttribute LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME = eINSTANCE.getLocalAuthenticationSystem_AuthenticationName();
 
 		/**
-		 * The meta object literal for the '<em><b>Authentication Key</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>User Key</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY = eINSTANCE.getLocalAuthenticationSystem_AuthenticationKey();
+		EReference LOCAL_AUTHENTICATION_SYSTEM__USER_KEY = eINSTANCE.getLocalAuthenticationSystem_UserKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Authentication Key</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY = eINSTANCE.getLocalAuthenticationSystem_AuthenticationKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Identifier Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCAL_AUTHENTICATION_SYSTEM__IDENTIFIER_FEATURE = eINSTANCE.getLocalAuthenticationSystem_IdentifierFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Password Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCAL_AUTHENTICATION_SYSTEM__PASSWORD_FEATURE = eINSTANCE.getLocalAuthenticationSystem_PasswordFeature();
 
 		/**
 		 * The meta object literal for the '<em><b>Reset Password Request Model</b></em>' reference feature.
@@ -2447,16 +2463,6 @@ public interface SecurityPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SECURITY_UNIT = eINSTANCE.getSecurityUnit();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes <em>Authentication Key Types</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.security.AuthenticationKeyTypes
-		 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getAuthenticationKeyTypes()
-		 * @generated
-		 */
-		EEnum AUTHENTICATION_KEY_TYPES = eINSTANCE.getAuthenticationKeyTypes();
 
 	}
 

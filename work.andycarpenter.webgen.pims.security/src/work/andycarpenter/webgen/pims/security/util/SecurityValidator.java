@@ -95,8 +95,6 @@ public class SecurityValidator extends EObjectValidator {
 				return validateCasAuthentication((CasAuthentication)value, diagnostics, context);
 			case SecurityPackage.SECURITY_UNIT:
 				return validateSecurityUnit((SecurityUnit)value, diagnostics, context);
-			case SecurityPackage.AUTHENTICATION_KEY_TYPES:
-				return validateAuthenticationKeyTypes((AuthenticationKeyTypes)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -117,78 +115,7 @@ public class SecurityValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAuthentication(Authentication authentication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(authentication, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyFromUser(authentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyRequiredAttribute(authentication, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the userKeyFromUser constraint of '<em>Authentication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String AUTHENTICATION__USER_KEY_FROM_USER__EEXPRESSION = "not user.oclIsUndefined() and not userKey.oclIsUndefined() implies\r\n" +
-		"\tuser.features->includes(userKey)";
-
-	/**
-	 * Validates the userKeyFromUser constraint of '<em>Authentication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAuthentication_userKeyFromUser(Authentication authentication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(SecurityPackage.Literals.AUTHENTICATION,
-				 authentication,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "userKeyFromUser",
-				 AUTHENTICATION__USER_KEY_FROM_USER__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * The cached validation expression for the userKeyRequiredAttribute constraint of '<em>Authentication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String AUTHENTICATION__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not userKey.oclIsUndefined() implies\n" +
-		"\tuserKey.cardinality = persistence::Cardinality::Required";
-
-	/**
-	 * Validates the userKeyRequiredAttribute constraint of '<em>Authentication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAuthentication_userKeyRequiredAttribute(Authentication authentication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(SecurityPackage.Literals.AUTHENTICATION,
-				 authentication,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "userKeyRequiredAttribute",
-				 AUTHENTICATION__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
+		return validate_EveryDefaultConstraint(authentication, diagnostics, context);
 	}
 
 	/**
@@ -206,28 +133,29 @@ public class SecurityValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(localAuthenticationSystem, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(localAuthenticationSystem, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(localAuthenticationSystem, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyFromUser(localAuthenticationSystem, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyRequiredAttribute(localAuthenticationSystem, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocalAuthenticationSystem_captchaRequiresKeys(localAuthenticationSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLocalAuthenticationSystem_authenticationKeyFromUserModel(localAuthenticationSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLocalAuthenticationSystem_authenticationKeyRequiredAttribute(localAuthenticationSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLocalAuthenticationSystem_userKeyFromAuthhenticationModel(localAuthenticationSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLocalAuthenticationSystem_userKeyRequiredAttribute(localAuthenticationSystem, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the captchaRequiresKeys constraint of '<em>Local Authentication System</em>'.
+	 * The cached validation expression for the authenticationKeyFromUserModel constraint of '<em>Local Authentication System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String LOCAL_AUTHENTICATION_SYSTEM__CAPTCHA_REQUIRES_KEYS__EEXPRESSION = "-- useCaptcha implies not authenticates.captchaSiteKey.oclIsUndefined() and not authenticates.captchaSecretKey.oclIsUndefined()\r\n" +
-		"true";
+	protected static final String LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY_FROM_USER_MODEL__EEXPRESSION = "not userModel.oclIsUndefined() and not authenticationKey.oclIsUndefined() implies\n" +
+		"\tuserModel.features->includes(authenticationKey)";
 
 	/**
-	 * Validates the captchaRequiresKeys constraint of '<em>Local Authentication System</em>'.
+	 * Validates the authenticationKeyFromUserModel constraint of '<em>Local Authentication System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLocalAuthenticationSystem_captchaRequiresKeys(LocalAuthenticationSystem localAuthenticationSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLocalAuthenticationSystem_authenticationKeyFromUserModel(LocalAuthenticationSystem localAuthenticationSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM,
@@ -235,8 +163,98 @@ public class SecurityValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 "captchaRequiresKeys",
-				 LOCAL_AUTHENTICATION_SYSTEM__CAPTCHA_REQUIRES_KEYS__EEXPRESSION,
+				 "authenticationKeyFromUserModel",
+				 LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY_FROM_USER_MODEL__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the authenticationKeyRequiredAttribute constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not authenticationKey.oclIsUndefined() implies\n" +
+		"\tauthenticationKey.cardinality = persistence::Cardinality::Required";
+
+	/**
+	 * Validates the authenticationKeyRequiredAttribute constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLocalAuthenticationSystem_authenticationKeyRequiredAttribute(LocalAuthenticationSystem localAuthenticationSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM,
+				 localAuthenticationSystem,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "authenticationKeyRequiredAttribute",
+				 LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the userKeyFromAuthhenticationModel constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String LOCAL_AUTHENTICATION_SYSTEM__USER_KEY_FROM_AUTHHENTICATION_MODEL__EEXPRESSION = "not authenticationModel.oclIsUndefined() and not userKey.oclIsUndefined() implies\n" +
+		"\tauthenticationModel.features->includes(userKey)";
+
+	/**
+	 * Validates the userKeyFromAuthhenticationModel constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLocalAuthenticationSystem_userKeyFromAuthhenticationModel(LocalAuthenticationSystem localAuthenticationSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM,
+				 localAuthenticationSystem,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "userKeyFromAuthhenticationModel",
+				 LOCAL_AUTHENTICATION_SYSTEM__USER_KEY_FROM_AUTHHENTICATION_MODEL__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the userKeyRequiredAttribute constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String LOCAL_AUTHENTICATION_SYSTEM__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION = "not userKey.oclIsUndefined() implies\n" +
+		"\tuserKey.cardinality = persistence::Cardinality::Required";
+
+	/**
+	 * Validates the userKeyRequiredAttribute constraint of '<em>Local Authentication System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLocalAuthenticationSystem_userKeyRequiredAttribute(LocalAuthenticationSystem localAuthenticationSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM,
+				 localAuthenticationSystem,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "userKeyRequiredAttribute",
+				 LOCAL_AUTHENTICATION_SYSTEM__USER_KEY_REQUIRED_ATTRIBUTE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -248,18 +266,7 @@ public class SecurityValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCasAuthentication(CasAuthentication casAuthentication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(casAuthentication, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyFromUser(casAuthentication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAuthentication_userKeyRequiredAttribute(casAuthentication, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint(casAuthentication, diagnostics, context);
 	}
 
 	/**
@@ -269,15 +276,6 @@ public class SecurityValidator extends EObjectValidator {
 	 */
 	public boolean validateSecurityUnit(SecurityUnit securityUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(securityUnit, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAuthenticationKeyTypes(AuthenticationKeyTypes authenticationKeyTypes, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
 	}
 
 	/**

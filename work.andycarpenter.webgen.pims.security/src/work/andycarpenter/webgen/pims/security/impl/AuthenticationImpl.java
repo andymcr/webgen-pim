@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.security.Authentication;
 import work.andycarpenter.webgen.pims.security.Security;
@@ -26,8 +25,7 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getSecurity <em>Security</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUser <em>User</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUserKey <em>User Key</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getUserModel <em>User Model</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationName <em>Implicit Registration Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationUnitLabel <em>Implicit Registration Unit Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl#getImplicitRegistrationActionLabel <em>Implicit Registration Action Label</em>}</li>
@@ -64,24 +62,14 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  */
 public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container implements Authentication {
 	/**
-	 * The cached value of the '{@link #getUser() <em>User</em>}' reference.
+	 * The cached value of the '{@link #getUserModel() <em>User Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUser()
+	 * @see #getUserModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity user;
-
-	/**
-	 * The cached value of the '{@link #getUserKey() <em>User Key</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected Attribute userKey;
+	protected Entity userModel;
 
 	/**
 	 * The default value of the '{@link #getImplicitRegistrationName() <em>Implicit Registration Name</em>}' attribute.
@@ -751,16 +739,16 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public Entity getUser() {
-		if (user != null && user.eIsProxy()) {
-			InternalEObject oldUser = (InternalEObject)user;
-			user = (Entity)eResolveProxy(oldUser);
-			if (user != oldUser) {
+	public Entity getUserModel() {
+		if (userModel != null && userModel.eIsProxy()) {
+			InternalEObject oldUserModel = (InternalEObject)userModel;
+			userModel = (Entity)eResolveProxy(oldUserModel);
+			if (userModel != oldUserModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.AUTHENTICATION__USER, oldUser, user));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.AUTHENTICATION__USER_MODEL, oldUserModel, userModel));
 			}
 		}
-		return user;
+		return userModel;
 	}
 
 	/**
@@ -768,8 +756,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetUser() {
-		return user;
+	public Entity basicGetUserModel() {
+		return userModel;
 	}
 
 	/**
@@ -778,51 +766,11 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setUser(Entity newUser) {
-		Entity oldUser = user;
-		user = newUser;
+	public void setUserModel(Entity newUserModel) {
+		Entity oldUserModel = userModel;
+		userModel = newUserModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__USER, oldUser, user));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Attribute getUserKey() {
-		if (userKey != null && userKey.eIsProxy()) {
-			InternalEObject oldUserKey = (InternalEObject)userKey;
-			userKey = (Attribute)eResolveProxy(oldUserKey);
-			if (userKey != oldUserKey) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.AUTHENTICATION__USER_KEY, oldUserKey, userKey));
-			}
-		}
-		return userKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Attribute basicGetUserKey() {
-		return userKey;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUserKey(Attribute newUserKey) {
-		Attribute oldUserKey = userKey;
-		userKey = newUserKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__USER_KEY, oldUserKey, userKey));
+			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.AUTHENTICATION__USER_MODEL, oldUserModel, userModel));
 	}
 
 	/**
@@ -1569,12 +1517,9 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 			case SecurityPackage.AUTHENTICATION__SECURITY:
 				return getSecurity();
-			case SecurityPackage.AUTHENTICATION__USER:
-				if (resolve) return getUser();
-				return basicGetUser();
-			case SecurityPackage.AUTHENTICATION__USER_KEY:
-				if (resolve) return getUserKey();
-				return basicGetUserKey();
+			case SecurityPackage.AUTHENTICATION__USER_MODEL:
+				if (resolve) return getUserModel();
+				return basicGetUserModel();
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
 				return getImplicitRegistrationName();
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL:
@@ -1650,11 +1595,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__SECURITY:
 				setSecurity((Security)newValue);
 				return;
-			case SecurityPackage.AUTHENTICATION__USER:
-				setUser((Entity)newValue);
-				return;
-			case SecurityPackage.AUTHENTICATION__USER_KEY:
-				setUserKey((Attribute)newValue);
+			case SecurityPackage.AUTHENTICATION__USER_MODEL:
+				setUserModel((Entity)newValue);
 				return;
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
 				setImplicitRegistrationName((String)newValue);
@@ -1761,11 +1703,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 			case SecurityPackage.AUTHENTICATION__SECURITY:
 				setSecurity((Security)null);
 				return;
-			case SecurityPackage.AUTHENTICATION__USER:
-				setUser((Entity)null);
-				return;
-			case SecurityPackage.AUTHENTICATION__USER_KEY:
-				setUserKey((Attribute)null);
+			case SecurityPackage.AUTHENTICATION__USER_MODEL:
+				setUserModel((Entity)null);
 				return;
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
 				setImplicitRegistrationName(IMPLICIT_REGISTRATION_NAME_EDEFAULT);
@@ -1871,10 +1810,8 @@ public abstract class AuthenticationImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 			case SecurityPackage.AUTHENTICATION__SECURITY:
 				return getSecurity() != null;
-			case SecurityPackage.AUTHENTICATION__USER:
-				return user != null;
-			case SecurityPackage.AUTHENTICATION__USER_KEY:
-				return userKey != null;
+			case SecurityPackage.AUTHENTICATION__USER_MODEL:
+				return userModel != null;
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_NAME:
 				return IMPLICIT_REGISTRATION_NAME_EDEFAULT == null ? implicitRegistrationName != null : !IMPLICIT_REGISTRATION_NAME_EDEFAULT.equals(implicitRegistrationName);
 			case SecurityPackage.AUTHENTICATION__IMPLICIT_REGISTRATION_UNIT_LABEL:

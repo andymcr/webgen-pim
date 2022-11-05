@@ -14,6 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.security.Authentication;
 import work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 
@@ -47,7 +48,10 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 
 			addAuthenticationModelPropertyDescriptor(object);
 			addAuthenticationNamePropertyDescriptor(object);
+			addUserKeyPropertyDescriptor(object);
 			addAuthenticationKeyPropertyDescriptor(object);
+			addIdentifierFeaturePropertyDescriptor(object);
+			addPasswordFeaturePropertyDescriptor(object);
 			addResetPasswordRequestModelPropertyDescriptor(object);
 			addResetPasswordRequestNamePropertyDescriptor(object);
 			addRegistrationUnitPropertyDescriptor(object);
@@ -85,7 +89,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 true,
 				 null,
-				 getString("_UI_PersistencePropertyCategory"),
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -107,29 +111,111 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_PersistencePropertyCategory"),
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the User Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addUserKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_LocalAuthenticationSystem_userKey_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_userKey_feature", "_UI_LocalAuthenticationSystem_type"),
+			SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__USER_KEY,
+			true, false, true, null,
+			getString("_UI_SecurityPropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof LocalAuthenticationSystem) {
+						final LocalAuthenticationSystem authentication = (LocalAuthenticationSystem) object;
+						if (authentication.getUserModel() != null) {
+							return authentication.getAuthenticationModel().getAttributes();
+						}
+					}
+
+					return super.getChoiceOfValues(object);
+				}
+			});
 	}
 
 	/**
 	 * This adds a property descriptor for the Authentication Key feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void addAuthenticationKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_LocalAuthenticationSystem_authenticationKey_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_authenticationKey_feature", "_UI_LocalAuthenticationSystem_type"),
+			SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY,
+			true, false, true, null,
+			getString("_UI_SecurityPropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof Authentication) {
+						final Authentication authentication = (Authentication) object;
+						if (authentication.getUserModel() != null) {
+							return authentication.getUserModel().getAttributes();
+						}
+					}
+
+					return super.getChoiceOfValues(object);
+				}
+			});
+	}
+
+	/**
+	 * This adds a property descriptor for the Identifier Feature feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdentifierFeaturePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LocalAuthenticationSystem_authenticationKey_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_authenticationKey_feature", "_UI_LocalAuthenticationSystem_type"),
-				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY,
+				 getString("_UI_LocalAuthenticationSystem_identifierFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_identifierFeature_feature", "_UI_LocalAuthenticationSystem_type"),
+				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__IDENTIFIER_FEATURE,
 				 true,
 				 false,
+				 true,
+				 null,
+				 getString("_UI_SecurityPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Password Feature feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPasswordFeaturePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LocalAuthenticationSystem_passwordFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LocalAuthenticationSystem_passwordFeature_feature", "_UI_LocalAuthenticationSystem_type"),
+				 SecurityPackage.Literals.LOCAL_AUTHENTICATION_SYSTEM__PASSWORD_FEATURE,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_PersistencePropertyCategory"),
+				 true,
+				 null,
+				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -502,7 +588,6 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 
 		switch (notification.getFeatureID(LocalAuthenticationSystem.class)) {
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_NAME:
-			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__AUTHENTICATION_KEY:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_REQUEST_NAME:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:

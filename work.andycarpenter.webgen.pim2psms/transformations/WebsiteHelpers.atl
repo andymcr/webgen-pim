@@ -89,7 +89,11 @@ helper context Website!UnitField def: dateFormat() : String
 	= if not self.dateFormat.oclIsUndefined() and self.dateFormat <> '' then
 			self.dateFormat
 		else if self.oclIsTypeOf(Website!UnitElement) then
-			self.attribute.dateFormat()
+			if self.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				self.attribute.dateFormat()
+			endif
 		else if self.oclIsTypeOf(Website!UnitAssociation) then
 			if not self.childFeature.oclIsUndefined() then
 				self.childFeature.dateFormat()

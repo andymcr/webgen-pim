@@ -419,7 +419,12 @@ abstract rule UnitFeature {
 rule UnitAttribute {
 	from website : Website!UnitElement
 	to waf : WAF!UnitAttribute (
-		attribute <- website.attribute.findOrmAttribute(),
+		attribute <-
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmAttribute()
+			endif,
 		attributeDefaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
 		placeholderOverride <- website.placeholder,
