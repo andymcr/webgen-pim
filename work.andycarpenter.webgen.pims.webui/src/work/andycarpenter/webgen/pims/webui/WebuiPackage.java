@@ -2534,13 +2534,22 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_UNIT__URI_PARENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2549,7 +2558,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -2558,7 +2567,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -2567,7 +2576,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -2576,7 +2585,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Content Unit</em>' class.
@@ -2585,7 +2594,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Content Unit</em>' class.
@@ -2678,6 +2687,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIC_UNIT__URI_ELEMENT = CONTENT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_UNIT__URI_PARENT = CONTENT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -2823,6 +2841,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_SITEMAP_UNIT__URI_ELEMENT = CONTENT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_SITEMAP_UNIT__URI_PARENT = CONTENT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -2977,6 +3004,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT__URI_ELEMENT = CONTENT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT__URI_PARENT = CONTENT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -5839,6 +5875,15 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT__URI_PARENT = DYNAMIC_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6162,6 +6207,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__URI_PARENT = DYNAMIC_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -6732,6 +6786,15 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__URI_ELEMENT = SINGLETON_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__URI_PARENT = SINGLETON_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7136,6 +7199,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -7554,6 +7626,15 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7966,6 +8047,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -8399,6 +8489,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -8843,6 +8942,15 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__URI_ELEMENT = SINGLETON_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_UNIT__URI_PARENT = SINGLETON_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9184,6 +9292,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -9779,6 +9896,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -10602,6 +10728,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__URI_PARENT = CARDS_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11239,6 +11374,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__URI_PARENT = CARDS_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -11889,6 +12033,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12481,6 +12634,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__URI_ELEMENT = CARDS_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__URI_PARENT = CARDS_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -13185,6 +13347,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__URI_ELEMENT = IMAGE_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__URI_PARENT = IMAGE_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13795,6 +13966,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__URI_ELEMENT = IMAGE_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__URI_PARENT = IMAGE_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -14418,6 +14598,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__URI_PARENT = DYNAMIC_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14749,6 +14938,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__URI_ELEMENT = CONTROL_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT__URI_PARENT = CONTROL_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -15101,6 +15299,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -15509,6 +15716,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15915,6 +16131,15 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__URI_ELEMENT = DYNAMIC_UNIT__URI_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT__URI_PARENT = DYNAMIC_UNIT__URI_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16229,6 +16454,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -16689,6 +16923,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__URI_ELEMENT = EDIT_UNIT__URI_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__URI_PARENT = EDIT_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -20097,6 +20340,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContentUnit_UriElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent <em>Uri Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Uri Parent</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent()
+	 * @see #getContentUnit()
+	 * @generated
+	 */
+	EReference getContentUnit_UriParent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAlternative <em>Alternative</em>}'.
@@ -23856,6 +24110,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTENT_UNIT__URI_ELEMENT = eINSTANCE.getContentUnit_UriElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Uri Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT_UNIT__URI_PARENT = eINSTANCE.getContentUnit_UriParent();
 
 		/**
 		 * The meta object literal for the '<em><b>Alternative</b></em>' attribute feature.

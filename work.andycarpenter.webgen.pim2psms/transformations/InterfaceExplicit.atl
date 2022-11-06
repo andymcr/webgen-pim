@@ -333,6 +333,7 @@ abstract rule ContentUnit {
 			else
 				''
 			endif endif,
+		uriParent <- website.uriParent,
 		authorisationRoles <- website.requiresRole,
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,

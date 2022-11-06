@@ -52,6 +52,7 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			addRequiresRolePropertyDescriptor(object);
 			addPurposeSummaryPropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
+			addUriParentPropertyDescriptor(object);
 			addAlternativePropertyDescriptor(object);
 			addSectionClassPropertyDescriptor(object);
 			addOmitCaptionPropertyDescriptor(object);
@@ -145,6 +146,28 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_NavigationPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uri Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUriParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContentUnit_uriParent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_uriParent_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__URI_PARENT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 getString("_UI_NavigationPropertyCategory"),
 				 null));
 	}

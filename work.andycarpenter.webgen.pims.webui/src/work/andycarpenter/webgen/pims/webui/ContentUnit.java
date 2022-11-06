@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriElement <em>Uri Element</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent <em>Uri Parent</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAlternative <em>Alternative</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}</li>
@@ -136,6 +137,28 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setUriElement(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Uri Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uri Parent</em>' reference.
+	 * @see #setUriParent(ContentUnit)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_UriParent()
+	 * @model
+	 * @generated
+	 */
+	ContentUnit getUriParent();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent <em>Uri Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uri Parent</em>' reference.
+	 * @see #getUriParent()
+	 * @generated
+	 */
+	void setUriParent(ContentUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Alternative</b></em>' attribute.

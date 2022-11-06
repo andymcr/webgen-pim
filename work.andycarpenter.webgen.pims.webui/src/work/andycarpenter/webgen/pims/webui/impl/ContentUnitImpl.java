@@ -27,6 +27,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriElement <em>Uri Element</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriParent <em>Uri Parent</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getAlternative <em>Alternative</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getSectionClass <em>Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isOmitCaption <em>Omit Caption</em>}</li>
@@ -116,6 +117,16 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @ordered
 	 */
 	protected String uriElement = URI_ELEMENT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getUriParent() <em>Uri Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUriParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContentUnit uriParent;
 
 	/**
 	 * The default value of the '{@link #getAlternative() <em>Alternative</em>}' attribute.
@@ -326,6 +337,46 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		uriElement = newUriElement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__URI_ELEMENT, oldUriElement, uriElement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ContentUnit getUriParent() {
+		if (uriParent != null && uriParent.eIsProxy()) {
+			InternalEObject oldUriParent = (InternalEObject)uriParent;
+			uriParent = (ContentUnit)eResolveProxy(oldUriParent);
+			if (uriParent != oldUriParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.CONTENT_UNIT__URI_PARENT, oldUriParent, uriParent));
+			}
+		}
+		return uriParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContentUnit basicGetUriParent() {
+		return uriParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUriParent(ContentUnit newUriParent) {
+		ContentUnit oldUriParent = uriParent;
+		uriParent = newUriParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__URI_PARENT, oldUriParent, uriParent));
 	}
 
 	/**
@@ -548,6 +599,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return getPurposeSummary();
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 				return getUriElement();
+			case WebuiPackage.CONTENT_UNIT__URI_PARENT:
+				if (resolve) return getUriParent();
+				return basicGetUriParent();
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return getAlternative();
 			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
@@ -584,6 +638,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return;
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 				setUriElement((String)newValue);
+				return;
+			case WebuiPackage.CONTENT_UNIT__URI_PARENT:
+				setUriParent((ContentUnit)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative((String)newValue);
@@ -627,6 +684,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 				setUriElement(URI_ELEMENT_EDEFAULT);
 				return;
+			case WebuiPackage.CONTENT_UNIT__URI_PARENT:
+				setUriParent((ContentUnit)null);
+				return;
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative(ALTERNATIVE_EDEFAULT);
 				return;
@@ -664,6 +724,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return PURPOSE_SUMMARY_EDEFAULT == null ? purposeSummary != null : !PURPOSE_SUMMARY_EDEFAULT.equals(purposeSummary);
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 				return URI_ELEMENT_EDEFAULT == null ? uriElement != null : !URI_ELEMENT_EDEFAULT.equals(uriElement);
+			case WebuiPackage.CONTENT_UNIT__URI_PARENT:
+				return uriParent != null;
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return ALTERNATIVE_EDEFAULT == null ? alternative != null : !ALTERNATIVE_EDEFAULT.equals(alternative);
 			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
