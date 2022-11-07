@@ -588,13 +588,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.IMAGE_UNIT: {
 				ImageUnit imageUnit = (ImageUnit)theEObject;
 				T result = caseImageUnit(imageUnit);
-				if (result == null) result = caseCollectionUnit(imageUnit);
-				if (result == null) result = caseDynamicUnit(imageUnit);
-				if (result == null) result = caseSelectableUnit(imageUnit);
-				if (result == null) result = caseContentUnit(imageUnit);
-				if (result == null) result = caseActionContainer(imageUnit);
-				if (result == null) result = caseNamedDisplayElement(imageUnit);
-				if (result == null) result = caseNamedElement(imageUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -616,8 +609,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.SLIDER_UNIT: {
 				SliderUnit sliderUnit = (SliderUnit)theEObject;
 				T result = caseSliderUnit(sliderUnit);
-				if (result == null) result = caseImageUnit(sliderUnit);
 				if (result == null) result = caseCollectionUnit(sliderUnit);
+				if (result == null) result = caseImageUnit(sliderUnit);
 				if (result == null) result = caseDynamicUnit(sliderUnit);
 				if (result == null) result = caseSelectableUnit(sliderUnit);
 				if (result == null) result = caseContentUnit(sliderUnit);
@@ -630,8 +623,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.GALLERY_UNIT: {
 				GalleryUnit galleryUnit = (GalleryUnit)theEObject;
 				T result = caseGalleryUnit(galleryUnit);
-				if (result == null) result = caseImageUnit(galleryUnit);
 				if (result == null) result = caseCollectionUnit(galleryUnit);
+				if (result == null) result = caseImageUnit(galleryUnit);
 				if (result == null) result = caseDynamicUnit(galleryUnit);
 				if (result == null) result = caseSelectableUnit(galleryUnit);
 				if (result == null) result = caseContentUnit(galleryUnit);

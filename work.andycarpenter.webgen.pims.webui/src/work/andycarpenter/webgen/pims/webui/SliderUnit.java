@@ -19,7 +19,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface SliderUnit extends ImageUnit {
+public interface SliderUnit extends CollectionUnit, ImageUnit {
 	/**
 	 * Returns the value of the '<em><b>Show Time</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.

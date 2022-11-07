@@ -419,11 +419,13 @@
     <genClasses image="false" ecoreClass="webui.ecore#//ImageUnit">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imagePathFeature"/>
+      <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageUnit/missingImagePath"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Image"
+          ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/showMissingImageWhen"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imageFilter"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/missingImageFilter"/>
-      <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//ImageUnit/missingImagePath"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ImageCardsUnit">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>

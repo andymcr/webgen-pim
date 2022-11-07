@@ -3852,7 +3852,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getImageUnit_ImageFilter() {
-		return (EReference)imageUnitEClass.getEStructuralFeatures().get(1);
+		return (EReference)imageUnitEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3862,7 +3862,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getImageUnit_MissingImageFilter() {
-		return (EReference)imageUnitEClass.getEStructuralFeatures().get(2);
+		return (EReference)imageUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3872,7 +3872,17 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getImageUnit_MissingImagePath() {
-		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)imageUnitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImageUnit_ShowMissingImageWhen() {
+		return (EReference)imageUnitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4840,9 +4850,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		imageUnitEClass = createEClass(IMAGE_UNIT);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_PATH_FEATURE);
+		createEAttribute(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_PATH);
+		createEReference(imageUnitEClass, IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_FILTER);
 		createEReference(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_FILTER);
-		createEAttribute(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_PATH);
 
 		imageCardsUnitEClass = createEClass(IMAGE_CARDS_UNIT);
 		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__OVERLAY_TITLE);
@@ -5041,10 +5052,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		cardsUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		textCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
 		dateCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
-		imageUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		imageCardsUnitEClass.getESuperTypes().add(this.getCardsUnit());
 		imageCardsUnitEClass.getESuperTypes().add(this.getImageUnit());
+		sliderUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		sliderUnitEClass.getESuperTypes().add(this.getImageUnit());
+		galleryUnitEClass.getESuperTypes().add(this.getCollectionUnit());
 		galleryUnitEClass.getESuperTypes().add(this.getImageUnit());
 		controlUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		searchUnitEClass.getESuperTypes().add(this.getControlUnit());
@@ -5415,11 +5427,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(dateCardsUnitEClass, DateCardsUnit.class, "DateCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDateCardsUnit_ElementDate(), this.getFeaturePath(), null, "elementDate", null, 1, 1, DateCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imageUnitEClass, ImageUnit.class, "ImageUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(imageUnitEClass, ImageUnit.class, "ImageUnit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageUnit_ImagePathFeature(), this.getFeaturePath(), null, "imagePathFeature", null, 1, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageUnit_MissingImagePath(), ecorePackage.getEString(), "missingImagePath", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageUnit_ShowMissingImageWhen(), theExpressionPackage.getPredicate(), null, "showMissingImageWhen", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_ImageFilter(), theImagePackage.getImageManipulation(), null, "imageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_MissingImageFilter(), theImagePackage.getImageManipulation(), null, "missingImageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageUnit_MissingImagePath(), ecorePackage.getEString(), "missingImagePath", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageCardsUnitEClass, ImageCardsUnit.class, "ImageCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImageCardsUnit_OverlayTitle(), ecorePackage.getEBoolean(), "overlayTitle", "false", 0, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

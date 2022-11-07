@@ -1718,21 +1718,7 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateImageUnit(ImageUnit imageUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(imageUnit, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDynamicUnit_featuresMustBeFromContentType(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_canOnlyTitleWithSingletons(imageUnit, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCollectionUnit_selectionMustNotBeSingleton(imageUnit, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint(imageUnit, diagnostics, context);
 	}
 
 	/**

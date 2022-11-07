@@ -821,14 +821,14 @@ rule DateCardsUnit {
 	)
 }
 
--- @extends CollectionUnit
 abstract rule ImageUnit {
 	from website : Website!ImageUnit
 	to waf : WAF!ImageUnit (
 		imagePathFeature <- website.imagePathFeature,
+		missingImagePath <- website.missingImagePath,
+		showMissingImageWhen <- website.showMissingImageWhen,
 		imageFilter <- website.imageFilter,
-		missingImageFilter <- website.missingImageFilter,
-		missingImagePath <- website.missingImagePath
+		missingImageFilter <- website.missingImageFilter
 	)
 }
 
@@ -842,7 +842,7 @@ rule ImageCardsUnit {
 	)
 }
 
--- @extends ImageUnit
+-- @extends CollectionUnit, ImageUnit
 rule SliderUnit {
 	from website : Website!SliderUnit
 	to waf : WAF!SliderUnit (
@@ -851,7 +851,7 @@ rule SliderUnit {
 	)
 }
 
--- @extends ImageUnit
+-- @extends CollectionUnit, ImageUnit
 rule GalleryUnit {
 	from website : Website!GalleryUnit
 	to waf : WAF!GalleryUnit (

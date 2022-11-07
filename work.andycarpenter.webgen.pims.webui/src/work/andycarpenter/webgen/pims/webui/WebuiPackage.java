@@ -10523,10 +10523,10 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT = 61;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl
+	 * @see work.andycarpenter.webgen.pims.webui.ImageUnit
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
@@ -11970,580 +11970,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT_OPERATION_COUNT = CARDS_UNIT_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__NAME = COLLECTION_UNIT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Controller</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
-
-	/**
-	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PURPOSE_SUMMARY = COLLECTION_UNIT__PURPOSE_SUMMARY;
-
-	/**
-	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
-
-	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
-
-	/**
-	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ACTIONS = COLLECTION_UNIT__ACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Content Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
-
-	/**
-	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
-
-	/**
-	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
-
-	/**
-	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__HIDE_WHEN = COLLECTION_UNIT__HIDE_WHEN;
-
-	/**
-	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__MESSAGE_WHEN_HIDDEN = COLLECTION_UNIT__MESSAGE_WHEN_HIDDEN;
-
-	/**
-	 * The feature id for the '<em><b>Header</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__HEADER = COLLECTION_UNIT__HEADER;
-
-	/**
-	 * The feature id for the '<em><b>Footer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FOOTER = COLLECTION_UNIT__FOOTER;
-
-	/**
-	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__ELEMENT_TITLE = COLLECTION_UNIT__ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Selection</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__SELECTION = COLLECTION_UNIT__SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
-
-	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FILTER = COLLECTION_UNIT__FILTER;
-
-	/**
-	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
-
-	/**
-	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__DEFAULT_PAGINATION_SIZE = COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__IMAGE_PATH_FEATURE = COLLECTION_UNIT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_UNIT__MISSING_IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 2;
+	int IMAGE_UNIT__IMAGE_PATH_FEATURE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
@@ -12552,7 +11985,34 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT__MISSING_IMAGE_PATH = COLLECTION_UNIT_FEATURE_COUNT + 3;
+	int IMAGE_UNIT__MISSING_IMAGE_PATH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Show Missing Image When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN = 2;
+
+	/**
+	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__IMAGE_FILTER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_UNIT__MISSING_IMAGE_FILTER = 4;
 
 	/**
 	 * The number of structural features of the '<em>Image Unit</em>' class.
@@ -12561,7 +12021,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int IMAGE_UNIT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Image Unit</em>' class.
@@ -12570,7 +12030,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
+	int IMAGE_UNIT_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13212,13 +12672,31 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__IMAGE_PATH_FEATURE = CARDS_UNIT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__MISSING_IMAGE_PATH = CARDS_UNIT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Show Missing Image When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SHOW_MISSING_IMAGE_WHEN = CARDS_UNIT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 1;
+	int IMAGE_CARDS_UNIT__IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
@@ -13227,16 +12705,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__MISSING_IMAGE_PATH = CARDS_UNIT_FEATURE_COUNT + 3;
+	int IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER = CARDS_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Overlay Title</b></em>' attribute.
@@ -13245,7 +12714,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__OVERLAY_TITLE = CARDS_UNIT_FEATURE_COUNT + 4;
+	int IMAGE_CARDS_UNIT__OVERLAY_TITLE = CARDS_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Enable Image Enlargement</b></em>' attribute.
@@ -13254,7 +12723,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT = CARDS_UNIT_FEATURE_COUNT + 5;
+	int IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT = CARDS_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Reveal Untruncated Content</b></em>' attribute.
@@ -13263,7 +12732,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 6;
+	int IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Image Cards Unit</em>' class.
@@ -13272,7 +12741,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 7;
+	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Image Cards Unit</em>' class.
@@ -13290,7 +12759,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__NAME = IMAGE_UNIT__NAME;
+	int SLIDER_UNIT__NAME = COLLECTION_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -13299,7 +12768,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__DISPLAY_LABEL = IMAGE_UNIT__DISPLAY_LABEL;
+	int SLIDER_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Controller</b></em>' container reference.
@@ -13308,7 +12777,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTROLLER = IMAGE_UNIT__CONTROLLER;
+	int SLIDER_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -13317,7 +12786,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CREATE_DEFAULT_URI_ELEMENT = IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int SLIDER_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -13326,7 +12795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__REQUIRES_ROLE = IMAGE_UNIT__REQUIRES_ROLE;
+	int SLIDER_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -13335,7 +12804,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PURPOSE_SUMMARY = IMAGE_UNIT__PURPOSE_SUMMARY;
+	int SLIDER_UNIT__PURPOSE_SUMMARY = COLLECTION_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -13344,7 +12813,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__URI_ELEMENT = IMAGE_UNIT__URI_ELEMENT;
+	int SLIDER_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
@@ -13353,7 +12822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__URI_PARENT = IMAGE_UNIT__URI_PARENT;
+	int SLIDER_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -13362,7 +12831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ALTERNATIVE = IMAGE_UNIT__ALTERNATIVE;
+	int SLIDER_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -13371,7 +12840,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SECTION_CLASS = IMAGE_UNIT__SECTION_CLASS;
+	int SLIDER_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -13380,7 +12849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__OMIT_CAPTION = IMAGE_UNIT__OMIT_CAPTION;
+	int SLIDER_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -13389,7 +12858,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_CAPTION_CLASS = IMAGE_UNIT__LOCAL_CAPTION_CLASS;
+	int SLIDER_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -13398,7 +12867,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
+	int SLIDER_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -13407,7 +12876,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTAINER_ACTIONS_PLACEMENT = IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT;
+	int SLIDER_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
@@ -13416,7 +12885,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__INSTANCE_ACTIONS_PLACEMENT = IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+	int SLIDER_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -13425,7 +12894,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ACTIONS = IMAGE_UNIT__ACTIONS;
+	int SLIDER_UNIT__ACTIONS = COLLECTION_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -13434,7 +12903,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ACTION_NAVIGATION_CLASS = IMAGE_UNIT__ACTION_NAVIGATION_CLASS;
+	int SLIDER_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
@@ -13443,7 +12912,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
+	int SLIDER_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -13452,7 +12921,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
+	int SLIDER_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -13461,7 +12930,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
+	int SLIDER_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -13470,7 +12939,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__DISPLAY_FIELDS = IMAGE_UNIT__DISPLAY_FIELDS;
+	int SLIDER_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
@@ -13479,7 +12948,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+	int SLIDER_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -13488,7 +12957,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__HIDE_WHEN = IMAGE_UNIT__HIDE_WHEN;
+	int SLIDER_UNIT__HIDE_WHEN = COLLECTION_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -13497,7 +12966,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__MESSAGE_WHEN_HIDDEN = IMAGE_UNIT__MESSAGE_WHEN_HIDDEN;
+	int SLIDER_UNIT__MESSAGE_WHEN_HIDDEN = COLLECTION_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -13506,7 +12975,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__HEADER = IMAGE_UNIT__HEADER;
+	int SLIDER_UNIT__HEADER = COLLECTION_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -13515,7 +12984,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FOOTER = IMAGE_UNIT__FOOTER;
+	int SLIDER_UNIT__FOOTER = COLLECTION_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -13524,7 +12993,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_FIELD_LIST_CLASS = IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS;
+	int SLIDER_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -13533,7 +13002,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_FIELD_LABEL_CLASS = IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS;
+	int SLIDER_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -13542,7 +13011,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_FIELD_VALUE_CLASS = IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS;
+	int SLIDER_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -13551,7 +13020,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
+	int SLIDER_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
@@ -13560,7 +13029,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+	int SLIDER_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -13569,7 +13038,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
+	int SLIDER_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
@@ -13578,7 +13047,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int SLIDER_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -13587,7 +13056,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__UNIT_TITLE = IMAGE_UNIT__UNIT_TITLE;
+	int SLIDER_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
@@ -13596,7 +13065,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__ELEMENT_TITLE = IMAGE_UNIT__ELEMENT_TITLE;
+	int SLIDER_UNIT__ELEMENT_TITLE = COLLECTION_UNIT__ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -13605,7 +13074,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__TRUNCATE_ELEMENT_TITLE = IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE;
+	int SLIDER_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -13614,7 +13083,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SELECTION = IMAGE_UNIT__SELECTION;
+	int SLIDER_UNIT__SELECTION = COLLECTION_UNIT__SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -13623,7 +13092,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIND_CONTAINER_SELECTION = IMAGE_UNIT__FIND_CONTAINER_SELECTION;
+	int SLIDER_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -13632,7 +13101,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIND_ELEMENT_SELECTION = IMAGE_UNIT__FIND_ELEMENT_SELECTION;
+	int SLIDER_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -13641,7 +13110,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FILTER = IMAGE_UNIT__FILTER;
+	int SLIDER_UNIT__FILTER = COLLECTION_UNIT__FILTER;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -13650,7 +13119,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SUPPORTED_FILTERS = IMAGE_UNIT__SUPPORTED_FILTERS;
+	int SLIDER_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -13659,7 +13128,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__EMPTY_MESSAGE = IMAGE_UNIT__EMPTY_MESSAGE;
+	int SLIDER_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13668,7 +13137,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__OMIT_FIELD_LABELS = IMAGE_UNIT__OMIT_FIELD_LABELS;
+	int SLIDER_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -13677,7 +13146,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__DEFAULT_PAGINATION_SIZE = IMAGE_UNIT__DEFAULT_PAGINATION_SIZE;
+	int SLIDER_UNIT__DEFAULT_PAGINATION_SIZE = COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -13686,7 +13155,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__MAXIMUM_PAGINATION_SIZE = IMAGE_UNIT__MAXIMUM_PAGINATION_SIZE;
+	int SLIDER_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -13695,7 +13164,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PAGINATION_CONTROL_PLACEMENT = IMAGE_UNIT__PAGINATION_CONTROL_PLACEMENT;
+	int SLIDER_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -13704,7 +13173,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__NEXT_NPAGES = IMAGE_UNIT__NEXT_NPAGES;
+	int SLIDER_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -13713,7 +13182,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PREVIOUS_NPAGES = IMAGE_UNIT__PREVIOUS_NPAGES;
+	int SLIDER_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -13722,7 +13191,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__NEXT_PAGE_LABEL = IMAGE_UNIT__NEXT_PAGE_LABEL;
+	int SLIDER_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -13731,7 +13200,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__NEXT_PAGE_ICON_NAME = IMAGE_UNIT__NEXT_PAGE_ICON_NAME;
+	int SLIDER_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -13740,7 +13209,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PREVIOUS_PAGE_LABEL = IMAGE_UNIT__PREVIOUS_PAGE_LABEL;
+	int SLIDER_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -13749,7 +13218,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PREVIOUS_PAGE_ICON_NAME = IMAGE_UNIT__PREVIOUS_PAGE_ICON_NAME;
+	int SLIDER_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -13758,7 +13227,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__USE_DISABLED_PAGE_LINKS = IMAGE_UNIT__USE_DISABLED_PAGE_LINKS;
+	int SLIDER_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -13767,7 +13236,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__USE_FIRST_LAST_PAGE_LINKS = IMAGE_UNIT__USE_FIRST_LAST_PAGE_LINKS;
+	int SLIDER_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -13776,7 +13245,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIRST_PAGE_LABEL = IMAGE_UNIT__FIRST_PAGE_LABEL;
+	int SLIDER_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -13785,7 +13254,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FIRST_PAGE_ICON_NAME = IMAGE_UNIT__FIRST_PAGE_ICON_NAME;
+	int SLIDER_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -13794,7 +13263,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LAST_PAGE_LABEL = IMAGE_UNIT__LAST_PAGE_LABEL;
+	int SLIDER_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -13803,7 +13272,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LAST_PAGE_ICON_NAME = IMAGE_UNIT__LAST_PAGE_ICON_NAME;
+	int SLIDER_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -13812,7 +13281,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PAGINATION_CLASS = IMAGE_UNIT__PAGINATION_CLASS;
+	int SLIDER_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -13821,7 +13290,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PAGINATION_ELEMENT_CLASS = IMAGE_UNIT__PAGINATION_ELEMENT_CLASS;
+	int SLIDER_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -13830,7 +13299,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PAGINATION_ANCHOR_CLASS = IMAGE_UNIT__PAGINATION_ANCHOR_CLASS;
+	int SLIDER_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -13839,25 +13308,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__IMAGE_PATH_FEATURE = IMAGE_UNIT__IMAGE_PATH_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__IMAGE_FILTER = IMAGE_UNIT__IMAGE_FILTER;
-
-	/**
-	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__MISSING_IMAGE_FILTER = IMAGE_UNIT__MISSING_IMAGE_FILTER;
+	int SLIDER_UNIT__IMAGE_PATH_FEATURE = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
@@ -13866,7 +13317,34 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__MISSING_IMAGE_PATH = IMAGE_UNIT__MISSING_IMAGE_PATH;
+	int SLIDER_UNIT__MISSING_IMAGE_PATH = COLLECTION_UNIT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Show Missing Image When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SHOW_MISSING_IMAGE_WHEN = COLLECTION_UNIT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__MISSING_IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Show Time</b></em>' attribute.
@@ -13875,7 +13353,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 0;
+	int SLIDER_UNIT__SHOW_TIME = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Transition Time</b></em>' attribute.
@@ -13884,7 +13362,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
+	int SLIDER_UNIT__TRANSITION_TIME = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Slider Unit</em>' class.
@@ -13893,7 +13371,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 2;
+	int SLIDER_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Slider Unit</em>' class.
@@ -13902,7 +13380,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_OPERATION_COUNT = IMAGE_UNIT_OPERATION_COUNT + 0;
+	int SLIDER_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13911,7 +13389,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__NAME = IMAGE_UNIT__NAME;
+	int GALLERY_UNIT__NAME = COLLECTION_UNIT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -13920,7 +13398,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__DISPLAY_LABEL = IMAGE_UNIT__DISPLAY_LABEL;
+	int GALLERY_UNIT__DISPLAY_LABEL = COLLECTION_UNIT__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Controller</b></em>' container reference.
@@ -13929,7 +13407,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTROLLER = IMAGE_UNIT__CONTROLLER;
+	int GALLERY_UNIT__CONTROLLER = COLLECTION_UNIT__CONTROLLER;
 
 	/**
 	 * The feature id for the '<em><b>Create Default Uri Element</b></em>' attribute.
@@ -13938,7 +13416,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CREATE_DEFAULT_URI_ELEMENT = IMAGE_UNIT__CREATE_DEFAULT_URI_ELEMENT;
+	int GALLERY_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -13947,7 +13425,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__REQUIRES_ROLE = IMAGE_UNIT__REQUIRES_ROLE;
+	int GALLERY_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -13956,7 +13434,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PURPOSE_SUMMARY = IMAGE_UNIT__PURPOSE_SUMMARY;
+	int GALLERY_UNIT__PURPOSE_SUMMARY = COLLECTION_UNIT__PURPOSE_SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -13965,7 +13443,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__URI_ELEMENT = IMAGE_UNIT__URI_ELEMENT;
+	int GALLERY_UNIT__URI_ELEMENT = COLLECTION_UNIT__URI_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
@@ -13974,7 +13452,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__URI_PARENT = IMAGE_UNIT__URI_PARENT;
+	int GALLERY_UNIT__URI_PARENT = COLLECTION_UNIT__URI_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -13983,7 +13461,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ALTERNATIVE = IMAGE_UNIT__ALTERNATIVE;
+	int GALLERY_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -13992,7 +13470,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SECTION_CLASS = IMAGE_UNIT__SECTION_CLASS;
+	int GALLERY_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -14001,7 +13479,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__OMIT_CAPTION = IMAGE_UNIT__OMIT_CAPTION;
+	int GALLERY_UNIT__OMIT_CAPTION = COLLECTION_UNIT__OMIT_CAPTION;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -14010,7 +13488,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_CAPTION_CLASS = IMAGE_UNIT__LOCAL_CAPTION_CLASS;
+	int GALLERY_UNIT__LOCAL_CAPTION_CLASS = COLLECTION_UNIT__LOCAL_CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -14019,7 +13497,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_CONTENT_CLASS = IMAGE_UNIT__LOCAL_CONTENT_CLASS;
+	int GALLERY_UNIT__LOCAL_CONTENT_CLASS = COLLECTION_UNIT__LOCAL_CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -14028,7 +13506,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTAINER_ACTIONS_PLACEMENT = IMAGE_UNIT__CONTAINER_ACTIONS_PLACEMENT;
+	int GALLERY_UNIT__CONTAINER_ACTIONS_PLACEMENT = COLLECTION_UNIT__CONTAINER_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
@@ -14037,7 +13515,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__INSTANCE_ACTIONS_PLACEMENT = IMAGE_UNIT__INSTANCE_ACTIONS_PLACEMENT;
+	int GALLERY_UNIT__INSTANCE_ACTIONS_PLACEMENT = COLLECTION_UNIT__INSTANCE_ACTIONS_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -14046,7 +13524,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ACTIONS = IMAGE_UNIT__ACTIONS;
+	int GALLERY_UNIT__ACTIONS = COLLECTION_UNIT__ACTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -14055,7 +13533,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ACTION_NAVIGATION_CLASS = IMAGE_UNIT__ACTION_NAVIGATION_CLASS;
+	int GALLERY_UNIT__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' reference.
@@ -14064,7 +13542,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTENT_TYPE = IMAGE_UNIT__CONTENT_TYPE;
+	int GALLERY_UNIT__CONTENT_TYPE = COLLECTION_UNIT__CONTENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -14073,7 +13551,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__CONTAINING_TYPE = IMAGE_UNIT__CONTAINING_TYPE;
+	int GALLERY_UNIT__CONTAINING_TYPE = COLLECTION_UNIT__CONTAINING_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -14082,7 +13560,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ROUTE_ACTUALS = IMAGE_UNIT__ROUTE_ACTUALS;
+	int GALLERY_UNIT__ROUTE_ACTUALS = COLLECTION_UNIT__ROUTE_ACTUALS;
 
 	/**
 	 * The feature id for the '<em><b>Display Fields</b></em>' containment reference list.
@@ -14091,7 +13569,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__DISPLAY_FIELDS = IMAGE_UNIT__DISPLAY_FIELDS;
+	int GALLERY_UNIT__DISPLAY_FIELDS = COLLECTION_UNIT__DISPLAY_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Has When Fields Empty Add Implicit Fields</b></em>' attribute.
@@ -14100,7 +13578,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = IMAGE_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
+	int GALLERY_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS = COLLECTION_UNIT__HAS_WHEN_FIELDS_EMPTY_ADD_IMPLICIT_FIELDS;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -14109,7 +13587,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__HIDE_WHEN = IMAGE_UNIT__HIDE_WHEN;
+	int GALLERY_UNIT__HIDE_WHEN = COLLECTION_UNIT__HIDE_WHEN;
 
 	/**
 	 * The feature id for the '<em><b>Message When Hidden</b></em>' attribute.
@@ -14118,7 +13596,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__MESSAGE_WHEN_HIDDEN = IMAGE_UNIT__MESSAGE_WHEN_HIDDEN;
+	int GALLERY_UNIT__MESSAGE_WHEN_HIDDEN = COLLECTION_UNIT__MESSAGE_WHEN_HIDDEN;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' attribute.
@@ -14127,7 +13605,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__HEADER = IMAGE_UNIT__HEADER;
+	int GALLERY_UNIT__HEADER = COLLECTION_UNIT__HEADER;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -14136,7 +13614,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FOOTER = IMAGE_UNIT__FOOTER;
+	int GALLERY_UNIT__FOOTER = COLLECTION_UNIT__FOOTER;
 
 	/**
 	 * The feature id for the '<em><b>Local Field List Class</b></em>' attribute.
@@ -14145,7 +13623,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_FIELD_LIST_CLASS = IMAGE_UNIT__LOCAL_FIELD_LIST_CLASS;
+	int GALLERY_UNIT__LOCAL_FIELD_LIST_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
@@ -14154,7 +13632,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_FIELD_LABEL_CLASS = IMAGE_UNIT__LOCAL_FIELD_LABEL_CLASS;
+	int GALLERY_UNIT__LOCAL_FIELD_LABEL_CLASS = COLLECTION_UNIT__LOCAL_FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
@@ -14163,7 +13641,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_FIELD_VALUE_CLASS = IMAGE_UNIT__LOCAL_FIELD_VALUE_CLASS;
+	int GALLERY_UNIT__LOCAL_FIELD_VALUE_CLASS = COLLECTION_UNIT__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Control Class</b></em>' attribute.
@@ -14172,7 +13650,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_CONTROL_CLASS = IMAGE_UNIT__LOCAL_CONTROL_CLASS;
+	int GALLERY_UNIT__LOCAL_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Instance Control Class</b></em>' attribute.
@@ -14181,7 +13659,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
+	int GALLERY_UNIT__LOCAL_INSTANCE_CONTROL_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Anchor Class</b></em>' attribute.
@@ -14190,7 +13668,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_ANCHOR_CLASS;
+	int GALLERY_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
@@ -14199,7 +13677,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = IMAGE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int GALLERY_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -14208,7 +13686,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__UNIT_TITLE = IMAGE_UNIT__UNIT_TITLE;
+	int GALLERY_UNIT__UNIT_TITLE = COLLECTION_UNIT__UNIT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Element Title</b></em>' containment reference.
@@ -14217,7 +13695,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__ELEMENT_TITLE = IMAGE_UNIT__ELEMENT_TITLE;
+	int GALLERY_UNIT__ELEMENT_TITLE = COLLECTION_UNIT__ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -14226,7 +13704,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__TRUNCATE_ELEMENT_TITLE = IMAGE_UNIT__TRUNCATE_ELEMENT_TITLE;
+	int GALLERY_UNIT__TRUNCATE_ELEMENT_TITLE = COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' reference.
@@ -14235,7 +13713,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SELECTION = IMAGE_UNIT__SELECTION;
+	int GALLERY_UNIT__SELECTION = COLLECTION_UNIT__SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Container Selection</b></em>' reference.
@@ -14244,7 +13722,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIND_CONTAINER_SELECTION = IMAGE_UNIT__FIND_CONTAINER_SELECTION;
+	int GALLERY_UNIT__FIND_CONTAINER_SELECTION = COLLECTION_UNIT__FIND_CONTAINER_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Find Element Selection</b></em>' reference.
@@ -14253,7 +13731,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIND_ELEMENT_SELECTION = IMAGE_UNIT__FIND_ELEMENT_SELECTION;
+	int GALLERY_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -14262,7 +13740,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FILTER = IMAGE_UNIT__FILTER;
+	int GALLERY_UNIT__FILTER = COLLECTION_UNIT__FILTER;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -14271,7 +13749,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SUPPORTED_FILTERS = IMAGE_UNIT__SUPPORTED_FILTERS;
+	int GALLERY_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -14280,7 +13758,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__EMPTY_MESSAGE = IMAGE_UNIT__EMPTY_MESSAGE;
+	int GALLERY_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -14289,7 +13767,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__OMIT_FIELD_LABELS = IMAGE_UNIT__OMIT_FIELD_LABELS;
+	int GALLERY_UNIT__OMIT_FIELD_LABELS = COLLECTION_UNIT__OMIT_FIELD_LABELS;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -14298,7 +13776,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__DEFAULT_PAGINATION_SIZE = IMAGE_UNIT__DEFAULT_PAGINATION_SIZE;
+	int GALLERY_UNIT__DEFAULT_PAGINATION_SIZE = COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -14307,7 +13785,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__MAXIMUM_PAGINATION_SIZE = IMAGE_UNIT__MAXIMUM_PAGINATION_SIZE;
+	int GALLERY_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
@@ -14316,7 +13794,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PAGINATION_CONTROL_PLACEMENT = IMAGE_UNIT__PAGINATION_CONTROL_PLACEMENT;
+	int GALLERY_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
@@ -14325,7 +13803,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__NEXT_NPAGES = IMAGE_UNIT__NEXT_NPAGES;
+	int GALLERY_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
@@ -14334,7 +13812,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PREVIOUS_NPAGES = IMAGE_UNIT__PREVIOUS_NPAGES;
+	int GALLERY_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
@@ -14343,7 +13821,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__NEXT_PAGE_LABEL = IMAGE_UNIT__NEXT_PAGE_LABEL;
+	int GALLERY_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
@@ -14352,7 +13830,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__NEXT_PAGE_ICON_NAME = IMAGE_UNIT__NEXT_PAGE_ICON_NAME;
+	int GALLERY_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
@@ -14361,7 +13839,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PREVIOUS_PAGE_LABEL = IMAGE_UNIT__PREVIOUS_PAGE_LABEL;
+	int GALLERY_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
@@ -14370,7 +13848,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PREVIOUS_PAGE_ICON_NAME = IMAGE_UNIT__PREVIOUS_PAGE_ICON_NAME;
+	int GALLERY_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
@@ -14379,7 +13857,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__USE_DISABLED_PAGE_LINKS = IMAGE_UNIT__USE_DISABLED_PAGE_LINKS;
+	int GALLERY_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
@@ -14388,7 +13866,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__USE_FIRST_LAST_PAGE_LINKS = IMAGE_UNIT__USE_FIRST_LAST_PAGE_LINKS;
+	int GALLERY_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
@@ -14397,7 +13875,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIRST_PAGE_LABEL = IMAGE_UNIT__FIRST_PAGE_LABEL;
+	int GALLERY_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
@@ -14406,7 +13884,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FIRST_PAGE_ICON_NAME = IMAGE_UNIT__FIRST_PAGE_ICON_NAME;
+	int GALLERY_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
@@ -14415,7 +13893,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LAST_PAGE_LABEL = IMAGE_UNIT__LAST_PAGE_LABEL;
+	int GALLERY_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
@@ -14424,7 +13902,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LAST_PAGE_ICON_NAME = IMAGE_UNIT__LAST_PAGE_ICON_NAME;
+	int GALLERY_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
@@ -14433,7 +13911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PAGINATION_CLASS = IMAGE_UNIT__PAGINATION_CLASS;
+	int GALLERY_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
@@ -14442,7 +13920,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PAGINATION_ELEMENT_CLASS = IMAGE_UNIT__PAGINATION_ELEMENT_CLASS;
+	int GALLERY_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
@@ -14451,7 +13929,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PAGINATION_ANCHOR_CLASS = IMAGE_UNIT__PAGINATION_ANCHOR_CLASS;
+	int GALLERY_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -14460,25 +13938,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__IMAGE_PATH_FEATURE = IMAGE_UNIT__IMAGE_PATH_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__IMAGE_FILTER = IMAGE_UNIT__IMAGE_FILTER;
-
-	/**
-	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__MISSING_IMAGE_FILTER = IMAGE_UNIT__MISSING_IMAGE_FILTER;
+	int GALLERY_UNIT__IMAGE_PATH_FEATURE = COLLECTION_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Missing Image Path</b></em>' attribute.
@@ -14487,7 +13947,34 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__MISSING_IMAGE_PATH = IMAGE_UNIT__MISSING_IMAGE_PATH;
+	int GALLERY_UNIT__MISSING_IMAGE_PATH = COLLECTION_UNIT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Show Missing Image When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SHOW_MISSING_IMAGE_WHEN = COLLECTION_UNIT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Missing Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__MISSING_IMAGE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Full Size Filter</b></em>' reference.
@@ -14496,7 +13983,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FULL_SIZE_FILTER = IMAGE_UNIT_FEATURE_COUNT + 0;
+	int GALLERY_UNIT__FULL_SIZE_FILTER = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Show Time</b></em>' attribute.
@@ -14505,7 +13992,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SHOW_TIME = IMAGE_UNIT_FEATURE_COUNT + 1;
+	int GALLERY_UNIT__SHOW_TIME = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Transition Time</b></em>' attribute.
@@ -14514,7 +14001,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__TRANSITION_TIME = IMAGE_UNIT_FEATURE_COUNT + 2;
+	int GALLERY_UNIT__TRANSITION_TIME = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Gallery Unit</em>' class.
@@ -14523,7 +14010,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_FEATURE_COUNT = IMAGE_UNIT_FEATURE_COUNT + 3;
+	int GALLERY_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Gallery Unit</em>' class.
@@ -14532,7 +14019,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_OPERATION_COUNT = IMAGE_UNIT_OPERATION_COUNT + 0;
+	int GALLERY_UNIT_OPERATION_COUNT = COLLECTION_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -22678,6 +22165,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getImageUnit_MissingImagePath();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getShowMissingImageWhen <em>Show Missing Image When</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Show Missing Image When</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageUnit#getShowMissingImageWhen()
+	 * @see #getImageUnit()
+	 * @generated
+	 */
+	EReference getImageUnit_ShowMissingImageWhen();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit <em>Image Cards Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25878,10 +25376,10 @@ public interface WebuiPackage extends EPackage {
 		EAttribute ACTION_CONTAINER__ACTION_NAVIGATION_CLASS = eINSTANCE.getActionContainer_ActionNavigationClass();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl <em>Image Unit</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.ImageUnitImpl
+		 * @see work.andycarpenter.webgen.pims.webui.ImageUnit
 		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 		 * @generated
 		 */
@@ -25918,6 +25416,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE_UNIT__MISSING_IMAGE_PATH = eINSTANCE.getImageUnit_MissingImagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Show Missing Image When</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN = eINSTANCE.getImageUnit_ShowMissingImageWhen();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.

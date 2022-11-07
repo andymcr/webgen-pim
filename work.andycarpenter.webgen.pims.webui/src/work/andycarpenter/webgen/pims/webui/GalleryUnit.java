@@ -22,7 +22,7 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  * @model
  * @generated
  */
-public interface GalleryUnit extends ImageUnit {
+public interface GalleryUnit extends CollectionUnit, ImageUnit {
 	/**
 	 * Returns the value of the '<em><b>Full Size Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->

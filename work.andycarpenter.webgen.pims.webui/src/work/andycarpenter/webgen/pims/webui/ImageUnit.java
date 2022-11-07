@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.ecore.EObject;
+import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 
 /**
@@ -14,16 +16,17 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getImagePathFeature <em>Image Path Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getMissingImagePath <em>Missing Image Path</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getShowMissingImageWhen <em>Show Missing Image When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getImageFilter <em>Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getMissingImageFilter <em>Missing Image Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getMissingImagePath <em>Missing Image Path</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageUnit()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface ImageUnit extends CollectionUnit {
+public interface ImageUnit extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -127,5 +130,27 @@ public interface ImageUnit extends CollectionUnit {
 	 * @generated
 	 */
 	void setMissingImagePath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Show Missing Image When</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Show Missing Image When</em>' containment reference.
+	 * @see #setShowMissingImageWhen(Predicate)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageUnit_ShowMissingImageWhen()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Predicate getShowMissingImageWhen();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getShowMissingImageWhen <em>Show Missing Image When</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Show Missing Image When</em>' containment reference.
+	 * @see #getShowMissingImageWhen()
+	 * @generated
+	 */
+	void setShowMissingImageWhen(Predicate value);
 
 } // ImageUnit

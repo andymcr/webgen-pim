@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -49,9 +50,9 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addMissingImagePathPropertyDescriptor(object);
 			addImageFilterPropertyDescriptor(object);
 			addMissingImageFilterPropertyDescriptor(object);
-			addMissingImagePathPropertyDescriptor(object);
 			addOverlayTitlePropertyDescriptor(object);
 			addEnableImageEnlargementPropertyDescriptor(object);
 			addRevealUntruncatedContentPropertyDescriptor(object);
@@ -204,6 +205,7 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE);
+			childrenFeatures.add(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN);
 		}
 		return childrenFeatures;
 	}
@@ -275,6 +277,7 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_PATH_FEATURE:
+			case WebuiPackage.IMAGE_CARDS_UNIT__SHOW_MISSING_IMAGE_WHEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -306,6 +309,51 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
 	}
 
 	/**
@@ -320,6 +368,8 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
+			childFeature == WebuiPackage.Literals.DYNAMIC_UNIT__HIDE_WHEN ||
+			childFeature == WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN ||
 			childFeature == WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE ||
 			childFeature == WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE;
 

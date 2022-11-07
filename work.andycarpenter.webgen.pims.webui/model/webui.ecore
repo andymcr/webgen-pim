@@ -698,12 +698,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementDate" lowerBound="1"
         eType="#//FeaturePath" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageUnit" abstract="true" eSuperTypes="#//CollectionUnit">
+  <eClassifiers xsi:type="ecore:EClass" name="ImageUnit" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imagePathFeature" lowerBound="1"
         eType="#//FeaturePath" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingImagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="showMissingImageWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imageFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="missingImageFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingImagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ImageCardsUnit" eSuperTypes="#//CardsUnit #//ImageUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overlayTitle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -713,13 +715,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="revealUntruncatedContent"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SliderUnit" eSuperTypes="#//ImageUnit">
+  <eClassifiers xsi:type="ecore:EClass" name="SliderUnit" eSuperTypes="#//CollectionUnit #//ImageUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="showTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transitionTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnit" eSuperTypes="#//ImageUnit">
+  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnit" eSuperTypes="#//CollectionUnit #//ImageUnit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fullSizeFilter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.image/model/image.ecore#//ImageManipulation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="showTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
