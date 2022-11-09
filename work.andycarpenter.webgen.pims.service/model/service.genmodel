@@ -41,6 +41,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//BusinessOperation/uses"/>
       <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//BusinessOperation/resultType"/>
       <genFeatures createChild="false" propertyCategory="Business" ecoreFeature="ecore:EAttribute service.ecore#//BusinessOperation/resultMimeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//BusinessOperation/fileExtension"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -4171,7 +4171,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getOperationAction_FileExtension() {
+	public EAttribute getOperationAction_RequiresRole() {
 		return (EAttribute)operationActionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -4181,18 +4181,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getOperationAction_RequiresRole() {
-		return (EAttribute)operationActionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getOperationAction_UriElement() {
-		return (EAttribute)operationActionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)operationActionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4932,7 +4922,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		operationActionEClass = createEClass(OPERATION_ACTION);
 		createEReference(operationActionEClass, OPERATION_ACTION__OPERATION);
-		createEAttribute(operationActionEClass, OPERATION_ACTION__FILE_EXTENSION);
 		createEAttribute(operationActionEClass, OPERATION_ACTION__REQUIRES_ROLE);
 		createEAttribute(operationActionEClass, OPERATION_ACTION__URI_ELEMENT);
 
@@ -5511,7 +5500,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(operationActionEClass, OperationAction.class, "OperationAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationAction_Operation(), theServicePackage.getBusinessOperation(), null, "operation", null, 1, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOperationAction_FileExtension(), ecorePackage.getEString(), "fileExtension", null, 0, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperationAction_RequiresRole(), ecorePackage.getEString(), "requiresRole", "", 0, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperationAction_UriElement(), ecorePackage.getEString(), "uriElement", "", 0, 1, OperationAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

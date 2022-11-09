@@ -18120,22 +18120,13 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION__OPERATION = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_ACTION__FILE_EXTENSION = ACTION_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__REQUIRES_ROLE = ACTION_FEATURE_COUNT + 2;
+	int OPERATION_ACTION__REQUIRES_ROLE = ACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -18144,7 +18135,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 3;
+	int OPERATION_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Operation Action</em>' class.
@@ -18153,7 +18144,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+	int OPERATION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Operation Action</em>' class.
@@ -18318,15 +18309,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_OPERATION_ACTION__FILE_EXTENSION = OPERATION_ACTION__FILE_EXTENSION;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -18498,15 +18480,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__FILE_EXTENSION = OPERATION_ACTION__FILE_EXTENSION;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -18688,15 +18661,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERAL_OPERATION_ACTION__FILE_EXTENSION = OPERATION_ACTION__FILE_EXTENSION;
 
 	/**
 	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
@@ -22478,17 +22442,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getOperationAction_Operation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getFileExtension <em>File Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File Extension</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.OperationAction#getFileExtension()
-	 * @see #getOperationAction()
-	 * @generated
-	 */
-	EAttribute getOperationAction_FileExtension();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole <em>Requires Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25660,14 +25613,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATION_ACTION__OPERATION = eINSTANCE.getOperationAction_Operation();
-
-		/**
-		 * The meta object literal for the '<em><b>File Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPERATION_ACTION__FILE_EXTENSION = eINSTANCE.getOperationAction_FileExtension();
 
 		/**
 		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.

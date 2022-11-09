@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.base.NamedElement;
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getUses <em>Uses</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getResultType <em>Result Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getResultMimeType <em>Result Mime Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getFileExtension <em>File Extension</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.service.ServicePackage#getBusinessOperation()
@@ -102,6 +103,7 @@ public interface BusinessOperation extends NamedElement, FormalParameterList {
 
 	/**
 	 * Returns the value of the '<em><b>Result Mime Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Result Mime Type</em>' attribute isn't clear,
@@ -111,7 +113,7 @@ public interface BusinessOperation extends NamedElement, FormalParameterList {
 	 * @return the value of the '<em>Result Mime Type</em>' attribute.
 	 * @see #setResultMimeType(String)
 	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getBusinessOperation_ResultMimeType()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getResultMimeType();
@@ -125,5 +127,28 @@ public interface BusinessOperation extends NamedElement, FormalParameterList {
 	 * @generated
 	 */
 	void setResultMimeType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>File Extension</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>File Extension</em>' attribute.
+	 * @see #setFileExtension(String)
+	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getBusinessOperation_FileExtension()
+	 * @model default=""
+	 * @generated
+	 */
+	String getFileExtension();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getFileExtension <em>File Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>File Extension</em>' attribute.
+	 * @see #getFileExtension()
+	 * @generated
+	 */
+	void setFileExtension(String value);
 
 } // BusinessOperation

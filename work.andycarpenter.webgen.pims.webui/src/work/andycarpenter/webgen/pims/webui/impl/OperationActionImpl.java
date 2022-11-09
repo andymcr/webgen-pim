@@ -21,7 +21,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getOperation <em>Operation</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getFileExtension <em>File Extension</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -38,26 +37,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 	 * @ordered
 	 */
 	protected BusinessOperation operation;
-
-	/**
-	 * The default value of the '{@link #getFileExtension() <em>File Extension</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFileExtension()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FILE_EXTENSION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFileExtension() <em>File Extension</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFileExtension()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fileExtension = FILE_EXTENSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
@@ -164,29 +143,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 	 * @generated
 	 */
 	@Override
-	public String getFileExtension() {
-		return fileExtension;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFileExtension(String newFileExtension) {
-		String oldFileExtension = fileExtension;
-		fileExtension = newFileExtension;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.OPERATION_ACTION__FILE_EXTENSION, oldFileExtension, fileExtension));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRequiresRole() {
 		return requiresRole;
 	}
@@ -238,8 +194,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				if (resolve) return getOperation();
 				return basicGetOperation();
-			case WebuiPackage.OPERATION_ACTION__FILE_EXTENSION:
-				return getFileExtension();
 			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 				return getRequiresRole();
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
@@ -258,9 +212,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		switch (featureID) {
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				setOperation((BusinessOperation)newValue);
-				return;
-			case WebuiPackage.OPERATION_ACTION__FILE_EXTENSION:
-				setFileExtension((String)newValue);
 				return;
 			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 				setRequiresRole((String)newValue);
@@ -283,9 +234,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				setOperation((BusinessOperation)null);
 				return;
-			case WebuiPackage.OPERATION_ACTION__FILE_EXTENSION:
-				setFileExtension(FILE_EXTENSION_EDEFAULT);
-				return;
 			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
 				return;
@@ -306,8 +254,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		switch (featureID) {
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				return operation != null;
-			case WebuiPackage.OPERATION_ACTION__FILE_EXTENSION:
-				return FILE_EXTENSION_EDEFAULT == null ? fileExtension != null : !FILE_EXTENSION_EDEFAULT.equals(fileExtension);
 			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
@@ -326,9 +272,7 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (fileExtension: ");
-		result.append(fileExtension);
-		result.append(", requiresRole: ");
+		result.append(" (requiresRole: ");
 		result.append(requiresRole);
 		result.append(", uriElement: ");
 		result.append(uriElement);

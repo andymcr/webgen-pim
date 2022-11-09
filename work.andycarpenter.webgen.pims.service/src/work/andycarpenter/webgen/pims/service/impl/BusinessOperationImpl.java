@@ -43,6 +43,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getUses <em>Uses</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getResultType <em>Result Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getResultMimeType <em>Result Mime Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getFileExtension <em>File Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,7 +97,7 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESULT_MIME_TYPE_EDEFAULT = null;
+	protected static final String RESULT_MIME_TYPE_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getResultMimeType() <em>Result Mime Type</em>}' attribute.
@@ -107,6 +108,26 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * @ordered
 	 */
 	protected String resultMimeType = RESULT_MIME_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFileExtension() <em>File Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFileExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FILE_EXTENSION_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFileExtension() <em>File Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFileExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fileExtension = FILE_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,6 +268,29 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getFileExtension() {
+		return fileExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFileExtension(String newFileExtension) {
+		String oldFileExtension = fileExtension;
+		fileExtension = newFileExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.BUSINESS_OPERATION__FILE_EXTENSION, oldFileExtension, fileExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -309,6 +353,8 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 				return getResultType();
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
 				return getResultMimeType();
+			case ServicePackage.BUSINESS_OPERATION__FILE_EXTENSION:
+				return getFileExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -339,6 +385,9 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
 				setResultMimeType((String)newValue);
 				return;
+			case ServicePackage.BUSINESS_OPERATION__FILE_EXTENSION:
+				setFileExtension((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -366,6 +415,9 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
 				setResultMimeType(RESULT_MIME_TYPE_EDEFAULT);
 				return;
+			case ServicePackage.BUSINESS_OPERATION__FILE_EXTENSION:
+				setFileExtension(FILE_EXTENSION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -388,6 +440,8 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 				return resultType != RESULT_TYPE_EDEFAULT;
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
 				return RESULT_MIME_TYPE_EDEFAULT == null ? resultMimeType != null : !RESULT_MIME_TYPE_EDEFAULT.equals(resultMimeType);
+			case ServicePackage.BUSINESS_OPERATION__FILE_EXTENSION:
+				return FILE_EXTENSION_EDEFAULT == null ? fileExtension != null : !FILE_EXTENSION_EDEFAULT.equals(fileExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -438,6 +492,8 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 		result.append(resultType);
 		result.append(", resultMimeType: ");
 		result.append(resultMimeType);
+		result.append(", fileExtension: ");
+		result.append(fileExtension);
 		result.append(')');
 		return result.toString();
 	}

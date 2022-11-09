@@ -46,7 +46,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOperationPropertyDescriptor(object);
-			addFileExtensionPropertyDescriptor(object);
 			addRequiresRolePropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
 		}
@@ -71,28 +70,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 				 false,
 				 true,
 				 null,
-				 getString("_UI_BusinessPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the File Extension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFileExtensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_OperationAction_fileExtension_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OperationAction_fileExtension_feature", "_UI_OperationAction_type"),
-				 WebuiPackage.Literals.OPERATION_ACTION__FILE_EXTENSION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI_BusinessPropertyCategory"),
 				 null));
 	}
@@ -168,7 +145,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationAction.class)) {
-			case WebuiPackage.OPERATION_ACTION__FILE_EXTENSION:
 			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

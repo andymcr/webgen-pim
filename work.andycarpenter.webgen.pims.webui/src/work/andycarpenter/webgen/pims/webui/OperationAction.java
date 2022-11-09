@@ -14,7 +14,6 @@ import work.andycarpenter.webgen.pims.service.BusinessOperation;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getOperation <em>Operation</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getFileExtension <em>File Extension</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -45,28 +44,6 @@ public interface OperationAction extends Action {
 	 * @generated
 	 */
 	void setOperation(BusinessOperation value);
-
-	/**
-	 * Returns the value of the '<em><b>File Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>File Extension</em>' attribute.
-	 * @see #setFileExtension(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getOperationAction_FileExtension()
-	 * @model
-	 * @generated
-	 */
-	String getFileExtension();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getFileExtension <em>File Extension</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>File Extension</em>' attribute.
-	 * @see #getFileExtension()
-	 * @generated
-	 */
-	void setFileExtension(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.

@@ -977,7 +977,6 @@ abstract rule OperationAction {
 			else
 				website.operation.findBusinessOperation()
 			endif,
-		fileExtension <- website.fileExtension,
 		localAuthorisationRoles <- website.requiresRole,
 		uriElement <-
 			if website.uriElement <> '' then

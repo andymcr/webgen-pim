@@ -356,13 +356,22 @@ public interface ServicePackage extends EPackage {
 	int BUSINESS_OPERATION__RESULT_MIME_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_OPERATION__FILE_EXTENSION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Business Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_OPERATION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int BUSINESS_OPERATION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Business Operation</em>' class.
@@ -578,6 +587,17 @@ public interface ServicePackage extends EPackage {
 	EAttribute getBusinessOperation_ResultMimeType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getFileExtension <em>File Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>File Extension</em>'.
+	 * @see work.andycarpenter.webgen.pims.service.BusinessOperation#getFileExtension()
+	 * @see #getBusinessOperation()
+	 * @generated
+	 */
+	EAttribute getBusinessOperation_FileExtension();
+
+	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -763,6 +783,14 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BUSINESS_OPERATION__RESULT_MIME_TYPE = eINSTANCE.getBusinessOperation_ResultMimeType();
+
+		/**
+		 * The meta object literal for the '<em><b>File Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUSINESS_OPERATION__FILE_EXTENSION = eINSTANCE.getBusinessOperation_FileExtension();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}' enum.
