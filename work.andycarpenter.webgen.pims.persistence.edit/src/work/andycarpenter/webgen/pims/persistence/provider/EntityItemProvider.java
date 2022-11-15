@@ -60,7 +60,6 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			addContainingTypePropertyDescriptor(object);
 			addKeysPropertyDescriptor(object);
 			addUniquePropertyDescriptor(object);
-			addContainerUniquePropertyDescriptor(object);
 			addRepositoryPropertyDescriptor(object);
 			addTableNamePropertyDescriptor(object);
 			addAutoKeyNamePropertyDescriptor(object);
@@ -284,28 +283,6 @@ public class EntityItemProvider extends ClassifierItemProvider {
 				 getString("_UI_Entity_unique_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_unique_feature", "_UI_Entity_type"),
 				 PersistencePackage.Literals.ENTITY__UNIQUE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Container Unique feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContainerUniquePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Entity_containerUnique_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_containerUnique_feature", "_UI_Entity_type"),
-				 PersistencePackage.Literals.ENTITY__CONTAINER_UNIQUE,
 				 true,
 				 false,
 				 true,

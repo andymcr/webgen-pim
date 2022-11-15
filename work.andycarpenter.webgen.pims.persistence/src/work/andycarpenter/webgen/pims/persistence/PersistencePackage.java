@@ -416,22 +416,13 @@ public interface PersistencePackage extends EPackage {
 	int ENTITY__UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__CONTAINER_UNIQUE = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
-
-	/**
 	 * The feature id for the '<em><b>Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__REPOSITORY = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
+	int ENTITY__REPOSITORY = BasePackage.CLASSIFIER_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
@@ -440,7 +431,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
+	int ENTITY__TABLE_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Name</b></em>' attribute.
@@ -449,7 +440,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
+	int ENTITY__AUTO_KEY_NAME = BasePackage.CLASSIFIER_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Persistent Type</b></em>' attribute.
@@ -458,7 +449,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
+	int ENTITY__AUTO_KEY_PERSISTENT_TYPE = BasePackage.CLASSIFIER_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Auto Key Generation Strategy</b></em>' attribute.
@@ -467,7 +458,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
+	int ENTITY__AUTO_KEY_GENERATION_STRATEGY = BasePackage.CLASSIFIER_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Implements User Interface</b></em>' attribute.
@@ -476,7 +467,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
+	int ENTITY__IMPLEMENTS_USER_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Implements Reset Password Interface</b></em>' attribute.
@@ -485,7 +476,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 20;
+	int ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE = BasePackage.CLASSIFIER_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -494,7 +485,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 21;
+	int ENTITY_FEATURE_COUNT = BasePackage.CLASSIFIER_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -5790,17 +5781,6 @@ public interface PersistencePackage extends EPackage {
 	EReference getEntity_Unique();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique <em>Container Unique</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Container Unique</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EReference getEntity_ContainerUnique();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Entity#getRepository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7309,14 +7289,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENTITY__UNIQUE = eINSTANCE.getEntity_Unique();
-
-		/**
-		 * The meta object literal for the '<em><b>Container Unique</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY__CONTAINER_UNIQUE = eINSTANCE.getEntity_ContainerUnique();
 
 		/**
 		 * The meta object literal for the '<em><b>Repository</b></em>' reference feature.

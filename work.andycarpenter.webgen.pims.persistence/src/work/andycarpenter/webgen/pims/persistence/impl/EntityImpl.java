@@ -47,7 +47,6 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getKeys <em>Keys</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getUnique <em>Unique</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getContainerUnique <em>Container Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getTableName <em>Table Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl#getAutoKeyName <em>Auto Key Name</em>}</li>
@@ -209,16 +208,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @ordered
 	 */
 	protected EList<Feature> unique;
-
-	/**
-	 * The cached value of the '{@link #getContainerUnique() <em>Container Unique</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainerUnique()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Feature> containerUnique;
 
 	/**
 	 * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference.
@@ -588,19 +577,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 	 * @generated
 	 */
 	@Override
-	public EList<Feature> getContainerUnique() {
-		if (containerUnique == null) {
-			containerUnique = new EObjectResolvingEList<Feature>(Feature.class, this, PersistencePackage.ENTITY__CONTAINER_UNIQUE);
-		}
-		return containerUnique;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Repository getRepository() {
 		if (repository != null && repository.eIsProxy()) {
 			InternalEObject oldRepository = (InternalEObject)repository;
@@ -874,8 +850,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return getLabels();
 			case PersistencePackage.ENTITY__UNIQUE:
 				return getUnique();
-			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
-				return getContainerUnique();
 			case PersistencePackage.ENTITY__REPOSITORY:
 				if (resolve) return getRepository();
 				return basicGetRepository();
@@ -930,10 +904,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				getUnique().clear();
 				getUnique().addAll((Collection<? extends Feature>)newValue);
 				return;
-			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
-				getContainerUnique().clear();
-				getContainerUnique().addAll((Collection<? extends Feature>)newValue);
-				return;
 			case PersistencePackage.ENTITY__REPOSITORY:
 				setRepository((Repository)newValue);
 				return;
@@ -987,9 +957,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return;
 			case PersistencePackage.ENTITY__UNIQUE:
 				getUnique().clear();
-				return;
-			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
-				getContainerUnique().clear();
 				return;
 			case PersistencePackage.ENTITY__REPOSITORY:
 				setRepository((Repository)null);
@@ -1050,8 +1017,6 @@ public class EntityImpl extends ClassifierImpl implements Entity {
 				return labels != null && !labels.isEmpty();
 			case PersistencePackage.ENTITY__UNIQUE:
 				return unique != null && !unique.isEmpty();
-			case PersistencePackage.ENTITY__CONTAINER_UNIQUE:
-				return containerUnique != null && !containerUnique.isEmpty();
 			case PersistencePackage.ENTITY__REPOSITORY:
 				return repository != null;
 			case PersistencePackage.ENTITY__TABLE_NAME:

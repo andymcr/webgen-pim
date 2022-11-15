@@ -152,7 +152,6 @@ rule Entity {
 				website.pluralisedName
 			endif,
 		"unique" <- website."unique",
-		containerUnique <- website.containerUnique,
 		tableName <- 
 			if not website.tableName.oclIsUndefined() and website.tableName <> '' then
 				website.tableName

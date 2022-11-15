@@ -1248,7 +1248,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_ContainerUnique() {
+	public EReference getEntity_Repository() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -1258,18 +1258,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_Repository() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getEntity_TableName() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1279,7 +1269,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getEntity_AutoKeyName() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(16);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -1289,7 +1279,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getEntity_AutoKeyPersistentType() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(17);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -1299,7 +1289,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getEntity_AutoKeyGenerationStrategy() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(18);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -1309,7 +1299,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getEntity_ImplementsUserInterface() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(19);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -1319,7 +1309,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 */
 	@Override
 	public EAttribute getEntity_ImplementsResetPasswordInterface() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(20);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(19);
 	}
 
 	/**
@@ -2045,7 +2035,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(entityEClass, ENTITY__KEYS);
 		createEReference(entityEClass, ENTITY__LABELS);
 		createEReference(entityEClass, ENTITY__UNIQUE);
-		createEReference(entityEClass, ENTITY__CONTAINER_UNIQUE);
 		createEReference(entityEClass, ENTITY__REPOSITORY);
 		createEAttribute(entityEClass, ENTITY__TABLE_NAME);
 		createEAttribute(entityEClass, ENTITY__AUTO_KEY_NAME);
@@ -2303,7 +2292,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEReference(getEntity_Keys(), this.getFeature(), null, "keys", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Labels(), this.getModelLabel(), this.getModelLabel_LabelFor(), "labels", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Unique(), this.getFeature(), null, "unique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_ContainerUnique(), this.getFeature(), null, "containerUnique", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Repository(), this.getRepository(), this.getRepository_Serves(), "repository", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyName(), ecorePackage.getEString(), "autoKeyName", "id", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

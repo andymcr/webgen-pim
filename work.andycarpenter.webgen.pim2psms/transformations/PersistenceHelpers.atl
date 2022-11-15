@@ -58,7 +58,8 @@ helper context String def: createAssociationColumnName() : String
 				endif;
 
 helper context Website!Entity def: createEntityColumnName() : String
-	= self.name.createName().concat('_id');
+	= -- self.name.createName().concat('_id');
+	self.name.trim().concat('_id').toLower();
 
 
 helper context Website!Attribute def: featureTypeNoted(noted : Set(Website!Feature)) : Boolean

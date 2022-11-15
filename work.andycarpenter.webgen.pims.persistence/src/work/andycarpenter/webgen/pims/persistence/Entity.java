@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.base.Classifier;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getKeys <em>Keys</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getLabels <em>Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getUnique <em>Unique</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getContainerUnique <em>Container Unique</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getRepository <em>Repository</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getTableName <em>Table Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyName <em>Auto Key Name</em>}</li>
@@ -294,22 +293,6 @@ public interface Entity extends Classifier {
 	 * @generated
 	 */
 	EList<Feature> getUnique();
-
-	/**
-	 * Returns the value of the '<em><b>Container Unique</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Feature}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Container Unique</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Container Unique</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_ContainerUnique()
-	 * @model
-	 * @generated
-	 */
-	EList<Feature> getContainerUnique();
 
 	/**
 	 * Returns the value of the '<em><b>Repository</b></em>' reference.

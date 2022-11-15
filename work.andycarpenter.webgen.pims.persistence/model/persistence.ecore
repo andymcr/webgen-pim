@@ -102,8 +102,6 @@
         eType="#//ModelLabel" containment="true" eOpposite="#//ModelLabel/labelFor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unique" upperBound="-1"
         eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containerUnique" upperBound="-1"
-        eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="#//Repository"
         eOpposite="#//Repository/serves"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
