@@ -10,8 +10,6 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Variable;
-import work.andycarpenter.webgen.pims.persistence.AssociationReference;
-import work.andycarpenter.webgen.pims.persistence.FeatureChildPath;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
 
@@ -323,60 +321,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitAssociation unitAssociation = (UnitAssociation)theEObject;
 				T result = caseUnitAssociation(unitAssociation);
 				if (result == null) result = caseUnitFeature(unitAssociation);
-				if (result == null) result = caseAssociationReference(unitAssociation);
+				if (result == null) result = casePathAssociation(unitAssociation);
 				if (result == null) result = caseUnitField(unitAssociation);
 				if (result == null) result = caseActionContainer(unitAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE: {
-				ChildPathAttribute childPathAttribute = (ChildPathAttribute)theEObject;
-				T result = caseChildPathAttribute(childPathAttribute);
-				if (result == null) result = caseFeatureChildPath(childPathAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.CHILD_PATH_ASSOCIATION: {
-				ChildPathAssociation childPathAssociation = (ChildPathAssociation)theEObject;
-				T result = caseChildPathAssociation(childPathAssociation);
-				if (result == null) result = caseFeatureChildPath(childPathAssociation);
-				if (result == null) result = caseAssociationReference(childPathAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH: {
-				FeaturePath featurePath = (FeaturePath)theEObject;
-				T result = caseFeaturePath(featurePath);
-				if (result == null) result = caseVariable(featurePath);
-				if (result == null) result = caseExpression(featurePath);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: {
-				FeaturePathAttribute featurePathAttribute = (FeaturePathAttribute)theEObject;
-				T result = caseFeaturePathAttribute(featurePathAttribute);
-				if (result == null) result = caseFeaturePath(featurePathAttribute);
-				if (result == null) result = caseVariable(featurePathAttribute);
-				if (result == null) result = caseExpression(featurePathAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_ASSOCIATION: {
-				FeaturePathAssociation featurePathAssociation = (FeaturePathAssociation)theEObject;
-				T result = caseFeaturePathAssociation(featurePathAssociation);
-				if (result == null) result = caseFeaturePath(featurePathAssociation);
-				if (result == null) result = caseAssociationReference(featurePathAssociation);
-				if (result == null) result = caseVariable(featurePathAssociation);
-				if (result == null) result = caseExpression(featurePathAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_LABEL: {
-				FeaturePathLabel featurePathLabel = (FeaturePathLabel)theEObject;
-				T result = caseFeaturePathLabel(featurePathLabel);
-				if (result == null) result = caseFeaturePath(featurePathLabel);
-				if (result == null) result = caseVariable(featurePathLabel);
-				if (result == null) result = caseExpression(featurePathLabel);
+				if (result == null) result = casePath(unitAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -722,6 +670,111 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseActionContainer(resetPasswordUnit);
 				if (result == null) result = caseNamedDisplayElement(resetPasswordUnit);
 				if (result == null) result = caseNamedElement(resetPasswordUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH: {
+				Path path = (Path)theEObject;
+				T result = casePath(path);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_ASSOCIATION: {
+				PathAssociation pathAssociation = (PathAssociation)theEObject;
+				T result = casePathAssociation(pathAssociation);
+				if (result == null) result = casePath(pathAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_ATTRIBUTE: {
+				PathAttribute pathAttribute = (PathAttribute)theEObject;
+				T result = casePathAttribute(pathAttribute);
+				if (result == null) result = casePath(pathAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CHILD_PATH: {
+				ChildPath childPath = (ChildPath)theEObject;
+				T result = caseChildPath(childPath);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CHILD_PATH_ASSOCIATION: {
+				ChildPathAssociation childPathAssociation = (ChildPathAssociation)theEObject;
+				T result = caseChildPathAssociation(childPathAssociation);
+				if (result == null) result = casePathAssociation(childPathAssociation);
+				if (result == null) result = caseChildPath(childPathAssociation);
+				if (result == null) result = casePath(childPathAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE: {
+				ChildPathAttribute childPathAttribute = (ChildPathAttribute)theEObject;
+				T result = caseChildPathAttribute(childPathAttribute);
+				if (result == null) result = casePathAttribute(childPathAttribute);
+				if (result == null) result = caseChildPath(childPathAttribute);
+				if (result == null) result = casePath(childPathAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FEATURE_PATH: {
+				FeaturePath featurePath = (FeaturePath)theEObject;
+				T result = caseFeaturePath(featurePath);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION: {
+				FeaturePathAssociation featurePathAssociation = (FeaturePathAssociation)theEObject;
+				T result = caseFeaturePathAssociation(featurePathAssociation);
+				if (result == null) result = casePathAssociation(featurePathAssociation);
+				if (result == null) result = caseFeaturePath(featurePathAssociation);
+				if (result == null) result = casePath(featurePathAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: {
+				FeaturePathAttribute featurePathAttribute = (FeaturePathAttribute)theEObject;
+				T result = caseFeaturePathAttribute(featurePathAttribute);
+				if (result == null) result = casePathAttribute(featurePathAttribute);
+				if (result == null) result = caseFeaturePath(featurePathAttribute);
+				if (result == null) result = casePath(featurePathAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.FEATURE_PATH_LABEL: {
+				FeaturePathLabel featurePathLabel = (FeaturePathLabel)theEObject;
+				T result = caseFeaturePathLabel(featurePathLabel);
+				if (result == null) result = caseFeaturePath(featurePathLabel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_VARIABLE: {
+				PathVariable pathVariable = (PathVariable)theEObject;
+				T result = casePathVariable(pathVariable);
+				if (result == null) result = caseVariable(pathVariable);
+				if (result == null) result = caseExpression(pathVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_VARIABLE_ASSOCIATION: {
+				PathVariableAssociation pathVariableAssociation = (PathVariableAssociation)theEObject;
+				T result = casePathVariableAssociation(pathVariableAssociation);
+				if (result == null) result = casePathAssociation(pathVariableAssociation);
+				if (result == null) result = casePathVariable(pathVariableAssociation);
+				if (result == null) result = casePath(pathVariableAssociation);
+				if (result == null) result = caseVariable(pathVariableAssociation);
+				if (result == null) result = caseExpression(pathVariableAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE: {
+				PathVariableAttribute pathVariableAttribute = (PathVariableAttribute)theEObject;
+				T result = casePathVariableAttribute(pathVariableAttribute);
+				if (result == null) result = casePathAttribute(pathVariableAttribute);
+				if (result == null) result = casePathVariable(pathVariableAttribute);
+				if (result == null) result = casePath(pathVariableAttribute);
+				if (result == null) result = caseVariable(pathVariableAttribute);
+				if (result == null) result = caseExpression(pathVariableAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1326,36 +1379,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Association Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Association Reference</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAssociationReference(AssociationReference object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeatureChildPath(FeatureChildPath object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1461,21 +1484,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePathAssociation(FeaturePathAssociation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1487,6 +1495,66 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFeaturePathLabel(FeaturePathLabel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathVariable(PathVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Variable Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathVariableAssociation(PathVariableAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Variable Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathVariableAttribute(PathVariableAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeaturePathAssociation(FeaturePathAssociation object) {
 		return null;
 	}
 
@@ -1847,6 +1915,66 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResetPasswordUnit(ResetPasswordUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePath(Path object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathAssociation(PathAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathAttribute(PathAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildPath(ChildPath object) {
 		return null;
 	}
 

@@ -236,12 +236,12 @@ public class BadgeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

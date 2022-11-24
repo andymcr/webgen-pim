@@ -58,8 +58,8 @@ public interface UnitLabel extends UnitField {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitLabel_Name()
-	 * @model changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if label.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tlabel.name\r\nendif\r\n'"
+	 * @model changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if label.oclIsUndefined() then\n\t\'\'\nelse\n\tlabel.name\nendif\n'"
 	 * @generated
 	 */
 	String getName();

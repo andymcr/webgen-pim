@@ -32,7 +32,7 @@ public interface CreateSitemapUnit extends ContentUnit {
 	 * @return the value of the '<em>Deployed URL</em>' attribute.
 	 * @see #setDeployedURL(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateSitemapUnit_DeployedURL()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	String getDeployedURL();
@@ -59,7 +59,7 @@ public interface CreateSitemapUnit extends ContentUnit {
 	 * @return the value of the '<em>Filename</em>' attribute.
 	 * @see #setFilename(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateSitemapUnit_Filename()
-	 * @model default="sitemap.xml" required="true" ordered="false"
+	 * @model default="sitemap.xml" required="true"
 	 * @generated
 	 */
 	String getFilename();

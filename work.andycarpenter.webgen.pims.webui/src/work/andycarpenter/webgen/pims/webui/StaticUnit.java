@@ -31,7 +31,7 @@ public interface StaticUnit extends ContentUnit {
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getStaticUnit_Content()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getContent();

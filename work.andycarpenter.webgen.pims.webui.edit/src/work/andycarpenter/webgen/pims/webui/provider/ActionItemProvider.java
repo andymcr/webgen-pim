@@ -53,6 +53,7 @@ public class ActionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addParentUnitPropertyDescriptor(object);
 			addIconNamePropertyDescriptor(object);
 			addDisablePropertyDescriptor(object);
 			addConfirmMessagePropertyDescriptor(object);
@@ -64,6 +65,28 @@ public class ActionItemProvider
 			addContainingTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Parent Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParentUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Action_parentUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Action_parentUnit_feature", "_UI_Action_type"),
+				 WebuiPackage.Literals.ACTION__PARENT_UNIT,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

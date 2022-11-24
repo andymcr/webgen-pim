@@ -298,12 +298,12 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

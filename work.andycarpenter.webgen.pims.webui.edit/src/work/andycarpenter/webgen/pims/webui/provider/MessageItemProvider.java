@@ -182,17 +182,12 @@ public class MessageItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
 	}
 
 	/**

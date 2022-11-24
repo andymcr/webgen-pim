@@ -139,7 +139,7 @@ public interface WebUI extends EObject {
 	 * @return the value of the '<em>Use Form Floating Labels</em>' attribute.
 	 * @see #setUseFormFloatingLabels(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_UseFormFloatingLabels()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isUseFormFloatingLabels();
@@ -166,7 +166,7 @@ public interface WebUI extends EObject {
 	 * @return the value of the '<em>Default Date Format</em>' attribute.
 	 * @see #setDefaultDateFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultDateFormat()
-	 * @model default="jS F Y" ordered="false"
+	 * @model default="jS F Y"
 	 * @generated
 	 */
 	String getDefaultDateFormat();
@@ -193,7 +193,7 @@ public interface WebUI extends EObject {
 	 * @return the value of the '<em>Default Time Format</em>' attribute.
 	 * @see #setDefaultTimeFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultTimeFormat()
-	 * @model default="G.i" ordered="false"
+	 * @model default="G.i"
 	 * @generated
 	 */
 	String getDefaultTimeFormat();
@@ -220,7 +220,7 @@ public interface WebUI extends EObject {
 	 * @return the value of the '<em>Default Date Time Format</em>' attribute.
 	 * @see #setDefaultDateTimeFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultDateTimeFormat()
-	 * @model default="jS F Y G.i" ordered="false"
+	 * @model default="jS F Y G.i"
 	 * @generated
 	 */
 	String getDefaultDateTimeFormat();
@@ -492,7 +492,7 @@ public interface WebUI extends EObject {
 	 * @return the value of the '<em>Default Maximum Upload Size</em>' attribute.
 	 * @see #setDefaultMaximumUploadSize(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultMaximumUploadSize()
-	 * @model default="2000000" ordered="false"
+	 * @model default="2000000" required="true"
 	 * @generated
 	 */
 	int getDefaultMaximumUploadSize();

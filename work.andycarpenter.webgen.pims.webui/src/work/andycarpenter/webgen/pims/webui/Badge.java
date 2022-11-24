@@ -165,7 +165,7 @@ public interface Badge extends EObject {
 	 * @return the value of the '<em>Local Badge Class</em>' attribute.
 	 * @see #setLocalBadgeClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_LocalBadgeClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalBadgeClass();

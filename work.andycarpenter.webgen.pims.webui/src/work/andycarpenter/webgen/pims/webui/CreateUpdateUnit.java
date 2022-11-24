@@ -34,7 +34,7 @@ public interface CreateUpdateUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>On Save Continue Editing</em>' attribute.
 	 * @see #setOnSaveContinueEditing(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit_OnSaveContinueEditing()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isOnSaveContinueEditing();
@@ -83,7 +83,7 @@ public interface CreateUpdateUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>Clear Label</em>' attribute.
 	 * @see #setClearLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCreateUpdateUnit_ClearLabel()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getClearLabel();

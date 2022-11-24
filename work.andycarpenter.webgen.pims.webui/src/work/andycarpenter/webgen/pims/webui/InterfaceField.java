@@ -40,7 +40,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Required</em>' attribute.
 	 * @see #setRequired(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_Required()
-	 * @model ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isRequired();
@@ -66,7 +66,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Default Value</em>' attribute.
 	 * @see #setDefaultValue(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_DefaultValue()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getDefaultValue();
@@ -93,7 +93,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Placeholder</em>' attribute.
 	 * @see #setPlaceholder(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_Placeholder()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getPlaceholder();
@@ -116,7 +116,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Repeated Field</em>' attribute.
 	 * @see #setRepeatedField(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_RepeatedField()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isRepeatedField();
@@ -235,7 +235,7 @@ public interface InterfaceField extends NamedDisplayElement, UnitField {
 	 * @return the value of the '<em>Validation Pattern</em>' attribute.
 	 * @see #setValidationPattern(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getInterfaceField_ValidationPattern()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getValidationPattern();

@@ -56,7 +56,7 @@ public interface SubmenuEntry extends Menu, MenuEntry {
 	 * @return the value of the '<em>Always Visible</em>' attribute.
 	 * @see #setAlwaysVisible(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSubmenuEntry_AlwaysVisible()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isAlwaysVisible();

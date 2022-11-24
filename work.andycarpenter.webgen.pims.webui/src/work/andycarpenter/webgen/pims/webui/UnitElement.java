@@ -38,7 +38,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Attribute</em>' reference.
 	 * @see #setAttribute(Attribute)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Attribute()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	Attribute getAttribute();
@@ -64,7 +64,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Name()
-	 * @model unsettable="true" changeable="false" volatile="true" derived="true" ordered="false"
+	 * @model unsettable="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif'"
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Default Value</em>' containment reference.
 	 * @see #setDefaultValue(Expression)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_DefaultValue()
-	 * @model containment="true" ordered="false"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Expression getDefaultValue();
@@ -118,7 +118,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Obfuscate Form Fields</em>' attribute.
 	 * @see #setObfuscateFormFields(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_ObfuscateFormFields()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isObfuscateFormFields();
@@ -145,7 +145,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Placeholder</em>' attribute.
 	 * @see #setPlaceholder(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Placeholder()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getPlaceholder();
@@ -172,7 +172,7 @@ public interface UnitElement extends UnitFeature {
 	 * @return the value of the '<em>Validation Pattern</em>' attribute.
 	 * @see #setValidationPattern(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_ValidationPattern()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getValidationPattern();

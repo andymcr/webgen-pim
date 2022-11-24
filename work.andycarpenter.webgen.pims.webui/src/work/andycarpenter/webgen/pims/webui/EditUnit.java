@@ -37,7 +37,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @return the value of the '<em>Use Captcha</em>' attribute.
 	 * @see #setUseCaptcha(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_UseCaptcha()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isUseCaptcha();
@@ -89,7 +89,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @return the value of the '<em>Confirm Destination</em>' reference.
 	 * @see #setConfirmDestination(ContentUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmDestination()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	ContentUnit getConfirmDestination();
@@ -115,7 +115,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @return the value of the '<em>Confirm Label</em>' attribute.
 	 * @see #setConfirmLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmLabel()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getConfirmLabel();
@@ -185,7 +185,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @return the value of the '<em>Cancel Destination</em>' reference.
 	 * @see #setCancelDestination(ContentUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelDestination()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	ContentUnit getCancelDestination();
@@ -211,7 +211,7 @@ public interface EditUnit extends SingletonUnit {
 	 * @return the value of the '<em>Cancel Label</em>' attribute.
 	 * @see #setCancelLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelLabel()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getCancelLabel();

@@ -50,7 +50,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Display Label</em>' attribute.
 	 * @see #setDisplayLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_DisplayLabel()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDisplayLabel();
@@ -76,7 +76,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Required</em>' attribute.
 	 * @see #setRequired(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_Required()
-	 * @model ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isRequired();
@@ -102,7 +102,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Forced Value</em>' containment reference.
 	 * @see #setForcedValue(Expression)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_ForcedValue()
-	 * @model containment="true" ordered="false"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Expression getForcedValue();
@@ -129,7 +129,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Collection Ui Allow Add</em>' attribute.
 	 * @see #setCollectionUiAllowAdd(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_CollectionUiAllowAdd()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isCollectionUiAllowAdd();
@@ -156,7 +156,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Collection Ui Allow Remove</em>' attribute.
 	 * @see #setCollectionUiAllowRemove(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_CollectionUiAllowRemove()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isCollectionUiAllowRemove();
@@ -262,7 +262,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Footer</em>' attribute.
 	 * @see #setFooter(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_Footer()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getFooter();
@@ -289,7 +289,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Autofocus</em>' attribute.
 	 * @see #setAutofocus(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_Autofocus()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isAutofocus();
@@ -316,7 +316,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Header Class</em>' attribute.
 	 * @see #setHeaderClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_HeaderClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getHeaderClass();
@@ -339,7 +339,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Field Label Class</em>' attribute.
 	 * @see #setFieldLabelClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_FieldLabelClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getFieldLabelClass();
@@ -385,7 +385,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Input Group Class</em>' attribute.
 	 * @see #setInputGroupClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_InputGroupClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getInputGroupClass();
@@ -412,7 +412,7 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @return the value of the '<em>Footer Class</em>' attribute.
 	 * @see #setFooterClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_FooterClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getFooterClass();

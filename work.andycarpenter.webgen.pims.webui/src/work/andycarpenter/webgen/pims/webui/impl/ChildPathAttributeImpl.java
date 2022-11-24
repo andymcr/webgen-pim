@@ -4,15 +4,15 @@ package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Entity;
-import work.andycarpenter.webgen.pims.persistence.impl.FeatureChildPathImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAttribute;
+import work.andycarpenter.webgen.pims.webui.PathAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -23,44 +23,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getContainingType <em>Containing Type</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAttributeImpl#getParent <em>Parent</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChildPathAttributeImpl extends FeatureChildPathImpl implements ChildPathAttribute {
-	/**
-	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ATTRIBUTE__NAME).getSettingDelegate();
-
-	/**
-	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAttribute()
-	 * @generated
-	 * @ordered
-	 */
-	protected Attribute attribute;
-
-	/**
-	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainingType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE).getSettingDelegate();
-
+public class ChildPathAttributeImpl extends PathAttributeImpl implements ChildPathAttribute {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,8 +54,19 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public PathAssociation getParent() {
+		if (eContainerFeatureID() != WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT) return null;
+		return (PathAssociation)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParent(PathAssociation newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newParent, WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT, msgs);
+		return msgs;
 	}
 
 	/**
@@ -96,25 +75,20 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	 * @generated
 	 */
 	@Override
-	public Attribute getAttribute() {
-		if (attribute != null && attribute.eIsProxy()) {
-			InternalEObject oldAttribute = (InternalEObject)attribute;
-			attribute = (Attribute)eResolveProxy(oldAttribute);
-			if (attribute != oldAttribute) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
-			}
+	public void setParent(PathAssociation newParent) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT && newParent != null)) {
+			if (EcoreUtil.isAncestor(this, newParent))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newParent != null)
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, WebuiPackage.PATH_ASSOCIATION__CHILD_FEATURE, PathAssociation.class, msgs);
+			msgs = basicSetParent(newParent, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return attribute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Attribute basicGetAttribute() {
-		return attribute;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT, newParent, newParent));
 	}
 
 	/**
@@ -123,11 +97,14 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	 * @generated
 	 */
 	@Override
-	public void setAttribute(Attribute newAttribute) {
-		Attribute oldAttribute = attribute;
-		attribute = newAttribute;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE, oldAttribute, attribute));
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetParent((PathAssociation)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -136,8 +113,12 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	 * @generated
 	 */
 	@Override
-	public Entity getContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				return basicSetParent(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -145,8 +126,13 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.PATH_ASSOCIATION__CHILD_FEATURE, PathAssociation.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -157,14 +143,8 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__NAME:
-				return getName();
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
-				if (resolve) return getAttribute();
-				return basicGetAttribute();
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE:
-				if (resolve) return getContainingType();
-				return basicGetContainingType();
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				return getParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,8 +157,8 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
-				setAttribute((Attribute)newValue);
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				setParent((PathAssociation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,8 +172,8 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
-				setAttribute((Attribute)null);
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				setParent((PathAssociation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,14 +187,42 @@ public class ChildPathAttributeImpl extends FeatureChildPathImpl implements Chil
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__NAME:
-				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__ATTRIBUTE:
-				return attribute != null;
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE:
-				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT:
+				return getParent() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ChildPath.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT: return WebuiPackage.CHILD_PATH__PARENT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ChildPath.class) {
+			switch (baseFeatureID) {
+				case WebuiPackage.CHILD_PATH__PARENT: return WebuiPackage.CHILD_PATH_ATTRIBUTE__PARENT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //ChildPathAttributeImpl

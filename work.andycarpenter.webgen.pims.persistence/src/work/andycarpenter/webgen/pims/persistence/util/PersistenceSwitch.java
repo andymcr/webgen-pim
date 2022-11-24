@@ -120,18 +120,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.ASSOCIATION_REFERENCE: {
-				AssociationReference associationReference = (AssociationReference)theEObject;
-				T result = caseAssociationReference(associationReference);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PersistencePackage.FEATURE_CHILD_PATH: {
-				FeatureChildPath featureChildPath = (FeatureChildPath)theEObject;
-				T result = caseFeatureChildPath(featureChildPath);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PersistencePackage.LABEL: {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
@@ -419,36 +407,6 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAssociation(Association object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Association Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Association Reference</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAssociationReference(AssociationReference object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Child Path</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeatureChildPath(FeatureChildPath object) {
 		return null;
 	}
 

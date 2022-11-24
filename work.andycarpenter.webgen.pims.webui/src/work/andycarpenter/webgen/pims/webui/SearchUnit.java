@@ -31,7 +31,7 @@ public interface SearchUnit extends ControlUnit {
 	 * @return the value of the '<em>Results Destination</em>' reference.
 	 * @see #setResultsDestination(TabularUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSearchUnit_ResultsDestination()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	TabularUnit getResultsDestination();

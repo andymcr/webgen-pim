@@ -34,7 +34,7 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @return the value of the '<em>Overlay Title</em>' attribute.
 	 * @see #setOverlayTitle(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_OverlayTitle()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isOverlayTitle();
@@ -60,7 +60,7 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @return the value of the '<em>Enable Image Enlargement</em>' attribute.
 	 * @see #setEnableImageEnlargement(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_EnableImageEnlargement()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isEnableImageEnlargement();
@@ -87,7 +87,7 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @return the value of the '<em>Reveal Untruncated Content</em>' attribute.
 	 * @see #setRevealUntruncatedContent(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_RevealUntruncatedContent()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isRevealUntruncatedContent();

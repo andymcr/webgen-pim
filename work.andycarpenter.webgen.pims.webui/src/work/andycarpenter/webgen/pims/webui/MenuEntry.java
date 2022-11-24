@@ -34,7 +34,7 @@ public interface MenuEntry extends EObject {
 	 * @see #setPartOf(Menu)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMenuEntry_PartOf()
 	 * @see work.andycarpenter.webgen.pims.webui.Menu#getEntries
-	 * @model opposite="entries" required="true" transient="false" ordered="false"
+	 * @model opposite="entries" required="true" transient="false"
 	 * @generated
 	 */
 	Menu getPartOf();

@@ -58,7 +58,7 @@ public interface CardsUnit extends CollectionUnit {
 	 * @return the value of the '<em>Overlay Single Select Action</em>' attribute.
 	 * @see #setOverlaySingleSelectAction(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_OverlaySingleSelectAction()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isOverlaySingleSelectAction();
@@ -81,7 +81,7 @@ public interface CardsUnit extends CollectionUnit {
 	 * @return the value of the '<em>Local Row Class</em>' attribute.
 	 * @see #setLocalRowClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalRowClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalRowClass();
@@ -104,7 +104,7 @@ public interface CardsUnit extends CollectionUnit {
 	 * @return the value of the '<em>Local Column Class</em>' attribute.
 	 * @see #setLocalColumnClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalColumnClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalColumnClass();
@@ -127,7 +127,7 @@ public interface CardsUnit extends CollectionUnit {
 	 * @return the value of the '<em>Local Card Class</em>' attribute.
 	 * @see #setLocalCardClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalCardClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalCardClass();
@@ -219,7 +219,7 @@ public interface CardsUnit extends CollectionUnit {
 	 * @return the value of the '<em>Local Badge Class</em>' attribute.
 	 * @see #setLocalBadgeClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnit_LocalBadgeClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalBadgeClass();

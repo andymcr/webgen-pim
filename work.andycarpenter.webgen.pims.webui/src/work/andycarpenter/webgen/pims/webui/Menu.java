@@ -55,7 +55,7 @@ public interface Menu extends NamedDisplayElement {
 	 * @return the value of the '<em>Omit Caption</em>' attribute.
 	 * @see #setOmitCaption(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMenu_OmitCaption()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isOmitCaption();
@@ -109,7 +109,7 @@ public interface Menu extends NamedDisplayElement {
 	 * @return the value of the '<em>Style Class</em>' attribute.
 	 * @see #setStyleClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMenu_StyleClass()
-	 * @model default="menu" ordered="false"
+	 * @model default="menu"
 	 * @generated
 	 */
 	String getStyleClass();
@@ -136,7 +136,7 @@ public interface Menu extends NamedDisplayElement {
 	 * @return the value of the '<em>Layout Class</em>' attribute.
 	 * @see #setLayoutClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMenu_LayoutClass()
-	 * @model default="collapsible" ordered="false"
+	 * @model default="collapsible"
 	 * @generated
 	 */
 	String getLayoutClass();

@@ -81,11 +81,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.ROUTE_ACTUAL: return createRouteActual();
 			case WebuiPackage.UNIT_ELEMENT: return createUnitElement();
 			case WebuiPackage.UNIT_ASSOCIATION: return createUnitAssociation();
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE: return createChildPathAttribute();
-			case WebuiPackage.CHILD_PATH_ASSOCIATION: return createChildPathAssociation();
-			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: return createFeaturePathAttribute();
-			case WebuiPackage.FEATURE_PATH_ASSOCIATION: return createFeaturePathAssociation();
-			case WebuiPackage.FEATURE_PATH_LABEL: return createFeaturePathLabel();
 			case WebuiPackage.UNIT_LABEL: return createUnitLabel();
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
 			case WebuiPackage.DATE_FIELD: return createDateField();
@@ -107,6 +102,14 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.LOGOUT_UNIT: return createLogoutUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
 			case WebuiPackage.RESET_PASSWORD_UNIT: return createResetPasswordUnit();
+			case WebuiPackage.PATH_ATTRIBUTE: return createPathAttribute();
+			case WebuiPackage.CHILD_PATH_ASSOCIATION: return createChildPathAssociation();
+			case WebuiPackage.CHILD_PATH_ATTRIBUTE: return createChildPathAttribute();
+			case WebuiPackage.FEATURE_PATH_ASSOCIATION: return createFeaturePathAssociation();
+			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: return createFeaturePathAttribute();
+			case WebuiPackage.FEATURE_PATH_LABEL: return createFeaturePathLabel();
+			case WebuiPackage.PATH_VARIABLE_ASSOCIATION: return createPathVariableAssociation();
+			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE: return createPathVariableAttribute();
 			case WebuiPackage.SECURITY_ACTION: return createSecurityAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.CONTAINER_SELECT_ACTION: return createContainerSelectAction();
@@ -474,9 +477,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public FeaturePathAssociation createFeaturePathAssociation() {
-		FeaturePathAssociationImpl featurePathAssociation = new FeaturePathAssociationImpl();
-		return featurePathAssociation;
+	public FeaturePathLabel createFeaturePathLabel() {
+		FeaturePathLabelImpl featurePathLabel = new FeaturePathLabelImpl();
+		return featurePathLabel;
 	}
 
 	/**
@@ -485,9 +488,31 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public FeaturePathLabel createFeaturePathLabel() {
-		FeaturePathLabelImpl featurePathLabel = new FeaturePathLabelImpl();
-		return featurePathLabel;
+	public PathVariableAssociation createPathVariableAssociation() {
+		PathVariableAssociationImpl pathVariableAssociation = new PathVariableAssociationImpl();
+		return pathVariableAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PathVariableAttribute createPathVariableAttribute() {
+		PathVariableAttributeImpl pathVariableAttribute = new PathVariableAttributeImpl();
+		return pathVariableAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FeaturePathAssociation createFeaturePathAssociation() {
+		FeaturePathAssociationImpl featurePathAssociation = new FeaturePathAssociationImpl();
+		return featurePathAssociation;
 	}
 
 	/**
@@ -686,6 +711,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public ResetPasswordUnit createResetPasswordUnit() {
 		ResetPasswordUnitImpl resetPasswordUnit = new ResetPasswordUnitImpl();
 		return resetPasswordUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PathAttribute createPathAttribute() {
+		PathAttributeImpl pathAttribute = new PathAttributeImpl();
+		return pathAttribute;
 	}
 
 	/**

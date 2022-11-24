@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +24,8 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <!-- end-user-doc -->
  * @see work.andycarpenter.webgen.pims.webui.WebuiFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' webgen-base='platform:/resource/work.andycarpenter.webgen.pims.base/model/base.ecore#/' webgen-expression='platform:/resource/work.andycarpenter.webgen.pims.expression/model/expression.ecore#/' webgen-image='platform:/resource/work.andycarpenter.webgen.pims.image/model/image.ecore#/' webgen-persistence='platform:/resource/work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#/' webgen-security='platform:/resource/work.andycarpenter.webgen.pims.security/model/security.ecore#/' webgen-service='platform:/resource/work.andycarpenter.webgen.pims.service/model/service.ecore#/'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
  * @generated
  */
 public interface WebuiPackage extends EPackage {
@@ -4324,13 +4324,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
+	int UNIT_ASSOCIATION__CONTAINING_TYPE = UNIT_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Association</b></em>' reference.
@@ -4342,13 +4342,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__NAME = UNIT_FEATURE_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Value Display</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -4357,16 +4366,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__CONTAINING_TYPE = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
@@ -4378,13 +4378,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__SOURCE_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ASSOCIATION__TARGET_ENTITY = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference.
@@ -4393,7 +4402,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 7;
+	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Use Autocomplete</b></em>' attribute.
@@ -4402,7 +4411,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -4411,7 +4420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 9;
+	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Unit Association</em>' class.
@@ -4430,61 +4439,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAttribute()
 	 * @generated
 	 */
-	int CHILD_PATH_ATTRIBUTE = 32;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE__PART_OF = PersistencePackage.FEATURE_CHILD_PATH__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE__NAME = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE__ATTRIBUTE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Child Path Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE_FEATURE_COUNT = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Child Path Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ATTRIBUTE_OPERATION_COUNT = PersistencePackage.FEATURE_CHILD_PATH_OPERATION_COUNT + 0;
+	int CHILD_PATH_ATTRIBUTE = 66;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl <em>Child Path Association</em>}' class.
@@ -4494,97 +4449,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPathAssociation()
 	 * @generated
 	 */
-	int CHILD_PATH_ASSOCIATION = 33;
-
-	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__PART_OF = PersistencePackage.FEATURE_CHILD_PATH__PART_OF;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__NAME = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__ASSOCIATION = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Value Display</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__VALUE_DISPLAY = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__CHILD_FEATURE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__TARGET_ENTITY = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION__CONTAINING_TYPE = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of structural features of the '<em>Child Path Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION_FEATURE_COUNT = PersistencePackage.FEATURE_CHILD_PATH_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of operations of the '<em>Child Path Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHILD_PATH_ASSOCIATION_OPERATION_COUNT = PersistencePackage.FEATURE_CHILD_PATH_OPERATION_COUNT + 0;
+	int CHILD_PATH_ASSOCIATION = 65;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl <em>Feature Path</em>}' class.
@@ -4594,61 +4459,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePath()
 	 * @generated
 	 */
-	int FEATURE_PATH = 34;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH__CONTAINING_TYPE = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH__USE_CONTAINER_AS_CONTEXT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Feature Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Feature Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+	int FEATURE_PATH = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAttributeImpl <em>Feature Path Attribute</em>}' class.
@@ -4658,79 +4469,37 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAttribute()
 	 * @generated
 	 */
-	int FEATURE_PATH_ATTRIBUTE = 35;
+	int FEATURE_PATH_ATTRIBUTE = 69;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableImpl <em>Path Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariable()
 	 * @generated
-	 * @ordered
 	 */
-	int FEATURE_PATH_ATTRIBUTE__SUFFIXES = FEATURE_PATH__SUFFIXES;
+	int PATH_VARIABLE = 71;
 
 	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableAssociationImpl <em>Path Variable Association</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableAssociationImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariableAssociation()
 	 * @generated
-	 * @ordered
 	 */
-	int FEATURE_PATH_ATTRIBUTE__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
+	int PATH_VARIABLE_ASSOCIATION = 72;
 
 	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableAttributeImpl <em>Path Variable Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariableAttribute()
 	 * @generated
-	 * @ordered
 	 */
-	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ATTRIBUTE__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ATTRIBUTE__NAME = FEATURE_PATH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ATTRIBUTE__ATTRIBUTE = FEATURE_PATH_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Feature Path Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ATTRIBUTE_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Feature Path Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ATTRIBUTE_OPERATION_COUNT = FEATURE_PATH_OPERATION_COUNT + 0;
+	int PATH_VARIABLE_ATTRIBUTE = 73;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl <em>Feature Path Association</em>}' class.
@@ -4740,197 +4509,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
 	 * @generated
 	 */
-	int FEATURE_PATH_ASSOCIATION = 36;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__SUFFIXES = FEATURE_PATH__SUFFIXES;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__NAME = FEATURE_PATH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__ASSOCIATION = FEATURE_PATH_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Value Display</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__VALUE_DISPLAY = FEATURE_PATH_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__CHILD_FEATURE = FEATURE_PATH_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = FEATURE_PATH_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION__TARGET_ENTITY = FEATURE_PATH_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Feature Path Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of operations of the '<em>Feature Path Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_ASSOCIATION_OPERATION_COUNT = FEATURE_PATH_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathLabelImpl <em>Feature Path Label</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.impl.FeaturePathLabelImpl
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathLabel()
-	 * @generated
-	 */
-	int FEATURE_PATH_LABEL = 37;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__SUFFIXES = FEATURE_PATH__SUFFIXES;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__ROOT_CONTAINER = FEATURE_PATH__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__CONTAINING_TYPE = FEATURE_PATH__CONTAINING_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__USE_CONTAINER_AS_CONTEXT = FEATURE_PATH__USE_CONTAINER_AS_CONTEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__NAME = FEATURE_PATH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL__LABEL = FEATURE_PATH_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Feature Path Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Feature Path Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_PATH_LABEL_OPERATION_COUNT = FEATURE_PATH_OPERATION_COUNT + 0;
+	int FEATURE_PATH_ASSOCIATION = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitLabelImpl <em>Unit Label</em>}' class.
@@ -4940,7 +4519,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 38;
+	int UNIT_LABEL = 32;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -5076,7 +4655,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 39;
+	int INTERFACE_FIELD = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5293,7 +4872,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 40;
+	int DATA_TYPE_FIELD = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5546,7 +5125,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 41;
+	int DATE_FIELD = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5781,7 +5360,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 42;
+	int SELECTABLE_UNIT = 36;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -5809,7 +5388,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 43;
+	int SINGLETON_UNIT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6143,7 +5722,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 44;
+	int COLLECTION_UNIT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6720,7 +6299,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 45;
+	int EDIT_UNIT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7135,7 +6714,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 46;
+	int CREATE_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7550,7 +7129,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 48;
+	int CREATE_UPDATE_UNIT = 42;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -7560,7 +7139,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 47;
+	int UPDATE_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8425,7 +8004,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 49;
+	int MAP_UNIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8876,7 +8455,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 50;
+	int DETAILS_UNIT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9228,7 +8807,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 51;
+	int TABULAR_UNIT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9832,7 +9411,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 52;
+	int CARDS_UNIT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10490,7 +10069,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 54;
+	int TEXT_CARDS_UNIT = 48;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -10500,7 +10079,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 55;
+	int DATE_CARDS_UNIT = 49;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -10510,7 +10089,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 60;
+	int CONTROL_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -10520,7 +10099,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 61;
+	int SEARCH_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
@@ -10530,7 +10109,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 56;
+	int IMAGE_UNIT = 50;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -10540,7 +10119,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 57;
+	int IMAGE_CARDS_UNIT = 51;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -10550,7 +10129,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 58;
+	int SLIDER_UNIT = 52;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -10560,7 +10139,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 59;
+	int GALLERY_UNIT = 53;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -10570,7 +10149,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 71;
+	int SELECT_ACTION = 78;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -10580,7 +10159,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 70;
+	int DELETE_ACTION = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -10590,7 +10169,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 53;
+	int BADGE = 47;
 
 	/**
 	 * The feature id for the '<em><b>Displayed On</b></em>' container reference.
@@ -14722,7 +14301,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 62;
+	int REGISTRATION_UNIT = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15137,7 +14716,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 63;
+	int LOGIN_UNIT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15552,7 +15131,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 64;
+	int LOGOUT_UNIT = 58;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15877,7 +15456,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 65;
+	int FORGOTTEN_PASSWORD_UNIT = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16346,7 +15925,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
 	 * @generated
 	 */
-	int RESET_PASSWORD_UNIT = 66;
+	int RESET_PASSWORD_UNIT = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16754,6 +16333,848 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT_OPERATION_COUNT = EDIT_UNIT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathImpl <em>Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPath()
+	 * @generated
+	 */
+	int PATH = 61;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__CONTAINING_TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathAssociationImpl <em>Path Association</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathAssociationImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathAssociation()
+	 * @generated
+	 */
+	int PATH_ASSOCIATION = 62;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__CONTAINING_TYPE = PATH__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__ASSOCIATION = PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__NAME = PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__VALUE_DISPLAY = PATH_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__CHILD_FEATURE = PATH_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = PATH_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__SOURCE_ENTITY = PATH_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION__TARGET_ENTITY = PATH_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION_FEATURE_COUNT = PATH_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ASSOCIATION_OPERATION_COUNT = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathAttributeImpl <em>Path Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.PathAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathAttribute()
+	 * @generated
+	 */
+	int PATH_ATTRIBUTE = 63;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ATTRIBUTE__CONTAINING_TYPE = PATH__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ATTRIBUTE__ATTRIBUTE = PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ATTRIBUTE__NAME = PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ATTRIBUTE_FEATURE_COUNT = PATH_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ATTRIBUTE_OPERATION_COUNT = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl <em>Child Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPath()
+	 * @generated
+	 */
+	int CHILD_PATH = 64;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH__PARENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Child Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__CONTAINING_TYPE = PATH_ASSOCIATION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__ASSOCIATION = PATH_ASSOCIATION__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__NAME = PATH_ASSOCIATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__VALUE_DISPLAY = PATH_ASSOCIATION__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__CHILD_FEATURE = PATH_ASSOCIATION__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__SOURCE_ENTITY = PATH_ASSOCIATION__SOURCE_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__TARGET_ENTITY = PATH_ASSOCIATION__TARGET_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION__PARENT = PATH_ASSOCIATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION_FEATURE_COUNT = PATH_ASSOCIATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Child Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ASSOCIATION_OPERATION_COUNT = PATH_ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE = PATH_ATTRIBUTE__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE__ATTRIBUTE = PATH_ATTRIBUTE__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE__NAME = PATH_ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE__PARENT = PATH_ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE_FEATURE_COUNT = PATH_ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Child Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_PATH_ATTRIBUTE_OPERATION_COUNT = PATH_ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Feature Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__CONTAINING_TYPE = PATH_ASSOCIATION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__ASSOCIATION = PATH_ASSOCIATION__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__NAME = PATH_ASSOCIATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__VALUE_DISPLAY = PATH_ASSOCIATION__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__CHILD_FEATURE = PATH_ASSOCIATION__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__SOURCE_ENTITY = PATH_ASSOCIATION__SOURCE_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION__TARGET_ENTITY = PATH_ASSOCIATION__TARGET_ENTITY;
+
+	/**
+	 * The number of structural features of the '<em>Feature Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION_FEATURE_COUNT = PATH_ASSOCIATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Path Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ASSOCIATION_OPERATION_COUNT = PATH_ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE__CONTAINING_TYPE = PATH_ATTRIBUTE__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE__ATTRIBUTE = PATH_ATTRIBUTE__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE__NAME = PATH_ATTRIBUTE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Feature Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE_FEATURE_COUNT = PATH_ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Path Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ATTRIBUTE_OPERATION_COUNT = PATH_ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathLabelImpl <em>Feature Path Label</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.FeaturePathLabelImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathLabel()
+	 * @generated
+	 */
+	int FEATURE_PATH_LABEL = 70;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL__LABEL = FEATURE_PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL__NAME = FEATURE_PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Feature Path Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL_FEATURE_COUNT = FEATURE_PATH_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Feature Path Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_LABEL_OPERATION_COUNT = FEATURE_PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__USE_CONTAINER_AS_CONTEXT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__CONTEXT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Path Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Path Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__CONTAINING_TYPE = PATH_ASSOCIATION__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__ASSOCIATION = PATH_ASSOCIATION__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__NAME = PATH_ASSOCIATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__VALUE_DISPLAY = PATH_ASSOCIATION__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__CHILD_FEATURE = PATH_ASSOCIATION__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__IS_SOURCE_ASSOCIATION = PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Source Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__SOURCE_ENTITY = PATH_ASSOCIATION__SOURCE_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Target Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__TARGET_ENTITY = PATH_ASSOCIATION__TARGET_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__SUFFIXES = PATH_ASSOCIATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__ROOT_CONTAINER = PATH_ASSOCIATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__USE_CONTAINER_AS_CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION__CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Path Variable Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION_FEATURE_COUNT = PATH_ASSOCIATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Path Variable Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ASSOCIATION_OPERATION_COUNT = PATH_ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__CONTAINING_TYPE = PATH_ATTRIBUTE__CONTAINING_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__ATTRIBUTE = PATH_ATTRIBUTE__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__NAME = PATH_ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__SUFFIXES = PATH_ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__ROOT_CONTAINER = PATH_ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__USE_CONTAINER_AS_CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE__CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Path Variable Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE_FEATURE_COUNT = PATH_ATTRIBUTE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Path Variable Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_ATTRIBUTE_OPERATION_COUNT = PATH_ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16761,7 +17182,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 67;
+	int ACTION_CONTAINER = 74;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -16825,7 +17246,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 68;
+	int ACTION = 75;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16855,13 +17276,22 @@ public interface WebuiPackage extends EPackage {
 	int ACTION__USED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__PARENT_UNIT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+	int ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -16870,7 +17300,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
@@ -16879,7 +17309,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
@@ -16888,7 +17318,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ENABLE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int ACTION__ENABLE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
@@ -16897,7 +17327,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONFIRM_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int ACTION__CONFIRM_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
@@ -16906,7 +17336,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__SUCCESS_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int ACTION__SUCCESS_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
@@ -16915,7 +17345,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__FAILURE_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int ACTION__FAILURE_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -16924,7 +17354,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -16933,7 +17363,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -16942,7 +17372,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -16951,7 +17381,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -16960,7 +17390,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -16979,7 +17409,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 69;
+	int SECURITY_ACTION = 76;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17007,6 +17437,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SECURITY_ACTION__USED_BY = ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_ACTION__PARENT_UNIT = ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -17160,7 +17599,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 75;
+	int OPERATION_ACTION = 82;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -17170,7 +17609,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 72;
+	int CONTAINER_SELECT_ACTION = 79;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -17180,7 +17619,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 73;
+	int INSTANCE_SELECT_ACTION = 80;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -17190,6 +17629,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_ACTION__USED_BY = ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__PARENT_UNIT = ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -17354,6 +17802,15 @@ public interface WebuiPackage extends EPackage {
 	int SELECT_ACTION__USED_BY = ACTION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__PARENT_UNIT = ACTION__PARENT_UNIT;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17514,6 +17971,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_SELECT_ACTION__USED_BY = SELECT_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__PARENT_UNIT = SELECT_ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -17678,6 +18144,15 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_SELECT_ACTION__USED_BY = SELECT_ACTION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__PARENT_UNIT = SELECT_ACTION__PARENT_UNIT;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17820,7 +18295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTargetAction()
 	 * @generated
 	 */
-	int TARGET_ACTION = 74;
+	int TARGET_ACTION = 81;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17848,6 +18323,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TARGET_ACTION__USED_BY = SELECT_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TARGET_ACTION__PARENT_UNIT = SELECT_ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -18012,6 +18496,15 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION__USED_BY = ACTION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_ACTION__PARENT_UNIT = ACTION__PARENT_UNIT;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18163,7 +18656,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 77;
+	int INSTANCE_OPERATION_ACTION = 84;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -18173,7 +18666,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 76;
+	int CONTAINER_OPERATION_ACTION = 83;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18201,6 +18694,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_OPERATION_ACTION__USED_BY = OPERATION_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_OPERATION_ACTION__PARENT_UNIT = OPERATION_ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -18374,6 +18876,15 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_OPERATION_ACTION__USED_BY = OPERATION_ACTION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__PARENT_UNIT = OPERATION_ACTION__PARENT_UNIT;
+
+	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18525,7 +19036,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 78;
+	int GENERAL_OPERATION_ACTION = 85;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18553,6 +19064,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION__USED_BY = OPERATION_ACTION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_OPERATION_ACTION__PARENT_UNIT = OPERATION_ACTION__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -18706,7 +19226,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 79;
+	int MESSAGE = 86;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -18752,7 +19272,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 80;
+	int AUTHENTICATION_MENU_PLACEMENT = 87;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -18762,7 +19282,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 81;
+	int PAGE_TOP_MENU_OPTIONS = 88;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -18772,7 +19292,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 82;
+	int COLLECTION_DISPLAY_OPTIONS = 89;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -18782,7 +19302,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 83;
+	int PAGINATION_CONTROL_PLACEMENTS = 90;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.
@@ -18792,7 +19312,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerActionsPlacement()
 	 * @generated
 	 */
-	int CONTAINER_ACTIONS_PLACEMENT = 84;
+	int CONTAINER_ACTIONS_PLACEMENT = 91;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
@@ -18802,7 +19322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
 	 * @generated
 	 */
-	int INSTANCE_ACTIONS_PLACEMENT = 85;
+	int INSTANCE_ACTIONS_PLACEMENT = 92;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -20533,39 +21053,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getUnitAssociation();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingType <em>Containing Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Containing Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getContainingType()
-	 * @see #getUnitAssociation()
-	 * @generated
-	 */
-	EReference getUnitAssociation_ContainingType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#isIsSourceAssociation()
-	 * @see #getUnitAssociation()
-	 * @generated
-	 */
-	EAttribute getUnitAssociation_IsSourceAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity <em>Target Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getTargetEntity()
-	 * @see #getUnitAssociation()
-	 * @generated
-	 */
-	EReference getUnitAssociation_TargetEntity();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20598,39 +21085,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getChildPathAttribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getName()
-	 * @see #getChildPathAttribute()
-	 * @generated
-	 */
-	EAttribute getChildPathAttribute_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getAttribute()
-	 * @see #getChildPathAttribute()
-	 * @generated
-	 */
-	EReference getChildPathAttribute_Attribute();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getContainingType <em>Containing Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Containing Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAttribute#getContainingType()
-	 * @see #getChildPathAttribute()
-	 * @generated
-	 */
-	EReference getChildPathAttribute_ContainingType();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation <em>Child Path Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20639,39 +21093,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getChildPathAssociation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation#isIsSourceAssociation()
-	 * @see #getChildPathAssociation()
-	 * @generated
-	 */
-	EAttribute getChildPathAssociation_IsSourceAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getTargetEntity <em>Target Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getTargetEntity()
-	 * @see #getChildPathAssociation()
-	 * @generated
-	 */
-	EReference getChildPathAssociation_TargetEntity();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getContainingType <em>Containing Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Containing Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation#getContainingType()
-	 * @see #getChildPathAssociation()
-	 * @generated
-	 */
-	EReference getChildPathAssociation_ContainingType();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePath <em>Feature Path</em>}'.
@@ -20684,28 +21105,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getFeaturePath();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingType <em>Containing Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Containing Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#getContainingType()
-	 * @see #getFeaturePath()
-	 * @generated
-	 */
-	EReference getFeaturePath_ContainingType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext <em>Use Container As Context</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Use Container As Context</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath#isUseContainerAsContext()
-	 * @see #getFeaturePath()
-	 * @generated
-	 */
-	EAttribute getFeaturePath_UseContainerAsContext();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute <em>Feature Path Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20716,60 +21115,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getFeaturePathAttribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAttribute#getName()
-	 * @see #getFeaturePathAttribute()
-	 * @generated
-	 */
-	EAttribute getFeaturePathAttribute_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAttribute#getAttribute()
-	 * @see #getFeaturePathAttribute()
-	 * @generated
-	 */
-	EReference getFeaturePathAttribute_Attribute();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation <em>Feature Path Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Feature Path Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation
-	 * @generated
-	 */
-	EClass getFeaturePathAssociation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#isIsSourceAssociation()
-	 * @see #getFeaturePathAssociation()
-	 * @generated
-	 */
-	EAttribute getFeaturePathAssociation_IsSourceAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getTargetEntity <em>Target Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Entity</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation#getTargetEntity()
-	 * @see #getFeaturePathAssociation()
-	 * @generated
-	 */
-	EReference getFeaturePathAssociation_TargetEntity();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel <em>Feature Path Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20778,6 +21123,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFeaturePathLabel();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathLabel#getLabel()
+	 * @see #getFeaturePathLabel()
+	 * @generated
+	 */
+	EReference getFeaturePathLabel_Label();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel#getName <em>Name</em>}'.
@@ -20791,15 +21147,66 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getFeaturePathLabel_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel#getLabel <em>Label</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PathVariable <em>Path Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathLabel#getLabel()
-	 * @see #getFeaturePathLabel()
+	 * @return the meta object for class '<em>Path Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariable
 	 * @generated
 	 */
-	EReference getFeaturePathLabel_Label();
+	EClass getPathVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.PathVariable#isUseContainerAsContext <em>Use Container As Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Use Container As Context</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariable#isUseContainerAsContext()
+	 * @see #getPathVariable()
+	 * @generated
+	 */
+	EAttribute getPathVariable_UseContainerAsContext();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathVariable#getContext <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Context</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariable#getContext()
+	 * @see #getPathVariable()
+	 * @generated
+	 */
+	EReference getPathVariable_Context();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PathVariableAssociation <em>Path Variable Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Variable Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariableAssociation
+	 * @generated
+	 */
+	EClass getPathVariableAssociation();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PathVariableAttribute <em>Path Variable Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Variable Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariableAttribute
+	 * @generated
+	 */
+	EClass getPathVariableAttribute();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation <em>Feature Path Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Path Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation
+	 * @generated
+	 */
+	EClass getFeaturePathAssociation();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitLabel <em>Unit Label</em>}'.
@@ -22021,6 +22428,167 @@ public interface WebuiPackage extends EPackage {
 	EClass getResetPasswordUnit();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Path
+	 * @generated
+	 */
+	EClass getPath();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Path#getContainingType <em>Containing Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Containing Type</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Path#getContainingType()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_ContainingType();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PathAssociation <em>Path Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation
+	 * @generated
+	 */
+	EClass getPathAssociation();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getAssociation <em>Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getAssociation()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EReference getPathAssociation_Association();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getName()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EAttribute getPathAssociation_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getValueDisplay <em>Value Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value Display</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getValueDisplay()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EReference getPathAssociation_ValueDisplay();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getChildFeature <em>Child Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Child Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getChildFeature()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EReference getPathAssociation_ChildFeature();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#isIsSourceAssociation()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EAttribute getPathAssociation_IsSourceAssociation();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getSourceEntity <em>Source Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source Entity</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getSourceEntity()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EReference getPathAssociation_SourceEntity();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathAssociation#getTargetEntity <em>Target Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Entity</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation#getTargetEntity()
+	 * @see #getPathAssociation()
+	 * @generated
+	 */
+	EReference getPathAssociation_TargetEntity();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.PathAttribute <em>Path Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAttribute
+	 * @generated
+	 */
+	EClass getPathAttribute();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.PathAttribute#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAttribute#getAttribute()
+	 * @see #getPathAttribute()
+	 * @generated
+	 */
+	EReference getPathAttribute_Attribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.PathAttribute#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.PathAttribute#getName()
+	 * @see #getPathAttribute()
+	 * @generated
+	 */
+	EAttribute getPathAttribute_Name();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChildPath <em>Child Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Child Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ChildPath
+	 * @generated
+	 */
+	EClass getChildPath();
+
+	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.ChildPath#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ChildPath#getParent()
+	 * @see #getChildPath()
+	 * @generated
+	 */
+	EReference getChildPath_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22277,6 +22845,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAction_UsedBy();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Action#getParentUnit <em>Parent Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent Unit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Action#getParentUnit()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EReference getAction_ParentUnit();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getIconName <em>Icon Name</em>}'.
@@ -24123,30 +24702,6 @@ public interface WebuiPackage extends EPackage {
 		EClass UNIT_ASSOCIATION = eINSTANCE.getUnitAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_ASSOCIATION__CONTAINING_TYPE = eINSTANCE.getUnitAssociation_ContainingType();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getUnitAssociation_IsSourceAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getUnitAssociation_TargetEntity();
-
-		/**
 		 * The meta object literal for the '<em><b>Options</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24173,30 +24728,6 @@ public interface WebuiPackage extends EPackage {
 		EClass CHILD_PATH_ATTRIBUTE = eINSTANCE.getChildPathAttribute();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CHILD_PATH_ATTRIBUTE__NAME = eINSTANCE.getChildPathAttribute_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getChildPathAttribute_Attribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH_ATTRIBUTE__CONTAINING_TYPE = eINSTANCE.getChildPathAttribute_ContainingType();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathAssociationImpl <em>Child Path Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24205,30 +24736,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CHILD_PATH_ASSOCIATION = eINSTANCE.getChildPathAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CHILD_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getChildPathAssociation_IsSourceAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getChildPathAssociation_TargetEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHILD_PATH_ASSOCIATION__CONTAINING_TYPE = eINSTANCE.getChildPathAssociation_ContainingType();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathImpl <em>Feature Path</em>}' class.
@@ -24241,22 +24748,6 @@ public interface WebuiPackage extends EPackage {
 		EClass FEATURE_PATH = eINSTANCE.getFeaturePath();
 
 		/**
-		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_PATH__CONTAINING_TYPE = eINSTANCE.getFeaturePath_ContainingType();
-
-		/**
-		 * The meta object literal for the '<em><b>Use Container As Context</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE_PATH__USE_CONTAINER_AS_CONTEXT = eINSTANCE.getFeaturePath_UseContainerAsContext();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAttributeImpl <em>Feature Path Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24265,48 +24756,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FEATURE_PATH_ATTRIBUTE = eINSTANCE.getFeaturePathAttribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE_PATH_ATTRIBUTE__NAME = eINSTANCE.getFeaturePathAttribute_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_PATH_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getFeaturePathAttribute_Attribute();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl <em>Feature Path Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
-		 * @generated
-		 */
-		EClass FEATURE_PATH_ASSOCIATION = eINSTANCE.getFeaturePathAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE_PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getFeaturePathAssociation_IsSourceAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_PATH_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getFeaturePathAssociation_TargetEntity();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathLabelImpl <em>Feature Path Label</em>}' class.
@@ -24319,6 +24768,14 @@ public interface WebuiPackage extends EPackage {
 		EClass FEATURE_PATH_LABEL = eINSTANCE.getFeaturePathLabel();
 
 		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE_PATH_LABEL__LABEL = eINSTANCE.getFeaturePathLabel_Label();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24327,12 +24784,60 @@ public interface WebuiPackage extends EPackage {
 		EAttribute FEATURE_PATH_LABEL__NAME = eINSTANCE.getFeaturePathLabel_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Label</b></em>' reference feature.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableImpl <em>Path Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariable()
+		 * @generated
+		 */
+		EClass PATH_VARIABLE = eINSTANCE.getPathVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Container As Context</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE_PATH_LABEL__LABEL = eINSTANCE.getFeaturePathLabel_Label();
+		EAttribute PATH_VARIABLE__USE_CONTAINER_AS_CONTEXT = eINSTANCE.getPathVariable_UseContainerAsContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Context</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_VARIABLE__CONTEXT = eINSTANCE.getPathVariable_Context();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableAssociationImpl <em>Path Variable Association</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableAssociationImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariableAssociation()
+		 * @generated
+		 */
+		EClass PATH_VARIABLE_ASSOCIATION = eINSTANCE.getPathVariableAssociation();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableAttributeImpl <em>Path Variable Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathVariableAttributeImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathVariableAttribute()
+		 * @generated
+		 */
+		EClass PATH_VARIABLE_ATTRIBUTE = eINSTANCE.getPathVariableAttribute();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl <em>Feature Path Association</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.FeaturePathAssociationImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFeaturePathAssociation()
+		 * @generated
+		 */
+		EClass FEATURE_PATH_ASSOCIATION = eINSTANCE.getFeaturePathAssociation();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitLabelImpl <em>Unit Label</em>}' class.
@@ -25287,6 +25792,134 @@ public interface WebuiPackage extends EPackage {
 		EClass RESET_PASSWORD_UNIT = eINSTANCE.getResetPasswordUnit();
 
 		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathImpl <em>Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPath()
+		 * @generated
+		 */
+		EClass PATH = eINSTANCE.getPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__CONTAINING_TYPE = eINSTANCE.getPath_ContainingType();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathAssociationImpl <em>Path Association</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathAssociationImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathAssociation()
+		 * @generated
+		 */
+		EClass PATH_ASSOCIATION = eINSTANCE.getPathAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Association</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ASSOCIATION__ASSOCIATION = eINSTANCE.getPathAssociation_Association();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_ASSOCIATION__NAME = eINSTANCE.getPathAssociation_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Display</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ASSOCIATION__VALUE_DISPLAY = eINSTANCE.getPathAssociation_ValueDisplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Child Feature</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ASSOCIATION__CHILD_FEATURE = eINSTANCE.getPathAssociation_ChildFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getPathAssociation_IsSourceAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ASSOCIATION__SOURCE_ENTITY = eINSTANCE.getPathAssociation_SourceEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ASSOCIATION__TARGET_ENTITY = eINSTANCE.getPathAssociation_TargetEntity();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.PathAttributeImpl <em>Path Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.PathAttributeImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPathAttribute()
+		 * @generated
+		 */
+		EClass PATH_ATTRIBUTE = eINSTANCE.getPathAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getPathAttribute_Attribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_ATTRIBUTE__NAME = eINSTANCE.getPathAttribute_Name();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl <em>Child Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ChildPathImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChildPath()
+		 * @generated
+		 */
+		EClass CHILD_PATH = eINSTANCE.getChildPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHILD_PATH__PARENT = eINSTANCE.getChildPath_Parent();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.ActionContainer <em>Action Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25489,6 +26122,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTION__USED_BY = eINSTANCE.getAction_UsedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent Unit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTION__PARENT_UNIT = eINSTANCE.getAction_ParentUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Icon Name</b></em>' attribute feature.

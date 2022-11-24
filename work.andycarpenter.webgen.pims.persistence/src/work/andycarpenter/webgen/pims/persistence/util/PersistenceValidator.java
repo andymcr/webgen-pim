@@ -106,10 +106,6 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAttribute((Attribute)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION:
 				return validateAssociation((Association)value, diagnostics, context);
-			case PersistencePackage.ASSOCIATION_REFERENCE:
-				return validateAssociationReference((AssociationReference)value, diagnostics, context);
-			case PersistencePackage.FEATURE_CHILD_PATH:
-				return validateFeatureChildPath((FeatureChildPath)value, diagnostics, context);
 			case PersistencePackage.LABEL:
 				return validateLabel((Label)value, diagnostics, context);
 			case PersistencePackage.MODEL_LABEL:
@@ -329,24 +325,6 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(association, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(association, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAssociationReference(AssociationReference associationReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(associationReference, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeatureChildPath(FeatureChildPath featureChildPath, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featureChildPath, diagnostics, context);
 	}
 
 	/**

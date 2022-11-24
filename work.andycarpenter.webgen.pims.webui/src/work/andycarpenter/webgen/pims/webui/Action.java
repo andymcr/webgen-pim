@@ -16,6 +16,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getUsedBy <em>Used By</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getParentUnit <em>Parent Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#isDisable <em>Disable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getDisplayWhen <em>Display When</em>}</li>
@@ -43,7 +44,7 @@ public interface Action extends NamedDisplayElement {
 	 * @see #setUsedBy(ActionContainer)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_UsedBy()
 	 * @see work.andycarpenter.webgen.pims.webui.ActionContainer#getActions
-	 * @model opposite="actions" required="true" transient="false" ordered="false"
+	 * @model opposite="actions" required="true" transient="false"
 	 * @generated
 	 */
 	ActionContainer getUsedBy();
@@ -57,6 +58,18 @@ public interface Action extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setUsedBy(ActionContainer value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Unit</em>' reference.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ParentUnit()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if usedBy.oclIsKindOf(DynamicUnit) then\n\tusedBy.oclAsType(DynamicUnit)\nelse if usedBy.oclIsKindOf(UnitFeature) then\n\tusedBy.oclAsType(UnitFeature).displayedOn\nelse\n\tnull\nendif endif'"
+	 * @generated
+	 */
+	DynamicUnit getParentUnit();
 
 	/**
 	 * Returns the value of the '<em><b>Icon Name</b></em>' attribute.
@@ -88,7 +101,7 @@ public interface Action extends NamedDisplayElement {
 	 * @return the value of the '<em>Disable</em>' attribute.
 	 * @see #setDisable(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_Disable()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isDisable();
@@ -155,7 +168,7 @@ public interface Action extends NamedDisplayElement {
 	 * @return the value of the '<em>Confirm Message</em>' attribute.
 	 * @see #setConfirmMessage(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ConfirmMessage()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getConfirmMessage();

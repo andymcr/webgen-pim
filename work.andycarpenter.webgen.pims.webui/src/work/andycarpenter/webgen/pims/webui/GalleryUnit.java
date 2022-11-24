@@ -61,7 +61,7 @@ public interface GalleryUnit extends CollectionUnit, ImageUnit {
 	 * @return the value of the '<em>Show Time</em>' attribute.
 	 * @see #setShowTime(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getGalleryUnit_ShowTime()
-	 * @model default="-1"
+	 * @model default="-1" required="true"
 	 * @generated
 	 */
 	int getShowTime();
@@ -88,7 +88,7 @@ public interface GalleryUnit extends CollectionUnit, ImageUnit {
 	 * @return the value of the '<em>Transition Time</em>' attribute.
 	 * @see #setTransitionTime(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getGalleryUnit_TransitionTime()
-	 * @model default="-1"
+	 * @model default="-1" required="true"
 	 * @generated
 	 */
 	int getTransitionTime();

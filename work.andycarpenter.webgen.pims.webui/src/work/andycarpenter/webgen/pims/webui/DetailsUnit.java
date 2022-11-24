@@ -18,8 +18,8 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionValidChoice selectionMustBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\n\tcontroller.webUI.persistence.repositories\n\t\t-&gt;select(s : persistence::Repository | not s.serves.oclIsUndefined())\n\t\t-&gt;select(s : persistence::Repository | contentType = s.serves)\n\t\t-&gt;collect(s : persistence::Repository | s.selections)\n\t\t-&gt;includes(selection)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='selectionMustBeSingleton selectionValidChoice'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL selectionMustBeSingleton='not selection.oclIsUndefined() implies\n\tselection.limit = 1' selectionValidChoice='not selection.oclIsUndefined() implies\n\tcontroller.webUI.persistence.repositories\n\t\t-&gt;select(s : persistence::Repository | not s.serves.oclIsUndefined())\n\t\t-&gt;select(s : persistence::Repository | contentType = s.serves)\n\t\t-&gt;collect(s : persistence::Repository | s.selections)\n\t\t-&gt;includes(selection)'"
  * @generated
  */
 public interface DetailsUnit extends SingletonUnit, SelectableUnit {
@@ -61,7 +61,7 @@ public interface DetailsUnit extends SingletonUnit, SelectableUnit {
 	 * @return the value of the '<em>Omit Field Labels</em>' attribute.
 	 * @see #setOmitFieldLabels(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDetailsUnit_OmitFieldLabels()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isOmitFieldLabels();

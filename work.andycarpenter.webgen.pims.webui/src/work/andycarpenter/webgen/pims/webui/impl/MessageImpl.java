@@ -17,9 +17,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.Message;
+import work.andycarpenter.webgen.pims.webui.PathVariable;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -65,7 +64,7 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FeaturePath> features;
+	protected EList<PathVariable> features;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,9 +114,9 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * @generated
 	 */
 	@Override
-	public EList<FeaturePath> getFeatures() {
+	public EList<PathVariable> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<FeaturePath>(FeaturePath.class, this, WebuiPackage.MESSAGE__FEATURES);
+			features = new EObjectContainmentEList<PathVariable>(PathVariable.class, this, WebuiPackage.MESSAGE__FEATURES);
 		}
 		return features;
 	}
@@ -166,7 +165,7 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 				return;
 			case WebuiPackage.MESSAGE__FEATURES:
 				getFeatures().clear();
-				getFeatures().addAll((Collection<? extends FeaturePath>)newValue);
+				getFeatures().addAll((Collection<? extends PathVariable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

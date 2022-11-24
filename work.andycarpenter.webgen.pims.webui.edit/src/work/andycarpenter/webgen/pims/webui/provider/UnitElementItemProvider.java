@@ -250,17 +250,12 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

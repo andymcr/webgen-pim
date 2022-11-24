@@ -15,6 +15,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
+import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -26,6 +27,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getUsedBy <em>Used By</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getParentUnit <em>Parent Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#isDisable <em>Disable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getDisplayWhen <em>Display When</em>}</li>
@@ -42,6 +44,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class ActionImpl extends NamedDisplayElementImpl implements Action {
+	/**
+	 * The cached setting delegate for the '{@link #getParentUnit() <em>Parent Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate PARENT_UNIT__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.ACTION__PARENT_UNIT).getSettingDelegate();
+
 	/**
 	 * The default value of the '{@link #getIconName() <em>Icon Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -292,6 +304,25 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__USED_BY, newUsedBy, newUsedBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DynamicUnit getParentUnit() {
+		return (DynamicUnit)PARENT_UNIT__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DynamicUnit basicGetParentUnit() {
+		return (DynamicUnit)PARENT_UNIT__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -655,6 +686,9 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 		switch (featureID) {
 			case WebuiPackage.ACTION__USED_BY:
 				return getUsedBy();
+			case WebuiPackage.ACTION__PARENT_UNIT:
+				if (resolve) return getParentUnit();
+				return basicGetParentUnit();
 			case WebuiPackage.ACTION__ICON_NAME:
 				return getIconName();
 			case WebuiPackage.ACTION__DISABLE:
@@ -788,6 +822,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 		switch (featureID) {
 			case WebuiPackage.ACTION__USED_BY:
 				return getUsedBy() != null;
+			case WebuiPackage.ACTION__PARENT_UNIT:
+				return PARENT_UNIT__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.ACTION__ICON_NAME:
 				return ICON_NAME_EDEFAULT == null ? iconName != null : !ICON_NAME_EDEFAULT.equals(iconName);
 			case WebuiPackage.ACTION__DISABLE:

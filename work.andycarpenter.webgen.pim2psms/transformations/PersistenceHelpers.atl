@@ -177,7 +177,18 @@ helper context Website!Association def: findOrmSourceAssociation() : ORM!Associa
 helper context Website!Association def: findOrmTargetAssociation() : ORM!Association
 	= thisModule.findOrmEntity(self.targetEntity.name).getOrmFeature(self.targetFeatureName());
 
-helper context Website!UnitAssociation def: findOrmAssociation() : ORM!Association
+helper context Website!PathAssociation def: findOrmAssociation() : ORM!Association
+	= if self.association.oclIsUndefined() then
+			OclUndefined
+		else 
+			if self.isSourceAssociation then
+				self.association.findOrmSourceAssociation()
+			else
+				self.association.findOrmTargetAssociation()
+			endif
+		endif;
+
+helper context Website!PathVariableAssociation def: findOrmAssociation() : ORM!Association
 	= if self.association.oclIsUndefined() then
 			OclUndefined
 		else 
@@ -243,29 +254,6 @@ helper context Website!Attribute def: validationPattern() : String
 				endif
 			else
 				OclUndefined
-			endif
-		endif;
-
-
-helper context Website!FeaturePathAssociation def: findOrmAssociation() : ORM!Association
-	= if self.association.oclIsUndefined() then
-			OclUndefined
-		else
-			if self.isSourceAssociation then
-				self.association.findOrmSourceAssociation()
-			else
-				self.association.findOrmTargetAssociation()
-			endif
-		endif;
-
-helper context Website!ChildPathAssociation def: findOrmAssociation() : ORM!Association
-	= if self.association.oclIsUndefined() then
-			OclUndefined
-		else
-			if self.isSourceAssociation then
-				self.association.findOrmSourceAssociation()
-			else
-				self.association.findOrmTargetAssociation()
 			endif
 		endif;
 

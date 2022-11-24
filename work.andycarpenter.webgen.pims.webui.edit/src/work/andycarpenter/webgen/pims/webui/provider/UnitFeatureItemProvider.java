@@ -564,17 +564,12 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -116,18 +116,6 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/targetDisplayLabel"/>
       <genFeatures createChild="false" propertyCategory="Serialization" ecoreFeature="ecore:EAttribute persistence.ecore#//Association/serializationMaxDepth"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//AssociationReference">
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//AssociationReference/name"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference persistence.ecore#//AssociationReference/association"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
-          propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationReference/valueDisplay"/>
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//AssociationReference/childFeature"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//FeatureChildPath">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//FeatureChildPath/partOf"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Label"/>
     <genClasses ecoreClass="persistence.ecore#//ModelLabel">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//ModelLabel/labelFor"/>

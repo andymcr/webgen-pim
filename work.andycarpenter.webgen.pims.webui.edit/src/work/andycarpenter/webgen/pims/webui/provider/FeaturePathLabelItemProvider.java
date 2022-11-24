@@ -4,8 +4,8 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -46,6 +46,7 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addLabelPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -54,28 +55,44 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 	 * This adds a property descriptor for the Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	protected void addLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_FeaturePathLabel_label_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathLabel_label_feature", "_UI_FeaturePathLabel_type"),
-			WebuiPackage.Literals.FEATURE_PATH_LABEL__LABEL,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof FeaturePathLabel) {
-						final FeaturePathLabel path = (FeaturePathLabel) object;
-						return path.getContainingType().getLabels();
-					}
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePathLabel_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathLabel_label_feature", "_UI_FeaturePathLabel_type"),
+				 WebuiPackage.Literals.FEATURE_PATH_LABEL__LABEL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
 
-					return Collections.emptySet();
-				}
-		});
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePathLabel_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathLabel_name_feature", "_UI_FeaturePathLabel_type"),
+				 WebuiPackage.Literals.FEATURE_PATH_LABEL__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -102,7 +119,7 @@ public class FeaturePathLabelItemProvider extends FeaturePathItemProvider {
 			getString("_UI_FeaturePathLabel_type") :
 			getString("_UI_FeaturePathLabel_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

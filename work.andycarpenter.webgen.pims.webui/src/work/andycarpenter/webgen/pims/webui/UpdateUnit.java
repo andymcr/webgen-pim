@@ -33,7 +33,7 @@ public interface UpdateUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>On Save Continue Editing</em>' attribute.
 	 * @see #setOnSaveContinueEditing(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit_OnSaveContinueEditing()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isOnSaveContinueEditing();
@@ -56,7 +56,7 @@ public interface UpdateUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>Display Empty Form</em>' attribute.
 	 * @see #setDisplayEmptyForm(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUpdateUnit_DisplayEmptyForm()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isDisplayEmptyForm();

@@ -61,7 +61,7 @@ public interface Controller extends NamedDisplayElement {
 	 * @return the value of the '<em>Parent Controller</em>' containment reference.
 	 * @see #setParentController(ControllerLink)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getController_ParentController()
-	 * @model containment="true" ordered="false"
+	 * @model containment="true"
 	 * @generated
 	 */
 	ControllerLink getParentController();
@@ -135,7 +135,7 @@ public interface Controller extends NamedDisplayElement {
 	 * @return the value of the '<em>Style Class</em>' attribute.
 	 * @see #setStyleClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getController_StyleClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getStyleClass();

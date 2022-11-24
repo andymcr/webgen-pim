@@ -265,15 +265,6 @@ public interface WebuiFactory extends EFactory {
 	FeaturePathAttribute createFeaturePathAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Feature Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Path Association</em>'.
-	 * @generated
-	 */
-	FeaturePathAssociation createFeaturePathAssociation();
-
-	/**
 	 * Returns a new object of class '<em>Feature Path Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -281,6 +272,33 @@ public interface WebuiFactory extends EFactory {
 	 * @generated
 	 */
 	FeaturePathLabel createFeaturePathLabel();
+
+	/**
+	 * Returns a new object of class '<em>Path Variable Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Variable Association</em>'.
+	 * @generated
+	 */
+	PathVariableAssociation createPathVariableAssociation();
+
+	/**
+	 * Returns a new object of class '<em>Path Variable Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Variable Attribute</em>'.
+	 * @generated
+	 */
+	PathVariableAttribute createPathVariableAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Feature Path Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feature Path Association</em>'.
+	 * @generated
+	 */
+	FeaturePathAssociation createFeaturePathAssociation();
 
 	/**
 	 * Returns a new object of class '<em>Unit Label</em>'.
@@ -443,6 +461,15 @@ public interface WebuiFactory extends EFactory {
 	 * @generated
 	 */
 	ResetPasswordUnit createResetPasswordUnit();
+
+	/**
+	 * Returns a new object of class '<em>Path Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Attribute</em>'.
+	 * @generated
+	 */
+	PathAttribute createPathAttribute();
 
 	/**
 	 * Returns a new object of class '<em>Security Action</em>'.

@@ -35,7 +35,7 @@ public interface DataTypeField extends InterfaceField {
 	 * @return the value of the '<em>Data Type</em>' reference.
 	 * @see #setDataType(DataType)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDataTypeField_DataType()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	DataType getDataType();
@@ -62,7 +62,7 @@ public interface DataTypeField extends InterfaceField {
 	 * @return the value of the '<em>Obfuscate Form Fields</em>' attribute.
 	 * @see #setObfuscateFormFields(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDataTypeField_ObfuscateFormFields()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isObfuscateFormFields();
@@ -89,7 +89,7 @@ public interface DataTypeField extends InterfaceField {
 	 * @return the value of the '<em>Encrypt</em>' attribute.
 	 * @see #setEncrypt(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDataTypeField_Encrypt()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isEncrypt();

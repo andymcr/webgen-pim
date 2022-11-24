@@ -33,7 +33,7 @@ public interface ActionMenuEntry extends MenuEntry, NamedDisplayElement {
 	 * @return the value of the '<em>Destination</em>' reference.
 	 * @see #setDestination(ContentUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionMenuEntry_Destination()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	ContentUnit getDestination();
@@ -56,7 +56,7 @@ public interface ActionMenuEntry extends MenuEntry, NamedDisplayElement {
 	 * @return the value of the '<em>Always Visible</em>' attribute.
 	 * @see #setAlwaysVisible(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getActionMenuEntry_AlwaysVisible()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isAlwaysVisible();

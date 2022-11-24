@@ -36,7 +36,7 @@ public interface DateField extends InterfaceField {
 	 * @see work.andycarpenter.webgen.pims.persistence.DateDetails
 	 * @see #setDetails(DateDetails)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDateField_Details()
-	 * @model default="DateOnly" required="true" ordered="false"
+	 * @model default="DateOnly" required="true"
 	 * @generated
 	 */
 	DateDetails getDetails();
@@ -63,7 +63,7 @@ public interface DateField extends InterfaceField {
 	 * @return the value of the '<em>Format</em>' attribute.
 	 * @see #setFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDateField_Format()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getFormat();

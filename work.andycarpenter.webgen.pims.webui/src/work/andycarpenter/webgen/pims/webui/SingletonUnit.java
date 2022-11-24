@@ -34,7 +34,7 @@ public interface SingletonUnit extends DynamicUnit {
 	 * @return the value of the '<em>Title</em>' reference.
 	 * @see #setTitle(Label)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSingletonUnit_Title()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	Label getTitle();

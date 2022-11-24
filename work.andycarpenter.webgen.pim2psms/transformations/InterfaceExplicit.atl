@@ -433,7 +433,7 @@ rule UnitAttribute {
 	)
 }
 
--- @extends UnitFeature, AssociationReference
+-- @extends UnitFeature, PathAssociation
 rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
@@ -444,72 +444,6 @@ rule UnitAssociation {
 				website.options.findSelection()
 			endif,
 		useAutocomplete <- website.useAutocomplete
-	)
-}
-
-abstract rule AssociationReference {
-	from website : Website!AssociationReference
-	to waf : WAF!AssociationReference (
-		association <- website.findOrmAssociation(),
-		valueDisplay <-
-			if website.valueDisplay.oclIsUndefined() then
-				OclUndefined
-			else
-				website.valueDisplay.findOrmLabel()
-			endif,
-		childFeature <- website.childFeature
-	)
-}
-
-abstract rule FeatureChildPath {
-	from website : Website!FeatureChildPath
-	to waf : WAF!FeatureChildPath (
-	)
-}
-
--- @extends FeatureChildPath
-rule ChildPathAttribute {
-	from website : Website!ChildPathAttribute
-	to waf : WAF!ChildPathAttribute (
-		attribute <- website.attribute.findOrmAttribute()
-	)
-}
-
--- @extends FeatureChildPath, AssociationReference
-rule ChildPathAssociation {
-	from website : Website!ChildPathAssociation
-	to waf : WAF!ChildPathAssociation (
-	)
-}
-
--- @extends Expression
-abstract rule FeaturePath {
-	from website : Website!FeaturePath
-	to waf : WAF!FeaturePath (
-		useContainerAsContext <- website.useContainerAsContext
-	)
-}
-
--- @extends FeaturePath
-rule FeaturePathAttribute {
-	from website : Website!FeaturePathAttribute
-	to waf : WAF!FeaturePathAttribute (
-		attribute <- website.attribute.findOrmAttribute()
-	)
-}
-
--- @extends FeaturePath, AssociationReference
-rule FeaturePathAssociation {
-	from website : Website!FeaturePathAssociation
-	to waf : WAF!FeaturePathAssociation (
-	)
-}
-
--- @extends FeaturePath
-rule FeaturePathLabel {
-	from website : Website!FeaturePathLabel
-	to waf : WAF!FeaturePathLabel (
-		label <- website.label.findOrmLabel()
 	)
 }
 
@@ -885,6 +819,111 @@ rule SearchUnit {
 	from website : Website!SearchUnit
 	to waf : WAF!SearchUnit (
 		resultsDestination <- website.resultsDestination
+	)
+}
+
+
+abstract rule Path {
+	from website : Website!Path
+	to waf : WAF!Path (
+	)
+}
+
+-- @extends Path
+abstract rule PathAssociation {
+	from website : Website!PathAssociation
+	to waf : WAF!PathAssociation (
+		association <- website.findOrmAssociation(),
+		valueDisplay <-
+			if website.valueDisplay.oclIsUndefined() then
+				OclUndefined
+			else
+				website.valueDisplay.findOrmLabel()
+			endif,
+		childFeature <- website.childFeature
+	)
+}
+
+-- @extends Path
+abstract rule PathAttribute {
+	from website : Website!PathAttribute
+	to waf : WAF!PathAttribute (
+		attribute <- 
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmAttribute()
+			endif
+	)
+}
+
+abstract rule ChildPath {
+	from website : Website!ChildPath
+	to waf : WAF!ChildPath (
+	)
+}
+
+-- @extends ChildPath, PathAssociation
+rule ChildPathAssociation {
+	from website : Website!ChildPathAssociation
+	to waf : WAF!ChildPathAssociation (
+	)
+}
+
+-- @extends ChildPath, PathAttribute
+rule ChildPathAttribute {
+	from website : Website!ChildPathAttribute
+	to waf : WAF!ChildPathAttribute (
+	)
+}
+
+abstract rule FeaturePath {
+	from website : Website!FeaturePath
+	to waf : WAF!FeaturePath (
+	)
+}
+
+-- @extends FeaturePath, PathAssociation
+rule FeaturePathAssociation {
+	from website : Website!FeaturePathAssociation
+	to waf : WAF!FeaturePathAssociation (
+	)
+}
+
+-- @extends FeaturePath, PathAttribute
+rule FeaturePathAttribute {
+	from website : Website!FeaturePathAttribute
+	to waf : WAF!FeaturePathAttribute (
+	)
+}
+
+-- @extends FeaturePath
+rule FeaturePathLabel {
+	from website : Website!FeaturePathLabel
+	to waf : WAF!FeaturePathLabel (
+		label <- website.label.findOrmLabel()
+	)
+}
+
+-- @extends Expression
+abstract rule PathVariable {
+	from website : Website!PathVariable
+	to waf : WAF!PathVariable (
+		useContainerAsContext <- website.useContainerAsContext
+	)
+}
+
+-- @extends PathVariable, PathAssociation
+rule PathVariableAssociation {
+	from website : Website!PathVariableAssociation
+	to waf : WAF!PathVariableAssociation (
+	)
+}
+
+-- @extends PathVariable, PathAttribute
+rule PathVariableAttribute {
+	from website : Website!PathVariableAttribute
+	to waf : WAF!PathVariableAttribute (
 	)
 }
 

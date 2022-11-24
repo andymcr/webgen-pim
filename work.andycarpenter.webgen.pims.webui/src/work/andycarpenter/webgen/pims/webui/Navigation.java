@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getNavigation()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='menuNameUnique '"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='menuNameUnique'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL menuNameUnique='menus-&gt;isUnique(name)'"
  * @generated
  */

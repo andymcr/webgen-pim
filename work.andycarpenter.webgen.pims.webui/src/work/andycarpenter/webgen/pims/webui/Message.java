@@ -48,7 +48,7 @@ public interface Message extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.FeaturePath}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.PathVariable}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features</em>' containment reference list.
@@ -56,6 +56,6 @@ public interface Message extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FeaturePath> getFeatures();
+	EList<PathVariable> getFeatures();
 
 } // Message

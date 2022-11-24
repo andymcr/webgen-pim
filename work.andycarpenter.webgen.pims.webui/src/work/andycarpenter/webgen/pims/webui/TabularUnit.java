@@ -74,7 +74,7 @@ public interface TabularUnit extends CollectionUnit {
 	 * @return the value of the '<em>Row Classes</em>' attribute.
 	 * @see #setRowClasses(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getTabularUnit_RowClasses()
-	 * @model default="odd_row,even_row" ordered="false"
+	 * @model default="odd_row,even_row"
 	 * @generated
 	 */
 	String getRowClasses();

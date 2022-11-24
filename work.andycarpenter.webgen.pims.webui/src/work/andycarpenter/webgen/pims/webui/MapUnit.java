@@ -37,7 +37,7 @@ public interface MapUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>Read Only</em>' attribute.
 	 * @see #setReadOnly(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMapUnit_ReadOnly()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isReadOnly();
@@ -64,7 +64,7 @@ public interface MapUnit extends EditUnit, SelectableUnit {
 	 * @return the value of the '<em>Default Zoom Level</em>' attribute.
 	 * @see #setDefaultZoomLevel(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getMapUnit_DefaultZoomLevel()
-	 * @model default="12"
+	 * @model default="12" required="true"
 	 * @generated
 	 */
 	int getDefaultZoomLevel();

@@ -44,7 +44,7 @@ public interface UnitField extends EObject {
 	 * @see #setDisplayedOn(DynamicUnit)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_DisplayedOn()
 	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields
-	 * @model opposite="displayFields" required="true" transient="false" ordered="false"
+	 * @model opposite="displayFields" required="true" transient="false"
 	 * @generated
 	 */
 	DynamicUnit getDisplayedOn();
@@ -174,7 +174,7 @@ public interface UnitField extends EObject {
 	 * @return the value of the '<em>Escape HTML</em>' attribute.
 	 * @see #setEscapeHTML(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_EscapeHTML()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isEscapeHTML();
@@ -203,7 +203,7 @@ public interface UnitField extends EObject {
 	 * @see work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions
 	 * @see #setCollectionDisplayOption(CollectionDisplayOptions)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_CollectionDisplayOption()
-	 * @model default="LineDirection" ordered="false"
+	 * @model default="LineDirection"
 	 * @generated
 	 */
 	CollectionDisplayOptions getCollectionDisplayOption();
@@ -231,7 +231,7 @@ public interface UnitField extends EObject {
 	 * @return the value of the '<em>Truncate</em>' attribute.
 	 * @see #setTruncate(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_Truncate()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isTruncate();
@@ -258,7 +258,7 @@ public interface UnitField extends EObject {
 	 * @return the value of the '<em>Date Format</em>' attribute.
 	 * @see #setDateFormat(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_DateFormat()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDateFormat();
@@ -285,7 +285,7 @@ public interface UnitField extends EObject {
 	 * @return the value of the '<em>Disable Input</em>' attribute.
 	 * @see #setDisableInput(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_DisableInput()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isDisableInput();

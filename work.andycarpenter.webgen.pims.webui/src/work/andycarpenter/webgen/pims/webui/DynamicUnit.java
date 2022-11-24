@@ -125,7 +125,7 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @return the value of the '<em>Has When Fields Empty Add Implicit Fields</em>' attribute.
 	 * @see #setHasWhenFieldsEmptyAddImplicitFields(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_HasWhenFieldsEmptyAddImplicitFields()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isHasWhenFieldsEmptyAddImplicitFields();

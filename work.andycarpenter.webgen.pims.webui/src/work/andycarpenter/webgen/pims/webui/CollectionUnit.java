@@ -49,7 +49,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='canOnlyTitleWithSingletons selectionMustNotBeSingleton'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n\t\tunitTitle.oclAsType(persistence::Attribute).cardinality &lt;&gt; persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\r\n\tselection.limit &lt;&gt; 1'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n\t\tunitTitle.oclAsType(persistence::Attribute).cardinality &lt;&gt; persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\n\tselection.limit &lt;&gt; 1'"
  * @generated
  */
 public interface CollectionUnit extends DynamicUnit, SelectableUnit {
@@ -64,7 +64,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Unit Title</em>' reference.
 	 * @see #setUnitTitle(Label)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_UnitTitle()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	Label getUnitTitle();
@@ -117,7 +117,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Truncate Element Title</em>' attribute.
 	 * @see #setTruncateElementTitle(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_TruncateElementTitle()
-	 * @model default="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isTruncateElementTitle();
@@ -286,7 +286,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Omit Field Labels</em>' attribute.
 	 * @see #setOmitFieldLabels(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_OmitFieldLabels()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isOmitFieldLabels();
@@ -313,7 +313,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Default Pagination Size</em>' attribute.
 	 * @see #setDefaultPaginationSize(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_DefaultPaginationSize()
-	 * @model default="10" ordered="false"
+	 * @model default="10" required="true"
 	 * @generated
 	 */
 	int getDefaultPaginationSize();
@@ -340,7 +340,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Maximum Pagination Size</em>' attribute.
 	 * @see #setMaximumPaginationSize(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_MaximumPaginationSize()
-	 * @model default="0" ordered="false"
+	 * @model default="0" required="true"
 	 * @generated
 	 */
 	int getMaximumPaginationSize();
@@ -397,7 +397,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Next Npages</em>' attribute.
 	 * @see #setNextNpages(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_NextNpages()
-	 * @model default="2"
+	 * @model default="2" required="true"
 	 * @generated
 	 */
 	int getNextNpages();
@@ -424,7 +424,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Previous Npages</em>' attribute.
 	 * @see #setPreviousNpages(int)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_PreviousNpages()
-	 * @model default="2"
+	 * @model default="2" required="true"
 	 * @generated
 	 */
 	int getPreviousNpages();
@@ -451,7 +451,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Next Page Label</em>' attribute.
 	 * @see #setNextPageLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_NextPageLabel()
-	 * @model default="&amp;gt;" ordered="false"
+	 * @model default="&amp;gt;"
 	 * @generated
 	 */
 	String getNextPageLabel();
@@ -505,7 +505,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Previous Page Label</em>' attribute.
 	 * @see #setPreviousPageLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_PreviousPageLabel()
-	 * @model default="&amp;lt;" ordered="false"
+	 * @model default="&amp;lt;"
 	 * @generated
 	 */
 	String getPreviousPageLabel();
@@ -559,7 +559,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Use Disabled Page Links</em>' attribute.
 	 * @see #setUseDisabledPageLinks(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_UseDisabledPageLinks()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isUseDisabledPageLinks();
@@ -586,7 +586,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Use First Last Page Links</em>' attribute.
 	 * @see #setUseFirstLastPageLinks(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_UseFirstLastPageLinks()
-	 * @model default="false" ordered="false"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isUseFirstLastPageLinks();
@@ -613,7 +613,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>First Page Label</em>' attribute.
 	 * @see #setFirstPageLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_FirstPageLabel()
-	 * @model default="&lt;&lt;" ordered="false"
+	 * @model default="&lt;&lt;"
 	 * @generated
 	 */
 	String getFirstPageLabel();
@@ -667,7 +667,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @return the value of the '<em>Last Page Label</em>' attribute.
 	 * @see #setLastPageLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_LastPageLabel()
-	 * @model default="&gt;&gt;" ordered="false"
+	 * @model default="&gt;&gt;"
 	 * @generated
 	 */
 	String getLastPageLabel();

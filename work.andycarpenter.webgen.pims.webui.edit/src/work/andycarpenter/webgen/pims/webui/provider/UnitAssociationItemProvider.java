@@ -21,9 +21,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
-import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.persistence.Selection;
+import work.andycarpenter.webgen.pims.webui.PathAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -57,10 +57,13 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addAssociationPropertyDescriptor(object);
-			addValueDisplayPropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
+			addAssociationPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addValueDisplayPropertyDescriptor(object);
+			addIsSourceAssociationPropertyDescriptor(object);
+			addSourceEntityPropertyDescriptor(object);
+			addTargetEntityPropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
 			addUseAutocompletePropertyDescriptor(object);
 		}
@@ -78,9 +81,9 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AssociationReference_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_name_feature", "_UI_AssociationReference_type"),
-				 PersistencePackage.Literals.ASSOCIATION_REFERENCE__NAME,
+				 getString("_UI_PathAssociation_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_name_feature", "_UI_PathAssociation_type"),
+				 WebuiPackage.Literals.PATH_ASSOCIATION__NAME,
 				 true,
 				 false,
 				 false,
@@ -97,24 +100,24 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	 */
 	protected void addAssociationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_AssociationReference_association_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_association_feature", "_UI_AssociationReference_type"),
-			PersistencePackage.Literals.ASSOCIATION_REFERENCE__ASSOCIATION,
-			true, false, true, null,
-			getString("_UI_ModelPropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof UnitAssociation) {
-						final UnitAssociation association = (UnitAssociation) object;
-						return association.getDisplayedOn().getContentType().getAllAssociations();
-					}
+				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_PathAssociation_association_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_association_feature", "_UI_PathAssociation_type"),
+				WebuiPackage.Literals.PATH_ASSOCIATION__ASSOCIATION,
+				true, false, true, null,
+				getString("_UI_ModelPropertyCategory"),
+				null) {
+					@Override
+					public Collection<?> getChoiceOfValues(Object object) {
+						if (object instanceof PathAssociation) {
+							final PathAssociation path = (PathAssociation) object;
+							return path.getContainingType().getAllAssociations();
+						}
 
-					return Collections.emptySet();
-				}
-		});
+						return Collections.emptySet();
+					}
+			});
 	}
 
 	/**
@@ -127,16 +130,16 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_AssociationReference_valueDisplay_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_AssociationReference_valueDisplay_feature", "_UI_AssociationReference_type"),
-			PersistencePackage.Literals.ASSOCIATION_REFERENCE__VALUE_DISPLAY,
+			getString("_UI_PathAssociation_valueDisplay_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_valueDisplay_feature", "_UI_PathAssociation_type"),
+			WebuiPackage.Literals.PATH_ASSOCIATION__VALUE_DISPLAY,
 			true, false, true, null,
 			getString("_UI_InterfacePropertyCategory"),
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof UnitAssociation) {
-						final UnitAssociation association = (UnitAssociation) object;
+					if (object instanceof PathAssociation) {
+						final PathAssociation association = (PathAssociation) object;
 						final Set<Label> labels = new HashSet<Label>();
 						if (association.getTargetEntity() != null) {
 							labels.addAll(association.getTargetEntity().getAttributes());
@@ -151,6 +154,72 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Source Association feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSourceAssociationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PathAssociation_isSourceAssociation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_isSourceAssociation_feature", "_UI_PathAssociation_type"),
+				 WebuiPackage.Literals.PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Source Entity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSourceEntityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PathAssociation_sourceEntity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_sourceEntity_feature", "_UI_PathAssociation_type"),
+				 WebuiPackage.Literals.PATH_ASSOCIATION__SOURCE_ENTITY,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target Entity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetEntityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PathAssociation_targetEntity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_targetEntity_feature", "_UI_PathAssociation_type"),
+				 WebuiPackage.Literals.PATH_ASSOCIATION__TARGET_ENTITY,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Containing Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,9 +230,9 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_containingType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_containingType_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__CONTAINING_TYPE,
+				 getString("_UI_Path_containingType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Path_containingType_feature", "_UI_Path_type"),
+				 WebuiPackage.Literals.PATH__CONTAINING_TYPE,
 				 false,
 				 false,
 				 false,
@@ -236,7 +305,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE);
+			childrenFeatures.add(WebuiPackage.Literals.PATH_ASSOCIATION__CHILD_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -317,13 +386,13 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
-				 WebuiFactory.eINSTANCE.createChildPathAttribute()));
+				(WebuiPackage.Literals.PATH_ASSOCIATION__CHILD_FEATURE,
+				 WebuiFactory.eINSTANCE.createChildPathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ASSOCIATION_REFERENCE__CHILD_FEATURE,
-				 WebuiFactory.eINSTANCE.createChildPathAssociation()));
+				(WebuiPackage.Literals.PATH_ASSOCIATION__CHILD_FEATURE,
+				 WebuiFactory.eINSTANCE.createChildPathAttribute()));
 	}
 
 	/**

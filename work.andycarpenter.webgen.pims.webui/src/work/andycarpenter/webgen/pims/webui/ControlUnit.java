@@ -33,7 +33,7 @@ public interface ControlUnit extends DynamicUnit {
 	 * @return the value of the '<em>Submit Label</em>' attribute.
 	 * @see #setSubmitLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit_SubmitLabel()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getSubmitLabel();
@@ -59,7 +59,7 @@ public interface ControlUnit extends DynamicUnit {
 	 * @return the value of the '<em>Cancel Destination</em>' reference.
 	 * @see #setCancelDestination(Controller)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit_CancelDestination()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	Controller getCancelDestination();
@@ -85,7 +85,7 @@ public interface ControlUnit extends DynamicUnit {
 	 * @return the value of the '<em>Cancel Label</em>' attribute.
 	 * @see #setCancelLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getControlUnit_CancelLabel()
-	 * @model ordered="false"
+	 * @model
 	 * @generated
 	 */
 	String getCancelLabel();

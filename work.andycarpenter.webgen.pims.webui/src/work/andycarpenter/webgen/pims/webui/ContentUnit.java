@@ -43,7 +43,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @return the value of the '<em>Create Default Uri Element</em>' attribute.
 	 * @see #setCreateDefaultUriElement(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_CreateDefaultUriElement()
-	 * @model default="true"
+	 * @model default="true" required="true"
 	 * @generated
 	 */
 	boolean isCreateDefaultUriElement();
@@ -194,7 +194,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @return the value of the '<em>Section Class</em>' attribute.
 	 * @see #setSectionClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_SectionClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getSectionClass();
@@ -220,7 +220,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @return the value of the '<em>Omit Caption</em>' attribute.
 	 * @see #setOmitCaption(boolean)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_OmitCaption()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isOmitCaption();
@@ -266,7 +266,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @return the value of the '<em>Local Content Class</em>' attribute.
 	 * @see #setLocalContentClass(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_LocalContentClass()
-	 * @model default="" ordered="false"
+	 * @model default=""
 	 * @generated
 	 */
 	String getLocalContentClass();
@@ -290,7 +290,7 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @see #setController(Controller)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_Controller()
 	 * @see work.andycarpenter.webgen.pims.webui.Controller#getUnits
-	 * @model opposite="units" required="true" transient="false" ordered="false"
+	 * @model opposite="units" required="true" transient="false"
 	 * @generated
 	 */
 	Controller getController();

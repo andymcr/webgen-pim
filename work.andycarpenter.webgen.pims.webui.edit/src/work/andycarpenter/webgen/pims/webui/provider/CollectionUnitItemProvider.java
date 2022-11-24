@@ -821,12 +821,12 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

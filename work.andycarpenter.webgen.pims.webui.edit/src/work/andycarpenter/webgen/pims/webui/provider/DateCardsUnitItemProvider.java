@@ -148,12 +148,12 @@ public class DateCardsUnitItemProvider extends CardsUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.DATE_CARDS_UNIT__ELEMENT_DATE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.DATE_CARDS_UNIT__ELEMENT_DATE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
