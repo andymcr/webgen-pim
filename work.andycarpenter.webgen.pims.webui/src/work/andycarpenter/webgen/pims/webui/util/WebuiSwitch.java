@@ -317,6 +317,15 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.UNIT_RESOURCE: {
+				UnitResource unitResource = (UnitResource)theEObject;
+				T result = caseUnitResource(unitResource);
+				if (result == null) result = caseUnitFeature(unitResource);
+				if (result == null) result = caseUnitField(unitResource);
+				if (result == null) result = caseActionContainer(unitResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.UNIT_ASSOCIATION: {
 				UnitAssociation unitAssociation = (UnitAssociation)theEObject;
 				T result = caseUnitAssociation(unitAssociation);
@@ -1360,6 +1369,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUnitElement(UnitElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnitResource(UnitResource object) {
 		return null;
 	}
 

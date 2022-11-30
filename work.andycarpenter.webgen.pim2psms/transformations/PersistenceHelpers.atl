@@ -171,6 +171,9 @@ helper context Website!Feature def: findOrmFeature() : ORM!Feature
 helper context Website!Attribute def: findOrmAttribute() : ORM!Attribute
 	= self.findOrmEntity().getOrmFeature(self.name);
 
+helper context Website!ResourceFeature def: findOrmResource() : ORM!ResourceFeature
+	= self.findOrmEntity().getOrmFeature(self.name);
+
 helper context Website!Association def: findOrmSourceAssociation() : ORM!Association
 	= thisModule.findOrmEntity(self.partOf.name).getOrmFeature(self.name);
 

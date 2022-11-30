@@ -229,6 +229,15 @@ public interface WebuiFactory extends EFactory {
 	UnitElement createUnitElement();
 
 	/**
+	 * Returns a new object of class '<em>Unit Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Resource</em>'.
+	 * @generated
+	 */
+	UnitResource createUnitResource();
+
+	/**
 	 * Returns a new object of class '<em>Unit Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

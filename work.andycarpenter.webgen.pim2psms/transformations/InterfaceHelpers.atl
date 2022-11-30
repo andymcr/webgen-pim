@@ -13,13 +13,6 @@ helper context Website!Feature def: defaultDisplayValue() : String
 				OclUndefined
 			endif;
 
-helper context Website!UnitAssociation def: defaultDisplayValue() : String
-	= if self.defaultDisplayValue.trim() <> '' then
-			self.defaultDisplayValue.trim()
-		else
-			self.association.defaultDisplayValue()
-		endif;
-
 helper context Website!UnitElement def: defaultDisplayValue() : String
 	= if self.defaultDisplayValue.trim() <> '' then
 			self.defaultDisplayValue.trim()
@@ -28,6 +21,16 @@ helper context Website!UnitElement def: defaultDisplayValue() : String
 		else
 			self.attribute.defaultDisplayValue()
 		endif endif;
+
+helper context Website!UnitResource def: defaultDisplayValue() : String
+	= '';
+
+helper context Website!UnitAssociation def: defaultDisplayValue() : String
+	= if self.defaultDisplayValue.trim() <> '' then
+			self.defaultDisplayValue.trim()
+		else
+			self.association.defaultDisplayValue()
+		endif;
 
 helper context Website!Feature def: displayLabel() : String
 	= if self.displayLabel.trim() <> '' then
@@ -43,13 +46,6 @@ helper context Website!Feature def: emptyDisplayValue() : String
 			OclUndefined
 		endif;
 
-helper context Website!UnitAssociation def: emptyDisplayValue() : String
-	= if self.emptyDisplayValue.trim() <> '' then
-			self.emptyDisplayValue.trim()
-		else
-			self.association.emptyDisplayValue()
-		endif;
-
 helper context Website!UnitElement def: emptyDisplayValue() : String
 	= if self.emptyDisplayValue.trim() <> '' then
 			self.emptyDisplayValue.trim()
@@ -58,6 +54,20 @@ helper context Website!UnitElement def: emptyDisplayValue() : String
 		else
 			self.attribute.emptyDisplayValue()
 		endif endif;
+
+helper context Website!UnitResource def: emptyDisplayValue() : String
+	= if self.emptyDisplayValue.trim() <> '' then
+			self.emptyDisplayValue.trim()
+		else
+			''
+		endif;
+
+helper context Website!UnitAssociation def: emptyDisplayValue() : String
+	= if self.emptyDisplayValue.trim() <> '' then
+			self.emptyDisplayValue.trim()
+		else
+			self.association.emptyDisplayValue()
+		endif;
 
 helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity
 	= if entity.features->includes(self) then

@@ -122,18 +122,36 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateDateAttribute((DateAttribute)value, diagnostics, context);
 			case PersistencePackage.URL_ATTRIBUTE:
 				return validateUrlAttribute((UrlAttribute)value, diagnostics, context);
-			case PersistencePackage.RESOURCE_ATTRIBUTE:
-				return validateResourceAttribute((ResourceAttribute)value, diagnostics, context);
-			case PersistencePackage.PATH_ELEMENT:
-				return validatePathElement((PathElement)value, diagnostics, context);
-			case PersistencePackage.STATIC_PATH_ELEMENT:
-				return validateStaticPathElement((StaticPathElement)value, diagnostics, context);
-			case PersistencePackage.DATE_PATH_ELEMENT:
-				return validateDatePathElement((DatePathElement)value, diagnostics, context);
-			case PersistencePackage.FILE_ATTRIBUTE:
-				return validateFileAttribute((FileAttribute)value, diagnostics, context);
-			case PersistencePackage.IMAGE_ATTRIBUTE:
-				return validateImageAttribute((ImageAttribute)value, diagnostics, context);
+			case PersistencePackage.RESOURCE_FEATURE:
+				return validateResourceFeature((ResourceFeature)value, diagnostics, context);
+			case PersistencePackage.DIRECTORY_NAMER:
+				return validateDirectoryNamer((DirectoryNamer)value, diagnostics, context);
+			case PersistencePackage.SUB_DIRECTORY:
+				return validateSubDirectory((SubDirectory)value, diagnostics, context);
+			case PersistencePackage.PROPERTY_DIRECTORY:
+				return validatePropertyDirectory((PropertyDirectory)value, diagnostics, context);
+			case PersistencePackage.DATE_TIME_DIRECTORY:
+				return validateDateTimeDirectory((DateTimeDirectory)value, diagnostics, context);
+			case PersistencePackage.FILE_NAMER:
+				return validateFileNamer((FileNamer)value, diagnostics, context);
+			case PersistencePackage.UNIQUE_ID_NAMER:
+				return validateUniqueIdNamer((UniqueIdNamer)value, diagnostics, context);
+			case PersistencePackage.ORIGINAL_NAMER:
+				return validateOriginalNamer((OriginalNamer)value, diagnostics, context);
+			case PersistencePackage.PROPERTY_NAMER:
+				return validatePropertyNamer((PropertyNamer)value, diagnostics, context);
+			case PersistencePackage.HASH_NAMER:
+				return validateHashNamer((HashNamer)value, diagnostics, context);
+			case PersistencePackage.BASE64_NAMER:
+				return validateBase64Namer((Base64Namer)value, diagnostics, context);
+			case PersistencePackage.SMART_UNIQUE_NAMER:
+				return validateSmartUniqueNamer((SmartUniqueNamer)value, diagnostics, context);
+			case PersistencePackage.SLUG_NAMER:
+				return validateSlugNamer((SlugNamer)value, diagnostics, context);
+			case PersistencePackage.FILE_RESOURCE:
+				return validateFileResource((FileResource)value, diagnostics, context);
+			case PersistencePackage.IMAGE_RESOURCE:
+				return validateImageResource((ImageResource)value, diagnostics, context);
 			case PersistencePackage.LOCATION_ATTRIBUTE:
 				return validateLocationAttribute((LocationAttribute)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT:
@@ -526,18 +544,18 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceAttribute(ResourceAttribute resourceAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(resourceAttribute, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(resourceAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(resourceAttribute, diagnostics, context);
+	public boolean validateResourceFeature(ResourceFeature resourceFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(resourceFeature, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(resourceFeature, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(resourceFeature, diagnostics, context);
 		return result;
 	}
 
@@ -546,8 +564,8 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePathElement(PathElement pathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathElement, diagnostics, context);
+	public boolean validateDirectoryNamer(DirectoryNamer directoryNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(directoryNamer, diagnostics, context);
 	}
 
 	/**
@@ -555,8 +573,8 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateStaticPathElement(StaticPathElement staticPathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(staticPathElement, diagnostics, context);
+	public boolean validateSubDirectory(SubDirectory subDirectory, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(subDirectory, diagnostics, context);
 	}
 
 	/**
@@ -564,8 +582,8 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDatePathElement(DatePathElement datePathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(datePathElement, diagnostics, context);
+	public boolean validatePropertyDirectory(PropertyDirectory propertyDirectory, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(propertyDirectory, diagnostics, context);
 	}
 
 	/**
@@ -573,18 +591,99 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFileAttribute(FileAttribute fileAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(fileAttribute, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(fileAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(fileAttribute, diagnostics, context);
+	public boolean validateDateTimeDirectory(DateTimeDirectory dateTimeDirectory, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dateTimeDirectory, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFileNamer(FileNamer fileNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fileNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUniqueIdNamer(UniqueIdNamer uniqueIdNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(uniqueIdNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateOriginalNamer(OriginalNamer originalNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(originalNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePropertyNamer(PropertyNamer propertyNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(propertyNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateHashNamer(HashNamer hashNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(hashNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBase64Namer(Base64Namer base64Namer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(base64Namer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSmartUniqueNamer(SmartUniqueNamer smartUniqueNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(smartUniqueNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSlugNamer(SlugNamer slugNamer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(slugNamer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFileResource(FileResource fileResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(fileResource, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(fileResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(fileResource, diagnostics, context);
 		return result;
 	}
 
@@ -593,18 +692,18 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateImageAttribute(ImageAttribute imageAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(imageAttribute, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(imageAttribute, diagnostics, context);
+	public boolean validateImageResource(ImageResource imageResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(imageResource, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(imageResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_primaryKeyRequired(imageResource, diagnostics, context);
 		return result;
 	}
 

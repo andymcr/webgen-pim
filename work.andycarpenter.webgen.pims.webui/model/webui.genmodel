@@ -231,12 +231,18 @@
     <genClasses ecoreClass="webui.ecore#//UnitElement">
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//UnitElement/attribute"/>
-      <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/name"/>
+      <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/name"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference webui.ecore#//UnitElement/defaultValue"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/obfuscateFormFields"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/placeholder"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
+    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//UnitResource">
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference webui.ecore#//UnitResource/resource"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/name"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"

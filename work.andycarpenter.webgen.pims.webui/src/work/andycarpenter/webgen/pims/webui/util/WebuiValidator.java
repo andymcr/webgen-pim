@@ -156,6 +156,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateUnitFeature((UnitFeature)value, diagnostics, context);
 			case WebuiPackage.UNIT_ELEMENT:
 				return validateUnitElement((UnitElement)value, diagnostics, context);
+			case WebuiPackage.UNIT_RESOURCE:
+				return validateUnitResource((UnitResource)value, diagnostics, context);
 			case WebuiPackage.UNIT_ASSOCIATION:
 				return validateUnitAssociation((UnitAssociation)value, diagnostics, context);
 			case WebuiPackage.UNIT_LABEL:
@@ -907,6 +909,27 @@ public class WebuiValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitElement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitElement, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnitResource(UnitResource unitResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(unitResource, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validateActionContainer_atMostOneDeleteAction(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUnitFeature_atMostOneSelectAction(unitResource, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUnitFeature_noDeleteActions(unitResource, diagnostics, context);
 		return result;
 	}
 

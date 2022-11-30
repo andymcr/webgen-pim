@@ -66,10 +66,18 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE: return createDataTypeAttribute();
 			case PersistencePackage.DATE_ATTRIBUTE: return createDateAttribute();
 			case PersistencePackage.URL_ATTRIBUTE: return createUrlAttribute();
-			case PersistencePackage.STATIC_PATH_ELEMENT: return createStaticPathElement();
-			case PersistencePackage.DATE_PATH_ELEMENT: return createDatePathElement();
-			case PersistencePackage.FILE_ATTRIBUTE: return createFileAttribute();
-			case PersistencePackage.IMAGE_ATTRIBUTE: return createImageAttribute();
+			case PersistencePackage.SUB_DIRECTORY: return createSubDirectory();
+			case PersistencePackage.PROPERTY_DIRECTORY: return createPropertyDirectory();
+			case PersistencePackage.DATE_TIME_DIRECTORY: return createDateTimeDirectory();
+			case PersistencePackage.UNIQUE_ID_NAMER: return createUniqueIdNamer();
+			case PersistencePackage.ORIGINAL_NAMER: return createOriginalNamer();
+			case PersistencePackage.PROPERTY_NAMER: return createPropertyNamer();
+			case PersistencePackage.HASH_NAMER: return createHashNamer();
+			case PersistencePackage.BASE64_NAMER: return createBase64Namer();
+			case PersistencePackage.SMART_UNIQUE_NAMER: return createSmartUniqueNamer();
+			case PersistencePackage.SLUG_NAMER: return createSlugNamer();
+			case PersistencePackage.FILE_RESOURCE: return createFileResource();
+			case PersistencePackage.IMAGE_RESOURCE: return createImageResource();
 			case PersistencePackage.LOCATION_ATTRIBUTE: return createLocationAttribute();
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT: return createAssociationWithoutContainment();
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT: return createAssociationWithContainment();
@@ -236,9 +244,9 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * @generated
 	 */
 	@Override
-	public StaticPathElement createStaticPathElement() {
-		StaticPathElementImpl staticPathElement = new StaticPathElementImpl();
-		return staticPathElement;
+	public SubDirectory createSubDirectory() {
+		SubDirectoryImpl subDirectory = new SubDirectoryImpl();
+		return subDirectory;
 	}
 
 	/**
@@ -247,9 +255,9 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * @generated
 	 */
 	@Override
-	public DatePathElement createDatePathElement() {
-		DatePathElementImpl datePathElement = new DatePathElementImpl();
-		return datePathElement;
+	public PropertyDirectory createPropertyDirectory() {
+		PropertyDirectoryImpl propertyDirectory = new PropertyDirectoryImpl();
+		return propertyDirectory;
 	}
 
 	/**
@@ -258,9 +266,9 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * @generated
 	 */
 	@Override
-	public FileAttribute createFileAttribute() {
-		FileAttributeImpl fileAttribute = new FileAttributeImpl();
-		return fileAttribute;
+	public DateTimeDirectory createDateTimeDirectory() {
+		DateTimeDirectoryImpl dateTimeDirectory = new DateTimeDirectoryImpl();
+		return dateTimeDirectory;
 	}
 
 	/**
@@ -269,9 +277,97 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * @generated
 	 */
 	@Override
-	public ImageAttribute createImageAttribute() {
-		ImageAttributeImpl imageAttribute = new ImageAttributeImpl();
-		return imageAttribute;
+	public UniqueIdNamer createUniqueIdNamer() {
+		UniqueIdNamerImpl uniqueIdNamer = new UniqueIdNamerImpl();
+		return uniqueIdNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OriginalNamer createOriginalNamer() {
+		OriginalNamerImpl originalNamer = new OriginalNamerImpl();
+		return originalNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PropertyNamer createPropertyNamer() {
+		PropertyNamerImpl propertyNamer = new PropertyNamerImpl();
+		return propertyNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public HashNamer createHashNamer() {
+		HashNamerImpl hashNamer = new HashNamerImpl();
+		return hashNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Base64Namer createBase64Namer() {
+		Base64NamerImpl base64Namer = new Base64NamerImpl();
+		return base64Namer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SmartUniqueNamer createSmartUniqueNamer() {
+		SmartUniqueNamerImpl smartUniqueNamer = new SmartUniqueNamerImpl();
+		return smartUniqueNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SlugNamer createSlugNamer() {
+		SlugNamerImpl slugNamer = new SlugNamerImpl();
+		return slugNamer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FileResource createFileResource() {
+		FileResourceImpl fileResource = new FileResourceImpl();
+		return fileResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ImageResource createImageResource() {
+		ImageResourceImpl imageResource = new ImageResourceImpl();
+		return imageResource;
 	}
 
 	/**

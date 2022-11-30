@@ -107,6 +107,7 @@ import work.andycarpenter.webgen.pims.webui.UnitElement;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.UnitField;
 import work.andycarpenter.webgen.pims.webui.UnitLabel;
+import work.andycarpenter.webgen.pims.webui.UnitResource;
 import work.andycarpenter.webgen.pims.webui.UpdateUnit;
 import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -337,6 +338,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass unitElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unitResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2439,6 +2447,36 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EAttribute getUnitElement_ValidationPattern() {
 		return (EAttribute)unitElementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUnitResource() {
+		return unitResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUnitResource_Resource() {
+		return (EReference)unitResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUnitResource_Name() {
+		return (EAttribute)unitResourceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4800,6 +4838,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(unitElementEClass, UNIT_ELEMENT__PLACEHOLDER);
 		createEAttribute(unitElementEClass, UNIT_ELEMENT__VALIDATION_PATTERN);
 
+		unitResourceEClass = createEClass(UNIT_RESOURCE);
+		createEReference(unitResourceEClass, UNIT_RESOURCE__RESOURCE);
+		createEAttribute(unitResourceEClass, UNIT_RESOURCE__NAME);
+
 		unitAssociationEClass = createEClass(UNIT_ASSOCIATION);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__USE_AUTOCOMPLETE);
@@ -5138,6 +5180,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		unitFeatureEClass.getESuperTypes().add(this.getUnitField());
 		unitFeatureEClass.getESuperTypes().add(this.getActionContainer());
 		unitElementEClass.getESuperTypes().add(this.getUnitFeature());
+		unitResourceEClass.getESuperTypes().add(this.getUnitFeature());
 		unitAssociationEClass.getESuperTypes().add(this.getUnitFeature());
 		unitAssociationEClass.getESuperTypes().add(this.getPathAssociation());
 		unitLabelEClass.getESuperTypes().add(this.getUnitField());
@@ -5398,6 +5441,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getUnitElement_ObfuscateFormFields(), ecorePackage.getEBoolean(), "obfuscateFormFields", "false", 1, 1, UnitElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitElement_Placeholder(), ecorePackage.getEString(), "placeholder", "", 0, 1, UnitElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitElement_ValidationPattern(), ecorePackage.getEString(), "validationPattern", "", 0, 1, UnitElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unitResourceEClass, UnitResource.class, "UnitResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitResource_Resource(), thePersistencePackage.getResourceFeature(), null, "resource", null, 1, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitResource_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnitResource.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitAssociationEClass, UnitAssociation.class, "UnitAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnitAssociation_Options(), thePersistencePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5860,6 +5907,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   source,
 		   new String[] {
 			   "derivation", "if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif"
+		   });
+		addAnnotation
+		  (getUnitResource_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if resource.oclIsUndefined() then\n\t\'\'\nelse\n\tresource.name\nendif"
 		   });
 		addAnnotation
 		  (unitAssociationEClass,

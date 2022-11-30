@@ -258,29 +258,60 @@
   <eClassifiers xsi:type="ecore:EClass" name="UrlAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceAttribute" abstract="true" eSuperTypes="#//Attribute">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceFeature" abstract="true" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumUploadSize" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validUploadMimeTypes" ordered="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validUploadExtensions"
         ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uploadsWithinWebsite" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadPath" upperBound="-1"
-        eType="#//PathElement" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PathElement" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StaticPathElement" eSuperTypes="#//PathElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="element" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriPrefix" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseUploadDirectory" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="directoryNamer" eType="#//DirectoryNamer"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fileNamer" lowerBound="1"
+        eType="#//FileNamer" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DatePathElement" eSuperTypes="#//PathElement">
+  <eClassifiers xsi:type="ecore:EClass" name="DirectoryNamer" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubDirectory" eSuperTypes="#//DirectoryNamer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charactersPerDirectory"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="2"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="directoryCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyDirectory" eSuperTypes="#//DirectoryNamer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribte" lowerBound="1"
+        eType="#//Attribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTimeDirectory" eSuperTypes="#//DirectoryNamer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Y/m/d"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//Attribute"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FileAttribute" eSuperTypes="#//ResourceAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageAttribute" eSuperTypes="#//ResourceAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileNamer" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UniqueIdNamer" eSuperTypes="#//FileNamer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OriginalNamer" eSuperTypes="#//FileNamer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyNamer" eSuperTypes="#//FileNamer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//Attribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HashNamer" eSuperTypes="#//FileNamer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="sha1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Base64Namer" eSuperTypes="#//FileNamer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="10"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartUniqueNamer" eSuperTypes="#//FileNamer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SlugNamer" eSuperTypes="#//FileNamer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileResource" eSuperTypes="#//ResourceFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageResource" eSuperTypes="#//ResourceFeature"/>
   <eClassifiers xsi:type="ecore:EClass" name="LocationAttribute" eSuperTypes="#//Attribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="AssociationWithoutContainment" eSuperTypes="#//Association">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

@@ -129,28 +129,64 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createUrlAttributeAdapter();
 			}
 			@Override
-			public Adapter caseResourceAttribute(ResourceAttribute object) {
-				return createResourceAttributeAdapter();
+			public Adapter caseResourceFeature(ResourceFeature object) {
+				return createResourceFeatureAdapter();
 			}
 			@Override
-			public Adapter casePathElement(PathElement object) {
-				return createPathElementAdapter();
+			public Adapter caseDirectoryNamer(DirectoryNamer object) {
+				return createDirectoryNamerAdapter();
 			}
 			@Override
-			public Adapter caseStaticPathElement(StaticPathElement object) {
-				return createStaticPathElementAdapter();
+			public Adapter caseSubDirectory(SubDirectory object) {
+				return createSubDirectoryAdapter();
 			}
 			@Override
-			public Adapter caseDatePathElement(DatePathElement object) {
-				return createDatePathElementAdapter();
+			public Adapter casePropertyDirectory(PropertyDirectory object) {
+				return createPropertyDirectoryAdapter();
 			}
 			@Override
-			public Adapter caseFileAttribute(FileAttribute object) {
-				return createFileAttributeAdapter();
+			public Adapter caseDateTimeDirectory(DateTimeDirectory object) {
+				return createDateTimeDirectoryAdapter();
 			}
 			@Override
-			public Adapter caseImageAttribute(ImageAttribute object) {
-				return createImageAttributeAdapter();
+			public Adapter caseFileNamer(FileNamer object) {
+				return createFileNamerAdapter();
+			}
+			@Override
+			public Adapter caseUniqueIdNamer(UniqueIdNamer object) {
+				return createUniqueIdNamerAdapter();
+			}
+			@Override
+			public Adapter caseOriginalNamer(OriginalNamer object) {
+				return createOriginalNamerAdapter();
+			}
+			@Override
+			public Adapter casePropertyNamer(PropertyNamer object) {
+				return createPropertyNamerAdapter();
+			}
+			@Override
+			public Adapter caseHashNamer(HashNamer object) {
+				return createHashNamerAdapter();
+			}
+			@Override
+			public Adapter caseBase64Namer(Base64Namer object) {
+				return createBase64NamerAdapter();
+			}
+			@Override
+			public Adapter caseSmartUniqueNamer(SmartUniqueNamer object) {
+				return createSmartUniqueNamerAdapter();
+			}
+			@Override
+			public Adapter caseSlugNamer(SlugNamer object) {
+				return createSlugNamerAdapter();
+			}
+			@Override
+			public Adapter caseFileResource(FileResource object) {
+				return createFileResourceAdapter();
+			}
+			@Override
+			public Adapter caseImageResource(ImageResource object) {
+				return createImageResourceAdapter();
 			}
 			@Override
 			public Adapter caseLocationAttribute(LocationAttribute object) {
@@ -437,86 +473,212 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute <em>Resource Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature <em>Resource Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature
 	 * @generated
 	 */
-	public Adapter createResourceAttributeAdapter() {
+	public Adapter createResourceFeatureAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.PathElement <em>Path Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.DirectoryNamer <em>Directory Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.PathElement
+	 * @see work.andycarpenter.webgen.pims.persistence.DirectoryNamer
 	 * @generated
 	 */
-	public Adapter createPathElementAdapter() {
+	public Adapter createDirectoryNamerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.StaticPathElement <em>Static Path Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.SubDirectory <em>Sub Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.StaticPathElement
+	 * @see work.andycarpenter.webgen.pims.persistence.SubDirectory
 	 * @generated
 	 */
-	public Adapter createStaticPathElementAdapter() {
+	public Adapter createSubDirectoryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.DatePathElement <em>Date Path Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.PropertyDirectory <em>Property Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.DatePathElement
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyDirectory
 	 * @generated
 	 */
-	public Adapter createDatePathElementAdapter() {
+	public Adapter createPropertyDirectoryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FileAttribute <em>File Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory <em>Date Time Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.FileAttribute
+	 * @see work.andycarpenter.webgen.pims.persistence.DateTimeDirectory
 	 * @generated
 	 */
-	public Adapter createFileAttributeAdapter() {
+	public Adapter createDateTimeDirectoryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ImageAttribute <em>Image Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FileNamer <em>File Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.ImageAttribute
+	 * @see work.andycarpenter.webgen.pims.persistence.FileNamer
 	 * @generated
 	 */
-	public Adapter createImageAttributeAdapter() {
+	public Adapter createFileNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.UniqueIdNamer <em>Unique Id Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.UniqueIdNamer
+	 * @generated
+	 */
+	public Adapter createUniqueIdNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.OriginalNamer <em>Original Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.OriginalNamer
+	 * @generated
+	 */
+	public Adapter createOriginalNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.PropertyNamer <em>Property Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyNamer
+	 * @generated
+	 */
+	public Adapter createPropertyNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.HashNamer <em>Hash Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.HashNamer
+	 * @generated
+	 */
+	public Adapter createHashNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.Base64Namer <em>Base64 Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.Base64Namer
+	 * @generated
+	 */
+	public Adapter createBase64NamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer <em>Smart Unique Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer
+	 * @generated
+	 */
+	public Adapter createSmartUniqueNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.SlugNamer <em>Slug Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.SlugNamer
+	 * @generated
+	 */
+	public Adapter createSlugNamerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FileResource <em>File Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.FileResource
+	 * @generated
+	 */
+	public Adapter createFileResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ImageResource <em>Image Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ImageResource
+	 * @generated
+	 */
+	public Adapter createImageResourceAdapter() {
 		return null;
 	}
 

@@ -2289,14 +2289,14 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceAttributeImpl <em>Resource Attribute</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl <em>Resource Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceAttribute()
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceFeature()
 	 * @generated
 	 */
-	int RESOURCE_ATTRIBUTE = 14;
+	int RESOURCE_FEATURE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2305,7 +2305,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__NAME = ATTRIBUTE__NAME;
+	int RESOURCE_FEATURE__NAME = FEATURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -2314,7 +2314,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DISPLAY_LABEL = ATTRIBUTE__DISPLAY_LABEL;
+	int RESOURCE_FEATURE__DISPLAY_LABEL = FEATURE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -2323,7 +2323,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PART_OF = ATTRIBUTE__PART_OF;
+	int RESOURCE_FEATURE__PART_OF = FEATURE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -2332,7 +2332,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__CARDINALITY = ATTRIBUTE__CARDINALITY;
+	int RESOURCE_FEATURE__CARDINALITY = FEATURE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -2341,7 +2341,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__ORDERED = ATTRIBUTE__ORDERED;
+	int RESOURCE_FEATURE__ORDERED = FEATURE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -2350,7 +2350,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PRIMARY_KEY = ATTRIBUTE__PRIMARY_KEY;
+	int RESOURCE_FEATURE__PRIMARY_KEY = FEATURE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -2359,7 +2359,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DERIVED = ATTRIBUTE__DERIVED;
+	int RESOURCE_FEATURE__DERIVED = FEATURE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -2368,7 +2368,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__CUSTOMISE_SET = ATTRIBUTE__CUSTOMISE_SET;
+	int RESOURCE_FEATURE__CUSTOMISE_SET = FEATURE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -2377,7 +2377,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int RESOURCE_FEATURE__BOOLEAN_IS_HAS_CHOICE = FEATURE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -2386,7 +2386,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__TITLE = ATTRIBUTE__TITLE;
+	int RESOURCE_FEATURE__TITLE = FEATURE__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
@@ -2395,7 +2395,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+	int RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_ADD = FEATURE__COLLECTION_ORM_ALLOW_ADD;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
@@ -2404,7 +2404,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+	int RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_REMOVE = FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -2413,7 +2413,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+	int RESOURCE_FEATURE__DEFAULT_DISPLAY_VALUE = FEATURE__DEFAULT_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -2422,7 +2422,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+	int RESOURCE_FEATURE__EMPTY_DISPLAY_VALUE = FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -2431,7 +2431,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__ENCODE_URI_KEY = ATTRIBUTE__ENCODE_URI_KEY;
+	int RESOURCE_FEATURE__ENCODE_URI_KEY = FEATURE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -2440,7 +2440,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__SINGLETON_NAME = ATTRIBUTE__SINGLETON_NAME;
+	int RESOURCE_FEATURE__SINGLETON_NAME = FEATURE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -2449,7 +2449,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__PLURALISED_NAME = ATTRIBUTE__PLURALISED_NAME;
+	int RESOURCE_FEATURE__PLURALISED_NAME = FEATURE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -2458,7 +2458,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__COLUMN_NAME = ATTRIBUTE__COLUMN_NAME;
+	int RESOURCE_FEATURE__COLUMN_NAME = FEATURE__COLUMN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -2467,70 +2467,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS = ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__HIDDEN = ATTRIBUTE__HIDDEN;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE = ATTRIBUTE__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__SLUG_FIELDS = ATTRIBUTE__SLUG_FIELDS;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__UNIQUE = ATTRIBUTE__UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__DEFAULT_VALUE = ATTRIBUTE__DEFAULT_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__PLACEHOLDER = ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_ATTRIBUTE__VALIDATION_PATTERN = ATTRIBUTE__VALIDATION_PATTERN;
+	int RESOURCE_FEATURE__SERIALIZATION_GROUPS = FEATURE__SERIALIZATION_GROUPS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -2539,7 +2476,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = ATTRIBUTE_FEATURE_COUNT + 0;
+	int RESOURCE_FEATURE__MAXIMUM_UPLOAD_SIZE = FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Mime Types</b></em>' attribute list.
@@ -2548,7 +2485,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = ATTRIBUTE_FEATURE_COUNT + 1;
+	int RESOURCE_FEATURE__VALID_UPLOAD_MIME_TYPES = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Extensions</b></em>' attribute list.
@@ -2557,118 +2494,182 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = ATTRIBUTE_FEATURE_COUNT + 2;
+	int RESOURCE_FEATURE__VALID_UPLOAD_EXTENSIONS = FEATURE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Uploads Within Website</b></em>' attribute.
+	 * The feature id for the '<em><b>Uri Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = ATTRIBUTE_FEATURE_COUNT + 3;
+	int RESOURCE_FEATURE__URI_PREFIX = FEATURE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Upload Path</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Base Upload Directory</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE__UPLOAD_PATH = ATTRIBUTE_FEATURE_COUNT + 4;
+	int RESOURCE_FEATURE__BASE_UPLOAD_DIRECTORY = FEATURE_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of structural features of the '<em>Resource Attribute</em>' class.
+	 * The feature id for the '<em><b>Directory Namer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 5;
+	int RESOURCE_FEATURE__DIRECTORY_NAMER = FEATURE_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of operations of the '<em>Resource Attribute</em>' class.
+	 * The feature id for the '<em><b>File Namer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
+	int RESOURCE_FEATURE__FILE_NAMER = FEATURE_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PathElementImpl <em>Path Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PathElementImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPathElement()
-	 * @generated
-	 */
-	int PATH_ELEMENT = 15;
-
-	/**
-	 * The number of structural features of the '<em>Path Element</em>' class.
+	 * The number of structural features of the '<em>Resource Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_ELEMENT_FEATURE_COUNT = 0;
+	int RESOURCE_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The number of operations of the '<em>Path Element</em>' class.
+	 * The number of operations of the '<em>Resource Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_ELEMENT_OPERATION_COUNT = 0;
+	int RESOURCE_FEATURE_OPERATION_COUNT = FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.StaticPathElementImpl <em>Static Path Element</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl <em>Directory Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.StaticPathElementImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getStaticPathElement()
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDirectoryNamer()
 	 * @generated
 	 */
-	int STATIC_PATH_ELEMENT = 16;
+	int DIRECTORY_NAMER = 15;
 
 	/**
-	 * The feature id for the '<em><b>Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_PATH_ELEMENT__ELEMENT = PATH_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Static Path Element</em>' class.
+	 * The number of structural features of the '<em>Directory Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_PATH_ELEMENT_FEATURE_COUNT = PATH_ELEMENT_FEATURE_COUNT + 1;
+	int DIRECTORY_NAMER_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Static Path Element</em>' class.
+	 * The number of operations of the '<em>Directory Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_PATH_ELEMENT_OPERATION_COUNT = PATH_ELEMENT_OPERATION_COUNT + 0;
+	int DIRECTORY_NAMER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DatePathElementImpl <em>Date Path Element</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl <em>Sub Directory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.DatePathElementImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatePathElement()
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSubDirectory()
 	 * @generated
 	 */
-	int DATE_PATH_ELEMENT = 17;
+	int SUB_DIRECTORY = 16;
+
+	/**
+	 * The feature id for the '<em><b>Characters Per Directory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_DIRECTORY__CHARACTERS_PER_DIRECTORY = DIRECTORY_NAMER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Directory Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_DIRECTORY__DIRECTORY_COUNT = DIRECTORY_NAMER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Sub Directory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_DIRECTORY_FEATURE_COUNT = DIRECTORY_NAMER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Sub Directory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl <em>Property Directory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyDirectory()
+	 * @generated
+	 */
+	int PROPERTY_DIRECTORY = 17;
+
+	/**
+	 * The feature id for the '<em><b>Attribte</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_DIRECTORY__ATTRIBTE = DIRECTORY_NAMER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Property Directory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_DIRECTORY_FEATURE_COUNT = DIRECTORY_NAMER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Property Directory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl <em>Date Time Directory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateTimeDirectory()
+	 * @generated
+	 */
+	int DATE_TIME_DIRECTORY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -2677,342 +2678,304 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_PATH_ELEMENT__FORMAT = PATH_ELEMENT_FEATURE_COUNT + 0;
+	int DATE_TIME_DIRECTORY__FORMAT = DIRECTORY_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Date Path Element</em>' class.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_PATH_ELEMENT_FEATURE_COUNT = PATH_ELEMENT_FEATURE_COUNT + 1;
+	int DATE_TIME_DIRECTORY__ATTRIBUTE = DIRECTORY_NAMER_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Date Path Element</em>' class.
+	 * The number of structural features of the '<em>Date Time Directory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_PATH_ELEMENT_OPERATION_COUNT = PATH_ELEMENT_OPERATION_COUNT + 0;
+	int DATE_TIME_DIRECTORY_FEATURE_COUNT = DIRECTORY_NAMER_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileAttributeImpl <em>File Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileAttribute()
-	 * @generated
-	 */
-	int FILE_ATTRIBUTE = 18;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of operations of the '<em>Date Time Directory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__NAME = RESOURCE_ATTRIBUTE__NAME;
+	int DATE_TIME_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl <em>File Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileNamer()
+	 * @generated
+	 */
+	int FILE_NAMER = 19;
+
+	/**
+	 * The number of structural features of the '<em>File Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__DISPLAY_LABEL = RESOURCE_ATTRIBUTE__DISPLAY_LABEL;
+	int FILE_NAMER_FEATURE_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * The number of operations of the '<em>File Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__PART_OF = RESOURCE_ATTRIBUTE__PART_OF;
+	int FILE_NAMER_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl <em>Unique Id Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUniqueIdNamer()
+	 * @generated
+	 */
+	int UNIQUE_ID_NAMER = 20;
+
+	/**
+	 * The number of structural features of the '<em>Unique Id Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__CARDINALITY = RESOURCE_ATTRIBUTE__CARDINALITY;
+	int UNIQUE_ID_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
+	 * The number of operations of the '<em>Unique Id Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__ORDERED = RESOURCE_ATTRIBUTE__ORDERED;
+	int UNIQUE_ID_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl <em>Original Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOriginalNamer()
+	 * @generated
+	 */
+	int ORIGINAL_NAMER = 21;
+
+	/**
+	 * The number of structural features of the '<em>Original Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__PRIMARY_KEY = RESOURCE_ATTRIBUTE__PRIMARY_KEY;
+	int ORIGINAL_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Derived</b></em>' attribute.
+	 * The number of operations of the '<em>Original Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__DERIVED = RESOURCE_ATTRIBUTE__DERIVED;
+	int ORIGINAL_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl <em>Property Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyNamer()
+	 * @generated
+	 */
+	int PROPERTY_NAMER = 22;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__CUSTOMISE_SET = RESOURCE_ATTRIBUTE__CUSTOMISE_SET;
+	int PROPERTY_NAMER__ATTRIBUTE = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
+	 * The number of structural features of the '<em>Property Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int PROPERTY_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * The number of operations of the '<em>Property Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
+	int PROPERTY_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl <em>Hash Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getHashNamer()
+	 * @generated
+	 */
+	int HASH_NAMER = 23;
+
+	/**
+	 * The feature id for the '<em><b>Algorithm</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+	int HASH_NAMER__ALGORITHM = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+	int HASH_NAMER__LENGTH = FILE_NAMER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * The number of structural features of the '<em>Hash Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+	int HASH_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The number of operations of the '<em>Hash Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+	int HASH_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl <em>Base64 Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getBase64Namer()
+	 * @generated
+	 */
+	int BASE64_NAMER = 24;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
+	int BASE64_NAMER__LENGTH = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
+	 * The number of structural features of the '<em>Base64 Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__SINGLETON_NAME = RESOURCE_ATTRIBUTE__SINGLETON_NAME;
+	int BASE64_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
+	 * The number of operations of the '<em>Base64 Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__PLURALISED_NAME = RESOURCE_ATTRIBUTE__PLURALISED_NAME;
+	int BASE64_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl <em>Smart Unique Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSmartUniqueNamer()
+	 * @generated
+	 */
+	int SMART_UNIQUE_NAMER = 25;
+
+	/**
+	 * The number of structural features of the '<em>Smart Unique Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__COLUMN_NAME = RESOURCE_ATTRIBUTE__COLUMN_NAME;
+	int SMART_UNIQUE_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
+	 * The number of operations of the '<em>Smart Unique Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
+	int SMART_UNIQUE_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl <em>Slug Namer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSlugNamer()
+	 * @generated
+	 */
+	int SLUG_NAMER = 26;
+
+	/**
+	 * The number of structural features of the '<em>Slug Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__HIDDEN = RESOURCE_ATTRIBUTE__HIDDEN;
+	int SLUG_NAMER_FEATURE_COUNT = FILE_NAMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
+	 * The number of operations of the '<em>Slug Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_ATTRIBUTE__CONTAINER_UNIQUE = RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE;
+	int SLUG_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl <em>File Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__SLUG_FIELDS = RESOURCE_ATTRIBUTE__SLUG_FIELDS;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__UNIQUE = RESOURCE_ATTRIBUTE__UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
-
-	/**
-	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Valid Upload Mime Types</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Valid Upload Extensions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Uploads Within Website</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE;
-
-	/**
-	 * The feature id for the '<em><b>Upload Path</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE__UPLOAD_PATH = RESOURCE_ATTRIBUTE__UPLOAD_PATH;
-
-	/**
-	 * The number of structural features of the '<em>File Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE_FEATURE_COUNT = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>File Attribute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_ATTRIBUTE_OPERATION_COUNT = RESOURCE_ATTRIBUTE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageAttributeImpl <em>Image Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageAttribute()
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileResource()
 	 * @generated
 	 */
-	int IMAGE_ATTRIBUTE = 19;
+	int FILE_RESOURCE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3021,7 +2984,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__NAME = RESOURCE_ATTRIBUTE__NAME;
+	int FILE_RESOURCE__NAME = RESOURCE_FEATURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -3030,7 +2993,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__DISPLAY_LABEL = RESOURCE_ATTRIBUTE__DISPLAY_LABEL;
+	int FILE_RESOURCE__DISPLAY_LABEL = RESOURCE_FEATURE__DISPLAY_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
@@ -3039,7 +3002,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__PART_OF = RESOURCE_ATTRIBUTE__PART_OF;
+	int FILE_RESOURCE__PART_OF = RESOURCE_FEATURE__PART_OF;
 
 	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
@@ -3048,7 +3011,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__CARDINALITY = RESOURCE_ATTRIBUTE__CARDINALITY;
+	int FILE_RESOURCE__CARDINALITY = RESOURCE_FEATURE__CARDINALITY;
 
 	/**
 	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
@@ -3057,7 +3020,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__ORDERED = RESOURCE_ATTRIBUTE__ORDERED;
+	int FILE_RESOURCE__ORDERED = RESOURCE_FEATURE__ORDERED;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -3066,7 +3029,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__PRIMARY_KEY = RESOURCE_ATTRIBUTE__PRIMARY_KEY;
+	int FILE_RESOURCE__PRIMARY_KEY = RESOURCE_FEATURE__PRIMARY_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Derived</b></em>' attribute.
@@ -3075,7 +3038,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__DERIVED = RESOURCE_ATTRIBUTE__DERIVED;
+	int FILE_RESOURCE__DERIVED = RESOURCE_FEATURE__DERIVED;
 
 	/**
 	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
@@ -3084,7 +3047,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__CUSTOMISE_SET = RESOURCE_ATTRIBUTE__CUSTOMISE_SET;
+	int FILE_RESOURCE__CUSTOMISE_SET = RESOURCE_FEATURE__CUSTOMISE_SET;
 
 	/**
 	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
@@ -3093,7 +3056,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_ATTRIBUTE__BOOLEAN_IS_HAS_CHOICE;
+	int FILE_RESOURCE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_FEATURE__BOOLEAN_IS_HAS_CHOICE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -3102,7 +3065,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__TITLE = RESOURCE_ATTRIBUTE__TITLE;
+	int FILE_RESOURCE__TITLE = RESOURCE_FEATURE__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
@@ -3111,7 +3074,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_ADD;
+	int FILE_RESOURCE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_ADD;
 
 	/**
 	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
@@ -3120,7 +3083,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_ATTRIBUTE__COLLECTION_ORM_ALLOW_REMOVE;
+	int FILE_RESOURCE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -3129,7 +3092,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_DISPLAY_VALUE;
+	int FILE_RESOURCE__DEFAULT_DISPLAY_VALUE = RESOURCE_FEATURE__DEFAULT_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -3138,7 +3101,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__EMPTY_DISPLAY_VALUE = RESOURCE_ATTRIBUTE__EMPTY_DISPLAY_VALUE;
+	int FILE_RESOURCE__EMPTY_DISPLAY_VALUE = RESOURCE_FEATURE__EMPTY_DISPLAY_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
@@ -3147,7 +3110,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__ENCODE_URI_KEY = RESOURCE_ATTRIBUTE__ENCODE_URI_KEY;
+	int FILE_RESOURCE__ENCODE_URI_KEY = RESOURCE_FEATURE__ENCODE_URI_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
@@ -3156,7 +3119,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__SINGLETON_NAME = RESOURCE_ATTRIBUTE__SINGLETON_NAME;
+	int FILE_RESOURCE__SINGLETON_NAME = RESOURCE_FEATURE__SINGLETON_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
@@ -3165,7 +3128,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__PLURALISED_NAME = RESOURCE_ATTRIBUTE__PLURALISED_NAME;
+	int FILE_RESOURCE__PLURALISED_NAME = RESOURCE_FEATURE__PLURALISED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
@@ -3174,7 +3137,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__COLUMN_NAME = RESOURCE_ATTRIBUTE__COLUMN_NAME;
+	int FILE_RESOURCE__COLUMN_NAME = RESOURCE_FEATURE__COLUMN_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
@@ -3183,70 +3146,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__SERIALIZATION_GROUPS = RESOURCE_ATTRIBUTE__SERIALIZATION_GROUPS;
-
-	/**
-	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__HIDDEN = RESOURCE_ATTRIBUTE__HIDDEN;
-
-	/**
-	 * The feature id for the '<em><b>Container Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__CONTAINER_UNIQUE = RESOURCE_ATTRIBUTE__CONTAINER_UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Slug Fields</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__SLUG_FIELDS = RESOURCE_ATTRIBUTE__SLUG_FIELDS;
-
-	/**
-	 * The feature id for the '<em><b>Unique</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__UNIQUE = RESOURCE_ATTRIBUTE__UNIQUE;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__DEFAULT_VALUE = RESOURCE_ATTRIBUTE__DEFAULT_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__PLACEHOLDER = RESOURCE_ATTRIBUTE__PLACEHOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ATTRIBUTE__VALIDATION_PATTERN = RESOURCE_ATTRIBUTE__VALIDATION_PATTERN;
+	int FILE_RESOURCE__SERIALIZATION_GROUPS = RESOURCE_FEATURE__SERIALIZATION_GROUPS;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
@@ -3255,7 +3155,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE;
+	int FILE_RESOURCE__MAXIMUM_UPLOAD_SIZE = RESOURCE_FEATURE__MAXIMUM_UPLOAD_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Mime Types</b></em>' attribute list.
@@ -3264,7 +3164,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES;
+	int FILE_RESOURCE__VALID_UPLOAD_MIME_TYPES = RESOURCE_FEATURE__VALID_UPLOAD_MIME_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Valid Upload Extensions</b></em>' attribute list.
@@ -3273,43 +3173,323 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS;
+	int FILE_RESOURCE__VALID_UPLOAD_EXTENSIONS = RESOURCE_FEATURE__VALID_UPLOAD_EXTENSIONS;
 
 	/**
-	 * The feature id for the '<em><b>Uploads Within Website</b></em>' attribute.
+	 * The feature id for the '<em><b>Uri Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE;
+	int FILE_RESOURCE__URI_PREFIX = RESOURCE_FEATURE__URI_PREFIX;
 
 	/**
-	 * The feature id for the '<em><b>Upload Path</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Base Upload Directory</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE__UPLOAD_PATH = RESOURCE_ATTRIBUTE__UPLOAD_PATH;
+	int FILE_RESOURCE__BASE_UPLOAD_DIRECTORY = RESOURCE_FEATURE__BASE_UPLOAD_DIRECTORY;
 
 	/**
-	 * The number of structural features of the '<em>Image Attribute</em>' class.
+	 * The feature id for the '<em><b>Directory Namer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE_FEATURE_COUNT = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 0;
+	int FILE_RESOURCE__DIRECTORY_NAMER = RESOURCE_FEATURE__DIRECTORY_NAMER;
 
 	/**
-	 * The number of operations of the '<em>Image Attribute</em>' class.
+	 * The feature id for the '<em><b>File Namer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_ATTRIBUTE_OPERATION_COUNT = RESOURCE_ATTRIBUTE_OPERATION_COUNT + 0;
+	int FILE_RESOURCE__FILE_NAMER = RESOURCE_FEATURE__FILE_NAMER;
+
+	/**
+	 * The number of structural features of the '<em>File Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_RESOURCE_FEATURE_COUNT = RESOURCE_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>File Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_RESOURCE_OPERATION_COUNT = RESOURCE_FEATURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl <em>Image Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageResource()
+	 * @generated
+	 */
+	int IMAGE_RESOURCE = 28;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__NAME = RESOURCE_FEATURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__DISPLAY_LABEL = RESOURCE_FEATURE__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__PART_OF = RESOURCE_FEATURE__PART_OF;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__CARDINALITY = RESOURCE_FEATURE__CARDINALITY;
+
+	/**
+	 * The feature id for the '<em><b>Ordered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__ORDERED = RESOURCE_FEATURE__ORDERED;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__PRIMARY_KEY = RESOURCE_FEATURE__PRIMARY_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Derived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__DERIVED = RESOURCE_FEATURE__DERIVED;
+
+	/**
+	 * The feature id for the '<em><b>Customise Set</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__CUSTOMISE_SET = RESOURCE_FEATURE__CUSTOMISE_SET;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Is Has Choice</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__BOOLEAN_IS_HAS_CHOICE = RESOURCE_FEATURE__BOOLEAN_IS_HAS_CHOICE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__TITLE = RESOURCE_FEATURE__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Add</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__COLLECTION_ORM_ALLOW_ADD = RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_ADD;
+
+	/**
+	 * The feature id for the '<em><b>Collection Orm Allow Remove</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__COLLECTION_ORM_ALLOW_REMOVE = RESOURCE_FEATURE__COLLECTION_ORM_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__DEFAULT_DISPLAY_VALUE = RESOURCE_FEATURE__DEFAULT_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__EMPTY_DISPLAY_VALUE = RESOURCE_FEATURE__EMPTY_DISPLAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Encode Uri Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__ENCODE_URI_KEY = RESOURCE_FEATURE__ENCODE_URI_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Singleton Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__SINGLETON_NAME = RESOURCE_FEATURE__SINGLETON_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pluralised Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__PLURALISED_NAME = RESOURCE_FEATURE__PLURALISED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__COLUMN_NAME = RESOURCE_FEATURE__COLUMN_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__SERIALIZATION_GROUPS = RESOURCE_FEATURE__SERIALIZATION_GROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Maximum Upload Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__MAXIMUM_UPLOAD_SIZE = RESOURCE_FEATURE__MAXIMUM_UPLOAD_SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Valid Upload Mime Types</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__VALID_UPLOAD_MIME_TYPES = RESOURCE_FEATURE__VALID_UPLOAD_MIME_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Valid Upload Extensions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__VALID_UPLOAD_EXTENSIONS = RESOURCE_FEATURE__VALID_UPLOAD_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Uri Prefix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__URI_PREFIX = RESOURCE_FEATURE__URI_PREFIX;
+
+	/**
+	 * The feature id for the '<em><b>Base Upload Directory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__BASE_UPLOAD_DIRECTORY = RESOURCE_FEATURE__BASE_UPLOAD_DIRECTORY;
+
+	/**
+	 * The feature id for the '<em><b>Directory Namer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__DIRECTORY_NAMER = RESOURCE_FEATURE__DIRECTORY_NAMER;
+
+	/**
+	 * The feature id for the '<em><b>File Namer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE__FILE_NAMER = RESOURCE_FEATURE__FILE_NAMER;
+
+	/**
+	 * The number of structural features of the '<em>Image Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE_FEATURE_COUNT = RESOURCE_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Image Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_RESOURCE_OPERATION_COUNT = RESOURCE_FEATURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl <em>Location Attribute</em>}' class.
@@ -3319,7 +3499,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
 	 * @generated
 	 */
-	int LOCATION_ATTRIBUTE = 20;
+	int LOCATION_ATTRIBUTE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3581,7 +3761,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT = 21;
+	int ASSOCIATION_WITHOUT_CONTAINMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3888,7 +4068,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
 	 * @generated
 	 */
-	int ASSOCIATION_WITH_CONTAINMENT = 22;
+	int ASSOCIATION_WITH_CONTAINMENT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4186,7 +4366,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
 	 * @generated
 	 */
-	int ASSOCIATION_KEY = 23;
+	int ASSOCIATION_KEY = 32;
 
 	/**
 	 * The feature id for the '<em><b>Key For</b></em>' container reference.
@@ -4241,7 +4421,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepository()
 	 * @generated
 	 */
-	int REPOSITORY = 24;
+	int REPOSITORY = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4314,7 +4494,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelection()
 	 * @generated
 	 */
-	int SELECTION = 25;
+	int SELECTION = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4468,7 +4648,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 26;
+	int ORDER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Path</b></em>' containment reference.
@@ -4505,7 +4685,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAsc()
 	 * @generated
 	 */
-	int ASC = 27;
+	int ASC = 36;
 
 	/**
 	 * The feature id for the '<em><b>Path</b></em>' containment reference.
@@ -4542,7 +4722,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDesc()
 	 * @generated
 	 */
-	int DESC = 28;
+	int DESC = 37;
 
 	/**
 	 * The feature id for the '<em><b>Path</b></em>' containment reference.
@@ -4579,7 +4759,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFilter()
 	 * @generated
 	 */
-	int FILTER = 29;
+	int FILTER = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4661,7 +4841,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepositoryFeatureReference()
 	 * @generated
 	 */
-	int REPOSITORY_FEATURE_REFERENCE = 30;
+	int REPOSITORY_FEATURE_REFERENCE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -4725,7 +4905,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 31;
+	int DATABASE_TECHNOLOGIES = 40;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -4735,7 +4915,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 32;
+	int ORM_TECHNOLOGIES = 41;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -4745,7 +4925,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 33;
+	int CARDINALITY = 42;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -4755,7 +4935,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 34;
+	int IS_HAS_CHOICES = 43;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -4765,7 +4945,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 35;
+	int DATE_DETAILS = 44;
 
 
 	/**
@@ -5789,141 +5969,330 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getUrlAttribute_DisplayValue();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute <em>Resource Attribute</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature <em>Resource Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute
+	 * @return the meta object for class '<em>Resource Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature
 	 * @generated
 	 */
-	EClass getResourceAttribute();
+	EClass getResourceFeature();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getMaximumUploadSize <em>Maximum Upload Size</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getMaximumUploadSize <em>Maximum Upload Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Upload Size</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getMaximumUploadSize()
-	 * @see #getResourceAttribute()
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getMaximumUploadSize()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EAttribute getResourceAttribute_MaximumUploadSize();
+	EAttribute getResourceFeature_MaximumUploadSize();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getValidUploadMimeTypes <em>Valid Upload Mime Types</em>}'.
+	 * Returns the meta object for the attribute list '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getValidUploadMimeTypes <em>Valid Upload Mime Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Valid Upload Mime Types</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getValidUploadMimeTypes()
-	 * @see #getResourceAttribute()
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getValidUploadMimeTypes()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EAttribute getResourceAttribute_ValidUploadMimeTypes();
+	EAttribute getResourceFeature_ValidUploadMimeTypes();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getValidUploadExtensions <em>Valid Upload Extensions</em>}'.
+	 * Returns the meta object for the attribute list '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getValidUploadExtensions <em>Valid Upload Extensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Valid Upload Extensions</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getValidUploadExtensions()
-	 * @see #getResourceAttribute()
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getValidUploadExtensions()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EAttribute getResourceAttribute_ValidUploadExtensions();
+	EAttribute getResourceFeature_ValidUploadExtensions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute#isUploadsWithinWebsite <em>Uploads Within Website</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getUriPrefix <em>Uri Prefix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Uploads Within Website</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute#isUploadsWithinWebsite()
-	 * @see #getResourceAttribute()
+	 * @return the meta object for the attribute '<em>Uri Prefix</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getUriPrefix()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EAttribute getResourceAttribute_UploadsWithinWebsite();
+	EAttribute getResourceFeature_UriPrefix();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getUploadPath <em>Upload Path</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getBaseUploadDirectory <em>Base Upload Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Upload Path</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourceAttribute#getUploadPath()
-	 * @see #getResourceAttribute()
+	 * @return the meta object for the attribute '<em>Base Upload Directory</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getBaseUploadDirectory()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EReference getResourceAttribute_UploadPath();
+	EAttribute getResourceFeature_BaseUploadDirectory();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.PathElement <em>Path Element</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getDirectoryNamer <em>Directory Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Path Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.PathElement
+	 * @return the meta object for the containment reference '<em>Directory Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getDirectoryNamer()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EClass getPathElement();
+	EReference getResourceFeature_DirectoryNamer();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.StaticPathElement <em>Static Path Element</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.ResourceFeature#getFileNamer <em>File Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Static Path Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.StaticPathElement
+	 * @return the meta object for the containment reference '<em>File Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceFeature#getFileNamer()
+	 * @see #getResourceFeature()
 	 * @generated
 	 */
-	EClass getStaticPathElement();
+	EReference getResourceFeature_FileNamer();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.StaticPathElement#getElement <em>Element</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DirectoryNamer <em>Directory Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.StaticPathElement#getElement()
-	 * @see #getStaticPathElement()
+	 * @return the meta object for class '<em>Directory Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.DirectoryNamer
 	 * @generated
 	 */
-	EAttribute getStaticPathElement_Element();
+	EClass getDirectoryNamer();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DatePathElement <em>Date Path Element</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.SubDirectory <em>Sub Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Date Path Element</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.DatePathElement
+	 * @return the meta object for class '<em>Sub Directory</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SubDirectory
 	 * @generated
 	 */
-	EClass getDatePathElement();
+	EClass getSubDirectory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.DatePathElement#getFormat <em>Format</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.SubDirectory#getCharactersPerDirectory <em>Characters Per Directory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Characters Per Directory</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SubDirectory#getCharactersPerDirectory()
+	 * @see #getSubDirectory()
+	 * @generated
+	 */
+	EAttribute getSubDirectory_CharactersPerDirectory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.SubDirectory#getDirectoryCount <em>Directory Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Directory Count</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SubDirectory#getDirectoryCount()
+	 * @see #getSubDirectory()
+	 * @generated
+	 */
+	EAttribute getSubDirectory_DirectoryCount();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.PropertyDirectory <em>Property Directory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Property Directory</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyDirectory
+	 * @generated
+	 */
+	EClass getPropertyDirectory();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.PropertyDirectory#getAttribte <em>Attribte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribte</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyDirectory#getAttribte()
+	 * @see #getPropertyDirectory()
+	 * @generated
+	 */
+	EReference getPropertyDirectory_Attribte();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory <em>Date Time Directory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date Time Directory</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.DateTimeDirectory
+	 * @generated
+	 */
+	EClass getDateTimeDirectory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory#getFormat <em>Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.DatePathElement#getFormat()
-	 * @see #getDatePathElement()
+	 * @see work.andycarpenter.webgen.pims.persistence.DateTimeDirectory#getFormat()
+	 * @see #getDateTimeDirectory()
 	 * @generated
 	 */
-	EAttribute getDatePathElement_Format();
+	EAttribute getDateTimeDirectory_Format();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.FileAttribute <em>File Attribute</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory#getAttribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>File Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.FileAttribute
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.DateTimeDirectory#getAttribute()
+	 * @see #getDateTimeDirectory()
 	 * @generated
 	 */
-	EClass getFileAttribute();
+	EReference getDateTimeDirectory_Attribute();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ImageAttribute <em>Image Attribute</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.FileNamer <em>File Namer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Image Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ImageAttribute
+	 * @return the meta object for class '<em>File Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FileNamer
 	 * @generated
 	 */
-	EClass getImageAttribute();
+	EClass getFileNamer();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.UniqueIdNamer <em>Unique Id Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unique Id Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.UniqueIdNamer
+	 * @generated
+	 */
+	EClass getUniqueIdNamer();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.OriginalNamer <em>Original Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Original Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.OriginalNamer
+	 * @generated
+	 */
+	EClass getOriginalNamer();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.PropertyNamer <em>Property Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Property Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyNamer
+	 * @generated
+	 */
+	EClass getPropertyNamer();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.PropertyNamer#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.PropertyNamer#getAttribute()
+	 * @see #getPropertyNamer()
+	 * @generated
+	 */
+	EReference getPropertyNamer_Attribute();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.HashNamer <em>Hash Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Hash Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.HashNamer
+	 * @generated
+	 */
+	EClass getHashNamer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.HashNamer#getAlgorithm <em>Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Algorithm</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.HashNamer#getAlgorithm()
+	 * @see #getHashNamer()
+	 * @generated
+	 */
+	EAttribute getHashNamer_Algorithm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.HashNamer#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.HashNamer#getLength()
+	 * @see #getHashNamer()
+	 * @generated
+	 */
+	EAttribute getHashNamer_Length();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Base64Namer <em>Base64 Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Base64 Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Base64Namer
+	 * @generated
+	 */
+	EClass getBase64Namer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Base64Namer#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Base64Namer#getLength()
+	 * @see #getBase64Namer()
+	 * @generated
+	 */
+	EAttribute getBase64Namer_Length();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer <em>Smart Unique Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Smart Unique Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer
+	 * @generated
+	 */
+	EClass getSmartUniqueNamer();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.SlugNamer <em>Slug Namer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Slug Namer</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SlugNamer
+	 * @generated
+	 */
+	EClass getSlugNamer();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.FileResource <em>File Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>File Resource</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FileResource
+	 * @generated
+	 */
+	EClass getFileResource();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ImageResource <em>Image Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image Resource</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ImageResource
+	 * @generated
+	 */
+	EClass getImageResource();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.LocationAttribute <em>Location Attribute</em>}'.
@@ -7197,14 +7566,14 @@ public interface PersistencePackage extends EPackage {
 		EAttribute URL_ATTRIBUTE__DISPLAY_VALUE = eINSTANCE.getUrlAttribute_DisplayValue();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceAttributeImpl <em>Resource Attribute</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl <em>Resource Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceAttributeImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceAttribute()
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceFeature()
 		 * @generated
 		 */
-		EClass RESOURCE_ATTRIBUTE = eINSTANCE.getResourceAttribute();
+		EClass RESOURCE_FEATURE = eINSTANCE.getResourceFeature();
 
 		/**
 		 * The meta object literal for the '<em><b>Maximum Upload Size</b></em>' attribute feature.
@@ -7212,7 +7581,7 @@ public interface PersistencePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE = eINSTANCE.getResourceAttribute_MaximumUploadSize();
+		EAttribute RESOURCE_FEATURE__MAXIMUM_UPLOAD_SIZE = eINSTANCE.getResourceFeature_MaximumUploadSize();
 
 		/**
 		 * The meta object literal for the '<em><b>Valid Upload Mime Types</b></em>' attribute list feature.
@@ -7220,7 +7589,7 @@ public interface PersistencePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES = eINSTANCE.getResourceAttribute_ValidUploadMimeTypes();
+		EAttribute RESOURCE_FEATURE__VALID_UPLOAD_MIME_TYPES = eINSTANCE.getResourceFeature_ValidUploadMimeTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Valid Upload Extensions</b></em>' attribute list feature.
@@ -7228,61 +7597,103 @@ public interface PersistencePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS = eINSTANCE.getResourceAttribute_ValidUploadExtensions();
+		EAttribute RESOURCE_FEATURE__VALID_UPLOAD_EXTENSIONS = eINSTANCE.getResourceFeature_ValidUploadExtensions();
 
 		/**
-		 * The meta object literal for the '<em><b>Uploads Within Website</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Uri Prefix</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE = eINSTANCE.getResourceAttribute_UploadsWithinWebsite();
+		EAttribute RESOURCE_FEATURE__URI_PREFIX = eINSTANCE.getResourceFeature_UriPrefix();
 
 		/**
-		 * The meta object literal for the '<em><b>Upload Path</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Base Upload Directory</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_ATTRIBUTE__UPLOAD_PATH = eINSTANCE.getResourceAttribute_UploadPath();
+		EAttribute RESOURCE_FEATURE__BASE_UPLOAD_DIRECTORY = eINSTANCE.getResourceFeature_BaseUploadDirectory();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PathElementImpl <em>Path Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PathElementImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPathElement()
-		 * @generated
-		 */
-		EClass PATH_ELEMENT = eINSTANCE.getPathElement();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.StaticPathElementImpl <em>Static Path Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.StaticPathElementImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getStaticPathElement()
-		 * @generated
-		 */
-		EClass STATIC_PATH_ELEMENT = eINSTANCE.getStaticPathElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Element</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Directory Namer</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STATIC_PATH_ELEMENT__ELEMENT = eINSTANCE.getStaticPathElement_Element();
+		EReference RESOURCE_FEATURE__DIRECTORY_NAMER = eINSTANCE.getResourceFeature_DirectoryNamer();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DatePathElementImpl <em>Date Path Element</em>}' class.
+		 * The meta object literal for the '<em><b>File Namer</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.DatePathElementImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatePathElement()
 		 * @generated
 		 */
-		EClass DATE_PATH_ELEMENT = eINSTANCE.getDatePathElement();
+		EReference RESOURCE_FEATURE__FILE_NAMER = eINSTANCE.getResourceFeature_FileNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl <em>Directory Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDirectoryNamer()
+		 * @generated
+		 */
+		EClass DIRECTORY_NAMER = eINSTANCE.getDirectoryNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl <em>Sub Directory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSubDirectory()
+		 * @generated
+		 */
+		EClass SUB_DIRECTORY = eINSTANCE.getSubDirectory();
+
+		/**
+		 * The meta object literal for the '<em><b>Characters Per Directory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_DIRECTORY__CHARACTERS_PER_DIRECTORY = eINSTANCE.getSubDirectory_CharactersPerDirectory();
+
+		/**
+		 * The meta object literal for the '<em><b>Directory Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_DIRECTORY__DIRECTORY_COUNT = eINSTANCE.getSubDirectory_DirectoryCount();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl <em>Property Directory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyDirectory()
+		 * @generated
+		 */
+		EClass PROPERTY_DIRECTORY = eINSTANCE.getPropertyDirectory();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribte</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROPERTY_DIRECTORY__ATTRIBTE = eINSTANCE.getPropertyDirectory_Attribte();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl <em>Date Time Directory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateTimeDirectory()
+		 * @generated
+		 */
+		EClass DATE_TIME_DIRECTORY = eINSTANCE.getDateTimeDirectory();
 
 		/**
 		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
@@ -7290,27 +7701,147 @@ public interface PersistencePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATE_PATH_ELEMENT__FORMAT = eINSTANCE.getDatePathElement_Format();
+		EAttribute DATE_TIME_DIRECTORY__FORMAT = eINSTANCE.getDateTimeDirectory_Format();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileAttributeImpl <em>File Attribute</em>}' class.
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.FileAttributeImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileAttribute()
 		 * @generated
 		 */
-		EClass FILE_ATTRIBUTE = eINSTANCE.getFileAttribute();
+		EReference DATE_TIME_DIRECTORY__ATTRIBUTE = eINSTANCE.getDateTimeDirectory_Attribute();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageAttributeImpl <em>Image Attribute</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl <em>File Namer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageAttributeImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageAttribute()
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileNamer()
 		 * @generated
 		 */
-		EClass IMAGE_ATTRIBUTE = eINSTANCE.getImageAttribute();
+		EClass FILE_NAMER = eINSTANCE.getFileNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl <em>Unique Id Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUniqueIdNamer()
+		 * @generated
+		 */
+		EClass UNIQUE_ID_NAMER = eINSTANCE.getUniqueIdNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl <em>Original Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOriginalNamer()
+		 * @generated
+		 */
+		EClass ORIGINAL_NAMER = eINSTANCE.getOriginalNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl <em>Property Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyNamer()
+		 * @generated
+		 */
+		EClass PROPERTY_NAMER = eINSTANCE.getPropertyNamer();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROPERTY_NAMER__ATTRIBUTE = eINSTANCE.getPropertyNamer_Attribute();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl <em>Hash Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getHashNamer()
+		 * @generated
+		 */
+		EClass HASH_NAMER = eINSTANCE.getHashNamer();
+
+		/**
+		 * The meta object literal for the '<em><b>Algorithm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASH_NAMER__ALGORITHM = eINSTANCE.getHashNamer_Algorithm();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASH_NAMER__LENGTH = eINSTANCE.getHashNamer_Length();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl <em>Base64 Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getBase64Namer()
+		 * @generated
+		 */
+		EClass BASE64_NAMER = eINSTANCE.getBase64Namer();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BASE64_NAMER__LENGTH = eINSTANCE.getBase64Namer_Length();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl <em>Smart Unique Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSmartUniqueNamer()
+		 * @generated
+		 */
+		EClass SMART_UNIQUE_NAMER = eINSTANCE.getSmartUniqueNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl <em>Slug Namer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSlugNamer()
+		 * @generated
+		 */
+		EClass SLUG_NAMER = eINSTANCE.getSlugNamer();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl <em>File Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileResource()
+		 * @generated
+		 */
+		EClass FILE_RESOURCE = eINSTANCE.getFileResource();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl <em>Image Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageResource()
+		 * @generated
+		 */
+		EClass IMAGE_RESOURCE = eINSTANCE.getImageResource();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl <em>Location Attribute</em>}' class.

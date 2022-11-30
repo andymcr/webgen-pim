@@ -187,58 +187,114 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.RESOURCE_ATTRIBUTE: {
-				ResourceAttribute resourceAttribute = (ResourceAttribute)theEObject;
-				T result = caseResourceAttribute(resourceAttribute);
-				if (result == null) result = caseAttribute(resourceAttribute);
-				if (result == null) result = caseFeature(resourceAttribute);
-				if (result == null) result = caseLabel(resourceAttribute);
-				if (result == null) result = caseNamedDisplayElement(resourceAttribute);
-				if (result == null) result = caseNamedElement(resourceAttribute);
+			case PersistencePackage.RESOURCE_FEATURE: {
+				ResourceFeature resourceFeature = (ResourceFeature)theEObject;
+				T result = caseResourceFeature(resourceFeature);
+				if (result == null) result = caseFeature(resourceFeature);
+				if (result == null) result = caseNamedDisplayElement(resourceFeature);
+				if (result == null) result = caseNamedElement(resourceFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.PATH_ELEMENT: {
-				PathElement pathElement = (PathElement)theEObject;
-				T result = casePathElement(pathElement);
+			case PersistencePackage.DIRECTORY_NAMER: {
+				DirectoryNamer directoryNamer = (DirectoryNamer)theEObject;
+				T result = caseDirectoryNamer(directoryNamer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.STATIC_PATH_ELEMENT: {
-				StaticPathElement staticPathElement = (StaticPathElement)theEObject;
-				T result = caseStaticPathElement(staticPathElement);
-				if (result == null) result = casePathElement(staticPathElement);
+			case PersistencePackage.SUB_DIRECTORY: {
+				SubDirectory subDirectory = (SubDirectory)theEObject;
+				T result = caseSubDirectory(subDirectory);
+				if (result == null) result = caseDirectoryNamer(subDirectory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.DATE_PATH_ELEMENT: {
-				DatePathElement datePathElement = (DatePathElement)theEObject;
-				T result = caseDatePathElement(datePathElement);
-				if (result == null) result = casePathElement(datePathElement);
+			case PersistencePackage.PROPERTY_DIRECTORY: {
+				PropertyDirectory propertyDirectory = (PropertyDirectory)theEObject;
+				T result = casePropertyDirectory(propertyDirectory);
+				if (result == null) result = caseDirectoryNamer(propertyDirectory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.FILE_ATTRIBUTE: {
-				FileAttribute fileAttribute = (FileAttribute)theEObject;
-				T result = caseFileAttribute(fileAttribute);
-				if (result == null) result = caseResourceAttribute(fileAttribute);
-				if (result == null) result = caseAttribute(fileAttribute);
-				if (result == null) result = caseFeature(fileAttribute);
-				if (result == null) result = caseLabel(fileAttribute);
-				if (result == null) result = caseNamedDisplayElement(fileAttribute);
-				if (result == null) result = caseNamedElement(fileAttribute);
+			case PersistencePackage.DATE_TIME_DIRECTORY: {
+				DateTimeDirectory dateTimeDirectory = (DateTimeDirectory)theEObject;
+				T result = caseDateTimeDirectory(dateTimeDirectory);
+				if (result == null) result = caseDirectoryNamer(dateTimeDirectory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.IMAGE_ATTRIBUTE: {
-				ImageAttribute imageAttribute = (ImageAttribute)theEObject;
-				T result = caseImageAttribute(imageAttribute);
-				if (result == null) result = caseResourceAttribute(imageAttribute);
-				if (result == null) result = caseAttribute(imageAttribute);
-				if (result == null) result = caseFeature(imageAttribute);
-				if (result == null) result = caseLabel(imageAttribute);
-				if (result == null) result = caseNamedDisplayElement(imageAttribute);
-				if (result == null) result = caseNamedElement(imageAttribute);
+			case PersistencePackage.FILE_NAMER: {
+				FileNamer fileNamer = (FileNamer)theEObject;
+				T result = caseFileNamer(fileNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.UNIQUE_ID_NAMER: {
+				UniqueIdNamer uniqueIdNamer = (UniqueIdNamer)theEObject;
+				T result = caseUniqueIdNamer(uniqueIdNamer);
+				if (result == null) result = caseFileNamer(uniqueIdNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.ORIGINAL_NAMER: {
+				OriginalNamer originalNamer = (OriginalNamer)theEObject;
+				T result = caseOriginalNamer(originalNamer);
+				if (result == null) result = caseFileNamer(originalNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.PROPERTY_NAMER: {
+				PropertyNamer propertyNamer = (PropertyNamer)theEObject;
+				T result = casePropertyNamer(propertyNamer);
+				if (result == null) result = caseFileNamer(propertyNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.HASH_NAMER: {
+				HashNamer hashNamer = (HashNamer)theEObject;
+				T result = caseHashNamer(hashNamer);
+				if (result == null) result = caseFileNamer(hashNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.BASE64_NAMER: {
+				Base64Namer base64Namer = (Base64Namer)theEObject;
+				T result = caseBase64Namer(base64Namer);
+				if (result == null) result = caseFileNamer(base64Namer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.SMART_UNIQUE_NAMER: {
+				SmartUniqueNamer smartUniqueNamer = (SmartUniqueNamer)theEObject;
+				T result = caseSmartUniqueNamer(smartUniqueNamer);
+				if (result == null) result = caseFileNamer(smartUniqueNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.SLUG_NAMER: {
+				SlugNamer slugNamer = (SlugNamer)theEObject;
+				T result = caseSlugNamer(slugNamer);
+				if (result == null) result = caseFileNamer(slugNamer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.FILE_RESOURCE: {
+				FileResource fileResource = (FileResource)theEObject;
+				T result = caseFileResource(fileResource);
+				if (result == null) result = caseResourceFeature(fileResource);
+				if (result == null) result = caseFeature(fileResource);
+				if (result == null) result = caseNamedDisplayElement(fileResource);
+				if (result == null) result = caseNamedElement(fileResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.IMAGE_RESOURCE: {
+				ImageResource imageResource = (ImageResource)theEObject;
+				T result = caseImageResource(imageResource);
+				if (result == null) result = caseResourceFeature(imageResource);
+				if (result == null) result = caseFeature(imageResource);
+				if (result == null) result = caseNamedDisplayElement(imageResource);
+				if (result == null) result = caseNamedElement(imageResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -546,92 +602,227 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Feature</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Feature</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResourceAttribute(ResourceAttribute object) {
+	public T caseResourceFeature(ResourceFeature object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Directory Namer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Directory Namer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePathElement(PathElement object) {
+	public T caseDirectoryNamer(DirectoryNamer object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Static Path Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Sub Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Static Path Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Sub Directory</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStaticPathElement(StaticPathElement object) {
+	public T caseSubDirectory(SubDirectory object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Date Path Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Property Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Date Path Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Property Directory</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDatePathElement(DatePathElement object) {
+	public T casePropertyDirectory(PropertyDirectory object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>File Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Date Time Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>File Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Date Time Directory</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFileAttribute(FileAttribute object) {
+	public T caseDateTimeDirectory(DateTimeDirectory object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>File Namer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>File Namer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImageAttribute(ImageAttribute object) {
+	public T caseFileNamer(FileNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unique Id Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unique Id Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUniqueIdNamer(UniqueIdNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Original Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Original Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOriginalNamer(OriginalNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Property Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Property Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropertyNamer(PropertyNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Hash Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Hash Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHashNamer(HashNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Base64 Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Base64 Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBase64Namer(Base64Namer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Smart Unique Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Smart Unique Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSmartUniqueNamer(SmartUniqueNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Slug Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Slug Namer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSlugNamer(SlugNamer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>File Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>File Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFileResource(FileResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageResource(ImageResource object) {
 		return null;
 	}
 

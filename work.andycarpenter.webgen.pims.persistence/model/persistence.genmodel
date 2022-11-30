@@ -155,23 +155,46 @@
     <genClasses ecoreClass="persistence.ecore#//UrlAttribute">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//UrlAttribute/displayValue"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//ResourceAttribute">
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceAttribute/maximumUploadSize"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceAttribute/validUploadMimeTypes"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceAttribute/validUploadExtensions"/>
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceAttribute/uploadsWithinWebsite"/>
+    <genClasses image="false" ecoreClass="persistence.ecore#//ResourceFeature">
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceFeature/maximumUploadSize"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceFeature/validUploadMimeTypes"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceFeature/validUploadExtensions"/>
+      <genFeatures createChild="false" propertyCategory="Resource" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceFeature/uriPrefix"/>
+      <genFeatures createChild="false" propertyCategory="Moel" ecoreFeature="ecore:EAttribute persistence.ecore#//ResourceFeature/baseUploadDirectory"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
-          ecoreFeature="ecore:EReference persistence.ecore#//ResourceAttribute/uploadPath"/>
+          ecoreFeature="ecore:EReference persistence.ecore#//ResourceFeature/directoryNamer"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Nodel"
+          ecoreFeature="ecore:EReference persistence.ecore#//ResourceFeature/fileNamer"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="persistence.ecore#//PathElement"/>
-    <genClasses ecoreClass="persistence.ecore#//StaticPathElement">
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//StaticPathElement/element"/>
+    <genClasses image="false" ecoreClass="persistence.ecore#//DirectoryNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//SubDirectory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//SubDirectory/charactersPerDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//SubDirectory/directoryCount"/>
     </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//DatePathElement">
-      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//DatePathElement/format"/>
+    <genClasses ecoreClass="persistence.ecore#//PropertyDirectory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//PropertyDirectory/attribte"/>
     </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//FileAttribute"/>
-    <genClasses ecoreClass="persistence.ecore#//ImageAttribute"/>
+    <genClasses ecoreClass="persistence.ecore#//DateTimeDirectory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//DateTimeDirectory/format"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//DateTimeDirectory/attribute"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence.ecore#//FileNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//UniqueIdNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//OriginalNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//PropertyNamer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//PropertyNamer/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//HashNamer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//HashNamer/algorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//HashNamer/length"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//Base64Namer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//Base64Namer/length"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//SmartUniqueNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//SlugNamer"/>
+    <genClasses ecoreClass="persistence.ecore#//FileResource"/>
+    <genClasses ecoreClass="persistence.ecore#//ImageResource"/>
     <genClasses ecoreClass="persistence.ecore#//LocationAttribute"/>
     <genClasses ecoreClass="persistence.ecore#//AssociationWithoutContainment">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute persistence.ecore#//AssociationWithoutContainment/targetCardinality"/>

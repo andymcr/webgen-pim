@@ -17,18 +17,22 @@ import work.andycarpenter.webgen.pims.persistence.AssociationKey;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithContainment;
 import work.andycarpenter.webgen.pims.persistence.AssociationWithoutContainment;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Base64Namer;
 import work.andycarpenter.webgen.pims.persistence.Cardinality;
 import work.andycarpenter.webgen.pims.persistence.DataTypeAttribute;
 import work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies;
 import work.andycarpenter.webgen.pims.persistence.DateAttribute;
 import work.andycarpenter.webgen.pims.persistence.DateDetails;
-import work.andycarpenter.webgen.pims.persistence.DatePathElement;
+import work.andycarpenter.webgen.pims.persistence.DateTimeDirectory;
 import work.andycarpenter.webgen.pims.persistence.Desc;
+import work.andycarpenter.webgen.pims.persistence.DirectoryNamer;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
-import work.andycarpenter.webgen.pims.persistence.FileAttribute;
+import work.andycarpenter.webgen.pims.persistence.FileNamer;
+import work.andycarpenter.webgen.pims.persistence.FileResource;
 import work.andycarpenter.webgen.pims.persistence.Filter;
-import work.andycarpenter.webgen.pims.persistence.ImageAttribute;
+import work.andycarpenter.webgen.pims.persistence.HashNamer;
+import work.andycarpenter.webgen.pims.persistence.ImageResource;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.LocationAttribute;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
@@ -36,17 +40,22 @@ import work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelFeature;
 import work.andycarpenter.webgen.pims.persistence.Order;
+import work.andycarpenter.webgen.pims.persistence.OriginalNamer;
 import work.andycarpenter.webgen.pims.persistence.OrmTechnologies;
-import work.andycarpenter.webgen.pims.persistence.PathElement;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.PropertyDirectory;
+import work.andycarpenter.webgen.pims.persistence.PropertyNamer;
 import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference;
-import work.andycarpenter.webgen.pims.persistence.ResourceAttribute;
+import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
-import work.andycarpenter.webgen.pims.persistence.StaticPathElement;
+import work.andycarpenter.webgen.pims.persistence.SlugNamer;
+import work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer;
+import work.andycarpenter.webgen.pims.persistence.SubDirectory;
+import work.andycarpenter.webgen.pims.persistence.UniqueIdNamer;
 import work.andycarpenter.webgen.pims.persistence.UrlAttribute;
 import work.andycarpenter.webgen.pims.persistence.isHasChoices;
 
@@ -162,42 +171,105 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourceAttributeEClass = null;
+	private EClass resourceFeatureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pathElementEClass = null;
+	private EClass directoryNamerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass staticPathElementEClass = null;
+	private EClass subDirectoryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass datePathElementEClass = null;
+	private EClass propertyDirectoryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fileAttributeEClass = null;
+	private EClass dateTimeDirectoryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageAttributeEClass = null;
+	private EClass fileNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass uniqueIdNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass originalNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass propertyNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hashNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass base64NamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass smartUniqueNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass slugNamerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fileResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass imageResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1332,8 +1404,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getResourceAttribute() {
-		return resourceAttributeEClass;
+	public EClass getResourceFeature() {
+		return resourceFeatureEClass;
 	}
 
 	/**
@@ -1342,8 +1414,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResourceAttribute_MaximumUploadSize() {
-		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getResourceFeature_MaximumUploadSize() {
+		return (EAttribute)resourceFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1352,8 +1424,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResourceAttribute_ValidUploadMimeTypes() {
-		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(1);
+	public EAttribute getResourceFeature_ValidUploadMimeTypes() {
+		return (EAttribute)resourceFeatureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1362,8 +1434,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResourceAttribute_ValidUploadExtensions() {
-		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getResourceFeature_ValidUploadExtensions() {
+		return (EAttribute)resourceFeatureEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1372,8 +1444,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResourceAttribute_UploadsWithinWebsite() {
-		return (EAttribute)resourceAttributeEClass.getEStructuralFeatures().get(3);
+	public EAttribute getResourceFeature_UriPrefix() {
+		return (EAttribute)resourceFeatureEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1382,8 +1454,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getResourceAttribute_UploadPath() {
-		return (EReference)resourceAttributeEClass.getEStructuralFeatures().get(4);
+	public EAttribute getResourceFeature_BaseUploadDirectory() {
+		return (EAttribute)resourceFeatureEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1392,8 +1464,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getPathElement() {
-		return pathElementEClass;
+	public EReference getResourceFeature_DirectoryNamer() {
+		return (EReference)resourceFeatureEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1402,8 +1474,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getStaticPathElement() {
-		return staticPathElementEClass;
+	public EReference getResourceFeature_FileNamer() {
+		return (EReference)resourceFeatureEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1412,8 +1484,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getStaticPathElement_Element() {
-		return (EAttribute)staticPathElementEClass.getEStructuralFeatures().get(0);
+	public EClass getDirectoryNamer() {
+		return directoryNamerEClass;
 	}
 
 	/**
@@ -1422,8 +1494,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getDatePathElement() {
-		return datePathElementEClass;
+	public EClass getSubDirectory() {
+		return subDirectoryEClass;
 	}
 
 	/**
@@ -1432,8 +1504,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDatePathElement_Format() {
-		return (EAttribute)datePathElementEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSubDirectory_CharactersPerDirectory() {
+		return (EAttribute)subDirectoryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1442,8 +1514,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getFileAttribute() {
-		return fileAttributeEClass;
+	public EAttribute getSubDirectory_DirectoryCount() {
+		return (EAttribute)subDirectoryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1452,8 +1524,188 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EClass getImageAttribute() {
-		return imageAttributeEClass;
+	public EClass getPropertyDirectory() {
+		return propertyDirectoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPropertyDirectory_Attribte() {
+		return (EReference)propertyDirectoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDateTimeDirectory() {
+		return dateTimeDirectoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDateTimeDirectory_Format() {
+		return (EAttribute)dateTimeDirectoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDateTimeDirectory_Attribute() {
+		return (EReference)dateTimeDirectoryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFileNamer() {
+		return fileNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUniqueIdNamer() {
+		return uniqueIdNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOriginalNamer() {
+		return originalNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPropertyNamer() {
+		return propertyNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPropertyNamer_Attribute() {
+		return (EReference)propertyNamerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getHashNamer() {
+		return hashNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHashNamer_Algorithm() {
+		return (EAttribute)hashNamerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHashNamer_Length() {
+		return (EAttribute)hashNamerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBase64Namer() {
+		return base64NamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBase64Namer_Length() {
+		return (EAttribute)base64NamerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSmartUniqueNamer() {
+		return smartUniqueNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSlugNamer() {
+		return slugNamerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFileResource() {
+		return fileResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImageResource() {
+		return imageResourceEClass;
 	}
 
 	/**
@@ -2033,24 +2285,51 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		urlAttributeEClass = createEClass(URL_ATTRIBUTE);
 		createEAttribute(urlAttributeEClass, URL_ATTRIBUTE__DISPLAY_VALUE);
 
-		resourceAttributeEClass = createEClass(RESOURCE_ATTRIBUTE);
-		createEAttribute(resourceAttributeEClass, RESOURCE_ATTRIBUTE__MAXIMUM_UPLOAD_SIZE);
-		createEAttribute(resourceAttributeEClass, RESOURCE_ATTRIBUTE__VALID_UPLOAD_MIME_TYPES);
-		createEAttribute(resourceAttributeEClass, RESOURCE_ATTRIBUTE__VALID_UPLOAD_EXTENSIONS);
-		createEAttribute(resourceAttributeEClass, RESOURCE_ATTRIBUTE__UPLOADS_WITHIN_WEBSITE);
-		createEReference(resourceAttributeEClass, RESOURCE_ATTRIBUTE__UPLOAD_PATH);
+		resourceFeatureEClass = createEClass(RESOURCE_FEATURE);
+		createEAttribute(resourceFeatureEClass, RESOURCE_FEATURE__MAXIMUM_UPLOAD_SIZE);
+		createEAttribute(resourceFeatureEClass, RESOURCE_FEATURE__VALID_UPLOAD_MIME_TYPES);
+		createEAttribute(resourceFeatureEClass, RESOURCE_FEATURE__VALID_UPLOAD_EXTENSIONS);
+		createEAttribute(resourceFeatureEClass, RESOURCE_FEATURE__URI_PREFIX);
+		createEAttribute(resourceFeatureEClass, RESOURCE_FEATURE__BASE_UPLOAD_DIRECTORY);
+		createEReference(resourceFeatureEClass, RESOURCE_FEATURE__DIRECTORY_NAMER);
+		createEReference(resourceFeatureEClass, RESOURCE_FEATURE__FILE_NAMER);
 
-		pathElementEClass = createEClass(PATH_ELEMENT);
+		directoryNamerEClass = createEClass(DIRECTORY_NAMER);
 
-		staticPathElementEClass = createEClass(STATIC_PATH_ELEMENT);
-		createEAttribute(staticPathElementEClass, STATIC_PATH_ELEMENT__ELEMENT);
+		subDirectoryEClass = createEClass(SUB_DIRECTORY);
+		createEAttribute(subDirectoryEClass, SUB_DIRECTORY__CHARACTERS_PER_DIRECTORY);
+		createEAttribute(subDirectoryEClass, SUB_DIRECTORY__DIRECTORY_COUNT);
 
-		datePathElementEClass = createEClass(DATE_PATH_ELEMENT);
-		createEAttribute(datePathElementEClass, DATE_PATH_ELEMENT__FORMAT);
+		propertyDirectoryEClass = createEClass(PROPERTY_DIRECTORY);
+		createEReference(propertyDirectoryEClass, PROPERTY_DIRECTORY__ATTRIBTE);
 
-		fileAttributeEClass = createEClass(FILE_ATTRIBUTE);
+		dateTimeDirectoryEClass = createEClass(DATE_TIME_DIRECTORY);
+		createEAttribute(dateTimeDirectoryEClass, DATE_TIME_DIRECTORY__FORMAT);
+		createEReference(dateTimeDirectoryEClass, DATE_TIME_DIRECTORY__ATTRIBUTE);
 
-		imageAttributeEClass = createEClass(IMAGE_ATTRIBUTE);
+		fileNamerEClass = createEClass(FILE_NAMER);
+
+		uniqueIdNamerEClass = createEClass(UNIQUE_ID_NAMER);
+
+		originalNamerEClass = createEClass(ORIGINAL_NAMER);
+
+		propertyNamerEClass = createEClass(PROPERTY_NAMER);
+		createEReference(propertyNamerEClass, PROPERTY_NAMER__ATTRIBUTE);
+
+		hashNamerEClass = createEClass(HASH_NAMER);
+		createEAttribute(hashNamerEClass, HASH_NAMER__ALGORITHM);
+		createEAttribute(hashNamerEClass, HASH_NAMER__LENGTH);
+
+		base64NamerEClass = createEClass(BASE64_NAMER);
+		createEAttribute(base64NamerEClass, BASE64_NAMER__LENGTH);
+
+		smartUniqueNamerEClass = createEClass(SMART_UNIQUE_NAMER);
+
+		slugNamerEClass = createEClass(SLUG_NAMER);
+
+		fileResourceEClass = createEClass(FILE_RESOURCE);
+
+		imageResourceEClass = createEClass(IMAGE_RESOURCE);
 
 		locationAttributeEClass = createEClass(LOCATION_ATTRIBUTE);
 
@@ -2155,11 +2434,19 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		dataTypeAttributeEClass.getESuperTypes().add(this.getAttribute());
 		dateAttributeEClass.getESuperTypes().add(this.getAttribute());
 		urlAttributeEClass.getESuperTypes().add(this.getAttribute());
-		resourceAttributeEClass.getESuperTypes().add(this.getAttribute());
-		staticPathElementEClass.getESuperTypes().add(this.getPathElement());
-		datePathElementEClass.getESuperTypes().add(this.getPathElement());
-		fileAttributeEClass.getESuperTypes().add(this.getResourceAttribute());
-		imageAttributeEClass.getESuperTypes().add(this.getResourceAttribute());
+		resourceFeatureEClass.getESuperTypes().add(this.getFeature());
+		subDirectoryEClass.getESuperTypes().add(this.getDirectoryNamer());
+		propertyDirectoryEClass.getESuperTypes().add(this.getDirectoryNamer());
+		dateTimeDirectoryEClass.getESuperTypes().add(this.getDirectoryNamer());
+		uniqueIdNamerEClass.getESuperTypes().add(this.getFileNamer());
+		originalNamerEClass.getESuperTypes().add(this.getFileNamer());
+		propertyNamerEClass.getESuperTypes().add(this.getFileNamer());
+		hashNamerEClass.getESuperTypes().add(this.getFileNamer());
+		base64NamerEClass.getESuperTypes().add(this.getFileNamer());
+		smartUniqueNamerEClass.getESuperTypes().add(this.getFileNamer());
+		slugNamerEClass.getESuperTypes().add(this.getFileNamer());
+		fileResourceEClass.getESuperTypes().add(this.getResourceFeature());
+		imageResourceEClass.getESuperTypes().add(this.getResourceFeature());
 		locationAttributeEClass.getESuperTypes().add(this.getAttribute());
 		associationWithoutContainmentEClass.getESuperTypes().add(this.getAssociation());
 		associationWithContainmentEClass.getESuperTypes().add(this.getAssociation());
@@ -2281,24 +2568,51 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEClass(urlAttributeEClass, UrlAttribute.class, "UrlAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUrlAttribute_DisplayValue(), ecorePackage.getEString(), "displayValue", null, 0, 1, UrlAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resourceAttributeEClass, ResourceAttribute.class, "ResourceAttribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResourceAttribute_MaximumUploadSize(), ecorePackage.getEInt(), "maximumUploadSize", "-1", 0, 1, ResourceAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getResourceAttribute_ValidUploadMimeTypes(), ecorePackage.getEString(), "validUploadMimeTypes", null, 0, -1, ResourceAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getResourceAttribute_ValidUploadExtensions(), ecorePackage.getEString(), "validUploadExtensions", null, 0, -1, ResourceAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getResourceAttribute_UploadsWithinWebsite(), ecorePackage.getEBoolean(), "uploadsWithinWebsite", null, 0, 1, ResourceAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getResourceAttribute_UploadPath(), this.getPathElement(), null, "uploadPath", null, 0, -1, ResourceAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resourceFeatureEClass, ResourceFeature.class, "ResourceFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResourceFeature_MaximumUploadSize(), ecorePackage.getEString(), "maximumUploadSize", "0", 0, 1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getResourceFeature_ValidUploadMimeTypes(), ecorePackage.getEString(), "validUploadMimeTypes", null, 0, -1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getResourceFeature_ValidUploadExtensions(), ecorePackage.getEString(), "validUploadExtensions", null, 0, -1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getResourceFeature_UriPrefix(), ecorePackage.getEString(), "uriPrefix", null, 0, 1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getResourceFeature_BaseUploadDirectory(), ecorePackage.getEString(), "baseUploadDirectory", null, 1, 1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceFeature_DirectoryNamer(), this.getDirectoryNamer(), null, "directoryNamer", null, 0, 1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceFeature_FileNamer(), this.getFileNamer(), null, "fileNamer", null, 1, 1, ResourceFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pathElementEClass, PathElement.class, "PathElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(directoryNamerEClass, DirectoryNamer.class, "DirectoryNamer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(staticPathElementEClass, StaticPathElement.class, "StaticPathElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStaticPathElement_Element(), ecorePackage.getEString(), "element", null, 1, 1, StaticPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(subDirectoryEClass, SubDirectory.class, "SubDirectory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSubDirectory_CharactersPerDirectory(), ecorePackage.getEInt(), "charactersPerDirectory", "2", 0, 1, SubDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubDirectory_DirectoryCount(), ecorePackage.getEInt(), "directoryCount", "1", 0, 1, SubDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(datePathElementEClass, DatePathElement.class, "DatePathElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDatePathElement_Format(), ecorePackage.getEString(), "format", null, 1, 1, DatePathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(propertyDirectoryEClass, PropertyDirectory.class, "PropertyDirectory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPropertyDirectory_Attribte(), this.getAttribute(), null, "attribte", null, 1, 1, PropertyDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fileAttributeEClass, FileAttribute.class, "FileAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(dateTimeDirectoryEClass, DateTimeDirectory.class, "DateTimeDirectory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDateTimeDirectory_Format(), ecorePackage.getEString(), "format", "Y/m/d", 1, 1, DateTimeDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDateTimeDirectory_Attribute(), this.getAttribute(), null, "attribute", null, 1, 1, DateTimeDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imageAttributeEClass, ImageAttribute.class, "ImageAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(fileNamerEClass, FileNamer.class, "FileNamer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(uniqueIdNamerEClass, UniqueIdNamer.class, "UniqueIdNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(originalNamerEClass, OriginalNamer.class, "OriginalNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(propertyNamerEClass, PropertyNamer.class, "PropertyNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPropertyNamer_Attribute(), this.getAttribute(), null, "attribute", null, 1, 1, PropertyNamer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(hashNamerEClass, HashNamer.class, "HashNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHashNamer_Algorithm(), ecorePackage.getEString(), "algorithm", "sha1", 0, 1, HashNamer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHashNamer_Length(), ecorePackage.getEInt(), "length", "0", 1, 1, HashNamer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(base64NamerEClass, Base64Namer.class, "Base64Namer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBase64Namer_Length(), ecorePackage.getEInt(), "length", "10", 1, 1, Base64Namer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(smartUniqueNamerEClass, SmartUniqueNamer.class, "SmartUniqueNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(slugNamerEClass, SlugNamer.class, "SlugNamer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fileResourceEClass, FileResource.class, "FileResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(imageResourceEClass, ImageResource.class, "ImageResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(locationAttributeEClass, LocationAttribute.class, "LocationAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

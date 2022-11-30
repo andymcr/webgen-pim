@@ -103,40 +103,112 @@ public interface PersistenceFactory extends EFactory {
 	UrlAttribute createUrlAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Static Path Element</em>'.
+	 * Returns a new object of class '<em>Sub Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Static Path Element</em>'.
+	 * @return a new object of class '<em>Sub Directory</em>'.
 	 * @generated
 	 */
-	StaticPathElement createStaticPathElement();
+	SubDirectory createSubDirectory();
 
 	/**
-	 * Returns a new object of class '<em>Date Path Element</em>'.
+	 * Returns a new object of class '<em>Property Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date Path Element</em>'.
+	 * @return a new object of class '<em>Property Directory</em>'.
 	 * @generated
 	 */
-	DatePathElement createDatePathElement();
+	PropertyDirectory createPropertyDirectory();
 
 	/**
-	 * Returns a new object of class '<em>File Attribute</em>'.
+	 * Returns a new object of class '<em>Date Time Directory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>File Attribute</em>'.
+	 * @return a new object of class '<em>Date Time Directory</em>'.
 	 * @generated
 	 */
-	FileAttribute createFileAttribute();
+	DateTimeDirectory createDateTimeDirectory();
 
 	/**
-	 * Returns a new object of class '<em>Image Attribute</em>'.
+	 * Returns a new object of class '<em>Unique Id Namer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image Attribute</em>'.
+	 * @return a new object of class '<em>Unique Id Namer</em>'.
 	 * @generated
 	 */
-	ImageAttribute createImageAttribute();
+	UniqueIdNamer createUniqueIdNamer();
+
+	/**
+	 * Returns a new object of class '<em>Original Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Original Namer</em>'.
+	 * @generated
+	 */
+	OriginalNamer createOriginalNamer();
+
+	/**
+	 * Returns a new object of class '<em>Property Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property Namer</em>'.
+	 * @generated
+	 */
+	PropertyNamer createPropertyNamer();
+
+	/**
+	 * Returns a new object of class '<em>Hash Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hash Namer</em>'.
+	 * @generated
+	 */
+	HashNamer createHashNamer();
+
+	/**
+	 * Returns a new object of class '<em>Base64 Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Base64 Namer</em>'.
+	 * @generated
+	 */
+	Base64Namer createBase64Namer();
+
+	/**
+	 * Returns a new object of class '<em>Smart Unique Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Smart Unique Namer</em>'.
+	 * @generated
+	 */
+	SmartUniqueNamer createSmartUniqueNamer();
+
+	/**
+	 * Returns a new object of class '<em>Slug Namer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Slug Namer</em>'.
+	 * @generated
+	 */
+	SlugNamer createSlugNamer();
+
+	/**
+	 * Returns a new object of class '<em>File Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>File Resource</em>'.
+	 * @generated
+	 */
+	FileResource createFileResource();
+
+	/**
+	 * Returns a new object of class '<em>Image Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image Resource</em>'.
+	 * @generated
+	 */
+	ImageResource createImageResource();
 
 	/**
 	 * Returns a new object of class '<em>Location Attribute</em>'.

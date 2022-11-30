@@ -80,6 +80,7 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.CREATE_SITEMAP_UNIT: return createCreateSitemapUnit();
 			case WebuiPackage.ROUTE_ACTUAL: return createRouteActual();
 			case WebuiPackage.UNIT_ELEMENT: return createUnitElement();
+			case WebuiPackage.UNIT_RESOURCE: return createUnitResource();
 			case WebuiPackage.UNIT_ASSOCIATION: return createUnitAssociation();
 			case WebuiPackage.UNIT_LABEL: return createUnitLabel();
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
@@ -425,6 +426,17 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public UnitElement createUnitElement() {
 		UnitElementImpl unitElement = new UnitElementImpl();
 		return unitElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UnitResource createUnitResource() {
+		UnitResourceImpl unitResource = new UnitResourceImpl();
+		return unitResource;
 	}
 
 	/**

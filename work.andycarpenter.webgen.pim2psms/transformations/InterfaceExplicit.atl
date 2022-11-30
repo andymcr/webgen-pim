@@ -433,6 +433,19 @@ rule UnitAttribute {
 	)
 }
 
+-- @extends UnitFeature
+rule UnitResource {
+	from website : Website!UnitResource
+	to waf : WAF!UnitResource (
+		resource <-
+			if website.resource.oclIsUndefined() then
+				OclUndefined
+			else
+				website.resource.findOrmResource()
+			endif
+	)
+}
+
 -- @extends UnitFeature, PathAssociation
 rule UnitAssociation {
 	from website : Website!UnitAssociation

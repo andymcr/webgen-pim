@@ -633,6 +633,29 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.UnitResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnitResourceItemProvider unitResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.UnitResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnitResourceAdapter() {
+		if (unitResourceItemProvider == null) {
+			unitResourceItemProvider = new UnitResourceItemProvider(this);
+		}
+
+		return unitResourceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.UnitAssociation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

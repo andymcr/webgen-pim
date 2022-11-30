@@ -296,95 +296,279 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.StaticPathElement} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.SubDirectory} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StaticPathElementItemProvider staticPathElementItemProvider;
+	protected SubDirectoryItemProvider subDirectoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.StaticPathElement}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.SubDirectory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createStaticPathElementAdapter() {
-		if (staticPathElementItemProvider == null) {
-			staticPathElementItemProvider = new StaticPathElementItemProvider(this);
+	public Adapter createSubDirectoryAdapter() {
+		if (subDirectoryItemProvider == null) {
+			subDirectoryItemProvider = new SubDirectoryItemProvider(this);
 		}
 
-		return staticPathElementItemProvider;
+		return subDirectoryItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.DatePathElement} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.PropertyDirectory} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DatePathElementItemProvider datePathElementItemProvider;
+	protected PropertyDirectoryItemProvider propertyDirectoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.DatePathElement}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.PropertyDirectory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDatePathElementAdapter() {
-		if (datePathElementItemProvider == null) {
-			datePathElementItemProvider = new DatePathElementItemProvider(this);
+	public Adapter createPropertyDirectoryAdapter() {
+		if (propertyDirectoryItemProvider == null) {
+			propertyDirectoryItemProvider = new PropertyDirectoryItemProvider(this);
 		}
 
-		return datePathElementItemProvider;
+		return propertyDirectoryItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.FileAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FileAttributeItemProvider fileAttributeItemProvider;
+	protected DateTimeDirectoryItemProvider dateTimeDirectoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.FileAttribute}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.DateTimeDirectory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFileAttributeAdapter() {
-		if (fileAttributeItemProvider == null) {
-			fileAttributeItemProvider = new FileAttributeItemProvider(this);
+	public Adapter createDateTimeDirectoryAdapter() {
+		if (dateTimeDirectoryItemProvider == null) {
+			dateTimeDirectoryItemProvider = new DateTimeDirectoryItemProvider(this);
 		}
 
-		return fileAttributeItemProvider;
+		return dateTimeDirectoryItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ImageAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.UniqueIdNamer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ImageAttributeItemProvider imageAttributeItemProvider;
+	protected UniqueIdNamerItemProvider uniqueIdNamerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ImageAttribute}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.UniqueIdNamer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createImageAttributeAdapter() {
-		if (imageAttributeItemProvider == null) {
-			imageAttributeItemProvider = new ImageAttributeItemProvider(this);
+	public Adapter createUniqueIdNamerAdapter() {
+		if (uniqueIdNamerItemProvider == null) {
+			uniqueIdNamerItemProvider = new UniqueIdNamerItemProvider(this);
 		}
 
-		return imageAttributeItemProvider;
+		return uniqueIdNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.OriginalNamer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OriginalNamerItemProvider originalNamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.OriginalNamer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOriginalNamerAdapter() {
+		if (originalNamerItemProvider == null) {
+			originalNamerItemProvider = new OriginalNamerItemProvider(this);
+		}
+
+		return originalNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.PropertyNamer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PropertyNamerItemProvider propertyNamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.PropertyNamer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPropertyNamerAdapter() {
+		if (propertyNamerItemProvider == null) {
+			propertyNamerItemProvider = new PropertyNamerItemProvider(this);
+		}
+
+		return propertyNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.HashNamer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HashNamerItemProvider hashNamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.HashNamer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHashNamerAdapter() {
+		if (hashNamerItemProvider == null) {
+			hashNamerItemProvider = new HashNamerItemProvider(this);
+		}
+
+		return hashNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.Base64Namer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Base64NamerItemProvider base64NamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.Base64Namer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBase64NamerAdapter() {
+		if (base64NamerItemProvider == null) {
+			base64NamerItemProvider = new Base64NamerItemProvider(this);
+		}
+
+		return base64NamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SmartUniqueNamerItemProvider smartUniqueNamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.SmartUniqueNamer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSmartUniqueNamerAdapter() {
+		if (smartUniqueNamerItemProvider == null) {
+			smartUniqueNamerItemProvider = new SmartUniqueNamerItemProvider(this);
+		}
+
+		return smartUniqueNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.SlugNamer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SlugNamerItemProvider slugNamerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.SlugNamer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSlugNamerAdapter() {
+		if (slugNamerItemProvider == null) {
+			slugNamerItemProvider = new SlugNamerItemProvider(this);
+		}
+
+		return slugNamerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.FileResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileResourceItemProvider fileResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.FileResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileResourceAdapter() {
+		if (fileResourceItemProvider == null) {
+			fileResourceItemProvider = new FileResourceItemProvider(this);
+		}
+
+		return fileResourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ImageResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImageResourceItemProvider imageResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ImageResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImageResourceAdapter() {
+		if (imageResourceItemProvider == null) {
+			imageResourceItemProvider = new ImageResourceItemProvider(this);
+		}
+
+		return imageResourceItemProvider;
 	}
 
 	/**

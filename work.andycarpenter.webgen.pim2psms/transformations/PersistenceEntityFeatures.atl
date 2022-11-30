@@ -103,7 +103,7 @@ rule DateAttribute {
 
 -- @extends Feature
 abstract rule ResourceFeature {
-	from website : Website!ResourceAttribute
+	from website : Website!ResourceFeature
 	to orm : ORM!ResourceFeature (
 		maximumUploadSize <-
 			if website.maximumUploadSize > 0 then
@@ -113,43 +113,114 @@ abstract rule ResourceFeature {
 			endif,
 		validUploadMimeTypes <- website.validUploadMimeTypes,
 		validUploadExtensions <- website.validUploadExtensions,
-		uploadsWithinWebsite <- website.uploadsWithinWebsite,
-		uploadPath <- website.uploadPath
+		uriPrefix <- website.uriPrefix,
+		baseUploadDirectory <- website.baseUploadDirectory,
+		directoryNamer <- website.directoryNamer,
+		fileNamer <- website.fileNamer
 	)
 }
 
-abstract rule PathElement {
-	from website: Website!PathElement
-	to orm : ORM!PathElement(
+abstract rule DirectoryNamer {
+	from website: Website!DirectoryNamer
+	to orm : ORM!DirectoryNamer(
 	)
 }
 
--- @extends PathElement
-rule StaticPathElement {
-	from website: Website!StaticPathElement
-	to orm : ORM!StaticPathElement(
-		element <- website.element
+-- @extends DirectoryNamer
+rule SubDirectory {
+	from website: Website!SubDirectory
+	to orm : ORM!SubDirectory(
+		charactersPerDirectory <- website.charactersPerDirectory,
+		directoryCount <- website.directoryCount
 	)
 }
 
--- @extends PathElement
-rule DatePathElement {
-	from website: Website!DatePathElement
-	to orm : ORM!DatePathElement(
-		format <- website.format
+-- @extends DirectoryNamer
+rule PropertyDirectory {
+	from website: Website!PropertyDirectory
+	to orm : ORM!PropertyDirectory(
+		attribute <- website.attribute
+	)
+}
+
+-- @extends DirectoryNamer
+rule DateTimeDirectory {
+	from website: Website!DateTimeDirectory
+	to orm : ORM!DateTimeDirectory(
+		format <- website.format,
+		attribute <- website.attribute
+	)
+}
+
+abstract rule FileNamer {
+	from website: Website!FileNamer
+	to orm : ORM!FileNamer(
+	)
+}
+
+-- @extends FileNamer
+rule UniqueIdNamer {
+	from website: Website!UniqueIdNamer
+	to orm : ORM!UniqueIdNamer(
+	)
+}
+
+-- @extends FileNamer
+rule OriginalNamer {
+	from website: Website!OriginalNamer
+	to orm : ORM!OriginalNamer(
+	)
+}
+
+-- @extends FileNamer
+rule PropertyNamer {
+	from website: Website!PropertyNamer
+	to orm : ORM!PropertyNamer(
+		attribute <- website.attribute
+	)
+}
+
+-- @extends FileNamer
+rule HashNamer {
+	from website: Website!HashNamer
+	to orm : ORM!HashNamer(
+		algoritm <- website.algorithm,
+		length <- website.length
+	)
+}
+
+-- @extends FileNamer
+rule Base64Namer {
+	from website: Website!Base64Namer
+	to orm : ORM!Base64Namer(
+		length <- website.length
+	)
+}
+
+-- @extends FileNamer
+rule SmartUniqueNamer {
+	from website: Website!SmartUniqueNamer
+	to orm : ORM!SmartUniqueNamer(
+	)
+}
+
+-- @extends FileNamer
+rule SlugNamer {
+	from website: Website!SlugNamer
+	to orm : ORM!SlugNamer(
 	)
 }
 
 -- @extends ResourceFeature
 rule FileResource {
-	from website : Website!FileAttribute
+	from website : Website!FileResource
 	to orm : ORM!FileResource (
 	)
 }
 
 -- @extends ResourceFeature
 rule ImageResource {
-	from website : Website!ImageAttribute
+	from website : Website!ImageResource
 	to orm : ORM!ImageResource (
 	)
 }

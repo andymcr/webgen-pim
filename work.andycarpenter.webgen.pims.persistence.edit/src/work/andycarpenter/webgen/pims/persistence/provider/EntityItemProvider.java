@@ -561,12 +561,12 @@ public class EntityItemProvider extends ClassifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ENTITY__FEATURES,
-				 PersistenceFactory.eINSTANCE.createFileAttribute()));
+				 PersistenceFactory.eINSTANCE.createFileResource()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ENTITY__FEATURES,
-				 PersistenceFactory.eINSTANCE.createImageAttribute()));
+				 PersistenceFactory.eINSTANCE.createImageResource()));
 
 		newChildDescriptors.add
 			(createChildParameter
