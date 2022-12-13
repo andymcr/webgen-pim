@@ -392,8 +392,6 @@
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/showMissingImageWhen"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/imageFilter"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="Image" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//ImageUnit/missingImageFilter"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ImageCardsUnit">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>
@@ -456,12 +454,18 @@
           ecoreFeature="ecore:EReference webui.ecore#//PathAttribute/attribute"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//PathAttribute/name"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//PathResource">
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference webui.ecore#//PathResource/resource"/>
+      <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//PathResource/name"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//ChildPath">
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="Model"
           ecoreFeature="ecore:EReference webui.ecore#//ChildPath/parent"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ChildPathAssociation"/>
     <genClasses ecoreClass="webui.ecore#//ChildPathAttribute"/>
+    <genClasses ecoreClass="webui.ecore#//ChildPathResource"/>
     <genClasses image="false" ecoreClass="webui.ecore#//FeaturePath"/>
     <genClasses ecoreClass="webui.ecore#//FeaturePathAssociation"/>
     <genClasses ecoreClass="webui.ecore#//FeaturePathAttribute"/>
@@ -470,12 +474,14 @@
           ecoreFeature="ecore:EReference webui.ecore#//FeaturePathLabel/label"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//FeaturePathLabel/name"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//FeaturePathResource"/>
     <genClasses image="false" ecoreClass="webui.ecore#//PathVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//PathVariable/useContainerAsContext"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//PathVariable/context"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//PathVariableAssociation"/>
     <genClasses ecoreClass="webui.ecore#//PathVariableAttribute"/>
+    <genClasses ecoreClass="webui.ecore#//PathVariableResource"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ActionContainer">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/containerActionsPlacement"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/instanceActionsPlacement"/>

@@ -490,12 +490,12 @@ public interface WebUI extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Maximum Upload Size</em>' attribute.
-	 * @see #setDefaultMaximumUploadSize(int)
+	 * @see #setDefaultMaximumUploadSize(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultMaximumUploadSize()
 	 * @model default="2000000" required="true"
 	 * @generated
 	 */
-	int getDefaultMaximumUploadSize();
+	String getDefaultMaximumUploadSize();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}' attribute.
@@ -505,6 +505,6 @@ public interface WebUI extends EObject {
 	 * @see #getDefaultMaximumUploadSize()
 	 * @generated
 	 */
-	void setDefaultMaximumUploadSize(int value);
+	void setDefaultMaximumUploadSize(String value);
 
 } // WebUI

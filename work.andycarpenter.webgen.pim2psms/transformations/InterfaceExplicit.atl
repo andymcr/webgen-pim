@@ -771,11 +771,10 @@ rule DateCardsUnit {
 abstract rule ImageUnit {
 	from website : Website!ImageUnit
 	to waf : WAF!ImageUnit (
-		imagePathFeature <- website.imagePathFeature,
+		imageFeaturePath <- website.imagePathFeature,
 		missingImagePath <- website.missingImagePath,
 		showMissingImageWhen <- website.showMissingImageWhen,
-		imageFilter <- website.imageFilter,
-		missingImageFilter <- website.missingImageFilter
+		imageFilter <- website.imageFilter
 	)
 }
 
@@ -870,6 +869,19 @@ abstract rule PathAttribute {
 	)
 }
 
+-- @extends Path
+abstract rule PathResource {
+	from website : Website!PathResource
+	to waf : WAF!PathResource (
+		resource <- 
+			if website.resource.oclIsUndefined() then
+				OclUndefined
+			else
+				website.resource.findOrmResource()
+			endif
+	)
+}
+
 abstract rule ChildPath {
 	from website : Website!ChildPath
 	to waf : WAF!ChildPath (
@@ -887,6 +899,13 @@ rule ChildPathAssociation {
 rule ChildPathAttribute {
 	from website : Website!ChildPathAttribute
 	to waf : WAF!ChildPathAttribute (
+	)
+}
+
+-- @extends ChildPath, PathResource
+rule ChildPathResource {
+	from website : Website!ChildPathResource
+	to waf : WAF!ChildPathResource (
 	)
 }
 
@@ -918,6 +937,13 @@ rule FeaturePathLabel {
 	)
 }
 
+-- @extends FeaturePath, PathResource
+rule FeaturePathResource {
+	from website : Website!FeaturePathResource
+	to waf : WAF!FeaturePathResource (
+	)
+}
+
 -- @extends Expression
 abstract rule PathVariable {
 	from website : Website!PathVariable
@@ -937,6 +963,13 @@ rule PathVariableAssociation {
 rule PathVariableAttribute {
 	from website : Website!PathVariableAttribute
 	to waf : WAF!PathVariableAttribute (
+	)
+}
+
+-- @extends PathVariable, PathResource
+rule PathVariableResource {
+	from website : Website!PathVariableResource
+	to waf : WAF!PathVariableResource (
 	)
 }
 

@@ -106,7 +106,7 @@ abstract rule ResourceFeature {
 	from website : Website!ResourceFeature
 	to orm : ORM!ResourceFeature (
 		maximumUploadSize <-
-			if website.maximumUploadSize > 0 then
+			if website.maximumUploadSize <> '0' then
 				website.maximumUploadSize
 			else
 				thisModule.findWebsiteUI().defaultMaximumUploadSize

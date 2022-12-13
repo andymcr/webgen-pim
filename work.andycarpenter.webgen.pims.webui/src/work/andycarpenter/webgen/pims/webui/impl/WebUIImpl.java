@@ -330,7 +330,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT = 2000000;
+	protected static final String DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT = "2000000";
 
 	/**
 	 * The cached value of the '{@link #getDefaultMaximumUploadSize() <em>Default Maximum Upload Size</em>}' attribute.
@@ -340,7 +340,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected int defaultMaximumUploadSize = DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
+	protected String defaultMaximumUploadSize = DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1026,7 +1026,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public int getDefaultMaximumUploadSize() {
+	public String getDefaultMaximumUploadSize() {
 		return defaultMaximumUploadSize;
 	}
 
@@ -1036,8 +1036,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultMaximumUploadSize(int newDefaultMaximumUploadSize) {
-		int oldDefaultMaximumUploadSize = defaultMaximumUploadSize;
+	public void setDefaultMaximumUploadSize(String newDefaultMaximumUploadSize) {
+		String oldDefaultMaximumUploadSize = defaultMaximumUploadSize;
 		defaultMaximumUploadSize = newDefaultMaximumUploadSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE, oldDefaultMaximumUploadSize, defaultMaximumUploadSize));
@@ -1216,7 +1216,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				setDefaultTabularStyles((TabularUnitStyles)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
-				setDefaultMaximumUploadSize((Integer)newValue);
+				setDefaultMaximumUploadSize((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1341,7 +1341,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_STYLES:
 				return defaultTabularStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
-				return defaultMaximumUploadSize != DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT;
+				return DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT == null ? defaultMaximumUploadSize != null : !DEFAULT_MAXIMUM_UPLOAD_SIZE_EDEFAULT.equals(defaultMaximumUploadSize);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -332,6 +332,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createPathAttributeAdapter();
 			}
 			@Override
+			public Adapter casePathResource(PathResource object) {
+				return createPathResourceAdapter();
+			}
+			@Override
 			public Adapter caseChildPath(ChildPath object) {
 				return createChildPathAdapter();
 			}
@@ -342,6 +346,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseChildPathAttribute(ChildPathAttribute object) {
 				return createChildPathAttributeAdapter();
+			}
+			@Override
+			public Adapter caseChildPathResource(ChildPathResource object) {
+				return createChildPathResourceAdapter();
 			}
 			@Override
 			public Adapter caseFeaturePath(FeaturePath object) {
@@ -360,6 +368,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createFeaturePathLabelAdapter();
 			}
 			@Override
+			public Adapter caseFeaturePathResource(FeaturePathResource object) {
+				return createFeaturePathResourceAdapter();
+			}
+			@Override
 			public Adapter casePathVariable(PathVariable object) {
 				return createPathVariableAdapter();
 			}
@@ -370,6 +382,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePathVariableAttribute(PathVariableAttribute object) {
 				return createPathVariableAttributeAdapter();
+			}
+			@Override
+			public Adapter casePathVariableResource(PathVariableResource object) {
+				return createPathVariableResourceAdapter();
 			}
 			@Override
 			public Adapter caseActionContainer(ActionContainer object) {
@@ -982,6 +998,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPathResource <em>Child Path Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ChildPathResource
+	 * @generated
+	 */
+	public Adapter createChildPathResourceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation <em>Child Path Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1038,6 +1068,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathResource <em>Feature Path Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathResource
+	 * @generated
+	 */
+	public Adapter createFeaturePathResourceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariable <em>Path Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1076,6 +1120,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPathVariableAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariableResource <em>Path Variable Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.PathVariableResource
+	 * @generated
+	 */
+	public Adapter createPathVariableResourceAdapter() {
 		return null;
 	}
 
@@ -1468,6 +1526,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPathAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathResource <em>Path Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.PathResource
+	 * @generated
+	 */
+	public Adapter createPathResourceAdapter() {
 		return null;
 	}
 

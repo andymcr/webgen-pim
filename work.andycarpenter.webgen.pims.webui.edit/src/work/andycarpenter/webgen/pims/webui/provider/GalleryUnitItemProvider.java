@@ -50,7 +50,6 @@ public class GalleryUnitItemProvider extends CollectionUnitItemProvider {
 
 			addMissingImagePathPropertyDescriptor(object);
 			addImageFilterPropertyDescriptor(object);
-			addMissingImageFilterPropertyDescriptor(object);
 			addFullSizeFilterPropertyDescriptor(object);
 			addShowTimePropertyDescriptor(object);
 			addTransitionTimePropertyDescriptor(object);
@@ -94,28 +93,6 @@ public class GalleryUnitItemProvider extends CollectionUnitItemProvider {
 				 getString("_UI_ImageUnit_imageFilter_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_imageFilter_feature", "_UI_ImageUnit_type"),
 				 WebuiPackage.Literals.IMAGE_UNIT__IMAGE_FILTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ImagePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Missing Image Filter feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMissingImageFilterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageUnit_missingImageFilter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageUnit_missingImageFilter_feature", "_UI_ImageUnit_type"),
-				 WebuiPackage.Literals.IMAGE_UNIT__MISSING_IMAGE_FILTER,
 				 true,
 				 false,
 				 true,
@@ -306,6 +283,11 @@ public class GalleryUnitItemProvider extends CollectionUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
+				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
 
 		newChildDescriptors.add
 			(createChildParameter

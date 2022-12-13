@@ -190,56 +190,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * @generated
 	 */
 	@Override
-	public ImageManipulation getMissingImageFilter() {
-		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
-			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
-			missingImageFilter = (ImageManipulation)eResolveProxy(oldMissingImageFilter);
-			if (missingImageFilter != oldMissingImageFilter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-			}
-		}
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImageManipulation basicGetMissingImageFilter() {
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
-		ImageManipulation oldMissingImageFilter = missingImageFilter;
-		missingImageFilter = newMissingImageFilter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getMissingImagePath() {
-		return missingImagePath;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public void setMissingImagePath(String newMissingImagePath) {
 		String oldMissingImagePath = missingImagePath;
 		missingImagePath = newMissingImagePath;
@@ -274,9 +224,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				if (resolve) return getImageFilter();
 				return basicGetImageFilter();
-			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER:
-				if (resolve) return getMissingImageFilter();
-				return basicGetMissingImageFilter();
 			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH:
 				return getMissingImagePath();
 		}
@@ -296,9 +243,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 				return;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
-				return;
-			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)newValue);
 				return;
 			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH:
 				setMissingImagePath((String)newValue);
@@ -321,9 +265,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);
 				return;
-			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)null);
-				return;
 			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH:
 				setMissingImagePath(MISSING_IMAGE_PATH_EDEFAULT);
 				return;
@@ -343,8 +284,6 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 				return imagePathFeature != null;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				return imageFilter != null;
-			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER:
-				return missingImageFilter != null;
 			case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH:
 				return MISSING_IMAGE_PATH_EDEFAULT == null ? missingImagePath != null : !MISSING_IMAGE_PATH_EDEFAULT.equals(missingImagePath);
 		}

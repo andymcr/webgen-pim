@@ -299,6 +299,11 @@ public class PathAssociationItemProvider extends PathItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.PATH_ASSOCIATION__CHILD_FEATURE,
 				 WebuiFactory.eINSTANCE.createChildPathAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.PATH_ASSOCIATION__CHILD_FEATURE,
+				 WebuiFactory.eINSTANCE.createChildPathResource()));
 	}
 
 }

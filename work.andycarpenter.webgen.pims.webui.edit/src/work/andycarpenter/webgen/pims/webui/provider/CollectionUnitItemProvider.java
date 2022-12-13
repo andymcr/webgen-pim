@@ -832,6 +832,11 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
+				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
 	}
 
 	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {

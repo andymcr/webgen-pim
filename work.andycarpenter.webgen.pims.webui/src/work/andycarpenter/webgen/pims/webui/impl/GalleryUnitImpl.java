@@ -28,7 +28,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getMissingImagePath <em>Missing Image Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getShowMissingImageWhen <em>Show Missing Image When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getImageFilter <em>Image Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getMissingImageFilter <em>Missing Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getFullSizeFilter <em>Full Size Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
@@ -86,16 +85,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * @ordered
 	 */
 	protected ImageManipulation imageFilter;
-
-	/**
-	 * The cached value of the '{@link #getMissingImageFilter() <em>Missing Image Filter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMissingImageFilter()
-	 * @generated
-	 * @ordered
-	 */
-	protected ImageManipulation missingImageFilter;
 
 	/**
 	 * The cached value of the '{@link #getFullSizeFilter() <em>Full Size Filter</em>}' reference.
@@ -325,46 +314,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * @generated
 	 */
 	@Override
-	public ImageManipulation getMissingImageFilter() {
-		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
-			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
-			missingImageFilter = (ImageManipulation)eResolveProxy(oldMissingImageFilter);
-			if (missingImageFilter != oldMissingImageFilter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-			}
-		}
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImageManipulation basicGetMissingImageFilter() {
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
-		ImageManipulation oldMissingImageFilter = missingImageFilter;
-		missingImageFilter = newMissingImageFilter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ImageManipulation getFullSizeFilter() {
 		if (fullSizeFilter != null && fullSizeFilter.eIsProxy()) {
 			InternalEObject oldFullSizeFilter = (InternalEObject)fullSizeFilter;
@@ -478,9 +427,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 			case WebuiPackage.GALLERY_UNIT__IMAGE_FILTER:
 				if (resolve) return getImageFilter();
 				return basicGetImageFilter();
-			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER:
-				if (resolve) return getMissingImageFilter();
-				return basicGetMissingImageFilter();
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				if (resolve) return getFullSizeFilter();
 				return basicGetFullSizeFilter();
@@ -511,9 +457,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 				return;
 			case WebuiPackage.GALLERY_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
-				return;
-			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)newValue);
 				return;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				setFullSizeFilter((ImageManipulation)newValue);
@@ -548,9 +491,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 			case WebuiPackage.GALLERY_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);
 				return;
-			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)null);
-				return;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				setFullSizeFilter((ImageManipulation)null);
 				return;
@@ -580,8 +520,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 				return showMissingImageWhen != null;
 			case WebuiPackage.GALLERY_UNIT__IMAGE_FILTER:
 				return imageFilter != null;
-			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER:
-				return missingImageFilter != null;
 			case WebuiPackage.GALLERY_UNIT__FULL_SIZE_FILTER:
 				return fullSizeFilter != null;
 			case WebuiPackage.GALLERY_UNIT__SHOW_TIME:
@@ -605,7 +543,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 				case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.GALLERY_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.GALLERY_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__IMAGE_FILTER;
-				case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}
@@ -625,7 +562,6 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.GALLERY_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER: return WebuiPackage.GALLERY_UNIT__IMAGE_FILTER;
-				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}

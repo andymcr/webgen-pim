@@ -250,6 +250,11 @@ public class BadgeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(WebuiPackage.Literals.BADGE__VALUE,
+				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(WebuiPackage.Literals.BADGE__DISPLAY_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 

@@ -26,6 +26,7 @@ import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
 import work.andycarpenter.webgen.pims.webui.ChildPath;
 import work.andycarpenter.webgen.pims.webui.ChildPathAssociation;
 import work.andycarpenter.webgen.pims.webui.ChildPathAttribute;
+import work.andycarpenter.webgen.pims.webui.ChildPathResource;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
 import work.andycarpenter.webgen.pims.webui.CollectionUnitStyles;
@@ -55,6 +56,7 @@ import work.andycarpenter.webgen.pims.webui.FeaturePath;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAssociation;
 import work.andycarpenter.webgen.pims.webui.FeaturePathAttribute;
 import work.andycarpenter.webgen.pims.webui.FeaturePathLabel;
+import work.andycarpenter.webgen.pims.webui.FeaturePathResource;
 import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.FormUnitStyles;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
@@ -81,9 +83,11 @@ import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
 import work.andycarpenter.webgen.pims.webui.Path;
 import work.andycarpenter.webgen.pims.webui.PathAssociation;
 import work.andycarpenter.webgen.pims.webui.PathAttribute;
+import work.andycarpenter.webgen.pims.webui.PathResource;
 import work.andycarpenter.webgen.pims.webui.PathVariable;
 import work.andycarpenter.webgen.pims.webui.PathVariableAssociation;
 import work.andycarpenter.webgen.pims.webui.PathVariableAttribute;
+import work.andycarpenter.webgen.pims.webui.PathVariableResource;
 import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
 import work.andycarpenter.webgen.pims.webui.ResetPasswordUnit;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
@@ -365,6 +369,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass childPathResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass childPathAssociationEClass = null;
 
 	/**
@@ -393,6 +404,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass featurePathResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass pathVariableEClass = null;
 
 	/**
@@ -408,6 +426,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass pathVariableAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathVariableResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -604,6 +629,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass pathAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2525,6 +2557,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getChildPathResource() {
+		return childPathResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildPathAssociation() {
 		return childPathAssociationEClass;
 	}
@@ -2585,6 +2627,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFeaturePathResource() {
+		return featurePathResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPathVariable() {
 		return pathVariableEClass;
 	}
@@ -2627,6 +2679,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EClass getPathVariableAttribute() {
 		return pathVariableAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPathVariableResource() {
+		return pathVariableResourceEClass;
 	}
 
 	/**
@@ -3905,6 +3967,36 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getPathResource() {
+		return pathResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPathResource_Resource() {
+		return (EReference)pathResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPathResource_Name() {
+		return (EAttribute)pathResourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildPath() {
 		return childPathEClass;
 	}
@@ -3997,16 +4089,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EReference getImageUnit_ImageFilter() {
 		return (EReference)imageUnitEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getImageUnit_MissingImageFilter() {
-		return (EReference)imageUnitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -4972,7 +5054,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_PATH);
 		createEReference(imageUnitEClass, IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN);
 		createEReference(imageUnitEClass, IMAGE_UNIT__IMAGE_FILTER);
-		createEReference(imageUnitEClass, IMAGE_UNIT__MISSING_IMAGE_FILTER);
 
 		imageCardsUnitEClass = createEClass(IMAGE_CARDS_UNIT);
 		createEAttribute(imageCardsUnitEClass, IMAGE_CARDS_UNIT__OVERLAY_TITLE);
@@ -5028,12 +5109,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(pathAttributeEClass, PATH_ATTRIBUTE__ATTRIBUTE);
 		createEAttribute(pathAttributeEClass, PATH_ATTRIBUTE__NAME);
 
+		pathResourceEClass = createEClass(PATH_RESOURCE);
+		createEReference(pathResourceEClass, PATH_RESOURCE__RESOURCE);
+		createEAttribute(pathResourceEClass, PATH_RESOURCE__NAME);
+
 		childPathEClass = createEClass(CHILD_PATH);
 		createEReference(childPathEClass, CHILD_PATH__PARENT);
 
 		childPathAssociationEClass = createEClass(CHILD_PATH_ASSOCIATION);
 
 		childPathAttributeEClass = createEClass(CHILD_PATH_ATTRIBUTE);
+
+		childPathResourceEClass = createEClass(CHILD_PATH_RESOURCE);
 
 		featurePathEClass = createEClass(FEATURE_PATH);
 
@@ -5045,6 +5132,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(featurePathLabelEClass, FEATURE_PATH_LABEL__LABEL);
 		createEAttribute(featurePathLabelEClass, FEATURE_PATH_LABEL__NAME);
 
+		featurePathResourceEClass = createEClass(FEATURE_PATH_RESOURCE);
+
 		pathVariableEClass = createEClass(PATH_VARIABLE);
 		createEAttribute(pathVariableEClass, PATH_VARIABLE__USE_CONTAINER_AS_CONTEXT);
 		createEReference(pathVariableEClass, PATH_VARIABLE__CONTEXT);
@@ -5052,6 +5141,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		pathVariableAssociationEClass = createEClass(PATH_VARIABLE_ASSOCIATION);
 
 		pathVariableAttributeEClass = createEClass(PATH_VARIABLE_ATTRIBUTE);
+
+		pathVariableResourceEClass = createEClass(PATH_VARIABLE_RESOURCE);
 
 		actionContainerEClass = createEClass(ACTION_CONTAINER);
 		createEAttribute(actionContainerEClass, ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT);
@@ -5225,20 +5316,27 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		resetPasswordUnitEClass.getESuperTypes().add(theSecurityPackage.getSecurityUnit());
 		pathAssociationEClass.getESuperTypes().add(this.getPath());
 		pathAttributeEClass.getESuperTypes().add(this.getPath());
+		pathResourceEClass.getESuperTypes().add(this.getPath());
 		childPathAssociationEClass.getESuperTypes().add(this.getPathAssociation());
 		childPathAssociationEClass.getESuperTypes().add(this.getChildPath());
 		childPathAttributeEClass.getESuperTypes().add(this.getPathAttribute());
 		childPathAttributeEClass.getESuperTypes().add(this.getChildPath());
+		childPathResourceEClass.getESuperTypes().add(this.getPathResource());
+		childPathResourceEClass.getESuperTypes().add(this.getChildPath());
 		featurePathAssociationEClass.getESuperTypes().add(this.getPathAssociation());
 		featurePathAssociationEClass.getESuperTypes().add(this.getFeaturePath());
 		featurePathAttributeEClass.getESuperTypes().add(this.getPathAttribute());
 		featurePathAttributeEClass.getESuperTypes().add(this.getFeaturePath());
 		featurePathLabelEClass.getESuperTypes().add(this.getFeaturePath());
+		featurePathResourceEClass.getESuperTypes().add(this.getPathResource());
+		featurePathResourceEClass.getESuperTypes().add(this.getFeaturePath());
 		pathVariableEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 		pathVariableAssociationEClass.getESuperTypes().add(this.getPathAssociation());
 		pathVariableAssociationEClass.getESuperTypes().add(this.getPathVariable());
 		pathVariableAttributeEClass.getESuperTypes().add(this.getPathAttribute());
 		pathVariableAttributeEClass.getESuperTypes().add(this.getPathVariable());
+		pathVariableResourceEClass.getESuperTypes().add(this.getPathResource());
+		pathVariableResourceEClass.getESuperTypes().add(this.getPathVariable());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
 		securityActionEClass.getESuperTypes().add(this.getAction());
 		deleteActionEClass.getESuperTypes().add(this.getAction());
@@ -5272,7 +5370,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getWebUI_DefaultSliderStyles(), this.getSliderUnitStyles(), null, "defaultSliderStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultStaticStyles(), this.getStaticUnitStyles(), null, "defaultStaticStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultTabularStyles(), this.getTabularUnitStyles(), null, "defaultTabularStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultMaximumUploadSize(), ecorePackage.getEInt(), "defaultMaximumUploadSize", "2000000", 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultMaximumUploadSize(), ecorePackage.getEString(), "defaultMaximumUploadSize", "2000000", 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNavigation_PartOf(), this.getWebUI(), this.getWebUI_Navigation(), "partOf", null, 1, 1, Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5576,7 +5674,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getImageUnit_MissingImagePath(), ecorePackage.getEString(), "missingImagePath", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_ShowMissingImageWhen(), theExpressionPackage.getPredicate(), null, "showMissingImageWhen", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImageUnit_ImageFilter(), theImagePackage.getImageManipulation(), null, "imageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageUnit_MissingImageFilter(), theImagePackage.getImageManipulation(), null, "missingImageFilter", null, 0, 1, ImageUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageCardsUnitEClass, ImageCardsUnit.class, "ImageCardsUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImageCardsUnit_OverlayTitle(), ecorePackage.getEBoolean(), "overlayTitle", "false", 1, 1, ImageCardsUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5632,12 +5729,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getPathAttribute_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, PathAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, PathAttribute.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
+		initEClass(pathResourceEClass, PathResource.class, "PathResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPathResource_Resource(), thePersistencePackage.getResourceFeature(), null, "resource", null, 1, 1, PathResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathResource_Name(), ecorePackage.getEString(), "name", null, 0, 1, PathResource.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
 		initEClass(childPathEClass, ChildPath.class, "ChildPath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getChildPath_Parent(), this.getPathAssociation(), this.getPathAssociation_ChildFeature(), "parent", null, 1, 1, ChildPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(childPathAssociationEClass, ChildPathAssociation.class, "ChildPathAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(childPathAttributeEClass, ChildPathAttribute.class, "ChildPathAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(childPathResourceEClass, ChildPathResource.class, "ChildPathResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(featurePathEClass, FeaturePath.class, "FeaturePath", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5649,6 +5752,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getFeaturePathLabel_Label(), thePersistencePackage.getModelLabel(), null, "label", null, 1, 1, FeaturePathLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeaturePathLabel_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeaturePathLabel.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
+		initEClass(featurePathResourceEClass, FeaturePathResource.class, "FeaturePathResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(pathVariableEClass, PathVariable.class, "PathVariable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPathVariable_UseContainerAsContext(), ecorePackage.getEBoolean(), "useContainerAsContext", "false", 1, 1, PathVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathVariable_Context(), thePersistencePackage.getEntity(), null, "context", null, 0, 1, PathVariable.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -5656,6 +5761,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(pathVariableAssociationEClass, PathVariableAssociation.class, "PathVariableAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pathVariableAttributeEClass, PathVariableAttribute.class, "PathVariableAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pathVariableResourceEClass, PathVariableResource.class, "PathVariableResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(actionContainerEClass, ActionContainer.class, "ActionContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActionContainer_ContainerActionsPlacement(), this.getContainerActionsPlacement(), "containerActionsPlacement", null, 0, 1, ActionContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5981,6 +6088,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   source,
 		   new String[] {
 			   "derivation", "if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif"
+		   });
+		addAnnotation
+		  (getPathResource_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if resource.oclIsUndefined() then\n\t\'\'\nelse\n\tresource.name\nendif"
 		   });
 		addAnnotation
 		  (getFeaturePathLabel_Name(),

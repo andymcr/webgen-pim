@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getMissingImagePath <em>Missing Image Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getShowMissingImageWhen <em>Show Missing Image When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getImageFilter <em>Image Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getMissingImageFilter <em>Missing Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getShowTime <em>Show Time</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl#getTransitionTime <em>Transition Time</em>}</li>
  * </ul>
@@ -84,16 +83,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 	 * @ordered
 	 */
 	protected ImageManipulation imageFilter;
-
-	/**
-	 * The cached value of the '{@link #getMissingImageFilter() <em>Missing Image Filter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMissingImageFilter()
-	 * @generated
-	 * @ordered
-	 */
-	protected ImageManipulation missingImageFilter;
 
 	/**
 	 * The default value of the '{@link #getShowTime() <em>Show Time</em>}' attribute.
@@ -313,46 +302,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 	 * @generated
 	 */
 	@Override
-	public ImageManipulation getMissingImageFilter() {
-		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
-			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
-			missingImageFilter = (ImageManipulation)eResolveProxy(oldMissingImageFilter);
-			if (missingImageFilter != oldMissingImageFilter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-			}
-		}
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImageManipulation basicGetMissingImageFilter() {
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
-		ImageManipulation oldMissingImageFilter = missingImageFilter;
-		missingImageFilter = newMissingImageFilter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public int getShowTime() {
 		return showTime;
 	}
@@ -426,9 +375,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 			case WebuiPackage.SLIDER_UNIT__IMAGE_FILTER:
 				if (resolve) return getImageFilter();
 				return basicGetImageFilter();
-			case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER:
-				if (resolve) return getMissingImageFilter();
-				return basicGetMissingImageFilter();
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				return getShowTime();
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
@@ -456,9 +402,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 				return;
 			case WebuiPackage.SLIDER_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
-				return;
-			case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)newValue);
 				return;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				setShowTime((Integer)newValue);
@@ -490,9 +433,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 			case WebuiPackage.SLIDER_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);
 				return;
-			case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)null);
-				return;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				setShowTime(SHOW_TIME_EDEFAULT);
 				return;
@@ -519,8 +459,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 				return showMissingImageWhen != null;
 			case WebuiPackage.SLIDER_UNIT__IMAGE_FILTER:
 				return imageFilter != null;
-			case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER:
-				return missingImageFilter != null;
 			case WebuiPackage.SLIDER_UNIT__SHOW_TIME:
 				return showTime != SHOW_TIME_EDEFAULT;
 			case WebuiPackage.SLIDER_UNIT__TRANSITION_TIME:
@@ -542,7 +480,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 				case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.SLIDER_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.SLIDER_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__IMAGE_FILTER;
-				case WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}
@@ -562,7 +499,6 @@ public class SliderUnitImpl extends CollectionUnitImpl implements SliderUnit {
 				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.SLIDER_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER: return WebuiPackage.SLIDER_UNIT__IMAGE_FILTER;
-				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.SLIDER_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}

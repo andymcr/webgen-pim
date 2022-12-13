@@ -702,6 +702,13 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.PATH_RESOURCE: {
+				PathResource pathResource = (PathResource)theEObject;
+				T result = casePathResource(pathResource);
+				if (result == null) result = casePath(pathResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.CHILD_PATH: {
 				ChildPath childPath = (ChildPath)theEObject;
 				T result = caseChildPath(childPath);
@@ -723,6 +730,15 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = casePathAttribute(childPathAttribute);
 				if (result == null) result = caseChildPath(childPathAttribute);
 				if (result == null) result = casePath(childPathAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CHILD_PATH_RESOURCE: {
+				ChildPathResource childPathResource = (ChildPathResource)theEObject;
+				T result = caseChildPathResource(childPathResource);
+				if (result == null) result = casePathResource(childPathResource);
+				if (result == null) result = caseChildPath(childPathResource);
+				if (result == null) result = casePath(childPathResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -757,6 +773,15 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.FEATURE_PATH_RESOURCE: {
+				FeaturePathResource featurePathResource = (FeaturePathResource)theEObject;
+				T result = caseFeaturePathResource(featurePathResource);
+				if (result == null) result = casePathResource(featurePathResource);
+				if (result == null) result = caseFeaturePath(featurePathResource);
+				if (result == null) result = casePath(featurePathResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.PATH_VARIABLE: {
 				PathVariable pathVariable = (PathVariable)theEObject;
 				T result = casePathVariable(pathVariable);
@@ -784,6 +809,17 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = casePath(pathVariableAttribute);
 				if (result == null) result = caseVariable(pathVariableAttribute);
 				if (result == null) result = caseExpression(pathVariableAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.PATH_VARIABLE_RESOURCE: {
+				PathVariableResource pathVariableResource = (PathVariableResource)theEObject;
+				T result = casePathVariableResource(pathVariableResource);
+				if (result == null) result = casePathResource(pathVariableResource);
+				if (result == null) result = casePathVariable(pathVariableResource);
+				if (result == null) result = casePath(pathVariableResource);
+				if (result == null) result = caseVariable(pathVariableResource);
+				if (result == null) result = caseExpression(pathVariableResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1463,6 +1499,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Path Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Path Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildPathResource(ChildPathResource object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Child Path Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1523,6 +1574,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Path Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeaturePathResource(FeaturePathResource object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Path Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1564,6 +1630,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePathVariableAttribute(PathVariableAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Variable Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathVariableResource(PathVariableResource object) {
 		return null;
 	}
 
@@ -1984,6 +2065,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePathAttribute(PathAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathResource(PathResource object) {
 		return null;
 	}
 

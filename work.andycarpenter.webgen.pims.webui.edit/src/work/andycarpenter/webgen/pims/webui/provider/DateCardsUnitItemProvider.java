@@ -159,6 +159,11 @@ public class DateCardsUnitItemProvider extends CardsUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.DATE_CARDS_UNIT__ELEMENT_DATE,
 				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.DATE_CARDS_UNIT__ELEMENT_DATE,
+				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
 	}
 
 	/**

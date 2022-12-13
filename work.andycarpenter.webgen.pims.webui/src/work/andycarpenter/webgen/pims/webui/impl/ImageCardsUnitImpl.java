@@ -28,7 +28,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#getMissingImagePath <em>Missing Image Path</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#getShowMissingImageWhen <em>Show Missing Image When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#getImageFilter <em>Image Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#getMissingImageFilter <em>Missing Image Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isOverlayTitle <em>Overlay Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isEnableImageEnlargement <em>Enable Image Enlargement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}</li>
@@ -86,16 +85,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 	 * @ordered
 	 */
 	protected ImageManipulation imageFilter;
-
-	/**
-	 * The cached value of the '{@link #getMissingImageFilter() <em>Missing Image Filter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMissingImageFilter()
-	 * @generated
-	 * @ordered
-	 */
-	protected ImageManipulation missingImageFilter;
 
 	/**
 	 * The default value of the '{@link #isOverlayTitle() <em>Overlay Title</em>}' attribute.
@@ -259,46 +248,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 		imageFilter = newImageFilter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER, oldImageFilter, imageFilter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ImageManipulation getMissingImageFilter() {
-		if (missingImageFilter != null && missingImageFilter.eIsProxy()) {
-			InternalEObject oldMissingImageFilter = (InternalEObject)missingImageFilter;
-			missingImageFilter = (ImageManipulation)eResolveProxy(oldMissingImageFilter);
-			if (missingImageFilter != oldMissingImageFilter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
-			}
-		}
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImageManipulation basicGetMissingImageFilter() {
-		return missingImageFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMissingImageFilter(ImageManipulation newMissingImageFilter) {
-		ImageManipulation oldMissingImageFilter = missingImageFilter;
-		missingImageFilter = newMissingImageFilter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER, oldMissingImageFilter, missingImageFilter));
 	}
 
 	/**
@@ -471,9 +420,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER:
 				if (resolve) return getImageFilter();
 				return basicGetImageFilter();
-			case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER:
-				if (resolve) return getMissingImageFilter();
-				return basicGetMissingImageFilter();
 			case WebuiPackage.IMAGE_CARDS_UNIT__OVERLAY_TITLE:
 				return isOverlayTitle();
 			case WebuiPackage.IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT:
@@ -503,9 +449,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
-				return;
-			case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)newValue);
 				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__OVERLAY_TITLE:
 				setOverlayTitle((Boolean)newValue);
@@ -540,9 +483,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);
 				return;
-			case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER:
-				setMissingImageFilter((ImageManipulation)null);
-				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__OVERLAY_TITLE:
 				setOverlayTitle(OVERLAY_TITLE_EDEFAULT);
 				return;
@@ -572,8 +512,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				return showMissingImageWhen != null;
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER:
 				return imageFilter != null;
-			case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER:
-				return missingImageFilter != null;
 			case WebuiPackage.IMAGE_CARDS_UNIT__OVERLAY_TITLE:
 				return overlayTitle != OVERLAY_TITLE_EDEFAULT;
 			case WebuiPackage.IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT:
@@ -597,7 +535,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.IMAGE_CARDS_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__IMAGE_FILTER;
-				case WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}
@@ -617,7 +554,6 @@ public class ImageCardsUnitImpl extends CardsUnitImpl implements ImageCardsUnit 
 				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_PATH: return WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_PATH;
 				case WebuiPackage.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN: return WebuiPackage.IMAGE_CARDS_UNIT__SHOW_MISSING_IMAGE_WHEN;
 				case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER: return WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_FILTER;
-				case WebuiPackage.IMAGE_UNIT__MISSING_IMAGE_FILTER: return WebuiPackage.IMAGE_CARDS_UNIT__MISSING_IMAGE_FILTER;
 				default: return -1;
 			}
 		}

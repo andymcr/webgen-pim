@@ -224,12 +224,16 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePathAssociation((PathAssociation)value, diagnostics, context);
 			case WebuiPackage.PATH_ATTRIBUTE:
 				return validatePathAttribute((PathAttribute)value, diagnostics, context);
+			case WebuiPackage.PATH_RESOURCE:
+				return validatePathResource((PathResource)value, diagnostics, context);
 			case WebuiPackage.CHILD_PATH:
 				return validateChildPath((ChildPath)value, diagnostics, context);
 			case WebuiPackage.CHILD_PATH_ASSOCIATION:
 				return validateChildPathAssociation((ChildPathAssociation)value, diagnostics, context);
 			case WebuiPackage.CHILD_PATH_ATTRIBUTE:
 				return validateChildPathAttribute((ChildPathAttribute)value, diagnostics, context);
+			case WebuiPackage.CHILD_PATH_RESOURCE:
+				return validateChildPathResource((ChildPathResource)value, diagnostics, context);
 			case WebuiPackage.FEATURE_PATH:
 				return validateFeaturePath((FeaturePath)value, diagnostics, context);
 			case WebuiPackage.FEATURE_PATH_ASSOCIATION:
@@ -238,12 +242,16 @@ public class WebuiValidator extends EObjectValidator {
 				return validateFeaturePathAttribute((FeaturePathAttribute)value, diagnostics, context);
 			case WebuiPackage.FEATURE_PATH_LABEL:
 				return validateFeaturePathLabel((FeaturePathLabel)value, diagnostics, context);
+			case WebuiPackage.FEATURE_PATH_RESOURCE:
+				return validateFeaturePathResource((FeaturePathResource)value, diagnostics, context);
 			case WebuiPackage.PATH_VARIABLE:
 				return validatePathVariable((PathVariable)value, diagnostics, context);
 			case WebuiPackage.PATH_VARIABLE_ASSOCIATION:
 				return validatePathVariableAssociation((PathVariableAssociation)value, diagnostics, context);
 			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE:
 				return validatePathVariableAttribute((PathVariableAttribute)value, diagnostics, context);
+			case WebuiPackage.PATH_VARIABLE_RESOURCE:
+				return validatePathVariableResource((PathVariableResource)value, diagnostics, context);
 			case WebuiPackage.ACTION_CONTAINER:
 				return validateActionContainer((ActionContainer)value, diagnostics, context);
 			case WebuiPackage.ACTION:
@@ -1002,6 +1010,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateChildPathResource(ChildPathResource childPathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(childPathResource, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateChildPathAssociation(ChildPathAssociation childPathAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(childPathAssociation, diagnostics, context);
 	}
@@ -1038,6 +1055,15 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateFeaturePathResource(FeaturePathResource featurePathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(featurePathResource, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validatePathVariable(PathVariable pathVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pathVariable, diagnostics, context);
 	}
@@ -1058,6 +1084,15 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validatePathVariableAttribute(PathVariableAttribute pathVariableAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pathVariableAttribute, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePathVariableResource(PathVariableResource pathVariableResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pathVariableResource, diagnostics, context);
 	}
 
 	/**
@@ -1753,6 +1788,15 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validatePathAttribute(PathAttribute pathAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pathAttribute, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePathResource(PathResource pathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pathResource, diagnostics, context);
 	}
 
 	/**
