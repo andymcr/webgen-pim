@@ -155,13 +155,22 @@ public interface ServicePackage extends EPackage {
 	int SERVICE__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Uses Vich Uploader Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__USES_VICH_UPLOADER_SERVICE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int SERVICE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Service</em>' class.
@@ -469,6 +478,17 @@ public interface ServicePackage extends EPackage {
 	EReference getService_Uses();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.Service#isUsesVichUploaderService <em>Uses Vich Uploader Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uses Vich Uploader Service</em>'.
+	 * @see work.andycarpenter.webgen.pims.service.Service#isUsesVichUploaderService()
+	 * @see #getService()
+	 * @generated
+	 */
+	EAttribute getService_UsesVichUploaderService();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.service.Constant <em>Constant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -689,6 +709,14 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SERVICE__USES = eINSTANCE.getService_Uses();
+
+		/**
+		 * The meta object literal for the '<em><b>Uses Vich Uploader Service</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVICE__USES_VICH_UPLOADER_SERVICE = eINSTANCE.getService_UsesVichUploaderService();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.impl.ConstantImpl <em>Constant</em>}' class.

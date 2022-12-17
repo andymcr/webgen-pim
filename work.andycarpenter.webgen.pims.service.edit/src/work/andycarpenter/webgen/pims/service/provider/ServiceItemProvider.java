@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
@@ -53,6 +54,7 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 
 			addRequiresPropertyDescriptor(object);
 			addUsesPropertyDescriptor(object);
+			addUsesVichUploaderServicePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -98,6 +100,28 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 				 true,
 				 null,
 				 getString("_UI_BusinessPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Vich Uploader Service feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesVichUploaderServicePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Service_usesVichUploaderService_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_usesVichUploaderService_feature", "_UI_Service_type"),
+				 ServicePackage.Literals.SERVICE__USES_VICH_UPLOADER_SERVICE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -170,6 +194,9 @@ public class ServiceItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Service.class)) {
+			case ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ServicePackage.SERVICE__CONSTANTS:
 			case ServicePackage.SERVICE__OPERATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

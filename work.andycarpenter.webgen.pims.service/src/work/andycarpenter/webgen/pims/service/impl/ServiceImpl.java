@@ -3,12 +3,14 @@
 package work.andycarpenter.webgen.pims.service.impl;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,6 +34,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getOperations <em>Operations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getRequires <em>Requires</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#getUses <em>Uses</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ServiceImpl#isUsesVichUploaderService <em>Uses Vich Uploader Service</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +79,26 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * @ordered
 	 */
 	protected EList<Service> uses;
+
+	/**
+	 * The default value of the '{@link #isUsesVichUploaderService() <em>Uses Vich Uploader Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUsesVichUploaderService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USES_VICH_UPLOADER_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUsesVichUploaderService() <em>Uses Vich Uploader Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUsesVichUploaderService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean usesVichUploaderService = USES_VICH_UPLOADER_SERVICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,6 +176,29 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public boolean isUsesVichUploaderService() {
+		return usesVichUploaderService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUsesVichUploaderService(boolean newUsesVichUploaderService) {
+		boolean oldUsesVichUploaderService = usesVichUploaderService;
+		usesVichUploaderService = newUsesVichUploaderService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE, oldUsesVichUploaderService, usesVichUploaderService));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -197,6 +243,8 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return getRequires();
 			case ServicePackage.SERVICE__USES:
 				return getUses();
+			case ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE:
+				return isUsesVichUploaderService();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,6 +274,9 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				getUses().clear();
 				getUses().addAll((Collection<? extends Service>)newValue);
 				return;
+			case ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE:
+				setUsesVichUploaderService((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -250,6 +301,9 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 			case ServicePackage.SERVICE__USES:
 				getUses().clear();
 				return;
+			case ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE:
+				setUsesVichUploaderService(USES_VICH_UPLOADER_SERVICE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -270,8 +324,26 @@ public class ServiceImpl extends NamedElementImpl implements Service {
 				return requires != null && !requires.isEmpty();
 			case ServicePackage.SERVICE__USES:
 				return uses != null && !uses.isEmpty();
+			case ServicePackage.SERVICE__USES_VICH_UPLOADER_SERVICE:
+				return usesVichUploaderService != USES_VICH_UPLOADER_SERVICE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (usesVichUploaderService: ");
+		result.append(usesVichUploaderService);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ServiceImpl

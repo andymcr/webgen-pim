@@ -25,6 +25,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Service/requires"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//Service/uses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//Service/usesVichUploaderService"/>
     </genClasses>
     <genClasses ecoreClass="service.ecore#//Constant">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference service.ecore#//Constant/definedBy"/>

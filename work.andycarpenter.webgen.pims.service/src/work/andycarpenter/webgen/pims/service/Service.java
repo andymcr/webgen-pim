@@ -20,6 +20,7 @@ import work.andycarpenter.webgen.pims.persistence.Repository;
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getOperations <em>Operations</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getRequires <em>Requires</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.Service#getUses <em>Uses</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.Service#isUsesVichUploaderService <em>Uses Vich Uploader Service</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.service.ServicePackage#getService()
@@ -90,5 +91,28 @@ public interface Service extends NamedElement {
 	 * @generated
 	 */
 	EList<Service> getUses();
+
+	/**
+	 * Returns the value of the '<em><b>Uses Vich Uploader Service</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uses Vich Uploader Service</em>' attribute.
+	 * @see #setUsesVichUploaderService(boolean)
+	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getService_UsesVichUploaderService()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isUsesVichUploaderService();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.service.Service#isUsesVichUploaderService <em>Uses Vich Uploader Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uses Vich Uploader Service</em>' attribute.
+	 * @see #isUsesVichUploaderService()
+	 * @generated
+	 */
+	void setUsesVichUploaderService(boolean value);
 
 } // Service

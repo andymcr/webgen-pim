@@ -215,6 +215,16 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getService_UsesVichUploaderService() {
+		return (EAttribute)serviceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getConstant() {
 		return constantEClass;
 	}
@@ -376,6 +386,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEReference(serviceEClass, SERVICE__OPERATIONS);
 		createEReference(serviceEClass, SERVICE__REQUIRES);
 		createEReference(serviceEClass, SERVICE__USES);
+		createEAttribute(serviceEClass, SERVICE__USES_VICH_UPLOADER_SERVICE);
 
 		constantEClass = createEClass(CONSTANT);
 		createEReference(constantEClass, CONSTANT__DEFINED_BY);
@@ -444,6 +455,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEReference(getService_Operations(), this.getBusinessOperation(), this.getBusinessOperation_DefinedBy(), "operations", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Requires(), thePersistencePackage.getRepository(), null, "requires", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Uses(), this.getService(), null, "uses", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getService_UsesVichUploaderService(), ecorePackage.getEBoolean(), "usesVichUploaderService", "false", 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstant_DefinedBy(), this.getService(), this.getService_Constants(), "definedBy", null, 1, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
