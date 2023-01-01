@@ -403,6 +403,7 @@ abstract rule UnitFeature {
 		forcedValue <- website.forcedValue,
 		collectionUiAllowAdd <- website.collectionUiAllowAdd,
 		collectionUiAllowRemove <- website.collectionUiAllowRemove,
+		collectionMaximumValues <- website.collectionMaximumValues,
 		defaultDisplayValue <- website.defaultDisplayValue(),
 		displayDefaultWhen <- website.displayDefaultWhen,
 		emptyDisplayValue <- website.emptyDisplayValue(),
@@ -442,7 +443,11 @@ rule UnitResource {
 				OclUndefined
 			else
 				website.resource.findOrmResource()
-			endif
+			endif,
+		isDeletable <- website.isDeletable,
+		isDownloadable <- website.isDownloadable,
+		showImageWhenEditing <- website.showImageWhenEditing,
+		imageFilter <- website.imageFilter
 	)
 }
 
@@ -455,6 +460,12 @@ rule UnitAssociation {
 				website.options
 			else
 				website.options.findSelection()
+			endif,
+		collectionSortBy <-
+			if website.collectionSortBy.oclIsUndefined() then
+				website.collectionSortBy
+			else
+				website.collectionSortBy.findOrmAttribute()
 			endif,
 		useAutocomplete <- website.useAutocomplete
 	)

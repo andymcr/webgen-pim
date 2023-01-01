@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import work.andycarpenter.webgen.pims.persistence.ImageResource;
 import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 
 import work.andycarpenter.webgen.pims.webui.UnitResource;
@@ -25,6 +26,10 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getResource <em>Resource</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isIsDeletable <em>Is Deletable</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isIsDownloadable <em>Is Downloadable</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isShowImageWhenEditing <em>Show Image When Editing</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getImageFilter <em>Image Filter</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +54,76 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_RESOURCE__NAME).getSettingDelegate();
+
+	/**
+	 * The default value of the '{@link #isIsDeletable() <em>Is Deletable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDeletable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_DELETABLE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isIsDeletable() <em>Is Deletable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDeletable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isDeletable = IS_DELETABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsDownloadable() <em>Is Downloadable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDownloadable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_DOWNLOADABLE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isIsDownloadable() <em>Is Downloadable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDownloadable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isDownloadable = IS_DOWNLOADABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isShowImageWhenEditing() <em>Show Image When Editing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isShowImageWhenEditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SHOW_IMAGE_WHEN_EDITING_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isShowImageWhenEditing() <em>Show Image When Editing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isShowImageWhenEditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean showImageWhenEditing = SHOW_IMAGE_WHEN_EDITING_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getImageFilter() <em>Image Filter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImageFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected ImageResource imageFilter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +210,115 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	 * @generated
 	 */
 	@Override
+	public boolean isIsDeletable() {
+		return isDeletable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsDeletable(boolean newIsDeletable) {
+		boolean oldIsDeletable = isDeletable;
+		isDeletable = newIsDeletable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_RESOURCE__IS_DELETABLE, oldIsDeletable, isDeletable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isIsDownloadable() {
+		return isDownloadable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsDownloadable(boolean newIsDownloadable) {
+		boolean oldIsDownloadable = isDownloadable;
+		isDownloadable = newIsDownloadable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE, oldIsDownloadable, isDownloadable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isShowImageWhenEditing() {
+		return showImageWhenEditing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setShowImageWhenEditing(boolean newShowImageWhenEditing) {
+		boolean oldShowImageWhenEditing = showImageWhenEditing;
+		showImageWhenEditing = newShowImageWhenEditing;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING, oldShowImageWhenEditing, showImageWhenEditing));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ImageResource getImageFilter() {
+		if (imageFilter != null && imageFilter.eIsProxy()) {
+			InternalEObject oldImageFilter = (InternalEObject)imageFilter;
+			imageFilter = (ImageResource)eResolveProxy(oldImageFilter);
+			if (imageFilter != oldImageFilter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER, oldImageFilter, imageFilter));
+			}
+		}
+		return imageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageResource basicGetImageFilter() {
+		return imageFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImageFilter(ImageResource newImageFilter) {
+		ImageResource oldImageFilter = imageFilter;
+		imageFilter = newImageFilter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER, oldImageFilter, imageFilter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
@@ -142,6 +326,15 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 				return basicGetResource();
 			case WebuiPackage.UNIT_RESOURCE__NAME:
 				return getName();
+			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
+				return isIsDeletable();
+			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
+				return isIsDownloadable();
+			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:
+				return isShowImageWhenEditing();
+			case WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER:
+				if (resolve) return getImageFilter();
+				return basicGetImageFilter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +350,18 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
 				setResource((ResourceFeature)newValue);
 				return;
+			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
+				setIsDeletable((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
+				setIsDownloadable((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:
+				setShowImageWhenEditing((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER:
+				setImageFilter((ImageResource)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -171,6 +376,18 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 		switch (featureID) {
 			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
 				setResource((ResourceFeature)null);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
+				setIsDeletable(IS_DELETABLE_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
+				setIsDownloadable(IS_DOWNLOADABLE_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:
+				setShowImageWhenEditing(SHOW_IMAGE_WHEN_EDITING_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER:
+				setImageFilter((ImageResource)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,8 +405,36 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 				return resource != null;
 			case WebuiPackage.UNIT_RESOURCE__NAME:
 				return isSetName();
+			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
+				return isDeletable != IS_DELETABLE_EDEFAULT;
+			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
+				return isDownloadable != IS_DOWNLOADABLE_EDEFAULT;
+			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:
+				return showImageWhenEditing != SHOW_IMAGE_WHEN_EDITING_EDEFAULT;
+			case WebuiPackage.UNIT_RESOURCE__IMAGE_FILTER:
+				return imageFilter != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (isDeletable: ");
+		result.append(isDeletable);
+		result.append(", isDownloadable: ");
+		result.append(isDownloadable);
+		result.append(", showImageWhenEditing: ");
+		result.append(showImageWhenEditing);
+		result.append(')');
+		return result.toString();
 	}
 
 } //UnitResourceImpl

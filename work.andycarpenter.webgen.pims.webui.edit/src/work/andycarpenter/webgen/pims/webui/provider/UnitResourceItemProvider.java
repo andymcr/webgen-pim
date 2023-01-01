@@ -47,6 +47,10 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 
 			addResourcePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addIsDeletablePropertyDescriptor(object);
+			addIsDownloadablePropertyDescriptor(object);
+			addShowImageWhenEditingPropertyDescriptor(object);
+			addImageFilterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,6 +100,94 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Deletable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDeletablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitResource_isDeletable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_isDeletable_feature", "_UI_UnitResource_type"),
+				 WebuiPackage.Literals.UNIT_RESOURCE__IS_DELETABLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Downloadable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDownloadablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitResource_isDownloadable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_isDownloadable_feature", "_UI_UnitResource_type"),
+				 WebuiPackage.Literals.UNIT_RESOURCE__IS_DOWNLOADABLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Show Image When Editing feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addShowImageWhenEditingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitResource_showImageWhenEditing_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_showImageWhenEditing_feature", "_UI_UnitResource_type"),
+				 WebuiPackage.Literals.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Image Filter feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImageFilterPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitResource_imageFilter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_imageFilter_feature", "_UI_UnitResource_type"),
+				 WebuiPackage.Literals.UNIT_RESOURCE__IMAGE_FILTER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns UnitResource.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,6 +226,9 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 
 		switch (notification.getFeatureID(UnitResource.class)) {
 			case WebuiPackage.UNIT_RESOURCE__NAME:
+			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
+			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
+			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
