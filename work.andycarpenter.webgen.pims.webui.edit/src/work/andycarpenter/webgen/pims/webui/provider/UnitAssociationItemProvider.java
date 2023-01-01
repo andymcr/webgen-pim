@@ -65,6 +65,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addSourceEntityPropertyDescriptor(object);
 			addTargetEntityPropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
+			addCollectionSortByPropertyDescriptor(object);
 			addUseAutocompletePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -269,6 +270,34 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 					return Collections.emptySet();
 				}
 		});
+	}
+
+	/**
+	 * This adds a property descriptor for the Collection Sort By feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addCollectionSortByPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_UnitAssociation_collectionSortBy_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_collectionSortBy_feature", "_UI_UnitAssociation_type"),
+			WebuiPackage.Literals.UNIT_ASSOCIATION__COLLECTION_SORT_BY,
+			true, false, true, null,
+			getString("_UI_ModelPropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof UnitAssociation) {
+						final UnitAssociation association = (UnitAssociation) object;
+						return association.getTargetEntity().getAttributes();
+					}
+
+					return Collections.emptySet();
+				}
+			});
 	}
 
 	/**

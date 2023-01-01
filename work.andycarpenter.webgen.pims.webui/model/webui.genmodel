@@ -216,6 +216,7 @@
           ecoreFeature="ecore:EReference webui.ecore#//UnitFeature/forcedValue"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/collectionUiAllowAdd"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/collectionUiAllowRemove"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/collectionMaximumValues"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/defaultDisplayValue"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
           ecoreFeature="ecore:EReference webui.ecore#//UnitFeature/displayDefaultWhen"/>
@@ -243,10 +244,15 @@
           ecoreFeature="ecore:EReference webui.ecore#//UnitResource/resource"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDeletable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDownloadable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/showImageWhenEditing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitResource/imageFilter"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/collectionSortBy"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/useAutocomplete"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitLabel">

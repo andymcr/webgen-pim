@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getForcedValue <em>Forced Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isCollectionUiAllowAdd <em>Collection Ui Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isCollectionUiAllowRemove <em>Collection Ui Allow Remove</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getCollectionMaximumValues <em>Collection Maximum Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen <em>Display Default When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
@@ -170,6 +171,29 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	 * @generated
 	 */
 	void setCollectionUiAllowRemove(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Collection Maximum Values</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Collection Maximum Values</em>' attribute.
+	 * @see #setCollectionMaximumValues(int)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_CollectionMaximumValues()
+	 * @model default="0"
+	 * @generated
+	 */
+	int getCollectionMaximumValues();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getCollectionMaximumValues <em>Collection Maximum Values</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Collection Maximum Values</em>' attribute.
+	 * @see #getCollectionMaximumValues()
+	 * @generated
+	 */
+	void setCollectionMaximumValues(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Display Value</b></em>' attribute.

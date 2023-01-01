@@ -59,6 +59,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addRequiredPropertyDescriptor(object);
 			addCollectionUiAllowAddPropertyDescriptor(object);
 			addCollectionUiAllowRemovePropertyDescriptor(object);
+			addCollectionMaximumValuesPropertyDescriptor(object);
 			addDefaultDisplayValuePropertyDescriptor(object);
 			addEmptyDisplayValuePropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
@@ -223,6 +224,28 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Collection Maximum Values feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCollectionMaximumValuesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitFeature_collectionMaximumValues_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_collectionMaximumValues_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -490,6 +513,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__REQUIRED:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
+			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
 			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
 			case WebuiPackage.UNIT_FEATURE__FOOTER:

@@ -2317,7 +2317,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_DefaultDisplayValue() {
+	public EAttribute getUnitFeature_CollectionMaximumValues() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2327,8 +2327,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getUnitFeature_DefaultDisplayValue() {
+		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getUnitFeature_DisplayDefaultWhen() {
-		return (EReference)unitFeatureEClass.getEStructuralFeatures().get(6);
+		return (EReference)unitFeatureEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2338,16 +2348,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getUnitFeature_EmptyDisplayValue() {
-		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getUnitFeature_Footer() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2357,7 +2357,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_Autofocus() {
+	public EAttribute getUnitFeature_Footer() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2367,7 +2367,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_HeaderClass() {
+	public EAttribute getUnitFeature_Autofocus() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -2377,7 +2377,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_FieldLabelClass() {
+	public EAttribute getUnitFeature_HeaderClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2387,7 +2387,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_FieldValueClass() {
+	public EAttribute getUnitFeature_FieldLabelClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2397,7 +2397,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_InputGroupClass() {
+	public EAttribute getUnitFeature_FieldValueClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2407,8 +2407,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnitFeature_FooterClass() {
+	public EAttribute getUnitFeature_InputGroupClass() {
 		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUnitFeature_FooterClass() {
+		return (EAttribute)unitFeatureEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -2517,6 +2527,46 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getUnitResource_IsDeletable() {
+		return (EAttribute)unitResourceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUnitResource_IsDownloadable() {
+		return (EAttribute)unitResourceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUnitResource_ShowImageWhenEditing() {
+		return (EAttribute)unitResourceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUnitResource_ImageFilter() {
+		return (EReference)unitResourceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getUnitAssociation() {
 		return unitAssociationEClass;
 	}
@@ -2537,8 +2587,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getUnitAssociation_CollectionSortBy() {
+		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getUnitAssociation_UseAutocomplete() {
-		return (EAttribute)unitAssociationEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)unitAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4901,6 +4961,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(unitFeatureEClass, UNIT_FEATURE__FORCED_VALUE);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE);
+		createEAttribute(unitFeatureEClass, UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__DEFAULT_DISPLAY_VALUE);
 		createEReference(unitFeatureEClass, UNIT_FEATURE__DISPLAY_DEFAULT_WHEN);
 		createEAttribute(unitFeatureEClass, UNIT_FEATURE__EMPTY_DISPLAY_VALUE);
@@ -4923,9 +4984,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		unitResourceEClass = createEClass(UNIT_RESOURCE);
 		createEReference(unitResourceEClass, UNIT_RESOURCE__RESOURCE);
 		createEAttribute(unitResourceEClass, UNIT_RESOURCE__NAME);
+		createEAttribute(unitResourceEClass, UNIT_RESOURCE__IS_DELETABLE);
+		createEAttribute(unitResourceEClass, UNIT_RESOURCE__IS_DOWNLOADABLE);
+		createEAttribute(unitResourceEClass, UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING);
+		createEReference(unitResourceEClass, UNIT_RESOURCE__IMAGE_FILTER);
 
 		unitAssociationEClass = createEClass(UNIT_ASSOCIATION);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__COLLECTION_SORT_BY);
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__USE_AUTOCOMPLETE);
 
 		unitLabelEClass = createEClass(UNIT_LABEL);
@@ -5521,6 +5587,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getUnitFeature_ForcedValue(), theExpressionPackage.getExpression(), null, "forcedValue", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitFeature_CollectionUiAllowAdd(), ecorePackage.getEBoolean(), "collectionUiAllowAdd", "false", 1, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitFeature_CollectionUiAllowRemove(), ecorePackage.getEBoolean(), "collectionUiAllowRemove", "false", 1, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitFeature_CollectionMaximumValues(), ecorePackage.getEInt(), "collectionMaximumValues", "0", 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitFeature_DefaultDisplayValue(), ecorePackage.getEString(), "defaultDisplayValue", "", 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitFeature_DisplayDefaultWhen(), theExpressionPackage.getPredicate(), null, "displayDefaultWhen", null, 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitFeature_EmptyDisplayValue(), ecorePackage.getEString(), "emptyDisplayValue", "", 0, 1, UnitFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5543,9 +5610,14 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(unitResourceEClass, UnitResource.class, "UnitResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnitResource_Resource(), thePersistencePackage.getResourceFeature(), null, "resource", null, 1, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitResource_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnitResource.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitResource_IsDeletable(), ecorePackage.getEBoolean(), "isDeletable", "true", 0, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitResource_IsDownloadable(), ecorePackage.getEBoolean(), "isDownloadable", "true", 0, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitResource_ShowImageWhenEditing(), ecorePackage.getEBoolean(), "showImageWhenEditing", "true", 0, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitResource_ImageFilter(), thePersistencePackage.getImageResource(), null, "imageFilter", null, 0, 1, UnitResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitAssociationEClass, UnitAssociation.class, "UnitAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnitAssociation_Options(), thePersistencePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_CollectionSortBy(), thePersistencePackage.getAttribute(), null, "collectionSortBy", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitAssociation_UseAutocomplete(), ecorePackage.getEBoolean(), "useAutocomplete", "false", 1, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitLabelEClass, UnitLabel.class, "UnitLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

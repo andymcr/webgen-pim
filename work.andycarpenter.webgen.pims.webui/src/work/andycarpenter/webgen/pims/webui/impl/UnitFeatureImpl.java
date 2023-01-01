@@ -39,6 +39,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getForcedValue <em>Forced Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isCollectionUiAllowAdd <em>Collection Ui Allow Add</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isCollectionUiAllowRemove <em>Collection Ui Allow Remove</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getCollectionMaximumValues <em>Collection Maximum Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayDefaultWhen <em>Display Default When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
@@ -213,6 +214,26 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected boolean collectionUiAllowRemove = COLLECTION_UI_ALLOW_REMOVE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCollectionMaximumValues() <em>Collection Maximum Values</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCollectionMaximumValues()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLLECTION_MAXIMUM_VALUES_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCollectionMaximumValues() <em>Collection Maximum Values</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCollectionMaximumValues()
+	 * @generated
+	 * @ordered
+	 */
+	protected int collectionMaximumValues = COLLECTION_MAXIMUM_VALUES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultDisplayValue() <em>Default Display Value</em>}' attribute.
@@ -648,6 +669,29 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
+	public int getCollectionMaximumValues() {
+		return collectionMaximumValues;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCollectionMaximumValues(int newCollectionMaximumValues) {
+		int oldCollectionMaximumValues = collectionMaximumValues;
+		collectionMaximumValues = newCollectionMaximumValues;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES, oldCollectionMaximumValues, collectionMaximumValues));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultDisplayValue() {
 		return defaultDisplayValue;
 	}
@@ -953,6 +997,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return isCollectionUiAllowAdd();
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				return isCollectionUiAllowRemove();
+			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
+				return getCollectionMaximumValues();
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
 				return getDefaultDisplayValue();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
@@ -1013,6 +1059,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return;
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				setCollectionUiAllowRemove((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
+				setCollectionMaximumValues((Integer)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
 				setDefaultDisplayValue((String)newValue);
@@ -1083,6 +1132,9 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				setCollectionUiAllowRemove(COLLECTION_UI_ALLOW_REMOVE_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
+				setCollectionMaximumValues(COLLECTION_MAXIMUM_VALUES_EDEFAULT);
+				return;
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
 				setDefaultDisplayValue(DEFAULT_DISPLAY_VALUE_EDEFAULT);
 				return;
@@ -1143,6 +1195,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return collectionUiAllowAdd != COLLECTION_UI_ALLOW_ADD_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 				return collectionUiAllowRemove != COLLECTION_UI_ALLOW_REMOVE_EDEFAULT;
+			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
+				return collectionMaximumValues != COLLECTION_MAXIMUM_VALUES_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
 				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
@@ -1229,6 +1283,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(collectionUiAllowAdd);
 		result.append(", collectionUiAllowRemove: ");
 		result.append(collectionUiAllowRemove);
+		result.append(", collectionMaximumValues: ");
+		result.append(collectionMaximumValues);
 		result.append(", defaultDisplayValue: ");
 		result.append(defaultDisplayValue);
 		result.append(", emptyDisplayValue: ");

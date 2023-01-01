@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -36,6 +37,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getSourceEntity <em>Source Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getCollectionSortBy <em>Collection Sort By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isUseAutocomplete <em>Use Autocomplete</em>}</li>
  * </ul>
  *
@@ -131,6 +133,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @ordered
 	 */
 	protected Selection options;
+
+	/**
+	 * The cached value of the '{@link #getCollectionSortBy() <em>Collection Sort By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCollectionSortBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected Attribute collectionSortBy;
 
 	/**
 	 * The default value of the '{@link #isUseAutocomplete() <em>Use Autocomplete</em>}' attribute.
@@ -449,6 +461,46 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
+	public Attribute getCollectionSortBy() {
+		if (collectionSortBy != null && collectionSortBy.eIsProxy()) {
+			InternalEObject oldCollectionSortBy = (InternalEObject)collectionSortBy;
+			collectionSortBy = (Attribute)eResolveProxy(oldCollectionSortBy);
+			if (collectionSortBy != oldCollectionSortBy) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY, oldCollectionSortBy, collectionSortBy));
+			}
+		}
+		return collectionSortBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute basicGetCollectionSortBy() {
+		return collectionSortBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCollectionSortBy(Attribute newCollectionSortBy) {
+		Attribute oldCollectionSortBy = collectionSortBy;
+		collectionSortBy = newCollectionSortBy;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY, oldCollectionSortBy, collectionSortBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isUseAutocomplete() {
 		return useAutocomplete;
 	}
@@ -528,6 +580,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				if (resolve) return getOptions();
 				return basicGetOptions();
+			case WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY:
+				if (resolve) return getCollectionSortBy();
+				return basicGetCollectionSortBy();
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				return isUseAutocomplete();
 		}
@@ -556,6 +611,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)newValue);
+				return;
+			case WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY:
+				setCollectionSortBy((Attribute)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				setUseAutocomplete((Boolean)newValue);
@@ -586,6 +644,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)null);
+				return;
+			case WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY:
+				setCollectionSortBy((Attribute)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				setUseAutocomplete(USE_AUTOCOMPLETE_EDEFAULT);
@@ -620,6 +681,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				return options != null;
+			case WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY:
+				return collectionSortBy != null;
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				return useAutocomplete != USE_AUTOCOMPLETE_EDEFAULT;
 		}

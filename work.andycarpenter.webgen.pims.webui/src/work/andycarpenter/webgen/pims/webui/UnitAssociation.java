@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
@@ -14,6 +15,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getCollectionSortBy <em>Collection Sort By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}</li>
  * </ul>
  *
@@ -48,6 +50,28 @@ public interface UnitAssociation extends UnitFeature, PathAssociation {
 	 * @generated
 	 */
 	void setOptions(Selection value);
+
+	/**
+	 * Returns the value of the '<em><b>Collection Sort By</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Collection Sort By</em>' reference.
+	 * @see #setCollectionSortBy(Attribute)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_CollectionSortBy()
+	 * @model
+	 * @generated
+	 */
+	Attribute getCollectionSortBy();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getCollectionSortBy <em>Collection Sort By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Collection Sort By</em>' reference.
+	 * @see #getCollectionSortBy()
+	 * @generated
+	 */
+	void setCollectionSortBy(Attribute value);
 
 	/**
 	 * Returns the value of the '<em><b>Use Autocomplete</b></em>' attribute.

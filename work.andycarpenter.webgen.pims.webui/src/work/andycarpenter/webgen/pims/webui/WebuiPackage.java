@@ -3602,13 +3602,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Collection Maximum Values</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES = UNIT_FIELD_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 9;
+	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
@@ -3617,7 +3626,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 10;
+	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
@@ -3626,7 +3635,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 11;
+	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -3635,7 +3644,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Autofocus</b></em>' attribute.
@@ -3644,7 +3653,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -3653,7 +3662,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -3662,7 +3671,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -3671,7 +3680,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
@@ -3680,7 +3689,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
+	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -3689,7 +3698,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -3698,7 +3707,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 19;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
@@ -3889,6 +3898,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__COLLECTION_UI_ALLOW_REMOVE = UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE;
+
+	/**
+	 * The feature id for the '<em><b>Collection Maximum Values</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__COLLECTION_MAXIMUM_VALUES = UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -4234,6 +4252,15 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE;
 
 	/**
+	 * The feature id for the '<em><b>Collection Maximum Values</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__COLLECTION_MAXIMUM_VALUES = UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES;
+
+	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4342,13 +4369,49 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__NAME = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Is Deletable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__IS_DELETABLE = UNIT_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Downloadable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__IS_DOWNLOADABLE = UNIT_FEATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Show Image When Editing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING = UNIT_FEATURE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__IMAGE_FILTER = UNIT_FEATURE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Unit Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_RESOURCE_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Unit Resource</em>' class.
@@ -4541,6 +4604,15 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__COLLECTION_UI_ALLOW_REMOVE = UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE;
 
 	/**
+	 * The feature id for the '<em><b>Collection Maximum Values</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__COLLECTION_MAXIMUM_VALUES = UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES;
+
+	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4712,13 +4784,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Collection Sort By</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__COLLECTION_SORT_BY = UNIT_FEATURE_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Use Autocomplete</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 9;
+	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -4727,7 +4808,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 10;
+	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Unit Association</em>' class.
@@ -21393,6 +21474,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_CollectionUiAllowRemove();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getCollectionMaximumValues <em>Collection Maximum Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Collection Maximum Values</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getCollectionMaximumValues()
+	 * @see #getUnitFeature()
+	 * @generated
+	 */
+	EAttribute getUnitFeature_CollectionMaximumValues();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21611,6 +21703,50 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitResource_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitResource#isIsDeletable <em>Is Deletable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Deletable</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#isIsDeletable()
+	 * @see #getUnitResource()
+	 * @generated
+	 */
+	EAttribute getUnitResource_IsDeletable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitResource#isIsDownloadable <em>Is Downloadable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Downloadable</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#isIsDownloadable()
+	 * @see #getUnitResource()
+	 * @generated
+	 */
+	EAttribute getUnitResource_IsDownloadable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitResource#isShowImageWhenEditing <em>Show Image When Editing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Show Image When Editing</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#isShowImageWhenEditing()
+	 * @see #getUnitResource()
+	 * @generated
+	 */
+	EAttribute getUnitResource_ShowImageWhenEditing();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitResource#getImageFilter <em>Image Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Image Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#getImageFilter()
+	 * @see #getUnitResource()
+	 * @generated
+	 */
+	EReference getUnitResource_ImageFilter();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation <em>Unit Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21630,6 +21766,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnitAssociation_Options();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getCollectionSortBy <em>Collection Sort By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Collection Sort By</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getCollectionSortBy()
+	 * @see #getUnitAssociation()
+	 * @generated
+	 */
+	EReference getUnitAssociation_CollectionSortBy();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}'.
@@ -25173,6 +25320,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = eINSTANCE.getUnitFeature_CollectionUiAllowRemove();
 
 		/**
+		 * The meta object literal for the '<em><b>Collection Maximum Values</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES = eINSTANCE.getUnitFeature_CollectionMaximumValues();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Display Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25337,6 +25492,38 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_RESOURCE__NAME = eINSTANCE.getUnitResource_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Deletable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_RESOURCE__IS_DELETABLE = eINSTANCE.getUnitResource_IsDeletable();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Downloadable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_RESOURCE__IS_DOWNLOADABLE = eINSTANCE.getUnitResource_IsDownloadable();
+
+		/**
+		 * The meta object literal for the '<em><b>Show Image When Editing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING = eINSTANCE.getUnitResource_ShowImageWhenEditing();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Filter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_RESOURCE__IMAGE_FILTER = eINSTANCE.getUnitResource_ImageFilter();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl <em>Unit Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25353,6 +25540,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNIT_ASSOCIATION__OPTIONS = eINSTANCE.getUnitAssociation_Options();
+
+		/**
+		 * The meta object literal for the '<em><b>Collection Sort By</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_ASSOCIATION__COLLECTION_SORT_BY = eINSTANCE.getUnitAssociation_CollectionSortBy();
 
 		/**
 		 * The meta object literal for the '<em><b>Use Autocomplete</b></em>' attribute feature.
