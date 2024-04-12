@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
+import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.StringLiteral;
 import work.andycarpenter.webgen.pims.expression.TimeLiteral;
 import work.andycarpenter.webgen.pims.expression.Variable;
@@ -89,6 +90,13 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	private EClass timeLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sizeFunctionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -377,6 +385,26 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	@Override
 	public EAttribute getTimeLiteral_Value() {
 		return (EAttribute)timeLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSizeFunction() {
+		return sizeFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSizeFunction_Feature() {
+		return (EReference)sizeFunctionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -758,6 +786,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		timeLiteralEClass = createEClass(TIME_LITERAL);
 		createEAttribute(timeLiteralEClass, TIME_LITERAL__VALUE);
 
+		sizeFunctionEClass = createEClass(SIZE_FUNCTION);
+		createEReference(sizeFunctionEClass, SIZE_FUNCTION__FEATURE);
+
 		functionCallEClass = createEClass(FUNCTION_CALL);
 		createEAttribute(functionCallEClass, FUNCTION_CALL__NAME);
 		createEReference(functionCallEClass, FUNCTION_CALL__ACTUALS);
@@ -840,6 +871,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		integerLiteralEClass.getESuperTypes().add(this.getLiteral());
 		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
 		timeLiteralEClass.getESuperTypes().add(this.getLiteral());
+		sizeFunctionEClass.getESuperTypes().add(this.getExpression());
 		functionCallEClass.getESuperTypes().add(this.getExpression());
 		variableEClass.getESuperTypes().add(this.getExpression());
 		predicateEClass.getESuperTypes().add(this.getExpression());
@@ -873,6 +905,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 
 		initEClass(timeLiteralEClass, TimeLiteral.class, "TimeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimeLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, TimeLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sizeFunctionEClass, SizeFunction.class, "SizeFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSizeFunction_Feature(), this.getVariable(), null, "feature", null, 1, 1, SizeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionCallEClass, FunctionCall.class, "FunctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionCall_Name(), ecorePackage.getEString(), "name", null, 1, 1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

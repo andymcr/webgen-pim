@@ -417,6 +417,61 @@ public interface ExpressionPackage extends EPackage {
 	int TIME_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl <em>Size Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getSizeFunction()
+	 * @generated
+	 */
+	int SIZE_FUNCTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION__SUFFIXES = EXPRESSION__SUFFIXES;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION__FEATURE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Size Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Size Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl <em>Function Call</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -424,7 +479,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getFunctionCall()
 	 * @generated
 	 */
-	int FUNCTION_CALL = 7;
+	int FUNCTION_CALL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -488,7 +543,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 8;
+	int VARIABLE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -534,7 +589,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicate()
 	 * @generated
 	 */
-	int PREDICATE = 9;
+	int PREDICATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -589,7 +644,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanVariable()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_VARIABLE = 10;
+	int PREDICATE_BOOLEAN_VARIABLE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -653,7 +708,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanOperator()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_OPERATOR = 11;
+	int PREDICATE_BOOLEAN_OPERATOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -726,7 +781,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateEqualityOperator()
 	 * @generated
 	 */
-	int PREDICATE_EQUALITY_OPERATOR = 12;
+	int PREDICATE_EQUALITY_OPERATOR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -799,7 +854,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateComparisonOperator()
 	 * @generated
 	 */
-	int PREDICATE_COMPARISON_OPERATOR = 13;
+	int PREDICATE_COMPARISON_OPERATOR = 14;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -881,7 +936,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateInOperator()
 	 * @generated
 	 */
-	int PREDICATE_IN_OPERATOR = 14;
+	int PREDICATE_IN_OPERATOR = 15;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -954,7 +1009,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsOperator()
 	 * @generated
 	 */
-	int PREDICATE_IS_OPERATOR = 15;
+	int PREDICATE_IS_OPERATOR = 16;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1027,7 +1082,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateLikeOperator()
 	 * @generated
 	 */
-	int PREDICATE_LIKE_OPERATOR = 16;
+	int PREDICATE_LIKE_OPERATOR = 17;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1100,7 +1155,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsEmpty()
 	 * @generated
 	 */
-	int PREDICATE_IS_EMPTY = 17;
+	int PREDICATE_IS_EMPTY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1164,7 +1219,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsNull()
 	 * @generated
 	 */
-	int PREDICATE_IS_NULL = 18;
+	int PREDICATE_IS_NULL = 19;
 
 	/**
 	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
@@ -1228,7 +1283,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanOperator()
 	 * @generated
 	 */
-	int BOOLEAN_OPERATOR = 19;
+	int BOOLEAN_OPERATOR = 20;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.ComparisionOperator <em>Comparision Operator</em>}' enum.
@@ -1238,7 +1293,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getComparisionOperator()
 	 * @generated
 	 */
-	int COMPARISION_OPERATOR = 20;
+	int COMPARISION_OPERATOR = 21;
 
 
 	/**
@@ -1376,6 +1431,27 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTimeLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.SizeFunction <em>Size Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Size Function</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.SizeFunction
+	 * @generated
+	 */
+	EClass getSizeFunction();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.SizeFunction#getFeature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.SizeFunction#getFeature()
+	 * @see #getSizeFunction()
+	 * @generated
+	 */
+	EReference getSizeFunction_Feature();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.FunctionCall <em>Function Call</em>}'.
@@ -1866,6 +1942,24 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TIME_LITERAL__VALUE = eINSTANCE.getTimeLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl <em>Size Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getSizeFunction()
+		 * @generated
+		 */
+		EClass SIZE_FUNCTION = eINSTANCE.getSizeFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIZE_FUNCTION__FEATURE = eINSTANCE.getSizeFunction_Feature();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl <em>Function Call</em>}' class.

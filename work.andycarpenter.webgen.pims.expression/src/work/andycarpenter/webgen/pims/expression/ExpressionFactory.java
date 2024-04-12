@@ -67,6 +67,15 @@ public interface ExpressionFactory extends EFactory {
 	TimeLiteral createTimeLiteral();
 
 	/**
+	 * Returns a new object of class '<em>Size Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Size Function</em>'.
+	 * @generated
+	 */
+	SizeFunction createSizeFunction();
+
+	/**
 	 * Returns a new object of class '<em>Function Call</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -87,7 +87,15 @@ rule CurrentUser {
 
 
 -- @extends Expression
-rule functionCall {
+rule Sizefunction {
+	from website : Website!SizeFunction (website.isInterfaceExpression())
+	to waf : WAF!SizeFunction (
+		feature <- website.feature
+	)
+}
+
+-- @extends Expression
+rule FunctionCall {
 	from website : Website!FunctionCall (website.isInterfaceExpression())
 	to waf : WAF!FunctionCall (
 		name <- website.name,

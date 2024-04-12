@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.expression/src"
     modelPluginID="work.andycarpenter.webgen.pims.expression" modelName="Expression"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    complianceLevel="17.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>expression.ecore</foreignModel>
   <genPackages prefix="Expression" basePackage="work.andycarpenter.webgen.pims" disposableProviderFactory="true"
       extensibleProviderFactory="true" ecorePackage="expression.ecore#/">
@@ -33,6 +33,10 @@
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//TimeLiteral">
       <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//TimeLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="expression.ecore#//SizeFunction">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
+          ecoreFeature="ecore:EReference expression.ecore#//SizeFunction/feature"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//FunctionCall">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//FunctionCall/name"/>

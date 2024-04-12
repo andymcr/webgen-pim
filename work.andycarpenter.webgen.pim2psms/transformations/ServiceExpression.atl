@@ -68,6 +68,14 @@ rule CurrentUser {
 }
 
 
+rule SizeFunction {
+	from website : Website!SizeFunction (website.isServiceExpression())
+	to service : Service!SizeFunction (
+		feature <- website.feature
+	)
+}
+
+
 abstract rule Predicate {
 	from website : Website!Predicate
 	to service : Service!Predicate (

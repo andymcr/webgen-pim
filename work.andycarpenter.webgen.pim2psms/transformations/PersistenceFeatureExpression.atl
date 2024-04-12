@@ -64,6 +64,13 @@ rule CurrentUser {
 }
 
 
+rule SizeFunction {
+	from website : Website!SizeFunction (website.isPresistenceFeatureExpression())
+	to orm : ORM!SizeFunction (
+		feature <- website.feature
+	)
+}
+
 rule FunctionCall {
 	from website : Website!FunctionCall (website.isPresistenceFeatureExpression())
 	to orm : ORM!FunctionCall (
