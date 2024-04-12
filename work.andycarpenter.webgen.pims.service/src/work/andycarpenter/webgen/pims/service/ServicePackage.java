@@ -247,15 +247,6 @@ public interface ServicePackage extends EPackage {
 	int CONSTANT_REFERENCE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_REFERENCE__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

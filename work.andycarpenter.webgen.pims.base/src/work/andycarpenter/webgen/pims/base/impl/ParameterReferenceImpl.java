@@ -2,12 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.base.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -15,9 +10,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
 import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.ParameterReference;
@@ -31,7 +23,6 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl#getParameter <em>Parameter</em>}</li>
@@ -40,16 +31,6 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
  * @generated
  */
 public class ParameterReferenceImpl extends MinimalEObjectImpl.Container implements ParameterReference {
-	/**
-	 * The cached value of the '{@link #getSuffixes() <em>Suffixes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuffixes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> suffixes;
-
 	/**
 	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -97,19 +78,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	protected EClass eStaticClass() {
 		return BasePackage.Literals.PARAMETER_REFERENCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getSuffixes() {
-		if (suffixes == null) {
-			suffixes = new EDataTypeUniqueEList<String>(String.class, this, BasePackage.PARAMETER_REFERENCE__SUFFIXES);
-		}
-		return suffixes;
 	}
 
 	/**
@@ -199,8 +167,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
-				return getSuffixes();
 			case BasePackage.PARAMETER_REFERENCE__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
@@ -222,10 +188,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
-				getSuffixes().clear();
-				getSuffixes().addAll((Collection<? extends String>)newValue);
-				return;
 			case BasePackage.PARAMETER_REFERENCE__PARAMETER:
 				setParameter((FormalParameter)newValue);
 				return;
@@ -241,9 +203,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
-				getSuffixes().clear();
-				return;
 			case BasePackage.PARAMETER_REFERENCE__PARAMETER:
 				setParameter((FormalParameter)null);
 				return;
@@ -259,8 +218,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BasePackage.PARAMETER_REFERENCE__SUFFIXES:
-				return suffixes != null && !suffixes.isEmpty();
 			case BasePackage.PARAMETER_REFERENCE__ROOT_CONTAINER:
 				return isSetRootContainer();
 			case BasePackage.PARAMETER_REFERENCE__NAME:
@@ -269,22 +226,6 @@ public class ParameterReferenceImpl extends MinimalEObjectImpl.Container impleme
 				return parameter != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (suffixes: ");
-		result.append(suffixes);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ParameterReferenceImpl

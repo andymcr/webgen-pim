@@ -79,7 +79,7 @@ public class PathItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

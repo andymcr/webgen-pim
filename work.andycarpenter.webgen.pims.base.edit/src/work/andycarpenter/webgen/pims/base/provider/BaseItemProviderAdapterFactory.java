@@ -45,6 +45,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
 
+import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
 /**
@@ -392,6 +393,20 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseSizeFunction(SizeFunction object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
+						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

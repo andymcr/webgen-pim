@@ -1477,7 +1477,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnitStyles_InstanceAnchorClass() {
+	public EAttribute getCollectionUnitStyles_InstanceActionClass() {
 		return (EAttribute)collectionUnitStylesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2137,7 +2137,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDynamicUnit_LocalInstanceAnchorClass() {
+	public EAttribute getDynamicUnit_LocalInstanceActionClass() {
 		return (EAttribute)dynamicUnitEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -4387,7 +4387,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAction_AnchorClass() {
+	public EAttribute getAction_DisabledMessage() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -4397,7 +4397,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAction_HeaderClass() {
+	public EAttribute getAction_AnchorClass() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -4407,7 +4407,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAction_FooterClass() {
+	public EAttribute getAction_HeaderClass() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -4417,8 +4417,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAction_FooterClass() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getAction_ContainingType() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(12);
+		return (EReference)actionEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -4857,7 +4867,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		collectionUnitStylesEClass = createEClass(COLLECTION_UNIT_STYLES);
 		createEAttribute(collectionUnitStylesEClass, COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS);
-		createEAttribute(collectionUnitStylesEClass, COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS);
+		createEAttribute(collectionUnitStylesEClass, COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS);
 
 		defaultUnitStylesEClass = createEClass(DEFAULT_UNIT_STYLES);
 
@@ -4936,7 +4946,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__LOCAL_CONTROL_CLASS);
 		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS);
 		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS);
-		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS);
+		createEAttribute(dynamicUnitEClass, DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS);
 
 		routeActualEClass = createEClass(ROUTE_ACTUAL);
 		createEReference(routeActualEClass, ROUTE_ACTUAL__ACTUAL_FOR);
@@ -5226,6 +5236,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(actionEClass, ACTION__CONFIRM_MESSAGE);
 		createEAttribute(actionEClass, ACTION__SUCCESS_MESSAGE);
 		createEAttribute(actionEClass, ACTION__FAILURE_MESSAGE);
+		createEAttribute(actionEClass, ACTION__DISABLED_MESSAGE);
 		createEAttribute(actionEClass, ACTION__ANCHOR_CLASS);
 		createEAttribute(actionEClass, ACTION__HEADER_CLASS);
 		createEAttribute(actionEClass, ACTION__FOOTER_CLASS);
@@ -5483,7 +5494,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(collectionUnitStylesEClass, CollectionUnitStyles.class, "CollectionUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollectionUnitStyles_InstanceControlClass(), ecorePackage.getEString(), "instanceControlClass", "", 0, 1, CollectionUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnitStyles_InstanceAnchorClass(), ecorePackage.getEString(), "instanceAnchorClass", "", 0, 1, CollectionUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnitStyles_InstanceActionClass(), ecorePackage.getEString(), "instanceActionClass", "", 0, 1, CollectionUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(defaultUnitStylesEClass, DefaultUnitStyles.class, "DefaultUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5562,7 +5573,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getDynamicUnit_LocalControlClass(), ecorePackage.getEString(), "localControlClass", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDynamicUnit_LocalInstanceControlClass(), ecorePackage.getEString(), "localInstanceControlClass", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDynamicUnit_LocalAnchorClass(), ecorePackage.getEString(), "localAnchorClass", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDynamicUnit_LocalInstanceAnchorClass(), ecorePackage.getEString(), "localInstanceAnchorClass", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDynamicUnit_LocalInstanceActionClass(), ecorePackage.getEString(), "localInstanceActionClass", "", 0, 1, DynamicUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(routeActualEClass, RouteActual.class, "RouteActual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRouteActual_ActualFor(), this.getDynamicUnit(), this.getDynamicUnit_RouteActuals(), "actualFor", null, 1, 1, RouteActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5852,6 +5863,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getAction_ConfirmMessage(), ecorePackage.getEString(), "confirmMessage", "", 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_SuccessMessage(), ecorePackage.getEString(), "successMessage", "", 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_FailureMessage(), ecorePackage.getEString(), "failureMessage", "", 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_DisabledMessage(), ecorePackage.getEString(), "disabledMessage", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_AnchorClass(), ecorePackage.getEString(), "anchorClass", "", 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_HeaderClass(), ecorePackage.getEString(), "headerClass", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_FooterClass(), ecorePackage.getEString(), "footerClass", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

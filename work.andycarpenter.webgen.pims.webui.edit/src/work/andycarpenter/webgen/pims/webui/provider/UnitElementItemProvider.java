@@ -305,6 +305,11 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
+				 ExpressionFactory.eINSTANCE.createSizeFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
 				 ExpressionFactory.eINSTANCE.createFunctionCall()));
 
 		newChildDescriptors.add

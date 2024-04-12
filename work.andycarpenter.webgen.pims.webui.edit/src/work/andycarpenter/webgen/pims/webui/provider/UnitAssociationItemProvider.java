@@ -238,7 +238,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

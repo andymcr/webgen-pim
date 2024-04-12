@@ -40,6 +40,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
+import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Order;
@@ -1757,6 +1758,30 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseSizeFunction(SizeFunction object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
+						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
+						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
+						 WebuiFactory.eINSTANCE.createPathVariableResource()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

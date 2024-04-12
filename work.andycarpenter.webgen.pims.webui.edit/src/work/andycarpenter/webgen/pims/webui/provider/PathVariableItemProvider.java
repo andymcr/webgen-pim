@@ -62,34 +62,11 @@ public class PathVariableItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuffixesPropertyDescriptor(object);
 			addRootContainerPropertyDescriptor(object);
 			addUseContainerAsContextPropertyDescriptor(object);
 			addContextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Suffixes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuffixesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Expression_suffixes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_suffixes_feature", "_UI_Expression_type"),
-				 ExpressionPackage.Literals.EXPRESSION__SUFFIXES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_ExpressionPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -132,7 +109,7 @@ public class PathVariableItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 
@@ -154,7 +131,7 @@ public class PathVariableItemProvider
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 
@@ -183,7 +160,6 @@ public class PathVariableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathVariable.class)) {
-			case WebuiPackage.PATH_VARIABLE__SUFFIXES:
 			case WebuiPackage.PATH_VARIABLE__USE_CONTAINER_AS_CONTEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

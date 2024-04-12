@@ -248,6 +248,11 @@ public class RouteActualItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
+				 ExpressionFactory.eINSTANCE.createSizeFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
 				 ExpressionFactory.eINSTANCE.createFunctionCall()));
 
 		newChildDescriptors.add

@@ -27,7 +27,6 @@ helper context Website!Expression def: isInterfaceExpression() : Boolean
 abstract rule Expression {
 	from website : Website!Expression (website.isInterfaceExpression())
 	to waf : WAF!Expression (
-		suffixes <- website.suffixes
 	)
 }
 

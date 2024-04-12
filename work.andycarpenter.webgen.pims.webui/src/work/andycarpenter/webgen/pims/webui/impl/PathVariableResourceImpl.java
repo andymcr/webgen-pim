@@ -2,20 +2,12 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.Variable;
@@ -34,7 +26,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableResourceImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableResourceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableResourceImpl#isUseContainerAsContext <em>Use Container As Context</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.PathVariableResourceImpl#getContext <em>Context</em>}</li>
@@ -43,16 +34,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class PathVariableResourceImpl extends PathResourceImpl implements PathVariableResource {
-	/**
-	 * The cached value of the '{@link #getSuffixes() <em>Suffixes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuffixes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> suffixes;
-
 	/**
 	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -110,19 +91,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.PATH_VARIABLE_RESOURCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getSuffixes() {
-		if (suffixes == null) {
-			suffixes = new EDataTypeUniqueEList<String>(String.class, this, WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES);
-		}
-		return suffixes;
 	}
 
 	/**
@@ -204,8 +172,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES:
-				return getSuffixes();
 			case WebuiPackage.PATH_VARIABLE_RESOURCE__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
@@ -223,14 +189,9 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES:
-				getSuffixes().clear();
-				getSuffixes().addAll((Collection<? extends String>)newValue);
-				return;
 			case WebuiPackage.PATH_VARIABLE_RESOURCE__USE_CONTAINER_AS_CONTEXT:
 				setUseContainerAsContext((Boolean)newValue);
 				return;
@@ -246,9 +207,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES:
-				getSuffixes().clear();
-				return;
 			case WebuiPackage.PATH_VARIABLE_RESOURCE__USE_CONTAINER_AS_CONTEXT:
 				setUseContainerAsContext(USE_CONTAINER_AS_CONTEXT_EDEFAULT);
 				return;
@@ -264,8 +222,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES:
-				return suffixes != null && !suffixes.isEmpty();
 			case WebuiPackage.PATH_VARIABLE_RESOURCE__ROOT_CONTAINER:
 				return isSetRootContainer();
 			case WebuiPackage.PATH_VARIABLE_RESOURCE__USE_CONTAINER_AS_CONTEXT:
@@ -285,7 +241,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Expression.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES: return ExpressionPackage.EXPRESSION__SUFFIXES;
 				case WebuiPackage.PATH_VARIABLE_RESOURCE__ROOT_CONTAINER: return ExpressionPackage.EXPRESSION__ROOT_CONTAINER;
 				default: return -1;
 			}
@@ -314,7 +269,6 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Expression.class) {
 			switch (baseFeatureID) {
-				case ExpressionPackage.EXPRESSION__SUFFIXES: return WebuiPackage.PATH_VARIABLE_RESOURCE__SUFFIXES;
 				case ExpressionPackage.EXPRESSION__ROOT_CONTAINER: return WebuiPackage.PATH_VARIABLE_RESOURCE__ROOT_CONTAINER;
 				default: return -1;
 			}
@@ -344,9 +298,7 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (suffixes: ");
-		result.append(suffixes);
-		result.append(", useContainerAsContext: ");
+		result.append(" (useContainerAsContext: ");
 		result.append(useContainerAsContext);
 		result.append(')');
 		return result.toString();

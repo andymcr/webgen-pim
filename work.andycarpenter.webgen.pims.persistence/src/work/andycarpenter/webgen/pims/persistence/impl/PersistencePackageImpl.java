@@ -2786,7 +2786,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		  (getEntity_AllAssociations(),
 		   source,
 		   new String[] {
-			   "derivation", "allFeatures->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"
+			   "derivation", "allFeatures\n\t->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asSet()\n\t->union(associationEnds)->asOrderedSet()"
 		   });
 		addAnnotation
 		  (getEntity_ContainingAssociation(),
