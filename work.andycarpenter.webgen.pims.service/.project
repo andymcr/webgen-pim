@@ -45,6 +45,5 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
-		<nature>org.eclipse.ocl.pivot.ui.oclnature</nature>
 	</natures>
 </projectDescription>
