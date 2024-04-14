@@ -4,12 +4,10 @@ package work.andycarpenter.webgen.pims.persistence.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
 import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.CommandParameter;
@@ -25,7 +23,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.FunctionCall;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
@@ -36,6 +33,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
+import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.util.PersistenceAdapterFactory;
@@ -937,6 +935,20 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseSizeFunction(SizeFunction object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
+						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

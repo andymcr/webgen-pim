@@ -13,7 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceControlClass <em>Instance Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceAnchorClass <em>Instance Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass <em>Instance Action Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnitStyles()
@@ -45,26 +45,26 @@ public interface CollectionUnitStyles extends DynamicUnitStyles {
 	void setInstanceControlClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Instance Action Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Instance Anchor Class</em>' attribute.
-	 * @see #setInstanceAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnitStyles_InstanceAnchorClass()
+	 * @return the value of the '<em>Instance Action Class</em>' attribute.
+	 * @see #setInstanceActionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnitStyles_InstanceActionClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getInstanceAnchorClass();
+	String getInstanceActionClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceAnchorClass <em>Instance Anchor Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass <em>Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Instance Anchor Class</em>' attribute.
-	 * @see #getInstanceAnchorClass()
+	 * @param value the new value of the '<em>Instance Action Class</em>' attribute.
+	 * @see #getInstanceActionClass()
 	 * @generated
 	 */
-	void setInstanceAnchorClass(String value);
+	void setInstanceActionClass(String value);
 
 } // CollectionUnitStyles

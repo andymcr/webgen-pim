@@ -46,7 +46,7 @@ public class CollectionUnitStylesItemProvider extends DynamicUnitStylesItemProvi
 			super.getPropertyDescriptors(object);
 
 			addInstanceControlClassPropertyDescriptor(object);
-			addInstanceAnchorClassPropertyDescriptor(object);
+			addInstanceActionClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -74,19 +74,19 @@ public class CollectionUnitStylesItemProvider extends DynamicUnitStylesItemProvi
 	}
 
 	/**
-	 * This adds a property descriptor for the Instance Anchor Class feature.
+	 * This adds a property descriptor for the Instance Action Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInstanceAnchorClassPropertyDescriptor(Object object) {
+	protected void addInstanceActionClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CollectionUnitStyles_instanceAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnitStyles_instanceAnchorClass_feature", "_UI_CollectionUnitStyles_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS,
+				 getString("_UI_CollectionUnitStyles_instanceActionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnitStyles_instanceActionClass_feature", "_UI_CollectionUnitStyles_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class CollectionUnitStylesItemProvider extends DynamicUnitStylesItemProvi
 
 		switch (notification.getFeatureID(CollectionUnitStyles.class)) {
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
-			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS:
+			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

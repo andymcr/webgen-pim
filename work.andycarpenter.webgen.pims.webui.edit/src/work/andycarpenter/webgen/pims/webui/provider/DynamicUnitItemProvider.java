@@ -62,7 +62,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addLocalControlClassPropertyDescriptor(object);
 			addLocalInstanceControlClassPropertyDescriptor(object);
 			addLocalAnchorClassPropertyDescriptor(object);
-			addLocalInstanceAnchorClassPropertyDescriptor(object);
+			addLocalInstanceActionClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -398,19 +398,19 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Local Instance Anchor Class feature.
+	 * This adds a property descriptor for the Local Instance Action Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLocalInstanceAnchorClassPropertyDescriptor(Object object) {
+	protected void addLocalInstanceActionClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_localInstanceAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_localInstanceAnchorClass_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS,
+				 getString("_UI_DynamicUnit_localInstanceActionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_localInstanceActionClass_feature", "_UI_DynamicUnit_type"),
+				 WebuiPackage.Literals.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -493,7 +493,7 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_CONTROL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_CONTROL_CLASS:
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
-			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.DYNAMIC_UNIT__ACTIONS:

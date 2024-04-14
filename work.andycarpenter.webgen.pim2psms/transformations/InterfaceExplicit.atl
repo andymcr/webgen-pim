@@ -183,7 +183,7 @@ rule CollectionUnitStyles {
 	from website : Website!CollectionUnitStyles
 	to waf : WAF!CollectionUnitStyles (
 		instanceControlClass <- website.instanceControlClass,
-		instanceAnchorClass <- website.instanceAnchorClass
+		instanceActionClass <- website.instanceActionClass
 	)
 }
 
@@ -725,7 +725,7 @@ rule TabularUnit {
 		localFooterClass <- website.footerClassOverride,
 		rowClasses <- website.rowClasses,
 		localInstanceControlClass <- website.localInstanceControlClass,
-		localInstanceAnchorClass <- website.localInstanceAnchorClass
+		localInstanceActionClass <- website.localInstanceActionClass
 	)
 }
 
@@ -743,7 +743,7 @@ abstract rule CardsUnit {
 		localCardFooterClass <- website.localCardFooterClass,
 		localBadgeClass <- website.localBadgeClass,
 		localInstanceControlClass <- website.localInstanceControlClass,
-		localInstanceAnchorClass <- website.localInstanceAnchorClass
+		localInstanceActionClass <- website.localInstanceActionClass
 	)
 }
 
@@ -1005,6 +1005,7 @@ abstract rule Action {
 		confirmMessage <- website.confirmMessage,
 		successMessage <- website.successMessage,
 		failureMessage <- website.failureMessage,
+		disabledMessage <- website.disabledMessage,
 		localAnchorClass <- website.anchorClass,
 		headerClass <- website.headerClass,
 		footerClass <- website.footerClass

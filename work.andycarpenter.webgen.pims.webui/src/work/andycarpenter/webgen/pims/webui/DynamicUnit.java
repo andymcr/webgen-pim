@@ -30,7 +30,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalControlClass <em>Local Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceActionClass <em>Local Instance Action Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit()
@@ -384,26 +384,26 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	void setLocalAnchorClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Local Instance Anchor Class</em>' attribute.
-	 * @see #setLocalInstanceAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalInstanceAnchorClass()
+	 * @return the value of the '<em>Local Instance Action Class</em>' attribute.
+	 * @see #setLocalInstanceActionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_LocalInstanceActionClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getLocalInstanceAnchorClass();
+	String getLocalInstanceActionClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceActionClass <em>Local Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Local Instance Anchor Class</em>' attribute.
-	 * @see #getLocalInstanceAnchorClass()
+	 * @param value the new value of the '<em>Local Instance Action Class</em>' attribute.
+	 * @see #getLocalInstanceActionClass()
 	 * @generated
 	 */
-	void setLocalInstanceAnchorClass(String value);
+	void setLocalInstanceActionClass(String value);
 
 } // DynamicUnit

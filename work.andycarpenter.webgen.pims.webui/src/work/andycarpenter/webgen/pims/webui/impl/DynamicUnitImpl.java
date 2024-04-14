@@ -52,7 +52,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalControlClass <em>Local Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceControlClass <em>Local Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalAnchorClass <em>Local Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getLocalInstanceActionClass <em>Local Instance Action Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -379,24 +379,24 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String localAnchorClass = LOCAL_ANCHOR_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLocalInstanceAnchorClass() <em>Local Instance Anchor Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalInstanceActionClass() <em>Local Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocalInstanceAnchorClass()
+	 * @see #getLocalInstanceActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_INSTANCE_ACTION_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getLocalInstanceAnchorClass() <em>Local Instance Anchor Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalInstanceActionClass() <em>Local Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocalInstanceAnchorClass()
+	 * @see #getLocalInstanceActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String localInstanceAnchorClass = LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT;
+	protected String localInstanceActionClass = LOCAL_INSTANCE_ACTION_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -875,8 +875,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public String getLocalInstanceAnchorClass() {
-		return localInstanceAnchorClass;
+	public String getLocalInstanceActionClass() {
+		return localInstanceActionClass;
 	}
 
 	/**
@@ -885,11 +885,11 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @generated
 	 */
 	@Override
-	public void setLocalInstanceAnchorClass(String newLocalInstanceAnchorClass) {
-		String oldLocalInstanceAnchorClass = localInstanceAnchorClass;
-		localInstanceAnchorClass = newLocalInstanceAnchorClass;
+	public void setLocalInstanceActionClass(String newLocalInstanceActionClass) {
+		String oldLocalInstanceActionClass = localInstanceActionClass;
+		localInstanceActionClass = newLocalInstanceActionClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS, oldLocalInstanceAnchorClass, localInstanceAnchorClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS, oldLocalInstanceActionClass, localInstanceActionClass));
 	}
 
 	/**
@@ -979,8 +979,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getLocalInstanceControlClass();
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				return getLocalAnchorClass();
-			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
-				return getLocalInstanceAnchorClass();
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS:
+				return getLocalInstanceActionClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1051,8 +1051,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				setLocalAnchorClass((String)newValue);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
-				setLocalInstanceAnchorClass((String)newValue);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS:
+				setLocalInstanceActionClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1120,8 +1120,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				setLocalAnchorClass(LOCAL_ANCHOR_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
-				setLocalInstanceAnchorClass(LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS:
+				setLocalInstanceActionClass(LOCAL_INSTANCE_ACTION_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1173,8 +1173,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT == null ? localInstanceControlClass != null : !LOCAL_INSTANCE_CONTROL_CLASS_EDEFAULT.equals(localInstanceControlClass);
 			case WebuiPackage.DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS:
 				return LOCAL_ANCHOR_CLASS_EDEFAULT == null ? localAnchorClass != null : !LOCAL_ANCHOR_CLASS_EDEFAULT.equals(localAnchorClass);
-			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS:
-				return LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT == null ? localInstanceAnchorClass != null : !LOCAL_INSTANCE_ANCHOR_CLASS_EDEFAULT.equals(localInstanceAnchorClass);
+			case WebuiPackage.DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS:
+				return LOCAL_INSTANCE_ACTION_CLASS_EDEFAULT == null ? localInstanceActionClass != null : !LOCAL_INSTANCE_ACTION_CLASS_EDEFAULT.equals(localInstanceActionClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1253,8 +1253,8 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		result.append(localInstanceControlClass);
 		result.append(", localAnchorClass: ");
 		result.append(localAnchorClass);
-		result.append(", localInstanceAnchorClass: ");
-		result.append(localInstanceAnchorClass);
+		result.append(", localInstanceActionClass: ");
+		result.append(localInstanceActionClass);
 		result.append(')');
 		return result.toString();
 	}

@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getInstanceControlClass <em>Instance Control Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getInstanceAnchorClass <em>Instance Anchor Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getInstanceActionClass <em>Instance Action Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,24 +47,24 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 	protected String instanceControlClass = INSTANCE_CONTROL_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInstanceAnchorClass() <em>Instance Anchor Class</em>}' attribute.
+	 * The default value of the '{@link #getInstanceActionClass() <em>Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstanceAnchorClass()
+	 * @see #getInstanceActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INSTANCE_ANCHOR_CLASS_EDEFAULT = "";
+	protected static final String INSTANCE_ACTION_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getInstanceAnchorClass() <em>Instance Anchor Class</em>}' attribute.
+	 * The cached value of the '{@link #getInstanceActionClass() <em>Instance Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstanceAnchorClass()
+	 * @see #getInstanceActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String instanceAnchorClass = INSTANCE_ANCHOR_CLASS_EDEFAULT;
+	protected String instanceActionClass = INSTANCE_ACTION_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,8 +114,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 	 * @generated
 	 */
 	@Override
-	public String getInstanceAnchorClass() {
-		return instanceAnchorClass;
+	public String getInstanceActionClass() {
+		return instanceActionClass;
 	}
 
 	/**
@@ -124,11 +124,11 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 	 * @generated
 	 */
 	@Override
-	public void setInstanceAnchorClass(String newInstanceAnchorClass) {
-		String oldInstanceAnchorClass = instanceAnchorClass;
-		instanceAnchorClass = newInstanceAnchorClass;
+	public void setInstanceActionClass(String newInstanceActionClass) {
+		String oldInstanceActionClass = instanceActionClass;
+		instanceActionClass = newInstanceActionClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS, oldInstanceAnchorClass, instanceAnchorClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS, oldInstanceActionClass, instanceActionClass));
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				return getInstanceControlClass();
-			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS:
-				return getInstanceAnchorClass();
+			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
+				return getInstanceActionClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,8 +158,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				setInstanceControlClass((String)newValue);
 				return;
-			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS:
-				setInstanceAnchorClass((String)newValue);
+			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
+				setInstanceActionClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,8 +176,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				setInstanceControlClass(INSTANCE_CONTROL_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS:
-				setInstanceAnchorClass(INSTANCE_ANCHOR_CLASS_EDEFAULT);
+			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
+				setInstanceActionClass(INSTANCE_ACTION_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -193,8 +193,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				return INSTANCE_CONTROL_CLASS_EDEFAULT == null ? instanceControlClass != null : !INSTANCE_CONTROL_CLASS_EDEFAULT.equals(instanceControlClass);
-			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS:
-				return INSTANCE_ANCHOR_CLASS_EDEFAULT == null ? instanceAnchorClass != null : !INSTANCE_ANCHOR_CLASS_EDEFAULT.equals(instanceAnchorClass);
+			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
+				return INSTANCE_ACTION_CLASS_EDEFAULT == null ? instanceActionClass != null : !INSTANCE_ACTION_CLASS_EDEFAULT.equals(instanceActionClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -211,8 +211,8 @@ public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements C
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (instanceControlClass: ");
 		result.append(instanceControlClass);
-		result.append(", instanceAnchorClass: ");
-		result.append(instanceAnchorClass);
+		result.append(", instanceActionClass: ");
+		result.append(instanceActionClass);
 		result.append(')');
 		return result.toString();
 	}

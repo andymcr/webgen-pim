@@ -5,9 +5,7 @@ package work.andycarpenter.webgen.pims.persistence.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import work.andycarpenter.webgen.pims.base.provider.BaseEditPlugin;
-
 import work.andycarpenter.webgen.pims.expression.provider.ExpressionEditPlugin;
 
 /**
