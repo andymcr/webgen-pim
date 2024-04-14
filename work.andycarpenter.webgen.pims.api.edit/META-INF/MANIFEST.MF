@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: work.andycarpenter.webgen.pims.api.provider.ApiEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: work.andycarpenter.webgen.pims.api.provider
 Require-Bundle: org.eclipse.core.runtime,
  work.andycarpenter.webgen.pims.api;visibility:=reexport,
