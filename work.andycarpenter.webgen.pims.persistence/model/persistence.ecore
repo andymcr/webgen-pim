@@ -81,7 +81,7 @@
         eType="#//Association" changeable="false" volatile="true" transient="true"
         derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="allFeatures->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asOrderedSet()"/>
+        <details key="derivation" value="allFeatures&#xA;&#x9;->select(f | f.oclIsKindOf(Association)).oclAsType(Association)->asSet()&#xA;&#x9;->union(associationEnds)->asOrderedSet()"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingAssociation"

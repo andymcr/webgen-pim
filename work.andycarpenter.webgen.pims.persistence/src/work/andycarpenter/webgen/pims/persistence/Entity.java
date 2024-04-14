@@ -209,7 +209,7 @@ public interface Entity extends Classifier {
 	 * @return the value of the '<em>All Associations</em>' reference list.
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_AllAssociations()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='allFeatures-&gt;select(f | f.oclIsKindOf(Association)).oclAsType(Association)-&gt;asOrderedSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='allFeatures\n\t-&gt;select(f | f.oclIsKindOf(Association)).oclAsType(Association)-&gt;asSet()\n\t-&gt;union(associationEnds)-&gt;asOrderedSet()'"
 	 * @generated
 	 */
 	EList<Association> getAllAssociations();
