@@ -24,6 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getFailureMessage <em>Failure Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getDisabledMessage <em>Disabled Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getFooterClass <em>Footer Class</em>}</li>
@@ -228,6 +229,28 @@ public interface Action extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setFailureMessage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Disabled Message</em>' attribute.
+	 * @see #setDisabledMessage(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_DisabledMessage()
+	 * @model
+	 * @generated
+	 */
+	String getDisabledMessage();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getDisabledMessage <em>Disabled Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Disabled Message</em>' attribute.
+	 * @see #getDisabledMessage()
+	 * @generated
+	 */
+	void setDisabledMessage(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Anchor Class</b></em>' attribute.

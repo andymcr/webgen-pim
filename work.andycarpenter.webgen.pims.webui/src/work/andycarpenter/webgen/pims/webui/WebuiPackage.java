@@ -1046,13 +1046,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+	int COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit Styles</em>' class.
@@ -1172,13 +1172,13 @@ public interface WebuiPackage extends EPackage {
 	int DEFAULT_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS;
+	int DEFAULT_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Default Unit Styles</em>' class.
@@ -1308,13 +1308,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS;
+	int CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
@@ -1752,13 +1752,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS;
+	int GALLERY_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Gallery Unit Styles</em>' class.
@@ -1888,13 +1888,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS;
+	int SLIDER_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Slider Unit Styles</em>' class.
@@ -2079,13 +2079,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS;
+	int TABULAR_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -3231,13 +3231,13 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 18;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CONTENT_UNIT_FEATURE_COUNT + 19;
+	int DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS = CONTENT_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic Unit</em>' class.
@@ -6067,13 +6067,13 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int SINGLETON_UNIT__LOCAL_INSTANCE_ACTION_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -6401,13 +6401,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int COLLECTION_UNIT__LOCAL_INSTANCE_ACTION_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -6978,13 +6978,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7393,13 +7393,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int CREATE_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -7818,13 +7818,13 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int UPDATE_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -8241,13 +8241,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int CREATE_UPDATE_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -8683,13 +8683,13 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int MAP_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -9134,13 +9134,13 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__LOCAL_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int DETAILS_UNIT__LOCAL_INSTANCE_ACTION_CLASS = SINGLETON_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -9486,13 +9486,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int TABULAR_UNIT__LOCAL_INSTANCE_ACTION_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10090,13 +10090,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -10920,13 +10920,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -11568,13 +11568,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12279,13 +12279,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__LOCAL_ANCHOR_CLASS = CARDS_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS = CARDS_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -12990,13 +12990,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int SLIDER_UNIT__LOCAL_INSTANCE_ACTION_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -13611,13 +13611,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__LOCAL_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int GALLERY_UNIT__LOCAL_INSTANCE_ACTION_CLASS = COLLECTION_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Unit Title</b></em>' reference.
@@ -14241,13 +14241,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int CONTROL_UNIT__LOCAL_INSTANCE_ACTION_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -14583,13 +14583,13 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__LOCAL_ANCHOR_CLASS = CONTROL_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = CONTROL_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int SEARCH_UNIT__LOCAL_INSTANCE_ACTION_CLASS = CONTROL_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Submit Label</b></em>' attribute.
@@ -14944,13 +14944,13 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int REGISTRATION_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -15359,13 +15359,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int LOGIN_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -15774,13 +15774,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__LOCAL_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int LOGOUT_UNIT__LOCAL_INSTANCE_ACTION_CLASS = DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Logout Unit</em>' class.
@@ -16099,13 +16099,13 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -16568,13 +16568,13 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__LOCAL_ANCHOR_CLASS = EDIT_UNIT__LOCAL_ANCHOR_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Local Instance Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Instance Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESET_PASSWORD_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS;
+	int RESET_PASSWORD_UNIT__LOCAL_INSTANCE_ACTION_CLASS = EDIT_UNIT__LOCAL_INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' reference.
@@ -17440,15 +17440,6 @@ public interface WebuiPackage extends EPackage {
 	int FEATURE_PATH_RESOURCE_OPERATION_COUNT = PATH_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_VARIABLE__SUFFIXES = ExpressionPackage.VARIABLE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17566,22 +17557,13 @@ public interface WebuiPackage extends EPackage {
 	int PATH_VARIABLE_ASSOCIATION__TARGET_ENTITY = PATH_ASSOCIATION__TARGET_ENTITY;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_VARIABLE_ASSOCIATION__SUFFIXES = PATH_ASSOCIATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ASSOCIATION__ROOT_CONTAINER = PATH_ASSOCIATION_FEATURE_COUNT + 1;
+	int PATH_VARIABLE_ASSOCIATION__ROOT_CONTAINER = PATH_ASSOCIATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -17590,7 +17572,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ASSOCIATION__USE_CONTAINER_AS_CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 2;
+	int PATH_VARIABLE_ASSOCIATION__USE_CONTAINER_AS_CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -17599,7 +17581,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ASSOCIATION__CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 3;
+	int PATH_VARIABLE_ASSOCIATION__CONTEXT = PATH_ASSOCIATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Path Variable Association</em>' class.
@@ -17608,7 +17590,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ASSOCIATION_FEATURE_COUNT = PATH_ASSOCIATION_FEATURE_COUNT + 4;
+	int PATH_VARIABLE_ASSOCIATION_FEATURE_COUNT = PATH_ASSOCIATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Path Variable Association</em>' class.
@@ -17647,22 +17629,13 @@ public interface WebuiPackage extends EPackage {
 	int PATH_VARIABLE_ATTRIBUTE__NAME = PATH_ATTRIBUTE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_VARIABLE_ATTRIBUTE__SUFFIXES = PATH_ATTRIBUTE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ATTRIBUTE__ROOT_CONTAINER = PATH_ATTRIBUTE_FEATURE_COUNT + 1;
+	int PATH_VARIABLE_ATTRIBUTE__ROOT_CONTAINER = PATH_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -17671,7 +17644,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ATTRIBUTE__USE_CONTAINER_AS_CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 2;
+	int PATH_VARIABLE_ATTRIBUTE__USE_CONTAINER_AS_CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -17680,7 +17653,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ATTRIBUTE__CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 3;
+	int PATH_VARIABLE_ATTRIBUTE__CONTEXT = PATH_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Path Variable Attribute</em>' class.
@@ -17689,7 +17662,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_ATTRIBUTE_FEATURE_COUNT = PATH_ATTRIBUTE_FEATURE_COUNT + 4;
+	int PATH_VARIABLE_ATTRIBUTE_FEATURE_COUNT = PATH_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Path Variable Attribute</em>' class.
@@ -17738,22 +17711,13 @@ public interface WebuiPackage extends EPackage {
 	int PATH_VARIABLE_RESOURCE__NAME = PATH_RESOURCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_VARIABLE_RESOURCE__SUFFIXES = PATH_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_RESOURCE__ROOT_CONTAINER = PATH_RESOURCE_FEATURE_COUNT + 1;
+	int PATH_VARIABLE_RESOURCE__ROOT_CONTAINER = PATH_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
@@ -17762,7 +17726,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_RESOURCE__USE_CONTAINER_AS_CONTEXT = PATH_RESOURCE_FEATURE_COUNT + 2;
+	int PATH_VARIABLE_RESOURCE__USE_CONTAINER_AS_CONTEXT = PATH_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -17771,7 +17735,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_RESOURCE__CONTEXT = PATH_RESOURCE_FEATURE_COUNT + 3;
+	int PATH_VARIABLE_RESOURCE__CONTEXT = PATH_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Path Variable Resource</em>' class.
@@ -17780,7 +17744,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_VARIABLE_RESOURCE_FEATURE_COUNT = PATH_RESOURCE_FEATURE_COUNT + 4;
+	int PATH_VARIABLE_RESOURCE_FEATURE_COUNT = PATH_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Path Variable Resource</em>' class.
@@ -17965,13 +17929,22 @@ public interface WebuiPackage extends EPackage {
 	int ACTION__FAILURE_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__DISABLED_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -17980,7 +17953,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -17989,7 +17962,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -17998,7 +17971,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -18007,7 +17980,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -18126,6 +18099,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SECURITY_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -18320,6 +18302,15 @@ public interface WebuiPackage extends EPackage {
 	int DELETE_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
 
 	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18489,6 +18480,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECT_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -18662,6 +18662,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_SELECT_ACTION__FAILURE_MESSAGE = SELECT_ACTION__FAILURE_MESSAGE;
 
 	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18831,6 +18840,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_SELECT_ACTION__FAILURE_MESSAGE = SELECT_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -19014,6 +19032,15 @@ public interface WebuiPackage extends EPackage {
 	int TARGET_ACTION__FAILURE_MESSAGE = SELECT_ACTION__FAILURE_MESSAGE;
 
 	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TARGET_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19183,6 +19210,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPERATION_ACTION__FAILURE_MESSAGE = ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -19385,6 +19421,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_OPERATION_ACTION__FAILURE_MESSAGE = OPERATION_ACTION__FAILURE_MESSAGE;
 
 	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19563,6 +19608,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_OPERATION_ACTION__FAILURE_MESSAGE = OPERATION_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -19753,6 +19807,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION__FAILURE_MESSAGE = OPERATION_ACTION__FAILURE_MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -20568,15 +20631,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionUnitStyles_InstanceControlClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceAnchorClass <em>Instance Anchor Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass <em>Instance Action Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceAnchorClass()
+	 * @return the meta object for the attribute '<em>Instance Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass()
 	 * @see #getCollectionUnitStyles()
 	 * @generated
 	 */
-	EAttribute getCollectionUnitStyles_InstanceAnchorClass();
+	EAttribute getCollectionUnitStyles_InstanceActionClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles <em>Cards Unit Styles</em>}'.
@@ -21278,15 +21341,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnit_LocalAnchorClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass <em>Local Instance Anchor Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceActionClass <em>Local Instance Action Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Local Instance Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceAnchorClass()
+	 * @return the meta object for the attribute '<em>Local Instance Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DynamicUnit#getLocalInstanceActionClass()
 	 * @see #getDynamicUnit()
 	 * @generated
 	 */
-	EAttribute getDynamicUnit_LocalInstanceAnchorClass();
+	EAttribute getDynamicUnit_LocalInstanceActionClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitField <em>Unit Field</em>}'.
@@ -23701,6 +23764,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getAction_FailureMessage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getDisabledMessage <em>Disabled Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disabled Message</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Action#getDisabledMessage()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_DisabledMessage();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -24612,12 +24686,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = eINSTANCE.getCollectionUnitStyles_InstanceControlClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Instance Anchor Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Instance Action Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COLLECTION_UNIT_STYLES__INSTANCE_ANCHOR_CLASS = eINSTANCE.getCollectionUnitStyles_InstanceAnchorClass();
+		EAttribute COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = eINSTANCE.getCollectionUnitStyles_InstanceActionClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl <em>Cards Unit Styles</em>}' class.
@@ -25172,12 +25246,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT__LOCAL_ANCHOR_CLASS = eINSTANCE.getDynamicUnit_LocalAnchorClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Local Instance Anchor Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Instance Action Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DYNAMIC_UNIT__LOCAL_INSTANCE_ANCHOR_CLASS = eINSTANCE.getDynamicUnit_LocalInstanceAnchorClass();
+		EAttribute DYNAMIC_UNIT__LOCAL_INSTANCE_ACTION_CLASS = eINSTANCE.getDynamicUnit_LocalInstanceActionClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl <em>Unit Field</em>}' class.
@@ -27074,6 +27148,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTION__FAILURE_MESSAGE = eINSTANCE.getAction_FailureMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Disabled Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__DISABLED_MESSAGE = eINSTANCE.getAction_DisabledMessage();
 
 		/**
 		 * The meta object literal for the '<em><b>Anchor Class</b></em>' attribute feature.

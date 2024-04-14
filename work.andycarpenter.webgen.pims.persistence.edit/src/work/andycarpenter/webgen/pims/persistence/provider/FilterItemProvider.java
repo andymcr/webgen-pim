@@ -17,14 +17,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 import work.andycarpenter.webgen.pims.base.BasePackage;
-
 import work.andycarpenter.webgen.pims.base.provider.NamedDisplayElementItemProvider;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
-
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 

@@ -106,7 +106,7 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceControlClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceActionClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//CardsUnitStyles">
@@ -187,7 +187,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localAnchorClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceActionClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//RouteActual">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//RouteActual/actualFor"/>
@@ -438,7 +438,8 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ResetPasswordUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//Path">
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//Path/containingType"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EReference webui.ecore#//Path/containingType"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//PathAssociation">
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
@@ -482,8 +483,9 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//FeaturePathResource"/>
     <genClasses image="false" ecoreClass="webui.ecore#//PathVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//PathVariable/useContainerAsContext"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//PathVariable/context"/>
+      <genFeatures createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//PathVariable/useContainerAsContext"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EReference webui.ecore#//PathVariable/context"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//PathVariableAssociation"/>
     <genClasses ecoreClass="webui.ecore#//PathVariableAttribute"/>
@@ -507,6 +509,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/confirmMessage"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/successMessage"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/failureMessage"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/disabledMessage"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/anchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/headerClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/footerClass"/>

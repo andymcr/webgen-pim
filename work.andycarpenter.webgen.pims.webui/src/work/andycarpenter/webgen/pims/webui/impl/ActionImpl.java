@@ -35,6 +35,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getFailureMessage <em>Failure Message</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getDisabledMessage <em>Disabled Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getAnchorClass <em>Anchor Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getHeaderClass <em>Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getFooterClass <em>Footer Class</em>}</li>
@@ -173,6 +174,26 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * @ordered
 	 */
 	protected String failureMessage = FAILURE_MESSAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDisabledMessage() <em>Disabled Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDisabledMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DISABLED_MESSAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDisabledMessage() <em>Disabled Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDisabledMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String disabledMessage = DISABLED_MESSAGE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAnchorClass() <em>Anchor Class</em>}' attribute.
@@ -536,6 +557,29 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * @generated
 	 */
 	@Override
+	public String getDisabledMessage() {
+		return disabledMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDisabledMessage(String newDisabledMessage) {
+		String oldDisabledMessage = disabledMessage;
+		disabledMessage = newDisabledMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__DISABLED_MESSAGE, oldDisabledMessage, disabledMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getAnchorClass() {
 		return anchorClass;
 	}
@@ -703,6 +747,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return getSuccessMessage();
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
 				return getFailureMessage();
+			case WebuiPackage.ACTION__DISABLED_MESSAGE:
+				return getDisabledMessage();
 			case WebuiPackage.ACTION__ANCHOR_CLASS:
 				return getAnchorClass();
 			case WebuiPackage.ACTION__HEADER_CLASS:
@@ -747,6 +793,9 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return;
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
 				setFailureMessage((String)newValue);
+				return;
+			case WebuiPackage.ACTION__DISABLED_MESSAGE:
+				setDisabledMessage((String)newValue);
 				return;
 			case WebuiPackage.ACTION__ANCHOR_CLASS:
 				setAnchorClass((String)newValue);
@@ -796,6 +845,9 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
 				setFailureMessage(FAILURE_MESSAGE_EDEFAULT);
 				return;
+			case WebuiPackage.ACTION__DISABLED_MESSAGE:
+				setDisabledMessage(DISABLED_MESSAGE_EDEFAULT);
+				return;
 			case WebuiPackage.ACTION__ANCHOR_CLASS:
 				setAnchorClass(ANCHOR_CLASS_EDEFAULT);
 				return;
@@ -838,6 +890,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return SUCCESS_MESSAGE_EDEFAULT == null ? successMessage != null : !SUCCESS_MESSAGE_EDEFAULT.equals(successMessage);
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
 				return FAILURE_MESSAGE_EDEFAULT == null ? failureMessage != null : !FAILURE_MESSAGE_EDEFAULT.equals(failureMessage);
+			case WebuiPackage.ACTION__DISABLED_MESSAGE:
+				return DISABLED_MESSAGE_EDEFAULT == null ? disabledMessage != null : !DISABLED_MESSAGE_EDEFAULT.equals(disabledMessage);
 			case WebuiPackage.ACTION__ANCHOR_CLASS:
 				return ANCHOR_CLASS_EDEFAULT == null ? anchorClass != null : !ANCHOR_CLASS_EDEFAULT.equals(anchorClass);
 			case WebuiPackage.ACTION__HEADER_CLASS:
@@ -870,6 +924,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 		result.append(successMessage);
 		result.append(", failureMessage: ");
 		result.append(failureMessage);
+		result.append(", disabledMessage: ");
+		result.append(disabledMessage);
 		result.append(", anchorClass: ");
 		result.append(anchorClass);
 		result.append(", headerClass: ");

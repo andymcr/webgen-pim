@@ -59,6 +59,7 @@ public class ActionItemProvider
 			addConfirmMessagePropertyDescriptor(object);
 			addSuccessMessagePropertyDescriptor(object);
 			addFailureMessagePropertyDescriptor(object);
+			addDisabledMessagePropertyDescriptor(object);
 			addAnchorClassPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
 			addFooterClassPropertyDescriptor(object);
@@ -191,6 +192,28 @@ public class ActionItemProvider
 				 getString("_UI_Action_failureMessage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Action_failureMessage_feature", "_UI_Action_type"),
 				 WebuiPackage.Literals.ACTION__FAILURE_MESSAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Disabled Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDisabledMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Action_disabledMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Action_disabledMessage_feature", "_UI_Action_type"),
+				 WebuiPackage.Literals.ACTION__DISABLED_MESSAGE,
 				 true,
 				 false,
 				 false,
@@ -350,6 +373,7 @@ public class ActionItemProvider
 			case WebuiPackage.ACTION__CONFIRM_MESSAGE:
 			case WebuiPackage.ACTION__SUCCESS_MESSAGE:
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
+			case WebuiPackage.ACTION__DISABLED_MESSAGE:
 			case WebuiPackage.ACTION__ANCHOR_CLASS:
 			case WebuiPackage.ACTION__HEADER_CLASS:
 			case WebuiPackage.ACTION__FOOTER_CLASS:
