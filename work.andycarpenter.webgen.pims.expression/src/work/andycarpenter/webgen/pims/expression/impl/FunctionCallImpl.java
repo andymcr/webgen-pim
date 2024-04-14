@@ -16,8 +16,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +31,6 @@ import work.andycarpenter.webgen.pims.expression.FunctionCall;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl#getActuals <em>Actuals</em>}</li>
@@ -42,16 +39,6 @@ import work.andycarpenter.webgen.pims.expression.FunctionCall;
  * @generated
  */
 public class FunctionCallImpl extends MinimalEObjectImpl.Container implements FunctionCall {
-	/**
-	 * The cached value of the '{@link #getSuffixes() <em>Suffixes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuffixes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> suffixes;
-
 	/**
 	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -109,19 +96,6 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 	@Override
 	protected EClass eStaticClass() {
 		return ExpressionPackage.Literals.FUNCTION_CALL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getSuffixes() {
-		if (suffixes == null) {
-			suffixes = new EDataTypeUniqueEList<String>(String.class, this, ExpressionPackage.FUNCTION_CALL__SUFFIXES);
-		}
-		return suffixes;
 	}
 
 	/**
@@ -211,8 +185,6 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpressionPackage.FUNCTION_CALL__SUFFIXES:
-				return getSuffixes();
 			case ExpressionPackage.FUNCTION_CALL__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
@@ -233,10 +205,6 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpressionPackage.FUNCTION_CALL__SUFFIXES:
-				getSuffixes().clear();
-				getSuffixes().addAll((Collection<? extends String>)newValue);
-				return;
 			case ExpressionPackage.FUNCTION_CALL__NAME:
 				setName((String)newValue);
 				return;
@@ -256,9 +224,6 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.FUNCTION_CALL__SUFFIXES:
-				getSuffixes().clear();
-				return;
 			case ExpressionPackage.FUNCTION_CALL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -277,8 +242,6 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.FUNCTION_CALL__SUFFIXES:
-				return suffixes != null && !suffixes.isEmpty();
 			case ExpressionPackage.FUNCTION_CALL__ROOT_CONTAINER:
 				return isSetRootContainer();
 			case ExpressionPackage.FUNCTION_CALL__NAME:
@@ -299,9 +262,7 @@ public class FunctionCallImpl extends MinimalEObjectImpl.Container implements Fu
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (suffixes: ");
-		result.append(suffixes);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

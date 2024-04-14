@@ -2,8 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.expression;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.Expression#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.Expression#getRootContainer <em>Root Container</em>}</li>
  * </ul>
  *
@@ -24,22 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Expression extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Suffixes</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Suffixes</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Suffixes</em>' attribute list.
-	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getExpression_Suffixes()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getSuffixes();
-
 	/**
 	 * Returns the value of the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->

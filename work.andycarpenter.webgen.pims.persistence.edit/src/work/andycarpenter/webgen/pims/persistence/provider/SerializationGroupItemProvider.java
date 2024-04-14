@@ -12,9 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
 import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
-
 import work.andycarpenter.webgen.pims.persistence.SerializationGroup;
 
 /**

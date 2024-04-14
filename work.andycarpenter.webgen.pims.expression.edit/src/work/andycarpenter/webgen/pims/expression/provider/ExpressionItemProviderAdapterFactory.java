@@ -204,6 +204,29 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.SizeFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SizeFunctionItemProvider sizeFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.SizeFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSizeFunctionAdapter() {
+		if (sizeFunctionItemProvider == null) {
+			sizeFunctionItemProvider = new SizeFunctionItemProvider(this);
+		}
+
+		return sizeFunctionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.FunctionCall} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,6 +593,7 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 		if (integerLiteralItemProvider != null) integerLiteralItemProvider.dispose();
 		if (stringLiteralItemProvider != null) stringLiteralItemProvider.dispose();
 		if (timeLiteralItemProvider != null) timeLiteralItemProvider.dispose();
+		if (sizeFunctionItemProvider != null) sizeFunctionItemProvider.dispose();
 		if (functionCallItemProvider != null) functionCallItemProvider.dispose();
 		if (predicateBooleanVariableItemProvider != null) predicateBooleanVariableItemProvider.dispose();
 		if (predicateBooleanOperatorItemProvider != null) predicateBooleanOperatorItemProvider.dispose();

@@ -21,9 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference;
 
@@ -34,13 +32,7 @@ import work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference;
  * @generated
  */
 public class RepositoryFeatureReferenceItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,34 +54,11 @@ public class RepositoryFeatureReferenceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuffixesPropertyDescriptor(object);
 			addRootContainerPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addFeaturePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Suffixes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuffixesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Expression_suffixes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_suffixes_feature", "_UI_Expression_type"),
-				 ExpressionPackage.Literals.EXPRESSION__SUFFIXES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_ExpressionPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -196,7 +165,6 @@ public class RepositoryFeatureReferenceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RepositoryFeatureReference.class)) {
-			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__SUFFIXES:
 			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

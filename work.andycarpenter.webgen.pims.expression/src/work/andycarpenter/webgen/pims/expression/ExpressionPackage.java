@@ -69,22 +69,13 @@ public interface ExpressionPackage extends EPackage {
 	int EXPRESSION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION__SUFFIXES = 0;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION__ROOT_CONTAINER = 1;
+	int EXPRESSION__ROOT_CONTAINER = 0;
 
 	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
@@ -93,7 +84,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_FEATURE_COUNT = 2;
+	int EXPRESSION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Expression</em>' class.
@@ -113,15 +104,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int LITERAL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LITERAL__SUFFIXES = EXPRESSION__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -161,15 +143,6 @@ public interface ExpressionPackage extends EPackage {
 	int NULL_LITERAL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NULL_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,15 +178,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int BOOLEAN_LITERAL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -262,15 +226,6 @@ public interface ExpressionPackage extends EPackage {
 	int INTEGER_LITERAL = 4;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -315,15 +270,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int STRING_LITERAL = 5;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -372,15 +318,6 @@ public interface ExpressionPackage extends EPackage {
 	int TIME_LITERAL = 6;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_LITERAL__SUFFIXES = LITERAL__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -427,15 +364,6 @@ public interface ExpressionPackage extends EPackage {
 	int SIZE_FUNCTION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIZE_FUNCTION__SUFFIXES = EXPRESSION__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -480,15 +408,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int FUNCTION_CALL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__SUFFIXES = EXPRESSION__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -546,15 +465,6 @@ public interface ExpressionPackage extends EPackage {
 	int VARIABLE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__SUFFIXES = EXPRESSION__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -590,15 +500,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE__SUFFIXES = EXPRESSION__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -645,15 +546,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE_BOOLEAN_VARIABLE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -709,15 +601,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE_BOOLEAN_OPERATOR = 12;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -784,15 +667,6 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_EQUALITY_OPERATOR = 13;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_EQUALITY_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -855,15 +729,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE_COMPARISON_OPERATOR = 14;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_COMPARISON_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -939,15 +804,6 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IN_OPERATOR = 15;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_IN_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1010,15 +866,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE_IS_OPERATOR = 16;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_IS_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -1085,15 +932,6 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_LIKE_OPERATOR = 17;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR__SUFFIXES = PREDICATE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1158,15 +996,6 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_EMPTY = 18;
 
 	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_IS_EMPTY__SUFFIXES = PREDICATE__SUFFIXES;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1220,15 +1049,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	int PREDICATE_IS_NULL = 19;
-
-	/**
-	 * The feature id for the '<em><b>Suffixes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_IS_NULL__SUFFIXES = PREDICATE__SUFFIXES;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -1305,17 +1125,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExpression();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link work.andycarpenter.webgen.pims.expression.Expression#getSuffixes <em>Suffixes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Suffixes</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.Expression#getSuffixes()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	EAttribute getExpression_Suffixes();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.expression.Expression#getRootContainer <em>Root Container</em>}'.
@@ -1834,14 +1643,6 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXPRESSION = eINSTANCE.getExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Suffixes</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESSION__SUFFIXES = eINSTANCE.getExpression_Suffixes();
 
 		/**
 		 * The meta object literal for the '<em><b>Root Container</b></em>' reference feature.

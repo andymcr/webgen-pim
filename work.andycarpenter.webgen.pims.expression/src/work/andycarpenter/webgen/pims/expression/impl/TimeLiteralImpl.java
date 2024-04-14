@@ -2,21 +2,13 @@
  */
 package work.andycarpenter.webgen.pims.expression.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.TimeLiteral;
 
@@ -28,7 +20,6 @@ import work.andycarpenter.webgen.pims.expression.TimeLiteral;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl#getSuffixes <em>Suffixes</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
@@ -36,16 +27,6 @@ import work.andycarpenter.webgen.pims.expression.TimeLiteral;
  * @generated
  */
 public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements TimeLiteral {
-	/**
-	 * The cached value of the '{@link #getSuffixes() <em>Suffixes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuffixes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> suffixes;
-
 	/**
 	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -93,19 +74,6 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 	@Override
 	protected EClass eStaticClass() {
 		return ExpressionPackage.Literals.TIME_LITERAL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getSuffixes() {
-		if (suffixes == null) {
-			suffixes = new EDataTypeUniqueEList<String>(String.class, this, ExpressionPackage.TIME_LITERAL__SUFFIXES);
-		}
-		return suffixes;
 	}
 
 	/**
@@ -168,8 +136,6 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpressionPackage.TIME_LITERAL__SUFFIXES:
-				return getSuffixes();
 			case ExpressionPackage.TIME_LITERAL__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
@@ -188,10 +154,6 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpressionPackage.TIME_LITERAL__SUFFIXES:
-				getSuffixes().clear();
-				getSuffixes().addAll((Collection<? extends String>)newValue);
-				return;
 			case ExpressionPackage.TIME_LITERAL__VALUE:
 				setValue((String)newValue);
 				return;
@@ -207,9 +169,6 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.TIME_LITERAL__SUFFIXES:
-				getSuffixes().clear();
-				return;
 			case ExpressionPackage.TIME_LITERAL__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -225,8 +184,6 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.TIME_LITERAL__SUFFIXES:
-				return suffixes != null && !suffixes.isEmpty();
 			case ExpressionPackage.TIME_LITERAL__ROOT_CONTAINER:
 				return isSetRootContainer();
 			case ExpressionPackage.TIME_LITERAL__VALUE:
@@ -245,9 +202,7 @@ public class TimeLiteralImpl extends MinimalEObjectImpl.Container implements Tim
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (suffixes: ");
-		result.append(suffixes);
-		result.append(", value: ");
+		result.append(" (value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

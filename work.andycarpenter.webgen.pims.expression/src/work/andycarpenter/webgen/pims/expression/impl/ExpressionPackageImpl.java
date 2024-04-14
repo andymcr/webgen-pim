@@ -273,18 +273,8 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExpression_Suffixes() {
-		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getExpression_RootContainer() {
-		return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+		return (EReference)expressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -767,7 +757,6 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 
 		// Create classes and their features
 		expressionEClass = createEClass(EXPRESSION);
-		createEAttribute(expressionEClass, EXPRESSION__SUFFIXES);
 		createEReference(expressionEClass, EXPRESSION__ROOT_CONTAINER);
 
 		literalEClass = createEClass(LITERAL);
@@ -887,7 +876,6 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpression_Suffixes(), ecorePackage.getEString(), "suffixes", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExpression_RootContainer(), ecorePackage.getEObject(), null, "rootContainer", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

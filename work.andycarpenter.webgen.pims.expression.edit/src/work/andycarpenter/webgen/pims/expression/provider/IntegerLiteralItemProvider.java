@@ -61,33 +61,10 @@ public class IntegerLiteralItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuffixesPropertyDescriptor(object);
 			addRootContainerPropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Suffixes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuffixesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Expression_suffixes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_suffixes_feature", "_UI_Expression_type"),
-				 ExpressionPackage.Literals.EXPRESSION__SUFFIXES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_ExpressionPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -170,7 +147,6 @@ public class IntegerLiteralItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IntegerLiteral.class)) {
-			case ExpressionPackage.INTEGER_LITERAL__SUFFIXES:
 			case ExpressionPackage.INTEGER_LITERAL__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
