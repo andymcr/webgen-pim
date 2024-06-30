@@ -57,13 +57,6 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ExpressionPackage.NULL_LITERAL: return createNullLiteral();
-			case ExpressionPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
-			case ExpressionPackage.INTEGER_LITERAL: return createIntegerLiteral();
-			case ExpressionPackage.STRING_LITERAL: return createStringLiteral();
-			case ExpressionPackage.TIME_LITERAL: return createTimeLiteral();
-			case ExpressionPackage.SIZE_FUNCTION: return createSizeFunction();
-			case ExpressionPackage.FUNCTION_CALL: return createFunctionCall();
 			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: return createPredicateBooleanVariable();
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR: return createPredicateBooleanOperator();
 			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: return createPredicateEqualityOperator();
@@ -73,6 +66,7 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR: return createPredicateLikeOperator();
 			case ExpressionPackage.PREDICATE_IS_EMPTY: return createPredicateIsEmpty();
 			case ExpressionPackage.PREDICATE_IS_NULL: return createPredicateIsNull();
+			case ExpressionPackage.ARITHMETIC_OPERATION: return createArithmeticOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -86,6 +80,8 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case ExpressionPackage.ARITHMETIC_OPERATOR:
+				return createArithmeticOperatorFromString(eDataType, initialValue);
 			case ExpressionPackage.BOOLEAN_OPERATOR:
 				return createBooleanOperatorFromString(eDataType, initialValue);
 			case ExpressionPackage.COMPARISION_OPERATOR:
@@ -103,6 +99,8 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case ExpressionPackage.ARITHMETIC_OPERATOR:
+				return convertArithmeticOperatorToString(eDataType, instanceValue);
 			case ExpressionPackage.BOOLEAN_OPERATOR:
 				return convertBooleanOperatorToString(eDataType, instanceValue);
 			case ExpressionPackage.COMPARISION_OPERATOR:
@@ -110,83 +108,6 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NullLiteral createNullLiteral() {
-		NullLiteralImpl nullLiteral = new NullLiteralImpl();
-		return nullLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BooleanLiteral createBooleanLiteral() {
-		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
-		return booleanLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IntegerLiteral createIntegerLiteral() {
-		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
-		return integerLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public StringLiteral createStringLiteral() {
-		StringLiteralImpl stringLiteral = new StringLiteralImpl();
-		return stringLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TimeLiteral createTimeLiteral() {
-		TimeLiteralImpl timeLiteral = new TimeLiteralImpl();
-		return timeLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SizeFunction createSizeFunction() {
-		SizeFunctionImpl sizeFunction = new SizeFunctionImpl();
-		return sizeFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FunctionCall createFunctionCall() {
-		FunctionCallImpl functionCall = new FunctionCallImpl();
-		return functionCall;
 	}
 
 	/**
@@ -286,6 +207,37 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	public PredicateIsNull createPredicateIsNull() {
 		PredicateIsNullImpl predicateIsNull = new PredicateIsNullImpl();
 		return predicateIsNull;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ArithmeticOperation createArithmeticOperation() {
+		ArithmeticOperationImpl arithmeticOperation = new ArithmeticOperationImpl();
+		return arithmeticOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArithmeticOperator createArithmeticOperatorFromString(EDataType eDataType, String initialValue) {
+		ArithmeticOperator result = ArithmeticOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertArithmeticOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

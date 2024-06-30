@@ -72,36 +72,12 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 				return createExpressionAdapter();
 			}
 			@Override
+			public Adapter caseOperand(Operand object) {
+				return createOperandAdapter();
+			}
+			@Override
 			public Adapter caseLiteral(Literal object) {
 				return createLiteralAdapter();
-			}
-			@Override
-			public Adapter caseNullLiteral(NullLiteral object) {
-				return createNullLiteralAdapter();
-			}
-			@Override
-			public Adapter caseBooleanLiteral(BooleanLiteral object) {
-				return createBooleanLiteralAdapter();
-			}
-			@Override
-			public Adapter caseIntegerLiteral(IntegerLiteral object) {
-				return createIntegerLiteralAdapter();
-			}
-			@Override
-			public Adapter caseStringLiteral(StringLiteral object) {
-				return createStringLiteralAdapter();
-			}
-			@Override
-			public Adapter caseTimeLiteral(TimeLiteral object) {
-				return createTimeLiteralAdapter();
-			}
-			@Override
-			public Adapter caseSizeFunction(SizeFunction object) {
-				return createSizeFunctionAdapter();
-			}
-			@Override
-			public Adapter caseFunctionCall(FunctionCall object) {
-				return createFunctionCallAdapter();
 			}
 			@Override
 			public Adapter caseVariable(Variable object) {
@@ -148,6 +124,10 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 				return createPredicateIsNullAdapter();
 			}
 			@Override
+			public Adapter caseArithmeticOperation(ArithmeticOperation object) {
+				return createArithmeticOperationAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -182,6 +162,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Operand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.expression.Operand
+	 * @generated
+	 */
+	public Adapter createOperandAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -192,104 +186,6 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.NullLiteral <em>Null Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.NullLiteral
-	 * @generated
-	 */
-	public Adapter createNullLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.BooleanLiteral <em>Boolean Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.BooleanLiteral
-	 * @generated
-	 */
-	public Adapter createBooleanLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.IntegerLiteral <em>Integer Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.IntegerLiteral
-	 * @generated
-	 */
-	public Adapter createIntegerLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.StringLiteral <em>String Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.StringLiteral
-	 * @generated
-	 */
-	public Adapter createStringLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.TimeLiteral <em>Time Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.TimeLiteral
-	 * @generated
-	 */
-	public Adapter createTimeLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.SizeFunction <em>Size Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.SizeFunction
-	 * @generated
-	 */
-	public Adapter createSizeFunctionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.FunctionCall <em>Function Call</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.FunctionCall
-	 * @generated
-	 */
-	public Adapter createFunctionCallAdapter() {
 		return null;
 	}
 
@@ -444,6 +340,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPredicateIsNullAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation <em>Arithmetic Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperation
+	 * @generated
+	 */
+	public Adapter createArithmeticOperationAdapter() {
 		return null;
 	}
 

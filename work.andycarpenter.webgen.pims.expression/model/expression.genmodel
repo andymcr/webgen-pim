@@ -7,6 +7,12 @@
   <foreignModel>expression.ecore</foreignModel>
   <genPackages prefix="Expression" basePackage="work.andycarpenter.webgen.pims" disposableProviderFactory="true"
       extensibleProviderFactory="true" ecorePackage="expression.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="expression.ecore#//ArithmeticOperator">
+      <genEnumLiterals ecoreEnumLiteral="expression.ecore#//ArithmeticOperator/Add"/>
+      <genEnumLiterals ecoreEnumLiteral="expression.ecore#//ArithmeticOperator/Subtract"/>
+      <genEnumLiterals ecoreEnumLiteral="expression.ecore#//ArithmeticOperator/Multiply"/>
+      <genEnumLiterals ecoreEnumLiteral="expression.ecore#//ArithmeticOperator/Divide"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="expression.ecore#//BooleanOperator">
       <genEnumLiterals ecoreEnumLiteral="expression.ecore#//BooleanOperator/And"/>
       <genEnumLiterals ecoreEnumLiteral="expression.ecore#//BooleanOperator/Or"/>
@@ -19,39 +25,17 @@
       <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
           ecoreFeature="ecore:EReference expression.ecore#//Expression/rootContainer"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="expression.ecore#//Operand"/>
     <genClasses image="false" ecoreClass="expression.ecore#//Literal"/>
-    <genClasses ecoreClass="expression.ecore#//NullLiteral"/>
-    <genClasses ecoreClass="expression.ecore#//BooleanLiteral">
-      <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//BooleanLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="expression.ecore#//IntegerLiteral">
-      <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//IntegerLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="expression.ecore#//StringLiteral">
-      <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//StringLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="expression.ecore#//TimeLiteral">
-      <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//TimeLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="expression.ecore#//SizeFunction">
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
-          ecoreFeature="ecore:EReference expression.ecore#//SizeFunction/feature"/>
-    </genClasses>
-    <genClasses ecoreClass="expression.ecore#//FunctionCall">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//FunctionCall/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//FunctionCall/actuals"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="expression.ecore#//Variable"/>
     <genClasses image="false" ecoreClass="expression.ecore#//Predicate">
       <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//Predicate/negated"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//PredicateBooleanVariable">
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
-          ecoreFeature="ecore:EReference expression.ecore#//PredicateBooleanVariable/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//PredicateBooleanVariable/variable"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//PredicateBooleanOperator">
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
-          ecoreFeature="ecore:EReference expression.ecore#//PredicateBooleanOperator/expressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//PredicateBooleanOperator/predicates"/>
       <genFeatures createChild="false" propertyCategory="Expression" ecoreFeature="ecore:EAttribute expression.ecore#//PredicateBooleanOperator/operator"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//PredicateEqualityOperator">
@@ -84,12 +68,14 @@
           ecoreFeature="ecore:EReference expression.ecore#//PredicateLikeOperator/right"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//PredicateIsEmpty">
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
-          ecoreFeature="ecore:EReference expression.ecore#//PredicateIsEmpty/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//PredicateIsEmpty/value"/>
     </genClasses>
     <genClasses ecoreClass="expression.ecore#//PredicateIsNull">
-      <genFeatures property="None" children="true" createChild="true" propertyCategory="Expression"
-          ecoreFeature="ecore:EReference expression.ecore#//PredicateIsNull/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//PredicateIsNull/value"/>
+    </genClasses>
+    <genClasses ecoreClass="expression.ecore#//ArithmeticOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//ArithmeticOperation/operands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//ArithmeticOperation/operator"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

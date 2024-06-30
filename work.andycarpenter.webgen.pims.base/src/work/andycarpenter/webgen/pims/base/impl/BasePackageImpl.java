@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.base.BooleanLiteral;
+import work.andycarpenter.webgen.pims.base.Callable;
 import work.andycarpenter.webgen.pims.base.Classifier;
 import work.andycarpenter.webgen.pims.base.CurrentTime;
 import work.andycarpenter.webgen.pims.base.CurrentUser;
@@ -20,10 +22,16 @@ import work.andycarpenter.webgen.pims.base.EnumerationLiteral;
 import work.andycarpenter.webgen.pims.base.EnumerationType;
 import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
+import work.andycarpenter.webgen.pims.base.IntegerLiteral;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
+import work.andycarpenter.webgen.pims.base.NullLiteral;
 import work.andycarpenter.webgen.pims.base.ParameterReference;
 
+import work.andycarpenter.webgen.pims.base.ReduceFunction;
+import work.andycarpenter.webgen.pims.base.SizeFunction;
+import work.andycarpenter.webgen.pims.base.StringLiteral;
+import work.andycarpenter.webgen.pims.base.TimeLiteral;
 import work.andycarpenter.webgen.pims.base.util.BaseValidator;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
@@ -35,6 +43,41 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
  * @generated
  */
 public class BasePackageImpl extends EPackageImpl implements BasePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nullLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass integerLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeLiteralEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,6 +156,27 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	private EClass parameterReferenceEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reduceFunctionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sizeFunctionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callableEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -184,6 +248,96 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(BasePackage.eNS_URI, theBasePackage);
 		return theBasePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNullLiteral() {
+		return nullLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBooleanLiteral() {
+		return booleanLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBooleanLiteral_Value() {
+		return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIntegerLiteral() {
+		return integerLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIntegerLiteral_Value() {
+		return (EAttribute)integerLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStringLiteral() {
+		return stringLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStringLiteral_Value() {
+		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTimeLiteral() {
+		return timeLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTimeLiteral_Value() {
+		return (EAttribute)timeLiteralEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -472,6 +626,76 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getReduceFunction() {
+		return reduceFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReduceFunction_Value() {
+		return (EReference)reduceFunctionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReduceFunction_Callback() {
+		return (EReference)reduceFunctionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReduceFunction_Initial() {
+		return (EReference)reduceFunctionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSizeFunction() {
+		return sizeFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSizeFunction_Value() {
+		return (EReference)sizeFunctionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCallable() {
+		return callableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public BaseFactory getBaseFactory() {
 		return (BaseFactory)getEFactoryInstance();
 	}
@@ -495,6 +719,25 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		isCreated = true;
 
 		// Create classes and their features
+		nullLiteralEClass = createEClass(NULL_LITERAL);
+
+		booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
+		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
+
+		integerLiteralEClass = createEClass(INTEGER_LITERAL);
+		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__VALUE);
+
+		stringLiteralEClass = createEClass(STRING_LITERAL);
+		createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+
+		timeLiteralEClass = createEClass(TIME_LITERAL);
+		createEAttribute(timeLiteralEClass, TIME_LITERAL__VALUE);
+
+		currentTimeEClass = createEClass(CURRENT_TIME);
+		createEAttribute(currentTimeEClass, CURRENT_TIME__FORMAT);
+
+		currentUserEClass = createEClass(CURRENT_USER);
+
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
@@ -515,11 +758,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 
 		enumerationLiteralEClass = createEClass(ENUMERATION_LITERAL);
 
-		currentTimeEClass = createEClass(CURRENT_TIME);
-		createEAttribute(currentTimeEClass, CURRENT_TIME__FORMAT);
-
-		currentUserEClass = createEClass(CURRENT_USER);
-
 		formalParameterListEClass = createEClass(FORMAL_PARAMETER_LIST);
 		createEReference(formalParameterListEClass, FORMAL_PARAMETER_LIST__PARAMETERS);
 
@@ -533,6 +771,16 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		parameterReferenceEClass = createEClass(PARAMETER_REFERENCE);
 		createEAttribute(parameterReferenceEClass, PARAMETER_REFERENCE__NAME);
 		createEReference(parameterReferenceEClass, PARAMETER_REFERENCE__PARAMETER);
+
+		callableEClass = createEClass(CALLABLE);
+
+		reduceFunctionEClass = createEClass(REDUCE_FUNCTION);
+		createEReference(reduceFunctionEClass, REDUCE_FUNCTION__VALUE);
+		createEReference(reduceFunctionEClass, REDUCE_FUNCTION__CALLBACK);
+		createEReference(reduceFunctionEClass, REDUCE_FUNCTION__INITIAL);
+
+		sizeFunctionEClass = createEClass(SIZE_FUNCTION);
+		createEReference(sizeFunctionEClass, SIZE_FUNCTION__VALUE);
 	}
 
 	/**
@@ -566,17 +814,45 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		nullLiteralEClass.getESuperTypes().add(theExpressionPackage.getLiteral());
+		booleanLiteralEClass.getESuperTypes().add(theExpressionPackage.getLiteral());
+		integerLiteralEClass.getESuperTypes().add(theExpressionPackage.getLiteral());
+		stringLiteralEClass.getESuperTypes().add(theExpressionPackage.getLiteral());
+		timeLiteralEClass.getESuperTypes().add(theExpressionPackage.getLiteral());
+		currentTimeEClass.getESuperTypes().add(theExpressionPackage.getVariable());
+		currentUserEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 		namedDisplayElementEClass.getESuperTypes().add(this.getNamedElement());
 		classifierEClass.getESuperTypes().add(this.getNamedDisplayElement());
 		dataTypeEClass.getESuperTypes().add(this.getClassifier());
 		enumerationTypeEClass.getESuperTypes().add(this.getDataType());
 		enumerationLiteralEClass.getESuperTypes().add(this.getNamedDisplayElement());
-		currentTimeEClass.getESuperTypes().add(theExpressionPackage.getExpression());
-		currentUserEClass.getESuperTypes().add(theExpressionPackage.getExpression());
 		formalParameterEClass.getESuperTypes().add(this.getNamedElement());
 		parameterReferenceEClass.getESuperTypes().add(theExpressionPackage.getVariable());
+		callableEClass.getESuperTypes().add(this.getFormalParameterList());
+		callableEClass.getESuperTypes().add(theExpressionPackage.getOperand());
+		reduceFunctionEClass.getESuperTypes().add(theExpressionPackage.getOperand());
+		sizeFunctionEClass.getESuperTypes().add(theExpressionPackage.getOperand());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(nullLiteralEClass, NullLiteral.class, "NullLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(integerLiteralEClass, IntegerLiteral.class, "IntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timeLiteralEClass, TimeLiteral.class, "TimeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, TimeLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(currentTimeEClass, CurrentTime.class, "CurrentTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCurrentTime_Format(), ecorePackage.getEString(), "format", null, 0, 1, CurrentTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(currentUserEClass, CurrentUser.class, "CurrentUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -597,11 +873,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 
 		initEClass(enumerationLiteralEClass, EnumerationLiteral.class, "EnumerationLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(currentTimeEClass, CurrentTime.class, "CurrentTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCurrentTime_Format(), ecorePackage.getEString(), "format", null, 0, 1, CurrentTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(currentUserEClass, CurrentUser.class, "CurrentUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(formalParameterListEClass, FormalParameterList.class, "FormalParameterList", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFormalParameterList_Parameters(), this.getFormalParameter(), this.getFormalParameter_FormalFor(), "parameters", null, 0, -1, FormalParameterList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -615,6 +886,16 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		initEClass(parameterReferenceEClass, ParameterReference.class, "ParameterReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, ParameterReference.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 		initEReference(getParameterReference_Parameter(), this.getFormalParameter(), null, "parameter", null, 1, 1, ParameterReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(callableEClass, Callable.class, "Callable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reduceFunctionEClass, ReduceFunction.class, "ReduceFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReduceFunction_Value(), theExpressionPackage.getVariable(), null, "value", null, 0, 1, ReduceFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReduceFunction_Callback(), this.getCallable(), null, "callback", null, 0, 1, ReduceFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReduceFunction_Initial(), theExpressionPackage.getExpression(), null, "initial", null, 0, 1, ReduceFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sizeFunctionEClass, SizeFunction.class, "SizeFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSizeFunction_Value(), theExpressionPackage.getVariable(), null, "value", null, 0, 1, SizeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

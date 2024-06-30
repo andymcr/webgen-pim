@@ -8,10 +8,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
@@ -24,7 +25,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
+public class PredicateLikeOperatorItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,8 +47,31 @@ public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNegatedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Negated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNegatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Predicate_negated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_negated_feature", "_UI_Predicate_type"),
+				 ExpressionPackage.Literals.PREDICATE__NEGATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ExpressionPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -117,6 +141,9 @@ public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PredicateLikeOperator.class)) {
+			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__NEGATED:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__LEFT:
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__RIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -139,41 +166,6 @@ public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createNullLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createStringLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createSizeFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createFunctionCall()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
@@ -218,38 +210,8 @@ public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createNullLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createStringLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createSizeFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+				 ExpressionFactory.eINSTANCE.createArithmeticOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -295,6 +257,11 @@ public class PredicateLikeOperatorItemProvider extends PredicateItemProvider {
 			(createChildParameter
 				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+				 ExpressionFactory.eINSTANCE.createArithmeticOperation()));
 	}
 
 	/**

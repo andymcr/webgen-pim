@@ -13,6 +13,7 @@ import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.persistence.*;
 
@@ -251,6 +252,10 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpression(Expression object) {
 				return createExpressionAdapter();
+			}
+			@Override
+			public Adapter caseOperand(Operand object) {
+				return createOperandAdapter();
 			}
 			@Override
 			public Adapter caseVariable(Variable object) {
@@ -903,6 +908,20 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Operand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.expression.Operand
+	 * @generated
+	 */
+	public Adapter createOperandAdapter() {
 		return null;
 	}
 

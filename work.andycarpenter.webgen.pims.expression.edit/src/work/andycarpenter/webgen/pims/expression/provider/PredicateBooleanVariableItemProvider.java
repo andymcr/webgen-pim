@@ -8,10 +8,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
@@ -23,7 +24,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PredicateBooleanVariableItemProvider extends PredicateItemProvider {
+public class PredicateBooleanVariableItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -45,8 +46,31 @@ public class PredicateBooleanVariableItemProvider extends PredicateItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNegatedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Negated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNegatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Predicate_negated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_negated_feature", "_UI_Predicate_type"),
+				 ExpressionPackage.Literals.PREDICATE__NEGATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ExpressionPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -61,7 +85,7 @@ public class PredicateBooleanVariableItemProvider extends PredicateItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__FEATURE);
+			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE);
 		}
 		return childrenFeatures;
 	}
@@ -115,7 +139,10 @@ public class PredicateBooleanVariableItemProvider extends PredicateItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PredicateBooleanVariable.class)) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE__FEATURE:
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE__NEGATED:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE__VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

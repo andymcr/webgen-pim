@@ -22,69 +22,6 @@ public interface ExpressionFactory extends EFactory {
 	ExpressionFactory eINSTANCE = work.andycarpenter.webgen.pims.expression.impl.ExpressionFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Null Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Null Literal</em>'.
-	 * @generated
-	 */
-	NullLiteral createNullLiteral();
-
-	/**
-	 * Returns a new object of class '<em>Boolean Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Literal</em>'.
-	 * @generated
-	 */
-	BooleanLiteral createBooleanLiteral();
-
-	/**
-	 * Returns a new object of class '<em>Integer Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Literal</em>'.
-	 * @generated
-	 */
-	IntegerLiteral createIntegerLiteral();
-
-	/**
-	 * Returns a new object of class '<em>String Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String Literal</em>'.
-	 * @generated
-	 */
-	StringLiteral createStringLiteral();
-
-	/**
-	 * Returns a new object of class '<em>Time Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Literal</em>'.
-	 * @generated
-	 */
-	TimeLiteral createTimeLiteral();
-
-	/**
-	 * Returns a new object of class '<em>Size Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Size Function</em>'.
-	 * @generated
-	 */
-	SizeFunction createSizeFunction();
-
-	/**
-	 * Returns a new object of class '<em>Function Call</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function Call</em>'.
-	 * @generated
-	 */
-	FunctionCall createFunctionCall();
-
-	/**
 	 * Returns a new object of class '<em>Predicate Boolean Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +101,15 @@ public interface ExpressionFactory extends EFactory {
 	 * @generated
 	 */
 	PredicateIsNull createPredicateIsNull();
+
+	/**
+	 * Returns a new object of class '<em>Arithmetic Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arithmetic Operation</em>'.
+	 * @generated
+	 */
+	ArithmeticOperation createArithmeticOperation();
 
 	/**
 	 * Returns the package supported by this factory.

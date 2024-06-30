@@ -85,6 +85,20 @@ public class BaseValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
+			case BasePackage.NULL_LITERAL:
+				return validateNullLiteral((NullLiteral)value, diagnostics, context);
+			case BasePackage.BOOLEAN_LITERAL:
+				return validateBooleanLiteral((BooleanLiteral)value, diagnostics, context);
+			case BasePackage.INTEGER_LITERAL:
+				return validateIntegerLiteral((IntegerLiteral)value, diagnostics, context);
+			case BasePackage.STRING_LITERAL:
+				return validateStringLiteral((StringLiteral)value, diagnostics, context);
+			case BasePackage.TIME_LITERAL:
+				return validateTimeLiteral((TimeLiteral)value, diagnostics, context);
+			case BasePackage.CURRENT_TIME:
+				return validateCurrentTime((CurrentTime)value, diagnostics, context);
+			case BasePackage.CURRENT_USER:
+				return validateCurrentUser((CurrentUser)value, diagnostics, context);
 			case BasePackage.NAMED_ELEMENT:
 				return validateNamedElement((NamedElement)value, diagnostics, context);
 			case BasePackage.NAMED_DISPLAY_ELEMENT:
@@ -97,19 +111,66 @@ public class BaseValidator extends EObjectValidator {
 				return validateEnumerationType((EnumerationType)value, diagnostics, context);
 			case BasePackage.ENUMERATION_LITERAL:
 				return validateEnumerationLiteral((EnumerationLiteral)value, diagnostics, context);
-			case BasePackage.CURRENT_TIME:
-				return validateCurrentTime((CurrentTime)value, diagnostics, context);
-			case BasePackage.CURRENT_USER:
-				return validateCurrentUser((CurrentUser)value, diagnostics, context);
 			case BasePackage.FORMAL_PARAMETER_LIST:
 				return validateFormalParameterList((FormalParameterList)value, diagnostics, context);
 			case BasePackage.FORMAL_PARAMETER:
 				return validateFormalParameter((FormalParameter)value, diagnostics, context);
 			case BasePackage.PARAMETER_REFERENCE:
 				return validateParameterReference((ParameterReference)value, diagnostics, context);
+			case BasePackage.CALLABLE:
+				return validateCallable((Callable)value, diagnostics, context);
+			case BasePackage.REDUCE_FUNCTION:
+				return validateReduceFunction((ReduceFunction)value, diagnostics, context);
+			case BasePackage.SIZE_FUNCTION:
+				return validateSizeFunction((SizeFunction)value, diagnostics, context);
 			default:
 				return true;
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNullLiteral(NullLiteral nullLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(nullLiteral, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBooleanLiteral(BooleanLiteral booleanLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(booleanLiteral, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateIntegerLiteral(IntegerLiteral integerLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(integerLiteral, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStringLiteral(StringLiteral stringLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(stringLiteral, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTimeLiteral(TimeLiteral timeLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(timeLiteral, diagnostics, context);
 	}
 
 	/**
@@ -308,6 +369,33 @@ public class BaseValidator extends EObjectValidator {
 	 */
 	public boolean validateParameterReference(ParameterReference parameterReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(parameterReference, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReduceFunction(ReduceFunction reduceFunction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(reduceFunction, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSizeFunction(SizeFunction sizeFunction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(sizeFunction, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCallable(Callable callable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(callable, diagnostics, context);
 	}
 
 	/**

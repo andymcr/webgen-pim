@@ -23,8 +23,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.base.ReduceFunction;
+import work.andycarpenter.webgen.pims.base.SizeFunction;
+import work.andycarpenter.webgen.pims.base.util.BaseSwitch;
+import work.andycarpenter.webgen.pims.expression.ArithmeticOperation;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.FunctionCall;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
 import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
@@ -33,7 +37,6 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
-import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.util.PersistenceAdapterFactory;
@@ -897,6 +900,112 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 	}
 
 	/**
+	 * A child creation extender for the {@link BasePackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class BaseChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends BaseSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseReduceFunction(ReduceFunction object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseSizeFunction(SizeFunction object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return PersistenceEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
 	 * A child creation extender for the {@link ExpressionPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -942,39 +1051,10 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 			 * @generated
 			 */
 			@Override
-			public Object caseSizeFunction(SizeFunction object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseFunctionCall(FunctionCall object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
 			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
 						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 
 				return null;
@@ -1089,7 +1169,7 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 			public Object casePredicateIsEmpty(PredicateIsEmpty object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
 						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 
 				return null;
@@ -1104,12 +1184,26 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 			public Object casePredicateIsNull(PredicateIsNull object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
 						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
 
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseArithmeticOperation(ArithmeticOperation object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -12,7 +12,7 @@ package work.andycarpenter.webgen.pims.expression;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getFeature <em>Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateIsEmpty()
@@ -21,29 +21,25 @@ package work.andycarpenter.webgen.pims.expression;
  */
 public interface PredicateIsEmpty extends Predicate {
 	/**
-	 * Returns the value of the '<em><b>Feature</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Feature</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Feature</em>' containment reference.
-	 * @see #setFeature(Variable)
-	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateIsEmpty_Feature()
+	 * @return the value of the '<em>Value</em>' containment reference.
+	 * @see #setValue(Operand)
+	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateIsEmpty_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Variable getFeature();
+	Operand getValue();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getFeature <em>Feature</em>}' containment reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Feature</em>' containment reference.
-	 * @see #getFeature()
+	 * @param value the new value of the '<em>Value</em>' containment reference.
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setFeature(Variable value);
+	void setValue(Operand value);
 
 } // PredicateIsEmpty

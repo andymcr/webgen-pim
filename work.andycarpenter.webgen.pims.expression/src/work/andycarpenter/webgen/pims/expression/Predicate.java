@@ -16,7 +16,7 @@ package work.andycarpenter.webgen.pims.expression;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicate()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface Predicate extends Expression {

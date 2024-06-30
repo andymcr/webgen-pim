@@ -22,6 +22,9 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated persistence -->
       <extender
+            uri="http://andycarpenter.work/pim/base"
+            class="work.andycarpenter.webgen.pims.persistence.provider.PersistenceItemProviderAdapterFactory$BaseChildCreationExtender"/>
+      <extender
             uri="http://andycarpenter.work/pim/expression"
             class="work.andycarpenter.webgen.pims.persistence.provider.PersistenceItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
    </extension>

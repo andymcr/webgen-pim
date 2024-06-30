@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
+import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Variable;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
@@ -245,6 +246,11 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 				default: return -1;
 			}
 		}
+		if (baseClass == Operand.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == Variable.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -270,6 +276,11 @@ public class PathVariableResourceImpl extends PathResourceImpl implements PathVa
 		if (baseClass == Expression.class) {
 			switch (baseFeatureID) {
 				case ExpressionPackage.EXPRESSION__ROOT_CONTAINER: return WebuiPackage.PATH_VARIABLE_RESOURCE__ROOT_CONTAINER;
+				default: return -1;
+			}
+		}
+		if (baseClass == Operand.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

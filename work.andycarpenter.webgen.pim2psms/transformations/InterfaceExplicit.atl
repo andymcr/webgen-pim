@@ -955,7 +955,7 @@ rule FeaturePathResource {
 	)
 }
 
--- @extends Expression
+-- @extends Variable
 abstract rule PathVariable {
 	from website : Website!PathVariable
 	to waf : WAF!PathVariable (

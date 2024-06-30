@@ -20,12 +20,36 @@ helper context Website!Expression def: isPresistenceRepositoryExpression() : Boo
 		endif endif endif endif;
 
 
+abstract rule Expression {
+	from website : Website!Expression (website.isPresistenceRepositoryExpression())
+	to orm : ORM!Expression (
+	)
+}
+
+
+-- @extends Expression
+abstract rule Operand {
+	from website : Website!Operand (website.isPresistenceRepositoryExpression())
+	to orm : ORM!Operand (
+	)
+}
+
+
+-- @extends Operand
+abstract rule Literal {
+	from website : Website!Literal (website.isPresistenceRepositoryExpression())
+	to orm : ORM!Literal (
+	)
+}
+
+-- @extends Literal
 rule NullLiteral {
 	from website : Website!NullLiteral (website.isPresistenceRepositoryExpression())
 	to orm : ORM!NullLiteral (
 	)
 }
 
+-- @extends Literal
 rule BooleanLiteral {
 	from website : Website!BooleanLiteral (website.isPresistenceRepositoryExpression())
 	to orm : ORM!BooleanLiteral (
@@ -33,6 +57,7 @@ rule BooleanLiteral {
 	)
 }
 
+-- @extends Literal
 rule IntegerLiteral {
 	from website : Website!IntegerLiteral (website.isPresistenceRepositoryExpression())
 	to orm : ORM!IntegerLiteral (
@@ -40,6 +65,7 @@ rule IntegerLiteral {
 	)
 }
 
+-- @extends Literal
 rule StringLiteral {
 	from website : Website!StringLiteral (website.isPresistenceRepositoryExpression())
 	to orm : ORM!StringLiteral (
@@ -47,6 +73,7 @@ rule StringLiteral {
 	)
 }
 
+-- @extends Literal
 rule TimeLiteral {
 	from website : Website!TimeLiteral (website.isPresistenceRepositoryExpression())
 	to orm : ORM!TimeLiteral (
@@ -55,12 +82,21 @@ rule TimeLiteral {
 }
 
 
+-- @extends Operand
+abstract rule Variable {
+	from website : Website!Variable (website.isPresistenceRepositoryExpression())
+	to waf : ORM!Variable (
+	)
+}
+
+-- @ extends Variable
 rule CurrentTime {
 	from website : Website!CurrentTime (website.isPresistenceRepositoryExpression())
 	to orm : ORM!CurrentTime (
 	)
 }
 
+-- @ extends Variable
 rule CurrentUser {
 	from website : Website!CurrentUser (website.isPresistenceRepositoryExpression())
 	to orm : ORM!CurrentUser (
@@ -68,22 +104,16 @@ rule CurrentUser {
 }
 
 
+-- @extends Operand
 rule SizeFunction {
 	from website : Website!SizeFunction (website.isPresistenceRepositoryExpression())
 	to orm : ORM!SizeFunction (
-		feature <- website.feature
-	)
-}
-
-rule FunctionCall {
-	from website : Website!FunctionCall (website.isPresistenceRepositoryExpression())
-	to orm : ORM!FunctionCall (
-		name <- website.name,
-		actuals <- website.actuals
+		value <- website.value
 	)
 }
 
 
+-- @extends Expression
 abstract rule Predicate {
 	from website : Website!Predicate
 	to orm : ORM!Predicate (
@@ -103,7 +133,7 @@ rule PredicateBooleanVariable {
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isPresistenceRepositoryExpression())
 	to orm : ORM!PredicateBooleanOperator (
-		predicates <- website.expressions,
+		predicates <- website.predicates,
 		operator <- website.operator
 	)
 }
@@ -140,7 +170,7 @@ rule PredicateLikeOperator {
 rule PredicateIsNullOperator {
 	from website : Website!PredicateIsNull (website.isPresistenceRepositoryExpression())
 	to orm : ORM!PredicateIsNull (
-		feature <- website.feature
+		value <- website.value
 	)
 }
 
@@ -148,6 +178,16 @@ rule PredicateIsNullOperator {
 rule PredicateIsEmptyOperator {
 	from website : Website!PredicateIsEmpty (website.isPresistenceRepositoryExpression())
 	to orm : ORM!PredicateIsEmpty (
-		feature <- website.feature
+		value <- website.value
+	)
+}
+
+
+-- @extends Expression
+rule ArithmeticOperation {
+	from website : Website!ArithmeticOperation (website.isPresistenceRepositoryExpression())
+	to waf : ORM!ArithmeticOperation (
+		operands <- website.operands,
+		operator <- website.operator
 	)
 }

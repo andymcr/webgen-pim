@@ -22,10 +22,14 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated service -->
       <extender
+            uri="http://andycarpenter.work/pim/base"
+            class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory$BaseChildCreationExtender"/>
+      <extender
             uri="http://andycarpenter.work/pim/expression"
             class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
       <extender
             uri="http://andycarpenter.work/pim/persistence"
             class="work.andycarpenter.webgen.pims.service.provider.ServiceItemProviderAdapterFactory$PersistenceChildCreationExtender"/>
    </extension>
+
 </plugin>

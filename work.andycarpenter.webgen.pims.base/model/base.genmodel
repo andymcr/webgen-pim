@@ -6,8 +6,25 @@
     usedGenPackages="../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression"
     operationReflection="true" importOrganizing="true">
   <foreignModel>base.ecore</foreignModel>
-  <genPackages prefix="Base" basePackage="work.andycarpenter.webgen.pims" childCreationExtenders="true"
-      ecorePackage="base.ecore#/">
+  <genPackages prefix="Base" basePackage="work.andycarpenter.webgen.pims" extensibleProviderFactory="true"
+      childCreationExtenders="true" ecorePackage="base.ecore#/">
+    <genClasses ecoreClass="base.ecore#//NullLiteral"/>
+    <genClasses ecoreClass="base.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute base.ecore#//BooleanLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//IntegerLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute base.ecore#//IntegerLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute base.ecore#//StringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//TimeLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute base.ecore#//TimeLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//CurrentTime">
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//CurrentTime/format"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//CurrentUser"/>
     <genClasses image="false" ecoreClass="base.ecore#//NamedElement">
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute base.ecore#//NamedElement/name"/>
     </genClasses>
@@ -28,10 +45,6 @@
           ecoreFeature="ecore:EReference base.ecore#//EnumerationType/enumerations"/>
     </genClasses>
     <genClasses ecoreClass="base.ecore#//EnumerationLiteral"/>
-    <genClasses ecoreClass="base.ecore#//CurrentTime">
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute base.ecore#//CurrentTime/format"/>
-    </genClasses>
-    <genClasses ecoreClass="base.ecore#//CurrentUser"/>
     <genClasses image="false" ecoreClass="base.ecore#//FormalParameterList">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Model"
           ecoreFeature="ecore:EReference base.ecore#//FormalParameterList/parameters"/>
@@ -48,6 +61,15 @@
       <genFeatures property="None" createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute base.ecore#//ParameterReference/name"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference base.ecore#//ParameterReference/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//Callable"/>
+    <genClasses ecoreClass="base.ecore#//ReduceFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//ReduceFunction/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//ReduceFunction/callback"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//ReduceFunction/initial"/>
+    </genClasses>
+    <genClasses ecoreClass="base.ecore#//SizeFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference base.ecore#//SizeFunction/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

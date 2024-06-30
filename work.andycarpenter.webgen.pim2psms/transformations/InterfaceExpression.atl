@@ -30,14 +30,30 @@ abstract rule Expression {
 	)
 }
 
+
 -- @extends Expression
+abstract rule Operand {
+	from website : Website!Operand (website.isInterfaceExpression())
+	to waf : WAF!Operand (
+	)
+}
+
+
+-- @extends Operand
+abstract rule Literal {
+	from website : Website!Literal (website.isInterfaceExpression())
+	to waf : WAF!Literal (
+	)
+}
+
+-- @extends Literal
 rule NullLiteral {
 	from website : Website!NullLiteral (website.isInterfaceExpression())
 	to waf : WAF!NullLiteral (
 	)
 }
 
--- @extends Expression
+-- @extends Literal
 rule BooleanLiteral {
 	from website : Website!BooleanLiteral (website.isInterfaceExpression())
 	to waf : WAF!BooleanLiteral (
@@ -45,7 +61,7 @@ rule BooleanLiteral {
 	)
 }
 
--- @extends Expression
+-- @extends Literal
 rule IntegerLiteral {
 	from website : Website!IntegerLiteral (website.isInterfaceExpression())
 	to waf : WAF!IntegerLiteral (
@@ -53,7 +69,7 @@ rule IntegerLiteral {
 	)
 }
 
--- @extends Expression
+-- @extends Literal
 rule StringLiteral {
 	from website : Website!StringLiteral (website.isInterfaceExpression())
 	to waf : WAF!StringLiteral (
@@ -61,7 +77,7 @@ rule StringLiteral {
 	)
 }
 
--- @extends Expression
+-- @extends Literal
 rule TimeLiteral {
 	from website : Website!TimeLiteral (website.isInterfaceExpression())
 	to waf : WAF!TimeLiteral (
@@ -70,14 +86,21 @@ rule TimeLiteral {
 }
 
 
--- @extends Expression
+-- @extends Operand
+abstract rule Variable {
+	from website : Website!Variable (website.isInterfaceExpression())
+	to waf : WAF!Variable (
+	)
+}
+
+-- @extends Variable
 rule CurrentTime {
 	from website : Website!CurrentTime (website.isInterfaceExpression())
 	to waf : WAF!CurrentTime (
 	)
 }
 
--- @extends Expression
+-- @extends Variable
 rule CurrentUser {
 	from website : Website!CurrentUser (website.isInterfaceExpression())
 	to waf : WAF!CurrentUser (
@@ -85,20 +108,21 @@ rule CurrentUser {
 }
 
 
--- @extends Expression
-rule Sizefunction {
-	from website : Website!SizeFunction (website.isInterfaceExpression())
-	to waf : WAF!SizeFunction (
-		feature <- website.feature
+-- @extends Operand
+rule Reducefunction {
+	from website : Website!ReduceFunction (website.isInterfaceExpression())
+	to waf : WAF!ReduceFunction (
+		value <- website.value,
+		initial <- website.initial --,
+--		returnValue <- website.returnValue
 	)
 }
 
--- @extends Expression
-rule FunctionCall {
-	from website : Website!FunctionCall (website.isInterfaceExpression())
-	to waf : WAF!FunctionCall (
-		name <- website.name,
-		actuals <- website.actuals
+-- @extends Operand
+rule Sizefunction {
+	from website : Website!SizeFunction (website.isInterfaceExpression())
+	to waf : WAF!SizeFunction (
+		value <- website.value
 	)
 }
 
@@ -115,7 +139,7 @@ abstract rule Predicate {
 rule PredicateBooleanVariable {
 	from website : Website!PredicateBooleanVariable (website.isInterfaceExpression())
 	to waf : WAF!PredicateBooleanVariable (
-		feature <- website.feature
+		feature <- website.variable
 	)
 }
 
@@ -123,7 +147,7 @@ rule PredicateBooleanVariable {
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isInterfaceExpression())
 	to waf : WAF!PredicateBooleanOperator (
-		predicates <- website.expressions,
+		predicates <- website.predicates,
 		operator <- website.operator
 	)
 }
@@ -160,7 +184,7 @@ rule PredicateLikeOperator {
 rule PredicateIsNullOperator {
 	from website : Website!PredicateIsNull (website.isInterfaceExpression())
 	to waf : WAF!PredicateIsNull (
-		feature <- website.feature
+		value <- website.value
 	)
 }
 
@@ -168,6 +192,16 @@ rule PredicateIsNullOperator {
 rule PredicateIsEmptyOperator {
 	from website : Website!PredicateIsEmpty (website.isInterfaceExpression())
 	to waf : WAF!PredicateIsEmpty (
-		feature <- website.feature
+		value <- website.value
+	)
+}
+
+
+-- @extends Expression
+rule ArithmeticOperation {
+	from website : Website!ArithmeticOperation (website.isInterfaceExpression())
+	to waf : WAF!ArithmeticOperation (
+		operands <- website.operands,
+		operator <- website.operator
 	)
 }

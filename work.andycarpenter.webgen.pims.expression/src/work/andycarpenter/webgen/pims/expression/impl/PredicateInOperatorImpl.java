@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
@@ -22,13 +21,34 @@ import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateInOperatorImpl#isNegated <em>Negated</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateInOperatorImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateInOperatorImpl#getRight <em>Right</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PredicateInOperatorImpl extends PredicateImpl implements PredicateInOperator {
+public class PredicateInOperatorImpl extends ExpressionImpl implements PredicateInOperator {
+	/**
+	 * The default value of the '{@link #isNegated() <em>Negated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNegated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NEGATED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNegated() <em>Negated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNegated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean negated = NEGATED_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -66,6 +86,29 @@ public class PredicateInOperatorImpl extends PredicateImpl implements PredicateI
 	@Override
 	protected EClass eStaticClass() {
 		return ExpressionPackage.Literals.PREDICATE_IN_OPERATOR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isNegated() {
+		return negated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNegated(boolean newNegated) {
+		boolean oldNegated = negated;
+		negated = newNegated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExpressionPackage.PREDICATE_IN_OPERATOR__NEGATED, oldNegated, negated));
 	}
 
 	/**
@@ -182,6 +225,8 @@ public class PredicateInOperatorImpl extends PredicateImpl implements PredicateI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__NEGATED:
+				return isNegated();
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__LEFT:
 				return getLeft();
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__RIGHT:
@@ -198,6 +243,9 @@ public class PredicateInOperatorImpl extends PredicateImpl implements PredicateI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__NEGATED:
+				setNegated((Boolean)newValue);
+				return;
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__LEFT:
 				setLeft((Expression)newValue);
 				return;
@@ -216,6 +264,9 @@ public class PredicateInOperatorImpl extends PredicateImpl implements PredicateI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__NEGATED:
+				setNegated(NEGATED_EDEFAULT);
+				return;
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__LEFT:
 				setLeft((Expression)null);
 				return;
@@ -234,12 +285,30 @@ public class PredicateInOperatorImpl extends PredicateImpl implements PredicateI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_IN_OPERATOR__NEGATED:
+				return negated != NEGATED_EDEFAULT;
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__LEFT:
 				return left != null;
 			case ExpressionPackage.PREDICATE_IN_OPERATOR__RIGHT:
 				return right != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (negated: ");
+		result.append(negated);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PredicateInOperatorImpl

@@ -11,6 +11,7 @@ import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Variable;
 
 import work.andycarpenter.webgen.pims.service.*;
@@ -96,6 +97,7 @@ public class ServiceSwitch<T> extends Switch<T> {
 				ConstantReference constantReference = (ConstantReference)theEObject;
 				T result = caseConstantReference(constantReference);
 				if (result == null) result = caseVariable(constantReference);
+				if (result == null) result = caseOperand(constantReference);
 				if (result == null) result = caseExpression(constantReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -229,6 +231,21 @@ public class ServiceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpression(Expression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperand(Operand object) {
 		return null;
 	}
 

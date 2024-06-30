@@ -72,70 +72,25 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExpressionPackage.OPERAND: {
+				Operand operand = (Operand)theEObject;
+				T result = caseOperand(operand);
+				if (result == null) result = caseExpression(operand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExpressionPackage.LITERAL: {
 				Literal literal = (Literal)theEObject;
 				T result = caseLiteral(literal);
+				if (result == null) result = caseOperand(literal);
 				if (result == null) result = caseExpression(literal);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.NULL_LITERAL: {
-				NullLiteral nullLiteral = (NullLiteral)theEObject;
-				T result = caseNullLiteral(nullLiteral);
-				if (result == null) result = caseLiteral(nullLiteral);
-				if (result == null) result = caseExpression(nullLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.BOOLEAN_LITERAL: {
-				BooleanLiteral booleanLiteral = (BooleanLiteral)theEObject;
-				T result = caseBooleanLiteral(booleanLiteral);
-				if (result == null) result = caseLiteral(booleanLiteral);
-				if (result == null) result = caseExpression(booleanLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.INTEGER_LITERAL: {
-				IntegerLiteral integerLiteral = (IntegerLiteral)theEObject;
-				T result = caseIntegerLiteral(integerLiteral);
-				if (result == null) result = caseLiteral(integerLiteral);
-				if (result == null) result = caseExpression(integerLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.STRING_LITERAL: {
-				StringLiteral stringLiteral = (StringLiteral)theEObject;
-				T result = caseStringLiteral(stringLiteral);
-				if (result == null) result = caseLiteral(stringLiteral);
-				if (result == null) result = caseExpression(stringLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.TIME_LITERAL: {
-				TimeLiteral timeLiteral = (TimeLiteral)theEObject;
-				T result = caseTimeLiteral(timeLiteral);
-				if (result == null) result = caseLiteral(timeLiteral);
-				if (result == null) result = caseExpression(timeLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.SIZE_FUNCTION: {
-				SizeFunction sizeFunction = (SizeFunction)theEObject;
-				T result = caseSizeFunction(sizeFunction);
-				if (result == null) result = caseExpression(sizeFunction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpressionPackage.FUNCTION_CALL: {
-				FunctionCall functionCall = (FunctionCall)theEObject;
-				T result = caseFunctionCall(functionCall);
-				if (result == null) result = caseExpression(functionCall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ExpressionPackage.VARIABLE: {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
+				if (result == null) result = caseOperand(variable);
 				if (result == null) result = caseExpression(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -219,6 +174,13 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExpressionPackage.ARITHMETIC_OPERATION: {
+				ArithmeticOperation arithmeticOperation = (ArithmeticOperation)theEObject;
+				T result = caseArithmeticOperation(arithmeticOperation);
+				if (result == null) result = caseExpression(arithmeticOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -239,6 +201,21 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperand(Operand object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -250,111 +227,6 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLiteral(Literal object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Null Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Null Literal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNullLiteral(NullLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBooleanLiteral(BooleanLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIntegerLiteral(IntegerLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStringLiteral(StringLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Literal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Literal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeLiteral(TimeLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Size Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Size Function</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSizeFunction(SizeFunction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Function Call</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Function Call</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFunctionCall(FunctionCall object) {
 		return null;
 	}
 
@@ -520,6 +392,21 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePredicateIsNull(PredicateIsNull object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arithmetic Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arithmetic Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithmeticOperation(ArithmeticOperation object) {
 		return null;
 	}
 

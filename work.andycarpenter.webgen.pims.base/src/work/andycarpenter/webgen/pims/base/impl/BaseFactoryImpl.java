@@ -56,16 +56,79 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case BasePackage.NULL_LITERAL: return createNullLiteral();
+			case BasePackage.BOOLEAN_LITERAL: return createBooleanLiteral();
+			case BasePackage.INTEGER_LITERAL: return createIntegerLiteral();
+			case BasePackage.STRING_LITERAL: return createStringLiteral();
+			case BasePackage.TIME_LITERAL: return createTimeLiteral();
+			case BasePackage.CURRENT_TIME: return createCurrentTime();
+			case BasePackage.CURRENT_USER: return createCurrentUser();
 			case BasePackage.DATA_TYPE: return createDataType();
 			case BasePackage.ENUMERATION_TYPE: return createEnumerationType();
 			case BasePackage.ENUMERATION_LITERAL: return createEnumerationLiteral();
-			case BasePackage.CURRENT_TIME: return createCurrentTime();
-			case BasePackage.CURRENT_USER: return createCurrentUser();
 			case BasePackage.FORMAL_PARAMETER: return createFormalParameter();
 			case BasePackage.PARAMETER_REFERENCE: return createParameterReference();
+			case BasePackage.CALLABLE: return createCallable();
+			case BasePackage.REDUCE_FUNCTION: return createReduceFunction();
+			case BasePackage.SIZE_FUNCTION: return createSizeFunction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NullLiteral createNullLiteral() {
+		NullLiteralImpl nullLiteral = new NullLiteralImpl();
+		return nullLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BooleanLiteral createBooleanLiteral() {
+		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
+		return booleanLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IntegerLiteral createIntegerLiteral() {
+		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
+		return integerLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public StringLiteral createStringLiteral() {
+		StringLiteralImpl stringLiteral = new StringLiteralImpl();
+		return stringLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TimeLiteral createTimeLiteral() {
+		TimeLiteralImpl timeLiteral = new TimeLiteralImpl();
+		return timeLiteral;
 	}
 
 	/**
@@ -143,6 +206,39 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	public ParameterReference createParameterReference() {
 		ParameterReferenceImpl parameterReference = new ParameterReferenceImpl();
 		return parameterReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ReduceFunction createReduceFunction() {
+		ReduceFunctionImpl reduceFunction = new ReduceFunctionImpl();
+		return reduceFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SizeFunction createSizeFunction() {
+		SizeFunctionImpl sizeFunction = new SizeFunctionImpl();
+		return sizeFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Callable createCallable() {
+		CallableImpl callable = new CallableImpl();
+		return callable;
 	}
 
 	/**

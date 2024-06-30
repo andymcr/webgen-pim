@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,22 +29,43 @@ import work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl#getExpressions <em>Expressions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl#isNegated <em>Negated</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl#getPredicates <em>Predicates</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl#getOperator <em>Operator</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PredicateBooleanOperatorImpl extends PredicateImpl implements PredicateBooleanOperator {
+public class PredicateBooleanOperatorImpl extends ExpressionImpl implements PredicateBooleanOperator {
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * The default value of the '{@link #isNegated() <em>Negated</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExpressions()
+	 * @see #isNegated()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Predicate> expressions;
+	protected static final boolean NEGATED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNegated() <em>Negated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNegated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean negated = NEGATED_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPredicates() <em>Predicates</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredicates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Predicate> predicates;
 
 	/**
 	 * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -92,11 +112,34 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	 * @generated
 	 */
 	@Override
-	public EList<Predicate> getExpressions() {
-		if (expressions == null) {
-			expressions = new EObjectContainmentEList<Predicate>(Predicate.class, this, ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS);
+	public boolean isNegated() {
+		return negated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNegated(boolean newNegated) {
+		boolean oldNegated = negated;
+		negated = newNegated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED, oldNegated, negated));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Predicate> getPredicates() {
+		if (predicates == null) {
+			predicates = new EObjectContainmentEList<Predicate>(Predicate.class, this, ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES);
 		}
-		return expressions;
+		return predicates;
 	}
 
 	/**
@@ -130,8 +173,8 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
-				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
+				return ((InternalEList<?>)getPredicates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -144,8 +187,10 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
-				return getExpressions();
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED:
+				return isNegated();
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
+				return getPredicates();
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__OPERATOR:
 				return getOperator();
 		}
@@ -161,9 +206,12 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
-				getExpressions().clear();
-				getExpressions().addAll((Collection<? extends Predicate>)newValue);
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED:
+				setNegated((Boolean)newValue);
+				return;
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
+				getPredicates().clear();
+				getPredicates().addAll((Collection<? extends Predicate>)newValue);
 				return;
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__OPERATOR:
 				setOperator((BooleanOperator)newValue);
@@ -180,8 +228,11 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
-				getExpressions().clear();
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED:
+				setNegated(NEGATED_EDEFAULT);
+				return;
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
+				getPredicates().clear();
 				return;
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__OPERATOR:
 				setOperator(OPERATOR_EDEFAULT);
@@ -198,8 +249,10 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
-				return expressions != null && !expressions.isEmpty();
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED:
+				return negated != NEGATED_EDEFAULT;
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
+				return predicates != null && !predicates.isEmpty();
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__OPERATOR:
 				return operator != OPERATOR_EDEFAULT;
 		}
@@ -216,7 +269,9 @@ public class PredicateBooleanOperatorImpl extends PredicateImpl implements Predi
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (operator: ");
+		result.append(" (negated: ");
+		result.append(negated);
+		result.append(", operator: ");
 		result.append(operator);
 		result.append(')');
 		return result.toString();

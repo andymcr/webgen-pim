@@ -95,7 +95,7 @@ rule PredicateBooleanVariable {
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isServiceExpression())
 	to service : Service!PredicateBooleanOperator (
-		expressions <- website.expressions,
+		predicates <- website.predicates,
 		operator <- website.operator
 	)
 }

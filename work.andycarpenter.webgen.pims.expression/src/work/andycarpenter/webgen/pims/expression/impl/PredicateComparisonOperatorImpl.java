@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import work.andycarpenter.webgen.pims.expression.ComparisionOperator;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
@@ -23,6 +22,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateComparisonOperatorImpl#isNegated <em>Negated</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateComparisonOperatorImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateComparisonOperatorImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.impl.PredicateComparisonOperatorImpl#getRight <em>Right</em>}</li>
@@ -30,7 +30,27 @@ import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
  *
  * @generated
  */
-public class PredicateComparisonOperatorImpl extends PredicateImpl implements PredicateComparisonOperator {
+public class PredicateComparisonOperatorImpl extends ExpressionImpl implements PredicateComparisonOperator {
+	/**
+	 * The default value of the '{@link #isNegated() <em>Negated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNegated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NEGATED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNegated() <em>Negated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNegated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean negated = NEGATED_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -88,6 +108,29 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	@Override
 	protected EClass eStaticClass() {
 		return ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isNegated() {
+		return negated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNegated(boolean newNegated) {
+		boolean oldNegated = negated;
+		negated = newNegated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED, oldNegated, negated));
 	}
 
 	/**
@@ -227,6 +270,8 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED:
+				return isNegated();
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__LEFT:
 				return getLeft();
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__OPERATOR:
@@ -245,6 +290,9 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED:
+				setNegated((Boolean)newValue);
+				return;
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__LEFT:
 				setLeft((Expression)newValue);
 				return;
@@ -266,6 +314,9 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED:
+				setNegated(NEGATED_EDEFAULT);
+				return;
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__LEFT:
 				setLeft((Expression)null);
 				return;
@@ -287,6 +338,8 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED:
+				return negated != NEGATED_EDEFAULT;
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__LEFT:
 				return left != null;
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__OPERATOR:
@@ -307,7 +360,9 @@ public class PredicateComparisonOperatorImpl extends PredicateImpl implements Pr
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (operator: ");
+		result.append(" (negated: ");
+		result.append(negated);
+		result.append(", operator: ");
 		result.append(operator);
 		result.append(')');
 		return result.toString();

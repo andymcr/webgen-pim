@@ -10,16 +10,15 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import work.andycarpenter.webgen.pims.expression.BooleanLiteral;
+import work.andycarpenter.webgen.pims.expression.ArithmeticOperation;
+import work.andycarpenter.webgen.pims.expression.ArithmeticOperator;
 import work.andycarpenter.webgen.pims.expression.BooleanOperator;
 import work.andycarpenter.webgen.pims.expression.ComparisionOperator;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.FunctionCall;
-import work.andycarpenter.webgen.pims.expression.IntegerLiteral;
 import work.andycarpenter.webgen.pims.expression.Literal;
-import work.andycarpenter.webgen.pims.expression.NullLiteral;
+import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
@@ -30,9 +29,6 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
-import work.andycarpenter.webgen.pims.expression.SizeFunction;
-import work.andycarpenter.webgen.pims.expression.StringLiteral;
-import work.andycarpenter.webgen.pims.expression.TimeLiteral;
 import work.andycarpenter.webgen.pims.expression.Variable;
 
 /**
@@ -54,56 +50,14 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass operandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass literalEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nullLiteralEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass booleanLiteralEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass integerLiteralEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass stringLiteralEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass timeLiteralEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sizeFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass functionCallEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,6 +135,20 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	private EClass predicateIsNullEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithmeticOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum arithmeticOperatorEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -283,148 +251,18 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
+	public EClass getOperand() {
+		return operandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLiteral() {
 		return literalEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getNullLiteral() {
-		return nullLiteralEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getBooleanLiteral() {
-		return booleanLiteralEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBooleanLiteral_Value() {
-		return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getIntegerLiteral() {
-		return integerLiteralEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getIntegerLiteral_Value() {
-		return (EAttribute)integerLiteralEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getStringLiteral() {
-		return stringLiteralEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getStringLiteral_Value() {
-		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTimeLiteral() {
-		return timeLiteralEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTimeLiteral_Value() {
-		return (EAttribute)timeLiteralEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSizeFunction() {
-		return sizeFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSizeFunction_Feature() {
-		return (EReference)sizeFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFunctionCall() {
-		return functionCallEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFunctionCall_Name() {
-		return (EAttribute)functionCallEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunctionCall_Actuals() {
-		return (EReference)functionCallEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -473,7 +311,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
-	public EReference getPredicateBooleanVariable_Feature() {
+	public EReference getPredicateBooleanVariable_Variable() {
 		return (EReference)predicateBooleanVariableEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -493,7 +331,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
-	public EReference getPredicateBooleanOperator_Expressions() {
+	public EReference getPredicateBooleanOperator_Predicates() {
 		return (EReference)predicateBooleanOperatorEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -683,7 +521,7 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
-	public EReference getPredicateIsEmpty_Feature() {
+	public EReference getPredicateIsEmpty_Value() {
 		return (EReference)predicateIsEmptyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -703,8 +541,48 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
-	public EReference getPredicateIsNull_Feature() {
+	public EReference getPredicateIsNull_Value() {
 		return (EReference)predicateIsNullEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArithmeticOperation() {
+		return arithmeticOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArithmeticOperation_Operands() {
+		return (EReference)arithmeticOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArithmeticOperation_Operator() {
+		return (EAttribute)arithmeticOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getArithmeticOperator() {
+		return arithmeticOperatorEEnum;
 	}
 
 	/**
@@ -759,28 +637,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		expressionEClass = createEClass(EXPRESSION);
 		createEReference(expressionEClass, EXPRESSION__ROOT_CONTAINER);
 
+		operandEClass = createEClass(OPERAND);
+
 		literalEClass = createEClass(LITERAL);
-
-		nullLiteralEClass = createEClass(NULL_LITERAL);
-
-		booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
-		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
-
-		integerLiteralEClass = createEClass(INTEGER_LITERAL);
-		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__VALUE);
-
-		stringLiteralEClass = createEClass(STRING_LITERAL);
-		createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
-
-		timeLiteralEClass = createEClass(TIME_LITERAL);
-		createEAttribute(timeLiteralEClass, TIME_LITERAL__VALUE);
-
-		sizeFunctionEClass = createEClass(SIZE_FUNCTION);
-		createEReference(sizeFunctionEClass, SIZE_FUNCTION__FEATURE);
-
-		functionCallEClass = createEClass(FUNCTION_CALL);
-		createEAttribute(functionCallEClass, FUNCTION_CALL__NAME);
-		createEReference(functionCallEClass, FUNCTION_CALL__ACTUALS);
 
 		variableEClass = createEClass(VARIABLE);
 
@@ -788,10 +647,10 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		createEAttribute(predicateEClass, PREDICATE__NEGATED);
 
 		predicateBooleanVariableEClass = createEClass(PREDICATE_BOOLEAN_VARIABLE);
-		createEReference(predicateBooleanVariableEClass, PREDICATE_BOOLEAN_VARIABLE__FEATURE);
+		createEReference(predicateBooleanVariableEClass, PREDICATE_BOOLEAN_VARIABLE__VARIABLE);
 
 		predicateBooleanOperatorEClass = createEClass(PREDICATE_BOOLEAN_OPERATOR);
-		createEReference(predicateBooleanOperatorEClass, PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS);
+		createEReference(predicateBooleanOperatorEClass, PREDICATE_BOOLEAN_OPERATOR__PREDICATES);
 		createEAttribute(predicateBooleanOperatorEClass, PREDICATE_BOOLEAN_OPERATOR__OPERATOR);
 
 		predicateEqualityOperatorEClass = createEClass(PREDICATE_EQUALITY_OPERATOR);
@@ -816,12 +675,17 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		createEReference(predicateLikeOperatorEClass, PREDICATE_LIKE_OPERATOR__RIGHT);
 
 		predicateIsEmptyEClass = createEClass(PREDICATE_IS_EMPTY);
-		createEReference(predicateIsEmptyEClass, PREDICATE_IS_EMPTY__FEATURE);
+		createEReference(predicateIsEmptyEClass, PREDICATE_IS_EMPTY__VALUE);
 
 		predicateIsNullEClass = createEClass(PREDICATE_IS_NULL);
-		createEReference(predicateIsNullEClass, PREDICATE_IS_NULL__FEATURE);
+		createEReference(predicateIsNullEClass, PREDICATE_IS_NULL__VALUE);
+
+		arithmeticOperationEClass = createEClass(ARITHMETIC_OPERATION);
+		createEReference(arithmeticOperationEClass, ARITHMETIC_OPERATION__OPERANDS);
+		createEAttribute(arithmeticOperationEClass, ARITHMETIC_OPERATION__OPERATOR);
 
 		// Create enums
+		arithmeticOperatorEEnum = createEEnum(ARITHMETIC_OPERATOR);
 		booleanOperatorEEnum = createEEnum(BOOLEAN_OPERATOR);
 		comparisionOperatorEEnum = createEEnum(COMPARISION_OPERATOR);
 	}
@@ -854,15 +718,9 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		literalEClass.getESuperTypes().add(this.getExpression());
-		nullLiteralEClass.getESuperTypes().add(this.getLiteral());
-		booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
-		integerLiteralEClass.getESuperTypes().add(this.getLiteral());
-		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
-		timeLiteralEClass.getESuperTypes().add(this.getLiteral());
-		sizeFunctionEClass.getESuperTypes().add(this.getExpression());
-		functionCallEClass.getESuperTypes().add(this.getExpression());
-		variableEClass.getESuperTypes().add(this.getExpression());
+		operandEClass.getESuperTypes().add(this.getExpression());
+		literalEClass.getESuperTypes().add(this.getOperand());
+		variableEClass.getESuperTypes().add(this.getOperand());
 		predicateEClass.getESuperTypes().add(this.getExpression());
 		predicateBooleanVariableEClass.getESuperTypes().add(this.getPredicate());
 		predicateBooleanOperatorEClass.getESuperTypes().add(this.getPredicate());
@@ -873,44 +731,26 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		predicateLikeOperatorEClass.getESuperTypes().add(this.getPredicate());
 		predicateIsEmptyEClass.getESuperTypes().add(this.getPredicate());
 		predicateIsNullEClass.getESuperTypes().add(this.getPredicate());
+		arithmeticOperationEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpression_RootContainer(), ecorePackage.getEObject(), null, "rootContainer", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(operandEClass, Operand.class, "Operand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(nullLiteralEClass, NullLiteral.class, "NullLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(integerLiteralEClass, IntegerLiteral.class, "IntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(timeLiteralEClass, TimeLiteral.class, "TimeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTimeLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, TimeLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sizeFunctionEClass, SizeFunction.class, "SizeFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSizeFunction_Feature(), this.getVariable(), null, "feature", null, 1, 1, SizeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(functionCallEClass, FunctionCall.class, "FunctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFunctionCall_Name(), ecorePackage.getEString(), "name", null, 1, 1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionCall_Actuals(), this.getExpression(), null, "actuals", null, 0, -1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(predicateEClass, Predicate.class, "Predicate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(predicateEClass, Predicate.class, "Predicate", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPredicate_Negated(), ecorePackage.getEBoolean(), "negated", "false", 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateBooleanVariableEClass, PredicateBooleanVariable.class, "PredicateBooleanVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredicateBooleanVariable_Feature(), this.getVariable(), null, "feature", null, 0, 1, PredicateBooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPredicateBooleanVariable_Variable(), this.getVariable(), null, "variable", null, 0, 1, PredicateBooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateBooleanOperatorEClass, PredicateBooleanOperator.class, "PredicateBooleanOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredicateBooleanOperator_Expressions(), this.getPredicate(), null, "expressions", null, 1, -1, PredicateBooleanOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPredicateBooleanOperator_Predicates(), this.getPredicate(), null, "predicates", null, 2, -1, PredicateBooleanOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPredicateBooleanOperator_Operator(), this.getBooleanOperator(), "operator", "And", 1, 1, PredicateBooleanOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateEqualityOperatorEClass, PredicateEqualityOperator.class, "PredicateEqualityOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -935,12 +775,22 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		initEReference(getPredicateLikeOperator_Right(), this.getExpression(), null, "right", null, 1, 1, PredicateLikeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateIsEmptyEClass, PredicateIsEmpty.class, "PredicateIsEmpty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredicateIsEmpty_Feature(), this.getVariable(), null, "feature", null, 0, 1, PredicateIsEmpty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPredicateIsEmpty_Value(), this.getOperand(), null, "value", null, 0, 1, PredicateIsEmpty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateIsNullEClass, PredicateIsNull.class, "PredicateIsNull", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredicateIsNull_Feature(), this.getVariable(), null, "feature", null, 0, 1, PredicateIsNull.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPredicateIsNull_Value(), this.getOperand(), null, "value", null, 0, 1, PredicateIsNull.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arithmeticOperationEClass, ArithmeticOperation.class, "ArithmeticOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArithmeticOperation_Operands(), this.getExpression(), null, "operands", null, 2, -1, ArithmeticOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArithmeticOperation_Operator(), this.getArithmeticOperator(), "operator", null, 1, 1, ArithmeticOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
+		initEEnum(arithmeticOperatorEEnum, ArithmeticOperator.class, "ArithmeticOperator");
+		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.ADD);
+		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.SUBTRACT);
+		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.MULTIPLY);
+		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.DIVIDE);
+
 		initEEnum(booleanOperatorEEnum, BooleanOperator.class, "BooleanOperator");
 		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.AND);
 		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.OR);

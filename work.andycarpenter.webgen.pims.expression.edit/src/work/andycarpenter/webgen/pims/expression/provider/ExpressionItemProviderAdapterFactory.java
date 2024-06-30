@@ -89,167 +89,6 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.NullLiteral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NullLiteralItemProvider nullLiteralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.NullLiteral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNullLiteralAdapter() {
-		if (nullLiteralItemProvider == null) {
-			nullLiteralItemProvider = new NullLiteralItemProvider(this);
-		}
-
-		return nullLiteralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.BooleanLiteral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BooleanLiteralItemProvider booleanLiteralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.BooleanLiteral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBooleanLiteralAdapter() {
-		if (booleanLiteralItemProvider == null) {
-			booleanLiteralItemProvider = new BooleanLiteralItemProvider(this);
-		}
-
-		return booleanLiteralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.IntegerLiteral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntegerLiteralItemProvider integerLiteralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.IntegerLiteral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIntegerLiteralAdapter() {
-		if (integerLiteralItemProvider == null) {
-			integerLiteralItemProvider = new IntegerLiteralItemProvider(this);
-		}
-
-		return integerLiteralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.StringLiteral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StringLiteralItemProvider stringLiteralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.StringLiteral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStringLiteralAdapter() {
-		if (stringLiteralItemProvider == null) {
-			stringLiteralItemProvider = new StringLiteralItemProvider(this);
-		}
-
-		return stringLiteralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.TimeLiteral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeLiteralItemProvider timeLiteralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.TimeLiteral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeLiteralAdapter() {
-		if (timeLiteralItemProvider == null) {
-			timeLiteralItemProvider = new TimeLiteralItemProvider(this);
-		}
-
-		return timeLiteralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.SizeFunction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SizeFunctionItemProvider sizeFunctionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.SizeFunction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSizeFunctionAdapter() {
-		if (sizeFunctionItemProvider == null) {
-			sizeFunctionItemProvider = new SizeFunctionItemProvider(this);
-		}
-
-		return sizeFunctionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.FunctionCall} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionCallItemProvider functionCallItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.FunctionCall}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionCallAdapter() {
-		if (functionCallItemProvider == null) {
-			functionCallItemProvider = new FunctionCallItemProvider(this);
-		}
-
-		return functionCallItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -457,6 +296,29 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArithmeticOperationItemProvider arithmeticOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArithmeticOperationAdapter() {
+		if (arithmeticOperationItemProvider == null) {
+			arithmeticOperationItemProvider = new ArithmeticOperationItemProvider(this);
+		}
+
+		return arithmeticOperationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,13 +450,6 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	 */
 	@Override
 	public void dispose() {
-		if (nullLiteralItemProvider != null) nullLiteralItemProvider.dispose();
-		if (booleanLiteralItemProvider != null) booleanLiteralItemProvider.dispose();
-		if (integerLiteralItemProvider != null) integerLiteralItemProvider.dispose();
-		if (stringLiteralItemProvider != null) stringLiteralItemProvider.dispose();
-		if (timeLiteralItemProvider != null) timeLiteralItemProvider.dispose();
-		if (sizeFunctionItemProvider != null) sizeFunctionItemProvider.dispose();
-		if (functionCallItemProvider != null) functionCallItemProvider.dispose();
 		if (predicateBooleanVariableItemProvider != null) predicateBooleanVariableItemProvider.dispose();
 		if (predicateBooleanOperatorItemProvider != null) predicateBooleanOperatorItemProvider.dispose();
 		if (predicateEqualityOperatorItemProvider != null) predicateEqualityOperatorItemProvider.dispose();
@@ -604,6 +459,7 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 		if (predicateLikeOperatorItemProvider != null) predicateLikeOperatorItemProvider.dispose();
 		if (predicateIsEmptyItemProvider != null) predicateIsEmptyItemProvider.dispose();
 		if (predicateIsNullItemProvider != null) predicateIsNullItemProvider.dispose();
+		if (arithmeticOperationItemProvider != null) arithmeticOperationItemProvider.dispose();
 	}
 
 }

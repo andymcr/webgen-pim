@@ -2,7 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.base;
 
-import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import work.andycarpenter.webgen.pims.expression.Expression;
  * @model
  * @generated
  */
-public interface CurrentTime extends Expression {
+public interface CurrentTime extends Variable {
 	/**
 	 * Returns the value of the '<em><b>Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->

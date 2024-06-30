@@ -10,8 +10,8 @@ package work.andycarpenter.webgen.pims.expression;
  *
  *
  * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getVariable()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  * @generated
  */
-public interface Variable extends Expression {
+public interface Variable extends Operand {
 } // Variable

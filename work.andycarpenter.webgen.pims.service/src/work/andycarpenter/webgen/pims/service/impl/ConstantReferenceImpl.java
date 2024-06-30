@@ -4,13 +4,11 @@ package work.andycarpenter.webgen.pims.service.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
+import work.andycarpenter.webgen.pims.expression.impl.VariableImpl;
 import work.andycarpenter.webgen.pims.service.Constant;
 import work.andycarpenter.webgen.pims.service.ConstantReference;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
@@ -23,24 +21,13 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getRootContainer <em>Root Container</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.ConstantReferenceImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implements ConstantReference {
-	/**
-	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRootContainer()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
-
+public class ConstantReferenceImpl extends VariableImpl implements ConstantReference {
 	/**
 	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,35 +65,6 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	protected EClass eStaticClass() {
 		return ServicePackage.Literals.CONSTANT_REFERENCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject getRootContainer() {
-		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetRootContainer() {
-		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetRootContainer() {
-		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -177,9 +135,6 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ServicePackage.CONSTANT_REFERENCE__ROOT_CONTAINER:
-				if (resolve) return getRootContainer();
-				return basicGetRootContainer();
 			case ServicePackage.CONSTANT_REFERENCE__NAME:
 				return getName();
 			case ServicePackage.CONSTANT_REFERENCE__VALUE:
@@ -228,8 +183,6 @@ public class ConstantReferenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ServicePackage.CONSTANT_REFERENCE__ROOT_CONTAINER:
-				return isSetRootContainer();
 			case ServicePackage.CONSTANT_REFERENCE__NAME:
 				return isSetName();
 			case ServicePackage.CONSTANT_REFERENCE__VALUE:

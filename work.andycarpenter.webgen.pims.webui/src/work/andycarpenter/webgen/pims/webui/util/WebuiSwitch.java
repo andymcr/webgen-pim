@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.expression.Expression;
+import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Variable;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
@@ -786,6 +787,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				PathVariable pathVariable = (PathVariable)theEObject;
 				T result = casePathVariable(pathVariable);
 				if (result == null) result = caseVariable(pathVariable);
+				if (result == null) result = caseOperand(pathVariable);
 				if (result == null) result = caseExpression(pathVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -797,6 +799,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = casePathVariable(pathVariableAssociation);
 				if (result == null) result = casePath(pathVariableAssociation);
 				if (result == null) result = caseVariable(pathVariableAssociation);
+				if (result == null) result = caseOperand(pathVariableAssociation);
 				if (result == null) result = caseExpression(pathVariableAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -808,6 +811,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = casePathVariable(pathVariableAttribute);
 				if (result == null) result = casePath(pathVariableAttribute);
 				if (result == null) result = caseVariable(pathVariableAttribute);
+				if (result == null) result = caseOperand(pathVariableAttribute);
 				if (result == null) result = caseExpression(pathVariableAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -819,6 +823,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = casePathVariable(pathVariableResource);
 				if (result == null) result = casePath(pathVariableResource);
 				if (result == null) result = caseVariable(pathVariableResource);
+				if (result == null) result = caseOperand(pathVariableResource);
 				if (result == null) result = caseExpression(pathVariableResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1450,6 +1455,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpression(Expression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperand(Operand object) {
 		return null;
 	}
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getExpressions <em>Expressions</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getPredicates <em>Predicates</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getOperator <em>Operator</em>}</li>
  * </ul>
  *
@@ -23,20 +23,16 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface PredicateBooleanOperator extends Predicate {
 	/**
-	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Predicates</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.expression.Predicate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expressions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expressions</em>' containment reference list.
-	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateBooleanOperator_Expressions()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Predicates</em>' containment reference list.
+	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateBooleanOperator_Predicates()
+	 * @model containment="true" lower="2"
 	 * @generated
 	 */
-	EList<Predicate> getExpressions();
+	EList<Predicate> getPredicates();
 
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.

@@ -59,10 +59,10 @@ public interface ExpressionPackage extends EPackage {
 	ExpressionPackage eINSTANCE = work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.Expression <em>Expression</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.ExpressionImpl <em>Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.Expression
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionImpl
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getExpression()
 	 * @generated
 	 */
@@ -96,14 +96,14 @@ public interface ExpressionPackage extends EPackage {
 	int EXPRESSION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.OperandImpl <em>Operand</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.Literal
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getLiteral()
+	 * @see work.andycarpenter.webgen.pims.expression.impl.OperandImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getOperand()
 	 * @generated
 	 */
-	int LITERAL = 1;
+	int OPERAND = 1;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -112,7 +112,44 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+	int OPERAND__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+
+	/**
+	 * The number of structural features of the '<em>Operand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERAND_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Operand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERAND_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.LiteralImpl <em>Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.LiteralImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getLiteral()
+	 * @generated
+	 */
+	int LITERAL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__ROOT_CONTAINER = OPERAND__ROOT_CONTAINER;
 
 	/**
 	 * The number of structural features of the '<em>Literal</em>' class.
@@ -121,7 +158,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+	int LITERAL_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Literal</em>' class.
@@ -130,339 +167,17 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int LITERAL_OPERATION_COUNT = OPERAND_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.VariableImpl <em>Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.NullLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getNullLiteral()
-	 * @generated
-	 */
-	int NULL_LITERAL = 2;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NULL_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
-
-	/**
-	 * The number of structural features of the '<em>Null Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NULL_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Null Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NULL_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.BooleanLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanLiteral()
-	 * @generated
-	 */
-	int BOOLEAN_LITERAL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Boolean Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Boolean Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getIntegerLiteral()
-	 * @generated
-	 */
-	int INTEGER_LITERAL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Integer Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Integer Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.StringLiteralImpl <em>String Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.StringLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getStringLiteral()
-	 * @generated
-	 */
-	int STRING_LITERAL = 5;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>String Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>String Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl <em>Time Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getTimeLiteral()
-	 * @generated
-	 */
-	int TIME_LITERAL = 6;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_LITERAL__ROOT_CONTAINER = LITERAL__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Time Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Time Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl <em>Size Function</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getSizeFunction()
-	 * @generated
-	 */
-	int SIZE_FUNCTION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIZE_FUNCTION__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIZE_FUNCTION__FEATURE = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Size Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIZE_FUNCTION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Size Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIZE_FUNCTION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl <em>Function Call</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getFunctionCall()
-	 * @generated
-	 */
-	int FUNCTION_CALL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__NAME = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Actuals</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__ACTUALS = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Function Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Function Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.Variable <em>Variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.Variable
+	 * @see work.andycarpenter.webgen.pims.expression.impl.VariableImpl
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 9;
+	int VARIABLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -471,7 +186,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+	int VARIABLE__ROOT_CONTAINER = OPERAND__ROOT_CONTAINER;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -480,7 +195,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+	int VARIABLE_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -489,17 +204,17 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE_OPERATION_COUNT = OPERAND_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateImpl <em>Predicate</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.Predicate <em>Predicate</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateImpl
+	 * @see work.andycarpenter.webgen.pims.expression.Predicate
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicate()
 	 * @generated
 	 */
-	int PREDICATE = 10;
+	int PREDICATE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -545,7 +260,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanVariable()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_VARIABLE = 11;
+	int PREDICATE_BOOLEAN_VARIABLE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -566,13 +281,13 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_BOOLEAN_VARIABLE__NEGATED = PREDICATE__NEGATED;
 
 	/**
-	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_BOOLEAN_VARIABLE__FEATURE = PREDICATE_FEATURE_COUNT + 0;
+	int PREDICATE_BOOLEAN_VARIABLE__VARIABLE = PREDICATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Predicate Boolean Variable</em>' class.
@@ -600,7 +315,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanOperator()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_OPERATOR = 12;
+	int PREDICATE_BOOLEAN_OPERATOR = 6;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -621,13 +336,13 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_BOOLEAN_OPERATOR__NEGATED = PREDICATE__NEGATED;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Predicates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS = PREDICATE_FEATURE_COUNT + 0;
+	int PREDICATE_BOOLEAN_OPERATOR__PREDICATES = PREDICATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -664,7 +379,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateEqualityOperator()
 	 * @generated
 	 */
-	int PREDICATE_EQUALITY_OPERATOR = 13;
+	int PREDICATE_EQUALITY_OPERATOR = 7;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -728,7 +443,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateComparisonOperator()
 	 * @generated
 	 */
-	int PREDICATE_COMPARISON_OPERATOR = 14;
+	int PREDICATE_COMPARISON_OPERATOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -801,7 +516,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateInOperator()
 	 * @generated
 	 */
-	int PREDICATE_IN_OPERATOR = 15;
+	int PREDICATE_IN_OPERATOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -865,7 +580,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsOperator()
 	 * @generated
 	 */
-	int PREDICATE_IS_OPERATOR = 16;
+	int PREDICATE_IS_OPERATOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -929,7 +644,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateLikeOperator()
 	 * @generated
 	 */
-	int PREDICATE_LIKE_OPERATOR = 17;
+	int PREDICATE_LIKE_OPERATOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -993,7 +708,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsEmpty()
 	 * @generated
 	 */
-	int PREDICATE_IS_EMPTY = 18;
+	int PREDICATE_IS_EMPTY = 12;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -1014,13 +729,13 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_EMPTY__NEGATED = PREDICATE__NEGATED;
 
 	/**
-	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_IS_EMPTY__FEATURE = PREDICATE_FEATURE_COUNT + 0;
+	int PREDICATE_IS_EMPTY__VALUE = PREDICATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Predicate Is Empty</em>' class.
@@ -1048,7 +763,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsNull()
 	 * @generated
 	 */
-	int PREDICATE_IS_NULL = 19;
+	int PREDICATE_IS_NULL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -1069,13 +784,13 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_NULL__NEGATED = PREDICATE__NEGATED;
 
 	/**
-	 * The feature id for the '<em><b>Feature</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_IS_NULL__FEATURE = PREDICATE_FEATURE_COUNT + 0;
+	int PREDICATE_IS_NULL__VALUE = PREDICATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Predicate Is Null</em>' class.
@@ -1096,6 +811,71 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_NULL_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.ArithmeticOperationImpl <em>Arithmetic Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ArithmeticOperationImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperation()
+	 * @generated
+	 */
+	int ARITHMETIC_OPERATION = 14;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_OPERATION__ROOT_CONTAINER = EXPRESSION__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Operands</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_OPERATION__OPERANDS = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_OPERATION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Arithmetic Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Arithmetic Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_OPERATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperator
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperator()
+	 * @generated
+	 */
+	int ARITHMETIC_OPERATOR = 15;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.BooleanOperator <em>Boolean Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1103,7 +883,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanOperator()
 	 * @generated
 	 */
-	int BOOLEAN_OPERATOR = 20;
+	int BOOLEAN_OPERATOR = 16;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.ComparisionOperator <em>Comparision Operator</em>}' enum.
@@ -1113,7 +893,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getComparisionOperator()
 	 * @generated
 	 */
-	int COMPARISION_OPERATOR = 21;
+	int COMPARISION_OPERATOR = 17;
 
 
 	/**
@@ -1138,6 +918,16 @@ public interface ExpressionPackage extends EPackage {
 	EReference getExpression_RootContainer();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.Operand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operand</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.Operand
+	 * @generated
+	 */
+	EClass getOperand();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1146,153 +936,6 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLiteral();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.NullLiteral <em>Null Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Null Literal</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.NullLiteral
-	 * @generated
-	 */
-	EClass getNullLiteral();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.BooleanLiteral <em>Boolean Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean Literal</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.BooleanLiteral
-	 * @generated
-	 */
-	EClass getBooleanLiteral();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.BooleanLiteral#isValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.BooleanLiteral#isValue()
-	 * @see #getBooleanLiteral()
-	 * @generated
-	 */
-	EAttribute getBooleanLiteral_Value();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.IntegerLiteral <em>Integer Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Integer Literal</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.IntegerLiteral
-	 * @generated
-	 */
-	EClass getIntegerLiteral();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.IntegerLiteral#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.IntegerLiteral#getValue()
-	 * @see #getIntegerLiteral()
-	 * @generated
-	 */
-	EAttribute getIntegerLiteral_Value();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.StringLiteral <em>String Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String Literal</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.StringLiteral
-	 * @generated
-	 */
-	EClass getStringLiteral();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.StringLiteral#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.StringLiteral#getValue()
-	 * @see #getStringLiteral()
-	 * @generated
-	 */
-	EAttribute getStringLiteral_Value();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.TimeLiteral <em>Time Literal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Time Literal</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.TimeLiteral
-	 * @generated
-	 */
-	EClass getTimeLiteral();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.TimeLiteral#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.TimeLiteral#getValue()
-	 * @see #getTimeLiteral()
-	 * @generated
-	 */
-	EAttribute getTimeLiteral_Value();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.SizeFunction <em>Size Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Size Function</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.SizeFunction
-	 * @generated
-	 */
-	EClass getSizeFunction();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.SizeFunction#getFeature <em>Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.SizeFunction#getFeature()
-	 * @see #getSizeFunction()
-	 * @generated
-	 */
-	EReference getSizeFunction_Feature();
-
-	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.FunctionCall <em>Function Call</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Function Call</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.FunctionCall
-	 * @generated
-	 */
-	EClass getFunctionCall();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.FunctionCall#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.FunctionCall#getName()
-	 * @see #getFunctionCall()
-	 * @generated
-	 */
-	EAttribute getFunctionCall_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.expression.FunctionCall#getActuals <em>Actuals</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Actuals</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.FunctionCall#getActuals()
-	 * @see #getFunctionCall()
-	 * @generated
-	 */
-	EReference getFunctionCall_Actuals();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.Variable <em>Variable</em>}'.
@@ -1336,15 +979,15 @@ public interface ExpressionPackage extends EPackage {
 	EClass getPredicateBooleanVariable();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature <em>Feature</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature()
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getVariable()
 	 * @see #getPredicateBooleanVariable()
 	 * @generated
 	 */
-	EReference getPredicateBooleanVariable_Feature();
+	EReference getPredicateBooleanVariable_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator <em>Predicate Boolean Operator</em>}'.
@@ -1357,15 +1000,15 @@ public interface ExpressionPackage extends EPackage {
 	EClass getPredicateBooleanOperator();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getExpressions <em>Expressions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getPredicates <em>Predicates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getExpressions()
+	 * @return the meta object for the containment reference list '<em>Predicates</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getPredicates()
 	 * @see #getPredicateBooleanOperator()
 	 * @generated
 	 */
-	EReference getPredicateBooleanOperator_Expressions();
+	EReference getPredicateBooleanOperator_Predicates();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator#getOperator <em>Operator</em>}'.
@@ -1560,15 +1203,15 @@ public interface ExpressionPackage extends EPackage {
 	EClass getPredicateIsEmpty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getFeature <em>Feature</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getFeature()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getValue()
 	 * @see #getPredicateIsEmpty()
 	 * @generated
 	 */
-	EReference getPredicateIsEmpty_Feature();
+	EReference getPredicateIsEmpty_Value();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateIsNull <em>Predicate Is Null</em>}'.
@@ -1581,15 +1224,57 @@ public interface ExpressionPackage extends EPackage {
 	EClass getPredicateIsNull();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsNull#getFeature <em>Feature</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsNull#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsNull#getFeature()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsNull#getValue()
 	 * @see #getPredicateIsNull()
 	 * @generated
 	 */
-	EReference getPredicateIsNull_Feature();
+	EReference getPredicateIsNull_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation <em>Arithmetic Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arithmetic Operation</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperation
+	 * @generated
+	 */
+	EClass getArithmeticOperation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation#getOperands <em>Operands</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operands</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperation#getOperands()
+	 * @see #getArithmeticOperation()
+	 * @generated
+	 */
+	EReference getArithmeticOperation_Operands();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperation#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperation#getOperator()
+	 * @see #getArithmeticOperation()
+	 * @generated
+	 */
+	EAttribute getArithmeticOperation_Operator();
+
+	/**
+	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperator <em>Arithmetic Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Arithmetic Operator</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperator
+	 * @generated
+	 */
+	EEnum getArithmeticOperator();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.expression.BooleanOperator <em>Boolean Operator</em>}'.
@@ -1635,10 +1320,10 @@ public interface ExpressionPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.Expression <em>Expression</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.ExpressionImpl <em>Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.Expression
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionImpl
 		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getExpression()
 		 * @generated
 		 */
@@ -1653,156 +1338,40 @@ public interface ExpressionPackage extends EPackage {
 		EReference EXPRESSION__ROOT_CONTAINER = eINSTANCE.getExpression_RootContainer();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.Literal <em>Literal</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.OperandImpl <em>Operand</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.Literal
+		 * @see work.andycarpenter.webgen.pims.expression.impl.OperandImpl
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getOperand()
+		 * @generated
+		 */
+		EClass OPERAND = eINSTANCE.getOperand();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.LiteralImpl <em>Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.impl.LiteralImpl
 		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getLiteral()
 		 * @generated
 		 */
 		EClass LITERAL = eINSTANCE.getLiteral();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.VariableImpl <em>Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.NullLiteralImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getNullLiteral()
-		 * @generated
-		 */
-		EClass NULL_LITERAL = eINSTANCE.getNullLiteral();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.BooleanLiteralImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanLiteral()
-		 * @generated
-		 */
-		EClass BOOLEAN_LITERAL = eINSTANCE.getBooleanLiteral();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.IntegerLiteralImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getIntegerLiteral()
-		 * @generated
-		 */
-		EClass INTEGER_LITERAL = eINSTANCE.getIntegerLiteral();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.StringLiteralImpl <em>String Literal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.StringLiteralImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getStringLiteral()
-		 * @generated
-		 */
-		EClass STRING_LITERAL = eINSTANCE.getStringLiteral();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRING_LITERAL__VALUE = eINSTANCE.getStringLiteral_Value();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl <em>Time Literal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.TimeLiteralImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getTimeLiteral()
-		 * @generated
-		 */
-		EClass TIME_LITERAL = eINSTANCE.getTimeLiteral();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TIME_LITERAL__VALUE = eINSTANCE.getTimeLiteral_Value();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl <em>Size Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.SizeFunctionImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getSizeFunction()
-		 * @generated
-		 */
-		EClass SIZE_FUNCTION = eINSTANCE.getSizeFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIZE_FUNCTION__FEATURE = eINSTANCE.getSizeFunction_Feature();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl <em>Function Call</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.FunctionCallImpl
-		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getFunctionCall()
-		 * @generated
-		 */
-		EClass FUNCTION_CALL = eINSTANCE.getFunctionCall();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION_CALL__NAME = eINSTANCE.getFunctionCall_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Actuals</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION_CALL__ACTUALS = eINSTANCE.getFunctionCall_Actuals();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.Variable <em>Variable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.Variable
+		 * @see work.andycarpenter.webgen.pims.expression.impl.VariableImpl
 		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getVariable()
 		 * @generated
 		 */
 		EClass VARIABLE = eINSTANCE.getVariable();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateImpl <em>Predicate</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.Predicate <em>Predicate</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateImpl
+		 * @see work.andycarpenter.webgen.pims.expression.Predicate
 		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicate()
 		 * @generated
 		 */
@@ -1827,12 +1396,12 @@ public interface ExpressionPackage extends EPackage {
 		EClass PREDICATE_BOOLEAN_VARIABLE = eINSTANCE.getPredicateBooleanVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PREDICATE_BOOLEAN_VARIABLE__FEATURE = eINSTANCE.getPredicateBooleanVariable_Feature();
+		EReference PREDICATE_BOOLEAN_VARIABLE__VARIABLE = eINSTANCE.getPredicateBooleanVariable_Variable();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl <em>Predicate Boolean Operator</em>}' class.
@@ -1845,12 +1414,12 @@ public interface ExpressionPackage extends EPackage {
 		EClass PREDICATE_BOOLEAN_OPERATOR = eINSTANCE.getPredicateBooleanOperator();
 
 		/**
-		 * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Predicates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS = eINSTANCE.getPredicateBooleanOperator_Expressions();
+		EReference PREDICATE_BOOLEAN_OPERATOR__PREDICATES = eINSTANCE.getPredicateBooleanOperator_Predicates();
 
 		/**
 		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
@@ -2009,12 +1578,12 @@ public interface ExpressionPackage extends EPackage {
 		EClass PREDICATE_IS_EMPTY = eINSTANCE.getPredicateIsEmpty();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PREDICATE_IS_EMPTY__FEATURE = eINSTANCE.getPredicateIsEmpty_Feature();
+		EReference PREDICATE_IS_EMPTY__VALUE = eINSTANCE.getPredicateIsEmpty_Value();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsNullImpl <em>Predicate Is Null</em>}' class.
@@ -2027,12 +1596,48 @@ public interface ExpressionPackage extends EPackage {
 		EClass PREDICATE_IS_NULL = eINSTANCE.getPredicateIsNull();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PREDICATE_IS_NULL__FEATURE = eINSTANCE.getPredicateIsNull_Feature();
+		EReference PREDICATE_IS_NULL__VALUE = eINSTANCE.getPredicateIsNull_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.ArithmeticOperationImpl <em>Arithmetic Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ArithmeticOperationImpl
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperation()
+		 * @generated
+		 */
+		EClass ARITHMETIC_OPERATION = eINSTANCE.getArithmeticOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Operands</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARITHMETIC_OPERATION__OPERANDS = eINSTANCE.getArithmeticOperation_Operands();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARITHMETIC_OPERATION__OPERATOR = eINSTANCE.getArithmeticOperation_Operator();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.ArithmeticOperator
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperator()
+		 * @generated
+		 */
+		EEnum ARITHMETIC_OPERATOR = eINSTANCE.getArithmeticOperator();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.BooleanOperator <em>Boolean Operator</em>}' enum.

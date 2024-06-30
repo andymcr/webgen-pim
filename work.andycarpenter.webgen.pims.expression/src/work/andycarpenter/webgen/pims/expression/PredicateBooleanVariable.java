@@ -12,7 +12,7 @@ package work.andycarpenter.webgen.pims.expression;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature <em>Feature</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateBooleanVariable()
@@ -21,25 +21,25 @@ package work.andycarpenter.webgen.pims.expression;
  */
 public interface PredicateBooleanVariable extends Predicate {
 	/**
-	 * Returns the value of the '<em><b>Feature</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Feature</em>' containment reference.
-	 * @see #setFeature(Variable)
-	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateBooleanVariable_Feature()
+	 * @return the value of the '<em>Variable</em>' containment reference.
+	 * @see #setVariable(Variable)
+	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateBooleanVariable_Variable()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Variable getFeature();
+	Variable getVariable();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getFeature <em>Feature</em>}' containment reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable#getVariable <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Feature</em>' containment reference.
-	 * @see #getFeature()
+	 * @param value the new value of the '<em>Variable</em>' containment reference.
+	 * @see #getVariable()
 	 * @generated
 	 */
-	void setFeature(Variable value);
+	void setVariable(Variable value);
 
 } // PredicateBooleanVariable

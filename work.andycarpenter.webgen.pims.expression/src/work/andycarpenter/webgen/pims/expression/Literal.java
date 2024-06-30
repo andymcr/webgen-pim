@@ -10,8 +10,8 @@ package work.andycarpenter.webgen.pims.expression;
  *
  *
  * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getLiteral()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  * @generated
  */
-public interface Literal extends Expression {
+public interface Literal extends Operand {
 } // Literal

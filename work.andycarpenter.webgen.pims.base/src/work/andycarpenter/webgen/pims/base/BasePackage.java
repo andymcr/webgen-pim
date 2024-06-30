@@ -60,6 +60,227 @@ public interface BasePackage extends EPackage {
 	BasePackage eINSTANCE = work.andycarpenter.webgen.pims.base.impl.BasePackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.NullLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getNullLiteral()
+	 * @generated
+	 */
+	int NULL_LITERAL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_LITERAL__ROOT_CONTAINER = ExpressionPackage.LITERAL__ROOT_CONTAINER;
+
+	/**
+	 * The number of structural features of the '<em>Null Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_LITERAL_FEATURE_COUNT = ExpressionPackage.LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Null Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_LITERAL_OPERATION_COUNT = ExpressionPackage.LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.BooleanLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getBooleanLiteral()
+	 * @generated
+	 */
+	int BOOLEAN_LITERAL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL__ROOT_CONTAINER = ExpressionPackage.LITERAL__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL__VALUE = ExpressionPackage.LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL_FEATURE_COUNT = ExpressionPackage.LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Boolean Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL_OPERATION_COUNT = ExpressionPackage.LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.IntegerLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getIntegerLiteral()
+	 * @generated
+	 */
+	int INTEGER_LITERAL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL__ROOT_CONTAINER = ExpressionPackage.LITERAL__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL__VALUE = ExpressionPackage.LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Integer Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL_FEATURE_COUNT = ExpressionPackage.LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Integer Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL_OPERATION_COUNT = ExpressionPackage.LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.StringLiteralImpl <em>String Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.StringLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getStringLiteral()
+	 * @generated
+	 */
+	int STRING_LITERAL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL__ROOT_CONTAINER = ExpressionPackage.LITERAL__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL__VALUE = ExpressionPackage.LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>String Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL_FEATURE_COUNT = ExpressionPackage.LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>String Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL_OPERATION_COUNT = ExpressionPackage.LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.TimeLiteralImpl <em>Time Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.TimeLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getTimeLiteral()
+	 * @generated
+	 */
+	int TIME_LITERAL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_LITERAL__ROOT_CONTAINER = ExpressionPackage.LITERAL__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_LITERAL__VALUE = ExpressionPackage.LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Time Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_LITERAL_FEATURE_COUNT = ExpressionPackage.LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Time Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_LITERAL_OPERATION_COUNT = ExpressionPackage.LITERAL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.NamedElementImpl <em>Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +288,140 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 0;
+	int NAMED_ELEMENT = 7;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl <em>Named Display Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getNamedDisplayElement()
+	 * @generated
+	 */
+	int NAMED_DISPLAY_ELEMENT = 8;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.ClassifierImpl <em>Classifier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.ClassifierImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getClassifier()
+	 * @generated
+	 */
+	int CLASSIFIER = 9;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.DataTypeImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getDataType()
+	 * @generated
+	 */
+	int DATA_TYPE = 10;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.EnumerationTypeImpl <em>Enumeration Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.EnumerationTypeImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getEnumerationType()
+	 * @generated
+	 */
+	int ENUMERATION_TYPE = 11;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.EnumerationLiteralImpl <em>Enumeration Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.EnumerationLiteralImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getEnumerationLiteral()
+	 * @generated
+	 */
+	int ENUMERATION_LITERAL = 12;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl <em>Current Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCurrentTime()
+	 * @generated
+	 */
+	int CURRENT_TIME = 5;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME__FORMAT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Current Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Current Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CurrentUserImpl <em>Current User</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.CurrentUserImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCurrentUser()
+	 * @generated
+	 */
+	int CURRENT_USER = 6;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_USER__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+
+	/**
+	 * The number of structural features of the '<em>Current User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_USER_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Current User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_USER_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -95,16 +449,6 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int NAMED_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl <em>Named Display Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getNamedDisplayElement()
-	 * @generated
-	 */
-	int NAMED_DISPLAY_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -143,16 +487,6 @@ public interface BasePackage extends EPackage {
 	int NAMED_DISPLAY_ELEMENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.ClassifierImpl <em>Classifier</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.ClassifierImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getClassifier()
-	 * @generated
-	 */
-	int CLASSIFIER = 2;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,16 +521,6 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASSIFIER_OPERATION_COUNT = NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.DataTypeImpl <em>Data Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.DataTypeImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getDataType()
-	 * @generated
-	 */
-	int DATA_TYPE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -278,16 +602,6 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.EnumerationTypeImpl <em>Enumeration Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.EnumerationTypeImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getEnumerationType()
-	 * @generated
-	 */
-	int ENUMERATION_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -380,16 +694,6 @@ public interface BasePackage extends EPackage {
 	int ENUMERATION_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.EnumerationLiteralImpl <em>Enumeration Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.EnumerationLiteralImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getEnumerationLiteral()
-	 * @generated
-	 */
-	int ENUMERATION_LITERAL = 5;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -426,89 +730,6 @@ public interface BasePackage extends EPackage {
 	int ENUMERATION_LITERAL_OPERATION_COUNT = NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl <em>Current Time</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.CurrentTimeImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCurrentTime()
-	 * @generated
-	 */
-	int CURRENT_TIME = 6;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_TIME__ROOT_CONTAINER = ExpressionPackage.EXPRESSION__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_TIME__FORMAT = ExpressionPackage.EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Current Time</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_TIME_FEATURE_COUNT = ExpressionPackage.EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Current Time</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_TIME_OPERATION_COUNT = ExpressionPackage.EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CurrentUserImpl <em>Current User</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.CurrentUserImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCurrentUser()
-	 * @generated
-	 */
-	int CURRENT_USER = 7;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_USER__ROOT_CONTAINER = ExpressionPackage.EXPRESSION__ROOT_CONTAINER;
-
-	/**
-	 * The number of structural features of the '<em>Current User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_USER_FEATURE_COUNT = ExpressionPackage.EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Current User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CURRENT_USER_OPERATION_COUNT = ExpressionPackage.EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.FormalParameterList <em>Formal Parameter List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -516,7 +737,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getFormalParameterList()
 	 * @generated
 	 */
-	int FORMAL_PARAMETER_LIST = 8;
+	int FORMAL_PARAMETER_LIST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -553,7 +774,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getFormalParameter()
 	 * @generated
 	 */
-	int FORMAL_PARAMETER = 9;
+	int FORMAL_PARAMETER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -635,7 +856,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getParameterReference()
 	 * @generated
 	 */
-	int PARAMETER_REFERENCE = 10;
+	int PARAMETER_REFERENCE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -682,6 +903,257 @@ public interface BasePackage extends EPackage {
 	 */
 	int PARAMETER_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
 
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl <em>Reduce Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getReduceFunction()
+	 * @generated
+	 */
+	int REDUCE_FUNCTION = 17;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.SizeFunctionImpl <em>Size Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.SizeFunctionImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getSizeFunction()
+	 * @generated
+	 */
+	int SIZE_FUNCTION = 18;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl <em>Callable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.base.impl.CallableImpl
+	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCallable()
+	 * @generated
+	 */
+	int CALLABLE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE__PARAMETERS = FORMAL_PARAMETER_LIST__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE__ROOT_CONTAINER = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Callable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE_FEATURE_COUNT = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Callable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE_OPERATION_COUNT = FORMAL_PARAMETER_LIST_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION__ROOT_CONTAINER = ExpressionPackage.OPERAND__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION__VALUE = ExpressionPackage.OPERAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Callback</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION__CALLBACK = ExpressionPackage.OPERAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Initial</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION__INITIAL = ExpressionPackage.OPERAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Reduce Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION_FEATURE_COUNT = ExpressionPackage.OPERAND_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Reduce Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCE_FUNCTION_OPERATION_COUNT = ExpressionPackage.OPERAND_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION__ROOT_CONTAINER = ExpressionPackage.OPERAND__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION__VALUE = ExpressionPackage.OPERAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Size Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION_FEATURE_COUNT = ExpressionPackage.OPERAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Size Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FUNCTION_OPERATION_COUNT = ExpressionPackage.OPERAND_OPERATION_COUNT + 0;
+
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.NullLiteral <em>Null Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Null Literal</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.NullLiteral
+	 * @generated
+	 */
+	EClass getNullLiteral();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.BooleanLiteral <em>Boolean Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Literal</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.BooleanLiteral
+	 * @generated
+	 */
+	EClass getBooleanLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.BooleanLiteral#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.BooleanLiteral#isValue()
+	 * @see #getBooleanLiteral()
+	 * @generated
+	 */
+	EAttribute getBooleanLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.IntegerLiteral <em>Integer Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer Literal</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.IntegerLiteral
+	 * @generated
+	 */
+	EClass getIntegerLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.IntegerLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.IntegerLiteral#getValue()
+	 * @see #getIntegerLiteral()
+	 * @generated
+	 */
+	EAttribute getIntegerLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.StringLiteral <em>String Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String Literal</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.StringLiteral
+	 * @generated
+	 */
+	EClass getStringLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.StringLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.StringLiteral#getValue()
+	 * @see #getStringLiteral()
+	 * @generated
+	 */
+	EAttribute getStringLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.TimeLiteral <em>Time Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time Literal</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.TimeLiteral
+	 * @generated
+	 */
+	EClass getTimeLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.TimeLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.TimeLiteral#getValue()
+	 * @see #getTimeLiteral()
+	 * @generated
+	 */
+	EAttribute getTimeLiteral_Value();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.NamedElement <em>Named Element</em>}'.
@@ -981,6 +1453,80 @@ public interface BasePackage extends EPackage {
 	EReference getParameterReference_Parameter();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.ReduceFunction <em>Reduce Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reduce Function</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.ReduceFunction
+	 * @generated
+	 */
+	EClass getReduceFunction();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.base.ReduceFunction#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.ReduceFunction#getValue()
+	 * @see #getReduceFunction()
+	 * @generated
+	 */
+	EReference getReduceFunction_Value();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.base.ReduceFunction#getCallback <em>Callback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Callback</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.ReduceFunction#getCallback()
+	 * @see #getReduceFunction()
+	 * @generated
+	 */
+	EReference getReduceFunction_Callback();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.base.ReduceFunction#getInitial <em>Initial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Initial</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.ReduceFunction#getInitial()
+	 * @see #getReduceFunction()
+	 * @generated
+	 */
+	EReference getReduceFunction_Initial();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.SizeFunction <em>Size Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Size Function</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.SizeFunction
+	 * @generated
+	 */
+	EClass getSizeFunction();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.base.SizeFunction#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.SizeFunction#getValue()
+	 * @see #getSizeFunction()
+	 * @generated
+	 */
+	EReference getSizeFunction_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.Callable <em>Callable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Callable</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.Callable
+	 * @generated
+	 */
+	EClass getCallable();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1003,6 +1549,88 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.NullLiteralImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getNullLiteral()
+		 * @generated
+		 */
+		EClass NULL_LITERAL = eINSTANCE.getNullLiteral();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.BooleanLiteralImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getBooleanLiteral()
+		 * @generated
+		 */
+		EClass BOOLEAN_LITERAL = eINSTANCE.getBooleanLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.IntegerLiteralImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getIntegerLiteral()
+		 * @generated
+		 */
+		EClass INTEGER_LITERAL = eINSTANCE.getIntegerLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.StringLiteralImpl <em>String Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.StringLiteralImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getStringLiteral()
+		 * @generated
+		 */
+		EClass STRING_LITERAL = eINSTANCE.getStringLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_LITERAL__VALUE = eINSTANCE.getStringLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.TimeLiteralImpl <em>Time Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.TimeLiteralImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getTimeLiteral()
+		 * @generated
+		 */
+		EClass TIME_LITERAL = eINSTANCE.getTimeLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_LITERAL__VALUE = eINSTANCE.getTimeLiteral_Value();
+
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.NamedElementImpl <em>Named Element</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1248,6 +1876,68 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARAMETER_REFERENCE__PARAMETER = eINSTANCE.getParameterReference_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl <em>Reduce Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getReduceFunction()
+		 * @generated
+		 */
+		EClass REDUCE_FUNCTION = eINSTANCE.getReduceFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REDUCE_FUNCTION__VALUE = eINSTANCE.getReduceFunction_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Callback</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REDUCE_FUNCTION__CALLBACK = eINSTANCE.getReduceFunction_Callback();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REDUCE_FUNCTION__INITIAL = eINSTANCE.getReduceFunction_Initial();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.SizeFunctionImpl <em>Size Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.SizeFunctionImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getSizeFunction()
+		 * @generated
+		 */
+		EClass SIZE_FUNCTION = eINSTANCE.getSizeFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIZE_FUNCTION__VALUE = eINSTANCE.getSizeFunction_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl <em>Callable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.base.impl.CallableImpl
+		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCallable()
+		 * @generated
+		 */
+		EClass CALLABLE = eINSTANCE.getCallable();
 
 	}
 

@@ -145,6 +145,16 @@ public class OrderItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ORDER__PATH,
+				 BaseFactory.eINSTANCE.createCurrentTime()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ORDER__PATH,
+				 BaseFactory.eINSTANCE.createCurrentUser()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ORDER__PATH,
 				 BaseFactory.eINSTANCE.createParameterReference()));
 	}
 

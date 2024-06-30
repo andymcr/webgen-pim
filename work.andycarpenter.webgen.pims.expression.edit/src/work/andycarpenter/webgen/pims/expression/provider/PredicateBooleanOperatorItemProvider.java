@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -26,7 +25,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateBooleanOperator;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PredicateBooleanOperatorItemProvider extends PredicateItemProvider {
+public class PredicateBooleanOperatorItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -48,9 +47,32 @@ public class PredicateBooleanOperatorItemProvider extends PredicateItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNegatedPropertyDescriptor(object);
 			addOperatorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Negated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNegatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Predicate_negated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_negated_feature", "_UI_Predicate_type"),
+				 ExpressionPackage.Literals.PREDICATE__NEGATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ExpressionPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -87,7 +109,7 @@ public class PredicateBooleanOperatorItemProvider extends PredicateItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS);
+			childrenFeatures.add(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES);
 		}
 		return childrenFeatures;
 	}
@@ -141,10 +163,11 @@ public class PredicateBooleanOperatorItemProvider extends PredicateItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PredicateBooleanOperator.class)) {
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__NEGATED:
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__OPERATOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS:
+			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR__PREDICATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -164,47 +187,47 @@ public class PredicateBooleanOperatorItemProvider extends PredicateItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateInOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateIsOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__EXPRESSIONS,
+				(ExpressionPackage.Literals.PREDICATE_BOOLEAN_OPERATOR__PREDICATES,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
 	}
 

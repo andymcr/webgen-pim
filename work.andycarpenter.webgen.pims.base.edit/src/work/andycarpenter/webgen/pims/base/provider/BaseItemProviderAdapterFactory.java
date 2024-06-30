@@ -19,6 +19,7 @@ import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
 import org.eclipse.emf.edit.provider.ChangeNotifier;
+import org.eclipse.emf.edit.provider.ChildCreationExtenderManager;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
@@ -32,10 +33,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import work.andycarpenter.webgen.pims.base.BaseFactory;
 
+import work.andycarpenter.webgen.pims.base.BasePackage;
 import work.andycarpenter.webgen.pims.base.util.BaseAdapterFactory;
 
+import work.andycarpenter.webgen.pims.expression.ArithmeticOperation;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.FunctionCall;
 import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
 import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
@@ -44,8 +46,6 @@ import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
-
-import work.andycarpenter.webgen.pims.expression.SizeFunction;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
 /**
@@ -57,7 +57,7 @@ import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier {
+public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -73,6 +73,14 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 	 * @generated
 	 */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+
+	/**
+	 * This helps manage the child creation extenders.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(BaseEditPlugin.INSTANCE, BasePackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -94,6 +102,121 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.NullLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NullLiteralItemProvider nullLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.NullLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNullLiteralAdapter() {
+		if (nullLiteralItemProvider == null) {
+			nullLiteralItemProvider = new NullLiteralItemProvider(this);
+		}
+
+		return nullLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.BooleanLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanLiteralItemProvider booleanLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.BooleanLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanLiteralAdapter() {
+		if (booleanLiteralItemProvider == null) {
+			booleanLiteralItemProvider = new BooleanLiteralItemProvider(this);
+		}
+
+		return booleanLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.IntegerLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntegerLiteralItemProvider integerLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.IntegerLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntegerLiteralAdapter() {
+		if (integerLiteralItemProvider == null) {
+			integerLiteralItemProvider = new IntegerLiteralItemProvider(this);
+		}
+
+		return integerLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.StringLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringLiteralItemProvider stringLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.StringLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringLiteralAdapter() {
+		if (stringLiteralItemProvider == null) {
+			stringLiteralItemProvider = new StringLiteralItemProvider(this);
+		}
+
+		return stringLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.TimeLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TimeLiteralItemProvider timeLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.TimeLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTimeLiteralAdapter() {
+		if (timeLiteralItemProvider == null) {
+			timeLiteralItemProvider = new TimeLiteralItemProvider(this);
+		}
+
+		return timeLiteralItemProvider;
 	}
 
 	/**
@@ -258,6 +381,75 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.ReduceFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReduceFunctionItemProvider reduceFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.ReduceFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReduceFunctionAdapter() {
+		if (reduceFunctionItemProvider == null) {
+			reduceFunctionItemProvider = new ReduceFunctionItemProvider(this);
+		}
+
+		return reduceFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.SizeFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SizeFunctionItemProvider sizeFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.SizeFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSizeFunctionAdapter() {
+		if (sizeFunctionItemProvider == null) {
+			sizeFunctionItemProvider = new SizeFunctionItemProvider(this);
+		}
+
+		return sizeFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.base.Callable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CallableItemProvider callableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.base.Callable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCallableAdapter() {
+		if (callableItemProvider == null) {
+			callableItemProvider = new CallableItemProvider(this);
+		}
+
+		return callableItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -315,6 +507,33 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 		}
 
 		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<IChildCreationExtender> getChildCreationExtenders() {
+		return childCreationExtenderManager.getChildCreationExtenders();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+		return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return childCreationExtenderManager;
 	}
 
 	/**
@@ -400,48 +619,20 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 			 * @generated
 			 */
 			@Override
-			public Object caseSizeFunction(SizeFunction object) {
+			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.SIZE_FUNCTION__FEATURE,
-						 BaseFactory.eINSTANCE.createParameterReference()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseFunctionCall(FunctionCall object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
 						 BaseFactory.eINSTANCE.createCurrentUser()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.FUNCTION_CALL__ACTUALS,
-						 BaseFactory.eINSTANCE.createParameterReference()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
 						 BaseFactory.eINSTANCE.createParameterReference()));
 
 				return null;
@@ -456,6 +647,31 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
@@ -470,6 +686,46 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
@@ -482,6 +738,21 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -496,6 +767,31 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
@@ -510,6 +806,46 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
@@ -522,6 +858,21 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -536,6 +887,31 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
@@ -550,6 +926,46 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
@@ -562,6 +978,21 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -576,6 +1007,31 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
@@ -590,6 +1046,46 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
@@ -602,6 +1098,21 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -616,6 +1127,31 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
 				newChildDescriptors.add
@@ -630,6 +1166,46 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createCurrentTime()));
 
@@ -642,6 +1218,21 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -655,8 +1246,58 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 			public Object casePredicateIsEmpty(PredicateIsEmpty object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createCurrentTime()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createCurrentUser()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
@@ -670,12 +1311,126 @@ public class BaseItemProviderAdapterFactory extends BaseAdapterFactory implement
 			public Object casePredicateIsNull(PredicateIsNull object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__FEATURE,
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createCurrentTime()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createCurrentUser()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
 						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
 
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseArithmeticOperation(ArithmeticOperation object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createNullLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createBooleanLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createIntegerLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createStringLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createTimeLiteral()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createCurrentTime()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createCurrentUser()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createParameterReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createCallable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createReduceFunction()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 BaseFactory.eINSTANCE.createSizeFunction()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

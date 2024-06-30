@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -26,7 +25,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PredicateComparisonOperatorItemProvider extends PredicateItemProvider {
+public class PredicateComparisonOperatorItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -48,9 +47,32 @@ public class PredicateComparisonOperatorItemProvider extends PredicateItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNegatedPropertyDescriptor(object);
 			addOperatorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Negated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNegatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Predicate_negated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_negated_feature", "_UI_Predicate_type"),
+				 ExpressionPackage.Literals.PREDICATE__NEGATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_ExpressionPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -142,6 +164,7 @@ public class PredicateComparisonOperatorItemProvider extends PredicateItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PredicateComparisonOperator.class)) {
+			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__NEGATED:
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR__OPERATOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
@@ -167,41 +190,6 @@ public class PredicateComparisonOperatorItemProvider extends PredicateItemProvid
 		newChildDescriptors.add
 			(createChildParameter
 				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createNullLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createStringLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createSizeFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-				 ExpressionFactory.eINSTANCE.createFunctionCall()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
@@ -246,38 +234,8 @@ public class PredicateComparisonOperatorItemProvider extends PredicateItemProvid
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createNullLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createBooleanLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createIntegerLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createStringLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createTimeLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createSizeFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-				 ExpressionFactory.eINSTANCE.createFunctionCall()));
+				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+				 ExpressionFactory.eINSTANCE.createArithmeticOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -323,6 +281,11 @@ public class PredicateComparisonOperatorItemProvider extends PredicateItemProvid
 			(createChildParameter
 				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+				 ExpressionFactory.eINSTANCE.createArithmeticOperation()));
 	}
 
 	/**

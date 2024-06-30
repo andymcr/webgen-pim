@@ -58,7 +58,7 @@ public class ClassifierItemProvider extends NamedDisplayElementItemProvider {
 			getString("_UI_Classifier_type") :
 			getString("_UI_Classifier_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
