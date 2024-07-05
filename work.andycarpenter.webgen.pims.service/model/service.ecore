@@ -37,10 +37,17 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Constant"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperationClass">
+    <eLiterals name="ReadOnly"/>
+    <eLiterals name="Costly" value="1"/>
+    <eLiterals name="Modifying" value="2"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessOperation" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" eType="#//Service"
         eOpposite="#//Service/operations"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uses" upperBound="-1" eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operationClass" lowerBound="1"
+        eType="#//OperationClass"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultType" lowerBound="1"
         eType="#//OperationResultTypes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultMimeType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

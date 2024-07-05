@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.base.NamedElement;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getDefinedBy <em>Defined By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getUses <em>Uses</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getOperationClass <em>Operation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getResultType <em>Result Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getResultMimeType <em>Result Mime Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getFileExtension <em>File Extension</em>}</li>
@@ -71,6 +72,31 @@ public interface BusinessOperation extends NamedElement, FormalParameterList {
 	 * @generated
 	 */
 	EList<Service> getUses();
+
+	/**
+	 * Returns the value of the '<em><b>Operation Class</b></em>' attribute.
+	 * The literals are from the enumeration {@link work.andycarpenter.webgen.pims.service.OperationClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operation Class</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.service.OperationClass
+	 * @see #setOperationClass(OperationClass)
+	 * @see work.andycarpenter.webgen.pims.service.ServicePackage#getBusinessOperation_OperationClass()
+	 * @model required="true"
+	 * @generated
+	 */
+	OperationClass getOperationClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getOperationClass <em>Operation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Operation Class</em>' attribute.
+	 * @see work.andycarpenter.webgen.pims.service.OperationClass
+	 * @see #getOperationClass()
+	 * @generated
+	 */
+	void setOperationClass(OperationClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Result Type</b></em>' attribute.

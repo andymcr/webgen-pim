@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
 import work.andycarpenter.webgen.pims.service.Constant;
 import work.andycarpenter.webgen.pims.service.ConstantReference;
+import work.andycarpenter.webgen.pims.service.OperationClass;
 import work.andycarpenter.webgen.pims.service.OperationResultTypes;
 import work.andycarpenter.webgen.pims.service.Service;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
@@ -65,6 +66,13 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	private EClass businessOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum operationClassEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -315,7 +323,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getBusinessOperation_ResultType() {
+	public EAttribute getBusinessOperation_OperationClass() {
 		return (EAttribute)businessOperationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -325,7 +333,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getBusinessOperation_ResultMimeType() {
+	public EAttribute getBusinessOperation_ResultType() {
 		return (EAttribute)businessOperationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -335,8 +343,28 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getBusinessOperation_FileExtension() {
+	public EAttribute getBusinessOperation_ResultMimeType() {
 		return (EAttribute)businessOperationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBusinessOperation_FileExtension() {
+		return (EAttribute)businessOperationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getOperationClass() {
+		return operationClassEEnum;
 	}
 
 	/**
@@ -399,11 +427,13 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		businessOperationEClass = createEClass(BUSINESS_OPERATION);
 		createEReference(businessOperationEClass, BUSINESS_OPERATION__DEFINED_BY);
 		createEReference(businessOperationEClass, BUSINESS_OPERATION__USES);
+		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__OPERATION_CLASS);
 		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__RESULT_TYPE);
 		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__RESULT_MIME_TYPE);
 		createEAttribute(businessOperationEClass, BUSINESS_OPERATION__FILE_EXTENSION);
 
 		// Create enums
+		operationClassEEnum = createEEnum(OPERATION_CLASS);
 		operationResultTypesEEnum = createEEnum(OPERATION_RESULT_TYPES);
 	}
 
@@ -468,11 +498,17 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEClass(businessOperationEClass, BusinessOperation.class, "BusinessOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusinessOperation_DefinedBy(), this.getService(), this.getService_Operations(), "definedBy", null, 0, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusinessOperation_Uses(), this.getService(), null, "uses", null, 0, -1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusinessOperation_OperationClass(), this.getOperationClass(), "operationClass", null, 1, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessOperation_ResultType(), this.getOperationResultTypes(), "resultType", null, 1, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessOperation_ResultMimeType(), ecorePackage.getEString(), "resultMimeType", "", 0, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessOperation_FileExtension(), ecorePackage.getEString(), "fileExtension", "", 0, 1, BusinessOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
+		initEEnum(operationClassEEnum, OperationClass.class, "OperationClass");
+		addEEnumLiteral(operationClassEEnum, OperationClass.READ_ONLY);
+		addEEnumLiteral(operationClassEEnum, OperationClass.COSTLY);
+		addEEnumLiteral(operationClassEEnum, OperationClass.MODIFYING);
+
 		initEEnum(operationResultTypesEEnum, OperationResultTypes.class, "OperationResultTypes");
 		addEEnumLiteral(operationResultTypesEEnum, OperationResultTypes.NONE);
 		addEEnumLiteral(operationResultTypesEEnum, OperationResultTypes.FILE);

@@ -338,13 +338,22 @@ public interface ServicePackage extends EPackage {
 	int BUSINESS_OPERATION__USES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Operation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_OPERATION__OPERATION_CLASS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Result Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_OPERATION__RESULT_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int BUSINESS_OPERATION__RESULT_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Result Mime Type</b></em>' attribute.
@@ -353,7 +362,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_OPERATION__RESULT_MIME_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int BUSINESS_OPERATION__RESULT_MIME_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
@@ -362,7 +371,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_OPERATION__FILE_EXTENSION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int BUSINESS_OPERATION__FILE_EXTENSION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Business Operation</em>' class.
@@ -371,7 +380,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_OPERATION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int BUSINESS_OPERATION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Business Operation</em>' class.
@@ -383,6 +392,16 @@ public interface ServicePackage extends EPackage {
 	int BUSINESS_OPERATION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.OperationClass <em>Operation Class</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.service.OperationClass
+	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOperationClass()
+	 * @generated
+	 */
+	int OPERATION_CLASS = 5;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -390,7 +409,7 @@ public interface ServicePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOperationResultTypes()
 	 * @generated
 	 */
-	int OPERATION_RESULT_TYPES = 5;
+	int OPERATION_RESULT_TYPES = 6;
 
 
 	/**
@@ -576,6 +595,17 @@ public interface ServicePackage extends EPackage {
 	EReference getBusinessOperation_Uses();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getOperationClass <em>Operation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operation Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.service.BusinessOperation#getOperationClass()
+	 * @see #getBusinessOperation()
+	 * @generated
+	 */
+	EAttribute getBusinessOperation_OperationClass();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.service.BusinessOperation#getResultType <em>Result Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +637,16 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBusinessOperation_FileExtension();
+
+	/**
+	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.service.OperationClass <em>Operation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Operation Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.service.OperationClass
+	 * @generated
+	 */
+	EEnum getOperationClass();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}'.
@@ -788,6 +828,14 @@ public interface ServicePackage extends EPackage {
 		EReference BUSINESS_OPERATION__USES = eINSTANCE.getBusinessOperation_Uses();
 
 		/**
+		 * The meta object literal for the '<em><b>Operation Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUSINESS_OPERATION__OPERATION_CLASS = eINSTANCE.getBusinessOperation_OperationClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Result Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -810,6 +858,16 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BUSINESS_OPERATION__FILE_EXTENSION = eINSTANCE.getBusinessOperation_FileExtension();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.OperationClass <em>Operation Class</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.service.OperationClass
+		 * @see work.andycarpenter.webgen.pims.service.impl.ServicePackageImpl#getOperationClass()
+		 * @generated
+		 */
+		EEnum OPERATION_CLASS = eINSTANCE.getOperationClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.service.OperationResultTypes <em>Operation Result Types</em>}' enum.

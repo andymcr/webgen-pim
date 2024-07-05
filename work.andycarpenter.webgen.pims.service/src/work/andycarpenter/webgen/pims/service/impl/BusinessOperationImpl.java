@@ -26,6 +26,7 @@ import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
 
 import work.andycarpenter.webgen.pims.service.BusinessOperation;
+import work.andycarpenter.webgen.pims.service.OperationClass;
 import work.andycarpenter.webgen.pims.service.OperationResultTypes;
 import work.andycarpenter.webgen.pims.service.Service;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
@@ -41,6 +42,7 @@ import work.andycarpenter.webgen.pims.service.ServicePackage;
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getDefinedBy <em>Defined By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getUses <em>Uses</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getOperationClass <em>Operation Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getResultType <em>Result Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getResultMimeType <em>Result Mime Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.service.impl.BusinessOperationImpl#getFileExtension <em>File Extension</em>}</li>
@@ -68,6 +70,26 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * @ordered
 	 */
 	protected EList<Service> uses;
+
+	/**
+	 * The default value of the '{@link #getOperationClass() <em>Operation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final OperationClass OPERATION_CLASS_EDEFAULT = OperationClass.READ_ONLY;
+
+	/**
+	 * The cached value of the '{@link #getOperationClass() <em>Operation Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected OperationClass operationClass = OPERATION_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getResultType() <em>Result Type</em>}' attribute.
@@ -223,6 +245,29 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 	 * @generated
 	 */
 	@Override
+	public OperationClass getOperationClass() {
+		return operationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOperationClass(OperationClass newOperationClass) {
+		OperationClass oldOperationClass = operationClass;
+		operationClass = newOperationClass == null ? OPERATION_CLASS_EDEFAULT : newOperationClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.BUSINESS_OPERATION__OPERATION_CLASS, oldOperationClass, operationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public OperationResultTypes getResultType() {
 		return resultType;
 	}
@@ -349,6 +394,8 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 				return getDefinedBy();
 			case ServicePackage.BUSINESS_OPERATION__USES:
 				return getUses();
+			case ServicePackage.BUSINESS_OPERATION__OPERATION_CLASS:
+				return getOperationClass();
 			case ServicePackage.BUSINESS_OPERATION__RESULT_TYPE:
 				return getResultType();
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
@@ -378,6 +425,9 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 			case ServicePackage.BUSINESS_OPERATION__USES:
 				getUses().clear();
 				getUses().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ServicePackage.BUSINESS_OPERATION__OPERATION_CLASS:
+				setOperationClass((OperationClass)newValue);
 				return;
 			case ServicePackage.BUSINESS_OPERATION__RESULT_TYPE:
 				setResultType((OperationResultTypes)newValue);
@@ -409,6 +459,9 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 			case ServicePackage.BUSINESS_OPERATION__USES:
 				getUses().clear();
 				return;
+			case ServicePackage.BUSINESS_OPERATION__OPERATION_CLASS:
+				setOperationClass(OPERATION_CLASS_EDEFAULT);
+				return;
 			case ServicePackage.BUSINESS_OPERATION__RESULT_TYPE:
 				setResultType(RESULT_TYPE_EDEFAULT);
 				return;
@@ -436,6 +489,8 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 				return getDefinedBy() != null;
 			case ServicePackage.BUSINESS_OPERATION__USES:
 				return uses != null && !uses.isEmpty();
+			case ServicePackage.BUSINESS_OPERATION__OPERATION_CLASS:
+				return operationClass != OPERATION_CLASS_EDEFAULT;
 			case ServicePackage.BUSINESS_OPERATION__RESULT_TYPE:
 				return resultType != RESULT_TYPE_EDEFAULT;
 			case ServicePackage.BUSINESS_OPERATION__RESULT_MIME_TYPE:
@@ -488,7 +543,9 @@ public class BusinessOperationImpl extends NamedElementImpl implements BusinessO
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (resultType: ");
+		result.append(" (operationClass: ");
+		result.append(operationClass);
+		result.append(", resultType: ");
 		result.append(resultType);
 		result.append(", resultMimeType: ");
 		result.append(resultMimeType);

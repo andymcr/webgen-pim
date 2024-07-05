@@ -75,6 +75,8 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case ServicePackage.OPERATION_CLASS:
+				return createOperationClassFromString(eDataType, initialValue);
 			case ServicePackage.OPERATION_RESULT_TYPES:
 				return createOperationResultTypesFromString(eDataType, initialValue);
 			default:
@@ -90,6 +92,8 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case ServicePackage.OPERATION_CLASS:
+				return convertOperationClassToString(eDataType, instanceValue);
 			case ServicePackage.OPERATION_RESULT_TYPES:
 				return convertOperationResultTypesToString(eDataType, instanceValue);
 			default:
@@ -150,6 +154,26 @@ public class ServiceFactoryImpl extends EFactoryImpl implements ServiceFactory {
 	public BusinessOperation createBusinessOperation() {
 		BusinessOperationImpl businessOperation = new BusinessOperationImpl();
 		return businessOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationClass createOperationClassFromString(EDataType eDataType, String initialValue) {
+		OperationClass result = OperationClass.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOperationClassToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

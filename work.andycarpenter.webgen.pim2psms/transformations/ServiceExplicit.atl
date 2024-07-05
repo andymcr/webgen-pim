@@ -92,6 +92,7 @@ rule BusinessOperation {
 	from website : Website!BusinessOperation
 	to service : Service!BusinessOperation (
 		uses <- website.uses,
+		operationClass <- website.operationClass,
 		resultType <- website.resultType,
 		resultMimeType <- website.resultMimeType,
 		fileExtension <- website.fileExtension
