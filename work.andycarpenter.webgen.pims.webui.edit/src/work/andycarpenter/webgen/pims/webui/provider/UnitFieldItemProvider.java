@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 
+import work.andycarpenter.webgen.pims.security.SecurityFactory;
 import work.andycarpenter.webgen.pims.webui.UnitField;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -264,6 +265,7 @@ public class UnitFieldItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(WebuiPackage.Literals.UNIT_FIELD__AUTHORISATION);
 			childrenFeatures.add(WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN);
 		}
 		return childrenFeatures;
@@ -319,6 +321,7 @@ public class UnitFieldItemProvider
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
 			case WebuiPackage.UNIT_FIELD__HIDE_WHEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -336,6 +339,11 @@ public class UnitFieldItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FIELD__AUTHORISATION,
+				 SecurityFactory.eINSTANCE.createIsGrantedRole()));
 
 		newChildDescriptors.add
 			(createChildParameter

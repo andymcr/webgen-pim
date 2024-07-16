@@ -1,0 +1,31 @@
+-- @atlcompiler emftvm 
+--
+-- @path Website=/work.andycarpenter.webgen.pims.model/model/website.ecore
+-- @path WAF=/work.andycarpenter.metamodel.waf/model/Waf.xecore
+
+module AuthorisationExpression;
+create waf : WAF from website : Website;
+
+uses SecurityHelpers;
+
+
+abstract rule AuthorisationExpression {
+	from website : Website!AuthorisationExpression
+	to waf : WAF!AuthorisationExpression (
+	)
+}
+
+
+-- @extends AuthorisationExpression
+rule IsGrantedRole {
+	from website : Website!IsGrantedRole
+	to waf : WAF!IsGrantedRole (
+		negated <- website.negated,
+		role <-
+			if not website.role.oclIsUndefined() then
+				website.role.findWafRole()
+			else
+				OclUndefined
+			endif
+	)
+}

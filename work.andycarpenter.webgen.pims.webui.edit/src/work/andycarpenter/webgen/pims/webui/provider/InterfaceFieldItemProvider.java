@@ -22,6 +22,7 @@ import work.andycarpenter.webgen.pims.base.provider.NamedDisplayElementItemProvi
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 
+import work.andycarpenter.webgen.pims.security.SecurityFactory;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -460,6 +461,7 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(WebuiPackage.Literals.UNIT_FIELD__AUTHORISATION);
 			childrenFeatures.add(WebuiPackage.Literals.UNIT_FIELD__HIDE_WHEN);
 		}
 		return childrenFeatures;
@@ -524,6 +526,7 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 			case WebuiPackage.INTERFACE_FIELD__SECOND_HELP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -541,6 +544,11 @@ public class InterfaceFieldItemProvider extends NamedDisplayElementItemProvider 
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FIELD__AUTHORISATION,
+				 SecurityFactory.eINSTANCE.createIsGrantedRole()));
 
 		newChildDescriptors.add
 			(createChildParameter

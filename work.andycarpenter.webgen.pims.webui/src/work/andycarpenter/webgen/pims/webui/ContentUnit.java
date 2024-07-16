@@ -3,6 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +17,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getController <em>Controller</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isCreateDefaultUriElement <em>Create Default Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent <em>Uri Parent</em>}</li>
@@ -84,6 +86,28 @@ public interface ContentUnit extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setRequiresRole(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authorisation</em>' containment reference.
+	 * @see #setAuthorisation(AuthorisationExpression)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_Authorisation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AuthorisationExpression getAuthorisation();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAuthorisation <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorisation</em>' containment reference.
+	 * @see #getAuthorisation()
+	 * @generated
+	 */
+	void setAuthorisation(AuthorisationExpression value);
 
 	/**
 	 * Returns the value of the '<em><b>Purpose Summary</b></em>' attribute.

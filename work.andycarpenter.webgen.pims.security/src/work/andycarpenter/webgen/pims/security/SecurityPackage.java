@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import work.andycarpenter.webgen.pims.base.BasePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,13 +78,22 @@ public interface SecurityPackage extends EPackage {
 	int SECURITY__AUTHENTICATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY__ROLES = 1;
+
+	/**
 	 * The number of structural features of the '<em>Security</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_FEATURE_COUNT = 1;
+	int SECURITY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Security</em>' class.
@@ -1278,6 +1288,117 @@ public interface SecurityPackage extends EPackage {
 	int SECURITY_UNIT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.security.impl.RoleImpl <em>Role</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.security.impl.RoleImpl
+	 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getRole()
+	 * @generated
+	 */
+	int ROLE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__NAME = BasePackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.security.impl.AuthorisationExpressionImpl <em>Authorisation Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.security.impl.AuthorisationExpressionImpl
+	 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getAuthorisationExpression()
+	 * @generated
+	 */
+	int AUTHORISATION_EXPRESSION = 6;
+
+	/**
+	 * The number of structural features of the '<em>Authorisation Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORISATION_EXPRESSION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Authorisation Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORISATION_EXPRESSION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.security.impl.IsGrantedRoleImpl <em>Is Granted Role</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.security.impl.IsGrantedRoleImpl
+	 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getIsGrantedRole()
+	 * @generated
+	 */
+	int IS_GRANTED_ROLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Negated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_GRANTED_ROLE__NEGATED = AUTHORISATION_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_GRANTED_ROLE__ROLE = AUTHORISATION_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Is Granted Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_GRANTED_ROLE_FEATURE_COUNT = AUTHORISATION_EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Is Granted Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_GRANTED_ROLE_OPERATION_COUNT = AUTHORISATION_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.Security <em>Security</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1297,6 +1418,17 @@ public interface SecurityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSecurity_Authentication();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.security.Security#getRoles <em>Roles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Roles</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Security#getRoles()
+	 * @see #getSecurity()
+	 * @generated
+	 */
+	EReference getSecurity_Roles();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.Authentication <em>Authentication</em>}'.
@@ -1944,6 +2076,58 @@ public interface SecurityPackage extends EPackage {
 	EClass getSecurityUnit();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.Role <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Role</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.Role
+	 * @generated
+	 */
+	EClass getRole();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.AuthorisationExpression <em>Authorisation Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authorisation Expression</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.AuthorisationExpression
+	 * @generated
+	 */
+	EClass getAuthorisationExpression();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.security.IsGrantedRole <em>Is Granted Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Is Granted Role</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.IsGrantedRole
+	 * @generated
+	 */
+	EClass getIsGrantedRole();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.IsGrantedRole#isNegated <em>Negated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Negated</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.IsGrantedRole#isNegated()
+	 * @see #getIsGrantedRole()
+	 * @generated
+	 */
+	EAttribute getIsGrantedRole_Negated();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.IsGrantedRole#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see work.andycarpenter.webgen.pims.security.IsGrantedRole#getRole()
+	 * @see #getIsGrantedRole()
+	 * @generated
+	 */
+	EReference getIsGrantedRole_Role();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1983,6 +2167,14 @@ public interface SecurityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SECURITY__AUTHENTICATION = eINSTANCE.getSecurity_Authentication();
+
+		/**
+		 * The meta object literal for the '<em><b>Roles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SECURITY__ROLES = eINSTANCE.getSecurity_Roles();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.AuthenticationImpl <em>Authentication</em>}' class.
@@ -2463,6 +2655,52 @@ public interface SecurityPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SECURITY_UNIT = eINSTANCE.getSecurityUnit();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.RoleImpl <em>Role</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.security.impl.RoleImpl
+		 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getRole()
+		 * @generated
+		 */
+		EClass ROLE = eINSTANCE.getRole();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.AuthorisationExpressionImpl <em>Authorisation Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.security.impl.AuthorisationExpressionImpl
+		 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getAuthorisationExpression()
+		 * @generated
+		 */
+		EClass AUTHORISATION_EXPRESSION = eINSTANCE.getAuthorisationExpression();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.security.impl.IsGrantedRoleImpl <em>Is Granted Role</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.security.impl.IsGrantedRoleImpl
+		 * @see work.andycarpenter.webgen.pims.security.impl.SecurityPackageImpl#getIsGrantedRole()
+		 * @generated
+		 */
+		EClass IS_GRANTED_ROLE = eINSTANCE.getIsGrantedRole();
+
+		/**
+		 * The meta object literal for the '<em><b>Negated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IS_GRANTED_ROLE__NEGATED = eINSTANCE.getIsGrantedRole_Negated();
+
+		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IS_GRANTED_ROLE__ROLE = eINSTANCE.getIsGrantedRole_Role();
 
 	}
 

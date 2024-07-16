@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.InterfaceField;
@@ -28,6 +29,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHelp <em>Help</em>}</li>
@@ -69,6 +71,16 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorisation()
+	 * @generated
+	 * @ordered
+	 */
+	protected AuthorisationExpression authorisation;
 
 	/**
 	 * The cached value of the '{@link #getHideWhen() <em>Hide When</em>}' containment reference.
@@ -483,6 +495,51 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		requiresRole = newRequiresRole;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE, oldRequiresRole, requiresRole));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthorisationExpression getAuthorisation() {
+		return authorisation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAuthorisation(AuthorisationExpression newAuthorisation, NotificationChain msgs) {
+		AuthorisationExpression oldAuthorisation = authorisation;
+		authorisation = newAuthorisation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__AUTHORISATION, oldAuthorisation, newAuthorisation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthorisation(AuthorisationExpression newAuthorisation) {
+		if (newAuthorisation != authorisation) {
+			NotificationChain msgs = null;
+			if (authorisation != null)
+				msgs = ((InternalEObject)authorisation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.INTERFACE_FIELD__AUTHORISATION, null, msgs);
+			if (newAuthorisation != null)
+				msgs = ((InternalEObject)newAuthorisation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.INTERFACE_FIELD__AUTHORISATION, null, msgs);
+			msgs = basicSetAuthorisation(newAuthorisation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__AUTHORISATION, newAuthorisation, newAuthorisation));
 	}
 
 	/**
@@ -924,6 +981,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		switch (featureID) {
 			case WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON:
 				return basicSetDisplayedOn(null, msgs);
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
+				return basicSetAuthorisation(null, msgs);
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				return basicSetHideWhen(null, msgs);
 		}
@@ -956,6 +1015,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return getDisplayedOn();
 			case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE:
 				return getRequiresRole();
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
+				return getAuthorisation();
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				return getHideWhen();
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
@@ -1007,6 +1068,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return;
 			case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE:
 				setRequiresRole((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				setHideWhen((Predicate)newValue);
@@ -1077,6 +1141,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE:
 				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
 				return;
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)null);
+				return;
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				setHideWhen((Predicate)null);
 				return;
@@ -1144,6 +1211,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return getDisplayedOn() != null;
 			case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE:
 				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
+			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
+				return authorisation != null;
 			case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN:
 				return hideWhen != null;
 			case WebuiPackage.INTERFACE_FIELD__TITLE:
@@ -1193,6 +1262,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			switch (derivedFeatureID) {
 				case WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON: return WebuiPackage.UNIT_FIELD__DISPLAYED_ON;
 				case WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE: return WebuiPackage.UNIT_FIELD__REQUIRES_ROLE;
+				case WebuiPackage.INTERFACE_FIELD__AUTHORISATION: return WebuiPackage.UNIT_FIELD__AUTHORISATION;
 				case WebuiPackage.INTERFACE_FIELD__HIDE_WHEN: return WebuiPackage.UNIT_FIELD__HIDE_WHEN;
 				case WebuiPackage.INTERFACE_FIELD__TITLE: return WebuiPackage.UNIT_FIELD__TITLE;
 				case WebuiPackage.INTERFACE_FIELD__HELP: return WebuiPackage.UNIT_FIELD__HELP;
@@ -1218,6 +1288,7 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			switch (baseFeatureID) {
 				case WebuiPackage.UNIT_FIELD__DISPLAYED_ON: return WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON;
 				case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE: return WebuiPackage.INTERFACE_FIELD__REQUIRES_ROLE;
+				case WebuiPackage.UNIT_FIELD__AUTHORISATION: return WebuiPackage.INTERFACE_FIELD__AUTHORISATION;
 				case WebuiPackage.UNIT_FIELD__HIDE_WHEN: return WebuiPackage.INTERFACE_FIELD__HIDE_WHEN;
 				case WebuiPackage.UNIT_FIELD__TITLE: return WebuiPackage.INTERFACE_FIELD__TITLE;
 				case WebuiPackage.UNIT_FIELD__HELP: return WebuiPackage.INTERFACE_FIELD__HELP;

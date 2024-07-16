@@ -9,10 +9,19 @@ create security : Security from website : Website, orm : ORM;
 uses PersistenceHelpers;
 
 
+abstract rule NamedElement {
+	from website : Website!NamedElement
+	to security : Security!NamedElement (
+		name <- website.name
+	)
+}
+
+
 rule SecurityModel {
 	from website : Website!Security
 	to security : Security!SecurityModel (
-		authentication <- website.authentication
+		authentication <- website.authentication,
+		roles <- website.roles
 	)
 }
 
@@ -87,5 +96,14 @@ rule CasAuthentication {
 	to security : Security!CasAuthentication (
 		loginLabel <- website.loginLabel,
 		logoutLabel <- website.logoutLabel
+	)
+}
+
+
+
+-- @extends NamedElement
+rule Role {
+	from website : Website!Role
+	to security : Security!Role (
 	)
 }

@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
  *
@@ -47,6 +50,28 @@ public interface SubmenuEntry extends Menu, MenuEntry {
 	 * @generated
 	 */
 	void setRequiresRole(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authorisation</em>' containment reference.
+	 * @see #setAuthorisation(AuthorisationExpression)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSubmenuEntry_Authorisation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AuthorisationExpression getAuthorisation();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorisation</em>' containment reference.
+	 * @see #getAuthorisation()
+	 * @generated
+	 */
+	void setAuthorisation(AuthorisationExpression value);
 
 	/**
 	 * Returns the value of the '<em><b>Always Visible</b></em>' attribute.

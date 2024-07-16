@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.ecore.EObject;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +17,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getTitle <em>Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHelp <em>Help</em>}</li>
@@ -85,6 +87,28 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setRequiresRole(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authorisation</em>' containment reference.
+	 * @see #setAuthorisation(AuthorisationExpression)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_Authorisation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AuthorisationExpression getAuthorisation();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getAuthorisation <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorisation</em>' containment reference.
+	 * @see #getAuthorisation()
+	 * @generated
+	 */
+	void setAuthorisation(AuthorisationExpression value);
 
 	/**
 	 * Returns the value of the '<em><b>Hide When</b></em>' containment reference.

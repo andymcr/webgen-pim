@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
+import work.andycarpenter.webgen.pims.base.util.BaseValidator;
 import work.andycarpenter.webgen.pims.security.*;
 
 /**
@@ -56,6 +57,14 @@ public class SecurityValidator extends EObjectValidator {
 	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
 
 	/**
+	 * The cached base package validator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BaseValidator baseValidator;
+
+	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,6 +72,7 @@ public class SecurityValidator extends EObjectValidator {
 	 */
 	public SecurityValidator() {
 		super();
+		baseValidator = BaseValidator.INSTANCE;
 	}
 
 	/**
@@ -95,6 +105,12 @@ public class SecurityValidator extends EObjectValidator {
 				return validateCasAuthentication((CasAuthentication)value, diagnostics, context);
 			case SecurityPackage.SECURITY_UNIT:
 				return validateSecurityUnit((SecurityUnit)value, diagnostics, context);
+			case SecurityPackage.ROLE:
+				return validateRole((Role)value, diagnostics, context);
+			case SecurityPackage.AUTHORISATION_EXPRESSION:
+				return validateAuthorisationExpression((AuthorisationExpression)value, diagnostics, context);
+			case SecurityPackage.IS_GRANTED_ROLE:
+				return validateIsGrantedRole((IsGrantedRole)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -276,6 +292,43 @@ public class SecurityValidator extends EObjectValidator {
 	 */
 	public boolean validateSecurityUnit(SecurityUnit securityUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(securityUnit, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRole(Role role, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(role, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(role, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(role, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(role, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAuthorisationExpression(AuthorisationExpression authorisationExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(authorisationExpression, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateIsGrantedRole(IsGrantedRole isGrantedRole, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(isGrantedRole, diagnostics, context);
 	}
 
 	/**

@@ -1,12 +1,15 @@
 -- @atlcompiler emftvm
 
-library AuthenticationHelpers;
+library SecurityHelpers;
 
 uses WebsiteHelpers;
 
 
 helper def: findWebsiteSecurity() : Website!Security
 	= thisModule.findWebGenModel().security;
+
+helper def: findWafSecurity() : Security!SecurityModel
+	= Security!SecurityModel.allInstancesFrom('security')->first();
 
 helper context Website!Security def: isLocallyAuthenticated() : Boolean
 	= if self.authentication.oclIsUndefined() then
@@ -37,7 +40,7 @@ helper context Website!Security def: hasImplicitSecurityPage() : Boolean
 		endif;
 
 
-	helper context Website!Authentication def: getDataType(name : String) : ORM!DataType
+helper context Website!Authentication def: getDataType(name : String) : ORM!DataType
 	= let dataType : ORM!DataType = thisModule.findOrmDataType(name)
 		in if not dataType.oclIsUndefined() then
 			dataType
@@ -53,3 +56,10 @@ helper context Website!Security def: hasImplicitSecurityPage() : Boolean
 					OclUndefined
 				endif endif endif
 		endif;
+
+
+helper def: findWafRole(name : String) : Security!Role
+	= thisModule.findWafSecurity().roles->any(r | r.name = name);
+
+helper context Website!Role def: findWafRole() : Security!Role
+	= thisModule.findWafRole(self.name);

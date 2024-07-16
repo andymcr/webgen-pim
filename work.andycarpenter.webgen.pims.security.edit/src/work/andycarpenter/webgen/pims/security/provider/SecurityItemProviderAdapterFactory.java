@@ -140,6 +140,52 @@ public class SecurityItemProviderAdapterFactory extends SecurityAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.security.Role} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RoleItemProvider roleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.security.Role}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRoleAdapter() {
+		if (roleItemProvider == null) {
+			roleItemProvider = new RoleItemProvider(this);
+		}
+
+		return roleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.security.IsGrantedRole} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IsGrantedRoleItemProvider isGrantedRoleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.security.IsGrantedRole}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIsGrantedRoleAdapter() {
+		if (isGrantedRoleItemProvider == null) {
+			isGrantedRoleItemProvider = new IsGrantedRoleItemProvider(this);
+		}
+
+		return isGrantedRoleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

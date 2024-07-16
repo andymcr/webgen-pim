@@ -59,6 +59,8 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 			case SecurityPackage.SECURITY: return createSecurity();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM: return createLocalAuthenticationSystem();
 			case SecurityPackage.CAS_AUTHENTICATION: return createCasAuthentication();
+			case SecurityPackage.ROLE: return createRole();
+			case SecurityPackage.IS_GRANTED_ROLE: return createIsGrantedRole();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +97,28 @@ public class SecurityFactoryImpl extends EFactoryImpl implements SecurityFactory
 	public CasAuthentication createCasAuthentication() {
 		CasAuthenticationImpl casAuthentication = new CasAuthenticationImpl();
 		return casAuthentication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Role createRole() {
+		RoleImpl role = new RoleImpl();
+		return role;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IsGrantedRole createIsGrantedRole() {
+		IsGrantedRoleImpl isGrantedRole = new IsGrantedRoleImpl();
+		return isGrantedRole;
 	}
 
 	/**

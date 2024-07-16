@@ -17,8 +17,11 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 import work.andycarpenter.webgen.pims.security.Authentication;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.security.CasAuthentication;
+import work.andycarpenter.webgen.pims.security.IsGrantedRole;
 import work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem;
+import work.andycarpenter.webgen.pims.security.Role;
 import work.andycarpenter.webgen.pims.security.Security;
 import work.andycarpenter.webgen.pims.security.SecurityFactory;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
@@ -67,6 +70,27 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	private EClass securityUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authorisationExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass isGrantedRoleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -162,6 +186,16 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	@Override
 	public EReference getSecurity_Authentication() {
 		return (EReference)securityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSecurity_Roles() {
+		return (EReference)securityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -760,6 +794,56 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getRole() {
+		return roleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthorisationExpression() {
+		return authorisationExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIsGrantedRole() {
+		return isGrantedRoleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIsGrantedRole_Negated() {
+		return (EAttribute)isGrantedRoleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getIsGrantedRole_Role() {
+		return (EReference)isGrantedRoleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public SecurityFactory getSecurityFactory() {
 		return (SecurityFactory)getEFactoryInstance();
 	}
@@ -785,6 +869,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		// Create classes and their features
 		securityEClass = createEClass(SECURITY);
 		createEReference(securityEClass, SECURITY__AUTHENTICATION);
+		createEReference(securityEClass, SECURITY__ROLES);
 
 		authenticationEClass = createEClass(AUTHENTICATION);
 		createEReference(authenticationEClass, AUTHENTICATION__SECURITY);
@@ -848,6 +933,14 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		createEAttribute(casAuthenticationEClass, CAS_AUTHENTICATION__LOGOUT_LABEL);
 
 		securityUnitEClass = createEClass(SECURITY_UNIT);
+
+		roleEClass = createEClass(ROLE);
+
+		authorisationExpressionEClass = createEClass(AUTHORISATION_EXPRESSION);
+
+		isGrantedRoleEClass = createEClass(IS_GRANTED_ROLE);
+		createEAttribute(isGrantedRoleEClass, IS_GRANTED_ROLE__NEGATED);
+		createEReference(isGrantedRoleEClass, IS_GRANTED_ROLE__ROLE);
 	}
 
 	/**
@@ -875,6 +968,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 
 		// Obtain other dependent packages
 		PersistencePackage thePersistencePackage = (PersistencePackage)EPackage.Registry.INSTANCE.getEPackage(PersistencePackage.eNS_URI);
+		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -883,10 +977,13 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		// Add supertypes to classes
 		localAuthenticationSystemEClass.getESuperTypes().add(this.getAuthentication());
 		casAuthenticationEClass.getESuperTypes().add(this.getAuthentication());
+		roleEClass.getESuperTypes().add(theBasePackage.getNamedElement());
+		isGrantedRoleEClass.getESuperTypes().add(this.getAuthorisationExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(securityEClass, Security.class, "Security", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSecurity_Authentication(), this.getAuthentication(), this.getAuthentication_Security(), "authentication", null, 0, 1, Security.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSecurity_Roles(), this.getRole(), null, "roles", null, 0, -1, Security.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(authenticationEClass, Authentication.class, "Authentication", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAuthentication_Security(), this.getSecurity(), this.getSecurity_Authentication(), "security", null, 1, 1, Authentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -950,6 +1047,14 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		initEAttribute(getCasAuthentication_LogoutLabel(), ecorePackage.getEString(), "logoutLabel", "logout", 0, 1, CasAuthentication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(securityUnitEClass, SecurityUnit.class, "SecurityUnit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authorisationExpressionEClass, AuthorisationExpression.class, "AuthorisationExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(isGrantedRoleEClass, IsGrantedRole.class, "IsGrantedRole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIsGrantedRole_Negated(), ecorePackage.getEBoolean(), "negated", "false", 0, 1, IsGrantedRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIsGrantedRole_Role(), this.getRole(), null, "role", null, 0, 1, IsGrantedRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

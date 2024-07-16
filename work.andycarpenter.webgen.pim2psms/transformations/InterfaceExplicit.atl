@@ -8,6 +8,7 @@ module InterfaceExplicit;
 create waf : WAF from website : Website, orm : ORM, security : Security, service : Service, api : API;
 
 uses WebsiteHelpers;
+uses AuthorisationExpression;
 uses PersistenceHelpers;
 uses InterfaceExpression;
 uses InterfaceHelpers;
@@ -136,7 +137,7 @@ abstract rule MenuEntry {
 rule SubmenuEntry {
 	from website : Website!SubmenuEntry
 	to waf : WAF!SubmenuEntry (
-		authorisationRoles <- website.requiresRole
+		authorisation <- website.authorisation
 	)
 }
 
@@ -334,7 +335,7 @@ abstract rule ContentUnit {
 				''
 			endif endif,
 		uriParent <- website.uriParent,
-		authorisationRoles <- website.requiresRole,
+		authorisation <- website.authorisation,
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
 		omitCaption <- website.omitCaption,
@@ -384,7 +385,7 @@ abstract rule UnitField {
 	from website : Website!UnitField
 	to waf : WAF!UnitField (
 		localHelp <- website.help,
-		authorisationRoles <- website.requiresRole,
+		authorisation <- website.authorisation,
 		hideWhen <- website.hideWhen,
 		escapeHTML <- website.escapeHTML,
 		collectionDisplayOption <- website.collectionDisplayOption,
@@ -1024,7 +1025,7 @@ rule DeleteAction {
 			else
 				website.name.createLabel().concat('?')
 			endif endif,
-		localAuthorisationRoles <- website.requiresRole,
+		localAuthorisation <- website.authorisation,
 		uriElement <-
 			if website.uriElement <> '' then
 				website.uriElement
@@ -1074,7 +1075,7 @@ abstract rule OperationAction {
 			else
 				website.operation.findBusinessOperation()
 			endif,
-		localAuthorisationRoles <- website.requiresRole,
+		localAuthorisation <- website.authorisation,
 		uriElement <-
 			if website.uriElement <> '' then
 				website.uriElement

@@ -3,8 +3,11 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.DeleteAction;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -17,6 +20,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getUriElement <em>Uri Element</em>}</li>
  * </ul>
  *
@@ -42,6 +46,16 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	 * @ordered
 	 */
 	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorisation()
+	 * @generated
+	 * @ordered
+	 */
+	protected AuthorisationExpression authorisation;
 
 	/**
 	 * The default value of the '{@link #getUriElement() <em>Uri Element</em>}' attribute.
@@ -111,6 +125,51 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	 * @generated
 	 */
 	@Override
+	public AuthorisationExpression getAuthorisation() {
+		return authorisation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAuthorisation(AuthorisationExpression newAuthorisation, NotificationChain msgs) {
+		AuthorisationExpression oldAuthorisation = authorisation;
+		authorisation = newAuthorisation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.DELETE_ACTION__AUTHORISATION, oldAuthorisation, newAuthorisation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthorisation(AuthorisationExpression newAuthorisation) {
+		if (newAuthorisation != authorisation) {
+			NotificationChain msgs = null;
+			if (authorisation != null)
+				msgs = ((InternalEObject)authorisation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.DELETE_ACTION__AUTHORISATION, null, msgs);
+			if (newAuthorisation != null)
+				msgs = ((InternalEObject)newAuthorisation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.DELETE_ACTION__AUTHORISATION, null, msgs);
+			msgs = basicSetAuthorisation(newAuthorisation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DELETE_ACTION__AUTHORISATION, newAuthorisation, newAuthorisation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getUriElement() {
 		return uriElement;
 	}
@@ -134,10 +193,26 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
+				return basicSetAuthorisation(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
 				return getRequiresRole();
+			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
+				return getAuthorisation();
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
 				return getUriElement();
 		}
@@ -154,6 +229,9 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 		switch (featureID) {
 			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
 				setRequiresRole((String)newValue);
+				return;
+			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)newValue);
 				return;
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
 				setUriElement((String)newValue);
@@ -173,6 +251,9 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
 				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
 				return;
+			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)null);
+				return;
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
 				setUriElement(URI_ELEMENT_EDEFAULT);
 				return;
@@ -190,6 +271,8 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 		switch (featureID) {
 			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
 				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
+			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
+				return authorisation != null;
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
 				return URI_ELEMENT_EDEFAULT == null ? uriElement != null : !URI_ELEMENT_EDEFAULT.equals(uriElement);
 		}

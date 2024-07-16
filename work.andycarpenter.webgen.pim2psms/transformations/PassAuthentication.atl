@@ -8,7 +8,7 @@ module PassAuthentication;
 create dummyWaf : WAF, dummySecurity : Security refining waf : WAF, website : Website, orm : ORM, security : Security;
 
 uses PersistenceHelpers;
-uses AuthenticationHelpers;
+uses SecurityHelpers;
 uses WebsiteHelpers;
 
 
@@ -144,6 +144,12 @@ unique lazy rule implicitAuthenticationsPage {
 		name <- 'authentications',
 		displayLabel <- 'Authentications',
 		authorisationRoles <- website.viewRole,
+		authorisation <- 
+			if website.viewRole.trim() <> '' then
+				thisModule.implicitViewAuthorisation(website)
+			else
+				OclUndefined
+			endif,
 		omitCaption <- false,
 		contentType <-
 			if website.authenticationModel.oclIsUndefined() then
@@ -178,14 +184,24 @@ unique lazy rule implicitAuthenticationsPage {
 	deleteAction : WAF!DeleteAction (
 		name <- 'delete',
 		displayLabel <- 'Delete',
-		localAuthorisationRoles <- website.editRole,
+		localAuthorisation <- 
+			if website.editRole.trim() <> '' then
+				thisModule.implicitEditAuthorisation(website)
+			else
+				OclUndefined
+			endif,
 		confirmMessage <- 'Delete authentication?',
 		uriElement <- 'delete'
 	),
 	update : WAF!UpdateUnit (
 		name <- 'update',
 		displayLabel <- 'Update Authentication',
-		authorisationRoles <- website.editRole,
+		authorisation <- 
+			if website.editRole.trim() <> '' then
+				thisModule.implicitEditAuthorisation(website)
+			else
+				OclUndefined
+			endif,
 		omitCaption <- false,
 		confirmDestination <- authentications,
 		confirmLabel <- 'Save',
@@ -218,6 +234,20 @@ unique lazy rule implicitAuthenticationsPage {
 	do {
 		waf;
 	}
+}
+
+lazy rule implicitEditAuthorisation {
+	from website : Website!LocalAuthenticationSystem
+	to security : WAF!IsGrantedRole (
+		role <- thisModule.findWafRole(website.editRole)
+	)
+}
+
+lazy rule implicitViewAuthorisation {
+	from website : Website!LocalAuthenticationSystem
+	to security : WAF!IsGrantedRole (
+		role <- thisModule.findWafRole(website.viewRole)
+	)
 }
 
 

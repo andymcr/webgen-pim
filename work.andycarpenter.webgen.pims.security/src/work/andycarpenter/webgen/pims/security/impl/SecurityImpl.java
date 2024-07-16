@@ -2,16 +2,21 @@
  */
 package work.andycarpenter.webgen.pims.security.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.security.Authentication;
+import work.andycarpenter.webgen.pims.security.Role;
 import work.andycarpenter.webgen.pims.security.Security;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 
@@ -24,6 +29,7 @@ import work.andycarpenter.webgen.pims.security.SecurityPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.security.impl.SecurityImpl#getAuthentication <em>Authentication</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.security.impl.SecurityImpl#getRoles <em>Roles</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +44,16 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * @ordered
 	 */
 	protected Authentication authentication;
+
+	/**
+	 * The cached value of the '{@link #getRoles() <em>Roles</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoles()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Role> roles;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,6 +125,19 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * @generated
 	 */
 	@Override
+	public EList<Role> getRoles() {
+		if (roles == null) {
+			roles = new EObjectContainmentEList<Role>(Role.class, this, SecurityPackage.SECURITY__ROLES);
+		}
+		return roles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SecurityPackage.SECURITY__AUTHENTICATION:
@@ -129,6 +158,8 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 		switch (featureID) {
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				return basicSetAuthentication(null, msgs);
+			case SecurityPackage.SECURITY__ROLES:
+				return ((InternalEList<?>)getRoles()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,6 +174,8 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 		switch (featureID) {
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				return getAuthentication();
+			case SecurityPackage.SECURITY__ROLES:
+				return getRoles();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,11 +185,16 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				setAuthentication((Authentication)newValue);
+				return;
+			case SecurityPackage.SECURITY__ROLES:
+				getRoles().clear();
+				getRoles().addAll((Collection<? extends Role>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,6 +211,9 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				setAuthentication((Authentication)null);
 				return;
+			case SecurityPackage.SECURITY__ROLES:
+				getRoles().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -187,6 +228,8 @@ public class SecurityImpl extends MinimalEObjectImpl.Container implements Securi
 		switch (featureID) {
 			case SecurityPackage.SECURITY__AUTHENTICATION:
 				return authentication != null;
+			case SecurityPackage.SECURITY__ROLES:
+				return roles != null && !roles.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

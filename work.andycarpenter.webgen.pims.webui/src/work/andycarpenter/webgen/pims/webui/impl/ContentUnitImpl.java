@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
+import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.ContentUnit;
 import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -25,6 +26,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getController <em>Controller</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isCreateDefaultUriElement <em>Create Default Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getRequiresRole <em>Requires Role</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getPurposeSummary <em>Purpose Summary</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriParent <em>Uri Parent</em>}</li>
@@ -77,6 +79,16 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @ordered
 	 */
 	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorisation()
+	 * @generated
+	 * @ordered
+	 */
+	protected AuthorisationExpression authorisation;
 
 	/**
 	 * The default value of the '{@link #getPurposeSummary() <em>Purpose Summary</em>}' attribute.
@@ -291,6 +303,51 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		requiresRole = newRequiresRole;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE, oldRequiresRole, requiresRole));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthorisationExpression getAuthorisation() {
+		return authorisation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAuthorisation(AuthorisationExpression newAuthorisation, NotificationChain msgs) {
+		AuthorisationExpression oldAuthorisation = authorisation;
+		authorisation = newAuthorisation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__AUTHORISATION, oldAuthorisation, newAuthorisation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthorisation(AuthorisationExpression newAuthorisation) {
+		if (newAuthorisation != authorisation) {
+			NotificationChain msgs = null;
+			if (authorisation != null)
+				msgs = ((InternalEObject)authorisation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.CONTENT_UNIT__AUTHORISATION, null, msgs);
+			if (newAuthorisation != null)
+				msgs = ((InternalEObject)newAuthorisation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.CONTENT_UNIT__AUTHORISATION, null, msgs);
+			msgs = basicSetAuthorisation(newAuthorisation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__AUTHORISATION, newAuthorisation, newAuthorisation));
 	}
 
 	/**
@@ -520,6 +577,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		switch (featureID) {
 			case WebuiPackage.CONTENT_UNIT__CONTROLLER:
 				return basicSetController(null, msgs);
+			case WebuiPackage.CONTENT_UNIT__AUTHORISATION:
+				return basicSetAuthorisation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -595,6 +654,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return isCreateDefaultUriElement();
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
 				return getRequiresRole();
+			case WebuiPackage.CONTENT_UNIT__AUTHORISATION:
+				return getAuthorisation();
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 				return getPurposeSummary();
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
@@ -632,6 +693,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return;
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
 				setRequiresRole((String)newValue);
+				return;
+			case WebuiPackage.CONTENT_UNIT__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 				setPurposeSummary((String)newValue);
@@ -678,6 +742,9 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
 				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
 				return;
+			case WebuiPackage.CONTENT_UNIT__AUTHORISATION:
+				setAuthorisation((AuthorisationExpression)null);
+				return;
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 				setPurposeSummary(PURPOSE_SUMMARY_EDEFAULT);
 				return;
@@ -720,6 +787,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return createDefaultUriElement != CREATE_DEFAULT_URI_ELEMENT_EDEFAULT;
 			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
 				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
+			case WebuiPackage.CONTENT_UNIT__AUTHORISATION:
+				return authorisation != null;
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 				return PURPOSE_SUMMARY_EDEFAULT == null ? purposeSummary != null : !PURPOSE_SUMMARY_EDEFAULT.equals(purposeSummary);
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:

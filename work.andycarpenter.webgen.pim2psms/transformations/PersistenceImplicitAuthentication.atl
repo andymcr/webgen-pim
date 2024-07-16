@@ -7,7 +7,7 @@ module PersistenceImplicitAuthentication;
 create dummyOrm : ORM refining orm : ORM, website : Website;
 
 uses PersistenceHelpers;
-uses AuthenticationHelpers;
+uses SecurityHelpers;
 
 
 rule OrmModel {

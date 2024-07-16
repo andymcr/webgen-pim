@@ -1,9 +1,7 @@
 package work.andycarpenter.webgen.ui.wizards;
 
 import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URI;
@@ -15,9 +13,6 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
-import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
-import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -229,46 +224,6 @@ public class NewWebgenProjectOperation extends WorkspaceModifyOperation {
 				}
 			}
 			zipFile.close();
- 		} catch (URISyntaxException | IOException | CoreException e) {
-			WebgenUiPlugin.log(e);
-		}
-	}
-
-	@SuppressWarnings("unused")
-	private void extractTGZ(final URL sourceURL, final IPath rootPath,
-			final int removeSegemntsCount, final IPath[] ignoreFilter,
-			final Map<IPath, IPath> renames) {
-		
-		try {
-			final File tgzPath = new File(FileLocator.resolve(sourceURL).toURI());
-			final TarArchiveInputStream tarIn = new TarArchiveInputStream(
-				new GzipCompressorInputStream(new BufferedInputStream(
-					new FileInputStream(tgzPath))));  
-			TarArchiveEntry entry = (TarArchiveEntry) tarIn.getNextEntry();  
-			while (entry != null) {
-				IPath path = new Path(entry.getName()).removeFirstSegments(removeSegemntsCount);
-				if (renames.containsKey(path)) {
-					path = renames.get(path);
-				}
-				if (rootPath != null) {
-					path = new Path(rootPath.toString() + path.toString());
-				}
-				if (!path.isEmpty() && !ignoreEntry(path, ignoreFilter)) {
-					if(entry.isDirectory()) {
-						final IFolder folder = projectHandle.getFolder(path);
-						if (!folder.exists()) {
-							folder.create(false, true, null);
-						}
-					} else {
-						byte[] contents = new byte[(int) entry.getSize()];
-						tarIn.read(contents);
-						final IFile file = projectHandle.getFile(path);
-						file.create(new ByteArrayInputStream(contents), false, null);
-					}
-				}
-				entry = (TarArchiveEntry) tarIn.getNextEntry();
-			}
-			tarIn.close();
  		} catch (URISyntaxException | IOException | CoreException e) {
 			WebgenUiPlugin.log(e);
 		}
