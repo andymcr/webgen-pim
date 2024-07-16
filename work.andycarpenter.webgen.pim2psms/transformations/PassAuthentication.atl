@@ -143,7 +143,6 @@ unique lazy rule implicitAuthenticationsPage {
 	authentications : WAF!TextCardsUnit (
 		name <- 'authentications',
 		displayLabel <- 'Authentications',
-		authorisationRoles <- website.viewRole,
 		authorisation <- 
 			if website.viewRole.trim() <> '' then
 				thisModule.implicitViewAuthorisation(website)

@@ -13,7 +13,6 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -24,33 +23,6 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * @generated
  */
 public interface DeleteAction extends Action {
-	/**
-	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requires Role</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requires Role</em>' attribute.
-	 * @see #setRequiresRole(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDeleteAction_RequiresRole()
-	 * @model default=""
-	 * @generated
-	 */
-	String getRequiresRole();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getRequiresRole <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requires Role</em>' attribute.
-	 * @see #getRequiresRole()
-	 * @generated
-	 */
-	void setRequiresRole(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

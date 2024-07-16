@@ -23,7 +23,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getOperation <em>Operation</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -40,26 +39,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 	 * @ordered
 	 */
 	protected BusinessOperation operation;
-
-	/**
-	 * The default value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REQUIRES_ROLE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
@@ -156,29 +135,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 	 * @generated
 	 */
 	@Override
-	public String getRequiresRole() {
-		return requiresRole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRequiresRole(String newRequiresRole) {
-		String oldRequiresRole = requiresRole;
-		requiresRole = newRequiresRole;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE, oldRequiresRole, requiresRole));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public AuthorisationExpression getAuthorisation() {
 		return authorisation;
 	}
@@ -266,8 +222,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				if (resolve) return getOperation();
 				return basicGetOperation();
-			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
-				return getRequiresRole();
 			case WebuiPackage.OPERATION_ACTION__AUTHORISATION:
 				return getAuthorisation();
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
@@ -286,9 +240,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		switch (featureID) {
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				setOperation((BusinessOperation)newValue);
-				return;
-			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
-				setRequiresRole((String)newValue);
 				return;
 			case WebuiPackage.OPERATION_ACTION__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)newValue);
@@ -311,9 +262,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				setOperation((BusinessOperation)null);
 				return;
-			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
-				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
-				return;
 			case WebuiPackage.OPERATION_ACTION__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)null);
 				return;
@@ -334,8 +282,6 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		switch (featureID) {
 			case WebuiPackage.OPERATION_ACTION__OPERATION:
 				return operation != null;
-			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
-				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
 			case WebuiPackage.OPERATION_ACTION__AUTHORISATION:
 				return authorisation != null;
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
@@ -354,9 +300,7 @@ public abstract class OperationActionImpl extends ActionImpl implements Operatio
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (requiresRole: ");
-		result.append(requiresRole);
-		result.append(", uriElement: ");
+		result.append(" (uriElement: ");
 		result.append(uriElement);
 		result.append(')');
 		return result.toString();

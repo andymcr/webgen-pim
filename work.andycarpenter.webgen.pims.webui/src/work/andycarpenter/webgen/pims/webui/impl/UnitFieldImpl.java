@@ -28,7 +28,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getDisplayedOn <em>Displayed On</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getTitle <em>Title</em>}</li>
@@ -43,26 +42,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container implements UnitField {
-	/**
-	 * The default value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REQUIRES_ROLE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -283,29 +262,6 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__DISPLAYED_ON, newDisplayedOn, newDisplayedOn));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getRequiresRole() {
-		return requiresRole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRequiresRole(String newRequiresRole) {
-		String oldRequiresRole = requiresRole;
-		requiresRole = newRequiresRole;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__REQUIRES_ROLE, oldRequiresRole, requiresRole));
 	}
 
 	/**
@@ -617,8 +573,6 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				return getDisplayedOn();
-			case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE:
-				return getRequiresRole();
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
 				return getAuthorisation();
 			case WebuiPackage.UNIT_FIELD__HIDE_WHEN:
@@ -651,9 +605,6 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				setDisplayedOn((DynamicUnit)newValue);
-				return;
-			case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE:
-				setRequiresRole((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)newValue);
@@ -697,9 +648,6 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				setDisplayedOn((DynamicUnit)null);
 				return;
-			case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE:
-				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
-				return;
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)null);
 				return;
@@ -741,8 +689,6 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				return getDisplayedOn() != null;
-			case WebuiPackage.UNIT_FIELD__REQUIRES_ROLE:
-				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
 				return authorisation != null;
 			case WebuiPackage.UNIT_FIELD__HIDE_WHEN:
@@ -775,9 +721,7 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (requiresRole: ");
-		result.append(requiresRole);
-		result.append(", title: ");
+		result.append(" (title: ");
 		result.append(title);
 		result.append(", help: ");
 		result.append(help);

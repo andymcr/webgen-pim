@@ -19,7 +19,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -27,26 +26,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class DeleteActionImpl extends ActionImpl implements DeleteAction {
-	/**
-	 * The default value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REQUIRES_ROLE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -94,29 +73,6 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.DELETE_ACTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getRequiresRole() {
-		return requiresRole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRequiresRole(String newRequiresRole) {
-		String oldRequiresRole = requiresRole;
-		requiresRole = newRequiresRole;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DELETE_ACTION__REQUIRES_ROLE, oldRequiresRole, requiresRole));
 	}
 
 	/**
@@ -209,8 +165,6 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
-				return getRequiresRole();
 			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
 				return getAuthorisation();
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
@@ -227,9 +181,6 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
-				setRequiresRole((String)newValue);
-				return;
 			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)newValue);
 				return;
@@ -248,9 +199,6 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
-				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
-				return;
 			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)null);
 				return;
@@ -269,8 +217,6 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
-				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
 			case WebuiPackage.DELETE_ACTION__AUTHORISATION:
 				return authorisation != null;
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
@@ -289,9 +235,7 @@ public class DeleteActionImpl extends ActionImpl implements DeleteAction {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (requiresRole: ");
-		result.append(requiresRole);
-		result.append(", uriElement: ");
+		result.append(" (uriElement: ");
 		result.append(uriElement);
 		result.append(')');
 		return result.toString();

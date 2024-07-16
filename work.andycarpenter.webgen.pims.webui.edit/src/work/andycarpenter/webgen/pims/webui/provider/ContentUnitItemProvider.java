@@ -51,7 +51,6 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addCreateDefaultUriElementPropertyDescriptor(object);
-			addRequiresRolePropertyDescriptor(object);
 			addPurposeSummaryPropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
 			addUriParentPropertyDescriptor(object);
@@ -83,28 +82,6 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_NavigationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Requires Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiresRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContentUnit_requiresRole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_requiresRole_feature", "_UI_ContentUnit_type"),
-				 WebuiPackage.Literals.CONTENT_UNIT__REQUIRES_ROLE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -342,7 +319,6 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 
 		switch (notification.getFeatureID(ContentUnit.class)) {
 			case WebuiPackage.CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT:
-			case WebuiPackage.CONTENT_UNIT__REQUIRES_ROLE:
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:

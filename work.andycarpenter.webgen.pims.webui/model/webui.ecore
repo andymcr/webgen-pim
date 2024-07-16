@@ -103,8 +103,6 @@
         eType="#//Menu" eOpposite="#//Menu/entries"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubmenuEntry" eSuperTypes="#//Menu #//MenuEntry">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alwaysVisible" lowerBound="1"
@@ -214,8 +212,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createDefaultUriElement"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purposeSummary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -299,8 +295,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="UnitField" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayedOn" lowerBound="1"
         eType="#//DynamicUnit" eOpposite="#//DynamicUnit/displayFields"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hideWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
@@ -847,8 +841,6 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="canOnlyDeleteSingletons" value="if usedBy.oclIsKindOf(UnitElement) then&#xA;&#x9;usedBy.oclAsType(UnitElement).attribute.cardinality &lt;> persistence::Cardinality::Many&#xA;else if usedBy.oclIsKindOf(UnitAssociation) then&#xA;&#x9;usedBy.oclAsType(UnitAssociation).association.cardinality &lt;> persistence::Cardinality::Many&#xA;else&#xA;&#x9;usedBy.oclIsKindOf(CollectionUnit)&#xA;endif endif&#xA;"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -866,8 +858,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="OperationAction" abstract="true" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.service/model/service.ecore#//BusinessOperation"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

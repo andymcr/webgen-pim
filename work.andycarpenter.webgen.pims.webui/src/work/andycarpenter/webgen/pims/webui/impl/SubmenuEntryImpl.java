@@ -27,7 +27,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#getPartOf <em>Part Of</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
@@ -35,26 +34,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
-	/**
-	 * The default value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REQUIRES_ROLE_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getRequiresRole() <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequiresRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String requiresRole = REQUIRES_ROLE_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -145,29 +124,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SUBMENU_ENTRY__PART_OF, newPartOf, newPartOf));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getRequiresRole() {
-		return requiresRole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRequiresRole(String newRequiresRole) {
-		String oldRequiresRole = requiresRole;
-		requiresRole = newRequiresRole;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SUBMENU_ENTRY__REQUIRES_ROLE, oldRequiresRole, requiresRole));
 	}
 
 	/**
@@ -294,8 +250,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				return getPartOf();
-			case WebuiPackage.SUBMENU_ENTRY__REQUIRES_ROLE:
-				return getRequiresRole();
 			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
 				return getAuthorisation();
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
@@ -314,9 +268,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				setPartOf((Menu)newValue);
-				return;
-			case WebuiPackage.SUBMENU_ENTRY__REQUIRES_ROLE:
-				setRequiresRole((String)newValue);
 				return;
 			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)newValue);
@@ -339,9 +290,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				setPartOf((Menu)null);
 				return;
-			case WebuiPackage.SUBMENU_ENTRY__REQUIRES_ROLE:
-				setRequiresRole(REQUIRES_ROLE_EDEFAULT);
-				return;
 			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
 				setAuthorisation((AuthorisationExpression)null);
 				return;
@@ -362,8 +310,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				return getPartOf() != null;
-			case WebuiPackage.SUBMENU_ENTRY__REQUIRES_ROLE:
-				return REQUIRES_ROLE_EDEFAULT == null ? requiresRole != null : !REQUIRES_ROLE_EDEFAULT.equals(requiresRole);
 			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
 				return authorisation != null;
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
@@ -414,9 +360,7 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (requiresRole: ");
-		result.append(requiresRole);
-		result.append(", alwaysVisible: ");
+		result.append(" (alwaysVisible: ");
 		result.append(alwaysVisible);
 		result.append(')');
 		return result.toString();

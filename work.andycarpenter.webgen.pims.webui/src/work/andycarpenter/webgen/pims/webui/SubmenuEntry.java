@@ -14,7 +14,6 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
@@ -24,33 +23,6 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * @generated
  */
 public interface SubmenuEntry extends Menu, MenuEntry {
-	/**
-	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requires Role</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requires Role</em>' attribute.
-	 * @see #setRequiresRole(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSubmenuEntry_RequiresRole()
-	 * @model default=""
-	 * @generated
-	 */
-	String getRequiresRole();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requires Role</em>' attribute.
-	 * @see #getRequiresRole()
-	 * @generated
-	 */
-	void setRequiresRole(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

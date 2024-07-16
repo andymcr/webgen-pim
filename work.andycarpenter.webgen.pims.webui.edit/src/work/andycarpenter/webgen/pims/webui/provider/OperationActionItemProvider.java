@@ -48,7 +48,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOperationPropertyDescriptor(object);
-			addRequiresRolePropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -73,28 +72,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 				 true,
 				 null,
 				 getString("_UI_BusinessPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Requires Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiresRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_OperationAction_requiresRole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OperationAction_requiresRole_feature", "_UI_OperationAction_type"),
-				 WebuiPackage.Literals.OPERATION_ACTION__REQUIRES_ROLE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
 
@@ -177,7 +154,6 @@ public class OperationActionItemProvider extends ActionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationAction.class)) {
-			case WebuiPackage.OPERATION_ACTION__REQUIRES_ROLE:
 			case WebuiPackage.OPERATION_ACTION__URI_ELEMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

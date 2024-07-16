@@ -45,32 +45,9 @@ public class DeleteActionItemProvider extends ActionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRequiresRolePropertyDescriptor(object);
 			addUriElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Requires Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiresRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DeleteAction_requiresRole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DeleteAction_requiresRole_feature", "_UI_DeleteAction_type"),
-				 WebuiPackage.Literals.DELETE_ACTION__REQUIRES_ROLE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_SecurityPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -163,7 +140,6 @@ public class DeleteActionItemProvider extends ActionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DeleteAction.class)) {
-			case WebuiPackage.DELETE_ACTION__REQUIRES_ROLE:
 			case WebuiPackage.DELETE_ACTION__URI_ELEMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

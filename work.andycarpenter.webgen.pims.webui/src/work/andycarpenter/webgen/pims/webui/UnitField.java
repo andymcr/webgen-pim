@@ -16,7 +16,6 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getDisplayedOn <em>Displayed On</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getHideWhen <em>Hide When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getTitle <em>Title</em>}</li>
@@ -60,33 +59,6 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setDisplayedOn(DynamicUnit value);
-
-	/**
-	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requires Role</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requires Role</em>' attribute.
-	 * @see #setRequiresRole(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_RequiresRole()
-	 * @model default=""
-	 * @generated
-	 */
-	String getRequiresRole();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requires Role</em>' attribute.
-	 * @see #getRequiresRole()
-	 * @generated
-	 */
-	void setRequiresRole(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.

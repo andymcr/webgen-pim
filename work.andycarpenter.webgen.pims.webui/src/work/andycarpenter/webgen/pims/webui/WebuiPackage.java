@@ -553,22 +553,13 @@ public interface WebuiPackage extends EPackage {
 	int SUBMENU_ENTRY__PART_OF = MENU_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBMENU_ENTRY__REQUIRES_ROLE = MENU_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY__AUTHORISATION = MENU_FEATURE_COUNT + 2;
+	int SUBMENU_ENTRY__AUTHORISATION = MENU_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Always Visible</b></em>' attribute.
@@ -577,7 +568,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY__ALWAYS_VISIBLE = MENU_FEATURE_COUNT + 3;
+	int SUBMENU_ENTRY__ALWAYS_VISIBLE = MENU_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Submenu Entry</em>' class.
@@ -586,7 +577,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 4;
+	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Submenu Entry</em>' class.
@@ -2516,22 +2507,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_UNIT__REQUIRES_ROLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__AUTHORISATION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int CONTENT_UNIT__AUTHORISATION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Purpose Summary</b></em>' attribute.
@@ -2540,7 +2522,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__PURPOSE_SUMMARY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int CONTENT_UNIT__PURPOSE_SUMMARY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -2549,7 +2531,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int CONTENT_UNIT__URI_ELEMENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Uri Parent</b></em>' reference.
@@ -2558,7 +2540,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__URI_PARENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int CONTENT_UNIT__URI_PARENT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Alternative</b></em>' attribute.
@@ -2567,7 +2549,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2576,7 +2558,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -2585,7 +2567,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int CONTENT_UNIT__OMIT_CAPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Local Caption Class</b></em>' attribute.
@@ -2594,7 +2576,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int CONTENT_UNIT__LOCAL_CAPTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Local Content Class</b></em>' attribute.
@@ -2603,7 +2585,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int CONTENT_UNIT__LOCAL_CONTENT_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Content Unit</em>' class.
@@ -2612,7 +2594,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int CONTENT_UNIT_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Content Unit</em>' class.
@@ -2678,15 +2660,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIC_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_UNIT__REQUIRES_ROLE = CONTENT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -2841,15 +2814,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_SITEMAP_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_SITEMAP_UNIT__REQUIRES_ROLE = CONTENT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -3013,15 +2977,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT__REQUIRES_ROLE = CONTENT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -3367,22 +3322,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FIELD__DISPLAYED_ON = 0;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FIELD__REQUIRES_ROLE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__AUTHORISATION = 2;
+	int UNIT_FIELD__AUTHORISATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -3391,7 +3337,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__HIDE_WHEN = 3;
+	int UNIT_FIELD__HIDE_WHEN = 2;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -3400,7 +3346,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__TITLE = 4;
+	int UNIT_FIELD__TITLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Help</b></em>' attribute.
@@ -3409,7 +3355,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__HELP = 5;
+	int UNIT_FIELD__HELP = 4;
 
 	/**
 	 * The feature id for the '<em><b>Escape HTML</b></em>' attribute.
@@ -3418,7 +3364,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__ESCAPE_HTML = 6;
+	int UNIT_FIELD__ESCAPE_HTML = 5;
 
 	/**
 	 * The feature id for the '<em><b>Collection Display Option</b></em>' attribute.
@@ -3427,7 +3373,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__COLLECTION_DISPLAY_OPTION = 7;
+	int UNIT_FIELD__COLLECTION_DISPLAY_OPTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Truncate</b></em>' attribute.
@@ -3436,7 +3382,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__TRUNCATE = 8;
+	int UNIT_FIELD__TRUNCATE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Date Format</b></em>' attribute.
@@ -3445,7 +3391,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__DATE_FORMAT = 9;
+	int UNIT_FIELD__DATE_FORMAT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Disable Input</b></em>' attribute.
@@ -3454,7 +3400,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD__DISABLE_INPUT = 10;
+	int UNIT_FIELD__DISABLE_INPUT = 9;
 
 	/**
 	 * The number of structural features of the '<em>Unit Field</em>' class.
@@ -3463,7 +3409,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD_FEATURE_COUNT = 11;
+	int UNIT_FIELD_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Unit Field</em>' class.
@@ -3492,15 +3438,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_FEATURE__DISPLAYED_ON = UNIT_FIELD__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__REQUIRES_ROLE = UNIT_FIELD__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -3799,15 +3736,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ELEMENT__DISPLAYED_ON = UNIT_FEATURE__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__REQUIRES_ROLE = UNIT_FEATURE__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -4162,15 +4090,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__DISPLAYED_ON = UNIT_FEATURE__DISPLAYED_ON;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__REQUIRES_ROLE = UNIT_FEATURE__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4521,15 +4440,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__DISPLAYED_ON = UNIT_FEATURE__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__REQUIRES_ROLE = UNIT_FEATURE__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -5009,15 +4919,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_LABEL__DISPLAYED_ON = UNIT_FIELD__DISPLAYED_ON;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_LABEL__REQUIRES_ROLE = UNIT_FIELD__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5172,22 +5073,13 @@ public interface WebuiPackage extends EPackage {
 	int INTERFACE_FIELD__DISPLAYED_ON = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_FIELD__REQUIRES_ROLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__AUTHORISATION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int INTERFACE_FIELD__AUTHORISATION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Hide When</b></em>' containment reference.
@@ -5196,7 +5088,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__HIDE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int INTERFACE_FIELD__HIDE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -5205,7 +5097,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int INTERFACE_FIELD__TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Help</b></em>' attribute.
@@ -5214,7 +5106,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int INTERFACE_FIELD__HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Escape HTML</b></em>' attribute.
@@ -5223,7 +5115,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__ESCAPE_HTML = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int INTERFACE_FIELD__ESCAPE_HTML = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Collection Display Option</b></em>' attribute.
@@ -5232,7 +5124,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int INTERFACE_FIELD__COLLECTION_DISPLAY_OPTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Truncate</b></em>' attribute.
@@ -5241,7 +5133,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__TRUNCATE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int INTERFACE_FIELD__TRUNCATE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Date Format</b></em>' attribute.
@@ -5250,7 +5142,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__DATE_FORMAT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int INTERFACE_FIELD__DATE_FORMAT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Disable Input</b></em>' attribute.
@@ -5259,7 +5151,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__DISABLE_INPUT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int INTERFACE_FIELD__DISABLE_INPUT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -5268,7 +5160,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__REQUIRED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int INTERFACE_FIELD__REQUIRED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
@@ -5277,7 +5169,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__DEFAULT_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int INTERFACE_FIELD__DEFAULT_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -5286,7 +5178,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -5295,7 +5187,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Repeated Field</b></em>' attribute.
@@ -5304,7 +5196,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__REPEATED_FIELD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int INTERFACE_FIELD__REPEATED_FIELD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Second Display Label</b></em>' attribute.
@@ -5313,7 +5205,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int INTERFACE_FIELD__SECOND_DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Second Title</b></em>' attribute.
@@ -5322,7 +5214,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+	int INTERFACE_FIELD__SECOND_TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Second Placeholder</b></em>' attribute.
@@ -5331,7 +5223,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+	int INTERFACE_FIELD__SECOND_PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Second Help</b></em>' attribute.
@@ -5340,7 +5232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+	int INTERFACE_FIELD__SECOND_HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Interface Field</em>' class.
@@ -5349,7 +5241,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
+	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Interface Field</em>' class.
@@ -5396,15 +5288,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE_FIELD__DISPLAYED_ON = INTERFACE_FIELD__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE_FIELD__REQUIRES_ROLE = INTERFACE_FIELD__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -5658,15 +5541,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_FIELD__DISPLAYED_ON = INTERFACE_FIELD__DISPLAYED_ON;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_FIELD__REQUIRES_ROLE = INTERFACE_FIELD__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -5939,15 +5813,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -6282,15 +6147,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -6870,15 +6726,6 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT = SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__REQUIRES_ROLE = SINGLETON_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7292,15 +7139,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -7728,15 +7566,6 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8158,15 +7987,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -8609,15 +8429,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -9071,15 +8882,6 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__CREATE_DEFAULT_URI_ELEMENT = SINGLETON_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS_UNIT__REQUIRES_ROLE = SINGLETON_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9430,15 +9232,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -10043,15 +9836,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -10884,15 +10668,6 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11539,15 +11314,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -12261,15 +12027,6 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT = CARDS_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__REQUIRES_ROLE = CARDS_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12981,15 +12738,6 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13609,15 +13357,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__CREATE_DEFAULT_URI_ELEMENT = COLLECTION_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__REQUIRES_ROLE = COLLECTION_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -14250,15 +13989,6 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14599,15 +14329,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT__CREATE_DEFAULT_URI_ELEMENT = CONTROL_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT__REQUIRES_ROLE = CONTROL_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -14969,15 +14690,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -15395,15 +15107,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15819,15 +15522,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__CREATE_DEFAULT_URI_ELEMENT = DYNAMIC_UNIT__CREATE_DEFAULT_URI_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT__REQUIRES_ROLE = DYNAMIC_UNIT__REQUIRES_ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16151,15 +15845,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -16629,15 +16314,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__CREATE_DEFAULT_URI_ELEMENT = EDIT_UNIT__CREATE_DEFAULT_URI_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESET_PASSWORD_UNIT__REQUIRES_ROLE = EDIT_UNIT__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -18671,22 +18347,13 @@ public interface WebuiPackage extends EPackage {
 	int DELETE_ACTION__CONTAINING_TYPE = ACTION__CONTAINING_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELETE_ACTION__REQUIRES_ROLE = ACTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_ACTION__AUTHORISATION = ACTION_FEATURE_COUNT + 1;
+	int DELETE_ACTION__AUTHORISATION = ACTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -18695,7 +18362,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 2;
+	int DELETE_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Delete Action</em>' class.
@@ -18704,7 +18371,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+	int DELETE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Delete Action</em>' class.
@@ -19599,22 +19266,13 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION__OPERATION = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_ACTION__REQUIRES_ROLE = ACTION_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__AUTHORISATION = ACTION_FEATURE_COUNT + 2;
+	int OPERATION_ACTION__AUTHORISATION = ACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Uri Element</b></em>' attribute.
@@ -19623,7 +19281,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 3;
+	int OPERATION_ACTION__URI_ELEMENT = ACTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Operation Action</em>' class.
@@ -19632,7 +19290,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+	int OPERATION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Operation Action</em>' class.
@@ -19815,15 +19473,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_OPERATION_ACTION__REQUIRES_ROLE = OPERATION_ACTION__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -20013,15 +19662,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__REQUIRES_ROLE = OPERATION_ACTION__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -20221,15 +19861,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION__OPERATION = OPERATION_ACTION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Requires Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERAL_OPERATION_ACTION__REQUIRES_ROLE = OPERATION_ACTION__REQUIRES_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
@@ -20763,17 +20394,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSubmenuEntry();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole <em>Requires Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requires Role</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SubmenuEntry#getRequiresRole()
-	 * @see #getSubmenuEntry()
-	 * @generated
-	 */
-	EAttribute getSubmenuEntry_RequiresRole();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation <em>Authorisation</em>}'.
@@ -21340,17 +20960,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_CreateDefaultUriElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole <em>Requires Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requires Role</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getRequiresRole()
-	 * @see #getContentUnit()
-	 * @generated
-	 */
-	EAttribute getContentUnit_RequiresRole();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAuthorisation <em>Authorisation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21762,17 +21371,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnitField_DisplayedOn();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole <em>Requires Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requires Role</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitField#getRequiresRole()
-	 * @see #getUnitField()
-	 * @generated
-	 */
-	EAttribute getUnitField_RequiresRole();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.UnitField#getAuthorisation <em>Authorisation</em>}'.
@@ -24263,17 +23861,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getOperationAction_Operation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole <em>Requires Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requires Role</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole()
-	 * @see #getOperationAction()
-	 * @generated
-	 */
-	EAttribute getOperationAction_RequiresRole();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getAuthorisation <em>Authorisation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -24438,17 +24025,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDeleteAction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getRequiresRole <em>Requires Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requires Role</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.DeleteAction#getRequiresRole()
-	 * @see #getDeleteAction()
-	 * @generated
-	 */
-	EAttribute getDeleteAction_RequiresRole();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.DeleteAction#getAuthorisation <em>Authorisation</em>}'.
@@ -24920,14 +24496,6 @@ public interface WebuiPackage extends EPackage {
 		EClass SUBMENU_ENTRY = eINSTANCE.getSubmenuEntry();
 
 		/**
-		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUBMENU_ENTRY__REQUIRES_ROLE = eINSTANCE.getSubmenuEntry_RequiresRole();
-
-		/**
 		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25390,14 +24958,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__CREATE_DEFAULT_URI_ELEMENT = eINSTANCE.getContentUnit_CreateDefaultUriElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTENT_UNIT__REQUIRES_ROLE = eINSTANCE.getContentUnit_RequiresRole();
-
-		/**
 		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25710,14 +25270,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNIT_FIELD__DISPLAYED_ON = eINSTANCE.getUnitField_DisplayedOn();
-
-		/**
-		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FIELD__REQUIRES_ROLE = eINSTANCE.getUnitField_RequiresRole();
 
 		/**
 		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.
@@ -27674,14 +27226,6 @@ public interface WebuiPackage extends EPackage {
 		EReference OPERATION_ACTION__OPERATION = eINSTANCE.getOperationAction_Operation();
 
 		/**
-		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPERATION_ACTION__REQUIRES_ROLE = eINSTANCE.getOperationAction_RequiresRole();
-
-		/**
 		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -27828,14 +27372,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DELETE_ACTION = eINSTANCE.getDeleteAction();
-
-		/**
-		 * The meta object literal for the '<em><b>Requires Role</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELETE_ACTION__REQUIRES_ROLE = eINSTANCE.getDeleteAction_RequiresRole();
 
 		/**
 		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.

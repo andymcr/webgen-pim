@@ -15,7 +15,6 @@ import work.andycarpenter.webgen.pims.service.BusinessOperation;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getOperation <em>Operation</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole <em>Requires Role</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.OperationAction#getUriElement <em>Uri Element</em>}</li>
  * </ul>
@@ -46,29 +45,6 @@ public interface OperationAction extends Action {
 	 * @generated
 	 */
 	void setOperation(BusinessOperation value);
-
-	/**
-	 * Returns the value of the '<em><b>Requires Role</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requires Role</em>' attribute.
-	 * @see #setRequiresRole(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getOperationAction_RequiresRole()
-	 * @model default=""
-	 * @generated
-	 */
-	String getRequiresRole();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.OperationAction#getRequiresRole <em>Requires Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requires Role</em>' attribute.
-	 * @see #getRequiresRole()
-	 * @generated
-	 */
-	void setRequiresRole(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Authorisation</b></em>' containment reference.
