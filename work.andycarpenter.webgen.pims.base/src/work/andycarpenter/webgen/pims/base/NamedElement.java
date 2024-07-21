@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.base;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @see work.andycarpenter.webgen.pims.base.BasePackage#getNamedElement()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='nameNeedsAtLeastOneCharacter'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL nameNeedsAtLeastOneCharacter='not name.oclIsUndefined() implies name.size() &gt; 0'"
  * @generated
  */
 public interface NamedElement extends EObject {
@@ -48,5 +49,13 @@ public interface NamedElement extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not name.oclIsUndefined() implies name.size() &gt; 0'"
+	 * @generated
+	 */
+	boolean nameNeedsAtLeastOneCharacter(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // NamedElement

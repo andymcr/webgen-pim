@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="expression" nsURI="http://andycarpenter.work/pim/expression"
-    nsPrefix="webgen-expression">
+    nsPrefix="webgen_expression">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -23,7 +23,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rootContainer" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        changeable="false" unsettable="true" derived="true">
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="derivation" value="if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Expression) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(Expression).rootContainer&#xA;else&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer()&#xA;endif"/>
       </eAnnotations>

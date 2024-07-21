@@ -32,8 +32,7 @@ public interface Expression extends EObject {
 	 * @return the value of the '<em>Root Container</em>' reference.
 	 * @see #isSetRootContainer()
 	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getExpression_RootContainer()
-	 * @model unsettable="true" changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Expression) then\n\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Expression).rootContainer\nelse\n\tself.oclAsType(ecore::EObject).eContainer()\nendif'"
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	EObject getRootContainer();

@@ -49,7 +49,7 @@ public interface ImagePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "webgen-image";
+	String eNS_PREFIX = "webgen_image";
 
 	/**
 	 * The singleton instance of the package.

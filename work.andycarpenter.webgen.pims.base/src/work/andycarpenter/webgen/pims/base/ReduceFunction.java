@@ -33,7 +33,7 @@ public interface ReduceFunction extends Operand {
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(Variable)
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getReduceFunction_Value()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Variable getValue();
@@ -55,7 +55,7 @@ public interface ReduceFunction extends Operand {
 	 * @return the value of the '<em>Callback</em>' containment reference.
 	 * @see #setCallback(Callable)
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getReduceFunction_Callback()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Callable getCallback();

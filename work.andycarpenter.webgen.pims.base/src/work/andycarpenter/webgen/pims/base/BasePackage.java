@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.base;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -23,7 +24,7 @@ import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
  * <!-- end-user-doc -->
  * @see work.andycarpenter.webgen.pims.base.BaseFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore"
  * @generated
  */
 public interface BasePackage extends EPackage {
@@ -49,7 +50,7 @@ public interface BasePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "webgen-base";
+	String eNS_PREFIX = "webgen_base";
 
 	/**
 	 * The singleton instance of the package.
@@ -442,13 +443,22 @@ public interface BasePackage extends EPackage {
 	int NAMED_ELEMENT_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>Named Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+	int NAMED_ELEMENT_OPERATION_COUNT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -476,6 +486,15 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int NAMED_DISPLAY_ELEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_DISPLAY_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = NAMED_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Named Display Element</em>' class.
@@ -512,6 +531,15 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASSIFIER_FEATURE_COUNT = NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = NAMED_DISPLAY_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Classifier</em>' class.
@@ -593,6 +621,15 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = CLASSIFIER___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Data Type</em>' class.
@@ -685,6 +722,15 @@ public interface BasePackage extends EPackage {
 	int ENUMERATION_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_TYPE___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = DATA_TYPE___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
+
+	/**
 	 * The number of operations of the '<em>Enumeration Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -719,6 +765,15 @@ public interface BasePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENUMERATION_LITERAL_FEATURE_COUNT = NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_LITERAL___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = NAMED_DISPLAY_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Enumeration Literal</em>' class.
@@ -840,6 +895,15 @@ public interface BasePackage extends EPackage {
 	int FORMAL_PARAMETER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Name Needs At Least One Character</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMAL_PARAMETER___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = NAMED_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP;
+
+	/**
 	 * The number of operations of the '<em>Formal Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -953,13 +1017,22 @@ public interface BasePackage extends EPackage {
 	int CALLABLE__ROOT_CONTAINER = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE__BODY = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Callable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALLABLE_FEATURE_COUNT = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 1;
+	int CALLABLE_FEATURE_COUNT = FORMAL_PARAMETER_LIST_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Callable</em>' class.
@@ -1175,6 +1248,16 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNamedElement_Name();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.base.NamedElement#nameNeedsAtLeastOneCharacter(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Needs At Least One Character</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Needs At Least One Character</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.base.NamedElement#nameNeedsAtLeastOneCharacter(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNamedElement__NameNeedsAtLeastOneCharacter__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.NamedDisplayElement <em>Named Display Element</em>}'.
@@ -1527,6 +1610,17 @@ public interface BasePackage extends EPackage {
 	EClass getCallable();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.base.Callable#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see work.andycarpenter.webgen.pims.base.Callable#getBody()
+	 * @see #getCallable()
+	 * @generated
+	 */
+	EReference getCallable_Body();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1648,6 +1742,14 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Needs At Least One Character</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NAMED_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNamedElement__NameNeedsAtLeastOneCharacter__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl <em>Named Display Element</em>}' class.
@@ -1938,6 +2040,14 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EClass CALLABLE = eINSTANCE.getCallable();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALLABLE__BODY = eINSTANCE.getCallable_Body();
 
 	}
 

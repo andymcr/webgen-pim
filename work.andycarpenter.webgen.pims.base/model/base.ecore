@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="http://andycarpenter.work/pim/base" nsPrefix="webgen-base">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="http://andycarpenter.work/pim/base" nsPrefix="webgen_base">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -70,7 +70,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterReference" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" volatile="true" derived="true">
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="derivation" value="if parameter.oclIsUndefined() then&#xD;&#xA;&#x9;''&#xD;&#xA;else&#xD;&#xA;&#x9;parameter.name&#xD;&#xA;endif"/>
       </eAnnotations>
@@ -78,12 +78,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
         eType="#//FormalParameter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Callable" eSuperTypes="#//FormalParameterList ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Operand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Callable" eSuperTypes="#//FormalParameterList ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Operand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Expression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReduceFunction" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Operand">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="callback" eType="#//Callable"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callback" lowerBound="1"
+        eType="#//Callable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initial" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Expression"
         containment="true"/>
   </eClassifiers>

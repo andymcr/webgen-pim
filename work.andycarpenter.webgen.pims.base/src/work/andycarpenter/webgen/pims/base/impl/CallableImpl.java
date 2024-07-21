@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.base.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -13,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,6 +37,7 @@ import work.andycarpenter.webgen.pims.expression.Operand;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl#getRootContainer <em>Root Container</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +62,16 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
+
+	/**
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBody()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression body;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,6 +139,51 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public Expression getBody() {
+		return body;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBody(Expression newBody, NotificationChain msgs) {
+		Expression oldBody = body;
+		body = newBody;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BasePackage.CALLABLE__BODY, oldBody, newBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBody(Expression newBody) {
+		if (newBody != body) {
+			NotificationChain msgs = null;
+			if (body != null)
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BasePackage.CALLABLE__BODY, null, msgs);
+			if (newBody != null)
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BasePackage.CALLABLE__BODY, null, msgs);
+			msgs = basicSetBody(newBody, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BasePackage.CALLABLE__BODY, newBody, newBody));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -147,6 +204,8 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 		switch (featureID) {
 			case BasePackage.CALLABLE__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case BasePackage.CALLABLE__BODY:
+				return basicSetBody(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,6 +223,8 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 			case BasePackage.CALLABLE__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
+			case BasePackage.CALLABLE__BODY:
+				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -181,6 +242,9 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends FormalParameter>)newValue);
 				return;
+			case BasePackage.CALLABLE__BODY:
+				setBody((Expression)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -195,6 +259,9 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 		switch (featureID) {
 			case BasePackage.CALLABLE__PARAMETERS:
 				getParameters().clear();
+				return;
+			case BasePackage.CALLABLE__BODY:
+				setBody((Expression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -212,6 +279,8 @@ public class CallableImpl extends MinimalEObjectImpl.Container implements Callab
 				return parameters != null && !parameters.isEmpty();
 			case BasePackage.CALLABLE__ROOT_CONTAINER:
 				return isSetRootContainer();
+			case BasePackage.CALLABLE__BODY:
+				return body != null;
 		}
 		return super.eIsSet(featureID);
 	}

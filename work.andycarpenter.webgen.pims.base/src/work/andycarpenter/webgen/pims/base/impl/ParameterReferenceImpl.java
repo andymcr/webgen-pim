@@ -4,7 +4,6 @@ package work.andycarpenter.webgen.pims.base.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -29,14 +28,14 @@ import work.andycarpenter.webgen.pims.expression.impl.VariableImpl;
  */
 public class ParameterReferenceImpl extends VariableImpl implements ParameterReference {
 	/**
-	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)BasePackage.Literals.PARAMETER_REFERENCE__NAME).getSettingDelegate();
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
@@ -74,7 +73,24 @@ public class ParameterReferenceImpl extends VariableImpl implements ParameterRef
 	 */
 	@Override
 	public String getName() {
-		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+		/**
+		 * parameter.name
+		 */
+		final /*@NonInvalid*/ FormalParameter parameter = this.getParameter();
+		final /*@NonInvalid*/ String name = parameter.getName();
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetName() {
+		// TODO: implement this method to return whether the 'Name' attribute is set
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -173,7 +189,7 @@ public class ParameterReferenceImpl extends VariableImpl implements ParameterRef
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case BasePackage.PARAMETER_REFERENCE__NAME:
-				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+				return isSetName();
 			case BasePackage.PARAMETER_REFERENCE__PARAMETER:
 				return parameter != null;
 		}

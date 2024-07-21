@@ -7,11 +7,13 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-20
 Export-Package: work.andycarpenter.webgen.pims.base,
  work.andycarpenter.webgen.pims.base.impl,
  work.andycarpenter.webgen.pims.base.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.ocl.pivot;visibility:=reexport,
+ org.eclipse.ocl.examples.codegen;visibility:=reexport,
  work.andycarpenter.webgen.pims.expression;visibility:=reexport
 Bundle-ActivationPolicy: lazy
