@@ -8,11 +8,12 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.base.provider.NamedDisplayElementItemProvider;
 import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -22,7 +23,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
+public class ActionMenuEntryItemProvider extends NamedDisplayElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -44,56 +45,10 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDisplayLabelPropertyDescriptor(object);
 			addDestinationPropertyDescriptor(object);
 			addAlwaysVisiblePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NamedElement_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_name_feature", "_UI_NamedElement_type"),
-				 BasePackage.Literals.NAMED_ELEMENT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Display Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDisplayLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NamedDisplayElement_displayLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NamedDisplayElement_displayLabel_feature", "_UI_NamedDisplayElement_type"),
-				 BasePackage.Literals.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -178,8 +133,6 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ActionMenuEntry.class)) {
-			case WebuiPackage.ACTION_MENU_ENTRY__NAME:
-			case WebuiPackage.ACTION_MENU_ENTRY__DISPLAY_LABEL:
 			case WebuiPackage.ACTION_MENU_ENTRY__ALWAYS_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
@@ -197,6 +150,17 @@ public class ActionMenuEntryItemProvider extends MenuEntryItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return WebuiEditPlugin.INSTANCE;
 	}
 
 }
