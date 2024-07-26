@@ -7,13 +7,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import work.andycarpenter.webgen.pims.base.BasePackage;
-
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-
 import work.andycarpenter.webgen.pims.image.BackgroundFilter;
 import work.andycarpenter.webgen.pims.image.BackgroundPositions;
 import work.andycarpenter.webgen.pims.image.Image;

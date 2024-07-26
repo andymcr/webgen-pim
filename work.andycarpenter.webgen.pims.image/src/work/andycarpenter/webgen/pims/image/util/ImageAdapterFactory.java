@@ -8,9 +8,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
 import work.andycarpenter.webgen.pims.base.NamedElement;
-
 import work.andycarpenter.webgen.pims.image.*;
 
 /**

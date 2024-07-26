@@ -21,7 +21,7 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * @model
  * @generated
  */
-public interface ActionMenuEntry extends MenuEntry, NamedDisplayElement {
+public interface ActionMenuEntry extends NamedDisplayElement, MenuEntry {
 	/**
 	 * Returns the value of the '<em><b>Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->

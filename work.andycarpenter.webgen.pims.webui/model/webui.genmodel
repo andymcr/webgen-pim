@@ -489,6 +489,12 @@
     <genClasses ecoreClass="webui.ecore#//PathVariableAssociation"/>
     <genClasses ecoreClass="webui.ecore#//PathVariableAttribute"/>
     <genClasses ecoreClass="webui.ecore#//PathVariableResource"/>
+    <genClasses image="false" ecoreClass="webui.ecore#//ParameterPath">
+      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
+          ecoreFeature="ecore:EReference webui.ecore#//ParameterPath/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//ParameterPathAssociation"/>
+    <genClasses ecoreClass="webui.ecore#//ParameterPathAttriute"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ActionContainer">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/containerActionsPlacement"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ActionContainer/instanceActionsPlacement"/>

@@ -17,9 +17,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
-
 import work.andycarpenter.webgen.pims.image.ImageFactory;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 import work.andycarpenter.webgen.pims.image.ImagePackage;

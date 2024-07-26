@@ -805,6 +805,8 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -819,6 +821,25 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		  (this,
 		   source,
 		   new String[] {
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createOCLAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (getExpression_RootContainer(),
+		   source,
+		   new String[] {
+			   "derivation", "if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Expression) then\n\tself.oclAsType(ecore::EObject).eContainer().oclAsType(Expression).rootContainer\nelse\n\tself.oclAsType(ecore::EObject).eContainer()\nendif"
 		   });
 	}
 

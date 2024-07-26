@@ -2,7 +2,7 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/work.andycarpenter.webgen.pims.api/src" modelPluginID="work.andycarpenter.webgen.pims.api"
     modelName="Api" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
     usedGenPackages="../../work.andycarpenter.webgen.pims.base/model/base.genmodel#//base ../../work.andycarpenter.webgen.pims.expression/model/expression.genmodel#//expression ../../work.andycarpenter.webgen.pims.presistence/model/persistence.genmodel#//persistence"
     operationReflection="true" importOrganizing="true">
   <foreignModel>api.ecore</foreignModel>

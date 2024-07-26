@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webui" nsURI="http://andycarpenter.work/pim/webui" nsPrefix="webgen-webui">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webui" nsURI="http://andycarpenter.work/pim/webui" nsPrefix="webgen_webui">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
     <details key="webgen-base" value="platform:/resource/work.andycarpenter.webgen.pims.base/model/base.ecore#/"/>
@@ -108,13 +108,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alwaysVisible" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ActionMenuEntry" eSuperTypes="#//MenuEntry ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ActionMenuEntry" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement #//MenuEntry">
     <eStructuralFeatures xsi:type="ecore:EReference" name="destination" lowerBound="1"
         eType="#//ContentUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alwaysVisible" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EditStaticTextMenuEntry" eSuperTypes="#//MenuEntry ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EditStaticTextMenuEntry" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement #//MenuEntry"/>
   <eClassifiers xsi:type="ecore:EClass" name="MenuFeature" eSuperTypes="#//MenuEntry"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContentUnitStyles" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -681,7 +681,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
         changeable="false" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if self.oclIsKindOf(ChildPath) then&#xA;&#x9;self.oclAsType(ChildPath).parent.targetEntity&#xA;else if self.oclIsTypeOf(UnitAssociation) then&#xA;&#x9;self.oclAsType(UnitAssociation).displayedOn.contentType&#xA;else if self.oclIsKindOf(PathVariable) then&#xA;&#x9;let variable : PathVariable&#xA;&#x9;&#x9;= self.oclAsType(PathVariable)&#xA;&#x9;&#x9;in let contentType : persistence::Entity&#xA;&#x9;&#x9;&#x9;= if variable .rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(DynamicUnit).contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(UnitField).displayedOn.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(Badge) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(Badge).displayedOn.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(Action) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(Action).parentUnit.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;&#x9;&#x9;endif endif endif endif&#xA;&#x9;&#x9;&#x9;in if variable.useContainerAsContext = true then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;contentType.containingType&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;contentType&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(DynamicUnit) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(DynamicUnit).contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SelectAction) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(SelectAction).parentUnit.contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Badge) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Message) then&#xA;&#x9;null -- self.oclAsType(ecore::EObject).eContainer().oclAsType(Message).contentType&#xA;else&#xA;&#x9;null&#xA;endif endif endif endif endif endif endif"/>
+        <details key="derivation" value="if self.oclIsKindOf(ChildPath) then&#xA;&#x9;self.oclAsType(ChildPath).parent.targetEntity&#xA;else if self.oclIsTypeOf(UnitAssociation) then&#xA;&#x9;self.oclAsType(UnitAssociation).displayedOn.contentType&#xA;else if self.oclIsKindOf(PathVariable) then&#xA;&#x9;let variable : PathVariable&#xA;&#x9;&#x9;= self.oclAsType(PathVariable)&#xA;&#x9;&#x9;in let contentType : persistence::Entity&#xA;&#x9;&#x9;&#x9;= if variable .rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(DynamicUnit).contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(UnitField).displayedOn.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(Badge) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(Badge).displayedOn.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else if variable .rootContainer.oclIsKindOf(Action) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;variable .rootContainer.oclAsType(Action).parentUnit.contentType&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;&#x9;&#x9;endif endif endif endif&#xA;&#x9;&#x9;&#x9;in if variable.useContainerAsContext = true then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;contentType.containingType&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;contentType&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;else if self.oclIsKindOf(ParameterPath) then&#xA;&#x9;let path : ParameterPath&#xA;&#x9;&#x9;= self.oclAsType(ParameterPath)&#xA;&#x9;&#x9;in if path.parameter.oclIsUndefined() then&#xA;&#x9;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;&#x9;else if path.parameter.dataType.oclIsUndefined() then&#xA;&#x9;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;&#x9;else if path.parameter.dataType.oclIsKindOf(persistence::Entity) then&#xA;&#x9;&#x9;&#x9;&#x9;path.parameter.dataType.oclAsType(persistence::Entity)&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;&#x9;endif endif endif&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(DynamicUnit) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(DynamicUnit).contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(SelectAction) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(SelectAction).parentUnit.contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Badge) then&#xA;&#x9;self.oclAsType(ecore::EObject).eContainer().oclAsType(Badge).displayedOn.contentType&#xA;else if self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(Message) then&#xA;&#x9;null -- self.oclAsType(ecore::EObject).eContainer().oclAsType(Message).contentType&#xA;else&#xA;&#x9;null&#xA;endif endif endif endif endif endif endif endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -701,7 +701,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
         volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;containingType.associations->includes(association)"/>
+        <details key="derivation" value="not association.oclIsUndefined() and not containingType.oclIsUndefined() implies&#xA;&#x9;containingType.associations->includes(association)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
@@ -762,7 +762,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"
-        changeable="false" derived="true">
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="derivation" value="let contentType : persistence::Entity&#xA;&#x9;= if self.rootContainer.oclIsKindOf(DynamicUnit) then&#xA;&#x9;&#x9;&#x9;self.rootContainer.oclAsType(DynamicUnit).contentType&#xA;&#x9;&#x9;else if self.rootContainer.oclIsKindOf(UnitField) then&#xA;&#x9;&#x9;&#x9;self.rootContainer.oclAsType(UnitField).displayedOn.contentType&#xA;&#x9;&#x9;else if self.rootContainer.oclIsKindOf(Badge) then&#xA;&#x9;&#x9;&#x9;self.rootContainer.oclAsType(Badge).displayedOn.contentType&#xA;&#x9;&#x9;else if self.rootContainer.oclIsKindOf(Action) then&#xA;&#x9;&#x9;&#x9;self.rootContainer.oclAsType(Action).parentUnit.contentType&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;null&#xA;&#x9;&#x9;endif endif endif endif&#xA;&#x9;in if useContainerAsContext = true then&#xA;&#x9;&#x9;&#x9;contentType.containingType&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;contentType&#xA;&#x9;&#x9;endif"/>
       </eAnnotations>
@@ -771,6 +771,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="PathVariableAssociation" eSuperTypes="#//PathAssociation #//PathVariable"/>
   <eClassifiers xsi:type="ecore:EClass" name="PathVariableAttribute" eSuperTypes="#//PathAttribute #//PathVariable"/>
   <eClassifiers xsi:type="ecore:EClass" name="PathVariableResource" eSuperTypes="#//PathResource #//PathVariable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterPath" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterPathAssociation" eSuperTypes="#//PathAssociation #//ParameterPath"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterPathAttriute" eSuperTypes="#//PathAttribute #//ParameterPath"/>
   <eClassifiers xsi:type="ecore:EEnum" name="ContainerActionsPlacement">
     <eLiterals name="Above"/>
     <eLiterals name="Below" value="1"/>

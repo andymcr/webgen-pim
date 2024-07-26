@@ -52,7 +52,7 @@ public interface ServicePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "webgen-service";
+	String eNS_PREFIX = "webgen_service";
 
 	/**
 	 * The singleton instance of the package.

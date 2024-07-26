@@ -6,9 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
 import work.andycarpenter.webgen.pims.base.NamedElement;
-
 import work.andycarpenter.webgen.pims.image.*;
 
 /**

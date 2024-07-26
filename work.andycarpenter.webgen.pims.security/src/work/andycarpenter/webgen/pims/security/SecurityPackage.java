@@ -48,7 +48,7 @@ public interface SecurityPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "webgen-security";
+	String eNS_PREFIX = "webgen_security";
 
 	/**
 	 * The singleton instance of the package.

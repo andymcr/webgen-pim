@@ -34,6 +34,7 @@ public interface ParameterReference extends Variable {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.base.BasePackage#getParameterReference_Name()
 	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if parameter.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tparameter.name\r\nendif'"
 	 * @generated
 	 */
 	String getName();

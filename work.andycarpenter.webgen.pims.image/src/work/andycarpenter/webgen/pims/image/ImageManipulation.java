@@ -3,7 +3,6 @@
 package work.andycarpenter.webgen.pims.image;
 
 import org.eclipse.emf.common.util.EList;
-
 import work.andycarpenter.webgen.pims.base.NamedElement;
 
 /**

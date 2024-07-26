@@ -13,12 +13,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import work.andycarpenter.webgen.pims.base.impl.NamedElementImpl;
-
 import work.andycarpenter.webgen.pims.image.ImageFilter;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 import work.andycarpenter.webgen.pims.image.ImagePackage;

@@ -4,17 +4,10 @@ package work.andycarpenter.webgen.pims.expression.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.ocl.pivot.evaluation.Executor;
-import org.eclipse.ocl.pivot.ids.IdResolver;
-import org.eclipse.ocl.pivot.library.oclany.OclAnyOclAsTypeOperation;
-import org.eclipse.ocl.pivot.library.oclany.OclAnyOclIsKindOfOperation;
-import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.ExpressionTables;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +23,16 @@ import work.andycarpenter.webgen.pims.expression.ExpressionTables;
  * @generated
  */
 public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression {
+	/**
+	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +59,7 @@ public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	public EObject getRootContainer() {
-		EObject rootContainer = basicGetRootContainer();
-		return rootContainer != null && rootContainer.eIsProxy() ? eResolveProxy((InternalEObject)rootContainer) : rootContainer;
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -66,36 +68,7 @@ public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	public EObject basicGetRootContainer() {
-		/**
-		 *
-		 * if
-		 *   self.oclAsType(ecore::EObject)
-		 *   .eContainer()
-		 *   .oclIsKindOf(Expression)
-		 * then
-		 *   self.oclAsType(ecore::EObject)
-		 *   .eContainer()
-		 *   .oclAsType(Expression).rootContainer
-		 * else self.oclAsType(ecore::EObject).eContainer()
-		 * endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
-		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-		final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_ecore_c_c_EObject_2 = idResolver.getClass(ExpressionTables.CLSSid_EObject, null);
-		final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_expression_c_c_Expression_0 = idResolver.getClass(ExpressionTables.CLSSid_Expression, null);
-		final /*@Thrown*/ EObject oclAsType_2 = (EObject)OclAnyOclAsTypeOperation.INSTANCE.evaluate(executor, this, TYP_ecore_c_c_EObject_2);
-		final /*@Thrown*/ EObject eContainer_1 = oclAsType_2.eContainer();
-		final /*@Thrown*/ boolean oclIsKindOf = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, eContainer_1, TYP_expression_c_c_Expression_0).booleanValue();
-		/*@Thrown*/ EObject IF_oclIsKindOf;
-		if (oclIsKindOf) {
-			final /*@Thrown*/ Expression oclAsType_1 = (Expression)OclAnyOclAsTypeOperation.INSTANCE.evaluate(executor, eContainer_1, TYP_expression_c_c_Expression_0);
-			final /*@Thrown*/ EObject rootContainer = oclAsType_1.getRootContainer();
-			IF_oclIsKindOf = rootContainer;
-		}
-		else {
-			IF_oclIsKindOf = eContainer_1;
-		}
-		return IF_oclIsKindOf;
+		return (EObject)ROOT_CONTAINER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -105,9 +78,7 @@ public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	public boolean isSetRootContainer() {
-		// TODO: implement this method to return whether the 'Root Container' reference is set
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return ROOT_CONTAINER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
