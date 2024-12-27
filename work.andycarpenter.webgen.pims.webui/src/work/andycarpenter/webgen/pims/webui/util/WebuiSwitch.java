@@ -8,9 +8,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
-import work.andycarpenter.webgen.pims.expression.Expression;
-import work.andycarpenter.webgen.pims.expression.Operand;
-import work.andycarpenter.webgen.pims.expression.Variable;
+import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
+import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
+import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
 
@@ -110,8 +112,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.ACTION_MENU_ENTRY: {
 				ActionMenuEntry actionMenuEntry = (ActionMenuEntry)theEObject;
 				T result = caseActionMenuEntry(actionMenuEntry);
-				if (result == null) result = caseMenuEntry(actionMenuEntry);
 				if (result == null) result = caseNamedDisplayElement(actionMenuEntry);
+				if (result == null) result = caseMenuEntry(actionMenuEntry);
 				if (result == null) result = caseNamedElement(actionMenuEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -119,8 +121,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY: {
 				EditStaticTextMenuEntry editStaticTextMenuEntry = (EditStaticTextMenuEntry)theEObject;
 				T result = caseEditStaticTextMenuEntry(editStaticTextMenuEntry);
-				if (result == null) result = caseMenuEntry(editStaticTextMenuEntry);
 				if (result == null) result = caseNamedDisplayElement(editStaticTextMenuEntry);
+				if (result == null) result = caseMenuEntry(editStaticTextMenuEntry);
 				if (result == null) result = caseNamedElement(editStaticTextMenuEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -284,6 +286,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseDynamicUnit(dynamicUnit);
 				if (result == null) result = caseContentUnit(dynamicUnit);
 				if (result == null) result = caseActionContainer(dynamicUnit);
+				if (result == null) result = caseFeatureVariableContext(dynamicUnit);
 				if (result == null) result = caseNamedDisplayElement(dynamicUnit);
 				if (result == null) result = caseNamedElement(dynamicUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -298,6 +301,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.UNIT_FIELD: {
 				UnitField unitField = (UnitField)theEObject;
 				T result = caseUnitField(unitField);
+				if (result == null) result = caseFeatureVariableContext(unitField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -306,6 +310,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseUnitFeature(unitFeature);
 				if (result == null) result = caseUnitField(unitFeature);
 				if (result == null) result = caseActionContainer(unitFeature);
+				if (result == null) result = caseFeatureVariableContext(unitFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,6 +320,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseUnitFeature(unitElement);
 				if (result == null) result = caseUnitField(unitElement);
 				if (result == null) result = caseActionContainer(unitElement);
+				if (result == null) result = caseFeatureVariableContext(unitElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -324,6 +330,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseUnitFeature(unitResource);
 				if (result == null) result = caseUnitField(unitResource);
 				if (result == null) result = caseActionContainer(unitResource);
+				if (result == null) result = caseFeatureVariableContext(unitResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -331,10 +338,11 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitAssociation unitAssociation = (UnitAssociation)theEObject;
 				T result = caseUnitAssociation(unitAssociation);
 				if (result == null) result = caseUnitFeature(unitAssociation);
-				if (result == null) result = casePathAssociation(unitAssociation);
+				if (result == null) result = caseAssociationPathElement(unitAssociation);
 				if (result == null) result = caseUnitField(unitAssociation);
 				if (result == null) result = caseActionContainer(unitAssociation);
 				if (result == null) result = casePath(unitAssociation);
+				if (result == null) result = caseFeatureVariableContext(unitAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -342,6 +350,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitLabel unitLabel = (UnitLabel)theEObject;
 				T result = caseUnitLabel(unitLabel);
 				if (result == null) result = caseUnitField(unitLabel);
+				if (result == null) result = caseFeatureVariableContext(unitLabel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -351,6 +360,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedDisplayElement(interfaceField);
 				if (result == null) result = caseUnitField(interfaceField);
 				if (result == null) result = caseNamedElement(interfaceField);
+				if (result == null) result = caseFeatureVariableContext(interfaceField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -361,6 +371,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedDisplayElement(dataTypeField);
 				if (result == null) result = caseUnitField(dataTypeField);
 				if (result == null) result = caseNamedElement(dataTypeField);
+				if (result == null) result = caseFeatureVariableContext(dataTypeField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -371,6 +382,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedDisplayElement(dateField);
 				if (result == null) result = caseUnitField(dateField);
 				if (result == null) result = caseNamedElement(dateField);
+				if (result == null) result = caseFeatureVariableContext(dateField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -386,6 +398,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(singletonUnit);
 				if (result == null) result = caseContentUnit(singletonUnit);
 				if (result == null) result = caseActionContainer(singletonUnit);
+				if (result == null) result = caseFeatureVariableContext(singletonUnit);
 				if (result == null) result = caseNamedDisplayElement(singletonUnit);
 				if (result == null) result = caseNamedElement(singletonUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -396,8 +409,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseCollectionUnit(collectionUnit);
 				if (result == null) result = caseDynamicUnit(collectionUnit);
 				if (result == null) result = caseSelectableUnit(collectionUnit);
+				if (result == null) result = caseValueContext(collectionUnit);
 				if (result == null) result = caseContentUnit(collectionUnit);
 				if (result == null) result = caseActionContainer(collectionUnit);
+				if (result == null) result = caseFeatureVariableContext(collectionUnit);
 				if (result == null) result = caseNamedDisplayElement(collectionUnit);
 				if (result == null) result = caseNamedElement(collectionUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -410,6 +425,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(editUnit);
 				if (result == null) result = caseContentUnit(editUnit);
 				if (result == null) result = caseActionContainer(editUnit);
+				if (result == null) result = caseFeatureVariableContext(editUnit);
 				if (result == null) result = caseNamedDisplayElement(editUnit);
 				if (result == null) result = caseNamedElement(editUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -423,6 +439,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(createUnit);
 				if (result == null) result = caseContentUnit(createUnit);
 				if (result == null) result = caseActionContainer(createUnit);
+				if (result == null) result = caseFeatureVariableContext(createUnit);
 				if (result == null) result = caseNamedDisplayElement(createUnit);
 				if (result == null) result = caseNamedElement(createUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -437,6 +454,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(updateUnit);
 				if (result == null) result = caseContentUnit(updateUnit);
 				if (result == null) result = caseActionContainer(updateUnit);
+				if (result == null) result = caseFeatureVariableContext(updateUnit);
 				if (result == null) result = caseNamedDisplayElement(updateUnit);
 				if (result == null) result = caseNamedElement(updateUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -451,6 +469,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(createUpdateUnit);
 				if (result == null) result = caseContentUnit(createUpdateUnit);
 				if (result == null) result = caseActionContainer(createUpdateUnit);
+				if (result == null) result = caseFeatureVariableContext(createUpdateUnit);
 				if (result == null) result = caseNamedDisplayElement(createUpdateUnit);
 				if (result == null) result = caseNamedElement(createUpdateUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -465,6 +484,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(mapUnit);
 				if (result == null) result = caseContentUnit(mapUnit);
 				if (result == null) result = caseActionContainer(mapUnit);
+				if (result == null) result = caseFeatureVariableContext(mapUnit);
 				if (result == null) result = caseNamedDisplayElement(mapUnit);
 				if (result == null) result = caseNamedElement(mapUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -478,6 +498,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(detailsUnit);
 				if (result == null) result = caseContentUnit(detailsUnit);
 				if (result == null) result = caseActionContainer(detailsUnit);
+				if (result == null) result = caseFeatureVariableContext(detailsUnit);
 				if (result == null) result = caseNamedDisplayElement(detailsUnit);
 				if (result == null) result = caseNamedElement(detailsUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -489,8 +510,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCollectionUnit(tabularUnit);
 				if (result == null) result = caseDynamicUnit(tabularUnit);
 				if (result == null) result = caseSelectableUnit(tabularUnit);
+				if (result == null) result = caseValueContext(tabularUnit);
 				if (result == null) result = caseContentUnit(tabularUnit);
 				if (result == null) result = caseActionContainer(tabularUnit);
+				if (result == null) result = caseFeatureVariableContext(tabularUnit);
 				if (result == null) result = caseNamedDisplayElement(tabularUnit);
 				if (result == null) result = caseNamedElement(tabularUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -502,8 +525,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCollectionUnit(cardsUnit);
 				if (result == null) result = caseDynamicUnit(cardsUnit);
 				if (result == null) result = caseSelectableUnit(cardsUnit);
+				if (result == null) result = caseValueContext(cardsUnit);
 				if (result == null) result = caseContentUnit(cardsUnit);
 				if (result == null) result = caseActionContainer(cardsUnit);
+				if (result == null) result = caseFeatureVariableContext(cardsUnit);
 				if (result == null) result = caseNamedDisplayElement(cardsUnit);
 				if (result == null) result = caseNamedElement(cardsUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -512,6 +537,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.BADGE: {
 				Badge badge = (Badge)theEObject;
 				T result = caseBadge(badge);
+				if (result == null) result = caseFeatureVariableContext(badge);
+				if (result == null) result = caseValueContext(badge);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -522,8 +549,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCollectionUnit(textCardsUnit);
 				if (result == null) result = caseDynamicUnit(textCardsUnit);
 				if (result == null) result = caseSelectableUnit(textCardsUnit);
+				if (result == null) result = caseValueContext(textCardsUnit);
 				if (result == null) result = caseContentUnit(textCardsUnit);
 				if (result == null) result = caseActionContainer(textCardsUnit);
+				if (result == null) result = caseFeatureVariableContext(textCardsUnit);
 				if (result == null) result = caseNamedDisplayElement(textCardsUnit);
 				if (result == null) result = caseNamedElement(textCardsUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -536,8 +565,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCollectionUnit(dateCardsUnit);
 				if (result == null) result = caseDynamicUnit(dateCardsUnit);
 				if (result == null) result = caseSelectableUnit(dateCardsUnit);
+				if (result == null) result = caseValueContext(dateCardsUnit);
 				if (result == null) result = caseContentUnit(dateCardsUnit);
 				if (result == null) result = caseActionContainer(dateCardsUnit);
+				if (result == null) result = caseFeatureVariableContext(dateCardsUnit);
 				if (result == null) result = caseNamedDisplayElement(dateCardsUnit);
 				if (result == null) result = caseNamedElement(dateCardsUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -546,6 +577,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.IMAGE_UNIT: {
 				ImageUnit imageUnit = (ImageUnit)theEObject;
 				T result = caseImageUnit(imageUnit);
+				if (result == null) result = caseValueContext(imageUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -557,8 +589,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCollectionUnit(imageCardsUnit);
 				if (result == null) result = caseDynamicUnit(imageCardsUnit);
 				if (result == null) result = caseSelectableUnit(imageCardsUnit);
+				if (result == null) result = caseValueContext(imageCardsUnit);
 				if (result == null) result = caseContentUnit(imageCardsUnit);
 				if (result == null) result = caseActionContainer(imageCardsUnit);
+				if (result == null) result = caseFeatureVariableContext(imageCardsUnit);
 				if (result == null) result = caseNamedDisplayElement(imageCardsUnit);
 				if (result == null) result = caseNamedElement(imageCardsUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -571,8 +605,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseImageUnit(sliderUnit);
 				if (result == null) result = caseDynamicUnit(sliderUnit);
 				if (result == null) result = caseSelectableUnit(sliderUnit);
+				if (result == null) result = caseValueContext(sliderUnit);
 				if (result == null) result = caseContentUnit(sliderUnit);
 				if (result == null) result = caseActionContainer(sliderUnit);
+				if (result == null) result = caseFeatureVariableContext(sliderUnit);
 				if (result == null) result = caseNamedDisplayElement(sliderUnit);
 				if (result == null) result = caseNamedElement(sliderUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -585,8 +621,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseImageUnit(galleryUnit);
 				if (result == null) result = caseDynamicUnit(galleryUnit);
 				if (result == null) result = caseSelectableUnit(galleryUnit);
+				if (result == null) result = caseValueContext(galleryUnit);
 				if (result == null) result = caseContentUnit(galleryUnit);
 				if (result == null) result = caseActionContainer(galleryUnit);
+				if (result == null) result = caseFeatureVariableContext(galleryUnit);
 				if (result == null) result = caseNamedDisplayElement(galleryUnit);
 				if (result == null) result = caseNamedElement(galleryUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -598,6 +636,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(controlUnit);
 				if (result == null) result = caseContentUnit(controlUnit);
 				if (result == null) result = caseActionContainer(controlUnit);
+				if (result == null) result = caseFeatureVariableContext(controlUnit);
 				if (result == null) result = caseNamedDisplayElement(controlUnit);
 				if (result == null) result = caseNamedElement(controlUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -610,6 +649,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(searchUnit);
 				if (result == null) result = caseContentUnit(searchUnit);
 				if (result == null) result = caseActionContainer(searchUnit);
+				if (result == null) result = caseFeatureVariableContext(searchUnit);
 				if (result == null) result = caseNamedDisplayElement(searchUnit);
 				if (result == null) result = caseNamedElement(searchUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -624,6 +664,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(registrationUnit);
 				if (result == null) result = caseContentUnit(registrationUnit);
 				if (result == null) result = caseActionContainer(registrationUnit);
+				if (result == null) result = caseFeatureVariableContext(registrationUnit);
 				if (result == null) result = caseNamedDisplayElement(registrationUnit);
 				if (result == null) result = caseNamedElement(registrationUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -638,6 +679,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(loginUnit);
 				if (result == null) result = caseContentUnit(loginUnit);
 				if (result == null) result = caseActionContainer(loginUnit);
+				if (result == null) result = caseFeatureVariableContext(loginUnit);
 				if (result == null) result = caseNamedDisplayElement(loginUnit);
 				if (result == null) result = caseNamedElement(loginUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -650,6 +692,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSecurityUnit(logoutUnit);
 				if (result == null) result = caseContentUnit(logoutUnit);
 				if (result == null) result = caseActionContainer(logoutUnit);
+				if (result == null) result = caseFeatureVariableContext(logoutUnit);
 				if (result == null) result = caseNamedDisplayElement(logoutUnit);
 				if (result == null) result = caseNamedElement(logoutUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -664,6 +707,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(forgottenPasswordUnit);
 				if (result == null) result = caseContentUnit(forgottenPasswordUnit);
 				if (result == null) result = caseActionContainer(forgottenPasswordUnit);
+				if (result == null) result = caseFeatureVariableContext(forgottenPasswordUnit);
 				if (result == null) result = caseNamedDisplayElement(forgottenPasswordUnit);
 				if (result == null) result = caseNamedElement(forgottenPasswordUnit);
 				if (result == null) result = defaultCase(theEObject);
@@ -678,153 +722,55 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDynamicUnit(resetPasswordUnit);
 				if (result == null) result = caseContentUnit(resetPasswordUnit);
 				if (result == null) result = caseActionContainer(resetPasswordUnit);
+				if (result == null) result = caseFeatureVariableContext(resetPasswordUnit);
 				if (result == null) result = caseNamedDisplayElement(resetPasswordUnit);
 				if (result == null) result = caseNamedElement(resetPasswordUnit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PATH: {
-				Path path = (Path)theEObject;
-				T result = casePath(path);
+			case WebuiPackage.VALUE_CONTEXT: {
+				ValueContext valueContext = (ValueContext)theEObject;
+				T result = caseValueContext(valueContext);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PATH_ASSOCIATION: {
-				PathAssociation pathAssociation = (PathAssociation)theEObject;
-				T result = casePathAssociation(pathAssociation);
-				if (result == null) result = casePath(pathAssociation);
+			case WebuiPackage.DISPLAY_VALUE: {
+				DisplayValue displayValue = (DisplayValue)theEObject;
+				T result = caseDisplayValue(displayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PATH_ATTRIBUTE: {
-				PathAttribute pathAttribute = (PathAttribute)theEObject;
-				T result = casePathAttribute(pathAttribute);
-				if (result == null) result = casePath(pathAttribute);
+			case WebuiPackage.ASSOCIATION_DISPLAY_VALUE: {
+				AssociationDisplayValue associationDisplayValue = (AssociationDisplayValue)theEObject;
+				T result = caseAssociationDisplayValue(associationDisplayValue);
+				if (result == null) result = caseAssociationPathElement(associationDisplayValue);
+				if (result == null) result = caseDisplayValue(associationDisplayValue);
+				if (result == null) result = casePath(associationDisplayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.PATH_RESOURCE: {
-				PathResource pathResource = (PathResource)theEObject;
-				T result = casePathResource(pathResource);
-				if (result == null) result = casePath(pathResource);
+			case WebuiPackage.ATTRIBUTE_DISPLAY_VALUE: {
+				AttributeDisplayValue attributeDisplayValue = (AttributeDisplayValue)theEObject;
+				T result = caseAttributeDisplayValue(attributeDisplayValue);
+				if (result == null) result = caseAttributePathElement(attributeDisplayValue);
+				if (result == null) result = caseDisplayValue(attributeDisplayValue);
+				if (result == null) result = casePath(attributeDisplayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.CHILD_PATH: {
-				ChildPath childPath = (ChildPath)theEObject;
-				T result = caseChildPath(childPath);
+			case WebuiPackage.LABEL_DISPLAY_VALUE: {
+				LabelDisplayValue labelDisplayValue = (LabelDisplayValue)theEObject;
+				T result = caseLabelDisplayValue(labelDisplayValue);
+				if (result == null) result = caseDisplayValue(labelDisplayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.CHILD_PATH_ASSOCIATION: {
-				ChildPathAssociation childPathAssociation = (ChildPathAssociation)theEObject;
-				T result = caseChildPathAssociation(childPathAssociation);
-				if (result == null) result = casePathAssociation(childPathAssociation);
-				if (result == null) result = caseChildPath(childPathAssociation);
-				if (result == null) result = casePath(childPathAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE: {
-				ChildPathAttribute childPathAttribute = (ChildPathAttribute)theEObject;
-				T result = caseChildPathAttribute(childPathAttribute);
-				if (result == null) result = casePathAttribute(childPathAttribute);
-				if (result == null) result = caseChildPath(childPathAttribute);
-				if (result == null) result = casePath(childPathAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.CHILD_PATH_RESOURCE: {
-				ChildPathResource childPathResource = (ChildPathResource)theEObject;
-				T result = caseChildPathResource(childPathResource);
-				if (result == null) result = casePathResource(childPathResource);
-				if (result == null) result = caseChildPath(childPathResource);
-				if (result == null) result = casePath(childPathResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH: {
-				FeaturePath featurePath = (FeaturePath)theEObject;
-				T result = caseFeaturePath(featurePath);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_ASSOCIATION: {
-				FeaturePathAssociation featurePathAssociation = (FeaturePathAssociation)theEObject;
-				T result = caseFeaturePathAssociation(featurePathAssociation);
-				if (result == null) result = casePathAssociation(featurePathAssociation);
-				if (result == null) result = caseFeaturePath(featurePathAssociation);
-				if (result == null) result = casePath(featurePathAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: {
-				FeaturePathAttribute featurePathAttribute = (FeaturePathAttribute)theEObject;
-				T result = caseFeaturePathAttribute(featurePathAttribute);
-				if (result == null) result = casePathAttribute(featurePathAttribute);
-				if (result == null) result = caseFeaturePath(featurePathAttribute);
-				if (result == null) result = casePath(featurePathAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_LABEL: {
-				FeaturePathLabel featurePathLabel = (FeaturePathLabel)theEObject;
-				T result = caseFeaturePathLabel(featurePathLabel);
-				if (result == null) result = caseFeaturePath(featurePathLabel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.FEATURE_PATH_RESOURCE: {
-				FeaturePathResource featurePathResource = (FeaturePathResource)theEObject;
-				T result = caseFeaturePathResource(featurePathResource);
-				if (result == null) result = casePathResource(featurePathResource);
-				if (result == null) result = caseFeaturePath(featurePathResource);
-				if (result == null) result = casePath(featurePathResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.PATH_VARIABLE: {
-				PathVariable pathVariable = (PathVariable)theEObject;
-				T result = casePathVariable(pathVariable);
-				if (result == null) result = caseVariable(pathVariable);
-				if (result == null) result = caseOperand(pathVariable);
-				if (result == null) result = caseExpression(pathVariable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.PATH_VARIABLE_ASSOCIATION: {
-				PathVariableAssociation pathVariableAssociation = (PathVariableAssociation)theEObject;
-				T result = casePathVariableAssociation(pathVariableAssociation);
-				if (result == null) result = casePathAssociation(pathVariableAssociation);
-				if (result == null) result = casePathVariable(pathVariableAssociation);
-				if (result == null) result = casePath(pathVariableAssociation);
-				if (result == null) result = caseVariable(pathVariableAssociation);
-				if (result == null) result = caseOperand(pathVariableAssociation);
-				if (result == null) result = caseExpression(pathVariableAssociation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE: {
-				PathVariableAttribute pathVariableAttribute = (PathVariableAttribute)theEObject;
-				T result = casePathVariableAttribute(pathVariableAttribute);
-				if (result == null) result = casePathAttribute(pathVariableAttribute);
-				if (result == null) result = casePathVariable(pathVariableAttribute);
-				if (result == null) result = casePath(pathVariableAttribute);
-				if (result == null) result = caseVariable(pathVariableAttribute);
-				if (result == null) result = caseOperand(pathVariableAttribute);
-				if (result == null) result = caseExpression(pathVariableAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.PATH_VARIABLE_RESOURCE: {
-				PathVariableResource pathVariableResource = (PathVariableResource)theEObject;
-				T result = casePathVariableResource(pathVariableResource);
-				if (result == null) result = casePathResource(pathVariableResource);
-				if (result == null) result = casePathVariable(pathVariableResource);
-				if (result == null) result = casePath(pathVariableResource);
-				if (result == null) result = caseVariable(pathVariableResource);
-				if (result == null) result = caseOperand(pathVariableResource);
-				if (result == null) result = caseExpression(pathVariableResource);
+			case WebuiPackage.RESOURCE_DISPLAY_VALUE: {
+				ResourceDisplayValue resourceDisplayValue = (ResourceDisplayValue)theEObject;
+				T result = caseResourceDisplayValue(resourceDisplayValue);
+				if (result == null) result = caseResourcePathElement(resourceDisplayValue);
+				if (result == null) result = caseDisplayValue(resourceDisplayValue);
+				if (result == null) result = casePath(resourceDisplayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -941,6 +887,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.MESSAGE: {
 				Message message = (Message)theEObject;
 				T result = caseMessage(message);
+				if (result == null) result = caseValueContext(message);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1444,51 +1391,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExpression(Expression object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperand(Operand object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVariable(Variable object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1504,182 +1406,32 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Child Path Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute Path Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Child Path Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute Path Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseChildPathAttribute(ChildPathAttribute object) {
+	public T caseAttributePathElement(AttributePathElement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Child Path Resource</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Path Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Child Path Resource</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Path Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseChildPathResource(ChildPathResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Child Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Child Path Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseChildPathAssociation(ChildPathAssociation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePath(FeaturePath object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePathAttribute(FeaturePathAttribute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Label</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path Label</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePathLabel(FeaturePathLabel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePathResource(FeaturePathResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathVariable(PathVariable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Variable Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathVariableAssociation(PathVariableAssociation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Variable Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathVariableAttribute(PathVariableAttribute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Variable Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Variable Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathVariableResource(PathVariableResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Path Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeaturePathAssociation(FeaturePathAssociation object) {
+	public T caseResourcePathElement(ResourcePathElement object) {
 		return null;
 	}
 
@@ -2044,77 +1796,92 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Value Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Value Context</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePath(Path object) {
+	public T caseValueContext(ValueContext object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Association</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Display Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Association</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Display Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePathAssociation(PathAssociation object) {
+	public T caseDisplayValue(DisplayValue object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Association Display Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Association Display Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePathAttribute(PathAttribute object) {
+	public T caseAssociationDisplayValue(AssociationDisplayValue object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Resource</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute Display Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Resource</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute Display Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePathResource(PathResource object) {
+	public T caseAttributeDisplayValue(AttributeDisplayValue object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Label Display Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Child Path</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Label Display Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseChildPath(ChildPath object) {
+	public T caseLabelDisplayValue(LabelDisplayValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Display Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Display Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResourceDisplayValue(ResourceDisplayValue object) {
 		return null;
 	}
 
@@ -2325,6 +2092,51 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedDisplayElement(NamedDisplayElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Variable Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Variable Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeatureVariableContext(FeatureVariableContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePath(Path object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Association Path Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Association Path Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAssociationPathElement(AssociationPathElement object) {
 		return null;
 	}
 

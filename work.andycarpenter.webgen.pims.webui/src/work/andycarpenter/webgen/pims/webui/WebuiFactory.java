@@ -247,96 +247,6 @@ public interface WebuiFactory extends EFactory {
 	UnitAssociation createUnitAssociation();
 
 	/**
-	 * Returns a new object of class '<em>Child Path Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Child Path Attribute</em>'.
-	 * @generated
-	 */
-	ChildPathAttribute createChildPathAttribute();
-
-	/**
-	 * Returns a new object of class '<em>Child Path Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Child Path Resource</em>'.
-	 * @generated
-	 */
-	ChildPathResource createChildPathResource();
-
-	/**
-	 * Returns a new object of class '<em>Child Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Child Path Association</em>'.
-	 * @generated
-	 */
-	ChildPathAssociation createChildPathAssociation();
-
-	/**
-	 * Returns a new object of class '<em>Feature Path Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Path Attribute</em>'.
-	 * @generated
-	 */
-	FeaturePathAttribute createFeaturePathAttribute();
-
-	/**
-	 * Returns a new object of class '<em>Feature Path Label</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Path Label</em>'.
-	 * @generated
-	 */
-	FeaturePathLabel createFeaturePathLabel();
-
-	/**
-	 * Returns a new object of class '<em>Feature Path Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Path Resource</em>'.
-	 * @generated
-	 */
-	FeaturePathResource createFeaturePathResource();
-
-	/**
-	 * Returns a new object of class '<em>Path Variable Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Variable Association</em>'.
-	 * @generated
-	 */
-	PathVariableAssociation createPathVariableAssociation();
-
-	/**
-	 * Returns a new object of class '<em>Path Variable Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Variable Attribute</em>'.
-	 * @generated
-	 */
-	PathVariableAttribute createPathVariableAttribute();
-
-	/**
-	 * Returns a new object of class '<em>Path Variable Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Variable Resource</em>'.
-	 * @generated
-	 */
-	PathVariableResource createPathVariableResource();
-
-	/**
-	 * Returns a new object of class '<em>Feature Path Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Path Association</em>'.
-	 * @generated
-	 */
-	FeaturePathAssociation createFeaturePathAssociation();
-
-	/**
 	 * Returns a new object of class '<em>Unit Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -499,13 +409,40 @@ public interface WebuiFactory extends EFactory {
 	ResetPasswordUnit createResetPasswordUnit();
 
 	/**
-	 * Returns a new object of class '<em>Path Attribute</em>'.
+	 * Returns a new object of class '<em>Association Display Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Attribute</em>'.
+	 * @return a new object of class '<em>Association Display Value</em>'.
 	 * @generated
 	 */
-	PathAttribute createPathAttribute();
+	AssociationDisplayValue createAssociationDisplayValue();
+
+	/**
+	 * Returns a new object of class '<em>Attribute Display Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attribute Display Value</em>'.
+	 * @generated
+	 */
+	AttributeDisplayValue createAttributeDisplayValue();
+
+	/**
+	 * Returns a new object of class '<em>Label Display Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Label Display Value</em>'.
+	 * @generated
+	 */
+	LabelDisplayValue createLabelDisplayValue();
+
+	/**
+	 * Returns a new object of class '<em>Resource Display Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Display Value</em>'.
+	 * @generated
+	 */
+	ResourceDisplayValue createResourceDisplayValue();
 
 	/**
 	 * Returns a new object of class '<em>Security Action</em>'.

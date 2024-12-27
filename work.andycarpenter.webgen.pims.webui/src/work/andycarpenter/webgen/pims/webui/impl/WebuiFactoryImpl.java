@@ -103,17 +103,10 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.LOGOUT_UNIT: return createLogoutUnit();
 			case WebuiPackage.FORGOTTEN_PASSWORD_UNIT: return createForgottenPasswordUnit();
 			case WebuiPackage.RESET_PASSWORD_UNIT: return createResetPasswordUnit();
-			case WebuiPackage.PATH_ATTRIBUTE: return createPathAttribute();
-			case WebuiPackage.CHILD_PATH_ASSOCIATION: return createChildPathAssociation();
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE: return createChildPathAttribute();
-			case WebuiPackage.CHILD_PATH_RESOURCE: return createChildPathResource();
-			case WebuiPackage.FEATURE_PATH_ASSOCIATION: return createFeaturePathAssociation();
-			case WebuiPackage.FEATURE_PATH_ATTRIBUTE: return createFeaturePathAttribute();
-			case WebuiPackage.FEATURE_PATH_LABEL: return createFeaturePathLabel();
-			case WebuiPackage.FEATURE_PATH_RESOURCE: return createFeaturePathResource();
-			case WebuiPackage.PATH_VARIABLE_ASSOCIATION: return createPathVariableAssociation();
-			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE: return createPathVariableAttribute();
-			case WebuiPackage.PATH_VARIABLE_RESOURCE: return createPathVariableResource();
+			case WebuiPackage.ASSOCIATION_DISPLAY_VALUE: return createAssociationDisplayValue();
+			case WebuiPackage.ATTRIBUTE_DISPLAY_VALUE: return createAttributeDisplayValue();
+			case WebuiPackage.LABEL_DISPLAY_VALUE: return createLabelDisplayValue();
+			case WebuiPackage.RESOURCE_DISPLAY_VALUE: return createResourceDisplayValue();
 			case WebuiPackage.SECURITY_ACTION: return createSecurityAction();
 			case WebuiPackage.DELETE_ACTION: return createDeleteAction();
 			case WebuiPackage.CONTAINER_SELECT_ACTION: return createContainerSelectAction();
@@ -459,116 +452,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public ChildPathAttribute createChildPathAttribute() {
-		ChildPathAttributeImpl childPathAttribute = new ChildPathAttributeImpl();
-		return childPathAttribute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ChildPathResource createChildPathResource() {
-		ChildPathResourceImpl childPathResource = new ChildPathResourceImpl();
-		return childPathResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ChildPathAssociation createChildPathAssociation() {
-		ChildPathAssociationImpl childPathAssociation = new ChildPathAssociationImpl();
-		return childPathAssociation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FeaturePathAttribute createFeaturePathAttribute() {
-		FeaturePathAttributeImpl featurePathAttribute = new FeaturePathAttributeImpl();
-		return featurePathAttribute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FeaturePathLabel createFeaturePathLabel() {
-		FeaturePathLabelImpl featurePathLabel = new FeaturePathLabelImpl();
-		return featurePathLabel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FeaturePathResource createFeaturePathResource() {
-		FeaturePathResourceImpl featurePathResource = new FeaturePathResourceImpl();
-		return featurePathResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PathVariableAssociation createPathVariableAssociation() {
-		PathVariableAssociationImpl pathVariableAssociation = new PathVariableAssociationImpl();
-		return pathVariableAssociation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PathVariableAttribute createPathVariableAttribute() {
-		PathVariableAttributeImpl pathVariableAttribute = new PathVariableAttributeImpl();
-		return pathVariableAttribute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PathVariableResource createPathVariableResource() {
-		PathVariableResourceImpl pathVariableResource = new PathVariableResourceImpl();
-		return pathVariableResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FeaturePathAssociation createFeaturePathAssociation() {
-		FeaturePathAssociationImpl featurePathAssociation = new FeaturePathAssociationImpl();
-		return featurePathAssociation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public UnitLabel createUnitLabel() {
 		UnitLabelImpl unitLabel = new UnitLabelImpl();
 		return unitLabel;
@@ -767,9 +650,42 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public PathAttribute createPathAttribute() {
-		PathAttributeImpl pathAttribute = new PathAttributeImpl();
-		return pathAttribute;
+	public AssociationDisplayValue createAssociationDisplayValue() {
+		AssociationDisplayValueImpl associationDisplayValue = new AssociationDisplayValueImpl();
+		return associationDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AttributeDisplayValue createAttributeDisplayValue() {
+		AttributeDisplayValueImpl attributeDisplayValue = new AttributeDisplayValueImpl();
+		return attributeDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LabelDisplayValue createLabelDisplayValue() {
+		LabelDisplayValueImpl labelDisplayValue = new LabelDisplayValueImpl();
+		return labelDisplayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceDisplayValue createResourceDisplayValue() {
+		ResourceDisplayValueImpl resourceDisplayValue = new ResourceDisplayValueImpl();
+		return resourceDisplayValue;
 	}
 
 	/**

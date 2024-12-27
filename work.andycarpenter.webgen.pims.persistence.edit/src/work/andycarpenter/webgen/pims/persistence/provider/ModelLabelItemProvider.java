@@ -227,12 +227,12 @@ public class ModelLabelItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.MODEL_LABEL__FEATURES,
-				 PersistenceFactory.eINSTANCE.createModelLabelAttribute()));
+				 PersistenceFactory.eINSTANCE.createModelLabelAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.MODEL_LABEL__FEATURES,
-				 PersistenceFactory.eINSTANCE.createModelLabelAssociation()));
+				 PersistenceFactory.eINSTANCE.createModelLabelAttribute()));
 	}
 
 	/**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="persistence" nsURI="http://andycarpenter.work/pim/persistence"
-    nsPrefix="webgen-persistence">
+    nsPrefix="webgen_persistence">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
@@ -199,41 +199,61 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializationMaxDepth"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Label" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelLabel" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement #//Label">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="labelFor" lowerBound="1"
-        eType="#//Entity" eOpposite="#//Entity/labels"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customise" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
-        eType="#//ModelLabelFeature" containment="true" eOpposite="#//ModelLabelFeature/partOf"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serializationGroups" upperBound="-1"
-        eType="#//SerializationGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Path" abstract="true">
+    <eOperations name="contextEntity" eType="#//Entity"/>
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelFeature" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="partOf" lowerBound="1"
-        eType="#//ModelLabel" eOpposite="#//ModelLabel/features"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelAttribute" eSuperTypes="#//ModelLabelFeature">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
-        eType="#//Attribute"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateFormat" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelAssociation" eSuperTypes="#//ModelLabelFeature">
+  <eClassifiers xsi:type="ecore:EClass" name="AssociationPathElement" abstract="true"
+      eSuperTypes="#//Path">
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="isSourceAssociation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="leafEntity" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="association" lowerBound="1"
         eType="#//Association"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueDisplay" eType="#//ModelLabel"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSourceAssociation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childFeature" eType="#//ChildFeature"
+        containment="true" eOpposite="#//ChildFeature/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associationSource" eType="#//Entity"
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="not association.oclIsUndefined() implies&#xA;&#x9;partOf.labelFor.features->includes(association)"/>
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation() then&#xA;&#x9;&#x9;association.partOf&#xA;&#x9;else&#xA;&#x9;&#x9;association.targetEntity&#xA;&#x9;endif&#xA;endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associationTarget" eType="#//Entity"
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="if association.oclIsUndefined() then&#xA;&#x9;null&#xA;else&#xA;&#x9;if isSourceAssociation() then&#xA;&#x9;&#x9;association.targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;association.partOf&#xA;&#x9;endif&#xA;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributePathElement" abstract="true"
+      eSuperTypes="#//Path">
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;attribute.name&#xA;endif"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//Attribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePathElement" abstract="true"
+      eSuperTypes="#//Path">
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="if resource.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;resource.name&#xA;endif"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//ResourceFeature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChildFeature" abstract="true" interface="true"
+      eSuperTypes="#//Path">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//AssociationPathElement"
+        eOpposite="#//AssociationPathElement/childFeature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChildAssociation" eSuperTypes="#//AssociationPathElement #//ChildFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChildAttribute" eSuperTypes="#//AttributePathElement #//ChildFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChildResource" eSuperTypes="#//ResourcePathElement #//ChildFeature"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataTypeAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//DataType"/>
@@ -336,6 +356,28 @@
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetFeature" eType="#//Feature"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelLabel" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement #//Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labelFor" lowerBound="1"
+        eType="#//Entity" eOpposite="#//Entity/labels"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customise" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//ModelLabelFeature" containment="true" eOpposite="#//ModelLabelFeature/partOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serializationGroups" upperBound="-1"
+        eType="#//SerializationGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelFeature" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOf" lowerBound="1"
+        eType="#//ModelLabel" eOpposite="#//ModelLabel/features"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelAssociation" eSuperTypes="#//AssociationPathElement #//ModelLabelFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelLabelAttribute" eSuperTypes="#//AttributePathElement #//ModelLabelFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateFormat" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serves" lowerBound="1"
         eType="#//Entity" eOpposite="#//Entity/repository"/>
@@ -344,7 +386,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="findAll" eType="#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findOne" eType="#//Selection"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Selection" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList">
+  <eClassifiers xsi:type="ecore:EClass" name="Selection" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList #//FeatureVariableContext">
+    <eOperations name="referencableEntities" upperBound="-1" eType="#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="if joins->isEmpty() then&#x9;&#xA;&#x9;OrderedSet{self.definedBy.serves}&#xA;else&#xA;&#x9;joins->iterate(&#xA;&#x9;&#x9;j; types : OrderedSet(Entity) = OrderedSet{self.definedBy.serves}&#xA;&#x9;&#x9;| if types->includes(j.partOf) then&#xA;&#x9;&#x9;&#x9;&#x9;types->append(j.targetEntity)&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;types->append(j.partOf)&#xA;&#x9;&#x9;&#x9;endif)&#xA;endif"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" lowerBound="1"
         eType="#//Repository" eOpposite="#//Repository/selections"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distinct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -355,30 +402,40 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ordering" upperBound="-1"
-        eType="#//Order" containment="true"/>
+        eType="#//Order" containment="true" eOpposite="#//Order/selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="grouping" upperBound="-1"
         eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectPath" upperBound="-1"
-        eType="#//Association"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pathType" eType="#//Entity"
-        changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if selectPath->isEmpty() then&#xA;&#x9;null&#xA;else if selectPath->size() = 1 then&#xA;&#x9;if selectPath->first().partOf = self.definedBy.serves then&#xA;&#x9;&#x9;selectPath->first().targetEntity&#xA;&#x9;else&#xA;&#x9;&#x9;selectPath->first().partOf&#xA;&#x9;endif&#xA;else&#xA;&#x9;selectPath->subOrderedSet(2, selectPath->size() )&#xA;&#x9;&#x9;->iterate(a; result : Entity = if selectPath->first().partOf = self.definedBy.serves then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;selectPath->first().targetEntity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;selectPath->first().partOf&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;| if a.partOf = result then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;a.targetEntity&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;a.partOf&#xA;&#x9;&#x9;&#x9;&#x9;endif )&#xA;endif endif"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectPath" eType="#//SelectionPath"
+        containment="true" eOpposite="#//SelectionPath/selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filters" upperBound="-1"
         eType="#//Filter" containment="true" eOpposite="#//Filter/selection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="path" lowerBound="1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionPath" eSuperTypes="#//AssociationPathElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" lowerBound="1"
+        eType="#//Selection" eOpposite="#//Selection/selectPath"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true" eSuperTypes="#//FeatureVariableContext">
+    <eOperations name="referencableEntities" upperBound="-1" eType="#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="selection.referencableEntities()"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selection" lowerBound="1"
+        eType="#//Selection" eOpposite="#//Selection/ordering"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//AttributeVariable" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Asc" eSuperTypes="#//Order"/>
   <eClassifiers xsi:type="ecore:EClass" name="Desc" eSuperTypes="#//Order"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Filter" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList">
+  <eClassifiers xsi:type="ecore:EClass" name="Filter" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameterList #//FeatureVariableContext">
+    <eOperations name="referencableEntities" upperBound="-1" eType="#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="selection.referencableEntities()"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selection" lowerBound="1"
         eType="#//Selection" eOpposite="#//Selection/filters"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
@@ -386,13 +443,33 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RepositoryFeatureReference" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureVariableContext" abstract="true"
+      interface="true">
+    <eOperations name="referencableEntities" upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencableEntities" upperBound="-1"
+        eType="#//Entity" changeable="false" volatile="true" transient="true" unsettable="true"
+        derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if feature.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;feature.name&#xA;endif"/>
+        <details key="derivation" value="referencableEntities()"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
-        eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureVariable" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useContainerAsContext"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociationVariable" eSuperTypes="#//AssociationPathElement #//FeatureVariable">
+    <eOperations name="isSourceAssociation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeVariable" eSuperTypes="#//AttributePathElement #//FeatureVariable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceVariable" eSuperTypes="#//ResourcePathElement #//FeatureVariable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterVariable" eSuperTypes="#//Path ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="if formal.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;formal.name&#xA;endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formal" lowerBound="1"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameter"/>
   </eClassifiers>
 </ecore:EPackage>

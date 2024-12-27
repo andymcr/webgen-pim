@@ -60,9 +60,9 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.PERSISTENCE: return createPersistence();
 			case PersistencePackage.ENTITY: return createEntity();
 			case PersistencePackage.SERIALIZATION_GROUP: return createSerializationGroup();
-			case PersistencePackage.MODEL_LABEL: return createModelLabel();
-			case PersistencePackage.MODEL_LABEL_ATTRIBUTE: return createModelLabelAttribute();
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION: return createModelLabelAssociation();
+			case PersistencePackage.CHILD_ASSOCIATION: return createChildAssociation();
+			case PersistencePackage.CHILD_ATTRIBUTE: return createChildAttribute();
+			case PersistencePackage.CHILD_RESOURCE: return createChildResource();
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE: return createDataTypeAttribute();
 			case PersistencePackage.DATE_ATTRIBUTE: return createDateAttribute();
 			case PersistencePackage.URL_ATTRIBUTE: return createUrlAttribute();
@@ -82,12 +82,19 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.ASSOCIATION_WITHOUT_CONTAINMENT: return createAssociationWithoutContainment();
 			case PersistencePackage.ASSOCIATION_WITH_CONTAINMENT: return createAssociationWithContainment();
 			case PersistencePackage.ASSOCIATION_KEY: return createAssociationKey();
+			case PersistencePackage.MODEL_LABEL: return createModelLabel();
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION: return createModelLabelAssociation();
+			case PersistencePackage.MODEL_LABEL_ATTRIBUTE: return createModelLabelAttribute();
 			case PersistencePackage.REPOSITORY: return createRepository();
 			case PersistencePackage.SELECTION: return createSelection();
+			case PersistencePackage.SELECTION_PATH: return createSelectionPath();
 			case PersistencePackage.ASC: return createAsc();
 			case PersistencePackage.DESC: return createDesc();
 			case PersistencePackage.FILTER: return createFilter();
-			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE: return createRepositoryFeatureReference();
+			case PersistencePackage.ASSOCIATION_VARIABLE: return createAssociationVariable();
+			case PersistencePackage.ATTRIBUTE_VARIABLE: return createAttributeVariable();
+			case PersistencePackage.RESOURCE_VARIABLE: return createResourceVariable();
+			case PersistencePackage.PARAMETER_VARIABLE: return createParameterVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -159,17 +166,6 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public SerializationGroup createSerializationGroup() {
 		SerializationGroupImpl serializationGroup = new SerializationGroupImpl();
 		return serializationGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ModelLabel createModelLabel() {
-		ModelLabelImpl modelLabel = new ModelLabelImpl();
-		return modelLabel;
 	}
 
 	/**
@@ -420,6 +416,94 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	 * @generated
 	 */
 	@Override
+	public ModelLabel createModelLabel() {
+		ModelLabelImpl modelLabel = new ModelLabelImpl();
+		return modelLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ChildAssociation createChildAssociation() {
+		ChildAssociationImpl childAssociation = new ChildAssociationImpl();
+		return childAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ChildAttribute createChildAttribute() {
+		ChildAttributeImpl childAttribute = new ChildAttributeImpl();
+		return childAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ChildResource createChildResource() {
+		ChildResourceImpl childResource = new ChildResourceImpl();
+		return childResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AssociationVariable createAssociationVariable() {
+		AssociationVariableImpl associationVariable = new AssociationVariableImpl();
+		return associationVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AttributeVariable createAttributeVariable() {
+		AttributeVariableImpl attributeVariable = new AttributeVariableImpl();
+		return attributeVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceVariable createResourceVariable() {
+		ResourceVariableImpl resourceVariable = new ResourceVariableImpl();
+		return resourceVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ParameterVariable createParameterVariable() {
+		ParameterVariableImpl parameterVariable = new ParameterVariableImpl();
+		return parameterVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Repository createRepository() {
 		RepositoryImpl repository = new RepositoryImpl();
 		return repository;
@@ -434,6 +518,17 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public Selection createSelection() {
 		SelectionImpl selection = new SelectionImpl();
 		return selection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SelectionPath createSelectionPath() {
+		SelectionPathImpl selectionPath = new SelectionPathImpl();
+		return selectionPath;
 	}
 
 	/**
@@ -467,17 +562,6 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public Filter createFilter() {
 		FilterImpl filter = new FilterImpl();
 		return filter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public RepositoryFeatureReference createRepositoryFeatureReference() {
-		RepositoryFeatureReferenceImpl repositoryFeatureReference = new RepositoryFeatureReferenceImpl();
-		return repositoryFeatureReference;
 	}
 
 	/**

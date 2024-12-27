@@ -2,10 +2,13 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -13,9 +16,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.CardsUnit;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
+import work.andycarpenter.webgen.pims.webui.ValueContext;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -26,6 +32,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValueEntities <em>Value Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getIconName <em>Icon Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl#getValue <em>Value</em>}</li>
@@ -37,6 +45,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getValueEntities() <em>Value Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValueEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate VALUE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES).getSettingDelegate();
+
 	/**
 	 * The default value of the '{@link #getIconName() <em>Icon Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +93,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath value;
+	protected DisplayValue value;
 
 	/**
 	 * The cached value of the '{@link #getTitle() <em>Title</em>}' reference.
@@ -124,6 +152,48 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.BADGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getValueEntities() {
+		return (EList<Entity>)VALUE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetValueEntities() {
+		return VALUE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -198,7 +268,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getValue() {
+	public DisplayValue getValue() {
 		return value;
 	}
 
@@ -207,8 +277,8 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(FeaturePath newValue, NotificationChain msgs) {
-		FeaturePath oldValue = value;
+	public NotificationChain basicSetValue(DisplayValue newValue, NotificationChain msgs) {
+		DisplayValue oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.BADGE__VALUE, oldValue, newValue);
@@ -223,7 +293,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	 * @generated
 	 */
 	@Override
-	public void setValue(FeaturePath newValue) {
+	public void setValue(DisplayValue newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -348,6 +418,34 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getDisplayedOn().getContentType() != null) {
+			entities.add(getDisplayedOn().getContentType());
+		}
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> valueEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getDisplayedOn().getContentType() != null) {
+			entities.add(getDisplayedOn().getContentType());
+		}
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -401,6 +499,10 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
+			case WebuiPackage.BADGE__VALUE_ENTITIES:
+				return getValueEntities();
 			case WebuiPackage.BADGE__DISPLAYED_ON:
 				return getDisplayedOn();
 			case WebuiPackage.BADGE__ICON_NAME:
@@ -433,7 +535,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				setIconName((String)newValue);
 				return;
 			case WebuiPackage.BADGE__VALUE:
-				setValue((FeaturePath)newValue);
+				setValue((DisplayValue)newValue);
 				return;
 			case WebuiPackage.BADGE__TITLE:
 				setTitle((Attribute)newValue);
@@ -463,7 +565,7 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				setIconName(ICON_NAME_EDEFAULT);
 				return;
 			case WebuiPackage.BADGE__VALUE:
-				setValue((FeaturePath)null);
+				setValue((DisplayValue)null);
 				return;
 			case WebuiPackage.BADGE__TITLE:
 				setTitle((Attribute)null);
@@ -486,6 +588,10 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.BADGE__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
+			case WebuiPackage.BADGE__VALUE_ENTITIES:
+				return isSetValueEntities();
 			case WebuiPackage.BADGE__DISPLAYED_ON:
 				return getDisplayedOn() != null;
 			case WebuiPackage.BADGE__ICON_NAME:
@@ -500,6 +606,70 @@ public class BadgeImpl extends MinimalEObjectImpl.Container implements Badge {
 				return LOCAL_BADGE_CLASS_EDEFAULT == null ? localBadgeClass != null : !LOCAL_BADGE_CLASS_EDEFAULT.equals(localBadgeClass);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ValueContext.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.BADGE__VALUE_ENTITIES: return WebuiPackage.VALUE_CONTEXT__VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ValueContext.class) {
+			switch (baseFeatureID) {
+				case WebuiPackage.VALUE_CONTEXT__VALUE_ENTITIES: return WebuiPackage.BADGE__VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ValueContext.class) {
+			switch (baseOperationID) {
+				case WebuiPackage.VALUE_CONTEXT___VALUE_ENTITIES: return WebuiPackage.BADGE___VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.BADGE___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+			case WebuiPackage.BADGE___VALUE_ENTITIES:
+				return valueEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -24,6 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Badge;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -63,11 +64,57 @@ public class BadgeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReferencableEntitiesPropertyDescriptor(object);
+			addValueEntitiesPropertyDescriptor(object);
 			addIconNamePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
 			addLocalBadgeClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Referencable Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencableEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureVariableContext_referencableEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureVariableContext_referencableEntities_feature", "_UI_FeatureVariableContext_type"),
+				 PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValueEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValueContext_valueEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValueContext_valueEntities_feature", "_UI_ValueContext_type"),
+				 WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -236,22 +283,22 @@ public class BadgeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createAssociationDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createAttributeDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createLabelDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.BADGE__VALUE,
-				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
+				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter

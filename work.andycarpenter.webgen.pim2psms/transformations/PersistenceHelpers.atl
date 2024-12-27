@@ -89,8 +89,6 @@ helper def: findOrmCollectionType(name : String) : ORM!CollectionType
 		->select(c | not c.elementType.oclIsUndefined())
 		->any(c | c.elementType.name = name);
 
-helper context Website!Feature def: findOrmTargetEntity() : ORM!Entity
-	= thisModule.findOrmEntity(self.targetEntity.name);
 
 helper context Website!DataType def: persistentType() : String
 	= if self.persistentType <> '' then
@@ -150,63 +148,28 @@ helper def: findOrmEntity(name : String) : ORM!Entity
 	= ORM!Entity.allInstancesFrom('orm')->any(e | e.name = name);
 
 helper context Website!Entity def: findOrmEntity() : ORM!Entity
-	= ORM!Entity.allInstancesFrom('orm')->any(eov | eov.name = self.name);
+	= thisModule.findOrmEntity(self.name);
 
 helper context Website!Feature def: findOrmEntity() : ORM!Entity
-	= thisModule.findOrmEntity(self.partOf.name);
-
-helper context Website!Entity def: getFeature(featureName : String) : Website!Feature
-	= self.features->any(f | f.name = featureName);
+	= if self.oclIsKindOf(Website!Association) then
+			self.partOf.findOrmEntity()
+		else
+			self.partOf.findOrmEntity()
+		endif;
 
 helper context ORM!Entity def: getOrmFeature(featureName : String) : ORM!Feature
 	= self.features->any(f | f.name = featureName);
 
 helper context Website!Feature def: findOrmFeature() : ORM!Feature
-	= if self.oclIsKindOf(Website!Attribute) then
-			self.findOrmAttribute()
-		else
-			self.findOrmSourceAssociation()
-		endif;
-
-helper context Website!Attribute def: findOrmAttribute() : ORM!Attribute
-	= self.findOrmEntity().getOrmFeature(self.name);
-
-helper context Website!ResourceFeature def: findOrmResource() : ORM!ResourceFeature
 	= self.findOrmEntity().getOrmFeature(self.name);
 
 helper context Website!Association def: findOrmSourceAssociation() : ORM!Association
-	= thisModule.findOrmEntity(self.partOf.name).getOrmFeature(self.name);
+	= self.partOf.findOrmEntity().getOrmFeature(self.name);
 
 helper context Website!Association def: findOrmTargetAssociation() : ORM!Association
-	= thisModule.findOrmEntity(self.targetEntity.name).getOrmFeature(self.targetFeatureName());
+	= self.targetEntity.findOrmEntity().getOrmFeature(self.targetFeatureName);
 
-helper context Website!PathAssociation def: findOrmAssociation() : ORM!Association
-	= if self.association.oclIsUndefined() then
-			OclUndefined
-		else 
-			if self.isSourceAssociation then
-				self.association.findOrmSourceAssociation()
-			else
-				self.association.findOrmTargetAssociation()
-			endif
-		endif;
-
-helper context Website!PathVariableAssociation def: findOrmAssociation() : ORM!Association
-	= if self.association.oclIsUndefined() then
-			OclUndefined
-		else 
-			if self.isSourceAssociation then
-				self.association.findOrmSourceAssociation()
-			else
-				self.association.findOrmTargetAssociation()
-			endif
-		endif;
-
-
-helper context Website!Association def: targetEntityName() : String
-	= self.targetEntity.name;
-
-	helper context Website!Association def: targetFeatureName() : String
+helper context Website!Association def: targetFeatureName() : String
 	= if not self.targetFeatureName.oclIsUndefined() and self.targetFeatureName <> '' then
 			self.targetFeatureName
 		else
@@ -220,7 +183,29 @@ helper context Website!Association def: targetDisplayLabel() : String
 			self.targetFeatureName().createLabel()
 		endif;
 
-	
+
+helper context Website!AssociationPathElement def: sourceName() : String
+	= if self.association.oclIsUndefined() then
+			''
+		else
+			if self.isSourceAssociation() then
+				self.association.name
+			else
+				self.association.targetFeatureName()
+			endif
+		endif;
+
+	helper context Website!AssociationPathElement def: targetName() : String
+	= if self.association.oclIsUndefined() then
+			''
+		else
+			if self.isSourceAssociation() then
+				self.association.targetFeatureName()
+			else
+				self.association.name
+			endif
+		endif;
+
 
 helper context Website!Feature def: collectionType() : ORM!CollectionType
     = if self."unique" then
@@ -329,27 +314,6 @@ helper context Website!Selection def: findOrmJoins(joins : Sequence(Website!Asso
 						endif
 			endif endif;
 
-helper context Website!Selection def: findOrmSelectPath(path : Sequence(Website!Association)) : Sequence(ORM!Association)
-	= if path->isEmpty() then
-			Sequence{}
-		else if path->size() = 1 then
-			if path->last().partOf = self.definedBy.serves then
-				Sequence{path->last().findOrmSourceAssociation()}
-			else
-				Sequence{path->last().findOrmTargetAssociation()}
-			endif
-		else
-			let yy : Sequence(Website!Entity)
-				= self.entities(path->subSequence(1, path->size() - 1))
-				in let zz : Sequence(ORM!Association)
-					= self.findOrmJoins(path->subSequence(1, path->size() - 1))
-					in if yy->includes(path->last().partOf) then
-							zz->union(Sequence{path->last().findOrmSourceAssociation()})
-						else
-							zz->union(Sequence{path->last().findOrmTargetAssociation()})
-						endif
-			endif endif;
-
 
 helper context Website!Filter def: findFilter() : ORM!Filter
 	= self.selection.findSelection().getFilter(self.name);
@@ -360,8 +324,13 @@ helper context ORM!Selection def: getFormalParameter(name : String) : ORM!Formal
 helper context Website!FormalParameter def: findFormalParameter() : ORM!FormalParameter
 	= self.formalFor.findSelection().getFormalParameter(self.name);
 
+
 helper context ORM!Entity def: getOrmLabel(labelName : String) : ORM!ModelLabel
 	= self.labels->any(l | l.name = labelName);
+
+helper context Website!ModelLabel def: findOrmLabel() : ORM!ModelLabel
+	= self.labelFor.getOrmLabel(self.name);
+
 
 helper def: findOrmCollection(name : String) : ORM!DataType
 	= ORM!CollectionType.allInstancesFrom('orm')

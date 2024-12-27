@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.webui;
 import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +17,6 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContentType <em>Content Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}</li>
@@ -39,7 +39,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL featuresMustBeFromContentType='displayFields\n\t-&gt;select(f | f.oclIsKindOf(UnitFeature)).oclAsType(UnitFeature)\n\t-&gt;select(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tnot f.oclAsType(UnitElement).attribute.oclIsUndefined()\n\t\telse\n\t\t\tnot f.oclAsType(UnitAssociation).association.oclIsUndefined()\n\t\tendif)\n\t-&gt;forAll(f | \n\t\tif f.oclIsKindOf(UnitElement) then\n\t\t\tcontentType.allFeatures-&gt;includes(f.oclAsType(UnitElement).attribute)\n\t\telse\n\t\t\tcontentType.allFeatures-&gt;includes(f.oclAsType(UnitAssociation).association)\n\t\tendif)'"
  * @generated
  */
-public interface DynamicUnit extends ContentUnit, ActionContainer {
+public interface DynamicUnit extends ContentUnit, ActionContainer, FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Content Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -61,29 +61,6 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	void setContentType(Entity value);
-
-	/**
-	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containing Type</em>' reference.
-	 * @see #isSetContainingType()
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDynamicUnit_ContainingType()
-	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.oclIsKindOf(CollectionUnit) then\n\tlet collectionUnit : CollectionUnit = self.oclAsType(CollectionUnit)\n\tin if not collectionUnit.findContainerSelection.oclIsUndefined() then\n\t\t\tcollectionUnit.findContainerSelection.definedBy.serves\n\t\telse if not collectionUnit.selection.oclIsUndefined() then\n\t\t\tif collectionUnit.selection.selectPath-&gt;notEmpty() then\n\t\t\t\tcollectionUnit.selection.pathType\n\t\t\telse\n\t\t\t\tcontentType.containingType\n\t\t\tendif\n\t\telse\n\t\t\tcontentType.containingType\n\t\tendif endif\n else if self.oclIsKindOf(DetailsUnit) then\n\tlet detailsUnit : DetailsUnit = self.oclAsType(DetailsUnit)\n\tin if not detailsUnit.selection.oclIsUndefined() then\n\t\tif detailsUnit.selection.selectPath-&gt;notEmpty() then\n\t\t\tdetailsUnit.selection.pathType\n\t\telse\n\t\t\tdetailsUnit.contentType.containingType\n\t\tendif\n\telse\n\t\tcontentType.containingType\n\tendif\nelse\n\tcontentType.containingType\nendif endif\n'"
-	 * @generated
-	 */
-	Entity getContainingType();
-
-	/**
-	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getContainingType <em>Containing Type</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Containing Type</em>' reference is set.
-	 * @see #getContainingType()
-	 * @generated
-	 */
-	boolean isSetContainingType();
 
 	/**
 	 * Returns the value of the '<em><b>Route Actuals</b></em>' containment reference list.
@@ -405,5 +382,21 @@ public interface DynamicUnit extends ContentUnit, ActionContainer {
 	 * @generated
 	 */
 	void setLocalInstanceActionClass(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if contentType.oclIsUndefined() then\n\tnull\nelse\n\tcontentType.containingType\nendif'"
+	 * @generated
+	 */
+	Entity containingType();
 
 } // DynamicUnit

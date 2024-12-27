@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
 import work.andycarpenter.webgen.pims.webui.SelectAction;
 import work.andycarpenter.webgen.pims.webui.SelectableUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -47,7 +47,7 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath valuePath;
+	protected DisplayValue valuePath;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getValuePath() {
+	public DisplayValue getValuePath() {
 		return valuePath;
 	}
 
@@ -123,8 +123,8 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValuePath(FeaturePath newValuePath, NotificationChain msgs) {
-		FeaturePath oldValuePath = valuePath;
+	public NotificationChain basicSetValuePath(DisplayValue newValuePath, NotificationChain msgs) {
+		DisplayValue oldValuePath = valuePath;
 		valuePath = newValuePath;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.SELECT_ACTION__VALUE_PATH, oldValuePath, newValuePath);
@@ -139,7 +139,7 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 	 * @generated
 	 */
 	@Override
-	public void setValuePath(FeaturePath newValuePath) {
+	public void setValuePath(DisplayValue newValuePath) {
 		if (newValuePath != valuePath) {
 			NotificationChain msgs = null;
 			if (valuePath != null)
@@ -196,7 +196,7 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 				setTarget((SelectableUnit)newValue);
 				return;
 			case WebuiPackage.SELECT_ACTION__VALUE_PATH:
-				setValuePath((FeaturePath)newValue);
+				setValuePath((DisplayValue)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,7 +214,7 @@ public abstract class SelectActionImpl extends ActionImpl implements SelectActio
 				setTarget((SelectableUnit)null);
 				return;
 			case WebuiPackage.SELECT_ACTION__VALUE_PATH:
-				setValuePath((FeaturePath)null);
+				setValuePath((DisplayValue)null);
 				return;
 		}
 		super.eUnset(featureID);

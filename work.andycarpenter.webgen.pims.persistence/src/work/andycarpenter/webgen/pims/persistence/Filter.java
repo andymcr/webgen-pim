@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.persistence;
 
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.expression.Predicate;
@@ -24,7 +25,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * @model
  * @generated
  */
-public interface Filter extends NamedDisplayElement, FormalParameterList {
+public interface Filter extends NamedDisplayElement, FormalParameterList, FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Selection</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}'.
@@ -92,5 +93,13 @@ public interface Filter extends NamedDisplayElement, FormalParameterList {
 	 * @generated
 	 */
 	void setMethodName(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='selection.referencableEntities()'"
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 
 } // Filter

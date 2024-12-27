@@ -272,22 +272,22 @@ public class GalleryUnitItemProvider extends CollectionUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createAssociationDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createAttributeDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createLabelDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
+				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter

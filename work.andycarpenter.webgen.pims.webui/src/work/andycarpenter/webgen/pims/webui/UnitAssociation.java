@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 
@@ -21,10 +22,10 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='optionsValidChoice'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() implies\n\tdisplayedOn.controller.webUI.persistence.repositories\n\t\t-&gt;select(r : persistence::Repository | r.serves = targetEntity)\n\t\t-&gt;collect(r : persistence::Repository | r.selections)\n\t\t-&gt;includes(options)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL optionsValidChoice='not options.oclIsUndefined() and not association.oclIsUndefined() implies\n\tdisplayedOn.controller.webUI.persistence.repositories\n\t\t-&gt;select(r : persistence::Repository | r.serves = association.targetEntity)\n\t\t-&gt;collect(r : persistence::Repository | r.selections)\n\t\t-&gt;includes(options)'"
  * @generated
  */
-public interface UnitAssociation extends UnitFeature, PathAssociation {
+public interface UnitAssociation extends UnitFeature, AssociationPathElement {
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' reference.
 	 * <!-- begin-user-doc -->

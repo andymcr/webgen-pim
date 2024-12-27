@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -10,6 +11,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -17,8 +19,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariable;
 import work.andycarpenter.webgen.pims.webui.Message;
-import work.andycarpenter.webgen.pims.webui.PathVariable;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -29,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MessageImpl#getValueEntities <em>Value Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MessageImpl#getText <em>Text</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.MessageImpl#getFeatures <em>Features</em>}</li>
  * </ul>
@@ -36,6 +40,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class MessageImpl extends MinimalEObjectImpl.Container implements Message {
+	/**
+	 * The cached setting delegate for the '{@link #getValueEntities() <em>Value Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValueEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate VALUE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES).getSettingDelegate();
+
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,7 +78,7 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PathVariable> features;
+	protected EList<FeatureVariable> features;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +97,27 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.MESSAGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getValueEntities() {
+		return (EList<Entity>)VALUE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetValueEntities() {
+		return VALUE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -114,11 +149,23 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * @generated
 	 */
 	@Override
-	public EList<PathVariable> getFeatures() {
+	public EList<FeatureVariable> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<PathVariable>(PathVariable.class, this, WebuiPackage.MESSAGE__FEATURES);
+			features = new EObjectContainmentEList<FeatureVariable>(FeatureVariable.class, this, WebuiPackage.MESSAGE__FEATURES);
 		}
 		return features;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Entity> valueEntities() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -143,6 +190,8 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.MESSAGE__VALUE_ENTITIES:
+				return getValueEntities();
 			case WebuiPackage.MESSAGE__TEXT:
 				return getText();
 			case WebuiPackage.MESSAGE__FEATURES:
@@ -165,7 +214,7 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 				return;
 			case WebuiPackage.MESSAGE__FEATURES:
 				getFeatures().clear();
-				getFeatures().addAll((Collection<? extends PathVariable>)newValue);
+				getFeatures().addAll((Collection<? extends FeatureVariable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -197,12 +246,28 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.MESSAGE__VALUE_ENTITIES:
+				return isSetValueEntities();
 			case WebuiPackage.MESSAGE__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case WebuiPackage.MESSAGE__FEATURES:
 				return features != null && !features.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.MESSAGE___VALUE_ENTITIES:
+				return valueEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

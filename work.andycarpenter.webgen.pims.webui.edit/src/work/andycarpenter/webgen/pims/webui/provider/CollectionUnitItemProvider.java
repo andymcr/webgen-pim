@@ -56,6 +56,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValueEntitiesPropertyDescriptor(object);
 			addUnitTitlePropertyDescriptor(object);
 			addTruncateElementTitlePropertyDescriptor(object);
 			addSelectionPropertyDescriptor(object);
@@ -88,6 +89,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Value Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValueEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValueContext_valueEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValueContext_valueEntities_feature", "_UI_ValueContext_type"),
+				 WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Unit Title feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,17 +128,16 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
+					final Set<Label> labels = new HashSet<Label>();
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						final Set<Label> labels = new HashSet<Label>();
-						if (unit.getContainingType() != null) {
-							labels.addAll(unit.getContainingType().getAttributes());
-							labels.addAll(unit.getContainingType().getLabels());
+						for (Entity type : unit.referencableEntities()) {
+							labels.addAll(type.getAttributes());
+							labels.addAll(type.getLabels());
 						}
-						return labels;
 					}
 
-					return Collections.emptySet();
+					return labels;
 				}
 		});
 	}
@@ -188,13 +210,13 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof CollectionUnit) {
-						final CollectionUnit unit = (CollectionUnit) object;
-						if (unit.getContainingType() != null) {
-							return getSelections(unit.getController().getWebUI(),
-									unit.getContainingType());
-						}
-					}
+//					if (object instanceof CollectionUnit) {
+//						final CollectionUnit unit = (CollectionUnit) object;
+//						if (unit.getContainingType() != null) {
+//							return getSelections(unit.getController().getWebUI(),
+//									unit.getContainingType());
+//						}
+//					}
 
 					return Collections.emptySet();
 				}
@@ -821,22 +843,22 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createAssociationDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createAttributeDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createLabelDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
-				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
+				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
 	}
 
 	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {

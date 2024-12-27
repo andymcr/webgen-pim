@@ -98,24 +98,36 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createAssociationAdapter();
 			}
 			@Override
-			public Adapter caseLabel(Label object) {
-				return createLabelAdapter();
+			public Adapter casePath(Path object) {
+				return createPathAdapter();
 			}
 			@Override
-			public Adapter caseModelLabel(ModelLabel object) {
-				return createModelLabelAdapter();
+			public Adapter caseAssociationPathElement(AssociationPathElement object) {
+				return createAssociationPathElementAdapter();
 			}
 			@Override
-			public Adapter caseModelLabelFeature(ModelLabelFeature object) {
-				return createModelLabelFeatureAdapter();
+			public Adapter caseAttributePathElement(AttributePathElement object) {
+				return createAttributePathElementAdapter();
 			}
 			@Override
-			public Adapter caseModelLabelAttribute(ModelLabelAttribute object) {
-				return createModelLabelAttributeAdapter();
+			public Adapter caseResourcePathElement(ResourcePathElement object) {
+				return createResourcePathElementAdapter();
 			}
 			@Override
-			public Adapter caseModelLabelAssociation(ModelLabelAssociation object) {
-				return createModelLabelAssociationAdapter();
+			public Adapter caseChildFeature(ChildFeature object) {
+				return createChildFeatureAdapter();
+			}
+			@Override
+			public Adapter caseChildAssociation(ChildAssociation object) {
+				return createChildAssociationAdapter();
+			}
+			@Override
+			public Adapter caseChildAttribute(ChildAttribute object) {
+				return createChildAttributeAdapter();
+			}
+			@Override
+			public Adapter caseChildResource(ChildResource object) {
+				return createChildResourceAdapter();
 			}
 			@Override
 			public Adapter caseDataTypeAttribute(DataTypeAttribute object) {
@@ -206,12 +218,36 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createAssociationKeyAdapter();
 			}
 			@Override
+			public Adapter caseLabel(Label object) {
+				return createLabelAdapter();
+			}
+			@Override
+			public Adapter caseModelLabel(ModelLabel object) {
+				return createModelLabelAdapter();
+			}
+			@Override
+			public Adapter caseModelLabelFeature(ModelLabelFeature object) {
+				return createModelLabelFeatureAdapter();
+			}
+			@Override
+			public Adapter caseModelLabelAssociation(ModelLabelAssociation object) {
+				return createModelLabelAssociationAdapter();
+			}
+			@Override
+			public Adapter caseModelLabelAttribute(ModelLabelAttribute object) {
+				return createModelLabelAttributeAdapter();
+			}
+			@Override
 			public Adapter caseRepository(Repository object) {
 				return createRepositoryAdapter();
 			}
 			@Override
 			public Adapter caseSelection(Selection object) {
 				return createSelectionAdapter();
+			}
+			@Override
+			public Adapter caseSelectionPath(SelectionPath object) {
+				return createSelectionPathAdapter();
 			}
 			@Override
 			public Adapter caseOrder(Order object) {
@@ -230,8 +266,28 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 				return createFilterAdapter();
 			}
 			@Override
-			public Adapter caseRepositoryFeatureReference(RepositoryFeatureReference object) {
-				return createRepositoryFeatureReferenceAdapter();
+			public Adapter caseFeatureVariableContext(FeatureVariableContext object) {
+				return createFeatureVariableContextAdapter();
+			}
+			@Override
+			public Adapter caseFeatureVariable(FeatureVariable object) {
+				return createFeatureVariableAdapter();
+			}
+			@Override
+			public Adapter caseAssociationVariable(AssociationVariable object) {
+				return createAssociationVariableAdapter();
+			}
+			@Override
+			public Adapter caseAttributeVariable(AttributeVariable object) {
+				return createAttributeVariableAdapter();
+			}
+			@Override
+			public Adapter caseResourceVariable(ResourceVariable object) {
+				return createResourceVariableAdapter();
+			}
+			@Override
+			public Adapter caseParameterVariable(ParameterVariable object) {
+				return createParameterVariableAdapter();
 			}
 			@Override
 			public Adapter caseNamedElement(NamedElement object) {
@@ -744,6 +800,188 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path
+	 * @generated
+	 */
+	public Adapter createPathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement <em>Association Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement
+	 * @generated
+	 */
+	public Adapter createAssociationPathElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AttributePathElement <em>Attribute Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributePathElement
+	 * @generated
+	 */
+	public Adapter createAttributePathElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement <em>Resource Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement
+	 * @generated
+	 */
+	public Adapter createResourcePathElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature <em>Child Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature
+	 * @generated
+	 */
+	public Adapter createChildFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ChildAssociation <em>Child Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildAssociation
+	 * @generated
+	 */
+	public Adapter createChildAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ChildAttribute <em>Child Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildAttribute
+	 * @generated
+	 */
+	public Adapter createChildAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ChildResource <em>Child Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildResource
+	 * @generated
+	 */
+	public Adapter createChildResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariable <em>Feature Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariable
+	 * @generated
+	 */
+	public Adapter createFeatureVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AssociationVariable <em>Association Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationVariable
+	 * @generated
+	 */
+	public Adapter createAssociationVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AttributeVariable <em>Attribute Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributeVariable
+	 * @generated
+	 */
+	public Adapter createAttributeVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ResourceVariable <em>Resource Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceVariable
+	 * @generated
+	 */
+	public Adapter createResourceVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable <em>Parameter Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable
+	 * @generated
+	 */
+	public Adapter createParameterVariableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.Repository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -768,6 +1006,20 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSelectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.SelectionPath <em>Selection Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.SelectionPath
+	 * @generated
+	 */
+	public Adapter createSelectionPathAdapter() {
 		return null;
 	}
 
@@ -828,16 +1080,16 @@ public class PersistenceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference <em>Repository Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext <em>Feature Variable Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext
 	 * @generated
 	 */
-	public Adapter createRepositoryFeatureReferenceAdapter() {
+	public Adapter createFeatureVariableContextAdapter() {
 		return null;
 	}
 

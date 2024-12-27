@@ -40,15 +40,6 @@ public interface PersistenceFactory extends EFactory {
 	SerializationGroup createSerializationGroup();
 
 	/**
-	 * Returns a new object of class '<em>Model Label</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Model Label</em>'.
-	 * @generated
-	 */
-	ModelLabel createModelLabel();
-
-	/**
 	 * Returns a new object of class '<em>Model Label Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,6 +238,78 @@ public interface PersistenceFactory extends EFactory {
 	AssociationKey createAssociationKey();
 
 	/**
+	 * Returns a new object of class '<em>Model Label</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Label</em>'.
+	 * @generated
+	 */
+	ModelLabel createModelLabel();
+
+	/**
+	 * Returns a new object of class '<em>Child Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Child Association</em>'.
+	 * @generated
+	 */
+	ChildAssociation createChildAssociation();
+
+	/**
+	 * Returns a new object of class '<em>Child Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Child Attribute</em>'.
+	 * @generated
+	 */
+	ChildAttribute createChildAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Child Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Child Resource</em>'.
+	 * @generated
+	 */
+	ChildResource createChildResource();
+
+	/**
+	 * Returns a new object of class '<em>Association Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Association Variable</em>'.
+	 * @generated
+	 */
+	AssociationVariable createAssociationVariable();
+
+	/**
+	 * Returns a new object of class '<em>Attribute Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attribute Variable</em>'.
+	 * @generated
+	 */
+	AttributeVariable createAttributeVariable();
+
+	/**
+	 * Returns a new object of class '<em>Resource Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Variable</em>'.
+	 * @generated
+	 */
+	ResourceVariable createResourceVariable();
+
+	/**
+	 * Returns a new object of class '<em>Parameter Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter Variable</em>'.
+	 * @generated
+	 */
+	ParameterVariable createParameterVariable();
+
+	/**
 	 * Returns a new object of class '<em>Repository</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,6 +326,15 @@ public interface PersistenceFactory extends EFactory {
 	 * @generated
 	 */
 	Selection createSelection();
+
+	/**
+	 * Returns a new object of class '<em>Selection Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Selection Path</em>'.
+	 * @generated
+	 */
+	SelectionPath createSelectionPath();
 
 	/**
 	 * Returns a new object of class '<em>Asc</em>'.
@@ -290,15 +362,6 @@ public interface PersistenceFactory extends EFactory {
 	 * @generated
 	 */
 	Filter createFilter();
-
-	/**
-	 * Returns a new object of class '<em>Repository Feature Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Repository Feature Reference</em>'.
-	 * @generated
-	 */
-	RepositoryFeatureReference createRepositoryFeatureReference();
 
 	/**
 	 * Returns the package supported by this factory.

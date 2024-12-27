@@ -19,20 +19,4 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated webui -->
-      <extender
-            uri="http://andycarpenter.work/pim/base"
-            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$BaseChildCreationExtender"/>
-      <extender
-            uri="http://andycarpenter.work/pim/expression"
-            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$ExpressionChildCreationExtender"/>
-      <extender
-            uri="http://andycarpenter.work/pim/persistence"
-            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$PersistenceChildCreationExtender"/>
-      <extender
-            uri="http://andycarpenter.work/pim/service"
-            class="work.andycarpenter.webgen.pims.webui.provider.WebuiItemProviderAdapterFactory$ServiceChildCreationExtender"/>
-   </extension>
-
 </plugin>

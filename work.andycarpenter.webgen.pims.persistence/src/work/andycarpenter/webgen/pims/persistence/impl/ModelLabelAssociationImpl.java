@@ -3,15 +3,17 @@
 package work.andycarpenter.webgen.pims.persistence.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.persistence.Association;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation;
+import work.andycarpenter.webgen.pims.persistence.ModelLabelFeature;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -22,44 +24,12 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getAssociation <em>Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl#getPartOf <em>Part Of</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements ModelLabelAssociation {
-	/**
-	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssociation()
-	 * @generated
-	 * @ordered
-	 */
-	protected Association association;
-
-	/**
-	 * The cached value of the '{@link #getValueDisplay() <em>Value Display</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected ModelLabel valueDisplay;
-
-	/**
-	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsSourceAssociation()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION).getSettingDelegate();
-
+public class ModelLabelAssociationImpl extends AssociationPathElementImpl implements ModelLabelAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,25 +55,51 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public Association getAssociation() {
-		if (association != null && association.eIsProxy()) {
-			InternalEObject oldAssociation = (InternalEObject)association;
-			association = (Association)eResolveProxy(oldAssociation);
-			if (association != oldAssociation) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION, oldAssociation, association));
-			}
+	public ModelLabel getPartOf() {
+		if (eContainerFeatureID() != PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF) return null;
+		return (ModelLabel)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPartOf(ModelLabel newPartOf, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newPartOf, PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPartOf(ModelLabel newPartOf) {
+		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF && newPartOf != null)) {
+			if (EcoreUtil.isAncestor(this, newPartOf))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newPartOf != null)
+				msgs = ((InternalEObject)newPartOf).eInverseAdd(this, PersistencePackage.MODEL_LABEL__FEATURES, ModelLabel.class, msgs);
+			msgs = basicSetPartOf(newPartOf, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return association;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF, newPartOf, newPartOf));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public Association basicGetAssociation() {
-		return association;
+	@Override
+	public Entity contextEntity() {
+		return getPartOf().getLabelFor();
 	}
 
 	/**
@@ -112,38 +108,14 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void setAssociation(Association newAssociation) {
-		Association oldAssociation = association;
-		association = newAssociation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION, oldAssociation, association));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ModelLabel getValueDisplay() {
-		if (valueDisplay != null && valueDisplay.eIsProxy()) {
-			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
-			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
-			if (valueDisplay != oldValueDisplay) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
-			}
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetPartOf((ModelLabel)otherEnd, msgs);
 		}
-		return valueDisplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelLabel basicGetValueDisplay() {
-		return valueDisplay;
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -152,11 +124,12 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void setValueDisplay(ModelLabel newValueDisplay) {
-		ModelLabel oldValueDisplay = valueDisplay;
-		valueDisplay = newValueDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				return basicSetPartOf(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -165,8 +138,12 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	 * @generated
 	 */
 	@Override
-	public boolean isIsSourceAssociation() {
-		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				return eInternalContainer().eInverseRemove(this, PersistencePackage.MODEL_LABEL__FEATURES, ModelLabel.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -177,14 +154,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				if (resolve) return getAssociation();
-				return basicGetAssociation();
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
-				if (resolve) return getValueDisplay();
-				return basicGetValueDisplay();
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION:
-				return isIsSourceAssociation();
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				return getPartOf();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,11 +168,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				setAssociation((Association)newValue);
-				return;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((ModelLabel)newValue);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				setPartOf((ModelLabel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -215,11 +183,8 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				setAssociation((Association)null);
-				return;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
-				setValueDisplay((ModelLabel)null);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				setPartOf((ModelLabel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -233,14 +198,42 @@ public class ModelLabelAssociationImpl extends ModelLabelFeatureImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__ASSOCIATION:
-				return association != null;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY:
-				return valueDisplay != null;
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION:
-				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF:
+				return getPartOf() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ModelLabelFeature.class) {
+			switch (derivedFeatureID) {
+				case PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF: return PersistencePackage.MODEL_LABEL_FEATURE__PART_OF;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ModelLabelFeature.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.MODEL_LABEL_FEATURE__PART_OF: return PersistencePackage.MODEL_LABEL_ASSOCIATION__PART_OF;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //ModelLabelAssociationImpl

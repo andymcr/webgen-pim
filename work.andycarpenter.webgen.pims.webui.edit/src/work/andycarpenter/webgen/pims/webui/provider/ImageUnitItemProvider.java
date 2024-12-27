@@ -15,7 +15,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -146,28 +145,6 @@ public class ImageUnitItemProvider extends CollectionUnitItemProvider {
 				return;
 		}
 		super.notifyChanged(notification);
-	}
-
-	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__IMAGE_PATH_FEATURE,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
 	}
 
 	/**

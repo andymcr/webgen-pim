@@ -276,7 +276,22 @@ public class AttributeItemProvider extends FeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

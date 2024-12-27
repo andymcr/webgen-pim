@@ -3,12 +3,15 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import work.andycarpenter.webgen.pims.base.BasePackage;
-import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
-import work.andycarpenter.webgen.pims.base.NamedElement;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry;
+import work.andycarpenter.webgen.pims.webui.Menu;
+import work.andycarpenter.webgen.pims.webui.MenuEntry;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -19,50 +22,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditStaticTextMenuEntryImpl#getName <em>Name</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditStaticTextMenuEntryImpl#getDisplayLabel <em>Display Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditStaticTextMenuEntryImpl#getPartOf <em>Part Of</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditStaticTextMenuEntry {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DISPLAY_LABEL_EDEFAULT = "";
-	/**
-	 * The cached value of the '{@link #getDisplayLabel() <em>Display Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplayLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String displayLabel = DISPLAY_LABEL_EDEFAULT;
-
+public class EditStaticTextMenuEntryImpl extends NamedDisplayElementImpl implements EditStaticTextMenuEntry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,8 +53,19 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return name;
+	public Menu getPartOf() {
+		if (eContainerFeatureID() != WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF) return null;
+		return (Menu)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPartOf(Menu newPartOf, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newPartOf, WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF, msgs);
+		return msgs;
 	}
 
 	/**
@@ -98,11 +74,20 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @generated
 	 */
 	@Override
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME, oldName, name));
+	public void setPartOf(Menu newPartOf) {
+		if (newPartOf != eInternalContainer() || (eContainerFeatureID() != WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF && newPartOf != null)) {
+			if (EcoreUtil.isAncestor(this, newPartOf))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newPartOf != null)
+				msgs = ((InternalEObject)newPartOf).eInverseAdd(this, WebuiPackage.MENU__ENTRIES, Menu.class, msgs);
+			msgs = basicSetPartOf(newPartOf, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF, newPartOf, newPartOf));
 	}
 
 	/**
@@ -111,8 +96,14 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @generated
 	 */
 	@Override
-	public String getDisplayLabel() {
-		return displayLabel;
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetPartOf((Menu)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -121,11 +112,26 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 * @generated
 	 */
 	@Override
-	public void setDisplayLabel(String newDisplayLabel) {
-		String oldDisplayLabel = displayLabel;
-		displayLabel = newDisplayLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL, oldDisplayLabel, displayLabel));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				return basicSetPartOf(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				return eInternalContainer().eInverseRemove(this, WebuiPackage.MENU__ENTRIES, Menu.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -136,10 +142,8 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME:
-				return getName();
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL:
-				return getDisplayLabel();
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				return getPartOf();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,11 +156,8 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME:
-				setName((String)newValue);
-				return;
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL:
-				setDisplayLabel((String)newValue);
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				setPartOf((Menu)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +171,8 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL:
-				setDisplayLabel(DISPLAY_LABEL_EDEFAULT);
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				setPartOf((Menu)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +186,8 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL:
-				return DISPLAY_LABEL_EDEFAULT == null ? displayLabel != null : !DISPLAY_LABEL_EDEFAULT.equals(displayLabel);
+			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF:
+				return getPartOf() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -203,15 +199,9 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
+		if (baseClass == MenuEntry.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME: return BasePackage.NAMED_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
-		if (baseClass == NamedDisplayElement.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL: return BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
+				case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF: return WebuiPackage.MENU_ENTRY__PART_OF;
 				default: return -1;
 			}
 		}
@@ -225,37 +215,13 @@ public class EditStaticTextMenuEntryImpl extends MenuEntryImpl implements EditSt
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
+		if (baseClass == MenuEntry.class) {
 			switch (baseFeatureID) {
-				case BasePackage.NAMED_ELEMENT__NAME: return WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__NAME;
-				default: return -1;
-			}
-		}
-		if (baseClass == NamedDisplayElement.class) {
-			switch (baseFeatureID) {
-				case BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL: return WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__DISPLAY_LABEL;
+				case WebuiPackage.MENU_ENTRY__PART_OF: return WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY__PART_OF;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", displayLabel: ");
-		result.append(displayLabel);
-		result.append(')');
-		return result.toString();
 	}
 
 } //EditStaticTextMenuEntryImpl

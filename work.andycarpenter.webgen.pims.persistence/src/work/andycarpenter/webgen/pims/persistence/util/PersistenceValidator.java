@@ -106,16 +106,22 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAttribute((Attribute)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION:
 				return validateAssociation((Association)value, diagnostics, context);
-			case PersistencePackage.LABEL:
-				return validateLabel((Label)value, diagnostics, context);
-			case PersistencePackage.MODEL_LABEL:
-				return validateModelLabel((ModelLabel)value, diagnostics, context);
-			case PersistencePackage.MODEL_LABEL_FEATURE:
-				return validateModelLabelFeature((ModelLabelFeature)value, diagnostics, context);
-			case PersistencePackage.MODEL_LABEL_ATTRIBUTE:
-				return validateModelLabelAttribute((ModelLabelAttribute)value, diagnostics, context);
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION:
-				return validateModelLabelAssociation((ModelLabelAssociation)value, diagnostics, context);
+			case PersistencePackage.PATH:
+				return validatePath((Path)value, diagnostics, context);
+			case PersistencePackage.ASSOCIATION_PATH_ELEMENT:
+				return validateAssociationPathElement((AssociationPathElement)value, diagnostics, context);
+			case PersistencePackage.ATTRIBUTE_PATH_ELEMENT:
+				return validateAttributePathElement((AttributePathElement)value, diagnostics, context);
+			case PersistencePackage.RESOURCE_PATH_ELEMENT:
+				return validateResourcePathElement((ResourcePathElement)value, diagnostics, context);
+			case PersistencePackage.CHILD_FEATURE:
+				return validateChildFeature((ChildFeature)value, diagnostics, context);
+			case PersistencePackage.CHILD_ASSOCIATION:
+				return validateChildAssociation((ChildAssociation)value, diagnostics, context);
+			case PersistencePackage.CHILD_ATTRIBUTE:
+				return validateChildAttribute((ChildAttribute)value, diagnostics, context);
+			case PersistencePackage.CHILD_RESOURCE:
+				return validateChildResource((ChildResource)value, diagnostics, context);
 			case PersistencePackage.DATA_TYPE_ATTRIBUTE:
 				return validateDataTypeAttribute((DataTypeAttribute)value, diagnostics, context);
 			case PersistencePackage.DATE_ATTRIBUTE:
@@ -160,10 +166,22 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAssociationWithContainment((AssociationWithContainment)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_KEY:
 				return validateAssociationKey((AssociationKey)value, diagnostics, context);
+			case PersistencePackage.LABEL:
+				return validateLabel((Label)value, diagnostics, context);
+			case PersistencePackage.MODEL_LABEL:
+				return validateModelLabel((ModelLabel)value, diagnostics, context);
+			case PersistencePackage.MODEL_LABEL_FEATURE:
+				return validateModelLabelFeature((ModelLabelFeature)value, diagnostics, context);
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION:
+				return validateModelLabelAssociation((ModelLabelAssociation)value, diagnostics, context);
+			case PersistencePackage.MODEL_LABEL_ATTRIBUTE:
+				return validateModelLabelAttribute((ModelLabelAttribute)value, diagnostics, context);
 			case PersistencePackage.REPOSITORY:
 				return validateRepository((Repository)value, diagnostics, context);
 			case PersistencePackage.SELECTION:
 				return validateSelection((Selection)value, diagnostics, context);
+			case PersistencePackage.SELECTION_PATH:
+				return validateSelectionPath((SelectionPath)value, diagnostics, context);
 			case PersistencePackage.ORDER:
 				return validateOrder((Order)value, diagnostics, context);
 			case PersistencePackage.ASC:
@@ -172,8 +190,18 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateDesc((Desc)value, diagnostics, context);
 			case PersistencePackage.FILTER:
 				return validateFilter((Filter)value, diagnostics, context);
-			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE:
-				return validateRepositoryFeatureReference((RepositoryFeatureReference)value, diagnostics, context);
+			case PersistencePackage.FEATURE_VARIABLE_CONTEXT:
+				return validateFeatureVariableContext((FeatureVariableContext)value, diagnostics, context);
+			case PersistencePackage.FEATURE_VARIABLE:
+				return validateFeatureVariable((FeatureVariable)value, diagnostics, context);
+			case PersistencePackage.ASSOCIATION_VARIABLE:
+				return validateAssociationVariable((AssociationVariable)value, diagnostics, context);
+			case PersistencePackage.ATTRIBUTE_VARIABLE:
+				return validateAttributeVariable((AttributeVariable)value, diagnostics, context);
+			case PersistencePackage.RESOURCE_VARIABLE:
+				return validateResourceVariable((ResourceVariable)value, diagnostics, context);
+			case PersistencePackage.PARAMETER_VARIABLE:
+				return validateParameterVariable((ParameterVariable)value, diagnostics, context);
 			case PersistencePackage.DATABASE_TECHNOLOGIES:
 				return validateDatabaseTechnologies((DatabaseTechnologies)value, diagnostics, context);
 			case PersistencePackage.ORM_TECHNOLOGIES:
@@ -811,6 +839,123 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validatePath(Path path, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(path, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAssociationPathElement(AssociationPathElement associationPathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(associationPathElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAttributePathElement(AttributePathElement attributePathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(attributePathElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateResourcePathElement(ResourcePathElement resourcePathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(resourcePathElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateChildFeature(ChildFeature childFeature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(childFeature, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateChildAssociation(ChildAssociation childAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(childAssociation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateChildAttribute(ChildAttribute childAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(childAttribute, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateChildResource(ChildResource childResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(childResource, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFeatureVariable(FeatureVariable featureVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(featureVariable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAssociationVariable(AssociationVariable associationVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(associationVariable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAttributeVariable(AttributeVariable attributeVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(attributeVariable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateResourceVariable(ResourceVariable resourceVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(resourceVariable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateParameterVariable(ParameterVariable parameterVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(parameterVariable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateRepository(Repository repository, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(repository, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(repository, diagnostics, context);
@@ -842,6 +987,15 @@ public class PersistenceValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(selection, diagnostics, context);
 		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(selection, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSelectionPath(SelectionPath selectionPath, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(selectionPath, diagnostics, context);
 	}
 
 	/**
@@ -895,8 +1049,8 @@ public class PersistenceValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRepositoryFeatureReference(RepositoryFeatureReference repositoryFeatureReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(repositoryFeatureReference, diagnostics, context);
+	public boolean validateFeatureVariableContext(FeatureVariableContext featureVariableContext, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(featureVariableContext, diagnostics, context);
 	}
 
 	/**

@@ -14,5 +14,5 @@ import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
  * @model
  * @generated
  */
-public interface EditStaticTextMenuEntry extends MenuEntry, NamedDisplayElement {
+public interface EditStaticTextMenuEntry extends NamedDisplayElement, MenuEntry {
 } // EditStaticTextMenuEntry

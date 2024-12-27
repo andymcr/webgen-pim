@@ -2,8 +2,10 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 
 /**
@@ -31,7 +33,7 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  * @model abstract="true"
  * @generated
  */
-public interface UnitField extends EObject {
+public interface UnitField extends FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Displayed On</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.DynamicUnit#getDisplayFields <em>Display Fields</em>}'.
@@ -295,5 +297,13 @@ public interface UnitField extends EObject {
 	 * @generated
 	 */
 	void setDisableInput(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 
 } // UnitField

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getModelLabelFeature()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface ModelLabelFeature extends EObject {

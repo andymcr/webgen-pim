@@ -15,6 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -50,8 +51,8 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 			addContainerActionsPlacementPropertyDescriptor(object);
 			addInstanceActionsPlacementPropertyDescriptor(object);
 			addActionNavigationClassPropertyDescriptor(object);
+			addReferencableEntitiesPropertyDescriptor(object);
 			addContentTypePropertyDescriptor(object);
-			addContainingTypePropertyDescriptor(object);
 			addHasWhenFieldsEmptyAddImplicitFieldsPropertyDescriptor(object);
 			addMessageWhenHiddenPropertyDescriptor(object);
 			addHeaderPropertyDescriptor(object);
@@ -134,6 +135,28 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Referencable Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencableEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureVariableContext_referencableEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureVariableContext_referencableEntities_feature", "_UI_FeatureVariableContext_type"),
+				 PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Content Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,28 +175,6 @@ public class DynamicUnitItemProvider extends ContentUnitItemProvider {
 				 false,
 				 null,
 				 getString("_UI_ModelPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Containing Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContainingTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DynamicUnit_containingType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DynamicUnit_containingType_feature", "_UI_DynamicUnit_type"),
-				 WebuiPackage.Literals.DYNAMIC_UNIT__CONTAINING_TYPE,
-				 false,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_DebugPropertyCategory"),
 				 null));
 	}
 

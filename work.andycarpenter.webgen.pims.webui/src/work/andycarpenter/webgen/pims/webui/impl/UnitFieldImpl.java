@@ -2,10 +2,13 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -13,6 +16,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -27,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getHideWhen <em>Hide When</em>}</li>
@@ -42,6 +48,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container implements UnitField {
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
+
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -219,6 +235,27 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.UNIT_FIELD;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -518,6 +555,20 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getDisplayedOn().getContentType() != null) {
+			entities.add(getDisplayedOn().getContentType());
+		}
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -571,6 +622,8 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FIELD__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				return getDisplayedOn();
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
@@ -687,6 +740,8 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FIELD__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case WebuiPackage.UNIT_FIELD__DISPLAYED_ON:
 				return getDisplayedOn() != null;
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:
@@ -709,6 +764,20 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return disableInput != DISABLE_INPUT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.UNIT_FIELD___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

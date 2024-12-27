@@ -2,9 +2,11 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +29,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * @model
  * @generated
  */
-public interface Badge extends EObject {
+public interface Badge extends FeatureVariableContext, ValueContext {
 	/**
 	 * Returns the value of the '<em><b>Displayed On</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getBadges <em>Badges</em>}'.
@@ -92,12 +94,12 @@ public interface Badge extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(FeaturePath)
+	 * @see #setValue(DisplayValue)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getBadge_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FeaturePath getValue();
+	DisplayValue getValue();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Badge#getValue <em>Value</em>}' containment reference.
@@ -107,7 +109,7 @@ public interface Badge extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(FeaturePath value);
+	void setValue(DisplayValue value);
 
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' reference.
@@ -179,5 +181,21 @@ public interface Badge extends EObject {
 	 * @generated
 	 */
 	void setLocalBadgeClass(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> valueEntities();
 
 } // Badge

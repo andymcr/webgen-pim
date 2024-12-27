@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
-            id="work.andycarpenter.webgen.pim2psms.websiteModel">
+            id="work.andycarpenter.webgen.pim2psms">
          <iterate
                ifEmpty="false"
                operator="and">
@@ -34,7 +34,7 @@
                <with
                      variable="activeMenuSelection">
                   <reference
-                        definitionId="work.andycarpenter.webgen.pim2psms.websiteModel">
+                        definitionId="work.andycarpenter.webgen.pim2psms">
                   </reference>
                </with>
             </visibleWhen>
@@ -44,7 +44,7 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            description="Transform website model to JSF and ORM models"
+            description="Transform website model to ORM and WAF models"
             id="work.andycarpenter.webgen.pim2psms.transformation"
             name="transform">
       </command>

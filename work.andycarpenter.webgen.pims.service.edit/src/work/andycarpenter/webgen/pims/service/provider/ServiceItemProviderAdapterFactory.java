@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.base.Callable;
 import work.andycarpenter.webgen.pims.base.ReduceFunction;
 import work.andycarpenter.webgen.pims.base.SizeFunction;
 import work.andycarpenter.webgen.pims.base.util.BaseSwitch;
@@ -47,7 +48,6 @@ import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
 import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
 
 import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 import work.andycarpenter.webgen.pims.persistence.util.PersistenceSwitch;
@@ -355,6 +355,20 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseCallable(Callable object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.CALLABLE__BODY,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->
@@ -707,20 +721,6 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 				return null;
 			}
  
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrder(Order object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ORDER__PATH,
-						 ServiceFactory.eINSTANCE.createConstantReference()));
-
-				return null;
-			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -10,9 +10,11 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
-import work.andycarpenter.webgen.pims.expression.Expression;
-import work.andycarpenter.webgen.pims.expression.Operand;
-import work.andycarpenter.webgen.pims.expression.Variable;
+import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
+import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
+import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
 
@@ -321,72 +323,28 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createResetPasswordUnitAdapter();
 			}
 			@Override
-			public Adapter casePath(Path object) {
-				return createPathAdapter();
+			public Adapter caseValueContext(ValueContext object) {
+				return createValueContextAdapter();
 			}
 			@Override
-			public Adapter casePathAssociation(PathAssociation object) {
-				return createPathAssociationAdapter();
+			public Adapter caseDisplayValue(DisplayValue object) {
+				return createDisplayValueAdapter();
 			}
 			@Override
-			public Adapter casePathAttribute(PathAttribute object) {
-				return createPathAttributeAdapter();
+			public Adapter caseAssociationDisplayValue(AssociationDisplayValue object) {
+				return createAssociationDisplayValueAdapter();
 			}
 			@Override
-			public Adapter casePathResource(PathResource object) {
-				return createPathResourceAdapter();
+			public Adapter caseAttributeDisplayValue(AttributeDisplayValue object) {
+				return createAttributeDisplayValueAdapter();
 			}
 			@Override
-			public Adapter caseChildPath(ChildPath object) {
-				return createChildPathAdapter();
+			public Adapter caseLabelDisplayValue(LabelDisplayValue object) {
+				return createLabelDisplayValueAdapter();
 			}
 			@Override
-			public Adapter caseChildPathAssociation(ChildPathAssociation object) {
-				return createChildPathAssociationAdapter();
-			}
-			@Override
-			public Adapter caseChildPathAttribute(ChildPathAttribute object) {
-				return createChildPathAttributeAdapter();
-			}
-			@Override
-			public Adapter caseChildPathResource(ChildPathResource object) {
-				return createChildPathResourceAdapter();
-			}
-			@Override
-			public Adapter caseFeaturePath(FeaturePath object) {
-				return createFeaturePathAdapter();
-			}
-			@Override
-			public Adapter caseFeaturePathAssociation(FeaturePathAssociation object) {
-				return createFeaturePathAssociationAdapter();
-			}
-			@Override
-			public Adapter caseFeaturePathAttribute(FeaturePathAttribute object) {
-				return createFeaturePathAttributeAdapter();
-			}
-			@Override
-			public Adapter caseFeaturePathLabel(FeaturePathLabel object) {
-				return createFeaturePathLabelAdapter();
-			}
-			@Override
-			public Adapter caseFeaturePathResource(FeaturePathResource object) {
-				return createFeaturePathResourceAdapter();
-			}
-			@Override
-			public Adapter casePathVariable(PathVariable object) {
-				return createPathVariableAdapter();
-			}
-			@Override
-			public Adapter casePathVariableAssociation(PathVariableAssociation object) {
-				return createPathVariableAssociationAdapter();
-			}
-			@Override
-			public Adapter casePathVariableAttribute(PathVariableAttribute object) {
-				return createPathVariableAttributeAdapter();
-			}
-			@Override
-			public Adapter casePathVariableResource(PathVariableResource object) {
-				return createPathVariableResourceAdapter();
+			public Adapter caseResourceDisplayValue(ResourceDisplayValue object) {
+				return createResourceDisplayValueAdapter();
 			}
 			@Override
 			public Adapter caseActionContainer(ActionContainer object) {
@@ -449,20 +407,28 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createNamedDisplayElementAdapter();
 			}
 			@Override
+			public Adapter caseFeatureVariableContext(FeatureVariableContext object) {
+				return createFeatureVariableContextAdapter();
+			}
+			@Override
+			public Adapter casePath(Path object) {
+				return createPathAdapter();
+			}
+			@Override
+			public Adapter caseAssociationPathElement(AssociationPathElement object) {
+				return createAssociationPathElementAdapter();
+			}
+			@Override
 			public Adapter caseSecurityUnit(SecurityUnit object) {
 				return createSecurityUnitAdapter();
 			}
 			@Override
-			public Adapter caseExpression(Expression object) {
-				return createExpressionAdapter();
+			public Adapter caseAttributePathElement(AttributePathElement object) {
+				return createAttributePathElementAdapter();
 			}
 			@Override
-			public Adapter caseOperand(Operand object) {
-				return createOperandAdapter();
-			}
-			@Override
-			public Adapter caseVariable(Variable object) {
-				return createVariableAdapter();
+			public Adapter caseResourcePathElement(ResourcePathElement object) {
+				return createResourcePathElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -947,48 +913,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.Expression
-	 * @generated
-	 */
-	public Adapter createExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Operand <em>Operand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.Operand
-	 * @generated
-	 */
-	public Adapter createOperandAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.Variable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.expression.Variable
-	 * @generated
-	 */
-	public Adapter createVariableAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.security.SecurityUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1003,170 +927,30 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute <em>Child Path Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AttributePathElement <em>Attribute Path Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAttribute
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributePathElement
 	 * @generated
 	 */
-	public Adapter createChildPathAttributeAdapter() {
+	public Adapter createAttributePathElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPathResource <em>Child Path Resource</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement <em>Resource Path Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathResource
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement
 	 * @generated
 	 */
-	public Adapter createChildPathResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation <em>Child Path Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPathAssociation
-	 * @generated
-	 */
-	public Adapter createChildPathAssociationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePath <em>Feature Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePath
-	 * @generated
-	 */
-	public Adapter createFeaturePathAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute <em>Feature Path Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAttribute
-	 * @generated
-	 */
-	public Adapter createFeaturePathAttributeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel <em>Feature Path Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathLabel
-	 * @generated
-	 */
-	public Adapter createFeaturePathLabelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathResource <em>Feature Path Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathResource
-	 * @generated
-	 */
-	public Adapter createFeaturePathResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariable <em>Path Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathVariable
-	 * @generated
-	 */
-	public Adapter createPathVariableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariableAssociation <em>Path Variable Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathVariableAssociation
-	 * @generated
-	 */
-	public Adapter createPathVariableAssociationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariableAttribute <em>Path Variable Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathVariableAttribute
-	 * @generated
-	 */
-	public Adapter createPathVariableAttributeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathVariableResource <em>Path Variable Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathVariableResource
-	 * @generated
-	 */
-	public Adapter createPathVariableResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation <em>Feature Path Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.FeaturePathAssociation
-	 * @generated
-	 */
-	public Adapter createFeaturePathAssociationAdapter() {
+	public Adapter createResourcePathElementAdapter() {
 		return null;
 	}
 
@@ -1507,72 +1291,86 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.Path <em>Path</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ValueContext <em>Value Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.Path
+	 * @see work.andycarpenter.webgen.pims.webui.ValueContext
 	 * @generated
 	 */
-	public Adapter createPathAdapter() {
+	public Adapter createValueContextAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathAssociation <em>Path Association</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DisplayValue <em>Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathAssociation
+	 * @see work.andycarpenter.webgen.pims.webui.DisplayValue
 	 * @generated
 	 */
-	public Adapter createPathAssociationAdapter() {
+	public Adapter createDisplayValueAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathAttribute <em>Path Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.AssociationDisplayValue <em>Association Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathAttribute
+	 * @see work.andycarpenter.webgen.pims.webui.AssociationDisplayValue
 	 * @generated
 	 */
-	public Adapter createPathAttributeAdapter() {
+	public Adapter createAssociationDisplayValueAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.PathResource <em>Path Resource</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.AttributeDisplayValue <em>Attribute Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.PathResource
+	 * @see work.andycarpenter.webgen.pims.webui.AttributeDisplayValue
 	 * @generated
 	 */
-	public Adapter createPathResourceAdapter() {
+	public Adapter createAttributeDisplayValueAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChildPath <em>Child Path</em>}'.
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.LabelDisplayValue <em>Label Display Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ChildPath
+	 * @see work.andycarpenter.webgen.pims.webui.LabelDisplayValue
 	 * @generated
 	 */
-	public Adapter createChildPathAdapter() {
+	public Adapter createLabelDisplayValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ResourceDisplayValue <em>Resource Display Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ResourceDisplayValue
+	 * @generated
+	 */
+	public Adapter createResourceDisplayValueAdapter() {
 		return null;
 	}
 
@@ -1769,6 +1567,48 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedDisplayElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext <em>Feature Variable Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext
+	 * @generated
+	 */
+	public Adapter createFeatureVariableContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path
+	 * @generated
+	 */
+	public Adapter createPathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement <em>Association Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement
+	 * @generated
+	 */
+	public Adapter createAssociationPathElementAdapter() {
 		return null;
 	}
 

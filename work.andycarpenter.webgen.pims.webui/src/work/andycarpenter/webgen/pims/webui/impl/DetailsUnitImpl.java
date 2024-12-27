@@ -3,10 +3,14 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.DetailsUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -73,6 +77,29 @@ public class DetailsUnitImpl extends SingletonUnitImpl implements DetailsUnit {
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.DETAILS_UNIT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getContentType() != null) {
+			if (getSelection() == null) {
+				entities.add(getContentType());
+			} else {
+				if (getSelection().getSelectPath() == null) {
+					entities.add(getContentType());
+				} else {
+					entities.add(getSelection().getSelectPath().leafEntity());
+				}
+			}
+		}
+
+		return entities;
 	}
 
 	/**

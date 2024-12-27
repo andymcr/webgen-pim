@@ -1,12 +1,13 @@
 -- @atlcompiler emftvm 
 --
--- @path Website=/uk.ac.man.cs.mdsd.webgen.model/model/website.ecore
--- @path ORM=/uk.ac.man.cs.mdsd.orm.model/model/orm.ecore
+-- @path Website=/work.andycarpenter.webgen.pims.webui/model/website.ecore
+-- @path ORM=/work.andycarpenter.metamodel.orm/model/orm.xcore
 
 module PersistenceRepositoryExpression;
 create orm : ORM from website : Website;
 
-helper context Website!Expression def: isPresistenceRepositoryExpression() : Boolean
+
+helper context Website!Expression def: isRepositoryExpression() : Boolean
 	= if self.rootContainer.oclIsUndefined() then
 			false
 		else if self.rootContainer.oclIsKindOf(Website!Selection) then
@@ -19,9 +20,27 @@ helper context Website!Expression def: isPresistenceRepositoryExpression() : Boo
 			false
 		endif endif endif endif;
 
+helper context Website!ChildFeature def: isRepositoryExpression() : Boolean
+	= self.parent.isRepositoryExpression();
+
+helper context Website!DisplayValue def: isRepositoryExpression() : Boolean
+	= false;
+
+helper context Website!ModelLabelFeature def: isRepositoryExpression() : Boolean
+	= false;
+
+helper context Website!ParameterReference def: isRepositoryExpression() : Boolean
+	= false;
+
+helper context Website!SelectionPath def: isRepositoryExpression() : Boolean
+	= true;
+
+helper context Website!UnitAssociation def: isRepositoryExpression() : Boolean
+	= false;
+
 
 abstract rule Expression {
-	from website : Website!Expression (website.isPresistenceRepositoryExpression())
+	from website : Website!Expression (website.isRepositoryExpression())
 	to orm : ORM!Expression (
 	)
 }
@@ -29,7 +48,7 @@ abstract rule Expression {
 
 -- @extends Expression
 abstract rule Operand {
-	from website : Website!Operand (website.isPresistenceRepositoryExpression())
+	from website : Website!Operand (website.isRepositoryExpression())
 	to orm : ORM!Operand (
 	)
 }
@@ -37,21 +56,21 @@ abstract rule Operand {
 
 -- @extends Operand
 abstract rule Literal {
-	from website : Website!Literal (website.isPresistenceRepositoryExpression())
+	from website : Website!Literal (website.isRepositoryExpression())
 	to orm : ORM!Literal (
 	)
 }
 
 -- @extends Literal
 rule NullLiteral {
-	from website : Website!NullLiteral (website.isPresistenceRepositoryExpression())
+	from website : Website!NullLiteral (website.isRepositoryExpression())
 	to orm : ORM!NullLiteral (
 	)
 }
 
 -- @extends Literal
 rule BooleanLiteral {
-	from website : Website!BooleanLiteral (website.isPresistenceRepositoryExpression())
+	from website : Website!BooleanLiteral (website.isRepositoryExpression())
 	to orm : ORM!BooleanLiteral (
 		value <- website.value
 	)
@@ -59,7 +78,7 @@ rule BooleanLiteral {
 
 -- @extends Literal
 rule IntegerLiteral {
-	from website : Website!IntegerLiteral (website.isPresistenceRepositoryExpression())
+	from website : Website!IntegerLiteral (website.isRepositoryExpression())
 	to orm : ORM!IntegerLiteral (
 		value <- website.value
 	)
@@ -67,7 +86,7 @@ rule IntegerLiteral {
 
 -- @extends Literal
 rule StringLiteral {
-	from website : Website!StringLiteral (website.isPresistenceRepositoryExpression())
+	from website : Website!StringLiteral (website.isRepositoryExpression())
 	to orm : ORM!StringLiteral (
 		value <- website.value
 	)
@@ -75,38 +94,195 @@ rule StringLiteral {
 
 -- @extends Literal
 rule TimeLiteral {
-	from website : Website!TimeLiteral (website.isPresistenceRepositoryExpression())
+	from website : Website!TimeLiteral (website.isRepositoryExpression())
 	to orm : ORM!TimeLiteral (
 		value <- website.value
 	)
 }
 
 
+abstract rule Path {
+	from website : Website!Path (website.isRepositoryExpression())
+	to orm : ORM!Path (
+	)
+}
+
+-- @extends Path
+abstract rule AssociationPathElement {
+	from website : Website!AssociationPathElement (website.isRepositoryExpression())
+	to orm : ORM!AssociationPathElement (
+		assoication <- 
+			if website.association.oclIsUndefined() then
+				OclUndefined
+			else 
+				website.associationSource.findOrmEntity()
+					.getOrmFeature(website.sourceName())
+			endif,
+		valueDisplay <-
+			if website.valueDisplay.oclIsUndefined() then
+				OclUndefined
+			else
+				website.valueDisplay.findOrmLabel()
+			endif,
+		childFeature <- website.childFeature
+	)
+}
+
+-- @extends Path
+abstract rule AttributePathElement {
+	from website : Website!AttributePathElement (website.isRepositoryExpression())
+	to orm : ORM!AttributePathElement (
+		attribute <- 
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmFeature()
+			endif
+	)
+}
+
+-- @extends Path
+abstract rule ResourcePathElement {
+	from website : Website!ResourcePathElement (website.isRepositoryExpression())
+	to orm : ORM!ResourcePathElement (
+		resource <- 
+			if website.resource.oclIsUndefined() then
+				OclUndefined
+			else
+				website.resource.findOrmFeature()
+			endif
+	)
+}
+
+abstract rule ChildFeature {
+	from website : Website!ChildFeature (website.isRepositoryExpression())
+	to orm : ORM!ChildFeature (
+	)
+}
+
+-- extends AssociationPathElement, ChildFeature
+rule ChildAssociation {
+	from website : Website!ChildAssociation (website.isRepositoryExpression())
+	to orm : ORM!ChildAssociation (
+		association <- 
+			if website.association.oclIsUndefined() then
+				OclUndefined
+			else 
+				website.associationSource.findOrmEntity()
+					.getOrmFeature(website.sourceName())
+			endif,
+		valueDisplay <-
+			if website.valueDisplay.oclIsUndefined() then
+				OclUndefined
+			else
+				website.valueDisplay.findOrmLabel()
+			endif,
+		childFeature <- website.childFeature
+	)
+}
+
+-- extends AttributePathElement, ChildFeature
+rule ChildAttribute {
+	from website : Website!ChildAttribute (website.isRepositoryExpression())
+	to orm : ORM!ChildAttribute (
+	)
+}
+
+-- @extends ResourcePathElement, ChildFeature
+rule ChildResource {
+	from website : Website!ChildResource (website.isRepositoryExpression())
+	to orm : ORM!ChildResource (
+	)
+}
+
+
 -- @extends Operand
 abstract rule Variable {
-	from website : Website!Variable (website.isPresistenceRepositoryExpression())
+	from website : Website!Variable (website.isRepositoryExpression())
 	to waf : ORM!Variable (
 	)
 }
 
--- @ extends Variable
+-- extends Variable
 rule CurrentTime {
-	from website : Website!CurrentTime (website.isPresistenceRepositoryExpression())
+	from website : Website!CurrentTime (website.isRepositoryExpression())
 	to orm : ORM!CurrentTime (
 	)
 }
 
--- @ extends Variable
+-- extends Variable
 rule CurrentUser {
-	from website : Website!CurrentUser (website.isPresistenceRepositoryExpression())
+	from website : Website!CurrentUser (website.isRepositoryExpression())
 	to orm : ORM!CurrentUser (
+	)
+}
+
+-- extends Variable
+abstract rule FeatureVariable {
+	from website : Website!FeatureVariable (website.isRepositoryExpression())
+	to orm : ORM!FeatureVariable (
+	)
+}
+
+-- extends AssociationPathElement, FeatureVariable
+rule AssociationVariable {
+	from website : Website!AssociationVariable (website.isRepositoryExpression())
+	to orm : ORM!AssociationVariable (
+		association <-
+			if website.association.oclIsUndefined() then
+				OclUndefined
+			else 
+				website.associationSource.findOrmEntity()
+					.getOrmFeature(website.sourceName())
+			endif,
+		valueDisplay <-
+			if website.valueDisplay.oclIsUndefined() then
+				OclUndefined
+			else
+				website.valueDisplay.findOrmLabel()
+			endif,
+		childFeature <- website.childFeature
+	)
+}
+
+-- extends AttributePathElement, FeatureVariable
+rule AttributeVariable {
+	from website : Website!AttributeVariable (website.isRepositoryExpression())
+	to waf : ORM!AttributeVariable (
+		attribute <- 
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmFeature()
+			endif
+	)
+}
+
+-- @extends ResourcePathElement, FeatureVariable
+rule ResourceVariable {
+	from website : Website!ResourceVariable (website.isRepositoryExpression())
+	to orm : ORM!ResourceVariable (
+		resource <- 
+			if website.resource.oclIsUndefined() then
+				OclUndefined
+			else
+				website.resource.findOrmRFeature()
+			endif
+	)
+}
+
+-- extends Variable
+rule ParameterVariable {
+	from website : Website!ParameterVariable (website.isRepositoryExpression())
+	to orm : ORM!ParameterVariable (
+		formal <- website.formal
 	)
 }
 
 
 -- @extends Operand
 rule SizeFunction {
-	from website : Website!SizeFunction (website.isPresistenceRepositoryExpression())
+	from website : Website!SizeFunction (website.isRepositoryExpression())
 	to orm : ORM!SizeFunction (
 		value <- website.value
 	)
@@ -123,7 +299,7 @@ abstract rule Predicate {
 
 -- @extends Predicate
 rule PredicateBooleanVariable {
-	from website : Website!PredicateBooleanVariable (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateBooleanVariable (website.isRepositoryExpression())
 	to orm : ORM!PredicateBooleanVariable (
 		feature <- website.feature
 	)
@@ -131,7 +307,7 @@ rule PredicateBooleanVariable {
 
 -- @extends Predicate
 rule PredicateBooleanOperator {
-	from website : Website!PredicateBooleanOperator (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateBooleanOperator (website.isRepositoryExpression())
 	to orm : ORM!PredicateBooleanOperator (
 		predicates <- website.predicates,
 		operator <- website.operator
@@ -140,7 +316,7 @@ rule PredicateBooleanOperator {
 
 -- @extends Predicate
 rule PredicateEqualityOperator {
-	from website : Website!PredicateEqualityOperator (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateEqualityOperator (website.isRepositoryExpression())
 	to orm : ORM!PredicateEqualityOperator (
 		left <- website.left,
 		right <- website.right
@@ -149,7 +325,7 @@ rule PredicateEqualityOperator {
 
 -- @extends Predicate
 rule PredicateComparisonOperator {
-	from website : Website!PredicateComparisonOperator (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateComparisonOperator (website.isRepositoryExpression())
 	to orm : ORM!PredicateComparisonOperator (
 		left <- website.left,
 		operator <- website.operator,
@@ -159,7 +335,7 @@ rule PredicateComparisonOperator {
 
 -- @extends Predicate
 rule PredicateLikeOperator {
-	from website : Website!PredicateLikeOperator (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateLikeOperator (website.isRepositoryExpression())
 	to orm : ORM!PredicateLikeOperator (
 		left <- website.left,
 		right <- website.right
@@ -168,7 +344,7 @@ rule PredicateLikeOperator {
 
 -- @extends Predicate
 rule PredicateIsNullOperator {
-	from website : Website!PredicateIsNull (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateIsNull (website.isRepositoryExpression())
 	to orm : ORM!PredicateIsNull (
 		value <- website.value
 	)
@@ -176,7 +352,7 @@ rule PredicateIsNullOperator {
 
 -- @extends Predicate
 rule PredicateIsEmptyOperator {
-	from website : Website!PredicateIsEmpty (website.isPresistenceRepositoryExpression())
+	from website : Website!PredicateIsEmpty (website.isRepositoryExpression())
 	to orm : ORM!PredicateIsEmpty (
 		value <- website.value
 	)
@@ -185,7 +361,7 @@ rule PredicateIsEmptyOperator {
 
 -- @extends Expression
 rule ArithmeticOperation {
-	from website : Website!ArithmeticOperation (website.isPresistenceRepositoryExpression())
+	from website : Website!ArithmeticOperation (website.isRepositoryExpression())
 	to waf : ORM!ArithmeticOperation (
 		operands <- website.operands,
 		operator <- website.operator

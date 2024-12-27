@@ -23,8 +23,7 @@ abstract rule Expression {
 }
 
 
--- @extends Expression
-abstract rule Operand {
+abstract rule Operand extends Expression {
 	from website : Website!Operand (website.isPresistenceFeatureExpression())
 	to orm : ORM!Operand (
 	)

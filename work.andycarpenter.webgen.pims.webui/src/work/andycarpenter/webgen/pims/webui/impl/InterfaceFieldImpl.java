@@ -2,16 +2,22 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -27,6 +33,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDisplayedOn <em>Displayed On</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getHideWhen <em>Hide When</em>}</li>
@@ -51,6 +58,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl implements InterfaceField {
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
+
 	/**
 	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -408,6 +425,27 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.INTERFACE_FIELD;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -894,6 +932,18 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 */
 	@Override
+	public EList<Entity> referencableEntities() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getValidationPattern() {
 		return validationPattern;
 	}
@@ -967,6 +1017,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.INTERFACE_FIELD__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON:
 				return getDisplayedOn();
 			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
@@ -1155,6 +1207,8 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.INTERFACE_FIELD__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON:
 				return getDisplayedOn() != null;
 			case WebuiPackage.INTERFACE_FIELD__AUTHORISATION:
@@ -1204,6 +1258,12 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.INTERFACE_FIELD__REFERENCABLE_ENTITIES: return PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		if (baseClass == UnitField.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON: return WebuiPackage.UNIT_FIELD__DISPLAYED_ON;
@@ -1229,6 +1289,12 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES: return WebuiPackage.INTERFACE_FIELD__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		if (baseClass == UnitField.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.UNIT_FIELD__DISPLAYED_ON: return WebuiPackage.INTERFACE_FIELD__DISPLAYED_ON;
@@ -1245,6 +1311,42 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES: return WebuiPackage.INTERFACE_FIELD___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		if (baseClass == UnitField.class) {
+			switch (baseOperationID) {
+				case WebuiPackage.UNIT_FIELD___REFERENCABLE_ENTITIES: return WebuiPackage.INTERFACE_FIELD___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.INTERFACE_FIELD___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

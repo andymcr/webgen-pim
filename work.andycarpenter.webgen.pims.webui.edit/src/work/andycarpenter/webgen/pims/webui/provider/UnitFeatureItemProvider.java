@@ -588,21 +588,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
 				 BaseFactory.eINSTANCE.createNullLiteral()));
 
 		newChildDescriptors.add
@@ -708,7 +693,22 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_FEATURE__FORCED_VALUE,
+				 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

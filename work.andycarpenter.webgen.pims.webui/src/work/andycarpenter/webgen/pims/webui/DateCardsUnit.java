@@ -19,7 +19,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface DateCardsUnit extends CardsUnit {
+public interface DateCardsUnit extends CardsUnit, ValueContext {
 	/**
 	 * Returns the value of the '<em><b>Element Date</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -29,12 +29,12 @@ public interface DateCardsUnit extends CardsUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Date</em>' containment reference.
-	 * @see #setElementDate(FeaturePath)
+	 * @see #setElementDate(DisplayValue)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getDateCardsUnit_ElementDate()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	FeaturePath getElementDate();
+	DisplayValue getElementDate();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.DateCardsUnit#getElementDate <em>Element Date</em>}' containment reference.
@@ -44,6 +44,6 @@ public interface DateCardsUnit extends CardsUnit {
 	 * @see #getElementDate()
 	 * @generated
 	 */
-	void setElementDate(FeaturePath value);
+	void setElementDate(DisplayValue value);
 
 } // DateCardsUnit

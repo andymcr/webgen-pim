@@ -2,21 +2,24 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Association;
+import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.ChildFeature;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
+import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Selection;
-import work.andycarpenter.webgen.pims.webui.ChildPath;
-import work.andycarpenter.webgen.pims.webui.Path;
-import work.andycarpenter.webgen.pims.webui.PathAssociation;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -28,14 +31,11 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isIsSourceAssociation <em>Is Source Association</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getSourceEntity <em>Source Entity</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getTargetEntity <em>Target Entity</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociationSource <em>Association Source</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociationTarget <em>Association Target</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getCollectionSortBy <em>Collection Sort By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isUseAutocomplete <em>Use Autocomplete</em>}</li>
@@ -45,16 +45,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  */
 public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociation {
 	/**
-	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainingType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.PATH__CONTAINING_TYPE).getSettingDelegate();
-
-	/**
 	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,16 +53,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @ordered
 	 */
 	protected Association association;
-
-	/**
-	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.PATH_ASSOCIATION__NAME).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getValueDisplay() <em>Value Display</em>}' reference.
@@ -92,37 +72,27 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 * @ordered
 	 */
-	protected ChildPath childFeature;
+	protected ChildFeature childFeature;
 
 	/**
-	 * The cached setting delegate for the '{@link #isIsSourceAssociation() <em>Is Source Association</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getAssociationSource() <em>Association Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsSourceAssociation()
+	 * @see #getAssociationSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate ASSOCIATION_SOURCE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE).getSettingDelegate();
 
 	/**
-	 * The cached setting delegate for the '{@link #getSourceEntity() <em>Source Entity</em>}' reference.
+	 * The cached setting delegate for the '{@link #getAssociationTarget() <em>Association Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSourceEntity()
+	 * @see #getAssociationTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate SOURCE_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.PATH_ASSOCIATION__SOURCE_ENTITY).getSettingDelegate();
-
-	/**
-	 * The cached setting delegate for the '{@link #getTargetEntity() <em>Target Entity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetEntity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate TARGET_ENTITY__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.PATH_ASSOCIATION__TARGET_ENTITY).getSettingDelegate();
+	protected EStructuralFeature.Internal.SettingDelegate ASSOCIATION_TARGET__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getOptions() <em>Options</em>}' reference.
@@ -189,46 +159,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		NAME__ESETTING_DELEGATE.dynamicSet(this, null, 0, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetName() {
-		NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetName() {
-		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject)association;
@@ -266,28 +196,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	public ModelLabel getValueDisplay() {
-		if (valueDisplay != null && valueDisplay.eIsProxy()) {
-			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
-			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
-			if (valueDisplay != oldValueDisplay) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
-			}
-		}
-		return valueDisplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelLabel basicGetValueDisplay() {
-		return valueDisplay;
+	public Entity contextEntity() {
+		return getDisplayedOn().getContentType();
 	}
 
 	/**
@@ -296,20 +209,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public void setValueDisplay(ModelLabel newValueDisplay) {
-		ModelLabel oldValueDisplay = valueDisplay;
-		valueDisplay = newValueDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ChildPath getChildFeature() {
+	public ChildFeature getChildFeature() {
 		return childFeature;
 	}
 
@@ -318,8 +218,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetChildFeature(ChildPath newChildFeature, NotificationChain msgs) {
-		ChildPath oldChildFeature = childFeature;
+	public NotificationChain basicSetChildFeature(ChildFeature newChildFeature, NotificationChain msgs) {
+		ChildFeature oldChildFeature = childFeature;
 		childFeature = newChildFeature;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE, oldChildFeature, newChildFeature);
@@ -334,13 +234,13 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public void setChildFeature(ChildPath newChildFeature) {
+	public void setChildFeature(ChildFeature newChildFeature) {
 		if (newChildFeature != childFeature) {
 			NotificationChain msgs = null;
 			if (childFeature != null)
-				msgs = ((InternalEObject)childFeature).eInverseRemove(this, WebuiPackage.CHILD_PATH__PARENT, ChildPath.class, msgs);
+				msgs = ((InternalEObject)childFeature).eInverseRemove(this, PersistencePackage.CHILD_FEATURE__PARENT, ChildFeature.class, msgs);
 			if (newChildFeature != null)
-				msgs = ((InternalEObject)newChildFeature).eInverseAdd(this, WebuiPackage.CHILD_PATH__PARENT, ChildPath.class, msgs);
+				msgs = ((InternalEObject)newChildFeature).eInverseAdd(this, PersistencePackage.CHILD_FEATURE__PARENT, ChildFeature.class, msgs);
 			msgs = basicSetChildFeature(newChildFeature, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -354,8 +254,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public Entity getContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getAssociationSource() {
+		return (Entity)ASSOCIATION_SOURCE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -363,18 +263,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isIsSourceAssociation() {
-		return (Boolean)IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity basicGetAssociationSource() {
+		return (Entity)ASSOCIATION_SOURCE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -383,17 +273,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public Entity getSourceEntity() {
-		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetSourceEntity() {
-		return (Entity)SOURCE_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public boolean isSetAssociationSource() {
+		return ASSOCIATION_SOURCE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -402,8 +283,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated
 	 */
 	@Override
-	public Entity getTargetEntity() {
-		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	public Entity getAssociationTarget() {
+		return (Entity)ASSOCIATION_TARGET__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -411,8 +292,18 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetTargetEntity() {
-		return (Entity)TARGET_ENTITY__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public Entity basicGetAssociationTarget() {
+		return (Entity)ASSOCIATION_TARGET__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetAssociationTarget() {
+		return ASSOCIATION_TARGET__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -453,6 +344,46 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 		options = newOptions;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__OPTIONS, oldOptions, options));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ModelLabel getValueDisplay() {
+		if (valueDisplay != null && valueDisplay.eIsProxy()) {
+			InternalEObject oldValueDisplay = (InternalEObject)valueDisplay;
+			valueDisplay = (ModelLabel)eResolveProxy(oldValueDisplay);
+			if (valueDisplay != oldValueDisplay) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
+			}
+		}
+		return valueDisplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelLabel basicGetValueDisplay() {
+		return valueDisplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setValueDisplay(ModelLabel newValueDisplay) {
+		ModelLabel oldValueDisplay = valueDisplay;
+		valueDisplay = newValueDisplay;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY, oldValueDisplay, valueDisplay));
 	}
 
 	/**
@@ -521,6 +452,64 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String name() {
+		if (getAssociation() == null) {
+			return "";
+		} else {
+			if (isSourceAssociation()) {
+				return getAssociation().getName();
+			} else {
+				if (getAssociation().getTargetFeatureName() == "") {
+					return "inv" + getAssociation().getName();
+				} else {
+					return getAssociation().getTargetFeatureName();
+				}
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean isSourceAssociation() {
+		if (getAssociation() == null || contextEntity() == null) {
+			return true;
+		} else {
+			return contextEntity().getAssociations().contains(getAssociation());
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public Entity leafEntity() {
+		if (getAssociation() == null) {
+			return null;
+		} else {
+			if (getChildFeature() == null) {
+				return getAssociationTarget();
+			} else {
+				if (getChildFeature() instanceof AssociationPathElement) {
+					return ((AssociationPathElement) getChildFeature()).leafEntity();
+				} else {
+					return getAssociationTarget();
+				}
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -529,7 +518,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				if (childFeature != null)
 					msgs = ((InternalEObject)childFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE, null, msgs);
-				return basicSetChildFeature((ChildPath)otherEnd, msgs);
+				return basicSetChildFeature((ChildFeature)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -556,27 +545,20 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE:
-				if (resolve) return getContainingType();
-				return basicGetContainingType();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				if (resolve) return getAssociation();
 				return basicGetAssociation();
-			case WebuiPackage.UNIT_ASSOCIATION__NAME:
-				return getName();
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				if (resolve) return getValueDisplay();
 				return basicGetValueDisplay();
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return getChildFeature();
-			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
-				return isIsSourceAssociation();
-			case WebuiPackage.UNIT_ASSOCIATION__SOURCE_ENTITY:
-				if (resolve) return getSourceEntity();
-				return basicGetSourceEntity();
-			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
-				if (resolve) return getTargetEntity();
-				return basicGetTargetEntity();
+			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE:
+				if (resolve) return getAssociationSource();
+				return basicGetAssociationSource();
+			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET:
+				if (resolve) return getAssociationTarget();
+				return basicGetAssociationTarget();
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				if (resolve) return getOptions();
 				return basicGetOptions();
@@ -600,14 +582,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)newValue);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__NAME:
-				setName((String)newValue);
-				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildPath)newValue);
+				setChildFeature((ChildFeature)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)newValue);
@@ -633,14 +612,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)null);
 				return;
-			case WebuiPackage.UNIT_ASSOCIATION__NAME:
-				unsetName();
-				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildPath)null);
+				setChildFeature((ChildFeature)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)null);
@@ -663,22 +639,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE:
-				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				return association != null;
-			case WebuiPackage.UNIT_ASSOCIATION__NAME:
-				return isSetName();
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				return valueDisplay != null;
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return childFeature != null;
-			case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION:
-				return IS_SOURCE_ASSOCIATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.UNIT_ASSOCIATION__SOURCE_ENTITY:
-				return SOURCE_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
-			case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY:
-				return TARGET_ENTITY__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE:
+				return isSetAssociationSource();
+			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET:
+				return isSetAssociationTarget();
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				return options != null;
 			case WebuiPackage.UNIT_ASSOCIATION__COLLECTION_SORT_BY:
@@ -698,19 +668,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Path.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE: return WebuiPackage.PATH__CONTAINING_TYPE;
 				default: return -1;
 			}
 		}
-		if (baseClass == PathAssociation.class) {
+		if (baseClass == AssociationPathElement.class) {
 			switch (derivedFeatureID) {
-				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION: return WebuiPackage.PATH_ASSOCIATION__ASSOCIATION;
-				case WebuiPackage.UNIT_ASSOCIATION__NAME: return WebuiPackage.PATH_ASSOCIATION__NAME;
-				case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY: return WebuiPackage.PATH_ASSOCIATION__VALUE_DISPLAY;
-				case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE: return WebuiPackage.PATH_ASSOCIATION__CHILD_FEATURE;
-				case WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION: return WebuiPackage.PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION;
-				case WebuiPackage.UNIT_ASSOCIATION__SOURCE_ENTITY: return WebuiPackage.PATH_ASSOCIATION__SOURCE_ENTITY;
-				case WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY: return WebuiPackage.PATH_ASSOCIATION__TARGET_ENTITY;
+				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
+				case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
+				case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
+				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
+				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
 				default: return -1;
 			}
 		}
@@ -726,23 +693,65 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Path.class) {
 			switch (baseFeatureID) {
-				case WebuiPackage.PATH__CONTAINING_TYPE: return WebuiPackage.UNIT_ASSOCIATION__CONTAINING_TYPE;
 				default: return -1;
 			}
 		}
-		if (baseClass == PathAssociation.class) {
+		if (baseClass == AssociationPathElement.class) {
 			switch (baseFeatureID) {
-				case WebuiPackage.PATH_ASSOCIATION__ASSOCIATION: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION;
-				case WebuiPackage.PATH_ASSOCIATION__NAME: return WebuiPackage.UNIT_ASSOCIATION__NAME;
-				case WebuiPackage.PATH_ASSOCIATION__VALUE_DISPLAY: return WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY;
-				case WebuiPackage.PATH_ASSOCIATION__CHILD_FEATURE: return WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE;
-				case WebuiPackage.PATH_ASSOCIATION__IS_SOURCE_ASSOCIATION: return WebuiPackage.UNIT_ASSOCIATION__IS_SOURCE_ASSOCIATION;
-				case WebuiPackage.PATH_ASSOCIATION__SOURCE_ENTITY: return WebuiPackage.UNIT_ASSOCIATION__SOURCE_ENTITY;
-				case WebuiPackage.PATH_ASSOCIATION__TARGET_ENTITY: return WebuiPackage.UNIT_ASSOCIATION__TARGET_ENTITY;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY: return WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE: return WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.PATH___CONTEXT_ENTITY: return WebuiPackage.UNIT_ASSOCIATION___CONTEXT_ENTITY;
+				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_ASSOCIATION___NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == AssociationPathElement.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT___NAME: return WebuiPackage.UNIT_ASSOCIATION___NAME;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION: return WebuiPackage.UNIT_ASSOCIATION___IS_SOURCE_ASSOCIATION;
+				case PersistencePackage.ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY: return WebuiPackage.UNIT_ASSOCIATION___LEAF_ENTITY;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.UNIT_ASSOCIATION___NAME:
+				return name();
+			case WebuiPackage.UNIT_ASSOCIATION___IS_SOURCE_ASSOCIATION:
+				return isSourceAssociation();
+			case WebuiPackage.UNIT_ASSOCIATION___LEAF_ENTITY:
+				return leafEntity();
+			case WebuiPackage.UNIT_ASSOCIATION___CONTEXT_ENTITY:
+				return contextEntity();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

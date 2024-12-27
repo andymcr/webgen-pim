@@ -218,40 +218,18 @@ public class WebuiValidator extends EObjectValidator {
 				return validateForgottenPasswordUnit((ForgottenPasswordUnit)value, diagnostics, context);
 			case WebuiPackage.RESET_PASSWORD_UNIT:
 				return validateResetPasswordUnit((ResetPasswordUnit)value, diagnostics, context);
-			case WebuiPackage.PATH:
-				return validatePath((Path)value, diagnostics, context);
-			case WebuiPackage.PATH_ASSOCIATION:
-				return validatePathAssociation((PathAssociation)value, diagnostics, context);
-			case WebuiPackage.PATH_ATTRIBUTE:
-				return validatePathAttribute((PathAttribute)value, diagnostics, context);
-			case WebuiPackage.PATH_RESOURCE:
-				return validatePathResource((PathResource)value, diagnostics, context);
-			case WebuiPackage.CHILD_PATH:
-				return validateChildPath((ChildPath)value, diagnostics, context);
-			case WebuiPackage.CHILD_PATH_ASSOCIATION:
-				return validateChildPathAssociation((ChildPathAssociation)value, diagnostics, context);
-			case WebuiPackage.CHILD_PATH_ATTRIBUTE:
-				return validateChildPathAttribute((ChildPathAttribute)value, diagnostics, context);
-			case WebuiPackage.CHILD_PATH_RESOURCE:
-				return validateChildPathResource((ChildPathResource)value, diagnostics, context);
-			case WebuiPackage.FEATURE_PATH:
-				return validateFeaturePath((FeaturePath)value, diagnostics, context);
-			case WebuiPackage.FEATURE_PATH_ASSOCIATION:
-				return validateFeaturePathAssociation((FeaturePathAssociation)value, diagnostics, context);
-			case WebuiPackage.FEATURE_PATH_ATTRIBUTE:
-				return validateFeaturePathAttribute((FeaturePathAttribute)value, diagnostics, context);
-			case WebuiPackage.FEATURE_PATH_LABEL:
-				return validateFeaturePathLabel((FeaturePathLabel)value, diagnostics, context);
-			case WebuiPackage.FEATURE_PATH_RESOURCE:
-				return validateFeaturePathResource((FeaturePathResource)value, diagnostics, context);
-			case WebuiPackage.PATH_VARIABLE:
-				return validatePathVariable((PathVariable)value, diagnostics, context);
-			case WebuiPackage.PATH_VARIABLE_ASSOCIATION:
-				return validatePathVariableAssociation((PathVariableAssociation)value, diagnostics, context);
-			case WebuiPackage.PATH_VARIABLE_ATTRIBUTE:
-				return validatePathVariableAttribute((PathVariableAttribute)value, diagnostics, context);
-			case WebuiPackage.PATH_VARIABLE_RESOURCE:
-				return validatePathVariableResource((PathVariableResource)value, diagnostics, context);
+			case WebuiPackage.VALUE_CONTEXT:
+				return validateValueContext((ValueContext)value, diagnostics, context);
+			case WebuiPackage.DISPLAY_VALUE:
+				return validateDisplayValue((DisplayValue)value, diagnostics, context);
+			case WebuiPackage.ASSOCIATION_DISPLAY_VALUE:
+				return validateAssociationDisplayValue((AssociationDisplayValue)value, diagnostics, context);
+			case WebuiPackage.ATTRIBUTE_DISPLAY_VALUE:
+				return validateAttributeDisplayValue((AttributeDisplayValue)value, diagnostics, context);
+			case WebuiPackage.LABEL_DISPLAY_VALUE:
+				return validateLabelDisplayValue((LabelDisplayValue)value, diagnostics, context);
+			case WebuiPackage.RESOURCE_DISPLAY_VALUE:
+				return validateResourceDisplayValue((ResourceDisplayValue)value, diagnostics, context);
 			case WebuiPackage.ACTION_CONTAINER:
 				return validateActionContainer((ActionContainer)value, diagnostics, context);
 			case WebuiPackage.ACTION:
@@ -969,9 +947,9 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() implies\n" +
+	protected static final String UNIT_ASSOCIATION__OPTIONS_VALID_CHOICE__EEXPRESSION = "not options.oclIsUndefined() and not association.oclIsUndefined() implies\n" +
 		"\tdisplayedOn.controller.webUI.persistence.repositories\n" +
-		"\t\t->select(r : persistence::Repository | r.serves = targetEntity)\n" +
+		"\t\t->select(r : persistence::Repository | r.serves = association.targetEntity)\n" +
 		"\t\t->collect(r : persistence::Repository | r.selections)\n" +
 		"\t\t->includes(options)";
 
@@ -994,114 +972,6 @@ public class WebuiValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateChildPathAttribute(ChildPathAttribute childPathAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(childPathAttribute, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateChildPathResource(ChildPathResource childPathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(childPathResource, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateChildPathAssociation(ChildPathAssociation childPathAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(childPathAssociation, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeaturePath(FeaturePath featurePath, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featurePath, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeaturePathAttribute(FeaturePathAttribute featurePathAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featurePathAttribute, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeaturePathLabel(FeaturePathLabel featurePathLabel, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featurePathLabel, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeaturePathResource(FeaturePathResource featurePathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featurePathResource, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePathVariable(PathVariable pathVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathVariable, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePathVariableAssociation(PathVariableAssociation pathVariableAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathVariableAssociation, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePathVariableAttribute(PathVariableAttribute pathVariableAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathVariableAttribute, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePathVariableResource(PathVariableResource pathVariableResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathVariableResource, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFeaturePathAssociation(FeaturePathAssociation featurePathAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(featurePathAssociation, diagnostics, context);
 	}
 
 	/**
@@ -1457,17 +1327,13 @@ public class WebuiValidator extends EObjectValidator {
 	}
 
 	/**
-	 * The cached validation expression for the selectionValidChoice constraint of '<em>Details Unit</em>'.
+	 * The cached validation expression for the selectionMustBeSingleton constraint of '<em>Details Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
-		"\tcontroller.webUI.persistence.repositories\n" +
-		"\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n" +
-		"\t\t->select(s : persistence::Repository | contentType = s.serves)\n" +
-		"\t\t->collect(s : persistence::Repository | s.selections)\n" +
-		"\t\t->includes(selection)";
+	protected static final String DETAILS_UNIT__SELECTION_MUST_BE_SINGLETON__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
+		"\tselection.limit = 1";
 
 	/**
 	 * Validates the selectionValidChoice constraint of '<em>Details Unit</em>'.
@@ -1491,15 +1357,6 @@ public class WebuiValidator extends EObjectValidator {
 	}
 
 	/**
-	 * The cached validation expression for the selectionMustBeSingleton constraint of '<em>Details Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String DETAILS_UNIT__SELECTION_MUST_BE_SINGLETON__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
-		"\tselection.limit = 1";
-
-	/**
 	 * Validates the selectionMustBeSingleton constraint of '<em>Details Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1519,6 +1376,19 @@ public class WebuiValidator extends EObjectValidator {
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
+
+	/**
+	 * The cached validation expression for the selectionValidChoice constraint of '<em>Details Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String DETAILS_UNIT__SELECTION_VALID_CHOICE__EEXPRESSION = "not selection.oclIsUndefined() implies\n" +
+		"\tcontroller.webUI.persistence.repositories\n" +
+		"\t\t->select(s : persistence::Repository | not s.serves.oclIsUndefined())\n" +
+		"\t\t->select(s : persistence::Repository | contentType = s.serves)\n" +
+		"\t\t->collect(s : persistence::Repository | s.selections)\n" +
+		"\t\t->includes(selection)";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1768,8 +1638,8 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePath(Path path, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(path, diagnostics, context);
+	public boolean validateValueContext(ValueContext valueContext, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(valueContext, diagnostics, context);
 	}
 
 	/**
@@ -1777,8 +1647,8 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePathAssociation(PathAssociation pathAssociation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathAssociation, diagnostics, context);
+	public boolean validateDisplayValue(DisplayValue displayValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(displayValue, diagnostics, context);
 	}
 
 	/**
@@ -1786,8 +1656,8 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePathAttribute(PathAttribute pathAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathAttribute, diagnostics, context);
+	public boolean validateAssociationDisplayValue(AssociationDisplayValue associationDisplayValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(associationDisplayValue, diagnostics, context);
 	}
 
 	/**
@@ -1795,8 +1665,8 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePathResource(PathResource pathResource, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(pathResource, diagnostics, context);
+	public boolean validateAttributeDisplayValue(AttributeDisplayValue attributeDisplayValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(attributeDisplayValue, diagnostics, context);
 	}
 
 	/**
@@ -1804,8 +1674,17 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateChildPath(ChildPath childPath, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(childPath, diagnostics, context);
+	public boolean validateLabelDisplayValue(LabelDisplayValue labelDisplayValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(labelDisplayValue, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateResourceDisplayValue(ResourceDisplayValue resourceDisplayValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(resourceDisplayValue, diagnostics, context);
 	}
 
 	/**

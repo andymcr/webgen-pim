@@ -258,7 +258,22 @@ public class ConstantItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ServicePackage.Literals.CONSTANT__VALUE,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ServicePackage.Literals.CONSTANT__VALUE,
+				 PersistenceFactory.eINSTANCE.createParameterVariable()));
 	}
 
 	/**

@@ -189,22 +189,22 @@ public class SelectActionItemProvider extends ActionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.SELECT_ACTION__VALUE_PATH,
-				 WebuiFactory.eINSTANCE.createFeaturePathAssociation()));
+				 WebuiFactory.eINSTANCE.createAssociationDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.SELECT_ACTION__VALUE_PATH,
-				 WebuiFactory.eINSTANCE.createFeaturePathAttribute()));
+				 WebuiFactory.eINSTANCE.createAttributeDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.SELECT_ACTION__VALUE_PATH,
-				 WebuiFactory.eINSTANCE.createFeaturePathLabel()));
+				 WebuiFactory.eINSTANCE.createLabelDisplayValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.SELECT_ACTION__VALUE_PATH,
-				 WebuiFactory.eINSTANCE.createFeaturePathResource()));
+				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
 	}
 
 	/**

@@ -2,6 +2,8 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
@@ -75,5 +77,13 @@ public interface DetailsUnit extends SingletonUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setOmitFieldLabels(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 
 } // DetailsUnit

@@ -6,6 +6,9 @@
 module InterfaceExpression;
 create waf : WAF from website : Website;
 
+uses PersistenceHelpers;
+
+
 helper context Website!Expression def: isInterfaceExpression() : Boolean
 	= if self.rootContainer.oclIsUndefined() then
 			false
@@ -22,6 +25,24 @@ helper context Website!Expression def: isInterfaceExpression() : Boolean
 		else
 			false
 		endif endif endif endif endif endif;
+
+helper context Website!ChildFeature def: isInterfaceExpression() : Boolean
+	= self.parent.isInterfaceExpression();
+
+helper context Website!DisplayValue def: isInterfaceExpression() : Boolean
+	= true;
+
+helper context Website!ModelLabelFeature def: isInterfaceExpression() : Boolean
+	= false;
+
+helper context Website!ParameterReference def: isInterfaceExpression() : Boolean
+	= false;
+
+helper context Website!SelectionPath def: isInterfaceExpression() : Boolean
+	= false;
+
+helper context Website!UnitAssociation def: isInterfaceExpression() : Boolean
+	= true;
 
 
 abstract rule Expression {
@@ -108,18 +129,76 @@ rule CurrentUser {
 }
 
 
+abstract rule NamedElement {
+	from website : Website!NamedElement
+	to waf : WAF!NamedElement (
+		name <- website.name
+	)
+}
+
+abstract rule FormalParameterList {
+	from website : Website!FormalParameterList
+	to waf : WAF!FormalParameterList (
+		parameters <- website.parameters
+	)
+}
+
+-- @extends NamedElement
+rule FormalParameter {
+	from website : Website!FormalParameter (website.formalFor.oclIsTypeOf(Website!Callable))
+	to waf : WAF!FormalParameter (
+		dataType <-
+			if website.dataType.oclIsUndefined() then
+				website.dataType
+			else
+				thisModule.findOrmDataType(website.dataType.name)
+			endif,
+		defaultValue <-
+			if website.defaultValue.oclIsUndefined() then
+				website.defaultValue
+			else if website.defaultValue.trim() <> '' then
+				website.defaultValue.trim()
+			else
+				OclUndefined
+			endif endif,
+		placeholder <-
+			if not website.placeholder.oclIsUndefined() then
+				website.placeholder.trim()
+			else
+				website.name.createLabel()
+			endif,
+		description <- website.description
+	)
+}
+
+rule ParameterReference {
+	from website : Website!ParameterReference (website.isInterfaceExpression())
+	to waf : WAF!ParameterReference (
+		parameter <- website.parameter
+	)
+}
+
+-- @extends FormalParameterList
+rule Callable {
+	from website : Website!Callable (website.isInterfaceExpression())
+	to waf : WAF!Callable (
+		expression <- website.body
+	)
+}
+
+
 -- @extends Operand
 rule Reducefunction {
 	from website : Website!ReduceFunction (website.isInterfaceExpression())
 	to waf : WAF!ReduceFunction (
 		value <- website.value,
-		initial <- website.initial --,
---		returnValue <- website.returnValue
+		initial <- website.initial,
+		callback <- website.callback
 	)
 }
 
 -- @extends Operand
-rule Sizefunction {
+rule SizeFunction {
 	from website : Website!SizeFunction (website.isInterfaceExpression())
 	to waf : WAF!SizeFunction (
 		value <- website.value

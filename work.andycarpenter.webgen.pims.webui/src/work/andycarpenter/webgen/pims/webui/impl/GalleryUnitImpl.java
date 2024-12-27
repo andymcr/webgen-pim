@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
 import work.andycarpenter.webgen.pims.webui.GalleryUnit;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
@@ -44,7 +44,7 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath imagePathFeature;
+	protected DisplayValue imagePathFeature;
 
 	/**
 	 * The default value of the '{@link #getMissingImagePath() <em>Missing Image Path</em>}' attribute.
@@ -161,7 +161,7 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getImagePathFeature() {
+	public DisplayValue getImagePathFeature() {
 		return imagePathFeature;
 	}
 
@@ -170,8 +170,8 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetImagePathFeature(FeaturePath newImagePathFeature, NotificationChain msgs) {
-		FeaturePath oldImagePathFeature = imagePathFeature;
+	public NotificationChain basicSetImagePathFeature(DisplayValue newImagePathFeature, NotificationChain msgs) {
+		DisplayValue oldImagePathFeature = imagePathFeature;
 		imagePathFeature = newImagePathFeature;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.GALLERY_UNIT__IMAGE_PATH_FEATURE, oldImagePathFeature, newImagePathFeature);
@@ -186,7 +186,7 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	 * @generated
 	 */
 	@Override
-	public void setImagePathFeature(FeaturePath newImagePathFeature) {
+	public void setImagePathFeature(DisplayValue newImagePathFeature) {
 		if (newImagePathFeature != imagePathFeature) {
 			NotificationChain msgs = null;
 			if (imagePathFeature != null)
@@ -447,7 +447,7 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.GALLERY_UNIT__IMAGE_PATH_FEATURE:
-				setImagePathFeature((FeaturePath)newValue);
+				setImagePathFeature((DisplayValue)newValue);
 				return;
 			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_PATH:
 				setMissingImagePath((String)newValue);
@@ -480,7 +480,7 @@ public class GalleryUnitImpl extends CollectionUnitImpl implements GalleryUnit {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.GALLERY_UNIT__IMAGE_PATH_FEATURE:
-				setImagePathFeature((FeaturePath)null);
+				setImagePathFeature((DisplayValue)null);
 				return;
 			case WebuiPackage.GALLERY_UNIT__MISSING_IMAGE_PATH:
 				setMissingImagePath(MISSING_IMAGE_PATH_EDEFAULT);

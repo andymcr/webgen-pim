@@ -4,8 +4,6 @@ package work.andycarpenter.webgen.pims.base.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
@@ -360,16 +358,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getNamedElement__NameNeedsAtLeastOneCharacter__DiagnosticChain_Map() {
-		return namedElementEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -762,7 +750,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
-		createEOperation(namedElementEClass, NAMED_ELEMENT___NAME_NEEDS_AT_LEAST_ONE_CHARACTER__DIAGNOSTICCHAIN_MAP);
 
 		namedDisplayElementEClass = createEClass(NAMED_DISPLAY_ELEMENT);
 		createEAttribute(namedDisplayElementEClass, NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL);
@@ -880,15 +867,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getNamedElement__NameNeedsAtLeastOneCharacter__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "nameNeedsAtLeastOneCharacter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
-		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(namedDisplayElementEClass, NamedDisplayElement.class, "NamedDisplayElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedDisplayElement_DisplayLabel(), ecorePackage.getEString(), "displayLabel", "", 0, 1, NamedDisplayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -937,8 +915,8 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -953,6 +931,9 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		  (this,
 		   source,
 		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 		addAnnotation
 		  (namedElementEClass,
@@ -963,18 +944,24 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+	protected void createOCLAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (getNamedElement__NameNeedsAtLeastOneCharacter__DiagnosticChain_Map(),
+		  (namedElementEClass,
 		   source,
 		   new String[] {
-			   "body", "not name.oclIsUndefined() implies name.size() > 0"
+			   "nameNeedsAtLeastOneCharacter", "not name.oclIsUndefined() implies name.size() > 0"
+		   });
+		addAnnotation
+		  (getParameterReference_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "if parameter.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tparameter.name\r\nendif"
 		   });
 	}
 

@@ -22,7 +22,6 @@ import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -250,21 +249,6 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
 				 BaseFactory.eINSTANCE.createNullLiteral()));
 
 		newChildDescriptors.add
@@ -370,7 +354,22 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
+				 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

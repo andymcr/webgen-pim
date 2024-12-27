@@ -14,7 +14,5 @@ Export-Package: work.andycarpenter.webgen.pims.persistence,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  work.andycarpenter.webgen.pims.expression;visibility:=reexport,
- work.andycarpenter.webgen.pims.base;visibility:=reexport,
- org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.xtext.xbase.lib
+ work.andycarpenter.webgen.pims.base;visibility:=reexport
 Bundle-ActivationPolicy: lazy

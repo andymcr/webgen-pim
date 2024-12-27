@@ -60,16 +60,37 @@ public class SelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReferencableEntitiesPropertyDescriptor(object);
 			addDistinctPropertyDescriptor(object);
 			addFieldsPropertyDescriptor(object);
 			addJoinsPropertyDescriptor(object);
 			addLimitPropertyDescriptor(object);
 			addGroupingPropertyDescriptor(object);
-			addSelectPathPropertyDescriptor(object);
-			addPathTypePropertyDescriptor(object);
 			addMethodNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Referencable Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencableEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureVariableContext_referencableEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureVariableContext_referencableEntities_feature", "_UI_FeatureVariableContext_type"),
+				 PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -233,60 +254,6 @@ public class SelectionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Select Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSelectPathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_Selection_selectPath_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_Selection_selectPath_feature", "_UI_Selection_type"),
-			PersistencePackage.Literals.SELECTION__SELECT_PATH,
-			true, false, true, null,
-			getString("_UI_DataAccessPropertyCategory"),
-			null) {
-			@Override
-			public Collection<?> getChoiceOfValues(Object object) {
-				if (object instanceof Selection) {
-					final Selection selection = (Selection) object;
-					if (selection.getPathType() == null) {
-						return selection.getDefinedBy().getServes().getAllAssociations();
-					} else {
-						return selection.getPathType().getAllAssociations();
-					}
-				}
-
-				return Collections.emptySet();
-			}
-		});
-	}
-
-	/**
-	 * This adds a property descriptor for the Path Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPathTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Selection_pathType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Selection_pathType_feature", "_UI_Selection_type"),
-				 PersistencePackage.Literals.SELECTION__PATH_TYPE,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Method Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,6 +290,7 @@ public class SelectionItemProvider
 			childrenFeatures.add(BasePackage.Literals.FORMAL_PARAMETER_LIST__PARAMETERS);
 			childrenFeatures.add(PersistencePackage.Literals.SELECTION__CONDITION);
 			childrenFeatures.add(PersistencePackage.Literals.SELECTION__ORDERING);
+			childrenFeatures.add(PersistencePackage.Literals.SELECTION__SELECT_PATH);
 			childrenFeatures.add(PersistencePackage.Literals.SELECTION__FILTERS);
 		}
 		return childrenFeatures;
@@ -387,6 +355,7 @@ public class SelectionItemProvider
 			case PersistencePackage.SELECTION__PARAMETERS:
 			case PersistencePackage.SELECTION__CONDITION:
 			case PersistencePackage.SELECTION__ORDERING:
+			case PersistencePackage.SELECTION__SELECT_PATH:
 			case PersistencePackage.SELECTION__FILTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -464,6 +433,11 @@ public class SelectionItemProvider
 			(createChildParameter
 				(PersistencePackage.Literals.SELECTION__ORDERING,
 				 PersistenceFactory.eINSTANCE.createDesc()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.SELECTION__SELECT_PATH,
+				 PersistenceFactory.eINSTANCE.createSelectionPath()));
 
 		newChildDescriptors.add
 			(createChildParameter

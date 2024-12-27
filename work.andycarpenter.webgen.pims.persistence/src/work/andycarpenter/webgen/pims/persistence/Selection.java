@@ -25,7 +25,6 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getLimit <em>Limit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -34,7 +33,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  * @model
  * @generated
  */
-public interface Selection extends NamedElement, FormalParameterList {
+public interface Selection extends NamedElement, FormalParameterList, FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Defined By</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Repository#getSelections <em>Selections</em>}'.
@@ -130,11 +129,13 @@ public interface Selection extends NamedElement, FormalParameterList {
 	/**
 	 * Returns the value of the '<em><b>Ordering</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Order}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.Order#getSelection <em>Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ordering</em>' containment reference list.
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getSelection_Ordering()
-	 * @model containment="true"
+	 * @see work.andycarpenter.webgen.pims.persistence.Order#getSelection
+	 * @model opposite="selection" containment="true"
 	 * @generated
 	 */
 	EList<Order> getOrdering();
@@ -175,39 +176,28 @@ public interface Selection extends NamedElement, FormalParameterList {
 	EList<Feature> getGrouping();
 
 	/**
-	 * Returns the value of the '<em><b>Select Path</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Association}.
+	 * Returns the value of the '<em><b>Select Path</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.SelectionPath#getSelection <em>Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Select Path</em>' reference list.
+	 * @return the value of the '<em>Select Path</em>' containment reference.
+	 * @see #setSelectPath(SelectionPath)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getSelection_SelectPath()
-	 * @model
+	 * @see work.andycarpenter.webgen.pims.persistence.SelectionPath#getSelection
+	 * @model opposite="selection" containment="true"
 	 * @generated
 	 */
-	EList<Association> getSelectPath();
+	SelectionPath getSelectPath();
 
 	/**
-	 * Returns the value of the '<em><b>Path Type</b></em>' reference.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Path Type</em>' reference.
-	 * @see #isSetPathType()
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getSelection_PathType()
-	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if selectPath-&gt;isEmpty() then\n\tnull\nelse if selectPath-&gt;size() = 1 then\n\tif selectPath-&gt;first().partOf = self.definedBy.serves then\n\t\tselectPath-&gt;first().targetEntity\n\telse\n\t\tselectPath-&gt;first().partOf\n\tendif\nelse\n\tselectPath-&gt;subOrderedSet(2, selectPath-&gt;size() )\n\t\t-&gt;iterate(a; result : Entity = if selectPath-&gt;first().partOf = self.definedBy.serves then\n\t\t\t\t\t\tselectPath-&gt;first().targetEntity\n\t\t\t\t\telse\n\t\t\t\t\t\tselectPath-&gt;first().partOf\n\t\t\t\t\tendif\n\t\t\t| if a.partOf = result then\n\t\t\t\t\ta.targetEntity\n\t\t\t\telse\n\t\t\t\t\ta.partOf\n\t\t\t\tendif )\nendif endif'"
+	 * @param value the new value of the '<em>Select Path</em>' containment reference.
+	 * @see #getSelectPath()
 	 * @generated
 	 */
-	Entity getPathType();
-
-	/**
-	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Path Type</em>' reference is set.
-	 * @see #getPathType()
-	 * @generated
-	 */
-	boolean isSetPathType();
+	void setSelectPath(SelectionPath value);
 
 	/**
 	 * Returns the value of the '<em><b>Filters</b></em>' containment reference list.
@@ -244,5 +234,13 @@ public interface Selection extends NamedElement, FormalParameterList {
 	 * @generated
 	 */
 	void setMethodName(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if joins-&gt;isEmpty() then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\tjoins-&gt;iterate(\n\t\tj; types : OrderedSet(Entity) = OrderedSet{self.definedBy.serves}\n\t\t| if types-&gt;includes(j.partOf) then\n\t\t\t\ttypes-&gt;append(j.targetEntity)\n\t\t\telse\n\t\t\t\ttypes-&gt;append(j.partOf)\n\t\t\tendif)\nendif'"
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 
 } // Selection

@@ -36,7 +36,6 @@ import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.RouteActual;
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -193,21 +192,6 @@ public class RouteActualItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
 				 BaseFactory.eINSTANCE.createNullLiteral()));
 
 		newChildDescriptors.add
@@ -313,7 +297,22 @@ public class RouteActualItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ROUTE_ACTUAL__VALUE,
+				 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter

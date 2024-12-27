@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.persistence;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import work.andycarpenter.webgen.pims.base.BasePackage;
@@ -50,7 +51,7 @@ public interface PersistencePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "webgen-persistence";
+	String eNS_PREFIX = "webgen_persistence";
 
 	/**
 	 * The singleton instance of the package.
@@ -208,7 +209,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 6;
+	int LABEL = 36;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelImpl <em>Model Label</em>}' class.
@@ -218,17 +219,17 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabel()
 	 * @generated
 	 */
-	int MODEL_LABEL = 7;
+	int MODEL_LABEL = 37;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelFeatureImpl <em>Model Label Feature</em>}' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelFeature <em>Model Label Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ModelLabelFeatureImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelFeature
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelFeature()
 	 * @generated
 	 */
-	int MODEL_LABEL_FEATURE = 8;
+	int MODEL_LABEL_FEATURE = 38;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAttributeImpl <em>Model Label Attribute</em>}' class.
@@ -238,7 +239,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelAttribute()
 	 * @generated
 	 */
-	int MODEL_LABEL_ATTRIBUTE = 9;
+	int MODEL_LABEL_ATTRIBUTE = 40;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelAssociationImpl <em>Model Label Association</em>}' class.
@@ -248,7 +249,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelAssociation()
 	 * @generated
 	 */
-	int MODEL_LABEL_ASSOCIATION = 10;
+	int MODEL_LABEL_ASSOCIATION = 39;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl <em>Entity</em>}' class.
@@ -1224,175 +1225,280 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_OPERATION_COUNT = FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Label</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDataTypeAttribute()
 	 * @generated
-	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = 0;
+	int DATA_TYPE_ATTRIBUTE = 14;
 
 	/**
-	 * The number of operations of the '<em>Label</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateAttributeImpl <em>Date Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DateAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateAttribute()
 	 * @generated
-	 * @ordered
 	 */
-	int LABEL_OPERATION_COUNT = 0;
+	int DATE_ATTRIBUTE = 15;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UrlAttributeImpl <em>Url Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.UrlAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUrlAttribute()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__NAME = BasePackage.NAMED_ELEMENT__NAME;
+	int URL_ATTRIBUTE = 16;
 
 	/**
-	 * The feature id for the '<em><b>Label For</b></em>' container reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl <em>Resource Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceFeature()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__LABEL_FOR = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int RESOURCE_FEATURE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl <em>Directory Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDirectoryNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__FORMAT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int DIRECTORY_NAMER = 18;
 
 	/**
-	 * The feature id for the '<em><b>Customise</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl <em>Sub Directory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSubDirectory()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__CUSTOMISE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SUB_DIRECTORY = 19;
 
 	/**
-	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl <em>Property Directory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyDirectory()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__FEATURES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int PROPERTY_DIRECTORY = 20;
 
 	/**
-	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl <em>Date Time Directory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateTimeDirectory()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL__SERIALIZATION_GROUPS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int DATE_TIME_DIRECTORY = 21;
 
 	/**
-	 * The number of structural features of the '<em>Model Label</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl <em>File Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int FILE_NAMER = 22;
 
 	/**
-	 * The number of operations of the '<em>Model Label</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl <em>Unique Id Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUniqueIdNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int UNIQUE_ID_NAMER = 23;
 
 	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl <em>Original Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOriginalNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_FEATURE__PART_OF = 0;
+	int ORIGINAL_NAMER = 24;
 
 	/**
-	 * The number of structural features of the '<em>Model Label Feature</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl <em>Property Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_FEATURE_FEATURE_COUNT = 1;
+	int PROPERTY_NAMER = 25;
 
 	/**
-	 * The number of operations of the '<em>Model Label Feature</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl <em>Hash Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getHashNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_FEATURE_OPERATION_COUNT = 0;
+	int HASH_NAMER = 26;
 
 	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl <em>Base64 Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getBase64Namer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_ATTRIBUTE__PART_OF = MODEL_LABEL_FEATURE__PART_OF;
+	int BASE64_NAMER = 27;
 
 	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl <em>Smart Unique Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSmartUniqueNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_ATTRIBUTE__ATTRIBUTE = MODEL_LABEL_FEATURE_FEATURE_COUNT + 0;
+	int SMART_UNIQUE_NAMER = 28;
 
 	/**
-	 * The feature id for the '<em><b>Date Format</b></em>' attribute.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl <em>Slug Namer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSlugNamer()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_ATTRIBUTE__DATE_FORMAT = MODEL_LABEL_FEATURE_FEATURE_COUNT + 1;
+	int SLUG_NAMER = 29;
 
 	/**
-	 * The number of structural features of the '<em>Model Label Attribute</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl <em>File Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileResource()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_ATTRIBUTE_FEATURE_COUNT = MODEL_LABEL_FEATURE_FEATURE_COUNT + 2;
+	int FILE_RESOURCE = 30;
 
 	/**
-	 * The number of operations of the '<em>Model Label Attribute</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl <em>Image Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageResource()
 	 * @generated
-	 * @ordered
 	 */
-	int MODEL_LABEL_ATTRIBUTE_OPERATION_COUNT = MODEL_LABEL_FEATURE_OPERATION_COUNT + 0;
+	int IMAGE_RESOURCE = 31;
 
 	/**
-	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl <em>Location Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
+	 * @generated
+	 */
+	int LOCATION_ATTRIBUTE = 32;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl <em>Association Without Containment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
+	 * @generated
+	 */
+	int ASSOCIATION_WITHOUT_CONTAINMENT = 33;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithContainmentImpl <em>Association With Containment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationWithContainmentImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
+	 * @generated
+	 */
+	int ASSOCIATION_WITH_CONTAINMENT = 34;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationKeyImpl <em>Association Key</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationKeyImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
+	 * @generated
+	 */
+	int ASSOCIATION_KEY = 35;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PathImpl <em>Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PathImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPath()
+	 * @generated
+	 */
+	int PATH = 6;
+
+	/**
+	 * The number of structural features of the '<em>Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION__PART_OF = MODEL_LABEL_FEATURE__PART_OF;
+	int PATH_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH___CONTEXT_ENTITY = 0;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH___NAME = 1;
+
+	/**
+	 * The number of operations of the '<em>Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_OPERATION_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl <em>Association Path Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationPathElement()
+	 * @generated
+	 */
+	int ASSOCIATION_PATH_ELEMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Association</b></em>' reference.
@@ -1401,7 +1507,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION__ASSOCIATION = MODEL_LABEL_FEATURE_FEATURE_COUNT + 0;
+	int ASSOCIATION_PATH_ELEMENT__ASSOCIATION = PATH_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value Display</b></em>' reference.
@@ -1410,44 +1516,499 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY = MODEL_LABEL_FEATURE_FEATURE_COUNT + 1;
+	int ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY = PATH_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Source Association</b></em>' attribute.
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION = MODEL_LABEL_FEATURE_FEATURE_COUNT + 2;
+	int ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE = PATH_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Model Label Association</em>' class.
+	 * The feature id for the '<em><b>Association Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION_FEATURE_COUNT = MODEL_LABEL_FEATURE_FEATURE_COUNT + 3;
+	int ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE = PATH_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Model Label Association</em>' class.
+	 * The feature id for the '<em><b>Association Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_LABEL_ASSOCIATION_OPERATION_COUNT = MODEL_LABEL_FEATURE_OPERATION_COUNT + 0;
+	int ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET = PATH_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl <em>Data Type Attribute</em>}' class.
+	 * The number of structural features of the '<em>Association Path Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.DataTypeAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDataTypeAttribute()
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT = PATH_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT___CONTEXT_ENTITY = PATH___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT___NAME = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Source Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION = PATH_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Leaf Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY = PATH_OPERATION_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Association Path Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT = PATH_OPERATION_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributePathElementImpl <em>Attribute Path Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributePathElementImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttributePathElement()
 	 * @generated
 	 */
-	int DATA_TYPE_ATTRIBUTE = 11;
+	int ATTRIBUTE_PATH_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE = PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Attribute Path Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT = PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT___CONTEXT_ENTITY = PATH___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT___NAME = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Attribute Path Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT_OPERATION_COUNT = PATH_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourcePathElementImpl <em>Resource Path Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourcePathElementImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourcePathElement()
+	 * @generated
+	 */
+	int RESOURCE_PATH_ELEMENT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT__RESOURCE = PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Resource Path Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT_FEATURE_COUNT = PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT___CONTEXT_ENTITY = PATH___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT___NAME = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Resource Path Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT_OPERATION_COUNT = PATH_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature <em>Child Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildFeature()
+	 * @generated
+	 */
+	int CHILD_FEATURE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE__PARENT = PATH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE_FEATURE_COUNT = PATH_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE___CONTEXT_ENTITY = PATH___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE___NAME = PATH___NAME;
+
+	/**
+	 * The number of operations of the '<em>Child Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE_OPERATION_COUNT = PATH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildAssociationImpl <em>Child Association</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildAssociationImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildAssociation()
+	 * @generated
+	 */
+	int CHILD_ASSOCIATION = 11;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__ASSOCIATION = ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__VALUE_DISPLAY = ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__CHILD_FEATURE = ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Association Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__ASSOCIATION_SOURCE = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Association Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__ASSOCIATION_TARGET = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__PARENT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION_FEATURE_COUNT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION___CONTEXT_ENTITY = ASSOCIATION_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION___NAME = ASSOCIATION_PATH_ELEMENT___NAME;
+
+	/**
+	 * The operation id for the '<em>Is Source Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION___IS_SOURCE_ASSOCIATION = ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The operation id for the '<em>Leaf Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION___LEAF_ENTITY = ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY;
+
+	/**
+	 * The number of operations of the '<em>Child Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildAttributeImpl <em>Child Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildAttributeImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildAttribute()
+	 * @generated
+	 */
+	int CHILD_ATTRIBUTE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE__ATTRIBUTE = ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE__PARENT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE___CONTEXT_ENTITY = ATTRIBUTE_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE___NAME = ATTRIBUTE_PATH_ELEMENT___NAME;
+
+	/**
+	 * The number of operations of the '<em>Child Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildResourceImpl <em>Child Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildResourceImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildResource()
+	 * @generated
+	 */
+	int CHILD_RESOURCE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE__RESOURCE = RESOURCE_PATH_ELEMENT__RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE__PARENT = RESOURCE_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Child Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE_FEATURE_COUNT = RESOURCE_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE___CONTEXT_ENTITY = RESOURCE_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE___NAME = RESOURCE_PATH_ELEMENT___NAME;
+
+	/**
+	 * The number of operations of the '<em>Child Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE_OPERATION_COUNT = RESOURCE_PATH_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1738,16 +2299,6 @@ public interface PersistencePackage extends EPackage {
 	int DATA_TYPE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateAttributeImpl <em>Date Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.DateAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateAttribute()
-	 * @generated
-	 */
-	int DATE_ATTRIBUTE = 12;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2018,16 +2569,6 @@ public interface PersistencePackage extends EPackage {
 	int DATE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UrlAttributeImpl <em>Url Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.UrlAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUrlAttribute()
-	 * @generated
-	 */
-	int URL_ATTRIBUTE = 13;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2289,16 +2830,6 @@ public interface PersistencePackage extends EPackage {
 	int URL_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl <em>Resource Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceFeatureImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceFeature()
-	 * @generated
-	 */
-	int RESOURCE_FEATURE = 14;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2551,16 +3082,6 @@ public interface PersistencePackage extends EPackage {
 	int RESOURCE_FEATURE_OPERATION_COUNT = FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl <em>Directory Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.DirectoryNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDirectoryNamer()
-	 * @generated
-	 */
-	int DIRECTORY_NAMER = 15;
-
-	/**
 	 * The number of structural features of the '<em>Directory Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2577,16 +3098,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int DIRECTORY_NAMER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl <em>Sub Directory</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.SubDirectoryImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSubDirectory()
-	 * @generated
-	 */
-	int SUB_DIRECTORY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Characters Per Directory</b></em>' attribute.
@@ -2625,16 +3136,6 @@ public interface PersistencePackage extends EPackage {
 	int SUB_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl <em>Property Directory</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyDirectoryImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyDirectory()
-	 * @generated
-	 */
-	int PROPERTY_DIRECTORY = 17;
-
-	/**
 	 * The feature id for the '<em><b>Attribte</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2660,16 +3161,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPERTY_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl <em>Date Time Directory</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.DateTimeDirectoryImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateTimeDirectory()
-	 * @generated
-	 */
-	int DATE_TIME_DIRECTORY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -2708,16 +3199,6 @@ public interface PersistencePackage extends EPackage {
 	int DATE_TIME_DIRECTORY_OPERATION_COUNT = DIRECTORY_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl <em>File Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileNamer()
-	 * @generated
-	 */
-	int FILE_NAMER = 19;
-
-	/**
 	 * The number of structural features of the '<em>File Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2734,16 +3215,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE_NAMER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl <em>Unique Id Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.UniqueIdNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getUniqueIdNamer()
-	 * @generated
-	 */
-	int UNIQUE_ID_NAMER = 20;
 
 	/**
 	 * The number of structural features of the '<em>Unique Id Namer</em>' class.
@@ -2764,16 +3235,6 @@ public interface PersistencePackage extends EPackage {
 	int UNIQUE_ID_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl <em>Original Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.OriginalNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOriginalNamer()
-	 * @generated
-	 */
-	int ORIGINAL_NAMER = 21;
-
-	/**
 	 * The number of structural features of the '<em>Original Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2790,16 +3251,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ORIGINAL_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl <em>Property Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PropertyNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPropertyNamer()
-	 * @generated
-	 */
-	int PROPERTY_NAMER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -2827,16 +3278,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPERTY_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl <em>Hash Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.HashNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getHashNamer()
-	 * @generated
-	 */
-	int HASH_NAMER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Algorithm</b></em>' attribute.
@@ -2875,16 +3316,6 @@ public interface PersistencePackage extends EPackage {
 	int HASH_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl <em>Base64 Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.Base64NamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getBase64Namer()
-	 * @generated
-	 */
-	int BASE64_NAMER = 24;
-
-	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2912,16 +3343,6 @@ public interface PersistencePackage extends EPackage {
 	int BASE64_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl <em>Smart Unique Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.SmartUniqueNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSmartUniqueNamer()
-	 * @generated
-	 */
-	int SMART_UNIQUE_NAMER = 25;
-
-	/**
 	 * The number of structural features of the '<em>Smart Unique Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2940,16 +3361,6 @@ public interface PersistencePackage extends EPackage {
 	int SMART_UNIQUE_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl <em>Slug Namer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.SlugNamerImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSlugNamer()
-	 * @generated
-	 */
-	int SLUG_NAMER = 26;
-
-	/**
 	 * The number of structural features of the '<em>Slug Namer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2966,16 +3377,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int SLUG_NAMER_OPERATION_COUNT = FILE_NAMER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl <em>File Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.FileResourceImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFileResource()
-	 * @generated
-	 */
-	int FILE_RESOURCE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3230,16 +3631,6 @@ public interface PersistencePackage extends EPackage {
 	int FILE_RESOURCE_OPERATION_COUNT = RESOURCE_FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl <em>Image Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.ImageResourceImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getImageResource()
-	 * @generated
-	 */
-	int IMAGE_RESOURCE = 28;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3492,16 +3883,6 @@ public interface PersistencePackage extends EPackage {
 	int IMAGE_RESOURCE_OPERATION_COUNT = RESOURCE_FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl <em>Location Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.LocationAttributeImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getLocationAttribute()
-	 * @generated
-	 */
-	int LOCATION_ATTRIBUTE = 29;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3752,16 +4133,6 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl <em>Association Without Containment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationWithoutContainmentImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithoutContainment()
-	 * @generated
-	 */
-	int ASSOCIATION_WITHOUT_CONTAINMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4061,16 +4432,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITHOUT_CONTAINMENT_OPERATION_COUNT = ASSOCIATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationWithContainmentImpl <em>Association With Containment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationWithContainmentImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationWithContainment()
-	 * @generated
-	 */
-	int ASSOCIATION_WITH_CONTAINMENT = 31;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4359,16 +4720,6 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_WITH_CONTAINMENT_OPERATION_COUNT = ASSOCIATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationKeyImpl <em>Association Key</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationKeyImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationKey()
-	 * @generated
-	 */
-	int ASSOCIATION_KEY = 32;
-
-	/**
 	 * The feature id for the '<em><b>Key For</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4414,6 +4765,344 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_KEY_OPERATION_COUNT = 0;
 
 	/**
+	 * The number of structural features of the '<em>Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__NAME = BasePackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Label For</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__LABEL_FOR = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__FORMAT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Customise</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__CUSTOMISE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__FEATURES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL__SERIALIZATION_GROUPS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Model Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Model Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_FEATURE__PART_OF = 0;
+
+	/**
+	 * The number of structural features of the '<em>Model Label Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_FEATURE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Model Label Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_FEATURE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__ASSOCIATION = ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY = ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__CHILD_FEATURE = ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Association Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__ASSOCIATION_SOURCE = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Association Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__ASSOCIATION_TARGET = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__PART_OF = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Model Label Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION_FEATURE_COUNT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION___CONTEXT_ENTITY = ASSOCIATION_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION___NAME = ASSOCIATION_PATH_ELEMENT___NAME;
+
+	/**
+	 * The operation id for the '<em>Is Source Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION___IS_SOURCE_ASSOCIATION = ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The operation id for the '<em>Leaf Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION___LEAF_ENTITY = ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY;
+
+	/**
+	 * The number of operations of the '<em>Model Label Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE__ATTRIBUTE = ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Part Of</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE__PART_OF = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Date Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE__DATE_FORMAT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Model Label Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE___CONTEXT_ENTITY = ATTRIBUTE_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE___NAME = ATTRIBUTE_PATH_ELEMENT___NAME;
+
+	/**
+	 * The number of operations of the '<em>Model Label Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureVariableImpl <em>Feature Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.FeatureVariableImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeatureVariable()
+	 * @generated
+	 */
+	int FEATURE_VARIABLE = 49;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationVariableImpl <em>Association Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationVariableImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationVariable()
+	 * @generated
+	 */
+	int ASSOCIATION_VARIABLE = 50;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeVariableImpl <em>Attribute Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributeVariableImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttributeVariable()
+	 * @generated
+	 */
+	int ATTRIBUTE_VARIABLE = 51;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceVariableImpl <em>Resource Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceVariableImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceVariable()
+	 * @generated
+	 */
+	int RESOURCE_VARIABLE = 52;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl <em>Parameter Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getParameterVariable()
+	 * @generated
+	 */
+	int PARAMETER_VARIABLE = 53;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl <em>Repository</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4421,7 +5110,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepository()
 	 * @generated
 	 */
-	int REPOSITORY = 33;
+	int REPOSITORY = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4494,7 +5183,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelection()
 	 * @generated
 	 */
-	int SELECTION = 34;
+	int SELECTION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4515,13 +5204,22 @@ public interface PersistencePackage extends EPackage {
 	int SELECTION__PARAMETERS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION__REFERENCABLE_ENTITIES = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Defined By</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__DEFINED_BY = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int SELECTION__DEFINED_BY = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Distinct</b></em>' attribute.
@@ -4530,7 +5228,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__DISTINCT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SELECTION__DISTINCT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' reference list.
@@ -4539,7 +5237,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__FIELDS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int SELECTION__FIELDS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Joins</b></em>' reference list.
@@ -4548,7 +5246,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__JOINS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int SELECTION__JOINS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -4557,7 +5255,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__CONDITION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int SELECTION__CONDITION = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Ordering</b></em>' containment reference list.
@@ -4566,7 +5264,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__ORDERING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int SELECTION__ORDERING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Limit</b></em>' attribute.
@@ -4575,7 +5273,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__LIMIT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 7;
+	int SELECTION__LIMIT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Grouping</b></em>' reference list.
@@ -4584,25 +5282,16 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__GROUPING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 8;
+	int SELECTION__GROUPING = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Select Path</b></em>' reference list.
+	 * The feature id for the '<em><b>Select Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION__SELECT_PATH = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Path Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION__PATH_TYPE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
+	int SELECTION__SELECT_PATH = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
@@ -4632,13 +5321,186 @@ public interface PersistencePackage extends EPackage {
 	int SELECTION_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION___REFERENCABLE_ENTITIES = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Selection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl <em>Selection Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelectionPath()
+	 * @generated
+	 */
+	int SELECTION_PATH = 43;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__ASSOCIATION = ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__VALUE_DISPLAY = ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__CHILD_FEATURE = ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Association Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__ASSOCIATION_SOURCE = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Association Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__ASSOCIATION_TARGET = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__SELECTION = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Selection Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH_FEATURE_COUNT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH___CONTEXT_ENTITY = ASSOCIATION_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH___NAME = ASSOCIATION_PATH_ELEMENT___NAME;
+
+	/**
+	 * The operation id for the '<em>Is Source Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH___IS_SOURCE_ASSOCIATION = ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION;
+
+	/**
+	 * The operation id for the '<em>Leaf Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH___LEAF_ENTITY = ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY;
+
+	/**
+	 * The number of operations of the '<em>Selection Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext <em>Feature Variable Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext
+	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeatureVariableContext()
+	 * @generated
+	 */
+	int FEATURE_VARIABLE_CONTEXT = 48;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Feature Variable Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES = 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Variable Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_CONTEXT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OrderImpl <em>Order</em>}' class.
@@ -4648,16 +5510,34 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 35;
+	int ORDER = 44;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__PATH = 0;
+	int ORDER__REFERENCABLE_ENTITIES = FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER__SELECTION = FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER__ATTRIBUTE = FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Order</em>' class.
@@ -4666,7 +5546,16 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_FEATURE_COUNT = 1;
+	int ORDER_FEATURE_COUNT = FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER___REFERENCABLE_ENTITIES = FEATURE_VARIABLE_CONTEXT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Order</em>' class.
@@ -4675,7 +5564,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_OPERATION_COUNT = 0;
+	int ORDER_OPERATION_COUNT = FEATURE_VARIABLE_CONTEXT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AscImpl <em>Asc</em>}' class.
@@ -4685,16 +5574,34 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAsc()
 	 * @generated
 	 */
-	int ASC = 36;
+	int ASC = 45;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASC__PATH = ORDER__PATH;
+	int ASC__REFERENCABLE_ENTITIES = ORDER__REFERENCABLE_ENTITIES;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC__SELECTION = ORDER__SELECTION;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC__ATTRIBUTE = ORDER__ATTRIBUTE;
 
 	/**
 	 * The number of structural features of the '<em>Asc</em>' class.
@@ -4704,6 +5611,15 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ASC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASC___REFERENCABLE_ENTITIES = ORDER___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Asc</em>' class.
@@ -4722,16 +5638,34 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDesc()
 	 * @generated
 	 */
-	int DESC = 37;
+	int DESC = 46;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESC__PATH = ORDER__PATH;
+	int DESC__REFERENCABLE_ENTITIES = ORDER__REFERENCABLE_ENTITIES;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC__SELECTION = ORDER__SELECTION;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC__ATTRIBUTE = ORDER__ATTRIBUTE;
 
 	/**
 	 * The number of structural features of the '<em>Desc</em>' class.
@@ -4741,6 +5675,15 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int DESC_FEATURE_COUNT = ORDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESC___REFERENCABLE_ENTITIES = ORDER___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Desc</em>' class.
@@ -4759,7 +5702,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFilter()
 	 * @generated
 	 */
-	int FILTER = 38;
+	int FILTER = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4789,13 +5732,22 @@ public interface PersistencePackage extends EPackage {
 	int FILTER__PARAMETERS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER__REFERENCABLE_ENTITIES = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Selection</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILTER__SELECTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+	int FILTER__SELECTION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -4804,7 +5756,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTER__CONDITION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int FILTER__CONDITION = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Method Name</b></em>' attribute.
@@ -4813,7 +5765,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTER__METHOD_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int FILTER__METHOD_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Filter</em>' class.
@@ -4822,7 +5774,16 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTER_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int FILTER_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTER___REFERENCABLE_ENTITIES = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Filter</em>' class.
@@ -4831,17 +5792,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTER_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl <em>Repository Feature Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl
-	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepositoryFeatureReference()
-	 * @generated
-	 */
-	int REPOSITORY_FEATURE_REFERENCE = 39;
+	int FILTER_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -4850,7 +5801,286 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_REFERENCE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+	int FEATURE_VARIABLE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE__USE_CONTAINER_AS_CONTEXT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Feature Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Feature Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_VARIABLE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__ASSOCIATION = ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Value Display</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__VALUE_DISPLAY = ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__CHILD_FEATURE = ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Association Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__ASSOCIATION_SOURCE = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Association Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__ASSOCIATION_TARGET = ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__ROOT_CONTAINER = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__USE_CONTAINER_AS_CONTEXT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Association Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE_FEATURE_COUNT = ASSOCIATION_PATH_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE___CONTEXT_ENTITY = ASSOCIATION_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE___NAME = ASSOCIATION_PATH_ELEMENT___NAME;
+
+	/**
+	 * The operation id for the '<em>Leaf Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE___LEAF_ENTITY = ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Is Source Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE___IS_SOURCE_ASSOCIATION = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Association Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE__ATTRIBUTE = ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE__ROOT_CONTAINER = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE__USE_CONTAINER_AS_CONTEXT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Attribute Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE_FEATURE_COUNT = ATTRIBUTE_PATH_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE___CONTEXT_ENTITY = ATTRIBUTE_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE___NAME = ATTRIBUTE_PATH_ELEMENT___NAME;
+
+	/**
+	 * The number of operations of the '<em>Attribute Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE_OPERATION_COUNT = ATTRIBUTE_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE__RESOURCE = RESOURCE_PATH_ELEMENT__RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE__ROOT_CONTAINER = RESOURCE_PATH_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Use Container As Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE__USE_CONTAINER_AS_CONTEXT = RESOURCE_PATH_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Resource Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE_FEATURE_COUNT = RESOURCE_PATH_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE___CONTEXT_ENTITY = RESOURCE_PATH_ELEMENT___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE___NAME = RESOURCE_PATH_ELEMENT___NAME;
+
+	/**
+	 * The number of operations of the '<em>Resource Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE_OPERATION_COUNT = RESOURCE_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_VARIABLE__ROOT_CONTAINER = PATH_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4859,34 +6089,52 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_REFERENCE__NAME = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
+	int PARAMETER_VARIABLE__NAME = PATH_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Feature</b></em>' reference.
+	 * The feature id for the '<em><b>Formal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_REFERENCE__FEATURE = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
+	int PARAMETER_VARIABLE__FORMAL = PATH_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Repository Feature Reference</em>' class.
+	 * The number of structural features of the '<em>Parameter Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_REFERENCE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
+	int PARAMETER_VARIABLE_FEATURE_COUNT = PATH_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Repository Feature Reference</em>' class.
+	 * The operation id for the '<em>Context Entity</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
+	int PARAMETER_VARIABLE___CONTEXT_ENTITY = PATH___CONTEXT_ENTITY;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_VARIABLE___NAME = PATH___NAME;
+
+	/**
+	 * The number of operations of the '<em>Parameter Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_VARIABLE_OPERATION_COUNT = PATH_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.
@@ -4896,7 +6144,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDatabaseTechnologies()
 	 * @generated
 	 */
-	int DATABASE_TECHNOLOGIES = 40;
+	int DATABASE_TECHNOLOGIES = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.OrmTechnologies <em>Orm Technologies</em>}' enum.
@@ -4906,7 +6154,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getOrmTechnologies()
 	 * @generated
 	 */
-	int ORM_TECHNOLOGIES = 41;
+	int ORM_TECHNOLOGIES = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.Cardinality <em>Cardinality</em>}' enum.
@@ -4916,7 +6164,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARDINALITY = 42;
+	int CARDINALITY = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.isHasChoices <em>is Has Choices</em>}' enum.
@@ -4926,7 +6174,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getisHasChoices()
 	 * @generated
 	 */
-	int IS_HAS_CHOICES = 43;
+	int IS_HAS_CHOICES = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DateDetails <em>Date Details</em>}' enum.
@@ -4936,7 +6184,7 @@ public interface PersistencePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getDateDetails()
 	 * @generated
 	 */
-	int DATE_DETAILS = 44;
+	int DATE_DETAILS = 58;
 
 
 	/**
@@ -5558,17 +6806,6 @@ public interface PersistencePackage extends EPackage {
 	EClass getModelLabelAttribute();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute#getAttribute()
-	 * @see #getModelLabelAttribute()
-	 * @generated
-	 */
-	EReference getModelLabelAttribute_Attribute();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute#getDateFormat <em>Date Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5588,39 +6825,6 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getModelLabelAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#getAssociation <em>Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#getAssociation()
-	 * @see #getModelLabelAssociation()
-	 * @generated
-	 */
-	EReference getModelLabelAssociation_Association();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#getValueDisplay <em>Value Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value Display</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#getValueDisplay()
-	 * @see #getModelLabelAssociation()
-	 * @generated
-	 */
-	EReference getModelLabelAssociation_ValueDisplay();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#isIsSourceAssociation <em>Is Source Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Source Association</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelAssociation#isIsSourceAssociation()
-	 * @see #getModelLabelAssociation()
-	 * @generated
-	 */
-	EAttribute getModelLabelAssociation_IsSourceAssociation();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Entity <em>Entity</em>}'.
@@ -6392,6 +7596,337 @@ public interface PersistencePackage extends EPackage {
 	EReference getAssociationKey_TargetFeature();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path
+	 * @generated
+	 */
+	EClass getPath();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Path#contextEntity() <em>Context Entity</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Context Entity</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path#contextEntity()
+	 * @generated
+	 */
+	EOperation getPath__ContextEntity();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Path#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path#name()
+	 * @generated
+	 */
+	EOperation getPath__Name();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement <em>Association Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Association Path Element</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement
+	 * @generated
+	 */
+	EClass getAssociationPathElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociation <em>Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociation()
+	 * @see #getAssociationPathElement()
+	 * @generated
+	 */
+	EReference getAssociationPathElement_Association();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getValueDisplay <em>Value Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value Display</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getValueDisplay()
+	 * @see #getAssociationPathElement()
+	 * @generated
+	 */
+	EReference getAssociationPathElement_ValueDisplay();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature <em>Child Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Child Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature()
+	 * @see #getAssociationPathElement()
+	 * @generated
+	 */
+	EReference getAssociationPathElement_ChildFeature();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationSource <em>Association Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Association Source</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationSource()
+	 * @see #getAssociationPathElement()
+	 * @generated
+	 */
+	EReference getAssociationPathElement_AssociationSource();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationTarget <em>Association Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Association Target</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationTarget()
+	 * @see #getAssociationPathElement()
+	 * @generated
+	 */
+	EReference getAssociationPathElement_AssociationTarget();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#name()
+	 * @generated
+	 */
+	EOperation getAssociationPathElement__Name();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#isSourceAssociation() <em>Is Source Association</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Source Association</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#isSourceAssociation()
+	 * @generated
+	 */
+	EOperation getAssociationPathElement__IsSourceAssociation();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#leafEntity() <em>Leaf Entity</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Leaf Entity</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#leafEntity()
+	 * @generated
+	 */
+	EOperation getAssociationPathElement__LeafEntity();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.AttributePathElement <em>Attribute Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute Path Element</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributePathElement
+	 * @generated
+	 */
+	EClass getAttributePathElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.AttributePathElement#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributePathElement#getAttribute()
+	 * @see #getAttributePathElement()
+	 * @generated
+	 */
+	EReference getAttributePathElement_Attribute();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.AttributePathElement#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributePathElement#name()
+	 * @generated
+	 */
+	EOperation getAttributePathElement__Name();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement <em>Resource Path Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource Path Element</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement
+	 * @generated
+	 */
+	EClass getResourcePathElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement#getResource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement#getResource()
+	 * @see #getResourcePathElement()
+	 * @generated
+	 */
+	EReference getResourcePathElement_Resource();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement#name()
+	 * @generated
+	 */
+	EOperation getResourcePathElement__Name();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature <em>Child Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Child Feature</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature
+	 * @generated
+	 */
+	EClass getChildFeature();
+
+	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature#getParent()
+	 * @see #getChildFeature()
+	 * @generated
+	 */
+	EReference getChildFeature_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ChildAssociation <em>Child Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Child Association</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildAssociation
+	 * @generated
+	 */
+	EClass getChildAssociation();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ChildAttribute <em>Child Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Child Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildAttribute
+	 * @generated
+	 */
+	EClass getChildAttribute();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ChildResource <em>Child Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Child Resource</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ChildResource
+	 * @generated
+	 */
+	EClass getChildResource();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariable <em>Feature Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariable
+	 * @generated
+	 */
+	EClass getFeatureVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariable#isUseContainerAsContext <em>Use Container As Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Use Container As Context</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariable#isUseContainerAsContext()
+	 * @see #getFeatureVariable()
+	 * @generated
+	 */
+	EAttribute getFeatureVariable_UseContainerAsContext();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.AssociationVariable <em>Association Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Association Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationVariable
+	 * @generated
+	 */
+	EClass getAssociationVariable();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.AssociationVariable#isSourceAssociation() <em>Is Source Association</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Source Association</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.AssociationVariable#isSourceAssociation()
+	 * @generated
+	 */
+	EOperation getAssociationVariable__IsSourceAssociation();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.AttributeVariable <em>Attribute Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.AttributeVariable
+	 * @generated
+	 */
+	EClass getAttributeVariable();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ResourceVariable <em>Resource Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ResourceVariable
+	 * @generated
+	 */
+	EClass getResourceVariable();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable <em>Parameter Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter Variable</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable
+	 * @generated
+	 */
+	EClass getParameterVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable#getName()
+	 * @see #getParameterVariable()
+	 * @generated
+	 */
+	EAttribute getParameterVariable_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#getFormal <em>Formal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Formal</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable#getFormal()
+	 * @see #getParameterVariable()
+	 * @generated
+	 */
+	EReference getParameterVariable_Formal();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Repository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6544,26 +8079,15 @@ public interface PersistencePackage extends EPackage {
 	EReference getSelection_Grouping();
 
 	/**
-	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}'.
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath <em>Select Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Select Path</em>'.
+	 * @return the meta object for the containment reference '<em>Select Path</em>'.
 	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getSelectPath()
 	 * @see #getSelection()
 	 * @generated
 	 */
 	EReference getSelection_SelectPath();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.Selection#getPathType <em>Path Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Path Type</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Selection#getPathType()
-	 * @see #getSelection()
-	 * @generated
-	 */
-	EReference getSelection_PathType();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.persistence.Selection#getFilters <em>Filters</em>}'.
@@ -6588,6 +8112,37 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getSelection_MethodName();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Selection#referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#referencableEntities()
+	 * @generated
+	 */
+	EOperation getSelection__ReferencableEntities();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.SelectionPath <em>Selection Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Selection Path</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SelectionPath
+	 * @generated
+	 */
+	EClass getSelectionPath();
+
+	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.SelectionPath#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Selection</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.SelectionPath#getSelection()
+	 * @see #getSelectionPath()
+	 * @generated
+	 */
+	EReference getSelectionPath_Selection();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Order <em>Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6598,15 +8153,36 @@ public interface PersistencePackage extends EPackage {
 	EClass getOrder();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Order#getPath <em>Path</em>}'.
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.persistence.Order#getSelection <em>Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Path</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.Order#getPath()
+	 * @return the meta object for the container reference '<em>Selection</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Order#getSelection()
 	 * @see #getOrder()
 	 * @generated
 	 */
-	EReference getOrder_Path();
+	EReference getOrder_Selection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.persistence.Order#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Order#getAttribute()
+	 * @see #getOrder()
+	 * @generated
+	 */
+	EReference getOrder_Attribute();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Order#referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Order#referencableEntities()
+	 * @generated
+	 */
+	EOperation getOrder__ReferencableEntities();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Asc <em>Asc</em>}'.
@@ -6672,36 +8248,45 @@ public interface PersistencePackage extends EPackage {
 	EAttribute getFilter_MethodName();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference <em>Repository Feature Reference</em>}'.
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Filter#referencableEntities() <em>Referencable Entities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Repository Feature Reference</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Filter#referencableEntities()
 	 * @generated
 	 */
-	EClass getRepositoryFeatureReference();
+	EOperation getFilter__ReferencableEntities();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getName <em>Name</em>}'.
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext <em>Feature Variable Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getName()
-	 * @see #getRepositoryFeatureReference()
+	 * @return the meta object for class '<em>Feature Variable Context</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext
 	 * @generated
 	 */
-	EAttribute getRepositoryFeatureReference_Name();
+	EClass getFeatureVariableContext();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getFeature <em>Feature</em>}'.
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext#getReferencableEntities <em>Referencable Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Feature</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference#getFeature()
-	 * @see #getRepositoryFeatureReference()
+	 * @return the meta object for the reference list '<em>Referencable Entities</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext#getReferencableEntities()
+	 * @see #getFeatureVariableContext()
 	 * @generated
 	 */
-	EReference getRepositoryFeatureReference_Feature();
+	EReference getFeatureVariableContext_ReferencableEntities();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext#referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext#referencableEntities()
+	 * @generated
+	 */
+	EOperation getFeatureVariableContext__ReferencableEntities();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}'.
@@ -7223,10 +8808,10 @@ public interface PersistencePackage extends EPackage {
 		EReference MODEL_LABEL__SERIALIZATION_GROUPS = eINSTANCE.getModelLabel_SerializationGroups();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ModelLabelFeatureImpl <em>Model Label Feature</em>}' class.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.ModelLabelFeature <em>Model Label Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.ModelLabelFeatureImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.ModelLabelFeature
 		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getModelLabelFeature()
 		 * @generated
 		 */
@@ -7251,14 +8836,6 @@ public interface PersistencePackage extends EPackage {
 		EClass MODEL_LABEL_ATTRIBUTE = eINSTANCE.getModelLabelAttribute();
 
 		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODEL_LABEL_ATTRIBUTE__ATTRIBUTE = eINSTANCE.getModelLabelAttribute_Attribute();
-
-		/**
 		 * The meta object literal for the '<em><b>Date Format</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7275,30 +8852,6 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EClass MODEL_LABEL_ASSOCIATION = eINSTANCE.getModelLabelAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Association</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODEL_LABEL_ASSOCIATION__ASSOCIATION = eINSTANCE.getModelLabelAssociation_Association();
-
-		/**
-		 * The meta object literal for the '<em><b>Value Display</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODEL_LABEL_ASSOCIATION__VALUE_DISPLAY = eINSTANCE.getModelLabelAssociation_ValueDisplay();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Source Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_LABEL_ASSOCIATION__IS_SOURCE_ASSOCIATION = eINSTANCE.getModelLabelAssociation_IsSourceAssociation();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.EntityImpl <em>Entity</em>}' class.
@@ -7923,6 +9476,288 @@ public interface PersistencePackage extends EPackage {
 		EReference ASSOCIATION_KEY__TARGET_FEATURE = eINSTANCE.getAssociationKey_TargetFeature();
 
 		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.PathImpl <em>Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PathImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getPath()
+		 * @generated
+		 */
+		EClass PATH = eINSTANCE.getPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Context Entity</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PATH___CONTEXT_ENTITY = eINSTANCE.getPath__ContextEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PATH___NAME = eINSTANCE.getPath__Name();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl <em>Association Path Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationPathElement()
+		 * @generated
+		 */
+		EClass ASSOCIATION_PATH_ELEMENT = eINSTANCE.getAssociationPathElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Association</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION_PATH_ELEMENT__ASSOCIATION = eINSTANCE.getAssociationPathElement_Association();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Display</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY = eINSTANCE.getAssociationPathElement_ValueDisplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Child Feature</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE = eINSTANCE.getAssociationPathElement_ChildFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Association Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE = eINSTANCE.getAssociationPathElement_AssociationSource();
+
+		/**
+		 * The meta object literal for the '<em><b>Association Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET = eINSTANCE.getAssociationPathElement_AssociationTarget();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSOCIATION_PATH_ELEMENT___NAME = eINSTANCE.getAssociationPathElement__Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Source Association</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSOCIATION_PATH_ELEMENT___IS_SOURCE_ASSOCIATION = eINSTANCE.getAssociationPathElement__IsSourceAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Leaf Entity</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSOCIATION_PATH_ELEMENT___LEAF_ENTITY = eINSTANCE.getAssociationPathElement__LeafEntity();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributePathElementImpl <em>Attribute Path Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributePathElementImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttributePathElement()
+		 * @generated
+		 */
+		EClass ATTRIBUTE_PATH_ELEMENT = eINSTANCE.getAttributePathElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE = eINSTANCE.getAttributePathElement_Attribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE_PATH_ELEMENT___NAME = eINSTANCE.getAttributePathElement__Name();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourcePathElementImpl <em>Resource Path Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourcePathElementImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourcePathElement()
+		 * @generated
+		 */
+		EClass RESOURCE_PATH_ELEMENT = eINSTANCE.getResourcePathElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE_PATH_ELEMENT__RESOURCE = eINSTANCE.getResourcePathElement_Resource();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RESOURCE_PATH_ELEMENT___NAME = eINSTANCE.getResourcePathElement__Name();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature <em>Child Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildFeature()
+		 * @generated
+		 */
+		EClass CHILD_FEATURE = eINSTANCE.getChildFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHILD_FEATURE__PARENT = eINSTANCE.getChildFeature_Parent();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildAssociationImpl <em>Child Association</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildAssociationImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildAssociation()
+		 * @generated
+		 */
+		EClass CHILD_ASSOCIATION = eINSTANCE.getChildAssociation();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildAttributeImpl <em>Child Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildAttributeImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildAttribute()
+		 * @generated
+		 */
+		EClass CHILD_ATTRIBUTE = eINSTANCE.getChildAttribute();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ChildResourceImpl <em>Child Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ChildResourceImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getChildResource()
+		 * @generated
+		 */
+		EClass CHILD_RESOURCE = eINSTANCE.getChildResource();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.FeatureVariableImpl <em>Feature Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.FeatureVariableImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeatureVariable()
+		 * @generated
+		 */
+		EClass FEATURE_VARIABLE = eINSTANCE.getFeatureVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Container As Context</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE_VARIABLE__USE_CONTAINER_AS_CONTEXT = eINSTANCE.getFeatureVariable_UseContainerAsContext();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationVariableImpl <em>Association Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AssociationVariableImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAssociationVariable()
+		 * @generated
+		 */
+		EClass ASSOCIATION_VARIABLE = eINSTANCE.getAssociationVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Source Association</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSOCIATION_VARIABLE___IS_SOURCE_ASSOCIATION = eINSTANCE.getAssociationVariable__IsSourceAssociation();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AttributeVariableImpl <em>Attribute Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.AttributeVariableImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getAttributeVariable()
+		 * @generated
+		 */
+		EClass ATTRIBUTE_VARIABLE = eINSTANCE.getAttributeVariable();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ResourceVariableImpl <em>Resource Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ResourceVariableImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getResourceVariable()
+		 * @generated
+		 */
+		EClass RESOURCE_VARIABLE = eINSTANCE.getResourceVariable();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl <em>Parameter Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getParameterVariable()
+		 * @generated
+		 */
+		EClass PARAMETER_VARIABLE = eINSTANCE.getParameterVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER_VARIABLE__NAME = eINSTANCE.getParameterVariable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Formal</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER_VARIABLE__FORMAL = eINSTANCE.getParameterVariable_Formal();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl <em>Repository</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8039,20 +9874,12 @@ public interface PersistencePackage extends EPackage {
 		EReference SELECTION__GROUPING = eINSTANCE.getSelection_Grouping();
 
 		/**
-		 * The meta object literal for the '<em><b>Select Path</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Select Path</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference SELECTION__SELECT_PATH = eINSTANCE.getSelection_SelectPath();
-
-		/**
-		 * The meta object literal for the '<em><b>Path Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SELECTION__PATH_TYPE = eINSTANCE.getSelection_PathType();
 
 		/**
 		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
@@ -8071,6 +9898,32 @@ public interface PersistencePackage extends EPackage {
 		EAttribute SELECTION__METHOD_NAME = eINSTANCE.getSelection_MethodName();
 
 		/**
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SELECTION___REFERENCABLE_ENTITIES = eINSTANCE.getSelection__ReferencableEntities();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl <em>Selection Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getSelectionPath()
+		 * @generated
+		 */
+		EClass SELECTION_PATH = eINSTANCE.getSelectionPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTION_PATH__SELECTION = eINSTANCE.getSelectionPath_Selection();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.OrderImpl <em>Order</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8081,12 +9934,28 @@ public interface PersistencePackage extends EPackage {
 		EClass ORDER = eINSTANCE.getOrder();
 
 		/**
-		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Selection</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORDER__PATH = eINSTANCE.getOrder_Path();
+		EReference ORDER__SELECTION = eINSTANCE.getOrder_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORDER__ATTRIBUTE = eINSTANCE.getOrder_Attribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ORDER___REFERENCABLE_ENTITIES = eINSTANCE.getOrder__ReferencableEntities();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.AscImpl <em>Asc</em>}' class.
@@ -8143,30 +10012,38 @@ public interface PersistencePackage extends EPackage {
 		EAttribute FILTER__METHOD_NAME = eINSTANCE.getFilter_MethodName();
 
 		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl <em>Repository Feature Reference</em>}' class.
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.RepositoryFeatureReferenceImpl
-		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getRepositoryFeatureReference()
 		 * @generated
 		 */
-		EClass REPOSITORY_FEATURE_REFERENCE = eINSTANCE.getRepositoryFeatureReference();
+		EOperation FILTER___REFERENCABLE_ENTITIES = eINSTANCE.getFilter__ReferencableEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.FeatureVariableContext <em>Feature Variable Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.persistence.FeatureVariableContext
+		 * @see work.andycarpenter.webgen.pims.persistence.impl.PersistencePackageImpl#getFeatureVariableContext()
 		 * @generated
 		 */
-		EAttribute REPOSITORY_FEATURE_REFERENCE__NAME = eINSTANCE.getRepositoryFeatureReference_Name();
+		EClass FEATURE_VARIABLE_CONTEXT = eINSTANCE.getFeatureVariableContext();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REPOSITORY_FEATURE_REFERENCE__FEATURE = eINSTANCE.getRepositoryFeatureReference_Feature();
+		EReference FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES = eINSTANCE.getFeatureVariableContext_ReferencableEntities();
+
+		/**
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES = eINSTANCE.getFeatureVariableContext__ReferencableEntities();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.

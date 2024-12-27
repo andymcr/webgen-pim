@@ -2,11 +2,15 @@
  */
 package work.andycarpenter.webgen.pims.persistence.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,6 +22,8 @@ import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -31,6 +37,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.FilterImpl#getMethodName <em>Method Name</em>}</li>
@@ -48,6 +55,16 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	 * @ordered
 	 */
 	protected EList<FormalParameter> parameters;
+
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
@@ -109,6 +126,27 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 			parameters = new EObjectContainmentWithInverseEList<FormalParameter>(FormalParameter.class, this, PersistencePackage.FILTER__PARAMETERS, BasePackage.FORMAL_PARAMETER__FORMAL_FOR);
 		}
 		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -223,6 +261,32 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #referencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate REFERENCABLE_ENTITIES__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.FILTER___REFERENCABLE_ENTITIES).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> referencableEntities() {
+		try {
+			return (EList<Entity>)REFERENCABLE_ENTITIES__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,6 +347,8 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 		switch (featureID) {
 			case PersistencePackage.FILTER__PARAMETERS:
 				return getParameters();
+			case PersistencePackage.FILTER__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case PersistencePackage.FILTER__SELECTION:
 				return getSelection();
 			case PersistencePackage.FILTER__CONDITION:
@@ -353,6 +419,8 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 		switch (featureID) {
 			case PersistencePackage.FILTER__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
+			case PersistencePackage.FILTER__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case PersistencePackage.FILTER__SELECTION:
 				return getSelection() != null;
 			case PersistencePackage.FILTER__CONDITION:
@@ -376,6 +444,12 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (derivedFeatureID) {
+				case PersistencePackage.FILTER__REFERENCABLE_ENTITIES: return PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -392,7 +466,48 @@ public class FilterImpl extends NamedDisplayElementImpl implements Filter {
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES: return PersistencePackage.FILTER__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == FormalParameterList.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES: return PersistencePackage.FILTER___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PersistencePackage.FILTER___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

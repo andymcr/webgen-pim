@@ -4,18 +4,15 @@ package work.andycarpenter.webgen.pims.persistence.provider;
 
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
@@ -25,7 +22,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelLabelAttributeItemProvider extends ModelLabelFeatureItemProvider {
+public class ModelLabelAttributeItemProvider extends AttributePathElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,38 +44,9 @@ public class ModelLabelAttributeItemProvider extends ModelLabelFeatureItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAttributePropertyDescriptor(object);
 			addDateFormatPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Attribute feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addAttributePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_ModelLabelAttribute_attribute_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_ModelLabelAttribute_attribute_feature", "_UI_ModelLabelAttribute_type"),
-			PersistencePackage.Literals.MODEL_LABEL_ATTRIBUTE__ATTRIBUTE,
-			true, false, true, null,
-			getString("_UI_InterfacePropertyCategory"),
-			null) {
-			@Override
-			public Collection<?> getChoiceOfValues(Object object) {
-				if (object instanceof ModelLabelAttribute) {
-					final ModelLabel label = (ModelLabel) ((EObject) object).eContainer();
-					return label.getLabelFor().getAttributes();
-				}
-
-				return Collections.emptyList();
-			}
-		});
 	}
 
 	/**
@@ -118,14 +86,12 @@ public class ModelLabelAttributeItemProvider extends ModelLabelFeatureItemProvid
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ModelLabelAttribute)object).getDateFormat();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ModelLabelAttribute_type") :
-			getString("_UI_ModelLabelAttribute_type") + " " + label;
+		ModelLabelAttribute modelLabelAttribute = (ModelLabelAttribute)object;
+		return getString("_UI_ModelLabelAttribute_type") + " " + modelLabelAttribute.name();
 	}
 	
 

@@ -376,7 +376,7 @@ abstract rule DynamicUnit {
 rule RouteActual {
 	from website : Website!RouteActual
 	to waf : WAF!RouteActual (
-		routeParameter <- website.routeParameter.findOrmAttribute(),
+		routeParameter <- website.routeParameter.findOrmFeature(),
 		value <- website.value
 	)
 }
@@ -426,7 +426,7 @@ rule UnitAttribute {
 			if website.attribute.oclIsUndefined() then
 				OclUndefined
 			else
-				website.attribute.findOrmAttribute()
+				website.attribute.findOrmFeature()
 			endif,
 		attributeDefaultValue <- website.defaultValue,
 		obfuscateFormFields <- website.obfuscateFormFields,
@@ -443,7 +443,7 @@ rule UnitResource {
 			if website.resource.oclIsUndefined() then
 				OclUndefined
 			else
-				website.resource.findOrmResource()
+				website.resource.findOrmFeature()
 			endif,
 		isDeletable <- website.isDeletable,
 		isDownloadable <- website.isDownloadable,
@@ -452,7 +452,7 @@ rule UnitResource {
 	)
 }
 
--- @extends UnitFeature, PathAssociation
+-- @extends UnitFeature, AssociationPathElement
 rule UnitAssociation {
 	from website : Website!UnitAssociation
 	to waf : WAF!UnitAssociation (
@@ -466,7 +466,7 @@ rule UnitAssociation {
 			if website.collectionSortBy.oclIsUndefined() then
 				website.collectionSortBy
 			else
-				website.collectionSortBy.findOrmAttribute()
+				website.collectionSortBy.findOrmFeature()
 			endif,
 		useAutocomplete <- website.useAutocomplete
 	)
@@ -557,10 +557,10 @@ abstract rule CollectionUnit {
 				website.selection.findSelection()
 			endif,
 		containerType <-
-			if website.containingType.oclIsUndefined() then
-				website.containingType
+			if website.containingType().oclIsUndefined() then
+				website.containingType()
 			else
-				website.containingType.findOrmEntity()
+				website.containingType().findOrmEntity()
 			endif,
 		findContainerSelection <-
 			if website.findContainerSelection.oclIsUndefined() then
@@ -693,12 +693,12 @@ rule MapUnit {
 	to waf : WAF!MapUnit (
 		readOnly <- website.readOnly,
 		defaultZoomLevel <- website.defaultZoomLevel,
-		location <- website.location.findOrmAttribute(),
+		location <- website.location.findOrmFeature(),
 		placeName <-
 			if website.placeName.oclIsUndefined() then
 				website.placeName
 			else
-				website.placeName.findOrmAttribute()
+				website.placeName.findOrmFeature()
 			endif
 	)
 }
@@ -848,16 +848,22 @@ rule SearchUnit {
 
 
 abstract rule Path {
-	from website : Website!Path
+	from website : Website!Path (website.isInterfaceExpression())
 	to waf : WAF!Path (
 	)
 }
 
 -- @extends Path
-abstract rule PathAssociation {
-	from website : Website!PathAssociation
-	to waf : WAF!PathAssociation (
-		association <- website.findOrmAssociation(),
+abstract rule AssociationPathElement {
+	from website : Website!AssociationPathElement (website.isInterfaceExpression())
+	to waf : WAF!AssociationPathElement (
+		association <- 
+			if website.association.oclIsUndefined() then
+				OclUndefined
+			else 
+				website.associationSource.findOrmEntity()
+					.getOrmFeature(website.sourceName())
+			endif,
 		valueDisplay <-
 			if website.valueDisplay.oclIsUndefined() then
 				OclUndefined
@@ -869,119 +875,126 @@ abstract rule PathAssociation {
 }
 
 -- @extends Path
-abstract rule PathAttribute {
-	from website : Website!PathAttribute
-	to waf : WAF!PathAttribute (
+abstract rule AttributePathElement {
+	from website : Website!AttributePathElement (website.isInterfaceExpression())
+	to waf : WAF!AttributePathElement (
 		attribute <- 
 			if website.attribute.oclIsUndefined() then
 				OclUndefined
 			else
-				website.attribute.findOrmAttribute()
+				website.attribute.findOrmFeature()
 			endif
 	)
 }
 
 -- @extends Path
-abstract rule PathResource {
-	from website : Website!PathResource
-	to waf : WAF!PathResource (
+abstract rule ResourcePathElement {
+	from website : Website!ResourcePathElement (website.isInterfaceExpression())
+	to waf : WAF!ResourcePathElement (
 		resource <- 
 			if website.resource.oclIsUndefined() then
 				OclUndefined
 			else
-				website.resource.findOrmResource()
+				website.resource.findOrmFeature()
 			endif
 	)
 }
 
-abstract rule ChildPath {
-	from website : Website!ChildPath
-	to waf : WAF!ChildPath (
+abstract rule ChildFeature {
+	from website : Website!ChildFeature (website.isInterfaceExpression())
+	to waf : WAF!ChildFeature (
 	)
 }
 
--- @extends ChildPath, PathAssociation
-rule ChildPathAssociation {
-	from website : Website!ChildPathAssociation
-	to waf : WAF!ChildPathAssociation (
+-- @extends ChildFeature, AssociationPathElement
+rule ChildAssociation {
+	from website : Website!ChildAssociation (website.isInterfaceExpression())
+	to waf : WAF!ChildAssociation (
 	)
 }
 
--- @extends ChildPath, PathAttribute
-rule ChildPathAttribute {
-	from website : Website!ChildPathAttribute
-	to waf : WAF!ChildPathAttribute (
+-- @extends ChildFeature, AttributePathElement
+rule ChildAttribute {
+	from website : Website!ChildAttribute (website.isInterfaceExpression())
+	to waf : WAF!ChildAttribute (
 	)
 }
 
--- @extends ChildPath, PathResource
-rule ChildPathResource {
-	from website : Website!ChildPathResource
-	to waf : WAF!ChildPathResource (
+-- @extends ChildFeature, ResourcePathElement
+rule ChildResource {
+	from website : Website!ChildResource (website.isInterfaceExpression())
+	to waf : WAF!ChildResource (
 	)
 }
 
-abstract rule FeaturePath {
-	from website : Website!FeaturePath
-	to waf : WAF!FeaturePath (
+abstract rule FeatureVariable {
+	from website : Website!FeatureVariable (website.isInterfaceExpression())
+	to waf : WAF!FeatureVariable (
 	)
 }
 
--- @extends FeaturePath, PathAssociation
-rule FeaturePathAssociation {
-	from website : Website!FeaturePathAssociation
-	to waf : WAF!FeaturePathAssociation (
+-- @extends FeatureVariable, AssociationPathElement
+rule AssociationVariable {
+	from website : Website!AssociationVariable (website.isInterfaceExpression())
+	to waf : WAF!AssociationVariable (
 	)
 }
 
--- @extends FeaturePath, PathAttribute
-rule FeaturePathAttribute {
-	from website : Website!FeaturePathAttribute
-	to waf : WAF!FeaturePathAttribute (
+-- @extends FeatureVariable, AttributePathElement
+rule AttributeVariable {
+	from website : Website!AttributeVariable (website.isInterfaceExpression())
+	to waf : WAF!AttributeVariable (
 	)
 }
 
--- @extends FeaturePath
-rule FeaturePathLabel {
-	from website : Website!FeaturePathLabel
-	to waf : WAF!FeaturePathLabel (
-		label <- website.label.findOrmLabel()
-	)
-}
-
--- @extends FeaturePath, PathResource
-rule FeaturePathResource {
-	from website : Website!FeaturePathResource
-	to waf : WAF!FeaturePathResource (
+-- @extends FeatureVariable, ResourcePathElement
+rule ResourceVariable {
+	from website : Website!ResourceVariable (website.isInterfaceExpression())
+	to waf : WAF!ResourceVariable (
 	)
 }
 
 -- @extends Variable
-abstract rule PathVariable {
-	from website : Website!PathVariable
-	to waf : WAF!PathVariable (
-		useContainerAsContext <- website.useContainerAsContext
+rule ParameterVariable {
+	from website : Website!ParameterVariable (website.isInterfaceExpression())
+	to waf : WAF!ParameterVariable (
+		formal <- website.formal
 	)
 }
 
--- @extends PathVariable, PathAssociation
-rule PathVariableAssociation {
-	from website : Website!PathVariableAssociation
-	to waf : WAF!PathVariableAssociation (
+
+abstract rule DisplayValue {
+	from website : Website!DisplayValue (website.isInterfaceExpression())
+	to waf : WAF!DisplayValue (
 	)
 }
 
--- @extends PathVariable, PathAttribute
-rule PathVariableAttribute {
-	from website : Website!PathVariableAttribute
-	to waf : WAF!PathVariableAttribute (
+-- @extends AssociationPathElement, DisplayValue
+rule AssociationDisplayValue {
+	from website : Website!AssociationDisplayValue (website.isInterfaceExpression())
+	to waf : WAF!AssociationDisplayValue (
 	)
 }
 
--- @extends PathVariable, PathResource
-rule PathVariableResource {
-	from website : Website!PathVariableResource
-	to waf : WAF!PathVariableResource (
+-- @extends AttributePathElement, DisplayValue
+rule AttributeDisplayValue {
+	from website : Website!AttributeDisplayValue (website.isInterfaceExpression())
+	to waf : WAF!AttributeDisplayValue (
+	)
+}
+
+-- @extends DisplayValue
+rule LabelDisplayValue {
+	from website : Website!LabelDisplayValue (website.isInterfaceExpression())
+	to waf : WAF!LabelDisplayValue (
+		label <- website.label.findOrmLabel()
+	)
+}
+
+-- @extends ResourcePathElement, DisplayValue
+rule ResourceDisplayValue {
+	from website : Website!ResourceDisplayValue (website.isInterfaceExpression())
+	to waf : WAF!ResourceDisplayValue (
 	)
 }
 

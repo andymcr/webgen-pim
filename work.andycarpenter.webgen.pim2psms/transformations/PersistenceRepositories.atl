@@ -104,7 +104,7 @@ rule Selection {
 		ordering <- website.ordering,
 		limit <- website.limit,
 		grouping <- website.grouping->collect(f | f.findOrmFeature()),
-		selectPath <- website.findOrmSelectPath(website.selectPath),
+		selectPath <- website.selectPath,
 		filters <- website.filters,
 		methodName <-
 			if not website.methodName.oclIsUndefined() and website.methodName.trim() <> '' then
@@ -115,62 +115,49 @@ rule Selection {
 	)
 }
 
+-- extends AssociationPathElement
+rule SelectionPath {
+	from website : Website!SelectionPath
+	to orm : ORM!SelectionPath (
+		association <-
+			if website.association.oclIsUndefined() then
+				OclUndefined
+			else 
+				website.associationSource.findOrmEntity()
+					.getOrmFeature(website.sourceName())
+			endif,
+		childFeature <- website.childFeature
+	)
+}
+
 rule ConstantReference {
-	from website : Website!ConstantReference (website.isPresistenceRepositoryExpression())
+	from website : Website!ConstantReference (website.isExpression())
 	to orm : ORM!ConstantReference (
 		value <- website.value
 	)
 }
 
 rule ParameterReference {
-	from website : Website!ParameterReference (website.isPresistenceRepositoryExpression())
+	from website : Website!ParameterReference (website.isRepositoryExpression())
 	to orm : ORM!ParameterReference (
 		parameter <- website.parameter
-	)
-}
-
-rule RepositoryFeatureReference {
-	from website : Website!RepositoryFeatureReference (website.isPresistenceRepositoryExpression())
-	to orm : ORM!FeatureReference (
-		feature <-
-			if website.feature.oclIsKindOf(Website!Attribute) then
-				website.feature.findOrmAttribute()
-			else 
-				if website.rootContainer.oclIsUndefined() or website.feature.oclIsUndefined() then
-						OclUndefined
-					else
-						let x : Website!Entity
-							= website.rootContainer.definedBy.serves
-							in if website.feature.partOf = x then
-									website.feature.findOrmSourceAssociation()
-								else if website.feature.targetEntity = x then
-									website.feature.findOrmTargetAssociation()
-								else if website.rootContainer.joins->includes(website.feature.partOf) then
-									website.feature.findOrmSourceAssociation()
-								else
-									website.feature.findOrmTargetAssociation()
-								endif endif endif
-					endif
-			endif
 	)
 }
 
 abstract rule Order {
 	from website : Website!Order
 	to orm : ORM!Order (
-		path <- website.path
+		attribute <- website.attribute
 	)
 }
 
--- @extends Order
-rule Asc {
+rule Asc extends Order {
 	from website : Website!Asc
 	to orm : ORM!Asc (
 	)
 }
 
--- @extends Order
-rule Desc {
+rule Desc extends Order {
 	from website : Website!Desc
 	to orm : ORM!Desc (
 	)

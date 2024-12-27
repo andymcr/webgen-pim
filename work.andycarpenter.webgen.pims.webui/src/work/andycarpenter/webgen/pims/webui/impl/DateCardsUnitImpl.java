@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.webui.DateCardsUnit;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -36,7 +36,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath elementDate;
+	protected DisplayValue elementDate;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getElementDate() {
+	public DisplayValue getElementDate() {
 		return elementDate;
 	}
 
@@ -72,8 +72,8 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElementDate(FeaturePath newElementDate, NotificationChain msgs) {
-		FeaturePath oldElementDate = elementDate;
+	public NotificationChain basicSetElementDate(DisplayValue newElementDate, NotificationChain msgs) {
+		DisplayValue oldElementDate = elementDate;
 		elementDate = newElementDate;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE, oldElementDate, newElementDate);
@@ -88,7 +88,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	 * @generated
 	 */
 	@Override
-	public void setElementDate(FeaturePath newElementDate) {
+	public void setElementDate(DisplayValue newElementDate) {
 		if (newElementDate != elementDate) {
 			NotificationChain msgs = null;
 			if (elementDate != null)
@@ -139,7 +139,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
-				setElementDate((FeaturePath)newValue);
+				setElementDate((DisplayValue)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,7 +154,7 @@ public class DateCardsUnitImpl extends CardsUnitImpl implements DateCardsUnit {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.DATE_CARDS_UNIT__ELEMENT_DATE:
-				setElementDate((FeaturePath)null);
+				setElementDate((DisplayValue)null);
 				return;
 		}
 		super.eUnset(featureID);

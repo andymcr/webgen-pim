@@ -45,7 +45,7 @@ rule LocalAuthenticationSystem {
 			endif,
 		userKey <-
 			if not website.userKey.oclIsUndefined() then
-				website.userKey.findOrmAttribute()
+				website.userKey.findOrmFeature()
 			else if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('username')
 			else
@@ -53,13 +53,13 @@ rule LocalAuthenticationSystem {
 			endif endif,
 		authenticationKey <-
 			if not website.authenticationKey.oclIsUndefined() then
-				website.authenticationKey.findOrmAttribute()
+				website.authenticationKey.findOrmFeature()
 			else
 				thisModule.findOrmEntity(website.userModel.name).getOrmFeature('username')
 			endif,
 		identifierFeature <-
 			if not website.identifierFeature.oclIsUndefined() then
-				website.identifierFeature.findOrmAttribute()
+				website.identifierFeature.findOrmFeature()
 			else if website.authenticationModel.oclIsUndefined() then
 				thisModule.findOrmEntity(website.authenticationName).getOrmFeature('email')
 			else

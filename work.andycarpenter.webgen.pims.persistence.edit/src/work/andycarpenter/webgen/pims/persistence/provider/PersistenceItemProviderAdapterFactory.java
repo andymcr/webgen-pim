@@ -24,6 +24,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import work.andycarpenter.webgen.pims.base.BasePackage;
+import work.andycarpenter.webgen.pims.base.Callable;
 import work.andycarpenter.webgen.pims.base.ReduceFunction;
 import work.andycarpenter.webgen.pims.base.SizeFunction;
 import work.andycarpenter.webgen.pims.base.util.BaseSwitch;
@@ -133,29 +134,6 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 		}
 
 		return serializationGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ModelLabel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModelLabelItemProvider modelLabelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ModelLabel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createModelLabelAdapter() {
-		if (modelLabelItemProvider == null) {
-			modelLabelItemProvider = new ModelLabelItemProvider(this);
-		}
-
-		return modelLabelItemProvider;
 	}
 
 	/**
@@ -665,6 +643,190 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ModelLabel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModelLabelItemProvider modelLabelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ModelLabel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModelLabelAdapter() {
+		if (modelLabelItemProvider == null) {
+			modelLabelItemProvider = new ModelLabelItemProvider(this);
+		}
+
+		return modelLabelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ChildAssociation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ChildAssociationItemProvider childAssociationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ChildAssociation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createChildAssociationAdapter() {
+		if (childAssociationItemProvider == null) {
+			childAssociationItemProvider = new ChildAssociationItemProvider(this);
+		}
+
+		return childAssociationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ChildAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ChildAttributeItemProvider childAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ChildAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createChildAttributeAdapter() {
+		if (childAttributeItemProvider == null) {
+			childAttributeItemProvider = new ChildAttributeItemProvider(this);
+		}
+
+		return childAttributeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ChildResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ChildResourceItemProvider childResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ChildResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createChildResourceAdapter() {
+		if (childResourceItemProvider == null) {
+			childResourceItemProvider = new ChildResourceItemProvider(this);
+		}
+
+		return childResourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.AssociationVariable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AssociationVariableItemProvider associationVariableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.AssociationVariable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAssociationVariableAdapter() {
+		if (associationVariableItemProvider == null) {
+			associationVariableItemProvider = new AssociationVariableItemProvider(this);
+		}
+
+		return associationVariableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.AttributeVariable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttributeVariableItemProvider attributeVariableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.AttributeVariable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttributeVariableAdapter() {
+		if (attributeVariableItemProvider == null) {
+			attributeVariableItemProvider = new AttributeVariableItemProvider(this);
+		}
+
+		return attributeVariableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ResourceVariable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceVariableItemProvider resourceVariableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ResourceVariable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceVariableAdapter() {
+		if (resourceVariableItemProvider == null) {
+			resourceVariableItemProvider = new ResourceVariableItemProvider(this);
+		}
+
+		return resourceVariableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ParameterVariable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterVariableItemProvider parameterVariableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.ParameterVariable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createParameterVariableAdapter() {
+		if (parameterVariableItemProvider == null) {
+			parameterVariableItemProvider = new ParameterVariableItemProvider(this);
+		}
+
+		return parameterVariableItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.Repository} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -708,6 +870,29 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 		}
 
 		return selectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.SelectionPath} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SelectionPathItemProvider selectionPathItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.SelectionPath}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSelectionPathAdapter() {
+		if (selectionPathItemProvider == null) {
+			selectionPathItemProvider = new SelectionPathItemProvider(this);
+		}
+
+		return selectionPathItemProvider;
 	}
 
 	/**
@@ -777,29 +962,6 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 		}
 
 		return filterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RepositoryFeatureReferenceItemProvider repositoryFeatureReferenceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.RepositoryFeatureReference}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRepositoryFeatureReferenceAdapter() {
-		if (repositoryFeatureReferenceItemProvider == null) {
-			repositoryFeatureReferenceItemProvider = new RepositoryFeatureReferenceItemProvider(this);
-		}
-
-		return repositoryFeatureReferenceItemProvider;
 	}
 
 	/**
@@ -945,16 +1107,75 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 			 * @generated
 			 */
 			@Override
+			public Object caseCallable(Callable object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.CALLABLE__BODY,
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.CALLABLE__BODY,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.CALLABLE__BODY,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.CALLABLE__BODY,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
 			public Object caseReduceFunction(ReduceFunction object) {
 				newChildDescriptors.add
 					(createChildParameter
 						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -969,7 +1190,22 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1055,7 +1291,22 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1070,12 +1321,42 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1090,12 +1371,42 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1110,12 +1421,42 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1130,12 +1471,42 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1150,12 +1521,42 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1170,7 +1571,22 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1185,7 +1601,22 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}
@@ -1200,7 +1631,22 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
-						 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
 
 				return null;
 			}

@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -21,7 +21,6 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import work.andycarpenter.webgen.pims.base.BaseFactory;
 import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -61,8 +60,31 @@ public class OrderItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReferencableEntitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Referencable Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencableEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureVariableContext_referencableEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureVariableContext_referencableEntities_feature", "_UI_FeatureVariableContext_type"),
+				 PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -77,7 +99,7 @@ public class OrderItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PersistencePackage.Literals.ORDER__PATH);
+			childrenFeatures.add(PersistencePackage.Literals.ORDER__ATTRIBUTE);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +141,7 @@ public class OrderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Order.class)) {
-			case PersistencePackage.ORDER__PATH:
+			case PersistencePackage.ORDER__ATTRIBUTE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,23 +161,8 @@ public class OrderItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ORDER__PATH,
-				 PersistenceFactory.eINSTANCE.createRepositoryFeatureReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.ORDER__PATH,
-				 BaseFactory.eINSTANCE.createCurrentTime()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.ORDER__PATH,
-				 BaseFactory.eINSTANCE.createCurrentUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.ORDER__PATH,
-				 BaseFactory.eINSTANCE.createParameterReference()));
+				(PersistencePackage.Literals.ORDER__ATTRIBUTE,
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
 	}
 
 	/**

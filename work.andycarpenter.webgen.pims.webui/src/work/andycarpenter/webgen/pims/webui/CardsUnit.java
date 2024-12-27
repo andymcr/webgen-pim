@@ -3,6 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface CardsUnit extends CollectionUnit {
+public interface CardsUnit extends CollectionUnit, FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Badges</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.Badge}.

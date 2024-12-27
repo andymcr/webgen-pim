@@ -170,7 +170,7 @@ unique lazy rule implicitAuthenticationsPage {
 		elementTitle <- elementTitle,
 		allActions <- Sequence{updateAction, deleteAction}
 	),
-	elementTitle : WAF!FeaturePathAttribute (
+	elementTitle : WAF!AttributeDisplayValue (
 		attribute <- 
 			thisModule.findOrmEntity(website.authenticationName).features
 				->any(f | f.name = 'username')

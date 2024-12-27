@@ -2,12 +2,16 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -16,6 +20,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
@@ -37,8 +43,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getInstanceActionsPlacement <em>Instance Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getActionNavigationClass <em>Action Navigation Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContentType <em>Content Type</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getContainingType <em>Containing Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getRouteActuals <em>Route Actuals</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#getDisplayFields <em>Display Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.DynamicUnitImpl#isHasWhenFieldsEmptyAddImplicitFields <em>Has When Fields Empty Add Implicit Fields</em>}</li>
@@ -129,6 +135,16 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	protected String actionNavigationClass = ACTION_NAVIGATION_CLASS_EDEFAULT;
 
 	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
+
+	/**
 	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,16 +153,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * @ordered
 	 */
 	protected Entity contentType;
-
-	/**
-	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainingType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate CONTAINING_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.DYNAMIC_UNIT__CONTAINING_TYPE).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getRouteActuals() <em>Route Actuals</em>}' containment reference list.
@@ -504,6 +510,27 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Entity getContentType() {
 		if (contentType != null && contentType.eIsProxy()) {
@@ -537,35 +564,6 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 		contentType = newContentType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE, oldContentType, contentType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Entity getContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetContainingType() {
-		return (Entity)CONTAINING_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetContainingType() {
-		return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -895,6 +893,45 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getContentType() != null) {
+			entities.add(getContentType());
+		}
+		return entities;
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #containingType() <em>Containing Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #containingType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate CONTAINING_TYPE__EINVOCATION_DELEGATE = ((EOperation.Internal)WebuiPackage.Literals.DYNAMIC_UNIT___CONTAINING_TYPE).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity containingType() {
+		try {
+			return (Entity)CONTAINING_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -947,12 +984,11 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return getActions();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return getActionNavigationClass();
+			case WebuiPackage.DYNAMIC_UNIT__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
 				if (resolve) return getContentType();
 				return basicGetContentType();
-			case WebuiPackage.DYNAMIC_UNIT__CONTAINING_TYPE:
-				if (resolve) return getContainingType();
-				return basicGetContainingType();
 			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
 				return getRouteActuals();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -1143,10 +1179,10 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				return actions != null && !actions.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__ACTION_NAVIGATION_CLASS:
 				return ACTION_NAVIGATION_CLASS_EDEFAULT == null ? actionNavigationClass != null : !ACTION_NAVIGATION_CLASS_EDEFAULT.equals(actionNavigationClass);
+			case WebuiPackage.DYNAMIC_UNIT__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case WebuiPackage.DYNAMIC_UNIT__CONTENT_TYPE:
 				return contentType != null;
-			case WebuiPackage.DYNAMIC_UNIT__CONTAINING_TYPE:
-				return isSetContainingType();
 			case WebuiPackage.DYNAMIC_UNIT__ROUTE_ACTUALS:
 				return routeActuals != null && !routeActuals.isEmpty();
 			case WebuiPackage.DYNAMIC_UNIT__DISPLAY_FIELDS:
@@ -1195,6 +1231,12 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.DYNAMIC_UNIT__REFERENCABLE_ENTITIES: return PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -1214,7 +1256,50 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES: return WebuiPackage.DYNAMIC_UNIT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ActionContainer.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES: return WebuiPackage.DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.DYNAMIC_UNIT___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+			case WebuiPackage.DYNAMIC_UNIT___CONTAINING_TYPE:
+				return containingType();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -3,8 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariable;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Message extends EObject {
+public interface Message extends ValueContext {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,7 +47,7 @@ public interface Message extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.PathVariable}.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.FeatureVariable}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features</em>' containment reference list.
@@ -56,6 +55,6 @@ public interface Message extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PathVariable> getFeatures();
+	EList<FeatureVariable> getFeatures();
 
 } // Message

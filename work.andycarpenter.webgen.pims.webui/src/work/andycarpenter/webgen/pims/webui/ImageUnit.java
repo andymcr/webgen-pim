@@ -2,7 +2,6 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
-import org.eclipse.emf.ecore.EObject;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
 
@@ -25,7 +24,7 @@ import work.andycarpenter.webgen.pims.image.ImageManipulation;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface ImageUnit extends EObject {
+public interface ImageUnit extends ValueContext {
 	/**
 	 * Returns the value of the '<em><b>Image Path Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -35,12 +34,12 @@ public interface ImageUnit extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Path Feature</em>' containment reference.
-	 * @see #setImagePathFeature(FeaturePath)
+	 * @see #setImagePathFeature(DisplayValue)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageUnit_ImagePathFeature()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	FeaturePath getImagePathFeature();
+	DisplayValue getImagePathFeature();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit#getImagePathFeature <em>Image Path Feature</em>}' containment reference.
@@ -50,7 +49,7 @@ public interface ImageUnit extends EObject {
 	 * @see #getImagePathFeature()
 	 * @generated
 	 */
-	void setImagePathFeature(FeaturePath value);
+	void setImagePathFeature(DisplayValue value);
 
 	/**
 	 * Returns the value of the '<em><b>Image Filter</b></em>' reference.

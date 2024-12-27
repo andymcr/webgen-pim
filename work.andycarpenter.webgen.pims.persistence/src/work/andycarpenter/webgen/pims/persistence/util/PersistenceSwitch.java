@@ -121,37 +121,64 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.LABEL: {
-				Label label = (Label)theEObject;
-				T result = caseLabel(label);
+			case PersistencePackage.PATH: {
+				Path path = (Path)theEObject;
+				T result = casePath(path);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.MODEL_LABEL: {
-				ModelLabel modelLabel = (ModelLabel)theEObject;
-				T result = caseModelLabel(modelLabel);
-				if (result == null) result = caseNamedElement(modelLabel);
-				if (result == null) result = caseLabel(modelLabel);
+			case PersistencePackage.ASSOCIATION_PATH_ELEMENT: {
+				AssociationPathElement associationPathElement = (AssociationPathElement)theEObject;
+				T result = caseAssociationPathElement(associationPathElement);
+				if (result == null) result = casePath(associationPathElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.MODEL_LABEL_FEATURE: {
-				ModelLabelFeature modelLabelFeature = (ModelLabelFeature)theEObject;
-				T result = caseModelLabelFeature(modelLabelFeature);
+			case PersistencePackage.ATTRIBUTE_PATH_ELEMENT: {
+				AttributePathElement attributePathElement = (AttributePathElement)theEObject;
+				T result = caseAttributePathElement(attributePathElement);
+				if (result == null) result = casePath(attributePathElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.MODEL_LABEL_ATTRIBUTE: {
-				ModelLabelAttribute modelLabelAttribute = (ModelLabelAttribute)theEObject;
-				T result = caseModelLabelAttribute(modelLabelAttribute);
-				if (result == null) result = caseModelLabelFeature(modelLabelAttribute);
+			case PersistencePackage.RESOURCE_PATH_ELEMENT: {
+				ResourcePathElement resourcePathElement = (ResourcePathElement)theEObject;
+				T result = caseResourcePathElement(resourcePathElement);
+				if (result == null) result = casePath(resourcePathElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.MODEL_LABEL_ASSOCIATION: {
-				ModelLabelAssociation modelLabelAssociation = (ModelLabelAssociation)theEObject;
-				T result = caseModelLabelAssociation(modelLabelAssociation);
-				if (result == null) result = caseModelLabelFeature(modelLabelAssociation);
+			case PersistencePackage.CHILD_FEATURE: {
+				ChildFeature childFeature = (ChildFeature)theEObject;
+				T result = caseChildFeature(childFeature);
+				if (result == null) result = casePath(childFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.CHILD_ASSOCIATION: {
+				ChildAssociation childAssociation = (ChildAssociation)theEObject;
+				T result = caseChildAssociation(childAssociation);
+				if (result == null) result = caseAssociationPathElement(childAssociation);
+				if (result == null) result = caseChildFeature(childAssociation);
+				if (result == null) result = casePath(childAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.CHILD_ATTRIBUTE: {
+				ChildAttribute childAttribute = (ChildAttribute)theEObject;
+				T result = caseChildAttribute(childAttribute);
+				if (result == null) result = caseAttributePathElement(childAttribute);
+				if (result == null) result = caseChildFeature(childAttribute);
+				if (result == null) result = casePath(childAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.CHILD_RESOURCE: {
+				ChildResource childResource = (ChildResource)theEObject;
+				T result = caseChildResource(childResource);
+				if (result == null) result = caseResourcePathElement(childResource);
+				if (result == null) result = caseChildFeature(childResource);
+				if (result == null) result = casePath(childResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -336,6 +363,44 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PersistencePackage.LABEL: {
+				Label label = (Label)theEObject;
+				T result = caseLabel(label);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.MODEL_LABEL: {
+				ModelLabel modelLabel = (ModelLabel)theEObject;
+				T result = caseModelLabel(modelLabel);
+				if (result == null) result = caseNamedElement(modelLabel);
+				if (result == null) result = caseLabel(modelLabel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.MODEL_LABEL_FEATURE: {
+				ModelLabelFeature modelLabelFeature = (ModelLabelFeature)theEObject;
+				T result = caseModelLabelFeature(modelLabelFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.MODEL_LABEL_ASSOCIATION: {
+				ModelLabelAssociation modelLabelAssociation = (ModelLabelAssociation)theEObject;
+				T result = caseModelLabelAssociation(modelLabelAssociation);
+				if (result == null) result = caseAssociationPathElement(modelLabelAssociation);
+				if (result == null) result = caseModelLabelFeature(modelLabelAssociation);
+				if (result == null) result = casePath(modelLabelAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.MODEL_LABEL_ATTRIBUTE: {
+				ModelLabelAttribute modelLabelAttribute = (ModelLabelAttribute)theEObject;
+				T result = caseModelLabelAttribute(modelLabelAttribute);
+				if (result == null) result = caseAttributePathElement(modelLabelAttribute);
+				if (result == null) result = caseModelLabelFeature(modelLabelAttribute);
+				if (result == null) result = casePath(modelLabelAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PersistencePackage.REPOSITORY: {
 				Repository repository = (Repository)theEObject;
 				T result = caseRepository(repository);
@@ -348,12 +413,22 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseSelection(selection);
 				if (result == null) result = caseNamedElement(selection);
 				if (result == null) result = caseFormalParameterList(selection);
+				if (result == null) result = caseFeatureVariableContext(selection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.SELECTION_PATH: {
+				SelectionPath selectionPath = (SelectionPath)theEObject;
+				T result = caseSelectionPath(selectionPath);
+				if (result == null) result = caseAssociationPathElement(selectionPath);
+				if (result == null) result = casePath(selectionPath);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PersistencePackage.ORDER: {
 				Order order = (Order)theEObject;
 				T result = caseOrder(order);
+				if (result == null) result = caseFeatureVariableContext(order);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -361,6 +436,7 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				Asc asc = (Asc)theEObject;
 				T result = caseAsc(asc);
 				if (result == null) result = caseOrder(asc);
+				if (result == null) result = caseFeatureVariableContext(asc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -368,6 +444,7 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				Desc desc = (Desc)theEObject;
 				T result = caseDesc(desc);
 				if (result == null) result = caseOrder(desc);
+				if (result == null) result = caseFeatureVariableContext(desc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -376,16 +453,69 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseFilter(filter);
 				if (result == null) result = caseNamedDisplayElement(filter);
 				if (result == null) result = caseFormalParameterList(filter);
+				if (result == null) result = caseFeatureVariableContext(filter);
 				if (result == null) result = caseNamedElement(filter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PersistencePackage.REPOSITORY_FEATURE_REFERENCE: {
-				RepositoryFeatureReference repositoryFeatureReference = (RepositoryFeatureReference)theEObject;
-				T result = caseRepositoryFeatureReference(repositoryFeatureReference);
-				if (result == null) result = caseVariable(repositoryFeatureReference);
-				if (result == null) result = caseOperand(repositoryFeatureReference);
-				if (result == null) result = caseExpression(repositoryFeatureReference);
+			case PersistencePackage.FEATURE_VARIABLE_CONTEXT: {
+				FeatureVariableContext featureVariableContext = (FeatureVariableContext)theEObject;
+				T result = caseFeatureVariableContext(featureVariableContext);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.FEATURE_VARIABLE: {
+				FeatureVariable featureVariable = (FeatureVariable)theEObject;
+				T result = caseFeatureVariable(featureVariable);
+				if (result == null) result = caseVariable(featureVariable);
+				if (result == null) result = caseOperand(featureVariable);
+				if (result == null) result = caseExpression(featureVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.ASSOCIATION_VARIABLE: {
+				AssociationVariable associationVariable = (AssociationVariable)theEObject;
+				T result = caseAssociationVariable(associationVariable);
+				if (result == null) result = caseAssociationPathElement(associationVariable);
+				if (result == null) result = caseFeatureVariable(associationVariable);
+				if (result == null) result = casePath(associationVariable);
+				if (result == null) result = caseVariable(associationVariable);
+				if (result == null) result = caseOperand(associationVariable);
+				if (result == null) result = caseExpression(associationVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.ATTRIBUTE_VARIABLE: {
+				AttributeVariable attributeVariable = (AttributeVariable)theEObject;
+				T result = caseAttributeVariable(attributeVariable);
+				if (result == null) result = caseAttributePathElement(attributeVariable);
+				if (result == null) result = caseFeatureVariable(attributeVariable);
+				if (result == null) result = casePath(attributeVariable);
+				if (result == null) result = caseVariable(attributeVariable);
+				if (result == null) result = caseOperand(attributeVariable);
+				if (result == null) result = caseExpression(attributeVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.RESOURCE_VARIABLE: {
+				ResourceVariable resourceVariable = (ResourceVariable)theEObject;
+				T result = caseResourceVariable(resourceVariable);
+				if (result == null) result = caseResourcePathElement(resourceVariable);
+				if (result == null) result = caseFeatureVariable(resourceVariable);
+				if (result == null) result = casePath(resourceVariable);
+				if (result == null) result = caseVariable(resourceVariable);
+				if (result == null) result = caseOperand(resourceVariable);
+				if (result == null) result = caseExpression(resourceVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PersistencePackage.PARAMETER_VARIABLE: {
+				ParameterVariable parameterVariable = (ParameterVariable)theEObject;
+				T result = caseParameterVariable(parameterVariable);
+				if (result == null) result = casePath(parameterVariable);
+				if (result == null) result = caseVariable(parameterVariable);
+				if (result == null) result = caseOperand(parameterVariable);
+				if (result == null) result = caseExpression(parameterVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -889,6 +1019,201 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePath(Path object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Association Path Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Association Path Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAssociationPathElement(AssociationPathElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute Path Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute Path Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttributePathElement(AttributePathElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Path Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Path Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResourcePathElement(ResourcePathElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildFeature(ChildFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildAssociation(ChildAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildAttribute(ChildAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Child Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Child Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChildResource(ChildResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeatureVariable(FeatureVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Association Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Association Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAssociationVariable(AssociationVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttributeVariable(AttributeVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResourceVariable(ResourceVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameterVariable(ParameterVariable object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Repository</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -915,6 +1240,21 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSelection(Selection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selection Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selection Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelectionPath(SelectionPath object) {
 		return null;
 	}
 
@@ -979,17 +1319,17 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Repository Feature Reference</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Variable Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Repository Feature Reference</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Variable Context</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRepositoryFeatureReference(RepositoryFeatureReference object) {
+	public T caseFeatureVariableContext(FeatureVariableContext object) {
 		return null;
 	}
 

@@ -6,7 +6,6 @@
 module PersistenceEntityLabels;
 create dummyOrm : ORM refining orm : ORM, website : Website;
 
-uses WebsiteHelpers;
 uses PersistenceHelpers;
 
 
@@ -39,10 +38,10 @@ rule ModelLabelAttribute {
 	from website : Website!ModelLabelAttribute
 	to orm : ORM!ModelLabelAttribute (
 		attribute <-
-			if website.attribute.oclIsKindOf(Website!Attribute) then
-				website.attribute.findOrmAttribute()
-			else
+			if website.attribute.oclIsUndefined() then
 				website.attribute
+			else
+				website.attribute.findOrmFeature()
 			endif,
 		dateFormat <-
 			if not website.dateFormat.oclIsUndefined() and website.dateFormat <> '' then
@@ -59,12 +58,14 @@ rule ModelLabelAssociation {
 	to orm : ORM!ModelLabelAssociation (
 		association <-
 			if website.association.oclIsUndefined() then
-				website.association
-			else
-				if website.isSourceAssociation then
-					website.association.findOrmEntity().getOrmFeature(website.association.name)
+				OclUndefined
+			else 
+				if website.partOf.labelFor.associations->includes(website.association) then
+					website.partOf.labelFor.findOrmEntity()
+						.getOrmFeature(website.association.name)
 				else
-					website.association.findOrmTargetEntity().getOrmFeature(website.association.targetFeatureName)
+					website.association.targetEntity.findOrmEntity()
+						.getOrmFeature(website.association.targetFeatureName())
 				endif
 			endif,
 		valueDisplay <- website.valueDisplay

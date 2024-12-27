@@ -56,12 +56,12 @@ public interface SelectAction extends Action {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value Path</em>' containment reference.
-	 * @see #setValuePath(FeaturePath)
+	 * @see #setValuePath(DisplayValue)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getSelectAction_ValuePath()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FeaturePath getValuePath();
+	DisplayValue getValuePath();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.SelectAction#getValuePath <em>Value Path</em>}' containment reference.
@@ -71,6 +71,6 @@ public interface SelectAction extends Action {
 	 * @see #getValuePath()
 	 * @generated
 	 */
-	void setValuePath(FeaturePath value);
+	void setValuePath(DisplayValue value);
 
 } // SelectAction

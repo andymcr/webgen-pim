@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Image -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="work.andycarpenter.webgen.pims.image.presentation.ImageModelWizardID"
+            name="%_UI_ImageModelWizard_label"
+            class="work.andycarpenter.webgen.pims.image.presentation.ImageModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ImageModelFile.gif">
+         <description>%_UI_ImageModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Image -->
+      <editor
+            id="work.andycarpenter.webgen.pims.image.presentation.ImageEditorID"
+            name="%_UI_ImageEditor_label"
+            icon="icons/full/obj16/ImageModelFile.gif"
+            extensions="image"
+            class="work.andycarpenter.webgen.pims.image.presentation.ImageEditor"
+            contributorClass="work.andycarpenter.webgen.pims.image.presentation.ImageActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

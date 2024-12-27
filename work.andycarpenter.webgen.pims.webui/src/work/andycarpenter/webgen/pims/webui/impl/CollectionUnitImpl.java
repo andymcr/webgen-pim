@@ -2,22 +2,29 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
 import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
+import work.andycarpenter.webgen.pims.webui.SelectableUnit;
+import work.andycarpenter.webgen.pims.webui.ValueContext;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -28,6 +35,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getValueEntities <em>Value Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getUnitTitle <em>Unit Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getElementTitle <em>Element Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isTruncateElementTitle <em>Truncate Element Title</em>}</li>
@@ -62,6 +70,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  */
 public abstract class CollectionUnitImpl extends DynamicUnitImpl implements CollectionUnit {
 	/**
+	 * The cached setting delegate for the '{@link #getValueEntities() <em>Value Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValueEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate VALUE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES).getSettingDelegate();
+
+	/**
 	 * The cached value of the '{@link #getUnitTitle() <em>Unit Title</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,7 +97,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath elementTitle;
+	protected DisplayValue elementTitle;
 
 	/**
 	 * The default value of the '{@link #isTruncateElementTitle() <em>Truncate Element Title</em>}' attribute.
@@ -575,6 +593,57 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getValueEntities() {
+		return (EList<Entity>)VALUE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetValueEntities() {
+		return VALUE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getContentType() != null) {
+			if (getFindContainerSelection() != null) {
+				entities.add(getContentType());
+				entities.add(getContentType().getContainingAssociation().getPartOf());
+			} else {
+				if (getSelection() == null) {
+					entities.add(getContentType());
+				} else {
+					if (getSelection().getSelectPath() == null) {
+						entities.add(getContentType());
+					} else {
+						if (getSelection().getSelectPath().leafEntity() != null) {
+							entities.add(getSelection().getSelectPath().leafEntity());
+						}
+					}
+				}
+			}
+		}
+
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Label getUnitTitle() {
 		if (unitTitle != null && unitTitle.eIsProxy()) {
@@ -616,7 +685,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getElementTitle() {
+	public DisplayValue getElementTitle() {
 		return elementTitle;
 	}
 
@@ -625,8 +694,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElementTitle(FeaturePath newElementTitle, NotificationChain msgs) {
-		FeaturePath oldElementTitle = elementTitle;
+	public NotificationChain basicSetElementTitle(DisplayValue newElementTitle, NotificationChain msgs) {
+		DisplayValue oldElementTitle = elementTitle;
 		elementTitle = newElementTitle;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE, oldElementTitle, newElementTitle);
@@ -641,7 +710,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
-	public void setElementTitle(FeaturePath newElementTitle) {
+	public void setElementTitle(DisplayValue newElementTitle) {
 		if (newElementTitle != elementTitle) {
 			NotificationChain msgs = null;
 			if (elementTitle != null)
@@ -1317,6 +1386,20 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
+	public EList<Entity> valueEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getContentType() != null) {
+			entities.add(getContentType());
+		}
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
@@ -1333,6 +1416,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__VALUE_ENTITIES:
+				return getValueEntities();
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				if (resolve) return getUnitTitle();
 				return basicGetUnitTitle();
@@ -1411,7 +1496,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				setUnitTitle((Label)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
-				setElementTitle((FeaturePath)newValue);
+				setElementTitle((DisplayValue)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
 				setTruncateElementTitle((Boolean)newValue);
@@ -1508,7 +1593,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				setUnitTitle((Label)null);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
-				setElementTitle((FeaturePath)null);
+				setElementTitle((DisplayValue)null);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
 				setTruncateElementTitle(TRUNCATE_ELEMENT_TITLE_EDEFAULT);
@@ -1600,6 +1685,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__VALUE_ENTITIES:
+				return isSetValueEntities();
 			case WebuiPackage.COLLECTION_UNIT__UNIT_TITLE:
 				return unitTitle != null;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
@@ -1658,6 +1745,83 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return PAGINATION_ANCHOR_CLASS_EDEFAULT == null ? paginationAnchorClass != null : !PAGINATION_ANCHOR_CLASS_EDEFAULT.equals(paginationAnchorClass);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == SelectableUnit.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ValueContext.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.COLLECTION_UNIT__VALUE_ENTITIES: return WebuiPackage.VALUE_CONTEXT__VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == SelectableUnit.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ValueContext.class) {
+			switch (baseFeatureID) {
+				case WebuiPackage.VALUE_CONTEXT__VALUE_ENTITIES: return WebuiPackage.COLLECTION_UNIT__VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == SelectableUnit.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ValueContext.class) {
+			switch (baseOperationID) {
+				case WebuiPackage.VALUE_CONTEXT___VALUE_ENTITIES: return WebuiPackage.COLLECTION_UNIT___VALUE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.COLLECTION_UNIT___VALUE_ENTITIES:
+				return valueEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

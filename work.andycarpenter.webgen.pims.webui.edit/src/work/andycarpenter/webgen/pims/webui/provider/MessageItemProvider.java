@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.webui.Message;
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -63,9 +63,32 @@ public class MessageItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValueEntitiesPropertyDescriptor(object);
 			addTextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Value Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValueEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValueContext_valueEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValueContext_valueEntities_feature", "_UI_ValueContext_type"),
+				 WebuiPackage.Literals.VALUE_CONTEXT__VALUE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -182,17 +205,17 @@ public class MessageItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
+				 PersistenceFactory.eINSTANCE.createAssociationVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
+				 PersistenceFactory.eINSTANCE.createAttributeVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.MESSAGE__FEATURES,
-				 WebuiFactory.eINSTANCE.createPathVariableResource()));
+				 PersistenceFactory.eINSTANCE.createResourceVariable()));
 	}
 
 	/**

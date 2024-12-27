@@ -3,6 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import org.eclipse.emf.common.util.EList;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Label;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -52,7 +53,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL canOnlyTitleWithSingletons='not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n\t\tunitTitle.oclAsType(persistence::Attribute).cardinality &lt;&gt; persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif' selectionMustNotBeSingleton='not selection.oclIsUndefined() implies\n\tselection.limit &lt;&gt; 1'"
  * @generated
  */
-public interface CollectionUnit extends DynamicUnit, SelectableUnit {
+public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContext {
 	/**
 	 * Returns the value of the '<em><b>Unit Title</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -88,12 +89,12 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Title</em>' containment reference.
-	 * @see #setElementTitle(FeaturePath)
+	 * @see #setElementTitle(DisplayValue)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ElementTitle()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FeaturePath getElementTitle();
+	DisplayValue getElementTitle();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getElementTitle <em>Element Title</em>}' containment reference.
@@ -103,7 +104,7 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @see #getElementTitle()
 	 * @generated
 	 */
-	void setElementTitle(FeaturePath value);
+	void setElementTitle(DisplayValue value);
 
 	/**
 	 * Returns the value of the '<em><b>Truncate Element Title</b></em>' attribute.
@@ -785,5 +786,21 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit {
 	 * @generated
 	 */
 	void setPaginationAnchorClass(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> valueEntities();
 
 } // CollectionUnit

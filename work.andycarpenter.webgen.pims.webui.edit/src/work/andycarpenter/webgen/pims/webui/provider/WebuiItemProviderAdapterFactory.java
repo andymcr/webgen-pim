@@ -4,59 +4,19 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.edit.command.CommandParameter;
-
-import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
-import work.andycarpenter.webgen.pims.base.BasePackage;
-import work.andycarpenter.webgen.pims.base.ReduceFunction;
-import work.andycarpenter.webgen.pims.base.SizeFunction;
-import work.andycarpenter.webgen.pims.base.util.BaseSwitch;
-import work.andycarpenter.webgen.pims.expression.ArithmeticOperation;
-import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.PredicateBooleanVariable;
-import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
-import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
-import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
-import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
-import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
-import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
-import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
-import work.andycarpenter.webgen.pims.expression.util.ExpressionSwitch;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
-import work.andycarpenter.webgen.pims.persistence.Order;
-import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-import work.andycarpenter.webgen.pims.persistence.util.PersistenceSwitch;
-
-import work.andycarpenter.webgen.pims.service.Constant;
-import work.andycarpenter.webgen.pims.service.ServicePackage;
-
-import work.andycarpenter.webgen.pims.service.util.ServiceSwitch;
-
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
-
 import work.andycarpenter.webgen.pims.webui.util.WebuiAdapterFactory;
 
 /**
@@ -683,236 +643,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChildPathAttributeItemProvider childPathAttributeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ChildPathAttribute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChildPathAttributeAdapter() {
-		if (childPathAttributeItemProvider == null) {
-			childPathAttributeItemProvider = new ChildPathAttributeItemProvider(this);
-		}
-
-		return childPathAttributeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ChildPathResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChildPathResourceItemProvider childPathResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ChildPathResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChildPathResourceAdapter() {
-		if (childPathResourceItemProvider == null) {
-			childPathResourceItemProvider = new ChildPathResourceItemProvider(this);
-		}
-
-		return childPathResourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChildPathAssociationItemProvider childPathAssociationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ChildPathAssociation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChildPathAssociationAdapter() {
-		if (childPathAssociationItemProvider == null) {
-			childPathAssociationItemProvider = new ChildPathAssociationItemProvider(this);
-		}
-
-		return childPathAssociationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FeaturePathAttributeItemProvider featurePathAttributeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FeaturePathAttribute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFeaturePathAttributeAdapter() {
-		if (featurePathAttributeItemProvider == null) {
-			featurePathAttributeItemProvider = new FeaturePathAttributeItemProvider(this);
-		}
-
-		return featurePathAttributeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FeaturePathLabelItemProvider featurePathLabelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FeaturePathLabel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFeaturePathLabelAdapter() {
-		if (featurePathLabelItemProvider == null) {
-			featurePathLabelItemProvider = new FeaturePathLabelItemProvider(this);
-		}
-
-		return featurePathLabelItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FeaturePathResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FeaturePathResourceItemProvider featurePathResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FeaturePathResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFeaturePathResourceAdapter() {
-		if (featurePathResourceItemProvider == null) {
-			featurePathResourceItemProvider = new FeaturePathResourceItemProvider(this);
-		}
-
-		return featurePathResourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.PathVariableAssociation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PathVariableAssociationItemProvider pathVariableAssociationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.PathVariableAssociation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPathVariableAssociationAdapter() {
-		if (pathVariableAssociationItemProvider == null) {
-			pathVariableAssociationItemProvider = new PathVariableAssociationItemProvider(this);
-		}
-
-		return pathVariableAssociationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.PathVariableAttribute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PathVariableAttributeItemProvider pathVariableAttributeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.PathVariableAttribute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPathVariableAttributeAdapter() {
-		if (pathVariableAttributeItemProvider == null) {
-			pathVariableAttributeItemProvider = new PathVariableAttributeItemProvider(this);
-		}
-
-		return pathVariableAttributeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.PathVariableResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PathVariableResourceItemProvider pathVariableResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.PathVariableResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPathVariableResourceAdapter() {
-		if (pathVariableResourceItemProvider == null) {
-			pathVariableResourceItemProvider = new PathVariableResourceItemProvider(this);
-		}
-
-		return pathVariableResourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FeaturePathAssociationItemProvider featurePathAssociationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.FeaturePathAssociation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFeaturePathAssociationAdapter() {
-		if (featurePathAssociationItemProvider == null) {
-			featurePathAssociationItemProvider = new FeaturePathAssociationItemProvider(this);
-		}
-
-		return featurePathAssociationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.UnitLabel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1327,26 +1057,95 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.PathAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.AssociationDisplayValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PathAttributeItemProvider pathAttributeItemProvider;
+	protected AssociationDisplayValueItemProvider associationDisplayValueItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.PathAttribute}.
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.AssociationDisplayValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPathAttributeAdapter() {
-		if (pathAttributeItemProvider == null) {
-			pathAttributeItemProvider = new PathAttributeItemProvider(this);
+	public Adapter createAssociationDisplayValueAdapter() {
+		if (associationDisplayValueItemProvider == null) {
+			associationDisplayValueItemProvider = new AssociationDisplayValueItemProvider(this);
 		}
 
-		return pathAttributeItemProvider;
+		return associationDisplayValueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.AttributeDisplayValue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttributeDisplayValueItemProvider attributeDisplayValueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.AttributeDisplayValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttributeDisplayValueAdapter() {
+		if (attributeDisplayValueItemProvider == null) {
+			attributeDisplayValueItemProvider = new AttributeDisplayValueItemProvider(this);
+		}
+
+		return attributeDisplayValueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.LabelDisplayValue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LabelDisplayValueItemProvider labelDisplayValueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.LabelDisplayValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLabelDisplayValueAdapter() {
+		if (labelDisplayValueItemProvider == null) {
+			labelDisplayValueItemProvider = new LabelDisplayValueItemProvider(this);
+		}
+
+		return labelDisplayValueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ResourceDisplayValue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceDisplayValueItemProvider resourceDisplayValueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ResourceDisplayValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceDisplayValueAdapter() {
+		if (resourceDisplayValueItemProvider == null) {
+			resourceDisplayValueItemProvider = new ResourceDisplayValueItemProvider(this);
+		}
+
+		return resourceDisplayValueItemProvider;
 	}
 
 	/**
@@ -1719,730 +1518,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 
 		if (parentAdapterFactory != null) {
 			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link BasePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class BaseChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends BaseSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseReduceFunction(ReduceFunction object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseSizeFunction(SizeFunction object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(BasePackage.Literals.SIZE_FUNCTION__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return WebuiEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link ExpressionPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ExpressionChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ExpressionSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateBooleanVariable(PredicateBooleanVariable object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_BOOLEAN_VARIABLE__VARIABLE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateEqualityOperator(PredicateEqualityOperator object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_EQUALITY_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateComparisonOperator(PredicateComparisonOperator object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_COMPARISON_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateInOperator(PredicateInOperator object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IN_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateIsOperator(PredicateIsOperator object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateLikeOperator(PredicateLikeOperator object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__LEFT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_LIKE_OPERATOR__RIGHT,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateIsEmpty(PredicateIsEmpty object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_EMPTY__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object casePredicateIsNull(PredicateIsNull object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.PREDICATE_IS_NULL__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseArithmeticOperation(ArithmeticOperation object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ExpressionPackage.Literals.ARITHMETIC_OPERATION__OPERANDS,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return WebuiEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link PersistencePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class PersistenceChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends PersistenceSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAttribute(Attribute object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrder(Order object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ORDER__PATH,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ORDER__PATH,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(PersistencePackage.Literals.ORDER__PATH,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return WebuiEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link ServicePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ServiceChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ServiceSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseConstant(Constant object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.CONSTANT__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAssociation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.CONSTANT__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableAttribute()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ServicePackage.Literals.CONSTANT__VALUE,
-						 WebuiFactory.eINSTANCE.createPathVariableResource()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return WebuiEditPlugin.INSTANCE;
 		}
 	}
 

@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.image.ImageManipulation;
-import work.andycarpenter.webgen.pims.webui.FeaturePath;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
 import work.andycarpenter.webgen.pims.webui.ImageUnit;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -38,7 +38,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * @generated
 	 * @ordered
 	 */
-	protected FeaturePath imagePathFeature;
+	protected DisplayValue imagePathFeature;
 
 	/**
 	 * The cached value of the '{@link #getImageFilter() <em>Image Filter</em>}' reference.
@@ -105,7 +105,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * @generated
 	 */
 	@Override
-	public FeaturePath getImagePathFeature() {
+	public DisplayValue getImagePathFeature() {
 		return imagePathFeature;
 	}
 
@@ -114,8 +114,8 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetImagePathFeature(FeaturePath newImagePathFeature, NotificationChain msgs) {
-		FeaturePath oldImagePathFeature = imagePathFeature;
+	public NotificationChain basicSetImagePathFeature(DisplayValue newImagePathFeature, NotificationChain msgs) {
+		DisplayValue oldImagePathFeature = imagePathFeature;
 		imagePathFeature = newImagePathFeature;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE, oldImagePathFeature, newImagePathFeature);
@@ -130,7 +130,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	 * @generated
 	 */
 	@Override
-	public void setImagePathFeature(FeaturePath newImagePathFeature) {
+	public void setImagePathFeature(DisplayValue newImagePathFeature) {
 		if (newImagePathFeature != imagePathFeature) {
 			NotificationChain msgs = null;
 			if (imagePathFeature != null)
@@ -239,7 +239,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
-				setImagePathFeature((FeaturePath)newValue);
+				setImagePathFeature((DisplayValue)newValue);
 				return;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)newValue);
@@ -260,7 +260,7 @@ public abstract class ImageUnitImpl extends CollectionUnitImpl implements ImageU
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case WebuiPackage.IMAGE_UNIT__IMAGE_PATH_FEATURE:
-				setImagePathFeature((FeaturePath)null);
+				setImagePathFeature((DisplayValue)null);
 				return;
 			case WebuiPackage.IMAGE_UNIT__IMAGE_FILTER:
 				setImageFilter((ImageManipulation)null);

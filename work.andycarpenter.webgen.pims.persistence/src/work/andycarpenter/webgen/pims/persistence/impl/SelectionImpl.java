@@ -2,19 +2,20 @@
  */
 package work.andycarpenter.webgen.pims.persistence.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -27,11 +28,13 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Feature;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.Order;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.persistence.Selection;
+import work.andycarpenter.webgen.pims.persistence.SelectionPath;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,6 +45,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getDefinedBy <em>Defined By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#isDistinct <em>Distinct</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getFields <em>Fields</em>}</li>
@@ -51,7 +55,6 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getLimit <em>Limit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getGrouping <em>Grouping</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getSelectPath <em>Select Path</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getPathType <em>Path Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionImpl#getMethodName <em>Method Name</em>}</li>
  * </ul>
@@ -68,6 +71,16 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @ordered
 	 */
 	protected EList<FormalParameter> parameters;
+
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #isDistinct() <em>Distinct</em>}' attribute.
@@ -160,24 +173,14 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	protected EList<Feature> grouping;
 
 	/**
-	 * The cached value of the '{@link #getSelectPath() <em>Select Path</em>}' reference list.
+	 * The cached value of the '{@link #getSelectPath() <em>Select Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSelectPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Association> selectPath;
-
-	/**
-	 * The cached setting delegate for the '{@link #getPathType() <em>Path Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPathType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate PATH_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.SELECTION__PATH_TYPE).getSettingDelegate();
+	protected SelectionPath selectPath;
 
 	/**
 	 * The cached value of the '{@link #getFilters() <em>Filters</em>}' containment reference list.
@@ -239,6 +242,27 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 			parameters = new EObjectContainmentWithInverseEList<FormalParameter>(FormalParameter.class, this, PersistencePackage.SELECTION__PARAMETERS, BasePackage.FORMAL_PARAMETER__FORMAL_FOR);
 		}
 		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -386,7 +410,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	@Override
 	public EList<Order> getOrdering() {
 		if (ordering == null) {
-			ordering = new EObjectContainmentEList<Order>(Order.class, this, PersistencePackage.SELECTION__ORDERING);
+			ordering = new EObjectContainmentWithInverseEList<Order>(Order.class, this, PersistencePackage.SELECTION__ORDERING, PersistencePackage.ORDER__SELECTION);
 		}
 		return ordering;
 	}
@@ -433,10 +457,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @generated
 	 */
 	@Override
-	public EList<Association> getSelectPath() {
-		if (selectPath == null) {
-			selectPath = new EObjectResolvingEList<Association>(Association.class, this, PersistencePackage.SELECTION__SELECT_PATH);
-		}
+	public SelectionPath getSelectPath() {
 		return selectPath;
 	}
 
@@ -445,18 +466,14 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Entity getPathType() {
-		return (Entity)PATH_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetPathType() {
-		return (Entity)PATH_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	public NotificationChain basicSetSelectPath(SelectionPath newSelectPath, NotificationChain msgs) {
+		SelectionPath oldSelectPath = selectPath;
+		selectPath = newSelectPath;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PersistencePackage.SELECTION__SELECT_PATH, oldSelectPath, newSelectPath);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -465,8 +482,18 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	 * @generated
 	 */
 	@Override
-	public boolean isSetPathType() {
-		return PATH_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	public void setSelectPath(SelectionPath newSelectPath) {
+		if (newSelectPath != selectPath) {
+			NotificationChain msgs = null;
+			if (selectPath != null)
+				msgs = ((InternalEObject)selectPath).eInverseRemove(this, PersistencePackage.SELECTION_PATH__SELECTION, SelectionPath.class, msgs);
+			if (newSelectPath != null)
+				msgs = ((InternalEObject)newSelectPath).eInverseAdd(this, PersistencePackage.SELECTION_PATH__SELECTION, SelectionPath.class, msgs);
+			msgs = basicSetSelectPath(newSelectPath, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.SELECTION__SELECT_PATH, newSelectPath, newSelectPath));
 	}
 
 	/**
@@ -506,6 +533,32 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #referencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate REFERENCABLE_ENTITIES__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.SELECTION___REFERENCABLE_ENTITIES).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> referencableEntities() {
+		try {
+			return (EList<Entity>)REFERENCABLE_ENTITIES__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -520,6 +573,12 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDefinedBy((Repository)otherEnd, msgs);
+			case PersistencePackage.SELECTION__ORDERING:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOrdering()).basicAdd(otherEnd, msgs);
+			case PersistencePackage.SELECTION__SELECT_PATH:
+				if (selectPath != null)
+					msgs = ((InternalEObject)selectPath).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PersistencePackage.SELECTION__SELECT_PATH, null, msgs);
+				return basicSetSelectPath((SelectionPath)otherEnd, msgs);
 			case PersistencePackage.SELECTION__FILTERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFilters()).basicAdd(otherEnd, msgs);
 		}
@@ -542,6 +601,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return basicSetCondition(null, msgs);
 			case PersistencePackage.SELECTION__ORDERING:
 				return ((InternalEList<?>)getOrdering()).basicRemove(otherEnd, msgs);
+			case PersistencePackage.SELECTION__SELECT_PATH:
+				return basicSetSelectPath(null, msgs);
 			case PersistencePackage.SELECTION__FILTERS:
 				return ((InternalEList<?>)getFilters()).basicRemove(otherEnd, msgs);
 		}
@@ -572,6 +633,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 		switch (featureID) {
 			case PersistencePackage.SELECTION__PARAMETERS:
 				return getParameters();
+			case PersistencePackage.SELECTION__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case PersistencePackage.SELECTION__DEFINED_BY:
 				return getDefinedBy();
 			case PersistencePackage.SELECTION__DISTINCT:
@@ -590,9 +653,6 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				return getGrouping();
 			case PersistencePackage.SELECTION__SELECT_PATH:
 				return getSelectPath();
-			case PersistencePackage.SELECTION__PATH_TYPE:
-				if (resolve) return getPathType();
-				return basicGetPathType();
 			case PersistencePackage.SELECTION__FILTERS:
 				return getFilters();
 			case PersistencePackage.SELECTION__METHOD_NAME:
@@ -643,8 +703,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				getGrouping().addAll((Collection<? extends Feature>)newValue);
 				return;
 			case PersistencePackage.SELECTION__SELECT_PATH:
-				getSelectPath().clear();
-				getSelectPath().addAll((Collection<? extends Association>)newValue);
+				setSelectPath((SelectionPath)newValue);
 				return;
 			case PersistencePackage.SELECTION__FILTERS:
 				getFilters().clear();
@@ -693,7 +752,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				getGrouping().clear();
 				return;
 			case PersistencePackage.SELECTION__SELECT_PATH:
-				getSelectPath().clear();
+				setSelectPath((SelectionPath)null);
 				return;
 			case PersistencePackage.SELECTION__FILTERS:
 				getFilters().clear();
@@ -715,6 +774,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 		switch (featureID) {
 			case PersistencePackage.SELECTION__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
+			case PersistencePackage.SELECTION__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case PersistencePackage.SELECTION__DEFINED_BY:
 				return getDefinedBy() != null;
 			case PersistencePackage.SELECTION__DISTINCT:
@@ -732,9 +793,7 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 			case PersistencePackage.SELECTION__GROUPING:
 				return grouping != null && !grouping.isEmpty();
 			case PersistencePackage.SELECTION__SELECT_PATH:
-				return selectPath != null && !selectPath.isEmpty();
-			case PersistencePackage.SELECTION__PATH_TYPE:
-				return isSetPathType();
+				return selectPath != null;
 			case PersistencePackage.SELECTION__FILTERS:
 				return filters != null && !filters.isEmpty();
 			case PersistencePackage.SELECTION__METHOD_NAME:
@@ -756,6 +815,12 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (derivedFeatureID) {
+				case PersistencePackage.SELECTION__REFERENCABLE_ENTITIES: return PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -772,7 +837,48 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 				default: return -1;
 			}
 		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES: return PersistencePackage.SELECTION__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == FormalParameterList.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES: return PersistencePackage.SELECTION___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PersistencePackage.SELECTION___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
