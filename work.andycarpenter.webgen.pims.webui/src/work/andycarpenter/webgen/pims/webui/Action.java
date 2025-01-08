@@ -2,9 +2,11 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +37,7 @@ import work.andycarpenter.webgen.pims.persistence.Entity;
  * @model abstract="true"
  * @generated
  */
-public interface Action extends NamedDisplayElement {
+public interface Action extends NamedDisplayElement, FeatureVariableContext {
 	/**
 	 * Returns the value of the '<em><b>Used By</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.ActionContainer#getActions <em>Actions</em>}'.
@@ -340,5 +342,13 @@ public interface Action extends NamedDisplayElement {
 	 * @generated
 	 */
 	void setContainingType(Entity value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 
 } // Action

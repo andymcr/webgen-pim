@@ -2,8 +2,11 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,6 +16,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import work.andycarpenter.webgen.pims.base.impl.NamedDisplayElementImpl;
 import work.andycarpenter.webgen.pims.expression.Predicate;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Feature;
+import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.DynamicUnit;
@@ -26,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getReferencableEntities <em>Referencable Entities</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getUsedBy <em>Used By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getParentUnit <em>Parent Unit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getIconName <em>Icon Name</em>}</li>
@@ -45,6 +52,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class ActionImpl extends NamedDisplayElementImpl implements Action {
+	/**
+	 * The cached setting delegate for the '{@link #getReferencableEntities() <em>Referencable Entities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencableEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate REFERENCABLE_ENTITIES__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES).getSettingDelegate();
+
 	/**
 	 * The cached setting delegate for the '{@link #getParentUnit() <em>Parent Unit</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -282,6 +299,27 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.ACTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getReferencableEntities() {
+		return (EList<Entity>)REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetReferencableEntities() {
+		return REFERENCABLE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -675,6 +713,25 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> referencableEntities() {
+		final EList<Entity> entities = new BasicEList<Entity>();
+		if (getUsedBy() instanceof DynamicUnit) {
+			final DynamicUnit unit = (DynamicUnit) getUsedBy();
+			entities.addAll(unit.referencableEntities());
+		} else if (getUsedBy() instanceof Feature) {
+			@SuppressWarnings("unused")
+			final Feature feature = (Feature) getUsedBy();
+		}
+
+		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -728,6 +785,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.ACTION__REFERENCABLE_ENTITIES:
+				return getReferencableEntities();
 			case WebuiPackage.ACTION__USED_BY:
 				return getUsedBy();
 			case WebuiPackage.ACTION__PARENT_UNIT:
@@ -872,6 +931,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.ACTION__REFERENCABLE_ENTITIES:
+				return isSetReferencableEntities();
 			case WebuiPackage.ACTION__USED_BY:
 				return getUsedBy() != null;
 			case WebuiPackage.ACTION__PARENT_UNIT:
@@ -902,6 +963,68 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.ACTION__REFERENCABLE_ENTITIES: return PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES: return WebuiPackage.ACTION__REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == FeatureVariableContext.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.FEATURE_VARIABLE_CONTEXT___REFERENCABLE_ENTITIES: return WebuiPackage.ACTION___REFERENCABLE_ENTITIES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.ACTION___REFERENCABLE_ENTITIES:
+				return referencableEntities();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

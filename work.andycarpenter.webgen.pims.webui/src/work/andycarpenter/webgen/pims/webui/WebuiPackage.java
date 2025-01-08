@@ -17820,13 +17820,22 @@ public interface WebuiPackage extends EPackage {
 	int ACTION__DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT__DISPLAY_LABEL;
 
 	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__REFERENCABLE_ENTITIES = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__USED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 0;
+	int ACTION__USED_BY = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
@@ -17835,7 +17844,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__PARENT_UNIT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 1;
+	int ACTION__PARENT_UNIT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Icon Name</b></em>' attribute.
@@ -17844,7 +17853,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 2;
+	int ACTION__ICON_NAME = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -17853,7 +17862,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 3;
+	int ACTION__DISABLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Display When</b></em>' containment reference.
@@ -17862,7 +17871,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 4;
+	int ACTION__DISPLAY_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Enable When</b></em>' containment reference.
@@ -17871,7 +17880,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ENABLE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 5;
+	int ACTION__ENABLE_WHEN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' attribute.
@@ -17880,7 +17889,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONFIRM_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
+	int ACTION__CONFIRM_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Success Message</b></em>' attribute.
@@ -17889,7 +17898,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__SUCCESS_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int ACTION__SUCCESS_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Failure Message</b></em>' attribute.
@@ -17898,7 +17907,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__FAILURE_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 8;
+	int ACTION__FAILURE_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Disabled Message</b></em>' attribute.
@@ -17907,7 +17916,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__DISABLED_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 9;
+	int ACTION__DISABLED_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -17916,7 +17925,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
+	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -17925,7 +17934,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -17934,7 +17943,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -17943,7 +17952,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -17952,7 +17961,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION___REFERENCABLE_ENTITIES = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -17961,7 +17979,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 0;
+	int ACTION_OPERATION_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SecurityActionImpl <em>Security Action</em>}' class.
@@ -17990,6 +18008,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SECURITY_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_ACTION__REFERENCABLE_ENTITIES = ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -18136,6 +18163,15 @@ public interface WebuiPackage extends EPackage {
 	int SECURITY_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_ACTION___REFERENCABLE_ENTITIES = ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Security Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18161,6 +18197,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION__REFERENCABLE_ENTITIES = ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.OperationActionImpl <em>Operation Action</em>}' class.
@@ -18346,6 +18391,15 @@ public interface WebuiPackage extends EPackage {
 	int DELETE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_ACTION___REFERENCABLE_ENTITIES = ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Delete Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18371,6 +18425,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECT_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION__REFERENCABLE_ENTITIES = ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -18526,6 +18589,15 @@ public interface WebuiPackage extends EPackage {
 	int SELECT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_ACTION___REFERENCABLE_ENTITIES = ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Select Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18551,6 +18623,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_SELECT_ACTION__DISPLAY_LABEL = SELECT_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION__REFERENCABLE_ENTITIES = SELECT_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -18706,6 +18787,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_SELECT_ACTION_FEATURE_COUNT = SELECT_ACTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SELECT_ACTION___REFERENCABLE_ENTITIES = SELECT_ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Container Select Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18731,6 +18821,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_SELECT_ACTION__DISPLAY_LABEL = SELECT_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION__REFERENCABLE_ENTITIES = SELECT_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -18886,6 +18985,15 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_SELECT_ACTION_FEATURE_COUNT = SELECT_ACTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_SELECT_ACTION___REFERENCABLE_ENTITIES = SELECT_ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Instance Select Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18921,6 +19029,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TARGET_ACTION__DISPLAY_LABEL = SELECT_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TARGET_ACTION__REFERENCABLE_ENTITIES = SELECT_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19076,6 +19193,15 @@ public interface WebuiPackage extends EPackage {
 	int TARGET_ACTION_FEATURE_COUNT = SELECT_ACTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TARGET_ACTION___REFERENCABLE_ENTITIES = SELECT_ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Target Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19101,6 +19227,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPERATION_ACTION__DISPLAY_LABEL = ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_ACTION__REFERENCABLE_ENTITIES = ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19265,6 +19400,15 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_ACTION___REFERENCABLE_ENTITIES = ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Operation Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19310,6 +19454,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER_OPERATION_ACTION__DISPLAY_LABEL = OPERATION_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_OPERATION_ACTION__REFERENCABLE_ENTITIES = OPERATION_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19474,6 +19627,15 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_OPERATION_ACTION_FEATURE_COUNT = OPERATION_ACTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_OPERATION_ACTION___REFERENCABLE_ENTITIES = OPERATION_ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Container Operation Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19499,6 +19661,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSTANCE_OPERATION_ACTION__DISPLAY_LABEL = OPERATION_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION__REFERENCABLE_ENTITIES = OPERATION_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19663,6 +19834,15 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_OPERATION_ACTION_FEATURE_COUNT = OPERATION_ACTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_ACTION___REFERENCABLE_ENTITIES = OPERATION_ACTION___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Instance Operation Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19698,6 +19878,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION__DISPLAY_LABEL = OPERATION_ACTION__DISPLAY_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_OPERATION_ACTION__REFERENCABLE_ENTITIES = OPERATION_ACTION__REFERENCABLE_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19860,6 +20049,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_OPERATION_ACTION_FEATURE_COUNT = OPERATION_ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_OPERATION_ACTION___REFERENCABLE_ENTITIES = OPERATION_ACTION___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>General Operation Action</em>' class.
@@ -23614,6 +23812,16 @@ public interface WebuiPackage extends EPackage {
 	EReference getAction_ContainingType();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.Action#referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.Action#referencableEntities()
+	 * @generated
+	 */
+	EOperation getAction__ReferencableEntities();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SecurityAction <em>Security Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26837,6 +27045,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTION__CONTAINING_TYPE = eINSTANCE.getAction_ContainingType();
+
+		/**
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACTION___REFERENCABLE_ENTITIES = eINSTANCE.getAction__ReferencableEntities();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SecurityActionImpl <em>Security Action</em>}' class.

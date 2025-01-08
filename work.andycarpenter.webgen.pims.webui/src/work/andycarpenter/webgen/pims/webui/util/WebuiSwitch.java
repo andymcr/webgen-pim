@@ -784,6 +784,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				Action action = (Action)theEObject;
 				T result = caseAction(action);
 				if (result == null) result = caseNamedDisplayElement(action);
+				if (result == null) result = caseFeatureVariableContext(action);
 				if (result == null) result = caseNamedElement(action);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -793,6 +794,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseSecurityAction(securityAction);
 				if (result == null) result = caseAction(securityAction);
 				if (result == null) result = caseNamedDisplayElement(securityAction);
+				if (result == null) result = caseFeatureVariableContext(securityAction);
 				if (result == null) result = caseNamedElement(securityAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -802,6 +804,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseDeleteAction(deleteAction);
 				if (result == null) result = caseAction(deleteAction);
 				if (result == null) result = caseNamedDisplayElement(deleteAction);
+				if (result == null) result = caseFeatureVariableContext(deleteAction);
 				if (result == null) result = caseNamedElement(deleteAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -811,6 +814,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseSelectAction(selectAction);
 				if (result == null) result = caseAction(selectAction);
 				if (result == null) result = caseNamedDisplayElement(selectAction);
+				if (result == null) result = caseFeatureVariableContext(selectAction);
 				if (result == null) result = caseNamedElement(selectAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -821,6 +825,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSelectAction(containerSelectAction);
 				if (result == null) result = caseAction(containerSelectAction);
 				if (result == null) result = caseNamedDisplayElement(containerSelectAction);
+				if (result == null) result = caseFeatureVariableContext(containerSelectAction);
 				if (result == null) result = caseNamedElement(containerSelectAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -831,6 +836,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSelectAction(instanceSelectAction);
 				if (result == null) result = caseAction(instanceSelectAction);
 				if (result == null) result = caseNamedDisplayElement(instanceSelectAction);
+				if (result == null) result = caseFeatureVariableContext(instanceSelectAction);
 				if (result == null) result = caseNamedElement(instanceSelectAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -841,6 +847,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSelectAction(targetAction);
 				if (result == null) result = caseAction(targetAction);
 				if (result == null) result = caseNamedDisplayElement(targetAction);
+				if (result == null) result = caseFeatureVariableContext(targetAction);
 				if (result == null) result = caseNamedElement(targetAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -850,6 +857,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseOperationAction(operationAction);
 				if (result == null) result = caseAction(operationAction);
 				if (result == null) result = caseNamedDisplayElement(operationAction);
+				if (result == null) result = caseFeatureVariableContext(operationAction);
 				if (result == null) result = caseNamedElement(operationAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -860,6 +868,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOperationAction(containerOperationAction);
 				if (result == null) result = caseAction(containerOperationAction);
 				if (result == null) result = caseNamedDisplayElement(containerOperationAction);
+				if (result == null) result = caseFeatureVariableContext(containerOperationAction);
 				if (result == null) result = caseNamedElement(containerOperationAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -870,6 +879,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOperationAction(instanceOperationAction);
 				if (result == null) result = caseAction(instanceOperationAction);
 				if (result == null) result = caseNamedDisplayElement(instanceOperationAction);
+				if (result == null) result = caseFeatureVariableContext(instanceOperationAction);
 				if (result == null) result = caseNamedElement(instanceOperationAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -880,6 +890,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOperationAction(generalOperationAction);
 				if (result == null) result = caseAction(generalOperationAction);
 				if (result == null) result = caseNamedDisplayElement(generalOperationAction);
+				if (result == null) result = caseFeatureVariableContext(generalOperationAction);
 				if (result == null) result = caseNamedElement(generalOperationAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

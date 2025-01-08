@@ -14,7 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-
+import work.andycarpenter.webgen.pims.persistence.Feature;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
@@ -74,7 +74,11 @@ public class ResourcePathElementItemProvider extends PathItemProvider {
 					if (object instanceof ResourcePathElement) {
 						final ResourcePathElement resource = (ResourcePathElement) object;
 						if (resource.contextEntity() != null) {
-							return resource.contextEntity().getAllAssociations();
+							for (Feature feature : resource.contextEntity().getFeatures()) {
+								if (feature instanceof ResourceFeature) {
+									resources.add((ResourceFeature) feature);
+								}
+							}
 						}
 					}
 			

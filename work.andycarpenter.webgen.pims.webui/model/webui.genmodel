@@ -481,6 +481,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/footerClass"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Debug" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//Action/containingType"/>
+      <genOperations ecoreOperation="webui.ecore#//Action/referencableEntities"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SecurityAction">
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"

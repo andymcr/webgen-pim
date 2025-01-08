@@ -4169,6 +4169,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getAction__ReferencableEntities() {
+		return actionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSecurityAction() {
 		return securityActionEClass;
 	}
@@ -4966,6 +4976,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(actionEClass, ACTION__HEADER_CLASS);
 		createEAttribute(actionEClass, ACTION__FOOTER_CLASS);
 		createEReference(actionEClass, ACTION__CONTAINING_TYPE);
+		createEOperation(actionEClass, ACTION___REFERENCABLE_ENTITIES);
 
 		securityActionEClass = createEClass(SECURITY_ACTION);
 		createEReference(securityActionEClass, SECURITY_ACTION__TARGET);
@@ -5132,6 +5143,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		resourceDisplayValueEClass.getESuperTypes().add(thePersistencePackage.getResourcePathElement());
 		resourceDisplayValueEClass.getESuperTypes().add(this.getDisplayValue());
 		actionEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
+		actionEClass.getESuperTypes().add(thePersistencePackage.getFeatureVariableContext());
 		securityActionEClass.getESuperTypes().add(this.getAction());
 		deleteActionEClass.getESuperTypes().add(this.getAction());
 		selectActionEClass.getESuperTypes().add(this.getAction());
@@ -5569,6 +5581,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getAction_HeaderClass(), ecorePackage.getEString(), "headerClass", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_FooterClass(), ecorePackage.getEString(), "footerClass", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_ContainingType(), thePersistencePackage.getEntity(), null, "containingType", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAction__ReferencableEntities(), thePersistencePackage.getEntity(), "referencableEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(securityActionEClass, SecurityAction.class, "SecurityAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSecurityAction_Target(), theSecurityPackage.getSecurityUnit(), null, "target", null, 1, 1, SecurityAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

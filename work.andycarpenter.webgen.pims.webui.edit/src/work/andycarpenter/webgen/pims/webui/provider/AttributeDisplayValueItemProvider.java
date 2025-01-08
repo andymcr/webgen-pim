@@ -20,7 +20,6 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.provider.AttributePathElementItemProvider;
-import work.andycarpenter.webgen.pims.webui.AssociationDisplayValue;
 import work.andycarpenter.webgen.pims.webui.AttributeDisplayValue;
 import work.andycarpenter.webgen.pims.webui.ValueContext;
 
@@ -66,16 +65,16 @@ public class AttributeDisplayValueItemProvider extends AttributePathElementItemP
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_AssociationPathElement_association_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_AssociationPathElement_association_feature", "_UI_AssociationPathElement_type"),
-			PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__ASSOCIATION,
+			getString("_UI_AttributePathElement_attribute_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_AttributePathElement_attribute_feature", "_UI_AttributePathElement_type"),
+			PersistencePackage.Literals.ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE,
 			true, false, true, null,
 			getString("_UI_ModelPropertyCategory"),
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
 					final Set<Attribute> attributes = new HashSet<Attribute>();
-					if (object instanceof AssociationDisplayValue) {
+					if (object instanceof AttributeDisplayValue) {
 						final AttributeDisplayValue value = (AttributeDisplayValue) object;
 						if (value.eContainer() instanceof ValueContext) {
 							final ValueContext context = (ValueContext) value.eContainer();

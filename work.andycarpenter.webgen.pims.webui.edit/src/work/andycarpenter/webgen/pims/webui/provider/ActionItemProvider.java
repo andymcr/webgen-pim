@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.provider.NamedDisplayElementItemProvider;
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -53,6 +54,7 @@ public class ActionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReferencableEntitiesPropertyDescriptor(object);
 			addParentUnitPropertyDescriptor(object);
 			addIconNamePropertyDescriptor(object);
 			addDisablePropertyDescriptor(object);
@@ -66,6 +68,28 @@ public class ActionItemProvider
 			addContainingTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Referencable Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencableEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeatureVariableContext_referencableEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureVariableContext_referencableEntities_feature", "_UI_FeatureVariableContext_type"),
+				 PersistencePackage.Literals.FEATURE_VARIABLE_CONTEXT__REFERENCABLE_ENTITIES,
+				 false,
+				 false,
+				 false,
+				 null,
+				 getString("_UI_DebugPropertyCategory"),
+				 null));
 	}
 
 	/**

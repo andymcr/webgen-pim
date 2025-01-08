@@ -619,8 +619,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		final EList<Entity> entities = new BasicEList<Entity>();
 		if (getContentType() != null) {
 			if (getFindContainerSelection() != null) {
-				entities.add(getContentType());
 				entities.add(getContentType().getContainingAssociation().getPartOf());
+				entities.add(getContentType());
 			} else {
 				if (getSelection() == null) {
 					entities.add(getContentType());
@@ -630,6 +630,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 					} else {
 						if (getSelection().getSelectPath().leafEntity() != null) {
 							entities.add(getSelection().getSelectPath().leafEntity());
+							entities.add(getContentType());
 						}
 					}
 				}
@@ -637,6 +638,16 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		}
 
 		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<Entity> valueEntities() {
+		return referencableEntities();
 	}
 
 	/**
@@ -1378,20 +1389,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		paginationAnchorClass = newPaginationAnchorClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS, oldPaginationAnchorClass, paginationAnchorClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Entity> valueEntities() {
-		final EList<Entity> entities = new BasicEList<Entity>();
-		if (getContentType() != null) {
-			entities.add(getContentType());
-		}
-		return entities;
 	}
 
 	/**

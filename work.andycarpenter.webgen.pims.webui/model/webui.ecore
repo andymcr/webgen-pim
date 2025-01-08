@@ -734,7 +734,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionNavigationClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=" "/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedDisplayElement ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//FeatureVariableContext">
+    <eOperations name="referencableEntities" upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" lowerBound="1"
         eType="#//ActionContainer" eOpposite="#//ActionContainer/actions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentUnit" eType="#//DynamicUnit"
