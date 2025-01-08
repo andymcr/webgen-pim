@@ -26,8 +26,6 @@ import work.andycarpenter.webgen.pims.base.IntegerLiteral;
 import work.andycarpenter.webgen.pims.base.NamedDisplayElement;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.base.NullLiteral;
-import work.andycarpenter.webgen.pims.base.ParameterReference;
-
 import work.andycarpenter.webgen.pims.base.ReduceFunction;
 import work.andycarpenter.webgen.pims.base.SizeFunction;
 import work.andycarpenter.webgen.pims.base.StringLiteral;
@@ -147,13 +145,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	private EClass formalParameterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass parameterReferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -596,36 +587,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getParameterReference() {
-		return parameterReferenceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getParameterReference_Name() {
-		return (EAttribute)parameterReferenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterReference_Parameter() {
-		return (EReference)parameterReferenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getReduceFunction() {
 		return reduceFunctionEClass;
 	}
@@ -778,10 +739,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		createEAttribute(formalParameterEClass, FORMAL_PARAMETER__PLACEHOLDER);
 		createEAttribute(formalParameterEClass, FORMAL_PARAMETER__DESCRIPTION);
 
-		parameterReferenceEClass = createEClass(PARAMETER_REFERENCE);
-		createEAttribute(parameterReferenceEClass, PARAMETER_REFERENCE__NAME);
-		createEReference(parameterReferenceEClass, PARAMETER_REFERENCE__PARAMETER);
-
 		callableEClass = createEClass(CALLABLE);
 		createEReference(callableEClass, CALLABLE__BODY);
 
@@ -838,7 +795,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		enumerationTypeEClass.getESuperTypes().add(this.getDataType());
 		enumerationLiteralEClass.getESuperTypes().add(this.getNamedDisplayElement());
 		formalParameterEClass.getESuperTypes().add(this.getNamedElement());
-		parameterReferenceEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 		callableEClass.getESuperTypes().add(this.getFormalParameterList());
 		callableEClass.getESuperTypes().add(theExpressionPackage.getOperand());
 		reduceFunctionEClass.getESuperTypes().add(theExpressionPackage.getOperand());
@@ -893,10 +849,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		initEReference(getFormalParameter_DataType(), this.getClassifier(), null, "dataType", null, 0, 1, FormalParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormalParameter_Placeholder(), ecorePackage.getEString(), "placeholder", null, 0, 1, FormalParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormalParameter_Description(), ecorePackage.getEString(), "description", null, 0, 1, FormalParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(parameterReferenceEClass, ParameterReference.class, "ParameterReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameterReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, ParameterReference.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getParameterReference_Parameter(), this.getFormalParameter(), null, "parameter", null, 1, 1, ParameterReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(callableEClass, Callable.class, "Callable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCallable_Body(), theExpressionPackage.getExpression(), null, "body", null, 1, 1, Callable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -956,12 +908,6 @@ public class BasePackageImpl extends EPackageImpl implements BasePackage {
 		   source,
 		   new String[] {
 			   "nameNeedsAtLeastOneCharacter", "not name.oclIsUndefined() implies name.size() > 0"
-		   });
-		addAnnotation
-		  (getParameterReference_Name(),
-		   source,
-		   new String[] {
-			   "derivation", "if parameter.oclIsUndefined() then\r\n\t\'\'\r\nelse\r\n\tparameter.name\r\nendif"
 		   });
 	}
 

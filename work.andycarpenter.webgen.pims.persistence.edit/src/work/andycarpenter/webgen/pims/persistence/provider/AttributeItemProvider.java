@@ -331,11 +331,6 @@ public class AttributeItemProvider extends FeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.ATTRIBUTE__DEFAULT_VALUE,
 				 BaseFactory.eINSTANCE.createCallable()));
 
 		newChildDescriptors.add

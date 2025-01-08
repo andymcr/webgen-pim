@@ -284,11 +284,6 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.UNIT_ELEMENT__DEFAULT_VALUE,
 				 BaseFactory.eINSTANCE.createCallable()));
 
 		newChildDescriptors.add

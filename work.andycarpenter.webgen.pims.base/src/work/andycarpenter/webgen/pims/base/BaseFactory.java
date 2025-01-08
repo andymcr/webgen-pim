@@ -121,15 +121,6 @@ public interface BaseFactory extends EFactory {
 	FormalParameter createFormalParameter();
 
 	/**
-	 * Returns a new object of class '<em>Parameter Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Reference</em>'.
-	 * @generated
-	 */
-	ParameterReference createParameterReference();
-
-	/**
 	 * Returns a new object of class '<em>Reduce Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -67,7 +67,6 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 			case BasePackage.ENUMERATION_TYPE: return createEnumerationType();
 			case BasePackage.ENUMERATION_LITERAL: return createEnumerationLiteral();
 			case BasePackage.FORMAL_PARAMETER: return createFormalParameter();
-			case BasePackage.PARAMETER_REFERENCE: return createParameterReference();
 			case BasePackage.CALLABLE: return createCallable();
 			case BasePackage.REDUCE_FUNCTION: return createReduceFunction();
 			case BasePackage.SIZE_FUNCTION: return createSizeFunction();
@@ -195,17 +194,6 @@ public class BaseFactoryImpl extends EFactoryImpl implements BaseFactory {
 	public FormalParameter createFormalParameter() {
 		FormalParameterImpl formalParameter = new FormalParameterImpl();
 		return formalParameter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ParameterReference createParameterReference() {
-		ParameterReferenceImpl parameterReference = new ParameterReferenceImpl();
-		return parameterReference;
 	}
 
 	/**

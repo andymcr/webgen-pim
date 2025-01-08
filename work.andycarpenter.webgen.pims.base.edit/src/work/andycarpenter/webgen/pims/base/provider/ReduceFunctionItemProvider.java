@@ -148,11 +148,6 @@ public class ReduceFunctionItemProvider extends OperandItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BasePackage.Literals.REDUCE_FUNCTION__VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__CALLBACK,
 				 BaseFactory.eINSTANCE.createCallable()));
 
@@ -190,11 +185,6 @@ public class ReduceFunctionItemProvider extends OperandItemProvider {
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
 				 BaseFactory.eINSTANCE.createCurrentUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-				 BaseFactory.eINSTANCE.createParameterReference()));
 
 		newChildDescriptors.add
 			(createChildParameter

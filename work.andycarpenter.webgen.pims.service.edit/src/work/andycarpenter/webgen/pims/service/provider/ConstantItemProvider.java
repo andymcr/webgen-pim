@@ -188,11 +188,6 @@ public class ConstantItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ServicePackage.Literals.CONSTANT__VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ServicePackage.Literals.CONSTANT__VALUE,
 				 BaseFactory.eINSTANCE.createCallable()));
 
 		newChildDescriptors.add

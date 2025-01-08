@@ -133,10 +133,6 @@ public class BaseAdapterFactory extends AdapterFactoryImpl {
 				return createFormalParameterAdapter();
 			}
 			@Override
-			public Adapter caseParameterReference(ParameterReference object) {
-				return createParameterReferenceAdapter();
-			}
-			@Override
 			public Adapter caseCallable(Callable object) {
 				return createCallableAdapter();
 			}
@@ -391,20 +387,6 @@ public class BaseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFormalParameterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.base.ParameterReference <em>Parameter Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.base.ParameterReference
-	 * @generated
-	 */
-	public Adapter createParameterReferenceAdapter() {
 		return null;
 	}
 

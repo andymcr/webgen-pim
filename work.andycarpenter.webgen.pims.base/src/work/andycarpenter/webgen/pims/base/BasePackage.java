@@ -849,62 +849,6 @@ public interface BasePackage extends EPackage {
 	int FORMAL_PARAMETER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl <em>Parameter Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl
-	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getParameterReference()
-	 * @generated
-	 */
-	int PARAMETER_REFERENCE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_REFERENCE__ROOT_CONTAINER = ExpressionPackage.VARIABLE__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_REFERENCE__NAME = ExpressionPackage.VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parameter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_REFERENCE__PARAMETER = ExpressionPackage.VARIABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Parameter Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_REFERENCE_FEATURE_COUNT = ExpressionPackage.VARIABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Parameter Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_REFERENCE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
-
-
-	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl <em>Reduce Function</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -912,7 +856,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getReduceFunction()
 	 * @generated
 	 */
-	int REDUCE_FUNCTION = 17;
+	int REDUCE_FUNCTION = 16;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.SizeFunctionImpl <em>Size Function</em>}' class.
@@ -922,7 +866,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getSizeFunction()
 	 * @generated
 	 */
-	int SIZE_FUNCTION = 18;
+	int SIZE_FUNCTION = 17;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.base.impl.CallableImpl <em>Callable</em>}' class.
@@ -932,7 +876,7 @@ public interface BasePackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getCallable()
 	 * @generated
 	 */
-	int CALLABLE = 16;
+	int CALLABLE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1430,38 +1374,6 @@ public interface BasePackage extends EPackage {
 	EAttribute getFormalParameter_Description();
 
 	/**
-	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.ParameterReference <em>Parameter Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter Reference</em>'.
-	 * @see work.andycarpenter.webgen.pims.base.ParameterReference
-	 * @generated
-	 */
-	EClass getParameterReference();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.base.ParameterReference#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.base.ParameterReference#getName()
-	 * @see #getParameterReference()
-	 * @generated
-	 */
-	EAttribute getParameterReference_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.base.ParameterReference#getParameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parameter</em>'.
-	 * @see work.andycarpenter.webgen.pims.base.ParameterReference#getParameter()
-	 * @see #getParameterReference()
-	 * @generated
-	 */
-	EReference getParameterReference_Parameter();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.base.ReduceFunction <em>Reduce Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1870,32 +1782,6 @@ public interface BasePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORMAL_PARAMETER__DESCRIPTION = eINSTANCE.getFormalParameter_Description();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl <em>Parameter Reference</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.base.impl.ParameterReferenceImpl
-		 * @see work.andycarpenter.webgen.pims.base.impl.BasePackageImpl#getParameterReference()
-		 * @generated
-		 */
-		EClass PARAMETER_REFERENCE = eINSTANCE.getParameterReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER_REFERENCE__NAME = eINSTANCE.getParameterReference_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETER_REFERENCE__PARAMETER = eINSTANCE.getParameterReference_Parameter();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.base.impl.ReduceFunctionImpl <em>Reduce Function</em>}' class.

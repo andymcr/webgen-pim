@@ -140,11 +140,6 @@ public class SizeFunctionItemProvider extends OperandItemProvider {
 			(createChildParameter
 				(BasePackage.Literals.SIZE_FUNCTION__VALUE,
 				 BaseFactory.eINSTANCE.createCurrentUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.SIZE_FUNCTION__VALUE,
-				 BaseFactory.eINSTANCE.createParameterReference()));
 	}
 
 }

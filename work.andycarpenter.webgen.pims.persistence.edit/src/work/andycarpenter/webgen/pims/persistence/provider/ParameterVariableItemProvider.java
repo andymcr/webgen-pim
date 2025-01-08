@@ -9,17 +9,21 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import work.andycarpenter.webgen.pims.base.FormalParameter;
+import work.andycarpenter.webgen.pims.base.FormalParameterList;
+import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.persistence.Filter;
 import work.andycarpenter.webgen.pims.persistence.ParameterVariable;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
-import work.andycarpenter.webgen.pims.persistence.Selection;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.persistence.ParameterVariable} object.
@@ -120,11 +124,11 @@ public class ParameterVariableItemProvider extends PathItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof ParameterVariable) {
 						final ParameterVariable variable = (ParameterVariable) object;
-						if (variable.getRootContainer() instanceof Selection) {
-							return ((Selection) variable.getRootContainer()).getParameters();
-						} else if (variable.getRootContainer() instanceof Filter) {
-							return ((Filter) variable.getRootContainer()).getParameters();
+						final EList<FormalParameter> formals = new BasicEList<FormalParameter>();
+						for (FormalParameterList context : parameterContexts(variable)) {
+							formals.addAll(context.getParameters());
 						}
+						return formals;
 					}
 		
 					return Collections.emptyList();
@@ -132,6 +136,20 @@ public class ParameterVariableItemProvider extends PathItemProvider {
 			});
 	}
 
+	private EList<FormalParameterList> parameterContexts(ParameterVariable variable) {
+		final EList<FormalParameterList> contexts = new BasicEList<FormalParameterList>();
+		EObject parent = variable.eContainer();
+		while (parent instanceof Expression) {
+			if (parent instanceof FormalParameterList) {
+				contexts.add((FormalParameterList) parent);
+			}
+			parent = parent.eContainer();
+		}
+		
+		return contexts;
+	}
+
+	
 	/**
 	 * This returns ParameterVariable.gif.
 	 * <!-- begin-user-doc -->

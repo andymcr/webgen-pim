@@ -115,8 +115,6 @@ public class BaseValidator extends EObjectValidator {
 				return validateFormalParameterList((FormalParameterList)value, diagnostics, context);
 			case BasePackage.FORMAL_PARAMETER:
 				return validateFormalParameter((FormalParameter)value, diagnostics, context);
-			case BasePackage.PARAMETER_REFERENCE:
-				return validateParameterReference((ParameterReference)value, diagnostics, context);
 			case BasePackage.CALLABLE:
 				return validateCallable((Callable)value, diagnostics, context);
 			case BasePackage.REDUCE_FUNCTION:
@@ -360,15 +358,6 @@ public class BaseValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(formalParameter, diagnostics, context);
 		if (result || diagnostics != null) result &= validateNamedElement_nameNeedsAtLeastOneCharacter(formalParameter, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateParameterReference(ParameterReference parameterReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(parameterReference, diagnostics, context);
 	}
 
 	/**

@@ -221,11 +221,6 @@ public class CallableItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
-				 BaseFactory.eINSTANCE.createParameterReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.CALLABLE__BODY,
 				 BaseFactory.eINSTANCE.createCallable()));
 
 		newChildDescriptors.add
