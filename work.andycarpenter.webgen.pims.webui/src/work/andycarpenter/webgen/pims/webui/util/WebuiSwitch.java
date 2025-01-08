@@ -12,6 +12,7 @@ import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
 import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PathRoot;
 import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
@@ -341,8 +342,9 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAssociationPathElement(unitAssociation);
 				if (result == null) result = caseUnitField(unitAssociation);
 				if (result == null) result = caseActionContainer(unitAssociation);
-				if (result == null) result = casePath(unitAssociation);
+				if (result == null) result = casePathRoot(unitAssociation);
 				if (result == null) result = caseFeatureVariableContext(unitAssociation);
+				if (result == null) result = casePath(unitAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -745,6 +747,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseAssociationDisplayValue(associationDisplayValue);
 				if (result == null) result = caseAssociationPathElement(associationDisplayValue);
 				if (result == null) result = caseDisplayValue(associationDisplayValue);
+				if (result == null) result = casePathRoot(associationDisplayValue);
 				if (result == null) result = casePath(associationDisplayValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -2133,6 +2136,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePath(Path object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Root</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathRoot(PathRoot object) {
 		return null;
 	}
 

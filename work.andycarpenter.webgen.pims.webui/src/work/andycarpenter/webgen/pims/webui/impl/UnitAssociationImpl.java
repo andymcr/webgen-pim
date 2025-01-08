@@ -18,6 +18,7 @@ import work.andycarpenter.webgen.pims.persistence.ChildFeature;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PathRoot;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.UnitAssociation;
@@ -31,9 +32,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociationSource <em>Association Source</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociationTarget <em>Association Target</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
@@ -44,6 +45,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociation {
+	/**
+	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChildFeature()
+	 * @generated
+	 * @ordered
+	 */
+	protected ChildFeature childFeature;
+
 	/**
 	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -63,16 +74,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @ordered
 	 */
 	protected ModelLabel valueDisplay;
-
-	/**
-	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildFeature()
-	 * @generated
-	 * @ordered
-	 */
-	protected ChildFeature childFeature;
 
 	/**
 	 * The cached setting delegate for the '{@link #getAssociationSource() <em>Association Source</em>}' reference.
@@ -545,14 +546,14 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
+				return getChildFeature();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				if (resolve) return getAssociation();
 				return basicGetAssociation();
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				if (resolve) return getValueDisplay();
 				return basicGetValueDisplay();
-			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				return getChildFeature();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE:
 				if (resolve) return getAssociationSource();
 				return basicGetAssociationSource();
@@ -579,14 +580,14 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
+				setChildFeature((ChildFeature)newValue);
+				return;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)newValue);
-				return;
-			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildFeature)newValue);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)newValue);
@@ -609,14 +610,14 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
+				setChildFeature((ChildFeature)null);
+				return;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				setAssociation((Association)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)null);
-				return;
-			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				setChildFeature((ChildFeature)null);
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__OPTIONS:
 				setOptions((Selection)null);
@@ -639,12 +640,12 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
+				return childFeature != null;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
 				return association != null;
 			case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY:
 				return valueDisplay != null;
-			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
-				return childFeature != null;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE:
 				return isSetAssociationSource();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET:
@@ -671,11 +672,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				default: return -1;
 			}
 		}
+		if (baseClass == PathRoot.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE: return PersistencePackage.PATH_ROOT__CHILD_FEATURE;
+				default: return -1;
+			}
+		}
 		if (baseClass == AssociationPathElement.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION;
 				case WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY;
-				case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE;
 				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE;
 				case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET: return PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET;
 				default: return -1;
@@ -696,11 +702,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				default: return -1;
 			}
 		}
+		if (baseClass == PathRoot.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.PATH_ROOT__CHILD_FEATURE: return WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE;
+				default: return -1;
+			}
+		}
 		if (baseClass == AssociationPathElement.class) {
 			switch (baseFeatureID) {
 				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION;
 				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY: return WebuiPackage.UNIT_ASSOCIATION__VALUE_DISPLAY;
-				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE: return WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE;
 				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_SOURCE;
 				case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET: return WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION_TARGET;
 				default: return -1;
@@ -720,6 +731,11 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			switch (baseOperationID) {
 				case PersistencePackage.PATH___CONTEXT_ENTITY: return WebuiPackage.UNIT_ASSOCIATION___CONTEXT_ENTITY;
 				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_ASSOCIATION___NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == PathRoot.class) {
+			switch (baseOperationID) {
 				default: return -1;
 			}
 		}

@@ -137,6 +137,29 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.PathRoot} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PathRootItemProvider pathRootItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.persistence.PathRoot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPathRootAdapter() {
+		if (pathRootItemProvider == null) {
+			pathRootItemProvider = new PathRootItemProvider(this);
+		}
+
+		return pathRootItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.persistence.ModelLabelAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

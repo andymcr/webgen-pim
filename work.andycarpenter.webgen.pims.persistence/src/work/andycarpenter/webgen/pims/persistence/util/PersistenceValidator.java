@@ -108,6 +108,8 @@ public class PersistenceValidator extends EObjectValidator {
 				return validateAssociation((Association)value, diagnostics, context);
 			case PersistencePackage.PATH:
 				return validatePath((Path)value, diagnostics, context);
+			case PersistencePackage.PATH_ROOT:
+				return validatePathRoot((PathRoot)value, diagnostics, context);
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT:
 				return validateAssociationPathElement((AssociationPathElement)value, diagnostics, context);
 			case PersistencePackage.ATTRIBUTE_PATH_ELEMENT:
@@ -868,6 +870,15 @@ public class PersistenceValidator extends EObjectValidator {
 	 */
 	public boolean validateResourcePathElement(ResourcePathElement resourcePathElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(resourcePathElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePathRoot(PathRoot pathRoot, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pathRoot, diagnostics, context);
 	}
 
 	/**

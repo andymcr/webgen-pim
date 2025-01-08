@@ -13,7 +13,6 @@ package work.andycarpenter.webgen.pims.persistence;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getValueDisplay <em>Value Display</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationSource <em>Association Source</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getAssociationTarget <em>Association Target</em>}</li>
  * </ul>
@@ -22,7 +21,7 @@ package work.andycarpenter.webgen.pims.persistence;
  * @model abstract="true"
  * @generated
  */
-public interface AssociationPathElement extends Path {
+public interface AssociationPathElement extends PathRoot {
 	/**
 	 * Returns the value of the '<em><b>Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -66,30 +65,6 @@ public interface AssociationPathElement extends Path {
 	 * @generated
 	 */
 	void setValueDisplay(ModelLabel value);
-
-	/**
-	 * Returns the value of the '<em><b>Child Feature</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Child Feature</em>' containment reference.
-	 * @see #setChildFeature(ChildFeature)
-	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getAssociationPathElement_ChildFeature()
-	 * @see work.andycarpenter.webgen.pims.persistence.ChildFeature#getParent
-	 * @model opposite="parent" containment="true"
-	 * @generated
-	 */
-	ChildFeature getChildFeature();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature <em>Child Feature</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Child Feature</em>' containment reference.
-	 * @see #getChildFeature()
-	 * @generated
-	 */
-	void setChildFeature(ChildFeature value);
 
 	/**
 	 * Returns the value of the '<em><b>Association Source</b></em>' reference.

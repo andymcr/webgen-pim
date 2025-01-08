@@ -43,4 +43,12 @@ public interface SelectionPath extends AssociationPathElement {
 	 */
 	void setSelection(Selection value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
+
 } // SelectionPath

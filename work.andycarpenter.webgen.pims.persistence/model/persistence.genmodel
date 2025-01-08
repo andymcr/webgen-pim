@@ -120,10 +120,12 @@
       <genOperations ecoreOperation="persistence.ecore#//Path/contextEntity"/>
       <genOperations ecoreOperation="persistence.ecore#//Path/name"/>
     </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//PathRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//PathRoot/childFeature"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//AssociationPathElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationPathElement/association"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationPathElement/valueDisplay"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationPathElement/childFeature"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//AssociationPathElement/associationSource"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//AssociationPathElement/associationTarget"/>
       <genOperations ecoreOperation="persistence.ecore#//AssociationPathElement/name"/>
@@ -141,9 +143,15 @@
     <genClasses image="false" ecoreClass="persistence.ecore#//ChildFeature">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//ChildFeature/parent"/>
     </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//ChildAssociation"/>
-    <genClasses ecoreClass="persistence.ecore#//ChildAttribute"/>
-    <genClasses ecoreClass="persistence.ecore#//ChildResource"/>
+    <genClasses ecoreClass="persistence.ecore#//ChildAssociation">
+      <genOperations ecoreOperation="persistence.ecore#//ChildAssociation/contextEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//ChildAttribute">
+      <genOperations ecoreOperation="persistence.ecore#//ChildAttribute/contextEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence.ecore#//ChildResource">
+      <genOperations ecoreOperation="persistence.ecore#//ChildResource/contextEntity"/>
+    </genClasses>
     <genClasses ecoreClass="persistence.ecore#//DataTypeAttribute">
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference persistence.ecore#//DataTypeAttribute/dataType"/>
@@ -226,9 +234,12 @@
     <genClasses image="false" ecoreClass="persistence.ecore#//ModelLabelFeature">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//ModelLabelFeature/partOf"/>
     </genClasses>
-    <genClasses ecoreClass="persistence.ecore#//ModelLabelAssociation"/>
+    <genClasses ecoreClass="persistence.ecore#//ModelLabelAssociation">
+      <genOperations ecoreOperation="persistence.ecore#//ModelLabelAssociation/contextEntity"/>
+    </genClasses>
     <genClasses ecoreClass="persistence.ecore#//ModelLabelAttribute">
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute persistence.ecore#//ModelLabelAttribute/dateFormat"/>
+      <genOperations ecoreOperation="persistence.ecore#//ModelLabelAttribute/contextEntity"/>
     </genClasses>
     <genClasses ecoreClass="persistence.ecore#//Repository">
       <genFeatures notify="false" createChild="false" propertyCategory="Data Access"
@@ -261,6 +272,7 @@
     <genClasses ecoreClass="persistence.ecore#//SelectionPath">
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//SelectionPath/selection"/>
+      <genOperations ecoreOperation="persistence.ecore#//SelectionPath/contextEntity"/>
     </genClasses>
     <genClasses image="false" ecoreClass="persistence.ecore#//Order">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence.ecore#//Order/selection"/>
@@ -292,6 +304,7 @@
     <genClasses ecoreClass="persistence.ecore#//ParameterVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence.ecore#//ParameterVariable/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persistence.ecore#//ParameterVariable/formal"/>
+      <genOperations ecoreOperation="persistence.ecore#//ParameterVariable/contextEntity"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

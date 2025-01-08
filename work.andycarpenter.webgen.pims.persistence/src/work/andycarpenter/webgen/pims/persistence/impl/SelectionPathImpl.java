@@ -63,16 +63,6 @@ public class SelectionPathImpl extends AssociationPathElementImpl implements Sel
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Entity contextEntity() {
-		return getSelection().getDefinedBy().getServes();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NotificationChain basicSetSelection(Selection newSelection, NotificationChain msgs) {
@@ -100,6 +90,16 @@ public class SelectionPathImpl extends AssociationPathElementImpl implements Sel
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.SELECTION_PATH__SELECTION, newSelection, newSelection));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public Entity contextEntity() {
+		return getSelection().getDefinedBy().getServes();
 	}
 
 	/**

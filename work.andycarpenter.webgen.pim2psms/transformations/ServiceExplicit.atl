@@ -107,10 +107,3 @@ rule ConstantReference {
 		value <- website.value
 	)
 }
-
-rule ParameterReference {
-	from website : Website!ParameterReference (website.isServiceExpression())
-	to service : Service!ParameterReference (
-		parameter <- website.parameter
-	)
-}

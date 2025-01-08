@@ -21,17 +21,17 @@ package work.andycarpenter.webgen.pims.persistence;
 public interface ChildFeature extends Path {
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature <em>Child Feature</em>}'.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.persistence.PathRoot#getChildFeature <em>Child Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' container reference.
-	 * @see #setParent(AssociationPathElement)
+	 * @see #setParent(PathRoot)
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getChildFeature_Parent()
-	 * @see work.andycarpenter.webgen.pims.persistence.AssociationPathElement#getChildFeature
+	 * @see work.andycarpenter.webgen.pims.persistence.PathRoot#getChildFeature
 	 * @model opposite="childFeature" transient="false"
 	 * @generated
 	 */
-	AssociationPathElement getParent();
+	PathRoot getParent();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.ChildFeature#getParent <em>Parent</em>}' container reference.
@@ -41,6 +41,6 @@ public interface ChildFeature extends Path {
 	 * @see #getParent()
 	 * @generated
 	 */
-	void setParent(AssociationPathElement value);
+	void setParent(PathRoot value);
 
 } // ChildFeature

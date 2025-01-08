@@ -40,6 +40,15 @@ public interface PersistenceFactory extends EFactory {
 	SerializationGroup createSerializationGroup();
 
 	/**
+	 * Returns a new object of class '<em>Path Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Root</em>'.
+	 * @generated
+	 */
+	PathRoot createPathRoot();
+
+	/**
 	 * Returns a new object of class '<em>Model Label Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

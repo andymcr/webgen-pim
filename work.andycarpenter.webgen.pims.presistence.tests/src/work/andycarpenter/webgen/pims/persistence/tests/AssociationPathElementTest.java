@@ -24,7 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
  * </p>
  * @generated
  */
-public abstract class AssociationPathElementTest extends PathTest {
+public abstract class AssociationPathElementTest extends PathRootTest {
 
 	/**
 	 * Constructs a new Association Path Element test case with the given name.

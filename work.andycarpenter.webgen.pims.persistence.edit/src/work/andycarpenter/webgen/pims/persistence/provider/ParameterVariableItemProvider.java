@@ -31,7 +31,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterVariableItemProvider extends PathItemProvider {
+public class ParameterVariableItemProvider extends PathRootItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

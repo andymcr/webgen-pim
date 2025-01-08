@@ -14,4 +14,12 @@ package work.andycarpenter.webgen.pims.persistence;
  * @generated
  */
 public interface ChildAssociation extends AssociationPathElement, ChildFeature {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
 } // ChildAssociation

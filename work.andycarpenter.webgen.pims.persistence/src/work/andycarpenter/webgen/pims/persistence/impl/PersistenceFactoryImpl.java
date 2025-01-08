@@ -60,6 +60,7 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 			case PersistencePackage.PERSISTENCE: return createPersistence();
 			case PersistencePackage.ENTITY: return createEntity();
 			case PersistencePackage.SERIALIZATION_GROUP: return createSerializationGroup();
+			case PersistencePackage.PATH_ROOT: return createPathRoot();
 			case PersistencePackage.CHILD_ASSOCIATION: return createChildAssociation();
 			case PersistencePackage.CHILD_ATTRIBUTE: return createChildAttribute();
 			case PersistencePackage.CHILD_RESOURCE: return createChildResource();
@@ -166,6 +167,17 @@ public class PersistenceFactoryImpl extends EFactoryImpl implements PersistenceF
 	public SerializationGroup createSerializationGroup() {
 		SerializationGroupImpl serializationGroup = new SerializationGroupImpl();
 		return serializationGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PathRoot createPathRoot() {
+		PathRootImpl pathRoot = new PathRootImpl();
+		return pathRoot;
 	}
 
 	/**

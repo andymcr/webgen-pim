@@ -14,4 +14,12 @@ package work.andycarpenter.webgen.pims.persistence;
  * @generated
  */
 public interface ChildResource extends ResourcePathElement, ChildFeature {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
 } // ChildResource

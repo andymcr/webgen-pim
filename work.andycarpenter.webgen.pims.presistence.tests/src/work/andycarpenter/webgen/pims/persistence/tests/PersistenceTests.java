@@ -32,6 +32,7 @@ public class PersistenceTests extends TestSuite {
 	public static Test suite() {
 		TestSuite suite = new PersistenceTests("persistence Tests");
 		suite.addTestSuite(EntityTest.class);
+		suite.addTestSuite(PathRootTest.class);
 		suite.addTestSuite(ChildAssociationTest.class);
 		suite.addTestSuite(ChildAttributeTest.class);
 		suite.addTestSuite(ChildResourceTest.class);

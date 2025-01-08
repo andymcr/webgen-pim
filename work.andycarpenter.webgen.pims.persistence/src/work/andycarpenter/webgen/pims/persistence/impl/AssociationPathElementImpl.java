@@ -4,8 +4,6 @@ package work.andycarpenter.webgen.pims.persistence.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
-import work.andycarpenter.webgen.pims.persistence.ChildFeature;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ModelLabel;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -30,14 +27,13 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl#getValueDisplay <em>Value Display</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl#getAssociationSource <em>Association Source</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl#getAssociationTarget <em>Association Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class AssociationPathElementImpl extends PathImpl implements AssociationPathElement {
+public abstract class AssociationPathElementImpl extends PathRootImpl implements AssociationPathElement {
 	/**
 	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -57,16 +53,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 	 * @ordered
 	 */
 	protected ModelLabel valueDisplay;
-
-	/**
-	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildFeature()
-	 * @generated
-	 * @ordered
-	 */
-	protected ChildFeature childFeature;
 
 	/**
 	 * The cached setting delegate for the '{@link #getAssociationSource() <em>Association Source</em>}' reference.
@@ -193,51 +179,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 	 * @generated
 	 */
 	@Override
-	public ChildFeature getChildFeature() {
-		return childFeature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetChildFeature(ChildFeature newChildFeature, NotificationChain msgs) {
-		ChildFeature oldChildFeature = childFeature;
-		childFeature = newChildFeature;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE, oldChildFeature, newChildFeature);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setChildFeature(ChildFeature newChildFeature) {
-		if (newChildFeature != childFeature) {
-			NotificationChain msgs = null;
-			if (childFeature != null)
-				msgs = ((InternalEObject)childFeature).eInverseRemove(this, PersistencePackage.CHILD_FEATURE__PARENT, ChildFeature.class, msgs);
-			if (newChildFeature != null)
-				msgs = ((InternalEObject)newChildFeature).eInverseAdd(this, PersistencePackage.CHILD_FEATURE__PARENT, ChildFeature.class, msgs);
-			msgs = basicSetChildFeature(newChildFeature, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE, newChildFeature, newChildFeature));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Entity getAssociationSource() {
 		return (Entity)ASSOCIATION_SOURCE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -354,36 +295,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				if (childFeature != null)
-					msgs = ((InternalEObject)childFeature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE, null, msgs);
-				return basicSetChildFeature((ChildFeature)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				return basicSetChildFeature(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION:
@@ -392,8 +303,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY:
 				if (resolve) return getValueDisplay();
 				return basicGetValueDisplay();
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				return getChildFeature();
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE:
 				if (resolve) return getAssociationSource();
 				return basicGetAssociationSource();
@@ -418,9 +327,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)newValue);
 				return;
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				setChildFeature((ChildFeature)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -439,9 +345,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY:
 				setValueDisplay((ModelLabel)null);
 				return;
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				setChildFeature((ChildFeature)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -458,8 +361,6 @@ public abstract class AssociationPathElementImpl extends PathImpl implements Ass
 				return association != null;
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY:
 				return valueDisplay != null;
-			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE:
-				return childFeature != null;
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE:
 				return isSetAssociationSource();
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET:

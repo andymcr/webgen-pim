@@ -35,9 +35,6 @@ helper context Website!DisplayValue def: isInterfaceExpression() : Boolean
 helper context Website!ModelLabelFeature def: isInterfaceExpression() : Boolean
 	= false;
 
-helper context Website!ParameterReference def: isInterfaceExpression() : Boolean
-	= false;
-
 helper context Website!SelectionPath def: isInterfaceExpression() : Boolean
 	= false;
 
@@ -168,13 +165,6 @@ rule FormalParameter {
 				website.name.createLabel()
 			endif,
 		description <- website.description
-	)
-}
-
-rule ParameterReference {
-	from website : Website!ParameterReference (website.isInterfaceExpression())
-	to waf : WAF!ParameterReference (
-		parameter <- website.parameter
 	)
 }
 

@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
  * </p>
  * @generated
  */
-public class ParameterVariableTest extends PathTest {
+public class ParameterVariableTest extends PathRootTest {
 
 	/**
 	 * <!-- begin-user-doc -->

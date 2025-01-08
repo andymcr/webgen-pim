@@ -29,9 +29,6 @@ helper context Website!DisplayValue def: isRepositoryExpression() : Boolean
 helper context Website!ModelLabelFeature def: isRepositoryExpression() : Boolean
 	= false;
 
-helper context Website!ParameterReference def: isRepositoryExpression() : Boolean
-	= false;
-
 helper context Website!SelectionPath def: isRepositoryExpression() : Boolean
 	= true;
 

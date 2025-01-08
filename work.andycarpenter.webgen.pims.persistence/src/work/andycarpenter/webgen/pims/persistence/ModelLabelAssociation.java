@@ -15,4 +15,12 @@ package work.andycarpenter.webgen.pims.persistence;
  */
 public interface ModelLabelAssociation extends AssociationPathElement, ModelLabelFeature {
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
+
 } // ModelLabelAssociation

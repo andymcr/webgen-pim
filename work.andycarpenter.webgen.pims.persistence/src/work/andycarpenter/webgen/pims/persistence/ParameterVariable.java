@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.expression.Variable;
  * @model
  * @generated
  */
-public interface ParameterVariable extends Path, Variable {
+public interface ParameterVariable extends PathRoot, Variable {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,5 +68,13 @@ public interface ParameterVariable extends Path, Variable {
 	 * @generated
 	 */
 	void setFormal(FormalParameter value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
 
 } // ParameterVariable

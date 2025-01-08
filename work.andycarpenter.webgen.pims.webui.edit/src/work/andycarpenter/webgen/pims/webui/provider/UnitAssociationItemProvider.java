@@ -267,7 +267,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE);
+			childrenFeatures.add(PersistencePackage.Literals.PATH_ROOT__CHILD_FEATURE);
 		}
 		return childrenFeatures;
 	}
@@ -344,17 +344,17 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE,
+				(PersistencePackage.Literals.PATH_ROOT__CHILD_FEATURE,
 				 PersistenceFactory.eINSTANCE.createChildAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE,
+				(PersistencePackage.Literals.PATH_ROOT__CHILD_FEATURE,
 				 PersistenceFactory.eINSTANCE.createChildAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE,
+				(PersistencePackage.Literals.PATH_ROOT__CHILD_FEATURE,
 				 PersistenceFactory.eINSTANCE.createChildResource()));
 	}
 

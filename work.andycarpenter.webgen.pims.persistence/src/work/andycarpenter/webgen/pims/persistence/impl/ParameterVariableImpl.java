@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import work.andycarpenter.webgen.pims.base.FormalParameter;
-
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.Variable;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ParameterVariable;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
@@ -34,7 +34,7 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  *
  * @generated
  */
-public class ParameterVariableImpl extends PathImpl implements ParameterVariable {
+public class ParameterVariableImpl extends PathRootImpl implements ParameterVariable {
 	/**
 	 * The cached setting delegate for the '{@link #getRootContainer() <em>Root Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -171,6 +171,25 @@ public class ParameterVariableImpl extends PathImpl implements ParameterVariable
 		formal = newFormal;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PersistencePackage.PARAMETER_VARIABLE__FORMAL, oldFormal, formal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public Entity contextEntity() {
+		if (getFormal() == null) {
+			return null;
+		} else {
+			if (getFormal().getDataType() == null
+					|| !(getFormal().getDataType() instanceof Entity)) {
+				return null;
+			} else {
+				return (Entity) getFormal().getDataType();
+			}
+		}
 	}
 
 	/**

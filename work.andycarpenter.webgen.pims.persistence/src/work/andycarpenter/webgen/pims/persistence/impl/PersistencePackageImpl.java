@@ -55,6 +55,7 @@ import work.andycarpenter.webgen.pims.persistence.OriginalNamer;
 import work.andycarpenter.webgen.pims.persistence.OrmTechnologies;
 import work.andycarpenter.webgen.pims.persistence.ParameterVariable;
 import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PathRoot;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -340,6 +341,13 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	private EClass resourcePathElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathRootEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1156,8 +1164,28 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EOperation getModelLabelAttribute__ContextEntity() {
+		return modelLabelAttributeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getModelLabelAssociation() {
 		return modelLabelAssociationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelLabelAssociation__ContextEntity() {
+		return modelLabelAssociationEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1946,7 +1974,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getAssociationPathElement_ChildFeature() {
+	public EReference getAssociationPathElement_AssociationSource() {
 		return (EReference)associationPathElementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1956,18 +1984,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EReference getAssociationPathElement_AssociationSource() {
-		return (EReference)associationPathElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getAssociationPathElement_AssociationTarget() {
-		return (EReference)associationPathElementEClass.getEStructuralFeatures().get(4);
+		return (EReference)associationPathElementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2066,6 +2084,26 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EClass getPathRoot() {
+		return pathRootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPathRoot_ChildFeature() {
+		return (EReference)pathRootEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildFeature() {
 		return childFeatureEClass;
 	}
@@ -2096,6 +2134,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EOperation getChildAssociation__ContextEntity() {
+		return childAssociationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildAttribute() {
 		return childAttributeEClass;
 	}
@@ -2106,8 +2154,28 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EOperation getChildAttribute__ContextEntity() {
+		return childAttributeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getChildResource() {
 		return childResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getChildResource__ContextEntity() {
+		return childResourceEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2198,6 +2266,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	@Override
 	public EReference getParameterVariable_Formal() {
 		return (EReference)parameterVariableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getParameterVariable__ContextEntity() {
+		return parameterVariableEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2398,6 +2476,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	@Override
 	public EReference getSelectionPath_Selection() {
 		return (EReference)selectionPathEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSelectionPath__ContextEntity() {
+		return selectionPathEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2697,10 +2785,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEOperation(pathEClass, PATH___CONTEXT_ENTITY);
 		createEOperation(pathEClass, PATH___NAME);
 
+		pathRootEClass = createEClass(PATH_ROOT);
+		createEReference(pathRootEClass, PATH_ROOT__CHILD_FEATURE);
+
 		associationPathElementEClass = createEClass(ASSOCIATION_PATH_ELEMENT);
 		createEReference(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT__ASSOCIATION);
 		createEReference(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY);
-		createEReference(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE);
 		createEReference(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT__ASSOCIATION_SOURCE);
 		createEReference(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT__ASSOCIATION_TARGET);
 		createEOperation(associationPathElementEClass, ASSOCIATION_PATH_ELEMENT___NAME);
@@ -2719,10 +2809,13 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(childFeatureEClass, CHILD_FEATURE__PARENT);
 
 		childAssociationEClass = createEClass(CHILD_ASSOCIATION);
+		createEOperation(childAssociationEClass, CHILD_ASSOCIATION___CONTEXT_ENTITY);
 
 		childAttributeEClass = createEClass(CHILD_ATTRIBUTE);
+		createEOperation(childAttributeEClass, CHILD_ATTRIBUTE___CONTEXT_ENTITY);
 
 		childResourceEClass = createEClass(CHILD_RESOURCE);
+		createEOperation(childResourceEClass, CHILD_RESOURCE___CONTEXT_ENTITY);
 
 		dataTypeAttributeEClass = createEClass(DATA_TYPE_ATTRIBUTE);
 		createEReference(dataTypeAttributeEClass, DATA_TYPE_ATTRIBUTE__DATA_TYPE);
@@ -2810,9 +2903,11 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(modelLabelFeatureEClass, MODEL_LABEL_FEATURE__PART_OF);
 
 		modelLabelAssociationEClass = createEClass(MODEL_LABEL_ASSOCIATION);
+		createEOperation(modelLabelAssociationEClass, MODEL_LABEL_ASSOCIATION___CONTEXT_ENTITY);
 
 		modelLabelAttributeEClass = createEClass(MODEL_LABEL_ATTRIBUTE);
 		createEAttribute(modelLabelAttributeEClass, MODEL_LABEL_ATTRIBUTE__DATE_FORMAT);
+		createEOperation(modelLabelAttributeEClass, MODEL_LABEL_ATTRIBUTE___CONTEXT_ENTITY);
 
 		repositoryEClass = createEClass(REPOSITORY);
 		createEReference(repositoryEClass, REPOSITORY__SERVES);
@@ -2836,6 +2931,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		selectionPathEClass = createEClass(SELECTION_PATH);
 		createEReference(selectionPathEClass, SELECTION_PATH__SELECTION);
+		createEOperation(selectionPathEClass, SELECTION_PATH___CONTEXT_ENTITY);
 
 		orderEClass = createEClass(ORDER);
 		createEReference(orderEClass, ORDER__SELECTION);
@@ -2869,6 +2965,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		parameterVariableEClass = createEClass(PARAMETER_VARIABLE);
 		createEAttribute(parameterVariableEClass, PARAMETER_VARIABLE__NAME);
 		createEReference(parameterVariableEClass, PARAMETER_VARIABLE__FORMAL);
+		createEOperation(parameterVariableEClass, PARAMETER_VARIABLE___CONTEXT_ENTITY);
 
 		// Create enums
 		databaseTechnologiesEEnum = createEEnum(DATABASE_TECHNOLOGIES);
@@ -2916,7 +3013,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		attributeEClass.getESuperTypes().add(this.getFeature());
 		attributeEClass.getESuperTypes().add(this.getLabel());
 		associationEClass.getESuperTypes().add(this.getFeature());
-		associationPathElementEClass.getESuperTypes().add(this.getPath());
+		pathRootEClass.getESuperTypes().add(this.getPath());
+		associationPathElementEClass.getESuperTypes().add(this.getPathRoot());
 		attributePathElementEClass.getESuperTypes().add(this.getPath());
 		resourcePathElementEClass.getESuperTypes().add(this.getPath());
 		childFeatureEClass.getESuperTypes().add(this.getPath());
@@ -2969,7 +3067,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		attributeVariableEClass.getESuperTypes().add(this.getFeatureVariable());
 		resourceVariableEClass.getESuperTypes().add(this.getResourcePathElement());
 		resourceVariableEClass.getESuperTypes().add(this.getFeatureVariable());
-		parameterVariableEClass.getESuperTypes().add(this.getPath());
+		parameterVariableEClass.getESuperTypes().add(this.getPathRoot());
 		parameterVariableEClass.getESuperTypes().add(theExpressionPackage.getVariable());
 
 		// Initialize classes, features, and operations; add parameters
@@ -3053,10 +3151,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		initEOperation(getPath__Name(), ecorePackage.getEString(), "name", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(pathRootEClass, PathRoot.class, "PathRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPathRoot_ChildFeature(), this.getChildFeature(), this.getChildFeature_Parent(), "childFeature", null, 0, 1, PathRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(associationPathElementEClass, AssociationPathElement.class, "AssociationPathElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociationPathElement_Association(), this.getAssociation(), null, "association", null, 1, 1, AssociationPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationPathElement_ValueDisplay(), this.getModelLabel(), null, "valueDisplay", null, 0, 1, AssociationPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociationPathElement_ChildFeature(), this.getChildFeature(), this.getChildFeature_Parent(), "childFeature", null, 0, 1, AssociationPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationPathElement_AssociationSource(), this.getEntity(), null, "associationSource", null, 0, 1, AssociationPathElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationPathElement_AssociationTarget(), this.getEntity(), null, "associationTarget", null, 0, 1, AssociationPathElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -3077,13 +3177,19 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEOperation(getResourcePathElement__Name(), ecorePackage.getEString(), "name", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(childFeatureEClass, ChildFeature.class, "ChildFeature", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getChildFeature_Parent(), this.getAssociationPathElement(), this.getAssociationPathElement_ChildFeature(), "parent", null, 0, 1, ChildFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChildFeature_Parent(), this.getPathRoot(), this.getPathRoot_ChildFeature(), "parent", null, 0, 1, ChildFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(childAssociationEClass, ChildAssociation.class, "ChildAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getChildAssociation__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(childAttributeEClass, ChildAttribute.class, "ChildAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getChildAttribute__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(childResourceEClass, ChildResource.class, "ChildResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getChildResource__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(dataTypeAttributeEClass, DataTypeAttribute.class, "DataTypeAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataTypeAttribute_DataType(), theBasePackage.getDataType(), null, "dataType", null, 1, 1, DataTypeAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3172,8 +3278,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		initEClass(modelLabelAssociationEClass, ModelLabelAssociation.class, "ModelLabelAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getModelLabelAssociation__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(modelLabelAttributeEClass, ModelLabelAttribute.class, "ModelLabelAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModelLabelAttribute_DateFormat(), ecorePackage.getEString(), "dateFormat", null, 0, 1, ModelLabelAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getModelLabelAttribute__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRepository_Serves(), this.getEntity(), this.getEntity_Repository(), "serves", null, 1, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3198,6 +3308,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 
 		initEClass(selectionPathEClass, SelectionPath.class, "SelectionPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSelectionPath_Selection(), this.getSelection(), this.getSelection_SelectPath(), "selection", null, 1, 1, SelectionPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getSelectionPath__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(orderEClass, Order.class, "Order", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrder_Selection(), this.getSelection(), this.getSelection_Ordering(), "selection", null, 1, 1, Order.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3235,6 +3347,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEClass(parameterVariableEClass, ParameterVariable.class, "ParameterVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, ParameterVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getParameterVariable_Formal(), theBasePackage.getFormalParameter(), null, "formal", null, 1, 1, ParameterVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getParameterVariable__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(databaseTechnologiesEEnum, DatabaseTechnologies.class, "DatabaseTechnologies");

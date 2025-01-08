@@ -15,6 +15,8 @@ import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.ChildFeature;
 import work.andycarpenter.webgen.pims.persistence.ChildResource;
 import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.ParameterVariable;
+import work.andycarpenter.webgen.pims.persistence.PathRoot;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 
 /**
@@ -56,9 +58,9 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	 * @generated
 	 */
 	@Override
-	public AssociationPathElement getParent() {
+	public PathRoot getParent() {
 		if (eContainerFeatureID() != PersistencePackage.CHILD_RESOURCE__PARENT) return null;
-		return (AssociationPathElement)eInternalContainer();
+		return (PathRoot)eInternalContainer();
 	}
 
 	/**
@@ -66,7 +68,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(AssociationPathElement newParent, NotificationChain msgs) {
+	public NotificationChain basicSetParent(PathRoot newParent, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newParent, PersistencePackage.CHILD_RESOURCE__PARENT, msgs);
 		return msgs;
 	}
@@ -77,7 +79,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	 * @generated
 	 */
 	@Override
-	public void setParent(AssociationPathElement newParent) {
+	public void setParent(PathRoot newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != PersistencePackage.CHILD_RESOURCE__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -85,7 +87,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE, AssociationPathElement.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, PersistencePackage.PATH_ROOT__CHILD_FEATURE, PathRoot.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -100,7 +102,11 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	 */
 	@Override
 	public Entity contextEntity() {
-		return getParent().getAssociationTarget();
+		if (getParent() instanceof AssociationPathElement) {
+			return ((AssociationPathElement) getParent()).getAssociationTarget();
+		} else {
+			return ((ParameterVariable) getParent()).contextEntity();
+		}
 	}
 
 	/**
@@ -114,7 +120,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 			case PersistencePackage.CHILD_RESOURCE__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((AssociationPathElement)otherEnd, msgs);
+				return basicSetParent((PathRoot)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -142,7 +148,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case PersistencePackage.CHILD_RESOURCE__PARENT:
-				return eInternalContainer().eInverseRemove(this, PersistencePackage.ASSOCIATION_PATH_ELEMENT__CHILD_FEATURE, AssociationPathElement.class, msgs);
+				return eInternalContainer().eInverseRemove(this, PersistencePackage.PATH_ROOT__CHILD_FEATURE, PathRoot.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -170,7 +176,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PersistencePackage.CHILD_RESOURCE__PARENT:
-				setParent((AssociationPathElement)newValue);
+				setParent((PathRoot)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,7 +191,7 @@ public class ChildResourceImpl extends ResourcePathElementImpl implements ChildR
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PersistencePackage.CHILD_RESOURCE__PARENT:
-				setParent((AssociationPathElement)null);
+				setParent((PathRoot)null);
 				return;
 		}
 		super.eUnset(featureID);

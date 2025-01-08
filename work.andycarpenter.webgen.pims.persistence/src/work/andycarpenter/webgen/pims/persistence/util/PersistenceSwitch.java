@@ -127,9 +127,17 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PersistencePackage.PATH_ROOT: {
+				PathRoot pathRoot = (PathRoot)theEObject;
+				T result = casePathRoot(pathRoot);
+				if (result == null) result = casePath(pathRoot);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PersistencePackage.ASSOCIATION_PATH_ELEMENT: {
 				AssociationPathElement associationPathElement = (AssociationPathElement)theEObject;
 				T result = caseAssociationPathElement(associationPathElement);
+				if (result == null) result = casePathRoot(associationPathElement);
 				if (result == null) result = casePath(associationPathElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -160,6 +168,7 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseChildAssociation(childAssociation);
 				if (result == null) result = caseAssociationPathElement(childAssociation);
 				if (result == null) result = caseChildFeature(childAssociation);
+				if (result == null) result = casePathRoot(childAssociation);
 				if (result == null) result = casePath(childAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -388,6 +397,7 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseModelLabelAssociation(modelLabelAssociation);
 				if (result == null) result = caseAssociationPathElement(modelLabelAssociation);
 				if (result == null) result = caseModelLabelFeature(modelLabelAssociation);
+				if (result == null) result = casePathRoot(modelLabelAssociation);
 				if (result == null) result = casePath(modelLabelAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -421,6 +431,7 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				SelectionPath selectionPath = (SelectionPath)theEObject;
 				T result = caseSelectionPath(selectionPath);
 				if (result == null) result = caseAssociationPathElement(selectionPath);
+				if (result == null) result = casePathRoot(selectionPath);
 				if (result == null) result = casePath(selectionPath);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -478,8 +489,9 @@ public class PersistenceSwitch<T> extends Switch<T> {
 				T result = caseAssociationVariable(associationVariable);
 				if (result == null) result = caseAssociationPathElement(associationVariable);
 				if (result == null) result = caseFeatureVariable(associationVariable);
-				if (result == null) result = casePath(associationVariable);
+				if (result == null) result = casePathRoot(associationVariable);
 				if (result == null) result = caseVariable(associationVariable);
+				if (result == null) result = casePath(associationVariable);
 				if (result == null) result = caseOperand(associationVariable);
 				if (result == null) result = caseExpression(associationVariable);
 				if (result == null) result = defaultCase(theEObject);
@@ -512,8 +524,9 @@ public class PersistenceSwitch<T> extends Switch<T> {
 			case PersistencePackage.PARAMETER_VARIABLE: {
 				ParameterVariable parameterVariable = (ParameterVariable)theEObject;
 				T result = caseParameterVariable(parameterVariable);
-				if (result == null) result = casePath(parameterVariable);
+				if (result == null) result = casePathRoot(parameterVariable);
 				if (result == null) result = caseVariable(parameterVariable);
+				if (result == null) result = casePath(parameterVariable);
 				if (result == null) result = caseOperand(parameterVariable);
 				if (result == null) result = caseExpression(parameterVariable);
 				if (result == null) result = defaultCase(theEObject);
@@ -1075,6 +1088,21 @@ public class PersistenceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResourcePathElement(ResourcePathElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Root</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathRoot(PathRoot object) {
 		return null;
 	}
 

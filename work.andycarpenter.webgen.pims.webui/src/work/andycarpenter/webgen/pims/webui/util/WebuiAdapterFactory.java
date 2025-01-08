@@ -14,6 +14,7 @@ import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
 import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
 import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PathRoot;
 import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 import work.andycarpenter.webgen.pims.webui.*;
@@ -413,6 +414,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePath(Path object) {
 				return createPathAdapter();
+			}
+			@Override
+			public Adapter casePathRoot(PathRoot object) {
+				return createPathRootAdapter();
 			}
 			@Override
 			public Adapter caseAssociationPathElement(AssociationPathElement object) {
@@ -1595,6 +1600,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.persistence.PathRoot <em>Path Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.persistence.PathRoot
+	 * @generated
+	 */
+	public Adapter createPathRootAdapter() {
 		return null;
 	}
 

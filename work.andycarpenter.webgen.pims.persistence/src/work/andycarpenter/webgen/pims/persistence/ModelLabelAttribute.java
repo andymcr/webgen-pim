@@ -46,4 +46,12 @@ public interface ModelLabelAttribute extends AttributePathElement, ModelLabelFea
 	 */
 	void setDateFormat(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
+
 } // ModelLabelAttribute
