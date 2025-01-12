@@ -108,7 +108,10 @@ public class AttributeDisplayValueItemProvider extends AttributePathElementItemP
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_AttributeDisplayValue_type");
+		String label = ((AttributeDisplayValue)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AttributeDisplayValue_type") :
+			getString("_UI_AttributeDisplayValue_type") + " " + label;
 	}
 
 

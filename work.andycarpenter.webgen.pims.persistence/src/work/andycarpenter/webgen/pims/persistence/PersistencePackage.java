@@ -1455,13 +1455,22 @@ public interface PersistencePackage extends EPackage {
 	int PATH = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_FEATURE_COUNT = 0;
+	int PATH_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Context Entity</em>' operation.
@@ -1499,6 +1508,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int PATH_ROOT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_ROOT__NAME = PATH__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -1554,6 +1572,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int ASSOCIATION_PATH_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_PATH_ELEMENT__NAME = PATH_ROOT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -1665,6 +1692,15 @@ public interface PersistencePackage extends EPackage {
 	int ATTRIBUTE_PATH_ELEMENT = 9;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_PATH_ELEMENT__NAME = PATH__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1718,6 +1754,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int RESOURCE_PATH_ELEMENT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PATH_ELEMENT__NAME = PATH__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -1775,6 +1820,15 @@ public interface PersistencePackage extends EPackage {
 	int CHILD_FEATURE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_FEATURE__NAME = PATH__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1828,6 +1882,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int CHILD_ASSOCIATION = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ASSOCIATION__NAME = ASSOCIATION_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -1948,6 +2011,15 @@ public interface PersistencePackage extends EPackage {
 	int CHILD_ATTRIBUTE = 13;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_ATTRIBUTE__NAME = ATTRIBUTE_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2010,6 +2082,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int CHILD_RESOURCE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHILD_RESOURCE__NAME = RESOURCE_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -4937,6 +5018,15 @@ public interface PersistencePackage extends EPackage {
 	int MODEL_LABEL_FEATURE_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ASSOCIATION__NAME = ASSOCIATION_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5043,6 +5133,15 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int MODEL_LABEL_ASSOCIATION_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_LABEL_ATTRIBUTE__NAME = ATTRIBUTE_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -5402,6 +5501,15 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	int SELECTION_PATH = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_PATH__NAME = ASSOCIATION_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
@@ -5886,6 +5994,15 @@ public interface PersistencePackage extends EPackage {
 	int FEATURE_VARIABLE_OPERATION_COUNT = ExpressionPackage.VARIABLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_VARIABLE__NAME = ASSOCIATION_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6003,6 +6120,15 @@ public interface PersistencePackage extends EPackage {
 	int ASSOCIATION_VARIABLE_OPERATION_COUNT = ASSOCIATION_PATH_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_VARIABLE__NAME = ATTRIBUTE_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6064,6 +6190,15 @@ public interface PersistencePackage extends EPackage {
 	 * @ordered
 	 */
 	int ATTRIBUTE_VARIABLE_OPERATION_COUNT = ATTRIBUTE_PATH_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_VARIABLE__NAME = RESOURCE_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -6129,6 +6264,15 @@ public interface PersistencePackage extends EPackage {
 	int RESOURCE_VARIABLE_OPERATION_COUNT = RESOURCE_PATH_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_VARIABLE__NAME = PATH_ROOT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6147,22 +6291,13 @@ public interface PersistencePackage extends EPackage {
 	int PARAMETER_VARIABLE__ROOT_CONTAINER = PATH_ROOT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_VARIABLE__NAME = PATH_ROOT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Formal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_VARIABLE__FORMAL = PATH_ROOT_FEATURE_COUNT + 2;
+	int PARAMETER_VARIABLE__FORMAL = PATH_ROOT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Variable</em>' class.
@@ -6171,16 +6306,7 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_VARIABLE_FEATURE_COUNT = PATH_ROOT_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_VARIABLE___NAME = PATH_ROOT___NAME;
+	int PARAMETER_VARIABLE_FEATURE_COUNT = PATH_ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Context Entity</em>' operation.
@@ -6192,13 +6318,22 @@ public interface PersistencePackage extends EPackage {
 	int PARAMETER_VARIABLE___CONTEXT_ENTITY = PATH_ROOT_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_VARIABLE___NAME = PATH_ROOT_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Parameter Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_VARIABLE_OPERATION_COUNT = PATH_ROOT_OPERATION_COUNT + 1;
+	int PARAMETER_VARIABLE_OPERATION_COUNT = PATH_ROOT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.DatabaseTechnologies <em>Database Technologies</em>}' enum.
@@ -7690,6 +7825,17 @@ public interface PersistencePackage extends EPackage {
 	EClass getPath();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.Path#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see work.andycarpenter.webgen.pims.persistence.Path#getName()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EAttribute getPath_Name();
+
+	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Path#contextEntity() <em>Context Entity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8029,17 +8175,6 @@ public interface PersistencePackage extends EPackage {
 	EClass getParameterVariable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable#getName()
-	 * @see #getParameterVariable()
-	 * @generated
-	 */
-	EAttribute getParameterVariable_Name();
-
-	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#getFormal <em>Formal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8059,6 +8194,16 @@ public interface PersistencePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getParameterVariable__ContextEntity();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable#name()
+	 * @generated
+	 */
+	EOperation getParameterVariable__Name();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.Repository <em>Repository</em>}'.
@@ -9646,6 +9791,14 @@ public interface PersistencePackage extends EPackage {
 		EClass PATH = eINSTANCE.getPath();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH__NAME = eINSTANCE.getPath_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Context Entity</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9936,14 +10089,6 @@ public interface PersistencePackage extends EPackage {
 		EClass PARAMETER_VARIABLE = eINSTANCE.getParameterVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER_VARIABLE__NAME = eINSTANCE.getParameterVariable_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Formal</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9958,6 +10103,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation PARAMETER_VARIABLE___CONTEXT_ENTITY = eINSTANCE.getParameterVariable__ContextEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PARAMETER_VARIABLE___NAME = eINSTANCE.getParameterVariable__Name();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.RepositoryImpl <em>Repository</em>}' class.

@@ -1924,6 +1924,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPath_Name() {
+		return (EAttribute)pathEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EOperation getPath__ContextEntity() {
 		return pathEClass.getEOperations().get(0);
 	}
@@ -2254,18 +2264,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getParameterVariable_Name() {
-		return (EAttribute)parameterVariableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getParameterVariable_Formal() {
-		return (EReference)parameterVariableEClass.getEStructuralFeatures().get(1);
+		return (EReference)parameterVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2276,6 +2276,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	@Override
 	public EOperation getParameterVariable__ContextEntity() {
 		return parameterVariableEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getParameterVariable__Name() {
+		return parameterVariableEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -2782,6 +2792,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(associationEClass, ASSOCIATION__SERIALIZATION_MAX_DEPTH);
 
 		pathEClass = createEClass(PATH);
+		createEAttribute(pathEClass, PATH__NAME);
 		createEOperation(pathEClass, PATH___CONTEXT_ENTITY);
 		createEOperation(pathEClass, PATH___NAME);
 
@@ -2963,9 +2974,9 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		resourceVariableEClass = createEClass(RESOURCE_VARIABLE);
 
 		parameterVariableEClass = createEClass(PARAMETER_VARIABLE);
-		createEAttribute(parameterVariableEClass, PARAMETER_VARIABLE__NAME);
 		createEReference(parameterVariableEClass, PARAMETER_VARIABLE__FORMAL);
 		createEOperation(parameterVariableEClass, PARAMETER_VARIABLE___CONTEXT_ENTITY);
+		createEOperation(parameterVariableEClass, PARAMETER_VARIABLE___NAME);
 
 		// Create enums
 		databaseTechnologiesEEnum = createEEnum(DATABASE_TECHNOLOGIES);
@@ -3146,6 +3157,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getAssociation_SerializationMaxDepth(), ecorePackage.getEInt(), "serializationMaxDepth", "1", 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathEClass, Path.class, "Path", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPath_Name(), ecorePackage.getEString(), "name", null, 0, 1, Path.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPath__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -3345,10 +3357,11 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEClass(resourceVariableEClass, ResourceVariable.class, "ResourceVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(parameterVariableEClass, ParameterVariable.class, "ParameterVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameterVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, ParameterVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getParameterVariable_Formal(), theBasePackage.getFormalParameter(), null, "formal", null, 1, 1, ParameterVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getParameterVariable__ContextEntity(), this.getEntity(), "contextEntity", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getParameterVariable__Name(), ecorePackage.getEString(), "name", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(databaseTechnologiesEEnum, DatabaseTechnologies.class, "DatabaseTechnologies");
@@ -3547,7 +3560,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 			   "derivation", "referencableEntities()"
 		   });
 		addAnnotation
-		  (getParameterVariable_Name(),
+		  (getParameterVariable__Name(),
 		   source,
 		   new String[] {
 			   "derivation", "if formal.oclIsUndefined() then\n\t\'\'\nelse\n\tformal.name\nendif"

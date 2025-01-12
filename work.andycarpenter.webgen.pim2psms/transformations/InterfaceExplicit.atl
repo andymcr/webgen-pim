@@ -958,7 +958,8 @@ rule ResourceVariable {
 rule ParameterVariable {
 	from website : Website!ParameterVariable (website.isInterfaceExpression())
 	to waf : WAF!ParameterVariable (
-		formal <- website.formal
+		formal <- website.formal,
+		childFeature <- website.childFeature
 	)
 }
 

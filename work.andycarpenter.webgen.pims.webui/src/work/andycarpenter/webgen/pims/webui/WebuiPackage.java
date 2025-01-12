@@ -4063,22 +4063,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__ATTRIBUTE = UNIT_FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__NAME = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_ELEMENT__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__ATTRIBUTE = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -4135,13 +4135,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT___REFERENCABLE_ENTITIES = UNIT_FEATURE___REFERENCABLE_ENTITIES;
 
 	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT___CONTEXT_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT___NAME = UNIT_FEATURE_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Unit Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl <em>Unit Resource</em>}' class.
@@ -4433,22 +4451,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__RESOURCE = UNIT_FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__NAME = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_RESOURCE__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__RESOURCE = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Deletable</b></em>' attribute.
@@ -4505,13 +4523,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE___REFERENCABLE_ENTITIES = UNIT_FEATURE___REFERENCABLE_ENTITIES;
 
 	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE___CONTEXT_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE___NAME = UNIT_FEATURE_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Unit Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl <em>Unit Association</em>}' class.
@@ -4803,13 +4839,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 0;
+	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Association</b></em>' reference.
@@ -4818,7 +4863,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_ASSOCIATION__ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Value Display</b></em>' reference.
@@ -4827,7 +4872,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Association Source</b></em>' reference.
@@ -4836,7 +4881,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION_SOURCE = UNIT_FEATURE_FEATURE_COUNT + 3;
+	int UNIT_ASSOCIATION__ASSOCIATION_SOURCE = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Association Target</b></em>' reference.
@@ -4845,7 +4890,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION_TARGET = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ASSOCIATION__ASSOCIATION_TARGET = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference.
@@ -4854,7 +4899,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 5;
+	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Collection Sort By</b></em>' reference.
@@ -4863,7 +4908,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__COLLECTION_SORT_BY = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ASSOCIATION__COLLECTION_SORT_BY = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Use Autocomplete</b></em>' attribute.
@@ -4872,7 +4917,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 7;
+	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -4881,7 +4926,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -17473,6 +17518,15 @@ public interface WebuiPackage extends EPackage {
 	int ASSOCIATION_DISPLAY_VALUE = 64;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_DISPLAY_VALUE__NAME = PersistencePackage.ASSOCIATION_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17582,6 +17636,15 @@ public interface WebuiPackage extends EPackage {
 	int ATTRIBUTE_DISPLAY_VALUE = 65;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_DISPLAY_VALUE__NAME = PersistencePackage.ATTRIBUTE_PATH_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17681,6 +17744,15 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	int RESOURCE_DISPLAY_VALUE = 67;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_DISPLAY_VALUE__NAME = PersistencePackage.RESOURCE_PATH_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -21875,28 +21947,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getUnitElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitElement#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitElement#getAttribute()
-	 * @see #getUnitElement()
-	 * @generated
-	 */
-	EReference getUnitElement_Attribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitElement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitElement#getName()
-	 * @see #getUnitElement()
-	 * @generated
-	 */
-	EAttribute getUnitElement_Name();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.UnitElement#getDefaultValue <em>Default Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21949,28 +21999,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getUnitResource();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.UnitResource#getResource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resource</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#getResource()
-	 * @see #getUnitResource()
-	 * @generated
-	 */
-	EReference getUnitResource_Resource();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitResource#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#getName()
-	 * @see #getUnitResource()
-	 * @generated
-	 */
-	EAttribute getUnitResource_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitResource#isIsDeletable <em>Is Deletable</em>}'.
@@ -25531,22 +25559,6 @@ public interface WebuiPackage extends EPackage {
 		EClass UNIT_ELEMENT = eINSTANCE.getUnitElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_ELEMENT__ATTRIBUTE = eINSTANCE.getUnitElement_Attribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_ELEMENT__NAME = eINSTANCE.getUnitElement_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25587,22 +25599,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass UNIT_RESOURCE = eINSTANCE.getUnitResource();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_RESOURCE__RESOURCE = eINSTANCE.getUnitResource_Resource();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_RESOURCE__NAME = eINSTANCE.getUnitResource_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Deletable</b></em>' attribute feature.

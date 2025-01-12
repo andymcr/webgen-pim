@@ -2,9 +2,13 @@
  */
 package work.andycarpenter.webgen.pims.persistence.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -28,7 +32,6 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl#getRootContainer <em>Root Container</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.impl.ParameterVariableImpl#getFormal <em>Formal</em>}</li>
  * </ul>
  *
@@ -44,16 +47,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate ROOT_CONTAINER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ExpressionPackage.Literals.EXPRESSION__ROOT_CONTAINER).getSettingDelegate();
-
-	/**
-	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.PARAMETER_VARIABLE__NAME).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getFormal() <em>Formal</em>}' reference.
@@ -119,26 +112,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		NAME__ESETTING_DELEGATE.dynamicSet(this, null, 0, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public FormalParameter getFormal() {
 		if (formal != null && formal.eIsProxy()) {
 			InternalEObject oldFormal = (InternalEObject)formal;
@@ -174,6 +147,31 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #name()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate NAME__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.PARAMETER_VARIABLE___NAME).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String name() {
+		try {
+			return (String)NAME__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -203,8 +201,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 			case PersistencePackage.PARAMETER_VARIABLE__ROOT_CONTAINER:
 				if (resolve) return getRootContainer();
 				return basicGetRootContainer();
-			case PersistencePackage.PARAMETER_VARIABLE__NAME:
-				return getName();
 			case PersistencePackage.PARAMETER_VARIABLE__FORMAL:
 				if (resolve) return getFormal();
 				return basicGetFormal();
@@ -220,9 +216,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PersistencePackage.PARAMETER_VARIABLE__NAME:
-				setName((String)newValue);
-				return;
 			case PersistencePackage.PARAMETER_VARIABLE__FORMAL:
 				setFormal((FormalParameter)newValue);
 				return;
@@ -238,9 +231,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PersistencePackage.PARAMETER_VARIABLE__NAME:
-				NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
-				return;
 			case PersistencePackage.PARAMETER_VARIABLE__FORMAL:
 				setFormal((FormalParameter)null);
 				return;
@@ -258,8 +248,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 		switch (featureID) {
 			case PersistencePackage.PARAMETER_VARIABLE__ROOT_CONTAINER:
 				return isSetRootContainer();
-			case PersistencePackage.PARAMETER_VARIABLE__NAME:
-				return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case PersistencePackage.PARAMETER_VARIABLE__FORMAL:
 				return formal != null;
 		}
@@ -316,6 +304,20 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PersistencePackage.PARAMETER_VARIABLE___NAME:
+				return name();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ParameterVariableImpl

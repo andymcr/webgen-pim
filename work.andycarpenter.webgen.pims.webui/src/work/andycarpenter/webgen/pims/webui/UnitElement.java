@@ -3,7 +3,7 @@
 package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
-import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,8 +14,6 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitElement#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitElement#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitElement#getDefaultValue <em>Default Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitElement#isObfuscateFormFields <em>Obfuscate Form Fields</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitElement#getPlaceholder <em>Placeholder</em>}</li>
@@ -26,60 +24,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * @model
  * @generated
  */
-public interface UnitElement extends UnitFeature {
-	/**
-	 * Returns the value of the '<em><b>Attribute</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Attribute</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attribute</em>' reference.
-	 * @see #setAttribute(Attribute)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Attribute()
-	 * @model required="true"
-	 * @generated
-	 */
-	Attribute getAttribute();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitElement#getAttribute <em>Attribute</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attribute</em>' reference.
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	void setAttribute(Attribute value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #isSetName()
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitElement_Name()
-	 * @model unsettable="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif'"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Returns whether the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitElement#getName <em>Name</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Name</em>' attribute is set.
-	 * @see #getName()
-	 * @generated
-	 */
-	boolean isSetName();
-
+public interface UnitElement extends UnitFeature, AttributePathElement {
 	/**
 	 * Returns the value of the '<em><b>Default Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -319,8 +319,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitElement unitElement = (UnitElement)theEObject;
 				T result = caseUnitElement(unitElement);
 				if (result == null) result = caseUnitFeature(unitElement);
+				if (result == null) result = caseAttributePathElement(unitElement);
 				if (result == null) result = caseUnitField(unitElement);
 				if (result == null) result = caseActionContainer(unitElement);
+				if (result == null) result = casePath(unitElement);
 				if (result == null) result = caseFeatureVariableContext(unitElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -329,8 +331,10 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitResource unitResource = (UnitResource)theEObject;
 				T result = caseUnitResource(unitResource);
 				if (result == null) result = caseUnitFeature(unitResource);
+				if (result == null) result = caseResourcePathElement(unitResource);
 				if (result == null) result = caseUnitField(unitResource);
 				if (result == null) result = caseActionContainer(unitResource);
+				if (result == null) result = casePath(unitResource);
 				if (result == null) result = caseFeatureVariableContext(unitResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

@@ -416,6 +416,14 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createPathAdapter();
 			}
 			@Override
+			public Adapter caseAttributePathElement(AttributePathElement object) {
+				return createAttributePathElementAdapter();
+			}
+			@Override
+			public Adapter caseResourcePathElement(ResourcePathElement object) {
+				return createResourcePathElementAdapter();
+			}
+			@Override
 			public Adapter casePathRoot(PathRoot object) {
 				return createPathRootAdapter();
 			}
@@ -426,14 +434,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSecurityUnit(SecurityUnit object) {
 				return createSecurityUnitAdapter();
-			}
-			@Override
-			public Adapter caseAttributePathElement(AttributePathElement object) {
-				return createAttributePathElementAdapter();
-			}
-			@Override
-			public Adapter caseResourcePathElement(ResourcePathElement object) {
-				return createResourcePathElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

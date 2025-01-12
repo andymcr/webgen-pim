@@ -272,7 +272,8 @@ rule ResourceVariable {
 rule ParameterVariable {
 	from website : Website!ParameterVariable (website.isRepositoryExpression())
 	to orm : ORM!ParameterVariable (
-		formal <- website.formal
+		formal <- website.formal,
+		childFeature <- website.childFeature
 	)
 }
 

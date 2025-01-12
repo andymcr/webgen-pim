@@ -11,6 +11,12 @@ import work.andycarpenter.webgen.pims.persistence.Path;
  * A test case for the model object '<em><b>Path</b></em>'.
  * <!-- end-user-doc -->
  * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Path#getName() <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ * <p>
  * The following operations are tested:
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Path#contextEntity() <em>Context Entity</em>}</li>
@@ -57,6 +63,32 @@ public abstract class PathTest extends TestCase {
 	 */
 	protected Path getFixture() {
 		return fixture;
+	}
+
+	/**
+	 * Tests the '{@link work.andycarpenter.webgen.pims.persistence.Path#getName() <em>Name</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.Path#getName()
+	 * @generated
+	 */
+	public void testGetName() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link work.andycarpenter.webgen.pims.persistence.Path#isSetName() <em>isSetName()</em>}' method.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.Path#isSetName()
+	 * @generated
+	 */
+	public void testIsSetName() {
+		// TODO: implement this test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 	/**

@@ -15,9 +15,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.base.FormalParameter;
 import work.andycarpenter.webgen.pims.base.FormalParameterList;
 import work.andycarpenter.webgen.pims.expression.Expression;
@@ -54,7 +51,6 @@ public class ParameterVariableItemProvider extends PathRootItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addRootContainerPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addFormalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -79,28 +75,6 @@ public class ParameterVariableItemProvider extends PathRootItemProvider {
 				 false,
 				 null,
 				 getString("_UI_DebugPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ParameterVariable_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ParameterVariable_name_feature", "_UI_ParameterVariable_type"),
-				 PersistencePackage.Literals.PARAMETER_VARIABLE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
 				 null));
 	}
 
@@ -186,12 +160,6 @@ public class ParameterVariableItemProvider extends PathRootItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(ParameterVariable.class)) {
-			case PersistencePackage.PARAMETER_VARIABLE__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

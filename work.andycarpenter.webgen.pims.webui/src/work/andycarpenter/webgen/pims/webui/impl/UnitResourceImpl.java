@@ -2,17 +2,24 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.ImageResource;
+import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 
+import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
 import work.andycarpenter.webgen.pims.webui.UnitResource;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -24,8 +31,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getResource <em>Resource</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#getResource <em>Resource</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isIsDeletable <em>Is Deletable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isIsDownloadable <em>Is Downloadable</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl#isShowImageWhenEditing <em>Show Image When Editing</em>}</li>
@@ -36,6 +43,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  */
 public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -44,16 +61,6 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	 * @ordered
 	 */
 	protected ResourceFeature resource;
-
-	/**
-	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)WebuiPackage.Literals.UNIT_RESOURCE__NAME).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #isIsDeletable() <em>Is Deletable</em>}' attribute.
@@ -191,7 +198,9 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	 */
 	@Override
 	public String getName() {
-		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+		// TODO: implement this method to return the 'Name' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -201,7 +210,9 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	 */
 	@Override
 	public boolean isSetName() {
-		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+		// TODO: implement this method to return whether the 'Name' attribute is set
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -314,6 +325,43 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #name()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate NAME__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.RESOURCE_PATH_ELEMENT___NAME).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String name() {
+		try {
+			return (String)NAME__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Entity contextEntity() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -321,11 +369,11 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_RESOURCE__NAME:
+				return getName();
 			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
 				if (resolve) return getResource();
 				return basicGetResource();
-			case WebuiPackage.UNIT_RESOURCE__NAME:
-				return getName();
 			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
 				return isIsDeletable();
 			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
@@ -401,10 +449,10 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
-				return resource != null;
 			case WebuiPackage.UNIT_RESOURCE__NAME:
 				return isSetName();
+			case WebuiPackage.UNIT_RESOURCE__RESOURCE:
+				return resource != null;
 			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
 				return isDeletable != IS_DELETABLE_EDEFAULT;
 			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
@@ -415,6 +463,89 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 				return imageFilter != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_RESOURCE__NAME: return PersistencePackage.PATH__NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == ResourcePathElement.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_RESOURCE__RESOURCE: return PersistencePackage.RESOURCE_PATH_ELEMENT__RESOURCE;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.PATH__NAME: return WebuiPackage.UNIT_RESOURCE__NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == ResourcePathElement.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.RESOURCE_PATH_ELEMENT__RESOURCE: return WebuiPackage.UNIT_RESOURCE__RESOURCE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.PATH___CONTEXT_ENTITY: return WebuiPackage.UNIT_RESOURCE___CONTEXT_ENTITY;
+				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_RESOURCE___NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == ResourcePathElement.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.RESOURCE_PATH_ELEMENT___NAME: return WebuiPackage.UNIT_RESOURCE___NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.UNIT_RESOURCE___NAME:
+				return name();
+			case WebuiPackage.UNIT_RESOURCE___CONTEXT_ENTITY:
+				return contextEntity();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

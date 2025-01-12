@@ -32,6 +32,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getChildFeature <em>Child Feature</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAssociation <em>Association</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getValueDisplay <em>Value Display</em>}</li>
@@ -45,6 +46,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociation {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getChildFeature() <em>Child Feature</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -152,6 +163,30 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.UNIT_ASSOCIATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		// TODO: implement this method to return the 'Name' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetName() {
+		// TODO: implement this method to return whether the 'Name' attribute is set
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -546,6 +581,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__NAME:
+				return getName();
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return getChildFeature();
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
@@ -640,6 +677,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_ASSOCIATION__NAME:
+				return isSetName();
 			case WebuiPackage.UNIT_ASSOCIATION__CHILD_FEATURE:
 				return childFeature != null;
 			case WebuiPackage.UNIT_ASSOCIATION__ASSOCIATION:
@@ -669,6 +708,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Path.class) {
 			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_ASSOCIATION__NAME: return PersistencePackage.PATH__NAME;
 				default: return -1;
 			}
 		}
@@ -699,6 +739,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Path.class) {
 			switch (baseFeatureID) {
+				case PersistencePackage.PATH__NAME: return WebuiPackage.UNIT_ASSOCIATION__NAME;
 				default: return -1;
 			}
 		}

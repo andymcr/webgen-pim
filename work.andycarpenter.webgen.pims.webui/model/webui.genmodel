@@ -230,9 +230,6 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footerClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitElement">
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//UnitElement/attribute"/>
-      <genFeatures property="None" createChild="false" propertyCategory="Debug" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/name"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
           ecoreFeature="ecore:EReference webui.ecore#//UnitElement/defaultValue"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/obfuscateFormFields"/>
@@ -240,10 +237,6 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitResource">
-      <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
-          ecoreFeature="ecore:EReference webui.ecore#//UnitResource/resource"/>
-      <genFeatures property="Readonly" createChild="false" propertyCategory="Debug"
-          ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDeletable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDownloadable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/showImageWhenEditing"/>

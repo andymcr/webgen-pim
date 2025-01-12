@@ -137,13 +137,6 @@ rule ConstantReference {
 	)
 }
 
-rule ParameterReference {
-	from website : Website!ParameterReference (website.isRepositoryExpression())
-	to orm : ORM!ParameterReference (
-		parameter <- website.parameter
-	)
-}
-
 abstract rule Order {
 	from website : Website!Order
 	to orm : ORM!Order (

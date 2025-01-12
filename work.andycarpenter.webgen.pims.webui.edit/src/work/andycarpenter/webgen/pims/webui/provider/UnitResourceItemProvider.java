@@ -4,7 +4,9 @@ package work.andycarpenter.webgen.pims.webui.provider;
 
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -14,6 +16,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import work.andycarpenter.webgen.pims.persistence.Feature;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
+import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 import work.andycarpenter.webgen.pims.webui.UnitResource;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -45,8 +50,8 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResourcePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addResourcePropertyDescriptor(object);
 			addIsDeletablePropertyDescriptor(object);
 			addIsDownloadablePropertyDescriptor(object);
 			addShowImageWhenEditingPropertyDescriptor(object);
@@ -59,22 +64,33 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 	 * This adds a property descriptor for the Resource feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void addResourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitResource_resource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_resource_feature", "_UI_UnitResource_type"),
-				 WebuiPackage.Literals.UNIT_RESOURCE__RESOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_ModelPropertyCategory"),
-				 null));
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_ResourcePathElement_resource_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_ResourcePathElement_resource_feature", "_UI_UnitResource_type"),
+			PersistencePackage.Literals.RESOURCE_PATH_ELEMENT__RESOURCE,
+			true, false, true, null,
+			getString("_UI_ModelPropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					final Set<ResourceFeature> resources = new HashSet<ResourceFeature>();
+					if (object instanceof UnitResource) {
+						final UnitResource resource = (UnitResource) object;
+						for (Feature feature : resource.contextEntity().getFeatures()) {
+							if (feature instanceof ResourceFeature) {
+								resources.add((ResourceFeature) feature);
+							}
+						}
+					}
+
+					return resources;
+				}
+			});
 	}
 
 	/**
@@ -88,14 +104,14 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnitResource_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitResource_name_feature", "_UI_UnitResource_type"),
-				 WebuiPackage.Literals.UNIT_RESOURCE__NAME,
+				 getString("_UI_Path_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Path_name_feature", "_UI_Path_type"),
+				 PersistencePackage.Literals.PATH__NAME,
 				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_DebugPropertyCategory"),
+				 null,
 				 null));
 	}
 
