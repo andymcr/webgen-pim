@@ -3506,6 +3506,12 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 			   "primaryKeyRequired", "primaryKey implies cardinality <> Cardinality::Optional"
 		   });
 		addAnnotation
+		  (getPath_Name(),
+		   source,
+		   new String[] {
+			   "derivation", "name()"
+		   });
+		addAnnotation
 		  (getAssociationPathElement_AssociationSource(),
 		   source,
 		   new String[] {

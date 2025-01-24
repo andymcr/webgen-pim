@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.persistence.impl;
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
@@ -26,15 +27,14 @@ import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
  */
 public abstract class PathImpl extends MinimalEObjectImpl.Container implements Path {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
+	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.PATH__NAME).getSettingDelegate();
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,9 +61,7 @@ public abstract class PathImpl extends MinimalEObjectImpl.Container implements P
 	 */
 	@Override
 	public String getName() {
-		// TODO: implement this method to return the 'Name' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -73,9 +71,7 @@ public abstract class PathImpl extends MinimalEObjectImpl.Container implements P
 	 */
 	@Override
 	public boolean isSetName() {
-		// TODO: implement this method to return whether the 'Name' attribute is set
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**

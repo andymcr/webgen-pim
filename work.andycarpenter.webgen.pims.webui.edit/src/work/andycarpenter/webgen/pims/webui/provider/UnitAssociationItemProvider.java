@@ -57,7 +57,6 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addAssociationPropertyDescriptor(object);
 			addValueDisplayPropertyDescriptor(object);
 			addAssociationSourcePropertyDescriptor(object);
@@ -67,28 +66,6 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addUseAutocompletePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Path_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Path_name_feature", "_UI_Path_type"),
-				 PersistencePackage.Literals.PATH__NAME,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -202,30 +179,27 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	 * @generated NOT
 	 */
 	protected void addValueDisplayPropertyDescriptor(Object object) {
-//		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-//			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-//			getResourceLocator(),
-//			getString("_UI_PathAssociation_valueDisplay_feature"),
-//			getString("_UI_PropertyDescriptor_description", "_UI_PathAssociation_valueDisplay_feature", "_UI_PathAssociation_type"),
-//			WebuiPackage.Literals.UNIT_ASSOCIATION__VALUE_DISPLAY,
-//			true, false, true, null,
-//			getString("_UI_InterfacePropertyCategory"),
-//			null) {
-//				@Override
-//				public Collection<?> getChoiceOfValues(Object object) {
-//					if (object instanceof UnitAssociation) {
-//						final UnitAssociation association = (UnitAssociation) object;
-//						final Set<Label> labels = new HashSet<Label>();
-//						if (association.getTargetEntity() != null) {
-//							labels.addAll(association.getTargetEntity().getAttributes());
-//							labels.addAll(association.getTargetEntity().getLabels());
-//						}
-//						return labels;
-//					}
-//
-//					return Collections.emptySet();
-//				}
-//			});
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_AssociationPathElement_valueDisplay_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_AssociationPathElement_valueDisplay_feature", "_UI_UnitAssociation_type"),
+			PersistencePackage.Literals.ASSOCIATION_PATH_ELEMENT__VALUE_DISPLAY,
+			true, false, true, null,
+			getString("_UI_InterfacePropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof UnitAssociation) {
+						final UnitAssociation association = (UnitAssociation) object;
+						if (association.getAssociationTarget() != null) {
+							return association.getAssociationTarget().getLabels();
+						}
+					}
+			
+					return Collections.emptyList();
+				}
+			});
 	}
 
 	/**
@@ -344,7 +318,6 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UnitAssociation.class)) {
-			case WebuiPackage.UNIT_ASSOCIATION__NAME:
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

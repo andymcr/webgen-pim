@@ -29,6 +29,7 @@ public interface Path extends EObject {
 	 * @see #isSetName()
 	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getPath_Name()
 	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='name()'"
 	 * @generated
 	 */
 	String getName();

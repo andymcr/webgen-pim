@@ -50,7 +50,6 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addResourcePropertyDescriptor(object);
 			addIsDeletablePropertyDescriptor(object);
 			addIsDownloadablePropertyDescriptor(object);
@@ -91,28 +90,6 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 					return resources;
 				}
 			});
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Path_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Path_name_feature", "_UI_Path_type"),
-				 PersistencePackage.Literals.PATH__NAME,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -241,7 +218,6 @@ public class UnitResourceItemProvider extends UnitFeatureItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UnitResource.class)) {
-			case WebuiPackage.UNIT_RESOURCE__NAME:
 			case WebuiPackage.UNIT_RESOURCE__IS_DELETABLE:
 			case WebuiPackage.UNIT_RESOURCE__IS_DOWNLOADABLE:
 			case WebuiPackage.UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING:

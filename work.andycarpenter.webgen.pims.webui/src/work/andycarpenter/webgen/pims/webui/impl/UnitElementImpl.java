@@ -17,10 +17,10 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 
 import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
-import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Path;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
+import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -31,7 +31,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl#getDefaultValue <em>Default Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl#isObfuscateFormFields <em>Obfuscate Form Fields</em>}</li>
@@ -42,16 +41,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
 	/**
 	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -189,30 +178,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 		attribute = newAttribute;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ELEMENT__ATTRIBUTE, oldAttribute, attribute));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getName() {
-		// TODO: implement this method to return the 'Name' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetName() {
-		// TODO: implement this method to return whether the 'Name' attribute is set
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -360,18 +325,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 * @generated
 	 */
 	@Override
-	public Entity contextEntity() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case WebuiPackage.UNIT_ELEMENT__DEFAULT_VALUE:
@@ -388,8 +341,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ELEMENT__NAME:
-				return getName();
 			case WebuiPackage.UNIT_ELEMENT__ATTRIBUTE:
 				if (resolve) return getAttribute();
 				return basicGetAttribute();
@@ -467,8 +418,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.UNIT_ELEMENT__NAME:
-				return isSetName();
 			case WebuiPackage.UNIT_ELEMENT__ATTRIBUTE:
 				return attribute != null;
 			case WebuiPackage.UNIT_ELEMENT__DEFAULT_VALUE:
@@ -490,12 +439,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Path.class) {
-			switch (derivedFeatureID) {
-				case WebuiPackage.UNIT_ELEMENT__NAME: return PersistencePackage.PATH__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == AttributePathElement.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_ELEMENT__ATTRIBUTE: return PersistencePackage.ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE;
@@ -512,12 +455,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Path.class) {
-			switch (baseFeatureID) {
-				case PersistencePackage.PATH__NAME: return WebuiPackage.UNIT_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == AttributePathElement.class) {
 			switch (baseFeatureID) {
 				case PersistencePackage.ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE: return WebuiPackage.UNIT_ELEMENT__ATTRIBUTE;
@@ -536,9 +473,14 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Path.class) {
 			switch (baseOperationID) {
-				case PersistencePackage.PATH___CONTEXT_ENTITY: return WebuiPackage.UNIT_ELEMENT___CONTEXT_ENTITY;
 				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_ELEMENT___NAME;
-				default: return -1;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		if (baseClass == UnitFeature.class) {
+			switch (baseOperationID) {
+				case WebuiPackage.UNIT_FEATURE___NAME: return WebuiPackage.UNIT_ELEMENT___NAME;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
 			}
 		}
 		if (baseClass == AttributePathElement.class) {
@@ -560,8 +502,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 		switch (operationID) {
 			case WebuiPackage.UNIT_ELEMENT___NAME:
 				return name();
-			case WebuiPackage.UNIT_ELEMENT___CONTEXT_ENTITY:
-				return contextEntity();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
