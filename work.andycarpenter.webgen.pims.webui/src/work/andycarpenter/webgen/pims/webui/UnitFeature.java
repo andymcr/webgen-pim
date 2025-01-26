@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Path;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +23,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getCollectionMaximumValues <em>Collection Maximum Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getDisplayDefaultWhen <em>Display Default When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyCollectionDisplay <em>Empty Collection Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getHeaderClass <em>Header Class</em>}</li>
@@ -38,7 +39,7 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL atMostOneSelectAction='actions-&gt;select(a | a.oclIsKindOf(SelectAction))-&gt;size() &lt; 2' noDeleteActions='actions-&gt;select(a | a.oclIsKindOf(DeleteAction))-&gt;isEmpty()'"
  * @generated
  */
-public interface UnitFeature extends UnitField, ActionContainer {
+public interface UnitFeature extends UnitField, Path, ActionContainer {
 	/**
 	 * Returns the value of the '<em><b>Display Label</b></em>' attribute.
 	 * The default value is <code>""</code>.
@@ -249,31 +250,27 @@ public interface UnitFeature extends UnitField, ActionContainer {
 	void setDisplayDefaultWhen(Predicate value);
 
 	/**
-	 * Returns the value of the '<em><b>Empty Display Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Empty Collection Display</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Empty Display Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Empty Display Value</em>' attribute.
-	 * @see #setEmptyDisplayValue(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_EmptyDisplayValue()
+	 * @return the value of the '<em>Empty Collection Display</em>' attribute.
+	 * @see #setEmptyCollectionDisplay(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitFeature_EmptyCollectionDisplay()
 	 * @model default=""
 	 * @generated
 	 */
-	String getEmptyDisplayValue();
+	String getEmptyCollectionDisplay();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyCollectionDisplay <em>Empty Collection Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Empty Display Value</em>' attribute.
-	 * @see #getEmptyDisplayValue()
+	 * @param value the new value of the '<em>Empty Collection Display</em>' attribute.
+	 * @see #getEmptyCollectionDisplay()
 	 * @generated
 	 */
-	void setEmptyDisplayValue(String value);
+	void setEmptyCollectionDisplay(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Footer</b></em>' attribute.

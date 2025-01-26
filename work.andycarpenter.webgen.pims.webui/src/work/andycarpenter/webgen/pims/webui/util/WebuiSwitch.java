@@ -310,6 +310,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				UnitFeature unitFeature = (UnitFeature)theEObject;
 				T result = caseUnitFeature(unitFeature);
 				if (result == null) result = caseUnitField(unitFeature);
+				if (result == null) result = casePath(unitFeature);
 				if (result == null) result = caseActionContainer(unitFeature);
 				if (result == null) result = caseFeatureVariableContext(unitFeature);
 				if (result == null) result = defaultCase(theEObject);
@@ -321,8 +322,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseUnitFeature(unitElement);
 				if (result == null) result = caseAttributePathElement(unitElement);
 				if (result == null) result = caseUnitField(unitElement);
-				if (result == null) result = caseActionContainer(unitElement);
 				if (result == null) result = casePath(unitElement);
+				if (result == null) result = caseActionContainer(unitElement);
 				if (result == null) result = caseFeatureVariableContext(unitElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -333,8 +334,8 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = caseUnitFeature(unitResource);
 				if (result == null) result = caseResourcePathElement(unitResource);
 				if (result == null) result = caseUnitField(unitResource);
-				if (result == null) result = caseActionContainer(unitResource);
 				if (result == null) result = casePath(unitResource);
+				if (result == null) result = caseActionContainer(unitResource);
 				if (result == null) result = caseFeatureVariableContext(unitResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

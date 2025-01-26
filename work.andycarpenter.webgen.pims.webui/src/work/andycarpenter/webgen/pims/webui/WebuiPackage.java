@@ -3250,22 +3250,22 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT_FEATURE_COUNT = CONTENT_UNIT_FEATURE_COUNT + 20;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMIC_UNIT___REFERENCABLE_ENTITIES = CONTENT_UNIT_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT___CONTAINING_TYPE = CONTENT_UNIT_OPERATION_COUNT + 2;
+	int DYNAMIC_UNIT___CONTAINING_TYPE = CONTENT_UNIT_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_UNIT___REFERENCABLE_ENTITIES = CONTENT_UNIT_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Dynamic Unit</em>' class.
@@ -3567,13 +3567,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__DISABLE_INPUT = UNIT_FIELD__DISABLE_INPUT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__NAME = UNIT_FIELD_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 0;
+	int UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Instance Actions Placement</b></em>' attribute.
@@ -3582,7 +3591,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 1;
+	int UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT = UNIT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -3591,7 +3600,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 2;
+	int UNIT_FEATURE__ACTIONS = UNIT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -3600,7 +3609,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__ACTION_NAVIGATION_CLASS = UNIT_FIELD_FEATURE_COUNT + 3;
+	int UNIT_FEATURE__ACTION_NAVIGATION_CLASS = UNIT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Display Label</b></em>' attribute.
@@ -3609,7 +3618,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 4;
+	int UNIT_FEATURE__DISPLAY_LABEL = UNIT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -3618,7 +3627,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 5;
+	int UNIT_FEATURE__REQUIRED = UNIT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Forced Value</b></em>' containment reference.
@@ -3627,7 +3636,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 6;
+	int UNIT_FEATURE__FORCED_VALUE = UNIT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Add</b></em>' attribute.
@@ -3636,7 +3645,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 7;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_ADD = UNIT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection Ui Allow Remove</b></em>' attribute.
@@ -3645,7 +3654,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 8;
+	int UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE = UNIT_FIELD_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Collection Maximum Values</b></em>' attribute.
@@ -3654,7 +3663,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES = UNIT_FIELD_FEATURE_COUNT + 9;
+	int UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES = UNIT_FIELD_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Default Display Value</b></em>' attribute.
@@ -3663,7 +3672,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 10;
+	int UNIT_FEATURE__DEFAULT_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Display Default When</b></em>' containment reference.
@@ -3672,16 +3681,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 11;
+	int UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = UNIT_FIELD_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Collection Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__EMPTY_DISPLAY_VALUE = UNIT_FIELD_FEATURE_COUNT + 12;
+	int UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY = UNIT_FIELD_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -3690,7 +3699,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 13;
+	int UNIT_FEATURE__FOOTER = UNIT_FIELD_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Autofocus</b></em>' attribute.
@@ -3699,7 +3708,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 14;
+	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -3708,7 +3717,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 15;
+	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -3717,7 +3726,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
+	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -3726,7 +3735,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
+	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
@@ -3735,7 +3744,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
+	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -3744,7 +3753,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 19;
+	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
@@ -3753,7 +3762,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 20;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 21;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -3765,13 +3774,31 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE___REFERENCABLE_ENTITIES = UNIT_FIELD___REFERENCABLE_ENTITIES;
 
 	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE___CONTEXT_ENTITY = UNIT_FIELD_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE___NAME = UNIT_FIELD_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_OPERATION_COUNT = UNIT_FIELD_OPERATION_COUNT + 0;
+	int UNIT_FEATURE_OPERATION_COUNT = UNIT_FIELD_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl <em>Unit Element</em>}' class.
@@ -3883,6 +3910,15 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__NAME = UNIT_FEATURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3991,13 +4027,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__DISPLAY_DEFAULT_WHEN = UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
 
 	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Collection Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__EMPTY_DISPLAY_VALUE = UNIT_FEATURE__EMPTY_DISPLAY_VALUE;
+	int UNIT_ELEMENT__EMPTY_COLLECTION_DISPLAY = UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -4063,22 +4099,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__ATTRIBUTE = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_ELEMENT__ATTRIBUTE = UNIT_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -4087,7 +4114,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__DEFAULT_VALUE = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_ELEMENT__DEFAULT_VALUE = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Obfuscate Form Fields</b></em>' attribute.
@@ -4096,7 +4123,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__OBFUSCATE_FORM_FIELDS = UNIT_FEATURE_FEATURE_COUNT + 3;
+	int UNIT_ELEMENT__OBFUSCATE_FORM_FIELDS = UNIT_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -4105,7 +4132,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__PLACEHOLDER = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ELEMENT__PLACEHOLDER = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -4114,7 +4141,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT__VALIDATION_PATTERN = UNIT_FEATURE_FEATURE_COUNT + 5;
+	int UNIT_ELEMENT__VALIDATION_PATTERN = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Unit Element</em>' class.
@@ -4123,7 +4150,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ELEMENT_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -4141,7 +4168,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT___CONTEXT_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_ELEMENT___CONTEXT_ENTITY = UNIT_FEATURE___CONTEXT_ENTITY;
 
 	/**
 	 * The operation id for the '<em>Name</em>' operation.
@@ -4150,7 +4177,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT___NAME = UNIT_FEATURE_OPERATION_COUNT + 2;
+	int UNIT_ELEMENT___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Unit Element</em>' class.
@@ -4159,7 +4186,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
+	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl <em>Unit Resource</em>}' class.
@@ -4271,6 +4298,15 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__NAME = UNIT_FEATURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4379,13 +4415,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__DISPLAY_DEFAULT_WHEN = UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
 
 	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Collection Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__EMPTY_DISPLAY_VALUE = UNIT_FEATURE__EMPTY_DISPLAY_VALUE;
+	int UNIT_RESOURCE__EMPTY_COLLECTION_DISPLAY = UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -4451,22 +4487,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__RESOURCE = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_RESOURCE__RESOURCE = UNIT_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Deletable</b></em>' attribute.
@@ -4475,7 +4502,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__IS_DELETABLE = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_RESOURCE__IS_DELETABLE = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Downloadable</b></em>' attribute.
@@ -4484,7 +4511,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__IS_DOWNLOADABLE = UNIT_FEATURE_FEATURE_COUNT + 3;
+	int UNIT_RESOURCE__IS_DOWNLOADABLE = UNIT_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Show Image When Editing</b></em>' attribute.
@@ -4493,7 +4520,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_RESOURCE__SHOW_IMAGE_WHEN_EDITING = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Image Filter</b></em>' reference.
@@ -4502,7 +4529,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE__IMAGE_FILTER = UNIT_FEATURE_FEATURE_COUNT + 5;
+	int UNIT_RESOURCE__IMAGE_FILTER = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Unit Resource</em>' class.
@@ -4511,7 +4538,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_RESOURCE_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -4529,7 +4556,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE___CONTEXT_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_RESOURCE___CONTEXT_ENTITY = UNIT_FEATURE___CONTEXT_ENTITY;
 
 	/**
 	 * The operation id for the '<em>Name</em>' operation.
@@ -4538,7 +4565,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE___NAME = UNIT_FEATURE_OPERATION_COUNT + 2;
+	int UNIT_RESOURCE___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Unit Resource</em>' class.
@@ -4547,7 +4574,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
+	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl <em>Unit Association</em>}' class.
@@ -4659,6 +4686,15 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__NAME = UNIT_FEATURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4767,13 +4803,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__DISPLAY_DEFAULT_WHEN = UNIT_FEATURE__DISPLAY_DEFAULT_WHEN;
 
 	/**
-	 * The feature id for the '<em><b>Empty Display Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Collection Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__EMPTY_DISPLAY_VALUE = UNIT_FEATURE__EMPTY_DISPLAY_VALUE;
+	int UNIT_ASSOCIATION__EMPTY_COLLECTION_DISPLAY = UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY;
 
 	/**
 	 * The feature id for the '<em><b>Footer</b></em>' attribute.
@@ -4839,22 +4875,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__NAME = UNIT_FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 1;
+	int UNIT_ASSOCIATION__CHILD_FEATURE = UNIT_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Association</b></em>' reference.
@@ -4863,7 +4890,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 2;
+	int UNIT_ASSOCIATION__ASSOCIATION = UNIT_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Value Display</b></em>' reference.
@@ -4872,7 +4899,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 3;
+	int UNIT_ASSOCIATION__VALUE_DISPLAY = UNIT_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Association Source</b></em>' reference.
@@ -4881,7 +4908,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION_SOURCE = UNIT_FEATURE_FEATURE_COUNT + 4;
+	int UNIT_ASSOCIATION__ASSOCIATION_SOURCE = UNIT_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Association Target</b></em>' reference.
@@ -4890,7 +4917,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__ASSOCIATION_TARGET = UNIT_FEATURE_FEATURE_COUNT + 5;
+	int UNIT_ASSOCIATION__ASSOCIATION_TARGET = UNIT_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference.
@@ -4899,7 +4926,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 6;
+	int UNIT_ASSOCIATION__OPTIONS = UNIT_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Collection Sort By</b></em>' reference.
@@ -4908,7 +4935,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__COLLECTION_SORT_BY = UNIT_FEATURE_FEATURE_COUNT + 7;
+	int UNIT_ASSOCIATION__COLLECTION_SORT_BY = UNIT_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Use Autocomplete</b></em>' attribute.
@@ -4917,7 +4944,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
@@ -4926,7 +4953,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 9;
+	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -4944,7 +4971,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION___CONTEXT_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_ASSOCIATION___CONTEXT_ENTITY = UNIT_FEATURE___CONTEXT_ENTITY;
 
 	/**
 	 * The operation id for the '<em>Name</em>' operation.
@@ -4953,7 +4980,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION___NAME = UNIT_FEATURE_OPERATION_COUNT + 2;
+	int UNIT_ASSOCIATION___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Source Association</em>' operation.
@@ -4962,7 +4989,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION___IS_SOURCE_ASSOCIATION = UNIT_FEATURE_OPERATION_COUNT + 3;
+	int UNIT_ASSOCIATION___IS_SOURCE_ASSOCIATION = UNIT_FEATURE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Leaf Entity</em>' operation.
@@ -4971,7 +4998,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION___LEAF_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 4;
+	int UNIT_ASSOCIATION___LEAF_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Unit Association</em>' class.
@@ -4980,7 +5007,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 5;
+	int UNIT_ASSOCIATION_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitLabelImpl <em>Unit Label</em>}' class.
@@ -6249,15 +6276,6 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINGLETON_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6265,6 +6283,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLETON_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLETON_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Singleton Unit</em>' class.
@@ -6859,7 +6886,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT___CONTAINING_TYPE;
+	int COLLECTION_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -6868,7 +6895,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 1;
+	int COLLECTION_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Value Entities</em>' operation.
@@ -6877,7 +6904,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT___VALUE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 2;
+	int COLLECTION_UNIT___VALUE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -6886,7 +6913,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 3;
+	int COLLECTION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.
@@ -7295,15 +7322,6 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT___REFERENCABLE_ENTITIES = SINGLETON_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7311,6 +7329,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIT_UNIT___CONTAINING_TYPE = SINGLETON_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT___REFERENCABLE_ENTITIES = SINGLETON_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Edit Unit</em>' class.
@@ -7728,15 +7755,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7744,6 +7762,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Create Unit</em>' class.
@@ -8189,15 +8216,6 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8205,6 +8223,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Update Unit</em>' class.
@@ -8639,15 +8666,6 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8655,6 +8673,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Create Update Unit</em>' class.
@@ -9108,15 +9135,6 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9124,6 +9142,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Map Unit</em>' class.
@@ -14955,15 +14982,6 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14971,6 +14989,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Control Unit</em>' class.
@@ -15324,15 +15351,6 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT_FEATURE_COUNT = CONTROL_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEARCH_UNIT___REFERENCABLE_ENTITIES = CONTROL_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15340,6 +15358,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEARCH_UNIT___CONTAINING_TYPE = CONTROL_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_UNIT___REFERENCABLE_ENTITIES = CONTROL_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Search Unit</em>' class.
@@ -15757,15 +15784,6 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15773,6 +15791,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Registration Unit</em>' class.
@@ -16190,15 +16217,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16206,6 +16224,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Login Unit</em>' class.
@@ -16533,15 +16560,6 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGOUT_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16549,6 +16567,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGOUT_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGOUT_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Logout Unit</em>' class.
@@ -17020,15 +17047,6 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 6;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17036,6 +17054,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Forgotten Password Unit</em>' class.
@@ -17453,15 +17480,6 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT_FEATURE_COUNT = EDIT_UNIT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Referencable Entities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESET_PASSWORD_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
-
-	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17469,6 +17487,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT___CONTAINING_TYPE = EDIT_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT___REFERENCABLE_ENTITIES = EDIT_UNIT___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Reset Password Unit</em>' class.
@@ -21849,15 +21876,15 @@ public interface WebuiPackage extends EPackage {
 	EReference getUnitFeature_DisplayDefaultWhen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue <em>Empty Display Value</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyCollectionDisplay <em>Empty Collection Display</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Empty Display Value</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyDisplayValue()
+	 * @return the meta object for the attribute '<em>Empty Collection Display</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getEmptyCollectionDisplay()
 	 * @see #getUnitFeature()
 	 * @generated
 	 */
-	EAttribute getUnitFeature_EmptyDisplayValue();
+	EAttribute getUnitFeature_EmptyCollectionDisplay();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooter <em>Footer</em>}'.
@@ -22662,6 +22689,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCollectionUnit_PaginationAnchorClass();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#containingType() <em>Containing Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Containing Type</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#containingType()
+	 * @generated
+	 */
+	EOperation getCollectionUnit__ContainingType();
 
 	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#referencableEntities() <em>Referencable Entities</em>}' operation.
@@ -25485,12 +25522,12 @@ public interface WebuiPackage extends EPackage {
 		EReference UNIT_FEATURE__DISPLAY_DEFAULT_WHEN = eINSTANCE.getUnitFeature_DisplayDefaultWhen();
 
 		/**
-		 * The meta object literal for the '<em><b>Empty Display Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Empty Collection Display</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_FEATURE__EMPTY_DISPLAY_VALUE = eINSTANCE.getUnitFeature_EmptyDisplayValue();
+		EAttribute UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY = eINSTANCE.getUnitFeature_EmptyCollectionDisplay();
 
 		/**
 		 * The meta object literal for the '<em><b>Footer</b></em>' attribute feature.
@@ -26103,6 +26140,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = eINSTANCE.getCollectionUnit_PaginationAnchorClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Containing Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COLLECTION_UNIT___CONTAINING_TYPE = eINSTANCE.getCollectionUnit__ContainingType();
 
 		/**
 		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.

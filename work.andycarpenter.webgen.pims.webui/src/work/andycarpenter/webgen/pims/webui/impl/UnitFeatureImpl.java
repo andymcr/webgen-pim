@@ -2,12 +2,14 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -15,6 +17,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
+import work.andycarpenter.webgen.pims.persistence.Path;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.Action;
 import work.andycarpenter.webgen.pims.webui.ActionContainer;
 import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
@@ -30,6 +35,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getName <em>Name</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getContainerActionsPlacement <em>Container Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInstanceActionsPlacement <em>Instance Actions Placement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getActions <em>Actions</em>}</li>
@@ -42,7 +48,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getCollectionMaximumValues <em>Collection Maximum Values</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDefaultDisplayValue <em>Default Display Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getDisplayDefaultWhen <em>Display Default When</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getEmptyDisplayValue <em>Empty Display Value</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getEmptyCollectionDisplay <em>Empty Collection Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isAutofocus <em>Autofocus</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
@@ -55,6 +61,16 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeature {
+	/**
+	 * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PersistencePackage.Literals.PATH__NAME).getSettingDelegate();
+
 	/**
 	 * The default value of the '{@link #getContainerActionsPlacement() <em>Container Actions Placement</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -266,24 +282,24 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	protected Predicate displayDefaultWhen;
 
 	/**
-	 * The default value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * The default value of the '{@link #getEmptyCollectionDisplay() <em>Empty Collection Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEmptyDisplayValue()
+	 * @see #getEmptyCollectionDisplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EMPTY_DISPLAY_VALUE_EDEFAULT = "";
+	protected static final String EMPTY_COLLECTION_DISPLAY_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getEmptyDisplayValue() <em>Empty Display Value</em>}' attribute.
+	 * The cached value of the '{@link #getEmptyCollectionDisplay() <em>Empty Collection Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEmptyDisplayValue()
+	 * @see #getEmptyCollectionDisplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected String emptyDisplayValue = EMPTY_DISPLAY_VALUE_EDEFAULT;
+	protected String emptyCollectionDisplay = EMPTY_COLLECTION_DISPLAY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFooter() <em>Footer</em>}' attribute.
@@ -442,6 +458,26 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	protected EClass eStaticClass() {
 		return WebuiPackage.Literals.UNIT_FEATURE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return (String)NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetName() {
+		return NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**
@@ -760,8 +796,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public String getEmptyDisplayValue() {
-		return emptyDisplayValue;
+	public String getEmptyCollectionDisplay() {
+		return emptyCollectionDisplay;
 	}
 
 	/**
@@ -770,11 +806,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public void setEmptyDisplayValue(String newEmptyDisplayValue) {
-		String oldEmptyDisplayValue = emptyDisplayValue;
-		emptyDisplayValue = newEmptyDisplayValue;
+	public void setEmptyCollectionDisplay(String newEmptyCollectionDisplay) {
+		String oldEmptyCollectionDisplay = emptyCollectionDisplay;
+		emptyCollectionDisplay = newEmptyCollectionDisplay;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE, oldEmptyDisplayValue, emptyDisplayValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY, oldEmptyCollectionDisplay, emptyCollectionDisplay));
 	}
 
 	/**
@@ -943,6 +979,30 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public Entity contextEntity() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String name() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -979,6 +1039,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__NAME:
+				return getName();
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				return getContainerActionsPlacement();
 			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
@@ -1003,8 +1065,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return getDefaultDisplayValue();
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
 				return getDisplayDefaultWhen();
-			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
-				return getEmptyDisplayValue();
+			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
+				return getEmptyCollectionDisplay();
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				return getFooter();
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
@@ -1069,8 +1131,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
 				setDisplayDefaultWhen((Predicate)newValue);
 				return;
-			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
-				setEmptyDisplayValue((String)newValue);
+			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
+				setEmptyCollectionDisplay((String)newValue);
 				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				setFooter((String)newValue);
@@ -1141,8 +1203,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
 				setDisplayDefaultWhen((Predicate)null);
 				return;
-			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
-				setEmptyDisplayValue(EMPTY_DISPLAY_VALUE_EDEFAULT);
+			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
+				setEmptyCollectionDisplay(EMPTY_COLLECTION_DISPLAY_EDEFAULT);
 				return;
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				setFooter(FOOTER_EDEFAULT);
@@ -1177,6 +1239,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.UNIT_FEATURE__NAME:
+				return isSetName();
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 				return containerActionsPlacement != CONTAINER_ACTIONS_PLACEMENT_EDEFAULT;
 			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
@@ -1201,8 +1265,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return DEFAULT_DISPLAY_VALUE_EDEFAULT == null ? defaultDisplayValue != null : !DEFAULT_DISPLAY_VALUE_EDEFAULT.equals(defaultDisplayValue);
 			case WebuiPackage.UNIT_FEATURE__DISPLAY_DEFAULT_WHEN:
 				return displayDefaultWhen != null;
-			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
-				return EMPTY_DISPLAY_VALUE_EDEFAULT == null ? emptyDisplayValue != null : !EMPTY_DISPLAY_VALUE_EDEFAULT.equals(emptyDisplayValue);
+			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
+				return EMPTY_COLLECTION_DISPLAY_EDEFAULT == null ? emptyCollectionDisplay != null : !EMPTY_COLLECTION_DISPLAY_EDEFAULT.equals(emptyCollectionDisplay);
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
@@ -1228,6 +1292,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (derivedFeatureID) {
+				case WebuiPackage.UNIT_FEATURE__NAME: return PersistencePackage.PATH__NAME;
+				default: return -1;
+			}
+		}
 		if (baseClass == ActionContainer.class) {
 			switch (derivedFeatureID) {
 				case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT;
@@ -1247,6 +1317,12 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (baseFeatureID) {
+				case PersistencePackage.PATH__NAME: return WebuiPackage.UNIT_FEATURE__NAME;
+				default: return -1;
+			}
+		}
 		if (baseClass == ActionContainer.class) {
 			switch (baseFeatureID) {
 				case WebuiPackage.ACTION_CONTAINER__CONTAINER_ACTIONS_PLACEMENT: return WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT;
@@ -1257,6 +1333,44 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == Path.class) {
+			switch (baseOperationID) {
+				case PersistencePackage.PATH___CONTEXT_ENTITY: return WebuiPackage.UNIT_FEATURE___CONTEXT_ENTITY;
+				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_FEATURE___NAME;
+				default: return -1;
+			}
+		}
+		if (baseClass == ActionContainer.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case WebuiPackage.UNIT_FEATURE___CONTEXT_ENTITY:
+				return contextEntity();
+			case WebuiPackage.UNIT_FEATURE___NAME:
+				return name();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -1287,8 +1401,8 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(collectionMaximumValues);
 		result.append(", defaultDisplayValue: ");
 		result.append(defaultDisplayValue);
-		result.append(", emptyDisplayValue: ");
-		result.append(emptyDisplayValue);
+		result.append(", emptyCollectionDisplay: ");
+		result.append(emptyCollectionDisplay);
 		result.append(", footer: ");
 		result.append(footer);
 		result.append(", autofocus: ");
