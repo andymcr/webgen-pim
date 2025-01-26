@@ -185,8 +185,8 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localAnchorClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnit/localInstanceActionClass"/>
-      <genOperations ecoreOperation="webui.ecore#//DynamicUnit/referencableEntities"/>
       <genOperations ecoreOperation="webui.ecore#//DynamicUnit/containingType"/>
+      <genOperations ecoreOperation="webui.ecore#//DynamicUnit/referencableEntities"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//RouteActual">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//RouteActual/actualFor"/>
@@ -220,7 +220,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/defaultDisplayValue"/>
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
           ecoreFeature="ecore:EReference webui.ecore#//UnitFeature/displayDefaultWhen"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/emptyDisplayValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/emptyCollectionDisplay"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footer"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/autofocus"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/headerClass"/>
@@ -317,6 +317,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationElementClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
+      <genOperations ecoreOperation="webui.ecore#//CollectionUnit/containingType"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/referencableEntities"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/valueEntities"/>
     </genClasses>

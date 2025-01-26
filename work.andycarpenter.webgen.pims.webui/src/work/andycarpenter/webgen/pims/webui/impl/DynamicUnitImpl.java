@@ -9,9 +9,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -905,27 +903,16 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #containingType() <em>Containing Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #containingType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate CONTAINING_TYPE__EINVOCATION_DELEGATE = ((EOperation.Internal)WebuiPackage.Literals.DYNAMIC_UNIT___CONTAINING_TYPE).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Entity containingType() {
-		try {
-			return (Entity)CONTAINING_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
+		if (contentType == null) {
+			return null;
+		} else {
+			return contentType.getContainingType();
 		}
 	}
 
@@ -1294,10 +1281,10 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case WebuiPackage.DYNAMIC_UNIT___REFERENCABLE_ENTITIES:
-				return referencableEntities();
 			case WebuiPackage.DYNAMIC_UNIT___CONTAINING_TYPE:
 				return containingType();
+			case WebuiPackage.DYNAMIC_UNIT___REFERENCABLE_ENTITIES:
+				return referencableEntities();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

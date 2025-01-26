@@ -591,22 +591,23 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Entity> getValueEntities() {
-		return (EList<Entity>)VALUE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	public boolean isSetValueEntities() {
-		return VALUE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+	public Entity containingType() {
+		if (contentType == null) {
+			return null;
+		} else {
+			if (getSelection() == null) {
+				return contentType.getContainingType();
+			} else {
+				if (getSelection().getSelectPath() == null) {
+					return contentType.getContainingType();
+				} else {
+					return getSelection().getSelectPath().leafEntity();
+				}
+			}
+		}
 	}
 
 	/**
@@ -638,6 +639,27 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		}
 
 		return entities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Entity> getValueEntities() {
+		return (EList<Entity>)VALUE_ENTITIES__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetValueEntities() {
+		return VALUE_ENTITIES__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 	}
 
 	/**

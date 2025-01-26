@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.base.BaseFactory;
 
 import work.andycarpenter.webgen.pims.expression.ExpressionFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
+import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.service.ServiceFactory;
 import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
@@ -52,6 +53,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addContainerActionsPlacementPropertyDescriptor(object);
 			addInstanceActionsPlacementPropertyDescriptor(object);
 			addActionNavigationClassPropertyDescriptor(object);
@@ -61,7 +63,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addCollectionUiAllowRemovePropertyDescriptor(object);
 			addCollectionMaximumValuesPropertyDescriptor(object);
 			addDefaultDisplayValuePropertyDescriptor(object);
-			addEmptyDisplayValuePropertyDescriptor(object);
+			addEmptyCollectionDisplayPropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
 			addAutofocusPropertyDescriptor(object);
 			addHeaderClassPropertyDescriptor(object);
@@ -71,6 +73,28 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Path_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Path_name_feature", "_UI_Path_type"),
+				 PersistencePackage.Literals.PATH__NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -272,24 +296,24 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Empty Display Value feature.
+	 * This adds a property descriptor for the Empty Collection Display feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEmptyDisplayValuePropertyDescriptor(Object object) {
+	protected void addEmptyCollectionDisplayPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnitFeature_emptyDisplayValue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_emptyDisplayValue_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__EMPTY_DISPLAY_VALUE,
+				 getString("_UI_UnitFeature_emptyCollectionDisplay_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_emptyCollectionDisplay_feature", "_UI_UnitFeature_type"),
+				 WebuiPackage.Literals.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -487,7 +511,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UnitFeature)object).getTitle();
+		String label = ((UnitFeature)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_UnitFeature_type") :
 			getString("_UI_UnitFeature_type") + " " + label;
@@ -506,6 +530,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UnitFeature.class)) {
+			case WebuiPackage.UNIT_FEATURE__NAME:
 			case WebuiPackage.UNIT_FEATURE__CONTAINER_ACTIONS_PLACEMENT:
 			case WebuiPackage.UNIT_FEATURE__INSTANCE_ACTIONS_PLACEMENT:
 			case WebuiPackage.UNIT_FEATURE__ACTION_NAVIGATION_CLASS:
@@ -515,7 +540,7 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_UI_ALLOW_REMOVE:
 			case WebuiPackage.UNIT_FEATURE__COLLECTION_MAXIMUM_VALUES:
 			case WebuiPackage.UNIT_FEATURE__DEFAULT_DISPLAY_VALUE:
-			case WebuiPackage.UNIT_FEATURE__EMPTY_DISPLAY_VALUE:
+			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:

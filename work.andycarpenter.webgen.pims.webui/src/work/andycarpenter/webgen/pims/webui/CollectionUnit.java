@@ -793,6 +793,14 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	 * @model
 	 * @generated
 	 */
+	Entity containingType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
 	EList<Entity> referencableEntities();
 
 	/**

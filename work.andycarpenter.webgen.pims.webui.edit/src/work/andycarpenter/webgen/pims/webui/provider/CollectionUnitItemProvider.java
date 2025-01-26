@@ -21,10 +21,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Label;
-import work.andycarpenter.webgen.pims.persistence.Repository;
 import work.andycarpenter.webgen.pims.persistence.Selection;
 import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.WebUI;
 import work.andycarpenter.webgen.pims.webui.WebuiFactory;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -184,8 +182,9 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						return getSelections(unit.getController().getWebUI(),
-								unit.getContentType());
+						if (unit.getContentType() != null) {
+							return getSelections(unit.getContentType());
+						}
 					}
 					return Collections.emptySet();
 				}
@@ -210,13 +209,12 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			null) {
 				@Override
 				public Collection<?> getChoiceOfValues(Object object) {
-//					if (object instanceof CollectionUnit) {
-//						final CollectionUnit unit = (CollectionUnit) object;
-//						if (unit.getContainingType() != null) {
-//							return getSelections(unit.getController().getWebUI(),
-//									unit.getContainingType());
-//						}
-//					}
+					if (object instanceof CollectionUnit) {
+						final CollectionUnit unit = (CollectionUnit) object;
+						if (unit.containingType() != null) {
+							return getSelections(unit.containingType());
+						}
+					}
 
 					return Collections.emptySet();
 				}
@@ -243,9 +241,11 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof CollectionUnit) {
 						final CollectionUnit unit = (CollectionUnit) object;
-						return getSelections(unit.getController().getWebUI(),
-								unit.getContentType());
+						if (unit.getContentType() != null) {
+							return getSelections(unit.getContentType());
+						}
 					}
+
 					return Collections.emptySet();
 				}
 		});
@@ -861,18 +861,12 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
 	}
 
-	protected Set<Selection> getSelections(final WebUI webUI, final Entity contentType) {
-		if (contentType == null) {
-			return Collections.emptySet();
-		}
-		final Set<Selection> selections = new HashSet<Selection>();
-		for (Repository repository : webUI.getPersistence().getRepositories()) {
-			if (contentType.equals(repository.getServes())) {
-				selections.addAll(repository.getSelections());
-			}
+	protected List<Selection> getSelections(final Entity entity) {
+		if (entity.getRepository() != null) {
+			return entity.getRepository().getSelections();
 		}
 
-		return selections;
+		return Collections.emptyList();
 	}
 
 }

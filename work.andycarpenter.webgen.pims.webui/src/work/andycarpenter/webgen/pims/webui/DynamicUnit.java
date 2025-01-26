@@ -394,7 +394,7 @@ public interface DynamicUnit extends ContentUnit, ActionContainer, FeatureVariab
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if contentType.oclIsUndefined() then\n\tnull\nelse\n\tcontentType.containingType\nendif'"
+	 * @model
 	 * @generated
 	 */
 	Entity containingType();
