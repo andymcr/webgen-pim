@@ -5,6 +5,7 @@ package work.andycarpenter.webgen.pims.webui.impl;
 import org.eclipse.emf.ecore.EClass;
 import work.andycarpenter.webgen.pims.persistence.impl.AssociationPathElementImpl;
 import work.andycarpenter.webgen.pims.webui.AssociationDisplayValue;
+import work.andycarpenter.webgen.pims.webui.DynamicUnit;
 import work.andycarpenter.webgen.pims.webui.ValueContext;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -49,7 +50,14 @@ public class AssociationDisplayValueImpl extends AssociationPathElementImpl impl
 		if (getAssociation() == null) {
 			return true;
 		} else {
-			if (eContainer() instanceof ValueContext) {
+			if (eContainer() instanceof DynamicUnit) {
+				final DynamicUnit unit = (DynamicUnit) eContainer();
+				if (unit.getContentType() == null) {
+					return true;
+				} else {
+					return unit.getContentType().getAssociations().contains(getAssociation());
+				}
+			} else if (eContainer() instanceof ValueContext) {
 				final ValueContext valueContext = (ValueContext) eContainer();
 				return valueContext.valueEntities().stream()
 					.anyMatch(e -> e.getAssociations().contains(getAssociation()));
