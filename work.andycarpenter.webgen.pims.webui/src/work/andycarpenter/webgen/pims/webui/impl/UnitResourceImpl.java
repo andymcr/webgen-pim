@@ -2,23 +2,16 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.ImageResource;
-import work.andycarpenter.webgen.pims.persistence.Path;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.persistence.ResourceFeature;
 
 import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
-import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.UnitResource;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
@@ -289,31 +282,6 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #name() <em>Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #name()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate NAME__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.RESOURCE_PATH_ELEMENT___NAME).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String name() {
-		try {
-			return (String)NAME__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -443,48 +411,6 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Path.class) {
-			switch (baseOperationID) {
-				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_RESOURCE___NAME;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == UnitFeature.class) {
-			switch (baseOperationID) {
-				case WebuiPackage.UNIT_FEATURE___NAME: return WebuiPackage.UNIT_RESOURCE___NAME;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == ResourcePathElement.class) {
-			switch (baseOperationID) {
-				case PersistencePackage.RESOURCE_PATH_ELEMENT___NAME: return WebuiPackage.UNIT_RESOURCE___NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case WebuiPackage.UNIT_RESOURCE___NAME:
-				return name();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

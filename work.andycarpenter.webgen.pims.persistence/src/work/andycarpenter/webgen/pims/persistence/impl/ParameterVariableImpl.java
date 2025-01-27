@@ -2,13 +2,9 @@
  */
 package work.andycarpenter.webgen.pims.persistence.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -147,27 +143,16 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #name() <em>Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #name()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate NAME__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.PARAMETER_VARIABLE___NAME).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String name() {
-		try {
-			return (String)NAME__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
+		if (getFormal() == null) {
+			return "";
+		} else {
+			return getFormal().getName();
 		}
 	}
 
@@ -304,20 +289,6 @@ public class ParameterVariableImpl extends PathRootImpl implements ParameterVari
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case PersistencePackage.PARAMETER_VARIABLE___NAME:
-				return name();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //ParameterVariableImpl

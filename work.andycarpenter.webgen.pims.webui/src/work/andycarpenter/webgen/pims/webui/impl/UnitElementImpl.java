@@ -2,14 +2,9 @@
  */
 package work.andycarpenter.webgen.pims.webui.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -17,10 +12,8 @@ import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 
 import work.andycarpenter.webgen.pims.persistence.AttributePathElement;
-import work.andycarpenter.webgen.pims.persistence.Path;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.webui.UnitElement;
-import work.andycarpenter.webgen.pims.webui.UnitFeature;
 import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
@@ -295,31 +288,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #name() <em>Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #name()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate NAME__EINVOCATION_DELEGATE = ((EOperation.Internal)PersistencePackage.Literals.ATTRIBUTE_PATH_ELEMENT___NAME).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String name() {
-		try {
-			return (String)NAME__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -462,48 +430,6 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Path.class) {
-			switch (baseOperationID) {
-				case PersistencePackage.PATH___NAME: return WebuiPackage.UNIT_ELEMENT___NAME;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == UnitFeature.class) {
-			switch (baseOperationID) {
-				case WebuiPackage.UNIT_FEATURE___NAME: return WebuiPackage.UNIT_ELEMENT___NAME;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == AttributePathElement.class) {
-			switch (baseOperationID) {
-				case PersistencePackage.ATTRIBUTE_PATH_ELEMENT___NAME: return WebuiPackage.UNIT_ELEMENT___NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case WebuiPackage.UNIT_ELEMENT___NAME:
-				return name();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

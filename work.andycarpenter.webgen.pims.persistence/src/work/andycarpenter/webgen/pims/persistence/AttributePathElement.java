@@ -45,7 +45,7 @@ public interface AttributePathElement extends Path {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif'"
+	 * @model
 	 * @generated
 	 */
 	String name();

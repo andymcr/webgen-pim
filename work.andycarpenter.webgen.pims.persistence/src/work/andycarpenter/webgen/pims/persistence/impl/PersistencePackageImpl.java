@@ -3537,18 +3537,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 			   "derivation", "if association.oclIsUndefined() then\n\tnull\nelse\n\tif isSourceAssociation() then\n\t\tassociation.targetEntity\n\telse\n\t\tassociation.partOf\n\tendif\nendif"
 		   });
 		addAnnotation
-		  (getAttributePathElement__Name(),
-		   source,
-		   new String[] {
-			   "body", "if attribute.oclIsUndefined() then\n\t\'\'\nelse\n\tattribute.name\nendif"
-		   });
-		addAnnotation
-		  (getResourcePathElement__Name(),
-		   source,
-		   new String[] {
-			   "body", "if resource.oclIsUndefined() then\n\t\'\'\nelse\n\tresource.name\nendif"
-		   });
-		addAnnotation
 		  (associationWithoutContainmentEClass,
 		   source,
 		   new String[] {
@@ -3577,12 +3565,6 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		   source,
 		   new String[] {
 			   "derivation", "referencableEntities()"
-		   });
-		addAnnotation
-		  (getParameterVariable__Name(),
-		   source,
-		   new String[] {
-			   "derivation", "if formal.oclIsUndefined() then\n\t\'\'\nelse\n\tformal.name\nendif"
 		   });
 	}
 

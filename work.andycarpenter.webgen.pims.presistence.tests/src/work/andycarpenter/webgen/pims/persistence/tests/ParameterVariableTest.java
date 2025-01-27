@@ -17,12 +17,6 @@ import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
  *   <li>{@link work.andycarpenter.webgen.pims.expression.Expression#getRootContainer() <em>Root Container</em>}</li>
  * </ul>
  * </p>
- * <p>
- * The following operations are tested:
- * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#name() <em>Name</em>}</li>
- * </ul>
- * </p>
  * @generated
  */
 public class ParameterVariableTest extends PathRootTest {
@@ -101,19 +95,6 @@ public class ParameterVariableTest extends PathRootTest {
 	 */
 	public void testIsSetRootContainer() {
 		// TODO: implement this test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link work.andycarpenter.webgen.pims.persistence.ParameterVariable#name() <em>Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.ParameterVariable#name()
-	 * @generated
-	 */
-	public void testName() {
-		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}

@@ -8,12 +8,6 @@ import work.andycarpenter.webgen.pims.persistence.ResourcePathElement;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Resource Path Element</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following operations are tested:
- * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement#name() <em>Name</em>}</li>
- * </ul>
- * </p>
  * @generated
  */
 public abstract class ResourcePathElementTest extends PathTest {
@@ -37,19 +31,6 @@ public abstract class ResourcePathElementTest extends PathTest {
 	@Override
 	protected ResourcePathElement getFixture() {
 		return (ResourcePathElement)fixture;
-	}
-
-	/**
-	 * Tests the '{@link work.andycarpenter.webgen.pims.persistence.ResourcePathElement#name() <em>Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.persistence.ResourcePathElement#name()
-	 * @generated
-	 */
-	public void testName() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
 	}
 
 } //ResourcePathElementTest

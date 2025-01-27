@@ -236,21 +236,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributePathElement" abstract="true"
       eSuperTypes="#//Path">
-    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="body" value="if attribute.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;attribute.name&#xA;endif"/>
-      </eAnnotations>
-    </eOperations>
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
         eType="#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourcePathElement" abstract="true"
       eSuperTypes="#//Path">
-    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="body" value="if resource.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;resource.name&#xA;endif"/>
-      </eAnnotations>
-    </eOperations>
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
         eType="#//ResourceFeature"/>
   </eClassifiers>
@@ -484,11 +476,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ResourceVariable" eSuperTypes="#//ResourcePathElement #//FeatureVariable"/>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterVariable" eSuperTypes="#//PathRoot ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Variable">
     <eOperations name="contextEntity" eType="#//Entity"/>
-    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if formal.oclIsUndefined() then&#xA;&#x9;''&#xA;else&#xA;&#x9;formal.name&#xA;endif"/>
-      </eAnnotations>
-    </eOperations>
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formal" lowerBound="1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.base/model/base.ecore#//FormalParameter"/>
   </eClassifiers>

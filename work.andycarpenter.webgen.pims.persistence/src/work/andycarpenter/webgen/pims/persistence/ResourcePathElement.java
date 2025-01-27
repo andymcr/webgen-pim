@@ -45,7 +45,7 @@ public interface ResourcePathElement extends Path {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if resource.oclIsUndefined() then\n\t\'\'\nelse\n\tresource.name\nendif'"
+	 * @model
 	 * @generated
 	 */
 	String name();

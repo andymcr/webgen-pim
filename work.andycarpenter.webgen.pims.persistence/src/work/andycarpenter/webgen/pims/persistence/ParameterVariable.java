@@ -56,7 +56,7 @@ public interface ParameterVariable extends PathRoot, Variable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if formal.oclIsUndefined() then\n\t\'\'\nelse\n\tformal.name\nendif'"
+	 * @model
 	 * @generated
 	 */
 	String name();
