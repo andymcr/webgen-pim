@@ -269,6 +269,7 @@
           ecoreFeature="ecore:EReference persistence.ecore#//Selection/filters"/>
       <genFeatures createChild="false" propertyCategory="Data Access" ecoreFeature="ecore:EAttribute persistence.ecore#//Selection/methodName"/>
       <genOperations ecoreOperation="persistence.ecore#//Selection/referencableEntities"/>
+      <genOperations ecoreOperation="persistence.ecore#//Selection/selectionType"/>
     </genClasses>
     <genClasses ecoreClass="persistence.ecore#//SelectionPath">
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="Business"

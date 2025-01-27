@@ -595,19 +595,25 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 */
 	@Override
 	public Entity containingType() {
-		if (contentType == null) {
-			return null;
+		if (getFindContainerSelection() != null) {
+			return getFindContainerSelection().getDefinedBy().getServes();
+		} else if (getSelection() != null) {
+			return getSelection().selectionType();
+		} else if (contentType != null) {
+			return contentType.getContainingType();
 		} else {
-			if (getSelection() == null) {
-				return contentType.getContainingType();
-			} else {
-				if (getSelection().getSelectPath() == null) {
-					return contentType.getContainingType();
-				} else {
-					return getSelection().getSelectPath().leafEntity();
-				}
-			}
+			return null;
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean isContained() {
+		return containingType() != null;
 	}
 
 	/**
@@ -619,23 +625,10 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	public EList<Entity> referencableEntities() {
 		final EList<Entity> entities = new BasicEList<Entity>();
 		if (getContentType() != null) {
-			if (getFindContainerSelection() != null) {
-				entities.add(getContentType().getContainingAssociation().getPartOf());
-				entities.add(getContentType());
-			} else {
-				if (getSelection() == null) {
-					entities.add(getContentType());
-				} else {
-					if (getSelection().getSelectPath() == null) {
-						entities.add(getContentType());
-					} else {
-						if (getSelection().getSelectPath().leafEntity() != null) {
-							entities.add(getSelection().getSelectPath().leafEntity());
-							entities.add(getContentType());
-						}
-					}
-				}
-			}
+			entities.add(getContentType());
+		}
+		if (isContained()) {
+			entities.add(containingType());
 		}
 
 		return entities;
@@ -1837,6 +1830,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case WebuiPackage.COLLECTION_UNIT___IS_CONTAINED:
+				return isContained();
 			case WebuiPackage.COLLECTION_UNIT___VALUE_ENTITIES:
 				return valueEntities();
 		}

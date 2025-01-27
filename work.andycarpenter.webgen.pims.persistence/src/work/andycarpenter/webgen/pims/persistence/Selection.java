@@ -243,4 +243,12 @@ public interface Selection extends NamedElement, FormalParameterList, FeatureVar
 	 */
 	EList<Entity> referencableEntities();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity selectionType();
+
 } // Selection

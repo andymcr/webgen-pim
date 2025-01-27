@@ -2474,6 +2474,16 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
+	public EOperation getSelection__SelectionType() {
+		return selectionEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSelectionPath() {
 		return selectionPathEClass;
 	}
@@ -2939,6 +2949,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEReference(selectionEClass, SELECTION__FILTERS);
 		createEAttribute(selectionEClass, SELECTION__METHOD_NAME);
 		createEOperation(selectionEClass, SELECTION___REFERENCABLE_ENTITIES);
+		createEOperation(selectionEClass, SELECTION___SELECTION_TYPE);
 
 		selectionPathEClass = createEClass(SELECTION_PATH);
 		createEReference(selectionPathEClass, SELECTION_PATH__SELECTION);
@@ -3317,6 +3328,8 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getSelection_MethodName(), ecorePackage.getEString(), "methodName", null, 0, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getSelection__ReferencableEntities(), this.getEntity(), "referencableEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getSelection__SelectionType(), this.getEntity(), "selectionType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(selectionPathEClass, SelectionPath.class, "SelectionPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSelectionPath_Selection(), this.getSelection(), this.getSelection_SelectPath(), "selection", null, 1, 1, SelectionPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

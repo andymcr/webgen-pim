@@ -318,6 +318,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationElementClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/containingType"/>
+      <genOperations ecoreOperation="webui.ecore#//CollectionUnit/isContained"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/referencableEntities"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/valueEntities"/>
     </genClasses>

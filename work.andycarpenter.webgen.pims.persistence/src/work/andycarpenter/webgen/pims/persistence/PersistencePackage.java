@@ -5484,13 +5484,22 @@ public interface PersistencePackage extends EPackage {
 	int SELECTION___REFERENCABLE_ENTITIES = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Selection Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION___SELECTION_TYPE = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Selection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 2;
+	int SELECTION_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl <em>Selection Path</em>}' class.
@@ -8401,6 +8410,16 @@ public interface PersistencePackage extends EPackage {
 	EOperation getSelection__ReferencableEntities();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.persistence.Selection#selectionType() <em>Selection Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Selection Type</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#selectionType()
+	 * @generated
+	 */
+	EOperation getSelection__SelectionType();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.persistence.SelectionPath <em>Selection Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10259,6 +10278,14 @@ public interface PersistencePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SELECTION___REFERENCABLE_ENTITIES = eINSTANCE.getSelection__ReferencableEntities();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SELECTION___SELECTION_TYPE = eINSTANCE.getSelection__SelectionType();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.persistence.impl.SelectionPathImpl <em>Selection Path</em>}' class.

@@ -909,7 +909,7 @@ public abstract class DynamicUnitImpl extends ContentUnitImpl implements Dynamic
 	 */
 	@Override
 	public Entity containingType() {
-		if (contentType == null) {
+		if (getContentType() == null) {
 			return null;
 		} else {
 			return contentType.getContainingType();

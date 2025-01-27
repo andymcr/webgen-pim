@@ -23,6 +23,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  * The following operations are tested:
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#referencableEntities() <em>Referencable Entities</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Selection#selectionType() <em>Selection Type</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -132,6 +133,19 @@ public class SelectionTest extends TestCase {
 	 * @generated
 	 */
 	public void testReferencableEntities() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link work.andycarpenter.webgen.pims.persistence.Selection#selectionType() <em>Selection Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.persistence.Selection#selectionType()
+	 * @generated
+	 */
+	public void testSelectionType() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

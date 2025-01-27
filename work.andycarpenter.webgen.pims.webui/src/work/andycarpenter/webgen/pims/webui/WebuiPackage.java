@@ -6889,13 +6889,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT___CONTAINING_TYPE = DYNAMIC_UNIT_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT___IS_CONTAINED = DYNAMIC_UNIT_OPERATION_COUNT + 2;
+
+	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 2;
+	int COLLECTION_UNIT___REFERENCABLE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Value Entities</em>' operation.
@@ -6904,7 +6913,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT___VALUE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 3;
+	int COLLECTION_UNIT___VALUE_ENTITIES = DYNAMIC_UNIT_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit</em>' class.
@@ -6913,7 +6922,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 4;
+	int COLLECTION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.
@@ -10145,6 +10154,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT___CONTAINING_TYPE = COLLECTION_UNIT___CONTAINING_TYPE;
 
 	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT___IS_CONTAINED = COLLECTION_UNIT___IS_CONTAINED;
+
+	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10837,6 +10855,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT___CONTAINING_TYPE = COLLECTION_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT___IS_CONTAINED = COLLECTION_UNIT___IS_CONTAINED;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -11751,6 +11778,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT___CONTAINING_TYPE = CARDS_UNIT___CONTAINING_TYPE;
 
 	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT___IS_CONTAINED = CARDS_UNIT___IS_CONTAINED;
+
+	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12442,6 +12478,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT___CONTAINING_TYPE = CARDS_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT___IS_CONTAINED = CARDS_UNIT___IS_CONTAINED;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -13299,6 +13344,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT___CONTAINING_TYPE = CARDS_UNIT___CONTAINING_TYPE;
 
 	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT___IS_CONTAINED = CARDS_UNIT___IS_CONTAINED;
+
+	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13954,6 +14008,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT___CONTAINING_TYPE = COLLECTION_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT___IS_CONTAINED = COLLECTION_UNIT___IS_CONTAINED;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -14620,6 +14683,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT___CONTAINING_TYPE = COLLECTION_UNIT___CONTAINING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Contained</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT___IS_CONTAINED = COLLECTION_UNIT___IS_CONTAINED;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -22701,6 +22773,16 @@ public interface WebuiPackage extends EPackage {
 	EOperation getCollectionUnit__ContainingType();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isContained() <em>Is Contained</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Contained</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isContained()
+	 * @generated
+	 */
+	EOperation getCollectionUnit__IsContained();
+
+	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#referencableEntities() <em>Referencable Entities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26148,6 +26230,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation COLLECTION_UNIT___CONTAINING_TYPE = eINSTANCE.getCollectionUnit__ContainingType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Contained</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COLLECTION_UNIT___IS_CONTAINED = eINSTANCE.getCollectionUnit__IsContained();
 
 		/**
 		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.

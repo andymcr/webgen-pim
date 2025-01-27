@@ -3039,7 +3039,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getCollectionUnit__ReferencableEntities() {
+	public EOperation getCollectionUnit__IsContained() {
 		return collectionUnitEClass.getEOperations().get(1);
 	}
 
@@ -3049,8 +3049,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getCollectionUnit__ValueEntities() {
+	public EOperation getCollectionUnit__ReferencableEntities() {
 		return collectionUnitEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getCollectionUnit__ValueEntities() {
+		return collectionUnitEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -4794,6 +4804,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___CONTAINING_TYPE);
+		createEOperation(collectionUnitEClass, COLLECTION_UNIT___IS_CONTAINED);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___REFERENCABLE_ENTITIES);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___VALUE_ENTITIES);
 
@@ -5393,6 +5404,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCollectionUnit_PaginationAnchorClass(), ecorePackage.getEString(), "paginationAnchorClass", "page-link", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCollectionUnit__ContainingType(), thePersistencePackage.getEntity(), "containingType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getCollectionUnit__IsContained(), ecorePackage.getEBoolean(), "isContained", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCollectionUnit__ReferencableEntities(), thePersistencePackage.getEntity(), "referencableEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 

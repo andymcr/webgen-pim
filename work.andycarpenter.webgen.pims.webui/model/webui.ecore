@@ -450,6 +450,7 @@
       <details key="selectionMustNotBeSingleton" value="not selection.oclIsUndefined() implies&#xA;&#x9;selection.limit &lt;> 1"/>
     </eAnnotations>
     <eOperations name="containingType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
+    <eOperations name="isContained" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="referencableEntities" upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eOperations name="valueEntities" upperBound="-1" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unitTitle" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>

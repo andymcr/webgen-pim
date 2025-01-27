@@ -409,6 +409,7 @@
         <details key="body" value="if joins->isEmpty() then&#x9;&#xA;&#x9;OrderedSet{self.definedBy.serves}&#xA;else&#xA;&#x9;joins->iterate(&#xA;&#x9;&#x9;j; types : OrderedSet(Entity) = OrderedSet{self.definedBy.serves}&#xA;&#x9;&#x9;| if types->includes(j.partOf) then&#xA;&#x9;&#x9;&#x9;&#x9;types->append(j.targetEntity)&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;types->append(j.partOf)&#xA;&#x9;&#x9;&#x9;endif)&#xA;endif"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="selectionType" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" lowerBound="1"
         eType="#//Repository" eOpposite="#//Repository/selections"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distinct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

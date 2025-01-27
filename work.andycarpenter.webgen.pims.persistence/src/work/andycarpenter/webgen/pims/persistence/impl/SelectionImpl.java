@@ -561,6 +561,20 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public Entity selectionType() {
+		if (selectPath == null) {
+			return getDefinedBy().getServes(); 
+		} else {
+			return selectPath.leafEntity();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -877,6 +891,8 @@ public class SelectionImpl extends NamedElementImpl implements Selection {
 		switch (operationID) {
 			case PersistencePackage.SELECTION___REFERENCABLE_ENTITIES:
 				return referencableEntities();
+			case PersistencePackage.SELECTION___SELECTION_TYPE:
+				return selectionType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
