@@ -17,7 +17,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnitStyles()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface CollectionUnitStyles extends DynamicUnitStyles {

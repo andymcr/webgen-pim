@@ -64,9 +64,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.ACTION_MENU_ENTRY: return createActionMenuEntry();
 			case WebuiPackage.EDIT_STATIC_TEXT_MENU_ENTRY: return createEditStaticTextMenuEntry();
 			case WebuiPackage.MENU_FEATURE: return createMenuFeature();
-			case WebuiPackage.COLLECTION_UNIT_STYLES: return createCollectionUnitStyles();
 			case WebuiPackage.DEFAULT_UNIT_STYLES: return createDefaultUnitStyles();
 			case WebuiPackage.CARDS_UNIT_STYLES: return createCardsUnitStyles();
+			case WebuiPackage.IMAGE_CARDS_UNIT_STYLES: return createImageCardsUnitStyles();
 			case WebuiPackage.DETAILS_UNIT_STYLES: return createDetailsUnitStyles();
 			case WebuiPackage.FORM_UNIT_STYLES: return createFormUnitStyles();
 			case WebuiPackage.GALLERY_UNIT_STYLES: return createGalleryUnitStyles();
@@ -265,9 +265,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public CollectionUnitStyles createCollectionUnitStyles() {
-		CollectionUnitStylesImpl collectionUnitStyles = new CollectionUnitStylesImpl();
-		return collectionUnitStyles;
+	public CardsUnitStyles createCardsUnitStyles() {
+		CardsUnitStylesImpl cardsUnitStyles = new CardsUnitStylesImpl();
+		return cardsUnitStyles;
 	}
 
 	/**
@@ -276,9 +276,9 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public CardsUnitStyles createCardsUnitStyles() {
-		CardsUnitStylesImpl cardsUnitStyles = new CardsUnitStylesImpl();
-		return cardsUnitStyles;
+	public ImageCardsUnitStyles createImageCardsUnitStyles() {
+		ImageCardsUnitStylesImpl imageCardsUnitStyles = new ImageCardsUnitStylesImpl();
+		return imageCardsUnitStyles;
 	}
 
 	/**

@@ -55,7 +55,7 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			addUriElementPropertyDescriptor(object);
 			addUriParentPropertyDescriptor(object);
 			addAlternativePropertyDescriptor(object);
-			addSectionClassPropertyDescriptor(object);
+			addLocalSectionClassPropertyDescriptor(object);
 			addOmitCaptionPropertyDescriptor(object);
 			addLocalCaptionClassPropertyDescriptor(object);
 			addLocalContentClassPropertyDescriptor(object);
@@ -174,19 +174,19 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Section Class feature.
+	 * This adds a property descriptor for the Local Section Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSectionClassPropertyDescriptor(Object object) {
+	protected void addLocalSectionClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContentUnit_sectionClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_sectionClass_feature", "_UI_ContentUnit_type"),
-				 WebuiPackage.Literals.CONTENT_UNIT__SECTION_CLASS,
+				 getString("_UI_ContentUnit_localSectionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContentUnit_localSectionClass_feature", "_UI_ContentUnit_type"),
+				 WebuiPackage.Literals.CONTENT_UNIT__LOCAL_SECTION_CLASS,
 				 true,
 				 false,
 				 false,
@@ -322,7 +322,7 @@ public class ContentUnitItemProvider extends NamedDisplayElementItemProvider {
 			case WebuiPackage.CONTENT_UNIT__PURPOSE_SUMMARY:
 			case WebuiPackage.CONTENT_UNIT__URI_ELEMENT:
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
-			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
+			case WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS:
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CONTENT_CLASS:

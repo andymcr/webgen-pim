@@ -15,6 +15,7 @@ package work.andycarpenter.webgen.pims.webui;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isOverlayTitle <em>Overlay Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isEnableImageEnlargement <em>Enable Image Enlargement</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#isRevealUntruncatedContent <em>Reveal Untruncated Content</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getImageActionClass <em>Image Action Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit()
@@ -101,5 +102,27 @@ public interface ImageCardsUnit extends CardsUnit, ImageUnit {
 	 * @generated
 	 */
 	void setRevealUntruncatedContent(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Image Action Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image Action Class</em>' attribute.
+	 * @see #setImageActionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getImageCardsUnit_ImageActionClass()
+	 * @model
+	 * @generated
+	 */
+	String getImageActionClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getImageActionClass <em>Image Action Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image Action Class</em>' attribute.
+	 * @see #getImageActionClass()
+	 * @generated
+	 */
+	void setImageActionClass(String value);
 
 } // ImageCardsUnit

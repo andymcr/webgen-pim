@@ -52,6 +52,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultPageStyleClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCardsStyles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultImageCardsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultDetailsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultFormStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultGalleryStyles"/>
@@ -110,13 +111,14 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//CardsUnitStyles">
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/rowClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/columnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardHeaderClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardBodyClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/badgeClass"/>
+    </genClasses>
+    <genClasses ecoreClass="webui.ecore#//ImageCardsUnitStyles">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnitStyles/imageActionClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//DetailsUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//FormUnitStyles">
@@ -154,7 +156,7 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//ContentUnit/uriParent"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/alternative"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/sectionClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/localSectionClass"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/omitCaption"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/localCaptionClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ContentUnit/localContentClass"/>
@@ -368,8 +370,6 @@
     <genClasses image="false" ecoreClass="webui.ecore#//CardsUnit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CardsUnit/badges"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/overlaySingleSelectAction"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/localRowClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/localColumnClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/localCardClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/localCardHeaderClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnit/localCardBodyClass"/>
@@ -403,6 +403,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/overlayTitle"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/enableImageEnlargement"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/revealUntruncatedContent"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnit/imageActionClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//SliderUnit">
       <genFeatures createChild="false" propertyCategory="Image" ecoreFeature="ecore:EAttribute webui.ecore#//SliderUnit/showTime"/>

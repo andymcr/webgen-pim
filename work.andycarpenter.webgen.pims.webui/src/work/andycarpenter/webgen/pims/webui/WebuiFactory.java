@@ -94,15 +94,6 @@ public interface WebuiFactory extends EFactory {
 	DefaultUnitStyles createDefaultUnitStyles();
 
 	/**
-	 * Returns a new object of class '<em>Collection Unit Styles</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Collection Unit Styles</em>'.
-	 * @generated
-	 */
-	CollectionUnitStyles createCollectionUnitStyles();
-
-	/**
 	 * Returns a new object of class '<em>Cards Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +101,15 @@ public interface WebuiFactory extends EFactory {
 	 * @generated
 	 */
 	CardsUnitStyles createCardsUnitStyles();
+
+	/**
+	 * Returns a new object of class '<em>Image Cards Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image Cards Unit Styles</em>'.
+	 * @generated
+	 */
+	ImageCardsUnitStyles createImageCardsUnitStyles();
 
 	/**
 	 * Returns a new object of class '<em>Details Unit Styles</em>'.

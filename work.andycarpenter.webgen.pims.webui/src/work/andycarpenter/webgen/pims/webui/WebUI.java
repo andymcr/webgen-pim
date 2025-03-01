@@ -30,6 +30,7 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsStyles <em>Default Details Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormStyles <em>Default Form Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryStyles <em>Default Gallery Styles</em>}</li>
@@ -324,6 +325,28 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultCardsStyles(CardsUnitStyles value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Image Cards Styles</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Image Cards Styles</em>' containment reference.
+	 * @see #setDefaultImageCardsStyles(ImageCardsUnitStyles)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultImageCardsStyles()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	ImageCardsUnitStyles getDefaultImageCardsStyles();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Image Cards Styles</em>' containment reference.
+	 * @see #getDefaultImageCardsStyles()
+	 * @generated
+	 */
+	void setDefaultImageCardsStyles(ImageCardsUnitStyles value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Details Styles</b></em>' containment reference.

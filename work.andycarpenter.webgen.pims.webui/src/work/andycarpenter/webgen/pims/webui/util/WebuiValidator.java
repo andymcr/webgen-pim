@@ -120,6 +120,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateDefaultUnitStyles((DefaultUnitStyles)value, diagnostics, context);
 			case WebuiPackage.CARDS_UNIT_STYLES:
 				return validateCardsUnitStyles((CardsUnitStyles)value, diagnostics, context);
+			case WebuiPackage.IMAGE_CARDS_UNIT_STYLES:
+				return validateImageCardsUnitStyles((ImageCardsUnitStyles)value, diagnostics, context);
 			case WebuiPackage.DETAILS_UNIT_STYLES:
 				return validateDetailsUnitStyles((DetailsUnitStyles)value, diagnostics, context);
 			case WebuiPackage.FORM_UNIT_STYLES:
@@ -506,6 +508,15 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validateCardsUnitStyles(CardsUnitStyles cardsUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(cardsUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateImageCardsUnitStyles(ImageCardsUnitStyles imageCardsUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(imageCardsUnitStyles, diagnostics, context);
 	}
 
 	/**

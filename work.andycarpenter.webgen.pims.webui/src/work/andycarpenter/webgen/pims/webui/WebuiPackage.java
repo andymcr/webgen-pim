@@ -190,13 +190,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CARDS_STYLES = 12;
 
 	/**
+	 * The feature id for the '<em><b>Default Image Cards Styles</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = 13;
+
+	/**
 	 * The feature id for the '<em><b>Default Details Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_STYLES = 13;
+	int WEB_UI__DEFAULT_DETAILS_STYLES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Form Styles</b></em>' containment reference.
@@ -205,7 +214,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_STYLES = 14;
+	int WEB_UI__DEFAULT_FORM_STYLES = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Gallery Styles</b></em>' containment reference.
@@ -214,7 +223,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_GALLERY_STYLES = 15;
+	int WEB_UI__DEFAULT_GALLERY_STYLES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Slider Styles</b></em>' containment reference.
@@ -223,7 +232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SLIDER_STYLES = 16;
+	int WEB_UI__DEFAULT_SLIDER_STYLES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Styles</b></em>' containment reference.
@@ -232,7 +241,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_STYLES = 17;
+	int WEB_UI__DEFAULT_STATIC_STYLES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Default Tabular Styles</b></em>' containment reference.
@@ -241,7 +250,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_STYLES = 18;
+	int WEB_UI__DEFAULT_TABULAR_STYLES = 19;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -250,7 +259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 19;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 20;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -259,7 +268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 20;
+	int WEB_UI_FEATURE_COUNT = 21;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -1318,31 +1327,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT_STYLES__ROW_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT_STYLES__COLUMN_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 2;
+	int CARDS_UNIT_STYLES__CARD_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
@@ -1351,7 +1342,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_HEADER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 3;
+	int CARDS_UNIT_STYLES__CARD_HEADER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
@@ -1360,7 +1351,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_BODY_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 4;
+	int CARDS_UNIT_STYLES__CARD_BODY_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
@@ -1369,7 +1360,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 5;
+	int CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
@@ -1378,7 +1369,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__BADGE_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 6;
+	int CARDS_UNIT_STYLES__BADGE_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit Styles</em>' class.
@@ -1387,7 +1378,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 7;
+	int CARDS_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit Styles</em>' class.
@@ -1399,6 +1390,196 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitStylesImpl <em>Image Cards Unit Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnitStyles()
+	 * @generated
+	 */
+	int IMAGE_CARDS_UNIT_STYLES = 13;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__SECTION_CLASS = CARDS_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CAPTION_CLASS = CARDS_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CONTENT_CLASS = CARDS_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__FIELD_LIST_CLASS = CARDS_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = CARDS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__FIELD_LABEL_CLASS = CARDS_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__FIELD_VALUE_CLASS = CARDS_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CONTROL_CLASS = CARDS_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__ACTION_NAVIGATION_CLASS = CARDS_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__ANCHOR_CLASS = CARDS_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__INSTANCE_CONTROL_CLASS = CARDS_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS = CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CARD_CLASS = CARDS_UNIT_STYLES__CARD_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CARD_HEADER_CLASS = CARDS_UNIT_STYLES__CARD_HEADER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CARD_BODY_CLASS = CARDS_UNIT_STYLES__CARD_BODY_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = CARDS_UNIT_STYLES__CARD_FOOTER_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__BADGE_CLASS = CARDS_UNIT_STYLES__BADGE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Image Action Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__IMAGE_ACTION_CLASS = CARDS_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Image Cards Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES_FEATURE_COUNT = CARDS_UNIT_STYLES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Image Cards Unit Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES_OPERATION_COUNT = CARDS_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl <em>Details Unit Styles</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1406,7 +1587,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnitStyles()
 	 * @generated
 	 */
-	int DETAILS_UNIT_STYLES = 13;
+	int DETAILS_UNIT_STYLES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1524,7 +1705,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFormUnitStyles()
 	 * @generated
 	 */
-	int FORM_UNIT_STYLES = 14;
+	int FORM_UNIT_STYLES = 15;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1651,7 +1832,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnitStyles()
 	 * @generated
 	 */
-	int GALLERY_UNIT_STYLES = 15;
+	int GALLERY_UNIT_STYLES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1787,7 +1968,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnitStyles()
 	 * @generated
 	 */
-	int SLIDER_UNIT_STYLES = 16;
+	int SLIDER_UNIT_STYLES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1923,7 +2104,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnitStyles()
 	 * @generated
 	 */
-	int STATIC_UNIT_STYLES = 17;
+	int STATIC_UNIT_STYLES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1978,7 +2159,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnitStyles()
 	 * @generated
 	 */
-	int TABULAR_UNIT_STYLES = 18;
+	int TABULAR_UNIT_STYLES = 19;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2132,7 +2313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getController()
 	 * @generated
 	 */
-	int CONTROLLER = 19;
+	int CONTROLLER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2232,7 +2413,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControllerLink()
 	 * @generated
 	 */
-	int CONTROLLER_LINK = 20;
+	int CONTROLLER_LINK = 21;
 
 	/**
 	 * The feature id for the '<em><b>Target Controller</b></em>' reference.
@@ -2269,7 +2450,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSinglePageController()
 	 * @generated
 	 */
-	int SINGLE_PAGE_CONTROLLER = 21;
+	int SINGLE_PAGE_CONTROLLER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2369,7 +2550,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMultiPageController()
 	 * @generated
 	 */
-	int MULTI_PAGE_CONTROLLER = 22;
+	int MULTI_PAGE_CONTROLLER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2469,7 +2650,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnit()
 	 * @generated
 	 */
-	int CONTENT_UNIT = 23;
+	int CONTENT_UNIT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2553,13 +2734,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTENT_UNIT__ALTERNATIVE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT_UNIT__SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
+	int CONTENT_UNIT__LOCAL_SECTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -2614,7 +2795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRouteActual()
 	 * @generated
 	 */
-	int ROUTE_ACTUAL = 27;
+	int ROUTE_ACTUAL = 28;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitImpl <em>Static Unit</em>}' class.
@@ -2624,7 +2805,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnit()
 	 * @generated
 	 */
-	int STATIC_UNIT = 24;
+	int STATIC_UNIT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2708,13 +2889,13 @@ public interface WebuiPackage extends EPackage {
 	int STATIC_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+	int STATIC_UNIT__LOCAL_SECTION_CLASS = CONTENT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -2778,7 +2959,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateSitemapUnit()
 	 * @generated
 	 */
-	int CREATE_SITEMAP_UNIT = 25;
+	int CREATE_SITEMAP_UNIT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2862,13 +3043,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_SITEMAP_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_SITEMAP_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+	int CREATE_SITEMAP_UNIT__LOCAL_SECTION_CLASS = CONTENT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -2941,7 +3122,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnit()
 	 * @generated
 	 */
-	int DYNAMIC_UNIT = 26;
+	int DYNAMIC_UNIT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3025,13 +3206,13 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT__ALTERNATIVE = CONTENT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_UNIT__SECTION_CLASS = CONTENT_UNIT__SECTION_CLASS;
+	int DYNAMIC_UNIT__LOCAL_SECTION_CLASS = CONTENT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -3329,7 +3510,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitField()
 	 * @generated
 	 */
-	int UNIT_FIELD = 28;
+	int UNIT_FIELD = 29;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -3465,7 +3646,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitFeature()
 	 * @generated
 	 */
-	int UNIT_FEATURE = 29;
+	int UNIT_FEATURE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -3808,7 +3989,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitElement()
 	 * @generated
 	 */
-	int UNIT_ELEMENT = 30;
+	int UNIT_ELEMENT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -4196,7 +4377,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitResource()
 	 * @generated
 	 */
-	int UNIT_RESOURCE = 31;
+	int UNIT_RESOURCE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -4584,7 +4765,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitAssociation()
 	 * @generated
 	 */
-	int UNIT_ASSOCIATION = 32;
+	int UNIT_ASSOCIATION = 33;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -5017,7 +5198,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 33;
+	int UNIT_LABEL = 34;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -5171,7 +5352,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 34;
+	int INTERFACE_FIELD = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5406,7 +5587,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 35;
+	int DATA_TYPE_FIELD = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5677,7 +5858,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 36;
+	int DATE_FIELD = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5930,7 +6111,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 37;
+	int SELECTABLE_UNIT = 38;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -5958,7 +6139,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 38;
+	int SINGLETON_UNIT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6042,13 +6223,13 @@ public interface WebuiPackage extends EPackage {
 	int SINGLETON_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINGLETON_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int SINGLETON_UNIT__LOCAL_SECTION_CLASS = DYNAMIC_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -6310,7 +6491,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 39;
+	int COLLECTION_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6394,13 +6575,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int COLLECTION_UNIT__LOCAL_SECTION_CLASS = DYNAMIC_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -6932,7 +7113,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 40;
+	int EDIT_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7016,13 +7197,13 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__ALTERNATIVE = SINGLETON_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SECTION_CLASS = SINGLETON_UNIT__SECTION_CLASS;
+	int EDIT_UNIT__LOCAL_SECTION_CLASS = SINGLETON_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -7365,7 +7546,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 41;
+	int CREATE_UNIT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7449,13 +7630,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int CREATE_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -7798,7 +7979,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 43;
+	int CREATE_UPDATE_UNIT = 44;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -7808,7 +7989,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 42;
+	int UPDATE_UNIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7892,13 +8073,13 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int UPDATE_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -8333,13 +8514,13 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int CREATE_UPDATE_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -8709,7 +8890,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 44;
+	int MAP_UNIT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8793,13 +8974,13 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int MAP_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -9178,7 +9359,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 45;
+	int DETAILS_UNIT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9262,13 +9443,13 @@ public interface WebuiPackage extends EPackage {
 	int DETAILS_UNIT__ALTERNATIVE = SINGLETON_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_UNIT__SECTION_CLASS = SINGLETON_UNIT__SECTION_CLASS;
+	int DETAILS_UNIT__LOCAL_SECTION_CLASS = SINGLETON_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -9548,7 +9729,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 46;
+	int TABULAR_UNIT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9632,13 +9813,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+	int TABULAR_UNIT__LOCAL_SECTION_CLASS = COLLECTION_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -10197,7 +10378,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 47;
+	int CARDS_UNIT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10281,13 +10462,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+	int CARDS_UNIT__LOCAL_SECTION_CLASS = COLLECTION_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -10776,31 +10957,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = COLLECTION_UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__LOCAL_ROW_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__LOCAL_COLUMN_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
+	int CARDS_UNIT__LOCAL_CARD_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Local Card Header Class</b></em>' attribute.
@@ -10809,7 +10972,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
+	int CARDS_UNIT__LOCAL_CARD_HEADER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Local Card Body Class</b></em>' attribute.
@@ -10818,7 +10981,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_CARD_BODY_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
+	int CARDS_UNIT__LOCAL_CARD_BODY_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Local Card Footer Class</b></em>' attribute.
@@ -10827,7 +10990,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 7;
+	int CARDS_UNIT__LOCAL_CARD_FOOTER_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Local Badge Class</b></em>' attribute.
@@ -10836,7 +10999,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__LOCAL_BADGE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 8;
+	int CARDS_UNIT__LOCAL_BADGE_CLASS = COLLECTION_UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit</em>' class.
@@ -10845,7 +11008,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 9;
+	int CARDS_UNIT_FEATURE_COUNT = COLLECTION_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -10900,7 +11063,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getValueContext()
 	 * @generated
 	 */
-	int VALUE_CONTEXT = 62;
+	int VALUE_CONTEXT = 63;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
@@ -10910,7 +11073,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 49;
+	int TEXT_CARDS_UNIT = 50;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -10920,7 +11083,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 50;
+	int DATE_CARDS_UNIT = 51;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -10930,7 +11093,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 55;
+	int CONTROL_UNIT = 56;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -10940,7 +11103,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 56;
+	int SEARCH_UNIT = 57;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
@@ -10950,7 +11113,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 51;
+	int IMAGE_UNIT = 52;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -10960,7 +11123,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 52;
+	int IMAGE_CARDS_UNIT = 53;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -10970,7 +11133,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 53;
+	int SLIDER_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -10980,7 +11143,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 54;
+	int GALLERY_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -10990,7 +11153,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 72;
+	int SELECT_ACTION = 73;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -11000,7 +11163,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 71;
+	int DELETE_ACTION = 72;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -11010,7 +11173,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 48;
+	int BADGE = 49;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -11202,13 +11365,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+	int TEXT_CARDS_UNIT__LOCAL_SECTION_CLASS = CARDS_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -11697,24 +11860,6 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11895,13 +12040,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+	int DATE_CARDS_UNIT__LOCAL_SECTION_CLASS = CARDS_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -12390,24 +12535,6 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12705,13 +12832,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__ALTERNATIVE = CARDS_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__SECTION_CLASS = CARDS_UNIT__SECTION_CLASS;
+	int IMAGE_CARDS_UNIT__LOCAL_SECTION_CLASS = CARDS_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -13200,24 +13327,6 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Local Row Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__LOCAL_ROW_CLASS = CARDS_UNIT__LOCAL_ROW_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Local Column Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__LOCAL_COLUMN_CLASS = CARDS_UNIT__LOCAL_COLUMN_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Local Card Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13326,13 +13435,22 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = CARDS_UNIT_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Image Action Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__IMAGE_ACTION_CLASS = CARDS_UNIT_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Image Cards Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 7;
+	int IMAGE_CARDS_UNIT_FEATURE_COUNT = CARDS_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -13461,13 +13579,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+	int SLIDER_UNIT__LOCAL_SECTION_CLASS = COLLECTION_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -14127,13 +14245,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__ALTERNATIVE = COLLECTION_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__SECTION_CLASS = COLLECTION_UNIT__SECTION_CLASS;
+	int GALLERY_UNIT__LOCAL_SECTION_CLASS = COLLECTION_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -14802,13 +14920,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTROL_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int CONTROL_UNIT__LOCAL_SECTION_CLASS = DYNAMIC_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -15162,13 +15280,13 @@ public interface WebuiPackage extends EPackage {
 	int SEARCH_UNIT__ALTERNATIVE = CONTROL_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_UNIT__SECTION_CLASS = CONTROL_UNIT__SECTION_CLASS;
+	int SEARCH_UNIT__LOCAL_SECTION_CLASS = CONTROL_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -15457,7 +15575,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 57;
+	int REGISTRATION_UNIT = 58;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15541,13 +15659,13 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int REGISTRATION_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -15890,7 +16008,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 58;
+	int LOGIN_UNIT = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15974,13 +16092,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int LOGIN_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -16323,7 +16441,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 59;
+	int LOGOUT_UNIT = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16407,13 +16525,13 @@ public interface WebuiPackage extends EPackage {
 	int LOGOUT_UNIT__ALTERNATIVE = DYNAMIC_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGOUT_UNIT__SECTION_CLASS = DYNAMIC_UNIT__SECTION_CLASS;
+	int LOGOUT_UNIT__LOCAL_SECTION_CLASS = DYNAMIC_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -16666,7 +16784,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 60;
+	int FORGOTTEN_PASSWORD_UNIT = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16750,13 +16868,13 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int FORGOTTEN_PASSWORD_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -17153,7 +17271,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
 	 * @generated
 	 */
-	int RESET_PASSWORD_UNIT = 61;
+	int RESET_PASSWORD_UNIT = 62;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17237,13 +17355,13 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__ALTERNATIVE = EDIT_UNIT__ALTERNATIVE;
 
 	/**
-	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Local Section Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESET_PASSWORD_UNIT__SECTION_CLASS = EDIT_UNIT__SECTION_CLASS;
+	int RESET_PASSWORD_UNIT__LOCAL_SECTION_CLASS = EDIT_UNIT__LOCAL_SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Omit Caption</b></em>' attribute.
@@ -17586,7 +17704,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDisplayValue()
 	 * @generated
 	 */
-	int DISPLAY_VALUE = 63;
+	int DISPLAY_VALUE = 64;
 
 	/**
 	 * The number of structural features of the '<em>Display Value</em>' class.
@@ -17614,7 +17732,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAssociationDisplayValue()
 	 * @generated
 	 */
-	int ASSOCIATION_DISPLAY_VALUE = 64;
+	int ASSOCIATION_DISPLAY_VALUE = 65;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17732,7 +17850,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAttributeDisplayValue()
 	 * @generated
 	 */
-	int ATTRIBUTE_DISPLAY_VALUE = 65;
+	int ATTRIBUTE_DISPLAY_VALUE = 66;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17796,7 +17914,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLabelDisplayValue()
 	 * @generated
 	 */
-	int LABEL_DISPLAY_VALUE = 66;
+	int LABEL_DISPLAY_VALUE = 67;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' reference.
@@ -17842,7 +17960,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResourceDisplayValue()
 	 * @generated
 	 */
-	int RESOURCE_DISPLAY_VALUE = 67;
+	int RESOURCE_DISPLAY_VALUE = 68;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17906,7 +18024,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 68;
+	int ACTION_CONTAINER = 69;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -17970,7 +18088,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 69;
+	int ACTION = 70;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18160,7 +18278,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 70;
+	int SECURITY_ACTION = 71;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18386,7 +18504,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 76;
+	int OPERATION_ACTION = 77;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -18396,7 +18514,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 73;
+	int CONTAINER_SELECT_ACTION = 74;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -18406,7 +18524,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 74;
+	int INSTANCE_SELECT_ACTION = 75;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19181,7 +19299,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTargetAction()
 	 * @generated
 	 */
-	int TARGET_ACTION = 75;
+	int TARGET_ACTION = 76;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -19596,7 +19714,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 78;
+	int INSTANCE_OPERATION_ACTION = 79;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -19606,7 +19724,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 77;
+	int CONTAINER_OPERATION_ACTION = 78;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20030,7 +20148,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 79;
+	int GENERAL_OPERATION_ACTION = 80;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20247,7 +20365,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 80;
+	int MESSAGE = 81;
 
 	/**
 	 * The feature id for the '<em><b>Value Entities</b></em>' reference list.
@@ -20311,7 +20429,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 81;
+	int AUTHENTICATION_MENU_PLACEMENT = 82;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -20321,7 +20439,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 82;
+	int PAGE_TOP_MENU_OPTIONS = 83;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -20331,7 +20449,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 83;
+	int COLLECTION_DISPLAY_OPTIONS = 84;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
@@ -20341,7 +20459,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
 	 * @generated
 	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 84;
+	int PAGINATION_CONTROL_PLACEMENTS = 85;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.
@@ -20351,7 +20469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerActionsPlacement()
 	 * @generated
 	 */
-	int CONTAINER_ACTIONS_PLACEMENT = 85;
+	int CONTAINER_ACTIONS_PLACEMENT = 86;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
@@ -20361,7 +20479,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
 	 * @generated
 	 */
-	int INSTANCE_ACTIONS_PLACEMENT = 86;
+	int INSTANCE_ACTIONS_PLACEMENT = 87;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -20504,6 +20622,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWebUI_DefaultCardsStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Image Cards Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultImageCardsStyles();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsStyles <em>Default Details Styles</em>}'.
@@ -21011,28 +21140,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getCardsUnitStyles();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass <em>Row Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Row Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass()
-	 * @see #getCardsUnitStyles()
-	 * @generated
-	 */
-	EAttribute getCardsUnitStyles_RowClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass <em>Column Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass()
-	 * @see #getCardsUnitStyles()
-	 * @generated
-	 */
-	EAttribute getCardsUnitStyles_ColumnClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardClass <em>Card Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21086,6 +21193,27 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCardsUnitStyles_BadgeClass();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles <em>Image Cards Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image Cards Unit Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles
+	 * @generated
+	 */
+	EClass getImageCardsUnitStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles#getImageActionClass <em>Image Action Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles#getImageActionClass()
+	 * @see #getImageCardsUnitStyles()
+	 * @generated
+	 */
+	EAttribute getImageCardsUnitStyles_ImageActionClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles <em>Details Unit Styles</em>}'.
@@ -21374,15 +21502,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getContentUnit_Alternative();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalSectionClass <em>Local Section Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Section Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass()
+	 * @return the meta object for the attribute '<em>Local Section Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalSectionClass()
 	 * @see #getContentUnit()
 	 * @generated
 	 */
-	EAttribute getContentUnit_SectionClass();
+	EAttribute getContentUnit_LocalSectionClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}'.
@@ -23168,28 +23296,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCardsUnit_OverlaySingleSelectAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass <em>Local Row Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Local Row Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalRowClass()
-	 * @see #getCardsUnit()
-	 * @generated
-	 */
-	EAttribute getCardsUnit_LocalRowClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass <em>Local Column Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Local Column Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalColumnClass()
-	 * @see #getCardsUnit()
-	 * @generated
-	 */
-	EAttribute getCardsUnit_LocalColumnClass();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CardsUnit#getLocalCardClass <em>Local Card Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -23718,6 +23824,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getImageCardsUnit_RevealUntruncatedContent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getImageActionClass <em>Image Action Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnit#getImageActionClass()
+	 * @see #getImageCardsUnit()
+	 * @generated
+	 */
+	EAttribute getImageCardsUnit_ImageActionClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.SliderUnit <em>Slider Unit</em>}'.
@@ -24474,6 +24591,14 @@ public interface WebuiPackage extends EPackage {
 		EReference WEB_UI__DEFAULT_CARDS_STYLES = eINSTANCE.getWebUI_DefaultCardsStyles();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Image Cards Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = eINSTANCE.getWebUI_DefaultImageCardsStyles();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Details Styles</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24874,22 +24999,6 @@ public interface WebuiPackage extends EPackage {
 		EClass CARDS_UNIT_STYLES = eINSTANCE.getCardsUnitStyles();
 
 		/**
-		 * The meta object literal for the '<em><b>Row Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT_STYLES__ROW_CLASS = eINSTANCE.getCardsUnitStyles_RowClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Column Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT_STYLES__COLUMN_CLASS = eINSTANCE.getCardsUnitStyles_ColumnClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Card Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24928,6 +25037,24 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CARDS_UNIT_STYLES__BADGE_CLASS = eINSTANCE.getCardsUnitStyles_BadgeClass();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitStylesImpl <em>Image Cards Unit Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnitStyles()
+		 * @generated
+		 */
+		EClass IMAGE_CARDS_UNIT_STYLES = eINSTANCE.getImageCardsUnitStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Action Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE_CARDS_UNIT_STYLES__IMAGE_ACTION_CLASS = eINSTANCE.getImageCardsUnitStyles_ImageActionClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DetailsUnitStylesImpl <em>Details Unit Styles</em>}' class.
@@ -25168,12 +25295,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CONTENT_UNIT__ALTERNATIVE = eINSTANCE.getContentUnit_Alternative();
 
 		/**
-		 * The meta object literal for the '<em><b>Section Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Local Section Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENT_UNIT__SECTION_CLASS = eINSTANCE.getContentUnit_SectionClass();
+		EAttribute CONTENT_UNIT__LOCAL_SECTION_CLASS = eINSTANCE.getContentUnit_LocalSectionClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Omit Caption</b></em>' attribute feature.
@@ -26544,22 +26671,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION = eINSTANCE.getCardsUnit_OverlaySingleSelectAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Local Row Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT__LOCAL_ROW_CLASS = eINSTANCE.getCardsUnit_LocalRowClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Local Column Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CARDS_UNIT__LOCAL_COLUMN_CLASS = eINSTANCE.getCardsUnit_LocalColumnClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Local Card Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26994,6 +27105,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT = eINSTANCE.getImageCardsUnit_RevealUntruncatedContent();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Action Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE_CARDS_UNIT__IMAGE_ACTION_CLASS = eINSTANCE.getImageCardsUnit_ImageActionClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.

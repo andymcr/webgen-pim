@@ -25,7 +25,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements CollectionUnitStyles {
+public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements CollectionUnitStyles {
 	/**
 	 * The default value of the '{@link #getInstanceControlClass() <em>Instance Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -128,6 +128,10 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCardsUnitStylesAdapter();
 			}
 			@Override
+			public Adapter caseImageCardsUnitStyles(ImageCardsUnitStyles object) {
+				return createImageCardsUnitStylesAdapter();
+			}
+			@Override
 			public Adapter caseDetailsUnitStyles(DetailsUnitStyles object) {
 				return createDetailsUnitStylesAdapter();
 			}
@@ -634,6 +638,20 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCardsUnitStylesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles <em>Image Cards Unit Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles
+	 * @generated
+	 */
+	public Adapter createImageCardsUnitStylesAdapter() {
 		return null;
 	}
 

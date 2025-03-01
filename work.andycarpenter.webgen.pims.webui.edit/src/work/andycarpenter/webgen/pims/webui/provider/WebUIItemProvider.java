@@ -290,6 +290,7 @@ public class WebUIItemProvider
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__CONTROLLERS);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES);
+			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_STYLES);
@@ -363,6 +364,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__CONTROLLERS:
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
+			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
@@ -413,6 +415,16 @@ public class WebUIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES,
+				 WebuiFactory.eINSTANCE.createImageCardsUnitStyles()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES,
+				 WebuiFactory.eINSTANCE.createImageCardsUnitStyles()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_STYLES,
 				 WebuiFactory.eINSTANCE.createDetailsUnitStyles()));
 
@@ -440,6 +452,29 @@ public class WebUIItemProvider
 			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_STYLES,
 				 WebuiFactory.eINSTANCE.createTabularUnitStyles()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES ||
+			childFeature == WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

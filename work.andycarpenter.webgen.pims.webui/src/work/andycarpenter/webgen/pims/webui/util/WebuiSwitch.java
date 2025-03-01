@@ -174,6 +174,16 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.IMAGE_CARDS_UNIT_STYLES: {
+				ImageCardsUnitStyles imageCardsUnitStyles = (ImageCardsUnitStyles)theEObject;
+				T result = caseImageCardsUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = caseCardsUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = caseCollectionUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = caseDynamicUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = caseContentUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.DETAILS_UNIT_STYLES: {
 				DetailsUnitStyles detailsUnitStyles = (DetailsUnitStyles)theEObject;
 				T result = caseDetailsUnitStyles(detailsUnitStyles);
@@ -1106,6 +1116,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCardsUnitStyles(CardsUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Cards Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Cards Unit Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageCardsUnitStyles(ImageCardsUnitStyles object) {
 		return null;
 	}
 

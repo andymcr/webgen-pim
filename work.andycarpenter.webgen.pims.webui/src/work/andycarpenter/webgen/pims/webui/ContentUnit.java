@@ -21,7 +21,7 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getUriParent <em>Uri Parent</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getAlternative <em>Alternative</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalSectionClass <em>Local Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalCaptionClass <em>Local Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalContentClass <em>Local Content Class</em>}</li>
@@ -183,27 +183,27 @@ public interface ContentUnit extends NamedDisplayElement {
 	void setAlternative(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Section Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Local Section Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Section Class</em>' attribute.
-	 * @see #setSectionClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_SectionClass()
+	 * @return the value of the '<em>Local Section Class</em>' attribute.
+	 * @see #setLocalSectionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getContentUnit_LocalSectionClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getSectionClass();
+	String getLocalSectionClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getSectionClass <em>Section Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.ContentUnit#getLocalSectionClass <em>Local Section Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Section Class</em>' attribute.
-	 * @see #getSectionClass()
+	 * @param value the new value of the '<em>Local Section Class</em>' attribute.
+	 * @see #getLocalSectionClass()
 	 * @generated
 	 */
-	void setSectionClass(String value);
+	void setLocalSectionClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Omit Caption</b></em>' attribute.

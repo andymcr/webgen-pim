@@ -55,6 +55,7 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 			addOverlayTitlePropertyDescriptor(object);
 			addEnableImageEnlargementPropertyDescriptor(object);
 			addRevealUntruncatedContentPropertyDescriptor(object);
+			addImageActionClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -170,6 +171,28 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Image Action Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImageActionClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImageCardsUnit_imageActionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImageCardsUnit_imageActionClass_feature", "_UI_ImageCardsUnit_type"),
+				 WebuiPackage.Literals.IMAGE_CARDS_UNIT__IMAGE_ACTION_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_StylePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -251,6 +274,7 @@ public class ImageCardsUnitItemProvider extends CardsUnitItemProvider {
 			case WebuiPackage.IMAGE_CARDS_UNIT__OVERLAY_TITLE:
 			case WebuiPackage.IMAGE_CARDS_UNIT__ENABLE_IMAGE_ENLARGEMENT:
 			case WebuiPackage.IMAGE_CARDS_UNIT__REVEAL_UNTRUNCATED_CONTENT:
+			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_ACTION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.IMAGE_CARDS_UNIT__IMAGE_PATH_FEATURE:

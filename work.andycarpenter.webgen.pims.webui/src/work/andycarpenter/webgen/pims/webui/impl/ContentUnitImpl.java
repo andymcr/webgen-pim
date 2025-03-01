@@ -30,7 +30,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriElement <em>Uri Element</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getUriParent <em>Uri Parent</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getAlternative <em>Alternative</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getSectionClass <em>Section Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalSectionClass <em>Local Section Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#isOmitCaption <em>Omit Caption</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalCaptionClass <em>Local Caption Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ContentUnitImpl#getLocalContentClass <em>Local Content Class</em>}</li>
@@ -140,24 +140,24 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	protected String alternative = ALTERNATIVE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSectionClass() <em>Section Class</em>}' attribute.
+	 * The default value of the '{@link #getLocalSectionClass() <em>Local Section Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSectionClass()
+	 * @see #getLocalSectionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SECTION_CLASS_EDEFAULT = "";
+	protected static final String LOCAL_SECTION_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getSectionClass() <em>Section Class</em>}' attribute.
+	 * The cached value of the '{@link #getLocalSectionClass() <em>Local Section Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSectionClass()
+	 * @see #getLocalSectionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String sectionClass = SECTION_CLASS_EDEFAULT;
+	protected String localSectionClass = LOCAL_SECTION_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isOmitCaption() <em>Omit Caption</em>}' attribute.
@@ -421,8 +421,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getSectionClass() {
-		return sectionClass;
+	public String getLocalSectionClass() {
+		return localSectionClass;
 	}
 
 	/**
@@ -431,11 +431,11 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setSectionClass(String newSectionClass) {
-		String oldSectionClass = sectionClass;
-		sectionClass = newSectionClass;
+	public void setLocalSectionClass(String newLocalSectionClass) {
+		String oldLocalSectionClass = localSectionClass;
+		localSectionClass = newLocalSectionClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__SECTION_CLASS, oldSectionClass, sectionClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS, oldLocalSectionClass, localSectionClass));
 	}
 
 	/**
@@ -619,8 +619,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return basicGetUriParent();
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return getAlternative();
-			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
-				return getSectionClass();
+			case WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS:
+				return getLocalSectionClass();
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return isOmitCaption();
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
@@ -660,8 +660,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative((String)newValue);
 				return;
-			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
-				setSectionClass((String)newValue);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS:
+				setLocalSectionClass((String)newValue);
 				return;
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption((Boolean)newValue);
@@ -705,8 +705,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				setAlternative(ALTERNATIVE_EDEFAULT);
 				return;
-			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
-				setSectionClass(SECTION_CLASS_EDEFAULT);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS:
+				setLocalSectionClass(LOCAL_SECTION_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				setOmitCaption(OMIT_CAPTION_EDEFAULT);
@@ -743,8 +743,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 				return uriParent != null;
 			case WebuiPackage.CONTENT_UNIT__ALTERNATIVE:
 				return ALTERNATIVE_EDEFAULT == null ? alternative != null : !ALTERNATIVE_EDEFAULT.equals(alternative);
-			case WebuiPackage.CONTENT_UNIT__SECTION_CLASS:
-				return SECTION_CLASS_EDEFAULT == null ? sectionClass != null : !SECTION_CLASS_EDEFAULT.equals(sectionClass);
+			case WebuiPackage.CONTENT_UNIT__LOCAL_SECTION_CLASS:
+				return LOCAL_SECTION_CLASS_EDEFAULT == null ? localSectionClass != null : !LOCAL_SECTION_CLASS_EDEFAULT.equals(localSectionClass);
 			case WebuiPackage.CONTENT_UNIT__OMIT_CAPTION:
 				return omitCaption != OMIT_CAPTION_EDEFAULT;
 			case WebuiPackage.CONTENT_UNIT__LOCAL_CAPTION_CLASS:
@@ -773,8 +773,8 @@ public abstract class ContentUnitImpl extends NamedDisplayElementImpl implements
 		result.append(uriElement);
 		result.append(", alternative: ");
 		result.append(alternative);
-		result.append(", sectionClass: ");
-		result.append(sectionClass);
+		result.append(", localSectionClass: ");
+		result.append(localSectionClass);
 		result.append(", omitCaption: ");
 		result.append(omitCaption);
 		result.append(", localCaptionClass: ");

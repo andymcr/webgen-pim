@@ -65,6 +65,7 @@ rule WafModel {
 		defaultPageClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
 		defaultUnitStyles <- thisModule.findWebsiteUI().defaultStyles,
 		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
+		defaultImageCardsStyles <- thisModule.findWebsiteUI().defaultImageCardsStyles,
 		defaultDetailsStyles <- thisModule.findWebsiteUI().defaultDetailsStyles,
 		defaultFormStyles <- thisModule.findWebsiteUI().defaultFormStyles,
 		defaultGalleryStyles <- thisModule.findWebsiteUI().defaultGalleryStyles,
@@ -199,13 +200,19 @@ rule DefaultUnitStyles {
 rule CardsUnitStyles {
 	from website : Website!CardsUnitStyles
 	to waf : WAF!CardsUnitStyles (
-		rowClass <- website.rowClass,
-		columnClass <- website.columnClass,
 		cardClass <- website.cardClass,
 		cardHeaderClass <- website.cardHeaderClass,
 		cardBodyClass <- website.cardBodyClass,
 		cardFooterClass <- website.cardFooterClass,
 		badgeClass <- website.badgeClass
+	)
+}
+
+-- @extends CardsUnitStyles
+rule ImageCardsUnitStyles {
+	from website : Website!ImageCardsUnitStyles
+	to waf : WAF!ImageCardsUnitStyles (
+		imageActionClass <- website.imageActionClass
 	)
 }
 
@@ -339,9 +346,9 @@ abstract rule ContentUnit {
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
 		omitCaption <- website.omitCaption,
-		sectionClassOverride <- website.sectionClass,
-		captionClassOverride <- website.localCaptionClass,
-		contentClassOverride <- website.localContentClass
+		localSectionClass <- website.localSectionClass,
+		localCaptionClass <- website.localCaptionClass,
+		localContentClass <- website.localContentClass
 	)
 }
 
@@ -405,9 +412,9 @@ abstract rule UnitFeature {
 		collectionUiAllowAdd <- website.collectionUiAllowAdd,
 		collectionUiAllowRemove <- website.collectionUiAllowRemove,
 		collectionMaximumValues <- website.collectionMaximumValues,
-		defaultDisplayValue <- website.defaultDisplayValue(),
+		defaultDisplay <- website.defaultDisplayValue(),
 		displayDefaultWhen <- website.displayDefaultWhen,
-		emptyDisplayValue <- website.emptyDisplayValue(),
+		emptyCollectionDisplay <- website.emptyCollectionDisplay(),
 		autofocus <- website.autofocus,
 		footer <- website.footer,
 		headerClass <- website.headerClass,
@@ -555,12 +562,6 @@ abstract rule CollectionUnit {
 				website.selection
 			else
 				website.selection.findSelection()
-			endif,
-		containerType <-
-			if website.containingType().oclIsUndefined() then
-				website.containingType()
-			else
-				website.containingType().findOrmEntity()
 			endif,
 		findContainerSelection <-
 			if website.findContainerSelection.oclIsUndefined() then
@@ -736,15 +737,11 @@ abstract rule CardsUnit {
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		localRowClass <- website.localRowClass,
-		localColumnClass <- website.localColumnClass,
 		localCardClass <- website.localCardClass,
 		localCardHeaderClass <- website.localCardHeaderClass,
 		localCardBodyClass <- website.localCardBodyClass,
 		localCardFooterClass <- website.localCardFooterClass,
-		localBadgeClass <- website.localBadgeClass,
-		localInstanceControlClass <- website.localInstanceControlClass,
-		localInstanceActionClass <- website.localInstanceActionClass
+		localBadgeClass <- website.localBadgeClass
 	)
 }
 
@@ -760,7 +757,7 @@ rule Badge {
 				website.title.findOrmLabel()
 			endif,
 		displayWhen <- website.displayWhen,
-		localBadgeClass <- website.localBadgeClass
+		localBadgeClass <- website.localadgeClass
 	)
 }
 
