@@ -45,8 +45,6 @@ public class CardsUnitStylesItemProvider extends CollectionUnitStylesItemProvide
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRowClassPropertyDescriptor(object);
-			addColumnClassPropertyDescriptor(object);
 			addCardClassPropertyDescriptor(object);
 			addCardHeaderClassPropertyDescriptor(object);
 			addCardBodyClassPropertyDescriptor(object);
@@ -54,50 +52,6 @@ public class CardsUnitStylesItemProvider extends CollectionUnitStylesItemProvide
 			addBadgeClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Row Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRowClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnitStyles_rowClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnitStyles_rowClass_feature", "_UI_CardsUnitStyles_type"),
-				 WebuiPackage.Literals.CARDS_UNIT_STYLES__ROW_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Column Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addColumnClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnitStyles_columnClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnitStyles_columnClass_feature", "_UI_CardsUnitStyles_type"),
-				 WebuiPackage.Literals.CARDS_UNIT_STYLES__COLUMN_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -248,8 +202,6 @@ public class CardsUnitStylesItemProvider extends CollectionUnitStylesItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CardsUnitStyles.class)) {
-			case WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS:
-			case WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS:
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_CLASS:
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_HEADER_CLASS:
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_BODY_CLASS:

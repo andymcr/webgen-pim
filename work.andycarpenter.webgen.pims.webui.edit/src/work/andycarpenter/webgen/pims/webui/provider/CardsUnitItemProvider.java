@@ -47,8 +47,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOverlaySingleSelectActionPropertyDescriptor(object);
-			addLocalRowClassPropertyDescriptor(object);
-			addLocalColumnClassPropertyDescriptor(object);
 			addLocalCardClassPropertyDescriptor(object);
 			addLocalCardHeaderClassPropertyDescriptor(object);
 			addLocalCardBodyClassPropertyDescriptor(object);
@@ -77,50 +75,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Local Row Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLocalRowClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnit_localRowClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localRowClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_ROW_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Local Column Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLocalColumnClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CardsUnit_localColumnClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CardsUnit_localColumnClass_feature", "_UI_CardsUnit_type"),
-				 WebuiPackage.Literals.CARDS_UNIT__LOCAL_COLUMN_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
 				 null));
 	}
 
@@ -292,8 +246,6 @@ public class CardsUnitItemProvider extends CollectionUnitItemProvider {
 
 		switch (notification.getFeatureID(CardsUnit.class)) {
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
-			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
-			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_BODY_CLASS:

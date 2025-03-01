@@ -27,8 +27,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getBadges <em>Badges</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#isOverlaySingleSelectAction <em>Overlay Single Select Action</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalRowClass <em>Local Row Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalColumnClass <em>Local Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardClass <em>Local Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardHeaderClass <em>Local Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitImpl#getLocalCardBodyClass <em>Local Card Body Class</em>}</li>
@@ -68,46 +66,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @ordered
 	 */
 	protected boolean overlaySingleSelectAction = OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLocalRowClass() <em>Local Row Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalRowClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LOCAL_ROW_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getLocalRowClass() <em>Local Row Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalRowClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String localRowClass = LOCAL_ROW_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLocalColumnClass() <em>Local Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LOCAL_COLUMN_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getLocalColumnClass() <em>Local Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String localColumnClass = LOCAL_COLUMN_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLocalCardClass() <em>Local Card Class</em>}' attribute.
@@ -270,52 +228,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 	 * @generated
 	 */
 	@Override
-	public String getLocalRowClass() {
-		return localRowClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLocalRowClass(String newLocalRowClass) {
-		String oldLocalRowClass = localRowClass;
-		localRowClass = newLocalRowClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS, oldLocalRowClass, localRowClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getLocalColumnClass() {
-		return localColumnClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLocalColumnClass(String newLocalColumnClass) {
-		String oldLocalColumnClass = localColumnClass;
-		localColumnClass = newLocalColumnClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS, oldLocalColumnClass, localColumnClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getLocalCardClass() {
 		return localCardClass;
 	}
@@ -466,10 +378,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return getBadges();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return isOverlaySingleSelectAction();
-			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
-				return getLocalRowClass();
-			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
-				return getLocalColumnClass();
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
 				return getLocalCardClass();
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
@@ -499,12 +407,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return;
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction((Boolean)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
-				setLocalRowClass((String)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
-				setLocalColumnClass((String)newValue);
 				return;
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
 				setLocalCardClass((String)newValue);
@@ -539,12 +441,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				setOverlaySingleSelectAction(OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT);
 				return;
-			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
-				setLocalRowClass(LOCAL_ROW_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
-				setLocalColumnClass(LOCAL_COLUMN_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
 				setLocalCardClass(LOCAL_CARD_CLASS_EDEFAULT);
 				return;
@@ -576,10 +472,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 				return badges != null && !badges.isEmpty();
 			case WebuiPackage.CARDS_UNIT__OVERLAY_SINGLE_SELECT_ACTION:
 				return overlaySingleSelectAction != OVERLAY_SINGLE_SELECT_ACTION_EDEFAULT;
-			case WebuiPackage.CARDS_UNIT__LOCAL_ROW_CLASS:
-				return LOCAL_ROW_CLASS_EDEFAULT == null ? localRowClass != null : !LOCAL_ROW_CLASS_EDEFAULT.equals(localRowClass);
-			case WebuiPackage.CARDS_UNIT__LOCAL_COLUMN_CLASS:
-				return LOCAL_COLUMN_CLASS_EDEFAULT == null ? localColumnClass != null : !LOCAL_COLUMN_CLASS_EDEFAULT.equals(localColumnClass);
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_CLASS:
 				return LOCAL_CARD_CLASS_EDEFAULT == null ? localCardClass != null : !LOCAL_CARD_CLASS_EDEFAULT.equals(localCardClass);
 			case WebuiPackage.CARDS_UNIT__LOCAL_CARD_HEADER_CLASS:
@@ -606,10 +498,6 @@ public abstract class CardsUnitImpl extends CollectionUnitImpl implements CardsU
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (overlaySingleSelectAction: ");
 		result.append(overlaySingleSelectAction);
-		result.append(", localRowClass: ");
-		result.append(localRowClass);
-		result.append(", localColumnClass: ");
-		result.append(localColumnClass);
 		result.append(", localCardClass: ");
 		result.append(localCardClass);
 		result.append(", localCardHeaderClass: ");

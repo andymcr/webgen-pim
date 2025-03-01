@@ -12,8 +12,6 @@ package work.andycarpenter.webgen.pims.webui;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass <em>Row Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardClass <em>Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardHeaderClass <em>Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getCardBodyClass <em>Card Body Class</em>}</li>
@@ -26,52 +24,6 @@ package work.andycarpenter.webgen.pims.webui;
  * @generated
  */
 public interface CardsUnitStyles extends CollectionUnitStyles {
-	/**
-	 * Returns the value of the '<em><b>Row Class</b></em>' attribute.
-	 * The default value is <code>"row"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Row Class</em>' attribute.
-	 * @see #setRowClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnitStyles_RowClass()
-	 * @model default="row"
-	 * @generated
-	 */
-	String getRowClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getRowClass <em>Row Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Row Class</em>' attribute.
-	 * @see #getRowClass()
-	 * @generated
-	 */
-	void setRowClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Column Class</b></em>' attribute.
-	 * The default value is <code>"col"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Column Class</em>' attribute.
-	 * @see #setColumnClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCardsUnitStyles_ColumnClass()
-	 * @model default="col"
-	 * @generated
-	 */
-	String getColumnClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles#getColumnClass <em>Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Column Class</em>' attribute.
-	 * @see #getColumnClass()
-	 * @generated
-	 */
-	void setColumnClass(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Card Class</b></em>' attribute.
 	 * The default value is <code>"card"</code>.

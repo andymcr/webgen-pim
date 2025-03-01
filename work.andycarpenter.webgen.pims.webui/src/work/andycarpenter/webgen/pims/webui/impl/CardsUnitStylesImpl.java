@@ -19,8 +19,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl#getRowClass <em>Row Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl#getColumnClass <em>Column Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl#getCardClass <em>Card Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl#getCardHeaderClass <em>Card Header Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl#getCardBodyClass <em>Card Body Class</em>}</li>
@@ -31,46 +29,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements CardsUnitStyles {
-	/**
-	 * The default value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRowClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ROW_CLASS_EDEFAULT = "row";
-
-	/**
-	 * The cached value of the '{@link #getRowClass() <em>Row Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRowClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String rowClass = ROW_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COLUMN_CLASS_EDEFAULT = "col";
-
-	/**
-	 * The cached value of the '{@link #getColumnClass() <em>Column Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String columnClass = COLUMN_CLASS_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -196,52 +154,6 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 	 * @generated
 	 */
 	@Override
-	public String getRowClass() {
-		return rowClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRowClass(String newRowClass) {
-		String oldRowClass = rowClass;
-		rowClass = newRowClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS, oldRowClass, rowClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getColumnClass() {
-		return columnClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setColumnClass(String newColumnClass) {
-		String oldColumnClass = columnClass;
-		columnClass = newColumnClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS, oldColumnClass, columnClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getCardClass() {
 		return cardClass;
 	}
@@ -359,10 +271,6 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS:
-				return getRowClass();
-			case WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS:
-				return getColumnClass();
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_CLASS:
 				return getCardClass();
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_HEADER_CLASS:
@@ -385,12 +293,6 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS:
-				setRowClass((String)newValue);
-				return;
-			case WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS:
-				setColumnClass((String)newValue);
-				return;
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_CLASS:
 				setCardClass((String)newValue);
 				return;
@@ -418,12 +320,6 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS:
-				setRowClass(ROW_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS:
-				setColumnClass(COLUMN_CLASS_EDEFAULT);
-				return;
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_CLASS:
 				setCardClass(CARD_CLASS_EDEFAULT);
 				return;
@@ -451,10 +347,6 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case WebuiPackage.CARDS_UNIT_STYLES__ROW_CLASS:
-				return ROW_CLASS_EDEFAULT == null ? rowClass != null : !ROW_CLASS_EDEFAULT.equals(rowClass);
-			case WebuiPackage.CARDS_UNIT_STYLES__COLUMN_CLASS:
-				return COLUMN_CLASS_EDEFAULT == null ? columnClass != null : !COLUMN_CLASS_EDEFAULT.equals(columnClass);
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_CLASS:
 				return CARD_CLASS_EDEFAULT == null ? cardClass != null : !CARD_CLASS_EDEFAULT.equals(cardClass);
 			case WebuiPackage.CARDS_UNIT_STYLES__CARD_HEADER_CLASS:
@@ -479,11 +371,7 @@ public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements Car
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (rowClass: ");
-		result.append(rowClass);
-		result.append(", columnClass: ");
-		result.append(columnClass);
-		result.append(", cardClass: ");
+		result.append(" (cardClass: ");
 		result.append(cardClass);
 		result.append(", cardHeaderClass: ");
 		result.append(cardHeaderClass);
