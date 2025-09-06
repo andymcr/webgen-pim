@@ -176,7 +176,7 @@ abstract rule DynamicUnitStyles {
 		fieldLabelClass <- website.fieldLabelClass,
 		fieldValueClass <- website.fieldValueClass,
 		controlClass <- website.controlClass,
-		anchorClass <- website.anchorClass
+		actionClass <- website.anchorClass
 	)
 }
 
@@ -310,7 +310,7 @@ abstract rule Controller {
 				website.parentController.targetController
 			endif,
 		units <- website.units,
-		pageClassOverride <- '' -- website.
+		localPageClass <- '' -- website.
 	)
 }
 
@@ -376,7 +376,7 @@ abstract rule DynamicUnit {
 		localFieldLabelClass <- website.localFieldLabelClass,
 		localFieldValueClass <- website.localFieldValueClass,
 		localControlClass <- website.localControlClass,
-		localAnchorClass <- website.localAnchorClass
+		localActionClass <- website.localAnchorClass
 	)
 }
 
@@ -398,7 +398,10 @@ abstract rule UnitField {
 		collectionDisplayOption <- website.collectionDisplayOption,
 		truncate <- website.truncate,
 		dateFormat <- website.dateFormat(),
-		disabledInput <- website.disableInput
+		disabledInput <- website.disableInput,
+		localInputGroupClass <- website.localInputGroupClass,
+		localFieldLabelClass <- website.localFieldLabelClass,
+		localFieldValueClass <- website.localFieldValueClass
 	)
 }
 
@@ -416,12 +419,7 @@ abstract rule UnitFeature {
 		displayDefaultWhen <- website.displayDefaultWhen,
 		emptyCollectionDisplay <- website.emptyCollectionDisplay(),
 		autofocus <- website.autofocus,
-		footer <- website.footer,
-		headerClass <- website.headerClass,
-		inputGroupClassOverride <- website.inputGroupClass,
-		fieldLabelClassOverride <- website.fieldLabelClass,
-		fieldValueClassOverride <- website.fieldValueClass,
-		footerClass <- website.footerClass
+		footer <- website.footer
 	)
 }
 
@@ -585,23 +583,7 @@ abstract rule CollectionUnit {
 		omitFieldLabels <- website.omitFieldLabels,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
-		paginationControlPlacement <- website.paginationControlPlacement,
-		emptyMessage <- website.emptyMessage,
-		nextNpages <- website.nextNpages,
-		previousNpages <- website.previousNpages,
-		nextPageLabel <- website.nextPageLabel,
-		nextPageIconName <- website.nextPageIconName,
-		previousPageLabel <- website.previousPageLabel,
-		previousPageIconName <- website.previousPageIconName,
-		useDisabledPageLinks <- website.useDisabledPageLinks,
-		useFirstLastPageLinks <- website.useFirstLastPageLinks,
-		firstPageLabel <- website.firstPageLabel,
-		firstPageIconName <- website.firstPageIconName,
-		lastPageLabel <- website.lastPageLabel,
-		lastPageIconName <- website.lastPageIconName,
-		paginationClass <- website.paginationClass,
-		paginationElementClass <- website.paginationElementClass,
-		paginationAnchorClass <- website.paginationAnchorClass
+		emptyMessage <- website.emptyMessage
 	)
 }
 
@@ -757,7 +739,7 @@ rule Badge {
 				website.title.findOrmLabel()
 			endif,
 		displayWhen <- website.displayWhen,
-		localBadgeClass <- website.localadgeClass
+		localBadgeClass <- website.localBadgeClass
 	)
 }
 
@@ -1018,9 +1000,7 @@ abstract rule Action {
 		successMessage <- website.successMessage,
 		failureMessage <- website.failureMessage,
 		disabledMessage <- website.disabledMessage,
-		localAnchorClass <- website.anchorClass,
-		headerClass <- website.headerClass,
-		footerClass <- website.footerClass
+		localActionClass <- website.actionClass
 	)
 }
 

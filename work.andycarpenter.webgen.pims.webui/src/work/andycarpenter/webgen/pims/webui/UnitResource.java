@@ -116,4 +116,12 @@ public interface UnitResource extends UnitFeature, ResourcePathElement {
 	 */
 	void setImageFilter(ImageResource value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String name();
+
 } // UnitResource

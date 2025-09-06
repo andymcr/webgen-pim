@@ -313,6 +313,12 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="disableInput" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localInputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localFieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitFeature" abstract="true" eSuperTypes="#//UnitField ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Path #//ActionContainer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -344,18 +350,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autofocus" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldLabelClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldValueClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitElement" eSuperTypes="#//UnitFeature ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//AttributePathElement">
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="obfuscateFormFields" lowerBound="1"
@@ -366,6 +363,7 @@
         defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitResource" eSuperTypes="#//UnitFeature ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//ResourcePathElement">
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDownloadable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -381,6 +379,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="optionsValidChoice" value="not options.oclIsUndefined() and not association.oclIsUndefined() implies&#xA;&#x9;displayedOn.controller.webUI.persistence.repositories&#xA;&#x9;&#x9;->select(r : persistence::Repository | r.serves = association.targetEntity)&#xA;&#x9;&#x9;->collect(r : persistence::Repository | r.selections)&#xA;&#x9;&#x9;->includes(options)"/>
     </eAnnotations>
+    <eOperations name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collectionSortBy" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useAutocomplete" lowerBound="1"
@@ -439,11 +438,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Label"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PaginationControlPlacements">
-    <eLiterals name="Below"/>
-    <eLiterals name="Above" value="1"/>
-    <eLiterals name="AboveAndBelow" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionUnit" abstract="true" eSuperTypes="#//DynamicUnit #//SelectableUnit #//ValueContext">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="canOnlyTitleWithSingletons selectionMustNotBeSingleton"/>
@@ -468,7 +462,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedFilters" upperBound="-1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPaginationSize"
@@ -477,39 +470,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumPaginationSize"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationControlPlacement"
-        eType="#//PaginationControlPlacements" defaultValueLiteral="Below"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextNpages" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="2"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="previousNpages" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="2"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextPageLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="&amp;gt;"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextPageIconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="chevron_right"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="previousPageLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="&amp;lt;"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="previousPageIconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="chevron_left"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useDisabledPageLinks" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useFirstLastPageLinks"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstPageLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="&lt;&lt;"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstPageIconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="first_page"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastPageLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=">>"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastPageIconName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="last_page"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="pagination"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationElementClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="page-item"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paginationAnchorClass"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="page-link"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditUnit" abstract="true" eSuperTypes="#//SingletonUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" lowerBound="1"
@@ -741,10 +702,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="disabledMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containingType" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="derivation" value="if usedBy.oclIsKindOf(DynamicUnit) then&#xA;&#x9;usedBy.oclAsType(DynamicUnit).contentType&#xA;else if usedBy.oclIsKindOf(UnitFeature) then&#xA;&#x9;usedBy.oclAsType(UnitFeature).displayedOn.contentType&#xA;else&#xA;&#x9;null&#xA;endif endif"/>

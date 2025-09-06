@@ -43,6 +43,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#isTruncate <em>Truncate</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getDateFormat <em>Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#isDisableInput <em>Disable Input</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getLocalInputGroupClass <em>Local Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFieldImpl#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -217,6 +220,66 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected boolean disableInput = DISABLE_INPUT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalInputGroupClass() <em>Local Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_INPUT_GROUP_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalInputGroupClass() <em>Local Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localInputGroupClass = LOCAL_INPUT_GROUP_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldLabelClass = LOCAL_FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldValueClass = LOCAL_FIELD_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -555,6 +618,75 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalInputGroupClass() {
+		return localInputGroupClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalInputGroupClass(String newLocalInputGroupClass) {
+		String oldLocalInputGroupClass = localInputGroupClass;
+		localInputGroupClass = newLocalInputGroupClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS, oldLocalInputGroupClass, localInputGroupClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldLabelClass() {
+		return localFieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldLabelClass(String newLocalFieldLabelClass) {
+		String oldLocalFieldLabelClass = localFieldLabelClass;
+		localFieldLabelClass = newLocalFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS, oldLocalFieldLabelClass, localFieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldValueClass() {
+		return localFieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldValueClass(String newLocalFieldValueClass) {
+		String oldLocalFieldValueClass = localFieldValueClass;
+		localFieldValueClass = newLocalFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS, oldLocalFieldValueClass, localFieldValueClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
@@ -644,6 +776,12 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return getDateFormat();
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
 				return isDisableInput();
+			case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				return getLocalInputGroupClass();
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				return getLocalFieldLabelClass();
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				return getLocalFieldValueClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -685,6 +823,15 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
 				setDisableInput((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				setLocalInputGroupClass((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -728,6 +875,15 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
 				setDisableInput(DISABLE_INPUT_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				setLocalInputGroupClass(LOCAL_INPUT_GROUP_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass(LOCAL_FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass(LOCAL_FIELD_VALUE_CLASS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -762,6 +918,12 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 				return DATE_FORMAT_EDEFAULT == null ? dateFormat != null : !DATE_FORMAT_EDEFAULT.equals(dateFormat);
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
 				return disableInput != DISABLE_INPUT_EDEFAULT;
+			case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				return LOCAL_INPUT_GROUP_CLASS_EDEFAULT == null ? localInputGroupClass != null : !LOCAL_INPUT_GROUP_CLASS_EDEFAULT.equals(localInputGroupClass);
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				return LOCAL_FIELD_LABEL_CLASS_EDEFAULT == null ? localFieldLabelClass != null : !LOCAL_FIELD_LABEL_CLASS_EDEFAULT.equals(localFieldLabelClass);
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				return LOCAL_FIELD_VALUE_CLASS_EDEFAULT == null ? localFieldValueClass != null : !LOCAL_FIELD_VALUE_CLASS_EDEFAULT.equals(localFieldValueClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -804,6 +966,12 @@ public abstract class UnitFieldImpl extends MinimalEObjectImpl.Container impleme
 		result.append(dateFormat);
 		result.append(", disableInput: ");
 		result.append(disableInput);
+		result.append(", localInputGroupClass: ");
+		result.append(localInputGroupClass);
+		result.append(", localFieldLabelClass: ");
+		result.append(localFieldLabelClass);
+		result.append(", localFieldValueClass: ");
+		result.append(localFieldValueClass);
 		result.append(')');
 		return result.toString();
 	}

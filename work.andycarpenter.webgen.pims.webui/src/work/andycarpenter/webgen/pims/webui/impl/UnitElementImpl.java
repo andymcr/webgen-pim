@@ -176,6 +176,20 @@ public class UnitElementImpl extends UnitFeatureImpl implements UnitElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String name() {
+		if (getAttribute() == null) {
+			return "";
+		} else {
+			return getAttribute().getName();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override

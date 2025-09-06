@@ -43,9 +43,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getFailureMessage <em>Failure Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getDisabledMessage <em>Disabled Message</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getAnchorClass <em>Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getFooterClass <em>Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getActionClass <em>Action Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.ActionImpl#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
@@ -213,64 +211,24 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	protected String disabledMessage = DISABLED_MESSAGE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAnchorClass() <em>Anchor Class</em>}' attribute.
+	 * The default value of the '{@link #getActionClass() <em>Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnchorClass()
+	 * @see #getActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ANCHOR_CLASS_EDEFAULT = "";
+	protected static final String ACTION_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getAnchorClass() <em>Anchor Class</em>}' attribute.
+	 * The cached value of the '{@link #getActionClass() <em>Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnchorClass()
+	 * @see #getActionClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String anchorClass = ANCHOR_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String HEADER_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String headerClass = HEADER_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String footerClass = FOOTER_CLASS_EDEFAULT;
+	protected String actionClass = ACTION_CLASS_EDEFAULT;
 
 	/**
 	 * The cached setting delegate for the '{@link #getContainingType() <em>Containing Type</em>}' reference.
@@ -618,8 +576,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * @generated
 	 */
 	@Override
-	public String getAnchorClass() {
-		return anchorClass;
+	public String getActionClass() {
+		return actionClass;
 	}
 
 	/**
@@ -628,57 +586,11 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 	 * @generated
 	 */
 	@Override
-	public void setAnchorClass(String newAnchorClass) {
-		String oldAnchorClass = anchorClass;
-		anchorClass = newAnchorClass;
+	public void setActionClass(String newActionClass) {
+		String oldActionClass = actionClass;
+		actionClass = newActionClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__ANCHOR_CLASS, oldAnchorClass, anchorClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getHeaderClass() {
-		return headerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setHeaderClass(String newHeaderClass) {
-		String oldHeaderClass = headerClass;
-		headerClass = newHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__HEADER_CLASS, oldHeaderClass, headerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFooterClass() {
-		return footerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFooterClass(String newFooterClass) {
-		String oldFooterClass = footerClass;
-		footerClass = newFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__FOOTER_CLASS, oldFooterClass, footerClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.ACTION__ACTION_CLASS, oldActionClass, actionClass));
 	}
 
 	/**
@@ -808,12 +720,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return getFailureMessage();
 			case WebuiPackage.ACTION__DISABLED_MESSAGE:
 				return getDisabledMessage();
-			case WebuiPackage.ACTION__ANCHOR_CLASS:
-				return getAnchorClass();
-			case WebuiPackage.ACTION__HEADER_CLASS:
-				return getHeaderClass();
-			case WebuiPackage.ACTION__FOOTER_CLASS:
-				return getFooterClass();
+			case WebuiPackage.ACTION__ACTION_CLASS:
+				return getActionClass();
 			case WebuiPackage.ACTION__CONTAINING_TYPE:
 				if (resolve) return getContainingType();
 				return basicGetContainingType();
@@ -856,14 +764,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 			case WebuiPackage.ACTION__DISABLED_MESSAGE:
 				setDisabledMessage((String)newValue);
 				return;
-			case WebuiPackage.ACTION__ANCHOR_CLASS:
-				setAnchorClass((String)newValue);
-				return;
-			case WebuiPackage.ACTION__HEADER_CLASS:
-				setHeaderClass((String)newValue);
-				return;
-			case WebuiPackage.ACTION__FOOTER_CLASS:
-				setFooterClass((String)newValue);
+			case WebuiPackage.ACTION__ACTION_CLASS:
+				setActionClass((String)newValue);
 				return;
 			case WebuiPackage.ACTION__CONTAINING_TYPE:
 				setContainingType((Entity)newValue);
@@ -907,14 +809,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 			case WebuiPackage.ACTION__DISABLED_MESSAGE:
 				setDisabledMessage(DISABLED_MESSAGE_EDEFAULT);
 				return;
-			case WebuiPackage.ACTION__ANCHOR_CLASS:
-				setAnchorClass(ANCHOR_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.ACTION__HEADER_CLASS:
-				setHeaderClass(HEADER_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.ACTION__FOOTER_CLASS:
-				setFooterClass(FOOTER_CLASS_EDEFAULT);
+			case WebuiPackage.ACTION__ACTION_CLASS:
+				setActionClass(ACTION_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.ACTION__CONTAINING_TYPE:
 				setContainingType((Entity)null);
@@ -953,12 +849,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 				return FAILURE_MESSAGE_EDEFAULT == null ? failureMessage != null : !FAILURE_MESSAGE_EDEFAULT.equals(failureMessage);
 			case WebuiPackage.ACTION__DISABLED_MESSAGE:
 				return DISABLED_MESSAGE_EDEFAULT == null ? disabledMessage != null : !DISABLED_MESSAGE_EDEFAULT.equals(disabledMessage);
-			case WebuiPackage.ACTION__ANCHOR_CLASS:
-				return ANCHOR_CLASS_EDEFAULT == null ? anchorClass != null : !ANCHOR_CLASS_EDEFAULT.equals(anchorClass);
-			case WebuiPackage.ACTION__HEADER_CLASS:
-				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case WebuiPackage.ACTION__FOOTER_CLASS:
-				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
+			case WebuiPackage.ACTION__ACTION_CLASS:
+				return ACTION_CLASS_EDEFAULT == null ? actionClass != null : !ACTION_CLASS_EDEFAULT.equals(actionClass);
 			case WebuiPackage.ACTION__CONTAINING_TYPE:
 				return CONTAINING_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
@@ -1049,12 +941,8 @@ public abstract class ActionImpl extends NamedDisplayElementImpl implements Acti
 		result.append(failureMessage);
 		result.append(", disabledMessage: ");
 		result.append(disabledMessage);
-		result.append(", anchorClass: ");
-		result.append(anchorClass);
-		result.append(", headerClass: ");
-		result.append(headerClass);
-		result.append(", footerClass: ");
-		result.append(footerClass);
+		result.append(", actionClass: ");
+		result.append(actionClass);
 		result.append(')');
 		return result.toString();
 	}

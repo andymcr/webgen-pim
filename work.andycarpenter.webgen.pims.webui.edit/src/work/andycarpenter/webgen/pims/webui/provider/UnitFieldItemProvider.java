@@ -73,6 +73,9 @@ public class UnitFieldItemProvider
 			addTruncatePropertyDescriptor(object);
 			addDateFormatPropertyDescriptor(object);
 			addDisableInputPropertyDescriptor(object);
+			addLocalInputGroupClassPropertyDescriptor(object);
+			addLocalFieldLabelClassPropertyDescriptor(object);
+			addLocalFieldValueClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -254,6 +257,72 @@ public class UnitFieldItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Local Input Group Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalInputGroupClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitField_localInputGroupClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitField_localInputGroupClass_feature", "_UI_UnitField_type"),
+				 WebuiPackage.Literals.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Local Field Label Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalFieldLabelClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitField_localFieldLabelClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitField_localFieldLabelClass_feature", "_UI_UnitField_type"),
+				 WebuiPackage.Literals.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Local Field Value Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalFieldValueClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitField_localFieldValueClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitField_localFieldValueClass_feature", "_UI_UnitField_type"),
+				 WebuiPackage.Literals.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -318,6 +387,9 @@ public class UnitFieldItemProvider
 			case WebuiPackage.UNIT_FIELD__TRUNCATE:
 			case WebuiPackage.UNIT_FIELD__DATE_FORMAT:
 			case WebuiPackage.UNIT_FIELD__DISABLE_INPUT:
+			case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS:
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS:
+			case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.UNIT_FIELD__AUTHORISATION:

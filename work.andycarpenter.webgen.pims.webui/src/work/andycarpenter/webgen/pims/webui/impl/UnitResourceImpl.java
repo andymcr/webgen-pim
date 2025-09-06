@@ -175,6 +175,20 @@ public class UnitResourceImpl extends UnitFeatureImpl implements UnitResource {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String name() {
+		if (getResource() == null) {
+			return "";
+		} else {
+			return getResource().getName();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override

@@ -27,9 +27,7 @@ import work.andycarpenter.webgen.pims.persistence.FeatureVariableContext;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getFailureMessage <em>Failure Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getDisabledMessage <em>Disabled Message</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getFooterClass <em>Footer Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getActionClass <em>Action Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.Action#getContainingType <em>Containing Type</em>}</li>
  * </ul>
  *
@@ -255,71 +253,27 @@ public interface Action extends NamedDisplayElement, FeatureVariableContext {
 	void setDisabledMessage(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Anchor Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Action Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anchor Class</em>' attribute.
-	 * @see #setAnchorClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_AnchorClass()
+	 * @return the value of the '<em>Action Class</em>' attribute.
+	 * @see #setActionClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_ActionClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getAnchorClass();
+	String getActionClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getActionClass <em>Action Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anchor Class</em>' attribute.
-	 * @see #getAnchorClass()
+	 * @param value the new value of the '<em>Action Class</em>' attribute.
+	 * @see #getActionClass()
 	 * @generated
 	 */
-	void setAnchorClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Header Class</em>' attribute.
-	 * @see #setHeaderClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_HeaderClass()
-	 * @model
-	 * @generated
-	 */
-	String getHeaderClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getHeaderClass <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Header Class</em>' attribute.
-	 * @see #getHeaderClass()
-	 * @generated
-	 */
-	void setHeaderClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Footer Class</em>' attribute.
-	 * @see #setFooterClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getAction_FooterClass()
-	 * @model
-	 * @generated
-	 */
-	String getFooterClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.Action#getFooterClass <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Footer Class</em>' attribute.
-	 * @see #getFooterClass()
-	 * @generated
-	 */
-	void setFooterClass(String value);
+	void setActionClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Containing Type</b></em>' reference.

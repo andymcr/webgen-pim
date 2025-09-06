@@ -62,9 +62,7 @@ public class ActionItemProvider
 			addSuccessMessagePropertyDescriptor(object);
 			addFailureMessagePropertyDescriptor(object);
 			addDisabledMessagePropertyDescriptor(object);
-			addAnchorClassPropertyDescriptor(object);
-			addHeaderClassPropertyDescriptor(object);
-			addFooterClassPropertyDescriptor(object);
+			addActionClassPropertyDescriptor(object);
 			addContainingTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -247,68 +245,24 @@ public class ActionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Anchor Class feature.
+	 * This adds a property descriptor for the Action Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnchorClassPropertyDescriptor(Object object) {
+	protected void addActionClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Action_anchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_anchorClass_feature", "_UI_Action_type"),
-				 WebuiPackage.Literals.ACTION__ANCHOR_CLASS,
+				 getString("_UI_Action_actionClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Action_actionClass_feature", "_UI_Action_type"),
+				 WebuiPackage.Literals.ACTION__ACTION_CLASS,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Header Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHeaderClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Action_headerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_headerClass_feature", "_UI_Action_type"),
-				 WebuiPackage.Literals.ACTION__HEADER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Footer Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFooterClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Action_footerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_footerClass_feature", "_UI_Action_type"),
-				 WebuiPackage.Literals.ACTION__FOOTER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -398,9 +352,7 @@ public class ActionItemProvider
 			case WebuiPackage.ACTION__SUCCESS_MESSAGE:
 			case WebuiPackage.ACTION__FAILURE_MESSAGE:
 			case WebuiPackage.ACTION__DISABLED_MESSAGE:
-			case WebuiPackage.ACTION__ANCHOR_CLASS:
-			case WebuiPackage.ACTION__HEADER_CLASS:
-			case WebuiPackage.ACTION__FOOTER_CLASS:
+			case WebuiPackage.ACTION__ACTION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.ACTION__DISPLAY_WHEN:

@@ -51,11 +51,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getEmptyCollectionDisplay <em>Empty Collection Display</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooter <em>Footer</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#isAutofocus <em>Autofocus</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getHeaderClass <em>Header Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldLabelClass <em>Field Label Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFieldValueClass <em>Field Value Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getInputGroupClass <em>Input Group Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitFeatureImpl#getFooterClass <em>Footer Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -340,106 +335,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @ordered
 	 */
 	protected boolean autofocus = AUTOFOCUS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String HEADER_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeaderClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String headerClass = HEADER_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIELD_LABEL_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFieldLabelClass() <em>Field Label Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldLabelClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldLabelClass = FIELD_LABEL_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldValueClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIELD_VALUE_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFieldValueClass() <em>Field Value Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldValueClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldValueClass = FIELD_VALUE_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getInputGroupClass() <em>Input Group Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputGroupClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INPUT_GROUP_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getInputGroupClass() <em>Input Group Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputGroupClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String inputGroupClass = INPUT_GROUP_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FOOTER_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFooterClass() <em>Footer Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFooterClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String footerClass = FOOTER_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -865,121 +760,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	 * @generated
 	 */
 	@Override
-	public String getHeaderClass() {
-		return headerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setHeaderClass(String newHeaderClass) {
-		String oldHeaderClass = headerClass;
-		headerClass = newHeaderClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__HEADER_CLASS, oldHeaderClass, headerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFieldLabelClass() {
-		return fieldLabelClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFieldLabelClass(String newFieldLabelClass) {
-		String oldFieldLabelClass = fieldLabelClass;
-		fieldLabelClass = newFieldLabelClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS, oldFieldLabelClass, fieldLabelClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFieldValueClass() {
-		return fieldValueClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFieldValueClass(String newFieldValueClass) {
-		String oldFieldValueClass = fieldValueClass;
-		fieldValueClass = newFieldValueClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS, oldFieldValueClass, fieldValueClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getInputGroupClass() {
-		return inputGroupClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInputGroupClass(String newInputGroupClass) {
-		String oldInputGroupClass = inputGroupClass;
-		inputGroupClass = newInputGroupClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS, oldInputGroupClass, inputGroupClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFooterClass() {
-		return footerClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFooterClass(String newFooterClass) {
-		String oldFooterClass = footerClass;
-		footerClass = newFooterClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_FEATURE__FOOTER_CLASS, oldFooterClass, footerClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Entity contextEntity() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1071,16 +851,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return getFooter();
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 				return isAutofocus();
-			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
-				return getHeaderClass();
-			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
-				return getFieldLabelClass();
-			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
-				return getFieldValueClass();
-			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-				return getInputGroupClass();
-			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
-				return getFooterClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1140,21 +910,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 				setAutofocus((Boolean)newValue);
 				return;
-			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
-				setHeaderClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
-				setFieldLabelClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
-				setFieldValueClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-				setInputGroupClass((String)newValue);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
-				setFooterClass((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1212,21 +967,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 				setAutofocus(AUTOFOCUS_EDEFAULT);
 				return;
-			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
-				setHeaderClass(HEADER_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
-				setFieldLabelClass(FIELD_LABEL_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
-				setFieldValueClass(FIELD_VALUE_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-				setInputGroupClass(INPUT_GROUP_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
-				setFooterClass(FOOTER_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1271,16 +1011,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 				return FOOTER_EDEFAULT == null ? footer != null : !FOOTER_EDEFAULT.equals(footer);
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
 				return autofocus != AUTOFOCUS_EDEFAULT;
-			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
-				return HEADER_CLASS_EDEFAULT == null ? headerClass != null : !HEADER_CLASS_EDEFAULT.equals(headerClass);
-			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
-				return FIELD_LABEL_CLASS_EDEFAULT == null ? fieldLabelClass != null : !FIELD_LABEL_CLASS_EDEFAULT.equals(fieldLabelClass);
-			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
-				return FIELD_VALUE_CLASS_EDEFAULT == null ? fieldValueClass != null : !FIELD_VALUE_CLASS_EDEFAULT.equals(fieldValueClass);
-			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-				return INPUT_GROUP_CLASS_EDEFAULT == null ? inputGroupClass != null : !INPUT_GROUP_CLASS_EDEFAULT.equals(inputGroupClass);
-			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
-				return FOOTER_CLASS_EDEFAULT == null ? footerClass != null : !FOOTER_CLASS_EDEFAULT.equals(footerClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1407,16 +1137,6 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 		result.append(footer);
 		result.append(", autofocus: ");
 		result.append(autofocus);
-		result.append(", headerClass: ");
-		result.append(headerClass);
-		result.append(", fieldLabelClass: ");
-		result.append(fieldLabelClass);
-		result.append(", fieldValueClass: ");
-		result.append(fieldValueClass);
-		result.append(", inputGroupClass: ");
-		result.append(inputGroupClass);
-		result.append(", footerClass: ");
-		result.append(footerClass);
 		result.append(')');
 		return result.toString();
 	}

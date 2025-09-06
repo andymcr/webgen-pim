@@ -165,8 +165,6 @@ unique lazy rule implicitAuthenticationsPage {
 				->select(f | f.name = 'email' or f.name = 'roles')
 				->collect(f | thisModule.implicitUnitAttribute(f)),
 			defaultPaginationSize <- 12,
-		nextPageLabel <- '>',
-		previousPageLabel <- '<',
 		elementTitle <- elementTitle,
 		allActions <- Sequence{updateAction, deleteAction}
 	),

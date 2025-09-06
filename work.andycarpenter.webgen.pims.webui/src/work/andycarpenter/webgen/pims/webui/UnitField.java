@@ -27,6 +27,9 @@ import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isTruncate <em>Truncate</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getDateFormat <em>Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#isDisableInput <em>Disable Input</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalInputGroupClass <em>Local Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField()
@@ -297,6 +300,75 @@ public interface UnitField extends FeatureVariableContext {
 	 * @generated
 	 */
 	void setDisableInput(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Input Group Class</em>' attribute.
+	 * @see #setLocalInputGroupClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_LocalInputGroupClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalInputGroupClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalInputGroupClass <em>Local Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Input Group Class</em>' attribute.
+	 * @see #getLocalInputGroupClass()
+	 * @generated
+	 */
+	void setLocalInputGroupClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Field Label Class</em>' attribute.
+	 * @see #setLocalFieldLabelClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_LocalFieldLabelClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalFieldLabelClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldLabelClass <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Field Label Class</em>' attribute.
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 */
+	void setLocalFieldLabelClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Field Value Class</em>' attribute.
+	 * @see #setLocalFieldValueClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitField_LocalFieldValueClass()
+	 * @model default=""
+	 * @generated
+	 */
+	String getLocalFieldValueClass();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldValueClass <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Field Value Class</em>' attribute.
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 */
+	void setLocalFieldValueClass(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

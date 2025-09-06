@@ -209,6 +209,9 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/truncate"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/dateFormat"/>
       <genFeatures createChild="false" propertyCategory="Model" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/disableInput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/localInputGroupClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/localFieldLabelClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitField/localFieldValueClass"/>
       <genOperations ecoreOperation="webui.ecore#//UnitField/referencableEntities"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//UnitFeature">
@@ -225,11 +228,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/emptyCollectionDisplay"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footer"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/autofocus"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/headerClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/fieldLabelClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/fieldValueClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/inputGroupClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footerClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitElement">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
@@ -237,18 +235,21 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/obfuscateFormFields"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/placeholder"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitElement/validationPattern"/>
+      <genOperations ecoreOperation="webui.ecore#//UnitElement/name"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitResource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDeletable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/isDownloadable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitResource/showImageWhenEditing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitResource/imageFilter"/>
+      <genOperations ecoreOperation="webui.ecore#//UnitResource/name"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitAssociation">
       <genFeatures notify="false" createChild="false" propertyCategory="Interface"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/collectionSortBy"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/useAutocomplete"/>
+      <genOperations ecoreOperation="webui.ecore#//UnitAssociation/name"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitLabel">
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
@@ -472,9 +473,7 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/successMessage"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/failureMessage"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//Action/disabledMessage"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/anchorClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/headerClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//Action/footerClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//Action/actionClass"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Debug" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//Action/containingType"/>
       <genOperations ecoreOperation="webui.ecore#//Action/referencableEntities"/>

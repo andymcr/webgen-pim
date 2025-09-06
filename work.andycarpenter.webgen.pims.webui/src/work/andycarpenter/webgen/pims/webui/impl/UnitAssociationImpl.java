@@ -199,6 +199,28 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @generated NOT
 	 */
 	@Override
+	public String name() {
+		if (getAssociation() == null) {
+			return "";
+		} else {
+			if (isSourceAssociation()) {
+				return getAssociation().getName();
+			} else {
+				if (getAssociation().getTargetFeatureName() == "") {
+					return "inv" + getAssociation().getName();
+				} else {
+					return getAssociation().getTargetFeatureName();
+				}
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
 	public Entity contextEntity() {
 		return getDisplayedOn().getContentType();
 	}
@@ -447,28 +469,6 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 		useAutocomplete = newUseAutocomplete;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE, oldUseAutocomplete, useAutocomplete));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public String name() {
-		if (getAssociation() == null) {
-			return "";
-		} else {
-			if (isSourceAssociation()) {
-				return getAssociation().getName();
-			} else {
-				if (getAssociation().getTargetFeatureName() == "") {
-					return "inv" + getAssociation().getName();
-				} else {
-					return getAssociation().getTargetFeatureName();
-				}
-			}
-		}
 	}
 
 	/**

@@ -3612,13 +3612,40 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FIELD__DISABLE_INPUT = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 12;
+
+	/**
 	 * The number of structural features of the '<em>Unit Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FIELD_FEATURE_COUNT = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 10;
+	int UNIT_FIELD_FEATURE_COUNT = PersistencePackage.FEATURE_VARIABLE_CONTEXT_FEATURE_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -3746,6 +3773,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_FEATURE__DISABLE_INPUT = UNIT_FIELD__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__LOCAL_INPUT_GROUP_CLASS = UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__LOCAL_FIELD_LABEL_CLASS = UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE__LOCAL_FIELD_VALUE_CLASS = UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3892,58 +3946,13 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE__AUTOFOCUS = UNIT_FIELD_FEATURE_COUNT + 15;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__HEADER_CLASS = UNIT_FIELD_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__FIELD_LABEL_CLASS = UNIT_FIELD_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__FIELD_VALUE_CLASS = UNIT_FIELD_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__INPUT_GROUP_CLASS = UNIT_FIELD_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE__FOOTER_CLASS = UNIT_FIELD_FEATURE_COUNT + 20;
-
-	/**
 	 * The number of structural features of the '<em>Unit Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 21;
+	int UNIT_FEATURE_FEATURE_COUNT = UNIT_FIELD_FEATURE_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -4091,6 +4100,33 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
 
 	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__LOCAL_INPUT_GROUP_CLASS = UNIT_FEATURE__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__LOCAL_FIELD_LABEL_CLASS = UNIT_FEATURE__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ELEMENT__LOCAL_FIELD_VALUE_CLASS = UNIT_FEATURE__LOCAL_FIELD_VALUE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4235,51 +4271,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ELEMENT__AUTOFOCUS = UNIT_FEATURE__AUTOFOCUS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__FIELD_LABEL_CLASS = UNIT_FEATURE__FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__FIELD_VALUE_CLASS = UNIT_FEATURE__FIELD_VALUE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ELEMENT__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4358,7 +4349,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_ELEMENT___NAME = UNIT_FEATURE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Unit Element</em>' class.
@@ -4367,7 +4358,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 1;
+	int UNIT_ELEMENT_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl <em>Unit Resource</em>}' class.
@@ -4477,6 +4468,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_RESOURCE__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__LOCAL_INPUT_GROUP_CLASS = UNIT_FEATURE__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__LOCAL_FIELD_LABEL_CLASS = UNIT_FEATURE__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_RESOURCE__LOCAL_FIELD_VALUE_CLASS = UNIT_FEATURE__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4623,51 +4641,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_RESOURCE__AUTOFOCUS = UNIT_FEATURE__AUTOFOCUS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__FIELD_LABEL_CLASS = UNIT_FEATURE__FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__FIELD_VALUE_CLASS = UNIT_FEATURE__FIELD_VALUE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_RESOURCE__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4746,7 +4719,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
+	int UNIT_RESOURCE___NAME = UNIT_FEATURE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Unit Resource</em>' class.
@@ -4755,7 +4728,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 1;
+	int UNIT_RESOURCE_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl <em>Unit Association</em>}' class.
@@ -4865,6 +4838,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_ASSOCIATION__DISABLE_INPUT = UNIT_FEATURE__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__LOCAL_INPUT_GROUP_CLASS = UNIT_FEATURE__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__LOCAL_FIELD_LABEL_CLASS = UNIT_FEATURE__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__LOCAL_FIELD_VALUE_CLASS = UNIT_FEATURE__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5011,51 +5011,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__AUTOFOCUS = UNIT_FEATURE__AUTOFOCUS;
 
 	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__HEADER_CLASS = UNIT_FEATURE__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__FIELD_LABEL_CLASS = UNIT_FEATURE__FIELD_LABEL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__FIELD_VALUE_CLASS = UNIT_FEATURE__FIELD_VALUE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Input Group Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__INPUT_GROUP_CLASS = UNIT_FEATURE__INPUT_GROUP_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION__FOOTER_CLASS = UNIT_FEATURE__FOOTER_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Child Feature</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5155,15 +5110,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION___CONTEXT_ENTITY = UNIT_FEATURE___CONTEXT_ENTITY;
 
 	/**
-	 * The operation id for the '<em>Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_ASSOCIATION___NAME = UNIT_FEATURE_OPERATION_COUNT + 0;
-
-	/**
 	 * The operation id for the '<em>Is Source Association</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5182,13 +5128,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION___LEAF_ENTITY = UNIT_FEATURE_OPERATION_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION___NAME = UNIT_FEATURE_OPERATION_COUNT + 3;
+
+	/**
 	 * The number of operations of the '<em>Unit Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 3;
+	int UNIT_ASSOCIATION_OPERATION_COUNT = UNIT_FEATURE_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitLabelImpl <em>Unit Label</em>}' class.
@@ -5298,6 +5253,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIT_LABEL__DISABLE_INPUT = UNIT_FIELD__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_LABEL__LOCAL_INPUT_GROUP_CLASS = UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_LABEL__LOCAL_FIELD_LABEL_CLASS = UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_LABEL__LOCAL_FIELD_VALUE_CLASS = UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' reference.
@@ -5472,13 +5454,40 @@ public interface WebuiPackage extends EPackage {
 	int INTERFACE_FIELD__DISABLE_INPUT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+
+	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__REQUIRED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
+	int INTERFACE_FIELD__REQUIRED = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
@@ -5487,7 +5496,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__DEFAULT_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
+	int INTERFACE_FIELD__DEFAULT_VALUE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -5496,7 +5505,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int INTERFACE_FIELD__PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Validation Pattern</b></em>' attribute.
@@ -5505,7 +5514,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int INTERFACE_FIELD__VALIDATION_PATTERN = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Repeated Field</b></em>' attribute.
@@ -5514,7 +5523,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__REPEATED_FIELD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int INTERFACE_FIELD__REPEATED_FIELD = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Second Display Label</b></em>' attribute.
@@ -5523,7 +5532,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 16;
+	int INTERFACE_FIELD__SECOND_DISPLAY_LABEL = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Second Title</b></em>' attribute.
@@ -5532,7 +5541,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 17;
+	int INTERFACE_FIELD__SECOND_TITLE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Second Placeholder</b></em>' attribute.
@@ -5541,7 +5550,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 18;
+	int INTERFACE_FIELD__SECOND_PLACEHOLDER = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Second Help</b></em>' attribute.
@@ -5550,7 +5559,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD__SECOND_HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 19;
+	int INTERFACE_FIELD__SECOND_HELP = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 22;
 
 	/**
 	 * The number of structural features of the '<em>Interface Field</em>' class.
@@ -5559,7 +5568,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 20;
+	int INTERFACE_FIELD_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 23;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -5705,6 +5714,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE_FIELD__DISABLE_INPUT = INTERFACE_FIELD__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__LOCAL_INPUT_GROUP_CLASS = INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__LOCAL_FIELD_LABEL_CLASS = INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FIELD__LOCAL_FIELD_VALUE_CLASS = INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -5976,6 +6012,33 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_FIELD__DISABLE_INPUT = INTERFACE_FIELD__DISABLE_INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Local Input Group Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__LOCAL_INPUT_GROUP_CLASS = INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__LOCAL_FIELD_LABEL_CLASS = INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Local Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FIELD__LOCAL_FIELD_VALUE_CLASS = INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -18208,31 +18271,13 @@ public interface WebuiPackage extends EPackage {
 	int ACTION__DISABLED_MESSAGE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ANCHOR_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__HEADER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__FOOTER_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
+	int ACTION__ACTION_CLASS = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -18241,7 +18286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 14;
+	int ACTION__CONTAINING_TYPE = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -18250,7 +18295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 15;
+	int ACTION_FEATURE_COUNT = BasePackage.NAMED_DISPLAY_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -18398,31 +18443,13 @@ public interface WebuiPackage extends EPackage {
 	int SECURITY_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECURITY_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECURITY_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
+	int SECURITY_ACTION__ACTION_CLASS = ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -18617,31 +18644,13 @@ public interface WebuiPackage extends EPackage {
 	int DELETE_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELETE_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELETE_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
+	int DELETE_ACTION__ACTION_CLASS = ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -18815,31 +18824,13 @@ public interface WebuiPackage extends EPackage {
 	int SELECT_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECT_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECT_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
+	int SELECT_ACTION__ACTION_CLASS = ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -19013,31 +19004,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_SELECT_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_SELECT_ACTION__ANCHOR_CLASS = SELECT_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_SELECT_ACTION__HEADER_CLASS = SELECT_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_SELECT_ACTION__FOOTER_CLASS = SELECT_ACTION__FOOTER_CLASS;
+	int CONTAINER_SELECT_ACTION__ACTION_CLASS = SELECT_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -19211,31 +19184,13 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_SELECT_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_SELECT_ACTION__ANCHOR_CLASS = SELECT_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_SELECT_ACTION__HEADER_CLASS = SELECT_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_SELECT_ACTION__FOOTER_CLASS = SELECT_ACTION__FOOTER_CLASS;
+	int INSTANCE_SELECT_ACTION__ACTION_CLASS = SELECT_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -19419,31 +19374,13 @@ public interface WebuiPackage extends EPackage {
 	int TARGET_ACTION__DISABLED_MESSAGE = SELECT_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TARGET_ACTION__ANCHOR_CLASS = SELECT_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TARGET_ACTION__HEADER_CLASS = SELECT_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TARGET_ACTION__FOOTER_CLASS = SELECT_ACTION__FOOTER_CLASS;
+	int TARGET_ACTION__ACTION_CLASS = SELECT_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -19617,31 +19554,13 @@ public interface WebuiPackage extends EPackage {
 	int OPERATION_ACTION__DISABLED_MESSAGE = ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_ACTION__ANCHOR_CLASS = ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_ACTION__HEADER_CLASS = ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_ACTION__FOOTER_CLASS = ACTION__FOOTER_CLASS;
+	int OPERATION_ACTION__ACTION_CLASS = ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -19844,31 +19763,13 @@ public interface WebuiPackage extends EPackage {
 	int CONTAINER_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_OPERATION_ACTION__ANCHOR_CLASS = OPERATION_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_OPERATION_ACTION__HEADER_CLASS = OPERATION_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
+	int CONTAINER_OPERATION_ACTION__ACTION_CLASS = OPERATION_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -20051,31 +19952,13 @@ public interface WebuiPackage extends EPackage {
 	int INSTANCE_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_OPERATION_ACTION__ANCHOR_CLASS = OPERATION_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__HEADER_CLASS = OPERATION_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
+	int INSTANCE_OPERATION_ACTION__ACTION_CLASS = OPERATION_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -20268,31 +20151,13 @@ public interface WebuiPackage extends EPackage {
 	int GENERAL_OPERATION_ACTION__DISABLED_MESSAGE = OPERATION_ACTION__DISABLED_MESSAGE;
 
 	/**
-	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Action Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERAL_OPERATION_ACTION__ANCHOR_CLASS = OPERATION_ACTION__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERAL_OPERATION_ACTION__HEADER_CLASS = OPERATION_ACTION__HEADER_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERAL_OPERATION_ACTION__FOOTER_CLASS = OPERATION_ACTION__FOOTER_CLASS;
+	int GENERAL_OPERATION_ACTION__ACTION_CLASS = OPERATION_ACTION__ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Containing Type</b></em>' reference.
@@ -21968,6 +21833,39 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitField_DisableInput();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalInputGroupClass <em>Local Input Group Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Input Group Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitField#getLocalInputGroupClass()
+	 * @see #getUnitField()
+	 * @generated
+	 */
+	EAttribute getUnitField_LocalInputGroupClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldLabelClass <em>Local Field Label Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Field Label Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldLabelClass()
+	 * @see #getUnitField()
+	 * @generated
+	 */
+	EAttribute getUnitField_LocalFieldLabelClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldValueClass <em>Local Field Value Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Field Value Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitField#getLocalFieldValueClass()
+	 * @see #getUnitField()
+	 * @generated
+	 */
+	EAttribute getUnitField_LocalFieldValueClass();
+
+	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitField#referencableEntities() <em>Referencable Entities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22109,61 +22007,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_Autofocus();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getHeaderClass <em>Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getHeaderClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_HeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldLabelClass <em>Field Label Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Label Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldLabelClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_FieldLabelClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldValueClass <em>Field Value Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Value Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getFieldValueClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_FieldValueClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass <em>Input Group Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Group Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getInputGroupClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_InputGroupClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#getFooterClass <em>Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#getFooterClass()
-	 * @see #getUnitFeature()
-	 * @generated
-	 */
-	EAttribute getUnitFeature_FooterClass();
-
-	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitElement <em>Unit Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22216,6 +22059,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUnitElement_ValidationPattern();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitElement#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitElement#name()
+	 * @generated
+	 */
+	EOperation getUnitElement__Name();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitResource <em>Unit Resource</em>}'.
@@ -22272,6 +22125,16 @@ public interface WebuiPackage extends EPackage {
 	EReference getUnitResource_ImageFilter();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitResource#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitResource#name()
+	 * @generated
+	 */
+	EOperation getUnitResource__Name();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation <em>Unit Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22313,6 +22176,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUnitAssociation_UseAutocomplete();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#name() <em>Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#name()
+	 * @generated
+	 */
+	EOperation getUnitAssociation__Name();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitLabel <em>Unit Label</em>}'.
@@ -24032,37 +23905,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getAction_DisabledMessage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getAnchorClass <em>Anchor Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getActionClass <em>Action Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Action#getAnchorClass()
+	 * @return the meta object for the attribute '<em>Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.Action#getActionClass()
 	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getAction_AnchorClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getHeaderClass <em>Header Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Header Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Action#getHeaderClass()
-	 * @see #getAction()
-	 * @generated
-	 */
-	EAttribute getAction_HeaderClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.Action#getFooterClass <em>Footer Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Footer Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.Action#getFooterClass()
-	 * @see #getAction()
-	 * @generated
-	 */
-	EAttribute getAction_FooterClass();
+	EAttribute getAction_ActionClass();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.Action#getContainingType <em>Containing Type</em>}'.
@@ -25649,6 +25500,30 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FIELD__DISABLE_INPUT = eINSTANCE.getUnitField_DisableInput();
 
 		/**
+		 * The meta object literal for the '<em><b>Local Input Group Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS = eINSTANCE.getUnitField_LocalInputGroupClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Field Label Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS = eINSTANCE.getUnitField_LocalFieldLabelClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Field Value Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS = eINSTANCE.getUnitField_LocalFieldValueClass();
+
+		/**
 		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25755,46 +25630,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_FEATURE__AUTOFOCUS = eINSTANCE.getUnitFeature_Autofocus();
 
 		/**
-		 * The meta object literal for the '<em><b>Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__HEADER_CLASS = eINSTANCE.getUnitFeature_HeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Field Label Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__FIELD_LABEL_CLASS = eINSTANCE.getUnitFeature_FieldLabelClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Field Value Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__FIELD_VALUE_CLASS = eINSTANCE.getUnitFeature_FieldValueClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Group Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__INPUT_GROUP_CLASS = eINSTANCE.getUnitFeature_InputGroupClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_FEATURE__FOOTER_CLASS = eINSTANCE.getUnitFeature_FooterClass();
-
-		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl <em>Unit Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25835,6 +25670,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UNIT_ELEMENT__VALIDATION_PATTERN = eINSTANCE.getUnitElement_ValidationPattern();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UNIT_ELEMENT___NAME = eINSTANCE.getUnitElement__Name();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitResourceImpl <em>Unit Resource</em>}' class.
@@ -25879,6 +25722,14 @@ public interface WebuiPackage extends EPackage {
 		EReference UNIT_RESOURCE__IMAGE_FILTER = eINSTANCE.getUnitResource_ImageFilter();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UNIT_RESOURCE___NAME = eINSTANCE.getUnitResource__Name();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl <em>Unit Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25911,6 +25762,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UNIT_ASSOCIATION__USE_AUTOCOMPLETE = eINSTANCE.getUnitAssociation_UseAutocomplete();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UNIT_ASSOCIATION___NAME = eINSTANCE.getUnitAssociation__Name();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitLabelImpl <em>Unit Label</em>}' class.
@@ -27265,28 +27124,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute ACTION__DISABLED_MESSAGE = eINSTANCE.getAction_DisabledMessage();
 
 		/**
-		 * The meta object literal for the '<em><b>Anchor Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Action Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTION__ANCHOR_CLASS = eINSTANCE.getAction_AnchorClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Header Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTION__HEADER_CLASS = eINSTANCE.getAction_HeaderClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Footer Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTION__FOOTER_CLASS = eINSTANCE.getAction_FooterClass();
+		EAttribute ACTION__ACTION_CLASS = eINSTANCE.getAction_ActionClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Containing Type</b></em>' reference feature.

@@ -132,4 +132,12 @@ public interface UnitElement extends UnitFeature, AttributePathElement {
 	 */
 	void setValidationPattern(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String name();
+
 } // UnitElement

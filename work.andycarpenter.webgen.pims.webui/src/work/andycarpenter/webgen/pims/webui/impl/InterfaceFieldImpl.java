@@ -44,6 +44,9 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isTruncate <em>Truncate</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDateFormat <em>Date Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isDisableInput <em>Disable Input</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getLocalInputGroupClass <em>Local Input Group Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getLocalFieldLabelClass <em>Local Field Label Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getLocalFieldValueClass <em>Local Field Value Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#isRequired <em>Required</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getDefaultValue <em>Default Value</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.InterfaceFieldImpl#getPlaceholder <em>Placeholder</em>}</li>
@@ -227,6 +230,66 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @ordered
 	 */
 	protected boolean disableInput = DISABLE_INPUT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalInputGroupClass() <em>Local Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_INPUT_GROUP_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalInputGroupClass() <em>Local Input Group Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalInputGroupClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localInputGroupClass = LOCAL_INPUT_GROUP_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_LABEL_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldLabelClass() <em>Local Field Label Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldLabelClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldLabelClass = LOCAL_FIELD_LABEL_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCAL_FIELD_VALUE_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLocalFieldValueClass() <em>Local Field Value Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalFieldValueClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String localFieldValueClass = LOCAL_FIELD_VALUE_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isRequired() <em>Required</em>}' attribute.
@@ -748,6 +811,75 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 	 * @generated
 	 */
 	@Override
+	public String getLocalInputGroupClass() {
+		return localInputGroupClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalInputGroupClass(String newLocalInputGroupClass) {
+		String oldLocalInputGroupClass = localInputGroupClass;
+		localInputGroupClass = newLocalInputGroupClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS, oldLocalInputGroupClass, localInputGroupClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldLabelClass() {
+		return localFieldLabelClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldLabelClass(String newLocalFieldLabelClass) {
+		String oldLocalFieldLabelClass = localFieldLabelClass;
+		localFieldLabelClass = newLocalFieldLabelClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS, oldLocalFieldLabelClass, localFieldLabelClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLocalFieldValueClass() {
+		return localFieldValueClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLocalFieldValueClass(String newLocalFieldValueClass) {
+		String oldLocalFieldValueClass = localFieldValueClass;
+		localFieldValueClass = newLocalFieldValueClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS, oldLocalFieldValueClass, localFieldValueClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean isRequired() {
 		return required;
 	}
@@ -1039,6 +1171,12 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return getDateFormat();
 			case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT:
 				return isDisableInput();
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				return getLocalInputGroupClass();
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				return getLocalFieldLabelClass();
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				return getLocalFieldValueClass();
 			case WebuiPackage.INTERFACE_FIELD__REQUIRED:
 				return isRequired();
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
@@ -1098,6 +1236,15 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return;
 			case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT:
 				setDisableInput((Boolean)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				setLocalInputGroupClass((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass((String)newValue);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass((String)newValue);
 				return;
 			case WebuiPackage.INTERFACE_FIELD__REQUIRED:
 				setRequired((Boolean)newValue);
@@ -1168,6 +1315,15 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 			case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT:
 				setDisableInput(DISABLE_INPUT_EDEFAULT);
 				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				setLocalInputGroupClass(LOCAL_INPUT_GROUP_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				setLocalFieldLabelClass(LOCAL_FIELD_LABEL_CLASS_EDEFAULT);
+				return;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				setLocalFieldValueClass(LOCAL_FIELD_VALUE_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.INTERFACE_FIELD__REQUIRED:
 				setRequired(REQUIRED_EDEFAULT);
 				return;
@@ -1229,6 +1385,12 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				return DATE_FORMAT_EDEFAULT == null ? dateFormat != null : !DATE_FORMAT_EDEFAULT.equals(dateFormat);
 			case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT:
 				return disableInput != DISABLE_INPUT_EDEFAULT;
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS:
+				return LOCAL_INPUT_GROUP_CLASS_EDEFAULT == null ? localInputGroupClass != null : !LOCAL_INPUT_GROUP_CLASS_EDEFAULT.equals(localInputGroupClass);
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS:
+				return LOCAL_FIELD_LABEL_CLASS_EDEFAULT == null ? localFieldLabelClass != null : !LOCAL_FIELD_LABEL_CLASS_EDEFAULT.equals(localFieldLabelClass);
+			case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS:
+				return LOCAL_FIELD_VALUE_CLASS_EDEFAULT == null ? localFieldValueClass != null : !LOCAL_FIELD_VALUE_CLASS_EDEFAULT.equals(localFieldValueClass);
 			case WebuiPackage.INTERFACE_FIELD__REQUIRED:
 				return required != REQUIRED_EDEFAULT;
 			case WebuiPackage.INTERFACE_FIELD__DEFAULT_VALUE:
@@ -1276,6 +1438,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.INTERFACE_FIELD__TRUNCATE: return WebuiPackage.UNIT_FIELD__TRUNCATE;
 				case WebuiPackage.INTERFACE_FIELD__DATE_FORMAT: return WebuiPackage.UNIT_FIELD__DATE_FORMAT;
 				case WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT: return WebuiPackage.UNIT_FIELD__DISABLE_INPUT;
+				case WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS: return WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS;
+				case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS: return WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS;
+				case WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS: return WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS;
 				default: return -1;
 			}
 		}
@@ -1307,6 +1472,9 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 				case WebuiPackage.UNIT_FIELD__TRUNCATE: return WebuiPackage.INTERFACE_FIELD__TRUNCATE;
 				case WebuiPackage.UNIT_FIELD__DATE_FORMAT: return WebuiPackage.INTERFACE_FIELD__DATE_FORMAT;
 				case WebuiPackage.UNIT_FIELD__DISABLE_INPUT: return WebuiPackage.INTERFACE_FIELD__DISABLE_INPUT;
+				case WebuiPackage.UNIT_FIELD__LOCAL_INPUT_GROUP_CLASS: return WebuiPackage.INTERFACE_FIELD__LOCAL_INPUT_GROUP_CLASS;
+				case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_LABEL_CLASS: return WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_LABEL_CLASS;
+				case WebuiPackage.UNIT_FIELD__LOCAL_FIELD_VALUE_CLASS: return WebuiPackage.INTERFACE_FIELD__LOCAL_FIELD_VALUE_CLASS;
 				default: return -1;
 			}
 		}
@@ -1373,6 +1541,12 @@ public abstract class InterfaceFieldImpl extends NamedDisplayElementImpl impleme
 		result.append(dateFormat);
 		result.append(", disableInput: ");
 		result.append(disableInput);
+		result.append(", localInputGroupClass: ");
+		result.append(localInputGroupClass);
+		result.append(", localFieldLabelClass: ");
+		result.append(localFieldLabelClass);
+		result.append(", localFieldValueClass: ");
+		result.append(localFieldValueClass);
 		result.append(", required: ");
 		result.append(required);
 		result.append(", defaultValue: ");

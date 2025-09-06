@@ -38,7 +38,7 @@ helper context Website!ModelLabelFeature def: isInterfaceExpression() : Boolean
 helper context Website!SelectionPath def: isInterfaceExpression() : Boolean
 	= false;
 
-helper context Website!UnitAssociation def: isInterfaceExpression() : Boolean
+helper context Website!UnitFeature def: isInterfaceExpression() : Boolean
 	= true;
 
 

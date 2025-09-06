@@ -97,4 +97,12 @@ public interface UnitAssociation extends UnitFeature, AssociationPathElement {
 	 */
 	void setUseAutocomplete(boolean value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String name();
+
 } // UnitAssociation

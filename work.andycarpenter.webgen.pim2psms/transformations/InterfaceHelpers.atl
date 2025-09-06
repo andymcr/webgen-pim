@@ -39,34 +39,34 @@ helper context Website!Feature def: displayLabel() : String
 			self.name.createLabel()
 		endif;
 
-helper context Website!Feature def: emptyDisplayValue() : String
+helper context Website!Feature def: emptyCollectionDisplay() : String
 	= if self.emptyDisplayValue.trim() <> '' then
 			self.emptyDisplayValue.trim()
 		else
 			OclUndefined
 		endif;
 
-helper context Website!UnitElement def: emptyDisplayValue() : String
-	= if self.emptyDisplayValue.trim() <> '' then
-			self.emptyDisplayValue.trim()
+helper context Website!UnitElement def: emptyCollectionDisplay() : String
+	= if self.emptyCollectionDisplay.trim() <> '' then
+			self.emptyCollectionDisplay.trim()
 		else if self.attribute.oclIsUndefined() then
 			''
 		else
-			self.attribute.emptyDisplayValue()
+			self.attribute.emptyCollectionDisplay()
 		endif endif;
 
-helper context Website!UnitResource def: emptyDisplayValue() : String
-	= if self.emptyDisplayValue.trim() <> '' then
-			self.emptyDisplayValue.trim()
+helper context Website!UnitResource def: emptyCollectionDisplay() : String
+	= if self.emptyCollectionDisplay.trim() <> '' then
+			self.emptyCollectionDisplay.trim()
 		else
 			''
 		endif;
 
-helper context Website!UnitAssociation def: emptyDisplayValue() : String
-	= if self.emptyDisplayValue.trim() <> '' then
-			self.emptyDisplayValue.trim()
+helper context Website!UnitAssociation def: emptyCollectionDisplay() : String
+	= if self.emptyCollectionDisplay.trim() <> '' then
+			self.emptyCollectionDisplay.trim()
 		else
-			self.association.emptyDisplayValue()
+			self.association.emptyCollectionDisplay()
 		endif;
 
 helper context Website!Association def: findOrmEntity(entity : Website!Entity) : ORM!Entity

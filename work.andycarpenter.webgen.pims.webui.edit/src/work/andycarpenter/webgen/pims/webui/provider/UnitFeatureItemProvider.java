@@ -66,11 +66,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			addEmptyCollectionDisplayPropertyDescriptor(object);
 			addFooterPropertyDescriptor(object);
 			addAutofocusPropertyDescriptor(object);
-			addHeaderClassPropertyDescriptor(object);
-			addFieldLabelClassPropertyDescriptor(object);
-			addFieldValueClassPropertyDescriptor(object);
-			addInputGroupClassPropertyDescriptor(object);
-			addFooterClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -362,116 +357,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Header Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHeaderClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_headerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_headerClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__HEADER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Field Label Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFieldLabelClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_fieldLabelClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_fieldLabelClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__FIELD_LABEL_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Field Value Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFieldValueClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_fieldValueClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_fieldValueClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__FIELD_VALUE_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Group Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputGroupClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_inputGroupClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_inputGroupClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__INPUT_GROUP_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Footer Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFooterClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitFeature_footerClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitFeature_footerClass_feature", "_UI_UnitFeature_type"),
-				 WebuiPackage.Literals.UNIT_FEATURE__FOOTER_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -543,11 +428,6 @@ public class UnitFeatureItemProvider extends UnitFieldItemProvider {
 			case WebuiPackage.UNIT_FEATURE__EMPTY_COLLECTION_DISPLAY:
 			case WebuiPackage.UNIT_FEATURE__FOOTER:
 			case WebuiPackage.UNIT_FEATURE__AUTOFOCUS:
-			case WebuiPackage.UNIT_FEATURE__HEADER_CLASS:
-			case WebuiPackage.UNIT_FEATURE__FIELD_LABEL_CLASS:
-			case WebuiPackage.UNIT_FEATURE__FIELD_VALUE_CLASS:
-			case WebuiPackage.UNIT_FEATURE__INPUT_GROUP_CLASS:
-			case WebuiPackage.UNIT_FEATURE__FOOTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.UNIT_FEATURE__ACTIONS:
